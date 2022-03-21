@@ -100,37 +100,48 @@ public final class FirewallPolicy {
             this.statefulDefaultActions = statefulDefaultActions;
             return this;
         }
-
+        public Builder statefulDefaultActions(String... statefulDefaultActions) {
+            return statefulDefaultActions(List.of(statefulDefaultActions));
+        }
         public Builder statefulEngineOptions(@Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions) {
             this.statefulEngineOptions = statefulEngineOptions;
             return this;
         }
-
         public Builder statefulRuleGroupReferences(@Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences) {
             this.statefulRuleGroupReferences = statefulRuleGroupReferences;
             return this;
         }
-
+        public Builder statefulRuleGroupReferences(FirewallPolicyStatefulRuleGroupReference... statefulRuleGroupReferences) {
+            return statefulRuleGroupReferences(List.of(statefulRuleGroupReferences));
+        }
         public Builder statelessCustomActions(@Nullable List<FirewallPolicyCustomAction> statelessCustomActions) {
             this.statelessCustomActions = statelessCustomActions;
             return this;
         }
-
+        public Builder statelessCustomActions(FirewallPolicyCustomAction... statelessCustomActions) {
+            return statelessCustomActions(List.of(statelessCustomActions));
+        }
         public Builder statelessDefaultActions(List<String> statelessDefaultActions) {
             this.statelessDefaultActions = Objects.requireNonNull(statelessDefaultActions);
             return this;
         }
-
+        public Builder statelessDefaultActions(String... statelessDefaultActions) {
+            return statelessDefaultActions(List.of(statelessDefaultActions));
+        }
         public Builder statelessFragmentDefaultActions(List<String> statelessFragmentDefaultActions) {
             this.statelessFragmentDefaultActions = Objects.requireNonNull(statelessFragmentDefaultActions);
             return this;
         }
-
+        public Builder statelessFragmentDefaultActions(String... statelessFragmentDefaultActions) {
+            return statelessFragmentDefaultActions(List.of(statelessFragmentDefaultActions));
+        }
         public Builder statelessRuleGroupReferences(@Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
             this.statelessRuleGroupReferences = statelessRuleGroupReferences;
             return this;
         }
-        public FirewallPolicy build() {
+        public Builder statelessRuleGroupReferences(FirewallPolicyStatelessRuleGroupReference... statelessRuleGroupReferences) {
+            return statelessRuleGroupReferences(List.of(statelessRuleGroupReferences));
+        }        public FirewallPolicy build() {
             return new FirewallPolicy(statefulDefaultActions, statefulEngineOptions, statefulRuleGroupReferences, statelessCustomActions, statelessDefaultActions, statelessFragmentDefaultActions, statelessRuleGroupReferences);
         }
     }

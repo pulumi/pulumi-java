@@ -52,12 +52,10 @@ public final class ClusterMasterAuthClientCertificateConfigGetArgs extends io.pu
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }
-
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
             this.issueClientCertificate = Output.of(Objects.requireNonNull(issueClientCertificate));
             return this;
-        }
-        public ClusterMasterAuthClientCertificateConfigGetArgs build() {
+        }        public ClusterMasterAuthClientCertificateConfigGetArgs build() {
             return new ClusterMasterAuthClientCertificateConfigGetArgs(issueClientCertificate);
         }
     }

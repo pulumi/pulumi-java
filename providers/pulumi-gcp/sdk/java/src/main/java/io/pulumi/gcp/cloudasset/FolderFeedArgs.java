@@ -189,82 +189,72 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
             this.assetNames = assetNames;
             return this;
         }
-
         public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Output.ofNullable(assetNames);
             return this;
         }
-
+        public Builder assetNames(String... assetNames) {
+            return assetNames(List.of(assetNames));
+        }
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
-
         public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Output.ofNullable(assetTypes);
             return this;
         }
-
+        public Builder assetTypes(String... assetTypes) {
+            return assetTypes(List.of(assetTypes));
+        }
         public Builder billingProject(Output<String> billingProject) {
             this.billingProject = Objects.requireNonNull(billingProject);
             return this;
         }
-
         public Builder billingProject(String billingProject) {
             this.billingProject = Output.of(Objects.requireNonNull(billingProject));
             return this;
         }
-
         public Builder condition(@Nullable Output<FolderFeedConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable FolderFeedConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder feedId(Output<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
-
         public Builder feedId(String feedId) {
             this.feedId = Output.of(Objects.requireNonNull(feedId));
             return this;
         }
-
         public Builder feedOutputConfig(Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
-
         public Builder feedOutputConfig(FolderFeedFeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
-
         public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
-        }
-        public FolderFeedArgs build() {
+        }        public FolderFeedArgs build() {
             return new FolderFeedArgs(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, folder);
         }
     }

@@ -95,32 +95,29 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             this.fqdns = fqdns;
             return this;
         }
-
         public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = Output.ofNullable(fqdns);
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
-        }
-        public ManagedPrivateEndpointArgs build() {
+        }        public ManagedPrivateEndpointArgs build() {
             return new ManagedPrivateEndpointArgs(fqdns, groupId, privateLinkResourceId);
         }
     }

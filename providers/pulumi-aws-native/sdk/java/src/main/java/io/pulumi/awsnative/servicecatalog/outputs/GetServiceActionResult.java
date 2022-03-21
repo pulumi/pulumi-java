@@ -91,32 +91,29 @@ public final class GetServiceActionResult {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder definition(@Nullable List<ServiceActionDefinitionParameter> definition) {
             this.definition = definition;
             return this;
         }
-
+        public Builder definition(ServiceActionDefinitionParameter... definition) {
+            return definition(List.of(definition));
+        }
         public Builder definitionType(@Nullable ServiceActionDefinitionType definitionType) {
             this.definitionType = definitionType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetServiceActionResult build() {
+        }        public GetServiceActionResult build() {
             return new GetServiceActionResult(acceptLanguage, definition, definitionType, description, id, name);
         }
     }

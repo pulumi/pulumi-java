@@ -84,32 +84,26 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
             this.csv = csv;
             return this;
         }
-
         public Builder csv(@Nullable DatasetCsvOptionsArgs csv) {
             this.csv = Output.ofNullable(csv);
             return this;
         }
-
         public Builder excel(@Nullable Output<DatasetExcelOptionsArgs> excel) {
             this.excel = excel;
             return this;
         }
-
         public Builder excel(@Nullable DatasetExcelOptionsArgs excel) {
             this.excel = Output.ofNullable(excel);
             return this;
         }
-
         public Builder json(@Nullable Output<DatasetJsonOptionsArgs> json) {
             this.json = json;
             return this;
         }
-
         public Builder json(@Nullable DatasetJsonOptionsArgs json) {
             this.json = Output.ofNullable(json);
             return this;
-        }
-        public DatasetFormatOptionsArgs build() {
+        }        public DatasetFormatOptionsArgs build() {
             return new DatasetFormatOptionsArgs(csv, excel, json);
         }
     }

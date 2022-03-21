@@ -255,132 +255,112 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder deleteProtection(@Nullable Output<Boolean> deleteProtection) {
             this.deleteProtection = deleteProtection;
             return this;
         }
-
         public Builder deleteProtection(@Nullable Boolean deleteProtection) {
             this.deleteProtection = Output.ofNullable(deleteProtection);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder firewallPolicyArn(@Nullable Output<String> firewallPolicyArn) {
             this.firewallPolicyArn = firewallPolicyArn;
             return this;
         }
-
         public Builder firewallPolicyArn(@Nullable String firewallPolicyArn) {
             this.firewallPolicyArn = Output.ofNullable(firewallPolicyArn);
             return this;
         }
-
         public Builder firewallPolicyChangeProtection(@Nullable Output<Boolean> firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
             return this;
         }
-
         public Builder firewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = Output.ofNullable(firewallPolicyChangeProtection);
             return this;
         }
-
         public Builder firewallStatuses(@Nullable Output<List<FirewallFirewallStatusGetArgs>> firewallStatuses) {
             this.firewallStatuses = firewallStatuses;
             return this;
         }
-
         public Builder firewallStatuses(@Nullable List<FirewallFirewallStatusGetArgs> firewallStatuses) {
             this.firewallStatuses = Output.ofNullable(firewallStatuses);
             return this;
         }
-
+        public Builder firewallStatuses(FirewallFirewallStatusGetArgs... firewallStatuses) {
+            return firewallStatuses(List.of(firewallStatuses));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder subnetChangeProtection(@Nullable Output<Boolean> subnetChangeProtection) {
             this.subnetChangeProtection = subnetChangeProtection;
             return this;
         }
-
         public Builder subnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
             this.subnetChangeProtection = Output.ofNullable(subnetChangeProtection);
             return this;
         }
-
         public Builder subnetMappings(@Nullable Output<List<FirewallSubnetMappingGetArgs>> subnetMappings) {
             this.subnetMappings = subnetMappings;
             return this;
         }
-
         public Builder subnetMappings(@Nullable List<FirewallSubnetMappingGetArgs> subnetMappings) {
             this.subnetMappings = Output.ofNullable(subnetMappings);
             return this;
         }
-
+        public Builder subnetMappings(FirewallSubnetMappingGetArgs... subnetMappings) {
+            return subnetMappings(List.of(subnetMappings));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder updateToken(@Nullable Output<String> updateToken) {
             this.updateToken = updateToken;
             return this;
         }
-
         public Builder updateToken(@Nullable String updateToken) {
             this.updateToken = Output.ofNullable(updateToken);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public FirewallState build() {
+        }        public FirewallState build() {
             return new FirewallState(arn, deleteProtection, description, firewallPolicyArn, firewallPolicyChangeProtection, firewallStatuses, name, subnetChangeProtection, subnetMappings, tags, tagsAll, updateToken, vpcId);
         }
     }

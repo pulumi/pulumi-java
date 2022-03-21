@@ -95,32 +95,32 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             this.blobListBlobPath = blobListBlobPath;
             return this;
         }
-
         public Builder blobListBlobPath(@Nullable String blobListBlobPath) {
             this.blobListBlobPath = Output.ofNullable(blobListBlobPath);
             return this;
         }
-
         public Builder blobPath(@Nullable Output<List<String>> blobPath) {
             this.blobPath = blobPath;
             return this;
         }
-
         public Builder blobPath(@Nullable List<String> blobPath) {
             this.blobPath = Output.ofNullable(blobPath);
             return this;
         }
-
+        public Builder blobPath(String... blobPath) {
+            return blobPath(List.of(blobPath));
+        }
         public Builder blobPathPrefix(@Nullable Output<List<String>> blobPathPrefix) {
             this.blobPathPrefix = blobPathPrefix;
             return this;
         }
-
         public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
             this.blobPathPrefix = Output.ofNullable(blobPathPrefix);
             return this;
         }
-        public ExportArgs build() {
+        public Builder blobPathPrefix(String... blobPathPrefix) {
+            return blobPathPrefix(List.of(blobPathPrefix));
+        }        public ExportArgs build() {
             return new ExportArgs(blobListBlobPath, blobPath, blobPathPrefix);
         }
     }

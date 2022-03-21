@@ -161,72 +161,58 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder numberOfProbes(@Nullable Output<Integer> numberOfProbes) {
             this.numberOfProbes = numberOfProbes;
             return this;
         }
-
         public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
             this.numberOfProbes = Output.ofNullable(numberOfProbes);
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder protocol(Output<Either<String,ProbeProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,ProbeProtocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder requestPath(@Nullable Output<String> requestPath) {
             this.requestPath = requestPath;
             return this;
         }
-
         public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = Output.ofNullable(requestPath);
             return this;
-        }
-        public ProbeArgs build() {
+        }        public ProbeArgs build() {
             return new ProbeArgs(id, intervalInSeconds, name, numberOfProbes, port, protocol, requestPath);
         }
     }

@@ -76,12 +76,10 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AcceleratorConfigResponse build() {
+        }        public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(coreCount, type);
         }
     }

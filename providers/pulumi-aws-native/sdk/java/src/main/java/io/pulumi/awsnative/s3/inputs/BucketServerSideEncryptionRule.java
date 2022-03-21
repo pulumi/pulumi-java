@@ -75,12 +75,10 @@ public final class BucketServerSideEncryptionRule extends io.pulumi.resources.In
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
-
         public Builder serverSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault) {
             this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
             return this;
-        }
-        public BucketServerSideEncryptionRule build() {
+        }        public BucketServerSideEncryptionRule build() {
             return new BucketServerSideEncryptionRule(bucketKeyEnabled, serverSideEncryptionByDefault);
         }
     }

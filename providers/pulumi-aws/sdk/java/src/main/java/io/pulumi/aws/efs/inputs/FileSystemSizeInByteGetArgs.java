@@ -90,32 +90,26 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder valueInIa(@Nullable Output<Integer> valueInIa) {
             this.valueInIa = valueInIa;
             return this;
         }
-
         public Builder valueInIa(@Nullable Integer valueInIa) {
             this.valueInIa = Output.ofNullable(valueInIa);
             return this;
         }
-
         public Builder valueInStandard(@Nullable Output<Integer> valueInStandard) {
             this.valueInStandard = valueInStandard;
             return this;
         }
-
         public Builder valueInStandard(@Nullable Integer valueInStandard) {
             this.valueInStandard = Output.ofNullable(valueInStandard);
             return this;
-        }
-        public FileSystemSizeInByteGetArgs build() {
+        }        public FileSystemSizeInByteGetArgs build() {
             return new FileSystemSizeInByteGetArgs(value, valueInIa, valueInStandard);
         }
     }

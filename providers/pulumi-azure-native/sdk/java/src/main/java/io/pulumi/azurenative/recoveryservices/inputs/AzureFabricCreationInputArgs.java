@@ -79,22 +79,18 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
-        }
-        public AzureFabricCreationInputArgs build() {
+        }        public AzureFabricCreationInputArgs build() {
             return new AzureFabricCreationInputArgs(instanceType, location);
         }
     }

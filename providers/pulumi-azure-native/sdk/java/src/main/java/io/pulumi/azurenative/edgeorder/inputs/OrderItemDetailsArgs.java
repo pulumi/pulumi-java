@@ -115,42 +115,37 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
             this.notificationEmailList = notificationEmailList;
             return this;
         }
-
         public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
             this.notificationEmailList = Output.ofNullable(notificationEmailList);
             return this;
         }
-
+        public Builder notificationEmailList(String... notificationEmailList) {
+            return notificationEmailList(List.of(notificationEmailList));
+        }
         public Builder orderItemType(Output<Either<String,OrderItemType>> orderItemType) {
             this.orderItemType = Objects.requireNonNull(orderItemType);
             return this;
         }
-
         public Builder orderItemType(Either<String,OrderItemType> orderItemType) {
             this.orderItemType = Output.of(Objects.requireNonNull(orderItemType));
             return this;
         }
-
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
-
         public Builder preferences(@Nullable PreferencesArgs preferences) {
             this.preferences = Output.ofNullable(preferences);
             return this;
         }
-
         public Builder productDetails(Output<ProductDetailsArgs> productDetails) {
             this.productDetails = Objects.requireNonNull(productDetails);
             return this;
         }
-
         public Builder productDetails(ProductDetailsArgs productDetails) {
             this.productDetails = Output.of(Objects.requireNonNull(productDetails));
             return this;
-        }
-        public OrderItemDetailsArgs build() {
+        }        public OrderItemDetailsArgs build() {
             return new OrderItemDetailsArgs(notificationEmailList, orderItemType, preferences, productDetails);
         }
     }

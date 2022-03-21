@@ -85,17 +85,14 @@ public final class RangePartitioningRangeResponse {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
-        }
-        public RangePartitioningRangeResponse build() {
+        }        public RangePartitioningRangeResponse build() {
             return new RangePartitioningRangeResponse(end, interval, start);
         }
     }

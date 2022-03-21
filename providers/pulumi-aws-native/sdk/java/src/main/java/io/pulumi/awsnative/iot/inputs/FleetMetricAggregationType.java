@@ -77,12 +77,13 @@ public final class FleetMetricAggregationType extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public FleetMetricAggregationType build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public FleetMetricAggregationType build() {
             return new FleetMetricAggregationType(name, values);
         }
     }

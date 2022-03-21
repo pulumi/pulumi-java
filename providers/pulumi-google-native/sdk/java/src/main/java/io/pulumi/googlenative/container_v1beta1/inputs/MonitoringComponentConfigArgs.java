@@ -62,12 +62,13 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
             this.enableComponents = enableComponents;
             return this;
         }
-
         public Builder enableComponents(@Nullable List<MonitoringComponentConfigEnableComponentsItem> enableComponents) {
             this.enableComponents = Output.ofNullable(enableComponents);
             return this;
         }
-        public MonitoringComponentConfigArgs build() {
+        public Builder enableComponents(MonitoringComponentConfigEnableComponentsItem... enableComponents) {
+            return enableComponents(List.of(enableComponents));
+        }        public MonitoringComponentConfigArgs build() {
             return new MonitoringComponentConfigArgs(enableComponents);
         }
     }

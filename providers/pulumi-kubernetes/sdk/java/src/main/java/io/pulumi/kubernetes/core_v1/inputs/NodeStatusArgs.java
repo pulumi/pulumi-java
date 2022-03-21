@@ -236,112 +236,105 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.addresses = addresses;
             return this;
         }
-
         public Builder addresses(@Nullable List<NodeAddressArgs> addresses) {
             this.addresses = Output.ofNullable(addresses);
             return this;
         }
-
+        public Builder addresses(NodeAddressArgs... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder allocatable(@Nullable Output<Map<String,String>> allocatable) {
             this.allocatable = allocatable;
             return this;
         }
-
         public Builder allocatable(@Nullable Map<String,String> allocatable) {
             this.allocatable = Output.ofNullable(allocatable);
             return this;
         }
-
         public Builder capacity(@Nullable Output<Map<String,String>> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<NodeConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<NodeConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(NodeConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder config(@Nullable Output<NodeConfigStatusArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable NodeConfigStatusArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder daemonEndpoints(@Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints) {
             this.daemonEndpoints = daemonEndpoints;
             return this;
         }
-
         public Builder daemonEndpoints(@Nullable NodeDaemonEndpointsArgs daemonEndpoints) {
             this.daemonEndpoints = Output.ofNullable(daemonEndpoints);
             return this;
         }
-
         public Builder images(@Nullable Output<List<ContainerImageArgs>> images) {
             this.images = images;
             return this;
         }
-
         public Builder images(@Nullable List<ContainerImageArgs> images) {
             this.images = Output.ofNullable(images);
             return this;
         }
-
+        public Builder images(ContainerImageArgs... images) {
+            return images(List.of(images));
+        }
         public Builder nodeInfo(@Nullable Output<NodeSystemInfoArgs> nodeInfo) {
             this.nodeInfo = nodeInfo;
             return this;
         }
-
         public Builder nodeInfo(@Nullable NodeSystemInfoArgs nodeInfo) {
             this.nodeInfo = Output.ofNullable(nodeInfo);
             return this;
         }
-
         public Builder phase(@Nullable Output<String> phase) {
             this.phase = phase;
             return this;
         }
-
         public Builder phase(@Nullable String phase) {
             this.phase = Output.ofNullable(phase);
             return this;
         }
-
         public Builder volumesAttached(@Nullable Output<List<AttachedVolumeArgs>> volumesAttached) {
             this.volumesAttached = volumesAttached;
             return this;
         }
-
         public Builder volumesAttached(@Nullable List<AttachedVolumeArgs> volumesAttached) {
             this.volumesAttached = Output.ofNullable(volumesAttached);
             return this;
         }
-
+        public Builder volumesAttached(AttachedVolumeArgs... volumesAttached) {
+            return volumesAttached(List.of(volumesAttached));
+        }
         public Builder volumesInUse(@Nullable Output<List<String>> volumesInUse) {
             this.volumesInUse = volumesInUse;
             return this;
         }
-
         public Builder volumesInUse(@Nullable List<String> volumesInUse) {
             this.volumesInUse = Output.ofNullable(volumesInUse);
             return this;
         }
-        public NodeStatusArgs build() {
+        public Builder volumesInUse(String... volumesInUse) {
+            return volumesInUse(List.of(volumesInUse));
+        }        public NodeStatusArgs build() {
             return new NodeStatusArgs(addresses, allocatable, capacity, conditions, config, daemonEndpoints, images, nodeInfo, phase, volumesAttached, volumesInUse);
         }
     }

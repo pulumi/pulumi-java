@@ -80,32 +80,35 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
             this.excludePaths = excludePaths;
             return this;
         }
-
         public Builder excludePaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> excludePaths) {
             this.excludePaths = Output.ofNullable(excludePaths);
             return this;
         }
-
+        public Builder excludePaths(NetworkInsightsAccessScopeAccessScopePathRequestArgs... excludePaths) {
+            return excludePaths(List.of(excludePaths));
+        }
         public Builder matchPaths(@Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths) {
             this.matchPaths = matchPaths;
             return this;
         }
-
         public Builder matchPaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> matchPaths) {
             this.matchPaths = Output.ofNullable(matchPaths);
             return this;
         }
-
+        public Builder matchPaths(NetworkInsightsAccessScopeAccessScopePathRequestArgs... matchPaths) {
+            return matchPaths(List.of(matchPaths));
+        }
         public Builder tags(@Nullable Output<List<NetworkInsightsAccessScopeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsAccessScopeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public NetworkInsightsAccessScopeArgs build() {
+        public Builder tags(NetworkInsightsAccessScopeTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public NetworkInsightsAccessScopeArgs build() {
             return new NetworkInsightsAccessScopeArgs(excludePaths, matchPaths, tags);
         }
     }

@@ -140,62 +140,59 @@ public final class VpcDhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder domainNameServers(@Nullable Output<List<String>> domainNameServers) {
             this.domainNameServers = domainNameServers;
             return this;
         }
-
         public Builder domainNameServers(@Nullable List<String> domainNameServers) {
             this.domainNameServers = Output.ofNullable(domainNameServers);
             return this;
         }
-
+        public Builder domainNameServers(String... domainNameServers) {
+            return domainNameServers(List.of(domainNameServers));
+        }
         public Builder netbiosNameServers(@Nullable Output<List<String>> netbiosNameServers) {
             this.netbiosNameServers = netbiosNameServers;
             return this;
         }
-
         public Builder netbiosNameServers(@Nullable List<String> netbiosNameServers) {
             this.netbiosNameServers = Output.ofNullable(netbiosNameServers);
             return this;
         }
-
+        public Builder netbiosNameServers(String... netbiosNameServers) {
+            return netbiosNameServers(List.of(netbiosNameServers));
+        }
         public Builder netbiosNodeType(@Nullable Output<String> netbiosNodeType) {
             this.netbiosNodeType = netbiosNodeType;
             return this;
         }
-
         public Builder netbiosNodeType(@Nullable String netbiosNodeType) {
             this.netbiosNodeType = Output.ofNullable(netbiosNodeType);
             return this;
         }
-
         public Builder ntpServers(@Nullable Output<List<String>> ntpServers) {
             this.ntpServers = ntpServers;
             return this;
         }
-
         public Builder ntpServers(@Nullable List<String> ntpServers) {
             this.ntpServers = Output.ofNullable(ntpServers);
             return this;
         }
-
+        public Builder ntpServers(String... ntpServers) {
+            return ntpServers(List.of(ntpServers));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VpcDhcpOptionsArgs build() {
+        }        public VpcDhcpOptionsArgs build() {
             return new VpcDhcpOptionsArgs(domainName, domainNameServers, netbiosNameServers, netbiosNodeType, ntpServers, tags);
         }
     }

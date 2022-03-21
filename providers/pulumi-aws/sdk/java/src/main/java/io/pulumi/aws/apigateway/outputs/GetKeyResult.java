@@ -167,42 +167,34 @@ public final class GetKeyResult {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetKeyResult build() {
+        }        public GetKeyResult build() {
             return new GetKeyResult(createdDate, description, enabled, id, lastUpdatedDate, name, tags, value);
         }
     }

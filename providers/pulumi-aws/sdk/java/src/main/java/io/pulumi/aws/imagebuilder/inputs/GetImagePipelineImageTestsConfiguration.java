@@ -73,12 +73,10 @@ public final class GetImagePipelineImageTestsConfiguration extends io.pulumi.res
             this.imageTestsEnabled = Objects.requireNonNull(imageTestsEnabled);
             return this;
         }
-
         public Builder timeoutMinutes(Integer timeoutMinutes) {
             this.timeoutMinutes = Objects.requireNonNull(timeoutMinutes);
             return this;
-        }
-        public GetImagePipelineImageTestsConfiguration build() {
+        }        public GetImagePipelineImageTestsConfiguration build() {
             return new GetImagePipelineImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
         }
     }

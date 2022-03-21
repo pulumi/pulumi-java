@@ -58,8 +58,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
-        }
-        public NotificationConfigResponse build() {
+        }        public NotificationConfigResponse build() {
             return new NotificationConfigResponse(pubsubTopic);
         }
     }

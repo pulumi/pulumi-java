@@ -132,52 +132,42 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
             this.proxyBind = proxyBind;
             return this;
         }
-
         public Builder proxyBind(@Nullable Boolean proxyBind) {
             this.proxyBind = Output.ofNullable(proxyBind);
             return this;
         }
-
         public Builder urlMap(Output<String> urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public Builder urlMap(String urlMap) {
             this.urlMap = Output.of(Objects.requireNonNull(urlMap));
             return this;
-        }
-        public TargetHttpProxyArgs build() {
+        }        public TargetHttpProxyArgs build() {
             return new TargetHttpProxyArgs(description, name, project, proxyBind, urlMap);
         }
     }

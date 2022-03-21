@@ -111,42 +111,40 @@ public final class RouteSpecHttpRouteRetryPolicyGetArgs extends io.pulumi.resour
             this.httpRetryEvents = httpRetryEvents;
             return this;
         }
-
         public Builder httpRetryEvents(@Nullable List<String> httpRetryEvents) {
             this.httpRetryEvents = Output.ofNullable(httpRetryEvents);
             return this;
         }
-
+        public Builder httpRetryEvents(String... httpRetryEvents) {
+            return httpRetryEvents(List.of(httpRetryEvents));
+        }
         public Builder maxRetries(Output<Integer> maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Output.of(Objects.requireNonNull(maxRetries));
             return this;
         }
-
         public Builder perRetryTimeout(Output<RouteSpecHttpRouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout) {
             this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
             return this;
         }
-
         public Builder perRetryTimeout(RouteSpecHttpRouteRetryPolicyPerRetryTimeoutGetArgs perRetryTimeout) {
             this.perRetryTimeout = Output.of(Objects.requireNonNull(perRetryTimeout));
             return this;
         }
-
         public Builder tcpRetryEvents(@Nullable Output<List<String>> tcpRetryEvents) {
             this.tcpRetryEvents = tcpRetryEvents;
             return this;
         }
-
         public Builder tcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
             this.tcpRetryEvents = Output.ofNullable(tcpRetryEvents);
             return this;
         }
-        public RouteSpecHttpRouteRetryPolicyGetArgs build() {
+        public Builder tcpRetryEvents(String... tcpRetryEvents) {
+            return tcpRetryEvents(List.of(tcpRetryEvents));
+        }        public RouteSpecHttpRouteRetryPolicyGetArgs build() {
             return new RouteSpecHttpRouteRetryPolicyGetArgs(httpRetryEvents, maxRetries, perRetryTimeout, tcpRetryEvents);
         }
     }

@@ -78,22 +78,18 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
             this.headerName = headerName;
             return this;
         }
-
         public Builder headerName(@Nullable String headerName) {
             this.headerName = Output.ofNullable(headerName);
             return this;
         }
-
         public Builder headerValue(@Nullable Output<String> headerValue) {
             this.headerValue = headerValue;
             return this;
         }
-
         public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = Output.ofNullable(headerValue);
             return this;
-        }
-        public ApplicationGatewayHeaderConfigurationArgs build() {
+        }        public ApplicationGatewayHeaderConfigurationArgs build() {
             return new ApplicationGatewayHeaderConfigurationArgs(headerName, headerValue);
         }
     }

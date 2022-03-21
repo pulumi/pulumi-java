@@ -1,7 +1,5 @@
 package staticwebsite;
 
-import java.util.List;
-
 import io.pulumi.Stack;
 import io.pulumi.azurenative.cdn.*;
 import io.pulumi.azurenative.cdn.enums.QueryStringCachingBehavior;
@@ -73,11 +71,11 @@ public final class MyStack extends Stack {
                 EndpointArgs.builder().isHttpAllowed(false)
                         .isHttpsAllowed(true)
                         .originHostHeader(endpointOrigin)
-                        .origins(List.of(DeepCreatedOriginArgs.builder()
+                        .origins(DeepCreatedOriginArgs.builder()
                                 .hostName(endpointOrigin)
                                 .httpsPort(443)
                                 .name("origin-storage-account")
-                                .build()))
+                                .build())
                         .profileName(profile.getName())
                         .queryStringCachingBehavior(QueryStringCachingBehavior.NotSet)
                         .resourceGroupName(resourceGroup.getName())

@@ -124,52 +124,45 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder interpreter(Output<String> interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
-
         public Builder interpreter(String interpreter) {
             this.interpreter = Output.of(Objects.requireNonNull(interpreter));
             return this;
         }
-
         public Builder outputFilePath(@Nullable Output<String> outputFilePath) {
             this.outputFilePath = outputFilePath;
             return this;
         }
-
         public Builder outputFilePath(@Nullable String outputFilePath) {
             this.outputFilePath = Output.ofNullable(outputFilePath);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs(args, file, interpreter, outputFilePath, script);
         }
     }

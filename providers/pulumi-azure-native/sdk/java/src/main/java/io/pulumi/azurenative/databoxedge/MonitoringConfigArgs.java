@@ -107,42 +107,37 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder metricConfigurations(Output<List<MetricConfigurationArgs>> metricConfigurations) {
             this.metricConfigurations = Objects.requireNonNull(metricConfigurations);
             return this;
         }
-
         public Builder metricConfigurations(List<MetricConfigurationArgs> metricConfigurations) {
             this.metricConfigurations = Output.of(Objects.requireNonNull(metricConfigurations));
             return this;
         }
-
+        public Builder metricConfigurations(MetricConfigurationArgs... metricConfigurations) {
+            return metricConfigurations(List.of(metricConfigurations));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
-        }
-        public MonitoringConfigArgs build() {
+        }        public MonitoringConfigArgs build() {
             return new MonitoringConfigArgs(deviceName, metricConfigurations, resourceGroupName, roleName);
         }
     }

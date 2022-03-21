@@ -73,12 +73,13 @@ public final class LabelSelector {
             this.matchExpressions = matchExpressions;
             return this;
         }
-
+        public Builder matchExpressions(LabelSelectorRequirement... matchExpressions) {
+            return matchExpressions(List.of(matchExpressions));
+        }
         public Builder matchLabels(@Nullable Map<String,String> matchLabels) {
             this.matchLabels = matchLabels;
             return this;
-        }
-        public LabelSelector build() {
+        }        public LabelSelector build() {
             return new LabelSelector(matchExpressions, matchLabels);
         }
     }

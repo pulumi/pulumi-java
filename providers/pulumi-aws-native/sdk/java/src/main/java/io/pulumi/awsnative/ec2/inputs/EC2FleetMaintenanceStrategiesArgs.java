@@ -53,12 +53,10 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
             this.capacityRebalance = capacityRebalance;
             return this;
         }
-
         public Builder capacityRebalance(@Nullable EC2FleetCapacityRebalanceArgs capacityRebalance) {
             this.capacityRebalance = Output.ofNullable(capacityRebalance);
             return this;
-        }
-        public EC2FleetMaintenanceStrategiesArgs build() {
+        }        public EC2FleetMaintenanceStrategiesArgs build() {
             return new EC2FleetMaintenanceStrategiesArgs(capacityRebalance);
         }
     }

@@ -155,37 +155,33 @@ public final class AzureFirewallApplicationRuleCollectionResponse {
             this.action = action;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder rules(@Nullable List<AzureFirewallApplicationRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
-        public AzureFirewallApplicationRuleCollectionResponse build() {
+        public Builder rules(AzureFirewallApplicationRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public AzureFirewallApplicationRuleCollectionResponse build() {
             return new AzureFirewallApplicationRuleCollectionResponse(action, etag, id, name, priority, provisioningState, rules);
         }
     }

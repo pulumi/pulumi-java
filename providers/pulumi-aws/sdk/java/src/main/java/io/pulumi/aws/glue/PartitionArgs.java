@@ -137,62 +137,53 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder partitionValues(Output<List<String>> partitionValues) {
             this.partitionValues = Objects.requireNonNull(partitionValues);
             return this;
         }
-
         public Builder partitionValues(List<String> partitionValues) {
             this.partitionValues = Output.of(Objects.requireNonNull(partitionValues));
             return this;
         }
-
+        public Builder partitionValues(String... partitionValues) {
+            return partitionValues(List.of(partitionValues));
+        }
         public Builder storageDescriptor(@Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
-
         public Builder storageDescriptor(@Nullable PartitionStorageDescriptorArgs storageDescriptor) {
             this.storageDescriptor = Output.ofNullable(storageDescriptor);
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public PartitionArgs build() {
+        }        public PartitionArgs build() {
             return new PartitionArgs(catalogId, databaseName, parameters, partitionValues, storageDescriptor, tableName);
         }
     }

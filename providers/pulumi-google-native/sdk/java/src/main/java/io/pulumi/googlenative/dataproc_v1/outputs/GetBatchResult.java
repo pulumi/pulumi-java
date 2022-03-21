@@ -319,87 +319,73 @@ public final class GetBatchResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder creator(String creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
-
         public Builder environmentConfig(EnvironmentConfigResponse environmentConfig) {
             this.environmentConfig = Objects.requireNonNull(environmentConfig);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder pysparkBatch(PySparkBatchResponse pysparkBatch) {
             this.pysparkBatch = Objects.requireNonNull(pysparkBatch);
             return this;
         }
-
         public Builder runtimeConfig(RuntimeConfigResponse runtimeConfig) {
             this.runtimeConfig = Objects.requireNonNull(runtimeConfig);
             return this;
         }
-
         public Builder runtimeInfo(RuntimeInfoResponse runtimeInfo) {
             this.runtimeInfo = Objects.requireNonNull(runtimeInfo);
             return this;
         }
-
         public Builder sparkBatch(SparkBatchResponse sparkBatch) {
             this.sparkBatch = Objects.requireNonNull(sparkBatch);
             return this;
         }
-
         public Builder sparkRBatch(SparkRBatchResponse sparkRBatch) {
             this.sparkRBatch = Objects.requireNonNull(sparkRBatch);
             return this;
         }
-
         public Builder sparkSqlBatch(SparkSqlBatchResponse sparkSqlBatch) {
             this.sparkSqlBatch = Objects.requireNonNull(sparkSqlBatch);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateHistory(List<StateHistoryResponse> stateHistory) {
             this.stateHistory = Objects.requireNonNull(stateHistory);
             return this;
         }
-
+        public Builder stateHistory(StateHistoryResponse... stateHistory) {
+            return stateHistory(List.of(stateHistory));
+        }
         public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
-
         public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
-        }
-        public GetBatchResult build() {
+        }        public GetBatchResult build() {
             return new GetBatchResult(createTime, creator, environmentConfig, labels, name, operation, pysparkBatch, runtimeConfig, runtimeInfo, sparkBatch, sparkRBatch, sparkSqlBatch, state, stateHistory, stateMessage, stateTime, uuid);
         }
     }

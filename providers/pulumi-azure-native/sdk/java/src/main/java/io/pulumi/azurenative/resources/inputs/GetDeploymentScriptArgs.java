@@ -72,12 +72,10 @@ public final class GetDeploymentScriptArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder scriptName(String scriptName) {
             this.scriptName = Objects.requireNonNull(scriptName);
             return this;
-        }
-        public GetDeploymentScriptArgs build() {
+        }        public GetDeploymentScriptArgs build() {
             return new GetDeploymentScriptArgs(resourceGroupName, scriptName);
         }
     }

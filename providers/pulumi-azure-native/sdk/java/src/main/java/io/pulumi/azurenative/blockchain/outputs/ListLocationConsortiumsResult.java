@@ -54,7 +54,9 @@ public final class ListLocationConsortiumsResult {
             this.value = value;
             return this;
         }
-        public ListLocationConsortiumsResult build() {
+        public Builder value(ConsortiumResponse... value) {
+            return value(List.of(value));
+        }        public ListLocationConsortiumsResult build() {
             return new ListLocationConsortiumsResult(value);
         }
     }

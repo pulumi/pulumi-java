@@ -157,72 +157,58 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.dataPolicy = Objects.requireNonNull(dataPolicy);
             return this;
         }
-
         public Builder dataPolicy(Either<String,DataPolicy> dataPolicy) {
             this.dataPolicy = Output.of(Objects.requireNonNull(dataPolicy));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountCredentialId(@Nullable Output<String> storageAccountCredentialId) {
             this.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
-
         public Builder storageAccountCredentialId(@Nullable String storageAccountCredentialId) {
             this.storageAccountCredentialId = Output.ofNullable(storageAccountCredentialId);
             return this;
         }
-
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
         }
-
         public Builder storageAccountStatus(@Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus) {
             this.storageAccountStatus = storageAccountStatus;
             return this;
         }
-
         public Builder storageAccountStatus(@Nullable Either<String,StorageAccountStatus> storageAccountStatus) {
             this.storageAccountStatus = Output.ofNullable(storageAccountStatus);
             return this;
-        }
-        public StorageAccountArgs build() {
+        }        public StorageAccountArgs build() {
             return new StorageAccountArgs(dataPolicy, description, deviceName, resourceGroupName, storageAccountCredentialId, storageAccountName, storageAccountStatus);
         }
     }

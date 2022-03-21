@@ -161,72 +161,64 @@ public final class ClusterClusterConfigMasterConfigGetArgs extends io.pulumi.res
             this.accelerators = accelerators;
             return this;
         }
-
         public Builder accelerators(@Nullable List<ClusterClusterConfigMasterConfigAcceleratorGetArgs> accelerators) {
             this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
-
+        public Builder accelerators(ClusterClusterConfigMasterConfigAcceleratorGetArgs... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder diskConfig(@Nullable Output<ClusterClusterConfigMasterConfigDiskConfigGetArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder diskConfig(@Nullable ClusterClusterConfigMasterConfigDiskConfigGetArgs diskConfig) {
             this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
-
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
-
         public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = Output.ofNullable(instanceNames);
             return this;
         }
-
+        public Builder instanceNames(String... instanceNames) {
+            return instanceNames(List.of(instanceNames));
+        }
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
-
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
-
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Output.ofNullable(numInstances);
             return this;
-        }
-        public ClusterClusterConfigMasterConfigGetArgs build() {
+        }        public ClusterClusterConfigMasterConfigGetArgs build() {
             return new ClusterClusterConfigMasterConfigGetArgs(accelerators, diskConfig, imageUri, instanceNames, machineType, minCpuPlatform, numInstances);
         }
     }

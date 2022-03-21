@@ -104,22 +104,18 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
             this.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
-
         public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             this.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
-
         public Builder catalogPricingTier(@Nullable String catalogPricingTier) {
             this.catalogPricingTier = catalogPricingTier;
             return this;
         }
-
         public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
-        }
-        public IntegrationRuntimeSsisCatalogInfoResponse build() {
+        }        public IntegrationRuntimeSsisCatalogInfoResponse build() {
             return new IntegrationRuntimeSsisCatalogInfoResponse(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint);
         }
     }

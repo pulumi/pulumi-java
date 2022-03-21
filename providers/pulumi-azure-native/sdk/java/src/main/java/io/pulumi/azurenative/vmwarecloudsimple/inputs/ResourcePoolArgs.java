@@ -60,12 +60,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public ResourcePoolArgs build() {
+        }        public ResourcePoolArgs build() {
             return new ResourcePoolArgs(id);
         }
     }

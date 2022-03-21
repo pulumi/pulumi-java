@@ -43,8 +43,7 @@ public final class GetMeshIstioServiceTelemetry {
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetMeshIstioServiceTelemetry build() {
+        }        public GetMeshIstioServiceTelemetry build() {
             return new GetMeshIstioServiceTelemetry(resourceName);
         }
     }

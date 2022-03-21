@@ -104,22 +104,18 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetLongTermRetentionPolicyArgs build() {
+        }        public GetLongTermRetentionPolicyArgs build() {
             return new GetLongTermRetentionPolicyArgs(databaseName, policyName, resourceGroupName, serverName);
         }
     }

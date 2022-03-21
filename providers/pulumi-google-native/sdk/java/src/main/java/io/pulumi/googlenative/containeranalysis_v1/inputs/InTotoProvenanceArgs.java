@@ -106,42 +106,37 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
             this.builderConfig = builderConfig;
             return this;
         }
-
         public Builder builderConfig(@Nullable BuilderConfigArgs builderConfig) {
             this.builderConfig = Output.ofNullable(builderConfig);
             return this;
         }
-
         public Builder materials(@Nullable Output<List<String>> materials) {
             this.materials = materials;
             return this;
         }
-
         public Builder materials(@Nullable List<String> materials) {
             this.materials = Output.ofNullable(materials);
             return this;
         }
-
+        public Builder materials(String... materials) {
+            return materials(List.of(materials));
+        }
         public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable MetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder recipe(@Nullable Output<RecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
-
         public Builder recipe(@Nullable RecipeArgs recipe) {
             this.recipe = Output.ofNullable(recipe);
             return this;
-        }
-        public InTotoProvenanceArgs build() {
+        }        public InTotoProvenanceArgs build() {
             return new InTotoProvenanceArgs(builderConfig, materials, metadata, recipe);
         }
     }

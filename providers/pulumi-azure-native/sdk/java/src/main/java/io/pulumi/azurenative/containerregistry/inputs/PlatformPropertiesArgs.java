@@ -98,32 +98,26 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.architecture = architecture;
             return this;
         }
-
         public Builder architecture(@Nullable Either<String,Architecture> architecture) {
             this.architecture = Output.ofNullable(architecture);
             return this;
         }
-
         public Builder os(Output<Either<String,OS>> os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
-
         public Builder os(Either<String,OS> os) {
             this.os = Output.of(Objects.requireNonNull(os));
             return this;
         }
-
         public Builder variant(@Nullable Output<Either<String,Variant>> variant) {
             this.variant = variant;
             return this;
         }
-
         public Builder variant(@Nullable Either<String,Variant> variant) {
             this.variant = Output.ofNullable(variant);
             return this;
-        }
-        public PlatformPropertiesArgs build() {
+        }        public PlatformPropertiesArgs build() {
             return new PlatformPropertiesArgs(architecture, os, variant);
         }
     }

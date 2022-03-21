@@ -89,17 +89,17 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ports(List<JitNetworkAccessPortRuleResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
+        public Builder ports(JitNetworkAccessPortRuleResponse... ports) {
+            return ports(List.of(ports));
+        }
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
-        }
-        public JitNetworkAccessPolicyVirtualMachineResponse build() {
+        }        public JitNetworkAccessPolicyVirtualMachineResponse build() {
             return new JitNetworkAccessPolicyVirtualMachineResponse(id, ports, publicIpAddress);
         }
     }

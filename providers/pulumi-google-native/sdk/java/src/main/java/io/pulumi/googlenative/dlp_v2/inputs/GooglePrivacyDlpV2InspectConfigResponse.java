@@ -162,37 +162,39 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
             this.customInfoTypes = Objects.requireNonNull(customInfoTypes);
             return this;
         }
-
+        public Builder customInfoTypes(GooglePrivacyDlpV2CustomInfoTypeResponse... customInfoTypes) {
+            return customInfoTypes(List.of(customInfoTypes));
+        }
         public Builder excludeInfoTypes(Boolean excludeInfoTypes) {
             this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes);
             return this;
         }
-
         public Builder includeQuote(Boolean includeQuote) {
             this.includeQuote = Objects.requireNonNull(includeQuote);
             return this;
         }
-
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder limits(GooglePrivacyDlpV2FindingLimitsResponse limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-
         public Builder minLikelihood(String minLikelihood) {
             this.minLikelihood = Objects.requireNonNull(minLikelihood);
             return this;
         }
-
         public Builder ruleSet(List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
             this.ruleSet = Objects.requireNonNull(ruleSet);
             return this;
         }
-        public GooglePrivacyDlpV2InspectConfigResponse build() {
+        public Builder ruleSet(GooglePrivacyDlpV2InspectionRuleSetResponse... ruleSet) {
+            return ruleSet(List.of(ruleSet));
+        }        public GooglePrivacyDlpV2InspectConfigResponse build() {
             return new GooglePrivacyDlpV2InspectConfigResponse(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
         }
     }

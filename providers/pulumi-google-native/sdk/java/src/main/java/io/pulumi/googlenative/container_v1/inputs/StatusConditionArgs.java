@@ -79,22 +79,18 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
             this.canonicalCode = canonicalCode;
             return this;
         }
-
         public Builder canonicalCode(@Nullable StatusConditionCanonicalCode canonicalCode) {
             this.canonicalCode = Output.ofNullable(canonicalCode);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
-        }
-        public StatusConditionArgs build() {
+        }        public StatusConditionArgs build() {
             return new StatusConditionArgs(canonicalCode, message);
         }
     }

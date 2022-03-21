@@ -88,17 +88,14 @@ public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder natRuleName(String natRuleName) {
             this.natRuleName = Objects.requireNonNull(natRuleName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNatRuleArgs build() {
+        }        public GetNatRuleArgs build() {
             return new GetNatRuleArgs(gatewayName, natRuleName, resourceGroupName);
         }
     }

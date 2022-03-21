@@ -94,17 +94,14 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
             this.utilization = Objects.requireNonNull(utilization);
             return this;
         }
-
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public Builder vmwareVmDetails(VmwareVmDetailsResponse vmwareVmDetails) {
             this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
             return this;
-        }
-        public VmUtilizationInfoResponse build() {
+        }        public VmUtilizationInfoResponse build() {
             return new VmUtilizationInfoResponse(utilization, vmId, vmwareVmDetails);
         }
     }

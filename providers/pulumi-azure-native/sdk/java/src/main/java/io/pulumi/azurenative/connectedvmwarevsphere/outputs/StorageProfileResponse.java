@@ -72,12 +72,16 @@ public final class StorageProfileResponse {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(VirtualDiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder scsiControllers(List<VirtualSCSIControllerResponse> scsiControllers) {
             this.scsiControllers = Objects.requireNonNull(scsiControllers);
             return this;
         }
-        public StorageProfileResponse build() {
+        public Builder scsiControllers(VirtualSCSIControllerResponse... scsiControllers) {
+            return scsiControllers(List.of(scsiControllers));
+        }        public StorageProfileResponse build() {
             return new StorageProfileResponse(disks, scsiControllers);
         }
     }

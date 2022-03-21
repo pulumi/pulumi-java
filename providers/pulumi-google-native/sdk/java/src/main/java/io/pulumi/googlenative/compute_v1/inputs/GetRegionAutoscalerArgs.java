@@ -78,17 +78,14 @@ public final class GetRegionAutoscalerArgs extends io.pulumi.resources.InvokeArg
             this.autoscaler = Objects.requireNonNull(autoscaler);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionAutoscalerArgs build() {
+        }        public GetRegionAutoscalerArgs build() {
             return new GetRegionAutoscalerArgs(autoscaler, project, region);
         }
     }

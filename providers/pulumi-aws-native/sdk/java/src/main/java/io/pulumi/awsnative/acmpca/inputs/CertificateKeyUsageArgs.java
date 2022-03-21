@@ -154,92 +154,74 @@ public final class CertificateKeyUsageArgs extends io.pulumi.resources.ResourceA
             this.cRLSign = cRLSign;
             return this;
         }
-
         public Builder cRLSign(@Nullable Boolean cRLSign) {
             this.cRLSign = Output.ofNullable(cRLSign);
             return this;
         }
-
         public Builder dataEncipherment(@Nullable Output<Boolean> dataEncipherment) {
             this.dataEncipherment = dataEncipherment;
             return this;
         }
-
         public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
             this.dataEncipherment = Output.ofNullable(dataEncipherment);
             return this;
         }
-
         public Builder decipherOnly(@Nullable Output<Boolean> decipherOnly) {
             this.decipherOnly = decipherOnly;
             return this;
         }
-
         public Builder decipherOnly(@Nullable Boolean decipherOnly) {
             this.decipherOnly = Output.ofNullable(decipherOnly);
             return this;
         }
-
         public Builder digitalSignature(@Nullable Output<Boolean> digitalSignature) {
             this.digitalSignature = digitalSignature;
             return this;
         }
-
         public Builder digitalSignature(@Nullable Boolean digitalSignature) {
             this.digitalSignature = Output.ofNullable(digitalSignature);
             return this;
         }
-
         public Builder encipherOnly(@Nullable Output<Boolean> encipherOnly) {
             this.encipherOnly = encipherOnly;
             return this;
         }
-
         public Builder encipherOnly(@Nullable Boolean encipherOnly) {
             this.encipherOnly = Output.ofNullable(encipherOnly);
             return this;
         }
-
         public Builder keyAgreement(@Nullable Output<Boolean> keyAgreement) {
             this.keyAgreement = keyAgreement;
             return this;
         }
-
         public Builder keyAgreement(@Nullable Boolean keyAgreement) {
             this.keyAgreement = Output.ofNullable(keyAgreement);
             return this;
         }
-
         public Builder keyCertSign(@Nullable Output<Boolean> keyCertSign) {
             this.keyCertSign = keyCertSign;
             return this;
         }
-
         public Builder keyCertSign(@Nullable Boolean keyCertSign) {
             this.keyCertSign = Output.ofNullable(keyCertSign);
             return this;
         }
-
         public Builder keyEncipherment(@Nullable Output<Boolean> keyEncipherment) {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
             this.keyEncipherment = Output.ofNullable(keyEncipherment);
             return this;
         }
-
         public Builder nonRepudiation(@Nullable Output<Boolean> nonRepudiation) {
             this.nonRepudiation = nonRepudiation;
             return this;
         }
-
         public Builder nonRepudiation(@Nullable Boolean nonRepudiation) {
             this.nonRepudiation = Output.ofNullable(nonRepudiation);
             return this;
-        }
-        public CertificateKeyUsageArgs build() {
+        }        public CertificateKeyUsageArgs build() {
             return new CertificateKeyUsageArgs(cRLSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyCertSign, keyEncipherment, nonRepudiation);
         }
     }

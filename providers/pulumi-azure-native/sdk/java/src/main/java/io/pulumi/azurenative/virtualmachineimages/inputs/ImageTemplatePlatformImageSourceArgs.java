@@ -144,62 +144,50 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
             this.offer = offer;
             return this;
         }
-
         public Builder offer(@Nullable String offer) {
             this.offer = Output.ofNullable(offer);
             return this;
         }
-
         public Builder planInfo(@Nullable Output<PlatformImagePurchasePlanArgs> planInfo) {
             this.planInfo = planInfo;
             return this;
         }
-
         public Builder planInfo(@Nullable PlatformImagePurchasePlanArgs planInfo) {
             this.planInfo = Output.ofNullable(planInfo);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ImageTemplatePlatformImageSourceArgs build() {
+        }        public ImageTemplatePlatformImageSourceArgs build() {
             return new ImageTemplatePlatformImageSourceArgs(offer, planInfo, publisher, sku, type, version);
         }
     }

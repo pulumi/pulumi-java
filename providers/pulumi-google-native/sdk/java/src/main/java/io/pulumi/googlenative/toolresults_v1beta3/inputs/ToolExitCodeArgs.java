@@ -61,12 +61,10 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
             this.number = number;
             return this;
         }
-
         public Builder number(@Nullable Integer number) {
             this.number = Output.ofNullable(number);
             return this;
-        }
-        public ToolExitCodeArgs build() {
+        }        public ToolExitCodeArgs build() {
             return new ToolExitCodeArgs(number);
         }
     }

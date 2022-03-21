@@ -95,17 +95,14 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
             this.isSecret = isSecret;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ArgumentResponse build() {
+        }        public ArgumentResponse build() {
             return new ArgumentResponse(isSecret, name, value);
         }
     }

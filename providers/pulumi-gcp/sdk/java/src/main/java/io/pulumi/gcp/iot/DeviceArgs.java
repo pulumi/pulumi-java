@@ -162,72 +162,61 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.blocked = blocked;
             return this;
         }
-
         public Builder blocked(@Nullable Boolean blocked) {
             this.blocked = Output.ofNullable(blocked);
             return this;
         }
-
         public Builder credentials(@Nullable Output<List<DeviceCredentialArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable List<DeviceCredentialArgs> credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
+        public Builder credentials(DeviceCredentialArgs... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
-
         public Builder gatewayConfig(@Nullable DeviceGatewayConfigArgs gatewayConfig) {
             this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder registry(Output<String> registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
-
         public Builder registry(String registry) {
             this.registry = Output.of(Objects.requireNonNull(registry));
             return this;
-        }
-        public DeviceArgs build() {
+        }        public DeviceArgs build() {
             return new DeviceArgs(blocked, credentials, gatewayConfig, logLevel, metadata, name, registry);
         }
     }

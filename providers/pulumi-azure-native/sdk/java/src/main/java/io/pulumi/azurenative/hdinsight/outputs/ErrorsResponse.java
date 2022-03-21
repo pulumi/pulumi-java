@@ -71,12 +71,10 @@ public final class ErrorsResponse {
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public ErrorsResponse build() {
+        }        public ErrorsResponse build() {
             return new ErrorsResponse(code, message);
         }
     }

@@ -53,12 +53,10 @@ public final class TopicRuleTimestreamDimension {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TopicRuleTimestreamDimension build() {
+        }        public TopicRuleTimestreamDimension build() {
             return new TopicRuleTimestreamDimension(name, value);
         }
     }

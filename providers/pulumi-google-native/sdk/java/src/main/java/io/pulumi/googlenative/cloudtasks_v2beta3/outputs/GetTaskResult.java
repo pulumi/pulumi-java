@@ -234,62 +234,50 @@ public final class GetTaskResult {
             this.appEngineHttpRequest = Objects.requireNonNull(appEngineHttpRequest);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dispatchCount(Integer dispatchCount) {
             this.dispatchCount = Objects.requireNonNull(dispatchCount);
             return this;
         }
-
         public Builder dispatchDeadline(String dispatchDeadline) {
             this.dispatchDeadline = Objects.requireNonNull(dispatchDeadline);
             return this;
         }
-
         public Builder firstAttempt(AttemptResponse firstAttempt) {
             this.firstAttempt = Objects.requireNonNull(firstAttempt);
             return this;
         }
-
         public Builder httpRequest(HttpRequestResponse httpRequest) {
             this.httpRequest = Objects.requireNonNull(httpRequest);
             return this;
         }
-
         public Builder lastAttempt(AttemptResponse lastAttempt) {
             this.lastAttempt = Objects.requireNonNull(lastAttempt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pullMessage(PullMessageResponse pullMessage) {
             this.pullMessage = Objects.requireNonNull(pullMessage);
             return this;
         }
-
         public Builder responseCount(Integer responseCount) {
             this.responseCount = Objects.requireNonNull(responseCount);
             return this;
         }
-
         public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
-
         public Builder view(String view) {
             this.view = Objects.requireNonNull(view);
             return this;
-        }
-        public GetTaskResult build() {
+        }        public GetTaskResult build() {
             return new GetTaskResult(appEngineHttpRequest, createTime, dispatchCount, dispatchDeadline, firstAttempt, httpRequest, lastAttempt, name, pullMessage, responseCount, scheduleTime, view);
         }
     }

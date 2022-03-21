@@ -105,22 +105,21 @@ public final class ProjectServiceCatalogProvisioningDetails {
             this.pathId = pathId;
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-
         public Builder provisioningParameters(@Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-        public ProjectServiceCatalogProvisioningDetails build() {
+        public Builder provisioningParameters(ProjectServiceCatalogProvisioningDetailsProvisioningParameter... provisioningParameters) {
+            return provisioningParameters(List.of(provisioningParameters));
+        }        public ProjectServiceCatalogProvisioningDetails build() {
             return new ProjectServiceCatalogProvisioningDetails(pathId, productId, provisioningArtifactId, provisioningParameters);
         }
     }

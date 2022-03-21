@@ -50,8 +50,7 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling extends io.pul
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public GetClusterAddonsConfigHorizontalPodAutoscaling build() {
+        }        public GetClusterAddonsConfigHorizontalPodAutoscaling build() {
             return new GetClusterAddonsConfigHorizontalPodAutoscaling(disabled);
         }
     }

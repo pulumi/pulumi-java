@@ -58,12 +58,10 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs extends
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs build() {
+        }        public OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs build() {
             return new OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs(labels);
         }
     }

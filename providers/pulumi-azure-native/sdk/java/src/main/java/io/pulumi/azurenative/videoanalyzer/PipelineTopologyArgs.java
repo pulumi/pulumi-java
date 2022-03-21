@@ -211,102 +211,94 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kind(Output<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,Kind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ParameterDeclarationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ParameterDeclarationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(ParameterDeclarationArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder pipelineTopologyName(@Nullable Output<String> pipelineTopologyName) {
             this.pipelineTopologyName = pipelineTopologyName;
             return this;
         }
-
         public Builder pipelineTopologyName(@Nullable String pipelineTopologyName) {
             this.pipelineTopologyName = Output.ofNullable(pipelineTopologyName);
             return this;
         }
-
         public Builder processors(@Nullable Output<List<EncoderProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
-
         public Builder processors(@Nullable List<EncoderProcessorArgs> processors) {
             this.processors = Output.ofNullable(processors);
             return this;
         }
-
+        public Builder processors(EncoderProcessorArgs... processors) {
+            return processors(List.of(processors));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sinks(Output<List<VideoSinkArgs>> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
-
         public Builder sinks(List<VideoSinkArgs> sinks) {
             this.sinks = Output.of(Objects.requireNonNull(sinks));
             return this;
         }
-
+        public Builder sinks(VideoSinkArgs... sinks) {
+            return sinks(List.of(sinks));
+        }
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder sources(Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public Builder sources(List<Either<RtspSourceArgs,VideoSourceArgs>> sources) {
             this.sources = Output.of(Objects.requireNonNull(sources));
             return this;
         }
-        public PipelineTopologyArgs build() {
+        public Builder sources(Either<RtspSourceArgs,VideoSourceArgs>... sources) {
+            return sources(List.of(sources));
+        }        public PipelineTopologyArgs build() {
             return new PipelineTopologyArgs(accountName, description, kind, parameters, pipelineTopologyName, processors, resourceGroupName, sinks, sku, sources);
         }
     }

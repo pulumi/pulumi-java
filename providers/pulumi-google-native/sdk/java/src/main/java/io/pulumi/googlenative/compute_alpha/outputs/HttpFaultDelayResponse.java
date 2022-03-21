@@ -70,12 +70,10 @@ public final class HttpFaultDelayResponse {
             this.fixedDelay = Objects.requireNonNull(fixedDelay);
             return this;
         }
-
         public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
-        }
-        public HttpFaultDelayResponse build() {
+        }        public HttpFaultDelayResponse build() {
             return new HttpFaultDelayResponse(fixedDelay, percentage);
         }
     }

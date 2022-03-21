@@ -71,12 +71,13 @@ public final class AnalysisSourceTemplate {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder dataSetReferences(List<AnalysisDataSetReference> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
-        public AnalysisSourceTemplate build() {
+        public Builder dataSetReferences(AnalysisDataSetReference... dataSetReferences) {
+            return dataSetReferences(List.of(dataSetReferences));
+        }        public AnalysisSourceTemplate build() {
             return new AnalysisSourceTemplate(arn, dataSetReferences);
         }
     }

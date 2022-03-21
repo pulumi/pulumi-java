@@ -106,22 +106,18 @@ public final class RouteSpecGrpcRoute {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder match(@Nullable RouteSpecGrpcRouteMatch match) {
             this.match = match;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RouteSpecGrpcRouteRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder timeout(@Nullable RouteSpecGrpcRouteTimeout timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public RouteSpecGrpcRoute build() {
+        }        public RouteSpecGrpcRoute build() {
             return new RouteSpecGrpcRoute(action, match, retryPolicy, timeout);
         }
     }

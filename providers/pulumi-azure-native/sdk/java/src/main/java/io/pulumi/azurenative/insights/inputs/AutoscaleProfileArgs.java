@@ -131,52 +131,45 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder capacity(ScaleCapacityArgs capacity) {
             this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
-
         public Builder fixedDate(@Nullable Output<TimeWindowArgs> fixedDate) {
             this.fixedDate = fixedDate;
             return this;
         }
-
         public Builder fixedDate(@Nullable TimeWindowArgs fixedDate) {
             this.fixedDate = Output.ofNullable(fixedDate);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder recurrence(@Nullable Output<RecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
-
         public Builder recurrence(@Nullable RecurrenceArgs recurrence) {
             this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
-
         public Builder rules(Output<List<ScaleRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(List<ScaleRuleArgs> rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-        public AutoscaleProfileArgs build() {
+        public Builder rules(ScaleRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public AutoscaleProfileArgs build() {
             return new AutoscaleProfileArgs(capacity, fixedDate, name, recurrence, rules);
         }
     }

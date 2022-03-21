@@ -88,17 +88,14 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
             this.accountResourceName = Objects.requireNonNull(accountResourceName);
             return this;
         }
-
         public Builder extensionResourceName(String extensionResourceName) {
             this.extensionResourceName = Objects.requireNonNull(extensionResourceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExtensionArgs build() {
+        }        public GetExtensionArgs build() {
             return new GetExtensionArgs(accountResourceName, extensionResourceName, resourceGroupName);
         }
     }

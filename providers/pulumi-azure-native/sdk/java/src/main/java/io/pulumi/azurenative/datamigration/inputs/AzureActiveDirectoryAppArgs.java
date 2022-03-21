@@ -93,32 +93,26 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
-
         public Builder appKey(String appKey) {
             this.appKey = Output.of(Objects.requireNonNull(appKey));
             return this;
         }
-
         public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
-        }
-        public AzureActiveDirectoryAppArgs build() {
+        }        public AzureActiveDirectoryAppArgs build() {
             return new AzureActiveDirectoryAppArgs(appKey, applicationId, tenantId);
         }
     }

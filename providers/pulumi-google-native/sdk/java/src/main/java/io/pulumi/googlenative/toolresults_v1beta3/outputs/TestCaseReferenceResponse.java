@@ -85,17 +85,14 @@ public final class TestCaseReferenceResponse {
             this.className = Objects.requireNonNull(className);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder testSuiteName(String testSuiteName) {
             this.testSuiteName = Objects.requireNonNull(testSuiteName);
             return this;
-        }
-        public TestCaseReferenceResponse build() {
+        }        public TestCaseReferenceResponse build() {
             return new TestCaseReferenceResponse(className, name, testSuiteName);
         }
     }

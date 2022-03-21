@@ -158,72 +158,58 @@ public final class BucketReplicationConfigRuleDestinationArgs extends io.pulumi.
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
-
         public Builder accessControlTranslation(@Nullable BucketReplicationConfigRuleDestinationAccessControlTranslationArgs accessControlTranslation) {
             this.accessControlTranslation = Output.ofNullable(accessControlTranslation);
             return this;
         }
-
         public Builder account(@Nullable Output<String> account) {
             this.account = account;
             return this;
         }
-
         public Builder account(@Nullable String account) {
             this.account = Output.ofNullable(account);
             return this;
         }
-
         public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder metrics(@Nullable Output<BucketReplicationConfigRuleDestinationMetricsArgs> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable BucketReplicationConfigRuleDestinationMetricsArgs metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
         public Builder replicationTime(@Nullable Output<BucketReplicationConfigRuleDestinationReplicationTimeArgs> replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
-
         public Builder replicationTime(@Nullable BucketReplicationConfigRuleDestinationReplicationTimeArgs replicationTime) {
             this.replicationTime = Output.ofNullable(replicationTime);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationArgs build() {
+        }        public BucketReplicationConfigRuleDestinationArgs build() {
             return new BucketReplicationConfigRuleDestinationArgs(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
         }
     }

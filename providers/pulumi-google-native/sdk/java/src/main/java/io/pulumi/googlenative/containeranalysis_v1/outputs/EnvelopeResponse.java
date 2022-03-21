@@ -63,17 +63,17 @@ public final class EnvelopeResponse {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
-
         public Builder payloadType(String payloadType) {
             this.payloadType = Objects.requireNonNull(payloadType);
             return this;
         }
-
         public Builder signatures(List<EnvelopeSignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-        public EnvelopeResponse build() {
+        public Builder signatures(EnvelopeSignatureResponse... signatures) {
+            return signatures(List.of(signatures));
+        }        public EnvelopeResponse build() {
             return new EnvelopeResponse(payload, payloadType, signatures);
         }
     }

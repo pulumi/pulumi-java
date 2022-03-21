@@ -72,12 +72,10 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTime 
             this.minutes = minutes;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public BucketReplicationConfigurationRuleDestinationReplicationTime build() {
+        }        public BucketReplicationConfigurationRuleDestinationReplicationTime build() {
             return new BucketReplicationConfigurationRuleDestinationReplicationTime(minutes, status);
         }
     }

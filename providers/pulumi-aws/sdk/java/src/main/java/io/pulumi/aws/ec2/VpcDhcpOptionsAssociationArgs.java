@@ -73,22 +73,18 @@ public final class VpcDhcpOptionsAssociationArgs extends io.pulumi.resources.Res
             this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
             return this;
         }
-
         public Builder dhcpOptionsId(String dhcpOptionsId) {
             this.dhcpOptionsId = Output.of(Objects.requireNonNull(dhcpOptionsId));
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public VpcDhcpOptionsAssociationArgs build() {
+        }        public VpcDhcpOptionsAssociationArgs build() {
             return new VpcDhcpOptionsAssociationArgs(dhcpOptionsId, vpcId);
         }
     }

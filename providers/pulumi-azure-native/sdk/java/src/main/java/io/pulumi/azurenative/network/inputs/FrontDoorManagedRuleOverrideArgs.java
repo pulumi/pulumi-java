@@ -115,42 +115,37 @@ public final class FrontDoorManagedRuleOverrideArgs extends io.pulumi.resources.
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable Either<String,ActionType> action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,ManagedRuleEnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder exclusions(@Nullable Output<List<ManagedRuleExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
         public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
             this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
-
+        public Builder exclusions(ManagedRuleExclusionArgs... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder ruleId(Output<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
-        }
-        public FrontDoorManagedRuleOverrideArgs build() {
+        }        public FrontDoorManagedRuleOverrideArgs build() {
             return new FrontDoorManagedRuleOverrideArgs(action, enabledState, exclusions, ruleId);
         }
     }

@@ -66,22 +66,18 @@ public final class DatasetResourceConfigurationArgs extends io.pulumi.resources.
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder computeType(DatasetResourceConfigurationComputeType computeType) {
             this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
-
         public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Output.of(Objects.requireNonNull(volumeSizeInGB));
             return this;
-        }
-        public DatasetResourceConfigurationArgs build() {
+        }        public DatasetResourceConfigurationArgs build() {
             return new DatasetResourceConfigurationArgs(computeType, volumeSizeInGB);
         }
     }

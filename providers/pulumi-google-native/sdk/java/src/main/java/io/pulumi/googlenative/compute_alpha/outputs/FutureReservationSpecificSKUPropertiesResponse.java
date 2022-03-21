@@ -70,12 +70,10 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public Builder totalCount(String totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
-        }
-        public FutureReservationSpecificSKUPropertiesResponse build() {
+        }        public FutureReservationSpecificSKUPropertiesResponse build() {
             return new FutureReservationSpecificSKUPropertiesResponse(instanceProperties, totalCount);
         }
     }

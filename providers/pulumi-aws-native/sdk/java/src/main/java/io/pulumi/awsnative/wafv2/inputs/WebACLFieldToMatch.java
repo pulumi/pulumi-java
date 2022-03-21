@@ -169,42 +169,34 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
-
         public Builder jsonBody(@Nullable WebACLJsonBody jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
-
         public Builder method(@Nullable Object method) {
             this.method = method;
             return this;
         }
-
         public Builder queryString(@Nullable Object queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = uriPath;
             return this;
-        }
-        public WebACLFieldToMatch build() {
+        }        public WebACLFieldToMatch build() {
             return new WebACLFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

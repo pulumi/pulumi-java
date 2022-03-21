@@ -69,12 +69,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse {
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
-
         public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
-        }
-        public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse build() {
+        }        public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(nextRotationTime, rotationPeriod);
         }
     }

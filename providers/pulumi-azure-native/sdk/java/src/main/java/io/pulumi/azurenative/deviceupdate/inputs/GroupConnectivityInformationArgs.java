@@ -95,32 +95,29 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
             this.customerVisibleFqdns = customerVisibleFqdns;
             return this;
         }
-
         public Builder customerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
             this.customerVisibleFqdns = Output.ofNullable(customerVisibleFqdns);
             return this;
         }
-
+        public Builder customerVisibleFqdns(String... customerVisibleFqdns) {
+            return customerVisibleFqdns(List.of(customerVisibleFqdns));
+        }
         public Builder privateLinkServiceArmRegion(@Nullable Output<String> privateLinkServiceArmRegion) {
             this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
             return this;
         }
-
         public Builder privateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
             this.privateLinkServiceArmRegion = Output.ofNullable(privateLinkServiceArmRegion);
             return this;
         }
-
         public Builder redirectMapId(@Nullable Output<String> redirectMapId) {
             this.redirectMapId = redirectMapId;
             return this;
         }
-
         public Builder redirectMapId(@Nullable String redirectMapId) {
             this.redirectMapId = Output.ofNullable(redirectMapId);
             return this;
-        }
-        public GroupConnectivityInformationArgs build() {
+        }        public GroupConnectivityInformationArgs build() {
             return new GroupConnectivityInformationArgs(customerVisibleFqdns, privateLinkServiceArmRegion, redirectMapId);
         }
     }

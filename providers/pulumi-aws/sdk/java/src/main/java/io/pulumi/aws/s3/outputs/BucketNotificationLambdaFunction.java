@@ -120,27 +120,25 @@ public final class BucketNotificationLambdaFunction {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
-
         public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
             this.lambdaFunctionArn = lambdaFunctionArn;
             return this;
-        }
-        public BucketNotificationLambdaFunction build() {
+        }        public BucketNotificationLambdaFunction build() {
             return new BucketNotificationLambdaFunction(events, filterPrefix, filterSuffix, id, lambdaFunctionArn);
         }
     }

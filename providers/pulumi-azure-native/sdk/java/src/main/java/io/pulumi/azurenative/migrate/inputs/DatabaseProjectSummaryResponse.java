@@ -112,22 +112,18 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
             this.extendedSummary = extendedSummary;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
             this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
-
         public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
             this.refreshSummaryState = refreshSummaryState;
             return this;
-        }
-        public DatabaseProjectSummaryResponse build() {
+        }        public DatabaseProjectSummaryResponse build() {
             return new DatabaseProjectSummaryResponse(extendedSummary, instanceType, lastSummaryRefreshedTime, refreshSummaryState);
         }
     }

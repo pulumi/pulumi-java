@@ -82,17 +82,20 @@ public final class GetRulesetResult {
             this.description = description;
             return this;
         }
-
         public Builder rules(@Nullable List<RulesetRule> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(RulesetRule... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable List<RulesetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRulesetResult build() {
+        public Builder tags(RulesetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRulesetResult build() {
             return new GetRulesetResult(description, rules, tags);
         }
     }

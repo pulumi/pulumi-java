@@ -71,12 +71,10 @@ public final class RemediationConfigurationExecutionControlsSsmControls {
             this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
             return this;
         }
-
         public Builder errorPercentage(@Nullable Integer errorPercentage) {
             this.errorPercentage = errorPercentage;
             return this;
-        }
-        public RemediationConfigurationExecutionControlsSsmControls build() {
+        }        public RemediationConfigurationExecutionControlsSsmControls build() {
             return new RemediationConfigurationExecutionControlsSsmControls(concurrentExecutionRatePercentage, errorPercentage);
         }
     }

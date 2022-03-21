@@ -217,57 +217,46 @@ public final class GetWebAppSourceControlResult {
             this.branch = branch;
             return this;
         }
-
         public Builder deploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
             this.deploymentRollbackEnabled = deploymentRollbackEnabled;
             return this;
         }
-
         public Builder gitHubActionConfiguration(@Nullable GitHubActionConfigurationResponse gitHubActionConfiguration) {
             this.gitHubActionConfiguration = gitHubActionConfiguration;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isGitHubAction(@Nullable Boolean isGitHubAction) {
             this.isGitHubAction = isGitHubAction;
             return this;
         }
-
         public Builder isManualIntegration(@Nullable Boolean isManualIntegration) {
             this.isManualIntegration = isManualIntegration;
             return this;
         }
-
         public Builder isMercurial(@Nullable Boolean isMercurial) {
             this.isMercurial = isMercurial;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppSourceControlResult build() {
+        }        public GetWebAppSourceControlResult build() {
             return new GetWebAppSourceControlResult(branch, deploymentRollbackEnabled, gitHubActionConfiguration, id, isGitHubAction, isManualIntegration, isMercurial, kind, name, repoUrl, type);
         }
     }

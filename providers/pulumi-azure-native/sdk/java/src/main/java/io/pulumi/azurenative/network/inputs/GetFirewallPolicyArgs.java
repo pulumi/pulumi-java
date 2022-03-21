@@ -90,17 +90,14 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.expand = expand;
             return this;
         }
-
         public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFirewallPolicyArgs build() {
+        }        public GetFirewallPolicyArgs build() {
             return new GetFirewallPolicyArgs(expand, firewallPolicyName, resourceGroupName);
         }
     }

@@ -76,12 +76,10 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ExpressionResponse build() {
+        }        public ExpressionResponse build() {
             return new ExpressionResponse(type, value);
         }
     }

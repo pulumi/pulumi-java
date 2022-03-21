@@ -71,12 +71,10 @@ public final class GetReleaseLabelsFilters {
             this.application = application;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public GetReleaseLabelsFilters build() {
+        }        public GetReleaseLabelsFilters build() {
             return new GetReleaseLabelsFilters(application, prefix);
         }
     }

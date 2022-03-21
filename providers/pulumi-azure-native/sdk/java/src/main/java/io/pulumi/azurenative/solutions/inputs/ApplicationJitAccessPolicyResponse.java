@@ -113,22 +113,21 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
             this.jitAccessEnabled = Objects.requireNonNull(jitAccessEnabled);
             return this;
         }
-
         public Builder jitApprovalMode(@Nullable String jitApprovalMode) {
             this.jitApprovalMode = jitApprovalMode;
             return this;
         }
-
         public Builder jitApprovers(@Nullable List<JitApproverDefinitionResponse> jitApprovers) {
             this.jitApprovers = jitApprovers;
             return this;
         }
-
+        public Builder jitApprovers(JitApproverDefinitionResponse... jitApprovers) {
+            return jitApprovers(List.of(jitApprovers));
+        }
         public Builder maximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
             this.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;
-        }
-        public ApplicationJitAccessPolicyResponse build() {
+        }        public ApplicationJitAccessPolicyResponse build() {
             return new ApplicationJitAccessPolicyResponse(jitAccessEnabled, jitApprovalMode, jitApprovers, maximumJitAccessDuration);
         }
     }

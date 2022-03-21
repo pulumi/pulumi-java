@@ -61,17 +61,14 @@ public final class TopicRuleSigV4Authorization {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder signingRegion(String signingRegion) {
             this.signingRegion = Objects.requireNonNull(signingRegion);
             return this;
-        }
-        public TopicRuleSigV4Authorization build() {
+        }        public TopicRuleSigV4Authorization build() {
             return new TopicRuleSigV4Authorization(roleArn, serviceName, signingRegion);
         }
     }

@@ -69,12 +69,10 @@ public final class GetCanonicalUserIdResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetCanonicalUserIdResult build() {
+        }        public GetCanonicalUserIdResult build() {
             return new GetCanonicalUserIdResult(displayName, id);
         }
     }

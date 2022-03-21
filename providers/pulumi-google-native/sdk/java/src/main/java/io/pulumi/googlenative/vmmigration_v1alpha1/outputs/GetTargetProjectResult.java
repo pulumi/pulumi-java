@@ -117,27 +117,22 @@ public final class GetTargetProjectResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetTargetProjectResult build() {
+        }        public GetTargetProjectResult build() {
             return new GetTargetProjectResult(createTime, description, name, project, updateTime);
         }
     }

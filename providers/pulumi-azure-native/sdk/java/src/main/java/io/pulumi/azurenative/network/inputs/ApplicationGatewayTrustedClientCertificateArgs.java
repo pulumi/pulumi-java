@@ -94,32 +94,26 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pul
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ApplicationGatewayTrustedClientCertificateArgs build() {
+        }        public ApplicationGatewayTrustedClientCertificateArgs build() {
             return new ApplicationGatewayTrustedClientCertificateArgs(data, id, name);
         }
     }

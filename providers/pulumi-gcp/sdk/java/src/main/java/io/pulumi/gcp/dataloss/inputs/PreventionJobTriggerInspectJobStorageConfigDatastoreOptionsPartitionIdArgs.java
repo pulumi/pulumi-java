@@ -74,22 +74,18 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
             this.namespaceId = namespaceId;
             return this;
         }
-
         public Builder namespaceId(@Nullable String namespaceId) {
             this.namespaceId = Output.ofNullable(namespaceId);
             return this;
         }
-
         public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs(namespaceId, projectId);
         }
     }

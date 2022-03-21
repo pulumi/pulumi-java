@@ -106,42 +106,34 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
             this.available = available;
             return this;
         }
-
         public Builder available(@Nullable Integer available) {
             this.available = Output.ofNullable(available);
             return this;
         }
-
         public Builder desiredInstances(Output<Integer> desiredInstances) {
             this.desiredInstances = Objects.requireNonNull(desiredInstances);
             return this;
         }
-
         public Builder desiredInstances(Integer desiredInstances) {
             this.desiredInstances = Output.of(Objects.requireNonNull(desiredInstances));
             return this;
         }
-
         public Builder inUse(@Nullable Output<Integer> inUse) {
             this.inUse = inUse;
             return this;
         }
-
         public Builder inUse(@Nullable Integer inUse) {
             this.inUse = Output.ofNullable(inUse);
             return this;
         }
-
         public Builder running(@Nullable Output<Integer> running) {
             this.running = running;
             return this;
         }
-
         public Builder running(@Nullable Integer running) {
             this.running = Output.ofNullable(running);
             return this;
-        }
-        public FleetComputeCapacityArgs build() {
+        }        public FleetComputeCapacityArgs build() {
             return new FleetComputeCapacityArgs(available, desiredInstances, inUse, running);
         }
     }

@@ -89,32 +89,29 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Output.ofNullable(allowInterrupt);
             return this;
         }
-
         public Builder maxRetries(Output<Integer> maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Output.of(Objects.requireNonNull(maxRetries));
             return this;
         }
-
         public Builder messageGroupsList(Output<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-
         public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
             this.messageGroupsList = Output.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }
-        public BotPromptSpecificationArgs build() {
+        public Builder messageGroupsList(BotMessageGroupArgs... messageGroupsList) {
+            return messageGroupsList(List.of(messageGroupsList));
+        }        public BotPromptSpecificationArgs build() {
             return new BotPromptSpecificationArgs(allowInterrupt, maxRetries, messageGroupsList);
         }
     }

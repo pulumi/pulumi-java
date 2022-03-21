@@ -91,32 +91,26 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public BasicAuthenticationArgs build() {
+        }        public BasicAuthenticationArgs build() {
             return new BasicAuthenticationArgs(password, type, username);
         }
     }

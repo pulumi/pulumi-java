@@ -140,42 +140,37 @@ public final class GetBackendBucketCdnPolicy extends io.pulumi.resources.InvokeA
             this.cacheMode = Objects.requireNonNull(cacheMode);
             return this;
         }
-
         public Builder clientTtl(Integer clientTtl) {
             this.clientTtl = Objects.requireNonNull(clientTtl);
             return this;
         }
-
         public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
-
         public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
-
         public Builder negativeCaching(Boolean negativeCaching) {
             this.negativeCaching = Objects.requireNonNull(negativeCaching);
             return this;
         }
-
         public Builder negativeCachingPolicies(List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
             this.negativeCachingPolicies = Objects.requireNonNull(negativeCachingPolicies);
             return this;
         }
-
+        public Builder negativeCachingPolicies(GetBackendBucketCdnPolicyNegativeCachingPolicy... negativeCachingPolicies) {
+            return negativeCachingPolicies(List.of(negativeCachingPolicies));
+        }
         public Builder serveWhileStale(Integer serveWhileStale) {
             this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
             return this;
         }
-
         public Builder signedUrlCacheMaxAgeSec(Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
-        }
-        public GetBackendBucketCdnPolicy build() {
+        }        public GetBackendBucketCdnPolicy build() {
             return new GetBackendBucketCdnPolicy(cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }
     }

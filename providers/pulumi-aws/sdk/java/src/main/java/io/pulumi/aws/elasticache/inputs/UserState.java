@@ -185,92 +185,77 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             this.accessString = accessString;
             return this;
         }
-
         public Builder accessString(@Nullable String accessString) {
             this.accessString = Output.ofNullable(accessString);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
             this.noPasswordRequired = noPasswordRequired;
             return this;
         }
-
         public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
             this.noPasswordRequired = Output.ofNullable(noPasswordRequired);
             return this;
         }
-
         public Builder passwords(@Nullable Output<List<String>> passwords) {
             this.passwords = passwords;
             return this;
         }
-
         public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = Output.ofNullable(passwords);
             return this;
         }
-
+        public Builder passwords(String... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = Output.ofNullable(userId);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public UserState build() {
+        }        public UserState build() {
             return new UserState(accessString, arn, engine, noPasswordRequired, passwords, tags, tagsAll, userId, userName);
         }
     }

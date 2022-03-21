@@ -271,142 +271,117 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.cidrAllowList = cidrAllowList;
             return this;
         }
-
         public Builder cidrAllowList(@Nullable List<String> cidrAllowList) {
             this.cidrAllowList = Output.ofNullable(cidrAllowList);
             return this;
         }
-
+        public Builder cidrAllowList(String... cidrAllowList) {
+            return cidrAllowList(List.of(cidrAllowList));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder encryption(@Nullable Output<FlowOutputEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable FlowOutputEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder flowArn(Output<String> flowArn) {
             this.flowArn = Objects.requireNonNull(flowArn);
             return this;
         }
-
         public Builder flowArn(String flowArn) {
             this.flowArn = Output.of(Objects.requireNonNull(flowArn));
             return this;
         }
-
         public Builder maxLatency(@Nullable Output<Integer> maxLatency) {
             this.maxLatency = maxLatency;
             return this;
         }
-
         public Builder maxLatency(@Nullable Integer maxLatency) {
             this.maxLatency = Output.ofNullable(maxLatency);
             return this;
         }
-
         public Builder minLatency(@Nullable Output<Integer> minLatency) {
             this.minLatency = minLatency;
             return this;
         }
-
         public Builder minLatency(@Nullable Integer minLatency) {
             this.minLatency = Output.ofNullable(minLatency);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(Output<FlowOutputProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(FlowOutputProtocol protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder remoteId(@Nullable Output<String> remoteId) {
             this.remoteId = remoteId;
             return this;
         }
-
         public Builder remoteId(@Nullable String remoteId) {
             this.remoteId = Output.ofNullable(remoteId);
             return this;
         }
-
         public Builder smoothingLatency(@Nullable Output<Integer> smoothingLatency) {
             this.smoothingLatency = smoothingLatency;
             return this;
         }
-
         public Builder smoothingLatency(@Nullable Integer smoothingLatency) {
             this.smoothingLatency = Output.ofNullable(smoothingLatency);
             return this;
         }
-
         public Builder streamId(@Nullable Output<String> streamId) {
             this.streamId = streamId;
             return this;
         }
-
         public Builder streamId(@Nullable String streamId) {
             this.streamId = Output.ofNullable(streamId);
             return this;
         }
-
         public Builder vpcInterfaceAttachment(@Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment) {
             this.vpcInterfaceAttachment = vpcInterfaceAttachment;
             return this;
         }
-
         public Builder vpcInterfaceAttachment(@Nullable FlowOutputVpcInterfaceAttachmentArgs vpcInterfaceAttachment) {
             this.vpcInterfaceAttachment = Output.ofNullable(vpcInterfaceAttachment);
             return this;
-        }
-        public FlowOutputArgs build() {
+        }        public FlowOutputArgs build() {
             return new FlowOutputArgs(cidrAllowList, description, destination, encryption, flowArn, maxLatency, minLatency, name, port, protocol, remoteId, smoothingLatency, streamId, vpcInterfaceAttachment);
         }
     }

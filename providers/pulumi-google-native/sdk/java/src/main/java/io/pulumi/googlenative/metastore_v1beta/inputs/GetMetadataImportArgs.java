@@ -90,22 +90,18 @@ public final class GetMetadataImportArgs extends io.pulumi.resources.InvokeArgs 
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder metadataImportId(String metadataImportId) {
             this.metadataImportId = Objects.requireNonNull(metadataImportId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
-        }
-        public GetMetadataImportArgs build() {
+        }        public GetMetadataImportArgs build() {
             return new GetMetadataImportArgs(location, metadataImportId, project, serviceId);
         }
     }

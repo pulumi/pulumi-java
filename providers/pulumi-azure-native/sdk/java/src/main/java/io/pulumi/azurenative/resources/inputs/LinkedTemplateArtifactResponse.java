@@ -77,12 +77,10 @@ public final class LinkedTemplateArtifactResponse extends io.pulumi.resources.In
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder template(Object template) {
             this.template = Objects.requireNonNull(template);
             return this;
-        }
-        public LinkedTemplateArtifactResponse build() {
+        }        public LinkedTemplateArtifactResponse build() {
             return new LinkedTemplateArtifactResponse(path, template);
         }
     }

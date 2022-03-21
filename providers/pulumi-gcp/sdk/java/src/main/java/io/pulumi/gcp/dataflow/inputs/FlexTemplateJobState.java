@@ -204,92 +204,74 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             this.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
-
         public Builder containerSpecGcsPath(@Nullable String containerSpecGcsPath) {
             this.containerSpecGcsPath = Output.ofNullable(containerSpecGcsPath);
             return this;
         }
-
         public Builder jobId(@Nullable Output<String> jobId) {
             this.jobId = jobId;
             return this;
         }
-
         public Builder jobId(@Nullable String jobId) {
             this.jobId = Output.ofNullable(jobId);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder onDelete(@Nullable Output<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
-
         public Builder onDelete(@Nullable String onDelete) {
             this.onDelete = Output.ofNullable(onDelete);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public FlexTemplateJobState build() {
+        }        public FlexTemplateJobState build() {
             return new FlexTemplateJobState(containerSpecGcsPath, jobId, labels, name, onDelete, parameters, project, region, state);
         }
     }

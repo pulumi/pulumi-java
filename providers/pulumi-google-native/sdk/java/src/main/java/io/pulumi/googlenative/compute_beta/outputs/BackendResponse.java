@@ -232,62 +232,50 @@ public final class BackendResponse {
             this.balancingMode = Objects.requireNonNull(balancingMode);
             return this;
         }
-
         public Builder capacityScaler(Double capacityScaler) {
             this.capacityScaler = Objects.requireNonNull(capacityScaler);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder failover(Boolean failover) {
             this.failover = Objects.requireNonNull(failover);
             return this;
         }
-
         public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
-
         public Builder maxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = Objects.requireNonNull(maxConnectionsPerEndpoint);
             return this;
         }
-
         public Builder maxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = Objects.requireNonNull(maxConnectionsPerInstance);
             return this;
         }
-
         public Builder maxRate(Integer maxRate) {
             this.maxRate = Objects.requireNonNull(maxRate);
             return this;
         }
-
         public Builder maxRatePerEndpoint(Double maxRatePerEndpoint) {
             this.maxRatePerEndpoint = Objects.requireNonNull(maxRatePerEndpoint);
             return this;
         }
-
         public Builder maxRatePerInstance(Double maxRatePerInstance) {
             this.maxRatePerInstance = Objects.requireNonNull(maxRatePerInstance);
             return this;
         }
-
         public Builder maxUtilization(Double maxUtilization) {
             this.maxUtilization = Objects.requireNonNull(maxUtilization);
             return this;
-        }
-        public BackendResponse build() {
+        }        public BackendResponse build() {
             return new BackendResponse(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }
     }

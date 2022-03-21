@@ -69,12 +69,10 @@ public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
             this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public FirehoseDeliveryStreamKinesisSourceConfiguration build() {
+        }        public FirehoseDeliveryStreamKinesisSourceConfiguration build() {
             return new FirehoseDeliveryStreamKinesisSourceConfiguration(kinesisStreamArn, roleArn);
         }
     }

@@ -193,92 +193,80 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
             this.ciphers = ciphers;
             return this;
         }
-
         public Builder ciphers(@Nullable List<String> ciphers) {
             this.ciphers = Output.ofNullable(ciphers);
             return this;
         }
-
+        public Builder ciphers(String... ciphers) {
+            return ciphers(List.of(ciphers));
+        }
         public Builder clientAuthEnabled(@Nullable Output<Boolean> clientAuthEnabled) {
             this.clientAuthEnabled = clientAuthEnabled;
             return this;
         }
-
         public Builder clientAuthEnabled(@Nullable Boolean clientAuthEnabled) {
             this.clientAuthEnabled = Output.ofNullable(clientAuthEnabled);
             return this;
         }
-
         public Builder commonName(@Nullable Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName) {
             this.commonName = commonName;
             return this;
         }
-
         public Builder commonName(@Nullable GoogleCloudApigeeV1TlsInfoCommonNameArgs commonName) {
             this.commonName = Output.ofNullable(commonName);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder ignoreValidationErrors(@Nullable Output<Boolean> ignoreValidationErrors) {
             this.ignoreValidationErrors = ignoreValidationErrors;
             return this;
         }
-
         public Builder ignoreValidationErrors(@Nullable Boolean ignoreValidationErrors) {
             this.ignoreValidationErrors = Output.ofNullable(ignoreValidationErrors);
             return this;
         }
-
         public Builder keyAlias(@Nullable Output<String> keyAlias) {
             this.keyAlias = keyAlias;
             return this;
         }
-
         public Builder keyAlias(@Nullable String keyAlias) {
             this.keyAlias = Output.ofNullable(keyAlias);
             return this;
         }
-
         public Builder keyStore(@Nullable Output<String> keyStore) {
             this.keyStore = keyStore;
             return this;
         }
-
         public Builder keyStore(@Nullable String keyStore) {
             this.keyStore = Output.ofNullable(keyStore);
             return this;
         }
-
         public Builder protocols(@Nullable Output<List<String>> protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = Output.ofNullable(protocols);
             return this;
         }
-
+        public Builder protocols(String... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder trustStore(@Nullable Output<String> trustStore) {
             this.trustStore = trustStore;
             return this;
         }
-
         public Builder trustStore(@Nullable String trustStore) {
             this.trustStore = Output.ofNullable(trustStore);
             return this;
-        }
-        public GoogleCloudApigeeV1TlsInfoArgs build() {
+        }        public GoogleCloudApigeeV1TlsInfoArgs build() {
             return new GoogleCloudApigeeV1TlsInfoArgs(ciphers, clientAuthEnabled, commonName, enabled, ignoreValidationErrors, keyAlias, keyStore, protocols, trustStore);
         }
     }

@@ -69,12 +69,10 @@ public final class MigrationReportResultResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder reportUrl(String reportUrl) {
             this.reportUrl = Objects.requireNonNull(reportUrl);
             return this;
-        }
-        public MigrationReportResultResponse build() {
+        }        public MigrationReportResultResponse build() {
             return new MigrationReportResultResponse(id, reportUrl);
         }
     }

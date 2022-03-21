@@ -65,22 +65,18 @@ public final class ContainerLabelGetArgs extends io.pulumi.resources.ResourceArg
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Output.of(Objects.requireNonNull(label));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ContainerLabelGetArgs build() {
+        }        public ContainerLabelGetArgs build() {
             return new ContainerLabelGetArgs(label, value);
         }
     }

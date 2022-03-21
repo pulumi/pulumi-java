@@ -152,37 +152,30 @@ public final class SqlTriggerGetPropertiesResponseResource {
             this.body = body;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
-
         public Builder triggerOperation(@Nullable String triggerOperation) {
             this.triggerOperation = triggerOperation;
             return this;
         }
-
         public Builder triggerType(@Nullable String triggerType) {
             this.triggerType = triggerType;
             return this;
         }
-
         public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
-        }
-        public SqlTriggerGetPropertiesResponseResource build() {
+        }        public SqlTriggerGetPropertiesResponseResource build() {
             return new SqlTriggerGetPropertiesResponseResource(body, etag, id, rid, triggerOperation, triggerType, ts);
         }
     }

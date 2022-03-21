@@ -69,12 +69,10 @@ public final class ObjectiveResponse {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
-
         public Builder primaryMetric(String primaryMetric) {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
-        }
-        public ObjectiveResponse build() {
+        }        public ObjectiveResponse build() {
             return new ObjectiveResponse(goal, primaryMetric);
         }
     }

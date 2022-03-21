@@ -85,17 +85,14 @@ public final class SdkVersionResponse {
             this.sdkSupportStatus = Objects.requireNonNull(sdkSupportStatus);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder versionDisplayName(String versionDisplayName) {
             this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
             return this;
-        }
-        public SdkVersionResponse build() {
+        }        public SdkVersionResponse build() {
             return new SdkVersionResponse(sdkSupportStatus, version, versionDisplayName);
         }
     }

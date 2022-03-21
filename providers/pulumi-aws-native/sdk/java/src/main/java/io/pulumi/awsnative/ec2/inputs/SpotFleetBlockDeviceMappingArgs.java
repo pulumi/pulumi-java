@@ -91,42 +91,34 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder ebs(@Nullable Output<SpotFleetEbsBlockDeviceArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
-
         public Builder ebs(@Nullable SpotFleetEbsBlockDeviceArgs ebs) {
             this.ebs = Output.ofNullable(ebs);
             return this;
         }
-
         public Builder noDevice(@Nullable Output<String> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder noDevice(@Nullable String noDevice) {
             this.noDevice = Output.ofNullable(noDevice);
             return this;
         }
-
         public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Output.ofNullable(virtualName);
             return this;
-        }
-        public SpotFleetBlockDeviceMappingArgs build() {
+        }        public SpotFleetBlockDeviceMappingArgs build() {
             return new SpotFleetBlockDeviceMappingArgs(deviceName, ebs, noDevice, virtualName);
         }
     }

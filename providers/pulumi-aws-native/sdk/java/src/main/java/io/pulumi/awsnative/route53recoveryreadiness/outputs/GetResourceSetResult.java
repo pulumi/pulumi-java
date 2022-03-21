@@ -90,17 +90,20 @@ public final class GetResourceSetResult {
             this.resourceSetArn = resourceSetArn;
             return this;
         }
-
         public Builder resources(@Nullable List<ResourceSetResource> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(ResourceSetResource... resources) {
+            return resources(List.of(resources));
+        }
         public Builder tags(@Nullable List<ResourceSetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetResourceSetResult build() {
+        public Builder tags(ResourceSetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetResourceSetResult build() {
             return new GetResourceSetResult(resourceSetArn, resources, tags);
         }
     }

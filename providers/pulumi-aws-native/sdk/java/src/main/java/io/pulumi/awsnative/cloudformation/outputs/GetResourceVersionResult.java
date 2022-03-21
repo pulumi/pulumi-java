@@ -150,32 +150,26 @@ public final class GetResourceVersionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
-
         public Builder provisioningType(@Nullable ResourceVersionProvisioningType provisioningType) {
             this.provisioningType = provisioningType;
             return this;
         }
-
         public Builder typeArn(@Nullable String typeArn) {
             this.typeArn = typeArn;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder visibility(@Nullable ResourceVersionVisibility visibility) {
             this.visibility = visibility;
             return this;
-        }
-        public GetResourceVersionResult build() {
+        }        public GetResourceVersionResult build() {
             return new GetResourceVersionResult(arn, isDefaultVersion, provisioningType, typeArn, versionId, visibility);
         }
     }

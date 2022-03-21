@@ -114,52 +114,42 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
             this.accountKey = Objects.requireNonNull(accountKey);
             return this;
         }
-
         public Builder accountKey(String accountKey) {
             this.accountKey = Output.of(Objects.requireNonNull(accountKey));
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder azureFileUrl(Output<String> azureFileUrl) {
             this.azureFileUrl = Objects.requireNonNull(azureFileUrl);
             return this;
         }
-
         public Builder azureFileUrl(String azureFileUrl) {
             this.azureFileUrl = Output.of(Objects.requireNonNull(azureFileUrl));
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
         public Builder relativeMountPath(Output<String> relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Output.of(Objects.requireNonNull(relativeMountPath));
             return this;
-        }
-        public AzureFileShareConfigurationArgs build() {
+        }        public AzureFileShareConfigurationArgs build() {
             return new AzureFileShareConfigurationArgs(accountKey, accountName, azureFileUrl, mountOptions, relativeMountPath);
         }
     }

@@ -91,32 +91,26 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.activeTracing = activeTracing;
             return this;
         }
-
         public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = Output.ofNullable(activeTracing);
             return this;
         }
-
         public Builder memoryInMb(@Nullable Output<Integer> memoryInMb) {
             this.memoryInMb = memoryInMb;
             return this;
         }
-
         public Builder memoryInMb(@Nullable Integer memoryInMb) {
             this.memoryInMb = Output.ofNullable(memoryInMb);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
-        }
-        public CanaryRunConfigArgs build() {
+        }        public CanaryRunConfigArgs build() {
             return new CanaryRunConfigArgs(activeTracing, memoryInMb, timeoutInSeconds);
         }
     }

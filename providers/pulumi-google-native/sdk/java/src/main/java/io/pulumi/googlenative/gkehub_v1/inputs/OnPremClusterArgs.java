@@ -79,22 +79,18 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.adminCluster = adminCluster;
             return this;
         }
-
         public Builder adminCluster(@Nullable Boolean adminCluster) {
             this.adminCluster = Output.ofNullable(adminCluster);
             return this;
         }
-
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
             this.resourceLink = resourceLink;
             return this;
         }
-
         public Builder resourceLink(@Nullable String resourceLink) {
             this.resourceLink = Output.ofNullable(resourceLink);
             return this;
-        }
-        public OnPremClusterArgs build() {
+        }        public OnPremClusterArgs build() {
             return new OnPremClusterArgs(adminCluster, resourceLink);
         }
     }

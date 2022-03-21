@@ -75,22 +75,18 @@ public final class LaunchTemplateTagSpecificationArgs extends io.pulumi.resource
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LaunchTemplateTagSpecificationArgs build() {
+        }        public LaunchTemplateTagSpecificationArgs build() {
             return new LaunchTemplateTagSpecificationArgs(resourceType, tags);
         }
     }

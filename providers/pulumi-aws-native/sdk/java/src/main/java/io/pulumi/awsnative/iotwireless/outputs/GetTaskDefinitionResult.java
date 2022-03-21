@@ -173,42 +173,37 @@ public final class GetTaskDefinitionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder autoCreateTasks(@Nullable Boolean autoCreateTasks) {
             this.autoCreateTasks = autoCreateTasks;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder loRaWANUpdateGatewayTaskEntry(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry) {
             this.loRaWANUpdateGatewayTaskEntry = loRaWANUpdateGatewayTaskEntry;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<TaskDefinitionTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TaskDefinitionTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taskDefinitionType(@Nullable TaskDefinitionType taskDefinitionType) {
             this.taskDefinitionType = taskDefinitionType;
             return this;
         }
-
         public Builder update(@Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update) {
             this.update = update;
             return this;
-        }
-        public GetTaskDefinitionResult build() {
+        }        public GetTaskDefinitionResult build() {
             return new GetTaskDefinitionResult(arn, autoCreateTasks, id, loRaWANUpdateGatewayTaskEntry, name, tags, taskDefinitionType, update);
         }
     }

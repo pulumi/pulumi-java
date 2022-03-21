@@ -57,12 +57,13 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends io.pulum
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-
         public Builder logDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs> logDestinationConfigs) {
             this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
-        public LoggingConfigurationLoggingConfigurationArgs build() {
+        public Builder logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }        public LoggingConfigurationLoggingConfigurationArgs build() {
             return new LoggingConfigurationLoggingConfigurationArgs(logDestinationConfigs);
         }
     }

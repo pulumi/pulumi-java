@@ -72,12 +72,10 @@ public final class VirtualMachineIdentityResponseUserAssignedIdentities extends 
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public VirtualMachineIdentityResponseUserAssignedIdentities build() {
+        }        public VirtualMachineIdentityResponseUserAssignedIdentities build() {
             return new VirtualMachineIdentityResponseUserAssignedIdentities(clientId, principalId);
         }
     }

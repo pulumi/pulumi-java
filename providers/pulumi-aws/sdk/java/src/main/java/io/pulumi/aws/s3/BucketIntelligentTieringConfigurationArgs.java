@@ -125,52 +125,45 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketIntelligentTieringConfigurationFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tierings(Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings) {
             this.tierings = Objects.requireNonNull(tierings);
             return this;
         }
-
         public Builder tierings(List<BucketIntelligentTieringConfigurationTieringArgs> tierings) {
             this.tierings = Output.of(Objects.requireNonNull(tierings));
             return this;
         }
-        public BucketIntelligentTieringConfigurationArgs build() {
+        public Builder tierings(BucketIntelligentTieringConfigurationTieringArgs... tierings) {
+            return tierings(List.of(tierings));
+        }        public BucketIntelligentTieringConfigurationArgs build() {
             return new BucketIntelligentTieringConfigurationArgs(bucket, filter, name, status, tierings);
         }
     }

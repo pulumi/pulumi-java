@@ -78,17 +78,14 @@ public final class GetDeveloperArgs extends io.pulumi.resources.InvokeArgs {
             this.action = action;
             return this;
         }
-
         public Builder developerId(String developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetDeveloperArgs build() {
+        }        public GetDeveloperArgs build() {
             return new GetDeveloperArgs(action, developerId, organizationId);
         }
     }

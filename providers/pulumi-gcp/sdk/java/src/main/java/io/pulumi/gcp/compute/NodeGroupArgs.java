@@ -209,102 +209,82 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-
         public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
             this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder initialSize(@Nullable Output<Integer> initialSize) {
             this.initialSize = initialSize;
             return this;
         }
-
         public Builder initialSize(@Nullable Integer initialSize) {
             this.initialSize = Output.ofNullable(initialSize);
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable Output<String> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable String maintenancePolicy) {
             this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeTemplate(Output<String> nodeTemplate) {
             this.nodeTemplate = Objects.requireNonNull(nodeTemplate);
             return this;
         }
-
         public Builder nodeTemplate(String nodeTemplate) {
             this.nodeTemplate = Output.of(Objects.requireNonNull(nodeTemplate));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public NodeGroupArgs build() {
+        }        public NodeGroupArgs build() {
             return new NodeGroupArgs(autoscalingPolicy, description, initialSize, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, size, zone);
         }
     }

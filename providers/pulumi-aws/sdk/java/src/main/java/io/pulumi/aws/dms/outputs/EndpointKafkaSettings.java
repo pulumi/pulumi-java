@@ -329,92 +329,74 @@ public final class EndpointKafkaSettings {
             this.broker = Objects.requireNonNull(broker);
             return this;
         }
-
         public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
             this.includeControlDetails = includeControlDetails;
             return this;
         }
-
         public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
             this.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
-
         public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
             this.includePartitionValue = includePartitionValue;
             return this;
         }
-
         public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
             this.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
-
         public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
             this.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
-
         public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
-
         public Builder messageMaxBytes(@Nullable Integer messageMaxBytes) {
             this.messageMaxBytes = messageMaxBytes;
             return this;
         }
-
         public Builder noHexPrefix(@Nullable Boolean noHexPrefix) {
             this.noHexPrefix = noHexPrefix;
             return this;
         }
-
         public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
-
         public Builder saslPassword(@Nullable String saslPassword) {
             this.saslPassword = saslPassword;
             return this;
         }
-
         public Builder saslUsername(@Nullable String saslUsername) {
             this.saslUsername = saslUsername;
             return this;
         }
-
         public Builder securityProtocol(@Nullable String securityProtocol) {
             this.securityProtocol = securityProtocol;
             return this;
         }
-
         public Builder sslCaCertificateArn(@Nullable String sslCaCertificateArn) {
             this.sslCaCertificateArn = sslCaCertificateArn;
             return this;
         }
-
         public Builder sslClientCertificateArn(@Nullable String sslClientCertificateArn) {
             this.sslClientCertificateArn = sslClientCertificateArn;
             return this;
         }
-
         public Builder sslClientKeyArn(@Nullable String sslClientKeyArn) {
             this.sslClientKeyArn = sslClientKeyArn;
             return this;
         }
-
         public Builder sslClientKeyPassword(@Nullable String sslClientKeyPassword) {
             this.sslClientKeyPassword = sslClientKeyPassword;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = topic;
             return this;
-        }
-        public EndpointKafkaSettings build() {
+        }        public EndpointKafkaSettings build() {
             return new EndpointKafkaSettings(broker, includeControlDetails, includeNullAndEmpty, includePartitionValue, includeTableAlterOperations, includeTransactionDetails, messageFormat, messageMaxBytes, noHexPrefix, partitionIncludeSchemaTable, saslPassword, saslUsername, securityProtocol, sslCaCertificateArn, sslClientCertificateArn, sslClientKeyArn, sslClientKeyPassword, topic);
         }
     }

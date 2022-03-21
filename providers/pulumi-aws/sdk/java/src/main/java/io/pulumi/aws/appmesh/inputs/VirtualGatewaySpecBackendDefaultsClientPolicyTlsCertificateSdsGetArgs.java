@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSd
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs(secretName);
         }
     }

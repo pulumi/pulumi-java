@@ -135,32 +135,26 @@ public final class CertificateSigningRequestCondition {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
-
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CertificateSigningRequestCondition build() {
+        }        public CertificateSigningRequestCondition build() {
             return new CertificateSigningRequestCondition(lastTransitionTime, lastUpdateTime, message, reason, status, type);
         }
     }

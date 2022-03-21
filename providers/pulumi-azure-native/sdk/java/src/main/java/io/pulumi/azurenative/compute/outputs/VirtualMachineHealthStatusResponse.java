@@ -51,8 +51,7 @@ public final class VirtualMachineHealthStatusResponse {
         public Builder status(InstanceViewStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public VirtualMachineHealthStatusResponse build() {
+        }        public VirtualMachineHealthStatusResponse build() {
             return new VirtualMachineHealthStatusResponse(status);
         }
     }

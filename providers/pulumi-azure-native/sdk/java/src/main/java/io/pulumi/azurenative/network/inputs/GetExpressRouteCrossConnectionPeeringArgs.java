@@ -88,17 +88,14 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
             this.crossConnectionName = Objects.requireNonNull(crossConnectionName);
             return this;
         }
-
         public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExpressRouteCrossConnectionPeeringArgs build() {
+        }        public GetExpressRouteCrossConnectionPeeringArgs build() {
             return new GetExpressRouteCrossConnectionPeeringArgs(crossConnectionName, peeringName, resourceGroupName);
         }
     }

@@ -212,112 +212,93 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.authConfig = authConfig;
             return this;
         }
-
         public Builder authConfig(@Nullable AuthConfigArgs authConfig) {
             this.authConfig = Output.ofNullable(authConfig);
             return this;
         }
-
         public Builder configVariables(@Nullable Output<List<ConfigVariableArgs>> configVariables) {
             this.configVariables = configVariables;
             return this;
         }
-
         public Builder configVariables(@Nullable List<ConfigVariableArgs> configVariables) {
             this.configVariables = Output.ofNullable(configVariables);
             return this;
         }
-
+        public Builder configVariables(ConfigVariableArgs... configVariables) {
+            return configVariables(List.of(configVariables));
+        }
         public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder connectionId(String connectionId) {
             this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
-
         public Builder connectorVersion(Output<String> connectorVersion) {
             this.connectorVersion = Objects.requireNonNull(connectorVersion);
             return this;
         }
-
         public Builder connectorVersion(String connectorVersion) {
             this.connectorVersion = Output.of(Objects.requireNonNull(connectorVersion));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder lockConfig(@Nullable Output<LockConfigArgs> lockConfig) {
             this.lockConfig = lockConfig;
             return this;
         }
-
         public Builder lockConfig(@Nullable LockConfigArgs lockConfig) {
             this.lockConfig = Output.ofNullable(lockConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder suspended(@Nullable Output<Boolean> suspended) {
             this.suspended = suspended;
             return this;
         }
-
         public Builder suspended(@Nullable Boolean suspended) {
             this.suspended = Output.ofNullable(suspended);
             return this;
-        }
-        public ConnectionArgs build() {
+        }        public ConnectionArgs build() {
             return new ConnectionArgs(authConfig, configVariables, connectionId, connectorVersion, description, labels, location, lockConfig, project, serviceAccount, suspended);
         }
     }

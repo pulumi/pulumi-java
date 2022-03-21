@@ -120,27 +120,22 @@ public final class WorkspaceFeaturesResponse {
             this.clusterResourceId = clusterResourceId;
             return this;
         }
-
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
-
         public Builder enableDataExport(@Nullable Boolean enableDataExport) {
             this.enableDataExport = enableDataExport;
             return this;
         }
-
         public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
             this.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
-
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
-        }
-        public WorkspaceFeaturesResponse build() {
+        }        public WorkspaceFeaturesResponse build() {
             return new WorkspaceFeaturesResponse(clusterResourceId, disableLocalAuth, enableDataExport, enableLogAccessUsingOnlyResourcePermissions, immediatePurgeDataOn30Days);
         }
     }

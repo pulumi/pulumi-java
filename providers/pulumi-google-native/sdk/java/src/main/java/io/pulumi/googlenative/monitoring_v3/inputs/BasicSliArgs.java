@@ -129,52 +129,51 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
             this.availability = availability;
             return this;
         }
-
         public Builder availability(@Nullable AvailabilityCriteriaArgs availability) {
             this.availability = Output.ofNullable(availability);
             return this;
         }
-
         public Builder latency(@Nullable Output<LatencyCriteriaArgs> latency) {
             this.latency = latency;
             return this;
         }
-
         public Builder latency(@Nullable LatencyCriteriaArgs latency) {
             this.latency = Output.ofNullable(latency);
             return this;
         }
-
         public Builder location(@Nullable Output<List<String>> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable List<String> location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
+        public Builder location(String... location) {
+            return location(List.of(location));
+        }
         public Builder method(@Nullable Output<List<String>> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable List<String> method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
+        public Builder method(String... method) {
+            return method(List.of(method));
+        }
         public Builder version(@Nullable Output<List<String>> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable List<String> version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-        public BasicSliArgs build() {
+        public Builder version(String... version) {
+            return version(List.of(version));
+        }        public BasicSliArgs build() {
             return new BasicSliArgs(availability, latency, location, method, version);
         }
     }

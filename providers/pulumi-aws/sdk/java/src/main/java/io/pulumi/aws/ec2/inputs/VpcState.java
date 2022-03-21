@@ -415,232 +415,186 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder assignGeneratedIpv6CidrBlock(@Nullable Output<Boolean> assignGeneratedIpv6CidrBlock) {
             this.assignGeneratedIpv6CidrBlock = assignGeneratedIpv6CidrBlock;
             return this;
         }
-
         public Builder assignGeneratedIpv6CidrBlock(@Nullable Boolean assignGeneratedIpv6CidrBlock) {
             this.assignGeneratedIpv6CidrBlock = Output.ofNullable(assignGeneratedIpv6CidrBlock);
             return this;
         }
-
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder defaultNetworkAclId(@Nullable Output<String> defaultNetworkAclId) {
             this.defaultNetworkAclId = defaultNetworkAclId;
             return this;
         }
-
         public Builder defaultNetworkAclId(@Nullable String defaultNetworkAclId) {
             this.defaultNetworkAclId = Output.ofNullable(defaultNetworkAclId);
             return this;
         }
-
         public Builder defaultRouteTableId(@Nullable Output<String> defaultRouteTableId) {
             this.defaultRouteTableId = defaultRouteTableId;
             return this;
         }
-
         public Builder defaultRouteTableId(@Nullable String defaultRouteTableId) {
             this.defaultRouteTableId = Output.ofNullable(defaultRouteTableId);
             return this;
         }
-
         public Builder defaultSecurityGroupId(@Nullable Output<String> defaultSecurityGroupId) {
             this.defaultSecurityGroupId = defaultSecurityGroupId;
             return this;
         }
-
         public Builder defaultSecurityGroupId(@Nullable String defaultSecurityGroupId) {
             this.defaultSecurityGroupId = Output.ofNullable(defaultSecurityGroupId);
             return this;
         }
-
         public Builder dhcpOptionsId(@Nullable Output<String> dhcpOptionsId) {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
-
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
             this.dhcpOptionsId = Output.ofNullable(dhcpOptionsId);
             return this;
         }
-
         public Builder enableClassiclink(@Nullable Output<Boolean> enableClassiclink) {
             this.enableClassiclink = enableClassiclink;
             return this;
         }
-
         public Builder enableClassiclink(@Nullable Boolean enableClassiclink) {
             this.enableClassiclink = Output.ofNullable(enableClassiclink);
             return this;
         }
-
         public Builder enableClassiclinkDnsSupport(@Nullable Output<Boolean> enableClassiclinkDnsSupport) {
             this.enableClassiclinkDnsSupport = enableClassiclinkDnsSupport;
             return this;
         }
-
         public Builder enableClassiclinkDnsSupport(@Nullable Boolean enableClassiclinkDnsSupport) {
             this.enableClassiclinkDnsSupport = Output.ofNullable(enableClassiclinkDnsSupport);
             return this;
         }
-
         public Builder enableDnsHostnames(@Nullable Output<Boolean> enableDnsHostnames) {
             this.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
-
         public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
             this.enableDnsHostnames = Output.ofNullable(enableDnsHostnames);
             return this;
         }
-
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
             this.enableDnsSupport = enableDnsSupport;
             return this;
         }
-
         public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
             this.enableDnsSupport = Output.ofNullable(enableDnsSupport);
             return this;
         }
-
         public Builder instanceTenancy(@Nullable Output<String> instanceTenancy) {
             this.instanceTenancy = instanceTenancy;
             return this;
         }
-
         public Builder instanceTenancy(@Nullable String instanceTenancy) {
             this.instanceTenancy = Output.ofNullable(instanceTenancy);
             return this;
         }
-
         public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
             this.ipv4IpamPoolId = ipv4IpamPoolId;
             return this;
         }
-
         public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
             this.ipv4IpamPoolId = Output.ofNullable(ipv4IpamPoolId);
             return this;
         }
-
         public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
             this.ipv4NetmaskLength = ipv4NetmaskLength;
             return this;
         }
-
         public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
             this.ipv4NetmaskLength = Output.ofNullable(ipv4NetmaskLength);
             return this;
         }
-
         public Builder ipv6AssociationId(@Nullable Output<String> ipv6AssociationId) {
             this.ipv6AssociationId = ipv6AssociationId;
             return this;
         }
-
         public Builder ipv6AssociationId(@Nullable String ipv6AssociationId) {
             this.ipv6AssociationId = Output.ofNullable(ipv6AssociationId);
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
-
         public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable Output<String> ipv6CidrBlockNetworkBorderGroup) {
             this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
             return this;
         }
-
         public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable String ipv6CidrBlockNetworkBorderGroup) {
             this.ipv6CidrBlockNetworkBorderGroup = Output.ofNullable(ipv6CidrBlockNetworkBorderGroup);
             return this;
         }
-
         public Builder ipv6IpamPoolId(@Nullable Output<String> ipv6IpamPoolId) {
             this.ipv6IpamPoolId = ipv6IpamPoolId;
             return this;
         }
-
         public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
             this.ipv6IpamPoolId = Output.ofNullable(ipv6IpamPoolId);
             return this;
         }
-
         public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
             this.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
-
         public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
             this.ipv6NetmaskLength = Output.ofNullable(ipv6NetmaskLength);
             return this;
         }
-
         public Builder mainRouteTableId(@Nullable Output<String> mainRouteTableId) {
             this.mainRouteTableId = mainRouteTableId;
             return this;
         }
-
         public Builder mainRouteTableId(@Nullable String mainRouteTableId) {
             this.mainRouteTableId = Output.ofNullable(mainRouteTableId);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public VpcState build() {
+        }        public VpcState build() {
             return new VpcState(arn, assignGeneratedIpv6CidrBlock, cidrBlock, defaultNetworkAclId, defaultRouteTableId, defaultSecurityGroupId, dhcpOptionsId, enableClassiclink, enableClassiclinkDnsSupport, enableDnsHostnames, enableDnsSupport, instanceTenancy, ipv4IpamPoolId, ipv4NetmaskLength, ipv6AssociationId, ipv6CidrBlock, ipv6CidrBlockNetworkBorderGroup, ipv6IpamPoolId, ipv6NetmaskLength, mainRouteTableId, ownerId, tags, tagsAll);
         }
     }

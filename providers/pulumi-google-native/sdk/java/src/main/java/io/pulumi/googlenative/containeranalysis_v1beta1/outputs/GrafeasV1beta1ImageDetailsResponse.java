@@ -51,8 +51,7 @@ public final class GrafeasV1beta1ImageDetailsResponse {
         public Builder derivedImage(DerivedResponse derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
-        }
-        public GrafeasV1beta1ImageDetailsResponse build() {
+        }        public GrafeasV1beta1ImageDetailsResponse build() {
             return new GrafeasV1beta1ImageDetailsResponse(derivedImage);
         }
     }

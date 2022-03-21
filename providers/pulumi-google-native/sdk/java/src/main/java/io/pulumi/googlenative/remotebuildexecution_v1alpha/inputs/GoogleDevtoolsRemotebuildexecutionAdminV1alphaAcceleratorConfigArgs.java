@@ -78,22 +78,18 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
             this.acceleratorCount = acceleratorCount;
             return this;
         }
-
         public Builder acceleratorCount(@Nullable String acceleratorCount) {
             this.acceleratorCount = Output.ofNullable(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
-        }
-        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs build() {
+        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(acceleratorCount, acceleratorType);
         }
     }

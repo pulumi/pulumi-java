@@ -93,17 +93,17 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public Builder muxStreams(List<String> muxStreams) {
             this.muxStreams = Objects.requireNonNull(muxStreams);
             return this;
         }
-
+        public Builder muxStreams(String... muxStreams) {
+            return muxStreams(List.of(muxStreams));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManifestResponse build() {
+        }        public ManifestResponse build() {
             return new ManifestResponse(fileName, muxStreams, type);
         }
     }

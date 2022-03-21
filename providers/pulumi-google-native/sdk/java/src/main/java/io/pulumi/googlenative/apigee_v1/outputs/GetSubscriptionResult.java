@@ -133,32 +133,26 @@ public final class GetSubscriptionResult {
             this.apiproduct = Objects.requireNonNull(apiproduct);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GetSubscriptionResult build() {
+        }        public GetSubscriptionResult build() {
             return new GetSubscriptionResult(apiproduct, createdAt, endTime, lastModifiedAt, name, startTime);
         }
     }

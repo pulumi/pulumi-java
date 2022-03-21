@@ -115,37 +115,42 @@ public final class GetResourcesResult {
             this.excludeCompliantResources = excludeCompliantResources;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includeComplianceDetails(@Nullable Boolean includeComplianceDetails) {
             this.includeComplianceDetails = includeComplianceDetails;
             return this;
         }
-
         public Builder resourceArnLists(@Nullable List<String> resourceArnLists) {
             this.resourceArnLists = resourceArnLists;
             return this;
         }
-
+        public Builder resourceArnLists(String... resourceArnLists) {
+            return resourceArnLists(List.of(resourceArnLists));
+        }
         public Builder resourceTagMappingLists(List<GetResourcesResourceTagMappingList> resourceTagMappingLists) {
             this.resourceTagMappingLists = Objects.requireNonNull(resourceTagMappingLists);
             return this;
         }
-
+        public Builder resourceTagMappingLists(GetResourcesResourceTagMappingList... resourceTagMappingLists) {
+            return resourceTagMappingLists(List.of(resourceTagMappingLists));
+        }
         public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
-
+        public Builder resourceTypeFilters(String... resourceTypeFilters) {
+            return resourceTypeFilters(List.of(resourceTypeFilters));
+        }
         public Builder tagFilters(@Nullable List<GetResourcesTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-        public GetResourcesResult build() {
+        public Builder tagFilters(GetResourcesTagFilter... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public GetResourcesResult build() {
             return new GetResourcesResult(excludeCompliantResources, id, includeComplianceDetails, resourceArnLists, resourceTagMappingLists, resourceTypeFilters, tagFilters);
         }
     }

@@ -112,42 +112,34 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder maxEventsPerBatch(@Nullable Output<Integer> maxEventsPerBatch) {
             this.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
-
         public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
             this.maxEventsPerBatch = Output.ofNullable(maxEventsPerBatch);
             return this;
         }
-
         public Builder preferredBatchSizeInKilobytes(@Nullable Output<Integer> preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
-
         public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = Output.ofNullable(preferredBatchSizeInKilobytes);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public AzureFunctionEventSubscriptionDestinationArgs build() {
+        }        public AzureFunctionEventSubscriptionDestinationArgs build() {
             return new AzureFunctionEventSubscriptionDestinationArgs(endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
         }
     }

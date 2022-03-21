@@ -120,27 +120,22 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
-
         public Builder workloadClassifierName(String workloadClassifierName) {
             this.workloadClassifierName = Objects.requireNonNull(workloadClassifierName);
             return this;
         }
-
         public Builder workloadGroupName(String workloadGroupName) {
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSqlPoolWorkloadClassifierArgs build() {
+        }        public GetSqlPoolWorkloadClassifierArgs build() {
             return new GetSqlPoolWorkloadClassifierArgs(resourceGroupName, sqlPoolName, workloadClassifierName, workloadGroupName, workspaceName);
         }
     }

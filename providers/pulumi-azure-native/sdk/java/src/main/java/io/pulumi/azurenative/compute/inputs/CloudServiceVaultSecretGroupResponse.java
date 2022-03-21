@@ -80,12 +80,13 @@ public final class CloudServiceVaultSecretGroupResponse extends io.pulumi.resour
             this.sourceVault = sourceVault;
             return this;
         }
-
         public Builder vaultCertificates(@Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates) {
             this.vaultCertificates = vaultCertificates;
             return this;
         }
-        public CloudServiceVaultSecretGroupResponse build() {
+        public Builder vaultCertificates(CloudServiceVaultCertificateResponse... vaultCertificates) {
+            return vaultCertificates(List.of(vaultCertificates));
+        }        public CloudServiceVaultSecretGroupResponse build() {
             return new CloudServiceVaultSecretGroupResponse(sourceVault, vaultCertificates);
         }
     }

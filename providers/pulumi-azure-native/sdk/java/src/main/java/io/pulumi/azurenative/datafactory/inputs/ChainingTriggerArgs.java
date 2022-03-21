@@ -147,62 +147,56 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder dependsOn(Output<List<PipelineReferenceArgs>> dependsOn) {
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
-
         public Builder dependsOn(List<PipelineReferenceArgs> dependsOn) {
             this.dependsOn = Output.of(Objects.requireNonNull(dependsOn));
             return this;
         }
-
+        public Builder dependsOn(PipelineReferenceArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
-
         public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
             this.pipeline = Output.of(Objects.requireNonNull(pipeline));
             return this;
         }
-
         public Builder runDimension(Output<String> runDimension) {
             this.runDimension = Objects.requireNonNull(runDimension);
             return this;
         }
-
         public Builder runDimension(String runDimension) {
             this.runDimension = Output.of(Objects.requireNonNull(runDimension));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ChainingTriggerArgs build() {
+        }        public ChainingTriggerArgs build() {
             return new ChainingTriggerArgs(annotations, dependsOn, description, pipeline, runDimension, type);
         }
     }

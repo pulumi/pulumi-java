@@ -127,72 +127,58 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
             this.claimRegex = claimRegex;
             return this;
         }
-
         public Builder claimRegex(@Nullable String claimRegex) {
             this.claimRegex = Output.ofNullable(claimRegex);
             return this;
         }
-
         public Builder groupAttributeField(@Nullable Output<String> groupAttributeField) {
             this.groupAttributeField = groupAttributeField;
             return this;
         }
-
         public Builder groupAttributeField(@Nullable String groupAttributeField) {
             this.groupAttributeField = Output.ofNullable(groupAttributeField);
             return this;
         }
-
         public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = Output.ofNullable(issuer);
             return this;
         }
-
         public Builder keyLocation(Output<IndexKeyLocation> keyLocation) {
             this.keyLocation = Objects.requireNonNull(keyLocation);
             return this;
         }
-
         public Builder keyLocation(IndexKeyLocation keyLocation) {
             this.keyLocation = Output.of(Objects.requireNonNull(keyLocation));
             return this;
         }
-
         public Builder secretManagerArn(@Nullable Output<String> secretManagerArn) {
             this.secretManagerArn = secretManagerArn;
             return this;
         }
-
         public Builder secretManagerArn(@Nullable String secretManagerArn) {
             this.secretManagerArn = Output.ofNullable(secretManagerArn);
             return this;
         }
-
         public Builder uRL(@Nullable Output<String> uRL) {
             this.uRL = uRL;
             return this;
         }
-
         public Builder uRL(@Nullable String uRL) {
             this.uRL = Output.ofNullable(uRL);
             return this;
         }
-
         public Builder userNameAttributeField(@Nullable Output<String> userNameAttributeField) {
             this.userNameAttributeField = userNameAttributeField;
             return this;
         }
-
         public Builder userNameAttributeField(@Nullable String userNameAttributeField) {
             this.userNameAttributeField = Output.ofNullable(userNameAttributeField);
             return this;
-        }
-        public IndexJwtTokenTypeConfigurationArgs build() {
+        }        public IndexJwtTokenTypeConfigurationArgs build() {
             return new IndexJwtTokenTypeConfigurationArgs(claimRegex, groupAttributeField, issuer, keyLocation, secretManagerArn, uRL, userNameAttributeField);
         }
     }

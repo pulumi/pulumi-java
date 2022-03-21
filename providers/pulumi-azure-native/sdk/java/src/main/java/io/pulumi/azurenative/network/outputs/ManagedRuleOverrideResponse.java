@@ -71,12 +71,10 @@ public final class ManagedRuleOverrideResponse {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public ManagedRuleOverrideResponse build() {
+        }        public ManagedRuleOverrideResponse build() {
             return new ManagedRuleOverrideResponse(ruleId, state);
         }
     }

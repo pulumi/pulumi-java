@@ -87,17 +87,14 @@ public final class UserProfileUserSettingsSharingSettings {
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
-
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
-
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
-        }
-        public UserProfileUserSettingsSharingSettings build() {
+        }        public UserProfileUserSettingsSharingSettings build() {
             return new UserProfileUserSettingsSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }
     }

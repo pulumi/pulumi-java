@@ -78,22 +78,18 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
             this.function = function;
             return this;
         }
-
         public Builder function(@Nullable String function) {
             this.function = Output.ofNullable(function);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GoogleCloudApigeeV1CustomReportMetricArgs build() {
+        }        public GoogleCloudApigeeV1CustomReportMetricArgs build() {
             return new GoogleCloudApigeeV1CustomReportMetricArgs(function, name);
         }
     }

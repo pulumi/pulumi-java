@@ -169,37 +169,30 @@ public final class CSIStorageCapacity {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder capacity(@Nullable String capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder maximumVolumeSize(@Nullable String maximumVolumeSize) {
             this.maximumVolumeSize = maximumVolumeSize;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder nodeTopology(@Nullable LabelSelector nodeTopology) {
             this.nodeTopology = nodeTopology;
             return this;
         }
-
         public Builder storageClassName(String storageClassName) {
             this.storageClassName = Objects.requireNonNull(storageClassName);
             return this;
-        }
-        public CSIStorageCapacity build() {
+        }        public CSIStorageCapacity build() {
             return new CSIStorageCapacity(apiVersion, capacity, kind, maximumVolumeSize, metadata, nodeTopology, storageClassName);
         }
     }

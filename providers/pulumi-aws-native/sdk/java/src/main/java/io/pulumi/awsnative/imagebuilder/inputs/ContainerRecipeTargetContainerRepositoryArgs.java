@@ -79,22 +79,18 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
-
         public Builder service(@Nullable Output<ContainerRecipeTargetContainerRepositoryService> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable ContainerRecipeTargetContainerRepositoryService service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public ContainerRecipeTargetContainerRepositoryArgs build() {
+        }        public ContainerRecipeTargetContainerRepositoryArgs build() {
             return new ContainerRecipeTargetContainerRepositoryArgs(repositoryName, service);
         }
     }

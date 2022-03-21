@@ -124,52 +124,42 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
             this.callerReference = callerReference;
             return this;
         }
-
         public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Output.ofNullable(callerReference);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder contentTypeProfileConfig(@Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig) {
             this.contentTypeProfileConfig = contentTypeProfileConfig;
             return this;
         }
-
         public Builder contentTypeProfileConfig(@Nullable FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs contentTypeProfileConfig) {
             this.contentTypeProfileConfig = Output.ofNullable(contentTypeProfileConfig);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder queryArgProfileConfig(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
             this.queryArgProfileConfig = queryArgProfileConfig;
             return this;
         }
-
         public Builder queryArgProfileConfig(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs queryArgProfileConfig) {
             this.queryArgProfileConfig = Output.ofNullable(queryArgProfileConfig);
             return this;
-        }
-        public FieldLevelEncryptionConfigState build() {
+        }        public FieldLevelEncryptionConfigState build() {
             return new FieldLevelEncryptionConfigState(callerReference, comment, contentTypeProfileConfig, etag, queryArgProfileConfig);
         }
     }

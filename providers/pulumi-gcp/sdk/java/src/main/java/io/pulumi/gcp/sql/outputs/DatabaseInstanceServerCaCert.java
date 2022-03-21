@@ -89,27 +89,22 @@ public final class DatabaseInstanceServerCaCert {
             this.cert = cert;
             return this;
         }
-
         public Builder commonName(@Nullable String commonName) {
             this.commonName = commonName;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
-        }
-        public DatabaseInstanceServerCaCert build() {
+        }        public DatabaseInstanceServerCaCert build() {
             return new DatabaseInstanceServerCaCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }
     }

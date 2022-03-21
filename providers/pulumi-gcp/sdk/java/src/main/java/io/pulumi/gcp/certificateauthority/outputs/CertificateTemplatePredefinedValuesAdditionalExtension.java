@@ -89,17 +89,14 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
             this.critical = critical;
             return this;
         }
-
         public Builder objectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CertificateTemplatePredefinedValuesAdditionalExtension build() {
+        }        public CertificateTemplatePredefinedValuesAdditionalExtension build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtension(critical, objectId, value);
         }
     }

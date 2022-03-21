@@ -190,87 +190,70 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder executionArn(@Nullable Output<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
-
         public Builder executionArn(@Nullable String executionArn) {
             this.executionArn = Output.ofNullable(executionArn);
             return this;
         }
-
         public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
             this.invokeUrl = invokeUrl;
             return this;
         }
-
         public Builder invokeUrl(@Nullable String invokeUrl) {
             this.invokeUrl = Output.ofNullable(invokeUrl);
             return this;
         }
-
         public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
-
         public Builder stageDescription(@Nullable Output<String> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
-
         public Builder stageDescription(@Nullable String stageDescription) {
             this.stageDescription = Output.ofNullable(stageDescription);
             return this;
         }
-
         public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = Output.ofNullable(stageName);
             return this;
         }
-
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
         }
-
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
-        }
-        public DeploymentState build() {
+        }        public DeploymentState build() {
             return new DeploymentState(createdDate, description, executionArn, invokeUrl, restApi, stageDescription, stageName, triggers, variables);
         }
     }

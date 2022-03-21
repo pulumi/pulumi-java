@@ -69,17 +69,17 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.bar = bar;
             return this;
         }
-
+        public Builder bar(String... bar) {
+            return bar(List.of(bar));
+        }
         public Builder foo(@Nullable Output<Resource> foo) {
             this.foo = foo;
             return this;
         }
-
         public Builder foo(@Nullable Resource foo) {
             this.foo = Output.ofNullable(foo);
             return this;
-        }
-        public OtherResourceArgs build() {
+        }        public OtherResourceArgs build() {
             return new OtherResourceArgs(bar, foo);
         }
     }

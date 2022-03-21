@@ -107,42 +107,34 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Output.of(Objects.requireNonNull(hostedZoneId));
             return this;
         }
-
         public Builder keyManagementServiceArn(Output<String> keyManagementServiceArn) {
             this.keyManagementServiceArn = Objects.requireNonNull(keyManagementServiceArn);
             return this;
         }
-
         public Builder keyManagementServiceArn(String keyManagementServiceArn) {
             this.keyManagementServiceArn = Output.of(Objects.requireNonNull(keyManagementServiceArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder status(Output<KeySigningKeyStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(KeySigningKeyStatus status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public KeySigningKeyArgs build() {
+        }        public KeySigningKeyArgs build() {
             return new KeySigningKeyArgs(hostedZoneId, keyManagementServiceArn, name, status);
         }
     }

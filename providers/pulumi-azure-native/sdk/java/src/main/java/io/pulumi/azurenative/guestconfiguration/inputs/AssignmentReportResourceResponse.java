@@ -113,22 +113,21 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder reasons(@Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons) {
             this.reasons = reasons;
             return this;
         }
-
+        public Builder reasons(AssignmentReportResourceComplianceReasonResponse... reasons) {
+            return reasons(List.of(reasons));
+        }
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public AssignmentReportResourceResponse build() {
+        }        public AssignmentReportResourceResponse build() {
             return new AssignmentReportResourceResponse(complianceStatus, properties, reasons, resourceId);
         }
     }

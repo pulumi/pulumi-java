@@ -87,17 +87,14 @@ public final class VpnGatewayIpConfigurationResponse {
             this.id = id;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
-        }
-        public VpnGatewayIpConfigurationResponse build() {
+        }        public VpnGatewayIpConfigurationResponse build() {
             return new VpnGatewayIpConfigurationResponse(id, privateIpAddress, publicIpAddress);
         }
     }

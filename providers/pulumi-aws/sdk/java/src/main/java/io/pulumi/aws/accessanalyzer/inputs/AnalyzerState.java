@@ -123,52 +123,42 @@ public final class AnalyzerState extends io.pulumi.resources.ResourceArgs {
             this.analyzerName = analyzerName;
             return this;
         }
-
         public Builder analyzerName(@Nullable String analyzerName) {
             this.analyzerName = Output.ofNullable(analyzerName);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AnalyzerState build() {
+        }        public AnalyzerState build() {
             return new AnalyzerState(analyzerName, arn, tags, tagsAll, type);
         }
     }

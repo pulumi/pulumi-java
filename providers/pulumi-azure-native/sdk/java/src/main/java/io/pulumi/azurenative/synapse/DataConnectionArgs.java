@@ -156,72 +156,58 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.dataConnectionName = dataConnectionName;
             return this;
         }
-
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
             this.dataConnectionName = Output.ofNullable(dataConnectionName);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder kind(Output<Either<String,DataConnectionKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,DataConnectionKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public DataConnectionArgs build() {
+        }        public DataConnectionArgs build() {
             return new DataConnectionArgs(dataConnectionName, databaseName, kind, kustoPoolName, location, resourceGroupName, workspaceName);
         }
     }

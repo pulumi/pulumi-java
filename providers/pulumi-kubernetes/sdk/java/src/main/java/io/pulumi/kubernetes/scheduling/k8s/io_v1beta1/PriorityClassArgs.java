@@ -157,72 +157,58 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalDefault(@Nullable Output<Boolean> globalDefault) {
             this.globalDefault = globalDefault;
             return this;
         }
-
         public Builder globalDefault(@Nullable Boolean globalDefault) {
             this.globalDefault = Output.ofNullable(globalDefault);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder preemptionPolicy(@Nullable Output<String> preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
-
         public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = Output.ofNullable(preemptionPolicy);
             return this;
         }
-
         public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public PriorityClassArgs build() {
+        }        public PriorityClassArgs build() {
             return new PriorityClassArgs(apiVersion, description, globalDefault, kind, metadata, preemptionPolicy, value);
         }
     }

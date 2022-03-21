@@ -60,8 +60,7 @@ public final class DebugSettingResponse extends io.pulumi.resources.InvokeArgs {
         public Builder detailLevel(@Nullable String detailLevel) {
             this.detailLevel = detailLevel;
             return this;
-        }
-        public DebugSettingResponse build() {
+        }        public DebugSettingResponse build() {
             return new DebugSettingResponse(detailLevel);
         }
     }

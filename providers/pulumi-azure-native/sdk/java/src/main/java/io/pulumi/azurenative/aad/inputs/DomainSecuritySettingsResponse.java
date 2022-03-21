@@ -158,37 +158,30 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
             this.kerberosArmoring = kerberosArmoring;
             return this;
         }
-
         public Builder kerberosRc4Encryption(@Nullable String kerberosRc4Encryption) {
             this.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
-
         public Builder ntlmV1(@Nullable String ntlmV1) {
             this.ntlmV1 = ntlmV1;
             return this;
         }
-
         public Builder syncKerberosPasswords(@Nullable String syncKerberosPasswords) {
             this.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
-
         public Builder syncNtlmPasswords(@Nullable String syncNtlmPasswords) {
             this.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
-
         public Builder syncOnPremPasswords(@Nullable String syncOnPremPasswords) {
             this.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
-
         public Builder tlsV1(@Nullable String tlsV1) {
             this.tlsV1 = tlsV1;
             return this;
-        }
-        public DomainSecuritySettingsResponse build() {
+        }        public DomainSecuritySettingsResponse build() {
             return new DomainSecuritySettingsResponse(kerberosArmoring, kerberosRc4Encryption, ntlmV1, syncKerberosPasswords, syncNtlmPasswords, syncOnPremPasswords, tlsV1);
         }
     }

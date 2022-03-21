@@ -111,42 +111,34 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public Builder event(String event) {
             this.event = Output.of(Objects.requireNonNull(event));
             return this;
         }
-
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
-
         public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = Output.ofNullable(targetFlow);
             return this;
         }
-
         public Builder targetPage(@Nullable Output<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
-
         public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = Output.ofNullable(targetPage);
             return this;
         }
-
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
-
         public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentArgs triggerFulfillment) {
             this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1EventHandlerArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1EventHandlerArgs build() {
             return new GoogleCloudDialogflowCxV3beta1EventHandlerArgs(event, targetFlow, targetPage, triggerFulfillment);
         }
     }

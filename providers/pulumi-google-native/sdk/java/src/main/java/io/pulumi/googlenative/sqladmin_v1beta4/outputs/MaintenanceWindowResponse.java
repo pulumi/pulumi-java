@@ -102,22 +102,18 @@ public final class MaintenanceWindowResponse {
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder hour(Integer hour) {
             this.hour = Objects.requireNonNull(hour);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder updateTrack(String updateTrack) {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
-        }
-        public MaintenanceWindowResponse build() {
+        }        public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(day, hour, kind, updateTrack);
         }
     }

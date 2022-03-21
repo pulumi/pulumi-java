@@ -70,12 +70,10 @@ public final class RevisionTemplateResponse {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder spec(RevisionSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
-        }
-        public RevisionTemplateResponse build() {
+        }        public RevisionTemplateResponse build() {
             return new RevisionTemplateResponse(metadata, spec);
         }
     }

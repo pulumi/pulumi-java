@@ -78,12 +78,10 @@ public final class CredentialsResponse {
             this.customRegistries = customRegistries;
             return this;
         }
-
         public Builder sourceRegistry(@Nullable SourceRegistryCredentialsResponse sourceRegistry) {
             this.sourceRegistry = sourceRegistry;
             return this;
-        }
-        public CredentialsResponse build() {
+        }        public CredentialsResponse build() {
             return new CredentialsResponse(customRegistries, sourceRegistry);
         }
     }

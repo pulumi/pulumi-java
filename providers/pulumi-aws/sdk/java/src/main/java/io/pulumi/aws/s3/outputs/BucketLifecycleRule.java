@@ -191,47 +191,44 @@ public final class BucketLifecycleRule {
             this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder expiration(@Nullable BucketLifecycleRuleExpiration expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder noncurrentVersionExpiration(@Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
-
         public Builder noncurrentVersionTransitions(@Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
-
+        public Builder noncurrentVersionTransitions(BucketLifecycleRuleNoncurrentVersionTransition... noncurrentVersionTransitions) {
+            return noncurrentVersionTransitions(List.of(noncurrentVersionTransitions));
+        }
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder transitions(@Nullable List<BucketLifecycleRuleTransition> transitions) {
             this.transitions = transitions;
             return this;
         }
-        public BucketLifecycleRule build() {
+        public Builder transitions(BucketLifecycleRuleTransition... transitions) {
+            return transitions(List.of(transitions));
+        }        public BucketLifecycleRule build() {
             return new BucketLifecycleRule(abortIncompleteMultipartUploadDays, enabled, expiration, id, noncurrentVersionExpiration, noncurrentVersionTransitions, prefix, tags, transitions);
         }
     }

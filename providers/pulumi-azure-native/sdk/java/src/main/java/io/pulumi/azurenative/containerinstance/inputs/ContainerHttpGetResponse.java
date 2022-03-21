@@ -112,22 +112,18 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
             this.httpHeaders = httpHeaders;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder scheme(@Nullable String scheme) {
             this.scheme = scheme;
             return this;
-        }
-        public ContainerHttpGetResponse build() {
+        }        public ContainerHttpGetResponse build() {
             return new ContainerHttpGetResponse(httpHeaders, path, port, scheme);
         }
     }

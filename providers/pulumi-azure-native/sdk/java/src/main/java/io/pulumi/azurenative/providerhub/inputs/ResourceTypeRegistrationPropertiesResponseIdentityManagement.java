@@ -66,12 +66,10 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesResponseIdentityManagement build() {
+        }        public ResourceTypeRegistrationPropertiesResponseIdentityManagement build() {
             return new ResourceTypeRegistrationPropertiesResponseIdentityManagement(applicationId, type);
         }
     }

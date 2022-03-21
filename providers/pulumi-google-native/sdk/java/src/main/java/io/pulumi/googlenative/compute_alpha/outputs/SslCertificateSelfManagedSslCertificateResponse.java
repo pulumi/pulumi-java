@@ -69,12 +69,10 @@ public final class SslCertificateSelfManagedSslCertificateResponse {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
-        }
-        public SslCertificateSelfManagedSslCertificateResponse build() {
+        }        public SslCertificateSelfManagedSslCertificateResponse build() {
             return new SslCertificateSelfManagedSslCertificateResponse(certificate, privateKey);
         }
     }

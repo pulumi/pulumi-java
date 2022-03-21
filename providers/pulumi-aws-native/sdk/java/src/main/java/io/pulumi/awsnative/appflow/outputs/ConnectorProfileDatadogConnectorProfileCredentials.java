@@ -69,12 +69,10 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder applicationKey(String applicationKey) {
             this.applicationKey = Objects.requireNonNull(applicationKey);
             return this;
-        }
-        public ConnectorProfileDatadogConnectorProfileCredentials build() {
+        }        public ConnectorProfileDatadogConnectorProfileCredentials build() {
             return new ConnectorProfileDatadogConnectorProfileCredentials(apiKey, applicationKey);
         }
     }

@@ -53,8 +53,7 @@ public final class EntityParentGroupInfoResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public EntityParentGroupInfoResponse build() {
+        }        public EntityParentGroupInfoResponse build() {
             return new EntityParentGroupInfoResponse(id);
         }
     }

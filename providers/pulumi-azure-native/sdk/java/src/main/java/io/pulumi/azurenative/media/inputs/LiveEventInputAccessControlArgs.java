@@ -61,12 +61,10 @@ public final class LiveEventInputAccessControlArgs extends io.pulumi.resources.R
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable IPAccessControlArgs ip) {
             this.ip = Output.ofNullable(ip);
             return this;
-        }
-        public LiveEventInputAccessControlArgs build() {
+        }        public LiveEventInputAccessControlArgs build() {
             return new LiveEventInputAccessControlArgs(ip);
         }
     }

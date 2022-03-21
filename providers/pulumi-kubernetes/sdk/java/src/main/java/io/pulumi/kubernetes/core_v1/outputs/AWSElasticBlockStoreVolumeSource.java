@@ -105,22 +105,18 @@ public final class AWSElasticBlockStoreVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder partition(@Nullable Integer partition) {
             this.partition = partition;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder volumeID(String volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
-        }
-        public AWSElasticBlockStoreVolumeSource build() {
+        }        public AWSElasticBlockStoreVolumeSource build() {
             return new AWSElasticBlockStoreVolumeSource(fsType, partition, readOnly, volumeID);
         }
     }

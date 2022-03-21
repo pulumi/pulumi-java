@@ -76,17 +76,14 @@ public final class GetCustomerArgs extends io.pulumi.resources.InvokeArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder channelPartnerLinkId(String channelPartnerLinkId) {
             this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId);
             return this;
         }
-
         public Builder customerId(String customerId) {
             this.customerId = Objects.requireNonNull(customerId);
             return this;
-        }
-        public GetCustomerArgs build() {
+        }        public GetCustomerArgs build() {
             return new GetCustomerArgs(accountId, channelPartnerLinkId, customerId);
         }
     }

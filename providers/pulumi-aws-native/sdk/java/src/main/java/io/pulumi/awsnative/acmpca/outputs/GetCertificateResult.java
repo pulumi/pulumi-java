@@ -71,12 +71,10 @@ public final class GetCertificateResult {
             this.arn = arn;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(arn, certificate);
         }
     }

@@ -318,87 +318,73 @@ public final class GetCustomImageResult {
             this.author = author;
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder customImagePlan(@Nullable CustomImagePropertiesFromPlanResponse customImagePlan) {
             this.customImagePlan = customImagePlan;
             return this;
         }
-
         public Builder dataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo) {
             this.dataDiskStorageInfo = dataDiskStorageInfo;
             return this;
         }
-
+        public Builder dataDiskStorageInfo(DataDiskStorageTypeInfoResponse... dataDiskStorageInfo) {
+            return dataDiskStorageInfo(List.of(dataDiskStorageInfo));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedImageId(@Nullable String managedImageId) {
             this.managedImageId = managedImageId;
             return this;
         }
-
         public Builder managedSnapshotId(@Nullable String managedSnapshotId) {
             this.managedSnapshotId = managedSnapshotId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder vhd(@Nullable CustomImagePropertiesCustomResponse vhd) {
             this.vhd = vhd;
             return this;
         }
-
         public Builder vm(@Nullable CustomImagePropertiesFromVmResponse vm) {
             this.vm = vm;
             return this;
-        }
-        public GetCustomImageResult build() {
+        }        public GetCustomImageResult build() {
             return new GetCustomImageResult(author, creationDate, customImagePlan, dataDiskStorageInfo, description, id, isPlanAuthorized, location, managedImageId, managedSnapshotId, name, provisioningState, tags, type, uniqueIdentifier, vhd, vm);
         }
     }

@@ -173,42 +173,46 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
             this.bioConductorPackages = bioConductorPackages;
             return this;
         }
-
+        public Builder bioConductorPackages(String... bioConductorPackages) {
+            return bioConductorPackages(List.of(bioConductorPackages));
+        }
         public Builder cranPackages(@Nullable List<RCranPackageResponse> cranPackages) {
             this.cranPackages = cranPackages;
             return this;
         }
-
+        public Builder cranPackages(RCranPackageResponse... cranPackages) {
+            return cranPackages(List.of(cranPackages));
+        }
         public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
             this.customUrlPackages = customUrlPackages;
             return this;
         }
-
+        public Builder customUrlPackages(String... customUrlPackages) {
+            return customUrlPackages(List.of(customUrlPackages));
+        }
         public Builder gitHubPackages(@Nullable List<RGitHubPackageResponseResponse> gitHubPackages) {
             this.gitHubPackages = gitHubPackages;
             return this;
         }
-
+        public Builder gitHubPackages(RGitHubPackageResponseResponse... gitHubPackages) {
+            return gitHubPackages(List.of(gitHubPackages));
+        }
         public Builder rVersion(@Nullable String rVersion) {
             this.rVersion = rVersion;
             return this;
         }
-
         public Builder rscriptPath(@Nullable String rscriptPath) {
             this.rscriptPath = rscriptPath;
             return this;
         }
-
         public Builder snapshotDate(@Nullable String snapshotDate) {
             this.snapshotDate = snapshotDate;
             return this;
         }
-
         public Builder userManaged(@Nullable Boolean userManaged) {
             this.userManaged = userManaged;
             return this;
-        }
-        public ModelEnvironmentDefinitionResponseResponseR build() {
+        }        public ModelEnvironmentDefinitionResponseResponseR build() {
             return new ModelEnvironmentDefinitionResponseResponseR(bioConductorPackages, cranPackages, customUrlPackages, gitHubPackages, rVersion, rscriptPath, snapshotDate, userManaged);
         }
     }

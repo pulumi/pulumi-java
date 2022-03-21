@@ -99,22 +99,21 @@ public final class GetListenerResult {
             this.clientAffinity = clientAffinity;
             return this;
         }
-
         public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
-
         public Builder portRanges(@Nullable List<ListenerPortRange> portRanges) {
             this.portRanges = portRanges;
             return this;
         }
-
+        public Builder portRanges(ListenerPortRange... portRanges) {
+            return portRanges(List.of(portRanges));
+        }
         public Builder protocol(@Nullable ListenerProtocol protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public GetListenerResult build() {
+        }        public GetListenerResult build() {
             return new GetListenerResult(clientAffinity, listenerArn, portRanges, protocol);
         }
     }

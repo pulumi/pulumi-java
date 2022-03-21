@@ -55,12 +55,13 @@ public final class LaunchStepConfig {
             this.groupWeights = Objects.requireNonNull(groupWeights);
             return this;
         }
-
+        public Builder groupWeights(LaunchGroupToWeight... groupWeights) {
+            return groupWeights(List.of(groupWeights));
+        }
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public LaunchStepConfig build() {
+        }        public LaunchStepConfig build() {
             return new LaunchStepConfig(groupWeights, startTime);
         }
     }

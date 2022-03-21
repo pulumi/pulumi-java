@@ -99,42 +99,34 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlMigrationServiceName(@Nullable Output<String> sqlMigrationServiceName) {
             this.sqlMigrationServiceName = sqlMigrationServiceName;
             return this;
         }
-
         public Builder sqlMigrationServiceName(@Nullable String sqlMigrationServiceName) {
             this.sqlMigrationServiceName = Output.ofNullable(sqlMigrationServiceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SqlMigrationServiceArgs build() {
+        }        public SqlMigrationServiceArgs build() {
             return new SqlMigrationServiceArgs(location, resourceGroupName, sqlMigrationServiceName, tags);
         }
     }

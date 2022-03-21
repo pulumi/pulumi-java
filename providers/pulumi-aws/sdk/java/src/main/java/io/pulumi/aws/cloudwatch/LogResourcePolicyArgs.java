@@ -73,22 +73,18 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
-
         public Builder policyDocument(String policyDocument) {
             this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
             return this;
         }
-
         public Builder policyName(Output<String> policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Output.of(Objects.requireNonNull(policyName));
             return this;
-        }
-        public LogResourcePolicyArgs build() {
+        }        public LogResourcePolicyArgs build() {
             return new LogResourcePolicyArgs(policyDocument, policyName);
         }
     }

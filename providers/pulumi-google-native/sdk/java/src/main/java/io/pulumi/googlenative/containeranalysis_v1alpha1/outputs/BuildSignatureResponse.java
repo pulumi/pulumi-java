@@ -101,22 +101,18 @@ public final class BuildSignatureResponse {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder signature(String signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
-        }
-        public BuildSignatureResponse build() {
+        }        public BuildSignatureResponse build() {
             return new BuildSignatureResponse(keyId, keyType, publicKey, signature);
         }
     }

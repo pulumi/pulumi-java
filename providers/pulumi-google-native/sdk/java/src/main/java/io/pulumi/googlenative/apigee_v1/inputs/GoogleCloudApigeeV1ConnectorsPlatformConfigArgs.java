@@ -61,12 +61,10 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigArgs extends io.pu
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GoogleCloudApigeeV1ConnectorsPlatformConfigArgs build() {
+        }        public GoogleCloudApigeeV1ConnectorsPlatformConfigArgs build() {
             return new GoogleCloudApigeeV1ConnectorsPlatformConfigArgs(enabled);
         }
     }

@@ -119,27 +119,25 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
             this.allowAllDomains = Objects.requireNonNull(allowAllDomains);
             return this;
         }
-
         public Builder allowAmpTraffic(Boolean allowAmpTraffic) {
             this.allowAmpTraffic = Objects.requireNonNull(allowAmpTraffic);
             return this;
         }
-
         public Builder allowedDomains(List<String> allowedDomains) {
             this.allowedDomains = Objects.requireNonNull(allowedDomains);
             return this;
         }
-
+        public Builder allowedDomains(String... allowedDomains) {
+            return allowedDomains(List.of(allowedDomains));
+        }
         public Builder challengeSecurityPreference(String challengeSecurityPreference) {
             this.challengeSecurityPreference = Objects.requireNonNull(challengeSecurityPreference);
             return this;
         }
-
         public Builder integrationType(String integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
-        }
-        public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse build() {
+        }        public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }
     }

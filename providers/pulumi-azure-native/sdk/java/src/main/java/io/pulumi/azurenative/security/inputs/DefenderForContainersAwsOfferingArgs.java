@@ -131,52 +131,42 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
             this.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
-
         public Builder cloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingCloudWatchToKinesisArgs cloudWatchToKinesis) {
             this.cloudWatchToKinesis = Output.ofNullable(cloudWatchToKinesis);
             return this;
         }
-
         public Builder kinesisToS3(@Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3) {
             this.kinesisToS3 = kinesisToS3;
             return this;
         }
-
         public Builder kinesisToS3(@Nullable DefenderForContainersAwsOfferingKinesisToS3Args kinesisToS3) {
             this.kinesisToS3 = Output.ofNullable(kinesisToS3);
             return this;
         }
-
         public Builder kubernetesScubaReader(@Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader) {
             this.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
-
         public Builder kubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingKubernetesScubaReaderArgs kubernetesScubaReader) {
             this.kubernetesScubaReader = Output.ofNullable(kubernetesScubaReader);
             return this;
         }
-
         public Builder kubernetesService(@Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService) {
             this.kubernetesService = kubernetesService;
             return this;
         }
-
         public Builder kubernetesService(@Nullable DefenderForContainersAwsOfferingKubernetesServiceArgs kubernetesService) {
             this.kubernetesService = Output.ofNullable(kubernetesService);
             return this;
         }
-
         public Builder offeringType(Output<String> offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public Builder offeringType(String offeringType) {
             this.offeringType = Output.of(Objects.requireNonNull(offeringType));
             return this;
-        }
-        public DefenderForContainersAwsOfferingArgs build() {
+        }        public DefenderForContainersAwsOfferingArgs build() {
             return new DefenderForContainersAwsOfferingArgs(cloudWatchToKinesis, kinesisToS3, kubernetesScubaReader, kubernetesService, offeringType);
         }
     }

@@ -53,8 +53,7 @@ public final class FeatureGroupOnlineStoreConfigSecurityConfig {
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
-        }
-        public FeatureGroupOnlineStoreConfigSecurityConfig build() {
+        }        public FeatureGroupOnlineStoreConfigSecurityConfig build() {
             return new FeatureGroupOnlineStoreConfigSecurityConfig(kmsKeyId);
         }
     }

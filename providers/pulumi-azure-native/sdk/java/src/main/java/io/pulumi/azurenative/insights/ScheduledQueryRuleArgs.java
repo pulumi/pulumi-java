@@ -226,112 +226,90 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(Either<AlertingActionArgs,LogToMetricActionArgs> action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
-
         public Builder autoMitigate(@Nullable Boolean autoMitigate) {
             this.autoMitigate = Output.ofNullable(autoMitigate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Either<String,Enabled>> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Either<String,Enabled> enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable ScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder source(Output<SourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(SourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ScheduledQueryRuleArgs build() {
+        }        public ScheduledQueryRuleArgs build() {
             return new ScheduledQueryRuleArgs(action, autoMitigate, description, displayName, enabled, location, resourceGroupName, ruleName, schedule, source, tags);
         }
     }

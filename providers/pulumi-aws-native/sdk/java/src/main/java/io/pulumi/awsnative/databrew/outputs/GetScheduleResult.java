@@ -64,12 +64,13 @@ public final class GetScheduleResult {
             this.cronExpression = cronExpression;
             return this;
         }
-
         public Builder jobNames(@Nullable List<String> jobNames) {
             this.jobNames = jobNames;
             return this;
         }
-        public GetScheduleResult build() {
+        public Builder jobNames(String... jobNames) {
+            return jobNames(List.of(jobNames));
+        }        public GetScheduleResult build() {
             return new GetScheduleResult(cronExpression, jobNames);
         }
     }

@@ -159,37 +159,45 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
+        public Builder conditions(ConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder in(List<String> in) {
             this.in = Objects.requireNonNull(in);
             return this;
         }
-
+        public Builder in(String... in) {
+            return in(List.of(in));
+        }
         public Builder logConfig(List<LogConfigResponse> logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
-
+        public Builder logConfig(LogConfigResponse... logConfig) {
+            return logConfig(List.of(logConfig));
+        }
         public Builder notIn(List<String> notIn) {
             this.notIn = Objects.requireNonNull(notIn);
             return this;
         }
-
+        public Builder notIn(String... notIn) {
+            return notIn(List.of(notIn));
+        }
         public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-        public RuleResponse build() {
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }        public RuleResponse build() {
             return new RuleResponse(action, conditions, description, in, logConfig, notIn, permissions);
         }
     }

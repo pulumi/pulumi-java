@@ -193,92 +193,83 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             this.attachments = attachments;
             return this;
         }
-
         public Builder attachments(@Nullable List<DocumentAttachmentsSourceArgs> attachments) {
             this.attachments = Output.ofNullable(attachments);
             return this;
         }
-
+        public Builder attachments(DocumentAttachmentsSourceArgs... attachments) {
+            return attachments(List.of(attachments));
+        }
         public Builder content(Output<Object> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(Object content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder documentFormat(@Nullable Output<DocumentFormat> documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
-
         public Builder documentFormat(@Nullable DocumentFormat documentFormat) {
             this.documentFormat = Output.ofNullable(documentFormat);
             return this;
         }
-
         public Builder documentType(@Nullable Output<DocumentType> documentType) {
             this.documentType = documentType;
             return this;
         }
-
         public Builder documentType(@Nullable DocumentType documentType) {
             this.documentType = Output.ofNullable(documentType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder requires(@Nullable Output<List<DocumentRequiresArgs>> requires) {
             this.requires = requires;
             return this;
         }
-
         public Builder requires(@Nullable List<DocumentRequiresArgs> requires) {
             this.requires = Output.ofNullable(requires);
             return this;
         }
-
+        public Builder requires(DocumentRequiresArgs... requires) {
+            return requires(List.of(requires));
+        }
         public Builder tags(@Nullable Output<List<DocumentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DocumentTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DocumentTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
-
         public Builder targetType(@Nullable String targetType) {
             this.targetType = Output.ofNullable(targetType);
             return this;
         }
-
         public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
-
         public Builder versionName(@Nullable String versionName) {
             this.versionName = Output.ofNullable(versionName);
             return this;
-        }
-        public DocumentArgs build() {
+        }        public DocumentArgs build() {
             return new DocumentArgs(attachments, content, documentFormat, documentType, name, requires, tags, targetType, versionName);
         }
     }

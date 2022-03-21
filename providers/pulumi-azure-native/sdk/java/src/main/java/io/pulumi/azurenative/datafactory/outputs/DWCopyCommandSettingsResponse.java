@@ -73,12 +73,13 @@ public final class DWCopyCommandSettingsResponse {
             this.additionalOptions = additionalOptions;
             return this;
         }
-
         public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
             this.defaultValues = defaultValues;
             return this;
         }
-        public DWCopyCommandSettingsResponse build() {
+        public Builder defaultValues(DWCopyCommandDefaultValueResponse... defaultValues) {
+            return defaultValues(List.of(defaultValues));
+        }        public DWCopyCommandSettingsResponse build() {
             return new DWCopyCommandSettingsResponse(additionalOptions, defaultValues);
         }
     }

@@ -107,42 +107,34 @@ public final class EventTargetBatchTargetArgs extends io.pulumi.resources.Resour
             this.arraySize = arraySize;
             return this;
         }
-
         public Builder arraySize(@Nullable Integer arraySize) {
             this.arraySize = Output.ofNullable(arraySize);
             return this;
         }
-
         public Builder jobAttempts(@Nullable Output<Integer> jobAttempts) {
             this.jobAttempts = jobAttempts;
             return this;
         }
-
         public Builder jobAttempts(@Nullable Integer jobAttempts) {
             this.jobAttempts = Output.ofNullable(jobAttempts);
             return this;
         }
-
         public Builder jobDefinition(Output<String> jobDefinition) {
             this.jobDefinition = Objects.requireNonNull(jobDefinition);
             return this;
         }
-
         public Builder jobDefinition(String jobDefinition) {
             this.jobDefinition = Output.of(Objects.requireNonNull(jobDefinition));
             return this;
         }
-
         public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
-        }
-        public EventTargetBatchTargetArgs build() {
+        }        public EventTargetBatchTargetArgs build() {
             return new EventTargetBatchTargetArgs(arraySize, jobAttempts, jobDefinition, jobName);
         }
     }

@@ -88,17 +88,14 @@ public final class GetLinkedStorageAccountArgs extends io.pulumi.resources.Invok
             this.dataSourceType = Objects.requireNonNull(dataSourceType);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetLinkedStorageAccountArgs build() {
+        }        public GetLinkedStorageAccountArgs build() {
             return new GetLinkedStorageAccountArgs(dataSourceType, resourceGroupName, workspaceName);
         }
     }

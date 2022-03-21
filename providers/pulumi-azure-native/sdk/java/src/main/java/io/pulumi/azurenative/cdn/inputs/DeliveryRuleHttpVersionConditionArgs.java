@@ -79,22 +79,18 @@ public final class DeliveryRuleHttpVersionConditionArgs extends io.pulumi.resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<HttpVersionMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(HttpVersionMatchConditionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleHttpVersionConditionArgs build() {
+        }        public DeliveryRuleHttpVersionConditionArgs build() {
             return new DeliveryRuleHttpVersionConditionArgs(name, parameters);
         }
     }

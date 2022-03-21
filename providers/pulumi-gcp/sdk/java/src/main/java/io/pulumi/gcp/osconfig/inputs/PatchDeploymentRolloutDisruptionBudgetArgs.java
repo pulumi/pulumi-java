@@ -74,22 +74,18 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
             this.fixed = fixed;
             return this;
         }
-
         public Builder fixed(@Nullable Integer fixed) {
             this.fixed = Output.ofNullable(fixed);
             return this;
         }
-
         public Builder percentage(@Nullable Output<Integer> percentage) {
             this.percentage = percentage;
             return this;
         }
-
         public Builder percentage(@Nullable Integer percentage) {
             this.percentage = Output.ofNullable(percentage);
             return this;
-        }
-        public PatchDeploymentRolloutDisruptionBudgetArgs build() {
+        }        public PatchDeploymentRolloutDisruptionBudgetArgs build() {
             return new PatchDeploymentRolloutDisruptionBudgetArgs(fixed, percentage);
         }
     }

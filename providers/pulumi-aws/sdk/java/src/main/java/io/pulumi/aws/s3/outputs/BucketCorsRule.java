@@ -121,27 +121,34 @@ public final class BucketCorsRule {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
-
+        public Builder allowedHeaders(String... allowedHeaders) {
+            return allowedHeaders(List.of(allowedHeaders));
+        }
         public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
-
+        public Builder exposeHeaders(String... exposeHeaders) {
+            return exposeHeaders(List.of(exposeHeaders));
+        }
         public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
-        }
-        public BucketCorsRule build() {
+        }        public BucketCorsRule build() {
             return new BucketCorsRule(allowedHeaders, allowedMethods, allowedOrigins, exposeHeaders, maxAgeSeconds);
         }
     }

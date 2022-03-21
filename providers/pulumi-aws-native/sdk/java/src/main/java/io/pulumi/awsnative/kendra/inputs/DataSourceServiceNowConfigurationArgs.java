@@ -118,62 +118,50 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder hostUrl(Output<String> hostUrl) {
             this.hostUrl = Objects.requireNonNull(hostUrl);
             return this;
         }
-
         public Builder hostUrl(String hostUrl) {
             this.hostUrl = Output.of(Objects.requireNonNull(hostUrl));
             return this;
         }
-
         public Builder knowledgeArticleConfiguration(@Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
-
         public Builder knowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = Output.ofNullable(knowledgeArticleConfiguration);
             return this;
         }
-
         public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
-
         public Builder serviceCatalogConfiguration(@Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration) {
             this.serviceCatalogConfiguration = serviceCatalogConfiguration;
             return this;
         }
-
         public Builder serviceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfigurationArgs serviceCatalogConfiguration) {
             this.serviceCatalogConfiguration = Output.ofNullable(serviceCatalogConfiguration);
             return this;
         }
-
         public Builder serviceNowBuildVersion(Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion) {
             this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
             return this;
         }
-
         public Builder serviceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
             this.serviceNowBuildVersion = Output.of(Objects.requireNonNull(serviceNowBuildVersion));
             return this;
-        }
-        public DataSourceServiceNowConfigurationArgs build() {
+        }        public DataSourceServiceNowConfigurationArgs build() {
             return new DataSourceServiceNowConfigurationArgs(authenticationType, hostUrl, knowledgeArticleConfiguration, secretArn, serviceCatalogConfiguration, serviceNowBuildVersion);
         }
     }

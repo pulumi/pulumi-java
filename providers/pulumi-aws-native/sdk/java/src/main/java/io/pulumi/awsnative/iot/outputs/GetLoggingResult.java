@@ -72,12 +72,10 @@ public final class GetLoggingResult {
             this.defaultLogLevel = defaultLogLevel;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public GetLoggingResult build() {
+        }        public GetLoggingResult build() {
             return new GetLoggingResult(defaultLogLevel, roleArn);
         }
     }

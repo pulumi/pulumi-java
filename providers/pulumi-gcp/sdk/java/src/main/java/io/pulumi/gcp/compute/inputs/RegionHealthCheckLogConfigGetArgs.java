@@ -58,12 +58,10 @@ public final class RegionHealthCheckLogConfigGetArgs extends io.pulumi.resources
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
-        }
-        public RegionHealthCheckLogConfigGetArgs build() {
+        }        public RegionHealthCheckLogConfigGetArgs build() {
             return new RegionHealthCheckLogConfigGetArgs(enable);
         }
     }

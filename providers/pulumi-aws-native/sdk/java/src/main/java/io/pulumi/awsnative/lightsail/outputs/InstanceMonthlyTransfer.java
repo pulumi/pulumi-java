@@ -53,8 +53,7 @@ public final class InstanceMonthlyTransfer {
         public Builder gbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
             this.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
-        }
-        public InstanceMonthlyTransfer build() {
+        }        public InstanceMonthlyTransfer build() {
             return new InstanceMonthlyTransfer(gbPerMonthAllocated);
         }
     }

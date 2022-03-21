@@ -79,12 +79,10 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
             this.connectivityType = connectivityType;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public SqlConnectivityUpdateSettingsResponse build() {
+        }        public SqlConnectivityUpdateSettingsResponse build() {
             return new SqlConnectivityUpdateSettingsResponse(connectivityType, port);
         }
     }

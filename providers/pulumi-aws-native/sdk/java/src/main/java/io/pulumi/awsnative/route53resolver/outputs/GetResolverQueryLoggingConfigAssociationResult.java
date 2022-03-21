@@ -121,27 +121,22 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder error(@Nullable ResolverQueryLoggingConfigAssociationError error) {
             this.error = error;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder status(@Nullable ResolverQueryLoggingConfigAssociationStatus status) {
             this.status = status;
             return this;
-        }
-        public GetResolverQueryLoggingConfigAssociationResult build() {
+        }        public GetResolverQueryLoggingConfigAssociationResult build() {
             return new GetResolverQueryLoggingConfigAssociationResult(creationTime, error, errorMessage, id, status);
         }
     }

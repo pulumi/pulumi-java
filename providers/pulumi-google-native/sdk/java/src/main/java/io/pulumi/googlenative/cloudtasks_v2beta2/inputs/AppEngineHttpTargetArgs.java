@@ -61,12 +61,10 @@ public final class AppEngineHttpTargetArgs extends io.pulumi.resources.ResourceA
             this.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
-
         public Builder appEngineRoutingOverride(@Nullable AppEngineRoutingArgs appEngineRoutingOverride) {
             this.appEngineRoutingOverride = Output.ofNullable(appEngineRoutingOverride);
             return this;
-        }
-        public AppEngineHttpTargetArgs build() {
+        }        public AppEngineHttpTargetArgs build() {
             return new AppEngineHttpTargetArgs(appEngineRoutingOverride);
         }
     }

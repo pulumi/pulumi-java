@@ -268,72 +268,70 @@ public final class GetRouterResult {
             this.bgp = Objects.requireNonNull(bgp);
             return this;
         }
-
         public Builder bgpPeers(List<RouterBgpPeerResponse> bgpPeers) {
             this.bgpPeers = Objects.requireNonNull(bgpPeers);
             return this;
         }
-
+        public Builder bgpPeers(RouterBgpPeerResponse... bgpPeers) {
+            return bgpPeers(List.of(bgpPeers));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Objects.requireNonNull(encryptedInterconnectRouter);
             return this;
         }
-
         public Builder interfaces(List<RouterInterfaceResponse> interfaces) {
             this.interfaces = Objects.requireNonNull(interfaces);
             return this;
         }
-
+        public Builder interfaces(RouterInterfaceResponse... interfaces) {
+            return interfaces(List.of(interfaces));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder md5AuthenticationKeys(List<RouterMd5AuthenticationKeyResponse> md5AuthenticationKeys) {
             this.md5AuthenticationKeys = Objects.requireNonNull(md5AuthenticationKeys);
             return this;
         }
-
+        public Builder md5AuthenticationKeys(RouterMd5AuthenticationKeyResponse... md5AuthenticationKeys) {
+            return md5AuthenticationKeys(List.of(md5AuthenticationKeys));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nats(List<RouterNatResponse> nats) {
             this.nats = Objects.requireNonNull(nats);
             return this;
         }
-
+        public Builder nats(RouterNatResponse... nats) {
+            return nats(List.of(nats));
+        }
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
-        }
-        public GetRouterResult build() {
+        }        public GetRouterResult build() {
             return new GetRouterResult(bgp, bgpPeers, creationTimestamp, description, encryptedInterconnectRouter, interfaces, kind, md5AuthenticationKeys, name, nats, network, region, selfLink, selfLinkWithId);
         }
     }

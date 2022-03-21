@@ -143,62 +143,53 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder draftContentLink(@Nullable Output<ContentLinkArgs> draftContentLink) {
             this.draftContentLink = draftContentLink;
             return this;
         }
-
         public Builder draftContentLink(@Nullable ContentLinkArgs draftContentLink) {
             this.draftContentLink = Output.ofNullable(draftContentLink);
             return this;
         }
-
         public Builder inEdit(@Nullable Output<Boolean> inEdit) {
             this.inEdit = inEdit;
             return this;
         }
-
         public Builder inEdit(@Nullable Boolean inEdit) {
             this.inEdit = Output.ofNullable(inEdit);
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
-
         public Builder outputTypes(@Nullable Output<List<String>> outputTypes) {
             this.outputTypes = outputTypes;
             return this;
         }
-
         public Builder outputTypes(@Nullable List<String> outputTypes) {
             this.outputTypes = Output.ofNullable(outputTypes);
             return this;
         }
-
+        public Builder outputTypes(String... outputTypes) {
+            return outputTypes(List.of(outputTypes));
+        }
         public Builder parameters(@Nullable Output<Map<String,RunbookParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,RunbookParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
-        }
-        public RunbookDraftArgs build() {
+        }        public RunbookDraftArgs build() {
             return new RunbookDraftArgs(creationTime, draftContentLink, inEdit, lastModifiedTime, outputTypes, parameters);
         }
     }

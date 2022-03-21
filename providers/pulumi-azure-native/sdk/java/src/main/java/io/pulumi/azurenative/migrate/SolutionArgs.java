@@ -107,42 +107,34 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             this.migrateProjectName = Objects.requireNonNull(migrateProjectName);
             return this;
         }
-
         public Builder migrateProjectName(String migrateProjectName) {
             this.migrateProjectName = Output.of(Objects.requireNonNull(migrateProjectName));
             return this;
         }
-
         public Builder properties(@Nullable Output<SolutionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable SolutionPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder solutionName(@Nullable Output<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
-
         public Builder solutionName(@Nullable String solutionName) {
             this.solutionName = Output.ofNullable(solutionName);
             return this;
-        }
-        public SolutionArgs build() {
+        }        public SolutionArgs build() {
             return new SolutionArgs(migrateProjectName, properties, resourceGroupName, solutionName);
         }
     }

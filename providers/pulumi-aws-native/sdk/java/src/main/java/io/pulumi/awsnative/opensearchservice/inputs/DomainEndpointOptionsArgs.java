@@ -103,52 +103,42 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             this.customEndpoint = customEndpoint;
             return this;
         }
-
         public Builder customEndpoint(@Nullable String customEndpoint) {
             this.customEndpoint = Output.ofNullable(customEndpoint);
             return this;
         }
-
         public Builder customEndpointCertificateArn(@Nullable Output<String> customEndpointCertificateArn) {
             this.customEndpointCertificateArn = customEndpointCertificateArn;
             return this;
         }
-
         public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
             this.customEndpointCertificateArn = Output.ofNullable(customEndpointCertificateArn);
             return this;
         }
-
         public Builder customEndpointEnabled(@Nullable Output<Boolean> customEndpointEnabled) {
             this.customEndpointEnabled = customEndpointEnabled;
             return this;
         }
-
         public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
             this.customEndpointEnabled = Output.ofNullable(customEndpointEnabled);
             return this;
         }
-
         public Builder enforceHTTPS(@Nullable Output<Boolean> enforceHTTPS) {
             this.enforceHTTPS = enforceHTTPS;
             return this;
         }
-
         public Builder enforceHTTPS(@Nullable Boolean enforceHTTPS) {
             this.enforceHTTPS = Output.ofNullable(enforceHTTPS);
             return this;
         }
-
         public Builder tLSSecurityPolicy(@Nullable Output<String> tLSSecurityPolicy) {
             this.tLSSecurityPolicy = tLSSecurityPolicy;
             return this;
         }
-
         public Builder tLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
             this.tLSSecurityPolicy = Output.ofNullable(tLSSecurityPolicy);
             return this;
-        }
-        public DomainEndpointOptionsArgs build() {
+        }        public DomainEndpointOptionsArgs build() {
             return new DomainEndpointOptionsArgs(customEndpoint, customEndpointCertificateArn, customEndpointEnabled, enforceHTTPS, tLSSecurityPolicy);
         }
     }

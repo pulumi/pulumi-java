@@ -249,67 +249,57 @@ public final class GetArcSettingResult {
             this.aggregateState = Objects.requireNonNull(aggregateState);
             return this;
         }
-
         public Builder arcInstanceResourceGroup(String arcInstanceResourceGroup) {
             this.arcInstanceResourceGroup = Objects.requireNonNull(arcInstanceResourceGroup);
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdByType(@Nullable String createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder perNodeDetails(List<PerNodeStateResponse> perNodeDetails) {
             this.perNodeDetails = Objects.requireNonNull(perNodeDetails);
             return this;
         }
-
+        public Builder perNodeDetails(PerNodeStateResponse... perNodeDetails) {
+            return perNodeDetails(List.of(perNodeDetails));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetArcSettingResult build() {
+        }        public GetArcSettingResult build() {
             return new GetArcSettingResult(aggregateState, arcInstanceResourceGroup, createdAt, createdBy, createdByType, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, perNodeDetails, provisioningState, type);
         }
     }

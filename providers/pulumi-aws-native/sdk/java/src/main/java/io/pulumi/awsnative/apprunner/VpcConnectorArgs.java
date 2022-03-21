@@ -108,42 +108,43 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public Builder subnets(List<String> subnets) {
             this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Output<List<VpcConnectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<VpcConnectorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(VpcConnectorTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcConnectorName(@Nullable Output<String> vpcConnectorName) {
             this.vpcConnectorName = vpcConnectorName;
             return this;
         }
-
         public Builder vpcConnectorName(@Nullable String vpcConnectorName) {
             this.vpcConnectorName = Output.ofNullable(vpcConnectorName);
             return this;
-        }
-        public VpcConnectorArgs build() {
+        }        public VpcConnectorArgs build() {
             return new VpcConnectorArgs(securityGroups, subnets, tags, vpcConnectorName);
         }
     }

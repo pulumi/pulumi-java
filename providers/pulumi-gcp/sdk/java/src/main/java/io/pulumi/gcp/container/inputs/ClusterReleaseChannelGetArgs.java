@@ -61,12 +61,10 @@ public final class ClusterReleaseChannelGetArgs extends io.pulumi.resources.Reso
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
-
         public Builder channel(String channel) {
             this.channel = Output.of(Objects.requireNonNull(channel));
             return this;
-        }
-        public ClusterReleaseChannelGetArgs build() {
+        }        public ClusterReleaseChannelGetArgs build() {
             return new ClusterReleaseChannelGetArgs(channel);
         }
     }

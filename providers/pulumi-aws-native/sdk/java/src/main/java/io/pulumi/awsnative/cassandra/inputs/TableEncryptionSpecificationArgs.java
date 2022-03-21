@@ -71,22 +71,18 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder encryptionType(TableEncryptionType encryptionType) {
             this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
             return this;
         }
-
         public Builder kmsKeyIdentifier(@Nullable Output<String> kmsKeyIdentifier) {
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }
-
         public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
             this.kmsKeyIdentifier = Output.ofNullable(kmsKeyIdentifier);
             return this;
-        }
-        public TableEncryptionSpecificationArgs build() {
+        }        public TableEncryptionSpecificationArgs build() {
             return new TableEncryptionSpecificationArgs(encryptionType, kmsKeyIdentifier);
         }
     }

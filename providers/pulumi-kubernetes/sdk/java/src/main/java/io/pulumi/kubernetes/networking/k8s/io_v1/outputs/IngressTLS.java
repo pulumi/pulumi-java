@@ -72,12 +72,13 @@ public final class IngressTLS {
             this.hosts = hosts;
             return this;
         }
-
+        public Builder hosts(String... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
-        }
-        public IngressTLS build() {
+        }        public IngressTLS build() {
             return new IngressTLS(hosts, secretName);
         }
     }

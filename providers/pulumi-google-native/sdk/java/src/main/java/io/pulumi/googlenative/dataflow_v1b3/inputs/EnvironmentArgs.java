@@ -307,162 +307,139 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterManagerApiService = clusterManagerApiService;
             return this;
         }
-
         public Builder clusterManagerApiService(@Nullable String clusterManagerApiService) {
             this.clusterManagerApiService = Output.ofNullable(clusterManagerApiService);
             return this;
         }
-
         public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder debugOptions(@Nullable Output<DebugOptionsArgs> debugOptions) {
             this.debugOptions = debugOptions;
             return this;
         }
-
         public Builder debugOptions(@Nullable DebugOptionsArgs debugOptions) {
             this.debugOptions = Output.ofNullable(debugOptions);
             return this;
         }
-
         public Builder experiments(@Nullable Output<List<String>> experiments) {
             this.experiments = experiments;
             return this;
         }
-
         public Builder experiments(@Nullable List<String> experiments) {
             this.experiments = Output.ofNullable(experiments);
             return this;
         }
-
+        public Builder experiments(String... experiments) {
+            return experiments(List.of(experiments));
+        }
         public Builder flexResourceSchedulingGoal(@Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal) {
             this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
             return this;
         }
-
         public Builder flexResourceSchedulingGoal(@Nullable EnvironmentFlexResourceSchedulingGoal flexResourceSchedulingGoal) {
             this.flexResourceSchedulingGoal = Output.ofNullable(flexResourceSchedulingGoal);
             return this;
         }
-
         public Builder internalExperiments(@Nullable Output<Map<String,String>> internalExperiments) {
             this.internalExperiments = internalExperiments;
             return this;
         }
-
         public Builder internalExperiments(@Nullable Map<String,String> internalExperiments) {
             this.internalExperiments = Output.ofNullable(internalExperiments);
             return this;
         }
-
         public Builder sdkPipelineOptions(@Nullable Output<Map<String,String>> sdkPipelineOptions) {
             this.sdkPipelineOptions = sdkPipelineOptions;
             return this;
         }
-
         public Builder sdkPipelineOptions(@Nullable Map<String,String> sdkPipelineOptions) {
             this.sdkPipelineOptions = Output.ofNullable(sdkPipelineOptions);
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder serviceKmsKeyName(@Nullable Output<String> serviceKmsKeyName) {
             this.serviceKmsKeyName = serviceKmsKeyName;
             return this;
         }
-
         public Builder serviceKmsKeyName(@Nullable String serviceKmsKeyName) {
             this.serviceKmsKeyName = Output.ofNullable(serviceKmsKeyName);
             return this;
         }
-
         public Builder serviceOptions(@Nullable Output<List<String>> serviceOptions) {
             this.serviceOptions = serviceOptions;
             return this;
         }
-
         public Builder serviceOptions(@Nullable List<String> serviceOptions) {
             this.serviceOptions = Output.ofNullable(serviceOptions);
             return this;
         }
-
+        public Builder serviceOptions(String... serviceOptions) {
+            return serviceOptions(List.of(serviceOptions));
+        }
         public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
-
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
             this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
             return this;
         }
-
         public Builder userAgent(@Nullable Output<Map<String,String>> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
-
         public Builder userAgent(@Nullable Map<String,String> userAgent) {
             this.userAgent = Output.ofNullable(userAgent);
             return this;
         }
-
         public Builder version(@Nullable Output<Map<String,String>> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Map<String,String> version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder workerPools(@Nullable Output<List<WorkerPoolArgs>> workerPools) {
             this.workerPools = workerPools;
             return this;
         }
-
         public Builder workerPools(@Nullable List<WorkerPoolArgs> workerPools) {
             this.workerPools = Output.ofNullable(workerPools);
             return this;
         }
-
+        public Builder workerPools(WorkerPoolArgs... workerPools) {
+            return workerPools(List.of(workerPools));
+        }
         public Builder workerRegion(@Nullable Output<String> workerRegion) {
             this.workerRegion = workerRegion;
             return this;
         }
-
         public Builder workerRegion(@Nullable String workerRegion) {
             this.workerRegion = Output.ofNullable(workerRegion);
             return this;
         }
-
         public Builder workerZone(@Nullable Output<String> workerZone) {
             this.workerZone = workerZone;
             return this;
         }
-
         public Builder workerZone(@Nullable String workerZone) {
             this.workerZone = Output.ofNullable(workerZone);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);
         }
     }

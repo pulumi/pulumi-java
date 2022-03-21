@@ -57,12 +57,10 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
             this.allowMultipleValues = allowMultipleValues;
             return this;
         }
-
         public Builder allowMultipleValues(@Nullable Boolean allowMultipleValues) {
             this.allowMultipleValues = Output.ofNullable(allowMultipleValues);
             return this;
-        }
-        public BotMultipleValuesSettingArgs build() {
+        }        public BotMultipleValuesSettingArgs build() {
             return new BotMultipleValuesSettingArgs(allowMultipleValues);
         }
     }

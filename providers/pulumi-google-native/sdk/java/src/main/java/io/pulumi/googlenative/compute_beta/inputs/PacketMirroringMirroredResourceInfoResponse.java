@@ -91,17 +91,23 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(PacketMirroringMirroredResourceInfoInstanceInfoResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder subnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
-
+        public Builder subnetworks(PacketMirroringMirroredResourceInfoSubnetInfoResponse... subnetworks) {
+            return subnetworks(List.of(subnetworks));
+        }
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-        public PacketMirroringMirroredResourceInfoResponse build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public PacketMirroringMirroredResourceInfoResponse build() {
             return new PacketMirroringMirroredResourceInfoResponse(instances, subnetworks, tags);
         }
     }

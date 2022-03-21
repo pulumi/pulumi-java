@@ -53,8 +53,7 @@ public final class FirewallPolicyNatRuleCollectionActionResponse {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public FirewallPolicyNatRuleCollectionActionResponse build() {
+        }        public FirewallPolicyNatRuleCollectionActionResponse build() {
             return new FirewallPolicyNatRuleCollectionActionResponse(type);
         }
     }

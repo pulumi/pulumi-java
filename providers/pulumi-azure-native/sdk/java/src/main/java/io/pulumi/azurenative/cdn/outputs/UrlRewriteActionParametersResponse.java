@@ -96,22 +96,18 @@ public final class UrlRewriteActionParametersResponse {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
             this.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
-
         public Builder sourcePattern(String sourcePattern) {
             this.sourcePattern = Objects.requireNonNull(sourcePattern);
             return this;
-        }
-        public UrlRewriteActionParametersResponse build() {
+        }        public UrlRewriteActionParametersResponse build() {
             return new UrlRewriteActionParametersResponse(destination, odataType, preserveUnmatchedPath, sourcePattern);
         }
     }

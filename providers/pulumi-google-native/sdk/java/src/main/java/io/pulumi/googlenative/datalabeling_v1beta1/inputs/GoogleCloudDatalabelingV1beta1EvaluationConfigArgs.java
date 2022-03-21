@@ -61,12 +61,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
             this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
             return this;
         }
-
         public Builder boundingBoxEvaluationOptions(@Nullable GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs boundingBoxEvaluationOptions) {
             this.boundingBoxEvaluationOptions = Output.ofNullable(boundingBoxEvaluationOptions);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(boundingBoxEvaluationOptions);
         }
     }

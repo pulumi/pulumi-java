@@ -108,32 +108,32 @@ public final class BotLocale {
             this.description = description;
             return this;
         }
-
         public Builder intents(@Nullable List<BotIntent> intents) {
             this.intents = intents;
             return this;
         }
-
+        public Builder intents(BotIntent... intents) {
+            return intents(List.of(intents));
+        }
         public Builder localeId(String localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
-
         public Builder nluConfidenceThreshold(Double nluConfidenceThreshold) {
             this.nluConfidenceThreshold = Objects.requireNonNull(nluConfidenceThreshold);
             return this;
         }
-
         public Builder slotTypes(@Nullable List<BotSlotType> slotTypes) {
             this.slotTypes = slotTypes;
             return this;
         }
-
+        public Builder slotTypes(BotSlotType... slotTypes) {
+            return slotTypes(List.of(slotTypes));
+        }
         public Builder voiceSettings(@Nullable BotVoiceSettings voiceSettings) {
             this.voiceSettings = voiceSettings;
             return this;
-        }
-        public BotLocale build() {
+        }        public BotLocale build() {
             return new BotLocale(description, intents, localeId, nluConfidenceThreshold, slotTypes, voiceSettings);
         }
     }

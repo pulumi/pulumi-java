@@ -66,17 +66,17 @@ public final class TaskDefinitionLogConfiguration {
             this.logDriver = Objects.requireNonNull(logDriver);
             return this;
         }
-
         public Builder options(@Nullable Object options) {
             this.options = options;
             return this;
         }
-
         public Builder secretOptions(@Nullable List<TaskDefinitionSecret> secretOptions) {
             this.secretOptions = secretOptions;
             return this;
         }
-        public TaskDefinitionLogConfiguration build() {
+        public Builder secretOptions(TaskDefinitionSecret... secretOptions) {
+            return secretOptions(List.of(secretOptions));
+        }        public TaskDefinitionLogConfiguration build() {
             return new TaskDefinitionLogConfiguration(logDriver, options, secretOptions);
         }
     }

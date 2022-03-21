@@ -72,12 +72,10 @@ public final class ListWebAppSiteBackupsArgs extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppSiteBackupsArgs build() {
+        }        public ListWebAppSiteBackupsArgs build() {
             return new ListWebAppSiteBackupsArgs(name, resourceGroupName);
         }
     }

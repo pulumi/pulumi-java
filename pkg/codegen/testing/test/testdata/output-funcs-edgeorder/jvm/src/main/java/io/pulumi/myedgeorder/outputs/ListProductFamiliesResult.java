@@ -73,12 +73,13 @@ public final class ListProductFamiliesResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(List<ProductFamilyResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListProductFamiliesResult build() {
+        public Builder value(ProductFamilyResponse... value) {
+            return value(List.of(value));
+        }        public ListProductFamiliesResult build() {
             return new ListProductFamiliesResult(nextLink, value);
         }
     }

@@ -79,12 +79,10 @@ public final class ConnectionMonitorSourceResponse extends io.pulumi.resources.I
             this.port = port;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public ConnectionMonitorSourceResponse build() {
+        }        public ConnectionMonitorSourceResponse build() {
             return new ConnectionMonitorSourceResponse(port, resourceId);
         }
     }

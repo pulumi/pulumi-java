@@ -73,22 +73,18 @@ public final class AwsNodePoolAutoscalingGetArgs extends io.pulumi.resources.Res
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
             return this;
         }
-
         public Builder minNodeCount(Output<Integer> minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Output.of(Objects.requireNonNull(minNodeCount));
             return this;
-        }
-        public AwsNodePoolAutoscalingGetArgs build() {
+        }        public AwsNodePoolAutoscalingGetArgs build() {
             return new AwsNodePoolAutoscalingGetArgs(maxNodeCount, minNodeCount);
         }
     }

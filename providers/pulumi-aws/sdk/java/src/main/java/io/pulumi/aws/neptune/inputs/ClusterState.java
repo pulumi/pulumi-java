@@ -558,322 +558,273 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.applyImmediately = applyImmediately;
             return this;
         }
-
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder backupRetentionPeriod(@Nullable Output<Integer> backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
-
         public Builder backupRetentionPeriod(@Nullable Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = Output.ofNullable(backupRetentionPeriod);
             return this;
         }
-
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
-
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifierPrefix(@Nullable Output<String> clusterIdentifierPrefix) {
             this.clusterIdentifierPrefix = clusterIdentifierPrefix;
             return this;
         }
-
         public Builder clusterIdentifierPrefix(@Nullable String clusterIdentifierPrefix) {
             this.clusterIdentifierPrefix = Output.ofNullable(clusterIdentifierPrefix);
             return this;
         }
-
         public Builder clusterMembers(@Nullable Output<List<String>> clusterMembers) {
             this.clusterMembers = clusterMembers;
             return this;
         }
-
         public Builder clusterMembers(@Nullable List<String> clusterMembers) {
             this.clusterMembers = Output.ofNullable(clusterMembers);
             return this;
         }
-
+        public Builder clusterMembers(String... clusterMembers) {
+            return clusterMembers(List.of(clusterMembers));
+        }
         public Builder clusterResourceId(@Nullable Output<String> clusterResourceId) {
             this.clusterResourceId = clusterResourceId;
             return this;
         }
-
         public Builder clusterResourceId(@Nullable String clusterResourceId) {
             this.clusterResourceId = Output.ofNullable(clusterResourceId);
             return this;
         }
-
         public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
             this.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
-
         public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
             this.copyTagsToSnapshot = Output.ofNullable(copyTagsToSnapshot);
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder enableCloudwatchLogsExports(@Nullable Output<List<String>> enableCloudwatchLogsExports) {
             this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
             return this;
         }
-
         public Builder enableCloudwatchLogsExports(@Nullable List<String> enableCloudwatchLogsExports) {
             this.enableCloudwatchLogsExports = Output.ofNullable(enableCloudwatchLogsExports);
             return this;
         }
-
+        public Builder enableCloudwatchLogsExports(String... enableCloudwatchLogsExports) {
+            return enableCloudwatchLogsExports(List.of(enableCloudwatchLogsExports));
+        }
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
-
         public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = Output.ofNullable(finalSnapshotIdentifier);
             return this;
         }
-
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
-
         public Builder iamDatabaseAuthenticationEnabled(@Nullable Output<Boolean> iamDatabaseAuthenticationEnabled) {
             this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
             return this;
         }
-
         public Builder iamDatabaseAuthenticationEnabled(@Nullable Boolean iamDatabaseAuthenticationEnabled) {
             this.iamDatabaseAuthenticationEnabled = Output.ofNullable(iamDatabaseAuthenticationEnabled);
             return this;
         }
-
         public Builder iamRoles(@Nullable Output<List<String>> iamRoles) {
             this.iamRoles = iamRoles;
             return this;
         }
-
         public Builder iamRoles(@Nullable List<String> iamRoles) {
             this.iamRoles = Output.ofNullable(iamRoles);
             return this;
         }
-
+        public Builder iamRoles(String... iamRoles) {
+            return iamRoles(List.of(iamRoles));
+        }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder neptuneClusterParameterGroupName(@Nullable Output<String> neptuneClusterParameterGroupName) {
             this.neptuneClusterParameterGroupName = neptuneClusterParameterGroupName;
             return this;
         }
-
         public Builder neptuneClusterParameterGroupName(@Nullable String neptuneClusterParameterGroupName) {
             this.neptuneClusterParameterGroupName = Output.ofNullable(neptuneClusterParameterGroupName);
             return this;
         }
-
         public Builder neptuneSubnetGroupName(@Nullable Output<String> neptuneSubnetGroupName) {
             this.neptuneSubnetGroupName = neptuneSubnetGroupName;
             return this;
         }
-
         public Builder neptuneSubnetGroupName(@Nullable String neptuneSubnetGroupName) {
             this.neptuneSubnetGroupName = Output.ofNullable(neptuneSubnetGroupName);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder readerEndpoint(@Nullable Output<String> readerEndpoint) {
             this.readerEndpoint = readerEndpoint;
             return this;
         }
-
         public Builder readerEndpoint(@Nullable String readerEndpoint) {
             this.readerEndpoint = Output.ofNullable(readerEndpoint);
             return this;
         }
-
         public Builder replicationSourceIdentifier(@Nullable Output<String> replicationSourceIdentifier) {
             this.replicationSourceIdentifier = replicationSourceIdentifier;
             return this;
         }
-
         public Builder replicationSourceIdentifier(@Nullable String replicationSourceIdentifier) {
             this.replicationSourceIdentifier = Output.ofNullable(replicationSourceIdentifier);
             return this;
         }
-
         public Builder skipFinalSnapshot(@Nullable Output<Boolean> skipFinalSnapshot) {
             this.skipFinalSnapshot = skipFinalSnapshot;
             return this;
         }
-
         public Builder skipFinalSnapshot(@Nullable Boolean skipFinalSnapshot) {
             this.skipFinalSnapshot = Output.ofNullable(skipFinalSnapshot);
             return this;
         }
-
         public Builder snapshotIdentifier(@Nullable Output<String> snapshotIdentifier) {
             this.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
-
         public Builder snapshotIdentifier(@Nullable String snapshotIdentifier) {
             this.snapshotIdentifier = Output.ofNullable(snapshotIdentifier);
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-        public ClusterState build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public ClusterState build() {
             return new ClusterState(applyImmediately, arn, availabilityZones, backupRetentionPeriod, clusterIdentifier, clusterIdentifierPrefix, clusterMembers, clusterResourceId, copyTagsToSnapshot, deletionProtection, enableCloudwatchLogsExports, endpoint, engine, engineVersion, finalSnapshotIdentifier, hostedZoneId, iamDatabaseAuthenticationEnabled, iamRoles, kmsKeyArn, neptuneClusterParameterGroupName, neptuneSubnetGroupName, port, preferredBackupWindow, preferredMaintenanceWindow, readerEndpoint, replicationSourceIdentifier, skipFinalSnapshot, snapshotIdentifier, storageEncrypted, tags, tagsAll, vpcSecurityGroupIds);
         }
     }

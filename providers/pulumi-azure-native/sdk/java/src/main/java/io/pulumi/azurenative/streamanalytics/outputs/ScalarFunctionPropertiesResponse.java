@@ -127,27 +127,25 @@ public final class ScalarFunctionPropertiesResponse {
             this.binding = binding;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder inputs(@Nullable List<FunctionInputResponse> inputs) {
             this.inputs = inputs;
             return this;
         }
-
+        public Builder inputs(FunctionInputResponse... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder output(@Nullable FunctionOutputResponse output) {
             this.output = output;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ScalarFunctionPropertiesResponse build() {
+        }        public ScalarFunctionPropertiesResponse build() {
             return new ScalarFunctionPropertiesResponse(binding, etag, inputs, output, type);
         }
     }

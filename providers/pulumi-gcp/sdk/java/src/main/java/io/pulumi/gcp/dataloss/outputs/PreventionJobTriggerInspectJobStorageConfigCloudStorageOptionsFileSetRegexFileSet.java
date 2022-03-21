@@ -95,17 +95,20 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder excludeRegexes(@Nullable List<String> excludeRegexes) {
             this.excludeRegexes = excludeRegexes;
             return this;
         }
-
+        public Builder excludeRegexes(String... excludeRegexes) {
+            return excludeRegexes(List.of(excludeRegexes));
+        }
         public Builder includeRegexes(@Nullable List<String> includeRegexes) {
             this.includeRegexes = includeRegexes;
             return this;
         }
-        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet build() {
+        public Builder includeRegexes(String... includeRegexes) {
+            return includeRegexes(List.of(includeRegexes));
+        }        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet(bucketName, excludeRegexes, includeRegexes);
         }
     }

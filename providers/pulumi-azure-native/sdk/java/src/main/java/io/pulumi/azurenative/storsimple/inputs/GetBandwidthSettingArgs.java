@@ -88,17 +88,14 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
             this.bandwidthSettingName = Objects.requireNonNull(bandwidthSettingName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBandwidthSettingArgs build() {
+        }        public GetBandwidthSettingArgs build() {
             return new GetBandwidthSettingArgs(bandwidthSettingName, managerName, resourceGroupName);
         }
     }

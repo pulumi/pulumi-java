@@ -85,17 +85,14 @@ public final class GetInstanceAttachmentResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetInstanceAttachmentResult build() {
+        }        public GetInstanceAttachmentResult build() {
             return new GetInstanceAttachmentResult(createdAt, environment, name);
         }
     }

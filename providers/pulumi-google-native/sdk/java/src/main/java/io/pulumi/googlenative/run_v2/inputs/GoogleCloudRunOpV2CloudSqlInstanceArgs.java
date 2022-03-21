@@ -62,12 +62,13 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
             this.connections = connections;
             return this;
         }
-
         public Builder connections(@Nullable List<String> connections) {
             this.connections = Output.ofNullable(connections);
             return this;
         }
-        public GoogleCloudRunOpV2CloudSqlInstanceArgs build() {
+        public Builder connections(String... connections) {
+            return connections(List.of(connections));
+        }        public GoogleCloudRunOpV2CloudSqlInstanceArgs build() {
             return new GoogleCloudRunOpV2CloudSqlInstanceArgs(connections);
         }
     }

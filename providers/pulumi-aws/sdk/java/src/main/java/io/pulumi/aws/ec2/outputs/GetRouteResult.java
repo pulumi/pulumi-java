@@ -157,72 +157,58 @@ public final class GetRouteResult {
             this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
             return this;
         }
-
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
-
         public Builder destinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
             this.destinationIpv6CidrBlock = Objects.requireNonNull(destinationIpv6CidrBlock);
             return this;
         }
-
         public Builder destinationPrefixListId(String destinationPrefixListId) {
             this.destinationPrefixListId = Objects.requireNonNull(destinationPrefixListId);
             return this;
         }
-
         public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
             this.egressOnlyGatewayId = Objects.requireNonNull(egressOnlyGatewayId);
             return this;
         }
-
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder localGatewayId(String localGatewayId) {
             this.localGatewayId = Objects.requireNonNull(localGatewayId);
             return this;
         }
-
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = Objects.requireNonNull(natGatewayId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
-
         public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
             return this;
-        }
-        public GetRouteResult build() {
+        }        public GetRouteResult build() {
             return new GetRouteResult(carrierGatewayId, destinationCidrBlock, destinationIpv6CidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, id, instanceId, localGatewayId, natGatewayId, networkInterfaceId, routeTableId, transitGatewayId, vpcPeeringConnectionId);
         }
     }

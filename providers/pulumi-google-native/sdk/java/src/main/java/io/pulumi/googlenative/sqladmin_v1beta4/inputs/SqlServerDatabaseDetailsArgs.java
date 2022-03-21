@@ -79,22 +79,18 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
-
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
             this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
             return this;
         }
-
         public Builder recoveryModel(@Nullable Output<String> recoveryModel) {
             this.recoveryModel = recoveryModel;
             return this;
         }
-
         public Builder recoveryModel(@Nullable String recoveryModel) {
             this.recoveryModel = Output.ofNullable(recoveryModel);
             return this;
-        }
-        public SqlServerDatabaseDetailsArgs build() {
+        }        public SqlServerDatabaseDetailsArgs build() {
             return new SqlServerDatabaseDetailsArgs(compatibilityLevel, recoveryModel);
         }
     }

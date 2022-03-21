@@ -60,12 +60,10 @@ public final class MachineLearningWorkspaceArgs extends io.pulumi.resources.Reso
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public MachineLearningWorkspaceArgs build() {
+        }        public MachineLearningWorkspaceArgs build() {
             return new MachineLearningWorkspaceArgs(id);
         }
     }

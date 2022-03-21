@@ -53,12 +53,10 @@ public final class RegistryScanningConfigurationRuleRepositoryFilter {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filterType(String filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
-        }
-        public RegistryScanningConfigurationRuleRepositoryFilter build() {
+        }        public RegistryScanningConfigurationRuleRepositoryFilter build() {
             return new RegistryScanningConfigurationRuleRepositoryFilter(filter, filterType);
         }
     }

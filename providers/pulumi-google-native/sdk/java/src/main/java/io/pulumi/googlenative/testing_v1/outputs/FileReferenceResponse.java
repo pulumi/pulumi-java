@@ -51,8 +51,7 @@ public final class FileReferenceResponse {
         public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
-        }
-        public FileReferenceResponse build() {
+        }        public FileReferenceResponse build() {
             return new FileReferenceResponse(gcsPath);
         }
     }

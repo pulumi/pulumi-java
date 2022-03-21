@@ -126,37 +126,30 @@ public final class GetServiceMetadata extends io.pulumi.resources.InvokeArgs {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder generation(Integer generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder resourceVersion(String resourceVersion) {
             this.resourceVersion = Objects.requireNonNull(resourceVersion);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public GetServiceMetadata build() {
+        }        public GetServiceMetadata build() {
             return new GetServiceMetadata(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }
     }

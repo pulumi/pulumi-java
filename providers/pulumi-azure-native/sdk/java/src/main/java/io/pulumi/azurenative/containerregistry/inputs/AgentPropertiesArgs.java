@@ -61,12 +61,10 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Integer cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
-        }
-        public AgentPropertiesArgs build() {
+        }        public AgentPropertiesArgs build() {
             return new AgentPropertiesArgs(cpu);
         }
     }

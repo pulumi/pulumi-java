@@ -299,82 +299,66 @@ public final class GetTransferConfigResult {
             this.dataRefreshWindowDays = Objects.requireNonNull(dataRefreshWindowDays);
             return this;
         }
-
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public Builder datasetRegion(String datasetRegion) {
             this.datasetRegion = Objects.requireNonNull(datasetRegion);
             return this;
         }
-
         public Builder destinationDatasetId(String destinationDatasetId) {
             this.destinationDatasetId = Objects.requireNonNull(destinationDatasetId);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder emailPreferences(EmailPreferencesResponse emailPreferences) {
             this.emailPreferences = Objects.requireNonNull(emailPreferences);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nextRunTime(String nextRunTime) {
             this.nextRunTime = Objects.requireNonNull(nextRunTime);
             return this;
         }
-
         public Builder notificationPubsubTopic(String notificationPubsubTopic) {
             this.notificationPubsubTopic = Objects.requireNonNull(notificationPubsubTopic);
             return this;
         }
-
         public Builder ownerInfo(UserInfoResponse ownerInfo) {
             this.ownerInfo = Objects.requireNonNull(ownerInfo);
             return this;
         }
-
         public Builder params(Map<String,String> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder scheduleOptions(ScheduleOptionsResponse scheduleOptions) {
             this.scheduleOptions = Objects.requireNonNull(scheduleOptions);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetTransferConfigResult build() {
+        }        public GetTransferConfigResult build() {
             return new GetTransferConfigResult(dataRefreshWindowDays, dataSourceId, datasetRegion, destinationDatasetId, disabled, displayName, emailPreferences, name, nextRunTime, notificationPubsubTopic, ownerInfo, params, schedule, scheduleOptions, state, updateTime);
         }
     }

@@ -70,12 +70,10 @@ public final class LocationHdfsNameNode {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public LocationHdfsNameNode build() {
+        }        public LocationHdfsNameNode build() {
             return new LocationHdfsNameNode(hostname, port);
         }
     }

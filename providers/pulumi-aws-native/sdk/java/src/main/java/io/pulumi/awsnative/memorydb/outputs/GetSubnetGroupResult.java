@@ -105,22 +105,24 @@ public final class GetSubnetGroupResult {
             this.aRN = aRN;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable List<SubnetGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSubnetGroupResult build() {
+        public Builder tags(SubnetGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetSubnetGroupResult build() {
             return new GetSubnetGroupResult(aRN, description, subnetIds, tags);
         }
     }

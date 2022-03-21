@@ -118,27 +118,22 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
             this.applicationArn = Objects.requireNonNull(applicationArn);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder externalId(String externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder userDataShared(Boolean userDataShared) {
             this.userDataShared = Objects.requireNonNull(userDataShared);
             return this;
-        }
-        public GetUserPoolClientAnalyticsConfiguration build() {
+        }        public GetUserPoolClientAnalyticsConfiguration build() {
             return new GetUserPoolClientAnalyticsConfiguration(applicationArn, applicationId, externalId, roleArn, userDataShared);
         }
     }

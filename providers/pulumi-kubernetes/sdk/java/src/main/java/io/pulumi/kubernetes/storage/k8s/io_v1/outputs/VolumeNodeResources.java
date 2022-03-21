@@ -53,8 +53,7 @@ public final class VolumeNodeResources {
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
-        }
-        public VolumeNodeResources build() {
+        }        public VolumeNodeResources build() {
             return new VolumeNodeResources(count);
         }
     }

@@ -88,17 +88,14 @@ public final class GetTriggerEventSubscriptionStatusArgs extends io.pulumi.resou
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
-        }
-        public GetTriggerEventSubscriptionStatusArgs build() {
+        }        public GetTriggerEventSubscriptionStatusArgs build() {
             return new GetTriggerEventSubscriptionStatusArgs(factoryName, resourceGroupName, triggerName);
         }
     }

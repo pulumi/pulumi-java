@@ -133,37 +133,30 @@ public final class GetAliasResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder functionVersion(String functionVersion) {
             this.functionVersion = Objects.requireNonNull(functionVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder invokeArn(String invokeArn) {
             this.invokeArn = Objects.requireNonNull(invokeArn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetAliasResult build() {
+        }        public GetAliasResult build() {
             return new GetAliasResult(arn, description, functionName, functionVersion, id, invokeArn, name);
         }
     }

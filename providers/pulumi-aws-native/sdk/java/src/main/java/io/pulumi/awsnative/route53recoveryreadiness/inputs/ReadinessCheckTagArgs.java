@@ -66,22 +66,21 @@ public final class ReadinessCheckTagArgs extends io.pulumi.resources.ResourceArg
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<List<String>> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(List<String> value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
-        public ReadinessCheckTagArgs build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public ReadinessCheckTagArgs build() {
             return new ReadinessCheckTagArgs(key, value);
         }
     }

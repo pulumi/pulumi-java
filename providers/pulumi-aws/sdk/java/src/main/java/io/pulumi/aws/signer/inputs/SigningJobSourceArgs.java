@@ -56,12 +56,10 @@ public final class SigningJobSourceArgs extends io.pulumi.resources.ResourceArgs
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
-
         public Builder s3(SigningJobSourceS3Args s3) {
             this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
-        }
-        public SigningJobSourceArgs build() {
+        }        public SigningJobSourceArgs build() {
             return new SigningJobSourceArgs(s3);
         }
     }

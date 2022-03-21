@@ -94,42 +94,34 @@ public final class ConfigurationTemplateSettingGetArgs extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ConfigurationTemplateSettingGetArgs build() {
+        }        public ConfigurationTemplateSettingGetArgs build() {
             return new ConfigurationTemplateSettingGetArgs(name, namespace, resource, value);
         }
     }

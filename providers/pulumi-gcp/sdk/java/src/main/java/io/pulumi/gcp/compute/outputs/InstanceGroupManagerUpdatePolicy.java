@@ -170,42 +170,34 @@ public final class InstanceGroupManagerUpdatePolicy {
             this.maxSurgeFixed = maxSurgeFixed;
             return this;
         }
-
         public Builder maxSurgePercent(@Nullable Integer maxSurgePercent) {
             this.maxSurgePercent = maxSurgePercent;
             return this;
         }
-
         public Builder maxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
             this.maxUnavailableFixed = maxUnavailableFixed;
             return this;
         }
-
         public Builder maxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
             this.maxUnavailablePercent = maxUnavailablePercent;
             return this;
         }
-
         public Builder minReadySec(@Nullable Integer minReadySec) {
             this.minReadySec = minReadySec;
             return this;
         }
-
         public Builder minimalAction(String minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
-
         public Builder replacementMethod(@Nullable String replacementMethod) {
             this.replacementMethod = replacementMethod;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InstanceGroupManagerUpdatePolicy build() {
+        }        public InstanceGroupManagerUpdatePolicy build() {
             return new InstanceGroupManagerUpdatePolicy(maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
         }
     }

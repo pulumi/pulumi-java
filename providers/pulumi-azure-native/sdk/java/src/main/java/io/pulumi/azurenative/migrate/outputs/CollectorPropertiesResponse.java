@@ -96,22 +96,18 @@ public final class CollectorPropertiesResponse {
             this.agentProperties = agentProperties;
             return this;
         }
-
         public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
-
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
-
         public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
-        }
-        public CollectorPropertiesResponse build() {
+        }        public CollectorPropertiesResponse build() {
             return new CollectorPropertiesResponse(agentProperties, createdTimestamp, discoverySiteId, updatedTimestamp);
         }
     }

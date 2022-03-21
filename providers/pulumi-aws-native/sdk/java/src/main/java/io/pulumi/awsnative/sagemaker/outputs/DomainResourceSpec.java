@@ -88,17 +88,14 @@ public final class DomainResourceSpec {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
-
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
-        }
-        public DomainResourceSpec build() {
+        }        public DomainResourceSpec build() {
             return new DomainResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }
     }

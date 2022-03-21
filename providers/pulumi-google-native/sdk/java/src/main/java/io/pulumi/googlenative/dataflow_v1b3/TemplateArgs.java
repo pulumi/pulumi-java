@@ -136,62 +136,50 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable RuntimeEnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder gcsPath(Output<String> gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
-
         public Builder gcsPath(String gcsPath) {
             this.gcsPath = Output.of(Objects.requireNonNull(gcsPath));
             return this;
         }
-
         public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public TemplateArgs build() {
+        }        public TemplateArgs build() {
             return new TemplateArgs(environment, gcsPath, jobName, location, parameters, project);
         }
     }

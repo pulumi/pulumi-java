@@ -69,12 +69,10 @@ public final class NetworkConfigResponse {
             this.ipAllocation = Objects.requireNonNull(ipAllocation);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
-        }
-        public NetworkConfigResponse build() {
+        }        public NetworkConfigResponse build() {
             return new NetworkConfigResponse(ipAllocation, network);
         }
     }

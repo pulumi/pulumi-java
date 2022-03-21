@@ -79,22 +79,18 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable AliasContextKind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AliasContextArgs build() {
+        }        public AliasContextArgs build() {
             return new AliasContextArgs(kind, name);
         }
     }

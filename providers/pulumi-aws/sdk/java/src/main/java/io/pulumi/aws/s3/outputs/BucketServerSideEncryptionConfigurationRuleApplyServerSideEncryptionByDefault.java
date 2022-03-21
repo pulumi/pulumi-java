@@ -71,12 +71,10 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
-
         public Builder sseAlgorithm(String sseAlgorithm) {
             this.sseAlgorithm = Objects.requireNonNull(sseAlgorithm);
             return this;
-        }
-        public BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault build() {
+        }        public BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault build() {
             return new BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault(kmsMasterKeyId, sseAlgorithm);
         }
     }

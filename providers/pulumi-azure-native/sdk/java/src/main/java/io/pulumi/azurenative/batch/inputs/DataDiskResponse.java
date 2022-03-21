@@ -116,22 +116,18 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.caching = caching;
             return this;
         }
-
         public Builder diskSizeGB(Integer diskSizeGB) {
             this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
-        }
-        public DataDiskResponse build() {
+        }        public DataDiskResponse build() {
             return new DataDiskResponse(caching, diskSizeGB, lun, storageAccountType);
         }
     }

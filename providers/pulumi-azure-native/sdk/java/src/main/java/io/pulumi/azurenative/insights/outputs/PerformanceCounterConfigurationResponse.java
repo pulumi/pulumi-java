@@ -63,17 +63,14 @@ public final class PerformanceCounterConfigurationResponse {
             this.instance = instance;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder samplingPeriod(String samplingPeriod) {
             this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
             return this;
-        }
-        public PerformanceCounterConfigurationResponse build() {
+        }        public PerformanceCounterConfigurationResponse build() {
             return new PerformanceCounterConfigurationResponse(instance, name, samplingPeriod);
         }
     }

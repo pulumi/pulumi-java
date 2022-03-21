@@ -126,62 +126,50 @@ public final class TargetProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder targetProjectId(Output<String> targetProjectId) {
             this.targetProjectId = Objects.requireNonNull(targetProjectId);
             return this;
         }
-
         public Builder targetProjectId(String targetProjectId) {
             this.targetProjectId = Output.of(Objects.requireNonNull(targetProjectId));
             return this;
-        }
-        public TargetProjectArgs build() {
+        }        public TargetProjectArgs build() {
             return new TargetProjectArgs(description, location, name, project, requestId, targetProjectId);
         }
     }

@@ -102,22 +102,18 @@ public final class ReverseSshConnectivityResponse {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
-
         public Builder vmIp(String vmIp) {
             this.vmIp = Objects.requireNonNull(vmIp);
             return this;
         }
-
         public Builder vmPort(Integer vmPort) {
             this.vmPort = Objects.requireNonNull(vmPort);
             return this;
         }
-
         public Builder vpc(String vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
-        }
-        public ReverseSshConnectivityResponse build() {
+        }        public ReverseSshConnectivityResponse build() {
             return new ReverseSshConnectivityResponse(vm, vmIp, vmPort, vpc);
         }
     }

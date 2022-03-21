@@ -255,132 +255,106 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
-
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder maxThroughput(@Nullable Output<Integer> maxThroughput) {
             this.maxThroughput = maxThroughput;
             return this;
         }
-
         public Builder maxThroughput(@Nullable Integer maxThroughput) {
             this.maxThroughput = Output.ofNullable(maxThroughput);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder minThroughput(@Nullable Output<Integer> minThroughput) {
             this.minThroughput = minThroughput;
             return this;
         }
-
         public Builder minThroughput(@Nullable Integer minThroughput) {
             this.minThroughput = Output.ofNullable(minThroughput);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder subnet(@Nullable Output<ConnectorSubnetGetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable ConnectorSubnetGetArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public ConnectorState build() {
+        }        public ConnectorState build() {
             return new ConnectorState(ipCidrRange, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, project, region, selfLink, state, subnet);
         }
     }

@@ -178,82 +178,66 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.controllerKey = controllerKey;
             return this;
         }
-
         public Builder controllerKey(@Nullable Integer controllerKey) {
             this.controllerKey = Output.ofNullable(controllerKey);
             return this;
         }
-
         public Builder deviceKey(@Nullable Output<Integer> deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
-
         public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = Output.ofNullable(deviceKey);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder diskMode(@Nullable Output<Either<String,DiskMode>> diskMode) {
             this.diskMode = diskMode;
             return this;
         }
-
         public Builder diskMode(@Nullable Either<String,DiskMode> diskMode) {
             this.diskMode = Output.ofNullable(diskMode);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder diskType(@Nullable Output<Either<String,DiskType>> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable Either<String,DiskType> diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder unitNumber(@Nullable Output<Integer> unitNumber) {
             this.unitNumber = unitNumber;
             return this;
         }
-
         public Builder unitNumber(@Nullable Integer unitNumber) {
             this.unitNumber = Output.ofNullable(unitNumber);
             return this;
-        }
-        public VirtualDiskArgs build() {
+        }        public VirtualDiskArgs build() {
             return new VirtualDiskArgs(controllerKey, deviceKey, deviceName, diskMode, diskSizeGB, diskType, name, unitNumber);
         }
     }

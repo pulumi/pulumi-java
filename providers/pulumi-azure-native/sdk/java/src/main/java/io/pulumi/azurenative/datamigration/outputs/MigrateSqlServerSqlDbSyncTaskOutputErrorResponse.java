@@ -88,17 +88,14 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputErrorResponse {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
-        }
-        public MigrateSqlServerSqlDbSyncTaskOutputErrorResponse build() {
+        }        public MigrateSqlServerSqlDbSyncTaskOutputErrorResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskOutputErrorResponse(error, id, resultType);
         }
     }

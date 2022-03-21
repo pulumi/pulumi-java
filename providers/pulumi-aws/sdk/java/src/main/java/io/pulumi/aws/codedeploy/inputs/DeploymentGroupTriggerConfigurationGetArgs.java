@@ -90,32 +90,29 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
             this.triggerEvents = Objects.requireNonNull(triggerEvents);
             return this;
         }
-
         public Builder triggerEvents(List<String> triggerEvents) {
             this.triggerEvents = Output.of(Objects.requireNonNull(triggerEvents));
             return this;
         }
-
+        public Builder triggerEvents(String... triggerEvents) {
+            return triggerEvents(List.of(triggerEvents));
+        }
         public Builder triggerName(Output<String> triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Output.of(Objects.requireNonNull(triggerName));
             return this;
         }
-
         public Builder triggerTargetArn(Output<String> triggerTargetArn) {
             this.triggerTargetArn = Objects.requireNonNull(triggerTargetArn);
             return this;
         }
-
         public Builder triggerTargetArn(String triggerTargetArn) {
             this.triggerTargetArn = Output.of(Objects.requireNonNull(triggerTargetArn));
             return this;
-        }
-        public DeploymentGroupTriggerConfigurationGetArgs build() {
+        }        public DeploymentGroupTriggerConfigurationGetArgs build() {
             return new DeploymentGroupTriggerConfigurationGetArgs(triggerEvents, triggerName, triggerTargetArn);
         }
     }

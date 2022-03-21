@@ -72,12 +72,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
-
         public Builder configurationSource(String configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositoryCodeConfiguration build() {
+        }        public ServiceSourceConfigurationCodeRepositoryCodeConfiguration build() {
             return new ServiceSourceConfigurationCodeRepositoryCodeConfiguration(codeConfigurationValues, configurationSource);
         }
     }

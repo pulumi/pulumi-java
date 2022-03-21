@@ -80,22 +80,24 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable List<QuotaLimitArgs> limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
+        public Builder limits(QuotaLimitArgs... limits) {
+            return limits(List.of(limits));
+        }
         public Builder metricRules(@Nullable Output<List<MetricRuleArgs>> metricRules) {
             this.metricRules = metricRules;
             return this;
         }
-
         public Builder metricRules(@Nullable List<MetricRuleArgs> metricRules) {
             this.metricRules = Output.ofNullable(metricRules);
             return this;
         }
-        public QuotaArgs build() {
+        public Builder metricRules(MetricRuleArgs... metricRules) {
+            return metricRules(List.of(metricRules));
+        }        public QuotaArgs build() {
             return new QuotaArgs(limits, metricRules);
         }
     }

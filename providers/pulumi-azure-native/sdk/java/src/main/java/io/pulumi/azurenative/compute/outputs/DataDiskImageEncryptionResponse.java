@@ -72,12 +72,10 @@ public final class DataDiskImageEncryptionResponse {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
-        }
-        public DataDiskImageEncryptionResponse build() {
+        }        public DataDiskImageEncryptionResponse build() {
             return new DataDiskImageEncryptionResponse(diskEncryptionSetId, lun);
         }
     }

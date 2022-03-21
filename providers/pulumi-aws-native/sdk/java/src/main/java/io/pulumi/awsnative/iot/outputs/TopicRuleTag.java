@@ -53,12 +53,10 @@ public final class TopicRuleTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TopicRuleTag build() {
+        }        public TopicRuleTag build() {
             return new TopicRuleTag(key, value);
         }
     }

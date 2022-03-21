@@ -305,162 +305,133 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
             this.accessControl = accessControl;
             return this;
         }
-
         public Builder accessControl(@Nullable StreamingEndpointAccessControlArgs accessControl) {
             this.accessControl = Output.ofNullable(accessControl);
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder autoStart(@Nullable Output<Boolean> autoStart) {
             this.autoStart = autoStart;
             return this;
         }
-
         public Builder autoStart(@Nullable Boolean autoStart) {
             this.autoStart = Output.ofNullable(autoStart);
             return this;
         }
-
         public Builder availabilitySetName(@Nullable Output<String> availabilitySetName) {
             this.availabilitySetName = availabilitySetName;
             return this;
         }
-
         public Builder availabilitySetName(@Nullable String availabilitySetName) {
             this.availabilitySetName = Output.ofNullable(availabilitySetName);
             return this;
         }
-
         public Builder cdnEnabled(@Nullable Output<Boolean> cdnEnabled) {
             this.cdnEnabled = cdnEnabled;
             return this;
         }
-
         public Builder cdnEnabled(@Nullable Boolean cdnEnabled) {
             this.cdnEnabled = Output.ofNullable(cdnEnabled);
             return this;
         }
-
         public Builder cdnProfile(@Nullable Output<String> cdnProfile) {
             this.cdnProfile = cdnProfile;
             return this;
         }
-
         public Builder cdnProfile(@Nullable String cdnProfile) {
             this.cdnProfile = Output.ofNullable(cdnProfile);
             return this;
         }
-
         public Builder cdnProvider(@Nullable Output<String> cdnProvider) {
             this.cdnProvider = cdnProvider;
             return this;
         }
-
         public Builder cdnProvider(@Nullable String cdnProvider) {
             this.cdnProvider = Output.ofNullable(cdnProvider);
             return this;
         }
-
         public Builder crossSiteAccessPolicies(@Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
-
         public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = Output.ofNullable(crossSiteAccessPolicies);
             return this;
         }
-
         public Builder customHostNames(@Nullable Output<List<String>> customHostNames) {
             this.customHostNames = customHostNames;
             return this;
         }
-
         public Builder customHostNames(@Nullable List<String> customHostNames) {
             this.customHostNames = Output.ofNullable(customHostNames);
             return this;
         }
-
+        public Builder customHostNames(String... customHostNames) {
+            return customHostNames(List.of(customHostNames));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxCacheAge(@Nullable Output<Double> maxCacheAge) {
             this.maxCacheAge = maxCacheAge;
             return this;
         }
-
         public Builder maxCacheAge(@Nullable Double maxCacheAge) {
             this.maxCacheAge = Output.ofNullable(maxCacheAge);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scaleUnits(Output<Integer> scaleUnits) {
             this.scaleUnits = Objects.requireNonNull(scaleUnits);
             return this;
         }
-
         public Builder scaleUnits(Integer scaleUnits) {
             this.scaleUnits = Output.of(Objects.requireNonNull(scaleUnits));
             return this;
         }
-
         public Builder streamingEndpointName(@Nullable Output<String> streamingEndpointName) {
             this.streamingEndpointName = streamingEndpointName;
             return this;
         }
-
         public Builder streamingEndpointName(@Nullable String streamingEndpointName) {
             this.streamingEndpointName = Output.ofNullable(streamingEndpointName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StreamingEndpointArgs build() {
+        }        public StreamingEndpointArgs build() {
             return new StreamingEndpointArgs(accessControl, accountName, autoStart, availabilitySetName, cdnEnabled, cdnProfile, cdnProvider, crossSiteAccessPolicies, customHostNames, description, location, maxCacheAge, resourceGroupName, scaleUnits, streamingEndpointName, tags);
         }
     }

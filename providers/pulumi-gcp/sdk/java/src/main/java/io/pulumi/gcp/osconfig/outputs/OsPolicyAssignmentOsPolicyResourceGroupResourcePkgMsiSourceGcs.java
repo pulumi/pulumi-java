@@ -88,17 +88,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGc
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs(bucket, generation, object);
         }
     }

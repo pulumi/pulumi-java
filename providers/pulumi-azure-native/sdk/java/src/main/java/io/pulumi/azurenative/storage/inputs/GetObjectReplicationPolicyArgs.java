@@ -88,17 +88,14 @@ public final class GetObjectReplicationPolicyArgs extends io.pulumi.resources.In
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder objectReplicationPolicyId(String objectReplicationPolicyId) {
             this.objectReplicationPolicyId = Objects.requireNonNull(objectReplicationPolicyId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetObjectReplicationPolicyArgs build() {
+        }        public GetObjectReplicationPolicyArgs build() {
             return new GetObjectReplicationPolicyArgs(accountName, objectReplicationPolicyId, resourceGroupName);
         }
     }

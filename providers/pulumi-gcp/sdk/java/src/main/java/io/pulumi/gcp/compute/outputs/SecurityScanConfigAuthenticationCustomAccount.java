@@ -89,17 +89,14 @@ public final class SecurityScanConfigAuthenticationCustomAccount {
             this.loginUrl = Objects.requireNonNull(loginUrl);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public SecurityScanConfigAuthenticationCustomAccount build() {
+        }        public SecurityScanConfigAuthenticationCustomAccount build() {
             return new SecurityScanConfigAuthenticationCustomAccount(loginUrl, password, username);
         }
     }

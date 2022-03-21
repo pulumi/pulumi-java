@@ -225,57 +225,61 @@ public final class EdifactProtocolSettingsResponse {
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
-
         public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides) {
             this.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
-
+        public Builder edifactDelimiterOverrides(EdifactDelimiterOverrideResponse... edifactDelimiterOverrides) {
+            return edifactDelimiterOverrides(List.of(edifactDelimiterOverrides));
+        }
         public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
-
+        public Builder envelopeOverrides(EdifactEnvelopeOverrideResponse... envelopeOverrides) {
+            return envelopeOverrides(List.of(envelopeOverrides));
+        }
         public Builder envelopeSettings(EdifactEnvelopeSettingsResponse envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
-
         public Builder framingSettings(EdifactFramingSettingsResponse framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
-
         public Builder messageFilter(EdifactMessageFilterResponse messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
-
         public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierResponse> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
-
+        public Builder messageFilterList(EdifactMessageIdentifierResponse... messageFilterList) {
+            return messageFilterList(List.of(messageFilterList));
+        }
         public Builder processingSettings(EdifactProcessingSettingsResponse processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
-
         public Builder schemaReferences(List<EdifactSchemaReferenceResponse> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
-
+        public Builder schemaReferences(EdifactSchemaReferenceResponse... schemaReferences) {
+            return schemaReferences(List.of(schemaReferences));
+        }
         public Builder validationOverrides(@Nullable List<EdifactValidationOverrideResponse> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
-
+        public Builder validationOverrides(EdifactValidationOverrideResponse... validationOverrides) {
+            return validationOverrides(List.of(validationOverrides));
+        }
         public Builder validationSettings(EdifactValidationSettingsResponse validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
-        }
-        public EdifactProtocolSettingsResponse build() {
+        }        public EdifactProtocolSettingsResponse build() {
             return new EdifactProtocolSettingsResponse(acknowledgementSettings, edifactDelimiterOverrides, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, validationOverrides, validationSettings);
         }
     }

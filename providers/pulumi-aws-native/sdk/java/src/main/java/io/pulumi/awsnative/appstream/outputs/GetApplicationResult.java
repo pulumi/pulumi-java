@@ -121,52 +121,45 @@ public final class GetApplicationResult {
             this.appBlockArn = appBlockArn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder attributesToDelete(@Nullable List<String> attributesToDelete) {
             this.attributesToDelete = attributesToDelete;
             return this;
         }
-
+        public Builder attributesToDelete(String... attributesToDelete) {
+            return attributesToDelete(List.of(attributesToDelete));
+        }
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder iconS3Location(@Nullable ApplicationS3Location iconS3Location) {
             this.iconS3Location = iconS3Location;
             return this;
         }
-
         public Builder launchParameters(@Nullable String launchParameters) {
             this.launchParameters = launchParameters;
             return this;
         }
-
         public Builder launchPath(@Nullable String launchPath) {
             this.launchPath = launchPath;
             return this;
         }
-
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(appBlockArn, arn, attributesToDelete, createdTime, description, displayName, iconS3Location, launchParameters, launchPath, workingDirectory);
         }
     }

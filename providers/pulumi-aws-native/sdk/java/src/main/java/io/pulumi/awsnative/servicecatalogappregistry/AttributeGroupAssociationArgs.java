@@ -73,22 +73,18 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
             this.application = Objects.requireNonNull(application);
             return this;
         }
-
         public Builder application(String application) {
             this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
-
         public Builder attributeGroup(Output<String> attributeGroup) {
             this.attributeGroup = Objects.requireNonNull(attributeGroup);
             return this;
         }
-
         public Builder attributeGroup(String attributeGroup) {
             this.attributeGroup = Output.of(Objects.requireNonNull(attributeGroup));
             return this;
-        }
-        public AttributeGroupAssociationArgs build() {
+        }        public AttributeGroupAssociationArgs build() {
             return new AttributeGroupAssociationArgs(application, attributeGroup);
         }
     }

@@ -76,12 +76,10 @@ public final class GRPCAction {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
-        }
-        public GRPCAction build() {
+        }        public GRPCAction build() {
             return new GRPCAction(port, service);
         }
     }

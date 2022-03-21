@@ -80,22 +80,18 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
             this.lun = lun;
             return this;
         }
-
         public Builder lun(@Nullable String lun) {
             this.lun = Output.ofNullable(lun);
             return this;
         }
-
         public Builder storageType(@Nullable Output<Either<String,StorageType>> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable Either<String,StorageType> storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
-        }
-        public DataDiskStorageTypeInfoArgs build() {
+        }        public DataDiskStorageTypeInfoArgs build() {
             return new DataDiskStorageTypeInfoArgs(lun, storageType);
         }
     }

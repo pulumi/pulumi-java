@@ -56,12 +56,10 @@ public final class URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArg
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder backendService(String backendService) {
             this.backendService = Output.of(Objects.requireNonNull(backendService));
             return this;
-        }
-        public URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs build() {
+        }        public URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs build() {
             return new URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs(backendService);
         }
     }

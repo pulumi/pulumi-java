@@ -53,8 +53,7 @@ public final class DatabaseStatisticsResponse {
         public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
-        }
-        public DatabaseStatisticsResponse build() {
+        }        public DatabaseStatisticsResponse build() {
             return new DatabaseStatisticsResponse(size);
         }
     }

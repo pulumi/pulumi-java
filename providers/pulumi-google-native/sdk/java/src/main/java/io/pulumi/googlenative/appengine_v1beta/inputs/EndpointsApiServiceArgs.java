@@ -112,42 +112,34 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
             this.configId = configId;
             return this;
         }
-
         public Builder configId(@Nullable String configId) {
             this.configId = Output.ofNullable(configId);
             return this;
         }
-
         public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
-
         public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
             this.disableTraceSampling = Output.ofNullable(disableTraceSampling);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rolloutStrategy(@Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }
-
         public Builder rolloutStrategy(@Nullable EndpointsApiServiceRolloutStrategy rolloutStrategy) {
             this.rolloutStrategy = Output.ofNullable(rolloutStrategy);
             return this;
-        }
-        public EndpointsApiServiceArgs build() {
+        }        public EndpointsApiServiceArgs build() {
             return new EndpointsApiServiceArgs(configId, disableTraceSampling, name, rolloutStrategy);
         }
     }

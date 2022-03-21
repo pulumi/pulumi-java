@@ -152,37 +152,36 @@ public final class FilterFindingCriteriaCriterion {
             this.equals = equals;
             return this;
         }
-
+        public Builder equals(String... equals) {
+            return equals(List.of(equals));
+        }
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder greaterThan(@Nullable String greaterThan) {
             this.greaterThan = greaterThan;
             return this;
         }
-
         public Builder greaterThanOrEqual(@Nullable String greaterThanOrEqual) {
             this.greaterThanOrEqual = greaterThanOrEqual;
             return this;
         }
-
         public Builder lessThan(@Nullable String lessThan) {
             this.lessThan = lessThan;
             return this;
         }
-
         public Builder lessThanOrEqual(@Nullable String lessThanOrEqual) {
             this.lessThanOrEqual = lessThanOrEqual;
             return this;
         }
-
         public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
-        public FilterFindingCriteriaCriterion build() {
+        public Builder notEquals(String... notEquals) {
+            return notEquals(List.of(notEquals));
+        }        public FilterFindingCriteriaCriterion build() {
             return new FilterFindingCriteriaCriterion(equals, field, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual, notEquals);
         }
     }

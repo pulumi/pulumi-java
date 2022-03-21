@@ -107,37 +107,30 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
-
         public Builder validateRequestBody(@Nullable Output<Boolean> validateRequestBody) {
             this.validateRequestBody = validateRequestBody;
             return this;
         }
-
         public Builder validateRequestBody(@Nullable Boolean validateRequestBody) {
             this.validateRequestBody = Output.ofNullable(validateRequestBody);
             return this;
         }
-
         public Builder validateRequestParameters(@Nullable Output<Boolean> validateRequestParameters) {
             this.validateRequestParameters = validateRequestParameters;
             return this;
         }
-
         public Builder validateRequestParameters(@Nullable Boolean validateRequestParameters) {
             this.validateRequestParameters = Output.ofNullable(validateRequestParameters);
             return this;
-        }
-        public RequestValidatorState build() {
+        }        public RequestValidatorState build() {
             return new RequestValidatorState(name, restApi, validateRequestBody, validateRequestParameters);
         }
     }

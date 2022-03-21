@@ -125,27 +125,22 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder warning(AnyResponse warning) {
             this.warning = Objects.requireNonNull(warning);
             return this;
-        }
-        public TestIssueResponse build() {
+        }        public TestIssueResponse build() {
             return new TestIssueResponse(category, errorMessage, severity, type, warning);
         }
     }

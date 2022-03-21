@@ -103,22 +103,18 @@ public final class CustomDomainAssociationCertificateValidationRecord {
             this.name = name;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CustomDomainAssociationCertificateValidationRecord build() {
+        }        public CustomDomainAssociationCertificateValidationRecord build() {
             return new CustomDomainAssociationCertificateValidationRecord(name, status, type, value);
         }
     }

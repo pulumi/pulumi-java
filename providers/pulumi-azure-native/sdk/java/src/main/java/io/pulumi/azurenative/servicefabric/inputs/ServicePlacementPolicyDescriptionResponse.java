@@ -58,8 +58,7 @@ public final class ServicePlacementPolicyDescriptionResponse extends io.pulumi.r
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServicePlacementPolicyDescriptionResponse build() {
+        }        public ServicePlacementPolicyDescriptionResponse build() {
             return new ServicePlacementPolicyDescriptionResponse(type);
         }
     }

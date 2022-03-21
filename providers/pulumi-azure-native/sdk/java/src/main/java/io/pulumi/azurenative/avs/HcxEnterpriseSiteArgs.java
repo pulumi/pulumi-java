@@ -90,32 +90,26 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
             this.hcxEnterpriseSiteName = hcxEnterpriseSiteName;
             return this;
         }
-
         public Builder hcxEnterpriseSiteName(@Nullable String hcxEnterpriseSiteName) {
             this.hcxEnterpriseSiteName = Output.ofNullable(hcxEnterpriseSiteName);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public HcxEnterpriseSiteArgs build() {
+        }        public HcxEnterpriseSiteArgs build() {
             return new HcxEnterpriseSiteArgs(hcxEnterpriseSiteName, privateCloudName, resourceGroupName);
         }
     }

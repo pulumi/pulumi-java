@@ -191,47 +191,38 @@ public final class AS2MdnSettingsResponse extends io.pulumi.resources.InvokeArgs
             this.dispositionNotificationTo = dispositionNotificationTo;
             return this;
         }
-
         public Builder mdnText(@Nullable String mdnText) {
             this.mdnText = mdnText;
             return this;
         }
-
         public Builder micHashingAlgorithm(String micHashingAlgorithm) {
             this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm);
             return this;
         }
-
         public Builder needMDN(Boolean needMDN) {
             this.needMDN = Objects.requireNonNull(needMDN);
             return this;
         }
-
         public Builder receiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
             this.receiptDeliveryUrl = receiptDeliveryUrl;
             return this;
         }
-
         public Builder sendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
             this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox);
             return this;
         }
-
         public Builder sendMDNAsynchronously(Boolean sendMDNAsynchronously) {
             this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously);
             return this;
         }
-
         public Builder signMDN(Boolean signMDN) {
             this.signMDN = Objects.requireNonNull(signMDN);
             return this;
         }
-
         public Builder signOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
             this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
             return this;
-        }
-        public AS2MdnSettingsResponse build() {
+        }        public AS2MdnSettingsResponse build() {
             return new AS2MdnSettingsResponse(dispositionNotificationTo, mdnText, micHashingAlgorithm, needMDN, receiptDeliveryUrl, sendInboundMDNToMessageBox, sendMDNAsynchronously, signMDN, signOutboundMDNIfOptional);
         }
     }

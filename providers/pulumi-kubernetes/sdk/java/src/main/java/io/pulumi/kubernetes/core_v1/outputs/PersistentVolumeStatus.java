@@ -101,17 +101,14 @@ public final class PersistentVolumeStatus {
             this.message = message;
             return this;
         }
-
         public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
-        }
-        public PersistentVolumeStatus build() {
+        }        public PersistentVolumeStatus build() {
             return new PersistentVolumeStatus(message, phase, reason);
         }
     }

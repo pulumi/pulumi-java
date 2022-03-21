@@ -56,12 +56,10 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
             this.autoEnable = Objects.requireNonNull(autoEnable);
             return this;
         }
-
         public Builder autoEnable(Boolean autoEnable) {
             this.autoEnable = Output.of(Objects.requireNonNull(autoEnable));
             return this;
-        }
-        public OrganizationConfigurationArgs build() {
+        }        public OrganizationConfigurationArgs build() {
             return new OrganizationConfigurationArgs(autoEnable);
         }
     }

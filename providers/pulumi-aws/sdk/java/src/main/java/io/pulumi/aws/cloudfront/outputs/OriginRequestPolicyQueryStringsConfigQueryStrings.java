@@ -46,7 +46,9 @@ public final class OriginRequestPolicyQueryStringsConfigQueryStrings {
             this.items = items;
             return this;
         }
-        public OriginRequestPolicyQueryStringsConfigQueryStrings build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public OriginRequestPolicyQueryStringsConfigQueryStrings build() {
             return new OriginRequestPolicyQueryStringsConfigQueryStrings(items);
         }
     }

@@ -88,17 +88,14 @@ public final class GroupTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder propagateAtLaunch(Boolean propagateAtLaunch) {
             this.propagateAtLaunch = Objects.requireNonNull(propagateAtLaunch);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GroupTag build() {
+        }        public GroupTag build() {
             return new GroupTag(key, propagateAtLaunch, value);
         }
     }

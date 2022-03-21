@@ -77,22 +77,18 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder viewDefinition(Output<String> viewDefinition) {
             this.viewDefinition = Objects.requireNonNull(viewDefinition);
             return this;
         }
-
         public Builder viewDefinition(String viewDefinition) {
             this.viewDefinition = Output.of(Objects.requireNonNull(viewDefinition));
             return this;
-        }
-        public CassandraViewResourceArgs build() {
+        }        public CassandraViewResourceArgs build() {
             return new CassandraViewResourceArgs(id, viewDefinition);
         }
     }

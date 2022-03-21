@@ -61,12 +61,10 @@ public final class GoogleCloudRetailV2PromotionArgs extends io.pulumi.resources.
             this.promotionId = promotionId;
             return this;
         }
-
         public Builder promotionId(@Nullable String promotionId) {
             this.promotionId = Output.ofNullable(promotionId);
             return this;
-        }
-        public GoogleCloudRetailV2PromotionArgs build() {
+        }        public GoogleCloudRetailV2PromotionArgs build() {
             return new GoogleCloudRetailV2PromotionArgs(promotionId);
         }
     }

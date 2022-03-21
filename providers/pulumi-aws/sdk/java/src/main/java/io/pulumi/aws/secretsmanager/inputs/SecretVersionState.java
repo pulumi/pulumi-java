@@ -139,62 +139,53 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder secretBinary(@Nullable Output<String> secretBinary) {
             this.secretBinary = secretBinary;
             return this;
         }
-
         public Builder secretBinary(@Nullable String secretBinary) {
             this.secretBinary = Output.ofNullable(secretBinary);
             return this;
         }
-
         public Builder secretId(@Nullable Output<String> secretId) {
             this.secretId = secretId;
             return this;
         }
-
         public Builder secretId(@Nullable String secretId) {
             this.secretId = Output.ofNullable(secretId);
             return this;
         }
-
         public Builder secretString(@Nullable Output<String> secretString) {
             this.secretString = secretString;
             return this;
         }
-
         public Builder secretString(@Nullable String secretString) {
             this.secretString = Output.ofNullable(secretString);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
         }
-
         public Builder versionStages(@Nullable Output<List<String>> versionStages) {
             this.versionStages = versionStages;
             return this;
         }
-
         public Builder versionStages(@Nullable List<String> versionStages) {
             this.versionStages = Output.ofNullable(versionStages);
             return this;
         }
-        public SecretVersionState build() {
+        public Builder versionStages(String... versionStages) {
+            return versionStages(List.of(versionStages));
+        }        public SecretVersionState build() {
             return new SecretVersionState(arn, secretBinary, secretId, secretString, versionId, versionStages);
         }
     }

@@ -58,8 +58,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse ex
         public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(caseSensitive);
         }
     }

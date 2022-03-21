@@ -83,27 +83,25 @@ public final class InstanceFromMachineImageScheduling {
             this.automaticRestart = automaticRestart;
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
-
         public Builder nodeAffinities(@Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
-
+        public Builder nodeAffinities(InstanceFromMachineImageSchedulingNodeAffinity... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
-
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
-        }
-        public InstanceFromMachineImageScheduling build() {
+        }        public InstanceFromMachineImageScheduling build() {
             return new InstanceFromMachineImageScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }
     }

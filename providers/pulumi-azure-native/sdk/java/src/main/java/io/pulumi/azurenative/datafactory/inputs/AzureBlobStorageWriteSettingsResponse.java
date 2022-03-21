@@ -128,27 +128,22 @@ public final class AzureBlobStorageWriteSettingsResponse extends io.pulumi.resou
             this.blockSizeInMB = blockSizeInMB;
             return this;
         }
-
         public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureBlobStorageWriteSettingsResponse build() {
+        }        public AzureBlobStorageWriteSettingsResponse build() {
             return new AzureBlobStorageWriteSettingsResponse(blockSizeInMB, copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }
     }

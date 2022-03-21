@@ -60,12 +60,10 @@ public final class OSPolicyResourcePackageResourceGooGetArgs extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public OSPolicyResourcePackageResourceGooGetArgs build() {
+        }        public OSPolicyResourcePackageResourceGooGetArgs build() {
             return new OSPolicyResourcePackageResourceGooGetArgs(name);
         }
     }

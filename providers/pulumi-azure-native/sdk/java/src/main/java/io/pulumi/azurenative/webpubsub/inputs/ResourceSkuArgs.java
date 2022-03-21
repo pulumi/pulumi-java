@@ -105,32 +105,26 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,WebPubSubSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,WebPubSubSkuTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public ResourceSkuArgs build() {
+        }        public ResourceSkuArgs build() {
             return new ResourceSkuArgs(capacity, name, tier);
         }
     }

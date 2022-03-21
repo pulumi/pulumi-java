@@ -124,27 +124,22 @@ public final class WebAclRule {
             this.action = action;
             return this;
         }
-
         public Builder overrideAction(@Nullable WebAclRuleOverrideAction overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public WebAclRule build() {
+        }        public WebAclRule build() {
             return new WebAclRule(action, overrideAction, priority, ruleId, type);
         }
     }

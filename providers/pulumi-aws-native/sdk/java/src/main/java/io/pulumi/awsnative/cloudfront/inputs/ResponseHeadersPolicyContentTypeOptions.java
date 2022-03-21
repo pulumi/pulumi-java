@@ -50,8 +50,7 @@ public final class ResponseHeadersPolicyContentTypeOptions extends io.pulumi.res
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
-        }
-        public ResponseHeadersPolicyContentTypeOptions build() {
+        }        public ResponseHeadersPolicyContentTypeOptions build() {
             return new ResponseHeadersPolicyContentTypeOptions(override);
         }
     }

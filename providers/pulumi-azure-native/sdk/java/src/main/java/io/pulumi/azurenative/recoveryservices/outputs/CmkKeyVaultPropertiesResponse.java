@@ -53,8 +53,7 @@ public final class CmkKeyVaultPropertiesResponse {
         public Builder keyUri(@Nullable String keyUri) {
             this.keyUri = keyUri;
             return this;
-        }
-        public CmkKeyVaultPropertiesResponse build() {
+        }        public CmkKeyVaultPropertiesResponse build() {
             return new CmkKeyVaultPropertiesResponse(keyUri);
         }
     }

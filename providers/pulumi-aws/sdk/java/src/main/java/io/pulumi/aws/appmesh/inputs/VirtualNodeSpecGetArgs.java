@@ -127,52 +127,45 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
             this.backendDefaults = backendDefaults;
             return this;
         }
-
         public Builder backendDefaults(@Nullable VirtualNodeSpecBackendDefaultsGetArgs backendDefaults) {
             this.backendDefaults = Output.ofNullable(backendDefaults);
             return this;
         }
-
         public Builder backends(@Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends) {
             this.backends = backends;
             return this;
         }
-
         public Builder backends(@Nullable List<VirtualNodeSpecBackendGetArgs> backends) {
             this.backends = Output.ofNullable(backends);
             return this;
         }
-
+        public Builder backends(VirtualNodeSpecBackendGetArgs... backends) {
+            return backends(List.of(backends));
+        }
         public Builder listener(@Nullable Output<VirtualNodeSpecListenerGetArgs> listener) {
             this.listener = listener;
             return this;
         }
-
         public Builder listener(@Nullable VirtualNodeSpecListenerGetArgs listener) {
             this.listener = Output.ofNullable(listener);
             return this;
         }
-
         public Builder logging(@Nullable Output<VirtualNodeSpecLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable VirtualNodeSpecLoggingGetArgs logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder serviceDiscovery(@Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
             this.serviceDiscovery = serviceDiscovery;
             return this;
         }
-
         public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscoveryGetArgs serviceDiscovery) {
             this.serviceDiscovery = Output.ofNullable(serviceDiscovery);
             return this;
-        }
-        public VirtualNodeSpecGetArgs build() {
+        }        public VirtualNodeSpecGetArgs build() {
             return new VirtualNodeSpecGetArgs(backendDefaults, backends, listener, logging, serviceDiscovery);
         }
     }

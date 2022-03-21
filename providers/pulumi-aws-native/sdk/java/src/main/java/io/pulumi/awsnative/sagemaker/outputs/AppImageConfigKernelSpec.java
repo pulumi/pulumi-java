@@ -71,12 +71,10 @@ public final class AppImageConfigKernelSpec {
             this.displayName = displayName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AppImageConfigKernelSpec build() {
+        }        public AppImageConfigKernelSpec build() {
             return new AppImageConfigKernelSpec(displayName, name);
         }
     }

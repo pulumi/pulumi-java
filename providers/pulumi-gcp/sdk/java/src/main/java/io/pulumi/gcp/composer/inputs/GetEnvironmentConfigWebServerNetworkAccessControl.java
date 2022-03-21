@@ -52,7 +52,9 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControl extends io.
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }
-        public GetEnvironmentConfigWebServerNetworkAccessControl build() {
+        public Builder allowedIpRanges(GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange... allowedIpRanges) {
+            return allowedIpRanges(List.of(allowedIpRanges));
+        }        public GetEnvironmentConfigWebServerNetworkAccessControl build() {
             return new GetEnvironmentConfigWebServerNetworkAccessControl(allowedIpRanges);
         }
     }

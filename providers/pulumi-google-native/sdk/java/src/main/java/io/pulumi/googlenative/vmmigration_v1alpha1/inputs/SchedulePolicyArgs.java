@@ -79,22 +79,18 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.idleDuration = idleDuration;
             return this;
         }
-
         public Builder idleDuration(@Nullable String idleDuration) {
             this.idleDuration = Output.ofNullable(idleDuration);
             return this;
         }
-
         public Builder skipOsAdaptation(@Nullable Output<Boolean> skipOsAdaptation) {
             this.skipOsAdaptation = skipOsAdaptation;
             return this;
         }
-
         public Builder skipOsAdaptation(@Nullable Boolean skipOsAdaptation) {
             this.skipOsAdaptation = Output.ofNullable(skipOsAdaptation);
             return this;
-        }
-        public SchedulePolicyArgs build() {
+        }        public SchedulePolicyArgs build() {
             return new SchedulePolicyArgs(idleDuration, skipOsAdaptation);
         }
     }

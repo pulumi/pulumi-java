@@ -72,12 +72,10 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
             this.begin = Objects.requireNonNull(begin);
             return this;
         }
-
         public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
-        }
-        public LicenseValidityDateFormat build() {
+        }        public LicenseValidityDateFormat build() {
             return new LicenseValidityDateFormat(begin, end);
         }
     }

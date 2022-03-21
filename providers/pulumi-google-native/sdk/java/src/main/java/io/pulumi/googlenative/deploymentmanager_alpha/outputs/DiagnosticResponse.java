@@ -69,12 +69,10 @@ public final class DiagnosticResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
-        }
-        public DiagnosticResponse build() {
+        }        public DiagnosticResponse build() {
             return new DiagnosticResponse(field, level);
         }
     }

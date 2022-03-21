@@ -78,12 +78,13 @@ public final class NfsAccessPolicyResponse extends io.pulumi.resources.InvokeArg
             this.accessRules = Objects.requireNonNull(accessRules);
             return this;
         }
-
+        public Builder accessRules(NfsAccessRuleResponse... accessRules) {
+            return accessRules(List.of(accessRules));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public NfsAccessPolicyResponse build() {
+        }        public NfsAccessPolicyResponse build() {
             return new NfsAccessPolicyResponse(accessRules, name);
         }
     }

@@ -88,17 +88,14 @@ public final class ListWebAppFunctionKeysArgs extends io.pulumi.resources.Invoke
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppFunctionKeysArgs build() {
+        }        public ListWebAppFunctionKeysArgs build() {
             return new ListWebAppFunctionKeysArgs(functionName, name, resourceGroupName);
         }
     }

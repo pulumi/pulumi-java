@@ -218,57 +218,49 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
             this.adMarkers = adMarkers;
             return this;
         }
-
         public Builder adTriggers(@Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
-
+        public Builder adTriggers(OriginEndpointHlsPackageAdTriggersItem... adTriggers) {
+            return adTriggers(List.of(adTriggers));
+        }
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
-
         public Builder encryption(@Nullable OriginEndpointHlsEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
-
         public Builder playlistType(@Nullable OriginEndpointHlsPackagePlaylistType playlistType) {
             this.playlistType = playlistType;
             return this;
         }
-
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
-        }
-        public OriginEndpointHlsPackage build() {
+        }        public OriginEndpointHlsPackage build() {
             return new OriginEndpointHlsPackage(adMarkers, adTriggers, adsOnDeliveryRestrictions, encryption, includeIframeOnlyStream, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, segmentDurationSeconds, streamSelection, useAudioRenditionGroup);
         }
     }

@@ -88,17 +88,14 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPatchScheduleArgs build() {
+        }        public GetPatchScheduleArgs build() {
             return new GetPatchScheduleArgs($default, name, resourceGroupName);
         }
     }

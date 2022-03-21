@@ -60,8 +60,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
-        }
-        public CreationDataResponse build() {
+        }        public CreationDataResponse build() {
             return new CreationDataResponse(sourceResourceId);
         }
     }

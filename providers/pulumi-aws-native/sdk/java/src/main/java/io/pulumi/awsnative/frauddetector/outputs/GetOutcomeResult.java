@@ -121,27 +121,25 @@ public final class GetOutcomeResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder tags(@Nullable List<OutcomeTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetOutcomeResult build() {
+        public Builder tags(OutcomeTag... tags) {
+            return tags(List.of(tags));
+        }        public GetOutcomeResult build() {
             return new GetOutcomeResult(arn, createdTime, description, lastUpdatedTime, tags);
         }
     }

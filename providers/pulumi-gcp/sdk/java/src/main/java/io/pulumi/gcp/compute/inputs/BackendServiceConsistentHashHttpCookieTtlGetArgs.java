@@ -77,22 +77,18 @@ public final class BackendServiceConsistentHashHttpCookieTtlGetArgs extends io.p
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public BackendServiceConsistentHashHttpCookieTtlGetArgs build() {
+        }        public BackendServiceConsistentHashHttpCookieTtlGetArgs build() {
             return new BackendServiceConsistentHashHttpCookieTtlGetArgs(nanos, seconds);
         }
     }

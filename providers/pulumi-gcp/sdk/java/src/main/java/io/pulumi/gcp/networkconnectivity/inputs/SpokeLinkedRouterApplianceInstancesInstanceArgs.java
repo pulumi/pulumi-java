@@ -74,22 +74,18 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends io.pu
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
-
         public Builder virtualMachine(@Nullable String virtualMachine) {
             this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
-        }
-        public SpokeLinkedRouterApplianceInstancesInstanceArgs build() {
+        }        public SpokeLinkedRouterApplianceInstancesInstanceArgs build() {
             return new SpokeLinkedRouterApplianceInstancesInstanceArgs(ipAddress, virtualMachine);
         }
     }

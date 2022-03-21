@@ -60,8 +60,7 @@ public final class DiskAutoSnapshotAddOn extends io.pulumi.resources.InvokeArgs 
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
-        }
-        public DiskAutoSnapshotAddOn build() {
+        }        public DiskAutoSnapshotAddOn build() {
             return new DiskAutoSnapshotAddOn(snapshotTimeOfDay);
         }
     }

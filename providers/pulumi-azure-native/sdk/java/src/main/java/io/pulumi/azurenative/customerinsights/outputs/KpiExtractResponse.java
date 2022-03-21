@@ -69,12 +69,10 @@ public final class KpiExtractResponse {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder extractName(String extractName) {
             this.extractName = Objects.requireNonNull(extractName);
             return this;
-        }
-        public KpiExtractResponse build() {
+        }        public KpiExtractResponse build() {
             return new KpiExtractResponse(expression, extractName);
         }
     }

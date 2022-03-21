@@ -58,8 +58,7 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse extends io.pulu
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GoogleCloudApigeeV1MonetizationConfigResponse build() {
+        }        public GoogleCloudApigeeV1MonetizationConfigResponse build() {
             return new GoogleCloudApigeeV1MonetizationConfigResponse(enabled);
         }
     }

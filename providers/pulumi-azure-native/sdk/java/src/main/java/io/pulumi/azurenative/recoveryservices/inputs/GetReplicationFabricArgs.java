@@ -88,17 +88,14 @@ public final class GetReplicationFabricArgs extends io.pulumi.resources.InvokeAr
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetReplicationFabricArgs build() {
+        }        public GetReplicationFabricArgs build() {
             return new GetReplicationFabricArgs(fabricName, resourceGroupName, resourceName);
         }
     }

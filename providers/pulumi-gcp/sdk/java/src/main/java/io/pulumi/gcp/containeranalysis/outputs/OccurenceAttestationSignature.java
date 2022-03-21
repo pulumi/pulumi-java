@@ -101,12 +101,10 @@ public final class OccurenceAttestationSignature {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
-
         public Builder signature(@Nullable String signature) {
             this.signature = signature;
             return this;
-        }
-        public OccurenceAttestationSignature build() {
+        }        public OccurenceAttestationSignature build() {
             return new OccurenceAttestationSignature(publicKeyId, signature);
         }
     }

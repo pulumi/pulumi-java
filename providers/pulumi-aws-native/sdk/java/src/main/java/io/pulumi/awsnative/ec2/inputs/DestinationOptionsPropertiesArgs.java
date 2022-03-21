@@ -78,32 +78,26 @@ public final class DestinationOptionsPropertiesArgs extends io.pulumi.resources.
             this.fileFormat = Objects.requireNonNull(fileFormat);
             return this;
         }
-
         public Builder fileFormat(FlowLogDestinationOptionsPropertiesFileFormat fileFormat) {
             this.fileFormat = Output.of(Objects.requireNonNull(fileFormat));
             return this;
         }
-
         public Builder hiveCompatiblePartitions(Output<Boolean> hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = Objects.requireNonNull(hiveCompatiblePartitions);
             return this;
         }
-
         public Builder hiveCompatiblePartitions(Boolean hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = Output.of(Objects.requireNonNull(hiveCompatiblePartitions));
             return this;
         }
-
         public Builder perHourPartition(Output<Boolean> perHourPartition) {
             this.perHourPartition = Objects.requireNonNull(perHourPartition);
             return this;
         }
-
         public Builder perHourPartition(Boolean perHourPartition) {
             this.perHourPartition = Output.of(Objects.requireNonNull(perHourPartition));
             return this;
-        }
-        public DestinationOptionsPropertiesArgs build() {
+        }        public DestinationOptionsPropertiesArgs build() {
             return new DestinationOptionsPropertiesArgs(fileFormat, hiveCompatiblePartitions, perHourPartition);
         }
     }

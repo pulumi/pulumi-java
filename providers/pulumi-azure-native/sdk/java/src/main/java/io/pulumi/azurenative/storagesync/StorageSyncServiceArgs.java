@@ -125,52 +125,42 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
             this.incomingTrafficPolicy = incomingTrafficPolicy;
             return this;
         }
-
         public Builder incomingTrafficPolicy(@Nullable Either<String,IncomingTrafficPolicy> incomingTrafficPolicy) {
             this.incomingTrafficPolicy = Output.ofNullable(incomingTrafficPolicy);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageSyncServiceName(@Nullable Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
-
         public Builder storageSyncServiceName(@Nullable String storageSyncServiceName) {
             this.storageSyncServiceName = Output.ofNullable(storageSyncServiceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StorageSyncServiceArgs build() {
+        }        public StorageSyncServiceArgs build() {
             return new StorageSyncServiceArgs(incomingTrafficPolicy, location, resourceGroupName, storageSyncServiceName, tags);
         }
     }

@@ -57,12 +57,13 @@ public final class WorkflowTemplateJobPrestoJobQueryListArgs extends io.pulumi.r
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-
         public Builder queries(List<String> queries) {
             this.queries = Output.of(Objects.requireNonNull(queries));
             return this;
         }
-        public WorkflowTemplateJobPrestoJobQueryListArgs build() {
+        public Builder queries(String... queries) {
+            return queries(List.of(queries));
+        }        public WorkflowTemplateJobPrestoJobQueryListArgs build() {
             return new WorkflowTemplateJobPrestoJobQueryListArgs(queries);
         }
     }

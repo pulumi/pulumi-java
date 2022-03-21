@@ -172,82 +172,66 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             this.appName = appName;
             return this;
         }
-
         public Builder appName(@Nullable String appName) {
             this.appName = Output.ofNullable(appName);
             return this;
         }
-
         public Builder appType(@Nullable Output<String> appType) {
             this.appType = appType;
             return this;
         }
-
         public Builder appType(@Nullable String appType) {
             this.appType = Output.ofNullable(appType);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder domainId(@Nullable Output<String> domainId) {
             this.domainId = domainId;
             return this;
         }
-
         public Builder domainId(@Nullable String domainId) {
             this.domainId = Output.ofNullable(domainId);
             return this;
         }
-
         public Builder resourceSpec(@Nullable Output<AppResourceSpecGetArgs> resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }
-
         public Builder resourceSpec(@Nullable AppResourceSpecGetArgs resourceSpec) {
             this.resourceSpec = Output.ofNullable(resourceSpec);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userProfileName(@Nullable Output<String> userProfileName) {
             this.userProfileName = userProfileName;
             return this;
         }
-
         public Builder userProfileName(@Nullable String userProfileName) {
             this.userProfileName = Output.ofNullable(userProfileName);
             return this;
-        }
-        public AppState build() {
+        }        public AppState build() {
             return new AppState(appName, appType, arn, domainId, resourceSpec, tags, tagsAll, userProfileName);
         }
     }

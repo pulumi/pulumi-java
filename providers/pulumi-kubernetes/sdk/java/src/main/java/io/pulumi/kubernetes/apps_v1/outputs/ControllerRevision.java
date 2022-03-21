@@ -122,27 +122,22 @@ public final class ControllerRevision {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder data(@Nullable JsonElement data) {
             this.data = data;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
-        }
-        public ControllerRevision build() {
+        }        public ControllerRevision build() {
             return new ControllerRevision(apiVersion, data, kind, metadata, revision);
         }
     }

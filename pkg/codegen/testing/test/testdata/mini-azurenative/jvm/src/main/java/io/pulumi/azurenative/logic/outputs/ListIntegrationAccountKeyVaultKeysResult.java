@@ -53,8 +53,7 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListIntegrationAccountKeyVaultKeysResult build() {
+        }        public ListIntegrationAccountKeyVaultKeysResult build() {
             return new ListIntegrationAccountKeyVaultKeysResult(skipToken);
         }
     }

@@ -78,12 +78,10 @@ public final class B2CResourceSKUResponse extends io.pulumi.resources.InvokeArgs
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public B2CResourceSKUResponse build() {
+        }        public B2CResourceSKUResponse build() {
             return new B2CResourceSKUResponse(name, tier);
         }
     }

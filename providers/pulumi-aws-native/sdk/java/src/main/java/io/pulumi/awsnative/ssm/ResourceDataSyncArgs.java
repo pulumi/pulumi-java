@@ -140,82 +140,66 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder bucketRegion(@Nullable Output<String> bucketRegion) {
             this.bucketRegion = bucketRegion;
             return this;
         }
-
         public Builder bucketRegion(@Nullable String bucketRegion) {
             this.bucketRegion = Output.ofNullable(bucketRegion);
             return this;
         }
-
         public Builder kMSKeyArn(@Nullable Output<String> kMSKeyArn) {
             this.kMSKeyArn = kMSKeyArn;
             return this;
         }
-
         public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
             this.kMSKeyArn = Output.ofNullable(kMSKeyArn);
             return this;
         }
-
         public Builder s3Destination(@Nullable Output<ResourceDataSyncS3DestinationArgs> s3Destination) {
             this.s3Destination = s3Destination;
             return this;
         }
-
         public Builder s3Destination(@Nullable ResourceDataSyncS3DestinationArgs s3Destination) {
             this.s3Destination = Output.ofNullable(s3Destination);
             return this;
         }
-
         public Builder syncFormat(@Nullable Output<String> syncFormat) {
             this.syncFormat = syncFormat;
             return this;
         }
-
         public Builder syncFormat(@Nullable String syncFormat) {
             this.syncFormat = Output.ofNullable(syncFormat);
             return this;
         }
-
         public Builder syncSource(@Nullable Output<ResourceDataSyncSyncSourceArgs> syncSource) {
             this.syncSource = syncSource;
             return this;
         }
-
         public Builder syncSource(@Nullable ResourceDataSyncSyncSourceArgs syncSource) {
             this.syncSource = Output.ofNullable(syncSource);
             return this;
         }
-
         public Builder syncType(@Nullable Output<String> syncType) {
             this.syncType = syncType;
             return this;
         }
-
         public Builder syncType(@Nullable String syncType) {
             this.syncType = Output.ofNullable(syncType);
             return this;
-        }
-        public ResourceDataSyncArgs build() {
+        }        public ResourceDataSyncArgs build() {
             return new ResourceDataSyncArgs(bucketName, bucketPrefix, bucketRegion, kMSKeyArn, s3Destination, syncFormat, syncSource, syncType);
         }
     }

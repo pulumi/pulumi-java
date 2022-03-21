@@ -268,72 +268,58 @@ public final class FlowLogResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration) {
             this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
             return this;
         }
-
         public Builder format(@Nullable FlowLogFormatParametersResponse format) {
             this.format = format;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable RetentionPolicyParametersResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder storageId(String storageId) {
             this.storageId = Objects.requireNonNull(storageId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetResourceGuid(String targetResourceGuid) {
             this.targetResourceGuid = Objects.requireNonNull(targetResourceGuid);
             return this;
         }
-
         public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FlowLogResponse build() {
+        }        public FlowLogResponse build() {
             return new FlowLogResponse(enabled, etag, flowAnalyticsConfiguration, format, id, location, name, provisioningState, retentionPolicy, storageId, tags, targetResourceGuid, targetResourceId, type);
         }
     }

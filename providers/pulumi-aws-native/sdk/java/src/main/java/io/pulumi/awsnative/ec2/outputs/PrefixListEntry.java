@@ -55,12 +55,10 @@ public final class PrefixListEntry {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public PrefixListEntry build() {
+        }        public PrefixListEntry build() {
             return new PrefixListEntry(cidr, description);
         }
     }

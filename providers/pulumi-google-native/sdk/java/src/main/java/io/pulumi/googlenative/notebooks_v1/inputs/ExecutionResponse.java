@@ -189,47 +189,38 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder executionTemplate(ExecutionTemplateResponse executionTemplate) {
             this.executionTemplate = Objects.requireNonNull(executionTemplate);
             return this;
         }
-
         public Builder jobUri(String jobUri) {
             this.jobUri = Objects.requireNonNull(jobUri);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputNotebookFile(String outputNotebookFile) {
             this.outputNotebookFile = Objects.requireNonNull(outputNotebookFile);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public ExecutionResponse build() {
+        }        public ExecutionResponse build() {
             return new ExecutionResponse(createTime, description, displayName, executionTemplate, jobUri, name, outputNotebookFile, state, updateTime);
         }
     }

@@ -107,22 +107,21 @@ public final class NetworkFunctionUserConfigurationResponse {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder osProfile(@Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
-        }
-        public NetworkFunctionUserConfigurationResponse build() {
+        }        public NetworkFunctionUserConfigurationResponse build() {
             return new NetworkFunctionUserConfigurationResponse(networkInterfaces, osProfile, roleName, userDataParameters);
         }
     }

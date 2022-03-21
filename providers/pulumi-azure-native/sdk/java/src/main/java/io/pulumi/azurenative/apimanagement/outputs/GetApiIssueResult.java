@@ -183,47 +183,38 @@ public final class GetApiIssueResult {
             this.apiId = apiId;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GetApiIssueResult build() {
+        }        public GetApiIssueResult build() {
             return new GetApiIssueResult(apiId, createdDate, description, id, name, state, title, type, userId);
         }
     }

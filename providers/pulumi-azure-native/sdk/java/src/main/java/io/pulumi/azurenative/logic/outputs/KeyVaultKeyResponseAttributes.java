@@ -88,17 +88,14 @@ public final class KeyVaultKeyResponseAttributes {
             this.created = created;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder updated(@Nullable Double updated) {
             this.updated = updated;
             return this;
-        }
-        public KeyVaultKeyResponseAttributes build() {
+        }        public KeyVaultKeyResponseAttributes build() {
             return new KeyVaultKeyResponseAttributes(created, enabled, updated);
         }
     }

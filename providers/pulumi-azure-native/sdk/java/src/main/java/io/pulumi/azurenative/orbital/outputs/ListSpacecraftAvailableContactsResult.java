@@ -72,12 +72,13 @@ public final class ListSpacecraftAvailableContactsResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(@Nullable List<AvailableContactsResponse> value) {
             this.value = value;
             return this;
         }
-        public ListSpacecraftAvailableContactsResult build() {
+        public Builder value(AvailableContactsResponse... value) {
+            return value(List.of(value));
+        }        public ListSpacecraftAvailableContactsResult build() {
             return new ListSpacecraftAvailableContactsResult(nextLink, value);
         }
     }

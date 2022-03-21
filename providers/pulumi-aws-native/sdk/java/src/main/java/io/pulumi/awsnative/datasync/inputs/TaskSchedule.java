@@ -58,8 +58,7 @@ public final class TaskSchedule extends io.pulumi.resources.InvokeArgs {
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
-        }
-        public TaskSchedule build() {
+        }        public TaskSchedule build() {
             return new TaskSchedule(scheduleExpression);
         }
     }

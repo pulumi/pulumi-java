@@ -69,12 +69,10 @@ public final class TaskDefinitionInferenceAccelerator {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceType(String deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
-        }
-        public TaskDefinitionInferenceAccelerator build() {
+        }        public TaskDefinitionInferenceAccelerator build() {
             return new TaskDefinitionInferenceAccelerator(deviceName, deviceType);
         }
     }

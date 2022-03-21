@@ -71,12 +71,16 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
             this.csvContentTypes = csvContentTypes;
             return this;
         }
-
+        public Builder csvContentTypes(String... csvContentTypes) {
+            return csvContentTypes(List.of(csvContentTypes));
+        }
         public Builder jsonContentTypes(@Nullable List<String> jsonContentTypes) {
             this.jsonContentTypes = jsonContentTypes;
             return this;
         }
-        public EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader build() {
+        public Builder jsonContentTypes(String... jsonContentTypes) {
+            return jsonContentTypes(List.of(jsonContentTypes));
+        }        public EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader build() {
             return new EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader(csvContentTypes, jsonContentTypes);
         }
     }

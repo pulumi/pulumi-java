@@ -204,102 +204,82 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder archiveWindowLength(Output<String> archiveWindowLength) {
             this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength);
             return this;
         }
-
         public Builder archiveWindowLength(String archiveWindowLength) {
             this.archiveWindowLength = Output.of(Objects.requireNonNull(archiveWindowLength));
             return this;
         }
-
         public Builder assetName(Output<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hls(@Nullable Output<HlsArgs> hls) {
             this.hls = hls;
             return this;
         }
-
         public Builder hls(@Nullable HlsArgs hls) {
             this.hls = Output.ofNullable(hls);
             return this;
         }
-
         public Builder liveEventName(Output<String> liveEventName) {
             this.liveEventName = Objects.requireNonNull(liveEventName);
             return this;
         }
-
         public Builder liveEventName(String liveEventName) {
             this.liveEventName = Output.of(Objects.requireNonNull(liveEventName));
             return this;
         }
-
         public Builder liveOutputName(@Nullable Output<String> liveOutputName) {
             this.liveOutputName = liveOutputName;
             return this;
         }
-
         public Builder liveOutputName(@Nullable String liveOutputName) {
             this.liveOutputName = Output.ofNullable(liveOutputName);
             return this;
         }
-
         public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
-
         public Builder outputSnapTime(@Nullable Output<Double> outputSnapTime) {
             this.outputSnapTime = outputSnapTime;
             return this;
         }
-
         public Builder outputSnapTime(@Nullable Double outputSnapTime) {
             this.outputSnapTime = Output.ofNullable(outputSnapTime);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public LiveOutputArgs build() {
+        }        public LiveOutputArgs build() {
             return new LiveOutputArgs(accountName, archiveWindowLength, assetName, description, hls, liveEventName, liveOutputName, manifestName, outputSnapTime, resourceGroupName);
         }
     }

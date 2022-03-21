@@ -256,67 +256,60 @@ public final class AwsClusterControlPlane {
             this.awsServicesAuthentication = Objects.requireNonNull(awsServicesAuthentication);
             return this;
         }
-
         public Builder configEncryption(AwsClusterControlPlaneConfigEncryption configEncryption) {
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
-
         public Builder databaseEncryption(AwsClusterControlPlaneDatabaseEncryption databaseEncryption) {
             this.databaseEncryption = Objects.requireNonNull(databaseEncryption);
             return this;
         }
-
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder mainVolume(@Nullable AwsClusterControlPlaneMainVolume mainVolume) {
             this.mainVolume = mainVolume;
             return this;
         }
-
         public Builder proxyConfig(@Nullable AwsClusterControlPlaneProxyConfig proxyConfig) {
             this.proxyConfig = proxyConfig;
             return this;
         }
-
         public Builder rootVolume(@Nullable AwsClusterControlPlaneRootVolume rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder sshConfig(@Nullable AwsClusterControlPlaneSshConfig sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public AwsClusterControlPlane build() {
+        }        public AwsClusterControlPlane build() {
             return new AwsClusterControlPlane(awsServicesAuthentication, configEncryption, databaseEncryption, iamInstanceProfile, instanceType, mainVolume, proxyConfig, rootVolume, securityGroupIds, sshConfig, subnetIds, tags, version);
         }
     }

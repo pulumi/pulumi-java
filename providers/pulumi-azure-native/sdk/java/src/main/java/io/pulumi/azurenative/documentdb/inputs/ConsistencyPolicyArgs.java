@@ -96,32 +96,26 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
             this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel);
             return this;
         }
-
         public Builder defaultConsistencyLevel(DefaultConsistencyLevel defaultConsistencyLevel) {
             this.defaultConsistencyLevel = Output.of(Objects.requireNonNull(defaultConsistencyLevel));
             return this;
         }
-
         public Builder maxIntervalInSeconds(@Nullable Output<Integer> maxIntervalInSeconds) {
             this.maxIntervalInSeconds = maxIntervalInSeconds;
             return this;
         }
-
         public Builder maxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
             this.maxIntervalInSeconds = Output.ofNullable(maxIntervalInSeconds);
             return this;
         }
-
         public Builder maxStalenessPrefix(@Nullable Output<Double> maxStalenessPrefix) {
             this.maxStalenessPrefix = maxStalenessPrefix;
             return this;
         }
-
         public Builder maxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
             this.maxStalenessPrefix = Output.ofNullable(maxStalenessPrefix);
             return this;
-        }
-        public ConsistencyPolicyArgs build() {
+        }        public ConsistencyPolicyArgs build() {
             return new ConsistencyPolicyArgs(defaultConsistencyLevel, maxIntervalInSeconds, maxStalenessPrefix);
         }
     }

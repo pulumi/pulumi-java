@@ -224,112 +224,93 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedRegions = allowedRegions;
             return this;
         }
-
         public Builder allowedRegions(@Nullable List<String> allowedRegions) {
             this.allowedRegions = Output.ofNullable(allowedRegions);
             return this;
         }
-
+        public Builder allowedRegions(String... allowedRegions) {
+            return allowedRegions(List.of(allowedRegions));
+        }
         public Builder defaultAutoShutdownProfile(@Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile) {
             this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
             return this;
         }
-
         public Builder defaultAutoShutdownProfile(@Nullable AutoShutdownProfileArgs defaultAutoShutdownProfile) {
             this.defaultAutoShutdownProfile = Output.ofNullable(defaultAutoShutdownProfile);
             return this;
         }
-
         public Builder defaultConnectionProfile(@Nullable Output<ConnectionProfileArgs> defaultConnectionProfile) {
             this.defaultConnectionProfile = defaultConnectionProfile;
             return this;
         }
-
         public Builder defaultConnectionProfile(@Nullable ConnectionProfileArgs defaultConnectionProfile) {
             this.defaultConnectionProfile = Output.ofNullable(defaultConnectionProfile);
             return this;
         }
-
         public Builder defaultNetworkProfile(@Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile) {
             this.defaultNetworkProfile = defaultNetworkProfile;
             return this;
         }
-
         public Builder defaultNetworkProfile(@Nullable LabPlanNetworkProfileArgs defaultNetworkProfile) {
             this.defaultNetworkProfile = Output.ofNullable(defaultNetworkProfile);
             return this;
         }
-
         public Builder labPlanName(@Nullable Output<String> labPlanName) {
             this.labPlanName = labPlanName;
             return this;
         }
-
         public Builder labPlanName(@Nullable String labPlanName) {
             this.labPlanName = Output.ofNullable(labPlanName);
             return this;
         }
-
         public Builder linkedLmsInstance(@Nullable Output<String> linkedLmsInstance) {
             this.linkedLmsInstance = linkedLmsInstance;
             return this;
         }
-
         public Builder linkedLmsInstance(@Nullable String linkedLmsInstance) {
             this.linkedLmsInstance = Output.ofNullable(linkedLmsInstance);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sharedGalleryId(@Nullable Output<String> sharedGalleryId) {
             this.sharedGalleryId = sharedGalleryId;
             return this;
         }
-
         public Builder sharedGalleryId(@Nullable String sharedGalleryId) {
             this.sharedGalleryId = Output.ofNullable(sharedGalleryId);
             return this;
         }
-
         public Builder supportInfo(@Nullable Output<SupportInfoArgs> supportInfo) {
             this.supportInfo = supportInfo;
             return this;
         }
-
         public Builder supportInfo(@Nullable SupportInfoArgs supportInfo) {
             this.supportInfo = Output.ofNullable(supportInfo);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LabPlanArgs build() {
+        }        public LabPlanArgs build() {
             return new LabPlanArgs(allowedRegions, defaultAutoShutdownProfile, defaultConnectionProfile, defaultNetworkProfile, labPlanName, linkedLmsInstance, location, resourceGroupName, sharedGalleryId, supportInfo, tags);
         }
     }

@@ -69,12 +69,10 @@ public final class GoogleSheetsOptionsResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public Builder skipLeadingRows(String skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
-        }
-        public GoogleSheetsOptionsResponse build() {
+        }        public GoogleSheetsOptionsResponse build() {
             return new GoogleSheetsOptionsResponse(range, skipLeadingRows);
         }
     }

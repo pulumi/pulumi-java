@@ -125,52 +125,42 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptionSpec(@Nullable Output<AiMetadataStoreEncryptionSpecArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
-
         public Builder encryptionSpec(@Nullable AiMetadataStoreEncryptionSpecArgs encryptionSpec) {
             this.encryptionSpec = Output.ofNullable(encryptionSpec);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public AiMetadataStoreArgs build() {
+        }        public AiMetadataStoreArgs build() {
             return new AiMetadataStoreArgs(description, encryptionSpec, name, project, region);
         }
     }

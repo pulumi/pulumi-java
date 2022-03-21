@@ -161,82 +161,66 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder dryRun(@Nullable Output<String> dryRun) {
             this.dryRun = dryRun;
             return this;
         }
-
         public Builder dryRun(@Nullable String dryRun) {
             this.dryRun = Output.ofNullable(dryRun);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder spec(@Nullable Output<ServiceSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable ServiceSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder status(@Nullable Output<ServiceStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable ServiceStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(apiVersion, dryRun, kind, location, metadata, project, spec, status);
         }
     }

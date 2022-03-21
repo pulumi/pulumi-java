@@ -56,8 +56,7 @@ public final class WebACLAllowAction extends io.pulumi.resources.InvokeArgs {
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public WebACLAllowAction build() {
+        }        public WebACLAllowAction build() {
             return new WebACLAllowAction(customRequestHandling);
         }
     }

@@ -71,12 +71,10 @@ public final class PrivilegeResponseResource {
             this.collection = collection;
             return this;
         }
-
         public Builder db(@Nullable String db) {
             this.db = db;
             return this;
-        }
-        public PrivilegeResponseResource build() {
+        }        public PrivilegeResponseResource build() {
             return new PrivilegeResponseResource(collection, db);
         }
     }

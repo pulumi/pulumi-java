@@ -92,17 +92,14 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public KeyResponse build() {
+        }        public KeyResponse build() {
             return new KeyResponse(keyName, permissions, value);
         }
     }

@@ -91,32 +91,26 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
             this.cpus = cpus;
             return this;
         }
-
         public Builder cpus(@Nullable String cpus) {
             this.cpus = Output.ofNullable(cpus);
             return this;
         }
-
         public Builder localSsd(@Nullable Output<String> localSsd) {
             this.localSsd = localSsd;
             return this;
         }
-
         public Builder localSsd(@Nullable String localSsd) {
             this.localSsd = Output.ofNullable(localSsd);
             return this;
         }
-
         public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memory(@Nullable String memory) {
             this.memory = Output.ofNullable(memory);
             return this;
-        }
-        public NodeTemplateNodeTypeFlexibilityGetArgs build() {
+        }        public NodeTemplateNodeTypeFlexibilityGetArgs build() {
             return new NodeTemplateNodeTypeFlexibilityGetArgs(cpus, localSsd, memory);
         }
     }

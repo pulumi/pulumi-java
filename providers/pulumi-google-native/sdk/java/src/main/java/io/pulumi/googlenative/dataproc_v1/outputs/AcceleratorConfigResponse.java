@@ -70,12 +70,10 @@ public final class AcceleratorConfigResponse {
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorTypeUri(String acceleratorTypeUri) {
             this.acceleratorTypeUri = Objects.requireNonNull(acceleratorTypeUri);
             return this;
-        }
-        public AcceleratorConfigResponse build() {
+        }        public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(acceleratorCount, acceleratorTypeUri);
         }
     }

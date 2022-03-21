@@ -250,67 +250,57 @@ public final class GetOsPolicyAssignmentResult {
             this.baseline = Objects.requireNonNull(baseline);
             return this;
         }
-
         public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder instanceFilter(OSPolicyAssignmentInstanceFilterResponse instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osPolicies(List<OSPolicyResponse> osPolicies) {
             this.osPolicies = Objects.requireNonNull(osPolicies);
             return this;
         }
-
+        public Builder osPolicies(OSPolicyResponse... osPolicies) {
+            return osPolicies(List.of(osPolicies));
+        }
         public Builder reconciling(Boolean reconciling) {
             this.reconciling = Objects.requireNonNull(reconciling);
             return this;
         }
-
         public Builder revisionCreateTime(String revisionCreateTime) {
             this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public Builder rollout(OSPolicyAssignmentRolloutResponse rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
-
         public Builder rolloutState(String rolloutState) {
             this.rolloutState = Objects.requireNonNull(rolloutState);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public GetOsPolicyAssignmentResult build() {
+        }        public GetOsPolicyAssignmentResult build() {
             return new GetOsPolicyAssignmentResult(baseline, deleted, description, etag, instanceFilter, name, osPolicies, reconciling, revisionCreateTime, revisionId, rollout, rolloutState, uid);
         }
     }

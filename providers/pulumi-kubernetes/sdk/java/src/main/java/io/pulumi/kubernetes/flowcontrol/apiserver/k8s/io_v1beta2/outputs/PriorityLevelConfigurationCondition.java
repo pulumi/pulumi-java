@@ -119,27 +119,22 @@ public final class PriorityLevelConfigurationCondition {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PriorityLevelConfigurationCondition build() {
+        }        public PriorityLevelConfigurationCondition build() {
             return new PriorityLevelConfigurationCondition(lastTransitionTime, message, reason, status, type);
         }
     }

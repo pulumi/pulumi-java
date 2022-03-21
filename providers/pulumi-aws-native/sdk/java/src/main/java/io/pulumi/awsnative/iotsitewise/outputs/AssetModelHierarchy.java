@@ -85,17 +85,14 @@ public final class AssetModelHierarchy {
             this.childAssetModelId = Objects.requireNonNull(childAssetModelId);
             return this;
         }
-
         public Builder logicalId(String logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AssetModelHierarchy build() {
+        }        public AssetModelHierarchy build() {
             return new AssetModelHierarchy(childAssetModelId, logicalId, name);
         }
     }

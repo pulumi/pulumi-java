@@ -171,37 +171,30 @@ public final class GuestPoliciesRecipeUpdateStep {
             this.archiveExtraction = archiveExtraction;
             return this;
         }
-
         public Builder dpkgInstallation(@Nullable GuestPoliciesRecipeUpdateStepDpkgInstallation dpkgInstallation) {
             this.dpkgInstallation = dpkgInstallation;
             return this;
         }
-
         public Builder fileCopy(@Nullable GuestPoliciesRecipeUpdateStepFileCopy fileCopy) {
             this.fileCopy = fileCopy;
             return this;
         }
-
         public Builder fileExec(@Nullable GuestPoliciesRecipeUpdateStepFileExec fileExec) {
             this.fileExec = fileExec;
             return this;
         }
-
         public Builder msiInstallation(@Nullable GuestPoliciesRecipeUpdateStepMsiInstallation msiInstallation) {
             this.msiInstallation = msiInstallation;
             return this;
         }
-
         public Builder rpmInstallation(@Nullable GuestPoliciesRecipeUpdateStepRpmInstallation rpmInstallation) {
             this.rpmInstallation = rpmInstallation;
             return this;
         }
-
         public Builder scriptRun(@Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun) {
             this.scriptRun = scriptRun;
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStep build() {
+        }        public GuestPoliciesRecipeUpdateStep build() {
             return new GuestPoliciesRecipeUpdateStep(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }
     }

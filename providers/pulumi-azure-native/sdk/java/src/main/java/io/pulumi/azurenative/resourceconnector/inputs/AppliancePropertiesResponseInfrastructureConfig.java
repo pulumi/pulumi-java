@@ -60,8 +60,7 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends io.pu
         public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
-        }
-        public AppliancePropertiesResponseInfrastructureConfig build() {
+        }        public AppliancePropertiesResponseInfrastructureConfig build() {
             return new AppliancePropertiesResponseInfrastructureConfig(provider);
         }
     }

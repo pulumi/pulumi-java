@@ -71,12 +71,13 @@ public final class ListRemediationDeploymentsAtResourceResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<RemediationDeploymentResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListRemediationDeploymentsAtResourceResult build() {
+        public Builder value(RemediationDeploymentResponse... value) {
+            return value(List.of(value));
+        }        public ListRemediationDeploymentsAtResourceResult build() {
             return new ListRemediationDeploymentsAtResourceResult(nextLink, value);
         }
     }

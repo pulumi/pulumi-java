@@ -140,62 +140,50 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
-
         public Builder initialInstanceCount(Output<Integer> initialInstanceCount) {
             this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount);
             return this;
         }
-
         public Builder initialInstanceCount(Integer initialInstanceCount) {
             this.initialInstanceCount = Output.of(Objects.requireNonNull(initialInstanceCount));
             return this;
         }
-
         public Builder initialVariantWeight(@Nullable Output<Double> initialVariantWeight) {
             this.initialVariantWeight = initialVariantWeight;
             return this;
         }
-
         public Builder initialVariantWeight(@Nullable Double initialVariantWeight) {
             this.initialVariantWeight = Output.ofNullable(initialVariantWeight);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder modelName(Output<String> modelName) {
             this.modelName = Objects.requireNonNull(modelName);
             return this;
         }
-
         public Builder modelName(String modelName) {
             this.modelName = Output.of(Objects.requireNonNull(modelName));
             return this;
         }
-
         public Builder variantName(@Nullable Output<String> variantName) {
             this.variantName = variantName;
             return this;
         }
-
         public Builder variantName(@Nullable String variantName) {
             this.variantName = Output.ofNullable(variantName);
             return this;
-        }
-        public EndpointConfigurationProductionVariantArgs build() {
+        }        public EndpointConfigurationProductionVariantArgs build() {
             return new EndpointConfigurationProductionVariantArgs(acceleratorType, initialInstanceCount, initialVariantWeight, instanceType, modelName, variantName);
         }
     }

@@ -105,22 +105,21 @@ public final class BotImageResponseCard {
             this.buttons = buttons;
             return this;
         }
-
+        public Builder buttons(BotButton... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public BotImageResponseCard build() {
+        }        public BotImageResponseCard build() {
             return new BotImageResponseCard(buttons, imageUrl, subtitle, title);
         }
     }

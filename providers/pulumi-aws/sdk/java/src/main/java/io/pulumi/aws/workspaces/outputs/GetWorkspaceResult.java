@@ -177,67 +177,57 @@ public final class GetWorkspaceResult {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder computerName(String computerName) {
             this.computerName = Objects.requireNonNull(computerName);
             return this;
         }
-
         public Builder directoryId(String directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder rootVolumeEncryptionEnabled(Boolean rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = Objects.requireNonNull(rootVolumeEncryptionEnabled);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userVolumeEncryptionEnabled(Boolean userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = Objects.requireNonNull(userVolumeEncryptionEnabled);
             return this;
         }
-
         public Builder volumeEncryptionKey(String volumeEncryptionKey) {
             this.volumeEncryptionKey = Objects.requireNonNull(volumeEncryptionKey);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceProperties(List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
             this.workspaceProperties = Objects.requireNonNull(workspaceProperties);
             return this;
         }
-        public GetWorkspaceResult build() {
+        public Builder workspaceProperties(GetWorkspaceWorkspaceProperty... workspaceProperties) {
+            return workspaceProperties(List.of(workspaceProperties));
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(bundleId, computerName, directoryId, id, ipAddress, rootVolumeEncryptionEnabled, state, tags, userName, userVolumeEncryptionEnabled, volumeEncryptionKey, workspaceId, workspaceProperties);
         }
     }

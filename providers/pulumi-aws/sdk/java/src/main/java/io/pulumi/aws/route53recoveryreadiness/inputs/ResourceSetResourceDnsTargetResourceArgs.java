@@ -123,52 +123,42 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
             this.hostedZoneArn = hostedZoneArn;
             return this;
         }
-
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
             this.hostedZoneArn = Output.ofNullable(hostedZoneArn);
             return this;
         }
-
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
-
         public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = Output.ofNullable(recordSetId);
             return this;
         }
-
         public Builder recordType(@Nullable Output<String> recordType) {
             this.recordType = recordType;
             return this;
         }
-
         public Builder recordType(@Nullable String recordType) {
             this.recordType = Output.ofNullable(recordType);
             return this;
         }
-
         public Builder targetResource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource) {
             this.targetResource = targetResource;
             return this;
         }
-
         public Builder targetResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceArgs targetResource) {
             this.targetResource = Output.ofNullable(targetResource);
             return this;
-        }
-        public ResourceSetResourceDnsTargetResourceArgs build() {
+        }        public ResourceSetResourceDnsTargetResourceArgs build() {
             return new ResourceSetResourceDnsTargetResourceArgs(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
         }
     }

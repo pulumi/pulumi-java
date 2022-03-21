@@ -79,12 +79,10 @@ public final class SloWindowsBasedSliMetricMeanInRangeRange {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
-        }
-        public SloWindowsBasedSliMetricMeanInRangeRange build() {
+        }        public SloWindowsBasedSliMetricMeanInRangeRange build() {
             return new SloWindowsBasedSliMetricMeanInRangeRange(max, min);
         }
     }

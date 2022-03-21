@@ -74,22 +74,18 @@ public final class NodePoolManagementArgs extends io.pulumi.resources.ResourceAr
             this.autoRepair = autoRepair;
             return this;
         }
-
         public Builder autoRepair(@Nullable Boolean autoRepair) {
             this.autoRepair = Output.ofNullable(autoRepair);
             return this;
         }
-
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
-
         public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
             this.autoUpgrade = Output.ofNullable(autoUpgrade);
             return this;
-        }
-        public NodePoolManagementArgs build() {
+        }        public NodePoolManagementArgs build() {
             return new NodePoolManagementArgs(autoRepair, autoUpgrade);
         }
     }

@@ -98,32 +98,26 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.ddosCustomPolicy = ddosCustomPolicy;
             return this;
         }
-
         public Builder ddosCustomPolicy(@Nullable SubResourceArgs ddosCustomPolicy) {
             this.ddosCustomPolicy = Output.ofNullable(ddosCustomPolicy);
             return this;
         }
-
         public Builder protectedIP(@Nullable Output<Boolean> protectedIP) {
             this.protectedIP = protectedIP;
             return this;
         }
-
         public Builder protectedIP(@Nullable Boolean protectedIP) {
             this.protectedIP = Output.ofNullable(protectedIP);
             return this;
         }
-
         public Builder protectionCoverage(@Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage) {
             this.protectionCoverage = protectionCoverage;
             return this;
         }
-
         public Builder protectionCoverage(@Nullable Either<String,DdosSettingsProtectionCoverage> protectionCoverage) {
             this.protectionCoverage = Output.ofNullable(protectionCoverage);
             return this;
-        }
-        public DdosSettingsArgs build() {
+        }        public DdosSettingsArgs build() {
             return new DdosSettingsArgs(ddosCustomPolicy, protectedIP, protectionCoverage);
         }
     }

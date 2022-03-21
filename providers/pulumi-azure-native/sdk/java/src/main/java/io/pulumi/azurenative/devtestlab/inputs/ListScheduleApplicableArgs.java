@@ -88,17 +88,14 @@ public final class ListScheduleApplicableArgs extends io.pulumi.resources.Invoke
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListScheduleApplicableArgs build() {
+        }        public ListScheduleApplicableArgs build() {
             return new ListScheduleApplicableArgs(labName, name, resourceGroupName);
         }
     }

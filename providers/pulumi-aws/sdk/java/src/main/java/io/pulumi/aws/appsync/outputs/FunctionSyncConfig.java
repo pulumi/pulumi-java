@@ -88,17 +88,14 @@ public final class FunctionSyncConfig {
             this.conflictDetection = conflictDetection;
             return this;
         }
-
         public Builder conflictHandler(@Nullable String conflictHandler) {
             this.conflictHandler = conflictHandler;
             return this;
         }
-
         public Builder lambdaConflictHandlerConfig(@Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
             return this;
-        }
-        public FunctionSyncConfig build() {
+        }        public FunctionSyncConfig build() {
             return new FunctionSyncConfig(conflictDetection, conflictHandler, lambdaConflictHandlerConfig);
         }
     }

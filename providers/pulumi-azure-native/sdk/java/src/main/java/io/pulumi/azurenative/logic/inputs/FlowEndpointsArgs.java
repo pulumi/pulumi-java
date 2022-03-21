@@ -79,22 +79,24 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
             this.accessEndpointIpAddresses = accessEndpointIpAddresses;
             return this;
         }
-
         public Builder accessEndpointIpAddresses(@Nullable List<IpAddressArgs> accessEndpointIpAddresses) {
             this.accessEndpointIpAddresses = Output.ofNullable(accessEndpointIpAddresses);
             return this;
         }
-
+        public Builder accessEndpointIpAddresses(IpAddressArgs... accessEndpointIpAddresses) {
+            return accessEndpointIpAddresses(List.of(accessEndpointIpAddresses));
+        }
         public Builder outgoingIpAddresses(@Nullable Output<List<IpAddressArgs>> outgoingIpAddresses) {
             this.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }
-
         public Builder outgoingIpAddresses(@Nullable List<IpAddressArgs> outgoingIpAddresses) {
             this.outgoingIpAddresses = Output.ofNullable(outgoingIpAddresses);
             return this;
         }
-        public FlowEndpointsArgs build() {
+        public Builder outgoingIpAddresses(IpAddressArgs... outgoingIpAddresses) {
+            return outgoingIpAddresses(List.of(outgoingIpAddresses));
+        }        public FlowEndpointsArgs build() {
             return new FlowEndpointsArgs(accessEndpointIpAddresses, outgoingIpAddresses);
         }
     }

@@ -119,42 +119,34 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
             this.labelSelector = labelSelector;
             return this;
         }
-
         public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
             this.labelSelector = Output.ofNullable(labelSelector);
             return this;
         }
-
         public Builder maxSkew(Output<Integer> maxSkew) {
             this.maxSkew = Objects.requireNonNull(maxSkew);
             return this;
         }
-
         public Builder maxSkew(Integer maxSkew) {
             this.maxSkew = Output.of(Objects.requireNonNull(maxSkew));
             return this;
         }
-
         public Builder topologyKey(Output<String> topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
-
         public Builder topologyKey(String topologyKey) {
             this.topologyKey = Output.of(Objects.requireNonNull(topologyKey));
             return this;
         }
-
         public Builder whenUnsatisfiable(Output<String> whenUnsatisfiable) {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
         }
-
         public Builder whenUnsatisfiable(String whenUnsatisfiable) {
             this.whenUnsatisfiable = Output.of(Objects.requireNonNull(whenUnsatisfiable));
             return this;
-        }
-        public TopologySpreadConstraintArgs build() {
+        }        public TopologySpreadConstraintArgs build() {
             return new TopologySpreadConstraintArgs(labelSelector, maxSkew, topologyKey, whenUnsatisfiable);
         }
     }

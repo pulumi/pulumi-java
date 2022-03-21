@@ -111,42 +111,34 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
-
         public Builder ipRange(Output<String> ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
-
         public Builder ipRange(String ipRange) {
             this.ipRange = Output.of(Objects.requireNonNull(ipRange));
             return this;
         }
-
         public Builder protocol(Output<FleetIpPermissionProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(FleetIpPermissionProtocol protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
-        }
-        public FleetIpPermissionArgs build() {
+        }        public FleetIpPermissionArgs build() {
             return new FleetIpPermissionArgs(fromPort, ipRange, protocol, toPort);
         }
     }

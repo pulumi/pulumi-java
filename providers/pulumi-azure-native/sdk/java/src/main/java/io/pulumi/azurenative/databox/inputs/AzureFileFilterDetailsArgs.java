@@ -95,32 +95,35 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
             this.filePathList = filePathList;
             return this;
         }
-
         public Builder filePathList(@Nullable List<String> filePathList) {
             this.filePathList = Output.ofNullable(filePathList);
             return this;
         }
-
+        public Builder filePathList(String... filePathList) {
+            return filePathList(List.of(filePathList));
+        }
         public Builder filePrefixList(@Nullable Output<List<String>> filePrefixList) {
             this.filePrefixList = filePrefixList;
             return this;
         }
-
         public Builder filePrefixList(@Nullable List<String> filePrefixList) {
             this.filePrefixList = Output.ofNullable(filePrefixList);
             return this;
         }
-
+        public Builder filePrefixList(String... filePrefixList) {
+            return filePrefixList(List.of(filePrefixList));
+        }
         public Builder fileShareList(@Nullable Output<List<String>> fileShareList) {
             this.fileShareList = fileShareList;
             return this;
         }
-
         public Builder fileShareList(@Nullable List<String> fileShareList) {
             this.fileShareList = Output.ofNullable(fileShareList);
             return this;
         }
-        public AzureFileFilterDetailsArgs build() {
+        public Builder fileShareList(String... fileShareList) {
+            return fileShareList(List.of(fileShareList));
+        }        public AzureFileFilterDetailsArgs build() {
             return new AzureFileFilterDetailsArgs(filePathList, filePrefixList, fileShareList);
         }
     }

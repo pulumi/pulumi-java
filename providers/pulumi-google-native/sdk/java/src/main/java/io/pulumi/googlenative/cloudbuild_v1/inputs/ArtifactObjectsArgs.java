@@ -79,22 +79,21 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = Output.ofNullable(paths);
             return this;
         }
-        public ArtifactObjectsArgs build() {
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }        public ArtifactObjectsArgs build() {
             return new ArtifactObjectsArgs(location, paths);
         }
     }

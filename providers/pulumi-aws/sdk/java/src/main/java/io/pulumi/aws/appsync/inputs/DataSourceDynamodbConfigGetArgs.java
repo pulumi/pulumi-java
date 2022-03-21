@@ -116,52 +116,42 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
             this.deltaSyncConfig = deltaSyncConfig;
             return this;
         }
-
         public Builder deltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfigGetArgs deltaSyncConfig) {
             this.deltaSyncConfig = Output.ofNullable(deltaSyncConfig);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public Builder useCallerCredentials(@Nullable Output<Boolean> useCallerCredentials) {
             this.useCallerCredentials = useCallerCredentials;
             return this;
         }
-
         public Builder useCallerCredentials(@Nullable Boolean useCallerCredentials) {
             this.useCallerCredentials = Output.ofNullable(useCallerCredentials);
             return this;
         }
-
         public Builder versioned(@Nullable Output<Boolean> versioned) {
             this.versioned = versioned;
             return this;
         }
-
         public Builder versioned(@Nullable Boolean versioned) {
             this.versioned = Output.ofNullable(versioned);
             return this;
-        }
-        public DataSourceDynamodbConfigGetArgs build() {
+        }        public DataSourceDynamodbConfigGetArgs build() {
             return new DataSourceDynamodbConfigGetArgs(deltaSyncConfig, region, tableName, useCallerCredentials, versioned);
         }
     }

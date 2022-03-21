@@ -157,42 +157,37 @@ public final class GetSimulationApplicationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder renderingEngine(@Nullable SimulationApplicationRenderingEngine renderingEngine) {
             this.renderingEngine = renderingEngine;
             return this;
         }
-
         public Builder robotSoftwareSuite(@Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite) {
             this.robotSoftwareSuite = robotSoftwareSuite;
             return this;
         }
-
         public Builder simulationSoftwareSuite(@Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite) {
             this.simulationSoftwareSuite = simulationSoftwareSuite;
             return this;
         }
-
         public Builder sources(@Nullable List<SimulationApplicationSourceConfig> sources) {
             this.sources = sources;
             return this;
         }
-
+        public Builder sources(SimulationApplicationSourceConfig... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tags(@Nullable SimulationApplicationTags tags) {
             this.tags = tags;
             return this;
-        }
-        public GetSimulationApplicationResult build() {
+        }        public GetSimulationApplicationResult build() {
             return new GetSimulationApplicationResult(arn, currentRevisionId, environment, renderingEngine, robotSoftwareSuite, simulationSoftwareSuite, sources, tags);
         }
     }

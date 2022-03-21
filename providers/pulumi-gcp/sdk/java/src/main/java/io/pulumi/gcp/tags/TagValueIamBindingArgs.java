@@ -102,42 +102,37 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable TagValueIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder tagValue(Output<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
-
         public Builder tagValue(String tagValue) {
             this.tagValue = Output.of(Objects.requireNonNull(tagValue));
             return this;
-        }
-        public TagValueIamBindingArgs build() {
+        }        public TagValueIamBindingArgs build() {
             return new TagValueIamBindingArgs(condition, members, role, tagValue);
         }
     }

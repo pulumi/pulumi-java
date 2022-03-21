@@ -50,8 +50,7 @@ public final class GetClusterIdentityServiceConfig extends io.pulumi.resources.I
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetClusterIdentityServiceConfig build() {
+        }        public GetClusterIdentityServiceConfig build() {
             return new GetClusterIdentityServiceConfig(enabled);
         }
     }

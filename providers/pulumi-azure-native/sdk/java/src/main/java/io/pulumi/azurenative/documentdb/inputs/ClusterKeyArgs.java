@@ -78,22 +78,18 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orderBy(@Nullable Output<String> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
-
         public Builder orderBy(@Nullable String orderBy) {
             this.orderBy = Output.ofNullable(orderBy);
             return this;
-        }
-        public ClusterKeyArgs build() {
+        }        public ClusterKeyArgs build() {
             return new ClusterKeyArgs(name, orderBy);
         }
     }

@@ -85,27 +85,22 @@ public final class GetCredentialsResult {
             this.authorizationToken = Objects.requireNonNull(authorizationToken);
             return this;
         }
-
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder proxyEndpoint(String proxyEndpoint) {
             this.proxyEndpoint = Objects.requireNonNull(proxyEndpoint);
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public GetCredentialsResult build() {
+        }        public GetCredentialsResult build() {
             return new GetCredentialsResult(authorizationToken, expiresAt, id, proxyEndpoint, registryId);
         }
     }

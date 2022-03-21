@@ -60,12 +60,10 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
-
         public Builder installation(InstallationArgs installation) {
             this.installation = Output.of(Objects.requireNonNull(installation));
             return this;
-        }
-        public GrafeasV1beta1PackageDetailsArgs build() {
+        }        public GrafeasV1beta1PackageDetailsArgs build() {
             return new GrafeasV1beta1PackageDetailsArgs(installation);
         }
     }

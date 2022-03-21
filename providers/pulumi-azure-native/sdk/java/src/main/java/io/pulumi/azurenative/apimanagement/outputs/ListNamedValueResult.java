@@ -53,8 +53,7 @@ public final class ListNamedValueResult {
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ListNamedValueResult build() {
+        }        public ListNamedValueResult build() {
             return new ListNamedValueResult(value);
         }
     }

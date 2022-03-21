@@ -94,32 +94,26 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
-
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             this.eventHubConnectionString = Output.ofNullable(eventHubConnectionString);
             return this;
         }
-
         public Builder ioTHubConnectionString(@Nullable Output<String> ioTHubConnectionString) {
             this.ioTHubConnectionString = ioTHubConnectionString;
             return this;
         }
-
         public Builder ioTHubConnectionString(@Nullable String ioTHubConnectionString) {
             this.ioTHubConnectionString = Output.ofNullable(ioTHubConnectionString);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public IotHubSettingsArgs build() {
+        }        public IotHubSettingsArgs build() {
             return new IotHubSettingsArgs(eventHubConnectionString, ioTHubConnectionString, resourceId);
         }
     }

@@ -57,12 +57,10 @@ public final class FeatureMembershipConfigmanagementBinauthzGetArgs extends io.p
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public FeatureMembershipConfigmanagementBinauthzGetArgs build() {
+        }        public FeatureMembershipConfigmanagementBinauthzGetArgs build() {
             return new FeatureMembershipConfigmanagementBinauthzGetArgs(enabled);
         }
     }

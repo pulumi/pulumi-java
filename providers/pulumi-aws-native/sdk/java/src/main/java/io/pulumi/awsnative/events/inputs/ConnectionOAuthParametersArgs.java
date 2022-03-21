@@ -93,42 +93,34 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
-
         public Builder clientParameters(Output<ConnectionClientParametersArgs> clientParameters) {
             this.clientParameters = Objects.requireNonNull(clientParameters);
             return this;
         }
-
         public Builder clientParameters(ConnectionClientParametersArgs clientParameters) {
             this.clientParameters = Output.of(Objects.requireNonNull(clientParameters));
             return this;
         }
-
         public Builder httpMethod(Output<ConnectionOAuthParametersHttpMethod> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder httpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
             this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
-
         public Builder oAuthHttpParameters(@Nullable Output<ConnectionHttpParametersArgs> oAuthHttpParameters) {
             this.oAuthHttpParameters = oAuthHttpParameters;
             return this;
         }
-
         public Builder oAuthHttpParameters(@Nullable ConnectionHttpParametersArgs oAuthHttpParameters) {
             this.oAuthHttpParameters = Output.ofNullable(oAuthHttpParameters);
             return this;
-        }
-        public ConnectionOAuthParametersArgs build() {
+        }        public ConnectionOAuthParametersArgs build() {
             return new ConnectionOAuthParametersArgs(authorizationEndpoint, clientParameters, httpMethod, oAuthHttpParameters);
         }
     }

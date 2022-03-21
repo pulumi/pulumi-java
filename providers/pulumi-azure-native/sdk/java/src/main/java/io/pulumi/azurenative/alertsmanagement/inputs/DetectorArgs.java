@@ -145,62 +145,56 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder imagePaths(@Nullable Output<List<String>> imagePaths) {
             this.imagePaths = imagePaths;
             return this;
         }
-
         public Builder imagePaths(@Nullable List<String> imagePaths) {
             this.imagePaths = Output.ofNullable(imagePaths);
             return this;
         }
-
+        public Builder imagePaths(String... imagePaths) {
+            return imagePaths(List.of(imagePaths));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder supportedResourceTypes(@Nullable Output<List<String>> supportedResourceTypes) {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
-
         public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
             this.supportedResourceTypes = Output.ofNullable(supportedResourceTypes);
             return this;
         }
-        public DetectorArgs build() {
+        public Builder supportedResourceTypes(String... supportedResourceTypes) {
+            return supportedResourceTypes(List.of(supportedResourceTypes));
+        }        public DetectorArgs build() {
             return new DetectorArgs(description, id, imagePaths, name, parameters, supportedResourceTypes);
         }
     }

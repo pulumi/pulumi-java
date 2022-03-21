@@ -79,12 +79,10 @@ public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.Invo
             this.managedIdentity = managedIdentity;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public UpstreamAuthSettingsResponse build() {
+        }        public UpstreamAuthSettingsResponse build() {
             return new UpstreamAuthSettingsResponse(managedIdentity, type);
         }
     }

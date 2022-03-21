@@ -70,12 +70,16 @@ public final class ConnectorVpc {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-        public ConnectorVpc build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ConnectorVpc build() {
             return new ConnectorVpc(securityGroups, subnets);
         }
     }

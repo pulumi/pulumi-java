@@ -76,12 +76,10 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAppEngineServiceArgs build() {
+        }        public GetAppEngineServiceArgs build() {
             return new GetAppEngineServiceArgs(moduleId, project);
         }
     }

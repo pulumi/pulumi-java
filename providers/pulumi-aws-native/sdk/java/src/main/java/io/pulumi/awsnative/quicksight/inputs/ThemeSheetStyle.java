@@ -71,12 +71,10 @@ public final class ThemeSheetStyle extends io.pulumi.resources.InvokeArgs {
             this.tile = tile;
             return this;
         }
-
         public Builder tileLayout(@Nullable ThemeTileLayoutStyle tileLayout) {
             this.tileLayout = tileLayout;
             return this;
-        }
-        public ThemeSheetStyle build() {
+        }        public ThemeSheetStyle build() {
             return new ThemeSheetStyle(tile, tileLayout);
         }
     }

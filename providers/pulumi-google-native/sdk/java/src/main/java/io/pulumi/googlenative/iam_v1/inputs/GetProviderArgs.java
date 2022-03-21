@@ -90,22 +90,18 @@ public final class GetProviderArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
-
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
-        }
-        public GetProviderArgs build() {
+        }        public GetProviderArgs build() {
             return new GetProviderArgs(location, project, providerId, workloadIdentityPoolId);
         }
     }

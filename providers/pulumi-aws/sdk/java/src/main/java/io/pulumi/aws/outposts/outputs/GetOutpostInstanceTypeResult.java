@@ -79,22 +79,21 @@ public final class GetOutpostInstanceTypeResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
             this.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
-        public GetOutpostInstanceTypeResult build() {
+        public Builder preferredInstanceTypes(String... preferredInstanceTypes) {
+            return preferredInstanceTypes(List.of(preferredInstanceTypes));
+        }        public GetOutpostInstanceTypeResult build() {
             return new GetOutpostInstanceTypeResult(arn, id, instanceType, preferredInstanceTypes);
         }
     }

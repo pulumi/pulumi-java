@@ -115,42 +115,37 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
             this.excludedPaths = excludedPaths;
             return this;
         }
-
         public Builder excludedPaths(@Nullable List<String> excludedPaths) {
             this.excludedPaths = Output.ofNullable(excludedPaths);
             return this;
         }
-
+        public Builder excludedPaths(String... excludedPaths) {
+            return excludedPaths(List.of(excludedPaths));
+        }
         public Builder redirectToProvider(@Nullable Output<String> redirectToProvider) {
             this.redirectToProvider = redirectToProvider;
             return this;
         }
-
         public Builder redirectToProvider(@Nullable String redirectToProvider) {
             this.redirectToProvider = Output.ofNullable(redirectToProvider);
             return this;
         }
-
         public Builder requireAuthentication(@Nullable Output<Boolean> requireAuthentication) {
             this.requireAuthentication = requireAuthentication;
             return this;
         }
-
         public Builder requireAuthentication(@Nullable Boolean requireAuthentication) {
             this.requireAuthentication = Output.ofNullable(requireAuthentication);
             return this;
         }
-
         public Builder unauthenticatedClientAction(@Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
-
         public Builder unauthenticatedClientAction(@Nullable UnauthenticatedClientActionV2 unauthenticatedClientAction) {
             this.unauthenticatedClientAction = Output.ofNullable(unauthenticatedClientAction);
             return this;
-        }
-        public GlobalValidationArgs build() {
+        }        public GlobalValidationArgs build() {
             return new GlobalValidationArgs(excludedPaths, redirectToProvider, requireAuthentication, unauthenticatedClientAction);
         }
     }

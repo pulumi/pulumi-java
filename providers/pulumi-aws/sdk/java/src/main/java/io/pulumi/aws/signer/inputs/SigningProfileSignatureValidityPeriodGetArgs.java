@@ -66,22 +66,18 @@ public final class SigningProfileSignatureValidityPeriodGetArgs extends io.pulum
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SigningProfileSignatureValidityPeriodGetArgs build() {
+        }        public SigningProfileSignatureValidityPeriodGetArgs build() {
             return new SigningProfileSignatureValidityPeriodGetArgs(type, value);
         }
     }

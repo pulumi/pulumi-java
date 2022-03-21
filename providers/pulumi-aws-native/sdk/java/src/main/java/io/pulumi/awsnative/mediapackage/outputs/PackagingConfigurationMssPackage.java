@@ -74,17 +74,17 @@ public final class PackagingConfigurationMssPackage {
             this.encryption = encryption;
             return this;
         }
-
         public Builder mssManifests(List<PackagingConfigurationMssManifest> mssManifests) {
             this.mssManifests = Objects.requireNonNull(mssManifests);
             return this;
         }
-
+        public Builder mssManifests(PackagingConfigurationMssManifest... mssManifests) {
+            return mssManifests(List.of(mssManifests));
+        }
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
-        }
-        public PackagingConfigurationMssPackage build() {
+        }        public PackagingConfigurationMssPackage build() {
             return new PackagingConfigurationMssPackage(encryption, mssManifests, segmentDurationSeconds);
         }
     }

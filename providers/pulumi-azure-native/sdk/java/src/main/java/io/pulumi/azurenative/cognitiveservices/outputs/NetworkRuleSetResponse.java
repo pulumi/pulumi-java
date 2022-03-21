@@ -90,17 +90,20 @@ public final class NetworkRuleSetResponse {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder ipRules(@Nullable List<IpRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
-
+        public Builder ipRules(IpRuleResponse... ipRules) {
+            return ipRules(List.of(ipRules));
+        }
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-        public NetworkRuleSetResponse build() {
+        public Builder virtualNetworkRules(VirtualNetworkRuleResponse... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(defaultAction, ipRules, virtualNetworkRules);
         }
     }

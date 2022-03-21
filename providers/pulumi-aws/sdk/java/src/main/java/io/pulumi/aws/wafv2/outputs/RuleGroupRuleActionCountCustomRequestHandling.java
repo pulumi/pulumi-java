@@ -53,7 +53,9 @@ public final class RuleGroupRuleActionCountCustomRequestHandling {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-        public RuleGroupRuleActionCountCustomRequestHandling build() {
+        public Builder insertHeaders(RuleGroupRuleActionCountCustomRequestHandlingInsertHeader... insertHeaders) {
+            return insertHeaders(List.of(insertHeaders));
+        }        public RuleGroupRuleActionCountCustomRequestHandling build() {
             return new RuleGroupRuleActionCountCustomRequestHandling(insertHeaders);
         }
     }

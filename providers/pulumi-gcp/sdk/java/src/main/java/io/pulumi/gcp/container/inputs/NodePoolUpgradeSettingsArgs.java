@@ -77,22 +77,18 @@ public final class NodePoolUpgradeSettingsArgs extends io.pulumi.resources.Resou
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
-
         public Builder maxSurge(Integer maxSurge) {
             this.maxSurge = Output.of(Objects.requireNonNull(maxSurge));
             return this;
         }
-
         public Builder maxUnavailable(Output<Integer> maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public Builder maxUnavailable(Integer maxUnavailable) {
             this.maxUnavailable = Output.of(Objects.requireNonNull(maxUnavailable));
             return this;
-        }
-        public NodePoolUpgradeSettingsArgs build() {
+        }        public NodePoolUpgradeSettingsArgs build() {
             return new NodePoolUpgradeSettingsArgs(maxSurge, maxUnavailable);
         }
     }

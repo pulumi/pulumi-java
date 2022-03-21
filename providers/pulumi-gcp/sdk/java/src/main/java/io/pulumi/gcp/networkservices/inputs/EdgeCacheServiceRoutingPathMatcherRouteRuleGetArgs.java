@@ -168,72 +168,61 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder matchRules(Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs>> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
-
         public Builder matchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs> matchRules) {
             this.matchRules = Output.of(Objects.requireNonNull(matchRules));
             return this;
         }
-
+        public Builder matchRules(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs... matchRules) {
+            return matchRules(List.of(matchRules));
+        }
         public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder origin(@Nullable String origin) {
             this.origin = Output.ofNullable(origin);
             return this;
         }
-
         public Builder priority(Output<String> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(String priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder routeAction(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder routeAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs routeAction) {
             this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
-
         public Builder urlRedirect(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public Builder urlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs urlRedirect) {
             this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs(description, headerAction, matchRules, origin, priority, routeAction, urlRedirect);
         }
     }

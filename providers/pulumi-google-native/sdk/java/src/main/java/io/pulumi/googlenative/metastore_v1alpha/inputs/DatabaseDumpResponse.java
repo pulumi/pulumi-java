@@ -108,22 +108,18 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
-
         public Builder gcsUri(String gcsUri) {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
-
         public Builder sourceDatabase(String sourceDatabase) {
             this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DatabaseDumpResponse build() {
+        }        public DatabaseDumpResponse build() {
             return new DatabaseDumpResponse(databaseType, gcsUri, sourceDatabase, type);
         }
     }

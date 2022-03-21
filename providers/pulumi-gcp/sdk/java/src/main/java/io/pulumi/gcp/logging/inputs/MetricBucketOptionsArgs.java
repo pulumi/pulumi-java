@@ -97,32 +97,26 @@ public final class MetricBucketOptionsArgs extends io.pulumi.resources.ResourceA
             this.explicitBuckets = explicitBuckets;
             return this;
         }
-
         public Builder explicitBuckets(@Nullable MetricBucketOptionsExplicitBucketsArgs explicitBuckets) {
             this.explicitBuckets = Output.ofNullable(explicitBuckets);
             return this;
         }
-
         public Builder exponentialBuckets(@Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets) {
             this.exponentialBuckets = exponentialBuckets;
             return this;
         }
-
         public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBucketsArgs exponentialBuckets) {
             this.exponentialBuckets = Output.ofNullable(exponentialBuckets);
             return this;
         }
-
         public Builder linearBuckets(@Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets) {
             this.linearBuckets = linearBuckets;
             return this;
         }
-
         public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBucketsArgs linearBuckets) {
             this.linearBuckets = Output.ofNullable(linearBuckets);
             return this;
-        }
-        public MetricBucketOptionsArgs build() {
+        }        public MetricBucketOptionsArgs build() {
             return new MetricBucketOptionsArgs(explicitBuckets, exponentialBuckets, linearBuckets);
         }
     }

@@ -93,17 +93,17 @@ public final class ZypperRepositoryResponse extends io.pulumi.resources.InvokeAr
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder gpgKeys(List<String> gpgKeys) {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-        public ZypperRepositoryResponse build() {
+        public Builder gpgKeys(String... gpgKeys) {
+            return gpgKeys(List.of(gpgKeys));
+        }        public ZypperRepositoryResponse build() {
             return new ZypperRepositoryResponse(baseUrl, displayName, gpgKeys);
         }
     }

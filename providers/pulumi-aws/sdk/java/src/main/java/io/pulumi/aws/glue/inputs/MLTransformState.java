@@ -305,162 +305,136 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
-
         public Builder glueVersion(@Nullable String glueVersion) {
             this.glueVersion = Output.ofNullable(glueVersion);
             return this;
         }
-
         public Builder inputRecordTables(@Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables) {
             this.inputRecordTables = inputRecordTables;
             return this;
         }
-
         public Builder inputRecordTables(@Nullable List<MLTransformInputRecordTableGetArgs> inputRecordTables) {
             this.inputRecordTables = Output.ofNullable(inputRecordTables);
             return this;
         }
-
+        public Builder inputRecordTables(MLTransformInputRecordTableGetArgs... inputRecordTables) {
+            return inputRecordTables(List.of(inputRecordTables));
+        }
         public Builder labelCount(@Nullable Output<Integer> labelCount) {
             this.labelCount = labelCount;
             return this;
         }
-
         public Builder labelCount(@Nullable Integer labelCount) {
             this.labelCount = Output.ofNullable(labelCount);
             return this;
         }
-
         public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Double maxCapacity) {
             this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
-
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
-
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
             return this;
         }
-
         public Builder parameters(@Nullable Output<MLTransformParametersGetArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable MLTransformParametersGetArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder schemas(@Nullable Output<List<MLTransformSchemaGetArgs>> schemas) {
             this.schemas = schemas;
             return this;
         }
-
         public Builder schemas(@Nullable List<MLTransformSchemaGetArgs> schemas) {
             this.schemas = Output.ofNullable(schemas);
             return this;
         }
-
+        public Builder schemas(MLTransformSchemaGetArgs... schemas) {
+            return schemas(List.of(schemas));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder workerType(@Nullable Output<String> workerType) {
             this.workerType = workerType;
             return this;
         }
-
         public Builder workerType(@Nullable String workerType) {
             this.workerType = Output.ofNullable(workerType);
             return this;
-        }
-        public MLTransformState build() {
+        }        public MLTransformState build() {
             return new MLTransformState(arn, description, glueVersion, inputRecordTables, labelCount, maxCapacity, maxRetries, name, numberOfWorkers, parameters, roleArn, schemas, tags, tagsAll, timeout, workerType);
         }
     }

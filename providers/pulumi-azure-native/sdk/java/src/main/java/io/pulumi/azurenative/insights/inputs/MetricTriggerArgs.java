@@ -245,122 +245,101 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable List<ScaleRuleMetricDimensionArgs> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
+        public Builder dimensions(ScaleRuleMetricDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder dividePerInstance(@Nullable Output<Boolean> dividePerInstance) {
             this.dividePerInstance = dividePerInstance;
             return this;
         }
-
         public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
             this.dividePerInstance = Output.ofNullable(dividePerInstance);
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
-
         public Builder metricResourceLocation(@Nullable Output<String> metricResourceLocation) {
             this.metricResourceLocation = metricResourceLocation;
             return this;
         }
-
         public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
             this.metricResourceLocation = Output.ofNullable(metricResourceLocation);
             return this;
         }
-
         public Builder metricResourceUri(Output<String> metricResourceUri) {
             this.metricResourceUri = Objects.requireNonNull(metricResourceUri);
             return this;
         }
-
         public Builder metricResourceUri(String metricResourceUri) {
             this.metricResourceUri = Output.of(Objects.requireNonNull(metricResourceUri));
             return this;
         }
-
         public Builder operator(Output<ComparisonOperationType> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(ComparisonOperationType operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder statistic(Output<MetricStatisticType> statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
-
         public Builder statistic(MetricStatisticType statistic) {
             this.statistic = Output.of(Objects.requireNonNull(statistic));
             return this;
         }
-
         public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder timeAggregation(Output<TimeAggregationType> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public Builder timeAggregation(TimeAggregationType timeAggregation) {
             this.timeAggregation = Output.of(Objects.requireNonNull(timeAggregation));
             return this;
         }
-
         public Builder timeGrain(Output<String> timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
-
         public Builder timeGrain(String timeGrain) {
             this.timeGrain = Output.of(Objects.requireNonNull(timeGrain));
             return this;
         }
-
         public Builder timeWindow(Output<String> timeWindow) {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }
-
         public Builder timeWindow(String timeWindow) {
             this.timeWindow = Output.of(Objects.requireNonNull(timeWindow));
             return this;
-        }
-        public MetricTriggerArgs build() {
+        }        public MetricTriggerArgs build() {
             return new MetricTriggerArgs(dimensions, dividePerInstance, metricName, metricNamespace, metricResourceLocation, metricResourceUri, operator, statistic, threshold, timeAggregation, timeGrain, timeWindow);
         }
     }

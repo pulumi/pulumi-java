@@ -151,37 +151,30 @@ public final class GetDataCollectionRuleAssociationResult {
             this.dataCollectionRuleId = dataCollectionRuleId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataCollectionRuleAssociationResult build() {
+        }        public GetDataCollectionRuleAssociationResult build() {
             return new GetDataCollectionRuleAssociationResult(dataCollectionRuleId, description, etag, id, name, provisioningState, type);
         }
     }

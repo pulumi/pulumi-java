@@ -58,12 +58,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.customValues = customValues;
             return this;
         }
-
         public Builder customValues(@Nullable Map<String,String> customValues) {
             this.customValues = Output.ofNullable(customValues);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(customValues);
         }
     }

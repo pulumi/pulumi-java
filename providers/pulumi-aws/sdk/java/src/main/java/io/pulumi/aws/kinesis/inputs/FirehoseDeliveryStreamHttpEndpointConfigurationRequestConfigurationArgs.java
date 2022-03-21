@@ -76,22 +76,21 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
             this.commonAttributes = commonAttributes;
             return this;
         }
-
         public Builder commonAttributes(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs> commonAttributes) {
             this.commonAttributes = Output.ofNullable(commonAttributes);
             return this;
         }
-
+        public Builder commonAttributes(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs... commonAttributes) {
+            return commonAttributes(List.of(commonAttributes));
+        }
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs(commonAttributes, contentEncoding);
         }
     }

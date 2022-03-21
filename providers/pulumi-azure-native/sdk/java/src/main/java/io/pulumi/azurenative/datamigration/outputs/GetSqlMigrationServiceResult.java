@@ -121,42 +121,34 @@ public final class GetSqlMigrationServiceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder integrationRuntimeState(String integrationRuntimeState) {
             this.integrationRuntimeState = Objects.requireNonNull(integrationRuntimeState);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSqlMigrationServiceResult build() {
+        }        public GetSqlMigrationServiceResult build() {
             return new GetSqlMigrationServiceResult(id, integrationRuntimeState, location, name, provisioningState, systemData, tags, type);
         }
     }

@@ -148,27 +148,22 @@ public final class DistributionViewerCertificate {
             this.acmCertificateArn = acmCertificateArn;
             return this;
         }
-
         public Builder cloudfrontDefaultCertificate(@Nullable Boolean cloudfrontDefaultCertificate) {
             this.cloudfrontDefaultCertificate = cloudfrontDefaultCertificate;
             return this;
         }
-
         public Builder iamCertificateId(@Nullable String iamCertificateId) {
             this.iamCertificateId = iamCertificateId;
             return this;
         }
-
         public Builder minimumProtocolVersion(@Nullable String minimumProtocolVersion) {
             this.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
-
         public Builder sslSupportMethod(@Nullable String sslSupportMethod) {
             this.sslSupportMethod = sslSupportMethod;
             return this;
-        }
-        public DistributionViewerCertificate build() {
+        }        public DistributionViewerCertificate build() {
             return new DistributionViewerCertificate(acmCertificateArn, cloudfrontDefaultCertificate, iamCertificateId, minimumProtocolVersion, sslSupportMethod);
         }
     }

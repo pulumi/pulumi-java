@@ -189,92 +189,74 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
             this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyMaterialBase64(@Nullable Output<String> keyMaterialBase64) {
             this.keyMaterialBase64 = keyMaterialBase64;
             return this;
         }
-
         public Builder keyMaterialBase64(@Nullable String keyMaterialBase64) {
             this.keyMaterialBase64 = Output.ofNullable(keyMaterialBase64);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
             this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn);
             return this;
         }
-
         public Builder primaryKeyArn(String primaryKeyArn) {
             this.primaryKeyArn = Output.of(Objects.requireNonNull(primaryKeyArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder validTo(@Nullable Output<String> validTo) {
             this.validTo = validTo;
             return this;
         }
-
         public Builder validTo(@Nullable String validTo) {
             this.validTo = Output.ofNullable(validTo);
             return this;
-        }
-        public ReplicaExternalKeyArgs build() {
+        }        public ReplicaExternalKeyArgs build() {
             return new ReplicaExternalKeyArgs(bypassPolicyLockoutSafetyCheck, deletionWindowInDays, description, enabled, keyMaterialBase64, policy, primaryKeyArn, tags, validTo);
         }
     }

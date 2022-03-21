@@ -73,22 +73,18 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends io.pulumi.resourc
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public Builder entityId(String entityId) {
             this.entityId = Output.of(Objects.requireNonNull(entityId));
             return this;
         }
-
         public Builder metadataContent(Output<String> metadataContent) {
             this.metadataContent = Objects.requireNonNull(metadataContent);
             return this;
         }
-
         public Builder metadataContent(String metadataContent) {
             this.metadataContent = Output.of(Objects.requireNonNull(metadataContent));
             return this;
-        }
-        public DomainSamlOptionsSamlOptionsIdpArgs build() {
+        }        public DomainSamlOptionsSamlOptionsIdpArgs build() {
             return new DomainSamlOptionsSamlOptionsIdpArgs(entityId, metadataContent);
         }
     }

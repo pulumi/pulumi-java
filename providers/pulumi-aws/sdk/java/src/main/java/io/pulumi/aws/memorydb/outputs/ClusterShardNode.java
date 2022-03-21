@@ -99,22 +99,21 @@ public final class ClusterShardNode {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ClusterShardNodeEndpoint> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(ClusterShardNodeEndpoint... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ClusterShardNode build() {
+        }        public ClusterShardNode build() {
             return new ClusterShardNode(availabilityZone, createTime, endpoints, name);
         }
     }

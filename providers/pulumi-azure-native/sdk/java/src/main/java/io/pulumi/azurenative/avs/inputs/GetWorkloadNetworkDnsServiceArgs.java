@@ -88,17 +88,14 @@ public final class GetWorkloadNetworkDnsServiceArgs extends io.pulumi.resources.
             this.dnsServiceId = Objects.requireNonNull(dnsServiceId);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWorkloadNetworkDnsServiceArgs build() {
+        }        public GetWorkloadNetworkDnsServiceArgs build() {
             return new GetWorkloadNetworkDnsServiceArgs(dnsServiceId, privateCloudName, resourceGroupName);
         }
     }

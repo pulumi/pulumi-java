@@ -123,52 +123,42 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
             this.awsServiceName = Objects.requireNonNull(awsServiceName);
             return this;
         }
-
         public Builder awsServiceName(String awsServiceName) {
             this.awsServiceName = Output.of(Objects.requireNonNull(awsServiceName));
             return this;
         }
-
         public Builder customSuffix(@Nullable Output<String> customSuffix) {
             this.customSuffix = customSuffix;
             return this;
         }
-
         public Builder customSuffix(@Nullable String customSuffix) {
             this.customSuffix = Output.ofNullable(customSuffix);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ServiceLinkedRoleArgs build() {
+        }        public ServiceLinkedRoleArgs build() {
             return new ServiceLinkedRoleArgs(awsServiceName, customSuffix, description, tags, tagsAll);
         }
     }

@@ -327,87 +327,73 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder clientCustomerID(@Nullable Object clientCustomerID) {
             this.clientCustomerID = clientCustomerID;
             return this;
         }
-
         public Builder clientId(@Nullable Object clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectionProperties(@Nullable Object connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder developerToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken) {
             this.developerToken = developerToken;
             return this;
         }
-
         public Builder email(@Nullable Object email) {
             this.email = email;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder keyFilePath(@Nullable Object keyFilePath) {
             this.keyFilePath = keyFilePath;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
-        }
-        public GoogleAdWordsLinkedServiceResponse build() {
+        }        public GoogleAdWordsLinkedServiceResponse build() {
             return new GoogleAdWordsLinkedServiceResponse(annotations, authenticationType, clientCustomerID, clientId, clientSecret, connectVia, connectionProperties, description, developerToken, email, encryptedCredential, keyFilePath, parameters, refreshToken, trustedCertPath, type, useSystemTrustStore);
         }
     }

@@ -127,52 +127,42 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             this.maxOccurs = maxOccurs;
             return this;
         }
-
         public Builder maxOccurs(@Nullable Integer maxOccurs) {
             this.maxOccurs = Output.ofNullable(maxOccurs);
             return this;
         }
-
         public Builder minOccurs(@Nullable Output<Integer> minOccurs) {
             this.minOccurs = minOccurs;
             return this;
         }
-
         public Builder minOccurs(@Nullable Integer minOccurs) {
             this.minOccurs = Output.ofNullable(minOccurs);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public FieldArgs build() {
+        }        public FieldArgs build() {
             return new FieldArgs(maxOccurs, minOccurs, name, table, type);
         }
     }

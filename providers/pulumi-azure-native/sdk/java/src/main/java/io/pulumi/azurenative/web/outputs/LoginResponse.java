@@ -145,32 +145,29 @@ public final class LoginResponse {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
-
+        public Builder allowedExternalRedirectUrls(String... allowedExternalRedirectUrls) {
+            return allowedExternalRedirectUrls(List.of(allowedExternalRedirectUrls));
+        }
         public Builder cookieExpiration(@Nullable CookieExpirationResponse cookieExpiration) {
             this.cookieExpiration = cookieExpiration;
             return this;
         }
-
         public Builder nonce(@Nullable NonceResponse nonce) {
             this.nonce = nonce;
             return this;
         }
-
         public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
-
         public Builder routes(@Nullable LoginRoutesResponse routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder tokenStore(@Nullable TokenStoreResponse tokenStore) {
             this.tokenStore = tokenStore;
             return this;
-        }
-        public LoginResponse build() {
+        }        public LoginResponse build() {
             return new LoginResponse(allowedExternalRedirectUrls, cookieExpiration, nonce, preserveUrlFragmentsForLogins, routes, tokenStore);
         }
     }

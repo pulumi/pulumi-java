@@ -71,12 +71,10 @@ public final class MCASDataConnectorDataTypesResponse {
             this.alerts = alerts;
             return this;
         }
-
         public Builder discoveryLogs(@Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
             this.discoveryLogs = discoveryLogs;
             return this;
-        }
-        public MCASDataConnectorDataTypesResponse build() {
+        }        public MCASDataConnectorDataTypesResponse build() {
             return new MCASDataConnectorDataTypesResponse(alerts, discoveryLogs);
         }
     }

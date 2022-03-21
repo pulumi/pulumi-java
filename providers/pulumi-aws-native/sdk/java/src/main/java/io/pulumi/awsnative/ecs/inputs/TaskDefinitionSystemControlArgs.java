@@ -66,22 +66,18 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TaskDefinitionSystemControlArgs build() {
+        }        public TaskDefinitionSystemControlArgs build() {
             return new TaskDefinitionSystemControlArgs(namespace, value);
         }
     }

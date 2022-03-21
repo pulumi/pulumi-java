@@ -93,17 +93,17 @@ public final class DeploymentGroupAlarmConfiguration {
             this.alarms = alarms;
             return this;
         }
-
+        public Builder alarms(String... alarms) {
+            return alarms(List.of(alarms));
+        }
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder ignorePollAlarmFailure(@Nullable Boolean ignorePollAlarmFailure) {
             this.ignorePollAlarmFailure = ignorePollAlarmFailure;
             return this;
-        }
-        public DeploymentGroupAlarmConfiguration build() {
+        }        public DeploymentGroupAlarmConfiguration build() {
             return new DeploymentGroupAlarmConfiguration(alarms, enabled, ignorePollAlarmFailure);
         }
     }

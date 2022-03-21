@@ -206,102 +206,82 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder identityConstraints(@Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
-
         public Builder identityConstraints(@Nullable CertificateTemplateIdentityConstraintsGetArgs identityConstraints) {
             this.identityConstraints = Output.ofNullable(identityConstraints);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder passthroughExtensions(@Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions) {
             this.passthroughExtensions = passthroughExtensions;
             return this;
         }
-
         public Builder passthroughExtensions(@Nullable CertificateTemplatePassthroughExtensionsGetArgs passthroughExtensions) {
             this.passthroughExtensions = Output.ofNullable(passthroughExtensions);
             return this;
         }
-
         public Builder predefinedValues(@Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues) {
             this.predefinedValues = predefinedValues;
             return this;
         }
-
         public Builder predefinedValues(@Nullable CertificateTemplatePredefinedValuesGetArgs predefinedValues) {
             this.predefinedValues = Output.ofNullable(predefinedValues);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public CertificateTemplateState build() {
+        }        public CertificateTemplateState build() {
             return new CertificateTemplateState(createTime, description, identityConstraints, labels, location, name, passthroughExtensions, predefinedValues, project, updateTime);
         }
     }

@@ -97,32 +97,26 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder sizeDisk(Output<Either<String,SizeTypes>> sizeDisk) {
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }
-
         public Builder sizeDisk(Either<String,SizeTypes> sizeDisk) {
             this.sizeDisk = Output.of(Objects.requireNonNull(sizeDisk));
             return this;
-        }
-        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs build() {
+        }        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs build() {
             return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(description, kind, sizeDisk);
         }
     }

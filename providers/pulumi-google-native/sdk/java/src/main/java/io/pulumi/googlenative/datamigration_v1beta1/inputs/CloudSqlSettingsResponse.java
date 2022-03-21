@@ -271,72 +271,58 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
             this.activationPolicy = Objects.requireNonNull(activationPolicy);
             return this;
         }
-
         public Builder autoStorageIncrease(Boolean autoStorageIncrease) {
             this.autoStorageIncrease = Objects.requireNonNull(autoStorageIncrease);
             return this;
         }
-
         public Builder dataDiskSizeGb(String dataDiskSizeGb) {
             this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
             return this;
         }
-
         public Builder dataDiskType(String dataDiskType) {
             this.dataDiskType = Objects.requireNonNull(dataDiskType);
             return this;
         }
-
         public Builder databaseFlags(Map<String,String> databaseFlags) {
             this.databaseFlags = Objects.requireNonNull(databaseFlags);
             return this;
         }
-
         public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
-
         public Builder ipConfig(SqlIpConfigResponse ipConfig) {
             this.ipConfig = Objects.requireNonNull(ipConfig);
             return this;
         }
-
         public Builder rootPassword(String rootPassword) {
             this.rootPassword = Objects.requireNonNull(rootPassword);
             return this;
         }
-
         public Builder rootPasswordSet(Boolean rootPasswordSet) {
             this.rootPasswordSet = Objects.requireNonNull(rootPasswordSet);
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder storageAutoResizeLimit(String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public CloudSqlSettingsResponse build() {
+        }        public CloudSqlSettingsResponse build() {
             return new CloudSqlSettingsResponse(activationPolicy, autoStorageIncrease, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, rootPasswordSet, sourceId, storageAutoResizeLimit, tier, userLabels, zone);
         }
     }

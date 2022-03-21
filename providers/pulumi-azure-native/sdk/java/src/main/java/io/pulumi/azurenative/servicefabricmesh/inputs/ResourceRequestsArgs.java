@@ -77,22 +77,18 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder cpu(Double cpu) {
             this.cpu = Output.of(Objects.requireNonNull(cpu));
             return this;
         }
-
         public Builder memoryInGB(Output<Double> memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
             return this;
-        }
-        public ResourceRequestsArgs build() {
+        }        public ResourceRequestsArgs build() {
             return new ResourceRequestsArgs(cpu, memoryInGB);
         }
     }

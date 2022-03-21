@@ -96,32 +96,26 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterDns = clusterDns;
             return this;
         }
-
         public Builder clusterDns(@Nullable DNSConfigClusterDns clusterDns) {
             this.clusterDns = Output.ofNullable(clusterDns);
             return this;
         }
-
         public Builder clusterDnsDomain(@Nullable Output<String> clusterDnsDomain) {
             this.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
-
         public Builder clusterDnsDomain(@Nullable String clusterDnsDomain) {
             this.clusterDnsDomain = Output.ofNullable(clusterDnsDomain);
             return this;
         }
-
         public Builder clusterDnsScope(@Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope) {
             this.clusterDnsScope = clusterDnsScope;
             return this;
         }
-
         public Builder clusterDnsScope(@Nullable DNSConfigClusterDnsScope clusterDnsScope) {
             this.clusterDnsScope = Output.ofNullable(clusterDnsScope);
             return this;
-        }
-        public DNSConfigArgs build() {
+        }        public DNSConfigArgs build() {
             return new DNSConfigArgs(clusterDns, clusterDnsDomain, clusterDnsScope);
         }
     }

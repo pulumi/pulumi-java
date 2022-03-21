@@ -303,162 +303,142 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             this.autoAnalyze = Objects.requireNonNull(autoAnalyze);
             return this;
         }
-
         public Builder autoAnalyze(Boolean autoAnalyze) {
             this.autoAnalyze = Output.of(Objects.requireNonNull(autoAnalyze));
             return this;
         }
-
         public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder grades(@Nullable Output<List<PredictionGradesArgs>> grades) {
             this.grades = grades;
             return this;
         }
-
         public Builder grades(@Nullable List<PredictionGradesArgs> grades) {
             this.grades = Output.ofNullable(grades);
             return this;
         }
-
+        public Builder grades(PredictionGradesArgs... grades) {
+            return grades(List.of(grades));
+        }
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder involvedInteractionTypes(@Nullable Output<List<String>> involvedInteractionTypes) {
             this.involvedInteractionTypes = involvedInteractionTypes;
             return this;
         }
-
         public Builder involvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
             this.involvedInteractionTypes = Output.ofNullable(involvedInteractionTypes);
             return this;
         }
-
+        public Builder involvedInteractionTypes(String... involvedInteractionTypes) {
+            return involvedInteractionTypes(List.of(involvedInteractionTypes));
+        }
         public Builder involvedKpiTypes(@Nullable Output<List<String>> involvedKpiTypes) {
             this.involvedKpiTypes = involvedKpiTypes;
             return this;
         }
-
         public Builder involvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
             this.involvedKpiTypes = Output.ofNullable(involvedKpiTypes);
             return this;
         }
-
+        public Builder involvedKpiTypes(String... involvedKpiTypes) {
+            return involvedKpiTypes(List.of(involvedKpiTypes));
+        }
         public Builder involvedRelationships(@Nullable Output<List<String>> involvedRelationships) {
             this.involvedRelationships = involvedRelationships;
             return this;
         }
-
         public Builder involvedRelationships(@Nullable List<String> involvedRelationships) {
             this.involvedRelationships = Output.ofNullable(involvedRelationships);
             return this;
         }
-
+        public Builder involvedRelationships(String... involvedRelationships) {
+            return involvedRelationships(List.of(involvedRelationships));
+        }
         public Builder mappings(Output<PredictionMappingsArgs> mappings) {
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
-
         public Builder mappings(PredictionMappingsArgs mappings) {
             this.mappings = Output.of(Objects.requireNonNull(mappings));
             return this;
         }
-
         public Builder negativeOutcomeExpression(Output<String> negativeOutcomeExpression) {
             this.negativeOutcomeExpression = Objects.requireNonNull(negativeOutcomeExpression);
             return this;
         }
-
         public Builder negativeOutcomeExpression(String negativeOutcomeExpression) {
             this.negativeOutcomeExpression = Output.of(Objects.requireNonNull(negativeOutcomeExpression));
             return this;
         }
-
         public Builder positiveOutcomeExpression(Output<String> positiveOutcomeExpression) {
             this.positiveOutcomeExpression = Objects.requireNonNull(positiveOutcomeExpression);
             return this;
         }
-
         public Builder positiveOutcomeExpression(String positiveOutcomeExpression) {
             this.positiveOutcomeExpression = Output.of(Objects.requireNonNull(positiveOutcomeExpression));
             return this;
         }
-
         public Builder predictionName(@Nullable Output<String> predictionName) {
             this.predictionName = predictionName;
             return this;
         }
-
         public Builder predictionName(@Nullable String predictionName) {
             this.predictionName = Output.ofNullable(predictionName);
             return this;
         }
-
         public Builder primaryProfileType(Output<String> primaryProfileType) {
             this.primaryProfileType = Objects.requireNonNull(primaryProfileType);
             return this;
         }
-
         public Builder primaryProfileType(String primaryProfileType) {
             this.primaryProfileType = Output.of(Objects.requireNonNull(primaryProfileType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scopeExpression(Output<String> scopeExpression) {
             this.scopeExpression = Objects.requireNonNull(scopeExpression);
             return this;
         }
-
         public Builder scopeExpression(String scopeExpression) {
             this.scopeExpression = Output.of(Objects.requireNonNull(scopeExpression));
             return this;
         }
-
         public Builder scoreLabel(Output<String> scoreLabel) {
             this.scoreLabel = Objects.requireNonNull(scoreLabel);
             return this;
         }
-
         public Builder scoreLabel(String scoreLabel) {
             this.scoreLabel = Output.of(Objects.requireNonNull(scoreLabel));
             return this;
-        }
-        public PredictionArgs build() {
+        }        public PredictionArgs build() {
             return new PredictionArgs(autoAnalyze, description, displayName, grades, hubName, involvedInteractionTypes, involvedKpiTypes, involvedRelationships, mappings, negativeOutcomeExpression, positiveOutcomeExpression, predictionName, primaryProfileType, resourceGroupName, scopeExpression, scoreLabel);
         }
     }

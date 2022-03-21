@@ -45,7 +45,9 @@ public final class ResponseHeadersPolicyAccessControlAllowMethods {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public ResponseHeadersPolicyAccessControlAllowMethods build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyAccessControlAllowMethods build() {
             return new ResponseHeadersPolicyAccessControlAllowMethods(items);
         }
     }

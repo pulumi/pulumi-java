@@ -138,32 +138,26 @@ public final class PostgreSqlConnectionInfoResponse {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public PostgreSqlConnectionInfoResponse build() {
+        }        public PostgreSqlConnectionInfoResponse build() {
             return new PostgreSqlConnectionInfoResponse(databaseName, password, port, serverName, type, userName);
         }
     }

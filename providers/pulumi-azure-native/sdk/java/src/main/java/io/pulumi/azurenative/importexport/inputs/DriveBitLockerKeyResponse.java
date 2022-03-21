@@ -78,12 +78,10 @@ public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeA
             this.bitLockerKey = bitLockerKey;
             return this;
         }
-
         public Builder driveId(@Nullable String driveId) {
             this.driveId = driveId;
             return this;
-        }
-        public DriveBitLockerKeyResponse build() {
+        }        public DriveBitLockerKeyResponse build() {
             return new DriveBitLockerKeyResponse(bitLockerKey, driveId);
         }
     }

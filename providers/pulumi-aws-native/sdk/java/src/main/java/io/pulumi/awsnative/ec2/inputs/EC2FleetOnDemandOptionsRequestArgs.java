@@ -117,62 +117,50 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
-
         public Builder capacityReservationOptions(@Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions) {
             this.capacityReservationOptions = capacityReservationOptions;
             return this;
         }
-
         public Builder capacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequestArgs capacityReservationOptions) {
             this.capacityReservationOptions = Output.ofNullable(capacityReservationOptions);
             return this;
         }
-
         public Builder maxTotalPrice(@Nullable Output<String> maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
-
         public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = Output.ofNullable(maxTotalPrice);
             return this;
         }
-
         public Builder minTargetCapacity(@Nullable Output<Integer> minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
-
         public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = Output.ofNullable(minTargetCapacity);
             return this;
         }
-
         public Builder singleAvailabilityZone(@Nullable Output<Boolean> singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
-
         public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = Output.ofNullable(singleAvailabilityZone);
             return this;
         }
-
         public Builder singleInstanceType(@Nullable Output<Boolean> singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }
-
         public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = Output.ofNullable(singleInstanceType);
             return this;
-        }
-        public EC2FleetOnDemandOptionsRequestArgs build() {
+        }        public EC2FleetOnDemandOptionsRequestArgs build() {
             return new EC2FleetOnDemandOptionsRequestArgs(allocationStrategy, capacityReservationOptions, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
         }
     }

@@ -53,8 +53,7 @@ public final class DomainClusterConfigZoneAwarenessConfig {
         public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
             this.availabilityZoneCount = availabilityZoneCount;
             return this;
-        }
-        public DomainClusterConfigZoneAwarenessConfig build() {
+        }        public DomainClusterConfigZoneAwarenessConfig build() {
             return new DomainClusterConfigZoneAwarenessConfig(availabilityZoneCount);
         }
     }

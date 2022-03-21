@@ -104,22 +104,21 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
             this.excludedAccountIds = excludedAccountIds;
             return this;
         }
-
+        public Builder excludedAccountIds(String... excludedAccountIds) {
+            return excludedAccountIds(List.of(excludedAccountIds));
+        }
         public Builder organizationMembershipType(@Nullable String organizationMembershipType) {
             this.organizationMembershipType = organizationMembershipType;
             return this;
         }
-
         public Builder parentHierarchyId(@Nullable String parentHierarchyId) {
             this.parentHierarchyId = parentHierarchyId;
             return this;
         }
-
         public Builder stacksetName(@Nullable String stacksetName) {
             this.stacksetName = stacksetName;
             return this;
-        }
-        public SecurityConnectorPropertiesResponseOrganizationalData build() {
+        }        public SecurityConnectorPropertiesResponseOrganizationalData build() {
             return new SecurityConnectorPropertiesResponseOrganizationalData(excludedAccountIds, organizationMembershipType, parentHierarchyId, stacksetName);
         }
     }

@@ -129,52 +129,42 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder expired(@Nullable Output<Boolean> expired) {
             this.expired = expired;
             return this;
         }
-
         public Builder expired(@Nullable Boolean expired) {
             this.expired = Output.ofNullable(expired);
             return this;
         }
-
         public Builder markdown(@Nullable Output<String> markdown) {
             this.markdown = markdown;
             return this;
         }
-
         public Builder markdown(@Nullable String markdown) {
             this.markdown = Output.ofNullable(markdown);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public LabAnnouncementPropertiesArgs build() {
+        }        public LabAnnouncementPropertiesArgs build() {
             return new LabAnnouncementPropertiesArgs(enabled, expirationDate, expired, markdown, title);
         }
     }

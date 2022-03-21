@@ -173,42 +173,43 @@ public final class ProductLineResponse {
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
-
         public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
-
         public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
-
+        public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
+            return filterableProperties(List.of(filterableProperties));
+        }
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
-
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
-
+        public Builder imageInformation(ImageInformationResponse... imageInformation) {
+            return imageInformation(List.of(imageInformation));
+        }
         public Builder products(List<ProductResponse> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-        public ProductLineResponse build() {
+        public Builder products(ProductResponse... products) {
+            return products(List.of(products));
+        }        public ProductLineResponse build() {
             return new ProductLineResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, products);
         }
     }

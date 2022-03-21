@@ -80,22 +80,21 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.interfaceString = interfaceString;
             return this;
         }
-
         public Builder interfaceString(@Nullable String interfaceString) {
             this.interfaceString = Output.ofNullable(interfaceString);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-        public ModeValueInfoArgs build() {
+        public Builder parameters(ModuleAssetParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }        public ModeValueInfoArgs build() {
             return new ModeValueInfoArgs(interfaceString, parameters);
         }
     }

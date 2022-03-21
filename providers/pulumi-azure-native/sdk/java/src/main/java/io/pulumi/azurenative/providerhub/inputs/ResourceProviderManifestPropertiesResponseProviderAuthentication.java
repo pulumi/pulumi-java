@@ -52,7 +52,9 @@ public final class ResourceProviderManifestPropertiesResponseProviderAuthenticat
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-        public ResourceProviderManifestPropertiesResponseProviderAuthentication build() {
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }        public ResourceProviderManifestPropertiesResponseProviderAuthentication build() {
             return new ResourceProviderManifestPropertiesResponseProviderAuthentication(allowedAudiences);
         }
     }

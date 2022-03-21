@@ -73,12 +73,13 @@ public final class ImageRecipeComponentConfiguration {
             this.componentArn = componentArn;
             return this;
         }
-
         public Builder parameters(@Nullable List<ImageRecipeComponentParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
-        public ImageRecipeComponentConfiguration build() {
+        public Builder parameters(ImageRecipeComponentParameter... parameters) {
+            return parameters(List.of(parameters));
+        }        public ImageRecipeComponentConfiguration build() {
             return new ImageRecipeComponentConfiguration(componentArn, parameters);
         }
     }

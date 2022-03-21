@@ -97,42 +97,37 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkFabricType(@Nullable Output<EnvironmentNetworkFabricType> networkFabricType) {
             this.networkFabricType = networkFabricType;
             return this;
         }
-
         public Builder networkFabricType(@Nullable EnvironmentNetworkFabricType networkFabricType) {
             this.networkFabricType = Output.ofNullable(networkFabricType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<EnvironmentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<EnvironmentTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public EnvironmentArgs build() {
+        public Builder tags(EnvironmentTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(description, name, networkFabricType, tags);
         }
     }

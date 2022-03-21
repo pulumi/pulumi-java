@@ -97,32 +97,29 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
-
         public Builder number(@Nullable Integer number) {
             this.number = Output.ofNullable(number);
             return this;
         }
-
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-        public EnumValueArgs build() {
+        public Builder options(OptionArgs... options) {
+            return options(List.of(options));
+        }        public EnumValueArgs build() {
             return new EnumValueArgs(name, number, options);
         }
     }

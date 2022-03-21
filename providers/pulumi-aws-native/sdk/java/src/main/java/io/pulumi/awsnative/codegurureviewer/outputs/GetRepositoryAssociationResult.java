@@ -53,8 +53,7 @@ public final class GetRepositoryAssociationResult {
         public Builder associationArn(@Nullable String associationArn) {
             this.associationArn = associationArn;
             return this;
-        }
-        public GetRepositoryAssociationResult build() {
+        }        public GetRepositoryAssociationResult build() {
             return new GetRepositoryAssociationResult(associationArn);
         }
     }

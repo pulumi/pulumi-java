@@ -61,12 +61,13 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-
         public Builder regexes(List<String> regexes) {
             this.regexes = Output.of(Objects.requireNonNull(regexes));
             return this;
         }
-        public RegexValidationArgs build() {
+        public Builder regexes(String... regexes) {
+            return regexes(List.of(regexes));
+        }        public RegexValidationArgs build() {
             return new RegexValidationArgs(regexes);
         }
     }

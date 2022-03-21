@@ -83,32 +83,26 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder logConfiguration(@Nullable Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
-
         public Builder logConfiguration(@Nullable ClusterExecuteCommandLogConfigurationArgs logConfiguration) {
             this.logConfiguration = Output.ofNullable(logConfiguration);
             return this;
         }
-
         public Builder logging(@Nullable Output<String> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable String logging) {
             this.logging = Output.ofNullable(logging);
             return this;
-        }
-        public ClusterExecuteCommandConfigurationArgs build() {
+        }        public ClusterExecuteCommandConfigurationArgs build() {
             return new ClusterExecuteCommandConfigurationArgs(kmsKeyId, logConfiguration, logging);
         }
     }

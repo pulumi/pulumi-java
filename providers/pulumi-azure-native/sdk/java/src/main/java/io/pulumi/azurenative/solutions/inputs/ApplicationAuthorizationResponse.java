@@ -76,12 +76,10 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
-        }
-        public ApplicationAuthorizationResponse build() {
+        }        public ApplicationAuthorizationResponse build() {
             return new ApplicationAuthorizationResponse(principalId, roleDefinitionId);
         }
     }

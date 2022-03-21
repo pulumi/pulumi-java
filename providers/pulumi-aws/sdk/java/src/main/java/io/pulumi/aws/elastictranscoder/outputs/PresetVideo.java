@@ -247,67 +247,54 @@ public final class PresetVideo {
             this.aspectRatio = aspectRatio;
             return this;
         }
-
         public Builder bitRate(@Nullable String bitRate) {
             this.bitRate = bitRate;
             return this;
         }
-
         public Builder codec(@Nullable String codec) {
             this.codec = codec;
             return this;
         }
-
         public Builder displayAspectRatio(@Nullable String displayAspectRatio) {
             this.displayAspectRatio = displayAspectRatio;
             return this;
         }
-
         public Builder fixedGop(@Nullable String fixedGop) {
             this.fixedGop = fixedGop;
             return this;
         }
-
         public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = frameRate;
             return this;
         }
-
         public Builder keyframesMaxDist(@Nullable String keyframesMaxDist) {
             this.keyframesMaxDist = keyframesMaxDist;
             return this;
         }
-
         public Builder maxFrameRate(@Nullable String maxFrameRate) {
             this.maxFrameRate = maxFrameRate;
             return this;
         }
-
         public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
-
         public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
-
         public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
-
         public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
         }
-
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
-        }
-        public PresetVideo build() {
+        }        public PresetVideo build() {
             return new PresetVideo(aspectRatio, bitRate, codec, displayAspectRatio, fixedGop, frameRate, keyframesMaxDist, maxFrameRate, maxHeight, maxWidth, paddingPolicy, resolution, sizingPolicy);
         }
     }

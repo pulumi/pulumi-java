@@ -98,32 +98,26 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.recurrence = recurrence;
             return this;
         }
-
         public Builder recurrence(@Nullable Either<String,RecurrenceType> recurrence) {
             this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
-
         public Builder recurrencePeriod(@Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
-
         public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodArgs recurrencePeriod) {
             this.recurrencePeriod = Output.ofNullable(recurrencePeriod);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,StatusType>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,StatusType> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ExportScheduleArgs build() {
+        }        public ExportScheduleArgs build() {
             return new ExportScheduleArgs(recurrence, recurrencePeriod, status);
         }
     }

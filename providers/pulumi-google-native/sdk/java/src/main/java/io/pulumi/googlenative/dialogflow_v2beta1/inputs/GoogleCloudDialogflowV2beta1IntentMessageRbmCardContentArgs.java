@@ -113,42 +113,37 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder media(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media) {
             this.media = media;
             return this;
         }
-
         public Builder media(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs media) {
             this.media = Output.ofNullable(media);
             return this;
         }
-
         public Builder suggestions(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions) {
             this.suggestions = suggestions;
             return this;
         }
-
         public Builder suggestions(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> suggestions) {
             this.suggestions = Output.ofNullable(suggestions);
             return this;
         }
-
+        public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs... suggestions) {
+            return suggestions(List.of(suggestions));
+        }
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs(description, media, suggestions, title);
         }
     }

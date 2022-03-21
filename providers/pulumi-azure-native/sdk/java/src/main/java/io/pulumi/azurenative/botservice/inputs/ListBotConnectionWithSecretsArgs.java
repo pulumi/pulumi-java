@@ -88,17 +88,14 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListBotConnectionWithSecretsArgs build() {
+        }        public ListBotConnectionWithSecretsArgs build() {
             return new ListBotConnectionWithSecretsArgs(connectionName, resourceGroupName, resourceName);
         }
     }

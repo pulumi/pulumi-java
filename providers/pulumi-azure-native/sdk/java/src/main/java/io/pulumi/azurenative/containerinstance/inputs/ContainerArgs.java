@@ -196,92 +196,86 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder livenessProbe(@Nullable Output<ContainerProbeArgs> livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-
         public Builder livenessProbe(@Nullable ContainerProbeArgs livenessProbe) {
             this.livenessProbe = Output.ofNullable(livenessProbe);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<ContainerPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(ContainerPortArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder readinessProbe(@Nullable Output<ContainerProbeArgs> readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
-
         public Builder readinessProbe(@Nullable ContainerProbeArgs readinessProbe) {
             this.readinessProbe = Output.ofNullable(readinessProbe);
             return this;
         }
-
         public Builder resources(Output<ResourceRequirementsArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(ResourceRequirementsArgs resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
-        public ContainerArgs build() {
+        public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }        public ContainerArgs build() {
             return new ContainerArgs(command, environmentVariables, image, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
         }
     }

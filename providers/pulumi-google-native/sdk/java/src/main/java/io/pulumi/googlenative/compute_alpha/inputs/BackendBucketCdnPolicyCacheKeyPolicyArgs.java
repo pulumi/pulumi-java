@@ -79,22 +79,24 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
             this.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
-
         public Builder includeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
             this.includeHttpHeaders = Output.ofNullable(includeHttpHeaders);
             return this;
         }
-
+        public Builder includeHttpHeaders(String... includeHttpHeaders) {
+            return includeHttpHeaders(List.of(includeHttpHeaders));
+        }
         public Builder queryStringWhitelist(@Nullable Output<List<String>> queryStringWhitelist) {
             this.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
-
         public Builder queryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Output.ofNullable(queryStringWhitelist);
             return this;
         }
-        public BackendBucketCdnPolicyCacheKeyPolicyArgs build() {
+        public Builder queryStringWhitelist(String... queryStringWhitelist) {
+            return queryStringWhitelist(List.of(queryStringWhitelist));
+        }        public BackendBucketCdnPolicyCacheKeyPolicyArgs build() {
             return new BackendBucketCdnPolicyCacheKeyPolicyArgs(includeHttpHeaders, queryStringWhitelist);
         }
     }

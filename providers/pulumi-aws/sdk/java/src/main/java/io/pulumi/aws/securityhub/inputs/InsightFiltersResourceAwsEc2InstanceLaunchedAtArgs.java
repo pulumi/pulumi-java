@@ -91,32 +91,26 @@ public final class InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs extends io
             this.dateRange = dateRange;
             return this;
         }
-
         public Builder dateRange(@Nullable InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangeArgs dateRange) {
             this.dateRange = Output.ofNullable(dateRange);
             return this;
         }
-
         public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs build() {
+        }        public InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs build() {
             return new InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs(dateRange, end, start);
         }
     }

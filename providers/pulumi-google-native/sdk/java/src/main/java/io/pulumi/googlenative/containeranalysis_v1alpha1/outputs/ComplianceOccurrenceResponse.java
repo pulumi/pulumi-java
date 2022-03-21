@@ -71,12 +71,13 @@ public final class ComplianceOccurrenceResponse {
             this.nonComplianceReason = Objects.requireNonNull(nonComplianceReason);
             return this;
         }
-
         public Builder nonCompliantFiles(List<NonCompliantFileResponse> nonCompliantFiles) {
             this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
             return this;
         }
-        public ComplianceOccurrenceResponse build() {
+        public Builder nonCompliantFiles(NonCompliantFileResponse... nonCompliantFiles) {
+            return nonCompliantFiles(List.of(nonCompliantFiles));
+        }        public ComplianceOccurrenceResponse build() {
             return new ComplianceOccurrenceResponse(nonComplianceReason, nonCompliantFiles);
         }
     }

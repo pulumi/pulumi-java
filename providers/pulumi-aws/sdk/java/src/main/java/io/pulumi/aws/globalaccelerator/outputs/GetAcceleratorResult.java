@@ -130,52 +130,48 @@ public final class GetAcceleratorResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder attributes(List<GetAcceleratorAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(GetAcceleratorAttribute... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipAddressType(String ipAddressType) {
             this.ipAddressType = Objects.requireNonNull(ipAddressType);
             return this;
         }
-
         public Builder ipSets(List<GetAcceleratorIpSet> ipSets) {
             this.ipSets = Objects.requireNonNull(ipSets);
             return this;
         }
-
+        public Builder ipSets(GetAcceleratorIpSet... ipSets) {
+            return ipSets(List.of(ipSets));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetAcceleratorResult build() {
+        }        public GetAcceleratorResult build() {
             return new GetAcceleratorResult(arn, attributes, dnsName, enabled, hostedZoneId, id, ipAddressType, ipSets, name, tags);
         }
     }

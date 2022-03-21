@@ -107,22 +107,18 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder keyVault(KeyVaultReference keyVault) {
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListIntegrationAccountKeyVaultKeysArgs build() {
+        }        public ListIntegrationAccountKeyVaultKeysArgs build() {
             return new ListIntegrationAccountKeyVaultKeysArgs(integrationAccountName, keyVault, resourceGroupName, skipToken);
         }
     }

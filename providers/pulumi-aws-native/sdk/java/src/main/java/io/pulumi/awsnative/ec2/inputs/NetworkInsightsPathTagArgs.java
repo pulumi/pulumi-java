@@ -66,22 +66,18 @@ public final class NetworkInsightsPathTagArgs extends io.pulumi.resources.Resour
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public NetworkInsightsPathTagArgs build() {
+        }        public NetworkInsightsPathTagArgs build() {
             return new NetworkInsightsPathTagArgs(key, value);
         }
     }

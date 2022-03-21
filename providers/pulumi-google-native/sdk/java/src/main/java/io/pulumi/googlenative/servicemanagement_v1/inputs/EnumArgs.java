@@ -131,52 +131,48 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
             this.enumvalue = enumvalue;
             return this;
         }
-
         public Builder enumvalue(@Nullable List<EnumValueArgs> enumvalue) {
             this.enumvalue = Output.ofNullable(enumvalue);
             return this;
         }
-
+        public Builder enumvalue(EnumValueArgs... enumvalue) {
+            return enumvalue(List.of(enumvalue));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
+        public Builder options(OptionArgs... options) {
+            return options(List.of(options));
+        }
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
-
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
             this.sourceContext = Output.ofNullable(sourceContext);
             return this;
         }
-
         public Builder syntax(@Nullable Output<EnumSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
-
         public Builder syntax(@Nullable EnumSyntax syntax) {
             this.syntax = Output.ofNullable(syntax);
             return this;
-        }
-        public EnumArgs build() {
+        }        public EnumArgs build() {
             return new EnumArgs(enumvalue, name, options, sourceContext, syntax);
         }
     }

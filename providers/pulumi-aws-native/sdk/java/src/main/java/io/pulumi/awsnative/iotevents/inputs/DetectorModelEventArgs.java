@@ -96,32 +96,29 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<DetectorModelActionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(DetectorModelActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public Builder eventName(String eventName) {
             this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
-        }
-        public DetectorModelEventArgs build() {
+        }        public DetectorModelEventArgs build() {
             return new DetectorModelEventArgs(actions, condition, eventName);
         }
     }

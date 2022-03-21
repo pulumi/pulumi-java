@@ -721,212 +721,182 @@ public final class GetClusterResult {
             this.allowVersionUpgrade = allowVersionUpgrade;
             return this;
         }
-
         public Builder aquaConfigurationStatus(@Nullable String aquaConfigurationStatus) {
             this.aquaConfigurationStatus = aquaConfigurationStatus;
             return this;
         }
-
         public Builder automatedSnapshotRetentionPeriod(@Nullable Integer automatedSnapshotRetentionPeriod) {
             this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZoneRelocation(@Nullable Boolean availabilityZoneRelocation) {
             this.availabilityZoneRelocation = availabilityZoneRelocation;
             return this;
         }
-
         public Builder availabilityZoneRelocationStatus(@Nullable String availabilityZoneRelocationStatus) {
             this.availabilityZoneRelocationStatus = availabilityZoneRelocationStatus;
             return this;
         }
-
         public Builder classic(@Nullable Boolean classic) {
             this.classic = classic;
             return this;
         }
-
         public Builder clusterParameterGroupName(@Nullable String clusterParameterGroupName) {
             this.clusterParameterGroupName = clusterParameterGroupName;
             return this;
         }
-
         public Builder clusterSecurityGroups(@Nullable List<String> clusterSecurityGroups) {
             this.clusterSecurityGroups = clusterSecurityGroups;
             return this;
         }
-
+        public Builder clusterSecurityGroups(String... clusterSecurityGroups) {
+            return clusterSecurityGroups(List.of(clusterSecurityGroups));
+        }
         public Builder clusterType(@Nullable String clusterType) {
             this.clusterType = clusterType;
             return this;
         }
-
         public Builder clusterVersion(@Nullable String clusterVersion) {
             this.clusterVersion = clusterVersion;
             return this;
         }
-
         public Builder deferMaintenance(@Nullable Boolean deferMaintenance) {
             this.deferMaintenance = deferMaintenance;
             return this;
         }
-
         public Builder deferMaintenanceDuration(@Nullable Integer deferMaintenanceDuration) {
             this.deferMaintenanceDuration = deferMaintenanceDuration;
             return this;
         }
-
         public Builder deferMaintenanceEndTime(@Nullable String deferMaintenanceEndTime) {
             this.deferMaintenanceEndTime = deferMaintenanceEndTime;
             return this;
         }
-
         public Builder deferMaintenanceIdentifier(@Nullable String deferMaintenanceIdentifier) {
             this.deferMaintenanceIdentifier = deferMaintenanceIdentifier;
             return this;
         }
-
         public Builder deferMaintenanceStartTime(@Nullable String deferMaintenanceStartTime) {
             this.deferMaintenanceStartTime = deferMaintenanceStartTime;
             return this;
         }
-
         public Builder destinationRegion(@Nullable String destinationRegion) {
             this.destinationRegion = destinationRegion;
             return this;
         }
-
         public Builder elasticIp(@Nullable String elasticIp) {
             this.elasticIp = elasticIp;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder endpoint(@Nullable ClusterEndpoint endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder enhancedVpcRouting(@Nullable Boolean enhancedVpcRouting) {
             this.enhancedVpcRouting = enhancedVpcRouting;
             return this;
         }
-
         public Builder hsmClientCertificateIdentifier(@Nullable String hsmClientCertificateIdentifier) {
             this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
             return this;
         }
-
         public Builder hsmConfigurationIdentifier(@Nullable String hsmConfigurationIdentifier) {
             this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
             return this;
         }
-
         public Builder iamRoles(@Nullable List<String> iamRoles) {
             this.iamRoles = iamRoles;
             return this;
         }
-
+        public Builder iamRoles(String... iamRoles) {
+            return iamRoles(List.of(iamRoles));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder loggingProperties(@Nullable ClusterLoggingProperties loggingProperties) {
             this.loggingProperties = loggingProperties;
             return this;
         }
-
         public Builder maintenanceTrackName(@Nullable String maintenanceTrackName) {
             this.maintenanceTrackName = maintenanceTrackName;
             return this;
         }
-
         public Builder manualSnapshotRetentionPeriod(@Nullable Integer manualSnapshotRetentionPeriod) {
             this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder resourceAction(@Nullable String resourceAction) {
             this.resourceAction = resourceAction;
             return this;
         }
-
         public Builder revisionTarget(@Nullable String revisionTarget) {
             this.revisionTarget = revisionTarget;
             return this;
         }
-
         public Builder rotateEncryptionKey(@Nullable Boolean rotateEncryptionKey) {
             this.rotateEncryptionKey = rotateEncryptionKey;
             return this;
         }
-
         public Builder snapshotCopyGrantName(@Nullable String snapshotCopyGrantName) {
             this.snapshotCopyGrantName = snapshotCopyGrantName;
             return this;
         }
-
         public Builder snapshotCopyManual(@Nullable Boolean snapshotCopyManual) {
             this.snapshotCopyManual = snapshotCopyManual;
             return this;
         }
-
         public Builder snapshotCopyRetentionPeriod(@Nullable Integer snapshotCopyRetentionPeriod) {
             this.snapshotCopyRetentionPeriod = snapshotCopyRetentionPeriod;
             return this;
         }
-
         public Builder tags(@Nullable List<ClusterTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ClusterTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public GetClusterResult build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public GetClusterResult build() {
             return new GetClusterResult(allowVersionUpgrade, aquaConfigurationStatus, automatedSnapshotRetentionPeriod, availabilityZone, availabilityZoneRelocation, availabilityZoneRelocationStatus, classic, clusterParameterGroupName, clusterSecurityGroups, clusterType, clusterVersion, deferMaintenance, deferMaintenanceDuration, deferMaintenanceEndTime, deferMaintenanceIdentifier, deferMaintenanceStartTime, destinationRegion, elasticIp, encrypted, endpoint, enhancedVpcRouting, hsmClientCertificateIdentifier, hsmConfigurationIdentifier, iamRoles, id, kmsKeyId, loggingProperties, maintenanceTrackName, manualSnapshotRetentionPeriod, nodeType, numberOfNodes, port, preferredMaintenanceWindow, publiclyAccessible, resourceAction, revisionTarget, rotateEncryptionKey, snapshotCopyGrantName, snapshotCopyManual, snapshotCopyRetentionPeriod, tags, vpcSecurityGroupIds);
         }
     }

@@ -69,12 +69,10 @@ public final class AS2ErrorSettingsResponse {
             this.resendIfMDNNotReceived = Objects.requireNonNull(resendIfMDNNotReceived);
             return this;
         }
-
         public Builder suspendDuplicateMessage(Boolean suspendDuplicateMessage) {
             this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage);
             return this;
-        }
-        public AS2ErrorSettingsResponse build() {
+        }        public AS2ErrorSettingsResponse build() {
             return new AS2ErrorSettingsResponse(resendIfMDNNotReceived, suspendDuplicateMessage);
         }
     }

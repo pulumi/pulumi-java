@@ -88,17 +88,14 @@ public final class OsDiskResponse {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
-        }
-        public OsDiskResponse build() {
+        }        public OsDiskResponse build() {
             return new OsDiskResponse(diskSizeGB, name, osType);
         }
     }

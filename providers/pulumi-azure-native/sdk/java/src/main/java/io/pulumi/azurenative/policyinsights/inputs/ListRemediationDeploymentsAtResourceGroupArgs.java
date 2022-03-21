@@ -91,17 +91,14 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder top(@Nullable Integer top) {
             this.top = top;
             return this;
-        }
-        public ListRemediationDeploymentsAtResourceGroupArgs build() {
+        }        public ListRemediationDeploymentsAtResourceGroupArgs build() {
             return new ListRemediationDeploymentsAtResourceGroupArgs(remediationName, resourceGroupName, top);
         }
     }

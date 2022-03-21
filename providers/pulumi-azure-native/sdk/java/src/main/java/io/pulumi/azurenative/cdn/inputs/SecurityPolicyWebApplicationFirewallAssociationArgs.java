@@ -80,22 +80,24 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
             this.domains = domains;
             return this;
         }
-
         public Builder domains(@Nullable List<ResourceReferenceArgs> domains) {
             this.domains = Output.ofNullable(domains);
             return this;
         }
-
+        public Builder domains(ResourceReferenceArgs... domains) {
+            return domains(List.of(domains));
+        }
         public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = Output.ofNullable(patternsToMatch);
             return this;
         }
-        public SecurityPolicyWebApplicationFirewallAssociationArgs build() {
+        public Builder patternsToMatch(String... patternsToMatch) {
+            return patternsToMatch(List.of(patternsToMatch));
+        }        public SecurityPolicyWebApplicationFirewallAssociationArgs build() {
             return new SecurityPolicyWebApplicationFirewallAssociationArgs(domains, patternsToMatch);
         }
     }

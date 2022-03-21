@@ -63,17 +63,23 @@ public final class ConnectionHttpParameters {
             this.bodyParameters = bodyParameters;
             return this;
         }
-
+        public Builder bodyParameters(ConnectionParameter... bodyParameters) {
+            return bodyParameters(List.of(bodyParameters));
+        }
         public Builder headerParameters(@Nullable List<ConnectionParameter> headerParameters) {
             this.headerParameters = headerParameters;
             return this;
         }
-
+        public Builder headerParameters(ConnectionParameter... headerParameters) {
+            return headerParameters(List.of(headerParameters));
+        }
         public Builder queryStringParameters(@Nullable List<ConnectionParameter> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
         }
-        public ConnectionHttpParameters build() {
+        public Builder queryStringParameters(ConnectionParameter... queryStringParameters) {
+            return queryStringParameters(List.of(queryStringParameters));
+        }        public ConnectionHttpParameters build() {
             return new ConnectionHttpParameters(bodyParameters, headerParameters, queryStringParameters);
         }
     }

@@ -156,72 +156,61 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder condition(@Nullable Output<AppEngineVersionIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable AppEngineVersionIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
-
         public Builder versionId(Output<String> versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Output.of(Objects.requireNonNull(versionId));
             return this;
-        }
-        public AppEngineVersionIamBindingArgs build() {
+        }        public AppEngineVersionIamBindingArgs build() {
             return new AppEngineVersionIamBindingArgs(appId, condition, members, project, role, service, versionId);
         }
     }

@@ -130,27 +130,25 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = fabricName;
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
-
+        public Builder subProtectionPolicy(SubProtectionPolicyResponse... subProtectionPolicy) {
+            return subProtectionPolicy(List.of(subProtectionPolicy));
+        }
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public GenericProtectionPolicyResponse build() {
+        }        public GenericProtectionPolicyResponse build() {
             return new GenericProtectionPolicyResponse(backupManagementType, fabricName, protectedItemsCount, subProtectionPolicy, timeZone);
         }
     }

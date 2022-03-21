@@ -204,102 +204,82 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.androidSettings = androidSettings;
             return this;
         }
-
         public Builder androidSettings(@Nullable GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs androidSettings) {
             this.androidSettings = Output.ofNullable(androidSettings);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder iosSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings) {
             this.iosSettings = iosSettings;
             return this;
         }
-
         public Builder iosSettings(@Nullable GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs iosSettings) {
             this.iosSettings = Output.ofNullable(iosSettings);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder testingOptions(@Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions) {
             this.testingOptions = testingOptions;
             return this;
         }
-
         public Builder testingOptions(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs testingOptions) {
             this.testingOptions = Output.ofNullable(testingOptions);
             return this;
         }
-
         public Builder wafSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings) {
             this.wafSettings = wafSettings;
             return this;
         }
-
         public Builder wafSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WafSettingsArgs wafSettings) {
             this.wafSettings = Output.ofNullable(wafSettings);
             return this;
         }
-
         public Builder webSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings) {
             this.webSettings = webSettings;
             return this;
         }
-
         public Builder webSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs webSettings) {
             this.webSettings = Output.ofNullable(webSettings);
             return this;
-        }
-        public KeyArgs build() {
+        }        public KeyArgs build() {
             return new KeyArgs(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, wafSettings, webSettings);
         }
     }

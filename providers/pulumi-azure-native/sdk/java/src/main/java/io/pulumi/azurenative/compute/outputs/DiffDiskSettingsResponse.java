@@ -71,12 +71,10 @@ public final class DiffDiskSettingsResponse {
             this.option = option;
             return this;
         }
-
         public Builder placement(@Nullable String placement) {
             this.placement = placement;
             return this;
-        }
-        public DiffDiskSettingsResponse build() {
+        }        public DiffDiskSettingsResponse build() {
             return new DiffDiskSettingsResponse(option, placement);
         }
     }

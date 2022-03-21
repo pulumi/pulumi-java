@@ -96,22 +96,18 @@ public final class DatasetDataCatalogInputDefinition {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tempDirectory(@Nullable DatasetS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
-        }
-        public DatasetDataCatalogInputDefinition build() {
+        }        public DatasetDataCatalogInputDefinition build() {
             return new DatasetDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
         }
     }

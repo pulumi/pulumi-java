@@ -79,22 +79,18 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable PublicKeyCredentialFormat format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public PublicKeyCredentialArgs build() {
+        }        public PublicKeyCredentialArgs build() {
             return new PublicKeyCredentialArgs(format, key);
         }
     }

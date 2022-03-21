@@ -77,12 +77,10 @@ public final class TriggerBuildStepVolume {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public TriggerBuildStepVolume build() {
+        }        public TriggerBuildStepVolume build() {
             return new TriggerBuildStepVolume(name, path);
         }
     }

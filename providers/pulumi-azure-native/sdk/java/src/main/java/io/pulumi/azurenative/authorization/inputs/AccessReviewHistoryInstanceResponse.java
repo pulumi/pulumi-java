@@ -222,57 +222,46 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
             this.displayName = displayName;
             return this;
         }
-
         public Builder downloadUri(String downloadUri) {
             this.downloadUri = Objects.requireNonNull(downloadUri);
             return this;
         }
-
         public Builder expiration(@Nullable String expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
             this.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
-
         public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
-
         public Builder runDateTime(@Nullable String runDateTime) {
             this.runDateTime = runDateTime;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AccessReviewHistoryInstanceResponse build() {
+        }        public AccessReviewHistoryInstanceResponse build() {
             return new AccessReviewHistoryInstanceResponse(displayName, downloadUri, expiration, fulfilledDateTime, id, name, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, runDateTime, status, type);
         }
     }

@@ -80,27 +80,22 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
-        }
-        public ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties build() {
+        }        public ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties(accessToken, clientId, clientSecret, connectorOAuthRequest, refreshToken);
         }
     }

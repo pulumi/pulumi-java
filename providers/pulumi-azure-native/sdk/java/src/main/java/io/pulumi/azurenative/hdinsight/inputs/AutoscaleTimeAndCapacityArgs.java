@@ -95,32 +95,26 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
-
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
             this.maxInstanceCount = Output.ofNullable(maxInstanceCount);
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = Output.ofNullable(minInstanceCount);
             return this;
         }
-
         public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
-        }
-        public AutoscaleTimeAndCapacityArgs build() {
+        }        public AutoscaleTimeAndCapacityArgs build() {
             return new AutoscaleTimeAndCapacityArgs(maxInstanceCount, minInstanceCount, time);
         }
     }

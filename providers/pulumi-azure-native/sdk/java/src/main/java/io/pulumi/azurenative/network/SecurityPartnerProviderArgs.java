@@ -158,72 +158,58 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityPartnerProviderName(@Nullable Output<String> securityPartnerProviderName) {
             this.securityPartnerProviderName = securityPartnerProviderName;
             return this;
         }
-
         public Builder securityPartnerProviderName(@Nullable String securityPartnerProviderName) {
             this.securityPartnerProviderName = Output.ofNullable(securityPartnerProviderName);
             return this;
         }
-
         public Builder securityProviderName(@Nullable Output<Either<String,SecurityProviderName>> securityProviderName) {
             this.securityProviderName = securityProviderName;
             return this;
         }
-
         public Builder securityProviderName(@Nullable Either<String,SecurityProviderName> securityProviderName) {
             this.securityProviderName = Output.ofNullable(securityProviderName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
             this.virtualHub = Output.ofNullable(virtualHub);
             return this;
-        }
-        public SecurityPartnerProviderArgs build() {
+        }        public SecurityPartnerProviderArgs build() {
             return new SecurityPartnerProviderArgs(id, location, resourceGroupName, securityPartnerProviderName, securityProviderName, tags, virtualHub);
         }
     }

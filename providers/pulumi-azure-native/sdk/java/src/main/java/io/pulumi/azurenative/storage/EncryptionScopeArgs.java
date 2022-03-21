@@ -159,72 +159,58 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder encryptionScopeName(@Nullable Output<String> encryptionScopeName) {
             this.encryptionScopeName = encryptionScopeName;
             return this;
         }
-
         public Builder encryptionScopeName(@Nullable String encryptionScopeName) {
             this.encryptionScopeName = Output.ofNullable(encryptionScopeName);
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable EncryptionScopeKeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
-
         public Builder requireInfrastructureEncryption(@Nullable Output<Boolean> requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
-
         public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = Output.ofNullable(requireInfrastructureEncryption);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(@Nullable Output<Either<String,EncryptionScopeSource>> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable Either<String,EncryptionScopeSource> source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,EncryptionScopeState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,EncryptionScopeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public EncryptionScopeArgs build() {
+        }        public EncryptionScopeArgs build() {
             return new EncryptionScopeArgs(accountName, encryptionScopeName, keyVaultProperties, requireInfrastructureEncryption, resourceGroupName, source, state);
         }
     }

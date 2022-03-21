@@ -224,112 +224,93 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             this.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
-
         public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
             this.enableEcsManagedTags = Output.ofNullable(enableEcsManagedTags);
             return this;
         }
-
         public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
-
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = Output.ofNullable(enableExecuteCommand);
             return this;
         }
-
         public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder launchType(@Nullable Output<String> launchType) {
             this.launchType = launchType;
             return this;
         }
-
         public Builder launchType(@Nullable String launchType) {
             this.launchType = Output.ofNullable(launchType);
             return this;
         }
-
         public Builder networkConfiguration(@Nullable Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable EventTargetEcsTargetNetworkConfigurationGetArgs networkConfiguration) {
             this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
-
         public Builder placementConstraints(@Nullable Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
-
         public Builder placementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraintGetArgs> placementConstraints) {
             this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
-
+        public Builder placementConstraints(EventTargetEcsTargetPlacementConstraintGetArgs... placementConstraints) {
+            return placementConstraints(List.of(placementConstraints));
+        }
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
-
         public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
-
         public Builder propagateTags(@Nullable Output<String> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
-
         public Builder propagateTags(@Nullable String propagateTags) {
             this.propagateTags = Output.ofNullable(propagateTags);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder taskCount(@Nullable Output<Integer> taskCount) {
             this.taskCount = taskCount;
             return this;
         }
-
         public Builder taskCount(@Nullable Integer taskCount) {
             this.taskCount = Output.ofNullable(taskCount);
             return this;
         }
-
         public Builder taskDefinitionArn(Output<String> taskDefinitionArn) {
             this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
             return this;
         }
-
         public Builder taskDefinitionArn(String taskDefinitionArn) {
             this.taskDefinitionArn = Output.of(Objects.requireNonNull(taskDefinitionArn));
             return this;
-        }
-        public EventTargetEcsTargetGetArgs build() {
+        }        public EventTargetEcsTargetGetArgs build() {
             return new EventTargetEcsTargetGetArgs(enableEcsManagedTags, enableExecuteCommand, group, launchType, networkConfiguration, placementConstraints, platformVersion, propagateTags, tags, taskCount, taskDefinitionArn);
         }
     }

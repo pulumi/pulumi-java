@@ -133,32 +133,26 @@ public final class ActiveDirectoryPropertiesResponse {
             this.azureStorageSid = Objects.requireNonNull(azureStorageSid);
             return this;
         }
-
         public Builder domainGuid(String domainGuid) {
             this.domainGuid = Objects.requireNonNull(domainGuid);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainSid(String domainSid) {
             this.domainSid = Objects.requireNonNull(domainSid);
             return this;
         }
-
         public Builder forestName(String forestName) {
             this.forestName = Objects.requireNonNull(forestName);
             return this;
         }
-
         public Builder netBiosDomainName(String netBiosDomainName) {
             this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
             return this;
-        }
-        public ActiveDirectoryPropertiesResponse build() {
+        }        public ActiveDirectoryPropertiesResponse build() {
             return new ActiveDirectoryPropertiesResponse(azureStorageSid, domainGuid, domainName, domainSid, forestName, netBiosDomainName);
         }
     }

@@ -78,12 +78,13 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
             this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
             return this;
         }
-
         public Builder repromptEventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers) {
             this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse build() {
+        public Builder repromptEventHandlers(GoogleCloudDialogflowCxV3beta1EventHandlerResponse... repromptEventHandlers) {
+            return repromptEventHandlers(List.of(repromptEventHandlers));
+        }        public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(initialPromptFulfillment, repromptEventHandlers);
         }
     }

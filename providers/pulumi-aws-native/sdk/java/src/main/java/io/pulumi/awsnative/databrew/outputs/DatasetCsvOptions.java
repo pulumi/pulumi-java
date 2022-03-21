@@ -56,12 +56,10 @@ public final class DatasetCsvOptions {
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder headerRow(@Nullable Boolean headerRow) {
             this.headerRow = headerRow;
             return this;
-        }
-        public DatasetCsvOptions build() {
+        }        public DatasetCsvOptions build() {
             return new DatasetCsvOptions(delimiter, headerRow);
         }
     }

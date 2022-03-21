@@ -51,8 +51,7 @@ public final class ResourceStatusSchedulingResponse {
         public Builder availabilityDomain(Integer availabilityDomain) {
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
-        }
-        public ResourceStatusSchedulingResponse build() {
+        }        public ResourceStatusSchedulingResponse build() {
             return new ResourceStatusSchedulingResponse(availabilityDomain);
         }
     }

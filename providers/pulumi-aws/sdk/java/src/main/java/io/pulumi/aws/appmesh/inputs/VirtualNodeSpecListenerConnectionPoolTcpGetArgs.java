@@ -56,12 +56,10 @@ public final class VirtualNodeSpecListenerConnectionPoolTcpGetArgs extends io.pu
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
-
         public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Output.of(Objects.requireNonNull(maxConnections));
             return this;
-        }
-        public VirtualNodeSpecListenerConnectionPoolTcpGetArgs build() {
+        }        public VirtualNodeSpecListenerConnectionPoolTcpGetArgs build() {
             return new VirtualNodeSpecListenerConnectionPoolTcpGetArgs(maxConnections);
         }
     }

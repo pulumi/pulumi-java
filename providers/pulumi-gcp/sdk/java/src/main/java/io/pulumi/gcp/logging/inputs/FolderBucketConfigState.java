@@ -155,72 +155,58 @@ public final class FolderBucketConfigState extends io.pulumi.resources.ResourceA
             this.bucketId = bucketId;
             return this;
         }
-
         public Builder bucketId(@Nullable String bucketId) {
             this.bucketId = Output.ofNullable(bucketId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable String folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
-
         public Builder lifecycleState(@Nullable String lifecycleState) {
             this.lifecycleState = Output.ofNullable(lifecycleState);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
-        }
-        public FolderBucketConfigState build() {
+        }        public FolderBucketConfigState build() {
             return new FolderBucketConfigState(bucketId, description, folder, lifecycleState, location, name, retentionDays);
         }
     }

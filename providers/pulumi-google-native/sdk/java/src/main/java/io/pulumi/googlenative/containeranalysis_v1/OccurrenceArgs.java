@@ -289,152 +289,122 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.attestation = attestation;
             return this;
         }
-
         public Builder attestation(@Nullable AttestationOccurrenceArgs attestation) {
             this.attestation = Output.ofNullable(attestation);
             return this;
         }
-
         public Builder build(@Nullable Output<BuildOccurrenceArgs> build) {
             this.build = build;
             return this;
         }
-
         public Builder build(@Nullable BuildOccurrenceArgs build) {
             this.build = Output.ofNullable(build);
             return this;
         }
-
         public Builder compliance(@Nullable Output<ComplianceOccurrenceArgs> compliance) {
             this.compliance = compliance;
             return this;
         }
-
         public Builder compliance(@Nullable ComplianceOccurrenceArgs compliance) {
             this.compliance = Output.ofNullable(compliance);
             return this;
         }
-
         public Builder deployment(@Nullable Output<DeploymentOccurrenceArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
-
         public Builder deployment(@Nullable DeploymentOccurrenceArgs deployment) {
             this.deployment = Output.ofNullable(deployment);
             return this;
         }
-
         public Builder discovery(@Nullable Output<DiscoveryOccurrenceArgs> discovery) {
             this.discovery = discovery;
             return this;
         }
-
         public Builder discovery(@Nullable DiscoveryOccurrenceArgs discovery) {
             this.discovery = Output.ofNullable(discovery);
             return this;
         }
-
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation) {
             this.dsseAttestation = dsseAttestation;
             return this;
         }
-
         public Builder dsseAttestation(@Nullable DSSEAttestationOccurrenceArgs dsseAttestation) {
             this.dsseAttestation = Output.ofNullable(dsseAttestation);
             return this;
         }
-
         public Builder envelope(@Nullable Output<EnvelopeArgs> envelope) {
             this.envelope = envelope;
             return this;
         }
-
         public Builder envelope(@Nullable EnvelopeArgs envelope) {
             this.envelope = Output.ofNullable(envelope);
             return this;
         }
-
         public Builder image(@Nullable Output<ImageOccurrenceArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable ImageOccurrenceArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder noteName(Output<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
-
         public Builder noteName(String noteName) {
             this.noteName = Output.of(Objects.requireNonNull(noteName));
             return this;
         }
-
         public Builder $package(@Nullable Output<PackageOccurrenceArgs> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable PackageOccurrenceArgs $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
-
         public Builder remediation(@Nullable String remediation) {
             this.remediation = Output.ofNullable(remediation);
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public Builder upgrade(@Nullable Output<UpgradeOccurrenceArgs> upgrade) {
             this.upgrade = upgrade;
             return this;
         }
-
         public Builder upgrade(@Nullable UpgradeOccurrenceArgs upgrade) {
             this.upgrade = Output.ofNullable(upgrade);
             return this;
         }
-
         public Builder vulnerability(@Nullable Output<VulnerabilityOccurrenceArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
-
         public Builder vulnerability(@Nullable VulnerabilityOccurrenceArgs vulnerability) {
             this.vulnerability = Output.ofNullable(vulnerability);
             return this;
-        }
-        public OccurrenceArgs build() {
+        }        public OccurrenceArgs build() {
             return new OccurrenceArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, envelope, image, noteName, $package, project, remediation, resourceUri, upgrade, vulnerability);
         }
     }

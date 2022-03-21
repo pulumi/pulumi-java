@@ -104,42 +104,34 @@ public final class TaxonomyIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder taxonomy(Output<String> taxonomy) {
             this.taxonomy = Objects.requireNonNull(taxonomy);
             return this;
         }
-
         public Builder taxonomy(String taxonomy) {
             this.taxonomy = Output.of(Objects.requireNonNull(taxonomy));
             return this;
-        }
-        public TaxonomyIamPolicyArgs build() {
+        }        public TaxonomyIamPolicyArgs build() {
             return new TaxonomyIamPolicyArgs(policyData, project, region, taxonomy);
         }
     }

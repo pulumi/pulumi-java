@@ -56,12 +56,10 @@ public final class VirtualNodeSpecServiceDiscoveryDnsGetArgs extends io.pulumi.r
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder hostname(String hostname) {
             this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
-        }
-        public VirtualNodeSpecServiceDiscoveryDnsGetArgs build() {
+        }        public VirtualNodeSpecServiceDiscoveryDnsGetArgs build() {
             return new VirtualNodeSpecServiceDiscoveryDnsGetArgs(hostname);
         }
     }

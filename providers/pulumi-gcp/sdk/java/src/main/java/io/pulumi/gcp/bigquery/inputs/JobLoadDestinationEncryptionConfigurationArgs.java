@@ -76,22 +76,18 @@ public final class JobLoadDestinationEncryptionConfigurationArgs extends io.pulu
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public Builder kmsKeyVersion(@Nullable Output<String> kmsKeyVersion) {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
-
         public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
             this.kmsKeyVersion = Output.ofNullable(kmsKeyVersion);
             return this;
-        }
-        public JobLoadDestinationEncryptionConfigurationArgs build() {
+        }        public JobLoadDestinationEncryptionConfigurationArgs build() {
             return new JobLoadDestinationEncryptionConfigurationArgs(kmsKeyName, kmsKeyVersion);
         }
     }

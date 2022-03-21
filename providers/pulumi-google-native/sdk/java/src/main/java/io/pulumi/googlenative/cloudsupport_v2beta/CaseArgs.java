@@ -231,122 +231,101 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             this.classification = classification;
             return this;
         }
-
         public Builder classification(@Nullable CaseClassificationArgs classification) {
             this.classification = Output.ofNullable(classification);
             return this;
         }
-
         public Builder creator(@Nullable Output<ActorArgs> creator) {
             this.creator = creator;
             return this;
         }
-
         public Builder creator(@Nullable ActorArgs creator) {
             this.creator = Output.ofNullable(creator);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder escalated(@Nullable Output<Boolean> escalated) {
             this.escalated = escalated;
             return this;
         }
-
         public Builder escalated(@Nullable Boolean escalated) {
             this.escalated = Output.ofNullable(escalated);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<CasePriority> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable CasePriority priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder subscriberEmailAddresses(@Nullable Output<List<String>> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
-
         public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = Output.ofNullable(subscriberEmailAddresses);
             return this;
         }
-
+        public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
+            return subscriberEmailAddresses(List.of(subscriberEmailAddresses));
+        }
         public Builder testCase(@Nullable Output<Boolean> testCase) {
             this.testCase = testCase;
             return this;
         }
-
         public Builder testCase(@Nullable Boolean testCase) {
             this.testCase = Output.ofNullable(testCase);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
-
         public Builder v2betaId1(Output<String> v2betaId1) {
             this.v2betaId1 = Objects.requireNonNull(v2betaId1);
             return this;
         }
-
         public Builder v2betaId1(String v2betaId1) {
             this.v2betaId1 = Output.of(Objects.requireNonNull(v2betaId1));
             return this;
         }
-
         public Builder v2betumId(Output<String> v2betumId) {
             this.v2betumId = Objects.requireNonNull(v2betumId);
             return this;
         }
-
         public Builder v2betumId(String v2betumId) {
             this.v2betumId = Output.of(Objects.requireNonNull(v2betumId));
             return this;
-        }
-        public CaseArgs build() {
+        }        public CaseArgs build() {
             return new CaseArgs(classification, creator, description, displayName, escalated, name, priority, subscriberEmailAddresses, testCase, timeZone, v2betaId1, v2betumId);
         }
     }

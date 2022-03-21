@@ -79,22 +79,24 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
             this.add = add;
             return this;
         }
-
         public Builder add(@Nullable List<String> add) {
             this.add = Output.ofNullable(add);
             return this;
         }
-
+        public Builder add(String... add) {
+            return add(List.of(add));
+        }
         public Builder drop(@Nullable Output<List<String>> drop) {
             this.drop = drop;
             return this;
         }
-
         public Builder drop(@Nullable List<String> drop) {
             this.drop = Output.ofNullable(drop);
             return this;
         }
-        public CapabilitiesArgs build() {
+        public Builder drop(String... drop) {
+            return drop(List.of(drop));
+        }        public CapabilitiesArgs build() {
             return new CapabilitiesArgs(add, drop);
         }
     }

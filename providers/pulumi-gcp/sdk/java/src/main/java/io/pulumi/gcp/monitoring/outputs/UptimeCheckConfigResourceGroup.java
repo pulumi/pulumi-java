@@ -73,12 +73,10 @@ public final class UptimeCheckConfigResourceGroup {
             this.groupId = groupId;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
-        }
-        public UptimeCheckConfigResourceGroup build() {
+        }        public UptimeCheckConfigResourceGroup build() {
             return new UptimeCheckConfigResourceGroup(groupId, resourceType);
         }
     }

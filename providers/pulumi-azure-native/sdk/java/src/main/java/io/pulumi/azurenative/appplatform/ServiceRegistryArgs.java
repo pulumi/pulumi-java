@@ -90,32 +90,26 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder serviceRegistryName(@Nullable Output<String> serviceRegistryName) {
             this.serviceRegistryName = serviceRegistryName;
             return this;
         }
-
         public Builder serviceRegistryName(@Nullable String serviceRegistryName) {
             this.serviceRegistryName = Output.ofNullable(serviceRegistryName);
             return this;
-        }
-        public ServiceRegistryArgs build() {
+        }        public ServiceRegistryArgs build() {
             return new ServiceRegistryArgs(resourceGroupName, serviceName, serviceRegistryName);
         }
     }

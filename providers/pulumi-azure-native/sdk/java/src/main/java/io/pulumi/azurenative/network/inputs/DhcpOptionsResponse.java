@@ -62,7 +62,9 @@ public final class DhcpOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.dnsServers = dnsServers;
             return this;
         }
-        public DhcpOptionsResponse build() {
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }        public DhcpOptionsResponse build() {
             return new DhcpOptionsResponse(dnsServers);
         }
     }

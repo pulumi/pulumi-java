@@ -85,17 +85,14 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder provisioningId(String provisioningId) {
             this.provisioningId = Objects.requireNonNull(provisioningId);
             return this;
         }
-
         public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
-        }
-        public GoogleCloudChannelV1ProvisionedServiceResponse build() {
+        }        public GoogleCloudChannelV1ProvisionedServiceResponse build() {
             return new GoogleCloudChannelV1ProvisionedServiceResponse(productId, provisioningId, skuId);
         }
     }

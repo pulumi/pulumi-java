@@ -70,12 +70,13 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2FieldIdResponse... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder sensitiveAttribute(GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
             this.sensitiveAttribute = Objects.requireNonNull(sensitiveAttribute);
             return this;
-        }
-        public GooglePrivacyDlpV2LDiversityConfigResponse build() {
+        }        public GooglePrivacyDlpV2LDiversityConfigResponse build() {
             return new GooglePrivacyDlpV2LDiversityConfigResponse(quasiIds, sensitiveAttribute);
         }
     }

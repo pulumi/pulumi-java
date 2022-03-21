@@ -156,72 +156,58 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
-
         public Builder operatingSystem(@Nullable String operatingSystem) {
             this.operatingSystem = Output.ofNullable(operatingSystem);
             return this;
         }
-
         public Builder storageLocation(@Nullable Output<BuildStorageLocationGetArgs> storageLocation) {
             this.storageLocation = storageLocation;
             return this;
         }
-
         public Builder storageLocation(@Nullable BuildStorageLocationGetArgs storageLocation) {
             this.storageLocation = Output.ofNullable(storageLocation);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public BuildState build() {
+        }        public BuildState build() {
             return new BuildState(arn, name, operatingSystem, storageLocation, tags, tagsAll, version);
         }
     }

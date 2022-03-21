@@ -118,62 +118,56 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder maxDevices(@Nullable Output<Integer> maxDevices) {
             this.maxDevices = maxDevices;
             return this;
         }
-
         public Builder maxDevices(@Nullable Integer maxDevices) {
             this.maxDevices = Output.ofNullable(maxDevices);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder projectArn(Output<String> projectArn) {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }
-
         public Builder projectArn(String projectArn) {
             this.projectArn = Output.of(Objects.requireNonNull(projectArn));
             return this;
         }
-
         public Builder rules(Output<List<DevicePoolRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(List<DevicePoolRuleArgs> rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-
+        public Builder rules(DevicePoolRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Output<List<DevicePoolTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DevicePoolTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DevicePoolArgs build() {
+        public Builder tags(DevicePoolTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DevicePoolArgs build() {
             return new DevicePoolArgs(description, maxDevices, name, projectArn, rules, tags);
         }
     }

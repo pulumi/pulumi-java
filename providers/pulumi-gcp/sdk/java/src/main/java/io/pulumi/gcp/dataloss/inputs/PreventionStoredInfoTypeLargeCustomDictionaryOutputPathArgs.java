@@ -56,12 +56,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs e
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs build() {
+        }        public PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs(path);
         }
     }

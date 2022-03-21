@@ -155,37 +155,30 @@ public final class EventContentResponse {
             this.action = action;
             return this;
         }
-
         public Builder actor(@Nullable ActorResponse actor) {
             this.actor = actor;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder request(@Nullable RequestResponse request) {
             this.request = request;
             return this;
         }
-
         public Builder source(@Nullable SourceResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder target(@Nullable TargetResponse target) {
             this.target = target;
             return this;
         }
-
         public Builder timestamp(@Nullable String timestamp) {
             this.timestamp = timestamp;
             return this;
-        }
-        public EventContentResponse build() {
+        }        public EventContentResponse build() {
             return new EventContentResponse(action, actor, id, request, source, target, timestamp);
         }
     }

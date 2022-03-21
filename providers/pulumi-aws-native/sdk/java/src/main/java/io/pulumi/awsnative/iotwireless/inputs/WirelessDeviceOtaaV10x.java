@@ -64,12 +64,10 @@ public final class WirelessDeviceOtaaV10x extends io.pulumi.resources.InvokeArgs
             this.appEui = Objects.requireNonNull(appEui);
             return this;
         }
-
         public Builder appKey(String appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
-        }
-        public WirelessDeviceOtaaV10x build() {
+        }        public WirelessDeviceOtaaV10x build() {
             return new WirelessDeviceOtaaV10x(appEui, appKey);
         }
     }

@@ -93,32 +93,29 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
             this.deleteAfter = Objects.requireNonNull(deleteAfter);
             return this;
         }
-
         public Builder deleteAfter(AbsoluteDeleteOptionArgs deleteAfter) {
             this.deleteAfter = Output.of(Objects.requireNonNull(deleteAfter));
             return this;
         }
-
         public Builder sourceDataStore(Output<DataStoreInfoBaseArgs> sourceDataStore) {
             this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
             return this;
         }
-
         public Builder sourceDataStore(DataStoreInfoBaseArgs sourceDataStore) {
             this.sourceDataStore = Output.of(Objects.requireNonNull(sourceDataStore));
             return this;
         }
-
         public Builder targetDataStoreCopySettings(@Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
-
         public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingArgs> targetDataStoreCopySettings) {
             this.targetDataStoreCopySettings = Output.ofNullable(targetDataStoreCopySettings);
             return this;
         }
-        public SourceLifeCycleArgs build() {
+        public Builder targetDataStoreCopySettings(TargetCopySettingArgs... targetDataStoreCopySettings) {
+            return targetDataStoreCopySettings(List.of(targetDataStoreCopySettings));
+        }        public SourceLifeCycleArgs build() {
             return new SourceLifeCycleArgs(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
         }
     }

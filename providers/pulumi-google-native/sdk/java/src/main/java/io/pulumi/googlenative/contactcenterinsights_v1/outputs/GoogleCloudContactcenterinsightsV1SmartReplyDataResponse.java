@@ -103,22 +103,18 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
-
         public Builder reply(String reply) {
             this.reply = Objects.requireNonNull(reply);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(confidenceScore, metadata, queryRecord, reply);
         }
     }

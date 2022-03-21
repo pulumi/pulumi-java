@@ -108,42 +108,34 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
-
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Output.ofNullable(dataConnectorId);
             return this;
         }
-
         public Builder kind(Output<Either<String,DataConnectorKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,DataConnectorKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public DataConnectorArgs build() {
+        }        public DataConnectorArgs build() {
             return new DataConnectorArgs(dataConnectorId, kind, resourceGroupName, workspaceName);
         }
     }

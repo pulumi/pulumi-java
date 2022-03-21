@@ -107,42 +107,37 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
             this.dataSourceType = dataSourceType;
             return this;
         }
-
         public Builder dataSourceType(@Nullable String dataSourceType) {
             this.dataSourceType = Output.ofNullable(dataSourceType);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountIds(@Nullable Output<List<String>> storageAccountIds) {
             this.storageAccountIds = storageAccountIds;
             return this;
         }
-
         public Builder storageAccountIds(@Nullable List<String> storageAccountIds) {
             this.storageAccountIds = Output.ofNullable(storageAccountIds);
             return this;
         }
-
+        public Builder storageAccountIds(String... storageAccountIds) {
+            return storageAccountIds(List.of(storageAccountIds));
+        }
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public LinkedStorageAccountArgs build() {
+        }        public LinkedStorageAccountArgs build() {
             return new LinkedStorageAccountArgs(dataSourceType, resourceGroupName, storageAccountIds, workspaceName);
         }
     }

@@ -78,17 +78,14 @@ public final class GetSpokeArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder spokeId(String spokeId) {
             this.spokeId = Objects.requireNonNull(spokeId);
             return this;
-        }
-        public GetSpokeArgs build() {
+        }        public GetSpokeArgs build() {
             return new GetSpokeArgs(location, project, spokeId);
         }
     }

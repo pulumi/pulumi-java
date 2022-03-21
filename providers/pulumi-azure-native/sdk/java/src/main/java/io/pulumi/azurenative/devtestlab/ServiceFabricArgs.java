@@ -171,82 +171,66 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder externalServiceFabricId(@Nullable Output<String> externalServiceFabricId) {
             this.externalServiceFabricId = externalServiceFabricId;
             return this;
         }
-
         public Builder externalServiceFabricId(@Nullable String externalServiceFabricId) {
             this.externalServiceFabricId = Output.ofNullable(externalServiceFabricId);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public ServiceFabricArgs build() {
+        }        public ServiceFabricArgs build() {
             return new ServiceFabricArgs(environmentId, externalServiceFabricId, labName, location, name, resourceGroupName, tags, userName);
         }
     }

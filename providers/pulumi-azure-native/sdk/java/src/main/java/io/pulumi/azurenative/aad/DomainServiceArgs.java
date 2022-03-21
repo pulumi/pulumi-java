@@ -259,132 +259,109 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.domainConfigurationType = domainConfigurationType;
             return this;
         }
-
         public Builder domainConfigurationType(@Nullable String domainConfigurationType) {
             this.domainConfigurationType = Output.ofNullable(domainConfigurationType);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder domainSecuritySettings(@Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings) {
             this.domainSecuritySettings = domainSecuritySettings;
             return this;
         }
-
         public Builder domainSecuritySettings(@Nullable DomainSecuritySettingsArgs domainSecuritySettings) {
             this.domainSecuritySettings = Output.ofNullable(domainSecuritySettings);
             return this;
         }
-
         public Builder domainServiceName(@Nullable Output<String> domainServiceName) {
             this.domainServiceName = domainServiceName;
             return this;
         }
-
         public Builder domainServiceName(@Nullable String domainServiceName) {
             this.domainServiceName = Output.ofNullable(domainServiceName);
             return this;
         }
-
         public Builder filteredSync(@Nullable Output<Either<String,FilteredSync>> filteredSync) {
             this.filteredSync = filteredSync;
             return this;
         }
-
         public Builder filteredSync(@Nullable Either<String,FilteredSync> filteredSync) {
             this.filteredSync = Output.ofNullable(filteredSync);
             return this;
         }
-
         public Builder ldapsSettings(@Nullable Output<LdapsSettingsArgs> ldapsSettings) {
             this.ldapsSettings = ldapsSettings;
             return this;
         }
-
         public Builder ldapsSettings(@Nullable LdapsSettingsArgs ldapsSettings) {
             this.ldapsSettings = Output.ofNullable(ldapsSettings);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
-
         public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
             this.notificationSettings = Output.ofNullable(notificationSettings);
             return this;
         }
-
         public Builder replicaSets(@Nullable Output<List<ReplicaSetArgs>> replicaSets) {
             this.replicaSets = replicaSets;
             return this;
         }
-
         public Builder replicaSets(@Nullable List<ReplicaSetArgs> replicaSets) {
             this.replicaSets = Output.ofNullable(replicaSets);
             return this;
         }
-
+        public Builder replicaSets(ReplicaSetArgs... replicaSets) {
+            return replicaSets(List.of(replicaSets));
+        }
         public Builder resourceForestSettings(@Nullable Output<ResourceForestSettingsArgs> resourceForestSettings) {
             this.resourceForestSettings = resourceForestSettings;
             return this;
         }
-
         public Builder resourceForestSettings(@Nullable ResourceForestSettingsArgs resourceForestSettings) {
             this.resourceForestSettings = Output.ofNullable(resourceForestSettings);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DomainServiceArgs build() {
+        }        public DomainServiceArgs build() {
             return new DomainServiceArgs(domainConfigurationType, domainName, domainSecuritySettings, domainServiceName, filteredSync, ldapsSettings, location, notificationSettings, replicaSets, resourceForestSettings, resourceGroupName, sku, tags);
         }
     }

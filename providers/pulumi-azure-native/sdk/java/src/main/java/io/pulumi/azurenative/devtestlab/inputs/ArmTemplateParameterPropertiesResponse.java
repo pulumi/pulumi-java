@@ -78,12 +78,10 @@ public final class ArmTemplateParameterPropertiesResponse extends io.pulumi.reso
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ArmTemplateParameterPropertiesResponse build() {
+        }        public ArmTemplateParameterPropertiesResponse build() {
             return new ArmTemplateParameterPropertiesResponse(name, value);
         }
     }

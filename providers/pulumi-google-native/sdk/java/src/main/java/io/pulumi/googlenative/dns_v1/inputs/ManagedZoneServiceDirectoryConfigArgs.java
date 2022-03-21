@@ -75,22 +75,18 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder namespace(@Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public ManagedZoneServiceDirectoryConfigArgs build() {
+        }        public ManagedZoneServiceDirectoryConfigArgs build() {
             return new ManagedZoneServiceDirectoryConfigArgs(kind, namespace);
         }
     }

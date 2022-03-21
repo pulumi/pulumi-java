@@ -89,17 +89,14 @@ public final class JobQueryDestinationTable {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public JobQueryDestinationTable build() {
+        }        public JobQueryDestinationTable build() {
             return new JobQueryDestinationTable(datasetId, projectId, tableId);
         }
     }

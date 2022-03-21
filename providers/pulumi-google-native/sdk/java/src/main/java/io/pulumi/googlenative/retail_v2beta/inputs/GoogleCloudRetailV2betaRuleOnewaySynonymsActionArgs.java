@@ -95,32 +95,35 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
             this.onewayTerms = onewayTerms;
             return this;
         }
-
         public Builder onewayTerms(@Nullable List<String> onewayTerms) {
             this.onewayTerms = Output.ofNullable(onewayTerms);
             return this;
         }
-
+        public Builder onewayTerms(String... onewayTerms) {
+            return onewayTerms(List.of(onewayTerms));
+        }
         public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
-
         public Builder queryTerms(@Nullable List<String> queryTerms) {
             this.queryTerms = Output.ofNullable(queryTerms);
             return this;
         }
-
+        public Builder queryTerms(String... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
-
         public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
-        public GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs build() {
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs build() {
             return new GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs(onewayTerms, queryTerms, synonyms);
         }
     }

@@ -105,42 +105,34 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder hours(Integer hours) {
             this.hours = Output.of(Objects.requireNonNull(hours));
             return this;
         }
-
         public Builder minutes(Output<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
         }
-
         public Builder nanos(Output<Integer> nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder nanos(Integer nanos) {
             this.nanos = Output.of(Objects.requireNonNull(nanos));
             return this;
         }
-
         public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public TransferJobScheduleStartTimeOfDayArgs build() {
+        }        public TransferJobScheduleStartTimeOfDayArgs build() {
             return new TransferJobScheduleStartTimeOfDayArgs(hours, minutes, nanos, seconds);
         }
     }

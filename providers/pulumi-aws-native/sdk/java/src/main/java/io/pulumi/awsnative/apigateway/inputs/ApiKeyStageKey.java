@@ -74,12 +74,10 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
-        }
-        public ApiKeyStageKey build() {
+        }        public ApiKeyStageKey build() {
             return new ApiKeyStageKey(restApiId, stageName);
         }
     }

@@ -92,32 +92,26 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
             this.backendDefaults = backendDefaults;
             return this;
         }
-
         public Builder backendDefaults(@Nullable VirtualGatewaySpecBackendDefaultsArgs backendDefaults) {
             this.backendDefaults = Output.ofNullable(backendDefaults);
             return this;
         }
-
         public Builder listener(Output<VirtualGatewaySpecListenerArgs> listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }
-
         public Builder listener(VirtualGatewaySpecListenerArgs listener) {
             this.listener = Output.of(Objects.requireNonNull(listener));
             return this;
         }
-
         public Builder logging(@Nullable Output<VirtualGatewaySpecLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable VirtualGatewaySpecLoggingArgs logging) {
             this.logging = Output.ofNullable(logging);
             return this;
-        }
-        public VirtualGatewaySpecArgs build() {
+        }        public VirtualGatewaySpecArgs build() {
             return new VirtualGatewaySpecArgs(backendDefaults, listener, logging);
         }
     }

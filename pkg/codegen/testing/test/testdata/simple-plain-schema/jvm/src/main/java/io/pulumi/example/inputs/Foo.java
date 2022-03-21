@@ -116,32 +116,26 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
             this.a = Objects.requireNonNull(a);
             return this;
         }
-
         public Builder b(@Nullable Boolean b) {
             this.b = b;
             return this;
         }
-
         public Builder c(Integer c) {
             this.c = Objects.requireNonNull(c);
             return this;
         }
-
         public Builder d(@Nullable Integer d) {
             this.d = d;
             return this;
         }
-
         public Builder e(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
-
         public Builder f(@Nullable String f) {
             this.f = f;
             return this;
-        }
-        public Foo build() {
+        }        public Foo build() {
             return new Foo(a, b, c, d, e, f);
         }
     }

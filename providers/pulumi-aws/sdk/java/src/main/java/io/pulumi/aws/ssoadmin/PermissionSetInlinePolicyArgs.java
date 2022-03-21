@@ -89,32 +89,26 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
             this.inlinePolicy = Objects.requireNonNull(inlinePolicy);
             return this;
         }
-
         public Builder inlinePolicy(String inlinePolicy) {
             this.inlinePolicy = Output.of(Objects.requireNonNull(inlinePolicy));
             return this;
         }
-
         public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder permissionSetArn(Output<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
-
         public Builder permissionSetArn(String permissionSetArn) {
             this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
             return this;
-        }
-        public PermissionSetInlinePolicyArgs build() {
+        }        public PermissionSetInlinePolicyArgs build() {
             return new PermissionSetInlinePolicyArgs(inlinePolicy, instanceArn, permissionSetArn);
         }
     }

@@ -102,27 +102,22 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder intentId(String intentId) {
             this.intentId = Objects.requireNonNull(intentId);
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetIntentArgs build() {
+        }        public GetIntentArgs build() {
             return new GetIntentArgs(agentId, intentId, languageCode, location, project);
         }
     }

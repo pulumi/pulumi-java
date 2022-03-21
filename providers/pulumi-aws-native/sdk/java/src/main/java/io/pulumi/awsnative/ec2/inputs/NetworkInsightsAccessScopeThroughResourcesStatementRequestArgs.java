@@ -53,12 +53,10 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
             this.resourceStatement = resourceStatement;
             return this;
         }
-
         public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
             this.resourceStatement = Output.ofNullable(resourceStatement);
             return this;
-        }
-        public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs build() {
+        }        public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs build() {
             return new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(resourceStatement);
         }
     }

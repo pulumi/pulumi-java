@@ -64,12 +64,10 @@ public final class GetNotificationConfigArgs extends io.pulumi.resources.InvokeA
             this.notificationConfigId = Objects.requireNonNull(notificationConfigId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetNotificationConfigArgs build() {
+        }        public GetNotificationConfigArgs build() {
             return new GetNotificationConfigArgs(notificationConfigId, organizationId);
         }
     }

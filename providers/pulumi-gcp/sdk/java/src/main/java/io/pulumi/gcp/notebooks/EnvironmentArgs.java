@@ -177,82 +177,66 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.containerImage = containerImage;
             return this;
         }
-
         public Builder containerImage(@Nullable EnvironmentContainerImageArgs containerImage) {
             this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }
-
         public Builder postStartupScript(@Nullable String postStartupScript) {
             this.postStartupScript = Output.ofNullable(postStartupScript);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder vmImage(@Nullable Output<EnvironmentVmImageArgs> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
-
         public Builder vmImage(@Nullable EnvironmentVmImageArgs vmImage) {
             this.vmImage = Output.ofNullable(vmImage);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(containerImage, description, displayName, location, name, postStartupScript, project, vmImage);
         }
     }

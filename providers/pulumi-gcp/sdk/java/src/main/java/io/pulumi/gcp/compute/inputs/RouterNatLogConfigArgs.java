@@ -75,22 +75,18 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder enable(Boolean enable) {
             this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
-        }
-        public RouterNatLogConfigArgs build() {
+        }        public RouterNatLogConfigArgs build() {
             return new RouterNatLogConfigArgs(enable, filter);
         }
     }

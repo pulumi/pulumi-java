@@ -105,22 +105,21 @@ public final class BucketWebsiteConfiguration extends io.pulumi.resources.Invoke
             this.errorDocument = errorDocument;
             return this;
         }
-
         public Builder indexDocument(@Nullable String indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
-
         public Builder redirectAllRequestsTo(@Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo) {
             this.redirectAllRequestsTo = redirectAllRequestsTo;
             return this;
         }
-
         public Builder routingRules(@Nullable List<BucketRoutingRule> routingRules) {
             this.routingRules = routingRules;
             return this;
         }
-        public BucketWebsiteConfiguration build() {
+        public Builder routingRules(BucketRoutingRule... routingRules) {
+            return routingRules(List.of(routingRules));
+        }        public BucketWebsiteConfiguration build() {
             return new BucketWebsiteConfiguration(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
         }
     }

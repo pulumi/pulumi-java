@@ -50,8 +50,7 @@ public final class GetAttributeGroupArgs extends io.pulumi.resources.InvokeArgs 
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetAttributeGroupArgs build() {
+        }        public GetAttributeGroupArgs build() {
             return new GetAttributeGroupArgs(id);
         }
     }

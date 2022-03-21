@@ -224,57 +224,58 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
-
+        public Builder managementGroups(ResourceIdResponse... managementGroups) {
+            return managementGroups(List.of(managementGroups));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
-
+        public Builder subnets(ResourceIdResponse... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
-
+        public Builder subscriptions(ResourceIdResponse... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-        public ManagedNetworkGroupResponse build() {
+        public Builder virtualNetworks(ResourceIdResponse... virtualNetworks) {
+            return virtualNetworks(List.of(virtualNetworks));
+        }        public ManagedNetworkGroupResponse build() {
             return new ManagedNetworkGroupResponse(etag, id, kind, location, managementGroups, name, provisioningState, subnets, subscriptions, type, virtualNetworks);
         }
     }

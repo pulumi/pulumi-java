@@ -418,117 +418,100 @@ public final class GetAzureCliScriptResult {
             this.arguments = arguments;
             return this;
         }
-
         public Builder azCliVersion(String azCliVersion) {
             this.azCliVersion = Objects.requireNonNull(azCliVersion);
             return this;
         }
-
         public Builder cleanupPreference(@Nullable String cleanupPreference) {
             this.cleanupPreference = cleanupPreference;
             return this;
         }
-
         public Builder containerSettings(@Nullable ContainerConfigurationResponse containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputs(Map<String,Object> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
         public Builder primaryScriptUri(@Nullable String primaryScriptUri) {
             this.primaryScriptUri = primaryScriptUri;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder retentionInterval(String retentionInterval) {
             this.retentionInterval = Objects.requireNonNull(retentionInterval);
             return this;
         }
-
         public Builder scriptContent(@Nullable String scriptContent) {
             this.scriptContent = scriptContent;
             return this;
         }
-
         public Builder status(ScriptStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageAccountSettings(@Nullable StorageAccountConfigurationResponse storageAccountSettings) {
             this.storageAccountSettings = storageAccountSettings;
             return this;
         }
-
         public Builder supportingScriptUris(@Nullable List<String> supportingScriptUris) {
             this.supportingScriptUris = supportingScriptUris;
             return this;
         }
-
+        public Builder supportingScriptUris(String... supportingScriptUris) {
+            return supportingScriptUris(List.of(supportingScriptUris));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAzureCliScriptResult build() {
+        }        public GetAzureCliScriptResult build() {
             return new GetAzureCliScriptResult(arguments, azCliVersion, cleanupPreference, containerSettings, environmentVariables, forceUpdateTag, id, identity, kind, location, name, outputs, primaryScriptUri, provisioningState, retentionInterval, scriptContent, status, storageAccountSettings, supportingScriptUris, systemData, tags, timeout, type);
         }
     }

@@ -78,12 +78,10 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public KubernetesIPConfigurationResponse build() {
+        }        public KubernetesIPConfigurationResponse build() {
             return new KubernetesIPConfigurationResponse(ipAddress, port);
         }
     }

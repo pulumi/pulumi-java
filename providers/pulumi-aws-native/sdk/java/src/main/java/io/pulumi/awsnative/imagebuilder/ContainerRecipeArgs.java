@@ -289,152 +289,125 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             this.components = components;
             return this;
         }
-
         public Builder components(@Nullable List<ContainerRecipeComponentConfigurationArgs> components) {
             this.components = Output.ofNullable(components);
             return this;
         }
-
+        public Builder components(ContainerRecipeComponentConfigurationArgs... components) {
+            return components(List.of(components));
+        }
         public Builder containerType(@Nullable Output<ContainerRecipeContainerType> containerType) {
             this.containerType = containerType;
             return this;
         }
-
         public Builder containerType(@Nullable ContainerRecipeContainerType containerType) {
             this.containerType = Output.ofNullable(containerType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dockerfileTemplateData(@Nullable Output<String> dockerfileTemplateData) {
             this.dockerfileTemplateData = dockerfileTemplateData;
             return this;
         }
-
         public Builder dockerfileTemplateData(@Nullable String dockerfileTemplateData) {
             this.dockerfileTemplateData = Output.ofNullable(dockerfileTemplateData);
             return this;
         }
-
         public Builder dockerfileTemplateUri(@Nullable Output<String> dockerfileTemplateUri) {
             this.dockerfileTemplateUri = dockerfileTemplateUri;
             return this;
         }
-
         public Builder dockerfileTemplateUri(@Nullable String dockerfileTemplateUri) {
             this.dockerfileTemplateUri = Output.ofNullable(dockerfileTemplateUri);
             return this;
         }
-
         public Builder imageOsVersionOverride(@Nullable Output<String> imageOsVersionOverride) {
             this.imageOsVersionOverride = imageOsVersionOverride;
             return this;
         }
-
         public Builder imageOsVersionOverride(@Nullable String imageOsVersionOverride) {
             this.imageOsVersionOverride = Output.ofNullable(imageOsVersionOverride);
             return this;
         }
-
         public Builder instanceConfiguration(@Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
-
         public Builder instanceConfiguration(@Nullable ContainerRecipeInstanceConfigurationArgs instanceConfiguration) {
             this.instanceConfiguration = Output.ofNullable(instanceConfiguration);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentImage(@Nullable Output<String> parentImage) {
             this.parentImage = parentImage;
             return this;
         }
-
         public Builder parentImage(@Nullable String parentImage) {
             this.parentImage = Output.ofNullable(parentImage);
             return this;
         }
-
         public Builder platformOverride(@Nullable Output<ContainerRecipePlatformOverride> platformOverride) {
             this.platformOverride = platformOverride;
             return this;
         }
-
         public Builder platformOverride(@Nullable ContainerRecipePlatformOverride platformOverride) {
             this.platformOverride = Output.ofNullable(platformOverride);
             return this;
         }
-
         public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetRepository(@Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository) {
             this.targetRepository = targetRepository;
             return this;
         }
-
         public Builder targetRepository(@Nullable ContainerRecipeTargetContainerRepositoryArgs targetRepository) {
             this.targetRepository = Output.ofNullable(targetRepository);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
-        }
-        public ContainerRecipeArgs build() {
+        }        public ContainerRecipeArgs build() {
             return new ContainerRecipeArgs(components, containerType, description, dockerfileTemplateData, dockerfileTemplateUri, imageOsVersionOverride, instanceConfiguration, kmsKeyId, name, parentImage, platformOverride, tags, targetRepository, version, workingDirectory);
         }
     }

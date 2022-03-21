@@ -109,42 +109,34 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
             this.cacheBehavior = Objects.requireNonNull(cacheBehavior);
             return this;
         }
-
         public Builder cacheBehavior(Either<String,CacheBehavior> cacheBehavior) {
             this.cacheBehavior = Output.of(Objects.requireNonNull(cacheBehavior));
             return this;
         }
-
         public Builder cacheDuration(@Nullable Output<String> cacheDuration) {
             this.cacheDuration = cacheDuration;
             return this;
         }
-
         public Builder cacheDuration(@Nullable String cacheDuration) {
             this.cacheDuration = Output.ofNullable(cacheDuration);
             return this;
         }
-
         public Builder cacheType(Output<Either<String,CacheType>> cacheType) {
             this.cacheType = Objects.requireNonNull(cacheType);
             return this;
         }
-
         public Builder cacheType(Either<String,CacheType> cacheType) {
             this.cacheType = Output.of(Objects.requireNonNull(cacheType));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public CacheExpirationActionParametersArgs build() {
+        }        public CacheExpirationActionParametersArgs build() {
             return new CacheExpirationActionParametersArgs(cacheBehavior, cacheDuration, cacheType, odataType);
         }
     }

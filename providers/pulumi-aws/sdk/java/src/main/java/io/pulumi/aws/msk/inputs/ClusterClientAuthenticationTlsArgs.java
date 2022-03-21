@@ -58,12 +58,13 @@ public final class ClusterClientAuthenticationTlsArgs extends io.pulumi.resource
             this.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }
-
         public Builder certificateAuthorityArns(@Nullable List<String> certificateAuthorityArns) {
             this.certificateAuthorityArns = Output.ofNullable(certificateAuthorityArns);
             return this;
         }
-        public ClusterClientAuthenticationTlsArgs build() {
+        public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
+            return certificateAuthorityArns(List.of(certificateAuthorityArns));
+        }        public ClusterClientAuthenticationTlsArgs build() {
             return new ClusterClientAuthenticationTlsArgs(certificateAuthorityArns);
         }
     }

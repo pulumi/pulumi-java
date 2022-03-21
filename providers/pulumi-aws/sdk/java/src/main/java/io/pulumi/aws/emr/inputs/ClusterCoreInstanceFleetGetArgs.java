@@ -166,82 +166,69 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder instanceTypeConfigs(@Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs) {
             this.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
-
         public Builder instanceTypeConfigs(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs> instanceTypeConfigs) {
             this.instanceTypeConfigs = Output.ofNullable(instanceTypeConfigs);
             return this;
         }
-
+        public Builder instanceTypeConfigs(ClusterCoreInstanceFleetInstanceTypeConfigGetArgs... instanceTypeConfigs) {
+            return instanceTypeConfigs(List.of(instanceTypeConfigs));
+        }
         public Builder launchSpecifications(@Nullable Output<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
-
         public Builder launchSpecifications(@Nullable ClusterCoreInstanceFleetLaunchSpecificationsGetArgs launchSpecifications) {
             this.launchSpecifications = Output.ofNullable(launchSpecifications);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder provisionedOnDemandCapacity(@Nullable Output<Integer> provisionedOnDemandCapacity) {
             this.provisionedOnDemandCapacity = provisionedOnDemandCapacity;
             return this;
         }
-
         public Builder provisionedOnDemandCapacity(@Nullable Integer provisionedOnDemandCapacity) {
             this.provisionedOnDemandCapacity = Output.ofNullable(provisionedOnDemandCapacity);
             return this;
         }
-
         public Builder provisionedSpotCapacity(@Nullable Output<Integer> provisionedSpotCapacity) {
             this.provisionedSpotCapacity = provisionedSpotCapacity;
             return this;
         }
-
         public Builder provisionedSpotCapacity(@Nullable Integer provisionedSpotCapacity) {
             this.provisionedSpotCapacity = Output.ofNullable(provisionedSpotCapacity);
             return this;
         }
-
         public Builder targetOnDemandCapacity(@Nullable Output<Integer> targetOnDemandCapacity) {
             this.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
-
         public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
             this.targetOnDemandCapacity = Output.ofNullable(targetOnDemandCapacity);
             return this;
         }
-
         public Builder targetSpotCapacity(@Nullable Output<Integer> targetSpotCapacity) {
             this.targetSpotCapacity = targetSpotCapacity;
             return this;
         }
-
         public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
             this.targetSpotCapacity = Output.ofNullable(targetSpotCapacity);
             return this;
-        }
-        public ClusterCoreInstanceFleetGetArgs build() {
+        }        public ClusterCoreInstanceFleetGetArgs build() {
             return new ClusterCoreInstanceFleetGetArgs(id, instanceTypeConfigs, launchSpecifications, name, provisionedOnDemandCapacity, provisionedSpotCapacity, targetOnDemandCapacity, targetSpotCapacity);
         }
     }

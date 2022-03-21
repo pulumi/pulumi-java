@@ -70,12 +70,10 @@ public final class RuleGroupRuleGroupRuleVariablesIpSet {
             this.ipSet = Objects.requireNonNull(ipSet);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public RuleGroupRuleGroupRuleVariablesIpSet build() {
+        }        public RuleGroupRuleGroupRuleVariablesIpSet build() {
             return new RuleGroupRuleGroupRuleVariablesIpSet(ipSet, key);
         }
     }

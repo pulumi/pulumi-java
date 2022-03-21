@@ -195,47 +195,38 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder storageAccountVersion(@Nullable String storageAccountVersion) {
             this.storageAccountVersion = storageAccountVersion;
             return this;
-        }
-        public AzureStorageContainerResponse build() {
+        }        public AzureStorageContainerResponse build() {
             return new AzureStorageContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, protectedItemCount, registrationStatus, resourceGroup, sourceResourceId, storageAccountVersion);
         }
     }

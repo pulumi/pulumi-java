@@ -72,12 +72,10 @@ public final class GetSpatialAnchorsAccountArgs extends io.pulumi.resources.Invo
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetSpatialAnchorsAccountArgs build() {
+        }        public GetSpatialAnchorsAccountArgs build() {
             return new GetSpatialAnchorsAccountArgs(accountName, resourceGroupName);
         }
     }

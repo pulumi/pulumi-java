@@ -78,22 +78,18 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable Object level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder type(Output<Object> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Object type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DatasetCompressionArgs build() {
+        }        public DatasetCompressionArgs build() {
             return new DatasetCompressionArgs(level, type);
         }
     }

@@ -188,92 +188,74 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.billingModel = billingModel;
             return this;
         }
-
         public Builder billingModel(@Nullable Either<String,ConnectorBillingModel> billingModel) {
             this.billingModel = Output.ofNullable(billingModel);
             return this;
         }
-
         public Builder connectorName(@Nullable Output<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
-
         public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = Output.ofNullable(connectorName);
             return this;
         }
-
         public Builder credentialsKey(@Nullable Output<String> credentialsKey) {
             this.credentialsKey = credentialsKey;
             return this;
         }
-
         public Builder credentialsKey(@Nullable String credentialsKey) {
             this.credentialsKey = Output.ofNullable(credentialsKey);
             return this;
         }
-
         public Builder credentialsSecret(@Nullable Output<String> credentialsSecret) {
             this.credentialsSecret = credentialsSecret;
             return this;
         }
-
         public Builder credentialsSecret(@Nullable String credentialsSecret) {
             this.credentialsSecret = Output.ofNullable(credentialsSecret);
             return this;
         }
-
         public Builder defaultManagementGroupId(@Nullable Output<String> defaultManagementGroupId) {
             this.defaultManagementGroupId = defaultManagementGroupId;
             return this;
         }
-
         public Builder defaultManagementGroupId(@Nullable String defaultManagementGroupId) {
             this.defaultManagementGroupId = Output.ofNullable(defaultManagementGroupId);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder reportId(@Nullable Output<String> reportId) {
             this.reportId = reportId;
             return this;
         }
-
         public Builder reportId(@Nullable String reportId) {
             this.reportId = Output.ofNullable(reportId);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
-        }
-        public CloudConnectorArgs build() {
+        }        public CloudConnectorArgs build() {
             return new CloudConnectorArgs(billingModel, connectorName, credentialsKey, credentialsSecret, defaultManagementGroupId, displayName, kind, reportId, subscriptionId);
         }
     }

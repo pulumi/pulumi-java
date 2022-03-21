@@ -74,12 +74,10 @@ public final class FunctionTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public FunctionTag build() {
+        }        public FunctionTag build() {
             return new FunctionTag(key, value);
         }
     }

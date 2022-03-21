@@ -72,12 +72,10 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRemediationAtResourceGroupArgs build() {
+        }        public GetRemediationAtResourceGroupArgs build() {
             return new GetRemediationAtResourceGroupArgs(remediationName, resourceGroupName);
         }
     }

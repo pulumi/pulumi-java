@@ -277,72 +277,61 @@ public final class ScalingPlanScalingInstruction {
             this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
             return this;
         }
-
         public Builder disableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
             this.disableDynamicScaling = disableDynamicScaling;
             return this;
         }
-
         public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
-
         public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public Builder predefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
-
         public Builder predictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
             this.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
             return this;
         }
-
         public Builder predictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
             this.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
             return this;
         }
-
         public Builder predictiveScalingMode(@Nullable String predictiveScalingMode) {
             this.predictiveScalingMode = predictiveScalingMode;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
-
         public Builder scalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
             this.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
             return this;
         }
-
         public Builder scheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
             this.scheduledActionBufferTime = scheduledActionBufferTime;
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public Builder targetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
             this.targetTrackingConfigurations = Objects.requireNonNull(targetTrackingConfigurations);
             return this;
         }
-        public ScalingPlanScalingInstruction build() {
+        public Builder targetTrackingConfigurations(ScalingPlanScalingInstructionTargetTrackingConfiguration... targetTrackingConfigurations) {
+            return targetTrackingConfigurations(List.of(targetTrackingConfigurations));
+        }        public ScalingPlanScalingInstruction build() {
             return new ScalingPlanScalingInstruction(customizedLoadMetricSpecification, disableDynamicScaling, maxCapacity, minCapacity, predefinedLoadMetricSpecification, predictiveScalingMaxCapacityBehavior, predictiveScalingMaxCapacityBuffer, predictiveScalingMode, resourceId, scalableDimension, scalingPolicyUpdateBehavior, scheduledActionBufferTime, serviceNamespace, targetTrackingConfigurations);
         }
     }

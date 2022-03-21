@@ -96,17 +96,17 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
+        public Builder networkInterfaces(EndpointAccessNetworkInterface... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public VpcEndpointProperties build() {
+        }        public VpcEndpointProperties build() {
             return new VpcEndpointProperties(networkInterfaces, vpcEndpointId, vpcId);
         }
     }

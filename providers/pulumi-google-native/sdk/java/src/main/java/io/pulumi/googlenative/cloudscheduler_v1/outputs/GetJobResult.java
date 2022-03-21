@@ -266,72 +266,58 @@ public final class GetJobResult {
             this.appEngineHttpTarget = Objects.requireNonNull(appEngineHttpTarget);
             return this;
         }
-
         public Builder attemptDeadline(String attemptDeadline) {
             this.attemptDeadline = Objects.requireNonNull(attemptDeadline);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder httpTarget(HttpTargetResponse httpTarget) {
             this.httpTarget = Objects.requireNonNull(httpTarget);
             return this;
         }
-
         public Builder lastAttemptTime(String lastAttemptTime) {
             this.lastAttemptTime = Objects.requireNonNull(lastAttemptTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pubsubTarget(PubsubTargetResponse pubsubTarget) {
             this.pubsubTarget = Objects.requireNonNull(pubsubTarget);
             return this;
         }
-
         public Builder retryConfig(RetryConfigResponse retryConfig) {
             this.retryConfig = Objects.requireNonNull(retryConfig);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder status(StatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder userUpdateTime(String userUpdateTime) {
             this.userUpdateTime = Objects.requireNonNull(userUpdateTime);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(appEngineHttpTarget, attemptDeadline, description, httpTarget, lastAttemptTime, name, pubsubTarget, retryConfig, schedule, scheduleTime, state, status, timeZone, userUpdateTime);
         }
     }

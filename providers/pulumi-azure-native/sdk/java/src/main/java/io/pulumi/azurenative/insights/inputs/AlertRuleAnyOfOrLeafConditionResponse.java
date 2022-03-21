@@ -119,22 +119,24 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends io.pulumi.resou
             this.anyOf = anyOf;
             return this;
         }
-
+        public Builder anyOf(AlertRuleLeafConditionResponse... anyOf) {
+            return anyOf(List.of(anyOf));
+        }
         public Builder containsAny(@Nullable List<String> containsAny) {
             this.containsAny = containsAny;
             return this;
         }
-
+        public Builder containsAny(String... containsAny) {
+            return containsAny(List.of(containsAny));
+        }
         public Builder equals(@Nullable String equals) {
             this.equals = equals;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = field;
             return this;
-        }
-        public AlertRuleAnyOfOrLeafConditionResponse build() {
+        }        public AlertRuleAnyOfOrLeafConditionResponse build() {
             return new AlertRuleAnyOfOrLeafConditionResponse(anyOf, containsAny, equals, field);
         }
     }

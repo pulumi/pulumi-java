@@ -71,12 +71,10 @@ public final class CookieExpirationResponse {
             this.convention = convention;
             return this;
         }
-
         public Builder timeToExpiration(@Nullable String timeToExpiration) {
             this.timeToExpiration = timeToExpiration;
             return this;
-        }
-        public CookieExpirationResponse build() {
+        }        public CookieExpirationResponse build() {
             return new CookieExpirationResponse(convention, timeToExpiration);
         }
     }

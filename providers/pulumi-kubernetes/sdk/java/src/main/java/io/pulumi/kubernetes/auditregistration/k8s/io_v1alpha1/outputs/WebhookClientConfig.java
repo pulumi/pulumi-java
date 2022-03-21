@@ -112,17 +112,14 @@ public final class WebhookClientConfig {
             this.caBundle = caBundle;
             return this;
         }
-
         public Builder service(@Nullable ServiceReference service) {
             this.service = service;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public WebhookClientConfig build() {
+        }        public WebhookClientConfig build() {
             return new WebhookClientConfig(caBundle, service, url);
         }
     }

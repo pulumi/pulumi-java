@@ -72,12 +72,10 @@ public final class ProviderIgnoreTagsArgs {
             this.keyPrefixes = keyPrefixes;
             return this;
         }
-
         public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
-        }
-        public ProviderIgnoreTagsArgs build() {
+        }        public ProviderIgnoreTagsArgs build() {
             return new ProviderIgnoreTagsArgs(keyPrefixes, keys);
         }
     }

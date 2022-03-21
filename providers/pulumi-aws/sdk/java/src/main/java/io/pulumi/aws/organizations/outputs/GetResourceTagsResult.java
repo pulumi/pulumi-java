@@ -78,17 +78,14 @@ public final class GetResourceTagsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetResourceTagsResult build() {
+        }        public GetResourceTagsResult build() {
             return new GetResourceTagsResult(id, resourceId, tags);
         }
     }

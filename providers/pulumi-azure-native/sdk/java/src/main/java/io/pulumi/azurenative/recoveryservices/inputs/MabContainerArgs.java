@@ -249,122 +249,101 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
-
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
-
         public Builder canReRegister(@Nullable Output<Boolean> canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
-
         public Builder canReRegister(@Nullable Boolean canReRegister) {
             this.canReRegister = Output.ofNullable(canReRegister);
             return this;
         }
-
         public Builder containerHealthState(@Nullable Output<String> containerHealthState) {
             this.containerHealthState = containerHealthState;
             return this;
         }
-
         public Builder containerHealthState(@Nullable String containerHealthState) {
             this.containerHealthState = Output.ofNullable(containerHealthState);
             return this;
         }
-
         public Builder containerId(@Nullable Output<Double> containerId) {
             this.containerId = containerId;
             return this;
         }
-
         public Builder containerId(@Nullable Double containerId) {
             this.containerId = Output.ofNullable(containerId);
             return this;
         }
-
         public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
-
         public Builder extendedInfo(@Nullable Output<MabContainerExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder extendedInfo(@Nullable MabContainerExtendedInfoArgs extendedInfo) {
             this.extendedInfo = Output.ofNullable(extendedInfo);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
-
         public Builder mabContainerHealthDetails(@Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails) {
             this.mabContainerHealthDetails = mabContainerHealthDetails;
             return this;
         }
-
         public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsArgs> mabContainerHealthDetails) {
             this.mabContainerHealthDetails = Output.ofNullable(mabContainerHealthDetails);
             return this;
         }
-
+        public Builder mabContainerHealthDetails(MABContainerHealthDetailsArgs... mabContainerHealthDetails) {
+            return mabContainerHealthDetails(List.of(mabContainerHealthDetails));
+        }
         public Builder protectedItemCount(@Nullable Output<Double> protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
-
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = Output.ofNullable(protectedItemCount);
             return this;
         }
-
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
-        }
-        public MabContainerArgs build() {
+        }        public MabContainerArgs build() {
             return new MabContainerArgs(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);
         }
     }

@@ -71,12 +71,10 @@ public final class RoleResponse {
             this.db = db;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = role;
             return this;
-        }
-        public RoleResponse build() {
+        }        public RoleResponse build() {
             return new RoleResponse(db, role);
         }
     }

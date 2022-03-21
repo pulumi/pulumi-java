@@ -103,32 +103,26 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
             this.onError = onError;
             return this;
         }
-
         public Builder onError(@Nullable Either<String,OnErrorType> onError) {
             this.onError = Output.ofNullable(onError);
             return this;
         }
-
         public Builder preset(Output<Object> preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
-
         public Builder preset(Object preset) {
             this.preset = Output.of(Objects.requireNonNull(preset));
             return this;
         }
-
         public Builder relativePriority(@Nullable Output<Either<String,Priority>> relativePriority) {
             this.relativePriority = relativePriority;
             return this;
         }
-
         public Builder relativePriority(@Nullable Either<String,Priority> relativePriority) {
             this.relativePriority = Output.ofNullable(relativePriority);
             return this;
-        }
-        public TransformOutputArgs build() {
+        }        public TransformOutputArgs build() {
             return new TransformOutputArgs(onError, preset, relativePriority);
         }
     }

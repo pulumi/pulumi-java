@@ -231,122 +231,98 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder columnName(String columnName) {
             this.columnName = Output.of(Objects.requireNonNull(columnName));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder informationType(@Nullable Output<String> informationType) {
             this.informationType = informationType;
             return this;
         }
-
         public Builder informationType(@Nullable String informationType) {
             this.informationType = Output.ofNullable(informationType);
             return this;
         }
-
         public Builder informationTypeId(@Nullable Output<String> informationTypeId) {
             this.informationTypeId = informationTypeId;
             return this;
         }
-
         public Builder informationTypeId(@Nullable String informationTypeId) {
             this.informationTypeId = Output.ofNullable(informationTypeId);
             return this;
         }
-
         public Builder labelId(@Nullable Output<String> labelId) {
             this.labelId = labelId;
             return this;
         }
-
         public Builder labelId(@Nullable String labelId) {
             this.labelId = Output.ofNullable(labelId);
             return this;
         }
-
         public Builder labelName(@Nullable Output<String> labelName) {
             this.labelName = labelName;
             return this;
         }
-
         public Builder labelName(@Nullable String labelName) {
             this.labelName = Output.ofNullable(labelName);
             return this;
         }
-
         public Builder rank(@Nullable Output<SensitivityLabelRank> rank) {
             this.rank = rank;
             return this;
         }
-
         public Builder rank(@Nullable SensitivityLabelRank rank) {
             this.rank = Output.ofNullable(rank);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
-
         public Builder sensitivityLabelSource(@Nullable Output<String> sensitivityLabelSource) {
             this.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
-
         public Builder sensitivityLabelSource(@Nullable String sensitivityLabelSource) {
             this.sensitivityLabelSource = Output.ofNullable(sensitivityLabelSource);
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public SensitivityLabelArgs build() {
+        }        public SensitivityLabelArgs build() {
             return new SensitivityLabelArgs(columnName, databaseName, informationType, informationTypeId, labelId, labelName, rank, resourceGroupName, schemaName, sensitivityLabelSource, serverName, tableName);
         }
     }

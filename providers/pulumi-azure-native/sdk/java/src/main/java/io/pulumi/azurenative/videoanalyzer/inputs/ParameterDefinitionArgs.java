@@ -78,22 +78,18 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ParameterDefinitionArgs build() {
+        }        public ParameterDefinitionArgs build() {
             return new ParameterDefinitionArgs(name, value);
         }
     }

@@ -110,42 +110,34 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
             this.namespacePath = namespacePath;
             return this;
         }
-
         public Builder namespacePath(@Nullable String namespacePath) {
             this.namespacePath = Output.ofNullable(namespacePath);
             return this;
         }
-
         public Builder nfsAccessPolicy(@Nullable Output<String> nfsAccessPolicy) {
             this.nfsAccessPolicy = nfsAccessPolicy;
             return this;
         }
-
         public Builder nfsAccessPolicy(@Nullable String nfsAccessPolicy) {
             this.nfsAccessPolicy = Output.ofNullable(nfsAccessPolicy);
             return this;
         }
-
         public Builder nfsExport(@Nullable Output<String> nfsExport) {
             this.nfsExport = nfsExport;
             return this;
         }
-
         public Builder nfsExport(@Nullable String nfsExport) {
             this.nfsExport = Output.ofNullable(nfsExport);
             return this;
         }
-
         public Builder targetPath(@Nullable Output<String> targetPath) {
             this.targetPath = targetPath;
             return this;
         }
-
         public Builder targetPath(@Nullable String targetPath) {
             this.targetPath = Output.ofNullable(targetPath);
             return this;
-        }
-        public NamespaceJunctionArgs build() {
+        }        public NamespaceJunctionArgs build() {
             return new NamespaceJunctionArgs(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
         }
     }

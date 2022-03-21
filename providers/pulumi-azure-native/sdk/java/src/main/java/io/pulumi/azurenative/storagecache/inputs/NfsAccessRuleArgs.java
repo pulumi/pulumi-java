@@ -178,82 +178,66 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder access(Either<String,NfsAccessRuleAccess> access) {
             this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
-
         public Builder anonymousGID(@Nullable Output<String> anonymousGID) {
             this.anonymousGID = anonymousGID;
             return this;
         }
-
         public Builder anonymousGID(@Nullable String anonymousGID) {
             this.anonymousGID = Output.ofNullable(anonymousGID);
             return this;
         }
-
         public Builder anonymousUID(@Nullable Output<String> anonymousUID) {
             this.anonymousUID = anonymousUID;
             return this;
         }
-
         public Builder anonymousUID(@Nullable String anonymousUID) {
             this.anonymousUID = Output.ofNullable(anonymousUID);
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder rootSquash(@Nullable Output<Boolean> rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
-
         public Builder rootSquash(@Nullable Boolean rootSquash) {
             this.rootSquash = Output.ofNullable(rootSquash);
             return this;
         }
-
         public Builder scope(Output<Either<String,NfsAccessRuleScope>> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(Either<String,NfsAccessRuleScope> scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder submountAccess(@Nullable Output<Boolean> submountAccess) {
             this.submountAccess = submountAccess;
             return this;
         }
-
         public Builder submountAccess(@Nullable Boolean submountAccess) {
             this.submountAccess = Output.ofNullable(submountAccess);
             return this;
         }
-
         public Builder suid(@Nullable Output<Boolean> suid) {
             this.suid = suid;
             return this;
         }
-
         public Builder suid(@Nullable Boolean suid) {
             this.suid = Output.ofNullable(suid);
             return this;
-        }
-        public NfsAccessRuleArgs build() {
+        }        public NfsAccessRuleArgs build() {
             return new NfsAccessRuleArgs(access, anonymousGID, anonymousUID, filter, rootSquash, scope, submountAccess, suid);
         }
     }

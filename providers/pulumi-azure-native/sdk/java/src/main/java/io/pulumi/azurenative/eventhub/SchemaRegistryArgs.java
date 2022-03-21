@@ -134,62 +134,50 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
             this.groupProperties = groupProperties;
             return this;
         }
-
         public Builder groupProperties(@Nullable Map<String,String> groupProperties) {
             this.groupProperties = Output.ofNullable(groupProperties);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schemaCompatibility(@Nullable Output<Either<String,SchemaCompatibility>> schemaCompatibility) {
             this.schemaCompatibility = schemaCompatibility;
             return this;
         }
-
         public Builder schemaCompatibility(@Nullable Either<String,SchemaCompatibility> schemaCompatibility) {
             this.schemaCompatibility = Output.ofNullable(schemaCompatibility);
             return this;
         }
-
         public Builder schemaGroupName(@Nullable Output<String> schemaGroupName) {
             this.schemaGroupName = schemaGroupName;
             return this;
         }
-
         public Builder schemaGroupName(@Nullable String schemaGroupName) {
             this.schemaGroupName = Output.ofNullable(schemaGroupName);
             return this;
         }
-
         public Builder schemaType(@Nullable Output<Either<String,SchemaType>> schemaType) {
             this.schemaType = schemaType;
             return this;
         }
-
         public Builder schemaType(@Nullable Either<String,SchemaType> schemaType) {
             this.schemaType = Output.ofNullable(schemaType);
             return this;
-        }
-        public SchemaRegistryArgs build() {
+        }        public SchemaRegistryArgs build() {
             return new SchemaRegistryArgs(groupProperties, namespaceName, resourceGroupName, schemaCompatibility, schemaGroupName, schemaType);
         }
     }

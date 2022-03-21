@@ -86,17 +86,20 @@ public final class TestGridProjectVpcConfig {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public TestGridProjectVpcConfig build() {
+        }        public TestGridProjectVpcConfig build() {
             return new TestGridProjectVpcConfig(securityGroupIds, subnetIds, vpcId);
         }
     }

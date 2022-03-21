@@ -150,62 +150,53 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
-
         public Builder makePolicyConsistent(@Nullable Output<Boolean> makePolicyConsistent) {
             this.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
-
         public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
             this.makePolicyConsistent = Output.ofNullable(makePolicyConsistent);
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
-
         public Builder settings(@Nullable Output<SettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable SettingsArgs settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder subProtectionPolicy(@Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
-
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
             this.subProtectionPolicy = Output.ofNullable(subProtectionPolicy);
             return this;
         }
-
+        public Builder subProtectionPolicy(SubProtectionPolicyArgs... subProtectionPolicy) {
+            return subProtectionPolicy(List.of(subProtectionPolicy));
+        }
         public Builder workLoadType(@Nullable Output<Either<String,WorkloadType>> workLoadType) {
             this.workLoadType = workLoadType;
             return this;
         }
-
         public Builder workLoadType(@Nullable Either<String,WorkloadType> workLoadType) {
             this.workLoadType = Output.ofNullable(workLoadType);
             return this;
-        }
-        public AzureVmWorkloadProtectionPolicyArgs build() {
+        }        public AzureVmWorkloadProtectionPolicyArgs build() {
             return new AzureVmWorkloadProtectionPolicyArgs(backupManagementType, makePolicyConsistent, protectedItemsCount, settings, subProtectionPolicy, workLoadType);
         }
     }

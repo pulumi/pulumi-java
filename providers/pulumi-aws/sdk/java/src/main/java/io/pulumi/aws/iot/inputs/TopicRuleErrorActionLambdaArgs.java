@@ -56,12 +56,10 @@ public final class TopicRuleErrorActionLambdaArgs extends io.pulumi.resources.Re
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder functionArn(String functionArn) {
             this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
-        }
-        public TopicRuleErrorActionLambdaArgs build() {
+        }        public TopicRuleErrorActionLambdaArgs build() {
             return new TopicRuleErrorActionLambdaArgs(functionArn);
         }
     }

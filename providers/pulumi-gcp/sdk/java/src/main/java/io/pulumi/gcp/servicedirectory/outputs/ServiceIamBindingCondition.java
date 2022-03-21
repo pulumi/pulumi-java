@@ -63,17 +63,14 @@ public final class ServiceIamBindingCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public ServiceIamBindingCondition build() {
+        }        public ServiceIamBindingCondition build() {
             return new ServiceIamBindingCondition(description, expression, title);
         }
     }

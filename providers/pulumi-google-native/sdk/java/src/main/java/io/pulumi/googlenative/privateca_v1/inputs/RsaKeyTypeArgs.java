@@ -78,22 +78,18 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.maxModulusSize = maxModulusSize;
             return this;
         }
-
         public Builder maxModulusSize(@Nullable String maxModulusSize) {
             this.maxModulusSize = Output.ofNullable(maxModulusSize);
             return this;
         }
-
         public Builder minModulusSize(@Nullable Output<String> minModulusSize) {
             this.minModulusSize = minModulusSize;
             return this;
         }
-
         public Builder minModulusSize(@Nullable String minModulusSize) {
             this.minModulusSize = Output.ofNullable(minModulusSize);
             return this;
-        }
-        public RsaKeyTypeArgs build() {
+        }        public RsaKeyTypeArgs build() {
             return new RsaKeyTypeArgs(maxModulusSize, minModulusSize);
         }
     }

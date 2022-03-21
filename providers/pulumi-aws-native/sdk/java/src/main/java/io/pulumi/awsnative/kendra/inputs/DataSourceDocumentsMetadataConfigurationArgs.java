@@ -53,12 +53,10 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
             this.s3Prefix = s3Prefix;
             return this;
         }
-
         public Builder s3Prefix(@Nullable String s3Prefix) {
             this.s3Prefix = Output.ofNullable(s3Prefix);
             return this;
-        }
-        public DataSourceDocumentsMetadataConfigurationArgs build() {
+        }        public DataSourceDocumentsMetadataConfigurationArgs build() {
             return new DataSourceDocumentsMetadataConfigurationArgs(s3Prefix);
         }
     }

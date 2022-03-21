@@ -72,12 +72,10 @@ public final class VirtualServiceSpecProvider {
             this.virtualNode = virtualNode;
             return this;
         }
-
         public Builder virtualRouter(@Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
             this.virtualRouter = virtualRouter;
             return this;
-        }
-        public VirtualServiceSpecProvider build() {
+        }        public VirtualServiceSpecProvider build() {
             return new VirtualServiceSpecProvider(virtualNode, virtualRouter);
         }
     }

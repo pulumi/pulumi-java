@@ -85,17 +85,14 @@ public final class PackageShippingDetailsResponse {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
-
         public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
-        }
-        public PackageShippingDetailsResponse build() {
+        }        public PackageShippingDetailsResponse build() {
             return new PackageShippingDetailsResponse(carrierName, trackingId, trackingUrl);
         }
     }

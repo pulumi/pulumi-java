@@ -52,7 +52,9 @@ public final class GetSecretReplicationUserManaged extends io.pulumi.resources.I
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-        public GetSecretReplicationUserManaged build() {
+        public Builder replicas(GetSecretReplicationUserManagedReplica... replicas) {
+            return replicas(List.of(replicas));
+        }        public GetSecretReplicationUserManaged build() {
             return new GetSecretReplicationUserManaged(replicas);
         }
     }

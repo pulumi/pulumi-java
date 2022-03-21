@@ -127,52 +127,42 @@ public final class StageDefaultRouteSettingsArgs extends io.pulumi.resources.Res
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
             return this;
         }
-
         public Builder detailedMetricsEnabled(@Nullable Output<Boolean> detailedMetricsEnabled) {
             this.detailedMetricsEnabled = detailedMetricsEnabled;
             return this;
         }
-
         public Builder detailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
             this.detailedMetricsEnabled = Output.ofNullable(detailedMetricsEnabled);
             return this;
         }
-
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
             return this;
-        }
-        public StageDefaultRouteSettingsArgs build() {
+        }        public StageDefaultRouteSettingsArgs build() {
             return new StageDefaultRouteSettingsArgs(dataTraceEnabled, detailedMetricsEnabled, loggingLevel, throttlingBurstLimit, throttlingRateLimit);
         }
     }

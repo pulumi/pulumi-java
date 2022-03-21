@@ -476,132 +476,130 @@ public final class GetConfigResult {
             this.apis = Objects.requireNonNull(apis);
             return this;
         }
-
+        public Builder apis(ApiResponse... apis) {
+            return apis(List.of(apis));
+        }
         public Builder authentication(AuthenticationResponse authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder backend(BackendResponse backend) {
             this.backend = Objects.requireNonNull(backend);
             return this;
         }
-
         public Builder billing(BillingResponse billing) {
             this.billing = Objects.requireNonNull(billing);
             return this;
         }
-
         public Builder configVersion(Integer configVersion) {
             this.configVersion = Objects.requireNonNull(configVersion);
             return this;
         }
-
         public Builder context(ContextResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder control(ControlResponse control) {
             this.control = Objects.requireNonNull(control);
             return this;
         }
-
         public Builder customError(CustomErrorResponse customError) {
             this.customError = Objects.requireNonNull(customError);
             return this;
         }
-
         public Builder documentation(DocumentationResponse documentation) {
             this.documentation = Objects.requireNonNull(documentation);
             return this;
         }
-
         public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(EndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder enums(List<EnumResponse> enums) {
             this.enums = Objects.requireNonNull(enums);
             return this;
         }
-
+        public Builder enums(EnumResponse... enums) {
+            return enums(List.of(enums));
+        }
         public Builder http(HttpResponse http) {
             this.http = Objects.requireNonNull(http);
             return this;
         }
-
         public Builder logging(LoggingResponse logging) {
             this.logging = Objects.requireNonNull(logging);
             return this;
         }
-
         public Builder logs(List<LogDescriptorResponse> logs) {
             this.logs = Objects.requireNonNull(logs);
             return this;
         }
-
+        public Builder logs(LogDescriptorResponse... logs) {
+            return logs(List.of(logs));
+        }
         public Builder metrics(List<MetricDescriptorResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(MetricDescriptorResponse... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder monitoredResources(List<MonitoredResourceDescriptorResponse> monitoredResources) {
             this.monitoredResources = Objects.requireNonNull(monitoredResources);
             return this;
         }
-
+        public Builder monitoredResources(MonitoredResourceDescriptorResponse... monitoredResources) {
+            return monitoredResources(List.of(monitoredResources));
+        }
         public Builder monitoring(MonitoringResponse monitoring) {
             this.monitoring = Objects.requireNonNull(monitoring);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder producerProjectId(String producerProjectId) {
             this.producerProjectId = Objects.requireNonNull(producerProjectId);
             return this;
         }
-
         public Builder quota(QuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
-
         public Builder sourceInfo(SourceInfoResponse sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
-
         public Builder systemParameters(SystemParametersResponse systemParameters) {
             this.systemParameters = Objects.requireNonNull(systemParameters);
             return this;
         }
-
         public Builder systemTypes(List<TypeResponse> systemTypes) {
             this.systemTypes = Objects.requireNonNull(systemTypes);
             return this;
         }
-
+        public Builder systemTypes(TypeResponse... systemTypes) {
+            return systemTypes(List.of(systemTypes));
+        }
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder types(List<TypeResponse> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
+        public Builder types(TypeResponse... types) {
+            return types(List.of(types));
+        }
         public Builder usage(UsageResponse usage) {
             this.usage = Objects.requireNonNull(usage);
             return this;
-        }
-        public GetConfigResult build() {
+        }        public GetConfigResult build() {
             return new GetConfigResult(apis, authentication, backend, billing, configVersion, context, control, customError, documentation, endpoints, enums, http, logging, logs, metrics, monitoredResources, monitoring, name, producerProjectId, quota, sourceInfo, systemParameters, systemTypes, title, types, usage);
         }
     }

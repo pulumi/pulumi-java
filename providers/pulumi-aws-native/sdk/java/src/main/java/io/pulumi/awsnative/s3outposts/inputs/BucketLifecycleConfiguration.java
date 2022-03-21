@@ -56,7 +56,9 @@ public final class BucketLifecycleConfiguration extends io.pulumi.resources.Invo
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public BucketLifecycleConfiguration build() {
+        public Builder rules(BucketRule... rules) {
+            return rules(List.of(rules));
+        }        public BucketLifecycleConfiguration build() {
             return new BucketLifecycleConfiguration(rules);
         }
     }

@@ -218,62 +218,56 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
             this.assessmentType = Objects.requireNonNull(assessmentType);
             return this;
         }
-
         public Builder categories(@Nullable List<String> categories) {
             this.categories = categories;
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder implementationEffort(@Nullable String implementationEffort) {
             this.implementationEffort = implementationEffort;
             return this;
         }
-
         public Builder partnerData(@Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData) {
             this.partnerData = partnerData;
             return this;
         }
-
         public Builder policyDefinitionId(String policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder remediationDescription(@Nullable String remediationDescription) {
             this.remediationDescription = remediationDescription;
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder threats(@Nullable List<String> threats) {
             this.threats = threats;
             return this;
         }
-
+        public Builder threats(String... threats) {
+            return threats(List.of(threats));
+        }
         public Builder userImpact(@Nullable String userImpact) {
             this.userImpact = userImpact;
             return this;
-        }
-        public SecurityAssessmentMetadataPropertiesResponse build() {
+        }        public SecurityAssessmentMetadataPropertiesResponse build() {
             return new SecurityAssessmentMetadataPropertiesResponse(assessmentType, categories, description, displayName, implementationEffort, partnerData, policyDefinitionId, preview, remediationDescription, severity, threats, userImpact);
         }
     }

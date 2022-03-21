@@ -58,8 +58,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
         public Builder componentConfig(LoggingComponentConfigResponse componentConfig) {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
-        }
-        public LoggingConfigResponse build() {
+        }        public LoggingConfigResponse build() {
             return new LoggingConfigResponse(componentConfig);
         }
     }

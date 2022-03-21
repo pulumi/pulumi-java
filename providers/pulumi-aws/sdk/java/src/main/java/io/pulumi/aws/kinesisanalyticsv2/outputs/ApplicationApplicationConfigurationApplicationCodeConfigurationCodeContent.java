@@ -72,12 +72,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             this.s3ContentLocation = s3ContentLocation;
             return this;
         }
-
         public Builder textContent(@Nullable String textContent) {
             this.textContent = textContent;
             return this;
-        }
-        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent build() {
+        }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent(s3ContentLocation, textContent);
         }
     }

@@ -75,22 +75,18 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
             this.enableOnlineStore = enableOnlineStore;
             return this;
         }
-
         public Builder enableOnlineStore(@Nullable Boolean enableOnlineStore) {
             this.enableOnlineStore = Output.ofNullable(enableOnlineStore);
             return this;
         }
-
         public Builder securityConfig(@Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
-
         public Builder securityConfig(@Nullable FeatureGroupOnlineStoreConfigSecurityConfigGetArgs securityConfig) {
             this.securityConfig = Output.ofNullable(securityConfig);
             return this;
-        }
-        public FeatureGroupOnlineStoreConfigGetArgs build() {
+        }        public FeatureGroupOnlineStoreConfigGetArgs build() {
             return new FeatureGroupOnlineStoreConfigGetArgs(enableOnlineStore, securityConfig);
         }
     }

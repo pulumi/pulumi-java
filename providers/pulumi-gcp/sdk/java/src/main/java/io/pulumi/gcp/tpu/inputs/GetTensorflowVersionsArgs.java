@@ -76,12 +76,10 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
             this.project = project;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public GetTensorflowVersionsArgs build() {
+        }        public GetTensorflowVersionsArgs build() {
             return new GetTensorflowVersionsArgs(project, zone);
         }
     }

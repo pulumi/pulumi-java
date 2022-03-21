@@ -134,52 +134,45 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder httpHeaders(@Nullable Output<List<HTTPHeaderArgs>> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
-
         public Builder httpHeaders(@Nullable List<HTTPHeaderArgs> httpHeaders) {
             this.httpHeaders = Output.ofNullable(httpHeaders);
             return this;
         }
-
+        public Builder httpHeaders(HTTPHeaderArgs... httpHeaders) {
+            return httpHeaders(List.of(httpHeaders));
+        }
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(Output<Either<Integer,String>> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Either<Integer,String> port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder scheme(@Nullable Output<String> scheme) {
             this.scheme = scheme;
             return this;
         }
-
         public Builder scheme(@Nullable String scheme) {
             this.scheme = Output.ofNullable(scheme);
             return this;
-        }
-        public HTTPGetActionArgs build() {
+        }        public HTTPGetActionArgs build() {
             return new HTTPGetActionArgs(host, httpHeaders, path, port, scheme);
         }
     }

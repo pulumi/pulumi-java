@@ -67,12 +67,10 @@ public final class ThemeValues extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable ThemeValue value) {
             this.value = value;
             return this;
-        }
-        public ThemeValues build() {
+        }        public ThemeValues build() {
             return new ThemeValues(key, value);
         }
     }

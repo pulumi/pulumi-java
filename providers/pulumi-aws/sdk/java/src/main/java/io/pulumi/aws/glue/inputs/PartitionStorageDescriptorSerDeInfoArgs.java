@@ -91,32 +91,26 @@ public final class PartitionStorageDescriptorSerDeInfoArgs extends io.pulumi.res
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder serializationLibrary(@Nullable Output<String> serializationLibrary) {
             this.serializationLibrary = serializationLibrary;
             return this;
         }
-
         public Builder serializationLibrary(@Nullable String serializationLibrary) {
             this.serializationLibrary = Output.ofNullable(serializationLibrary);
             return this;
-        }
-        public PartitionStorageDescriptorSerDeInfoArgs build() {
+        }        public PartitionStorageDescriptorSerDeInfoArgs build() {
             return new PartitionStorageDescriptorSerDeInfoArgs(name, parameters, serializationLibrary);
         }
     }

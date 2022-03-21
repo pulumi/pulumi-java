@@ -63,12 +63,13 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse... items) {
+            return items(List.of(items));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public RRSetRoutingPolicyGeoPolicyResponse build() {
+        }        public RRSetRoutingPolicyGeoPolicyResponse build() {
             return new RRSetRoutingPolicyGeoPolicyResponse(items, kind);
         }
     }

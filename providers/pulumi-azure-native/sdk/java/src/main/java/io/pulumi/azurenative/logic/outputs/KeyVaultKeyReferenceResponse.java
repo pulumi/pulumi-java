@@ -88,17 +88,14 @@ public final class KeyVaultKeyReferenceResponse {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyVault(KeyVaultKeyReferenceResponseKeyVault keyVault) {
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
-        }
-        public KeyVaultKeyReferenceResponse build() {
+        }        public KeyVaultKeyReferenceResponse build() {
             return new KeyVaultKeyReferenceResponse(keyName, keyVault, keyVersion);
         }
     }

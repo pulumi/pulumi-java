@@ -218,57 +218,52 @@ public final class GetNetworkResult {
             this.autoCreateSubnetworks = Objects.requireNonNull(autoCreateSubnetworks);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder gatewayIPv4(String gatewayIPv4) {
             this.gatewayIPv4 = Objects.requireNonNull(gatewayIPv4);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder mtu(Integer mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peerings(List<NetworkPeeringResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
-
+        public Builder peerings(NetworkPeeringResponse... peerings) {
+            return peerings(List.of(peerings));
+        }
         public Builder routingConfig(NetworkRoutingConfigResponse routingConfig) {
             this.routingConfig = Objects.requireNonNull(routingConfig);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder subnetworks(List<String> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
-        public GetNetworkResult build() {
+        public Builder subnetworks(String... subnetworks) {
+            return subnetworks(List.of(subnetworks));
+        }        public GetNetworkResult build() {
             return new GetNetworkResult(autoCreateSubnetworks, creationTimestamp, description, gatewayIPv4, kind, mtu, name, peerings, routingConfig, selfLink, subnetworks);
         }
     }

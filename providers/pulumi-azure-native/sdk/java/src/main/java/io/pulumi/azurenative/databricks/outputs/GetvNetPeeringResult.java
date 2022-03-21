@@ -251,67 +251,54 @@ public final class GetvNetPeeringResult {
             this.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
-
         public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
             this.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
-
         public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
-
         public Builder databricksAddressSpace(@Nullable AddressSpaceResponse databricksAddressSpace) {
             this.databricksAddressSpace = databricksAddressSpace;
             return this;
         }
-
         public Builder databricksVirtualNetwork(@Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork) {
             this.databricksVirtualNetwork = databricksVirtualNetwork;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeringState(String peeringState) {
             this.peeringState = Objects.requireNonNull(peeringState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder remoteAddressSpace(@Nullable AddressSpaceResponse remoteAddressSpace) {
             this.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
-
         public Builder remoteVirtualNetwork(VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork) {
             this.remoteVirtualNetwork = Objects.requireNonNull(remoteVirtualNetwork);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
             this.useRemoteGateways = useRemoteGateways;
             return this;
-        }
-        public GetvNetPeeringResult build() {
+        }        public GetvNetPeeringResult build() {
             return new GetvNetPeeringResult(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, databricksAddressSpace, databricksVirtualNetwork, id, name, peeringState, provisioningState, remoteAddressSpace, remoteVirtualNetwork, type, useRemoteGateways);
         }
     }

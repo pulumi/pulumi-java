@@ -61,12 +61,10 @@ public final class GoogleCloudApigeeV1MonetizationConfigArgs extends io.pulumi.r
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GoogleCloudApigeeV1MonetizationConfigArgs build() {
+        }        public GoogleCloudApigeeV1MonetizationConfigArgs build() {
             return new GoogleCloudApigeeV1MonetizationConfigArgs(enabled);
         }
     }

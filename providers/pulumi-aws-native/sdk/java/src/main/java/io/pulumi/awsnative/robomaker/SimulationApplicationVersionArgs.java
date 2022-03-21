@@ -70,22 +70,18 @@ public final class SimulationApplicationVersionArgs extends io.pulumi.resources.
             this.application = Objects.requireNonNull(application);
             return this;
         }
-
         public Builder application(String application) {
             this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
-
         public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
-
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = Output.ofNullable(currentRevisionId);
             return this;
-        }
-        public SimulationApplicationVersionArgs build() {
+        }        public SimulationApplicationVersionArgs build() {
             return new SimulationApplicationVersionArgs(application, currentRevisionId);
         }
     }

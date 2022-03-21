@@ -72,12 +72,10 @@ public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public FirewallPolicyRuleSecureTagResponse build() {
+        }        public FirewallPolicyRuleSecureTagResponse build() {
             return new FirewallPolicyRuleSecureTagResponse(name, state);
         }
     }

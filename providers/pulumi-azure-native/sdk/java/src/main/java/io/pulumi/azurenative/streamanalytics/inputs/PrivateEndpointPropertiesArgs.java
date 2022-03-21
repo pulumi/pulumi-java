@@ -62,12 +62,13 @@ public final class PrivateEndpointPropertiesArgs extends io.pulumi.resources.Res
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = Output.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
-        public PrivateEndpointPropertiesArgs build() {
+        public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
+        }        public PrivateEndpointPropertiesArgs build() {
             return new PrivateEndpointPropertiesArgs(manualPrivateLinkServiceConnections);
         }
     }

@@ -51,8 +51,7 @@ public final class EventDestinationSnsDestination {
         public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
-        }
-        public EventDestinationSnsDestination build() {
+        }        public EventDestinationSnsDestination build() {
             return new EventDestinationSnsDestination(topicArn);
         }
     }

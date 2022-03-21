@@ -60,7 +60,9 @@ public final class LatencyDistributionResponse extends io.pulumi.resources.Invok
             this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
             return this;
         }
-        public LatencyDistributionResponse build() {
+        public Builder latencyPercentiles(LatencyPercentileResponse... latencyPercentiles) {
+            return latencyPercentiles(List.of(latencyPercentiles));
+        }        public LatencyDistributionResponse build() {
             return new LatencyDistributionResponse(latencyPercentiles);
         }
     }

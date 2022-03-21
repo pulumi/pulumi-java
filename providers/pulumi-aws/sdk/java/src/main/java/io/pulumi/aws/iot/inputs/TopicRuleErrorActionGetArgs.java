@@ -236,152 +236,122 @@ public final class TopicRuleErrorActionGetArgs extends io.pulumi.resources.Resou
             this.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
-
         public Builder cloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarmGetArgs cloudwatchAlarm) {
             this.cloudwatchAlarm = Output.ofNullable(cloudwatchAlarm);
             return this;
         }
-
         public Builder cloudwatchMetric(@Nullable Output<TopicRuleErrorActionCloudwatchMetricGetArgs> cloudwatchMetric) {
             this.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
-
         public Builder cloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetricGetArgs cloudwatchMetric) {
             this.cloudwatchMetric = Output.ofNullable(cloudwatchMetric);
             return this;
         }
-
         public Builder dynamodb(@Nullable Output<TopicRuleErrorActionDynamodbGetArgs> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
-
         public Builder dynamodb(@Nullable TopicRuleErrorActionDynamodbGetArgs dynamodb) {
             this.dynamodb = Output.ofNullable(dynamodb);
             return this;
         }
-
         public Builder dynamodbv2(@Nullable Output<TopicRuleErrorActionDynamodbv2GetArgs> dynamodbv2) {
             this.dynamodbv2 = dynamodbv2;
             return this;
         }
-
         public Builder dynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2GetArgs dynamodbv2) {
             this.dynamodbv2 = Output.ofNullable(dynamodbv2);
             return this;
         }
-
         public Builder elasticsearch(@Nullable Output<TopicRuleErrorActionElasticsearchGetArgs> elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
-
         public Builder elasticsearch(@Nullable TopicRuleErrorActionElasticsearchGetArgs elasticsearch) {
             this.elasticsearch = Output.ofNullable(elasticsearch);
             return this;
         }
-
         public Builder firehose(@Nullable Output<TopicRuleErrorActionFirehoseGetArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder firehose(@Nullable TopicRuleErrorActionFirehoseGetArgs firehose) {
             this.firehose = Output.ofNullable(firehose);
             return this;
         }
-
         public Builder iotAnalytics(@Nullable Output<TopicRuleErrorActionIotAnalyticsGetArgs> iotAnalytics) {
             this.iotAnalytics = iotAnalytics;
             return this;
         }
-
         public Builder iotAnalytics(@Nullable TopicRuleErrorActionIotAnalyticsGetArgs iotAnalytics) {
             this.iotAnalytics = Output.ofNullable(iotAnalytics);
             return this;
         }
-
         public Builder iotEvents(@Nullable Output<TopicRuleErrorActionIotEventsGetArgs> iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
-
         public Builder iotEvents(@Nullable TopicRuleErrorActionIotEventsGetArgs iotEvents) {
             this.iotEvents = Output.ofNullable(iotEvents);
             return this;
         }
-
         public Builder kinesis(@Nullable Output<TopicRuleErrorActionKinesisGetArgs> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
-
         public Builder kinesis(@Nullable TopicRuleErrorActionKinesisGetArgs kinesis) {
             this.kinesis = Output.ofNullable(kinesis);
             return this;
         }
-
         public Builder lambda(@Nullable Output<TopicRuleErrorActionLambdaGetArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder lambda(@Nullable TopicRuleErrorActionLambdaGetArgs lambda) {
             this.lambda = Output.ofNullable(lambda);
             return this;
         }
-
         public Builder republish(@Nullable Output<TopicRuleErrorActionRepublishGetArgs> republish) {
             this.republish = republish;
             return this;
         }
-
         public Builder republish(@Nullable TopicRuleErrorActionRepublishGetArgs republish) {
             this.republish = Output.ofNullable(republish);
             return this;
         }
-
         public Builder s3(@Nullable Output<TopicRuleErrorActionS3GetArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable TopicRuleErrorActionS3GetArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder sns(@Nullable Output<TopicRuleErrorActionSnsGetArgs> sns) {
             this.sns = sns;
             return this;
         }
-
         public Builder sns(@Nullable TopicRuleErrorActionSnsGetArgs sns) {
             this.sns = Output.ofNullable(sns);
             return this;
         }
-
         public Builder sqs(@Nullable Output<TopicRuleErrorActionSqsGetArgs> sqs) {
             this.sqs = sqs;
             return this;
         }
-
         public Builder sqs(@Nullable TopicRuleErrorActionSqsGetArgs sqs) {
             this.sqs = Output.ofNullable(sqs);
             return this;
         }
-
         public Builder stepFunctions(@Nullable Output<TopicRuleErrorActionStepFunctionsGetArgs> stepFunctions) {
             this.stepFunctions = stepFunctions;
             return this;
         }
-
         public Builder stepFunctions(@Nullable TopicRuleErrorActionStepFunctionsGetArgs stepFunctions) {
             this.stepFunctions = Output.ofNullable(stepFunctions);
             return this;
-        }
-        public TopicRuleErrorActionGetArgs build() {
+        }        public TopicRuleErrorActionGetArgs build() {
             return new TopicRuleErrorActionGetArgs(cloudwatchAlarm, cloudwatchMetric, dynamodb, dynamodbv2, elasticsearch, firehose, iotAnalytics, iotEvents, kinesis, lambda, republish, s3, sns, sqs, stepFunctions);
         }
     }

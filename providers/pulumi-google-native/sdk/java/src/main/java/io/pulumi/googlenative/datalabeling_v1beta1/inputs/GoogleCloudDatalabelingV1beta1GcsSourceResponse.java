@@ -76,12 +76,10 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1GcsSourceResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1GcsSourceResponse build() {
             return new GoogleCloudDatalabelingV1beta1GcsSourceResponse(inputUri, mimeType);
         }
     }

@@ -59,8 +59,7 @@ public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs 
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public LabelSelectorResponse build() {
+        }        public LabelSelectorResponse build() {
             return new LabelSelectorResponse(labels);
         }
     }

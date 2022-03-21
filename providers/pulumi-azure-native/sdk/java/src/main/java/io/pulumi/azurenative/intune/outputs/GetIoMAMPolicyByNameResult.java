@@ -281,127 +281,102 @@ public final class GetIoMAMPolicyByNameResult {
             this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
             return this;
         }
-
         public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
             return this;
         }
-
         public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
             this.appSharingFromLevel = appSharingFromLevel;
             return this;
         }
-
         public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
             this.appSharingToLevel = appSharingToLevel;
             return this;
         }
-
         public Builder authentication(@Nullable String authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
             this.clipboardSharingLevel = clipboardSharingLevel;
             return this;
         }
-
         public Builder dataBackup(@Nullable String dataBackup) {
             this.dataBackup = dataBackup;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder deviceCompliance(@Nullable String deviceCompliance) {
             this.deviceCompliance = deviceCompliance;
             return this;
         }
-
         public Builder fileEncryptionLevel(@Nullable String fileEncryptionLevel) {
             this.fileEncryptionLevel = fileEncryptionLevel;
             return this;
         }
-
         public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
             this.fileSharingSaveAs = fileSharingSaveAs;
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder groupStatus(String groupStatus) {
             this.groupStatus = Objects.requireNonNull(groupStatus);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedBrowser(@Nullable String managedBrowser) {
             this.managedBrowser = managedBrowser;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numOfApps(Integer numOfApps) {
             this.numOfApps = Objects.requireNonNull(numOfApps);
             return this;
         }
-
         public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
             this.offlineWipeTimeout = offlineWipeTimeout;
             return this;
         }
-
         public Builder pin(@Nullable String pin) {
             this.pin = pin;
             return this;
         }
-
         public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
             this.pinNumRetry = pinNumRetry;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder touchId(@Nullable String touchId) {
             this.touchId = touchId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIoMAMPolicyByNameResult build() {
+        }        public GetIoMAMPolicyByNameResult build() {
             return new GetIoMAMPolicyByNameResult(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryptionLevel, fileSharingSaveAs, friendlyName, groupStatus, id, lastModifiedTime, location, managedBrowser, name, numOfApps, offlineWipeTimeout, pin, pinNumRetry, tags, touchId, type);
         }
     }

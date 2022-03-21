@@ -140,62 +140,50 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
             this.bgpAsn = Objects.requireNonNull(bgpAsn);
             return this;
         }
-
         public Builder bgpAsn(String bgpAsn) {
             this.bgpAsn = Output.of(Objects.requireNonNull(bgpAsn));
             return this;
         }
-
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder ipAddress(Output<String> ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Output.of(Objects.requireNonNull(ipAddress));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public CustomerGatewayArgs build() {
+        }        public CustomerGatewayArgs build() {
             return new CustomerGatewayArgs(bgpAsn, certificateArn, deviceName, ipAddress, tags, type);
         }
     }

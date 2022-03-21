@@ -119,27 +119,22 @@ public final class SlsaMetadataResponse {
             this.buildFinishedOn = Objects.requireNonNull(buildFinishedOn);
             return this;
         }
-
         public Builder buildInvocationId(String buildInvocationId) {
             this.buildInvocationId = Objects.requireNonNull(buildInvocationId);
             return this;
         }
-
         public Builder buildStartedOn(String buildStartedOn) {
             this.buildStartedOn = Objects.requireNonNull(buildStartedOn);
             return this;
         }
-
         public Builder completeness(SlsaCompletenessResponse completeness) {
             this.completeness = Objects.requireNonNull(completeness);
             return this;
         }
-
         public Builder reproducible(Boolean reproducible) {
             this.reproducible = Objects.requireNonNull(reproducible);
             return this;
-        }
-        public SlsaMetadataResponse build() {
+        }        public SlsaMetadataResponse build() {
             return new SlsaMetadataResponse(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
         }
     }

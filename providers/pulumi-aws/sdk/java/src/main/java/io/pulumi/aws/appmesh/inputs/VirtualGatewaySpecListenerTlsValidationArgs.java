@@ -75,22 +75,18 @@ public final class VirtualGatewaySpecListenerTlsValidationArgs extends io.pulumi
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
         public Builder trust(Output<VirtualGatewaySpecListenerTlsValidationTrustArgs> trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }
-
         public Builder trust(VirtualGatewaySpecListenerTlsValidationTrustArgs trust) {
             this.trust = Output.of(Objects.requireNonNull(trust));
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsValidationArgs build() {
+        }        public VirtualGatewaySpecListenerTlsValidationArgs build() {
             return new VirtualGatewaySpecListenerTlsValidationArgs(subjectAlternativeNames, trust);
         }
     }

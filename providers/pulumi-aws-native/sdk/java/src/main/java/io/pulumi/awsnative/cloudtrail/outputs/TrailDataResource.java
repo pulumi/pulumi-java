@@ -71,12 +71,13 @@ public final class TrailDataResource {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public TrailDataResource build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public TrailDataResource build() {
             return new TrailDataResource(type, values);
         }
     }

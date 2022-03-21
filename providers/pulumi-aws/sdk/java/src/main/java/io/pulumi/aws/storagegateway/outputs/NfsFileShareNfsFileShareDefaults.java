@@ -103,22 +103,18 @@ public final class NfsFileShareNfsFileShareDefaults {
             this.directoryMode = directoryMode;
             return this;
         }
-
         public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = fileMode;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
-        }
-        public NfsFileShareNfsFileShareDefaults build() {
+        }        public NfsFileShareNfsFileShareDefaults build() {
             return new NfsFileShareNfsFileShareDefaults(directoryMode, fileMode, groupId, ownerId);
         }
     }

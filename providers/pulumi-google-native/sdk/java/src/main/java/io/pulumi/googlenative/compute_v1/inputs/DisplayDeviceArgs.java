@@ -61,12 +61,10 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.enableDisplay = enableDisplay;
             return this;
         }
-
         public Builder enableDisplay(@Nullable Boolean enableDisplay) {
             this.enableDisplay = Output.ofNullable(enableDisplay);
             return this;
-        }
-        public DisplayDeviceArgs build() {
+        }        public DisplayDeviceArgs build() {
             return new DisplayDeviceArgs(enableDisplay);
         }
     }

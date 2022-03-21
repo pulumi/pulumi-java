@@ -107,22 +107,21 @@ public final class PeeringPropertiesDirectResponse {
             this.connections = connections;
             return this;
         }
-
+        public Builder connections(DirectConnectionResponse... connections) {
+            return connections(List.of(connections));
+        }
         public Builder directPeeringType(@Nullable String directPeeringType) {
             this.directPeeringType = directPeeringType;
             return this;
         }
-
         public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder useForPeeringService(Boolean useForPeeringService) {
             this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
             return this;
-        }
-        public PeeringPropertiesDirectResponse build() {
+        }        public PeeringPropertiesDirectResponse build() {
             return new PeeringPropertiesDirectResponse(connections, directPeeringType, peerAsn, useForPeeringService);
         }
     }

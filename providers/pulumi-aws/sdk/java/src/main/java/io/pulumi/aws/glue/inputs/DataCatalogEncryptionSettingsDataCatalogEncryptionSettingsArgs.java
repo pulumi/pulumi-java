@@ -74,22 +74,18 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArg
             this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption);
             return this;
         }
-
         public Builder connectionPasswordEncryption(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs connectionPasswordEncryption) {
             this.connectionPasswordEncryption = Output.of(Objects.requireNonNull(connectionPasswordEncryption));
             return this;
         }
-
         public Builder encryptionAtRest(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest) {
             this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest);
             return this;
         }
-
         public Builder encryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs encryptionAtRest) {
             this.encryptionAtRest = Output.of(Objects.requireNonNull(encryptionAtRest));
             return this;
-        }
-        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs build() {
+        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs build() {
             return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs(connectionPasswordEncryption, encryptionAtRest);
         }
     }

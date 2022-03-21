@@ -51,8 +51,7 @@ public final class ListDatastoreSecretsResult {
         public Builder secretsType(String secretsType) {
             this.secretsType = Objects.requireNonNull(secretsType);
             return this;
-        }
-        public ListDatastoreSecretsResult build() {
+        }        public ListDatastoreSecretsResult build() {
             return new ListDatastoreSecretsResult(secretsType);
         }
     }

@@ -192,47 +192,41 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
-
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PrivateLinkServiceConnectionResponse build() {
+        }        public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(etag, groupIds, id, name, privateLinkServiceConnectionState, privateLinkServiceId, provisioningState, requestMessage, type);
         }
     }

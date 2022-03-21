@@ -58,8 +58,7 @@ public final class SuccessDetailResponse extends io.pulumi.resources.InvokeArgs 
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
-        }
-        public SuccessDetailResponse build() {
+        }        public SuccessDetailResponse build() {
             return new SuccessDetailResponse(otherNativeCrash);
         }
     }

@@ -93,17 +93,14 @@ public final class GetAccountKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder publicKeyType(@Nullable String publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
-        }
-        public GetAccountKeyArgs build() {
+        }        public GetAccountKeyArgs build() {
             return new GetAccountKeyArgs(name, project, publicKeyType);
         }
     }

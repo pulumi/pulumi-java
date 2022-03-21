@@ -96,32 +96,29 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
             this.denylistValues = Objects.requireNonNull(denylistValues);
             return this;
         }
-
         public Builder denylistValues(List<String> denylistValues) {
             this.denylistValues = Output.of(Objects.requireNonNull(denylistValues));
             return this;
         }
-
+        public Builder denylistValues(String... denylistValues) {
+            return denylistValues(List.of(denylistValues));
+        }
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
-        }
-        public DenylistCustomAlertRuleArgs build() {
+        }        public DenylistCustomAlertRuleArgs build() {
             return new DenylistCustomAlertRuleArgs(denylistValues, isEnabled, ruleType);
         }
     }

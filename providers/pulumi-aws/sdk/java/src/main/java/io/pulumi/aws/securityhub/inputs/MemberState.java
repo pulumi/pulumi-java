@@ -123,52 +123,42 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
-
         public Builder invite(@Nullable Boolean invite) {
             this.invite = Output.ofNullable(invite);
             return this;
         }
-
         public Builder masterId(@Nullable Output<String> masterId) {
             this.masterId = masterId;
             return this;
         }
-
         public Builder masterId(@Nullable String masterId) {
             this.masterId = Output.ofNullable(masterId);
             return this;
         }
-
         public Builder memberStatus(@Nullable Output<String> memberStatus) {
             this.memberStatus = memberStatus;
             return this;
         }
-
         public Builder memberStatus(@Nullable String memberStatus) {
             this.memberStatus = Output.ofNullable(memberStatus);
             return this;
-        }
-        public MemberState build() {
+        }        public MemberState build() {
             return new MemberState(accountId, email, invite, masterId, memberStatus);
         }
     }

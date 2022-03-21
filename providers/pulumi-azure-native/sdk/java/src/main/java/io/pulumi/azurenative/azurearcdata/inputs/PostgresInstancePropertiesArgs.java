@@ -128,52 +128,42 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
             this.admin = admin;
             return this;
         }
-
         public Builder admin(@Nullable String admin) {
             this.admin = Output.ofNullable(admin);
             return this;
         }
-
         public Builder basicLoginInformation(@Nullable Output<BasicLoginInformationArgs> basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
-
         public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
             this.basicLoginInformation = Output.ofNullable(basicLoginInformation);
             return this;
         }
-
         public Builder dataControllerId(@Nullable Output<String> dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
-
         public Builder dataControllerId(@Nullable String dataControllerId) {
             this.dataControllerId = Output.ofNullable(dataControllerId);
             return this;
         }
-
         public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
-
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = Output.ofNullable(k8sRaw);
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = Output.ofNullable(lastUploadedDate);
             return this;
-        }
-        public PostgresInstancePropertiesArgs build() {
+        }        public PostgresInstancePropertiesArgs build() {
             return new PostgresInstancePropertiesArgs(admin, basicLoginInformation, dataControllerId, k8sRaw, lastUploadedDate);
         }
     }

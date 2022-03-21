@@ -162,72 +162,64 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.configSource = configSource;
             return this;
         }
-
         public Builder configSource(@Nullable NodeConfigSourceArgs configSource) {
             this.configSource = Output.ofNullable(configSource);
             return this;
         }
-
         public Builder externalID(@Nullable Output<String> externalID) {
             this.externalID = externalID;
             return this;
         }
-
         public Builder externalID(@Nullable String externalID) {
             this.externalID = Output.ofNullable(externalID);
             return this;
         }
-
         public Builder podCIDR(@Nullable Output<String> podCIDR) {
             this.podCIDR = podCIDR;
             return this;
         }
-
         public Builder podCIDR(@Nullable String podCIDR) {
             this.podCIDR = Output.ofNullable(podCIDR);
             return this;
         }
-
         public Builder podCIDRs(@Nullable Output<List<String>> podCIDRs) {
             this.podCIDRs = podCIDRs;
             return this;
         }
-
         public Builder podCIDRs(@Nullable List<String> podCIDRs) {
             this.podCIDRs = Output.ofNullable(podCIDRs);
             return this;
         }
-
+        public Builder podCIDRs(String... podCIDRs) {
+            return podCIDRs(List.of(podCIDRs));
+        }
         public Builder providerID(@Nullable Output<String> providerID) {
             this.providerID = providerID;
             return this;
         }
-
         public Builder providerID(@Nullable String providerID) {
             this.providerID = Output.ofNullable(providerID);
             return this;
         }
-
         public Builder taints(@Nullable Output<List<TaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
-
         public Builder taints(@Nullable List<TaintArgs> taints) {
             this.taints = Output.ofNullable(taints);
             return this;
         }
-
+        public Builder taints(TaintArgs... taints) {
+            return taints(List.of(taints));
+        }
         public Builder unschedulable(@Nullable Output<Boolean> unschedulable) {
             this.unschedulable = unschedulable;
             return this;
         }
-
         public Builder unschedulable(@Nullable Boolean unschedulable) {
             this.unschedulable = Output.ofNullable(unschedulable);
             return this;
-        }
-        public NodeSpecArgs build() {
+        }        public NodeSpecArgs build() {
             return new NodeSpecArgs(configSource, externalID, podCIDR, podCIDRs, providerID, taints, unschedulable);
         }
     }

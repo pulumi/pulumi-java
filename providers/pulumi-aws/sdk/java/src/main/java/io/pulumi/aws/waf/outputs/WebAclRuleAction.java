@@ -51,8 +51,7 @@ public final class WebAclRuleAction {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleAction build() {
+        }        public WebAclRuleAction build() {
             return new WebAclRuleAction(type);
         }
     }

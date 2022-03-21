@@ -57,12 +57,10 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }
-
         public Builder targetNetwork(ManagedZonePeeringConfigTargetNetworkGetArgs targetNetwork) {
             this.targetNetwork = Output.of(Objects.requireNonNull(targetNetwork));
             return this;
-        }
-        public ManagedZonePeeringConfigGetArgs build() {
+        }        public ManagedZonePeeringConfigGetArgs build() {
             return new ManagedZonePeeringConfigGetArgs(targetNetwork);
         }
     }

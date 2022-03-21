@@ -51,8 +51,7 @@ public final class UserSubject {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public UserSubject build() {
+        }        public UserSubject build() {
             return new UserSubject(name);
         }
     }

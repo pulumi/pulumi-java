@@ -74,22 +74,18 @@ public final class ProjectSecondarySourceBuildStatusConfigGetArgs extends io.pul
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder targetUrl(@Nullable Output<String> targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
-
         public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = Output.ofNullable(targetUrl);
             return this;
-        }
-        public ProjectSecondarySourceBuildStatusConfigGetArgs build() {
+        }        public ProjectSecondarySourceBuildStatusConfigGetArgs build() {
             return new ProjectSecondarySourceBuildStatusConfigGetArgs(context, targetUrl);
         }
     }

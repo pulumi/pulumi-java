@@ -218,57 +218,49 @@ public final class KubeletConfigResponse {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
-
+        public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
+            return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
+        }
         public Builder containerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
             this.containerLogMaxFiles = containerLogMaxFiles;
             return this;
         }
-
         public Builder containerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
             this.containerLogMaxSizeMB = containerLogMaxSizeMB;
             return this;
         }
-
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
-
         public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
             this.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
-
         public Builder failSwapOn(@Nullable Boolean failSwapOn) {
             this.failSwapOn = failSwapOn;
             return this;
         }
-
         public Builder imageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
             this.imageGcHighThreshold = imageGcHighThreshold;
             return this;
         }
-
         public Builder imageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
             this.imageGcLowThreshold = imageGcLowThreshold;
             return this;
         }
-
         public Builder podMaxPids(@Nullable Integer podMaxPids) {
             this.podMaxPids = podMaxPids;
             return this;
         }
-
         public Builder topologyManagerPolicy(@Nullable String topologyManagerPolicy) {
             this.topologyManagerPolicy = topologyManagerPolicy;
             return this;
-        }
-        public KubeletConfigResponse build() {
+        }        public KubeletConfigResponse build() {
             return new KubeletConfigResponse(allowedUnsafeSysctls, containerLogMaxFiles, containerLogMaxSizeMB, cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy, failSwapOn, imageGcHighThreshold, imageGcLowThreshold, podMaxPids, topologyManagerPolicy);
         }
     }

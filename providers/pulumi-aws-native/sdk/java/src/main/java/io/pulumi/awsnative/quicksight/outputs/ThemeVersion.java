@@ -158,42 +158,37 @@ public final class ThemeVersion {
             this.arn = arn;
             return this;
         }
-
         public Builder baseThemeId(@Nullable String baseThemeId) {
             this.baseThemeId = baseThemeId;
             return this;
         }
-
         public Builder configuration(@Nullable ThemeConfiguration configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder errors(@Nullable List<ThemeError> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(ThemeError... errors) {
+            return errors(List.of(errors));
+        }
         public Builder status(@Nullable ThemeResourceStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
-        }
-        public ThemeVersion build() {
+        }        public ThemeVersion build() {
             return new ThemeVersion(arn, baseThemeId, configuration, createdTime, description, errors, status, versionNumber);
         }
     }

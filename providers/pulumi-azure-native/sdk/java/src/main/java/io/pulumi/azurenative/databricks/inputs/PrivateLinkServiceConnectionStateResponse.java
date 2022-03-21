@@ -94,17 +94,14 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
             this.actionRequired = actionRequired;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public PrivateLinkServiceConnectionStateResponse build() {
+        }        public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(actionRequired, description, status);
         }
     }

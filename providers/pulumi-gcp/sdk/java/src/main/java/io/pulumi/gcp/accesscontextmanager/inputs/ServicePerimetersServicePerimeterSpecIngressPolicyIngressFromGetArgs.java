@@ -98,32 +98,32 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom
             this.identities = identities;
             return this;
         }
-
         public Builder identities(@Nullable List<String> identities) {
             this.identities = Output.ofNullable(identities);
             return this;
         }
-
+        public Builder identities(String... identities) {
+            return identities(List.of(identities));
+        }
         public Builder identityType(@Nullable Output<String> identityType) {
             this.identityType = identityType;
             return this;
         }
-
         public Builder identityType(@Nullable String identityType) {
             this.identityType = Output.ofNullable(identityType);
             return this;
         }
-
         public Builder sources(@Nullable Output<List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-        public ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs build() {
+        public Builder sources(ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs... sources) {
+            return sources(List.of(sources));
+        }        public ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs build() {
             return new ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs(identities, identityType, sources);
         }
     }

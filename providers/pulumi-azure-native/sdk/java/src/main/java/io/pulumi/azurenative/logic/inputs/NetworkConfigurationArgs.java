@@ -97,32 +97,29 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             this.accessEndpoint = accessEndpoint;
             return this;
         }
-
         public Builder accessEndpoint(@Nullable IntegrationServiceEnvironmentAccessEndpointArgs accessEndpoint) {
             this.accessEndpoint = Output.ofNullable(accessEndpoint);
             return this;
         }
-
         public Builder subnets(@Nullable Output<List<ResourceReferenceArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<ResourceReferenceArgs> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(ResourceReferenceArgs... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder virtualNetworkAddressSpace(@Nullable Output<String> virtualNetworkAddressSpace) {
             this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }
-
         public Builder virtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
             this.virtualNetworkAddressSpace = Output.ofNullable(virtualNetworkAddressSpace);
             return this;
-        }
-        public NetworkConfigurationArgs build() {
+        }        public NetworkConfigurationArgs build() {
             return new NetworkConfigurationArgs(accessEndpoint, subnets, virtualNetworkAddressSpace);
         }
     }

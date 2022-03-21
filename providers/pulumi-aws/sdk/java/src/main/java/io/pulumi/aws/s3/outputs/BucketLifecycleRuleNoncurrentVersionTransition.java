@@ -72,12 +72,10 @@ public final class BucketLifecycleRuleNoncurrentVersionTransition {
             this.days = days;
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
-        }
-        public BucketLifecycleRuleNoncurrentVersionTransition build() {
+        }        public BucketLifecycleRuleNoncurrentVersionTransition build() {
             return new BucketLifecycleRuleNoncurrentVersionTransition(days, storageClass);
         }
     }

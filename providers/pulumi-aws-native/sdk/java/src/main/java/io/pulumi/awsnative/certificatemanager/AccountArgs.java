@@ -52,12 +52,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.expiryEventsConfiguration = Objects.requireNonNull(expiryEventsConfiguration);
             return this;
         }
-
         public Builder expiryEventsConfiguration(AccountExpiryEventsConfigurationArgs expiryEventsConfiguration) {
             this.expiryEventsConfiguration = Output.of(Objects.requireNonNull(expiryEventsConfiguration));
             return this;
-        }
-        public AccountArgs build() {
+        }        public AccountArgs build() {
             return new AccountArgs(expiryEventsConfiguration);
         }
     }

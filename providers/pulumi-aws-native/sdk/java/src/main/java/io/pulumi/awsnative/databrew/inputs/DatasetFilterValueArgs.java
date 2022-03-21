@@ -73,22 +73,18 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
-
         public Builder valueReference(Output<String> valueReference) {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
         }
-
         public Builder valueReference(String valueReference) {
             this.valueReference = Output.of(Objects.requireNonNull(valueReference));
             return this;
-        }
-        public DatasetFilterValueArgs build() {
+        }        public DatasetFilterValueArgs build() {
             return new DatasetFilterValueArgs(value, valueReference);
         }
     }

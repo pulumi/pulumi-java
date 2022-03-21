@@ -71,12 +71,13 @@ public final class PrimaryStepResponse {
             this.individualOutcome = Objects.requireNonNull(individualOutcome);
             return this;
         }
-
+        public Builder individualOutcome(IndividualOutcomeResponse... individualOutcome) {
+            return individualOutcome(List.of(individualOutcome));
+        }
         public Builder rollUp(String rollUp) {
             this.rollUp = Objects.requireNonNull(rollUp);
             return this;
-        }
-        public PrimaryStepResponse build() {
+        }        public PrimaryStepResponse build() {
             return new PrimaryStepResponse(individualOutcome, rollUp);
         }
     }

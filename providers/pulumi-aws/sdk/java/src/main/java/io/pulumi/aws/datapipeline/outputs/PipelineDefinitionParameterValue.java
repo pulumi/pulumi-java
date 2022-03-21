@@ -69,12 +69,10 @@ public final class PipelineDefinitionParameterValue {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
-        }
-        public PipelineDefinitionParameterValue build() {
+        }        public PipelineDefinitionParameterValue build() {
             return new PipelineDefinitionParameterValue(id, stringValue);
         }
     }

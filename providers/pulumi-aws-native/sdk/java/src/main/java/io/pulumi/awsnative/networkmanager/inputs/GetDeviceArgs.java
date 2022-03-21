@@ -72,12 +72,10 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
-
         public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
-        }
-        public GetDeviceArgs build() {
+        }        public GetDeviceArgs build() {
             return new GetDeviceArgs(deviceId, globalNetworkId);
         }
     }

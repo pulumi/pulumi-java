@@ -88,17 +88,14 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
-
         public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
-
         public Builder serviceProviderName(@Nullable String serviceProviderName) {
             this.serviceProviderName = serviceProviderName;
             return this;
-        }
-        public ExpressRouteCircuitServiceProviderPropertiesResponse build() {
+        }        public ExpressRouteCircuitServiceProviderPropertiesResponse build() {
             return new ExpressRouteCircuitServiceProviderPropertiesResponse(bandwidthInMbps, peeringLocation, serviceProviderName);
         }
     }

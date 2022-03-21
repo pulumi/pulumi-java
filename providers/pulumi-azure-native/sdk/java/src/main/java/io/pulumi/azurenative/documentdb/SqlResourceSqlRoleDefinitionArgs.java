@@ -157,72 +157,64 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder assignableScopes(@Nullable Output<List<String>> assignableScopes) {
             this.assignableScopes = assignableScopes;
             return this;
         }
-
         public Builder assignableScopes(@Nullable List<String> assignableScopes) {
             this.assignableScopes = Output.ofNullable(assignableScopes);
             return this;
         }
-
+        public Builder assignableScopes(String... assignableScopes) {
+            return assignableScopes(List.of(assignableScopes));
+        }
         public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<PermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(PermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder type(@Nullable Output<RoleDefinitionType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable RoleDefinitionType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SqlResourceSqlRoleDefinitionArgs build() {
+        }        public SqlResourceSqlRoleDefinitionArgs build() {
             return new SqlResourceSqlRoleDefinitionArgs(accountName, assignableScopes, permissions, resourceGroupName, roleDefinitionId, roleName, type);
         }
     }

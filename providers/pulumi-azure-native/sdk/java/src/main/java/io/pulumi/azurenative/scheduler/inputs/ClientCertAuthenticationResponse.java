@@ -139,32 +139,26 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
             this.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
-
         public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
             this.certificateSubjectName = certificateSubjectName;
             return this;
         }
-
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder pfx(@Nullable String pfx) {
             this.pfx = pfx;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ClientCertAuthenticationResponse build() {
+        }        public ClientCertAuthenticationResponse build() {
             return new ClientCertAuthenticationResponse(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
         }
     }

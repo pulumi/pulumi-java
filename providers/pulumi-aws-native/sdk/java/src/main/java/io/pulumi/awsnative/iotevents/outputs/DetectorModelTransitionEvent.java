@@ -104,22 +104,21 @@ public final class DetectorModelTransitionEvent {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(DetectorModelAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public Builder nextState(String nextState) {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
-        }
-        public DetectorModelTransitionEvent build() {
+        }        public DetectorModelTransitionEvent build() {
             return new DetectorModelTransitionEvent(actions, condition, eventName, nextState);
         }
     }

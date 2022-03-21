@@ -133,27 +133,31 @@ public final class CaPoolIssuancePolicyBaselineValues {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
+        public Builder additionalExtensions(CaPoolIssuancePolicyBaselineValuesAdditionalExtension... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
-
+        public Builder aiaOcspServers(String... aiaOcspServers) {
+            return aiaOcspServers(List.of(aiaOcspServers));
+        }
         public Builder caOptions(CaPoolIssuancePolicyBaselineValuesCaOptions caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
-
         public Builder keyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
-
         public Builder policyIds(@Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
-        public CaPoolIssuancePolicyBaselineValues build() {
+        public Builder policyIds(CaPoolIssuancePolicyBaselineValuesPolicyId... policyIds) {
+            return policyIds(List.of(policyIds));
+        }        public CaPoolIssuancePolicyBaselineValues build() {
             return new CaPoolIssuancePolicyBaselineValues(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }
     }

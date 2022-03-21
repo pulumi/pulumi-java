@@ -57,12 +57,10 @@ public final class ClusterNodeConfigSandboxConfigArgs extends io.pulumi.resource
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
-
         public Builder sandboxType(String sandboxType) {
             this.sandboxType = Output.of(Objects.requireNonNull(sandboxType));
             return this;
-        }
-        public ClusterNodeConfigSandboxConfigArgs build() {
+        }        public ClusterNodeConfigSandboxConfigArgs build() {
             return new ClusterNodeConfigSandboxConfigArgs(sandboxType);
         }
     }

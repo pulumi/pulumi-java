@@ -63,17 +63,14 @@ public final class InstanceFromMachineImageShieldedInstanceConfig {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableVtpm(@Nullable Boolean enableVtpm) {
             this.enableVtpm = enableVtpm;
             return this;
-        }
-        public InstanceFromMachineImageShieldedInstanceConfig build() {
+        }        public InstanceFromMachineImageShieldedInstanceConfig build() {
             return new InstanceFromMachineImageShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }
     }

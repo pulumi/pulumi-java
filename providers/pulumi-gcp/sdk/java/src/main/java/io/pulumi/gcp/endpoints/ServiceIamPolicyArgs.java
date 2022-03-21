@@ -70,22 +70,18 @@ public final class ServiceIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ServiceIamPolicyArgs build() {
+        }        public ServiceIamPolicyArgs build() {
             return new ServiceIamPolicyArgs(policyData, serviceName);
         }
     }

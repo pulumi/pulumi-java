@@ -92,17 +92,14 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SoftwareRecipeStepExtractArchiveResponse build() {
+        }        public SoftwareRecipeStepExtractArchiveResponse build() {
             return new SoftwareRecipeStepExtractArchiveResponse(artifactId, destination, type);
         }
     }

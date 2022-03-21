@@ -173,82 +173,66 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder deadline(@Nullable Output<Double> deadline) {
             this.deadline = deadline;
             return this;
         }
-
         public Builder deadline(@Nullable Double deadline) {
             this.deadline = Output.ofNullable(deadline);
             return this;
         }
-
         public Builder disableAuth(@Nullable Output<Boolean> disableAuth) {
             this.disableAuth = disableAuth;
             return this;
         }
-
         public Builder disableAuth(@Nullable Boolean disableAuth) {
             this.disableAuth = Output.ofNullable(disableAuth);
             return this;
         }
-
         public Builder jwtAudience(@Nullable Output<String> jwtAudience) {
             this.jwtAudience = jwtAudience;
             return this;
         }
-
         public Builder jwtAudience(@Nullable String jwtAudience) {
             this.jwtAudience = Output.ofNullable(jwtAudience);
             return this;
         }
-
         public Builder operationDeadline(@Nullable Output<Double> operationDeadline) {
             this.operationDeadline = operationDeadline;
             return this;
         }
-
         public Builder operationDeadline(@Nullable Double operationDeadline) {
             this.operationDeadline = Output.ofNullable(operationDeadline);
             return this;
         }
-
         public Builder pathTranslation(@Nullable Output<BackendRulePathTranslation> pathTranslation) {
             this.pathTranslation = pathTranslation;
             return this;
         }
-
         public Builder pathTranslation(@Nullable BackendRulePathTranslation pathTranslation) {
             this.pathTranslation = Output.ofNullable(pathTranslation);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public BackendRuleArgs build() {
+        }        public BackendRuleArgs build() {
             return new BackendRuleArgs(address, deadline, disableAuth, jwtAudience, operationDeadline, pathTranslation, protocol, selector);
         }
     }

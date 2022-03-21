@@ -60,8 +60,7 @@ public final class FrontendEndpointLinkResponse extends io.pulumi.resources.Invo
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public FrontendEndpointLinkResponse build() {
+        }        public FrontendEndpointLinkResponse build() {
             return new FrontendEndpointLinkResponse(id);
         }
     }

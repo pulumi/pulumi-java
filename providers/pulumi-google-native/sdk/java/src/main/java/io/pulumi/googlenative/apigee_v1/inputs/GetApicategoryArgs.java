@@ -76,17 +76,14 @@ public final class GetApicategoryArgs extends io.pulumi.resources.InvokeArgs {
             this.apicategoryId = Objects.requireNonNull(apicategoryId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
-        }
-        public GetApicategoryArgs build() {
+        }        public GetApicategoryArgs build() {
             return new GetApicategoryArgs(apicategoryId, organizationId, siteId);
         }
     }

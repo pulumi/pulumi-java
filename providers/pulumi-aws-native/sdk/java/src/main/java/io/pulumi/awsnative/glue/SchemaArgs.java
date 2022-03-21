@@ -168,82 +168,69 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.checkpointVersion = checkpointVersion;
             return this;
         }
-
         public Builder checkpointVersion(@Nullable SchemaVersionArgs checkpointVersion) {
             this.checkpointVersion = Output.ofNullable(checkpointVersion);
             return this;
         }
-
         public Builder compatibility(Output<SchemaCompatibility> compatibility) {
             this.compatibility = Objects.requireNonNull(compatibility);
             return this;
         }
-
         public Builder compatibility(SchemaCompatibility compatibility) {
             this.compatibility = Output.of(Objects.requireNonNull(compatibility));
             return this;
         }
-
         public Builder dataFormat(Output<SchemaDataFormat> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
-
         public Builder dataFormat(SchemaDataFormat dataFormat) {
             this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder registry(@Nullable Output<SchemaRegistryArgs> registry) {
             this.registry = registry;
             return this;
         }
-
         public Builder registry(@Nullable SchemaRegistryArgs registry) {
             this.registry = Output.ofNullable(registry);
             return this;
         }
-
         public Builder schemaDefinition(Output<String> schemaDefinition) {
             this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
             return this;
         }
-
         public Builder schemaDefinition(String schemaDefinition) {
             this.schemaDefinition = Output.of(Objects.requireNonNull(schemaDefinition));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<SchemaTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<SchemaTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public SchemaArgs build() {
+        public Builder tags(SchemaTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public SchemaArgs build() {
             return new SchemaArgs(checkpointVersion, compatibility, dataFormat, description, name, registry, schemaDefinition, tags);
         }
     }

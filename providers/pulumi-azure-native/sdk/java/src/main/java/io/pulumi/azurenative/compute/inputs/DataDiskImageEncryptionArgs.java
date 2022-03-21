@@ -79,22 +79,18 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
             return this;
         }
-
         public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
-        }
-        public DataDiskImageEncryptionArgs build() {
+        }        public DataDiskImageEncryptionArgs build() {
             return new DataDiskImageEncryptionArgs(diskEncryptionSetId, lun);
         }
     }

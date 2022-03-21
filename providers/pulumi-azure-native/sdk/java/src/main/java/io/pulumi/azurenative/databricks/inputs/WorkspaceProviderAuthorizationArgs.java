@@ -77,22 +77,18 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
-        }
-        public WorkspaceProviderAuthorizationArgs build() {
+        }        public WorkspaceProviderAuthorizationArgs build() {
             return new WorkspaceProviderAuthorizationArgs(principalId, roleDefinitionId);
         }
     }

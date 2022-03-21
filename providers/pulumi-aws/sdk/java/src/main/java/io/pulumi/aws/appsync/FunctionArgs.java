@@ -188,92 +188,74 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder dataSource(Output<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
-
         public Builder dataSource(String dataSource) {
             this.dataSource = Output.of(Objects.requireNonNull(dataSource));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
             this.functionVersion = functionVersion;
             return this;
         }
-
         public Builder functionVersion(@Nullable String functionVersion) {
             this.functionVersion = Output.ofNullable(functionVersion);
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
             this.maxBatchSize = Output.ofNullable(maxBatchSize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder requestMappingTemplate(Output<String> requestMappingTemplate) {
             this.requestMappingTemplate = Objects.requireNonNull(requestMappingTemplate);
             return this;
         }
-
         public Builder requestMappingTemplate(String requestMappingTemplate) {
             this.requestMappingTemplate = Output.of(Objects.requireNonNull(requestMappingTemplate));
             return this;
         }
-
         public Builder responseMappingTemplate(Output<String> responseMappingTemplate) {
             this.responseMappingTemplate = Objects.requireNonNull(responseMappingTemplate);
             return this;
         }
-
         public Builder responseMappingTemplate(String responseMappingTemplate) {
             this.responseMappingTemplate = Output.of(Objects.requireNonNull(responseMappingTemplate));
             return this;
         }
-
         public Builder syncConfig(@Nullable Output<FunctionSyncConfigArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
-
         public Builder syncConfig(@Nullable FunctionSyncConfigArgs syncConfig) {
             this.syncConfig = Output.ofNullable(syncConfig);
             return this;
-        }
-        public FunctionArgs build() {
+        }        public FunctionArgs build() {
             return new FunctionArgs(apiId, dataSource, description, functionVersion, maxBatchSize, name, requestMappingTemplate, responseMappingTemplate, syncConfig);
         }
     }

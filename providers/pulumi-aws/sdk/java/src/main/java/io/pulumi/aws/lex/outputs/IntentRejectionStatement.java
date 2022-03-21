@@ -81,12 +81,13 @@ public final class IntentRejectionStatement {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(IntentRejectionStatementMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public IntentRejectionStatement build() {
+        }        public IntentRejectionStatement build() {
             return new IntentRejectionStatement(messages, responseCard);
         }
     }

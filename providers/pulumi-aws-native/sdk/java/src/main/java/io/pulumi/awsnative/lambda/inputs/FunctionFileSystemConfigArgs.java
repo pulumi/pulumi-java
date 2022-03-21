@@ -73,22 +73,18 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder localMountPath(Output<String> localMountPath) {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
         }
-
         public Builder localMountPath(String localMountPath) {
             this.localMountPath = Output.of(Objects.requireNonNull(localMountPath));
             return this;
-        }
-        public FunctionFileSystemConfigArgs build() {
+        }        public FunctionFileSystemConfigArgs build() {
             return new FunctionFileSystemConfigArgs(arn, localMountPath);
         }
     }

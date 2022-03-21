@@ -78,22 +78,18 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
             this.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
-
         public Builder defaultConfigurationLink(@Nullable String defaultConfigurationLink) {
             this.defaultConfigurationLink = Output.ofNullable(defaultConfigurationLink);
             return this;
         }
-
         public Builder mediaLink(Output<String> mediaLink) {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }
-
         public Builder mediaLink(String mediaLink) {
             this.mediaLink = Output.of(Objects.requireNonNull(mediaLink));
             return this;
-        }
-        public UserArtifactSourceArgs build() {
+        }        public UserArtifactSourceArgs build() {
             return new UserArtifactSourceArgs(defaultConfigurationLink, mediaLink);
         }
     }

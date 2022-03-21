@@ -123,52 +123,42 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder latestRevision(@Nullable Integer latestRevision) {
             this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder propertiesFileContent(@Nullable Output<String> propertiesFileContent) {
             this.propertiesFileContent = propertiesFileContent;
             return this;
         }
-
         public Builder propertiesFileContent(@Nullable String propertiesFileContent) {
             this.propertiesFileContent = Output.ofNullable(propertiesFileContent);
             return this;
-        }
-        public WorkerConfigurationState build() {
+        }        public WorkerConfigurationState build() {
             return new WorkerConfigurationState(arn, description, latestRevision, name, propertiesFileContent);
         }
     }

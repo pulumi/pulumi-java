@@ -113,42 +113,34 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             this.argumentKind = argumentKind;
             return this;
         }
-
         public Builder argumentKind(@Nullable ArgumentArgumentKind argumentKind) {
             this.argumentKind = Output.ofNullable(argumentKind);
             return this;
         }
-
         public Builder dataType(@Nullable Output<StandardSqlDataTypeArgs> dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable StandardSqlDataTypeArgs dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder mode(@Nullable Output<ArgumentMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable ArgumentMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ArgumentArgs build() {
+        }        public ArgumentArgs build() {
             return new ArgumentArgs(argumentKind, dataType, mode, name);
         }
     }

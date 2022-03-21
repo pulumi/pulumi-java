@@ -286,152 +286,122 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder entity(@Nullable Output<String> entity) {
             this.entity = entity;
             return this;
         }
-
         public Builder entity(@Nullable String entity) {
             this.entity = Output.ofNullable(entity);
             return this;
         }
-
         public Builder entityId(@Nullable Output<String> entityId) {
             this.entityId = entityId;
             return this;
         }
-
         public Builder entityId(@Nullable String entityId) {
             this.entityId = Output.ofNullable(entityId);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder generation(@Nullable Output<String> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable String generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
-
         public Builder projectTeam(@Nullable Output<ObjectAccessControlProjectTeamArgs> projectTeam) {
             this.projectTeam = projectTeam;
             return this;
         }
-
         public Builder projectTeam(@Nullable ObjectAccessControlProjectTeamArgs projectTeam) {
             this.projectTeam = Output.ofNullable(projectTeam);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = Output.ofNullable(userProject);
             return this;
-        }
-        public ObjectAccessControlArgs build() {
+        }        public ObjectAccessControlArgs build() {
             return new ObjectAccessControlArgs(bucket, domain, email, entity, entityId, etag, generation, id, kind, object, projectTeam, provisionalUserProject, role, selfLink, userProject);
         }
     }

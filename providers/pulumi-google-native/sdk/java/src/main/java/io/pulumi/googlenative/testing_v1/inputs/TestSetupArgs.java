@@ -164,72 +164,70 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             this.account = account;
             return this;
         }
-
         public Builder account(@Nullable AccountArgs account) {
             this.account = Output.ofNullable(account);
             return this;
         }
-
         public Builder additionalApks(@Nullable Output<List<ApkArgs>> additionalApks) {
             this.additionalApks = additionalApks;
             return this;
         }
-
         public Builder additionalApks(@Nullable List<ApkArgs> additionalApks) {
             this.additionalApks = Output.ofNullable(additionalApks);
             return this;
         }
-
+        public Builder additionalApks(ApkArgs... additionalApks) {
+            return additionalApks(List.of(additionalApks));
+        }
         public Builder directoriesToPull(@Nullable Output<List<String>> directoriesToPull) {
             this.directoriesToPull = directoriesToPull;
             return this;
         }
-
         public Builder directoriesToPull(@Nullable List<String> directoriesToPull) {
             this.directoriesToPull = Output.ofNullable(directoriesToPull);
             return this;
         }
-
+        public Builder directoriesToPull(String... directoriesToPull) {
+            return directoriesToPull(List.of(directoriesToPull));
+        }
         public Builder dontAutograntPermissions(@Nullable Output<Boolean> dontAutograntPermissions) {
             this.dontAutograntPermissions = dontAutograntPermissions;
             return this;
         }
-
         public Builder dontAutograntPermissions(@Nullable Boolean dontAutograntPermissions) {
             this.dontAutograntPermissions = Output.ofNullable(dontAutograntPermissions);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder filesToPush(@Nullable Output<List<DeviceFileArgs>> filesToPush) {
             this.filesToPush = filesToPush;
             return this;
         }
-
         public Builder filesToPush(@Nullable List<DeviceFileArgs> filesToPush) {
             this.filesToPush = Output.ofNullable(filesToPush);
             return this;
         }
-
+        public Builder filesToPush(DeviceFileArgs... filesToPush) {
+            return filesToPush(List.of(filesToPush));
+        }
         public Builder networkProfile(@Nullable Output<String> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable String networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
-        }
-        public TestSetupArgs build() {
+        }        public TestSetupArgs build() {
             return new TestSetupArgs(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
         }
     }

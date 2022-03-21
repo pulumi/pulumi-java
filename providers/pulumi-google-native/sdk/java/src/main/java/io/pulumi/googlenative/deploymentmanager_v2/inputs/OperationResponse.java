@@ -400,112 +400,93 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
             this.clientOperationId = Objects.requireNonNull(clientOperationId);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder error(OperationErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder httpErrorMessage(String httpErrorMessage) {
             this.httpErrorMessage = Objects.requireNonNull(httpErrorMessage);
             return this;
         }
-
         public Builder httpErrorStatusCode(Integer httpErrorStatusCode) {
             this.httpErrorStatusCode = Objects.requireNonNull(httpErrorStatusCode);
             return this;
         }
-
         public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationGroupId(String operationGroupId) {
             this.operationGroupId = Objects.requireNonNull(operationGroupId);
             return this;
         }
-
         public Builder operationType(String operationType) {
             this.operationType = Objects.requireNonNull(operationType);
             return this;
         }
-
         public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder targetLink(String targetLink) {
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public Builder warnings(List<OperationWarningsItemResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
+        public Builder warnings(OperationWarningsItemResponse... warnings) {
+            return warnings(List.of(warnings));
+        }
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public OperationResponse build() {
+        }        public OperationResponse build() {
             return new OperationResponse(clientOperationId, description, endTime, error, httpErrorMessage, httpErrorStatusCode, insertTime, kind, name, operationGroupId, operationType, progress, region, selfLink, startTime, status, statusMessage, targetId, targetLink, user, warnings, zone);
         }
     }

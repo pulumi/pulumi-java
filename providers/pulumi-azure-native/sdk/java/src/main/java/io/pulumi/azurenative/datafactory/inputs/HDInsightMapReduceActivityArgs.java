@@ -296,152 +296,137 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<Object> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(Object... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder className(Output<Object> className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
-
         public Builder className(Object className) {
             this.className = Output.of(Objects.requireNonNull(className));
             return this;
         }
-
         public Builder defines(@Nullable Output<Map<String,Object>> defines) {
             this.defines = defines;
             return this;
         }
-
         public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = Output.ofNullable(defines);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
-
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
             this.getDebugInfo = Output.ofNullable(getDebugInfo);
             return this;
         }
-
         public Builder jarFilePath(Output<Object> jarFilePath) {
             this.jarFilePath = Objects.requireNonNull(jarFilePath);
             return this;
         }
-
         public Builder jarFilePath(Object jarFilePath) {
             this.jarFilePath = Output.of(Objects.requireNonNull(jarFilePath));
             return this;
         }
-
         public Builder jarLibs(@Nullable Output<List<Object>> jarLibs) {
             this.jarLibs = jarLibs;
             return this;
         }
-
         public Builder jarLibs(@Nullable List<Object> jarLibs) {
             this.jarLibs = Output.ofNullable(jarLibs);
             return this;
         }
-
+        public Builder jarLibs(Object... jarLibs) {
+            return jarLibs(List.of(jarLibs));
+        }
         public Builder jarLinkedService(@Nullable Output<LinkedServiceReferenceArgs> jarLinkedService) {
             this.jarLinkedService = jarLinkedService;
             return this;
         }
-
         public Builder jarLinkedService(@Nullable LinkedServiceReferenceArgs jarLinkedService) {
             this.jarLinkedService = Output.ofNullable(jarLinkedService);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
             this.storageLinkedServices = Output.ofNullable(storageLinkedServices);
             return this;
         }
-
+        public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
+            return storageLinkedServices(List.of(storageLinkedServices));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public HDInsightMapReduceActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public HDInsightMapReduceActivityArgs build() {
             return new HDInsightMapReduceActivityArgs(arguments, className, defines, dependsOn, description, getDebugInfo, jarFilePath, jarLibs, jarLinkedService, linkedServiceName, name, policy, storageLinkedServices, type, userProperties);
         }
     }

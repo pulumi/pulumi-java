@@ -87,17 +87,14 @@ public final class RosettaNetPipBusinessDocumentResponse {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public RosettaNetPipBusinessDocumentResponse build() {
+        }        public RosettaNetPipBusinessDocumentResponse build() {
             return new RosettaNetPipBusinessDocumentResponse(description, name, version);
         }
     }

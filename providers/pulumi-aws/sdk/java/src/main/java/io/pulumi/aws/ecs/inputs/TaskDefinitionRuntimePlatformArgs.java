@@ -74,22 +74,18 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
             this.cpuArchitecture = cpuArchitecture;
             return this;
         }
-
         public Builder cpuArchitecture(@Nullable String cpuArchitecture) {
             this.cpuArchitecture = Output.ofNullable(cpuArchitecture);
             return this;
         }
-
         public Builder operatingSystemFamily(@Nullable Output<String> operatingSystemFamily) {
             this.operatingSystemFamily = operatingSystemFamily;
             return this;
         }
-
         public Builder operatingSystemFamily(@Nullable String operatingSystemFamily) {
             this.operatingSystemFamily = Output.ofNullable(operatingSystemFamily);
             return this;
-        }
-        public TaskDefinitionRuntimePlatformArgs build() {
+        }        public TaskDefinitionRuntimePlatformArgs build() {
             return new TaskDefinitionRuntimePlatformArgs(cpuArchitecture, operatingSystemFamily);
         }
     }

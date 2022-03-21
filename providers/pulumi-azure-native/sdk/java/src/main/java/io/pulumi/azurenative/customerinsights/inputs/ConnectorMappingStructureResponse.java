@@ -111,22 +111,18 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
             this.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
-
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
-
         public Builder propertyName(String propertyName) {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
-        }
-        public ConnectorMappingStructureResponse build() {
+        }        public ConnectorMappingStructureResponse build() {
             return new ConnectorMappingStructureResponse(columnName, customFormatSpecifier, isEncrypted, propertyName);
         }
     }

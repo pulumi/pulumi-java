@@ -52,8 +52,7 @@ public final class LabelSelectorResponse {
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public LabelSelectorResponse build() {
+        }        public LabelSelectorResponse build() {
             return new LabelSelectorResponse(labels);
         }
     }

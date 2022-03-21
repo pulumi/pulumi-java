@@ -81,22 +81,21 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
-
         public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Output.of(Objects.requireNonNull(serializedPayload));
             return this;
         }
-
         public Builder signatures(Output<List<OccurenceAttestationSignatureGetArgs>> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public Builder signatures(List<OccurenceAttestationSignatureGetArgs> signatures) {
             this.signatures = Output.of(Objects.requireNonNull(signatures));
             return this;
         }
-        public OccurenceAttestationGetArgs build() {
+        public Builder signatures(OccurenceAttestationSignatureGetArgs... signatures) {
+            return signatures(List.of(signatures));
+        }        public OccurenceAttestationGetArgs build() {
             return new OccurenceAttestationGetArgs(serializedPayload, signatures);
         }
     }

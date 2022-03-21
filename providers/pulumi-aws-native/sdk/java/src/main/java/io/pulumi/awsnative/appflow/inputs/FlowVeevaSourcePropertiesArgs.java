@@ -103,52 +103,42 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
             this.documentType = documentType;
             return this;
         }
-
         public Builder documentType(@Nullable String documentType) {
             this.documentType = Output.ofNullable(documentType);
             return this;
         }
-
         public Builder includeAllVersions(@Nullable Output<Boolean> includeAllVersions) {
             this.includeAllVersions = includeAllVersions;
             return this;
         }
-
         public Builder includeAllVersions(@Nullable Boolean includeAllVersions) {
             this.includeAllVersions = Output.ofNullable(includeAllVersions);
             return this;
         }
-
         public Builder includeRenditions(@Nullable Output<Boolean> includeRenditions) {
             this.includeRenditions = includeRenditions;
             return this;
         }
-
         public Builder includeRenditions(@Nullable Boolean includeRenditions) {
             this.includeRenditions = Output.ofNullable(includeRenditions);
             return this;
         }
-
         public Builder includeSourceFiles(@Nullable Output<Boolean> includeSourceFiles) {
             this.includeSourceFiles = includeSourceFiles;
             return this;
         }
-
         public Builder includeSourceFiles(@Nullable Boolean includeSourceFiles) {
             this.includeSourceFiles = Output.ofNullable(includeSourceFiles);
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowVeevaSourcePropertiesArgs build() {
+        }        public FlowVeevaSourcePropertiesArgs build() {
             return new FlowVeevaSourcePropertiesArgs(documentType, includeAllVersions, includeRenditions, includeSourceFiles, object);
         }
     }

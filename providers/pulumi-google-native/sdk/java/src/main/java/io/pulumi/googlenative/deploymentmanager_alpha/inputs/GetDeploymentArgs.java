@@ -66,12 +66,10 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDeploymentArgs build() {
+        }        public GetDeploymentArgs build() {
             return new GetDeploymentArgs(deployment, project);
         }
     }

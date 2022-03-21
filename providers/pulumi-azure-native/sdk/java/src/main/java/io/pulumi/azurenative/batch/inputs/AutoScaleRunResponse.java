@@ -83,17 +83,14 @@ public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
             this.error = error;
             return this;
         }
-
         public Builder evaluationTime(String evaluationTime) {
             this.evaluationTime = Objects.requireNonNull(evaluationTime);
             return this;
         }
-
         public Builder results(@Nullable String results) {
             this.results = results;
             return this;
-        }
-        public AutoScaleRunResponse build() {
+        }        public AutoScaleRunResponse build() {
             return new AutoScaleRunResponse(error, evaluationTime, results);
         }
     }

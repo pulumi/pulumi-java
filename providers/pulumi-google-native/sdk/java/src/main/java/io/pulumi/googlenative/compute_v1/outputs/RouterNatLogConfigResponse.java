@@ -70,12 +70,10 @@ public final class RouterNatLogConfigResponse {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
-        }
-        public RouterNatLogConfigResponse build() {
+        }        public RouterNatLogConfigResponse build() {
             return new RouterNatLogConfigResponse(enable, filter);
         }
     }

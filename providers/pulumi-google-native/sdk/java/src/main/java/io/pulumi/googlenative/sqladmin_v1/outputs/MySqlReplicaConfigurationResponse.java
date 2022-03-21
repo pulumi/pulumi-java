@@ -215,57 +215,46 @@ public final class MySqlReplicaConfigurationResponse {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
-
         public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
-
         public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
-
         public Builder connectRetryInterval(Integer connectRetryInterval) {
             this.connectRetryInterval = Objects.requireNonNull(connectRetryInterval);
             return this;
         }
-
         public Builder dumpFilePath(String dumpFilePath) {
             this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder masterHeartbeatPeriod(String masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = Objects.requireNonNull(masterHeartbeatPeriod);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder sslCipher(String sslCipher) {
             this.sslCipher = Objects.requireNonNull(sslCipher);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder verifyServerCertificate(Boolean verifyServerCertificate) {
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
-        }
-        public MySqlReplicaConfigurationResponse build() {
+        }        public MySqlReplicaConfigurationResponse build() {
             return new MySqlReplicaConfigurationResponse(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, kind, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }
     }

@@ -55,12 +55,10 @@ public final class CapacityProviderTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CapacityProviderTag build() {
+        }        public CapacityProviderTag build() {
             return new CapacityProviderTag(key, value);
         }
     }

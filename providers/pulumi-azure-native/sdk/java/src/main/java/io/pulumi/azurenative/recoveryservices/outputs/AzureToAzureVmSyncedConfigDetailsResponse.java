@@ -73,12 +73,13 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
             this.inputEndpoints = inputEndpoints;
             return this;
         }
-
+        public Builder inputEndpoints(InputEndpointResponse... inputEndpoints) {
+            return inputEndpoints(List.of(inputEndpoints));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public AzureToAzureVmSyncedConfigDetailsResponse build() {
+        }        public AzureToAzureVmSyncedConfigDetailsResponse build() {
             return new AzureToAzureVmSyncedConfigDetailsResponse(inputEndpoints, tags);
         }
     }

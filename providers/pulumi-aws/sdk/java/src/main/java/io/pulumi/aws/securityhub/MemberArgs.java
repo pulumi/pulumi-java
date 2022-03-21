@@ -91,32 +91,26 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
-
         public Builder invite(@Nullable Boolean invite) {
             this.invite = Output.ofNullable(invite);
             return this;
-        }
-        public MemberArgs build() {
+        }        public MemberArgs build() {
             return new MemberArgs(accountId, email, invite);
         }
     }

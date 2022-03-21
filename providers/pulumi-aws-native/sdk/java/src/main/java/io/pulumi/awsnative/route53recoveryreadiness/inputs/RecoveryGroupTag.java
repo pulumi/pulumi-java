@@ -65,12 +65,13 @@ public final class RecoveryGroupTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public RecoveryGroupTag build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public RecoveryGroupTag build() {
             return new RecoveryGroupTag(key, value);
         }
     }

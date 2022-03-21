@@ -135,32 +135,26 @@ public final class AzureStorageInfoValueResponse {
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
-
         public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AzureStorageInfoValueResponse build() {
+        }        public AzureStorageInfoValueResponse build() {
             return new AzureStorageInfoValueResponse(accessKey, accountName, mountPath, shareName, state, type);
         }
     }

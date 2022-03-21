@@ -151,37 +151,42 @@ public final class CacheKeyPolicyResponse {
             this.includeHost = Objects.requireNonNull(includeHost);
             return this;
         }
-
         public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
             this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
             return this;
         }
-
+        public Builder includeHttpHeaders(String... includeHttpHeaders) {
+            return includeHttpHeaders(List.of(includeHttpHeaders));
+        }
         public Builder includeNamedCookies(List<String> includeNamedCookies) {
             this.includeNamedCookies = Objects.requireNonNull(includeNamedCookies);
             return this;
         }
-
+        public Builder includeNamedCookies(String... includeNamedCookies) {
+            return includeNamedCookies(List.of(includeNamedCookies));
+        }
         public Builder includeProtocol(Boolean includeProtocol) {
             this.includeProtocol = Objects.requireNonNull(includeProtocol);
             return this;
         }
-
         public Builder includeQueryString(Boolean includeQueryString) {
             this.includeQueryString = Objects.requireNonNull(includeQueryString);
             return this;
         }
-
         public Builder queryStringBlacklist(List<String> queryStringBlacklist) {
             this.queryStringBlacklist = Objects.requireNonNull(queryStringBlacklist);
             return this;
         }
-
+        public Builder queryStringBlacklist(String... queryStringBlacklist) {
+            return queryStringBlacklist(List.of(queryStringBlacklist));
+        }
         public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
             return this;
         }
-        public CacheKeyPolicyResponse build() {
+        public Builder queryStringWhitelist(String... queryStringWhitelist) {
+            return queryStringWhitelist(List.of(queryStringWhitelist));
+        }        public CacheKeyPolicyResponse build() {
             return new CacheKeyPolicyResponse(includeHost, includeHttpHeaders, includeNamedCookies, includeProtocol, includeQueryString, queryStringBlacklist, queryStringWhitelist);
         }
     }

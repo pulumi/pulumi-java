@@ -384,212 +384,182 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder containerDefinitions(@Nullable Output<String> containerDefinitions) {
             this.containerDefinitions = containerDefinitions;
             return this;
         }
-
         public Builder containerDefinitions(@Nullable String containerDefinitions) {
             this.containerDefinitions = Output.ofNullable(containerDefinitions);
             return this;
         }
-
         public Builder cpu(@Nullable Output<String> cpu) {
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable String cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder ephemeralStorage(@Nullable Output<TaskDefinitionEphemeralStorageGetArgs> ephemeralStorage) {
             this.ephemeralStorage = ephemeralStorage;
             return this;
         }
-
         public Builder ephemeralStorage(@Nullable TaskDefinitionEphemeralStorageGetArgs ephemeralStorage) {
             this.ephemeralStorage = Output.ofNullable(ephemeralStorage);
             return this;
         }
-
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
-
         public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder inferenceAccelerators(@Nullable Output<List<TaskDefinitionInferenceAcceleratorGetArgs>> inferenceAccelerators) {
             this.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
-
         public Builder inferenceAccelerators(@Nullable List<TaskDefinitionInferenceAcceleratorGetArgs> inferenceAccelerators) {
             this.inferenceAccelerators = Output.ofNullable(inferenceAccelerators);
             return this;
         }
-
+        public Builder inferenceAccelerators(TaskDefinitionInferenceAcceleratorGetArgs... inferenceAccelerators) {
+            return inferenceAccelerators(List.of(inferenceAccelerators));
+        }
         public Builder ipcMode(@Nullable Output<String> ipcMode) {
             this.ipcMode = ipcMode;
             return this;
         }
-
         public Builder ipcMode(@Nullable String ipcMode) {
             this.ipcMode = Output.ofNullable(ipcMode);
             return this;
         }
-
         public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memory(@Nullable String memory) {
             this.memory = Output.ofNullable(memory);
             return this;
         }
-
         public Builder networkMode(@Nullable Output<String> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
-
         public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = Output.ofNullable(networkMode);
             return this;
         }
-
         public Builder pidMode(@Nullable Output<String> pidMode) {
             this.pidMode = pidMode;
             return this;
         }
-
         public Builder pidMode(@Nullable String pidMode) {
             this.pidMode = Output.ofNullable(pidMode);
             return this;
         }
-
         public Builder placementConstraints(@Nullable Output<List<TaskDefinitionPlacementConstraintGetArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
-
         public Builder placementConstraints(@Nullable List<TaskDefinitionPlacementConstraintGetArgs> placementConstraints) {
             this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
-
+        public Builder placementConstraints(TaskDefinitionPlacementConstraintGetArgs... placementConstraints) {
+            return placementConstraints(List.of(placementConstraints));
+        }
         public Builder proxyConfiguration(@Nullable Output<TaskDefinitionProxyConfigurationGetArgs> proxyConfiguration) {
             this.proxyConfiguration = proxyConfiguration;
             return this;
         }
-
         public Builder proxyConfiguration(@Nullable TaskDefinitionProxyConfigurationGetArgs proxyConfiguration) {
             this.proxyConfiguration = Output.ofNullable(proxyConfiguration);
             return this;
         }
-
         public Builder requiresCompatibilities(@Nullable Output<List<String>> requiresCompatibilities) {
             this.requiresCompatibilities = requiresCompatibilities;
             return this;
         }
-
         public Builder requiresCompatibilities(@Nullable List<String> requiresCompatibilities) {
             this.requiresCompatibilities = Output.ofNullable(requiresCompatibilities);
             return this;
         }
-
+        public Builder requiresCompatibilities(String... requiresCompatibilities) {
+            return requiresCompatibilities(List.of(requiresCompatibilities));
+        }
         public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Integer revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder runtimePlatform(@Nullable Output<TaskDefinitionRuntimePlatformGetArgs> runtimePlatform) {
             this.runtimePlatform = runtimePlatform;
             return this;
         }
-
         public Builder runtimePlatform(@Nullable TaskDefinitionRuntimePlatformGetArgs runtimePlatform) {
             this.runtimePlatform = Output.ofNullable(runtimePlatform);
             return this;
         }
-
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
             this.skipDestroy = skipDestroy;
             return this;
         }
-
         public Builder skipDestroy(@Nullable Boolean skipDestroy) {
             this.skipDestroy = Output.ofNullable(skipDestroy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder taskRoleArn(@Nullable Output<String> taskRoleArn) {
             this.taskRoleArn = taskRoleArn;
             return this;
         }
-
         public Builder taskRoleArn(@Nullable String taskRoleArn) {
             this.taskRoleArn = Output.ofNullable(taskRoleArn);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<TaskDefinitionVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<TaskDefinitionVolumeGetArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public TaskDefinitionState build() {
+        public Builder volumes(TaskDefinitionVolumeGetArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public TaskDefinitionState build() {
             return new TaskDefinitionState(arn, containerDefinitions, cpu, ephemeralStorage, executionRoleArn, family, inferenceAccelerators, ipcMode, memory, networkMode, pidMode, placementConstraints, proxyConfiguration, requiresCompatibilities, revision, runtimePlatform, skipDestroy, tags, tagsAll, taskRoleArn, volumes);
         }
     }

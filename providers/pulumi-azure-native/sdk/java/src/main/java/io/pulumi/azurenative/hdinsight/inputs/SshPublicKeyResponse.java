@@ -60,8 +60,7 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
         public Builder certificateData(@Nullable String certificateData) {
             this.certificateData = certificateData;
             return this;
-        }
-        public SshPublicKeyResponse build() {
+        }        public SshPublicKeyResponse build() {
             return new SshPublicKeyResponse(certificateData);
         }
     }

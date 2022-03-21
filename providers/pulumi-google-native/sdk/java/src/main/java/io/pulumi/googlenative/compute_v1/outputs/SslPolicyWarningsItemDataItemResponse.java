@@ -69,12 +69,10 @@ public final class SslPolicyWarningsItemDataItemResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SslPolicyWarningsItemDataItemResponse build() {
+        }        public SslPolicyWarningsItemDataItemResponse build() {
             return new SslPolicyWarningsItemDataItemResponse(key, value);
         }
     }

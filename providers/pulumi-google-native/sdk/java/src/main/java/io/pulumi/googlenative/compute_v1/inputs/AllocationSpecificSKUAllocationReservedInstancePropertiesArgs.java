@@ -129,52 +129,48 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
             this.guestAccelerators = guestAccelerators;
             return this;
         }
-
         public Builder guestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
             this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(AcceleratorConfigArgs... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder localSsds(@Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds) {
             this.localSsds = localSsds;
             return this;
         }
-
         public Builder localSsds(@Nullable List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs> localSsds) {
             this.localSsds = Output.ofNullable(localSsds);
             return this;
         }
-
+        public Builder localSsds(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs... localSsds) {
+            return localSsds(List.of(localSsds));
+        }
         public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
-
         public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
-        }
-        public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs build() {
+        }        public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs build() {
             return new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(guestAccelerators, localSsds, locationHint, machineType, minCpuPlatform);
         }
     }

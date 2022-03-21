@@ -91,32 +91,26 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder targetKeyId(Output<String> targetKeyId) {
             this.targetKeyId = Objects.requireNonNull(targetKeyId);
             return this;
         }
-
         public Builder targetKeyId(String targetKeyId) {
             this.targetKeyId = Output.of(Objects.requireNonNull(targetKeyId));
             return this;
-        }
-        public AliasArgs build() {
+        }        public AliasArgs build() {
             return new AliasArgs(name, namePrefix, targetKeyId);
         }
     }

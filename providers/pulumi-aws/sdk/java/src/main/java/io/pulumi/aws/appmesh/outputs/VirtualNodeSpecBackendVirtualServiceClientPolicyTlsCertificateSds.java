@@ -51,8 +51,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds(secretName);
         }
     }

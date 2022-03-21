@@ -109,22 +109,21 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
             this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
             return this;
         }
-
         public Builder inputs(List<String> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
+        public Builder inputs(String... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
-        }
-        public EditAtomResponse build() {
+        }        public EditAtomResponse build() {
             return new EditAtomResponse(endTimeOffset, inputs, key, startTimeOffset);
         }
     }

@@ -189,47 +189,44 @@ public final class AwsNodePoolConfig {
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
-
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder rootVolume(@Nullable AwsNodePoolConfigRootVolume rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder sshConfig(@Nullable AwsNodePoolConfigSshConfig sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder taints(@Nullable List<AwsNodePoolConfigTaint> taints) {
             this.taints = taints;
             return this;
         }
-        public AwsNodePoolConfig build() {
+        public Builder taints(AwsNodePoolConfigTaint... taints) {
+            return taints(List.of(taints));
+        }        public AwsNodePoolConfig build() {
             return new AwsNodePoolConfig(configEncryption, iamInstanceProfile, instanceType, labels, rootVolume, securityGroupIds, sshConfig, tags, taints);
         }
     }

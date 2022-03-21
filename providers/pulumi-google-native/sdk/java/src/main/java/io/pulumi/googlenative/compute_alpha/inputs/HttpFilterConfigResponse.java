@@ -92,17 +92,14 @@ public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeAr
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder configTypeUrl(String configTypeUrl) {
             this.configTypeUrl = Objects.requireNonNull(configTypeUrl);
             return this;
         }
-
         public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
-        }
-        public HttpFilterConfigResponse build() {
+        }        public HttpFilterConfigResponse build() {
             return new HttpFilterConfigResponse(config, configTypeUrl, filterName);
         }
     }

@@ -78,17 +78,14 @@ public final class GetAddressArgs extends io.pulumi.resources.InvokeArgs {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetAddressArgs build() {
+        }        public GetAddressArgs build() {
             return new GetAddressArgs(address, project, region);
         }
     }

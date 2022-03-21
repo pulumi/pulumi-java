@@ -119,27 +119,25 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
-
         public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
-
         public Builder bucketValues(List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
-
+        public Builder bucketValues(GooglePrivacyDlpV2LDiversityEquivalenceClassResponse... bucketValues) {
+            return bucketValues(List.of(bucketValues));
+        }
         public Builder sensitiveValueFrequencyLowerBound(String sensitiveValueFrequencyLowerBound) {
             this.sensitiveValueFrequencyLowerBound = Objects.requireNonNull(sensitiveValueFrequencyLowerBound);
             return this;
         }
-
         public Builder sensitiveValueFrequencyUpperBound(String sensitiveValueFrequencyUpperBound) {
             this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound);
             return this;
-        }
-        public GooglePrivacyDlpV2LDiversityHistogramBucketResponse build() {
+        }        public GooglePrivacyDlpV2LDiversityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2LDiversityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, sensitiveValueFrequencyLowerBound, sensitiveValueFrequencyUpperBound);
         }
     }

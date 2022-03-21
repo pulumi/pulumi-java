@@ -96,32 +96,26 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends io.pulumi.re
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = Output.ofNullable(oldestRecoveryPoint);
             return this;
         }
-
         public Builder policyInconsistent(@Nullable Output<Boolean> policyInconsistent) {
             this.policyInconsistent = policyInconsistent;
             return this;
         }
-
         public Builder policyInconsistent(@Nullable Boolean policyInconsistent) {
             this.policyInconsistent = Output.ofNullable(policyInconsistent);
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = Output.ofNullable(recoveryPointCount);
             return this;
-        }
-        public AzureIaaSVMProtectedItemExtendedInfoArgs build() {
+        }        public AzureIaaSVMProtectedItemExtendedInfoArgs build() {
             return new AzureIaaSVMProtectedItemExtendedInfoArgs(oldestRecoveryPoint, policyInconsistent, recoveryPointCount);
         }
     }

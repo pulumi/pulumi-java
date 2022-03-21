@@ -133,62 +133,50 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
             this.inputConfig = Objects.requireNonNull(inputConfig);
             return this;
         }
-
         public Builder inputConfig(GlossaryInputConfigArgs inputConfig) {
             this.inputConfig = Output.of(Objects.requireNonNull(inputConfig));
             return this;
         }
-
         public Builder languageCodesSet(@Nullable Output<LanguageCodesSetArgs> languageCodesSet) {
             this.languageCodesSet = languageCodesSet;
             return this;
         }
-
         public Builder languageCodesSet(@Nullable LanguageCodesSetArgs languageCodesSet) {
             this.languageCodesSet = Output.ofNullable(languageCodesSet);
             return this;
         }
-
         public Builder languagePair(@Nullable Output<LanguageCodePairArgs> languagePair) {
             this.languagePair = languagePair;
             return this;
         }
-
         public Builder languagePair(@Nullable LanguageCodePairArgs languagePair) {
             this.languagePair = Output.ofNullable(languagePair);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GlossaryArgs build() {
+        }        public GlossaryArgs build() {
             return new GlossaryArgs(inputConfig, languageCodesSet, languagePair, location, name, project);
         }
     }

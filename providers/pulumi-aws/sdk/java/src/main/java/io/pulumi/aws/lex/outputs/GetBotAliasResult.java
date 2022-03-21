@@ -181,47 +181,38 @@ public final class GetBotAliasResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder botName(String botName) {
             this.botName = Objects.requireNonNull(botName);
             return this;
         }
-
         public Builder botVersion(String botVersion) {
             this.botVersion = Objects.requireNonNull(botVersion);
             return this;
         }
-
         public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetBotAliasResult build() {
+        }        public GetBotAliasResult build() {
             return new GetBotAliasResult(arn, botName, botVersion, checksum, createdDate, description, id, lastUpdatedDate, name);
         }
     }

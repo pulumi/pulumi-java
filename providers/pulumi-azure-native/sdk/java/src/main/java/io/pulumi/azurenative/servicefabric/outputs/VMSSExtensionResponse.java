@@ -202,52 +202,45 @@ public final class VMSSExtensionResponse {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
             this.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
-
+        public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
+            return provisionAfterExtensions(List.of(provisionAfterExtensions));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public Builder settings(@Nullable Object settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
-        }
-        public VMSSExtensionResponse build() {
+        }        public VMSSExtensionResponse build() {
             return new VMSSExtensionResponse(autoUpgradeMinorVersion, forceUpdateTag, name, protectedSettings, provisionAfterExtensions, provisioningState, publisher, settings, type, typeHandlerVersion);
         }
     }

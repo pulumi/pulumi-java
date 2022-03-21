@@ -247,67 +247,54 @@ public final class GetWebAppHostNameBindingResult {
             this.azureResourceName = azureResourceName;
             return this;
         }
-
         public Builder azureResourceType(@Nullable String azureResourceType) {
             this.azureResourceType = azureResourceType;
             return this;
         }
-
         public Builder customHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
-
         public Builder domainId(@Nullable String domainId) {
             this.domainId = domainId;
             return this;
         }
-
         public Builder hostNameType(@Nullable String hostNameType) {
             this.hostNameType = hostNameType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder siteName(@Nullable String siteName) {
             this.siteName = siteName;
             return this;
         }
-
         public Builder sslState(@Nullable String sslState) {
             this.sslState = sslState;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualIP(String virtualIP) {
             this.virtualIP = Objects.requireNonNull(virtualIP);
             return this;
-        }
-        public GetWebAppHostNameBindingResult build() {
+        }        public GetWebAppHostNameBindingResult build() {
             return new GetWebAppHostNameBindingResult(azureResourceName, azureResourceType, customHostNameDnsRecordType, domainId, hostNameType, id, kind, name, siteName, sslState, thumbprint, type, virtualIP);
         }
     }

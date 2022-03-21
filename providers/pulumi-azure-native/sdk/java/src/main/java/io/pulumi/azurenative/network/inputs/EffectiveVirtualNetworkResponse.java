@@ -94,17 +94,14 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder membershipType(@Nullable String membershipType) {
             this.membershipType = membershipType;
             return this;
-        }
-        public EffectiveVirtualNetworkResponse build() {
+        }        public EffectiveVirtualNetworkResponse build() {
             return new EffectiveVirtualNetworkResponse(id, location, membershipType);
         }
     }

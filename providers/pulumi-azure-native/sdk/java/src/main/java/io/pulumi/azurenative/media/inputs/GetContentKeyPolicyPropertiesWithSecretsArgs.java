@@ -88,17 +88,14 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder contentKeyPolicyName(String contentKeyPolicyName) {
             this.contentKeyPolicyName = Objects.requireNonNull(contentKeyPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetContentKeyPolicyPropertiesWithSecretsArgs build() {
+        }        public GetContentKeyPolicyPropertiesWithSecretsArgs build() {
             return new GetContentKeyPolicyPropertiesWithSecretsArgs(accountName, contentKeyPolicyName, resourceGroupName);
         }
     }

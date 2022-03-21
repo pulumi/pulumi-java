@@ -71,22 +71,18 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder destinationType(@Nullable Output<AssessmentReportDestinationType> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
-
         public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
             this.destinationType = Output.ofNullable(destinationType);
             return this;
-        }
-        public AssessmentReportsDestinationArgs build() {
+        }        public AssessmentReportsDestinationArgs build() {
             return new AssessmentReportsDestinationArgs(destination, destinationType);
         }
     }

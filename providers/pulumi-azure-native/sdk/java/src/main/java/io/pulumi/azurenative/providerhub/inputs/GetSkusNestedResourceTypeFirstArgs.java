@@ -104,22 +104,18 @@ public final class GetSkusNestedResourceTypeFirstArgs extends io.pulumi.resource
             this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst);
             return this;
         }
-
         public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
-        }
-        public GetSkusNestedResourceTypeFirstArgs build() {
+        }        public GetSkusNestedResourceTypeFirstArgs build() {
             return new GetSkusNestedResourceTypeFirstArgs(nestedResourceTypeFirst, providerNamespace, resourceType, sku);
         }
     }

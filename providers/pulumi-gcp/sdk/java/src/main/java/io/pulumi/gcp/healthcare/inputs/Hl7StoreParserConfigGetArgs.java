@@ -111,42 +111,34 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
             this.allowNullHeader = allowNullHeader;
             return this;
         }
-
         public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
             this.allowNullHeader = Output.ofNullable(allowNullHeader);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder segmentTerminator(@Nullable Output<String> segmentTerminator) {
             this.segmentTerminator = segmentTerminator;
             return this;
         }
-
         public Builder segmentTerminator(@Nullable String segmentTerminator) {
             this.segmentTerminator = Output.ofNullable(segmentTerminator);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public Hl7StoreParserConfigGetArgs build() {
+        }        public Hl7StoreParserConfigGetArgs build() {
             return new Hl7StoreParserConfigGetArgs(allowNullHeader, schema, segmentTerminator, version);
         }
     }

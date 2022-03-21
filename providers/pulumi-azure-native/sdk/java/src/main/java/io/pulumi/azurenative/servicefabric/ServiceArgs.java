@@ -311,162 +311,139 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder applicationName(String applicationName) {
             this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder correlationScheme(@Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme) {
             this.correlationScheme = correlationScheme;
             return this;
         }
-
         public Builder correlationScheme(@Nullable List<ServiceCorrelationDescriptionArgs> correlationScheme) {
             this.correlationScheme = Output.ofNullable(correlationScheme);
             return this;
         }
-
+        public Builder correlationScheme(ServiceCorrelationDescriptionArgs... correlationScheme) {
+            return correlationScheme(List.of(correlationScheme));
+        }
         public Builder defaultMoveCost(@Nullable Output<Either<String,MoveCost>> defaultMoveCost) {
             this.defaultMoveCost = defaultMoveCost;
             return this;
         }
-
         public Builder defaultMoveCost(@Nullable Either<String,MoveCost> defaultMoveCost) {
             this.defaultMoveCost = Output.ofNullable(defaultMoveCost);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder partitionDescription(@Nullable Output<Object> partitionDescription) {
             this.partitionDescription = partitionDescription;
             return this;
         }
-
         public Builder partitionDescription(@Nullable Object partitionDescription) {
             this.partitionDescription = Output.ofNullable(partitionDescription);
             return this;
         }
-
         public Builder placementConstraints(@Nullable Output<String> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
-
         public Builder placementConstraints(@Nullable String placementConstraints) {
             this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceDnsName(@Nullable Output<String> serviceDnsName) {
             this.serviceDnsName = serviceDnsName;
             return this;
         }
-
         public Builder serviceDnsName(@Nullable String serviceDnsName) {
             this.serviceDnsName = Output.ofNullable(serviceDnsName);
             return this;
         }
-
         public Builder serviceKind(Output<Either<String,ServiceKind>> serviceKind) {
             this.serviceKind = Objects.requireNonNull(serviceKind);
             return this;
         }
-
         public Builder serviceKind(Either<String,ServiceKind> serviceKind) {
             this.serviceKind = Output.of(Objects.requireNonNull(serviceKind));
             return this;
         }
-
         public Builder serviceLoadMetrics(@Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
             this.serviceLoadMetrics = serviceLoadMetrics;
             return this;
         }
-
         public Builder serviceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
             this.serviceLoadMetrics = Output.ofNullable(serviceLoadMetrics);
             return this;
         }
-
+        public Builder serviceLoadMetrics(ServiceLoadMetricDescriptionArgs... serviceLoadMetrics) {
+            return serviceLoadMetrics(List.of(serviceLoadMetrics));
+        }
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder servicePackageActivationMode(@Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
             this.servicePackageActivationMode = servicePackageActivationMode;
             return this;
         }
-
         public Builder servicePackageActivationMode(@Nullable Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
             this.servicePackageActivationMode = Output.ofNullable(servicePackageActivationMode);
             return this;
         }
-
         public Builder servicePlacementPolicies(@Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
             this.servicePlacementPolicies = servicePlacementPolicies;
             return this;
         }
-
         public Builder servicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
             this.servicePlacementPolicies = Output.ofNullable(servicePlacementPolicies);
             return this;
         }
-
+        public Builder servicePlacementPolicies(ServicePlacementPolicyDescriptionArgs... servicePlacementPolicies) {
+            return servicePlacementPolicies(List.of(servicePlacementPolicies));
+        }
         public Builder serviceTypeName(@Nullable Output<String> serviceTypeName) {
             this.serviceTypeName = serviceTypeName;
             return this;
         }
-
         public Builder serviceTypeName(@Nullable String serviceTypeName) {
             this.serviceTypeName = Output.ofNullable(serviceTypeName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(applicationName, clusterName, correlationScheme, defaultMoveCost, location, partitionDescription, placementConstraints, resourceGroupName, serviceDnsName, serviceKind, serviceLoadMetrics, serviceName, servicePackageActivationMode, servicePlacementPolicies, serviceTypeName, tags);
         }
     }

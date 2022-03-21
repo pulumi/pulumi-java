@@ -105,22 +105,21 @@ public final class BudgetFilterResponse {
             this.and = and;
             return this;
         }
-
+        public Builder and(BudgetFilterPropertiesResponse... and) {
+            return and(List.of(and));
+        }
         public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder not(@Nullable BudgetFilterPropertiesResponse not) {
             this.not = not;
             return this;
         }
-
         public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
-        }
-        public BudgetFilterResponse build() {
+        }        public BudgetFilterResponse build() {
             return new BudgetFilterResponse(and, dimensions, not, tags);
         }
     }

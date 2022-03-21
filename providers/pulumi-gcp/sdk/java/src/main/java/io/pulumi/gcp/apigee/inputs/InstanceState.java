@@ -213,102 +213,82 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskEncryptionKeyName(@Nullable Output<String> diskEncryptionKeyName) {
             this.diskEncryptionKeyName = diskEncryptionKeyName;
             return this;
         }
-
         public Builder diskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
             this.diskEncryptionKeyName = Output.ofNullable(diskEncryptionKeyName);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
-
         public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
-
         public Builder orgId(@Nullable String orgId) {
             this.orgId = Output.ofNullable(orgId);
             return this;
         }
-
         public Builder peeringCidrRange(@Nullable Output<String> peeringCidrRange) {
             this.peeringCidrRange = peeringCidrRange;
             return this;
         }
-
         public Builder peeringCidrRange(@Nullable String peeringCidrRange) {
             this.peeringCidrRange = Output.ofNullable(peeringCidrRange);
             return this;
         }
-
         public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public InstanceState build() {
+        }        public InstanceState build() {
             return new InstanceState(description, diskEncryptionKeyName, displayName, host, ipRange, location, name, orgId, peeringCidrRange, port);
         }
     }

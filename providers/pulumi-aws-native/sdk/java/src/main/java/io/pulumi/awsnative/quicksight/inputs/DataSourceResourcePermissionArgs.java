@@ -92,22 +92,21 @@ public final class DataSourceResourcePermissionArgs extends io.pulumi.resources.
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<String> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
-        }
-        public DataSourceResourcePermissionArgs build() {
+        }        public DataSourceResourcePermissionArgs build() {
             return new DataSourceResourcePermissionArgs(actions, principal);
         }
     }

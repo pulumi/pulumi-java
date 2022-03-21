@@ -51,8 +51,7 @@ public final class PrivateConnectivityResponse {
         public Builder privateConnection(String privateConnection) {
             this.privateConnection = Objects.requireNonNull(privateConnection);
             return this;
-        }
-        public PrivateConnectivityResponse build() {
+        }        public PrivateConnectivityResponse build() {
             return new PrivateConnectivityResponse(privateConnection);
         }
     }

@@ -69,12 +69,10 @@ public final class AliasIpRangeResponse {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder subnetworkRangeName(String subnetworkRangeName) {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
-        }
-        public AliasIpRangeResponse build() {
+        }        public AliasIpRangeResponse build() {
             return new AliasIpRangeResponse(ipCidrRange, subnetworkRangeName);
         }
     }

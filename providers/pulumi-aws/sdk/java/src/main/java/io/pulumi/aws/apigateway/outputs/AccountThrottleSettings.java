@@ -72,12 +72,10 @@ public final class AccountThrottleSettings {
             this.burstLimit = burstLimit;
             return this;
         }
-
         public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = rateLimit;
             return this;
-        }
-        public AccountThrottleSettings build() {
+        }        public AccountThrottleSettings build() {
             return new AccountThrottleSettings(burstLimit, rateLimit);
         }
     }

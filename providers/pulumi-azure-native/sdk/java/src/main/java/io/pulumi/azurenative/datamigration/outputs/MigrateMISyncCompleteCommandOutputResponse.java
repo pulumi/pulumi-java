@@ -54,7 +54,9 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
             this.errors = errors;
             return this;
         }
-        public MigrateMISyncCompleteCommandOutputResponse build() {
+        public Builder errors(ReportableExceptionResponse... errors) {
+            return errors(List.of(errors));
+        }        public MigrateMISyncCompleteCommandOutputResponse build() {
             return new MigrateMISyncCompleteCommandOutputResponse(errors);
         }
     }

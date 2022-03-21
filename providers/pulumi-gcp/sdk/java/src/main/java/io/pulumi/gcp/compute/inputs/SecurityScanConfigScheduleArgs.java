@@ -77,22 +77,18 @@ public final class SecurityScanConfigScheduleArgs extends io.pulumi.resources.Re
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
-
         public Builder intervalDurationDays(Integer intervalDurationDays) {
             this.intervalDurationDays = Output.of(Objects.requireNonNull(intervalDurationDays));
             return this;
         }
-
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }
-
         public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = Output.ofNullable(scheduleTime);
             return this;
-        }
-        public SecurityScanConfigScheduleArgs build() {
+        }        public SecurityScanConfigScheduleArgs build() {
             return new SecurityScanConfigScheduleArgs(intervalDurationDays, scheduleTime);
         }
     }

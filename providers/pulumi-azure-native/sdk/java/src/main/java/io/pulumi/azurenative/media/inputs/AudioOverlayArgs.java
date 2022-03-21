@@ -160,72 +160,58 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
             this.audioGainLevel = audioGainLevel;
             return this;
         }
-
         public Builder audioGainLevel(@Nullable Double audioGainLevel) {
             this.audioGainLevel = Output.ofNullable(audioGainLevel);
             return this;
         }
-
         public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder fadeInDuration(@Nullable Output<String> fadeInDuration) {
             this.fadeInDuration = fadeInDuration;
             return this;
         }
-
         public Builder fadeInDuration(@Nullable String fadeInDuration) {
             this.fadeInDuration = Output.ofNullable(fadeInDuration);
             return this;
         }
-
         public Builder fadeOutDuration(@Nullable Output<String> fadeOutDuration) {
             this.fadeOutDuration = fadeOutDuration;
             return this;
         }
-
         public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
             this.fadeOutDuration = Output.ofNullable(fadeOutDuration);
             return this;
         }
-
         public Builder inputLabel(Output<String> inputLabel) {
             this.inputLabel = Objects.requireNonNull(inputLabel);
             return this;
         }
-
         public Builder inputLabel(String inputLabel) {
             this.inputLabel = Output.of(Objects.requireNonNull(inputLabel));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public AudioOverlayArgs build() {
+        }        public AudioOverlayArgs build() {
             return new AudioOverlayArgs(audioGainLevel, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, start);
         }
     }

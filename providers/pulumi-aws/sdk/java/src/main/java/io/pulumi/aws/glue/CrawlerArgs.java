@@ -349,192 +349,175 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             this.catalogTargets = catalogTargets;
             return this;
         }
-
         public Builder catalogTargets(@Nullable List<CrawlerCatalogTargetArgs> catalogTargets) {
             this.catalogTargets = Output.ofNullable(catalogTargets);
             return this;
         }
-
+        public Builder catalogTargets(CrawlerCatalogTargetArgs... catalogTargets) {
+            return catalogTargets(List.of(catalogTargets));
+        }
         public Builder classifiers(@Nullable Output<List<String>> classifiers) {
             this.classifiers = classifiers;
             return this;
         }
-
         public Builder classifiers(@Nullable List<String> classifiers) {
             this.classifiers = Output.ofNullable(classifiers);
             return this;
         }
-
+        public Builder classifiers(String... classifiers) {
+            return classifiers(List.of(classifiers));
+        }
         public Builder configuration(@Nullable Output<String> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable String configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder deltaTargets(@Nullable Output<List<CrawlerDeltaTargetArgs>> deltaTargets) {
             this.deltaTargets = deltaTargets;
             return this;
         }
-
         public Builder deltaTargets(@Nullable List<CrawlerDeltaTargetArgs> deltaTargets) {
             this.deltaTargets = Output.ofNullable(deltaTargets);
             return this;
         }
-
+        public Builder deltaTargets(CrawlerDeltaTargetArgs... deltaTargets) {
+            return deltaTargets(List.of(deltaTargets));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dynamodbTargets(@Nullable Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets) {
             this.dynamodbTargets = dynamodbTargets;
             return this;
         }
-
         public Builder dynamodbTargets(@Nullable List<CrawlerDynamodbTargetArgs> dynamodbTargets) {
             this.dynamodbTargets = Output.ofNullable(dynamodbTargets);
             return this;
         }
-
+        public Builder dynamodbTargets(CrawlerDynamodbTargetArgs... dynamodbTargets) {
+            return dynamodbTargets(List.of(dynamodbTargets));
+        }
         public Builder jdbcTargets(@Nullable Output<List<CrawlerJdbcTargetArgs>> jdbcTargets) {
             this.jdbcTargets = jdbcTargets;
             return this;
         }
-
         public Builder jdbcTargets(@Nullable List<CrawlerJdbcTargetArgs> jdbcTargets) {
             this.jdbcTargets = Output.ofNullable(jdbcTargets);
             return this;
         }
-
+        public Builder jdbcTargets(CrawlerJdbcTargetArgs... jdbcTargets) {
+            return jdbcTargets(List.of(jdbcTargets));
+        }
         public Builder lineageConfiguration(@Nullable Output<CrawlerLineageConfigurationArgs> lineageConfiguration) {
             this.lineageConfiguration = lineageConfiguration;
             return this;
         }
-
         public Builder lineageConfiguration(@Nullable CrawlerLineageConfigurationArgs lineageConfiguration) {
             this.lineageConfiguration = Output.ofNullable(lineageConfiguration);
             return this;
         }
-
         public Builder mongodbTargets(@Nullable Output<List<CrawlerMongodbTargetArgs>> mongodbTargets) {
             this.mongodbTargets = mongodbTargets;
             return this;
         }
-
         public Builder mongodbTargets(@Nullable List<CrawlerMongodbTargetArgs> mongodbTargets) {
             this.mongodbTargets = Output.ofNullable(mongodbTargets);
             return this;
         }
-
+        public Builder mongodbTargets(CrawlerMongodbTargetArgs... mongodbTargets) {
+            return mongodbTargets(List.of(mongodbTargets));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder recrawlPolicy(@Nullable Output<CrawlerRecrawlPolicyArgs> recrawlPolicy) {
             this.recrawlPolicy = recrawlPolicy;
             return this;
         }
-
         public Builder recrawlPolicy(@Nullable CrawlerRecrawlPolicyArgs recrawlPolicy) {
             this.recrawlPolicy = Output.ofNullable(recrawlPolicy);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder s3Targets(@Nullable Output<List<CrawlerS3TargetArgs>> s3Targets) {
             this.s3Targets = s3Targets;
             return this;
         }
-
         public Builder s3Targets(@Nullable List<CrawlerS3TargetArgs> s3Targets) {
             this.s3Targets = Output.ofNullable(s3Targets);
             return this;
         }
-
+        public Builder s3Targets(CrawlerS3TargetArgs... s3Targets) {
+            return s3Targets(List.of(s3Targets));
+        }
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder schemaChangePolicy(@Nullable Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy) {
             this.schemaChangePolicy = schemaChangePolicy;
             return this;
         }
-
         public Builder schemaChangePolicy(@Nullable CrawlerSchemaChangePolicyArgs schemaChangePolicy) {
             this.schemaChangePolicy = Output.ofNullable(schemaChangePolicy);
             return this;
         }
-
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
-
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
-
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
-
         public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = Output.ofNullable(tablePrefix);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CrawlerArgs build() {
+        }        public CrawlerArgs build() {
             return new CrawlerArgs(catalogTargets, classifiers, configuration, databaseName, deltaTargets, description, dynamodbTargets, jdbcTargets, lineageConfiguration, mongodbTargets, name, recrawlPolicy, role, s3Targets, schedule, schemaChangePolicy, securityConfiguration, tablePrefix, tags);
         }
     }

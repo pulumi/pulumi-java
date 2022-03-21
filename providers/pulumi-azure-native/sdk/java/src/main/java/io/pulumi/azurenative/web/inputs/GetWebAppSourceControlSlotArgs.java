@@ -88,17 +88,14 @@ public final class GetWebAppSourceControlSlotArgs extends io.pulumi.resources.In
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppSourceControlSlotArgs build() {
+        }        public GetWebAppSourceControlSlotArgs build() {
             return new GetWebAppSourceControlSlotArgs(name, resourceGroupName, slot);
         }
     }

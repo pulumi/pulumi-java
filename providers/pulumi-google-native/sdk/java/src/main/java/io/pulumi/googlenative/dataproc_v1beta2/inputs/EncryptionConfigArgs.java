@@ -61,12 +61,10 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             this.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
-
         public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
             this.gcePdKmsKeyName = Output.ofNullable(gcePdKmsKeyName);
             return this;
-        }
-        public EncryptionConfigArgs build() {
+        }        public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(gcePdKmsKeyName);
         }
     }

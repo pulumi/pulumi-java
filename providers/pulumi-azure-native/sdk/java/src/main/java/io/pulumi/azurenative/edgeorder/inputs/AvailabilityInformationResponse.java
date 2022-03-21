@@ -92,17 +92,14 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
             this.availabilityStage = Objects.requireNonNull(availabilityStage);
             return this;
         }
-
         public Builder disabledReason(String disabledReason) {
             this.disabledReason = Objects.requireNonNull(disabledReason);
             return this;
         }
-
         public Builder disabledReasonMessage(String disabledReasonMessage) {
             this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
             return this;
-        }
-        public AvailabilityInformationResponse build() {
+        }        public AvailabilityInformationResponse build() {
             return new AvailabilityInformationResponse(availabilityStage, disabledReason, disabledReasonMessage);
         }
     }

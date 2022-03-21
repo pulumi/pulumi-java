@@ -95,32 +95,26 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
-
         public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Output.of(Objects.requireNonNull(currentAverageValue));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public PodsMetricStatusArgs build() {
+        }        public PodsMetricStatusArgs build() {
             return new PodsMetricStatusArgs(currentAverageValue, metricName, selector);
         }
     }

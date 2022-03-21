@@ -155,62 +155,56 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             this.admissionWhitelistPatterns = admissionWhitelistPatterns;
             return this;
         }
-
         public Builder admissionWhitelistPatterns(@Nullable List<PolicyAdmissionWhitelistPatternGetArgs> admissionWhitelistPatterns) {
             this.admissionWhitelistPatterns = Output.ofNullable(admissionWhitelistPatterns);
             return this;
         }
-
+        public Builder admissionWhitelistPatterns(PolicyAdmissionWhitelistPatternGetArgs... admissionWhitelistPatterns) {
+            return admissionWhitelistPatterns(List.of(admissionWhitelistPatterns));
+        }
         public Builder clusterAdmissionRules(@Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules) {
             this.clusterAdmissionRules = clusterAdmissionRules;
             return this;
         }
-
         public Builder clusterAdmissionRules(@Nullable List<PolicyClusterAdmissionRuleGetArgs> clusterAdmissionRules) {
             this.clusterAdmissionRules = Output.ofNullable(clusterAdmissionRules);
             return this;
         }
-
+        public Builder clusterAdmissionRules(PolicyClusterAdmissionRuleGetArgs... clusterAdmissionRules) {
+            return clusterAdmissionRules(List.of(clusterAdmissionRules));
+        }
         public Builder defaultAdmissionRule(@Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule) {
             this.defaultAdmissionRule = defaultAdmissionRule;
             return this;
         }
-
         public Builder defaultAdmissionRule(@Nullable PolicyDefaultAdmissionRuleGetArgs defaultAdmissionRule) {
             this.defaultAdmissionRule = Output.ofNullable(defaultAdmissionRule);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalPolicyEvaluationMode(@Nullable Output<String> globalPolicyEvaluationMode) {
             this.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
             return this;
         }
-
         public Builder globalPolicyEvaluationMode(@Nullable String globalPolicyEvaluationMode) {
             this.globalPolicyEvaluationMode = Output.ofNullable(globalPolicyEvaluationMode);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public PolicyState build() {
+        }        public PolicyState build() {
             return new PolicyState(admissionWhitelistPatterns, clusterAdmissionRules, defaultAdmissionRule, description, globalPolicyEvaluationMode, project);
         }
     }

@@ -124,52 +124,42 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
             this.customCname = customCname;
             return this;
         }
-
         public Builder customCname(@Nullable String customCname) {
             this.customCname = Output.ofNullable(customCname);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder expirationInDays(Output<Integer> expirationInDays) {
             this.expirationInDays = Objects.requireNonNull(expirationInDays);
             return this;
         }
-
         public Builder expirationInDays(Integer expirationInDays) {
             this.expirationInDays = Output.of(Objects.requireNonNull(expirationInDays));
             return this;
         }
-
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = Output.ofNullable(s3BucketName);
             return this;
         }
-
         public Builder s3ObjectAcl(@Nullable Output<String> s3ObjectAcl) {
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
         }
-
         public Builder s3ObjectAcl(@Nullable String s3ObjectAcl) {
             this.s3ObjectAcl = Output.ofNullable(s3ObjectAcl);
             return this;
-        }
-        public CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs build() {
+        }        public CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs build() {
             return new CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }
     }

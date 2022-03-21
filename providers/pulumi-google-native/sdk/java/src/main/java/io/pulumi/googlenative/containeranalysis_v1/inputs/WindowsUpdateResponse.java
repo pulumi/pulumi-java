@@ -159,37 +159,36 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
+        public Builder categories(CategoryResponse... categories) {
+            return categories(List.of(categories));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder identity(IdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder kbArticleIds(List<String> kbArticleIds) {
             this.kbArticleIds = Objects.requireNonNull(kbArticleIds);
             return this;
         }
-
+        public Builder kbArticleIds(String... kbArticleIds) {
+            return kbArticleIds(List.of(kbArticleIds));
+        }
         public Builder lastPublishedTimestamp(String lastPublishedTimestamp) {
             this.lastPublishedTimestamp = Objects.requireNonNull(lastPublishedTimestamp);
             return this;
         }
-
         public Builder supportUrl(String supportUrl) {
             this.supportUrl = Objects.requireNonNull(supportUrl);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public WindowsUpdateResponse build() {
+        }        public WindowsUpdateResponse build() {
             return new WindowsUpdateResponse(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
         }
     }

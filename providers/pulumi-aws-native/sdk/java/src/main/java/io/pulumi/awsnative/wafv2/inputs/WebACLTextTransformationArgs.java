@@ -70,22 +70,18 @@ public final class WebACLTextTransformationArgs extends io.pulumi.resources.Reso
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder type(Output<WebACLTextTransformationType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(WebACLTextTransformationType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WebACLTextTransformationArgs build() {
+        }        public WebACLTextTransformationArgs build() {
             return new WebACLTextTransformationArgs(priority, type);
         }
     }

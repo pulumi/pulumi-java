@@ -53,8 +53,7 @@ public final class ListOpenIdConnectProviderSecretsResult {
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
-        }
-        public ListOpenIdConnectProviderSecretsResult build() {
+        }        public ListOpenIdConnectProviderSecretsResult build() {
             return new ListOpenIdConnectProviderSecretsResult(clientSecret);
         }
     }

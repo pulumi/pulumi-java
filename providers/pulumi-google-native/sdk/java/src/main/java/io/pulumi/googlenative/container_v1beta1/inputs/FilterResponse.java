@@ -60,7 +60,9 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-        public FilterResponse build() {
+        public Builder eventType(String... eventType) {
+            return eventType(List.of(eventType));
+        }        public FilterResponse build() {
             return new FilterResponse(eventType);
         }
     }

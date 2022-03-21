@@ -53,8 +53,7 @@ public final class PipelineResponseFolder {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public PipelineResponseFolder build() {
+        }        public PipelineResponseFolder build() {
             return new PipelineResponseFolder(name);
         }
     }

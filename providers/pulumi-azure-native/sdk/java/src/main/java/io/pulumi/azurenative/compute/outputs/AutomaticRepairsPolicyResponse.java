@@ -72,12 +72,10 @@ public final class AutomaticRepairsPolicyResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder gracePeriod(@Nullable String gracePeriod) {
             this.gracePeriod = gracePeriod;
             return this;
-        }
-        public AutomaticRepairsPolicyResponse build() {
+        }        public AutomaticRepairsPolicyResponse build() {
             return new AutomaticRepairsPolicyResponse(enabled, gracePeriod);
         }
     }

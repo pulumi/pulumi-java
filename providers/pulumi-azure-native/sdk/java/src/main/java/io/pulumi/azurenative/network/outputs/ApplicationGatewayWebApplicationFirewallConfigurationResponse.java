@@ -204,52 +204,48 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
             this.disabledRuleGroups = disabledRuleGroups;
             return this;
         }
-
+        public Builder disabledRuleGroups(ApplicationGatewayFirewallDisabledRuleGroupResponse... disabledRuleGroups) {
+            return disabledRuleGroups(List.of(disabledRuleGroups));
+        }
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder exclusions(@Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
+        public Builder exclusions(ApplicationGatewayFirewallExclusionResponse... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             this.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
-
         public Builder firewallMode(String firewallMode) {
             this.firewallMode = Objects.requireNonNull(firewallMode);
             return this;
         }
-
         public Builder maxRequestBodySize(@Nullable Integer maxRequestBodySize) {
             this.maxRequestBodySize = maxRequestBodySize;
             return this;
         }
-
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
-
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
-
         public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
-
         public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
-        }
-        public ApplicationGatewayWebApplicationFirewallConfigurationResponse build() {
+        }        public ApplicationGatewayWebApplicationFirewallConfigurationResponse build() {
             return new ApplicationGatewayWebApplicationFirewallConfigurationResponse(disabledRuleGroups, enabled, exclusions, fileUploadLimitInMb, firewallMode, maxRequestBodySize, maxRequestBodySizeInKb, requestBodyCheck, ruleSetType, ruleSetVersion);
         }
     }

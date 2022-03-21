@@ -82,17 +82,14 @@ public final class AssessmentAWSAccount extends io.pulumi.resources.InvokeArgs {
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public AssessmentAWSAccount build() {
+        }        public AssessmentAWSAccount build() {
             return new AssessmentAWSAccount(emailAddress, id, name);
         }
     }

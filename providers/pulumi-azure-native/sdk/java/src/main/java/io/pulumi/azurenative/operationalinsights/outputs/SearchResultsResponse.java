@@ -136,32 +136,26 @@ public final class SearchResultsResponse {
             this.description = description;
             return this;
         }
-
         public Builder endSearchTime(@Nullable String endSearchTime) {
             this.endSearchTime = endSearchTime;
             return this;
         }
-
         public Builder limit(@Nullable Integer limit) {
             this.limit = limit;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
-
         public Builder sourceTable(String sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
-
         public Builder startSearchTime(@Nullable String startSearchTime) {
             this.startSearchTime = startSearchTime;
             return this;
-        }
-        public SearchResultsResponse build() {
+        }        public SearchResultsResponse build() {
             return new SearchResultsResponse(description, endSearchTime, limit, query, sourceTable, startSearchTime);
         }
     }

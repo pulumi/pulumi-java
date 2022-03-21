@@ -81,22 +81,21 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
-
         public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethods>> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = Output.ofNullable(bearerTokenSendingMethods);
             return this;
         }
-
+        public Builder bearerTokenSendingMethods(Either<String,BearerTokenSendingMethods>... bearerTokenSendingMethods) {
+            return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
+        }
         public Builder openidProviderId(@Nullable Output<String> openidProviderId) {
             this.openidProviderId = openidProviderId;
             return this;
         }
-
         public Builder openidProviderId(@Nullable String openidProviderId) {
             this.openidProviderId = Output.ofNullable(openidProviderId);
             return this;
-        }
-        public OpenIdAuthenticationSettingsContractArgs build() {
+        }        public OpenIdAuthenticationSettingsContractArgs build() {
             return new OpenIdAuthenticationSettingsContractArgs(bearerTokenSendingMethods, openidProviderId);
         }
     }

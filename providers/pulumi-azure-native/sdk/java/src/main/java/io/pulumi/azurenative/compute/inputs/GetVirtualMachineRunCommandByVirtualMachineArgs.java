@@ -106,22 +106,18 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder runCommandName(String runCommandName) {
             this.runCommandName = Objects.requireNonNull(runCommandName);
             return this;
         }
-
         public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
-        }
-        public GetVirtualMachineRunCommandByVirtualMachineArgs build() {
+        }        public GetVirtualMachineRunCommandByVirtualMachineArgs build() {
             return new GetVirtualMachineRunCommandByVirtualMachineArgs(expand, resourceGroupName, runCommandName, vmName);
         }
     }

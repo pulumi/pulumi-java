@@ -69,12 +69,10 @@ public final class FargateProfileLabel {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FargateProfileLabel build() {
+        }        public FargateProfileLabel build() {
             return new FargateProfileLabel(key, value);
         }
     }

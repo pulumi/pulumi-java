@@ -189,47 +189,41 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
             this.agentVersionExpiryDate = Objects.requireNonNull(agentVersionExpiryDate);
             return this;
         }
-
         public Builder driverVersion(String driverVersion) {
             this.driverVersion = Objects.requireNonNull(driverVersion);
             return this;
         }
-
         public Builder driverVersionExpiryDate(String driverVersionExpiryDate) {
             this.driverVersionExpiryDate = Objects.requireNonNull(driverVersionExpiryDate);
             return this;
         }
-
         public Builder isUpgradeable(String isUpgradeable) {
             this.isUpgradeable = Objects.requireNonNull(isUpgradeable);
             return this;
         }
-
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
-
         public Builder latestUpgradableVersionWithoutReboot(String latestUpgradableVersionWithoutReboot) {
             this.latestUpgradableVersionWithoutReboot = Objects.requireNonNull(latestUpgradableVersionWithoutReboot);
             return this;
         }
-
         public Builder latestVersion(String latestVersion) {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
-
         public Builder reasonsBlockingUpgrade(List<String> reasonsBlockingUpgrade) {
             this.reasonsBlockingUpgrade = Objects.requireNonNull(reasonsBlockingUpgrade);
             return this;
         }
-
+        public Builder reasonsBlockingUpgrade(String... reasonsBlockingUpgrade) {
+            return reasonsBlockingUpgrade(List.of(reasonsBlockingUpgrade));
+        }
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public InMageRcmMobilityAgentDetailsResponse build() {
+        }        public InMageRcmMobilityAgentDetailsResponse build() {
             return new InMageRcmMobilityAgentDetailsResponse(agentVersionExpiryDate, driverVersion, driverVersionExpiryDate, isUpgradeable, lastHeartbeatUtc, latestUpgradableVersionWithoutReboot, latestVersion, reasonsBlockingUpgrade, version);
         }
     }

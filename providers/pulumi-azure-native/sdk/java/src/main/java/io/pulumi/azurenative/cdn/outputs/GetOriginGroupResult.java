@@ -205,52 +205,45 @@ public final class GetOriginGroupResult {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder origins(List<ResourceReferenceResponse> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
-
+        public Builder origins(ResourceReferenceResponse... origins) {
+            return origins(List.of(origins));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOriginGroupResult build() {
+        }        public GetOriginGroupResult build() {
             return new GetOriginGroupResult(healthProbeSettings, id, name, origins, provisioningState, resourceState, responseBasedOriginErrorDetectionSettings, systemData, trafficRestorationTimeToHealedOrNewEndpointsInMinutes, type);
         }
     }

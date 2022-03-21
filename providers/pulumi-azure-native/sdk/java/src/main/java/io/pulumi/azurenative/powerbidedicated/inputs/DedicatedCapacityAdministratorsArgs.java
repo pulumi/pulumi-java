@@ -62,12 +62,13 @@ public final class DedicatedCapacityAdministratorsArgs extends io.pulumi.resourc
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-        public DedicatedCapacityAdministratorsArgs build() {
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }        public DedicatedCapacityAdministratorsArgs build() {
             return new DedicatedCapacityAdministratorsArgs(members);
         }
     }

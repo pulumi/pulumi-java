@@ -73,12 +73,13 @@ public final class GetFlowLogResult {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<FlowLogTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFlowLogResult build() {
+        public Builder tags(FlowLogTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFlowLogResult build() {
             return new GetFlowLogResult(id, tags);
         }
     }

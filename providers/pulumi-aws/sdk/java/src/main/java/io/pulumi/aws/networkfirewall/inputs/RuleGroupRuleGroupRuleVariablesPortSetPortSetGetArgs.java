@@ -57,12 +57,13 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs extends 
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }
-
         public Builder definitions(List<String> definitions) {
             this.definitions = Output.of(Objects.requireNonNull(definitions));
             return this;
         }
-        public RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs build() {
+        public Builder definitions(String... definitions) {
+            return definitions(List.of(definitions));
+        }        public RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs build() {
             return new RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs(definitions);
         }
     }

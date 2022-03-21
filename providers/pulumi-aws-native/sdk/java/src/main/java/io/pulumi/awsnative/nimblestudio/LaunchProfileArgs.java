@@ -168,82 +168,75 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ec2SubnetIds(Output<List<String>> ec2SubnetIds) {
             this.ec2SubnetIds = Objects.requireNonNull(ec2SubnetIds);
             return this;
         }
-
         public Builder ec2SubnetIds(List<String> ec2SubnetIds) {
             this.ec2SubnetIds = Output.of(Objects.requireNonNull(ec2SubnetIds));
             return this;
         }
-
+        public Builder ec2SubnetIds(String... ec2SubnetIds) {
+            return ec2SubnetIds(List.of(ec2SubnetIds));
+        }
         public Builder launchProfileProtocolVersions(Output<List<String>> launchProfileProtocolVersions) {
             this.launchProfileProtocolVersions = Objects.requireNonNull(launchProfileProtocolVersions);
             return this;
         }
-
         public Builder launchProfileProtocolVersions(List<String> launchProfileProtocolVersions) {
             this.launchProfileProtocolVersions = Output.of(Objects.requireNonNull(launchProfileProtocolVersions));
             return this;
         }
-
+        public Builder launchProfileProtocolVersions(String... launchProfileProtocolVersions) {
+            return launchProfileProtocolVersions(List.of(launchProfileProtocolVersions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder streamConfiguration(Output<LaunchProfileStreamConfigurationArgs> streamConfiguration) {
             this.streamConfiguration = Objects.requireNonNull(streamConfiguration);
             return this;
         }
-
         public Builder streamConfiguration(LaunchProfileStreamConfigurationArgs streamConfiguration) {
             this.streamConfiguration = Output.of(Objects.requireNonNull(streamConfiguration));
             return this;
         }
-
         public Builder studioComponentIds(Output<List<String>> studioComponentIds) {
             this.studioComponentIds = Objects.requireNonNull(studioComponentIds);
             return this;
         }
-
         public Builder studioComponentIds(List<String> studioComponentIds) {
             this.studioComponentIds = Output.of(Objects.requireNonNull(studioComponentIds));
             return this;
         }
-
+        public Builder studioComponentIds(String... studioComponentIds) {
+            return studioComponentIds(List.of(studioComponentIds));
+        }
         public Builder studioId(Output<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
-
         public Builder studioId(String studioId) {
             this.studioId = Output.of(Objects.requireNonNull(studioId));
             return this;
         }
-
         public Builder tags(@Nullable Output<LaunchProfileTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable LaunchProfileTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LaunchProfileArgs build() {
+        }        public LaunchProfileArgs build() {
             return new LaunchProfileArgs(description, ec2SubnetIds, launchProfileProtocolVersions, name, streamConfiguration, studioComponentIds, studioId, tags);
         }
     }

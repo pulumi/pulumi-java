@@ -94,32 +94,26 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
             this.dependencyName = dependencyName;
             return this;
         }
-
         public Builder dependencyName(@Nullable String dependencyName) {
             this.dependencyName = Output.ofNullable(dependencyName);
             return this;
         }
-
         public Builder minVersion(@Nullable Output<String> minVersion) {
             this.minVersion = minVersion;
             return this;
         }
-
         public Builder minVersion(@Nullable String minVersion) {
             this.minVersion = Output.ofNullable(minVersion);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
-        }
-        public MsixPackageDependenciesArgs build() {
+        }        public MsixPackageDependenciesArgs build() {
             return new MsixPackageDependenciesArgs(dependencyName, minVersion, publisher);
         }
     }

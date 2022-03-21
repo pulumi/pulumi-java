@@ -171,82 +171,66 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
-
         public Builder autoScalingGroupName(String autoScalingGroupName) {
             this.autoScalingGroupName = Output.of(Objects.requireNonNull(autoScalingGroupName));
             return this;
         }
-
         public Builder defaultResult(@Nullable Output<String> defaultResult) {
             this.defaultResult = defaultResult;
             return this;
         }
-
         public Builder defaultResult(@Nullable String defaultResult) {
             this.defaultResult = Output.ofNullable(defaultResult);
             return this;
         }
-
         public Builder heartbeatTimeout(@Nullable Output<Integer> heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
-
         public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = Output.ofNullable(heartbeatTimeout);
             return this;
         }
-
         public Builder lifecycleHookName(@Nullable Output<String> lifecycleHookName) {
             this.lifecycleHookName = lifecycleHookName;
             return this;
         }
-
         public Builder lifecycleHookName(@Nullable String lifecycleHookName) {
             this.lifecycleHookName = Output.ofNullable(lifecycleHookName);
             return this;
         }
-
         public Builder lifecycleTransition(Output<String> lifecycleTransition) {
             this.lifecycleTransition = Objects.requireNonNull(lifecycleTransition);
             return this;
         }
-
         public Builder lifecycleTransition(String lifecycleTransition) {
             this.lifecycleTransition = Output.of(Objects.requireNonNull(lifecycleTransition));
             return this;
         }
-
         public Builder notificationMetadata(@Nullable Output<String> notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
-
         public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = Output.ofNullable(notificationMetadata);
             return this;
         }
-
         public Builder notificationTargetARN(@Nullable Output<String> notificationTargetARN) {
             this.notificationTargetARN = notificationTargetARN;
             return this;
         }
-
         public Builder notificationTargetARN(@Nullable String notificationTargetARN) {
             this.notificationTargetARN = Output.ofNullable(notificationTargetARN);
             return this;
         }
-
         public Builder roleARN(@Nullable Output<String> roleARN) {
             this.roleARN = roleARN;
             return this;
         }
-
         public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = Output.ofNullable(roleARN);
             return this;
-        }
-        public LifecycleHookArgs build() {
+        }        public LifecycleHookArgs build() {
             return new LifecycleHookArgs(autoScalingGroupName, defaultResult, heartbeatTimeout, lifecycleHookName, lifecycleTransition, notificationMetadata, notificationTargetARN, roleARN);
         }
     }

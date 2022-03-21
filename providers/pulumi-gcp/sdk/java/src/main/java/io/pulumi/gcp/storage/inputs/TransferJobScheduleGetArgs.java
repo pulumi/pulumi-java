@@ -92,32 +92,26 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
             this.scheduleEndDate = scheduleEndDate;
             return this;
         }
-
         public Builder scheduleEndDate(@Nullable TransferJobScheduleScheduleEndDateGetArgs scheduleEndDate) {
             this.scheduleEndDate = Output.ofNullable(scheduleEndDate);
             return this;
         }
-
         public Builder scheduleStartDate(Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
-
         public Builder scheduleStartDate(TransferJobScheduleScheduleStartDateGetArgs scheduleStartDate) {
             this.scheduleStartDate = Output.of(Objects.requireNonNull(scheduleStartDate));
             return this;
         }
-
         public Builder startTimeOfDay(@Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay) {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }
-
         public Builder startTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDayGetArgs startTimeOfDay) {
             this.startTimeOfDay = Output.ofNullable(startTimeOfDay);
             return this;
-        }
-        public TransferJobScheduleGetArgs build() {
+        }        public TransferJobScheduleGetArgs build() {
             return new TransferJobScheduleGetArgs(scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }
     }

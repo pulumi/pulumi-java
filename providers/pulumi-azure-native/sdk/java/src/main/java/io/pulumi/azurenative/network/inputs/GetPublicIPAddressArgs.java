@@ -90,17 +90,14 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
             this.expand = expand;
             return this;
         }
-
         public Builder publicIpAddressName(String publicIpAddressName) {
             this.publicIpAddressName = Objects.requireNonNull(publicIpAddressName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPublicIPAddressArgs build() {
+        }        public GetPublicIPAddressArgs build() {
             return new GetPublicIPAddressArgs(expand, publicIpAddressName, resourceGroupName);
         }
     }

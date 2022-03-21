@@ -147,62 +147,50 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.clusterConfig = clusterConfig;
             return this;
         }
-
         public Builder clusterConfig(@Nullable ClusterClusterConfigGetArgs clusterConfig) {
             this.clusterConfig = Output.ofNullable(clusterConfig);
             return this;
         }
-
         public Builder gracefulDecommissionTimeout(@Nullable Output<String> gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
             return this;
         }
-
         public Builder gracefulDecommissionTimeout(@Nullable String gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = Output.ofNullable(gracefulDecommissionTimeout);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(clusterConfig, gracefulDecommissionTimeout, labels, name, project, region);
         }
     }

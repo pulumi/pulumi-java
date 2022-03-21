@@ -210,82 +210,69 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destination(@Nullable Output<ConnectivityTestDestinationGetArgs> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable ConnectivityTestDestinationGetArgs destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder relatedProjects(@Nullable Output<List<String>> relatedProjects) {
             this.relatedProjects = relatedProjects;
             return this;
         }
-
         public Builder relatedProjects(@Nullable List<String> relatedProjects) {
             this.relatedProjects = Output.ofNullable(relatedProjects);
             return this;
         }
-
+        public Builder relatedProjects(String... relatedProjects) {
+            return relatedProjects(List.of(relatedProjects));
+        }
         public Builder source(@Nullable Output<ConnectivityTestSourceGetArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable ConnectivityTestSourceGetArgs source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public ConnectivityTestState build() {
+        }        public ConnectivityTestState build() {
             return new ConnectivityTestState(description, destination, labels, name, project, protocol, relatedProjects, source);
         }
     }

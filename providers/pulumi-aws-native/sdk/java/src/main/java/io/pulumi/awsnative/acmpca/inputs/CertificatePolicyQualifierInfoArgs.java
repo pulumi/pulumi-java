@@ -70,22 +70,18 @@ public final class CertificatePolicyQualifierInfoArgs extends io.pulumi.resource
             this.policyQualifierId = Objects.requireNonNull(policyQualifierId);
             return this;
         }
-
         public Builder policyQualifierId(String policyQualifierId) {
             this.policyQualifierId = Output.of(Objects.requireNonNull(policyQualifierId));
             return this;
         }
-
         public Builder qualifier(Output<CertificateQualifierArgs> qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
-
         public Builder qualifier(CertificateQualifierArgs qualifier) {
             this.qualifier = Output.of(Objects.requireNonNull(qualifier));
             return this;
-        }
-        public CertificatePolicyQualifierInfoArgs build() {
+        }        public CertificatePolicyQualifierInfoArgs build() {
             return new CertificatePolicyQualifierInfoArgs(policyQualifierId, qualifier);
         }
     }

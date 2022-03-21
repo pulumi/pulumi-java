@@ -122,52 +122,42 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
             this.identifier = identifier;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = Output.ofNullable(identifier);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
-
         public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = Output.ofNullable(mountPoint);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ProjectFileSystemLocationArgs build() {
+        }        public ProjectFileSystemLocationArgs build() {
             return new ProjectFileSystemLocationArgs(identifier, location, mountOptions, mountPoint, type);
         }
     }

@@ -81,22 +81,18 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public InputArgs build() {
+        }        public InputArgs build() {
             return new InputArgs(name, properties);
         }
     }

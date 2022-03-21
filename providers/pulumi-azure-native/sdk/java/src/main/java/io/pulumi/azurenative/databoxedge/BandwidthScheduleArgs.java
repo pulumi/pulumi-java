@@ -158,72 +158,61 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
         public Builder days(List<Either<String,DayOfWeek>> days) {
             this.days = Output.of(Objects.requireNonNull(days));
             return this;
         }
-
+        public Builder days(Either<String,DayOfWeek>... days) {
+            return days(List.of(days));
+        }
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rateInMbps(Output<Integer> rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
-
         public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Output.of(Objects.requireNonNull(rateInMbps));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder start(Output<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
-
         public Builder stop(Output<String> stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
-
         public Builder stop(String stop) {
             this.stop = Output.of(Objects.requireNonNull(stop));
             return this;
-        }
-        public BandwidthScheduleArgs build() {
+        }        public BandwidthScheduleArgs build() {
             return new BandwidthScheduleArgs(days, deviceName, name, rateInMbps, resourceGroupName, start, stop);
         }
     }

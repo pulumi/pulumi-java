@@ -120,27 +120,22 @@ public final class GetOrganizationAccount extends io.pulumi.resources.InvokeArgs
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetOrganizationAccount build() {
+        }        public GetOrganizationAccount build() {
             return new GetOrganizationAccount(arn, email, id, name, status);
         }
     }

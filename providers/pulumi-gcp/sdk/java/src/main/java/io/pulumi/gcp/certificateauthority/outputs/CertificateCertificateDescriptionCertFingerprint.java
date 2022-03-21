@@ -45,8 +45,7 @@ public final class CertificateCertificateDescriptionCertFingerprint {
         public Builder sha256Hash(@Nullable String sha256Hash) {
             this.sha256Hash = sha256Hash;
             return this;
-        }
-        public CertificateCertificateDescriptionCertFingerprint build() {
+        }        public CertificateCertificateDescriptionCertFingerprint build() {
             return new CertificateCertificateDescriptionCertFingerprint(sha256Hash);
         }
     }

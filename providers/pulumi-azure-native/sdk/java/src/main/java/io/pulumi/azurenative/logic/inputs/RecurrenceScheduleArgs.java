@@ -129,52 +129,57 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
             this.hours = hours;
             return this;
         }
-
         public Builder hours(@Nullable List<Integer> hours) {
             this.hours = Output.ofNullable(hours);
             return this;
         }
-
+        public Builder hours(Integer... hours) {
+            return hours(List.of(hours));
+        }
         public Builder minutes(@Nullable Output<List<Integer>> minutes) {
             this.minutes = minutes;
             return this;
         }
-
         public Builder minutes(@Nullable List<Integer> minutes) {
             this.minutes = Output.ofNullable(minutes);
             return this;
         }
-
+        public Builder minutes(Integer... minutes) {
+            return minutes(List.of(minutes));
+        }
         public Builder monthDays(@Nullable Output<List<Integer>> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
-
         public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = Output.ofNullable(monthDays);
             return this;
         }
-
+        public Builder monthDays(Integer... monthDays) {
+            return monthDays(List.of(monthDays));
+        }
         public Builder monthlyOccurrences(@Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
-
         public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceArgs> monthlyOccurrences) {
             this.monthlyOccurrences = Output.ofNullable(monthlyOccurrences);
             return this;
         }
-
+        public Builder monthlyOccurrences(RecurrenceScheduleOccurrenceArgs... monthlyOccurrences) {
+            return monthlyOccurrences(List.of(monthlyOccurrences));
+        }
         public Builder weekDays(@Nullable Output<List<DaysOfWeek>> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
-
         public Builder weekDays(@Nullable List<DaysOfWeek> weekDays) {
             this.weekDays = Output.ofNullable(weekDays);
             return this;
         }
-        public RecurrenceScheduleArgs build() {
+        public Builder weekDays(DaysOfWeek... weekDays) {
+            return weekDays(List.of(weekDays));
+        }        public RecurrenceScheduleArgs build() {
             return new RecurrenceScheduleArgs(hours, minutes, monthDays, monthlyOccurrences, weekDays);
         }
     }

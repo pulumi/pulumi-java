@@ -93,32 +93,26 @@ public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
-
         public Builder countryCode(String countryCode) {
             this.countryCode = Output.of(Objects.requireNonNull(countryCode));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
-        }
-        public VoiceReceiverArgs build() {
+        }        public VoiceReceiverArgs build() {
             return new VoiceReceiverArgs(countryCode, name, phoneNumber);
         }
     }

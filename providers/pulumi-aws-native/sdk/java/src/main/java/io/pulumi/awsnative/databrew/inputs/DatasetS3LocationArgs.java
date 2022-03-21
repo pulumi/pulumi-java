@@ -70,22 +70,18 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public DatasetS3LocationArgs build() {
+        }        public DatasetS3LocationArgs build() {
             return new DatasetS3LocationArgs(bucket, key);
         }
     }

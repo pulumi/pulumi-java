@@ -88,17 +88,14 @@ public final class GetTriggerArgs extends io.pulumi.resources.InvokeArgs {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
-        }
-        public GetTriggerArgs build() {
+        }        public GetTriggerArgs build() {
             return new GetTriggerArgs(factoryName, resourceGroupName, triggerName);
         }
     }

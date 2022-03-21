@@ -65,22 +65,18 @@ public final class DatasetGlueConfigurationArgs extends io.pulumi.resources.Reso
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public DatasetGlueConfigurationArgs build() {
+        }        public DatasetGlueConfigurationArgs build() {
             return new DatasetGlueConfigurationArgs(databaseName, tableName);
         }
     }

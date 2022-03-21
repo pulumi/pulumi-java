@@ -102,32 +102,26 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
             this.datasource = datasource;
             return this;
         }
-
         public Builder datasource(@Nullable Object datasource) {
             this.datasource = Output.ofNullable(datasource);
             return this;
         }
-
         public Builder serialization(@Nullable Output<Object> serialization) {
             this.serialization = serialization;
             return this;
         }
-
         public Builder serialization(@Nullable Object serialization) {
             this.serialization = Output.ofNullable(serialization);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public StreamInputPropertiesArgs build() {
+        }        public StreamInputPropertiesArgs build() {
             return new StreamInputPropertiesArgs(datasource, serialization, type);
         }
     }

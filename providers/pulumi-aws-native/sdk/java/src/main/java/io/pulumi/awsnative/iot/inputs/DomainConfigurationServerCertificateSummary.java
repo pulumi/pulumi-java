@@ -79,17 +79,14 @@ public final class DomainConfigurationServerCertificateSummary extends io.pulumi
             this.serverCertificateArn = serverCertificateArn;
             return this;
         }
-
         public Builder serverCertificateStatus(@Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus) {
             this.serverCertificateStatus = serverCertificateStatus;
             return this;
         }
-
         public Builder serverCertificateStatusDetail(@Nullable String serverCertificateStatusDetail) {
             this.serverCertificateStatusDetail = serverCertificateStatusDetail;
             return this;
-        }
-        public DomainConfigurationServerCertificateSummary build() {
+        }        public DomainConfigurationServerCertificateSummary build() {
             return new DomainConfigurationServerCertificateSummary(serverCertificateArn, serverCertificateStatus, serverCertificateStatusDetail);
         }
     }

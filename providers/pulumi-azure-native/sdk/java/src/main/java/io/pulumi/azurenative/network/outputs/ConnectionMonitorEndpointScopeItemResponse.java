@@ -53,8 +53,7 @@ public final class ConnectionMonitorEndpointScopeItemResponse {
         public Builder address(@Nullable String address) {
             this.address = address;
             return this;
-        }
-        public ConnectionMonitorEndpointScopeItemResponse build() {
+        }        public ConnectionMonitorEndpointScopeItemResponse build() {
             return new ConnectionMonitorEndpointScopeItemResponse(address);
         }
     }

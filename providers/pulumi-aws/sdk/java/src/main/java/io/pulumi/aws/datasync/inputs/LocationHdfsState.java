@@ -299,162 +299,136 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             this.agentArns = agentArns;
             return this;
         }
-
         public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = Output.ofNullable(agentArns);
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder blockSize(@Nullable Output<Integer> blockSize) {
             this.blockSize = blockSize;
             return this;
         }
-
         public Builder blockSize(@Nullable Integer blockSize) {
             this.blockSize = Output.ofNullable(blockSize);
             return this;
         }
-
         public Builder kerberosKeytab(@Nullable Output<String> kerberosKeytab) {
             this.kerberosKeytab = kerberosKeytab;
             return this;
         }
-
         public Builder kerberosKeytab(@Nullable String kerberosKeytab) {
             this.kerberosKeytab = Output.ofNullable(kerberosKeytab);
             return this;
         }
-
         public Builder kerberosKrb5Conf(@Nullable Output<String> kerberosKrb5Conf) {
             this.kerberosKrb5Conf = kerberosKrb5Conf;
             return this;
         }
-
         public Builder kerberosKrb5Conf(@Nullable String kerberosKrb5Conf) {
             this.kerberosKrb5Conf = Output.ofNullable(kerberosKrb5Conf);
             return this;
         }
-
         public Builder kerberosPrincipal(@Nullable Output<String> kerberosPrincipal) {
             this.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
-
         public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
             this.kerberosPrincipal = Output.ofNullable(kerberosPrincipal);
             return this;
         }
-
         public Builder kmsKeyProviderUri(@Nullable Output<String> kmsKeyProviderUri) {
             this.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
-
         public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
             this.kmsKeyProviderUri = Output.ofNullable(kmsKeyProviderUri);
             return this;
         }
-
         public Builder nameNodes(@Nullable Output<List<LocationHdfsNameNodeGetArgs>> nameNodes) {
             this.nameNodes = nameNodes;
             return this;
         }
-
         public Builder nameNodes(@Nullable List<LocationHdfsNameNodeGetArgs> nameNodes) {
             this.nameNodes = Output.ofNullable(nameNodes);
             return this;
         }
-
+        public Builder nameNodes(LocationHdfsNameNodeGetArgs... nameNodes) {
+            return nameNodes(List.of(nameNodes));
+        }
         public Builder qopConfiguration(@Nullable Output<LocationHdfsQopConfigurationGetArgs> qopConfiguration) {
             this.qopConfiguration = qopConfiguration;
             return this;
         }
-
         public Builder qopConfiguration(@Nullable LocationHdfsQopConfigurationGetArgs qopConfiguration) {
             this.qopConfiguration = Output.ofNullable(qopConfiguration);
             return this;
         }
-
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
-
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
             this.replicationFactor = Output.ofNullable(replicationFactor);
             return this;
         }
-
         public Builder simpleUser(@Nullable Output<String> simpleUser) {
             this.simpleUser = simpleUser;
             return this;
         }
-
         public Builder simpleUser(@Nullable String simpleUser) {
             this.simpleUser = Output.ofNullable(simpleUser);
             return this;
         }
-
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public LocationHdfsState build() {
+        }        public LocationHdfsState build() {
             return new LocationHdfsState(agentArns, arn, authenticationType, blockSize, kerberosKeytab, kerberosKrb5Conf, kerberosPrincipal, kmsKeyProviderUri, nameNodes, qopConfiguration, replicationFactor, simpleUser, subdirectory, tags, tagsAll, uri);
         }
     }

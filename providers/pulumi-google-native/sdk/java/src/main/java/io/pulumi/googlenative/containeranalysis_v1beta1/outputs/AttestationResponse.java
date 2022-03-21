@@ -62,12 +62,10 @@ public final class AttestationResponse {
             this.genericSignedAttestation = Objects.requireNonNull(genericSignedAttestation);
             return this;
         }
-
         public Builder pgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
             this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
             return this;
-        }
-        public AttestationResponse build() {
+        }        public AttestationResponse build() {
             return new AttestationResponse(genericSignedAttestation, pgpSignedAttestation);
         }
     }

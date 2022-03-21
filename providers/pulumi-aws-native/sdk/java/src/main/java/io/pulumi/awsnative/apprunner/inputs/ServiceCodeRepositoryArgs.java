@@ -88,32 +88,26 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder codeConfiguration(@Nullable ServiceCodeConfigurationArgs codeConfiguration) {
             this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
-
         public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
-
         public Builder sourceCodeVersion(Output<ServiceSourceCodeVersionArgs> sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }
-
         public Builder sourceCodeVersion(ServiceSourceCodeVersionArgs sourceCodeVersion) {
             this.sourceCodeVersion = Output.of(Objects.requireNonNull(sourceCodeVersion));
             return this;
-        }
-        public ServiceCodeRepositoryArgs build() {
+        }        public ServiceCodeRepositoryArgs build() {
             return new ServiceCodeRepositoryArgs(codeConfiguration, repositoryUrl, sourceCodeVersion);
         }
     }

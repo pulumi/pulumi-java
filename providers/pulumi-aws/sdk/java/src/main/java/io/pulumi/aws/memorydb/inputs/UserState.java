@@ -157,72 +157,58 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             this.accessString = accessString;
             return this;
         }
-
         public Builder accessString(@Nullable String accessString) {
             this.accessString = Output.ofNullable(accessString);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authenticationMode(@Nullable Output<UserAuthenticationModeGetArgs> authenticationMode) {
             this.authenticationMode = authenticationMode;
             return this;
         }
-
         public Builder authenticationMode(@Nullable UserAuthenticationModeGetArgs authenticationMode) {
             this.authenticationMode = Output.ofNullable(authenticationMode);
             return this;
         }
-
         public Builder minimumEngineVersion(@Nullable Output<String> minimumEngineVersion) {
             this.minimumEngineVersion = minimumEngineVersion;
             return this;
         }
-
         public Builder minimumEngineVersion(@Nullable String minimumEngineVersion) {
             this.minimumEngineVersion = Output.ofNullable(minimumEngineVersion);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public UserState build() {
+        }        public UserState build() {
             return new UserState(accessString, arn, authenticationMode, minimumEngineVersion, tags, tagsAll, userName);
         }
     }

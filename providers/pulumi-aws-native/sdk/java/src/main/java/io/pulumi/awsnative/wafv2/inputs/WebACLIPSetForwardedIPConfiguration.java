@@ -78,17 +78,14 @@ public final class WebACLIPSetForwardedIPConfiguration extends io.pulumi.resourc
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder position(WebACLIPSetForwardedIPConfigurationPosition position) {
             this.position = Objects.requireNonNull(position);
             return this;
-        }
-        public WebACLIPSetForwardedIPConfiguration build() {
+        }        public WebACLIPSetForwardedIPConfiguration build() {
             return new WebACLIPSetForwardedIPConfiguration(fallbackBehavior, headerName, position);
         }
     }

@@ -90,32 +90,26 @@ public final class DeploymentGroupEc2TagFilterGetArgs extends io.pulumi.resource
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public DeploymentGroupEc2TagFilterGetArgs build() {
+        }        public DeploymentGroupEc2TagFilterGetArgs build() {
             return new DeploymentGroupEc2TagFilterGetArgs(key, type, value);
         }
     }

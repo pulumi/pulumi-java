@@ -55,8 +55,7 @@ public final class EventChannelSourceResponse {
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
-        }
-        public EventChannelSourceResponse build() {
+        }        public EventChannelSourceResponse build() {
             return new EventChannelSourceResponse(source);
         }
     }

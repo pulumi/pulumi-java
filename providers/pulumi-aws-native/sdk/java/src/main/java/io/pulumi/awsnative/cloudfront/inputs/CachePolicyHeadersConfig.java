@@ -67,12 +67,13 @@ public final class CachePolicyHeadersConfig extends io.pulumi.resources.InvokeAr
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
-        public CachePolicyHeadersConfig build() {
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }        public CachePolicyHeadersConfig build() {
             return new CachePolicyHeadersConfig(headerBehavior, headers);
         }
     }

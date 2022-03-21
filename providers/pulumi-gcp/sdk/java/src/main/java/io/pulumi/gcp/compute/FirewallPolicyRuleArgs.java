@@ -206,102 +206,88 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder direction(Output<String> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder firewallPolicy(Output<String> firewallPolicy) {
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
-
         public Builder firewallPolicy(String firewallPolicy) {
             this.firewallPolicy = Output.of(Objects.requireNonNull(firewallPolicy));
             return this;
         }
-
         public Builder match(Output<FirewallPolicyRuleMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(FirewallPolicyRuleMatchArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
-
         public Builder targetResources(@Nullable List<String> targetResources) {
             this.targetResources = Output.ofNullable(targetResources);
             return this;
         }
-
+        public Builder targetResources(String... targetResources) {
+            return targetResources(List.of(targetResources));
+        }
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
             return this;
         }
-        public FirewallPolicyRuleArgs build() {
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }        public FirewallPolicyRuleArgs build() {
             return new FirewallPolicyRuleArgs(action, description, direction, disabled, enableLogging, firewallPolicy, match, priority, targetResources, targetServiceAccounts);
         }
     }

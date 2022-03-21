@@ -61,12 +61,10 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.cname = cname;
             return this;
         }
-
         public Builder cname(@Nullable String cname) {
             this.cname = Output.ofNullable(cname);
             return this;
-        }
-        public CnameRecordArgs build() {
+        }        public CnameRecordArgs build() {
             return new CnameRecordArgs(cname);
         }
     }

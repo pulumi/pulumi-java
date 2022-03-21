@@ -93,17 +93,14 @@ public final class DomainMappingSpecResponse extends io.pulumi.resources.InvokeA
             this.certificateMode = Objects.requireNonNull(certificateMode);
             return this;
         }
-
         public Builder forceOverride(Boolean forceOverride) {
             this.forceOverride = Objects.requireNonNull(forceOverride);
             return this;
         }
-
         public Builder routeName(String routeName) {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
-        }
-        public DomainMappingSpecResponse build() {
+        }        public DomainMappingSpecResponse build() {
             return new DomainMappingSpecResponse(certificateMode, forceOverride, routeName);
         }
     }

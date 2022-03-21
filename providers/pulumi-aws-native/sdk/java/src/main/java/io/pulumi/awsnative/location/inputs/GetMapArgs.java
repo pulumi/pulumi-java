@@ -50,8 +50,7 @@ public final class GetMapArgs extends io.pulumi.resources.InvokeArgs {
         public Builder mapName(String mapName) {
             this.mapName = Objects.requireNonNull(mapName);
             return this;
-        }
-        public GetMapArgs build() {
+        }        public GetMapArgs build() {
             return new GetMapArgs(mapName);
         }
     }

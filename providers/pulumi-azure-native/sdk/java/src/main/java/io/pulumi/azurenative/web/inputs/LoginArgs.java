@@ -150,62 +150,53 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
-
         public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = Output.ofNullable(allowedExternalRedirectUrls);
             return this;
         }
-
+        public Builder allowedExternalRedirectUrls(String... allowedExternalRedirectUrls) {
+            return allowedExternalRedirectUrls(List.of(allowedExternalRedirectUrls));
+        }
         public Builder cookieExpiration(@Nullable Output<CookieExpirationArgs> cookieExpiration) {
             this.cookieExpiration = cookieExpiration;
             return this;
         }
-
         public Builder cookieExpiration(@Nullable CookieExpirationArgs cookieExpiration) {
             this.cookieExpiration = Output.ofNullable(cookieExpiration);
             return this;
         }
-
         public Builder nonce(@Nullable Output<NonceArgs> nonce) {
             this.nonce = nonce;
             return this;
         }
-
         public Builder nonce(@Nullable NonceArgs nonce) {
             this.nonce = Output.ofNullable(nonce);
             return this;
         }
-
         public Builder preserveUrlFragmentsForLogins(@Nullable Output<Boolean> preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
-
         public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = Output.ofNullable(preserveUrlFragmentsForLogins);
             return this;
         }
-
         public Builder routes(@Nullable Output<LoginRoutesArgs> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable LoginRoutesArgs routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
         public Builder tokenStore(@Nullable Output<TokenStoreArgs> tokenStore) {
             this.tokenStore = tokenStore;
             return this;
         }
-
         public Builder tokenStore(@Nullable TokenStoreArgs tokenStore) {
             this.tokenStore = Output.ofNullable(tokenStore);
             return this;
-        }
-        public LoginArgs build() {
+        }        public LoginArgs build() {
             return new LoginArgs(allowedExternalRedirectUrls, cookieExpiration, nonce, preserveUrlFragmentsForLogins, routes, tokenStore);
         }
     }

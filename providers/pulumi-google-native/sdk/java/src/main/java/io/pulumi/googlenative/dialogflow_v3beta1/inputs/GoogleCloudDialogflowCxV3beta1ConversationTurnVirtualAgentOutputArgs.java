@@ -148,62 +148,53 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
             this.currentPage = currentPage;
             return this;
         }
-
         public Builder currentPage(@Nullable GoogleCloudDialogflowCxV3beta1PageArgs currentPage) {
             this.currentPage = Output.ofNullable(currentPage);
             return this;
         }
-
         public Builder diagnosticInfo(Output<Map<String,String>> diagnosticInfo) {
             this.diagnosticInfo = Objects.requireNonNull(diagnosticInfo);
             return this;
         }
-
         public Builder diagnosticInfo(Map<String,String> diagnosticInfo) {
             this.diagnosticInfo = Output.of(Objects.requireNonNull(diagnosticInfo));
             return this;
         }
-
         public Builder sessionParameters(@Nullable Output<Map<String,String>> sessionParameters) {
             this.sessionParameters = sessionParameters;
             return this;
         }
-
         public Builder sessionParameters(@Nullable Map<String,String> sessionParameters) {
             this.sessionParameters = Output.ofNullable(sessionParameters);
             return this;
         }
-
         public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable GoogleRpcStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder textResponses(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs>> textResponses) {
             this.textResponses = textResponses;
             return this;
         }
-
         public Builder textResponses(@Nullable List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> textResponses) {
             this.textResponses = Output.ofNullable(textResponses);
             return this;
         }
-
+        public Builder textResponses(GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs... textResponses) {
+            return textResponses(List.of(textResponses));
+        }
         public Builder triggeredIntent(@Nullable Output<GoogleCloudDialogflowCxV3beta1IntentArgs> triggeredIntent) {
             this.triggeredIntent = triggeredIntent;
             return this;
         }
-
         public Builder triggeredIntent(@Nullable GoogleCloudDialogflowCxV3beta1IntentArgs triggeredIntent) {
             this.triggeredIntent = Output.ofNullable(triggeredIntent);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs(currentPage, diagnosticInfo, sessionParameters, status, textResponses, triggeredIntent);
         }
     }

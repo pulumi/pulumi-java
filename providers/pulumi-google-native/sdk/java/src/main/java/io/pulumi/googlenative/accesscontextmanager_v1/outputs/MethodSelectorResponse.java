@@ -69,12 +69,10 @@ public final class MethodSelectorResponse {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder permission(String permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
-        }
-        public MethodSelectorResponse build() {
+        }        public MethodSelectorResponse build() {
             return new MethodSelectorResponse(method, permission);
         }
     }

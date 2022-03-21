@@ -202,52 +202,45 @@ public final class GetEventHubResult {
             this.captureDescription = captureDescription;
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder messageRetentionInDays(@Nullable Double messageRetentionInDays) {
             this.messageRetentionInDays = messageRetentionInDays;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partitionCount(@Nullable Double partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder partitionIds(List<String> partitionIds) {
             this.partitionIds = Objects.requireNonNull(partitionIds);
             return this;
         }
-
+        public Builder partitionIds(String... partitionIds) {
+            return partitionIds(List.of(partitionIds));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
-        }
-        public GetEventHubResult build() {
+        }        public GetEventHubResult build() {
             return new GetEventHubResult(captureDescription, createdAt, id, messageRetentionInDays, name, partitionCount, partitionIds, status, type, updatedAt);
         }
     }

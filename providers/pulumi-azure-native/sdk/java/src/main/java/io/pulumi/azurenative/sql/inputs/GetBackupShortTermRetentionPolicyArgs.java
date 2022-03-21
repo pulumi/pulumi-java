@@ -104,22 +104,18 @@ public final class GetBackupShortTermRetentionPolicyArgs extends io.pulumi.resou
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetBackupShortTermRetentionPolicyArgs build() {
+        }        public GetBackupShortTermRetentionPolicyArgs build() {
             return new GetBackupShortTermRetentionPolicyArgs(databaseName, policyName, resourceGroupName, serverName);
         }
     }

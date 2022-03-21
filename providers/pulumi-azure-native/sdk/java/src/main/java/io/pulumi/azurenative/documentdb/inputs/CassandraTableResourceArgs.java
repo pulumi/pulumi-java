@@ -112,42 +112,34 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
-
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
             this.analyticalStorageTtl = Output.ofNullable(analyticalStorageTtl);
             return this;
         }
-
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder schema(@Nullable Output<CassandraSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable CassandraSchemaArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
-        }
-        public CassandraTableResourceArgs build() {
+        }        public CassandraTableResourceArgs build() {
             return new CassandraTableResourceArgs(analyticalStorageTtl, defaultTtl, id, schema);
         }
     }

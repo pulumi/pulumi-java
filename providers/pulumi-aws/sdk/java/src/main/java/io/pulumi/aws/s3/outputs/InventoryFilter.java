@@ -53,8 +53,7 @@ public final class InventoryFilter {
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public InventoryFilter build() {
+        }        public InventoryFilter build() {
             return new InventoryFilter(prefix);
         }
     }

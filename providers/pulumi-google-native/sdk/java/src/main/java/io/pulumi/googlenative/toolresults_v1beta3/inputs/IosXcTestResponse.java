@@ -76,12 +76,10 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder xcodeVersion(String xcodeVersion) {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
-        }
-        public IosXcTestResponse build() {
+        }        public IosXcTestResponse build() {
             return new IosXcTestResponse(bundleId, xcodeVersion);
         }
     }

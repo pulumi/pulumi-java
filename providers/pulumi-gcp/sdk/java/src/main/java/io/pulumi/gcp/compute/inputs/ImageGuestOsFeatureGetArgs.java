@@ -57,12 +57,10 @@ public final class ImageGuestOsFeatureGetArgs extends io.pulumi.resources.Resour
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageGuestOsFeatureGetArgs build() {
+        }        public ImageGuestOsFeatureGetArgs build() {
             return new ImageGuestOsFeatureGetArgs(type);
         }
     }

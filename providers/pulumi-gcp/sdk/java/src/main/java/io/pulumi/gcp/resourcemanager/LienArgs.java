@@ -116,42 +116,37 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
-
         public Builder origin(String origin) {
             this.origin = Output.of(Objects.requireNonNull(origin));
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
-
         public Builder restrictions(Output<List<String>> restrictions) {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }
-
         public Builder restrictions(List<String> restrictions) {
             this.restrictions = Output.of(Objects.requireNonNull(restrictions));
             return this;
         }
-        public LienArgs build() {
+        public Builder restrictions(String... restrictions) {
+            return restrictions(List.of(restrictions));
+        }        public LienArgs build() {
             return new LienArgs(origin, parent, reason, restrictions);
         }
     }

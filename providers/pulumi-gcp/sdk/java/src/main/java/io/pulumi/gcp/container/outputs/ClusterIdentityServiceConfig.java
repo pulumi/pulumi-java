@@ -55,8 +55,7 @@ public final class ClusterIdentityServiceConfig {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public ClusterIdentityServiceConfig build() {
+        }        public ClusterIdentityServiceConfig build() {
             return new ClusterIdentityServiceConfig(enabled);
         }
     }

@@ -215,57 +215,46 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
             this.aofStorageConnectionString0 = aofStorageConnectionString0;
             return this;
         }
-
         public Builder aofStorageConnectionString1(@Nullable String aofStorageConnectionString1) {
             this.aofStorageConnectionString1 = aofStorageConnectionString1;
             return this;
         }
-
         public Builder maxclients(String maxclients) {
             this.maxclients = Objects.requireNonNull(maxclients);
             return this;
         }
-
         public Builder maxfragmentationmemoryReserved(@Nullable String maxfragmentationmemoryReserved) {
             this.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
             return this;
         }
-
         public Builder maxmemoryDelta(@Nullable String maxmemoryDelta) {
             this.maxmemoryDelta = maxmemoryDelta;
             return this;
         }
-
         public Builder maxmemoryPolicy(@Nullable String maxmemoryPolicy) {
             this.maxmemoryPolicy = maxmemoryPolicy;
             return this;
         }
-
         public Builder maxmemoryReserved(@Nullable String maxmemoryReserved) {
             this.maxmemoryReserved = maxmemoryReserved;
             return this;
         }
-
         public Builder rdbBackupEnabled(@Nullable String rdbBackupEnabled) {
             this.rdbBackupEnabled = rdbBackupEnabled;
             return this;
         }
-
         public Builder rdbBackupFrequency(@Nullable String rdbBackupFrequency) {
             this.rdbBackupFrequency = rdbBackupFrequency;
             return this;
         }
-
         public Builder rdbBackupMaxSnapshotCount(@Nullable String rdbBackupMaxSnapshotCount) {
             this.rdbBackupMaxSnapshotCount = rdbBackupMaxSnapshotCount;
             return this;
         }
-
         public Builder rdbStorageConnectionString(@Nullable String rdbStorageConnectionString) {
             this.rdbStorageConnectionString = rdbStorageConnectionString;
             return this;
-        }
-        public RedisCommonPropertiesResponseRedisConfiguration build() {
+        }        public RedisCommonPropertiesResponseRedisConfiguration build() {
             return new RedisCommonPropertiesResponseRedisConfiguration(aofStorageConnectionString0, aofStorageConnectionString1, maxclients, maxfragmentationmemoryReserved, maxmemoryDelta, maxmemoryPolicy, maxmemoryReserved, rdbBackupEnabled, rdbBackupFrequency, rdbBackupMaxSnapshotCount, rdbStorageConnectionString);
         }
     }

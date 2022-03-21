@@ -118,27 +118,22 @@ public final class GetNotificationConfigResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder streamingConfig(StreamingConfigResponse streamingConfig) {
             this.streamingConfig = Objects.requireNonNull(streamingConfig);
             return this;
-        }
-        public GetNotificationConfigResult build() {
+        }        public GetNotificationConfigResult build() {
             return new GetNotificationConfigResult(description, name, pubsubTopic, serviceAccount, streamingConfig);
         }
     }

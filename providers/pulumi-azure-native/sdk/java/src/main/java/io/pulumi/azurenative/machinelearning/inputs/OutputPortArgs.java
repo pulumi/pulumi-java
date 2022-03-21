@@ -63,12 +63,10 @@ public final class OutputPortArgs extends io.pulumi.resources.ResourceArgs {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,OutputPortType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public OutputPortArgs build() {
+        }        public OutputPortArgs build() {
             return new OutputPortArgs(type);
         }
     }

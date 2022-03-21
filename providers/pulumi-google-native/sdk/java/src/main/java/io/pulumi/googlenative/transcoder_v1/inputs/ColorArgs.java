@@ -94,32 +94,26 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
             this.brightness = brightness;
             return this;
         }
-
         public Builder brightness(@Nullable Double brightness) {
             this.brightness = Output.ofNullable(brightness);
             return this;
         }
-
         public Builder contrast(@Nullable Output<Double> contrast) {
             this.contrast = contrast;
             return this;
         }
-
         public Builder contrast(@Nullable Double contrast) {
             this.contrast = Output.ofNullable(contrast);
             return this;
         }
-
         public Builder saturation(@Nullable Output<Double> saturation) {
             this.saturation = saturation;
             return this;
         }
-
         public Builder saturation(@Nullable Double saturation) {
             this.saturation = Output.ofNullable(saturation);
             return this;
-        }
-        public ColorArgs build() {
+        }        public ColorArgs build() {
             return new ColorArgs(brightness, contrast, saturation);
         }
     }

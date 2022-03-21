@@ -96,32 +96,26 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,SourceKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sourceId(@Nullable Output<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
-
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Output.ofNullable(sourceId);
             return this;
-        }
-        public MetadataSourceArgs build() {
+        }        public MetadataSourceArgs build() {
             return new MetadataSourceArgs(kind, name, sourceId);
         }
     }

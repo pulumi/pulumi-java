@@ -134,62 +134,53 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
             this.currentRevisionId = currentRevisionId;
             return this;
         }
-
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = Output.ofNullable(currentRevisionId);
             return this;
         }
-
         public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder robotSoftwareSuite(Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
             this.robotSoftwareSuite = Objects.requireNonNull(robotSoftwareSuite);
             return this;
         }
-
         public Builder robotSoftwareSuite(RobotApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
             this.robotSoftwareSuite = Output.of(Objects.requireNonNull(robotSoftwareSuite));
             return this;
         }
-
         public Builder sources(@Nullable Output<List<RobotApplicationSourceConfigArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<RobotApplicationSourceConfigArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-
+        public Builder sources(RobotApplicationSourceConfigArgs... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tags(@Nullable Output<RobotApplicationTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable RobotApplicationTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RobotApplicationArgs build() {
+        }        public RobotApplicationArgs build() {
             return new RobotApplicationArgs(currentRevisionId, environment, name, robotSoftwareSuite, sources, tags);
         }
     }

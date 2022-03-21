@@ -64,12 +64,10 @@ public final class TopicRuleTimestreamDimension extends io.pulumi.resources.Invo
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TopicRuleTimestreamDimension build() {
+        }        public TopicRuleTimestreamDimension build() {
             return new TopicRuleTimestreamDimension(name, value);
         }
     }

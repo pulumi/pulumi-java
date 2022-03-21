@@ -93,17 +93,14 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
-
         public Builder receiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
-
         public Builder senderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
-        }
-        public AS2OneWayAgreementResponse build() {
+        }        public AS2OneWayAgreementResponse build() {
             return new AS2OneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }
     }

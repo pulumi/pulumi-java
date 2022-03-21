@@ -80,12 +80,13 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
             this.items = items;
             return this;
         }
-
+        public Builder items(ConnectionMonitorEndpointFilterItemResponse... items) {
+            return items(List.of(items));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ConnectionMonitorEndpointFilterResponse build() {
+        }        public ConnectionMonitorEndpointFilterResponse build() {
             return new ConnectionMonitorEndpointFilterResponse(items, type);
         }
     }

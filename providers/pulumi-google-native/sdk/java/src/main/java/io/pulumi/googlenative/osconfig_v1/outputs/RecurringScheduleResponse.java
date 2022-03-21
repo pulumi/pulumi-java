@@ -185,47 +185,38 @@ public final class RecurringScheduleResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder lastExecuteTime(String lastExecuteTime) {
             this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime);
             return this;
         }
-
         public Builder monthly(MonthlyScheduleResponse monthly) {
             this.monthly = Objects.requireNonNull(monthly);
             return this;
         }
-
         public Builder nextExecuteTime(String nextExecuteTime) {
             this.nextExecuteTime = Objects.requireNonNull(nextExecuteTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder timeOfDay(TimeOfDayResponse timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
-
         public Builder timeZone(TimeZoneResponse timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder weekly(WeeklyScheduleResponse weekly) {
             this.weekly = Objects.requireNonNull(weekly);
             return this;
-        }
-        public RecurringScheduleResponse build() {
+        }        public RecurringScheduleResponse build() {
             return new RecurringScheduleResponse(endTime, frequency, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
         }
     }

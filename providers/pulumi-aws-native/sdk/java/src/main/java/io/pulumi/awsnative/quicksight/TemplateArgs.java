@@ -149,72 +149,64 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<TemplateResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<TemplateResourcePermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(TemplateResourcePermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder sourceEntity(Output<TemplateSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
-
         public Builder sourceEntity(TemplateSourceEntityArgs sourceEntity) {
             this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TemplateTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TemplateTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder templateId(Output<String> templateId) {
             this.templateId = Objects.requireNonNull(templateId);
             return this;
         }
-
         public Builder templateId(String templateId) {
             this.templateId = Output.of(Objects.requireNonNull(templateId));
             return this;
         }
-
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
-
         public Builder versionDescription(@Nullable String versionDescription) {
             this.versionDescription = Output.ofNullable(versionDescription);
             return this;
-        }
-        public TemplateArgs build() {
+        }        public TemplateArgs build() {
             return new TemplateArgs(awsAccountId, name, permissions, sourceEntity, tags, templateId, versionDescription);
         }
     }

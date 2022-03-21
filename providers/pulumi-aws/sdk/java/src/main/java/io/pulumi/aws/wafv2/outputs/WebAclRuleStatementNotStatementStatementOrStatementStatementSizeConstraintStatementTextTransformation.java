@@ -70,12 +70,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementS
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation build() {
+        }        public WebAclRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation build() {
             return new WebAclRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation(priority, type);
         }
     }

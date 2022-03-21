@@ -76,12 +76,10 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public GetKMSCryptoKeyVersionArgs build() {
+        }        public GetKMSCryptoKeyVersionArgs build() {
             return new GetKMSCryptoKeyVersionArgs(cryptoKey, version);
         }
     }

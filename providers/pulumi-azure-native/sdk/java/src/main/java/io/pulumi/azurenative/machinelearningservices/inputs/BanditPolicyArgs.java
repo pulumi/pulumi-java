@@ -128,52 +128,42 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
-
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = Output.ofNullable(delayEvaluation);
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Output<Integer> evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = Output.ofNullable(evaluationInterval);
             return this;
         }
-
         public Builder policyType(Output<String> policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public Builder policyType(String policyType) {
             this.policyType = Output.of(Objects.requireNonNull(policyType));
             return this;
         }
-
         public Builder slackAmount(@Nullable Output<Double> slackAmount) {
             this.slackAmount = slackAmount;
             return this;
         }
-
         public Builder slackAmount(@Nullable Double slackAmount) {
             this.slackAmount = Output.ofNullable(slackAmount);
             return this;
         }
-
         public Builder slackFactor(@Nullable Output<Double> slackFactor) {
             this.slackFactor = slackFactor;
             return this;
         }
-
         public Builder slackFactor(@Nullable Double slackFactor) {
             this.slackFactor = Output.ofNullable(slackFactor);
             return this;
-        }
-        public BanditPolicyArgs build() {
+        }        public BanditPolicyArgs build() {
             return new BanditPolicyArgs(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);
         }
     }

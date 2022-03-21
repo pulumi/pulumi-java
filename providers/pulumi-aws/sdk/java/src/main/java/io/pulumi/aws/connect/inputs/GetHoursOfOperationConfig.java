@@ -91,17 +91,20 @@ public final class GetHoursOfOperationConfig extends io.pulumi.resources.InvokeA
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder endTimes(List<GetHoursOfOperationConfigEndTime> endTimes) {
             this.endTimes = Objects.requireNonNull(endTimes);
             return this;
         }
-
+        public Builder endTimes(GetHoursOfOperationConfigEndTime... endTimes) {
+            return endTimes(List.of(endTimes));
+        }
         public Builder startTimes(List<GetHoursOfOperationConfigStartTime> startTimes) {
             this.startTimes = Objects.requireNonNull(startTimes);
             return this;
         }
-        public GetHoursOfOperationConfig build() {
+        public Builder startTimes(GetHoursOfOperationConfigStartTime... startTimes) {
+            return startTimes(List.of(startTimes));
+        }        public GetHoursOfOperationConfig build() {
             return new GetHoursOfOperationConfig(day, endTimes, startTimes);
         }
     }

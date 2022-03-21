@@ -57,12 +57,10 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesGetArgs extends io.p
             this.deliveryFrequency = deliveryFrequency;
             return this;
         }
-
         public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
             this.deliveryFrequency = Output.ofNullable(deliveryFrequency);
             return this;
-        }
-        public DeliveryChannelSnapshotDeliveryPropertiesGetArgs build() {
+        }        public DeliveryChannelSnapshotDeliveryPropertiesGetArgs build() {
             return new DeliveryChannelSnapshotDeliveryPropertiesGetArgs(deliveryFrequency);
         }
     }

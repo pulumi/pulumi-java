@@ -77,12 +77,10 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
-
         public Builder range(GoogleMonitoringV3RangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public DistributionCutResponse build() {
+        }        public DistributionCutResponse build() {
             return new DistributionCutResponse(distributionFilter, range);
         }
     }

@@ -72,12 +72,10 @@ public final class LocalTimestampResponse {
             this.format = format;
             return this;
         }
-
         public Builder timeZoneOffset(@Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
             this.timeZoneOffset = timeZoneOffset;
             return this;
-        }
-        public LocalTimestampResponse build() {
+        }        public LocalTimestampResponse build() {
             return new LocalTimestampResponse(format, timeZoneOffset);
         }
     }

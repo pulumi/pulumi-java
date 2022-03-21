@@ -54,7 +54,9 @@ public final class ListenerRuleSourceIpConfig extends io.pulumi.resources.Invoke
             this.values = values;
             return this;
         }
-        public ListenerRuleSourceIpConfig build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleSourceIpConfig build() {
             return new ListenerRuleSourceIpConfig(values);
         }
     }

@@ -94,17 +94,14 @@ public final class DeviceLocation extends io.pulumi.resources.InvokeArgs {
             this.address = address;
             return this;
         }
-
         public Builder latitude(@Nullable String latitude) {
             this.latitude = latitude;
             return this;
         }
-
         public Builder longitude(@Nullable String longitude) {
             this.longitude = longitude;
             return this;
-        }
-        public DeviceLocation build() {
+        }        public DeviceLocation build() {
             return new DeviceLocation(address, latitude, longitude);
         }
     }

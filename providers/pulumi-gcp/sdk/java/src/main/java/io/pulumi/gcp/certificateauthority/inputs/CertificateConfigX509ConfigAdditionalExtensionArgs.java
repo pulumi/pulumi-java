@@ -93,32 +93,26 @@ public final class CertificateConfigX509ConfigAdditionalExtensionArgs extends io
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
-
         public Builder critical(Boolean critical) {
             this.critical = Output.of(Objects.requireNonNull(critical));
             return this;
         }
-
         public Builder objectId(Output<CertificateConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(CertificateConfigX509ConfigAdditionalExtensionObjectIdArgs objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public CertificateConfigX509ConfigAdditionalExtensionArgs build() {
+        }        public CertificateConfigX509ConfigAdditionalExtensionArgs build() {
             return new CertificateConfigX509ConfigAdditionalExtensionArgs(critical, objectId, value);
         }
     }

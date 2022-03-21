@@ -91,17 +91,17 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
             this.customSupportLevel = customSupportLevel;
             return this;
         }
-
         public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
-
         public Builder stages(@Nullable List<String> stages) {
             this.stages = stages;
             return this;
         }
-        public GetTestablePermissionsArgs build() {
+        public Builder stages(String... stages) {
+            return stages(List.of(stages));
+        }        public GetTestablePermissionsArgs build() {
             return new GetTestablePermissionsArgs(customSupportLevel, fullResourceName, stages);
         }
     }

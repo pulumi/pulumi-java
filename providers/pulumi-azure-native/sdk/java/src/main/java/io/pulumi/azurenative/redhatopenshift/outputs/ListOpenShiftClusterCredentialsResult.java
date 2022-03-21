@@ -71,12 +71,10 @@ public final class ListOpenShiftClusterCredentialsResult {
             this.kubeadminPassword = kubeadminPassword;
             return this;
         }
-
         public Builder kubeadminUsername(@Nullable String kubeadminUsername) {
             this.kubeadminUsername = kubeadminUsername;
             return this;
-        }
-        public ListOpenShiftClusterCredentialsResult build() {
+        }        public ListOpenShiftClusterCredentialsResult build() {
             return new ListOpenShiftClusterCredentialsResult(kubeadminPassword, kubeadminUsername);
         }
     }

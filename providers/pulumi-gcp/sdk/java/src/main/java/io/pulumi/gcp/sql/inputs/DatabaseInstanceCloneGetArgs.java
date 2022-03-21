@@ -74,22 +74,18 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
             this.pointInTime = pointInTime;
             return this;
         }
-
         public Builder pointInTime(@Nullable String pointInTime) {
             this.pointInTime = Output.ofNullable(pointInTime);
             return this;
         }
-
         public Builder sourceInstanceName(Output<String> sourceInstanceName) {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }
-
         public Builder sourceInstanceName(String sourceInstanceName) {
             this.sourceInstanceName = Output.of(Objects.requireNonNull(sourceInstanceName));
             return this;
-        }
-        public DatabaseInstanceCloneGetArgs build() {
+        }        public DatabaseInstanceCloneGetArgs build() {
             return new DatabaseInstanceCloneGetArgs(pointInTime, sourceInstanceName);
         }
     }

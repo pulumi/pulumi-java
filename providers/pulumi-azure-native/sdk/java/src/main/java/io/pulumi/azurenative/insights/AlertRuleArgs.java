@@ -228,112 +228,93 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable Either<RuleEmailActionArgs,RuleWebhookActionArgs> action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder actions(@Nullable Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions) {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(Either<RuleEmailActionArgs,RuleWebhookActionArgs>... actions) {
+            return actions(List.of(actions));
+        }
         public Builder condition(Output<Object> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder condition(Object condition) {
             this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AlertRuleArgs build() {
+        }        public AlertRuleArgs build() {
             return new AlertRuleArgs(action, actions, condition, description, isEnabled, location, name, provisioningState, resourceGroupName, ruleName, tags);
         }
     }

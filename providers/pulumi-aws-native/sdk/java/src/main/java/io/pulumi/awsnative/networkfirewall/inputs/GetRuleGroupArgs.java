@@ -50,8 +50,7 @@ public final class GetRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
         public Builder ruleGroupArn(String ruleGroupArn) {
             this.ruleGroupArn = Objects.requireNonNull(ruleGroupArn);
             return this;
-        }
-        public GetRuleGroupArgs build() {
+        }        public GetRuleGroupArgs build() {
             return new GetRuleGroupArgs(ruleGroupArn);
         }
     }

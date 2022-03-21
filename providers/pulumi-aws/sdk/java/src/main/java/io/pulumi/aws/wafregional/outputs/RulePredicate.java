@@ -62,17 +62,14 @@ public final class RulePredicate {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
-
         public Builder negated(Boolean negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RulePredicate build() {
+        }        public RulePredicate build() {
             return new RulePredicate(dataId, negated, type);
         }
     }

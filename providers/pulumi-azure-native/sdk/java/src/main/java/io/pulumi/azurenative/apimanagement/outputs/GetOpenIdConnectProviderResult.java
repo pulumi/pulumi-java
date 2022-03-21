@@ -167,42 +167,34 @@ public final class GetOpenIdConnectProviderResult {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder metadataEndpoint(String metadataEndpoint) {
             this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOpenIdConnectProviderResult build() {
+        }        public GetOpenIdConnectProviderResult build() {
             return new GetOpenIdConnectProviderResult(clientId, clientSecret, description, displayName, id, metadataEndpoint, name, type);
         }
     }

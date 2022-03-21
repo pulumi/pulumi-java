@@ -140,62 +140,56 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
             this.dashManifests = Objects.requireNonNull(dashManifests);
             return this;
         }
-
         public Builder dashManifests(List<PackagingConfigurationDashManifestArgs> dashManifests) {
             this.dashManifests = Output.of(Objects.requireNonNull(dashManifests));
             return this;
         }
-
+        public Builder dashManifests(PackagingConfigurationDashManifestArgs... dashManifests) {
+            return dashManifests(List.of(dashManifests));
+        }
         public Builder encryption(@Nullable Output<PackagingConfigurationDashEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable PackagingConfigurationDashEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder includeEncoderConfigurationInSegments(@Nullable Output<Boolean> includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
-
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = Output.ofNullable(includeEncoderConfigurationInSegments);
             return this;
         }
-
         public Builder periodTriggers(@Nullable Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
-
         public Builder periodTriggers(@Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = Output.ofNullable(periodTriggers);
             return this;
         }
-
+        public Builder periodTriggers(PackagingConfigurationDashPackagePeriodTriggersItem... periodTriggers) {
+            return periodTriggers(List.of(periodTriggers));
+        }
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public Builder segmentTemplateFormat(@Nullable Output<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
-
         public Builder segmentTemplateFormat(@Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = Output.ofNullable(segmentTemplateFormat);
             return this;
-        }
-        public PackagingConfigurationDashPackageArgs build() {
+        }        public PackagingConfigurationDashPackageArgs build() {
             return new PackagingConfigurationDashPackageArgs(dashManifests, encryption, includeEncoderConfigurationInSegments, periodTriggers, segmentDurationSeconds, segmentTemplateFormat);
         }
     }

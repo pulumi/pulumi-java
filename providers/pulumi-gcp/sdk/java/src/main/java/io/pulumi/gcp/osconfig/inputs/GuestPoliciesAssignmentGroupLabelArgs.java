@@ -57,12 +57,10 @@ public final class GuestPoliciesAssignmentGroupLabelArgs extends io.pulumi.resou
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
-        }
-        public GuestPoliciesAssignmentGroupLabelArgs build() {
+        }        public GuestPoliciesAssignmentGroupLabelArgs build() {
             return new GuestPoliciesAssignmentGroupLabelArgs(labels);
         }
     }

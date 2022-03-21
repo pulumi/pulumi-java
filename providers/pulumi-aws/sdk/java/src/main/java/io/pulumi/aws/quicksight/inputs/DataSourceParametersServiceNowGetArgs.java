@@ -56,12 +56,10 @@ public final class DataSourceParametersServiceNowGetArgs extends io.pulumi.resou
             this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
             return this;
         }
-
         public Builder siteBaseUrl(String siteBaseUrl) {
             this.siteBaseUrl = Output.of(Objects.requireNonNull(siteBaseUrl));
             return this;
-        }
-        public DataSourceParametersServiceNowGetArgs build() {
+        }        public DataSourceParametersServiceNowGetArgs build() {
             return new DataSourceParametersServiceNowGetArgs(siteBaseUrl);
         }
     }

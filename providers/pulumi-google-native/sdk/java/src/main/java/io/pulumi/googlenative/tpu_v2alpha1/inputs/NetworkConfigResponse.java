@@ -109,22 +109,18 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
-
         public Builder enableExternalIps(Boolean enableExternalIps) {
             this.enableExternalIps = Objects.requireNonNull(enableExternalIps);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
-        }
-        public NetworkConfigResponse build() {
+        }        public NetworkConfigResponse build() {
             return new NetworkConfigResponse(canIpForward, enableExternalIps, network, subnetwork);
         }
     }

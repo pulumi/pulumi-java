@@ -51,8 +51,7 @@ public final class AwsNodePoolConfigConfigEncryption {
         public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
-        }
-        public AwsNodePoolConfigConfigEncryption build() {
+        }        public AwsNodePoolConfigConfigEncryption build() {
             return new AwsNodePoolConfigConfigEncryption(kmsKeyArn);
         }
     }

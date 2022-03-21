@@ -88,17 +88,14 @@ public final class ListWebAppSiteBackupsSlotArgs extends io.pulumi.resources.Inv
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppSiteBackupsSlotArgs build() {
+        }        public ListWebAppSiteBackupsSlotArgs build() {
             return new ListWebAppSiteBackupsSlotArgs(name, resourceGroupName, slot);
         }
     }

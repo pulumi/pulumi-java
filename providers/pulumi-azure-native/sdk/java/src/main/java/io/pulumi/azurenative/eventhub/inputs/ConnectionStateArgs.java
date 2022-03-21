@@ -80,22 +80,18 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,PrivateLinkConnectionStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,PrivateLinkConnectionStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ConnectionStateArgs build() {
+        }        public ConnectionStateArgs build() {
             return new ConnectionStateArgs(description, status);
         }
     }

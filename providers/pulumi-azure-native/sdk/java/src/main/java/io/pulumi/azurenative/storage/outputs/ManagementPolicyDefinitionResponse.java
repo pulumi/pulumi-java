@@ -72,12 +72,10 @@ public final class ManagementPolicyDefinitionResponse {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder filters(@Nullable ManagementPolicyFilterResponse filters) {
             this.filters = filters;
             return this;
-        }
-        public ManagementPolicyDefinitionResponse build() {
+        }        public ManagementPolicyDefinitionResponse build() {
             return new ManagementPolicyDefinitionResponse(actions, filters);
         }
     }

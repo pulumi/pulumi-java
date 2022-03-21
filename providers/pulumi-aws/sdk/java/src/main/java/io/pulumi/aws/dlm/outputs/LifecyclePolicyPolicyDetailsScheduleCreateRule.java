@@ -88,17 +88,14 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder intervalUnit(@Nullable String intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
-
         public Builder times(@Nullable String times) {
             this.times = times;
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleCreateRule build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleCreateRule build() {
             return new LifecyclePolicyPolicyDetailsScheduleCreateRule(interval, intervalUnit, times);
         }
     }

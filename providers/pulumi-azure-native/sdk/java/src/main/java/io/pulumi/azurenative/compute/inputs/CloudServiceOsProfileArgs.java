@@ -62,12 +62,13 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupArgs> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-        public CloudServiceOsProfileArgs build() {
+        public Builder secrets(CloudServiceVaultSecretGroupArgs... secrets) {
+            return secrets(List.of(secrets));
+        }        public CloudServiceOsProfileArgs build() {
             return new CloudServiceOsProfileArgs(secrets);
         }
     }

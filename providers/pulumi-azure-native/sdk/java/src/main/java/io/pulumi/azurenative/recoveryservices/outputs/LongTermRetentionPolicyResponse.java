@@ -125,27 +125,22 @@ public final class LongTermRetentionPolicyResponse {
             this.dailySchedule = dailySchedule;
             return this;
         }
-
         public Builder monthlySchedule(@Nullable MonthlyRetentionScheduleResponse monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
-
         public Builder retentionPolicyType(String retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }
-
         public Builder weeklySchedule(@Nullable WeeklyRetentionScheduleResponse weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public Builder yearlySchedule(@Nullable YearlyRetentionScheduleResponse yearlySchedule) {
             this.yearlySchedule = yearlySchedule;
             return this;
-        }
-        public LongTermRetentionPolicyResponse build() {
+        }        public LongTermRetentionPolicyResponse build() {
             return new LongTermRetentionPolicyResponse(dailySchedule, monthlySchedule, retentionPolicyType, weeklySchedule, yearlySchedule);
         }
     }

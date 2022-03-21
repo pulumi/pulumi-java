@@ -53,12 +53,10 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ServiceDeploymentControllerType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ServiceDeploymentControllerArgs build() {
+        }        public ServiceDeploymentControllerArgs build() {
             return new ServiceDeploymentControllerArgs(type);
         }
     }

@@ -273,142 +273,117 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             this.author = author;
             return this;
         }
-
         public Builder author(@Nullable String author) {
             this.author = Output.ofNullable(author);
             return this;
         }
-
         public Builder customImagePlan(@Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan) {
             this.customImagePlan = customImagePlan;
             return this;
         }
-
         public Builder customImagePlan(@Nullable CustomImagePropertiesFromPlanArgs customImagePlan) {
             this.customImagePlan = Output.ofNullable(customImagePlan);
             return this;
         }
-
         public Builder dataDiskStorageInfo(@Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo) {
             this.dataDiskStorageInfo = dataDiskStorageInfo;
             return this;
         }
-
         public Builder dataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoArgs> dataDiskStorageInfo) {
             this.dataDiskStorageInfo = Output.ofNullable(dataDiskStorageInfo);
             return this;
         }
-
+        public Builder dataDiskStorageInfo(DataDiskStorageTypeInfoArgs... dataDiskStorageInfo) {
+            return dataDiskStorageInfo(List.of(dataDiskStorageInfo));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
-
         public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
             this.isPlanAuthorized = Output.ofNullable(isPlanAuthorized);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedImageId(@Nullable Output<String> managedImageId) {
             this.managedImageId = managedImageId;
             return this;
         }
-
         public Builder managedImageId(@Nullable String managedImageId) {
             this.managedImageId = Output.ofNullable(managedImageId);
             return this;
         }
-
         public Builder managedSnapshotId(@Nullable Output<String> managedSnapshotId) {
             this.managedSnapshotId = managedSnapshotId;
             return this;
         }
-
         public Builder managedSnapshotId(@Nullable String managedSnapshotId) {
             this.managedSnapshotId = Output.ofNullable(managedSnapshotId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vhd(@Nullable Output<CustomImagePropertiesCustomArgs> vhd) {
             this.vhd = vhd;
             return this;
         }
-
         public Builder vhd(@Nullable CustomImagePropertiesCustomArgs vhd) {
             this.vhd = Output.ofNullable(vhd);
             return this;
         }
-
         public Builder vm(@Nullable Output<CustomImagePropertiesFromVmArgs> vm) {
             this.vm = vm;
             return this;
         }
-
         public Builder vm(@Nullable CustomImagePropertiesFromVmArgs vm) {
             this.vm = Output.ofNullable(vm);
             return this;
-        }
-        public CustomImageArgs build() {
+        }        public CustomImageArgs build() {
             return new CustomImageArgs(author, customImagePlan, dataDiskStorageInfo, description, isPlanAuthorized, labName, location, managedImageId, managedSnapshotId, name, resourceGroupName, tags, vhd, vm);
         }
     }

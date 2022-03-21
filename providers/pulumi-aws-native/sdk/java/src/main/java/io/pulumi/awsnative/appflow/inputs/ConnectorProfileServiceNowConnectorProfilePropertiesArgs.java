@@ -56,12 +56,10 @@ public final class ConnectorProfileServiceNowConnectorProfilePropertiesArgs exte
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
-
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
             return this;
-        }
-        public ConnectorProfileServiceNowConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileServiceNowConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileServiceNowConnectorProfilePropertiesArgs(instanceUrl);
         }
     }

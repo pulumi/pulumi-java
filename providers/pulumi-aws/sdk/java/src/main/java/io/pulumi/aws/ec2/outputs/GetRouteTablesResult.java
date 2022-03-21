@@ -98,27 +98,28 @@ public final class GetRouteTablesResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetRouteTablesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public GetRouteTablesResult build() {
+        }        public GetRouteTablesResult build() {
             return new GetRouteTablesResult(filters, id, ids, tags, vpcId);
         }
     }

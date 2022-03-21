@@ -72,12 +72,10 @@ public final class FunctionInputResponse {
             this.dataType = dataType;
             return this;
         }
-
         public Builder isConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
             this.isConfigurationParameter = isConfigurationParameter;
             return this;
-        }
-        public FunctionInputResponse build() {
+        }        public FunctionInputResponse build() {
             return new FunctionInputResponse(dataType, isConfigurationParameter);
         }
     }

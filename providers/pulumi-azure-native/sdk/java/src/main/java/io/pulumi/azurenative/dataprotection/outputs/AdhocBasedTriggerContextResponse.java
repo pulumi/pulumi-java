@@ -72,12 +72,10 @@ public final class AdhocBasedTriggerContextResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder taggingCriteria(AdhocBasedTaggingCriteriaResponse taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
-        }
-        public AdhocBasedTriggerContextResponse build() {
+        }        public AdhocBasedTriggerContextResponse build() {
             return new AdhocBasedTriggerContextResponse(objectType, taggingCriteria);
         }
     }

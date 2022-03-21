@@ -166,82 +166,66 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitArgs extends io
             this.gcpServiceAccountEmail = gcpServiceAccountEmail;
             return this;
         }
-
         public Builder gcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
             this.gcpServiceAccountEmail = Output.ofNullable(gcpServiceAccountEmail);
             return this;
         }
-
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
-
         public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = Output.ofNullable(httpsProxy);
             return this;
         }
-
         public Builder policyDir(@Nullable Output<String> policyDir) {
             this.policyDir = policyDir;
             return this;
         }
-
         public Builder policyDir(@Nullable String policyDir) {
             this.policyDir = Output.ofNullable(policyDir);
             return this;
         }
-
         public Builder secretType(@Nullable Output<String> secretType) {
             this.secretType = secretType;
             return this;
         }
-
         public Builder secretType(@Nullable String secretType) {
             this.secretType = Output.ofNullable(secretType);
             return this;
         }
-
         public Builder syncBranch(@Nullable Output<String> syncBranch) {
             this.syncBranch = syncBranch;
             return this;
         }
-
         public Builder syncBranch(@Nullable String syncBranch) {
             this.syncBranch = Output.ofNullable(syncBranch);
             return this;
         }
-
         public Builder syncRepo(@Nullable Output<String> syncRepo) {
             this.syncRepo = syncRepo;
             return this;
         }
-
         public Builder syncRepo(@Nullable String syncRepo) {
             this.syncRepo = Output.ofNullable(syncRepo);
             return this;
         }
-
         public Builder syncRev(@Nullable Output<String> syncRev) {
             this.syncRev = syncRev;
             return this;
         }
-
         public Builder syncRev(@Nullable String syncRev) {
             this.syncRev = Output.ofNullable(syncRev);
             return this;
         }
-
         public Builder syncWaitSecs(@Nullable Output<String> syncWaitSecs) {
             this.syncWaitSecs = syncWaitSecs;
             return this;
         }
-
         public Builder syncWaitSecs(@Nullable String syncWaitSecs) {
             this.syncWaitSecs = Output.ofNullable(syncWaitSecs);
             return this;
-        }
-        public FeatureMembershipConfigmanagementConfigSyncGitArgs build() {
+        }        public FeatureMembershipConfigmanagementConfigSyncGitArgs build() {
             return new FeatureMembershipConfigmanagementConfigSyncGitArgs(gcpServiceAccountEmail, httpsProxy, policyDir, secretType, syncBranch, syncRepo, syncRev, syncWaitSecs);
         }
     }

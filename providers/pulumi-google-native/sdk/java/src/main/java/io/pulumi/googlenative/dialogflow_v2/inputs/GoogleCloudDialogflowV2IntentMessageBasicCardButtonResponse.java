@@ -77,12 +77,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
             this.openUriAction = Objects.requireNonNull(openUriAction);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse(openUriAction, title);
         }
     }

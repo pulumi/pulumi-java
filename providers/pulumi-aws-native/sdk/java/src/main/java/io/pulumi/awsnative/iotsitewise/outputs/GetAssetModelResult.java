@@ -172,42 +172,46 @@ public final class GetAssetModelResult {
             this.assetModelArn = assetModelArn;
             return this;
         }
-
         public Builder assetModelCompositeModels(@Nullable List<AssetModelCompositeModel> assetModelCompositeModels) {
             this.assetModelCompositeModels = assetModelCompositeModels;
             return this;
         }
-
+        public Builder assetModelCompositeModels(AssetModelCompositeModel... assetModelCompositeModels) {
+            return assetModelCompositeModels(List.of(assetModelCompositeModels));
+        }
         public Builder assetModelDescription(@Nullable String assetModelDescription) {
             this.assetModelDescription = assetModelDescription;
             return this;
         }
-
         public Builder assetModelHierarchies(@Nullable List<AssetModelHierarchy> assetModelHierarchies) {
             this.assetModelHierarchies = assetModelHierarchies;
             return this;
         }
-
+        public Builder assetModelHierarchies(AssetModelHierarchy... assetModelHierarchies) {
+            return assetModelHierarchies(List.of(assetModelHierarchies));
+        }
         public Builder assetModelId(@Nullable String assetModelId) {
             this.assetModelId = assetModelId;
             return this;
         }
-
         public Builder assetModelName(@Nullable String assetModelName) {
             this.assetModelName = assetModelName;
             return this;
         }
-
         public Builder assetModelProperties(@Nullable List<AssetModelProperty> assetModelProperties) {
             this.assetModelProperties = assetModelProperties;
             return this;
         }
-
+        public Builder assetModelProperties(AssetModelProperty... assetModelProperties) {
+            return assetModelProperties(List.of(assetModelProperties));
+        }
         public Builder tags(@Nullable List<AssetModelTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAssetModelResult build() {
+        public Builder tags(AssetModelTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAssetModelResult build() {
             return new GetAssetModelResult(assetModelArn, assetModelCompositeModels, assetModelDescription, assetModelHierarchies, assetModelId, assetModelName, assetModelProperties, tags);
         }
     }

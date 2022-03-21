@@ -51,8 +51,7 @@ public final class DataSourceParametersJira {
         public Builder siteBaseUrl(String siteBaseUrl) {
             this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
             return this;
-        }
-        public DataSourceParametersJira build() {
+        }        public DataSourceParametersJira build() {
             return new DataSourceParametersJira(siteBaseUrl);
         }
     }

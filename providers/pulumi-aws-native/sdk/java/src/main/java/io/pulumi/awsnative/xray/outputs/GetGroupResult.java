@@ -106,27 +106,25 @@ public final class GetGroupResult {
             this.filterExpression = filterExpression;
             return this;
         }
-
         public Builder groupARN(@Nullable String groupARN) {
             this.groupARN = groupARN;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder insightsConfiguration(@Nullable GroupInsightsConfiguration insightsConfiguration) {
             this.insightsConfiguration = insightsConfiguration;
             return this;
         }
-
         public Builder tags(@Nullable List<TagsItemProperties> tags) {
             this.tags = tags;
             return this;
         }
-        public GetGroupResult build() {
+        public Builder tags(TagsItemProperties... tags) {
+            return tags(List.of(tags));
+        }        public GetGroupResult build() {
             return new GetGroupResult(filterExpression, groupARN, groupName, insightsConfiguration, tags);
         }
     }

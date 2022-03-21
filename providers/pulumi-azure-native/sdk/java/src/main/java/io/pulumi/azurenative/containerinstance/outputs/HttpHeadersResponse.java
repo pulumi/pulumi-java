@@ -71,12 +71,10 @@ public final class HttpHeadersResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public HttpHeadersResponse build() {
+        }        public HttpHeadersResponse build() {
             return new HttpHeadersResponse(name, value);
         }
     }

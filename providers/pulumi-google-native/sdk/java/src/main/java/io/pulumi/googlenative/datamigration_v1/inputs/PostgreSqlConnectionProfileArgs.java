@@ -144,62 +144,50 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
             this.cloudSqlId = cloudSqlId;
             return this;
         }
-
         public Builder cloudSqlId(@Nullable String cloudSqlId) {
             this.cloudSqlId = Output.ofNullable(cloudSqlId);
             return this;
         }
-
         public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder ssl(@Nullable Output<SslConfigArgs> ssl) {
             this.ssl = ssl;
             return this;
         }
-
         public Builder ssl(@Nullable SslConfigArgs ssl) {
             this.ssl = Output.ofNullable(ssl);
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public PostgreSqlConnectionProfileArgs build() {
+        }        public PostgreSqlConnectionProfileArgs build() {
             return new PostgreSqlConnectionProfileArgs(cloudSqlId, host, password, port, ssl, username);
         }
     }

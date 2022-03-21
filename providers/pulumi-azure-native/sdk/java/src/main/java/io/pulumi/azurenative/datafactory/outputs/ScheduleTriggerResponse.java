@@ -141,32 +141,32 @@ public final class ScheduleTriggerResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
-
+        public Builder pipelines(TriggerPipelineReferenceResponse... pipelines) {
+            return pipelines(List.of(pipelines));
+        }
         public Builder recurrence(ScheduleTriggerRecurrenceResponse recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ScheduleTriggerResponse build() {
+        }        public ScheduleTriggerResponse build() {
             return new ScheduleTriggerResponse(annotations, description, pipelines, recurrence, runtimeState, type);
         }
     }

@@ -207,52 +207,45 @@ public final class WebTableDatasetResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder index(Object index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebTableDatasetResponse build() {
+        }        public WebTableDatasetResponse build() {
             return new WebTableDatasetResponse(annotations, description, folder, index, linkedServiceName, parameters, path, schema, structure, type);
         }
     }

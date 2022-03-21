@@ -90,17 +90,17 @@ public final class Mp4FormatResponse {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder outputFiles(@Nullable List<OutputFileResponse> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
-        public Mp4FormatResponse build() {
+        public Builder outputFiles(OutputFileResponse... outputFiles) {
+            return outputFiles(List.of(outputFiles));
+        }        public Mp4FormatResponse build() {
             return new Mp4FormatResponse(filenamePattern, odataType, outputFiles);
         }
     }

@@ -95,17 +95,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
-
         public Builder corsPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
-
         public Builder urlRewrite(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction(cdnPolicy, corsPolicy, urlRewrite);
         }
     }

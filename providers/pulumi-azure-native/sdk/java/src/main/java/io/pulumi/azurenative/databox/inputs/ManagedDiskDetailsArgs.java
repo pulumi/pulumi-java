@@ -111,42 +111,34 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
-
         public Builder resourceGroupId(Output<String> resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
-
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
             return this;
         }
-
         public Builder sharePassword(@Nullable Output<String> sharePassword) {
             this.sharePassword = sharePassword;
             return this;
         }
-
         public Builder sharePassword(@Nullable String sharePassword) {
             this.sharePassword = Output.ofNullable(sharePassword);
             return this;
         }
-
         public Builder stagingStorageAccountId(Output<String> stagingStorageAccountId) {
             this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
             return this;
         }
-
         public Builder stagingStorageAccountId(String stagingStorageAccountId) {
             this.stagingStorageAccountId = Output.of(Objects.requireNonNull(stagingStorageAccountId));
             return this;
-        }
-        public ManagedDiskDetailsArgs build() {
+        }        public ManagedDiskDetailsArgs build() {
             return new ManagedDiskDetailsArgs(dataAccountType, resourceGroupId, sharePassword, stagingStorageAccountId);
         }
     }

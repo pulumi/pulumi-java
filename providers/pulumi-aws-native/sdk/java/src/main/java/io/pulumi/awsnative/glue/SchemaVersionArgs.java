@@ -70,22 +70,18 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(SchemaVersionSchemaArgs schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
-
         public Builder schemaDefinition(Output<String> schemaDefinition) {
             this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
             return this;
         }
-
         public Builder schemaDefinition(String schemaDefinition) {
             this.schemaDefinition = Output.of(Objects.requireNonNull(schemaDefinition));
             return this;
-        }
-        public SchemaVersionArgs build() {
+        }        public SchemaVersionArgs build() {
             return new SchemaVersionArgs(schema, schemaDefinition);
         }
     }

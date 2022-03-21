@@ -86,17 +86,14 @@ public final class DataSourceParametersPostgresql {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersPostgresql build() {
+        }        public DataSourceParametersPostgresql build() {
             return new DataSourceParametersPostgresql(database, host, port);
         }
     }

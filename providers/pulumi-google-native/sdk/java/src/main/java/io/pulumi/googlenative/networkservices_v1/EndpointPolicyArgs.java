@@ -226,122 +226,98 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizationPolicy = authorizationPolicy;
             return this;
         }
-
         public Builder authorizationPolicy(@Nullable String authorizationPolicy) {
             this.authorizationPolicy = Output.ofNullable(authorizationPolicy);
             return this;
         }
-
         public Builder clientTlsPolicy(@Nullable Output<String> clientTlsPolicy) {
             this.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
-
         public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
             this.clientTlsPolicy = Output.ofNullable(clientTlsPolicy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpointMatcher(Output<EndpointMatcherArgs> endpointMatcher) {
             this.endpointMatcher = Objects.requireNonNull(endpointMatcher);
             return this;
         }
-
         public Builder endpointMatcher(EndpointMatcherArgs endpointMatcher) {
             this.endpointMatcher = Output.of(Objects.requireNonNull(endpointMatcher));
             return this;
         }
-
         public Builder endpointPolicyId(Output<String> endpointPolicyId) {
             this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId);
             return this;
         }
-
         public Builder endpointPolicyId(String endpointPolicyId) {
             this.endpointPolicyId = Output.of(Objects.requireNonNull(endpointPolicyId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serverTlsPolicy(@Nullable Output<String> serverTlsPolicy) {
             this.serverTlsPolicy = serverTlsPolicy;
             return this;
         }
-
         public Builder serverTlsPolicy(@Nullable String serverTlsPolicy) {
             this.serverTlsPolicy = Output.ofNullable(serverTlsPolicy);
             return this;
         }
-
         public Builder trafficPortSelector(@Nullable Output<TrafficPortSelectorArgs> trafficPortSelector) {
             this.trafficPortSelector = trafficPortSelector;
             return this;
         }
-
         public Builder trafficPortSelector(@Nullable TrafficPortSelectorArgs trafficPortSelector) {
             this.trafficPortSelector = Output.ofNullable(trafficPortSelector);
             return this;
         }
-
         public Builder type(Output<EndpointPolicyType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(EndpointPolicyType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EndpointPolicyArgs build() {
+        }        public EndpointPolicyArgs build() {
             return new EndpointPolicyArgs(authorizationPolicy, clientTlsPolicy, description, endpointMatcher, endpointPolicyId, labels, location, name, project, serverTlsPolicy, trafficPortSelector, type);
         }
     }

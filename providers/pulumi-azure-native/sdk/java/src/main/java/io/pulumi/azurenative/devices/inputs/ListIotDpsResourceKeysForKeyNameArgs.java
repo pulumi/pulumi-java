@@ -88,17 +88,14 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder provisioningServiceName(String provisioningServiceName) {
             this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListIotDpsResourceKeysForKeyNameArgs build() {
+        }        public ListIotDpsResourceKeysForKeyNameArgs build() {
             return new ListIotDpsResourceKeysForKeyNameArgs(keyName, provisioningServiceName, resourceGroupName);
         }
     }

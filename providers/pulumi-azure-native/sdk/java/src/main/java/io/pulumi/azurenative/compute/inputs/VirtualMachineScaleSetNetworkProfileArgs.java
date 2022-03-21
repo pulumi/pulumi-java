@@ -99,32 +99,29 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
             this.healthProbe = healthProbe;
             return this;
         }
-
         public Builder healthProbe(@Nullable ApiEntityReferenceArgs healthProbe) {
             this.healthProbe = Output.ofNullable(healthProbe);
             return this;
         }
-
         public Builder networkApiVersion(@Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
-
         public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
             this.networkApiVersion = Output.ofNullable(networkApiVersion);
             return this;
         }
-
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
             return this;
         }
-        public VirtualMachineScaleSetNetworkProfileArgs build() {
+        public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationArgs... networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
+        }        public VirtualMachineScaleSetNetworkProfileArgs build() {
             return new VirtualMachineScaleSetNetworkProfileArgs(healthProbe, networkApiVersion, networkInterfaceConfigurations);
         }
     }

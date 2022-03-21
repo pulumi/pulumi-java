@@ -77,12 +77,10 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
             this.metastoreService = Objects.requireNonNull(metastoreService);
             return this;
         }
-
         public Builder sparkHistoryServerConfig(SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
             this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
             return this;
-        }
-        public PeripheralsConfigResponse build() {
+        }        public PeripheralsConfigResponse build() {
             return new PeripheralsConfigResponse(metastoreService, sparkHistoryServerConfig);
         }
     }

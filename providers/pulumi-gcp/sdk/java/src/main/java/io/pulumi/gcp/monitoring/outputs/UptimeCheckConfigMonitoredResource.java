@@ -70,12 +70,10 @@ public final class UptimeCheckConfigMonitoredResource {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public UptimeCheckConfigMonitoredResource build() {
+        }        public UptimeCheckConfigMonitoredResource build() {
             return new UptimeCheckConfigMonitoredResource(labels, type);
         }
     }

@@ -79,22 +79,18 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
-
         public Builder dataStoreType(Either<String,DataStoreTypes> dataStoreType) {
             this.dataStoreType = Output.of(Objects.requireNonNull(dataStoreType));
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
-        }
-        public DataStoreInfoBaseArgs build() {
+        }        public DataStoreInfoBaseArgs build() {
             return new DataStoreInfoBaseArgs(dataStoreType, objectType);
         }
     }

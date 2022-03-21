@@ -57,8 +57,7 @@ public final class GetHostedZoneIdArgs extends io.pulumi.resources.InvokeArgs {
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetHostedZoneIdArgs build() {
+        }        public GetHostedZoneIdArgs build() {
             return new GetHostedZoneIdArgs(region);
         }
     }

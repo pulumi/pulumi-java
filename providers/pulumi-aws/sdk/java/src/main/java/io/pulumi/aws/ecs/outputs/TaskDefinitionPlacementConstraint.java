@@ -71,12 +71,10 @@ public final class TaskDefinitionPlacementConstraint {
             this.expression = expression;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TaskDefinitionPlacementConstraint build() {
+        }        public TaskDefinitionPlacementConstraint build() {
             return new TaskDefinitionPlacementConstraint(expression, type);
         }
     }

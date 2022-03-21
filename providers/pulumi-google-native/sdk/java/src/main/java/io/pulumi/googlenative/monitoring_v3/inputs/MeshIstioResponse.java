@@ -92,17 +92,14 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
-        }
-        public MeshIstioResponse build() {
+        }        public MeshIstioResponse build() {
             return new MeshIstioResponse(meshUid, serviceName, serviceNamespace);
         }
     }

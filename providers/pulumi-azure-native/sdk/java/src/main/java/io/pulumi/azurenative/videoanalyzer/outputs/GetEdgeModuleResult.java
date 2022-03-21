@@ -118,27 +118,22 @@ public final class GetEdgeModuleResult {
             this.edgeModuleId = Objects.requireNonNull(edgeModuleId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEdgeModuleResult build() {
+        }        public GetEdgeModuleResult build() {
             return new GetEdgeModuleResult(edgeModuleId, id, name, systemData, type);
         }
     }

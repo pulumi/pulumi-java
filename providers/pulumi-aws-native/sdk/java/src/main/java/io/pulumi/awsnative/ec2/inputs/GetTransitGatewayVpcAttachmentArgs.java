@@ -50,8 +50,7 @@ public final class GetTransitGatewayVpcAttachmentArgs extends io.pulumi.resource
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetTransitGatewayVpcAttachmentArgs build() {
+        }        public GetTransitGatewayVpcAttachmentArgs build() {
             return new GetTransitGatewayVpcAttachmentArgs(id);
         }
     }

@@ -61,12 +61,10 @@ public final class DataCatalogConfigArgs extends io.pulumi.resources.ResourceArg
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public DataCatalogConfigArgs build() {
+        }        public DataCatalogConfigArgs build() {
             return new DataCatalogConfigArgs(enabled);
         }
     }

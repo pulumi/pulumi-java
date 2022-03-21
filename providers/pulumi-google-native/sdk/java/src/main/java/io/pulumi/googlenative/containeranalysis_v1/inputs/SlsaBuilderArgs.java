@@ -53,12 +53,10 @@ public final class SlsaBuilderArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public SlsaBuilderArgs build() {
+        }        public SlsaBuilderArgs build() {
             return new SlsaBuilderArgs(id);
         }
     }

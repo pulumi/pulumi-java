@@ -72,12 +72,10 @@ public final class WorkflowTemplatePlacementClusterSelector {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public WorkflowTemplatePlacementClusterSelector build() {
+        }        public WorkflowTemplatePlacementClusterSelector build() {
             return new WorkflowTemplatePlacementClusterSelector(clusterLabels, zone);
         }
     }

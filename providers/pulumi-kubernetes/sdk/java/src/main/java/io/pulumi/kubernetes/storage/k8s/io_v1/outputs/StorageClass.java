@@ -204,52 +204,48 @@ public final class StorageClass {
             this.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
-
         public Builder allowedTopologies(@Nullable List<TopologySelectorTerm> allowedTopologies) {
             this.allowedTopologies = allowedTopologies;
             return this;
         }
-
+        public Builder allowedTopologies(TopologySelectorTerm... allowedTopologies) {
+            return allowedTopologies(List.of(allowedTopologies));
+        }
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
+        public Builder mountOptions(String... mountOptions) {
+            return mountOptions(List.of(mountOptions));
+        }
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder provisioner(String provisioner) {
             this.provisioner = Objects.requireNonNull(provisioner);
             return this;
         }
-
         public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
             this.reclaimPolicy = reclaimPolicy;
             return this;
         }
-
         public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
             this.volumeBindingMode = volumeBindingMode;
             return this;
-        }
-        public StorageClass build() {
+        }        public StorageClass build() {
             return new StorageClass(allowVolumeExpansion, allowedTopologies, apiVersion, kind, metadata, mountOptions, parameters, provisioner, reclaimPolicy, volumeBindingMode);
         }
     }

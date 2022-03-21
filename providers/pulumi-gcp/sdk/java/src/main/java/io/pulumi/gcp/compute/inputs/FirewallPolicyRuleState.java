@@ -238,122 +238,104 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder firewallPolicy(@Nullable Output<String> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
-
         public Builder firewallPolicy(@Nullable String firewallPolicy) {
             this.firewallPolicy = Output.ofNullable(firewallPolicy);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder match(@Nullable Output<FirewallPolicyRuleMatchGetArgs> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable FirewallPolicyRuleMatchGetArgs match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder ruleTupleCount(@Nullable Output<Integer> ruleTupleCount) {
             this.ruleTupleCount = ruleTupleCount;
             return this;
         }
-
         public Builder ruleTupleCount(@Nullable Integer ruleTupleCount) {
             this.ruleTupleCount = Output.ofNullable(ruleTupleCount);
             return this;
         }
-
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
-
         public Builder targetResources(@Nullable List<String> targetResources) {
             this.targetResources = Output.ofNullable(targetResources);
             return this;
         }
-
+        public Builder targetResources(String... targetResources) {
+            return targetResources(List.of(targetResources));
+        }
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
             return this;
         }
-        public FirewallPolicyRuleState build() {
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }        public FirewallPolicyRuleState build() {
             return new FirewallPolicyRuleState(action, description, direction, disabled, enableLogging, firewallPolicy, kind, match, priority, ruleTupleCount, targetResources, targetServiceAccounts);
         }
     }

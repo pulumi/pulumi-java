@@ -175,82 +175,69 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             this.deleted = deleted;
             return this;
         }
-
         public Builder deleted(@Nullable Boolean deleted) {
             this.deleted = Output.ofNullable(deleted);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder roleId(@Nullable Output<String> roleId) {
             this.roleId = roleId;
             return this;
         }
-
         public Builder roleId(@Nullable String roleId) {
             this.roleId = Output.ofNullable(roleId);
             return this;
         }
-
         public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = Output.ofNullable(stage);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public IAMCustomRoleState build() {
+        }        public IAMCustomRoleState build() {
             return new IAMCustomRoleState(deleted, description, name, permissions, project, roleId, stage, title);
         }
     }

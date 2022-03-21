@@ -139,37 +139,39 @@ public final class GetOriginRequestPolicyResult {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder cookiesConfigs(List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs) {
             this.cookiesConfigs = Objects.requireNonNull(cookiesConfigs);
             return this;
         }
-
+        public Builder cookiesConfigs(GetOriginRequestPolicyCookiesConfig... cookiesConfigs) {
+            return cookiesConfigs(List.of(cookiesConfigs));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder headersConfigs(List<GetOriginRequestPolicyHeadersConfig> headersConfigs) {
             this.headersConfigs = Objects.requireNonNull(headersConfigs);
             return this;
         }
-
+        public Builder headersConfigs(GetOriginRequestPolicyHeadersConfig... headersConfigs) {
+            return headersConfigs(List.of(headersConfigs));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder queryStringsConfigs(List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
             this.queryStringsConfigs = Objects.requireNonNull(queryStringsConfigs);
             return this;
         }
-        public GetOriginRequestPolicyResult build() {
+        public Builder queryStringsConfigs(GetOriginRequestPolicyQueryStringsConfig... queryStringsConfigs) {
+            return queryStringsConfigs(List.of(queryStringsConfigs));
+        }        public GetOriginRequestPolicyResult build() {
             return new GetOriginRequestPolicyResult(comment, cookiesConfigs, etag, headersConfigs, id, name, queryStringsConfigs);
         }
     }

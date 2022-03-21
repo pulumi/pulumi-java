@@ -71,12 +71,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
             this.input = input;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters build() {
+        }        public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters build() {
             return new MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters(input, name);
         }
     }

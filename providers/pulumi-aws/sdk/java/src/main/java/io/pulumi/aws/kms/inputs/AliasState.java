@@ -123,52 +123,42 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder targetKeyArn(@Nullable Output<String> targetKeyArn) {
             this.targetKeyArn = targetKeyArn;
             return this;
         }
-
         public Builder targetKeyArn(@Nullable String targetKeyArn) {
             this.targetKeyArn = Output.ofNullable(targetKeyArn);
             return this;
         }
-
         public Builder targetKeyId(@Nullable Output<String> targetKeyId) {
             this.targetKeyId = targetKeyId;
             return this;
         }
-
         public Builder targetKeyId(@Nullable String targetKeyId) {
             this.targetKeyId = Output.ofNullable(targetKeyId);
             return this;
-        }
-        public AliasState build() {
+        }        public AliasState build() {
             return new AliasState(arn, name, namePrefix, targetKeyArn, targetKeyId);
         }
     }

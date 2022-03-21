@@ -151,37 +151,30 @@ public final class PrivateClusterConfigResponse {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
-
         public Builder enablePrivateNodes(Boolean enablePrivateNodes) {
             this.enablePrivateNodes = Objects.requireNonNull(enablePrivateNodes);
             return this;
         }
-
         public Builder masterGlobalAccessConfig(PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = Objects.requireNonNull(masterGlobalAccessConfig);
             return this;
         }
-
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
-
         public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
-
         public Builder privateEndpoint(String privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
-
         public Builder publicEndpoint(String publicEndpoint) {
             this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
             return this;
-        }
-        public PrivateClusterConfigResponse build() {
+        }        public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }
     }

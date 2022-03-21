@@ -113,22 +113,18 @@ public final class Taint {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder timeAdded(@Nullable String timeAdded) {
             this.timeAdded = timeAdded;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public Taint build() {
+        }        public Taint build() {
             return new Taint(effect, key, timeAdded, value);
         }
     }

@@ -43,8 +43,7 @@ public final class MultiRegionAccessPointRegion {
         public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
-        }
-        public MultiRegionAccessPointRegion build() {
+        }        public MultiRegionAccessPointRegion build() {
             return new MultiRegionAccessPointRegion(bucket);
         }
     }

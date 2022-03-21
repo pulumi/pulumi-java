@@ -193,42 +193,34 @@ public final class PatchDeploymentRecurringSchedule {
             this.endTime = endTime;
             return this;
         }
-
         public Builder lastExecuteTime(@Nullable String lastExecuteTime) {
             this.lastExecuteTime = lastExecuteTime;
             return this;
         }
-
         public Builder monthly(@Nullable PatchDeploymentRecurringScheduleMonthly monthly) {
             this.monthly = monthly;
             return this;
         }
-
         public Builder nextExecuteTime(@Nullable String nextExecuteTime) {
             this.nextExecuteTime = nextExecuteTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder timeOfDay(PatchDeploymentRecurringScheduleTimeOfDay timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
-
         public Builder timeZone(PatchDeploymentRecurringScheduleTimeZone timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder weekly(@Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
             this.weekly = weekly;
             return this;
-        }
-        public PatchDeploymentRecurringSchedule build() {
+        }        public PatchDeploymentRecurringSchedule build() {
             return new PatchDeploymentRecurringSchedule(endTime, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
         }
     }

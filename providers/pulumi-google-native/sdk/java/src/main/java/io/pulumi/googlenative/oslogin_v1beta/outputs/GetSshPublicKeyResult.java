@@ -101,22 +101,18 @@ public final class GetSshPublicKeyResult {
             this.expirationTimeUsec = Objects.requireNonNull(expirationTimeUsec);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSshPublicKeyResult build() {
+        }        public GetSshPublicKeyResult build() {
             return new GetSshPublicKeyResult(expirationTimeUsec, fingerprint, key, name);
         }
     }

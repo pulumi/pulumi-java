@@ -58,8 +58,7 @@ public final class TimeZoneResponse extends io.pulumi.resources.InvokeArgs {
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public TimeZoneResponse build() {
+        }        public TimeZoneResponse build() {
             return new TimeZoneResponse(version);
         }
     }

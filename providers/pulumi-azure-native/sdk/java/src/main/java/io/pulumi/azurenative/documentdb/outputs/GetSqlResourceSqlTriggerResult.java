@@ -129,32 +129,26 @@ public final class GetSqlResourceSqlTriggerResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resource(@Nullable SqlTriggerGetPropertiesResponseResource resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSqlResourceSqlTriggerResult build() {
+        }        public GetSqlResourceSqlTriggerResult build() {
             return new GetSqlResourceSqlTriggerResult(id, location, name, resource, tags, type);
         }
     }

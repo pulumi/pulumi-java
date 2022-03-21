@@ -77,12 +77,10 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends io.p
             this.spendBasis = Objects.requireNonNull(spendBasis);
             return this;
         }
-
         public Builder thresholdPercent(Double thresholdPercent) {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
-        }
-        public GoogleCloudBillingBudgetsV1ThresholdRuleResponse build() {
+        }        public GoogleCloudBillingBudgetsV1ThresholdRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1ThresholdRuleResponse(spendBasis, thresholdPercent);
         }
     }

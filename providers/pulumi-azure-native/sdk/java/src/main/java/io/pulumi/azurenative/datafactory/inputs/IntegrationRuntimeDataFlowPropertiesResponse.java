@@ -112,22 +112,18 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
             this.cleanup = cleanup;
             return this;
         }
-
         public Builder computeType(@Nullable String computeType) {
             this.computeType = computeType;
             return this;
         }
-
         public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder timeToLive(@Nullable Integer timeToLive) {
             this.timeToLive = timeToLive;
             return this;
-        }
-        public IntegrationRuntimeDataFlowPropertiesResponse build() {
+        }        public IntegrationRuntimeDataFlowPropertiesResponse build() {
             return new IntegrationRuntimeDataFlowPropertiesResponse(cleanup, computeType, coreCount, timeToLive);
         }
     }

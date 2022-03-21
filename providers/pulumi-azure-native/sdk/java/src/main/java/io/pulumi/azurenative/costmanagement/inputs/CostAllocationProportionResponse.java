@@ -77,12 +77,10 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
-        }
-        public CostAllocationProportionResponse build() {
+        }        public CostAllocationProportionResponse build() {
             return new CostAllocationProportionResponse(name, percentage);
         }
     }

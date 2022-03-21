@@ -72,22 +72,21 @@ public final class CustomLayerCloudwatchConfigurationArgs extends io.pulumi.reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<CustomLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<CustomLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public CustomLayerCloudwatchConfigurationArgs build() {
+        public Builder logStreams(CustomLayerCloudwatchConfigurationLogStreamArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public CustomLayerCloudwatchConfigurationArgs build() {
             return new CustomLayerCloudwatchConfigurationArgs(enabled, logStreams);
         }
     }

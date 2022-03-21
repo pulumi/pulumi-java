@@ -298,152 +298,134 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder body(@Nullable Output<Object> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable Object body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
             this.datasets = datasets;
             return this;
         }
-
         public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
             this.datasets = Output.ofNullable(datasets);
             return this;
         }
-
+        public Builder datasets(DatasetReferenceArgs... datasets) {
+            return datasets(List.of(datasets));
+        }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headers(@Nullable Output<Object> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Object headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder linkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
-
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
             this.linkedServices = Output.ofNullable(linkedServices);
             return this;
         }
-
+        public Builder linkedServices(LinkedServiceReferenceArgs... linkedServices) {
+            return linkedServices(List.of(linkedServices));
+        }
         public Builder method(Output<Either<String,WebActivityMethod>> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder method(Either<String,WebActivityMethod> method) {
             this.method = Output.of(Objects.requireNonNull(method));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public WebActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public WebActivityArgs build() {
             return new WebActivityArgs(authentication, body, connectVia, datasets, dependsOn, description, headers, linkedServiceName, linkedServices, method, name, policy, type, url, userProperties);
         }
     }

@@ -86,17 +86,14 @@ public final class GoogleCloudRetailV2alphaImageResponse {
             this.height = Objects.requireNonNull(height);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder width(Integer width) {
             this.width = Objects.requireNonNull(width);
             return this;
-        }
-        public GoogleCloudRetailV2alphaImageResponse build() {
+        }        public GoogleCloudRetailV2alphaImageResponse build() {
             return new GoogleCloudRetailV2alphaImageResponse(height, uri, width);
         }
     }

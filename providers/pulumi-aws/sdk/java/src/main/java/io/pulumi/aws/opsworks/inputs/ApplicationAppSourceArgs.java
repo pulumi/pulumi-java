@@ -138,62 +138,50 @@ public final class ApplicationAppSourceArgs extends io.pulumi.resources.Resource
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder sshKey(@Nullable Output<String> sshKey) {
             this.sshKey = sshKey;
             return this;
         }
-
         public Builder sshKey(@Nullable String sshKey) {
             this.sshKey = Output.ofNullable(sshKey);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public ApplicationAppSourceArgs build() {
+        }        public ApplicationAppSourceArgs build() {
             return new ApplicationAppSourceArgs(password, revision, sshKey, type, url, username);
         }
     }

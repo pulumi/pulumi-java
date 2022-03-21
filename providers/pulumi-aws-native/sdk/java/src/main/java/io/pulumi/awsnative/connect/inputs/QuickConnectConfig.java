@@ -97,22 +97,18 @@ public final class QuickConnectConfig extends io.pulumi.resources.InvokeArgs {
             this.phoneConfig = phoneConfig;
             return this;
         }
-
         public Builder queueConfig(@Nullable QuickConnectQueueQuickConnectConfig queueConfig) {
             this.queueConfig = queueConfig;
             return this;
         }
-
         public Builder quickConnectType(QuickConnectType quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
-
         public Builder userConfig(@Nullable QuickConnectUserQuickConnectConfig userConfig) {
             this.userConfig = userConfig;
             return this;
-        }
-        public QuickConnectConfig build() {
+        }        public QuickConnectConfig build() {
             return new QuickConnectConfig(phoneConfig, queueConfig, quickConnectType, userConfig);
         }
     }

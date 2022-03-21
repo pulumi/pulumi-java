@@ -95,32 +95,26 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder valueSource(@Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource) {
             this.valueSource = valueSource;
             return this;
         }
-
         public Builder valueSource(@Nullable GoogleCloudRunOpV2EnvVarSourceArgs valueSource) {
             this.valueSource = Output.ofNullable(valueSource);
             return this;
-        }
-        public GoogleCloudRunOpV2EnvVarArgs build() {
+        }        public GoogleCloudRunOpV2EnvVarArgs build() {
             return new GoogleCloudRunOpV2EnvVarArgs(name, value, valueSource);
         }
     }

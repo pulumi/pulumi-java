@@ -56,12 +56,10 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public Builder s3Configuration(ScheduledQueryS3ConfigurationArgs s3Configuration) {
             this.s3Configuration = Output.of(Objects.requireNonNull(s3Configuration));
             return this;
-        }
-        public ScheduledQueryErrorReportConfigurationArgs build() {
+        }        public ScheduledQueryErrorReportConfigurationArgs build() {
             return new ScheduledQueryErrorReportConfigurationArgs(s3Configuration);
         }
     }

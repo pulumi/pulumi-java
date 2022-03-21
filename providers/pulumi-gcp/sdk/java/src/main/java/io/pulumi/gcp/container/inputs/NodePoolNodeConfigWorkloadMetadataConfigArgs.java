@@ -52,12 +52,10 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigArgs extends io.pulum
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
-        }
-        public NodePoolNodeConfigWorkloadMetadataConfigArgs build() {
+        }        public NodePoolNodeConfigWorkloadMetadataConfigArgs build() {
             return new NodePoolNodeConfigWorkloadMetadataConfigArgs(mode);
         }
     }

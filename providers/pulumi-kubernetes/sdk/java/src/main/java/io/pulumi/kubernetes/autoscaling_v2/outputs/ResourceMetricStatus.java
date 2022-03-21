@@ -70,12 +70,10 @@ public final class ResourceMetricStatus {
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ResourceMetricStatus build() {
+        }        public ResourceMetricStatus build() {
             return new ResourceMetricStatus(current, name);
         }
     }

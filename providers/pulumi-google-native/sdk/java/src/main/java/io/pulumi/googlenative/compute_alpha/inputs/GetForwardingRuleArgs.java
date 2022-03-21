@@ -78,17 +78,14 @@ public final class GetForwardingRuleArgs extends io.pulumi.resources.InvokeArgs 
             this.forwardingRule = Objects.requireNonNull(forwardingRule);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetForwardingRuleArgs build() {
+        }        public GetForwardingRuleArgs build() {
             return new GetForwardingRuleArgs(forwardingRule, project, region);
         }
     }

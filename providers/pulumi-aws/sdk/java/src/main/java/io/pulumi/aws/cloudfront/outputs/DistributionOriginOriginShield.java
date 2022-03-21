@@ -70,12 +70,10 @@ public final class DistributionOriginOriginShield {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder originShieldRegion(String originShieldRegion) {
             this.originShieldRegion = Objects.requireNonNull(originShieldRegion);
             return this;
-        }
-        public DistributionOriginOriginShield build() {
+        }        public DistributionOriginOriginShield build() {
             return new DistributionOriginOriginShield(enabled, originShieldRegion);
         }
     }

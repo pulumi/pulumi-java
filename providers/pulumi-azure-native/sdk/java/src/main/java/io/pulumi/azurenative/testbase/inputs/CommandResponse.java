@@ -208,52 +208,42 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder alwaysRun(@Nullable Boolean alwaysRun) {
             this.alwaysRun = alwaysRun;
             return this;
         }
-
         public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
             this.applyUpdateBefore = applyUpdateBefore;
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder maxRunTime(@Nullable Integer maxRunTime) {
             this.maxRunTime = maxRunTime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restartAfter(@Nullable Boolean restartAfter) {
             this.restartAfter = restartAfter;
             return this;
         }
-
         public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
             this.runAsInteractive = runAsInteractive;
             return this;
         }
-
         public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = runElevated;
             return this;
-        }
-        public CommandResponse build() {
+        }        public CommandResponse build() {
             return new CommandResponse(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);
         }
     }

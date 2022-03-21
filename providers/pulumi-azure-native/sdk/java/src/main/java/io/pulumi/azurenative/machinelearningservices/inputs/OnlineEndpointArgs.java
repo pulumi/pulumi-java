@@ -149,62 +149,50 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
-
         public Builder authMode(Either<String,EndpointAuthMode> authMode) {
             this.authMode = Output.of(Objects.requireNonNull(authMode));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder keys(@Nullable Output<EndpointAuthKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable EndpointAuthKeysArgs keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder traffic(@Nullable Output<Map<String,Integer>> traffic) {
             this.traffic = traffic;
             return this;
         }
-
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
             this.traffic = Output.ofNullable(traffic);
             return this;
-        }
-        public OnlineEndpointArgs build() {
+        }        public OnlineEndpointArgs build() {
             return new OnlineEndpointArgs(authMode, description, keys, properties, target, traffic);
         }
     }

@@ -53,8 +53,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability build() {
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability(enabled);
         }
     }

@@ -79,22 +79,18 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
             this.manualSharding = manualSharding;
             return this;
         }
-
         public Builder manualSharding(@Nullable ManualShardingArgs manualSharding) {
             this.manualSharding = Output.ofNullable(manualSharding);
             return this;
         }
-
         public Builder uniformSharding(@Nullable Output<UniformShardingArgs> uniformSharding) {
             this.uniformSharding = uniformSharding;
             return this;
         }
-
         public Builder uniformSharding(@Nullable UniformShardingArgs uniformSharding) {
             this.uniformSharding = Output.ofNullable(uniformSharding);
             return this;
-        }
-        public ShardingOptionArgs build() {
+        }        public ShardingOptionArgs build() {
             return new ShardingOptionArgs(manualSharding, uniformSharding);
         }
     }

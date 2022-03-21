@@ -69,12 +69,10 @@ public final class SourceCrowdingConfigResponse {
             this.numResults = Objects.requireNonNull(numResults);
             return this;
         }
-
         public Builder numSuggestions(Integer numSuggestions) {
             this.numSuggestions = Objects.requireNonNull(numSuggestions);
             return this;
-        }
-        public SourceCrowdingConfigResponse build() {
+        }        public SourceCrowdingConfigResponse build() {
             return new SourceCrowdingConfigResponse(numResults, numSuggestions);
         }
     }

@@ -157,72 +157,58 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder inputParameters(@Nullable Output<String> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
-
         public Builder inputParameters(@Nullable String inputParameters) {
             this.inputParameters = Output.ofNullable(inputParameters);
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scope(@Nullable Output<RuleScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable RuleScopeArgs scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder source(Output<RuleSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(RuleSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RuleArgs build() {
+        }        public RuleArgs build() {
             return new RuleArgs(description, inputParameters, maximumExecutionFrequency, name, scope, source, tags);
         }
     }

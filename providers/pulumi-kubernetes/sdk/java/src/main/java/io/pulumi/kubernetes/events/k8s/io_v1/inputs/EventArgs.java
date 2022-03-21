@@ -323,172 +323,138 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder deprecatedCount(@Nullable Output<Integer> deprecatedCount) {
             this.deprecatedCount = deprecatedCount;
             return this;
         }
-
         public Builder deprecatedCount(@Nullable Integer deprecatedCount) {
             this.deprecatedCount = Output.ofNullable(deprecatedCount);
             return this;
         }
-
         public Builder deprecatedFirstTimestamp(@Nullable Output<String> deprecatedFirstTimestamp) {
             this.deprecatedFirstTimestamp = deprecatedFirstTimestamp;
             return this;
         }
-
         public Builder deprecatedFirstTimestamp(@Nullable String deprecatedFirstTimestamp) {
             this.deprecatedFirstTimestamp = Output.ofNullable(deprecatedFirstTimestamp);
             return this;
         }
-
         public Builder deprecatedLastTimestamp(@Nullable Output<String> deprecatedLastTimestamp) {
             this.deprecatedLastTimestamp = deprecatedLastTimestamp;
             return this;
         }
-
         public Builder deprecatedLastTimestamp(@Nullable String deprecatedLastTimestamp) {
             this.deprecatedLastTimestamp = Output.ofNullable(deprecatedLastTimestamp);
             return this;
         }
-
         public Builder deprecatedSource(@Nullable Output<EventSourceArgs> deprecatedSource) {
             this.deprecatedSource = deprecatedSource;
             return this;
         }
-
         public Builder deprecatedSource(@Nullable EventSourceArgs deprecatedSource) {
             this.deprecatedSource = Output.ofNullable(deprecatedSource);
             return this;
         }
-
         public Builder eventTime(Output<String> eventTime) {
             this.eventTime = Objects.requireNonNull(eventTime);
             return this;
         }
-
         public Builder eventTime(String eventTime) {
             this.eventTime = Output.of(Objects.requireNonNull(eventTime));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder note(@Nullable Output<String> note) {
             this.note = note;
             return this;
         }
-
         public Builder note(@Nullable String note) {
             this.note = Output.ofNullable(note);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder regarding(@Nullable Output<ObjectReferenceArgs> regarding) {
             this.regarding = regarding;
             return this;
         }
-
         public Builder regarding(@Nullable ObjectReferenceArgs regarding) {
             this.regarding = Output.ofNullable(regarding);
             return this;
         }
-
         public Builder related(@Nullable Output<ObjectReferenceArgs> related) {
             this.related = related;
             return this;
         }
-
         public Builder related(@Nullable ObjectReferenceArgs related) {
             this.related = Output.ofNullable(related);
             return this;
         }
-
         public Builder reportingController(@Nullable Output<String> reportingController) {
             this.reportingController = reportingController;
             return this;
         }
-
         public Builder reportingController(@Nullable String reportingController) {
             this.reportingController = Output.ofNullable(reportingController);
             return this;
         }
-
         public Builder reportingInstance(@Nullable Output<String> reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
-
         public Builder reportingInstance(@Nullable String reportingInstance) {
             this.reportingInstance = Output.ofNullable(reportingInstance);
             return this;
         }
-
         public Builder series(@Nullable Output<EventSeriesArgs> series) {
             this.series = series;
             return this;
         }
-
         public Builder series(@Nullable EventSeriesArgs series) {
             this.series = Output.ofNullable(series);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public EventArgs build() {
+        }        public EventArgs build() {
             return new EventArgs(action, apiVersion, deprecatedCount, deprecatedFirstTimestamp, deprecatedLastTimestamp, deprecatedSource, eventTime, kind, metadata, note, reason, regarding, related, reportingController, reportingInstance, series, type);
         }
     }

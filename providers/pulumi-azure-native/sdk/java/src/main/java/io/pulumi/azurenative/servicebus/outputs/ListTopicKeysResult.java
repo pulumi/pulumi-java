@@ -149,37 +149,30 @@ public final class ListTopicKeysResult {
             this.aliasPrimaryConnectionString = Objects.requireNonNull(aliasPrimaryConnectionString);
             return this;
         }
-
         public Builder aliasSecondaryConnectionString(String aliasSecondaryConnectionString) {
             this.aliasSecondaryConnectionString = Objects.requireNonNull(aliasSecondaryConnectionString);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder primaryConnectionString(String primaryConnectionString) {
             this.primaryConnectionString = Objects.requireNonNull(primaryConnectionString);
             return this;
         }
-
         public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryConnectionString(String secondaryConnectionString) {
             this.secondaryConnectionString = Objects.requireNonNull(secondaryConnectionString);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListTopicKeysResult build() {
+        }        public ListTopicKeysResult build() {
             return new ListTopicKeysResult(aliasPrimaryConnectionString, aliasSecondaryConnectionString, keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }
     }

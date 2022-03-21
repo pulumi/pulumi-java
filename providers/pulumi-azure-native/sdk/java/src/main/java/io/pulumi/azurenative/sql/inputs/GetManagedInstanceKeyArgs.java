@@ -88,17 +88,14 @@ public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeA
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedInstanceKeyArgs build() {
+        }        public GetManagedInstanceKeyArgs build() {
             return new GetManagedInstanceKeyArgs(keyName, managedInstanceName, resourceGroupName);
         }
     }

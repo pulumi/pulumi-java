@@ -70,12 +70,10 @@ public final class KeyCreationTimeResponse extends io.pulumi.resources.InvokeArg
             this.key1 = key1;
             return this;
         }
-
         public Builder key2(@Nullable String key2) {
             this.key2 = key2;
             return this;
-        }
-        public KeyCreationTimeResponse build() {
+        }        public KeyCreationTimeResponse build() {
             return new KeyCreationTimeResponse(key1, key2);
         }
     }

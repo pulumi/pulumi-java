@@ -288,82 +288,69 @@ public final class GetReplicationGroupResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder authTokenEnabled(Boolean authTokenEnabled) {
             this.authTokenEnabled = Objects.requireNonNull(authTokenEnabled);
             return this;
         }
-
         public Builder automaticFailoverEnabled(Boolean automaticFailoverEnabled) {
             this.automaticFailoverEnabled = Objects.requireNonNull(automaticFailoverEnabled);
             return this;
         }
-
         public Builder configurationEndpointAddress(String configurationEndpointAddress) {
             this.configurationEndpointAddress = Objects.requireNonNull(configurationEndpointAddress);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder memberClusters(List<String> memberClusters) {
             this.memberClusters = Objects.requireNonNull(memberClusters);
             return this;
         }
-
+        public Builder memberClusters(String... memberClusters) {
+            return memberClusters(List.of(memberClusters));
+        }
         public Builder multiAzEnabled(Boolean multiAzEnabled) {
             this.multiAzEnabled = Objects.requireNonNull(multiAzEnabled);
             return this;
         }
-
         public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
-
         public Builder numberCacheClusters(Integer numberCacheClusters) {
             this.numberCacheClusters = Objects.requireNonNull(numberCacheClusters);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder primaryEndpointAddress(String primaryEndpointAddress) {
             this.primaryEndpointAddress = Objects.requireNonNull(primaryEndpointAddress);
             return this;
         }
-
         public Builder readerEndpointAddress(String readerEndpointAddress) {
             this.readerEndpointAddress = Objects.requireNonNull(readerEndpointAddress);
             return this;
         }
-
         public Builder replicationGroupDescription(String replicationGroupDescription) {
             this.replicationGroupDescription = Objects.requireNonNull(replicationGroupDescription);
             return this;
         }
-
         public Builder replicationGroupId(String replicationGroupId) {
             this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
             return this;
         }
-
         public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = Objects.requireNonNull(snapshotRetentionLimit);
             return this;
         }
-
         public Builder snapshotWindow(String snapshotWindow) {
             this.snapshotWindow = Objects.requireNonNull(snapshotWindow);
             return this;
-        }
-        public GetReplicationGroupResult build() {
+        }        public GetReplicationGroupResult build() {
             return new GetReplicationGroupResult(arn, authTokenEnabled, automaticFailoverEnabled, configurationEndpointAddress, id, memberClusters, multiAzEnabled, nodeType, numberCacheClusters, port, primaryEndpointAddress, readerEndpointAddress, replicationGroupDescription, replicationGroupId, snapshotRetentionLimit, snapshotWindow);
         }
     }

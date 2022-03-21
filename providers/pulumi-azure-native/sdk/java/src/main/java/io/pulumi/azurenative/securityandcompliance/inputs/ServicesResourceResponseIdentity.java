@@ -94,17 +94,14 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ServicesResourceResponseIdentity build() {
+        }        public ServicesResourceResponseIdentity build() {
             return new ServicesResourceResponseIdentity(principalId, tenantId, type);
         }
     }

@@ -60,12 +60,10 @@ public final class ModelBiasJobDefinitionStoppingConditionArgs extends io.pulumi
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Output.of(Objects.requireNonNull(maxRuntimeInSeconds));
             return this;
-        }
-        public ModelBiasJobDefinitionStoppingConditionArgs build() {
+        }        public ModelBiasJobDefinitionStoppingConditionArgs build() {
             return new ModelBiasJobDefinitionStoppingConditionArgs(maxRuntimeInSeconds);
         }
     }

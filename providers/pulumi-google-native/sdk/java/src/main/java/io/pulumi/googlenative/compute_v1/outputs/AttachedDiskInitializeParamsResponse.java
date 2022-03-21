@@ -248,67 +248,60 @@ public final class AttachedDiskInitializeParamsResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder onUpdateAction(String onUpdateAction) {
             this.onUpdateAction = Objects.requireNonNull(onUpdateAction);
             return this;
         }
-
         public Builder provisionedIops(String provisionedIops) {
             this.provisionedIops = Objects.requireNonNull(provisionedIops);
             return this;
         }
-
         public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
-        }
-        public AttachedDiskInitializeParamsResponse build() {
+        }        public AttachedDiskInitializeParamsResponse build() {
             return new AttachedDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, labels, licenses, onUpdateAction, provisionedIops, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey);
         }
     }

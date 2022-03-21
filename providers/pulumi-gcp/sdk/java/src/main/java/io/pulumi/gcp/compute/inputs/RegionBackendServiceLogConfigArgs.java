@@ -78,22 +78,18 @@ public final class RegionBackendServiceLogConfigArgs extends io.pulumi.resources
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder sampleRate(@Nullable Output<Double> sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = Output.ofNullable(sampleRate);
             return this;
-        }
-        public RegionBackendServiceLogConfigArgs build() {
+        }        public RegionBackendServiceLogConfigArgs build() {
             return new RegionBackendServiceLogConfigArgs(enable, sampleRate);
         }
     }

@@ -75,22 +75,18 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public CertificateConfigPublicKeyGetArgs build() {
+        }        public CertificateConfigPublicKeyGetArgs build() {
             return new CertificateConfigPublicKeyGetArgs(format, key);
         }
     }

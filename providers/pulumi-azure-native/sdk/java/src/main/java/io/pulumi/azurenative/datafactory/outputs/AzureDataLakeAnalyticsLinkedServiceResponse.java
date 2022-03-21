@@ -257,67 +257,57 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder dataLakeAnalyticsUri(@Nullable Object dataLakeAnalyticsUri) {
             this.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable Object resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public Builder subscriptionId(@Nullable Object subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder tenant(Object tenant) {
             this.tenant = Objects.requireNonNull(tenant);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureDataLakeAnalyticsLinkedServiceResponse build() {
+        }        public AzureDataLakeAnalyticsLinkedServiceResponse build() {
             return new AzureDataLakeAnalyticsLinkedServiceResponse(accountName, annotations, connectVia, dataLakeAnalyticsUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
         }
     }

@@ -127,52 +127,45 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder column(String column) {
             this.column = Output.of(Objects.requireNonNull(column));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder subcolumns(@Nullable Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns) {
             this.subcolumns = subcolumns;
             return this;
         }
-
         public Builder subcolumns(@Nullable List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs> subcolumns) {
             this.subcolumns = Output.ofNullable(subcolumns);
             return this;
         }
-
+        public Builder subcolumns(GoogleCloudDatacatalogV1beta1ColumnSchemaArgs... subcolumns) {
+            return subcolumns(List.of(subcolumns));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public GoogleCloudDatacatalogV1beta1ColumnSchemaArgs build() {
+        }        public GoogleCloudDatacatalogV1beta1ColumnSchemaArgs build() {
             return new GoogleCloudDatacatalogV1beta1ColumnSchemaArgs(column, description, mode, subcolumns, type);
         }
     }

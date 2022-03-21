@@ -88,17 +88,14 @@ public final class GetPipelineDefinitionPipelineObjectField extends io.pulumi.re
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder refValue(String refValue) {
             this.refValue = Objects.requireNonNull(refValue);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
-        }
-        public GetPipelineDefinitionPipelineObjectField build() {
+        }        public GetPipelineDefinitionPipelineObjectField build() {
             return new GetPipelineDefinitionPipelineObjectField(key, refValue, stringValue);
         }
     }

@@ -78,17 +78,14 @@ public final class GetTargetPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder targetPool(String targetPool) {
             this.targetPool = Objects.requireNonNull(targetPool);
             return this;
-        }
-        public GetTargetPoolArgs build() {
+        }        public GetTargetPoolArgs build() {
             return new GetTargetPoolArgs(project, region, targetPool);
         }
     }

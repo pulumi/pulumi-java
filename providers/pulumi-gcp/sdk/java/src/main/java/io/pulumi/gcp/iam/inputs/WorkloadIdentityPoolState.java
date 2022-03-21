@@ -165,72 +165,58 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder workloadIdentityPoolId(@Nullable Output<String> workloadIdentityPoolId) {
             this.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
-
         public Builder workloadIdentityPoolId(@Nullable String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Output.ofNullable(workloadIdentityPoolId);
             return this;
-        }
-        public WorkloadIdentityPoolState build() {
+        }        public WorkloadIdentityPoolState build() {
             return new WorkloadIdentityPoolState(description, disabled, displayName, name, project, state, workloadIdentityPoolId);
         }
     }

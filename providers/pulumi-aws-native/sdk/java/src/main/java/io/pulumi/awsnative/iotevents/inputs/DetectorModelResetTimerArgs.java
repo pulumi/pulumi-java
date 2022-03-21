@@ -60,12 +60,10 @@ public final class DetectorModelResetTimerArgs extends io.pulumi.resources.Resou
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
-
         public Builder timerName(String timerName) {
             this.timerName = Output.of(Objects.requireNonNull(timerName));
             return this;
-        }
-        public DetectorModelResetTimerArgs build() {
+        }        public DetectorModelResetTimerArgs build() {
             return new DetectorModelResetTimerArgs(timerName);
         }
     }

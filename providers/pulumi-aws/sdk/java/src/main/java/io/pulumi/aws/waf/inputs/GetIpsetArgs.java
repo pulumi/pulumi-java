@@ -54,8 +54,7 @@ public final class GetIpsetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetIpsetArgs build() {
+        }        public GetIpsetArgs build() {
             return new GetIpsetArgs(name);
         }
     }

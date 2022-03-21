@@ -103,22 +103,18 @@ public final class RegionUrlMapTest {
             this.description = description;
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public RegionUrlMapTest build() {
+        }        public RegionUrlMapTest build() {
             return new RegionUrlMapTest(description, host, path, service);
         }
     }

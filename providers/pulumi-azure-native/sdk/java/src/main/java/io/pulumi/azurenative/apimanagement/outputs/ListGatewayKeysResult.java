@@ -71,12 +71,10 @@ public final class ListGatewayKeysResult {
             this.primary = primary;
             return this;
         }
-
         public Builder secondary(@Nullable String secondary) {
             this.secondary = secondary;
             return this;
-        }
-        public ListGatewayKeysResult build() {
+        }        public ListGatewayKeysResult build() {
             return new ListGatewayKeysResult(primary, secondary);
         }
     }

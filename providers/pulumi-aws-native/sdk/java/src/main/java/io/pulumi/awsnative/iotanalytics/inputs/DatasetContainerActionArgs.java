@@ -93,42 +93,37 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
-
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
-
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder resourceConfiguration(Output<DatasetResourceConfigurationArgs> resourceConfiguration) {
             this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration);
             return this;
         }
-
         public Builder resourceConfiguration(DatasetResourceConfigurationArgs resourceConfiguration) {
             this.resourceConfiguration = Output.of(Objects.requireNonNull(resourceConfiguration));
             return this;
         }
-
         public Builder variables(@Nullable Output<List<DatasetVariableArgs>> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable List<DatasetVariableArgs> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
         }
-        public DatasetContainerActionArgs build() {
+        public Builder variables(DatasetVariableArgs... variables) {
+            return variables(List.of(variables));
+        }        public DatasetContainerActionArgs build() {
             return new DatasetContainerActionArgs(executionRoleArn, image, resourceConfiguration, variables);
         }
     }

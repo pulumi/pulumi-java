@@ -130,72 +130,67 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
             this.alpnPolicy = alpnPolicy;
             return this;
         }
-
         public Builder alpnPolicy(@Nullable List<String> alpnPolicy) {
             this.alpnPolicy = Output.ofNullable(alpnPolicy);
             return this;
         }
-
+        public Builder alpnPolicy(String... alpnPolicy) {
+            return alpnPolicy(List.of(alpnPolicy));
+        }
         public Builder certificates(@Nullable Output<List<ListenerCertificateArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
-
         public Builder certificates(@Nullable List<ListenerCertificateArgs> certificates) {
             this.certificates = Output.ofNullable(certificates);
             return this;
         }
-
+        public Builder certificates(ListenerCertificateArgs... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder defaultActions(Output<List<ListenerActionArgs>> defaultActions) {
             this.defaultActions = Objects.requireNonNull(defaultActions);
             return this;
         }
-
         public Builder defaultActions(List<ListenerActionArgs> defaultActions) {
             this.defaultActions = Output.of(Objects.requireNonNull(defaultActions));
             return this;
         }
-
+        public Builder defaultActions(ListenerActionArgs... defaultActions) {
+            return defaultActions(List.of(defaultActions));
+        }
         public Builder loadBalancerArn(Output<String> loadBalancerArn) {
             this.loadBalancerArn = Objects.requireNonNull(loadBalancerArn);
             return this;
         }
-
         public Builder loadBalancerArn(String loadBalancerArn) {
             this.loadBalancerArn = Output.of(Objects.requireNonNull(loadBalancerArn));
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
-        }
-        public ListenerArgs build() {
+        }        public ListenerArgs build() {
             return new ListenerArgs(alpnPolicy, certificates, defaultActions, loadBalancerArn, port, protocol, sslPolicy);
         }
     }

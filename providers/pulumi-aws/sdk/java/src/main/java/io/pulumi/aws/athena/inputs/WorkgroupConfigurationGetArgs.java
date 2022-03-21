@@ -141,62 +141,50 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
-
         public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = Output.ofNullable(bytesScannedCutoffPerQuery);
             return this;
         }
-
         public Builder enforceWorkgroupConfiguration(@Nullable Output<Boolean> enforceWorkgroupConfiguration) {
             this.enforceWorkgroupConfiguration = enforceWorkgroupConfiguration;
             return this;
         }
-
         public Builder enforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
             this.enforceWorkgroupConfiguration = Output.ofNullable(enforceWorkgroupConfiguration);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<WorkgroupConfigurationEngineVersionGetArgs> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable WorkgroupConfigurationEngineVersionGetArgs engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder publishCloudwatchMetricsEnabled(@Nullable Output<Boolean> publishCloudwatchMetricsEnabled) {
             this.publishCloudwatchMetricsEnabled = publishCloudwatchMetricsEnabled;
             return this;
         }
-
         public Builder publishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
             this.publishCloudwatchMetricsEnabled = Output.ofNullable(publishCloudwatchMetricsEnabled);
             return this;
         }
-
         public Builder requesterPaysEnabled(@Nullable Output<Boolean> requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
-
         public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = Output.ofNullable(requesterPaysEnabled);
             return this;
         }
-
         public Builder resultConfiguration(@Nullable Output<WorkgroupConfigurationResultConfigurationGetArgs> resultConfiguration) {
             this.resultConfiguration = resultConfiguration;
             return this;
         }
-
         public Builder resultConfiguration(@Nullable WorkgroupConfigurationResultConfigurationGetArgs resultConfiguration) {
             this.resultConfiguration = Output.ofNullable(resultConfiguration);
             return this;
-        }
-        public WorkgroupConfigurationGetArgs build() {
+        }        public WorkgroupConfigurationGetArgs build() {
             return new WorkgroupConfigurationGetArgs(bytesScannedCutoffPerQuery, enforceWorkgroupConfiguration, engineVersion, publishCloudwatchMetricsEnabled, requesterPaysEnabled, resultConfiguration);
         }
     }

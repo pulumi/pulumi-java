@@ -155,52 +155,48 @@ public final class GetMissionProfileResult {
             this.arn = arn;
             return this;
         }
-
         public Builder contactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
             this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
             return this;
         }
-
         public Builder contactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
             this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
             return this;
         }
-
         public Builder dataflowEdges(@Nullable List<MissionProfileDataflowEdge> dataflowEdges) {
             this.dataflowEdges = dataflowEdges;
             return this;
         }
-
+        public Builder dataflowEdges(MissionProfileDataflowEdge... dataflowEdges) {
+            return dataflowEdges(List.of(dataflowEdges));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder minimumViableContactDurationSeconds(@Nullable Integer minimumViableContactDurationSeconds) {
             this.minimumViableContactDurationSeconds = minimumViableContactDurationSeconds;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder tags(@Nullable List<MissionProfileTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(MissionProfileTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder trackingConfigArn(@Nullable String trackingConfigArn) {
             this.trackingConfigArn = trackingConfigArn;
             return this;
-        }
-        public GetMissionProfileResult build() {
+        }        public GetMissionProfileResult build() {
             return new GetMissionProfileResult(arn, contactPostPassDurationSeconds, contactPrePassDurationSeconds, dataflowEdges, id, minimumViableContactDurationSeconds, name, region, tags, trackingConfigArn);
         }
     }

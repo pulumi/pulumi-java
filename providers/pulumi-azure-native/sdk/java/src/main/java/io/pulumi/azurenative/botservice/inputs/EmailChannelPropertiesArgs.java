@@ -95,32 +95,26 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder emailAddress(String emailAddress) {
             this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
-        }
-        public EmailChannelPropertiesArgs build() {
+        }        public EmailChannelPropertiesArgs build() {
             return new EmailChannelPropertiesArgs(emailAddress, isEnabled, password);
         }
     }

@@ -79,22 +79,18 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
             this.regexFileSet = regexFileSet;
             return this;
         }
-
         public Builder regexFileSet(@Nullable GooglePrivacyDlpV2CloudStorageRegexFileSetArgs regexFileSet) {
             this.regexFileSet = Output.ofNullable(regexFileSet);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public GooglePrivacyDlpV2FileSetArgs build() {
+        }        public GooglePrivacyDlpV2FileSetArgs build() {
             return new GooglePrivacyDlpV2FileSetArgs(regexFileSet, url);
         }
     }

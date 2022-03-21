@@ -78,12 +78,10 @@ public final class BackendServiceLogConfig {
             this.enable = enable;
             return this;
         }
-
         public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = sampleRate;
             return this;
-        }
-        public BackendServiceLogConfig build() {
+        }        public BackendServiceLogConfig build() {
             return new BackendServiceLogConfig(enable, sampleRate);
         }
     }

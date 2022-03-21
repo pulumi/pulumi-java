@@ -130,52 +130,42 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.authorization = authorization;
             return this;
         }
-
         public Builder authorization(@Nullable AuthorizationArgs authorization) {
             this.authorization = Output.ofNullable(authorization);
             return this;
         }
-
         public Builder defaultBranch(Output<String> defaultBranch) {
             this.defaultBranch = Objects.requireNonNull(defaultBranch);
             return this;
         }
-
         public Builder defaultBranch(String defaultBranch) {
             this.defaultBranch = Output.of(Objects.requireNonNull(defaultBranch));
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder repositoryType(Output<Either<String,CodeRepositoryType>> repositoryType) {
             this.repositoryType = Objects.requireNonNull(repositoryType);
             return this;
         }
-
         public Builder repositoryType(Either<String,CodeRepositoryType> repositoryType) {
             this.repositoryType = Output.of(Objects.requireNonNull(repositoryType));
             return this;
-        }
-        public CodeRepositoryArgs build() {
+        }        public CodeRepositoryArgs build() {
             return new CodeRepositoryArgs(authorization, defaultBranch, id, properties, repositoryType);
         }
     }

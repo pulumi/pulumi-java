@@ -54,7 +54,9 @@ public final class ListBlockchainMemberApiKeysResult {
             this.keys = keys;
             return this;
         }
-        public ListBlockchainMemberApiKeysResult build() {
+        public Builder keys(ApiKeyResponse... keys) {
+            return keys(List.of(keys));
+        }        public ListBlockchainMemberApiKeysResult build() {
             return new ListBlockchainMemberApiKeysResult(keys);
         }
     }

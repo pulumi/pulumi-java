@@ -114,42 +114,37 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
             this.criteria = criteria;
             return this;
         }
-
         public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaArgs> criteria) {
             this.criteria = Output.ofNullable(criteria);
             return this;
         }
-
+        public Builder criteria(ScheduleBasedBackupCriteriaArgs... criteria) {
+            return criteria(List.of(criteria));
+        }
         public Builder isDefault(Output<Boolean> isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
-
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = Output.of(Objects.requireNonNull(isDefault));
             return this;
         }
-
         public Builder tagInfo(Output<RetentionTagArgs> tagInfo) {
             this.tagInfo = Objects.requireNonNull(tagInfo);
             return this;
         }
-
         public Builder tagInfo(RetentionTagArgs tagInfo) {
             this.tagInfo = Output.of(Objects.requireNonNull(tagInfo));
             return this;
         }
-
         public Builder taggingPriority(Output<Double> taggingPriority) {
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
         }
-
         public Builder taggingPriority(Double taggingPriority) {
             this.taggingPriority = Output.of(Objects.requireNonNull(taggingPriority));
             return this;
-        }
-        public TaggingCriteriaArgs build() {
+        }        public TaggingCriteriaArgs build() {
             return new TaggingCriteriaArgs(criteria, isDefault, tagInfo, taggingPriority);
         }
     }

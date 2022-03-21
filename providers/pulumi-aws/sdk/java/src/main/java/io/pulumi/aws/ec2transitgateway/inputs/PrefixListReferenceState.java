@@ -119,52 +119,42 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
             this.blackhole = blackhole;
             return this;
         }
-
         public Builder blackhole(@Nullable Boolean blackhole) {
             this.blackhole = Output.ofNullable(blackhole);
             return this;
         }
-
         public Builder prefixListId(@Nullable Output<String> prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }
-
         public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = Output.ofNullable(prefixListId);
             return this;
         }
-
         public Builder prefixListOwnerId(@Nullable Output<String> prefixListOwnerId) {
             this.prefixListOwnerId = prefixListOwnerId;
             return this;
         }
-
         public Builder prefixListOwnerId(@Nullable String prefixListOwnerId) {
             this.prefixListOwnerId = Output.ofNullable(prefixListOwnerId);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
-
         public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Output.ofNullable(transitGatewayRouteTableId);
             return this;
-        }
-        public PrefixListReferenceState build() {
+        }        public PrefixListReferenceState build() {
             return new PrefixListReferenceState(blackhole, prefixListId, prefixListOwnerId, transitGatewayAttachmentId, transitGatewayRouteTableId);
         }
     }

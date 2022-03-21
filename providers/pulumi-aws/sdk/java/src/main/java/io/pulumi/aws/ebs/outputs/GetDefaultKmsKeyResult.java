@@ -69,12 +69,10 @@ public final class GetDefaultKmsKeyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyArn(String keyArn) {
             this.keyArn = Objects.requireNonNull(keyArn);
             return this;
-        }
-        public GetDefaultKmsKeyResult build() {
+        }        public GetDefaultKmsKeyResult build() {
             return new GetDefaultKmsKeyResult(id, keyArn);
         }
     }

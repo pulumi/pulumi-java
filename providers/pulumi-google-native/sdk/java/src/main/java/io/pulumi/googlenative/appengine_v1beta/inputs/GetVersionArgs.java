@@ -90,22 +90,18 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetVersionArgs build() {
+        }        public GetVersionArgs build() {
             return new GetVersionArgs(appId, serviceId, versionId, view);
         }
     }

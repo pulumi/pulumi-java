@@ -61,12 +61,10 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
-        }
-        public BulkCreationParametersArgs build() {
+        }        public BulkCreationParametersArgs build() {
             return new BulkCreationParametersArgs(instanceCount);
         }
     }

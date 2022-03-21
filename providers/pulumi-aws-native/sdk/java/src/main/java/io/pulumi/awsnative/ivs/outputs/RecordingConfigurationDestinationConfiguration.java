@@ -43,8 +43,7 @@ public final class RecordingConfigurationDestinationConfiguration {
         public Builder s3(RecordingConfigurationS3DestinationConfiguration s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
-        }
-        public RecordingConfigurationDestinationConfiguration build() {
+        }        public RecordingConfigurationDestinationConfiguration build() {
             return new RecordingConfigurationDestinationConfiguration(s3);
         }
     }

@@ -196,47 +196,38 @@ public final class ProjectSource {
             this.auth = auth;
             return this;
         }
-
         public Builder buildStatusConfig(@Nullable ProjectSourceBuildStatusConfig buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
-
         public Builder buildspec(@Nullable String buildspec) {
             this.buildspec = buildspec;
             return this;
         }
-
         public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
-
         public Builder gitSubmodulesConfig(@Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
-
         public Builder insecureSsl(@Nullable Boolean insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ProjectSource build() {
+        }        public ProjectSource build() {
             return new ProjectSource(auth, buildStatusConfig, buildspec, gitCloneDepth, gitSubmodulesConfig, insecureSsl, location, reportBuildStatus, type);
         }
     }

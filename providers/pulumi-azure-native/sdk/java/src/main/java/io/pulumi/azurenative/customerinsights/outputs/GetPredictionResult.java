@@ -365,102 +365,94 @@ public final class GetPredictionResult {
             this.autoAnalyze = Objects.requireNonNull(autoAnalyze);
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder grades(@Nullable List<PredictionResponseGrades> grades) {
             this.grades = grades;
             return this;
         }
-
+        public Builder grades(PredictionResponseGrades... grades) {
+            return grades(List.of(grades));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder involvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
             this.involvedInteractionTypes = involvedInteractionTypes;
             return this;
         }
-
+        public Builder involvedInteractionTypes(String... involvedInteractionTypes) {
+            return involvedInteractionTypes(List.of(involvedInteractionTypes));
+        }
         public Builder involvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
             this.involvedKpiTypes = involvedKpiTypes;
             return this;
         }
-
+        public Builder involvedKpiTypes(String... involvedKpiTypes) {
+            return involvedKpiTypes(List.of(involvedKpiTypes));
+        }
         public Builder involvedRelationships(@Nullable List<String> involvedRelationships) {
             this.involvedRelationships = involvedRelationships;
             return this;
         }
-
+        public Builder involvedRelationships(String... involvedRelationships) {
+            return involvedRelationships(List.of(involvedRelationships));
+        }
         public Builder mappings(PredictionResponseMappings mappings) {
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder negativeOutcomeExpression(String negativeOutcomeExpression) {
             this.negativeOutcomeExpression = Objects.requireNonNull(negativeOutcomeExpression);
             return this;
         }
-
         public Builder positiveOutcomeExpression(String positiveOutcomeExpression) {
             this.positiveOutcomeExpression = Objects.requireNonNull(positiveOutcomeExpression);
             return this;
         }
-
         public Builder predictionName(@Nullable String predictionName) {
             this.predictionName = predictionName;
             return this;
         }
-
         public Builder primaryProfileType(String primaryProfileType) {
             this.primaryProfileType = Objects.requireNonNull(primaryProfileType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scopeExpression(String scopeExpression) {
             this.scopeExpression = Objects.requireNonNull(scopeExpression);
             return this;
         }
-
         public Builder scoreLabel(String scoreLabel) {
             this.scoreLabel = Objects.requireNonNull(scoreLabel);
             return this;
         }
-
         public Builder systemGeneratedEntities(PredictionResponseSystemGeneratedEntities systemGeneratedEntities) {
             this.systemGeneratedEntities = Objects.requireNonNull(systemGeneratedEntities);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPredictionResult build() {
+        }        public GetPredictionResult build() {
             return new GetPredictionResult(autoAnalyze, description, displayName, grades, id, involvedInteractionTypes, involvedKpiTypes, involvedRelationships, mappings, name, negativeOutcomeExpression, positiveOutcomeExpression, predictionName, primaryProfileType, provisioningState, scopeExpression, scoreLabel, systemGeneratedEntities, tenantId, type);
         }
     }

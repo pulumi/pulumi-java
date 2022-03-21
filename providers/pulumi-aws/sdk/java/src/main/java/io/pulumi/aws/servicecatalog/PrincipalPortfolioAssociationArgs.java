@@ -106,42 +106,34 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder portfolioId(Output<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
-
         public Builder portfolioId(String portfolioId) {
             this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
             return this;
         }
-
         public Builder principalArn(Output<String> principalArn) {
             this.principalArn = Objects.requireNonNull(principalArn);
             return this;
         }
-
         public Builder principalArn(String principalArn) {
             this.principalArn = Output.of(Objects.requireNonNull(principalArn));
             return this;
         }
-
         public Builder principalType(@Nullable Output<String> principalType) {
             this.principalType = principalType;
             return this;
         }
-
         public Builder principalType(@Nullable String principalType) {
             this.principalType = Output.ofNullable(principalType);
             return this;
-        }
-        public PrincipalPortfolioAssociationArgs build() {
+        }        public PrincipalPortfolioAssociationArgs build() {
             return new PrincipalPortfolioAssociationArgs(acceptLanguage, portfolioId, principalArn, principalType);
         }
     }

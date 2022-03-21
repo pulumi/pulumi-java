@@ -85,17 +85,14 @@ public final class AzureContainerInfoResponse {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder dataFormat(String dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
-
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
-        }
-        public AzureContainerInfoResponse build() {
+        }        public AzureContainerInfoResponse build() {
             return new AzureContainerInfoResponse(containerName, dataFormat, storageAccountCredentialId);
         }
     }

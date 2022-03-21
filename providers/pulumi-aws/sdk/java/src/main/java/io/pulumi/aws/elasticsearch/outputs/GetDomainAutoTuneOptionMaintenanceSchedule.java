@@ -87,17 +87,17 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule {
             this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
             return this;
         }
-
         public Builder durations(List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations) {
             this.durations = Objects.requireNonNull(durations);
             return this;
         }
-
+        public Builder durations(GetDomainAutoTuneOptionMaintenanceScheduleDuration... durations) {
+            return durations(List.of(durations));
+        }
         public Builder startAt(String startAt) {
             this.startAt = Objects.requireNonNull(startAt);
             return this;
-        }
-        public GetDomainAutoTuneOptionMaintenanceSchedule build() {
+        }        public GetDomainAutoTuneOptionMaintenanceSchedule build() {
             return new GetDomainAutoTuneOptionMaintenanceSchedule(cronExpressionForRecurrence, durations, startAt);
         }
     }

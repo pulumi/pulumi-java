@@ -78,12 +78,13 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends io.p
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
-        }
-        public GooglePrivacyDlpV2InfoTypeTransformationResponse build() {
+        }        public GooglePrivacyDlpV2InfoTypeTransformationResponse build() {
             return new GooglePrivacyDlpV2InfoTypeTransformationResponse(infoTypes, primitiveTransformation);
         }
     }

@@ -69,12 +69,10 @@ public final class ApplianceNetworkConfigurationResponse {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ApplianceNetworkConfigurationResponse build() {
+        }        public ApplianceNetworkConfigurationResponse build() {
             return new ApplianceNetworkConfigurationResponse(macAddress, name);
         }
     }

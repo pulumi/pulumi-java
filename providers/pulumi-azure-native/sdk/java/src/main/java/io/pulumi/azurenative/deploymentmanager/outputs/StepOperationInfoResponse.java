@@ -136,32 +136,26 @@ public final class StepOperationInfoResponse {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
-
         public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder error(@Nullable CloudErrorBodyResponse error) {
             this.error = error;
             return this;
         }
-
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public StepOperationInfoResponse build() {
+        }        public StepOperationInfoResponse build() {
             return new StepOperationInfoResponse(correlationId, deploymentName, endTime, error, lastUpdatedTime, startTime);
         }
     }

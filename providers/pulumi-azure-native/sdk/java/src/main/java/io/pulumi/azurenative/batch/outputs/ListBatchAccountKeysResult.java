@@ -85,17 +85,14 @@ public final class ListBatchAccountKeysResult {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder primary(String primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
-
         public Builder secondary(String secondary) {
             this.secondary = Objects.requireNonNull(secondary);
             return this;
-        }
-        public ListBatchAccountKeysResult build() {
+        }        public ListBatchAccountKeysResult build() {
             return new ListBatchAccountKeysResult(accountName, primary, secondary);
         }
     }

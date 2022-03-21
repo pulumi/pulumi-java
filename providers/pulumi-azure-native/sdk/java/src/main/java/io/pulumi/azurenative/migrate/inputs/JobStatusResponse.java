@@ -76,12 +76,10 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder jobProgress(String jobProgress) {
             this.jobProgress = Objects.requireNonNull(jobProgress);
             return this;
-        }
-        public JobStatusResponse build() {
+        }        public JobStatusResponse build() {
             return new JobStatusResponse(jobName, jobProgress);
         }
     }

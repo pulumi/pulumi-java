@@ -69,12 +69,10 @@ public final class ListRedisKeysResult {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListRedisKeysResult build() {
+        }        public ListRedisKeysResult build() {
             return new ListRedisKeysResult(primaryKey, secondaryKey);
         }
     }

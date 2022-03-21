@@ -88,17 +88,14 @@ public final class ListTenantAccessGitSecretsArgs extends io.pulumi.resources.In
             this.accessName = Objects.requireNonNull(accessName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public ListTenantAccessGitSecretsArgs build() {
+        }        public ListTenantAccessGitSecretsArgs build() {
             return new ListTenantAccessGitSecretsArgs(accessName, resourceGroupName, serviceName);
         }
     }

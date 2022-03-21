@@ -252,67 +252,57 @@ public final class GetJitRequestResult {
             this.applicationResourceId = Objects.requireNonNull(applicationResourceId);
             return this;
         }
-
         public Builder createdBy(ApplicationClientDetailsResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder jitAuthorizationPolicies(List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies) {
             this.jitAuthorizationPolicies = Objects.requireNonNull(jitAuthorizationPolicies);
             return this;
         }
-
+        public Builder jitAuthorizationPolicies(JitAuthorizationPoliciesResponse... jitAuthorizationPolicies) {
+            return jitAuthorizationPolicies(List.of(jitAuthorizationPolicies));
+        }
         public Builder jitRequestState(String jitRequestState) {
             this.jitRequestState = Objects.requireNonNull(jitRequestState);
             return this;
         }
-
         public Builder jitSchedulingPolicy(JitSchedulingPolicyResponse jitSchedulingPolicy) {
             this.jitSchedulingPolicy = Objects.requireNonNull(jitSchedulingPolicy);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publisherTenantId(String publisherTenantId) {
             this.publisherTenantId = Objects.requireNonNull(publisherTenantId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedBy(ApplicationClientDetailsResponse updatedBy) {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
-        }
-        public GetJitRequestResult build() {
+        }        public GetJitRequestResult build() {
             return new GetJitRequestResult(applicationResourceId, createdBy, id, jitAuthorizationPolicies, jitRequestState, jitSchedulingPolicy, location, name, provisioningState, publisherTenantId, tags, type, updatedBy);
         }
     }

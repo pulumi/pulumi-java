@@ -91,32 +91,26 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentId(Output<String> parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
-
         public Builder parentId(String parentId) {
             this.parentId = Output.of(Objects.requireNonNull(parentId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public OrganizationalUnitArgs build() {
+        }        public OrganizationalUnitArgs build() {
             return new OrganizationalUnitArgs(name, parentId, tags);
         }
     }

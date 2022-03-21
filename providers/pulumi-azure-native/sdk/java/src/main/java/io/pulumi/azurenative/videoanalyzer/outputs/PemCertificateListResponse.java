@@ -72,12 +72,13 @@ public final class PemCertificateListResponse {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
-
+        public Builder certificates(String... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PemCertificateListResponse build() {
+        }        public PemCertificateListResponse build() {
             return new PemCertificateListResponse(certificates, type);
         }
     }

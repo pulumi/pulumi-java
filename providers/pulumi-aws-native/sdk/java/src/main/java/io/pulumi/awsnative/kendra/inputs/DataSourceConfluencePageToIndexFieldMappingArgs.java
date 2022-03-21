@@ -79,32 +79,26 @@ public final class DataSourceConfluencePageToIndexFieldMappingArgs extends io.pu
             this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
             return this;
         }
-
         public Builder dataSourceFieldName(DataSourceConfluencePageFieldName dataSourceFieldName) {
             this.dataSourceFieldName = Output.of(Objects.requireNonNull(dataSourceFieldName));
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable Output<String> dateFieldFormat) {
             this.dateFieldFormat = dateFieldFormat;
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
             this.dateFieldFormat = Output.ofNullable(dateFieldFormat);
             return this;
         }
-
         public Builder indexFieldName(Output<String> indexFieldName) {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public Builder indexFieldName(String indexFieldName) {
             this.indexFieldName = Output.of(Objects.requireNonNull(indexFieldName));
             return this;
-        }
-        public DataSourceConfluencePageToIndexFieldMappingArgs build() {
+        }        public DataSourceConfluencePageToIndexFieldMappingArgs build() {
             return new DataSourceConfluencePageToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }
     }

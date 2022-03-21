@@ -118,27 +118,22 @@ public final class GetPrivateEndpointConnectionResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(RemotePrivateEndpointConnectionResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPrivateEndpointConnectionResult build() {
+        }        public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(etag, id, name, properties, type);
         }
     }

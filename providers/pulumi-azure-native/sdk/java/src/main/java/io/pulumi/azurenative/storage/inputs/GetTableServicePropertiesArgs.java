@@ -88,17 +88,14 @@ public final class GetTableServicePropertiesArgs extends io.pulumi.resources.Inv
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tableServiceName(String tableServiceName) {
             this.tableServiceName = Objects.requireNonNull(tableServiceName);
             return this;
-        }
-        public GetTableServicePropertiesArgs build() {
+        }        public GetTableServicePropertiesArgs build() {
             return new GetTableServicePropertiesArgs(accountName, resourceGroupName, tableServiceName);
         }
     }

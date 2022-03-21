@@ -74,22 +74,18 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder state(Output<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
-        }
-        public ClusterDatabaseEncryptionGetArgs build() {
+        }        public ClusterDatabaseEncryptionGetArgs build() {
             return new ClusterDatabaseEncryptionGetArgs(keyName, state);
         }
     }

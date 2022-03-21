@@ -80,12 +80,10 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
             this.count = count;
             return this;
         }
-
         public Builder percent(@Nullable Double percent) {
             this.percent = percent;
             return this;
-        }
-        public AlertPolicyConditionConditionMonitoringQueryLanguageTrigger build() {
+        }        public AlertPolicyConditionConditionMonitoringQueryLanguageTrigger build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguageTrigger(count, percent);
         }
     }

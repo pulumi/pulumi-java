@@ -109,42 +109,34 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
             this.combineArtifacts = combineArtifacts;
             return this;
         }
-
         public Builder combineArtifacts(@Nullable Boolean combineArtifacts) {
             this.combineArtifacts = Output.ofNullable(combineArtifacts);
             return this;
         }
-
         public Builder restrictions(@Nullable Output<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
-
         public Builder restrictions(@Nullable ProjectBuildBatchConfigRestrictionsGetArgs restrictions) {
             this.restrictions = Output.ofNullable(restrictions);
             return this;
         }
-
         public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
         }
-
         public Builder timeoutInMins(@Nullable Output<Integer> timeoutInMins) {
             this.timeoutInMins = timeoutInMins;
             return this;
         }
-
         public Builder timeoutInMins(@Nullable Integer timeoutInMins) {
             this.timeoutInMins = Output.ofNullable(timeoutInMins);
             return this;
-        }
-        public ProjectBuildBatchConfigGetArgs build() {
+        }        public ProjectBuildBatchConfigGetArgs build() {
             return new ProjectBuildBatchConfigGetArgs(combineArtifacts, restrictions, serviceRole, timeoutInMins);
         }
     }

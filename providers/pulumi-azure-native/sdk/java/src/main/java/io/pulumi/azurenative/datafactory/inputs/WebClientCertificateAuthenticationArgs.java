@@ -114,42 +114,34 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder pfx(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             this.pfx = Objects.requireNonNull(pfx);
             return this;
         }
-
         public Builder pfx(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
             this.pfx = Output.of(Objects.requireNonNull(pfx));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public WebClientCertificateAuthenticationArgs build() {
+        }        public WebClientCertificateAuthenticationArgs build() {
             return new WebClientCertificateAuthenticationArgs(authenticationType, password, pfx, url);
         }
     }

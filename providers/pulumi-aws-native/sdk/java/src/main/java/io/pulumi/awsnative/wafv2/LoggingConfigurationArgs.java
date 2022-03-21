@@ -109,42 +109,40 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-
         public Builder logDestinationConfigs(List<String> logDestinationConfigs) {
             this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
-
+        public Builder logDestinationConfigs(String... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }
         public Builder loggingFilter(@Nullable Output<LoggingFilterPropertiesArgs> loggingFilter) {
             this.loggingFilter = loggingFilter;
             return this;
         }
-
         public Builder loggingFilter(@Nullable LoggingFilterPropertiesArgs loggingFilter) {
             this.loggingFilter = Output.ofNullable(loggingFilter);
             return this;
         }
-
         public Builder redactedFields(@Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
-
         public Builder redactedFields(@Nullable List<LoggingConfigurationFieldToMatchArgs> redactedFields) {
             this.redactedFields = Output.ofNullable(redactedFields);
             return this;
         }
-
+        public Builder redactedFields(LoggingConfigurationFieldToMatchArgs... redactedFields) {
+            return redactedFields(List.of(redactedFields));
+        }
         public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
-        }
-        public LoggingConfigurationArgs build() {
+        }        public LoggingConfigurationArgs build() {
             return new LoggingConfigurationArgs(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);
         }
     }

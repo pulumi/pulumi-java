@@ -65,12 +65,10 @@ public final class RuleGroupForwardedIPConfiguration extends io.pulumi.resources
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
-        }
-        public RuleGroupForwardedIPConfiguration build() {
+        }        public RuleGroupForwardedIPConfiguration build() {
             return new RuleGroupForwardedIPConfiguration(fallbackBehavior, headerName);
         }
     }

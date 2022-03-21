@@ -115,42 +115,40 @@ public final class GetTopicResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder messageRetentionDuration(String messageRetentionDuration) {
             this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
             return this;
         }
-
         public Builder messageStoragePolicies(List<GetTopicMessageStoragePolicy> messageStoragePolicies) {
             this.messageStoragePolicies = Objects.requireNonNull(messageStoragePolicies);
             return this;
         }
-
+        public Builder messageStoragePolicies(GetTopicMessageStoragePolicy... messageStoragePolicies) {
+            return messageStoragePolicies(List.of(messageStoragePolicies));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder schemaSettings(List<GetTopicSchemaSetting> schemaSettings) {
             this.schemaSettings = Objects.requireNonNull(schemaSettings);
             return this;
         }
-        public GetTopicResult build() {
+        public Builder schemaSettings(GetTopicSchemaSetting... schemaSettings) {
+            return schemaSettings(List.of(schemaSettings));
+        }        public GetTopicResult build() {
             return new GetTopicResult(id, kmsKeyName, labels, messageRetentionDuration, messageStoragePolicies, name, project, schemaSettings);
         }
     }

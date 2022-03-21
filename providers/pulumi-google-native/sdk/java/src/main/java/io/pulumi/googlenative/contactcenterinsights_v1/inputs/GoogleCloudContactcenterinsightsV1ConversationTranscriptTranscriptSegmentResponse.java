@@ -195,47 +195,41 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.channelTag = Objects.requireNonNull(channelTag);
             return this;
         }
-
         public Builder confidence(Double confidence) {
             this.confidence = Objects.requireNonNull(confidence);
             return this;
         }
-
         public Builder dialogflowSegmentMetadata(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata) {
             this.dialogflowSegmentMetadata = Objects.requireNonNull(dialogflowSegmentMetadata);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder messageTime(String messageTime) {
             this.messageTime = Objects.requireNonNull(messageTime);
             return this;
         }
-
         public Builder segmentParticipant(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant) {
             this.segmentParticipant = Objects.requireNonNull(segmentParticipant);
             return this;
         }
-
         public Builder sentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
             this.sentiment = Objects.requireNonNull(sentiment);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder words(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
             this.words = Objects.requireNonNull(words);
             return this;
         }
-        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse build() {
+        public Builder words(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse... words) {
+            return words(List.of(words));
+        }        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(channelTag, confidence, dialogflowSegmentMetadata, languageCode, messageTime, segmentParticipant, sentiment, text, words);
         }
     }

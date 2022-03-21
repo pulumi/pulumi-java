@@ -78,22 +78,18 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
-        }
-        public DefaultKeyArgs build() {
+        }        public DefaultKeyArgs build() {
             return new DefaultKeyArgs(label, policyName);
         }
     }

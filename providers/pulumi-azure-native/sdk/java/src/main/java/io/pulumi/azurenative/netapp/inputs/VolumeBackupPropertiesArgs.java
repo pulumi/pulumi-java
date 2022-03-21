@@ -111,42 +111,34 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
             this.backupEnabled = backupEnabled;
             return this;
         }
-
         public Builder backupEnabled(@Nullable Boolean backupEnabled) {
             this.backupEnabled = Output.ofNullable(backupEnabled);
             return this;
         }
-
         public Builder backupPolicyId(@Nullable Output<String> backupPolicyId) {
             this.backupPolicyId = backupPolicyId;
             return this;
         }
-
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
             this.backupPolicyId = Output.ofNullable(backupPolicyId);
             return this;
         }
-
         public Builder policyEnforced(@Nullable Output<Boolean> policyEnforced) {
             this.policyEnforced = policyEnforced;
             return this;
         }
-
         public Builder policyEnforced(@Nullable Boolean policyEnforced) {
             this.policyEnforced = Output.ofNullable(policyEnforced);
             return this;
         }
-
         public Builder vaultId(@Nullable Output<String> vaultId) {
             this.vaultId = vaultId;
             return this;
         }
-
         public Builder vaultId(@Nullable String vaultId) {
             this.vaultId = Output.ofNullable(vaultId);
             return this;
-        }
-        public VolumeBackupPropertiesArgs build() {
+        }        public VolumeBackupPropertiesArgs build() {
             return new VolumeBackupPropertiesArgs(backupEnabled, backupPolicyId, policyEnforced, vaultId);
         }
     }

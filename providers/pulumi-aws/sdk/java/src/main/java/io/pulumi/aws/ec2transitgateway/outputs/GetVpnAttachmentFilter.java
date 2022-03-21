@@ -70,12 +70,13 @@ public final class GetVpnAttachmentFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetVpnAttachmentFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetVpnAttachmentFilter build() {
             return new GetVpnAttachmentFilter(name, values);
         }
     }

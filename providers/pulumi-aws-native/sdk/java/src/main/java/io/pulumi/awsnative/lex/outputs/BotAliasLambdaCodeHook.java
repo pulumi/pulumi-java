@@ -69,12 +69,10 @@ public final class BotAliasLambdaCodeHook {
             this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion);
             return this;
         }
-
         public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
-        }
-        public BotAliasLambdaCodeHook build() {
+        }        public BotAliasLambdaCodeHook build() {
             return new BotAliasLambdaCodeHook(codeHookInterfaceVersion, lambdaArn);
         }
     }

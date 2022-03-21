@@ -168,42 +168,46 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse {
             this.calendarPeriod = Objects.requireNonNull(calendarPeriod);
             return this;
         }
-
         public Builder creditTypes(List<String> creditTypes) {
             this.creditTypes = Objects.requireNonNull(creditTypes);
             return this;
         }
-
+        public Builder creditTypes(String... creditTypes) {
+            return creditTypes(List.of(creditTypes));
+        }
         public Builder creditTypesTreatment(String creditTypesTreatment) {
             this.creditTypesTreatment = Objects.requireNonNull(creditTypesTreatment);
             return this;
         }
-
         public Builder customPeriod(GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod) {
             this.customPeriod = Objects.requireNonNull(customPeriod);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder projects(List<String> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
-
+        public Builder projects(String... projects) {
+            return projects(List.of(projects));
+        }
         public Builder services(List<String> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
+        public Builder services(String... services) {
+            return services(List.of(services));
+        }
         public Builder subaccounts(List<String> subaccounts) {
             this.subaccounts = Objects.requireNonNull(subaccounts);
             return this;
         }
-        public GoogleCloudBillingBudgetsV1beta1FilterResponse build() {
+        public Builder subaccounts(String... subaccounts) {
+            return subaccounts(List.of(subaccounts));
+        }        public GoogleCloudBillingBudgetsV1beta1FilterResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1FilterResponse(calendarPeriod, creditTypes, creditTypesTreatment, customPeriod, labels, projects, services, subaccounts);
         }
     }

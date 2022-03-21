@@ -72,12 +72,16 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions {
             this.customActions = customActions;
             return this;
         }
-
+        public Builder customActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction... customActions) {
+            return customActions(List.of(customActions));
+        }
         public Builder statelessRules(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions build() {
+        public Builder statelessRules(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule... statelessRules) {
+            return statelessRules(List.of(statelessRules));
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions(customActions, statelessRules);
         }
     }

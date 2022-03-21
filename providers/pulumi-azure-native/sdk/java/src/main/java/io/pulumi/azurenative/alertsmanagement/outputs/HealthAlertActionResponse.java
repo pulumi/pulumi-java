@@ -72,12 +72,10 @@ public final class HealthAlertActionResponse {
             this.actionGroupId = actionGroupId;
             return this;
         }
-
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
-        }
-        public HealthAlertActionResponse build() {
+        }        public HealthAlertActionResponse build() {
             return new HealthAlertActionResponse(actionGroupId, webHookProperties);
         }
     }

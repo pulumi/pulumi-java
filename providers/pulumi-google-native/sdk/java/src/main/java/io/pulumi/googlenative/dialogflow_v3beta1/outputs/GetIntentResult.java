@@ -171,42 +171,40 @@ public final class GetIntentResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder isFallback(Boolean isFallback) {
             this.isFallback = Objects.requireNonNull(isFallback);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudDialogflowCxV3beta1IntentParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder trainingPhrases(List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases) {
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }
-        public GetIntentResult build() {
+        public Builder trainingPhrases(GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse... trainingPhrases) {
+            return trainingPhrases(List.of(trainingPhrases));
+        }        public GetIntentResult build() {
             return new GetIntentResult(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
         }
     }

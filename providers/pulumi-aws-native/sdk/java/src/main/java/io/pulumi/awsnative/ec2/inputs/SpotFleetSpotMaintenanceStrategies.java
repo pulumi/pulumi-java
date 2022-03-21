@@ -52,8 +52,7 @@ public final class SpotFleetSpotMaintenanceStrategies extends io.pulumi.resource
         public Builder capacityRebalance(@Nullable SpotFleetSpotCapacityRebalance capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
-        }
-        public SpotFleetSpotMaintenanceStrategies build() {
+        }        public SpotFleetSpotMaintenanceStrategies build() {
             return new SpotFleetSpotMaintenanceStrategies(capacityRebalance);
         }
     }

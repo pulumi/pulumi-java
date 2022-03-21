@@ -74,22 +74,18 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
-
         public Builder signingStatus(@Nullable Output<String> signingStatus) {
             this.signingStatus = signingStatus;
             return this;
         }
-
         public Builder signingStatus(@Nullable String signingStatus) {
             this.signingStatus = Output.ofNullable(signingStatus);
             return this;
-        }
-        public HostedZoneDnsSecState build() {
+        }        public HostedZoneDnsSecState build() {
             return new HostedZoneDnsSecState(hostedZoneId, signingStatus);
         }
     }

@@ -139,57 +139,46 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
-
         public Builder stageDescription(@Nullable Output<String> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
-
         public Builder stageDescription(@Nullable String stageDescription) {
             this.stageDescription = Output.ofNullable(stageDescription);
             return this;
         }
-
         public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = Output.ofNullable(stageName);
             return this;
         }
-
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
         }
-
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(description, restApi, stageDescription, stageName, triggers, variables);
         }
     }

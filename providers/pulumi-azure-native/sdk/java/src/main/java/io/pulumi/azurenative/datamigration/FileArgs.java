@@ -123,52 +123,42 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable String fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
         }
-
         public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
-
         public Builder properties(@Nullable Output<ProjectFilePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ProjectFilePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public FileArgs build() {
+        }        public FileArgs build() {
             return new FileArgs(fileName, groupName, projectName, properties, serviceName);
         }
     }

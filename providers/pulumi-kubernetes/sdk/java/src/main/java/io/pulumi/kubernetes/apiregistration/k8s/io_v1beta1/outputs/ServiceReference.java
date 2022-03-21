@@ -88,17 +88,14 @@ public final class ServiceReference {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ServiceReference build() {
+        }        public ServiceReference build() {
             return new ServiceReference(name, namespace, port);
         }
     }

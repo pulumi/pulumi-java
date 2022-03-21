@@ -108,42 +108,37 @@ public final class WorkflowTemplateParameterGetArgs extends io.pulumi.resources.
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fields(Output<List<String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public Builder fields(List<String> fields) {
             this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
-
+        public Builder fields(String... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder validation(@Nullable Output<WorkflowTemplateParameterValidationGetArgs> validation) {
             this.validation = validation;
             return this;
         }
-
         public Builder validation(@Nullable WorkflowTemplateParameterValidationGetArgs validation) {
             this.validation = Output.ofNullable(validation);
             return this;
-        }
-        public WorkflowTemplateParameterGetArgs build() {
+        }        public WorkflowTemplateParameterGetArgs build() {
             return new WorkflowTemplateParameterGetArgs(description, fields, name, validation);
         }
     }

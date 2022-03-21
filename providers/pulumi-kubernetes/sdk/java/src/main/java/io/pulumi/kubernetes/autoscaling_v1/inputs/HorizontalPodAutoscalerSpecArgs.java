@@ -111,42 +111,34 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
-
         public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Output.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
-
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Output.ofNullable(minReplicas);
             return this;
         }
-
         public Builder scaleTargetRef(Output<CrossVersionObjectReferenceArgs> scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
-
         public Builder scaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
             this.scaleTargetRef = Output.of(Objects.requireNonNull(scaleTargetRef));
             return this;
         }
-
         public Builder targetCPUUtilizationPercentage(@Nullable Output<Integer> targetCPUUtilizationPercentage) {
             this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
             return this;
         }
-
         public Builder targetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
             this.targetCPUUtilizationPercentage = Output.ofNullable(targetCPUUtilizationPercentage);
             return this;
-        }
-        public HorizontalPodAutoscalerSpecArgs build() {
+        }        public HorizontalPodAutoscalerSpecArgs build() {
             return new HorizontalPodAutoscalerSpecArgs(maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage);
         }
     }

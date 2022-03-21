@@ -90,22 +90,18 @@ public final class GetDeliveryPipelineIamPolicyArgs extends io.pulumi.resources.
             this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDeliveryPipelineIamPolicyArgs build() {
+        }        public GetDeliveryPipelineIamPolicyArgs build() {
             return new GetDeliveryPipelineIamPolicyArgs(deliveryPipelineId, location, optionsRequestedPolicyVersion, project);
         }
     }

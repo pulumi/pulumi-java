@@ -54,12 +54,10 @@ public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends io
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
-
         public Builder requiredFeaturesPolicy(Either<String,FeaturesPolicy> requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Output.of(Objects.requireNonNull(requiredFeaturesPolicy));
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesFeaturesRuleArgs build() {
+        }        public ResourceTypeRegistrationPropertiesFeaturesRuleArgs build() {
             return new ResourceTypeRegistrationPropertiesFeaturesRuleArgs(requiredFeaturesPolicy);
         }
     }

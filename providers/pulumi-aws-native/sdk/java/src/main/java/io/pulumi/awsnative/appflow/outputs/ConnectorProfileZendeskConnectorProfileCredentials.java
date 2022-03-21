@@ -104,22 +104,18 @@ public final class ConnectorProfileZendeskConnectorProfileCredentials {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
-        }
-        public ConnectorProfileZendeskConnectorProfileCredentials build() {
+        }        public ConnectorProfileZendeskConnectorProfileCredentials build() {
             return new ConnectorProfileZendeskConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }
     }

@@ -56,12 +56,10 @@ public final class CustomPluginLocationArgs extends io.pulumi.resources.Resource
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
-
         public Builder s3(CustomPluginLocationS3Args s3) {
             this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
-        }
-        public CustomPluginLocationArgs build() {
+        }        public CustomPluginLocationArgs build() {
             return new CustomPluginLocationArgs(s3);
         }
     }

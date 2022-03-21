@@ -130,32 +130,26 @@ public final class AzureBlobFileSystemConfigurationResponse extends io.pulumi.re
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder blobfuseOptions(@Nullable String blobfuseOptions) {
             this.blobfuseOptions = blobfuseOptions;
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public Builder sasKey(@Nullable String sasKey) {
             this.sasKey = sasKey;
             return this;
-        }
-        public AzureBlobFileSystemConfigurationResponse build() {
+        }        public AzureBlobFileSystemConfigurationResponse build() {
             return new AzureBlobFileSystemConfigurationResponse(accountKey, accountName, blobfuseOptions, containerName, relativeMountPath, sasKey);
         }
     }

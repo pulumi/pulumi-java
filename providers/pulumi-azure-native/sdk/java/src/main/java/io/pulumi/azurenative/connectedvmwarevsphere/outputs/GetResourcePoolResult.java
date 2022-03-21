@@ -409,112 +409,93 @@ public final class GetResourcePoolResult {
             this.cpuLimitMHz = Objects.requireNonNull(cpuLimitMHz);
             return this;
         }
-
         public Builder cpuReservationMHz(Double cpuReservationMHz) {
             this.cpuReservationMHz = Objects.requireNonNull(cpuReservationMHz);
             return this;
         }
-
         public Builder cpuSharesLevel(String cpuSharesLevel) {
             this.cpuSharesLevel = Objects.requireNonNull(cpuSharesLevel);
             return this;
         }
-
         public Builder customResourceName(String customResourceName) {
             this.customResourceName = Objects.requireNonNull(customResourceName);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder memLimitMB(Double memLimitMB) {
             this.memLimitMB = Objects.requireNonNull(memLimitMB);
             return this;
         }
-
         public Builder memReservationMB(Double memReservationMB) {
             this.memReservationMB = Objects.requireNonNull(memReservationMB);
             return this;
         }
-
         public Builder memSharesLevel(String memSharesLevel) {
             this.memSharesLevel = Objects.requireNonNull(memSharesLevel);
             return this;
         }
-
         public Builder moName(String moName) {
             this.moName = Objects.requireNonNull(moName);
             return this;
         }
-
         public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = moRefId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder statuses(List<ResourceStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(ResourceStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public Builder vCenterId(@Nullable String vCenterId) {
             this.vCenterId = vCenterId;
             return this;
-        }
-        public GetResourcePoolResult build() {
+        }        public GetResourcePoolResult build() {
             return new GetResourcePoolResult(cpuLimitMHz, cpuReservationMHz, cpuSharesLevel, customResourceName, extendedLocation, id, inventoryItemId, kind, location, memLimitMB, memReservationMB, memSharesLevel, moName, moRefId, name, provisioningState, statuses, systemData, tags, type, uuid, vCenterId);
         }
     }

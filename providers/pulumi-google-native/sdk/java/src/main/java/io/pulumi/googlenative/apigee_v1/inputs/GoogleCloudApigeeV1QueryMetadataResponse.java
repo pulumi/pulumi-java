@@ -137,32 +137,32 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
+        public Builder dimensions(String... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder endTimestamp(String endTimestamp) {
             this.endTimestamp = Objects.requireNonNull(endTimestamp);
             return this;
         }
-
         public Builder metrics(List<String> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(String... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder outputFormat(String outputFormat) {
             this.outputFormat = Objects.requireNonNull(outputFormat);
             return this;
         }
-
         public Builder startTimestamp(String startTimestamp) {
             this.startTimestamp = Objects.requireNonNull(startTimestamp);
             return this;
         }
-
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
-        }
-        public GoogleCloudApigeeV1QueryMetadataResponse build() {
+        }        public GoogleCloudApigeeV1QueryMetadataResponse build() {
             return new GoogleCloudApigeeV1QueryMetadataResponse(dimensions, endTimestamp, metrics, outputFormat, startTimestamp, timeUnit);
         }
     }

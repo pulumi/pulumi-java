@@ -69,12 +69,10 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
             this.transcriptIndex = Objects.requireNonNull(transcriptIndex);
             return this;
         }
-
         public Builder wordIndex(Integer wordIndex) {
             this.wordIndex = Objects.requireNonNull(wordIndex);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(transcriptIndex, wordIndex);
         }
     }

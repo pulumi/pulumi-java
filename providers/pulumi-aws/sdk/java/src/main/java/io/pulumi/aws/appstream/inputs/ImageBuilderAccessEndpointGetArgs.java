@@ -74,22 +74,18 @@ public final class ImageBuilderAccessEndpointGetArgs extends io.pulumi.resources
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder vpceId(@Nullable Output<String> vpceId) {
             this.vpceId = vpceId;
             return this;
         }
-
         public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = Output.ofNullable(vpceId);
             return this;
-        }
-        public ImageBuilderAccessEndpointGetArgs build() {
+        }        public ImageBuilderAccessEndpointGetArgs build() {
             return new ImageBuilderAccessEndpointGetArgs(endpointType, vpceId);
         }
     }

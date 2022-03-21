@@ -90,17 +90,17 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
             this.arrayType = Objects.requireNonNull(arrayType);
             return this;
         }
-
         public Builder structTypes(List<QueryParameterTypeStructTypesItemResponse> structTypes) {
             this.structTypes = Objects.requireNonNull(structTypes);
             return this;
         }
-
+        public Builder structTypes(QueryParameterTypeStructTypesItemResponse... structTypes) {
+            return structTypes(List.of(structTypes));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public QueryParameterTypeResponse build() {
+        }        public QueryParameterTypeResponse build() {
             return new QueryParameterTypeResponse(arrayType, structTypes, type);
         }
     }

@@ -75,12 +75,13 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder value(@Nullable List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> value) {
             this.value = value;
             return this;
         }
-        public ListNetworkManagerEffectiveSecurityAdminRuleResult build() {
+        public Builder value(Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>... value) {
+            return value(List.of(value));
+        }        public ListNetworkManagerEffectiveSecurityAdminRuleResult build() {
             return new ListNetworkManagerEffectiveSecurityAdminRuleResult(skipToken, value);
         }
     }

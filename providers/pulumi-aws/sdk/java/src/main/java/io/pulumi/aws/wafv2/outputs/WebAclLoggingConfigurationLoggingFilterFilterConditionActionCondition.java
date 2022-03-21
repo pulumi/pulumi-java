@@ -51,8 +51,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
         public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
-        }
-        public WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition build() {
+        }        public WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition build() {
             return new WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition(action);
         }
     }

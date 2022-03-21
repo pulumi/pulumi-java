@@ -69,12 +69,10 @@ public final class RouterMd5AuthenticationKeyResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RouterMd5AuthenticationKeyResponse build() {
+        }        public RouterMd5AuthenticationKeyResponse build() {
             return new RouterMd5AuthenticationKeyResponse(key, name);
         }
     }

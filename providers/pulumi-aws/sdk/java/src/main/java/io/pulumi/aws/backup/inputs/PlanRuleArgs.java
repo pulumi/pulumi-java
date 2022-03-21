@@ -192,92 +192,77 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.completionWindow = completionWindow;
             return this;
         }
-
         public Builder completionWindow(@Nullable Integer completionWindow) {
             this.completionWindow = Output.ofNullable(completionWindow);
             return this;
         }
-
         public Builder copyActions(@Nullable Output<List<PlanRuleCopyActionArgs>> copyActions) {
             this.copyActions = copyActions;
             return this;
         }
-
         public Builder copyActions(@Nullable List<PlanRuleCopyActionArgs> copyActions) {
             this.copyActions = Output.ofNullable(copyActions);
             return this;
         }
-
+        public Builder copyActions(PlanRuleCopyActionArgs... copyActions) {
+            return copyActions(List.of(copyActions));
+        }
         public Builder enableContinuousBackup(@Nullable Output<Boolean> enableContinuousBackup) {
             this.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
-
         public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
             this.enableContinuousBackup = Output.ofNullable(enableContinuousBackup);
             return this;
         }
-
         public Builder lifecycle(@Nullable Output<PlanRuleLifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public Builder lifecycle(@Nullable PlanRuleLifecycleArgs lifecycle) {
             this.lifecycle = Output.ofNullable(lifecycle);
             return this;
         }
-
         public Builder recoveryPointTags(@Nullable Output<Map<String,String>> recoveryPointTags) {
             this.recoveryPointTags = recoveryPointTags;
             return this;
         }
-
         public Builder recoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
             this.recoveryPointTags = Output.ofNullable(recoveryPointTags);
             return this;
         }
-
         public Builder ruleName(Output<String> ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Output.of(Objects.requireNonNull(ruleName));
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder startWindow(@Nullable Output<Integer> startWindow) {
             this.startWindow = startWindow;
             return this;
         }
-
         public Builder startWindow(@Nullable Integer startWindow) {
             this.startWindow = Output.ofNullable(startWindow);
             return this;
         }
-
         public Builder targetVaultName(Output<String> targetVaultName) {
             this.targetVaultName = Objects.requireNonNull(targetVaultName);
             return this;
         }
-
         public Builder targetVaultName(String targetVaultName) {
             this.targetVaultName = Output.of(Objects.requireNonNull(targetVaultName));
             return this;
-        }
-        public PlanRuleArgs build() {
+        }        public PlanRuleArgs build() {
             return new PlanRuleArgs(completionWindow, copyActions, enableContinuousBackup, lifecycle, recoveryPointTags, ruleName, schedule, startWindow, targetVaultName);
         }
     }

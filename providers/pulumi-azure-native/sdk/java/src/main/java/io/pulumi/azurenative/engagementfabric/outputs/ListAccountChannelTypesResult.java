@@ -54,7 +54,9 @@ public final class ListAccountChannelTypesResult {
             this.value = value;
             return this;
         }
-        public ListAccountChannelTypesResult build() {
+        public Builder value(ChannelTypeDescriptionResponse... value) {
+            return value(List.of(value));
+        }        public ListAccountChannelTypesResult build() {
             return new ListAccountChannelTypesResult(value);
         }
     }

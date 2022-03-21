@@ -144,32 +144,26 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
             this.documentEndpoint = Objects.requireNonNull(documentEndpoint);
             return this;
         }
-
         public Builder failoverPriority(@Nullable Integer failoverPriority) {
             this.failoverPriority = failoverPriority;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isZoneRedundant(@Nullable Boolean isZoneRedundant) {
             this.isZoneRedundant = isZoneRedundant;
             return this;
         }
-
         public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public LocationResponse build() {
+        }        public LocationResponse build() {
             return new LocationResponse(documentEndpoint, failoverPriority, id, isZoneRedundant, locationName, provisioningState);
         }
     }

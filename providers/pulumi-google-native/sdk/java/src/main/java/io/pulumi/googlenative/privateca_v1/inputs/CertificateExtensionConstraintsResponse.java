@@ -78,12 +78,16 @@ public final class CertificateExtensionConstraintsResponse extends io.pulumi.res
             this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
             return this;
         }
-
+        public Builder additionalExtensions(ObjectIdResponse... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder knownExtensions(List<String> knownExtensions) {
             this.knownExtensions = Objects.requireNonNull(knownExtensions);
             return this;
         }
-        public CertificateExtensionConstraintsResponse build() {
+        public Builder knownExtensions(String... knownExtensions) {
+            return knownExtensions(List.of(knownExtensions));
+        }        public CertificateExtensionConstraintsResponse build() {
             return new CertificateExtensionConstraintsResponse(additionalExtensions, knownExtensions);
         }
     }

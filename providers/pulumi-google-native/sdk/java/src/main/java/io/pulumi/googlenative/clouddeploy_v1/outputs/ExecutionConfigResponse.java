@@ -136,32 +136,29 @@ public final class ExecutionConfigResponse {
             this.artifactStorage = Objects.requireNonNull(artifactStorage);
             return this;
         }
-
         public Builder defaultPool(DefaultPoolResponse defaultPool) {
             this.defaultPool = Objects.requireNonNull(defaultPool);
             return this;
         }
-
         public Builder privatePool(PrivatePoolResponse privatePool) {
             this.privatePool = Objects.requireNonNull(privatePool);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder usages(List<String> usages) {
             this.usages = Objects.requireNonNull(usages);
             return this;
         }
-
+        public Builder usages(String... usages) {
+            return usages(List.of(usages));
+        }
         public Builder workerPool(String workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
-        }
-        public ExecutionConfigResponse build() {
+        }        public ExecutionConfigResponse build() {
             return new ExecutionConfigResponse(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);
         }
     }

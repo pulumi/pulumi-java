@@ -74,12 +74,10 @@ public final class GetCaCertsArgs extends io.pulumi.resources.InvokeArgs {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCaCertsArgs build() {
+        }        public GetCaCertsArgs build() {
             return new GetCaCertsArgs(instance, project);
         }
     }

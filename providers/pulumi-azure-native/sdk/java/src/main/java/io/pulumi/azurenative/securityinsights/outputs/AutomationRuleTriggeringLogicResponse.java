@@ -122,27 +122,25 @@ public final class AutomationRuleTriggeringLogicResponse {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(AutomationRulePropertyValuesConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder triggersOn(String triggersOn) {
             this.triggersOn = Objects.requireNonNull(triggersOn);
             return this;
         }
-
         public Builder triggersWhen(String triggersWhen) {
             this.triggersWhen = Objects.requireNonNull(triggersWhen);
             return this;
-        }
-        public AutomationRuleTriggeringLogicResponse build() {
+        }        public AutomationRuleTriggeringLogicResponse build() {
             return new AutomationRuleTriggeringLogicResponse(conditions, expirationTimeUtc, isEnabled, triggersOn, triggersWhen);
         }
     }

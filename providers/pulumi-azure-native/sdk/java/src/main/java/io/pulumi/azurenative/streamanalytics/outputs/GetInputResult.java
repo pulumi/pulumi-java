@@ -106,22 +106,18 @@ public final class GetInputResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInputResult build() {
+        }        public GetInputResult build() {
             return new GetInputResult(id, name, properties, type);
         }
     }

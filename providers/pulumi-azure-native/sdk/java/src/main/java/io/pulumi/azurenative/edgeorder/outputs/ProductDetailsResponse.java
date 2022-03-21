@@ -124,27 +124,25 @@ public final class ProductDetailsResponse {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder deviceDetails(List<DeviceDetailsResponse> deviceDetails) {
             this.deviceDetails = Objects.requireNonNull(deviceDetails);
             return this;
         }
-
+        public Builder deviceDetails(DeviceDetailsResponse... deviceDetails) {
+            return deviceDetails(List.of(deviceDetails));
+        }
         public Builder displayInfo(@Nullable DisplayInfoResponse displayInfo) {
             this.displayInfo = displayInfo;
             return this;
         }
-
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
-
         public Builder productDoubleEncryptionStatus(String productDoubleEncryptionStatus) {
             this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
             return this;
-        }
-        public ProductDetailsResponse build() {
+        }        public ProductDetailsResponse build() {
             return new ProductDetailsResponse(count, deviceDetails, displayInfo, hierarchyInformation, productDoubleEncryptionStatus);
         }
     }

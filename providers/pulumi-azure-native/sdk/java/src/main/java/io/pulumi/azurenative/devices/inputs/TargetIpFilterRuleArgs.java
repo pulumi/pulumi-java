@@ -112,42 +112,34 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(IpFilterActionType action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder filterName(Output<String> filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
-
         public Builder filterName(String filterName) {
             this.filterName = Output.of(Objects.requireNonNull(filterName));
             return this;
         }
-
         public Builder ipMask(Output<String> ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
-
         public Builder ipMask(String ipMask) {
             this.ipMask = Output.of(Objects.requireNonNull(ipMask));
             return this;
         }
-
         public Builder target(@Nullable Output<IpFilterTargetType> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable IpFilterTargetType target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public TargetIpFilterRuleArgs build() {
+        }        public TargetIpFilterRuleArgs build() {
             return new TargetIpFilterRuleArgs(action, filterName, ipMask, target);
         }
     }

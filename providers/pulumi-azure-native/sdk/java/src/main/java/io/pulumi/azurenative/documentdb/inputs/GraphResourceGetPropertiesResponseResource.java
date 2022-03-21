@@ -54,8 +54,7 @@ public final class GraphResourceGetPropertiesResponseResource extends io.pulumi.
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GraphResourceGetPropertiesResponseResource build() {
+        }        public GraphResourceGetPropertiesResponseResource build() {
             return new GraphResourceGetPropertiesResponseResource(id);
         }
     }

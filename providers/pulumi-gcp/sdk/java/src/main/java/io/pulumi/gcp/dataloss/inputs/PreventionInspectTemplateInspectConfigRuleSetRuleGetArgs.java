@@ -77,22 +77,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
             this.exclusionRule = exclusionRule;
             return this;
         }
-
         public Builder exclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs exclusionRule) {
             this.exclusionRule = Output.ofNullable(exclusionRule);
             return this;
         }
-
         public Builder hotwordRule(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }
-
         public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs hotwordRule) {
             this.hotwordRule = Output.ofNullable(hotwordRule);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs(exclusionRule, hotwordRule);
         }
     }

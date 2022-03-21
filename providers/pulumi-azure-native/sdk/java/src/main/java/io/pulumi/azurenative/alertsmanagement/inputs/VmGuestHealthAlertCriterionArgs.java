@@ -113,42 +113,43 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
             this.healthStates = Objects.requireNonNull(healthStates);
             return this;
         }
-
         public Builder healthStates(List<HealthStateArgs> healthStates) {
             this.healthStates = Output.of(Objects.requireNonNull(healthStates));
             return this;
         }
-
+        public Builder healthStates(HealthStateArgs... healthStates) {
+            return healthStates(List.of(healthStates));
+        }
         public Builder monitorNames(@Nullable Output<List<String>> monitorNames) {
             this.monitorNames = monitorNames;
             return this;
         }
-
         public Builder monitorNames(@Nullable List<String> monitorNames) {
             this.monitorNames = Output.ofNullable(monitorNames);
             return this;
         }
-
+        public Builder monitorNames(String... monitorNames) {
+            return monitorNames(List.of(monitorNames));
+        }
         public Builder monitorTypes(@Nullable Output<List<String>> monitorTypes) {
             this.monitorTypes = monitorTypes;
             return this;
         }
-
         public Builder monitorTypes(@Nullable List<String> monitorTypes) {
             this.monitorTypes = Output.ofNullable(monitorTypes);
             return this;
         }
-
+        public Builder monitorTypes(String... monitorTypes) {
+            return monitorTypes(List.of(monitorTypes));
+        }
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
-        }
-        public VmGuestHealthAlertCriterionArgs build() {
+        }        public VmGuestHealthAlertCriterionArgs build() {
             return new VmGuestHealthAlertCriterionArgs(healthStates, monitorNames, monitorTypes, namespace);
         }
     }

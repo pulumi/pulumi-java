@@ -95,32 +95,29 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
         public Builder selectedDatabases(List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
-
+        public Builder selectedDatabases(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public Builder targetConnectionInfo(Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
-        }
-        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs build() {
+        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }
     }

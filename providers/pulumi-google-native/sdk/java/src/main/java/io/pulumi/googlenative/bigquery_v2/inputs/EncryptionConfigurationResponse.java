@@ -54,8 +54,7 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public EncryptionConfigurationResponse build() {
+        }        public EncryptionConfigurationResponse build() {
             return new EncryptionConfigurationResponse(kmsKeyName);
         }
     }

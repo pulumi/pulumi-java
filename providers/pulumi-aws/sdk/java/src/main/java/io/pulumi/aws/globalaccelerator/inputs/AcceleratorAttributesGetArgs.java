@@ -91,32 +91,26 @@ public final class AcceleratorAttributesGetArgs extends io.pulumi.resources.Reso
             this.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
-
         public Builder flowLogsEnabled(@Nullable Boolean flowLogsEnabled) {
             this.flowLogsEnabled = Output.ofNullable(flowLogsEnabled);
             return this;
         }
-
         public Builder flowLogsS3Bucket(@Nullable Output<String> flowLogsS3Bucket) {
             this.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
-
         public Builder flowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
             this.flowLogsS3Bucket = Output.ofNullable(flowLogsS3Bucket);
             return this;
         }
-
         public Builder flowLogsS3Prefix(@Nullable Output<String> flowLogsS3Prefix) {
             this.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
         }
-
         public Builder flowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
             this.flowLogsS3Prefix = Output.ofNullable(flowLogsS3Prefix);
             return this;
-        }
-        public AcceleratorAttributesGetArgs build() {
+        }        public AcceleratorAttributesGetArgs build() {
             return new AcceleratorAttributesGetArgs(flowLogsEnabled, flowLogsS3Bucket, flowLogsS3Prefix);
         }
     }

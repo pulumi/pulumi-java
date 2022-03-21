@@ -120,27 +120,22 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder poolName(String poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder snapshotName(String snapshotName) {
             this.snapshotName = Objects.requireNonNull(snapshotName);
             return this;
         }
-
         public Builder volumeName(String volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
-        }
-        public GetSnapshotArgs build() {
+        }        public GetSnapshotArgs build() {
             return new GetSnapshotArgs(accountName, poolName, resourceGroupName, snapshotName, volumeName);
         }
     }

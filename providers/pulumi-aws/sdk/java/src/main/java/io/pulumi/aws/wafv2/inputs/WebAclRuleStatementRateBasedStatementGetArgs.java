@@ -109,42 +109,34 @@ public final class WebAclRuleStatementRateBasedStatementGetArgs extends io.pulum
             this.aggregateKeyType = aggregateKeyType;
             return this;
         }
-
         public Builder aggregateKeyType(@Nullable String aggregateKeyType) {
             this.aggregateKeyType = Output.ofNullable(aggregateKeyType);
             return this;
         }
-
         public Builder forwardedIpConfig(@Nullable Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
-
         public Builder forwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfigGetArgs forwardedIpConfig) {
             this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
             return this;
         }
-
         public Builder limit(Output<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder limit(Integer limit) {
             this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementGetArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementGetArgs scopeDownStatement) {
             this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementGetArgs build() {
+        }        public WebAclRuleStatementRateBasedStatementGetArgs build() {
             return new WebAclRuleStatementRateBasedStatementGetArgs(aggregateKeyType, forwardedIpConfig, limit, scopeDownStatement);
         }
     }

@@ -75,12 +75,10 @@ public final class GuestPoliciesRecipeArtifactRemote {
             this.checkSum = checkSum;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public GuestPoliciesRecipeArtifactRemote build() {
+        }        public GuestPoliciesRecipeArtifactRemote build() {
             return new GuestPoliciesRecipeArtifactRemote(checkSum, uri);
         }
     }

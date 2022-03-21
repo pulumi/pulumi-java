@@ -141,72 +141,61 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable RuleGroupRuleActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder captchaConfig(@Nullable Output<RuleGroupCaptchaConfigArgs> captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
-
         public Builder captchaConfig(@Nullable RuleGroupCaptchaConfigArgs captchaConfig) {
             this.captchaConfig = Output.ofNullable(captchaConfig);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleLabels(@Nullable Output<List<RuleGroupLabelArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
-
         public Builder ruleLabels(@Nullable List<RuleGroupLabelArgs> ruleLabels) {
             this.ruleLabels = Output.ofNullable(ruleLabels);
             return this;
         }
-
+        public Builder ruleLabels(RuleGroupLabelArgs... ruleLabels) {
+            return ruleLabels(List.of(ruleLabels));
+        }
         public Builder statement(Output<RuleGroupStatementArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder statement(RuleGroupStatementArgs statement) {
             this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
         }
-
         public Builder visibilityConfig(Output<RuleGroupVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public Builder visibilityConfig(RuleGroupVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
-        }
-        public RuleGroupRuleArgs build() {
+        }        public RuleGroupRuleArgs build() {
             return new RuleGroupRuleArgs(action, captchaConfig, name, priority, ruleLabels, statement, visibilityConfig);
         }
     }

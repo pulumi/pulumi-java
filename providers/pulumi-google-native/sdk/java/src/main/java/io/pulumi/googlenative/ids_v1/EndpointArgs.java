@@ -173,92 +173,74 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpointId(Output<String> endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
-
         public Builder endpointId(String endpointId) {
             this.endpointId = Output.of(Objects.requireNonNull(endpointId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder severity(Output<EndpointSeverity> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder severity(EndpointSeverity severity) {
             this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
-
         public Builder trafficLogs(@Nullable Output<Boolean> trafficLogs) {
             this.trafficLogs = trafficLogs;
             return this;
         }
-
         public Builder trafficLogs(@Nullable Boolean trafficLogs) {
             this.trafficLogs = Output.ofNullable(trafficLogs);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(description, endpointId, labels, location, network, project, requestId, severity, trafficLogs);
         }
     }

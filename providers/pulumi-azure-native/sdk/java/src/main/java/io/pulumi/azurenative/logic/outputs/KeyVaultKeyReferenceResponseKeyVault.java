@@ -87,17 +87,14 @@ public final class KeyVaultKeyReferenceResponseKeyVault {
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public KeyVaultKeyReferenceResponseKeyVault build() {
+        }        public KeyVaultKeyReferenceResponseKeyVault build() {
             return new KeyVaultKeyReferenceResponseKeyVault(id, name, type);
         }
     }

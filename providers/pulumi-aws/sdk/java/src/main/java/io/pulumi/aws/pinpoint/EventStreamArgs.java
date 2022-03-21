@@ -89,32 +89,26 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder destinationStreamArn(Output<String> destinationStreamArn) {
             this.destinationStreamArn = Objects.requireNonNull(destinationStreamArn);
             return this;
         }
-
         public Builder destinationStreamArn(String destinationStreamArn) {
             this.destinationStreamArn = Output.of(Objects.requireNonNull(destinationStreamArn));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public EventStreamArgs build() {
+        }        public EventStreamArgs build() {
             return new EventStreamArgs(applicationId, destinationStreamArn, roleArn);
         }
     }

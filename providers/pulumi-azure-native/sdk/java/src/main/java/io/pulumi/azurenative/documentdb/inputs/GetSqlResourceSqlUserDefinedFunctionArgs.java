@@ -120,27 +120,22 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder userDefinedFunctionName(String userDefinedFunctionName) {
             this.userDefinedFunctionName = Objects.requireNonNull(userDefinedFunctionName);
             return this;
-        }
-        public GetSqlResourceSqlUserDefinedFunctionArgs build() {
+        }        public GetSqlResourceSqlUserDefinedFunctionArgs build() {
             return new GetSqlResourceSqlUserDefinedFunctionArgs(accountName, containerName, databaseName, resourceGroupName, userDefinedFunctionName);
         }
     }

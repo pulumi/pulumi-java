@@ -60,8 +60,7 @@ public final class DynamicExecutorAllocationResponse extends io.pulumi.resources
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public DynamicExecutorAllocationResponse build() {
+        }        public DynamicExecutorAllocationResponse build() {
             return new DynamicExecutorAllocationResponse(enabled);
         }
     }

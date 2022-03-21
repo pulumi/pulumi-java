@@ -86,17 +86,14 @@ public final class DataSourceParametersMysql {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersMysql build() {
+        }        public DataSourceParametersMysql build() {
             return new DataSourceParametersMysql(database, host, port);
         }
     }

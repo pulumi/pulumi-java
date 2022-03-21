@@ -57,12 +57,13 @@ public final class SkuResourceResponseProperties {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder skuSettings(List<SkuSettingResponse> skuSettings) {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }
-        public SkuResourceResponseProperties build() {
+        public Builder skuSettings(SkuSettingResponse... skuSettings) {
+            return skuSettings(List.of(skuSettings));
+        }        public SkuResourceResponseProperties build() {
             return new SkuResourceResponseProperties(provisioningState, skuSettings);
         }
     }

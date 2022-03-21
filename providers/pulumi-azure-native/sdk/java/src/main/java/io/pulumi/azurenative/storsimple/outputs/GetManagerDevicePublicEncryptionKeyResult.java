@@ -51,8 +51,7 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public GetManagerDevicePublicEncryptionKeyResult build() {
+        }        public GetManagerDevicePublicEncryptionKeyResult build() {
             return new GetManagerDevicePublicEncryptionKeyResult(key);
         }
     }

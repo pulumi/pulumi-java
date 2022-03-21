@@ -85,17 +85,14 @@ public final class CloudRunServiceResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public CloudRunServiceResponse build() {
+        }        public CloudRunServiceResponse build() {
             return new CloudRunServiceResponse(path, region, service);
         }
     }

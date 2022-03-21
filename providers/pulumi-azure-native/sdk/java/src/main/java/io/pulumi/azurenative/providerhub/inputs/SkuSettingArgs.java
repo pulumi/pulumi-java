@@ -191,122 +191,116 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<SkuCapabilityArgs> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(SkuCapabilityArgs... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder capacity(@Nullable Output<SkuSettingCapacityArgs> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable SkuSettingCapacityArgs capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder costs(@Nullable Output<List<SkuCostArgs>> costs) {
             this.costs = costs;
             return this;
         }
-
         public Builder costs(@Nullable List<SkuCostArgs> costs) {
             this.costs = Output.ofNullable(costs);
             return this;
         }
-
+        public Builder costs(SkuCostArgs... costs) {
+            return costs(List.of(costs));
+        }
         public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder locationInfo(@Nullable Output<List<SkuLocationInfoArgs>> locationInfo) {
             this.locationInfo = locationInfo;
             return this;
         }
-
         public Builder locationInfo(@Nullable List<SkuLocationInfoArgs> locationInfo) {
             this.locationInfo = Output.ofNullable(locationInfo);
             return this;
         }
-
+        public Builder locationInfo(SkuLocationInfoArgs... locationInfo) {
+            return locationInfo(List.of(locationInfo));
+        }
         public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
-
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }
         public Builder requiredQuotaIds(@Nullable Output<List<String>> requiredQuotaIds) {
             this.requiredQuotaIds = requiredQuotaIds;
             return this;
         }
-
         public Builder requiredQuotaIds(@Nullable List<String> requiredQuotaIds) {
             this.requiredQuotaIds = Output.ofNullable(requiredQuotaIds);
             return this;
         }
-
+        public Builder requiredQuotaIds(String... requiredQuotaIds) {
+            return requiredQuotaIds(List.of(requiredQuotaIds));
+        }
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public SkuSettingArgs build() {
+        }        public SkuSettingArgs build() {
             return new SkuSettingArgs(capabilities, capacity, costs, family, kind, locationInfo, locations, name, requiredFeatures, requiredQuotaIds, size, tier);
         }
     }

@@ -100,42 +100,34 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder auditCheckConfigurations(Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations) {
             this.auditCheckConfigurations = Objects.requireNonNull(auditCheckConfigurations);
             return this;
         }
-
         public Builder auditCheckConfigurations(AccountAuditConfigurationAuditCheckConfigurationsArgs auditCheckConfigurations) {
             this.auditCheckConfigurations = Output.of(Objects.requireNonNull(auditCheckConfigurations));
             return this;
         }
-
         public Builder auditNotificationTargetConfigurations(@Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations) {
             this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
             return this;
         }
-
         public Builder auditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs auditNotificationTargetConfigurations) {
             this.auditNotificationTargetConfigurations = Output.ofNullable(auditNotificationTargetConfigurations);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public AccountAuditConfigurationArgs build() {
+        }        public AccountAuditConfigurationArgs build() {
             return new AccountAuditConfigurationArgs(accountId, auditCheckConfigurations, auditNotificationTargetConfigurations, roleArn);
         }
     }

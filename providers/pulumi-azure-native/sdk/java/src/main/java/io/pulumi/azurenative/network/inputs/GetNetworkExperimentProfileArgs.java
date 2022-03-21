@@ -72,12 +72,10 @@ public final class GetNetworkExperimentProfileArgs extends io.pulumi.resources.I
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNetworkExperimentProfileArgs build() {
+        }        public GetNetworkExperimentProfileArgs build() {
             return new GetNetworkExperimentProfileArgs(profileName, resourceGroupName);
         }
     }

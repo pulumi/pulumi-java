@@ -79,22 +79,18 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
             this.publicKeyPem = publicKeyPem;
             return this;
         }
-
         public Builder publicKeyPem(@Nullable String publicKeyPem) {
             this.publicKeyPem = Output.ofNullable(publicKeyPem);
             return this;
         }
-
         public Builder signatureAlgorithm(@Nullable Output<String> signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
-
         public Builder signatureAlgorithm(@Nullable String signatureAlgorithm) {
             this.signatureAlgorithm = Output.ofNullable(signatureAlgorithm);
             return this;
-        }
-        public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs build() {
+        }        public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs build() {
             return new AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(publicKeyPem, signatureAlgorithm);
         }
     }

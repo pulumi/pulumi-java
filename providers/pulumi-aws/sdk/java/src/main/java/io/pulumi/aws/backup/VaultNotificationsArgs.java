@@ -90,32 +90,29 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
             this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
             return this;
         }
-
         public Builder backupVaultEvents(List<String> backupVaultEvents) {
             this.backupVaultEvents = Output.of(Objects.requireNonNull(backupVaultEvents));
             return this;
         }
-
+        public Builder backupVaultEvents(String... backupVaultEvents) {
+            return backupVaultEvents(List.of(backupVaultEvents));
+        }
         public Builder backupVaultName(Output<String> backupVaultName) {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
-
         public Builder backupVaultName(String backupVaultName) {
             this.backupVaultName = Output.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
-
         public Builder snsTopicArn(Output<String> snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
-
         public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Output.of(Objects.requireNonNull(snsTopicArn));
             return this;
-        }
-        public VaultNotificationsArgs build() {
+        }        public VaultNotificationsArgs build() {
             return new VaultNotificationsArgs(backupVaultEvents, backupVaultName, snsTopicArn);
         }
     }

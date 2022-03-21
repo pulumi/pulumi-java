@@ -53,12 +53,10 @@ public final class UserProfileTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public UserProfileTag build() {
+        }        public UserProfileTag build() {
             return new UserProfileTag(key, value);
         }
     }

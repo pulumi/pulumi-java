@@ -58,12 +58,10 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.multiclusteringress = multiclusteringress;
             return this;
         }
-
         public Builder multiclusteringress(@Nullable FeatureSpecMulticlusteringressArgs multiclusteringress) {
             this.multiclusteringress = Output.ofNullable(multiclusteringress);
             return this;
-        }
-        public FeatureSpecArgs build() {
+        }        public FeatureSpecArgs build() {
             return new FeatureSpecArgs(multiclusteringress);
         }
     }

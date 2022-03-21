@@ -86,17 +86,20 @@ public final class AwsClusterNetworking {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
-
+        public Builder podAddressCidrBlocks(String... podAddressCidrBlocks) {
+            return podAddressCidrBlocks(List.of(podAddressCidrBlocks));
+        }
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
-
+        public Builder serviceAddressCidrBlocks(String... serviceAddressCidrBlocks) {
+            return serviceAddressCidrBlocks(List.of(serviceAddressCidrBlocks));
+        }
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public AwsClusterNetworking build() {
+        }        public AwsClusterNetworking build() {
             return new AwsClusterNetworking(podAddressCidrBlocks, serviceAddressCidrBlocks, vpcId);
         }
     }

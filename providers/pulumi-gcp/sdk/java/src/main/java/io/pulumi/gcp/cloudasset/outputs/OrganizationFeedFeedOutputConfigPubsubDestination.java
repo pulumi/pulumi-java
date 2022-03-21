@@ -51,8 +51,7 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestination {
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public OrganizationFeedFeedOutputConfigPubsubDestination build() {
+        }        public OrganizationFeedFeedOutputConfigPubsubDestination build() {
             return new OrganizationFeedFeedOutputConfigPubsubDestination(topic);
         }
     }

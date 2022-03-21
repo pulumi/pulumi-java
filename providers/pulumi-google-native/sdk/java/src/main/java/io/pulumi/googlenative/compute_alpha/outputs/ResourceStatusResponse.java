@@ -54,12 +54,10 @@ public final class ResourceStatusResponse {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
-
         public Builder upcomingMaintenance(ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
             this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
             return this;
-        }
-        public ResourceStatusResponse build() {
+        }        public ResourceStatusResponse build() {
             return new ResourceStatusResponse(scheduling, upcomingMaintenance);
         }
     }

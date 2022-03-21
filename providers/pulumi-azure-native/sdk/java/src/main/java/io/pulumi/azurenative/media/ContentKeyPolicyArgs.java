@@ -124,52 +124,45 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder contentKeyPolicyName(@Nullable Output<String> contentKeyPolicyName) {
             this.contentKeyPolicyName = contentKeyPolicyName;
             return this;
         }
-
         public Builder contentKeyPolicyName(@Nullable String contentKeyPolicyName) {
             this.contentKeyPolicyName = Output.ofNullable(contentKeyPolicyName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder options(Output<List<ContentKeyPolicyOptionArgs>> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder options(List<ContentKeyPolicyOptionArgs> options) {
             this.options = Output.of(Objects.requireNonNull(options));
             return this;
         }
-
+        public Builder options(ContentKeyPolicyOptionArgs... options) {
+            return options(List.of(options));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ContentKeyPolicyArgs build() {
+        }        public ContentKeyPolicyArgs build() {
             return new ContentKeyPolicyArgs(accountName, contentKeyPolicyName, description, options, resourceGroupName);
         }
     }

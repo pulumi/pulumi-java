@@ -77,12 +77,13 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
             this.profiles = Objects.requireNonNull(profiles);
             return this;
         }
-
+        public Builder profiles(String... profiles) {
+            return profiles(List.of(profiles));
+        }
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
-        }
-        public StageResponse build() {
+        }        public StageResponse build() {
             return new StageResponse(profiles, targetId);
         }
     }

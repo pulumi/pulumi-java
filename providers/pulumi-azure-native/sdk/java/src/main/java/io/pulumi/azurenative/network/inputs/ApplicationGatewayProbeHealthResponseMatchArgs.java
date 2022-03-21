@@ -79,22 +79,21 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder statusCodes(@Nullable Output<List<String>> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
-
         public Builder statusCodes(@Nullable List<String> statusCodes) {
             this.statusCodes = Output.ofNullable(statusCodes);
             return this;
         }
-        public ApplicationGatewayProbeHealthResponseMatchArgs build() {
+        public Builder statusCodes(String... statusCodes) {
+            return statusCodes(List.of(statusCodes));
+        }        public ApplicationGatewayProbeHealthResponseMatchArgs build() {
             return new ApplicationGatewayProbeHealthResponseMatchArgs(body, statusCodes);
         }
     }

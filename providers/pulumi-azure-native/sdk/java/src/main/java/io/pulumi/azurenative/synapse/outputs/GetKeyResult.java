@@ -120,27 +120,22 @@ public final class GetKeyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isActiveCMK(@Nullable Boolean isActiveCMK) {
             this.isActiveCMK = isActiveCMK;
             return this;
         }
-
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetKeyResult build() {
+        }        public GetKeyResult build() {
             return new GetKeyResult(id, isActiveCMK, keyVaultUrl, name, type);
         }
     }

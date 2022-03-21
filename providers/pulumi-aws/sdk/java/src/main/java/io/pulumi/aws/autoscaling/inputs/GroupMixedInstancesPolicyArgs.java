@@ -75,22 +75,18 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
             this.instancesDistribution = instancesDistribution;
             return this;
         }
-
         public Builder instancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistributionArgs instancesDistribution) {
             this.instancesDistribution = Output.ofNullable(instancesDistribution);
             return this;
         }
-
         public Builder launchTemplate(Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = Objects.requireNonNull(launchTemplate);
             return this;
         }
-
         public Builder launchTemplate(GroupMixedInstancesPolicyLaunchTemplateArgs launchTemplate) {
             this.launchTemplate = Output.of(Objects.requireNonNull(launchTemplate));
             return this;
-        }
-        public GroupMixedInstancesPolicyArgs build() {
+        }        public GroupMixedInstancesPolicyArgs build() {
             return new GroupMixedInstancesPolicyArgs(instancesDistribution, launchTemplate);
         }
     }

@@ -176,82 +176,75 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.attributions = attributions;
             return this;
         }
-
         public Builder attributions(@Nullable List<String> attributions) {
             this.attributions = Output.ofNullable(attributions);
             return this;
         }
-
+        public Builder attributions(String... attributions) {
+            return attributions(List.of(attributions));
+        }
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder contributors(@Nullable Output<List<String>> contributors) {
             this.contributors = contributors;
             return this;
         }
-
         public Builder contributors(@Nullable List<String> contributors) {
             this.contributors = Output.ofNullable(contributors);
             return this;
         }
-
+        public Builder contributors(String... contributors) {
+            return contributors(List.of(contributors));
+        }
         public Builder copyright(@Nullable Output<String> copyright) {
             this.copyright = copyright;
             return this;
         }
-
         public Builder copyright(@Nullable String copyright) {
             this.copyright = Output.ofNullable(copyright);
             return this;
         }
-
         public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
             this.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
-
         public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
             this.filesLicenseInfo = Output.ofNullable(filesLicenseInfo);
             return this;
         }
-
+        public Builder filesLicenseInfo(String... filesLicenseInfo) {
+            return filesLicenseInfo(List.of(filesLicenseInfo));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
             this.licenseConcluded = licenseConcluded;
             return this;
         }
-
         public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
             this.licenseConcluded = Output.ofNullable(licenseConcluded);
             return this;
         }
-
         public Builder notice(@Nullable Output<String> notice) {
             this.notice = notice;
             return this;
         }
-
         public Builder notice(@Nullable String notice) {
             this.notice = Output.ofNullable(notice);
             return this;
-        }
-        public FileOccurrenceArgs build() {
+        }        public FileOccurrenceArgs build() {
             return new FileOccurrenceArgs(attributions, comment, contributors, copyright, filesLicenseInfo, id, licenseConcluded, notice);
         }
     }

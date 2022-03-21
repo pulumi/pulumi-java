@@ -137,52 +137,45 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<MetricMetricDescriptorLabelGetArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(MetricMetricDescriptorLabelGetArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder metricKind(Output<String> metricKind) {
             this.metricKind = Objects.requireNonNull(metricKind);
             return this;
         }
-
         public Builder metricKind(String metricKind) {
             this.metricKind = Output.of(Objects.requireNonNull(metricKind));
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
         }
-
         public Builder valueType(Output<String> valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public Builder valueType(String valueType) {
             this.valueType = Output.of(Objects.requireNonNull(valueType));
             return this;
-        }
-        public MetricMetricDescriptorGetArgs build() {
+        }        public MetricMetricDescriptorGetArgs build() {
             return new MetricMetricDescriptorGetArgs(displayName, labels, metricKind, unit, valueType);
         }
     }

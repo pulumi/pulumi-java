@@ -191,92 +191,77 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder eventTimeFeatureName(Output<String> eventTimeFeatureName) {
             this.eventTimeFeatureName = Objects.requireNonNull(eventTimeFeatureName);
             return this;
         }
-
         public Builder eventTimeFeatureName(String eventTimeFeatureName) {
             this.eventTimeFeatureName = Output.of(Objects.requireNonNull(eventTimeFeatureName));
             return this;
         }
-
         public Builder featureDefinitions(Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions) {
             this.featureDefinitions = Objects.requireNonNull(featureDefinitions);
             return this;
         }
-
         public Builder featureDefinitions(List<FeatureGroupFeatureDefinitionArgs> featureDefinitions) {
             this.featureDefinitions = Output.of(Objects.requireNonNull(featureDefinitions));
             return this;
         }
-
+        public Builder featureDefinitions(FeatureGroupFeatureDefinitionArgs... featureDefinitions) {
+            return featureDefinitions(List.of(featureDefinitions));
+        }
         public Builder featureGroupName(Output<String> featureGroupName) {
             this.featureGroupName = Objects.requireNonNull(featureGroupName);
             return this;
         }
-
         public Builder featureGroupName(String featureGroupName) {
             this.featureGroupName = Output.of(Objects.requireNonNull(featureGroupName));
             return this;
         }
-
         public Builder offlineStoreConfig(@Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig) {
             this.offlineStoreConfig = offlineStoreConfig;
             return this;
         }
-
         public Builder offlineStoreConfig(@Nullable FeatureGroupOfflineStoreConfigArgs offlineStoreConfig) {
             this.offlineStoreConfig = Output.ofNullable(offlineStoreConfig);
             return this;
         }
-
         public Builder onlineStoreConfig(@Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig) {
             this.onlineStoreConfig = onlineStoreConfig;
             return this;
         }
-
         public Builder onlineStoreConfig(@Nullable FeatureGroupOnlineStoreConfigArgs onlineStoreConfig) {
             this.onlineStoreConfig = Output.ofNullable(onlineStoreConfig);
             return this;
         }
-
         public Builder recordIdentifierFeatureName(Output<String> recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = Objects.requireNonNull(recordIdentifierFeatureName);
             return this;
         }
-
         public Builder recordIdentifierFeatureName(String recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = Output.of(Objects.requireNonNull(recordIdentifierFeatureName));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FeatureGroupArgs build() {
+        }        public FeatureGroupArgs build() {
             return new FeatureGroupArgs(description, eventTimeFeatureName, featureDefinitions, featureGroupName, offlineStoreConfig, onlineStoreConfig, recordIdentifierFeatureName, roleArn, tags);
         }
     }

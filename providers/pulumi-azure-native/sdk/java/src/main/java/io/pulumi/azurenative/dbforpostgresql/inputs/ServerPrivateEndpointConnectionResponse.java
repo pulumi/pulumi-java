@@ -77,12 +77,10 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder properties(ServerPrivateEndpointConnectionPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public ServerPrivateEndpointConnectionResponse build() {
+        }        public ServerPrivateEndpointConnectionResponse build() {
             return new ServerPrivateEndpointConnectionResponse(id, properties);
         }
     }

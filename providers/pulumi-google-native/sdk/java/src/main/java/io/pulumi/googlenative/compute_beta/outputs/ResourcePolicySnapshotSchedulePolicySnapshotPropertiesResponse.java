@@ -104,22 +104,21 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
             this.chainName = Objects.requireNonNull(chainName);
             return this;
         }
-
         public Builder guestFlush(Boolean guestFlush) {
             this.guestFlush = Objects.requireNonNull(guestFlush);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse build() {
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(chainName, guestFlush, labels, storageLocations);
         }
     }

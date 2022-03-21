@@ -79,22 +79,18 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             this.abort = abort;
             return this;
         }
-
         public Builder abort(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs abort) {
             this.abort = Output.ofNullable(abort);
             return this;
         }
-
         public Builder delay(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay) {
             this.delay = delay;
             return this;
         }
-
         public Builder delay(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs delay) {
             this.delay = Output.ofNullable(delay);
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs build() {
+        }        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs(abort, delay);
         }
     }

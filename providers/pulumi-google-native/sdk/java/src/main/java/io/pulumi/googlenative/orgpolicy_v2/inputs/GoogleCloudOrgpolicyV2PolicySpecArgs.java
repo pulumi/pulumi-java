@@ -113,42 +113,37 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = Output.ofNullable(inheritFromParent);
             return this;
         }
-
         public Builder reset(@Nullable Output<Boolean> reset) {
             this.reset = reset;
             return this;
         }
-
         public Builder reset(@Nullable Boolean reset) {
             this.reset = Output.ofNullable(reset);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public GoogleCloudOrgpolicyV2PolicySpecArgs build() {
+        public Builder rules(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public GoogleCloudOrgpolicyV2PolicySpecArgs build() {
             return new GoogleCloudOrgpolicyV2PolicySpecArgs(etag, inheritFromParent, reset, rules);
         }
     }

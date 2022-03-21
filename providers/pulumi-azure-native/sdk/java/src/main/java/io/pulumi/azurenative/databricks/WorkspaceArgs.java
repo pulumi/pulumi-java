@@ -191,92 +191,77 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizations = authorizations;
             return this;
         }
-
         public Builder authorizations(@Nullable List<WorkspaceProviderAuthorizationArgs> authorizations) {
             this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
-
+        public Builder authorizations(WorkspaceProviderAuthorizationArgs... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedResourceGroupId(Output<String> managedResourceGroupId) {
             this.managedResourceGroupId = Objects.requireNonNull(managedResourceGroupId);
             return this;
         }
-
         public Builder managedResourceGroupId(String managedResourceGroupId) {
             this.managedResourceGroupId = Output.of(Objects.requireNonNull(managedResourceGroupId));
             return this;
         }
-
         public Builder parameters(@Nullable Output<WorkspaceCustomParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable WorkspaceCustomParametersArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder uiDefinitionUri(@Nullable Output<String> uiDefinitionUri) {
             this.uiDefinitionUri = uiDefinitionUri;
             return this;
         }
-
         public Builder uiDefinitionUri(@Nullable String uiDefinitionUri) {
             this.uiDefinitionUri = Output.ofNullable(uiDefinitionUri);
             return this;
         }
-
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
-
         public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Output.ofNullable(workspaceName);
             return this;
-        }
-        public WorkspaceArgs build() {
+        }        public WorkspaceArgs build() {
             return new WorkspaceArgs(authorizations, location, managedResourceGroupId, parameters, resourceGroupName, sku, tags, uiDefinitionUri, workspaceName);
         }
     }

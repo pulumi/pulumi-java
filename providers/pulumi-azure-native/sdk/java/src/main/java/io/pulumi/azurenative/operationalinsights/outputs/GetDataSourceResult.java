@@ -153,37 +153,30 @@ public final class GetDataSourceResult {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataSourceResult build() {
+        }        public GetDataSourceResult build() {
             return new GetDataSourceResult(etag, id, kind, name, properties, tags, type);
         }
     }

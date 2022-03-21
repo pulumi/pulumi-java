@@ -89,32 +89,26 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
-
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
-
         public Builder featureName(Output<String> featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
-
         public Builder featureName(String featureName) {
             this.featureName = Output.of(Objects.requireNonNull(featureName));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public ClusterRoleAssociationArgs build() {
+        }        public ClusterRoleAssociationArgs build() {
             return new ClusterRoleAssociationArgs(dbClusterIdentifier, featureName, roleArn);
         }
     }

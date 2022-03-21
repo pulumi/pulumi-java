@@ -58,12 +58,13 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<Double> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs build() {
+        public Builder values(Double... values) {
+            return values(List.of(values));
+        }        public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs(values);
         }
     }

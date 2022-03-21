@@ -53,8 +53,7 @@ public final class ServiceTypeHealthPolicyResponse {
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
-        }
-        public ServiceTypeHealthPolicyResponse build() {
+        }        public ServiceTypeHealthPolicyResponse build() {
             return new ServiceTypeHealthPolicyResponse(maxPercentUnhealthyServices);
         }
     }

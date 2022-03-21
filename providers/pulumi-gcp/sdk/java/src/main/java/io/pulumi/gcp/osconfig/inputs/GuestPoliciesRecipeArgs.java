@@ -156,62 +156,59 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder artifacts(@Nullable List<GuestPoliciesRecipeArtifactArgs> artifacts) {
             this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
-
+        public Builder artifacts(GuestPoliciesRecipeArtifactArgs... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder desiredState(@Nullable Output<String> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
-
         public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = Output.ofNullable(desiredState);
             return this;
         }
-
         public Builder installSteps(@Nullable Output<List<GuestPoliciesRecipeInstallStepArgs>> installSteps) {
             this.installSteps = installSteps;
             return this;
         }
-
         public Builder installSteps(@Nullable List<GuestPoliciesRecipeInstallStepArgs> installSteps) {
             this.installSteps = Output.ofNullable(installSteps);
             return this;
         }
-
+        public Builder installSteps(GuestPoliciesRecipeInstallStepArgs... installSteps) {
+            return installSteps(List.of(installSteps));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder updateSteps(@Nullable Output<List<GuestPoliciesRecipeUpdateStepArgs>> updateSteps) {
             this.updateSteps = updateSteps;
             return this;
         }
-
         public Builder updateSteps(@Nullable List<GuestPoliciesRecipeUpdateStepArgs> updateSteps) {
             this.updateSteps = Output.ofNullable(updateSteps);
             return this;
         }
-
+        public Builder updateSteps(GuestPoliciesRecipeUpdateStepArgs... updateSteps) {
+            return updateSteps(List.of(updateSteps));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GuestPoliciesRecipeArgs build() {
+        }        public GuestPoliciesRecipeArgs build() {
             return new GuestPoliciesRecipeArgs(artifacts, desiredState, installSteps, name, updateSteps, version);
         }
     }

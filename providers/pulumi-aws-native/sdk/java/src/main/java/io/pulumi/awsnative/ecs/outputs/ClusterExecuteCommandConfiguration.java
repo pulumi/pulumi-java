@@ -64,17 +64,14 @@ public final class ClusterExecuteCommandConfiguration {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder logConfiguration(@Nullable ClusterExecuteCommandLogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
-
         public Builder logging(@Nullable String logging) {
             this.logging = logging;
             return this;
-        }
-        public ClusterExecuteCommandConfiguration build() {
+        }        public ClusterExecuteCommandConfiguration build() {
             return new ClusterExecuteCommandConfiguration(kmsKeyId, logConfiguration, logging);
         }
     }

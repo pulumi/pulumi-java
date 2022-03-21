@@ -90,17 +90,14 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorRespo
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
-        }
-        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorResponse build() {
+        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorResponse(error, id, resultType);
         }
     }

@@ -158,37 +158,42 @@ public final class ApplicationConfigurationDetails {
             this.alarmMetrics = alarmMetrics;
             return this;
         }
-
+        public Builder alarmMetrics(ApplicationAlarmMetric... alarmMetrics) {
+            return alarmMetrics(List.of(alarmMetrics));
+        }
         public Builder alarms(@Nullable List<ApplicationAlarm> alarms) {
             this.alarms = alarms;
             return this;
         }
-
+        public Builder alarms(ApplicationAlarm... alarms) {
+            return alarms(List.of(alarms));
+        }
         public Builder hAClusterPrometheusExporter(@Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter) {
             this.hAClusterPrometheusExporter = hAClusterPrometheusExporter;
             return this;
         }
-
         public Builder hANAPrometheusExporter(@Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter) {
             this.hANAPrometheusExporter = hANAPrometheusExporter;
             return this;
         }
-
         public Builder jMXPrometheusExporter(@Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter) {
             this.jMXPrometheusExporter = jMXPrometheusExporter;
             return this;
         }
-
         public Builder logs(@Nullable List<ApplicationLog> logs) {
             this.logs = logs;
             return this;
         }
-
+        public Builder logs(ApplicationLog... logs) {
+            return logs(List.of(logs));
+        }
         public Builder windowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
             this.windowsEvents = windowsEvents;
             return this;
         }
-        public ApplicationConfigurationDetails build() {
+        public Builder windowsEvents(ApplicationWindowsEvent... windowsEvents) {
+            return windowsEvents(List.of(windowsEvents));
+        }        public ApplicationConfigurationDetails build() {
             return new ApplicationConfigurationDetails(alarmMetrics, alarms, hAClusterPrometheusExporter, hANAPrometheusExporter, jMXPrometheusExporter, logs, windowsEvents);
         }
     }

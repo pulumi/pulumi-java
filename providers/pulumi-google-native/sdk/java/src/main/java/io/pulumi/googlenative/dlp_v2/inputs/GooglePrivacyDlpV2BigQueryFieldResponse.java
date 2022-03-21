@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             this.table = Objects.requireNonNull(table);
             return this;
-        }
-        public GooglePrivacyDlpV2BigQueryFieldResponse build() {
+        }        public GooglePrivacyDlpV2BigQueryFieldResponse build() {
             return new GooglePrivacyDlpV2BigQueryFieldResponse(field, table);
         }
     }

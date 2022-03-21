@@ -94,17 +94,17 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public MigrateMySqlAzureDbForMySqlSyncTaskInputResponse build() {
+        }        public MigrateMySqlAzureDbForMySqlSyncTaskInputResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }
     }

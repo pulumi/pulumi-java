@@ -61,12 +61,10 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
-        }
-        public ExpiryDetailArgs build() {
+        }        public ExpiryDetailArgs build() {
             return new ExpiryDetailArgs(expireTime);
         }
     }

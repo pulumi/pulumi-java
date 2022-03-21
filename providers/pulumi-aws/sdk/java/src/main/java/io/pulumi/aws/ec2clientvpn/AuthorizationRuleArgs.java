@@ -123,52 +123,42 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
             this.accessGroupId = accessGroupId;
             return this;
         }
-
         public Builder accessGroupId(@Nullable String accessGroupId) {
             this.accessGroupId = Output.ofNullable(accessGroupId);
             return this;
         }
-
         public Builder authorizeAllGroups(@Nullable Output<Boolean> authorizeAllGroups) {
             this.authorizeAllGroups = authorizeAllGroups;
             return this;
         }
-
         public Builder authorizeAllGroups(@Nullable Boolean authorizeAllGroups) {
             this.authorizeAllGroups = Output.ofNullable(authorizeAllGroups);
             return this;
         }
-
         public Builder clientVpnEndpointId(Output<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
-
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
             this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder targetNetworkCidr(Output<String> targetNetworkCidr) {
             this.targetNetworkCidr = Objects.requireNonNull(targetNetworkCidr);
             return this;
         }
-
         public Builder targetNetworkCidr(String targetNetworkCidr) {
             this.targetNetworkCidr = Output.of(Objects.requireNonNull(targetNetworkCidr));
             return this;
-        }
-        public AuthorizationRuleArgs build() {
+        }        public AuthorizationRuleArgs build() {
             return new AuthorizationRuleArgs(accessGroupId, authorizeAllGroups, clientVpnEndpointId, description, targetNetworkCidr);
         }
     }

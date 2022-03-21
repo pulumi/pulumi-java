@@ -73,12 +73,10 @@ public final class InstanceGroupManagerStatusStatefulResponse extends io.pulumi.
             this.hasStatefulConfig = Objects.requireNonNull(hasStatefulConfig);
             return this;
         }
-
         public Builder perInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs) {
             this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs);
             return this;
-        }
-        public InstanceGroupManagerStatusStatefulResponse build() {
+        }        public InstanceGroupManagerStatusStatefulResponse build() {
             return new InstanceGroupManagerStatusStatefulResponse(hasStatefulConfig, perInstanceConfigs);
         }
     }

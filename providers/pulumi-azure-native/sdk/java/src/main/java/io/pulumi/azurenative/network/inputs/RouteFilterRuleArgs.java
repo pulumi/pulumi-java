@@ -146,62 +146,53 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder access(Either<String,Access> access) {
             this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
-
         public Builder communities(Output<List<String>> communities) {
             this.communities = Objects.requireNonNull(communities);
             return this;
         }
-
         public Builder communities(List<String> communities) {
             this.communities = Output.of(Objects.requireNonNull(communities));
             return this;
         }
-
+        public Builder communities(String... communities) {
+            return communities(List.of(communities));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder routeFilterRuleType(Output<Either<String,RouteFilterRuleType>> routeFilterRuleType) {
             this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
             return this;
         }
-
         public Builder routeFilterRuleType(Either<String,RouteFilterRuleType> routeFilterRuleType) {
             this.routeFilterRuleType = Output.of(Objects.requireNonNull(routeFilterRuleType));
             return this;
-        }
-        public RouteFilterRuleArgs build() {
+        }        public RouteFilterRuleArgs build() {
             return new RouteFilterRuleArgs(access, communities, id, location, name, routeFilterRuleType);
         }
     }

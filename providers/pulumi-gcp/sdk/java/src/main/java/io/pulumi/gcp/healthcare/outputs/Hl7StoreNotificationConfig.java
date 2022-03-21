@@ -61,8 +61,7 @@ public final class Hl7StoreNotificationConfig {
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
-        }
-        public Hl7StoreNotificationConfig build() {
+        }        public Hl7StoreNotificationConfig build() {
             return new Hl7StoreNotificationConfig(pubsubTopic);
         }
     }

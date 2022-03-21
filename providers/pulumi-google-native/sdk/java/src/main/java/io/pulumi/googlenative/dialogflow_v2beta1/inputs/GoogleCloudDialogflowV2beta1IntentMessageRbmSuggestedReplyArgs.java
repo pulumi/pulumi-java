@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
             this.postbackData = postbackData;
             return this;
         }
-
         public Builder postbackData(@Nullable String postbackData) {
             this.postbackData = Output.ofNullable(postbackData);
             return this;
         }
-
         public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable String text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(postbackData, text);
         }
     }

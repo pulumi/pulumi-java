@@ -72,17 +72,14 @@ public final class BotKendraConfiguration {
             this.kendraIndex = Objects.requireNonNull(kendraIndex);
             return this;
         }
-
         public Builder queryFilterString(@Nullable String queryFilterString) {
             this.queryFilterString = queryFilterString;
             return this;
         }
-
         public Builder queryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
             this.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
-        }
-        public BotKendraConfiguration build() {
+        }        public BotKendraConfiguration build() {
             return new BotKendraConfiguration(kendraIndex, queryFilterString, queryFilterStringEnabled);
         }
     }

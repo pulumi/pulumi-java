@@ -128,52 +128,42 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = Output.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
-
         public Builder crashConsistentFrequencyInMinutes(@Nullable Output<Integer> crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = Output.ofNullable(crashConsistentFrequencyInMinutes);
             return this;
         }
-
         public Builder enableMultiVmSync(@Nullable Output<String> enableMultiVmSync) {
             this.enableMultiVmSync = enableMultiVmSync;
             return this;
         }
-
         public Builder enableMultiVmSync(@Nullable String enableMultiVmSync) {
             this.enableMultiVmSync = Output.ofNullable(enableMultiVmSync);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder recoveryPointHistoryInMinutes(@Nullable Output<Integer> recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
         }
-
         public Builder recoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = Output.ofNullable(recoveryPointHistoryInMinutes);
             return this;
-        }
-        public InMageRcmPolicyCreationInputArgs build() {
+        }        public InMageRcmPolicyCreationInputArgs build() {
             return new InMageRcmPolicyCreationInputArgs(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, enableMultiVmSync, instanceType, recoveryPointHistoryInMinutes);
         }
     }

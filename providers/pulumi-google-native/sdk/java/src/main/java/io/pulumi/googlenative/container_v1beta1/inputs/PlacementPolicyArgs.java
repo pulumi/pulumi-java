@@ -61,12 +61,10 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable PlacementPolicyType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public PlacementPolicyArgs build() {
+        }        public PlacementPolicyArgs build() {
             return new PlacementPolicyArgs(type);
         }
     }

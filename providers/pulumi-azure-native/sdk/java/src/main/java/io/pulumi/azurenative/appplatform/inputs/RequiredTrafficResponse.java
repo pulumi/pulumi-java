@@ -126,27 +126,28 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder fqdns(List<String> fqdns) {
             this.fqdns = Objects.requireNonNull(fqdns);
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder ips(List<String> ips) {
             this.ips = Objects.requireNonNull(ips);
             return this;
         }
-
+        public Builder ips(String... ips) {
+            return ips(List.of(ips));
+        }
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public RequiredTrafficResponse build() {
+        }        public RequiredTrafficResponse build() {
             return new RequiredTrafficResponse(direction, fqdns, ips, port, protocol);
         }
     }

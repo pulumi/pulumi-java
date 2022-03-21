@@ -124,52 +124,42 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             this.addonName = addonName;
             return this;
         }
-
         public Builder addonName(@Nullable String addonName) {
             this.addonName = Output.ofNullable(addonName);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder kind(Output<Either<String,AddonType>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,AddonType> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
-        }
-        public AddonArgs build() {
+        }        public AddonArgs build() {
             return new AddonArgs(addonName, deviceName, kind, resourceGroupName, roleName);
         }
     }

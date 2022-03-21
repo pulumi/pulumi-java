@@ -79,22 +79,18 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(ManagementPolicyActionArgs actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
         public Builder filters(@Nullable Output<ManagementPolicyFilterArgs> filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable ManagementPolicyFilterArgs filters) {
             this.filters = Output.ofNullable(filters);
             return this;
-        }
-        public ManagementPolicyDefinitionArgs build() {
+        }        public ManagementPolicyDefinitionArgs build() {
             return new ManagementPolicyDefinitionArgs(actions, filters);
         }
     }

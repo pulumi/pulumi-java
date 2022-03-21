@@ -77,12 +77,10 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
             this.pullDeps = Objects.requireNonNull(pullDeps);
             return this;
         }
-
         public Builder source(OSPolicyResourceFileResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public OSPolicyResourcePackageResourceDebResponse build() {
+        }        public OSPolicyResourcePackageResourceDebResponse build() {
             return new OSPolicyResourcePackageResourceDebResponse(pullDeps, source);
         }
     }

@@ -88,17 +88,17 @@ public final class StaticRouteResponse {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
-        }
-        public StaticRouteResponse build() {
+        }        public StaticRouteResponse build() {
             return new StaticRouteResponse(addressPrefixes, name, nextHopIpAddress);
         }
     }

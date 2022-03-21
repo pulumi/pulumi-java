@@ -174,57 +174,46 @@ public final class GetListenerDefaultActionAuthenticateOidc extends io.pulumi.re
             this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams);
             return this;
         }
-
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder onUnauthenticatedRequest(String onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder sessionCookieName(String sessionCookieName) {
             this.sessionCookieName = Objects.requireNonNull(sessionCookieName);
             return this;
         }
-
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.sessionTimeout = Objects.requireNonNull(sessionTimeout);
             return this;
         }
-
         public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
-
         public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
-        }
-        public GetListenerDefaultActionAuthenticateOidc build() {
+        }        public GetListenerDefaultActionAuthenticateOidc build() {
             return new GetListenerDefaultActionAuthenticateOidc(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, userInfoEndpoint);
         }
     }

@@ -58,12 +58,13 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
-
         public Builder dayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs> dayOfWeeks) {
             this.dayOfWeeks = Output.of(Objects.requireNonNull(dayOfWeeks));
             return this;
         }
-        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs build() {
+        public Builder dayOfWeeks(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs... dayOfWeeks) {
+            return dayOfWeeks(List.of(dayOfWeeks));
+        }        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(dayOfWeeks);
         }
     }

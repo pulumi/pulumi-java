@@ -167,42 +167,34 @@ public final class RosettaNetPipActivityBehaviorResponse {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder isAuthorizationRequired(Boolean isAuthorizationRequired) {
             this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired);
             return this;
         }
-
         public Builder isSecuredTransportRequired(Boolean isSecuredTransportRequired) {
             this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired);
             return this;
         }
-
         public Builder nonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
             this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent);
             return this;
         }
-
         public Builder persistentConfidentialityScope(String persistentConfidentialityScope) {
             this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope);
             return this;
         }
-
         public Builder responseType(String responseType) {
             this.responseType = Objects.requireNonNull(responseType);
             return this;
         }
-
         public Builder retryCount(Integer retryCount) {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }
-
         public Builder timeToPerformInSeconds(Integer timeToPerformInSeconds) {
             this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
             return this;
-        }
-        public RosettaNetPipActivityBehaviorResponse build() {
+        }        public RosettaNetPipActivityBehaviorResponse build() {
             return new RosettaNetPipActivityBehaviorResponse(actionType, isAuthorizationRequired, isSecuredTransportRequired, nonRepudiationOfOriginAndContent, persistentConfidentialityScope, responseType, retryCount, timeToPerformInSeconds);
         }
     }

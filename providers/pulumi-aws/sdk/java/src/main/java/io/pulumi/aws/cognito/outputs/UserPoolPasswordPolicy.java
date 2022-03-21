@@ -136,32 +136,26 @@ public final class UserPoolPasswordPolicy {
             this.minimumLength = minimumLength;
             return this;
         }
-
         public Builder requireLowercase(@Nullable Boolean requireLowercase) {
             this.requireLowercase = requireLowercase;
             return this;
         }
-
         public Builder requireNumbers(@Nullable Boolean requireNumbers) {
             this.requireNumbers = requireNumbers;
             return this;
         }
-
         public Builder requireSymbols(@Nullable Boolean requireSymbols) {
             this.requireSymbols = requireSymbols;
             return this;
         }
-
         public Builder requireUppercase(@Nullable Boolean requireUppercase) {
             this.requireUppercase = requireUppercase;
             return this;
         }
-
         public Builder temporaryPasswordValidityDays(@Nullable Integer temporaryPasswordValidityDays) {
             this.temporaryPasswordValidityDays = temporaryPasswordValidityDays;
             return this;
-        }
-        public UserPoolPasswordPolicy build() {
+        }        public UserPoolPasswordPolicy build() {
             return new UserPoolPasswordPolicy(minimumLength, requireLowercase, requireNumbers, requireSymbols, requireUppercase, temporaryPasswordValidityDays);
         }
     }

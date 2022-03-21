@@ -77,22 +77,18 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
             this.autoClose = autoClose;
             return this;
         }
-
         public Builder autoClose(@Nullable String autoClose) {
             this.autoClose = Output.ofNullable(autoClose);
             return this;
         }
-
         public Builder notificationRateLimit(@Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
             this.notificationRateLimit = notificationRateLimit;
             return this;
         }
-
         public Builder notificationRateLimit(@Nullable AlertPolicyAlertStrategyNotificationRateLimitArgs notificationRateLimit) {
             this.notificationRateLimit = Output.ofNullable(notificationRateLimit);
             return this;
-        }
-        public AlertPolicyAlertStrategyArgs build() {
+        }        public AlertPolicyAlertStrategyArgs build() {
             return new AlertPolicyAlertStrategyArgs(autoClose, notificationRateLimit);
         }
     }

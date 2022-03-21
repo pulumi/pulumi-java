@@ -51,8 +51,7 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptions {
         public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatefulEngineOptions build() {
+        }        public FirewallPolicyFirewallPolicyStatefulEngineOptions build() {
             return new FirewallPolicyFirewallPolicyStatefulEngineOptions(ruleOrder);
         }
     }

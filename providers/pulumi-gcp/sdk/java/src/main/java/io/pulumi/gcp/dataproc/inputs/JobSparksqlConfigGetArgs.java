@@ -139,62 +139,56 @@ public final class JobSparksqlConfigGetArgs extends io.pulumi.resources.Resource
             this.jarFileUris = jarFileUris;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(@Nullable Output<JobSparksqlConfigLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable JobSparksqlConfigLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Output.ofNullable(queryFileUri);
             return this;
         }
-
         public Builder queryLists(@Nullable Output<List<String>> queryLists) {
             this.queryLists = queryLists;
             return this;
         }
-
         public Builder queryLists(@Nullable List<String> queryLists) {
             this.queryLists = Output.ofNullable(queryLists);
             return this;
         }
-
+        public Builder queryLists(String... queryLists) {
+            return queryLists(List.of(queryLists));
+        }
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = Output.ofNullable(scriptVariables);
             return this;
-        }
-        public JobSparksqlConfigGetArgs build() {
+        }        public JobSparksqlConfigGetArgs build() {
             return new JobSparksqlConfigGetArgs(jarFileUris, loggingConfig, properties, queryFileUri, queryLists, scriptVariables);
         }
     }

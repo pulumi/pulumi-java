@@ -71,12 +71,13 @@ public final class ListWebAppSiteBackupsSlotResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<BackupItemResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListWebAppSiteBackupsSlotResult build() {
+        public Builder value(BackupItemResponse... value) {
+            return value(List.of(value));
+        }        public ListWebAppSiteBackupsSlotResult build() {
             return new ListWebAppSiteBackupsSlotResult(nextLink, value);
         }
     }

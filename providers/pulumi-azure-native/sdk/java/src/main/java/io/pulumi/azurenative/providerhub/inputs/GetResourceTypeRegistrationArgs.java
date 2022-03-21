@@ -72,12 +72,10 @@ public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.I
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GetResourceTypeRegistrationArgs build() {
+        }        public GetResourceTypeRegistrationArgs build() {
             return new GetResourceTypeRegistrationArgs(providerNamespace, resourceType);
         }
     }

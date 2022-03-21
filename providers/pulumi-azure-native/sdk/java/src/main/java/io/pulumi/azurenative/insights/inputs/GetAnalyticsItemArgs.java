@@ -122,27 +122,22 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder scopePath(String scopePath) {
             this.scopePath = Objects.requireNonNull(scopePath);
             return this;
-        }
-        public GetAnalyticsItemArgs build() {
+        }        public GetAnalyticsItemArgs build() {
             return new GetAnalyticsItemArgs(id, name, resourceGroupName, resourceName, scopePath);
         }
     }

@@ -74,22 +74,18 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.mappingParameters = Objects.requireNonNull(mappingParameters);
             return this;
         }
-
         public Builder mappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs mappingParameters) {
             this.mappingParameters = Output.of(Objects.requireNonNull(mappingParameters));
             return this;
         }
-
         public Builder recordFormatType(Output<String> recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }
-
         public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs(mappingParameters, recordFormatType);
         }
     }

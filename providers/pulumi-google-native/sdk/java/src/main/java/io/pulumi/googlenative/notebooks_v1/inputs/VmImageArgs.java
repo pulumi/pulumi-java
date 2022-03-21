@@ -94,32 +94,26 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
             this.imageFamily = imageFamily;
             return this;
         }
-
         public Builder imageFamily(@Nullable String imageFamily) {
             this.imageFamily = Output.ofNullable(imageFamily);
             return this;
         }
-
         public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = Output.ofNullable(imageName);
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
-        }
-        public VmImageArgs build() {
+        }        public VmImageArgs build() {
             return new VmImageArgs(imageFamily, imageName, project);
         }
     }

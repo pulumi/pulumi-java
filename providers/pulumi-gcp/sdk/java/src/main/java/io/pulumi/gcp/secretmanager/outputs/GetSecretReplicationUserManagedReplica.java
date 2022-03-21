@@ -55,12 +55,13 @@ public final class GetSecretReplicationUserManagedReplica {
             this.customerManagedEncryptions = Objects.requireNonNull(customerManagedEncryptions);
             return this;
         }
-
+        public Builder customerManagedEncryptions(GetSecretReplicationUserManagedReplicaCustomerManagedEncryption... customerManagedEncryptions) {
+            return customerManagedEncryptions(List.of(customerManagedEncryptions));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public GetSecretReplicationUserManagedReplica build() {
+        }        public GetSecretReplicationUserManagedReplica build() {
             return new GetSecretReplicationUserManagedReplica(customerManagedEncryptions, location);
         }
     }

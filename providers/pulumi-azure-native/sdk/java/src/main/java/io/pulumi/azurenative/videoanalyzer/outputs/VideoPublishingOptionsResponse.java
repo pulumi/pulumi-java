@@ -71,12 +71,10 @@ public final class VideoPublishingOptionsResponse {
             this.disableArchive = disableArchive;
             return this;
         }
-
         public Builder disableRtspPublishing(@Nullable String disableRtspPublishing) {
             this.disableRtspPublishing = disableRtspPublishing;
             return this;
-        }
-        public VideoPublishingOptionsResponse build() {
+        }        public VideoPublishingOptionsResponse build() {
             return new VideoPublishingOptionsResponse(disableArchive, disableRtspPublishing);
         }
     }

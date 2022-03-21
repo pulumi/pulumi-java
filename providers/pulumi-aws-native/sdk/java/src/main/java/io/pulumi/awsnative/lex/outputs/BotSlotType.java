@@ -91,32 +91,29 @@ public final class BotSlotType {
             this.description = description;
             return this;
         }
-
         public Builder externalSourceSetting(@Nullable BotExternalSourceSetting externalSourceSetting) {
             this.externalSourceSetting = externalSourceSetting;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parentSlotTypeSignature(@Nullable String parentSlotTypeSignature) {
             this.parentSlotTypeSignature = parentSlotTypeSignature;
             return this;
         }
-
         public Builder slotTypeValues(@Nullable List<BotSlotTypeValue> slotTypeValues) {
             this.slotTypeValues = slotTypeValues;
             return this;
         }
-
+        public Builder slotTypeValues(BotSlotTypeValue... slotTypeValues) {
+            return slotTypeValues(List.of(slotTypeValues));
+        }
         public Builder valueSelectionSetting(@Nullable BotSlotValueSelectionSetting valueSelectionSetting) {
             this.valueSelectionSetting = valueSelectionSetting;
             return this;
-        }
-        public BotSlotType build() {
+        }        public BotSlotType build() {
             return new BotSlotType(description, externalSourceSetting, name, parentSlotTypeSignature, slotTypeValues, valueSelectionSetting);
         }
     }

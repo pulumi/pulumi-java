@@ -87,17 +87,14 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecification {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public FleetLaunchTemplateConfigLaunchTemplateSpecification build() {
+        }        public FleetLaunchTemplateConfigLaunchTemplateSpecification build() {
             return new FleetLaunchTemplateConfigLaunchTemplateSpecification(launchTemplateId, launchTemplateName, version);
         }
     }

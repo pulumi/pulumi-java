@@ -95,17 +95,17 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
             this.additionalRecipients = additionalRecipients;
             return this;
         }
-
+        public Builder additionalRecipients(String... additionalRecipients) {
+            return additionalRecipients(List.of(additionalRecipients));
+        }
         public Builder notifyDcAdmins(@Nullable String notifyDcAdmins) {
             this.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
-
         public Builder notifyGlobalAdmins(@Nullable String notifyGlobalAdmins) {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
-        }
-        public NotificationSettingsResponse build() {
+        }        public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
         }
     }

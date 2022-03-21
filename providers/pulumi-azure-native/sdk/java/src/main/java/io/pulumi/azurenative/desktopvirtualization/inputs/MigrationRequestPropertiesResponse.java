@@ -78,12 +78,10 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
             this.migrationPath = migrationPath;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
-        }
-        public MigrationRequestPropertiesResponse build() {
+        }        public MigrationRequestPropertiesResponse build() {
             return new MigrationRequestPropertiesResponse(migrationPath, operation);
         }
     }

@@ -88,17 +88,14 @@ public final class AcceleratorAttributes {
             this.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
-
         public Builder flowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
             this.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
-
         public Builder flowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
             this.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
-        }
-        public AcceleratorAttributes build() {
+        }        public AcceleratorAttributes build() {
             return new AcceleratorAttributes(flowLogsEnabled, flowLogsS3Bucket, flowLogsS3Prefix);
         }
     }

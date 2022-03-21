@@ -53,8 +53,7 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfig {
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
             this.driverLogLevels = driverLogLevels;
             return this;
-        }
-        public WorkflowTemplateJobPrestoJobLoggingConfig build() {
+        }        public WorkflowTemplateJobPrestoJobLoggingConfig build() {
             return new WorkflowTemplateJobPrestoJobLoggingConfig(driverLogLevels);
         }
     }

@@ -78,22 +78,18 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
             this.entity = entity;
             return this;
         }
-
         public Builder entity(@Nullable String entity) {
             this.entity = Output.ofNullable(entity);
             return this;
         }
-
         public Builder entityId(@Nullable Output<String> entityId) {
             this.entityId = entityId;
             return this;
         }
-
         public Builder entityId(@Nullable String entityId) {
             this.entityId = Output.ofNullable(entityId);
             return this;
-        }
-        public BucketObjectOwnerArgs build() {
+        }        public BucketObjectOwnerArgs build() {
             return new BucketObjectOwnerArgs(entity, entityId);
         }
     }

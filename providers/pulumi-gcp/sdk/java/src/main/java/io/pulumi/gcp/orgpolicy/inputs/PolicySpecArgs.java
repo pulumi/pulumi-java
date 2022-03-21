@@ -127,52 +127,45 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = Output.ofNullable(inheritFromParent);
             return this;
         }
-
         public Builder reset(@Nullable Output<Boolean> reset) {
             this.reset = reset;
             return this;
         }
-
         public Builder reset(@Nullable Boolean reset) {
             this.reset = Output.ofNullable(reset);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<PolicySpecRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<PolicySpecRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(PolicySpecRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public PolicySpecArgs build() {
+        }        public PolicySpecArgs build() {
             return new PolicySpecArgs(etag, inheritFromParent, reset, rules, updateTime);
         }
     }

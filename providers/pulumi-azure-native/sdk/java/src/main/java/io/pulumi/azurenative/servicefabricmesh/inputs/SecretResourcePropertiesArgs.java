@@ -95,32 +95,26 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
-        }
-        public SecretResourcePropertiesArgs build() {
+        }        public SecretResourcePropertiesArgs build() {
             return new SecretResourcePropertiesArgs(contentType, description, kind);
         }
     }

@@ -91,17 +91,17 @@ public final class GraphPackageResponse {
             this.edges = edges;
             return this;
         }
-
+        public Builder edges(GraphEdgeResponse... edges) {
+            return edges(List.of(edges));
+        }
         public Builder graphParameters(@Nullable Map<String,GraphParameterResponse> graphParameters) {
             this.graphParameters = graphParameters;
             return this;
         }
-
         public Builder nodes(@Nullable Map<String,GraphNodeResponse> nodes) {
             this.nodes = nodes;
             return this;
-        }
-        public GraphPackageResponse build() {
+        }        public GraphPackageResponse build() {
             return new GraphPackageResponse(edges, graphParameters, nodes);
         }
     }

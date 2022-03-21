@@ -72,12 +72,10 @@ public final class GetTaskSetResult {
             this.id = id;
             return this;
         }
-
         public Builder scale(@Nullable TaskSetScale scale) {
             this.scale = scale;
             return this;
-        }
-        public GetTaskSetResult build() {
+        }        public GetTaskSetResult build() {
             return new GetTaskSetResult(id, scale);
         }
     }

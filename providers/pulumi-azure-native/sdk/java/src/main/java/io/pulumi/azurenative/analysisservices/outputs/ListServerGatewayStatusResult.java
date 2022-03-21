@@ -53,8 +53,7 @@ public final class ListServerGatewayStatusResult {
         public Builder status(@Nullable Integer status) {
             this.status = status;
             return this;
-        }
-        public ListServerGatewayStatusResult build() {
+        }        public ListServerGatewayStatusResult build() {
             return new ListServerGatewayStatusResult(status);
         }
     }

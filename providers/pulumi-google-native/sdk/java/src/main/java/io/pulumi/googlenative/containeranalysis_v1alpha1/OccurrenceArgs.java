@@ -374,202 +374,162 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.attestation = attestation;
             return this;
         }
-
         public Builder attestation(@Nullable AttestationArgs attestation) {
             this.attestation = Output.ofNullable(attestation);
             return this;
         }
-
         public Builder buildDetails(@Nullable Output<BuildDetailsArgs> buildDetails) {
             this.buildDetails = buildDetails;
             return this;
         }
-
         public Builder buildDetails(@Nullable BuildDetailsArgs buildDetails) {
             this.buildDetails = Output.ofNullable(buildDetails);
             return this;
         }
-
         public Builder compliance(@Nullable Output<ComplianceOccurrenceArgs> compliance) {
             this.compliance = compliance;
             return this;
         }
-
         public Builder compliance(@Nullable ComplianceOccurrenceArgs compliance) {
             this.compliance = Output.ofNullable(compliance);
             return this;
         }
-
         public Builder deployment(@Nullable Output<DeploymentArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
-
         public Builder deployment(@Nullable DeploymentArgs deployment) {
             this.deployment = Output.ofNullable(deployment);
             return this;
         }
-
         public Builder derivedImage(@Nullable Output<DerivedArgs> derivedImage) {
             this.derivedImage = derivedImage;
             return this;
         }
-
         public Builder derivedImage(@Nullable DerivedArgs derivedImage) {
             this.derivedImage = Output.ofNullable(derivedImage);
             return this;
         }
-
         public Builder discovered(@Nullable Output<DiscoveredArgs> discovered) {
             this.discovered = discovered;
             return this;
         }
-
         public Builder discovered(@Nullable DiscoveredArgs discovered) {
             this.discovered = Output.ofNullable(discovered);
             return this;
         }
-
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation) {
             this.dsseAttestation = dsseAttestation;
             return this;
         }
-
         public Builder dsseAttestation(@Nullable DSSEAttestationOccurrenceArgs dsseAttestation) {
             this.dsseAttestation = Output.ofNullable(dsseAttestation);
             return this;
         }
-
         public Builder envelope(@Nullable Output<EnvelopeArgs> envelope) {
             this.envelope = envelope;
             return this;
         }
-
         public Builder envelope(@Nullable EnvelopeArgs envelope) {
             this.envelope = Output.ofNullable(envelope);
             return this;
         }
-
         public Builder installation(@Nullable Output<InstallationArgs> installation) {
             this.installation = installation;
             return this;
         }
-
         public Builder installation(@Nullable InstallationArgs installation) {
             this.installation = Output.ofNullable(installation);
             return this;
         }
-
         public Builder noteName(@Nullable Output<String> noteName) {
             this.noteName = noteName;
             return this;
         }
-
         public Builder noteName(@Nullable String noteName) {
             this.noteName = Output.ofNullable(noteName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
-
         public Builder remediation(@Nullable String remediation) {
             this.remediation = Output.ofNullable(remediation);
             return this;
         }
-
         public Builder resource(@Nullable Output<ResourceArgs> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable ResourceArgs resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder resourceUrl(@Nullable Output<String> resourceUrl) {
             this.resourceUrl = resourceUrl;
             return this;
         }
-
         public Builder resourceUrl(@Nullable String resourceUrl) {
             this.resourceUrl = Output.ofNullable(resourceUrl);
             return this;
         }
-
         public Builder sbom(@Nullable Output<DocumentOccurrenceArgs> sbom) {
             this.sbom = sbom;
             return this;
         }
-
         public Builder sbom(@Nullable DocumentOccurrenceArgs sbom) {
             this.sbom = Output.ofNullable(sbom);
             return this;
         }
-
         public Builder spdxFile(@Nullable Output<FileOccurrenceArgs> spdxFile) {
             this.spdxFile = spdxFile;
             return this;
         }
-
         public Builder spdxFile(@Nullable FileOccurrenceArgs spdxFile) {
             this.spdxFile = Output.ofNullable(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(@Nullable Output<PackageInfoOccurrenceArgs> spdxPackage) {
             this.spdxPackage = spdxPackage;
             return this;
         }
-
         public Builder spdxPackage(@Nullable PackageInfoOccurrenceArgs spdxPackage) {
             this.spdxPackage = Output.ofNullable(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(@Nullable Output<RelationshipOccurrenceArgs> spdxRelationship) {
             this.spdxRelationship = spdxRelationship;
             return this;
         }
-
         public Builder spdxRelationship(@Nullable RelationshipOccurrenceArgs spdxRelationship) {
             this.spdxRelationship = Output.ofNullable(spdxRelationship);
             return this;
         }
-
         public Builder upgrade(@Nullable Output<UpgradeOccurrenceArgs> upgrade) {
             this.upgrade = upgrade;
             return this;
         }
-
         public Builder upgrade(@Nullable UpgradeOccurrenceArgs upgrade) {
             this.upgrade = Output.ofNullable(upgrade);
             return this;
         }
-
         public Builder vulnerabilityDetails(@Nullable Output<VulnerabilityDetailsArgs> vulnerabilityDetails) {
             this.vulnerabilityDetails = vulnerabilityDetails;
             return this;
         }
-
         public Builder vulnerabilityDetails(@Nullable VulnerabilityDetailsArgs vulnerabilityDetails) {
             this.vulnerabilityDetails = Output.ofNullable(vulnerabilityDetails);
             return this;
-        }
-        public OccurrenceArgs build() {
+        }        public OccurrenceArgs build() {
             return new OccurrenceArgs(attestation, buildDetails, compliance, deployment, derivedImage, discovered, dsseAttestation, envelope, installation, noteName, project, remediation, resource, resourceUrl, sbom, spdxFile, spdxPackage, spdxRelationship, upgrade, vulnerabilityDetails);
         }
     }

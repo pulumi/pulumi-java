@@ -71,12 +71,10 @@ public final class PermissionsDataLocation {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
-        }
-        public PermissionsDataLocation build() {
+        }        public PermissionsDataLocation build() {
             return new PermissionsDataLocation(arn, catalogId);
         }
     }

@@ -78,12 +78,10 @@ public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources
             this.id = id;
             return this;
         }
-
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
-        }
-        public RecoveryPlanProtectedItemResponse build() {
+        }        public RecoveryPlanProtectedItemResponse build() {
             return new RecoveryPlanProtectedItemResponse(id, virtualMachineId);
         }
     }

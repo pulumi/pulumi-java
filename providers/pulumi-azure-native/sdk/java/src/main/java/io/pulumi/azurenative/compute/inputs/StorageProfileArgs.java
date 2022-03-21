@@ -97,32 +97,29 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.dataDisks = dataDisks;
             return this;
         }
-
         public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
             this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
-
+        public Builder dataDisks(DataDiskArgs... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
             this.imageReference = imageReference;
             return this;
         }
-
         public Builder imageReference(@Nullable ImageReferenceArgs imageReference) {
             this.imageReference = Output.ofNullable(imageReference);
             return this;
         }
-
         public Builder osDisk(@Nullable Output<OSDiskArgs> osDisk) {
             this.osDisk = osDisk;
             return this;
         }
-
         public Builder osDisk(@Nullable OSDiskArgs osDisk) {
             this.osDisk = Output.ofNullable(osDisk);
             return this;
-        }
-        public StorageProfileArgs build() {
+        }        public StorageProfileArgs build() {
             return new StorageProfileArgs(dataDisks, imageReference, osDisk);
         }
     }

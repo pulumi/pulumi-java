@@ -146,62 +146,50 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.conditionAbsent = conditionAbsent;
             return this;
         }
-
         public Builder conditionAbsent(@Nullable MetricAbsenceArgs conditionAbsent) {
             this.conditionAbsent = Output.ofNullable(conditionAbsent);
             return this;
         }
-
         public Builder conditionMatchedLog(@Nullable Output<LogMatchArgs> conditionMatchedLog) {
             this.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
-
         public Builder conditionMatchedLog(@Nullable LogMatchArgs conditionMatchedLog) {
             this.conditionMatchedLog = Output.ofNullable(conditionMatchedLog);
             return this;
         }
-
         public Builder conditionMonitoringQueryLanguage(@Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
-
         public Builder conditionMonitoringQueryLanguage(@Nullable MonitoringQueryLanguageConditionArgs conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = Output.ofNullable(conditionMonitoringQueryLanguage);
             return this;
         }
-
         public Builder conditionThreshold(@Nullable Output<MetricThresholdArgs> conditionThreshold) {
             this.conditionThreshold = conditionThreshold;
             return this;
         }
-
         public Builder conditionThreshold(@Nullable MetricThresholdArgs conditionThreshold) {
             this.conditionThreshold = Output.ofNullable(conditionThreshold);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ConditionArgs build() {
+        }        public ConditionArgs build() {
             return new ConditionArgs(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }
     }

@@ -108,42 +108,43 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
-
         public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
             this.maxAgeSeconds = Output.ofNullable(maxAgeSeconds);
             return this;
         }
-
         public Builder method(@Nullable Output<List<String>> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable List<String> method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
+        public Builder method(String... method) {
+            return method(List.of(method));
+        }
         public Builder origin(@Nullable Output<List<String>> origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder origin(@Nullable List<String> origin) {
             this.origin = Output.ofNullable(origin);
             return this;
         }
-
+        public Builder origin(String... origin) {
+            return origin(List.of(origin));
+        }
         public Builder responseHeader(@Nullable Output<List<String>> responseHeader) {
             this.responseHeader = responseHeader;
             return this;
         }
-
         public Builder responseHeader(@Nullable List<String> responseHeader) {
             this.responseHeader = Output.ofNullable(responseHeader);
             return this;
         }
-        public BucketCorsItemArgs build() {
+        public Builder responseHeader(String... responseHeader) {
+            return responseHeader(List.of(responseHeader));
+        }        public BucketCorsItemArgs build() {
             return new BucketCorsItemArgs(maxAgeSeconds, method, origin, responseHeader);
         }
     }

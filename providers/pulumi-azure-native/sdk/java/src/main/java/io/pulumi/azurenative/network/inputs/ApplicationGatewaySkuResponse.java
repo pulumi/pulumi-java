@@ -95,17 +95,14 @@ public final class ApplicationGatewaySkuResponse extends io.pulumi.resources.Inv
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ApplicationGatewaySkuResponse build() {
+        }        public ApplicationGatewaySkuResponse build() {
             return new ApplicationGatewaySkuResponse(capacity, name, tier);
         }
     }

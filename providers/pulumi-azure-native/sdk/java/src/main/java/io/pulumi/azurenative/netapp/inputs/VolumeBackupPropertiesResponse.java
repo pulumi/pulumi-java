@@ -111,22 +111,18 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
             this.backupEnabled = backupEnabled;
             return this;
         }
-
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
             this.backupPolicyId = backupPolicyId;
             return this;
         }
-
         public Builder policyEnforced(@Nullable Boolean policyEnforced) {
             this.policyEnforced = policyEnforced;
             return this;
         }
-
         public Builder vaultId(@Nullable String vaultId) {
             this.vaultId = vaultId;
             return this;
-        }
-        public VolumeBackupPropertiesResponse build() {
+        }        public VolumeBackupPropertiesResponse build() {
             return new VolumeBackupPropertiesResponse(backupEnabled, backupPolicyId, policyEnforced, vaultId);
         }
     }

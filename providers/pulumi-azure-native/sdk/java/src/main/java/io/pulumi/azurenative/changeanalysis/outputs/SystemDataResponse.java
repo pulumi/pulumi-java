@@ -133,32 +133,26 @@ public final class SystemDataResponse {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder createdByType(String createdByType) {
             this.createdByType = Objects.requireNonNull(createdByType);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedByType(String lastModifiedByType) {
             this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
             return this;
-        }
-        public SystemDataResponse build() {
+        }        public SystemDataResponse build() {
             return new SystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }
     }

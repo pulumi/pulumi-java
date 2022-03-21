@@ -138,62 +138,50 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
             this.actionId = actionId;
             return this;
         }
-
         public Builder actionId(@Nullable String actionId) {
             this.actionId = Output.ofNullable(actionId);
             return this;
         }
-
         public Builder logicAppResourceId(Output<String> logicAppResourceId) {
             this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId);
             return this;
         }
-
         public Builder logicAppResourceId(String logicAppResourceId) {
             this.logicAppResourceId = Output.of(Objects.requireNonNull(logicAppResourceId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleId(Output<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
         }
-
         public Builder triggerUri(Output<String> triggerUri) {
             this.triggerUri = Objects.requireNonNull(triggerUri);
             return this;
         }
-
         public Builder triggerUri(String triggerUri) {
             this.triggerUri = Output.of(Objects.requireNonNull(triggerUri));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public ActionArgs build() {
+        }        public ActionArgs build() {
             return new ActionArgs(actionId, logicAppResourceId, resourceGroupName, ruleId, triggerUri, workspaceName);
         }
     }

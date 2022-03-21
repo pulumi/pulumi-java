@@ -69,12 +69,10 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRange {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder start(Integer start) {
             this.start = Objects.requireNonNull(start);
             return this;
-        }
-        public RouteSpecHttp2RouteMatchHeaderMatchRange build() {
+        }        public RouteSpecHttp2RouteMatchHeaderMatchRange build() {
             return new RouteSpecHttp2RouteMatchHeaderMatchRange(end, start);
         }
     }

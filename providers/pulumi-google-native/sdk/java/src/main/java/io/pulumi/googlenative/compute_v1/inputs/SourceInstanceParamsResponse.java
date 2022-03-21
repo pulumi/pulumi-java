@@ -60,7 +60,9 @@ public final class SourceInstanceParamsResponse extends io.pulumi.resources.Invo
             this.diskConfigs = Objects.requireNonNull(diskConfigs);
             return this;
         }
-        public SourceInstanceParamsResponse build() {
+        public Builder diskConfigs(DiskInstantiationConfigResponse... diskConfigs) {
+            return diskConfigs(List.of(diskConfigs));
+        }        public SourceInstanceParamsResponse build() {
             return new SourceInstanceParamsResponse(diskConfigs);
         }
     }

@@ -142,37 +142,36 @@ public final class StartTaskResponse {
             this.commandLine = commandLine;
             return this;
         }
-
         public Builder containerSettings(@Nullable TaskContainerSettingsResponse containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
-
         public Builder environmentSettings(@Nullable List<EnvironmentSettingResponse> environmentSettings) {
             this.environmentSettings = environmentSettings;
             return this;
         }
-
+        public Builder environmentSettings(EnvironmentSettingResponse... environmentSettings) {
+            return environmentSettings(List.of(environmentSettings));
+        }
         public Builder maxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
             this.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
-
         public Builder resourceFiles(@Nullable List<ResourceFileResponse> resourceFiles) {
             this.resourceFiles = resourceFiles;
             return this;
         }
-
+        public Builder resourceFiles(ResourceFileResponse... resourceFiles) {
+            return resourceFiles(List.of(resourceFiles));
+        }
         public Builder userIdentity(@Nullable UserIdentityResponse userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }
-
         public Builder waitForSuccess(@Nullable Boolean waitForSuccess) {
             this.waitForSuccess = waitForSuccess;
             return this;
-        }
-        public StartTaskResponse build() {
+        }        public StartTaskResponse build() {
             return new StartTaskResponse(commandLine, containerSettings, environmentSettings, maxTaskRetryCount, resourceFiles, userIdentity, waitForSuccess);
         }
     }

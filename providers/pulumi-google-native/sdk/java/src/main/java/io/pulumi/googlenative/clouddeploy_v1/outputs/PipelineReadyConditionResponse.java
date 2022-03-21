@@ -70,12 +70,10 @@ public final class PipelineReadyConditionResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public PipelineReadyConditionResponse build() {
+        }        public PipelineReadyConditionResponse build() {
             return new PipelineReadyConditionResponse(status, updateTime);
         }
     }

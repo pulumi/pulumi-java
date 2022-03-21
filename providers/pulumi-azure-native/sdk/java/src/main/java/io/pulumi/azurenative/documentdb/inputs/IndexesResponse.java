@@ -95,17 +95,14 @@ public final class IndexesResponse extends io.pulumi.resources.InvokeArgs {
             this.dataType = dataType;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder precision(@Nullable Integer precision) {
             this.precision = precision;
             return this;
-        }
-        public IndexesResponse build() {
+        }        public IndexesResponse build() {
             return new IndexesResponse(dataType, kind, precision);
         }
     }

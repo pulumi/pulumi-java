@@ -88,12 +88,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
-
         public Builder range(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut build() {
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut(distributionFilter, range);
         }
     }

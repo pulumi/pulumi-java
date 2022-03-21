@@ -55,8 +55,7 @@ public final class AiMetadataStoreEncryptionSpec {
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
-        }
-        public AiMetadataStoreEncryptionSpec build() {
+        }        public AiMetadataStoreEncryptionSpec build() {
             return new AiMetadataStoreEncryptionSpec(kmsKeyName);
         }
     }

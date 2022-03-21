@@ -92,17 +92,14 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetSecretVersionArgs build() {
+        }        public GetSecretVersionArgs build() {
             return new GetSecretVersionArgs(project, secret, version);
         }
     }

@@ -104,22 +104,21 @@ public final class OSPolicyResponse {
             this.allowNoResourceGroupMatch = Objects.requireNonNull(allowNoResourceGroupMatch);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder resourceGroups(List<OSPolicyResourceGroupResponse> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-        public OSPolicyResponse build() {
+        public Builder resourceGroups(OSPolicyResourceGroupResponse... resourceGroups) {
+            return resourceGroups(List.of(resourceGroups));
+        }        public OSPolicyResponse build() {
             return new OSPolicyResponse(allowNoResourceGroupMatch, description, mode, resourceGroups);
         }
     }

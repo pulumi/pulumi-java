@@ -70,12 +70,10 @@ public final class RepoIdResponse {
             this.projectRepoId = Objects.requireNonNull(projectRepoId);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public RepoIdResponse build() {
+        }        public RepoIdResponse build() {
             return new RepoIdResponse(projectRepoId, uid);
         }
     }

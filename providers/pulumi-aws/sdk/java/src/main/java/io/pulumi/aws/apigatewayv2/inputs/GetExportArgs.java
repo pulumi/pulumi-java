@@ -139,32 +139,26 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder exportVersion(@Nullable String exportVersion) {
             this.exportVersion = exportVersion;
             return this;
         }
-
         public Builder includeExtensions(@Nullable Boolean includeExtensions) {
             this.includeExtensions = includeExtensions;
             return this;
         }
-
         public Builder outputType(String outputType) {
             this.outputType = Objects.requireNonNull(outputType);
             return this;
         }
-
         public Builder specification(String specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
-        }
-        public GetExportArgs build() {
+        }        public GetExportArgs build() {
             return new GetExportArgs(apiId, exportVersion, includeExtensions, outputType, specification, stageName);
         }
     }

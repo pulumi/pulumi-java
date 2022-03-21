@@ -219,102 +219,82 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
             this.apiUpdatedMember = apiUpdatedMember;
             return this;
         }
-
         public Builder apiUpdatedMember(@Nullable Boolean apiUpdatedMember) {
             this.apiUpdatedMember = Output.ofNullable(apiUpdatedMember);
             return this;
         }
-
         public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
-
         public Builder groupByEmail(@Nullable String groupByEmail) {
             this.groupByEmail = Output.ofNullable(groupByEmail);
             return this;
         }
-
         public Builder iamMember(@Nullable Output<String> iamMember) {
             this.iamMember = iamMember;
             return this;
         }
-
         public Builder iamMember(@Nullable String iamMember) {
             this.iamMember = Output.ofNullable(iamMember);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder specialGroup(@Nullable Output<String> specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
-
         public Builder specialGroup(@Nullable String specialGroup) {
             this.specialGroup = Output.ofNullable(specialGroup);
             return this;
         }
-
         public Builder userByEmail(@Nullable Output<String> userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
-
         public Builder userByEmail(@Nullable String userByEmail) {
             this.userByEmail = Output.ofNullable(userByEmail);
             return this;
         }
-
         public Builder view(@Nullable Output<DatasetAccessViewGetArgs> view) {
             this.view = view;
             return this;
         }
-
         public Builder view(@Nullable DatasetAccessViewGetArgs view) {
             this.view = Output.ofNullable(view);
             return this;
-        }
-        public DatasetAccessState build() {
+        }        public DatasetAccessState build() {
             return new DatasetAccessState(apiUpdatedMember, datasetId, domain, groupByEmail, iamMember, project, role, specialGroup, userByEmail, view);
         }
     }

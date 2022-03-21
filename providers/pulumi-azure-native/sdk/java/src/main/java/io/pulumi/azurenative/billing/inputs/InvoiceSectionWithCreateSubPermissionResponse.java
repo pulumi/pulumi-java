@@ -208,52 +208,45 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
             this.billingProfileDisplayName = Objects.requireNonNull(billingProfileDisplayName);
             return this;
         }
-
         public Builder billingProfileId(String billingProfileId) {
             this.billingProfileId = Objects.requireNonNull(billingProfileId);
             return this;
         }
-
         public Builder billingProfileSpendingLimit(String billingProfileSpendingLimit) {
             this.billingProfileSpendingLimit = Objects.requireNonNull(billingProfileSpendingLimit);
             return this;
         }
-
         public Builder billingProfileStatus(String billingProfileStatus) {
             this.billingProfileStatus = Objects.requireNonNull(billingProfileStatus);
             return this;
         }
-
         public Builder billingProfileStatusReasonCode(String billingProfileStatusReasonCode) {
             this.billingProfileStatusReasonCode = Objects.requireNonNull(billingProfileStatusReasonCode);
             return this;
         }
-
         public Builder billingProfileSystemId(String billingProfileSystemId) {
             this.billingProfileSystemId = Objects.requireNonNull(billingProfileSystemId);
             return this;
         }
-
         public Builder enabledAzurePlans(@Nullable List<AzurePlanResponse> enabledAzurePlans) {
             this.enabledAzurePlans = enabledAzurePlans;
             return this;
         }
-
+        public Builder enabledAzurePlans(AzurePlanResponse... enabledAzurePlans) {
+            return enabledAzurePlans(List.of(enabledAzurePlans));
+        }
         public Builder invoiceSectionDisplayName(String invoiceSectionDisplayName) {
             this.invoiceSectionDisplayName = Objects.requireNonNull(invoiceSectionDisplayName);
             return this;
         }
-
         public Builder invoiceSectionId(String invoiceSectionId) {
             this.invoiceSectionId = Objects.requireNonNull(invoiceSectionId);
             return this;
         }
-
         public Builder invoiceSectionSystemId(String invoiceSectionSystemId) {
             this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId);
             return this;
-        }
-        public InvoiceSectionWithCreateSubPermissionResponse build() {
+        }        public InvoiceSectionWithCreateSubPermissionResponse build() {
             return new InvoiceSectionWithCreateSubPermissionResponse(billingProfileDisplayName, billingProfileId, billingProfileSpendingLimit, billingProfileStatus, billingProfileStatusReasonCode, billingProfileSystemId, enabledAzurePlans, invoiceSectionDisplayName, invoiceSectionId, invoiceSectionSystemId);
         }
     }

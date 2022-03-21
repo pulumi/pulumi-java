@@ -101,37 +101,30 @@ public final class GetPeeredDnsDomainResult {
             this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GetPeeredDnsDomainResult build() {
+        }        public GetPeeredDnsDomainResult build() {
             return new GetPeeredDnsDomainResult(dnsSuffix, id, name, network, parent, project, service);
         }
     }

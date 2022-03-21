@@ -45,7 +45,9 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles build() {
+        public Builder items(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem... items) {
+            return items(List.of(items));
+        }        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles build() {
             return new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles(items);
         }
     }

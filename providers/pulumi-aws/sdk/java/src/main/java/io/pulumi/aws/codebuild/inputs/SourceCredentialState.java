@@ -122,52 +122,42 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authType(@Nullable Output<String> authType) {
             this.authType = authType;
             return this;
         }
-
         public Builder authType(@Nullable String authType) {
             this.authType = Output.ofNullable(authType);
             return this;
         }
-
         public Builder serverType(@Nullable Output<String> serverType) {
             this.serverType = serverType;
             return this;
         }
-
         public Builder serverType(@Nullable String serverType) {
             this.serverType = Output.ofNullable(serverType);
             return this;
         }
-
         public Builder token(@Nullable Output<String> token) {
             this.token = token;
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = Output.ofNullable(token);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public SourceCredentialState build() {
+        }        public SourceCredentialState build() {
             return new SourceCredentialState(arn, authType, serverType, token, userName);
         }
     }

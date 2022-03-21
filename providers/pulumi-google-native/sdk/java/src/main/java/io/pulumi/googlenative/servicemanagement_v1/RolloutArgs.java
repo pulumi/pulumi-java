@@ -141,62 +141,50 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder deleteServiceStrategy(@Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy) {
             this.deleteServiceStrategy = deleteServiceStrategy;
             return this;
         }
-
         public Builder deleteServiceStrategy(@Nullable DeleteServiceStrategyArgs deleteServiceStrategy) {
             this.deleteServiceStrategy = Output.ofNullable(deleteServiceStrategy);
             return this;
         }
-
         public Builder rolloutId(@Nullable Output<String> rolloutId) {
             this.rolloutId = rolloutId;
             return this;
         }
-
         public Builder rolloutId(@Nullable String rolloutId) {
             this.rolloutId = Output.ofNullable(rolloutId);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder status(@Nullable Output<RolloutStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable RolloutStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder trafficPercentStrategy(@Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy) {
             this.trafficPercentStrategy = trafficPercentStrategy;
             return this;
         }
-
         public Builder trafficPercentStrategy(@Nullable TrafficPercentStrategyArgs trafficPercentStrategy) {
             this.trafficPercentStrategy = Output.ofNullable(trafficPercentStrategy);
             return this;
-        }
-        public RolloutArgs build() {
+        }        public RolloutArgs build() {
             return new RolloutArgs(createTime, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);
         }
     }

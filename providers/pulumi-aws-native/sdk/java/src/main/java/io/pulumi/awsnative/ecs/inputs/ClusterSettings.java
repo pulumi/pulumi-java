@@ -70,12 +70,10 @@ public final class ClusterSettings extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ClusterSettings build() {
+        }        public ClusterSettings build() {
             return new ClusterSettings(name, value);
         }
     }

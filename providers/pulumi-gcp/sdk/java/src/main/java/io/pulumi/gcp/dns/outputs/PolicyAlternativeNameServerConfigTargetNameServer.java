@@ -77,12 +77,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
             this.forwardingPath = forwardingPath;
             return this;
         }
-
         public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
-        }
-        public PolicyAlternativeNameServerConfigTargetNameServer build() {
+        }        public PolicyAlternativeNameServerConfigTargetNameServer build() {
             return new PolicyAlternativeNameServerConfigTargetNameServer(forwardingPath, ipv4Address);
         }
     }

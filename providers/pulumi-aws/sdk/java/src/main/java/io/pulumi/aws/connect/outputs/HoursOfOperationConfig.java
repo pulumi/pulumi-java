@@ -87,17 +87,14 @@ public final class HoursOfOperationConfig {
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder endTime(HoursOfOperationConfigEndTime endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(HoursOfOperationConfigStartTime startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public HoursOfOperationConfig build() {
+        }        public HoursOfOperationConfig build() {
             return new HoursOfOperationConfig(day, endTime, startTime);
         }
     }

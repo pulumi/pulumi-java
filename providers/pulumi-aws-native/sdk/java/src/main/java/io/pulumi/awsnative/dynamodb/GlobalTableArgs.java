@@ -184,112 +184,105 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             this.attributeDefinitions = Objects.requireNonNull(attributeDefinitions);
             return this;
         }
-
         public Builder attributeDefinitions(List<GlobalTableAttributeDefinitionArgs> attributeDefinitions) {
             this.attributeDefinitions = Output.of(Objects.requireNonNull(attributeDefinitions));
             return this;
         }
-
+        public Builder attributeDefinitions(GlobalTableAttributeDefinitionArgs... attributeDefinitions) {
+            return attributeDefinitions(List.of(attributeDefinitions));
+        }
         public Builder billingMode(@Nullable Output<String> billingMode) {
             this.billingMode = billingMode;
             return this;
         }
-
         public Builder billingMode(@Nullable String billingMode) {
             this.billingMode = Output.ofNullable(billingMode);
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = Output.ofNullable(globalSecondaryIndexes);
             return this;
         }
-
+        public Builder globalSecondaryIndexes(GlobalTableGlobalSecondaryIndexArgs... globalSecondaryIndexes) {
+            return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
+        }
         public Builder keySchema(Output<List<GlobalTableKeySchemaArgs>> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
-
         public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
             this.keySchema = Output.of(Objects.requireNonNull(keySchema));
             return this;
         }
-
+        public Builder keySchema(GlobalTableKeySchemaArgs... keySchema) {
+            return keySchema(List.of(keySchema));
+        }
         public Builder localSecondaryIndexes(@Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
             this.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
-
         public Builder localSecondaryIndexes(@Nullable List<GlobalTableLocalSecondaryIndexArgs> localSecondaryIndexes) {
             this.localSecondaryIndexes = Output.ofNullable(localSecondaryIndexes);
             return this;
         }
-
+        public Builder localSecondaryIndexes(GlobalTableLocalSecondaryIndexArgs... localSecondaryIndexes) {
+            return localSecondaryIndexes(List.of(localSecondaryIndexes));
+        }
         public Builder replicas(Output<List<GlobalTableReplicaSpecificationArgs>> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public Builder replicas(List<GlobalTableReplicaSpecificationArgs> replicas) {
             this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
-
+        public Builder replicas(GlobalTableReplicaSpecificationArgs... replicas) {
+            return replicas(List.of(replicas));
+        }
         public Builder sSESpecification(@Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
-
         public Builder sSESpecification(@Nullable GlobalTableSSESpecificationArgs sSESpecification) {
             this.sSESpecification = Output.ofNullable(sSESpecification);
             return this;
         }
-
         public Builder streamSpecification(@Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification) {
             this.streamSpecification = streamSpecification;
             return this;
         }
-
         public Builder streamSpecification(@Nullable GlobalTableStreamSpecificationArgs streamSpecification) {
             this.streamSpecification = Output.ofNullable(streamSpecification);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
         }
-
         public Builder timeToLiveSpecification(@Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification) {
             this.timeToLiveSpecification = timeToLiveSpecification;
             return this;
         }
-
         public Builder timeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecificationArgs timeToLiveSpecification) {
             this.timeToLiveSpecification = Output.ofNullable(timeToLiveSpecification);
             return this;
         }
-
         public Builder writeProvisionedThroughputSettings(@Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
-
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = Output.ofNullable(writeProvisionedThroughputSettings);
             return this;
-        }
-        public GlobalTableArgs build() {
+        }        public GlobalTableArgs build() {
             return new GlobalTableArgs(attributeDefinitions, billingMode, globalSecondaryIndexes, keySchema, localSecondaryIndexes, replicas, sSESpecification, streamSpecification, tableName, timeToLiveSpecification, writeProvisionedThroughputSettings);
         }
     }

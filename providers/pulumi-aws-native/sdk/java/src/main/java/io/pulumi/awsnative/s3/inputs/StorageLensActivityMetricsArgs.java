@@ -61,12 +61,10 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
-        }
-        public StorageLensActivityMetricsArgs build() {
+        }        public StorageLensActivityMetricsArgs build() {
             return new StorageLensActivityMetricsArgs(isEnabled);
         }
     }

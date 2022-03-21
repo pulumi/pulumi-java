@@ -91,32 +91,26 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs extend
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder artifactId(String artifactId) {
             this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
-
         public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs build() {
+        }        public GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs build() {
             return new GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs(artifactId, destination, type);
         }
     }

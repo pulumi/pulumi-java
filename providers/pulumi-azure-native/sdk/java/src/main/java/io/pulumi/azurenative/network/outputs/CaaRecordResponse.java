@@ -88,17 +88,14 @@ public final class CaaRecordResponse {
             this.flags = flags;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CaaRecordResponse build() {
+        }        public CaaRecordResponse build() {
             return new CaaRecordResponse(flags, tag, value);
         }
     }

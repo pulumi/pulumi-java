@@ -65,17 +65,20 @@ public final class BackupPlanResourceType {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
-
+        public Builder advancedBackupSettings(BackupPlanAdvancedBackupSettingResourceType... advancedBackupSettings) {
+            return advancedBackupSettings(List.of(advancedBackupSettings));
+        }
         public Builder backupPlanName(String backupPlanName) {
             this.backupPlanName = Objects.requireNonNull(backupPlanName);
             return this;
         }
-
         public Builder backupPlanRule(List<BackupPlanBackupRuleResourceType> backupPlanRule) {
             this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
             return this;
         }
-        public BackupPlanResourceType build() {
+        public Builder backupPlanRule(BackupPlanBackupRuleResourceType... backupPlanRule) {
+            return backupPlanRule(List.of(backupPlanRule));
+        }        public BackupPlanResourceType build() {
             return new BackupPlanResourceType(advancedBackupSettings, backupPlanName, backupPlanRule);
         }
     }

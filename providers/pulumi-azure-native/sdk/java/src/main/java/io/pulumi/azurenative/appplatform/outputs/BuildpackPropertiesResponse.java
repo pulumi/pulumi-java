@@ -53,8 +53,7 @@ public final class BuildpackPropertiesResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public BuildpackPropertiesResponse build() {
+        }        public BuildpackPropertiesResponse build() {
             return new BuildpackPropertiesResponse(id);
         }
     }

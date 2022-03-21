@@ -84,22 +84,18 @@ public final class ProjectSourceAuthArgs extends io.pulumi.resources.ResourceArg
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ProjectSourceAuthArgs build() {
+        }        public ProjectSourceAuthArgs build() {
             return new ProjectSourceAuthArgs(resource, type);
         }
     }

@@ -88,17 +88,14 @@ public final class GetPredictionModelStatusArgs extends io.pulumi.resources.Invo
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder predictionName(String predictionName) {
             this.predictionName = Objects.requireNonNull(predictionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPredictionModelStatusArgs build() {
+        }        public GetPredictionModelStatusArgs build() {
             return new GetPredictionModelStatusArgs(hubName, predictionName, resourceGroupName);
         }
     }

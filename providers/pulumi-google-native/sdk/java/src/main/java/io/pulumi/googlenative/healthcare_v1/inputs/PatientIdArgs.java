@@ -78,22 +78,18 @@ public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public PatientIdArgs build() {
+        }        public PatientIdArgs build() {
             return new PatientIdArgs(type, value);
         }
     }

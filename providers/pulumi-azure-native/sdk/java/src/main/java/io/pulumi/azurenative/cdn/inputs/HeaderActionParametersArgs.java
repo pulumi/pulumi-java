@@ -108,42 +108,34 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder headerAction(Either<String,HeaderAction> headerAction) {
             this.headerAction = Output.of(Objects.requireNonNull(headerAction));
             return this;
         }
-
         public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public HeaderActionParametersArgs build() {
+        }        public HeaderActionParametersArgs build() {
             return new HeaderActionParametersArgs(headerAction, headerName, odataType, value);
         }
     }

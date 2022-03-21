@@ -632,362 +632,296 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             this.architectures = architectures;
             return this;
         }
-
         public Builder architectures(@Nullable List<String> architectures) {
             this.architectures = Output.ofNullable(architectures);
             return this;
         }
-
+        public Builder architectures(String... architectures) {
+            return architectures(List.of(architectures));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder code(@Nullable Output<Archive> code) {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Archive code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable Output<String> codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = Output.ofNullable(codeSigningConfigArn);
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable Output<FunctionDeadLetterConfigGetArgs> deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable FunctionDeadLetterConfigGetArgs deadLetterConfig) {
             this.deadLetterConfig = Output.ofNullable(deadLetterConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environment(@Nullable Output<FunctionEnvironmentGetArgs> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable FunctionEnvironmentGetArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder fileSystemConfig(@Nullable Output<FunctionFileSystemConfigGetArgs> fileSystemConfig) {
             this.fileSystemConfig = fileSystemConfig;
             return this;
         }
-
         public Builder fileSystemConfig(@Nullable FunctionFileSystemConfigGetArgs fileSystemConfig) {
             this.fileSystemConfig = Output.ofNullable(fileSystemConfig);
             return this;
         }
-
         public Builder handler(@Nullable Output<String> handler) {
             this.handler = handler;
             return this;
         }
-
         public Builder handler(@Nullable String handler) {
             this.handler = Output.ofNullable(handler);
             return this;
         }
-
         public Builder imageConfig(@Nullable Output<FunctionImageConfigGetArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
-
         public Builder imageConfig(@Nullable FunctionImageConfigGetArgs imageConfig) {
             this.imageConfig = Output.ofNullable(imageConfig);
             return this;
         }
-
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder invokeArn(@Nullable Output<String> invokeArn) {
             this.invokeArn = invokeArn;
             return this;
         }
-
         public Builder invokeArn(@Nullable String invokeArn) {
             this.invokeArn = Output.ofNullable(invokeArn);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder lastModified(@Nullable Output<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
-
         public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = Output.ofNullable(lastModified);
             return this;
         }
-
         public Builder layers(@Nullable Output<List<String>> layers) {
             this.layers = layers;
             return this;
         }
-
         public Builder layers(@Nullable List<String> layers) {
             this.layers = Output.ofNullable(layers);
             return this;
         }
-
+        public Builder layers(String... layers) {
+            return layers(List.of(layers));
+        }
         public Builder memorySize(@Nullable Output<Integer> memorySize) {
             this.memorySize = memorySize;
             return this;
         }
-
         public Builder memorySize(@Nullable Integer memorySize) {
             this.memorySize = Output.ofNullable(memorySize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder packageType(@Nullable String packageType) {
             this.packageType = Output.ofNullable(packageType);
             return this;
         }
-
         public Builder publish(@Nullable Output<Boolean> publish) {
             this.publish = publish;
             return this;
         }
-
         public Builder publish(@Nullable Boolean publish) {
             this.publish = Output.ofNullable(publish);
             return this;
         }
-
         public Builder qualifiedArn(@Nullable Output<String> qualifiedArn) {
             this.qualifiedArn = qualifiedArn;
             return this;
         }
-
         public Builder qualifiedArn(@Nullable String qualifiedArn) {
             this.qualifiedArn = Output.ofNullable(qualifiedArn);
             return this;
         }
-
         public Builder reservedConcurrentExecutions(@Nullable Output<Integer> reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
-
         public Builder reservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = Output.ofNullable(reservedConcurrentExecutions);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder runtime(@Nullable Output<Either<String,Runtime>> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable Either<String,Runtime> runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
-
         public Builder signingJobArn(@Nullable Output<String> signingJobArn) {
             this.signingJobArn = signingJobArn;
             return this;
         }
-
         public Builder signingJobArn(@Nullable String signingJobArn) {
             this.signingJobArn = Output.ofNullable(signingJobArn);
             return this;
         }
-
         public Builder signingProfileVersionArn(@Nullable Output<String> signingProfileVersionArn) {
             this.signingProfileVersionArn = signingProfileVersionArn;
             return this;
         }
-
         public Builder signingProfileVersionArn(@Nullable String signingProfileVersionArn) {
             this.signingProfileVersionArn = Output.ofNullable(signingProfileVersionArn);
             return this;
         }
-
         public Builder sourceCodeHash(@Nullable Output<String> sourceCodeHash) {
             this.sourceCodeHash = sourceCodeHash;
             return this;
         }
-
         public Builder sourceCodeHash(@Nullable String sourceCodeHash) {
             this.sourceCodeHash = Output.ofNullable(sourceCodeHash);
             return this;
         }
-
         public Builder sourceCodeSize(@Nullable Output<Integer> sourceCodeSize) {
             this.sourceCodeSize = sourceCodeSize;
             return this;
         }
-
         public Builder sourceCodeSize(@Nullable Integer sourceCodeSize) {
             this.sourceCodeSize = Output.ofNullable(sourceCodeSize);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder tracingConfig(@Nullable Output<FunctionTracingConfigGetArgs> tracingConfig) {
             this.tracingConfig = tracingConfig;
             return this;
         }
-
         public Builder tracingConfig(@Nullable FunctionTracingConfigGetArgs tracingConfig) {
             this.tracingConfig = Output.ofNullable(tracingConfig);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<FunctionVpcConfigGetArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable FunctionVpcConfigGetArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public FunctionState build() {
+        }        public FunctionState build() {
             return new FunctionState(architectures, arn, code, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfig, handler, imageConfig, imageUri, invokeArn, kmsKeyArn, lastModified, layers, memorySize, name, packageType, publish, qualifiedArn, reservedConcurrentExecutions, role, runtime, s3Bucket, s3Key, s3ObjectVersion, signingJobArn, signingProfileVersionArn, sourceCodeHash, sourceCodeSize, tags, tagsAll, timeout, tracingConfig, version, vpcConfig);
         }
     }

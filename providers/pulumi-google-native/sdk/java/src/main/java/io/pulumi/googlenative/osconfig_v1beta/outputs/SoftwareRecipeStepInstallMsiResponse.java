@@ -87,17 +87,20 @@ public final class SoftwareRecipeStepInstallMsiResponse {
             this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder flags(List<String> flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
-        public SoftwareRecipeStepInstallMsiResponse build() {
+        public Builder flags(String... flags) {
+            return flags(List.of(flags));
+        }        public SoftwareRecipeStepInstallMsiResponse build() {
             return new SoftwareRecipeStepInstallMsiResponse(allowedExitCodes, artifactId, flags);
         }
     }

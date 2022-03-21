@@ -71,12 +71,16 @@ public final class MetadataCategoriesResponse {
             this.domains = domains;
             return this;
         }
-
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }
         public Builder verticals(@Nullable List<String> verticals) {
             this.verticals = verticals;
             return this;
         }
-        public MetadataCategoriesResponse build() {
+        public Builder verticals(String... verticals) {
+            return verticals(List.of(verticals));
+        }        public MetadataCategoriesResponse build() {
             return new MetadataCategoriesResponse(domains, verticals);
         }
     }

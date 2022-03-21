@@ -155,37 +155,33 @@ public final class ApiOAuthSettingsResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters) {
             this.customParameters = customParameters;
             return this;
         }
-
         public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder properties(@Nullable Object properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }
-        public ApiOAuthSettingsResponse build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public ApiOAuthSettingsResponse build() {
             return new ApiOAuthSettingsResponse(clientId, clientSecret, customParameters, identityProvider, properties, redirectUrl, scopes);
         }
     }

@@ -71,12 +71,10 @@ public final class VirtualNetworkProfileResponse {
             this.id = id;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public VirtualNetworkProfileResponse build() {
+        }        public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(id, subnet);
         }
     }

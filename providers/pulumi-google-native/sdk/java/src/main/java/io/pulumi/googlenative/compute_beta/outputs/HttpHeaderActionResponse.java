@@ -103,22 +103,30 @@ public final class HttpHeaderActionResponse {
             this.requestHeadersToAdd = Objects.requireNonNull(requestHeadersToAdd);
             return this;
         }
-
+        public Builder requestHeadersToAdd(HttpHeaderOptionResponse... requestHeadersToAdd) {
+            return requestHeadersToAdd(List.of(requestHeadersToAdd));
+        }
         public Builder requestHeadersToRemove(List<String> requestHeadersToRemove) {
             this.requestHeadersToRemove = Objects.requireNonNull(requestHeadersToRemove);
             return this;
         }
-
+        public Builder requestHeadersToRemove(String... requestHeadersToRemove) {
+            return requestHeadersToRemove(List.of(requestHeadersToRemove));
+        }
         public Builder responseHeadersToAdd(List<HttpHeaderOptionResponse> responseHeadersToAdd) {
             this.responseHeadersToAdd = Objects.requireNonNull(responseHeadersToAdd);
             return this;
         }
-
+        public Builder responseHeadersToAdd(HttpHeaderOptionResponse... responseHeadersToAdd) {
+            return responseHeadersToAdd(List.of(responseHeadersToAdd));
+        }
         public Builder responseHeadersToRemove(List<String> responseHeadersToRemove) {
             this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove);
             return this;
         }
-        public HttpHeaderActionResponse build() {
+        public Builder responseHeadersToRemove(String... responseHeadersToRemove) {
+            return responseHeadersToRemove(List.of(responseHeadersToRemove));
+        }        public HttpHeaderActionResponse build() {
             return new HttpHeaderActionResponse(requestHeadersToAdd, requestHeadersToRemove, responseHeadersToAdd, responseHeadersToRemove);
         }
     }

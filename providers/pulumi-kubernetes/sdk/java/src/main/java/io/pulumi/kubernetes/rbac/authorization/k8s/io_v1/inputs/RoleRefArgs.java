@@ -93,32 +93,26 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
             this.apiGroup = Objects.requireNonNull(apiGroup);
             return this;
         }
-
         public Builder apiGroup(String apiGroup) {
             this.apiGroup = Output.of(Objects.requireNonNull(apiGroup));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RoleRefArgs build() {
+        }        public RoleRefArgs build() {
             return new RoleRefArgs(apiGroup, kind, name);
         }
     }

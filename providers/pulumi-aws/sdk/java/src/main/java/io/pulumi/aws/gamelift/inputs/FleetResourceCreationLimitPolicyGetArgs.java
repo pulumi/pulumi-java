@@ -74,22 +74,18 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
             this.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
-
         public Builder newGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
             this.newGameSessionsPerCreator = Output.ofNullable(newGameSessionsPerCreator);
             return this;
         }
-
         public Builder policyPeriodInMinutes(@Nullable Output<Integer> policyPeriodInMinutes) {
             this.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
         }
-
         public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
             this.policyPeriodInMinutes = Output.ofNullable(policyPeriodInMinutes);
             return this;
-        }
-        public FleetResourceCreationLimitPolicyGetArgs build() {
+        }        public FleetResourceCreationLimitPolicyGetArgs build() {
             return new FleetResourceCreationLimitPolicyGetArgs(newGameSessionsPerCreator, policyPeriodInMinutes);
         }
     }

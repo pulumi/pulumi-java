@@ -104,22 +104,18 @@ public final class SsisEnvironmentReferenceResponse {
             this.environmentFolderName = environmentFolderName;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
-
         public Builder referenceType(@Nullable String referenceType) {
             this.referenceType = referenceType;
             return this;
-        }
-        public SsisEnvironmentReferenceResponse build() {
+        }        public SsisEnvironmentReferenceResponse build() {
             return new SsisEnvironmentReferenceResponse(environmentFolderName, environmentName, id, referenceType);
         }
     }

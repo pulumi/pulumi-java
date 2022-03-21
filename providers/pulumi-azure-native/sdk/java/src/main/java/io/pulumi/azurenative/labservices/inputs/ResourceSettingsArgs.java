@@ -97,32 +97,26 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
-
         public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
             this.galleryImageResourceId = Output.ofNullable(galleryImageResourceId);
             return this;
         }
-
         public Builder referenceVm(Output<ReferenceVmArgs> referenceVm) {
             this.referenceVm = Objects.requireNonNull(referenceVm);
             return this;
         }
-
         public Builder referenceVm(ReferenceVmArgs referenceVm) {
             this.referenceVm = Output.of(Objects.requireNonNull(referenceVm));
             return this;
         }
-
         public Builder size(@Nullable Output<Either<String,ManagedLabVmSize>> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Either<String,ManagedLabVmSize> size) {
             this.size = Output.ofNullable(size);
             return this;
-        }
-        public ResourceSettingsArgs build() {
+        }        public ResourceSettingsArgs build() {
             return new ResourceSettingsArgs(galleryImageResourceId, referenceVm, size);
         }
     }

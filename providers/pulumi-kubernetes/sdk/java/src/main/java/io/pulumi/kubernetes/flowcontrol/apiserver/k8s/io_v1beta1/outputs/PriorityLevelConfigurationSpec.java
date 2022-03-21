@@ -72,12 +72,10 @@ public final class PriorityLevelConfigurationSpec {
             this.limited = limited;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PriorityLevelConfigurationSpec build() {
+        }        public PriorityLevelConfigurationSpec build() {
             return new PriorityLevelConfigurationSpec(limited, type);
         }
     }

@@ -108,42 +108,34 @@ public final class CSINodeArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(Output<CSINodeSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder spec(CSINodeSpecArgs spec) {
             this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
-        }
-        public CSINodeArgs build() {
+        }        public CSINodeArgs build() {
             return new CSINodeArgs(apiVersion, kind, metadata, spec);
         }
     }

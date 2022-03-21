@@ -392,112 +392,108 @@ public final class GetReportResult {
             this.chartType = Objects.requireNonNull(chartType);
             return this;
         }
-
         public Builder comments(List<String> comments) {
             this.comments = Objects.requireNonNull(comments);
             return this;
         }
-
+        public Builder comments(String... comments) {
+            return comments(List.of(comments));
+        }
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder dimensions(List<String> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
+        public Builder dimensions(String... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder fromTime(String fromTime) {
             this.fromTime = Objects.requireNonNull(fromTime);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder lastViewedAt(String lastViewedAt) {
             this.lastViewedAt = Objects.requireNonNull(lastViewedAt);
             return this;
         }
-
         public Builder limit(String limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder metrics(List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudApigeeV1CustomReportMetricResponse... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder offset(String offset) {
             this.offset = Objects.requireNonNull(offset);
             return this;
         }
-
         public Builder organization(String organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
-
         public Builder properties(List<GoogleCloudApigeeV1ReportPropertyResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
+        public Builder properties(GoogleCloudApigeeV1ReportPropertyResponse... properties) {
+            return properties(List.of(properties));
+        }
         public Builder sortByCols(List<String> sortByCols) {
             this.sortByCols = Objects.requireNonNull(sortByCols);
             return this;
         }
-
+        public Builder sortByCols(String... sortByCols) {
+            return sortByCols(List.of(sortByCols));
+        }
         public Builder sortOrder(String sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
-
         public Builder toTime(String toTime) {
             this.toTime = Objects.requireNonNull(toTime);
             return this;
         }
-
         public Builder topk(String topk) {
             this.topk = Objects.requireNonNull(topk);
             return this;
-        }
-        public GetReportResult build() {
+        }        public GetReportResult build() {
             return new GetReportResult(chartType, comments, createdAt, dimensions, displayName, environment, filter, fromTime, lastModifiedAt, lastViewedAt, limit, metrics, name, offset, organization, properties, sortByCols, sortOrder, tags, timeUnit, toTime, topk);
         }
     }

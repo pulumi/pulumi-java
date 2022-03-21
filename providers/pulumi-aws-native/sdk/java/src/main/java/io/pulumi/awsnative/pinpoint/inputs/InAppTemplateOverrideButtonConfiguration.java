@@ -67,12 +67,10 @@ public final class InAppTemplateOverrideButtonConfiguration extends io.pulumi.re
             this.buttonAction = buttonAction;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = link;
             return this;
-        }
-        public InAppTemplateOverrideButtonConfiguration build() {
+        }        public InAppTemplateOverrideButtonConfiguration build() {
             return new InAppTemplateOverrideButtonConfiguration(buttonAction, link);
         }
     }

@@ -162,37 +162,33 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
             this.computerNamePrefix = computerNamePrefix;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public Builder secrets(@Nullable List<VaultSecretGroupResponse> secrets) {
             this.secrets = secrets;
             return this;
         }
-
+        public Builder secrets(VaultSecretGroupResponse... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
-        }
-        public VirtualMachineScaleSetOSProfileResponse build() {
+        }        public VirtualMachineScaleSetOSProfileResponse build() {
             return new VirtualMachineScaleSetOSProfileResponse(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
         }
     }

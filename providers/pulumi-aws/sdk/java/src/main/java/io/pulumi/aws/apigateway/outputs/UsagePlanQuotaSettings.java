@@ -88,17 +88,14 @@ public final class UsagePlanQuotaSettings {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder offset(@Nullable Integer offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
-        }
-        public UsagePlanQuotaSettings build() {
+        }        public UsagePlanQuotaSettings build() {
             return new UsagePlanQuotaSettings(limit, offset, period);
         }
     }

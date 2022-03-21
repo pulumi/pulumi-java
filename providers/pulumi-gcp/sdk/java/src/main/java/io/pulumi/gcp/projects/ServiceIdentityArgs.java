@@ -75,22 +75,18 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public ServiceIdentityArgs build() {
+        }        public ServiceIdentityArgs build() {
             return new ServiceIdentityArgs(project, service);
         }
     }

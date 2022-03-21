@@ -89,17 +89,17 @@ public final class GetClientCertificateResult {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder tags(@Nullable List<ClientCertificateTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetClientCertificateResult build() {
+        public Builder tags(ClientCertificateTag... tags) {
+            return tags(List.of(tags));
+        }        public GetClientCertificateResult build() {
             return new GetClientCertificateResult(clientCertificateId, description, tags);
         }
     }

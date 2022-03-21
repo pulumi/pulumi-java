@@ -91,32 +91,26 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
             this.keytab = Objects.requireNonNull(keytab);
             return this;
         }
-
         public Builder keytab(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs keytab) {
             this.keytab = Output.of(Objects.requireNonNull(keytab));
             return this;
         }
-
         public Builder krb5ConfigGcsUri(Output<String> krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
             return this;
         }
-
         public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Output.of(Objects.requireNonNull(krb5ConfigGcsUri));
             return this;
         }
-
         public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
-        }
-        public MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs build() {
+        }        public MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs(keytab, krb5ConfigGcsUri, principal);
         }
     }

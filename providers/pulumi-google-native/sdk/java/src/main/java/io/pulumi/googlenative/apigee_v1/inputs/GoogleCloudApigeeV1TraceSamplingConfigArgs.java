@@ -79,22 +79,18 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
             this.sampler = sampler;
             return this;
         }
-
         public Builder sampler(@Nullable GoogleCloudApigeeV1TraceSamplingConfigSampler sampler) {
             this.sampler = Output.ofNullable(sampler);
             return this;
         }
-
         public Builder samplingRate(@Nullable Output<Double> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public Builder samplingRate(@Nullable Double samplingRate) {
             this.samplingRate = Output.ofNullable(samplingRate);
             return this;
-        }
-        public GoogleCloudApigeeV1TraceSamplingConfigArgs build() {
+        }        public GoogleCloudApigeeV1TraceSamplingConfigArgs build() {
             return new GoogleCloudApigeeV1TraceSamplingConfigArgs(sampler, samplingRate);
         }
     }

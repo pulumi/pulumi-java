@@ -101,22 +101,18 @@ public final class EndPointResponse {
             this.endPointName = Objects.requireNonNull(endPointName);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public EndPointResponse build() {
+        }        public EndPointResponse build() {
             return new EndPointResponse(endPointName, ipAddress, port, protocol);
         }
     }

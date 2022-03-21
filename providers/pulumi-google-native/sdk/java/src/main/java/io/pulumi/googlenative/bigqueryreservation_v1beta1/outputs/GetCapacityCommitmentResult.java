@@ -166,42 +166,34 @@ public final class GetCapacityCommitmentResult {
             this.commitmentEndTime = Objects.requireNonNull(commitmentEndTime);
             return this;
         }
-
         public Builder commitmentStartTime(String commitmentStartTime) {
             this.commitmentStartTime = Objects.requireNonNull(commitmentStartTime);
             return this;
         }
-
         public Builder failureStatus(StatusResponse failureStatus) {
             this.failureStatus = Objects.requireNonNull(failureStatus);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder plan(String plan) {
             this.plan = Objects.requireNonNull(plan);
             return this;
         }
-
         public Builder renewalPlan(String renewalPlan) {
             this.renewalPlan = Objects.requireNonNull(renewalPlan);
             return this;
         }
-
         public Builder slotCount(String slotCount) {
             this.slotCount = Objects.requireNonNull(slotCount);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetCapacityCommitmentResult build() {
+        }        public GetCapacityCommitmentResult build() {
             return new GetCapacityCommitmentResult(commitmentEndTime, commitmentStartTime, failureStatus, name, plan, renewalPlan, slotCount, state);
         }
     }

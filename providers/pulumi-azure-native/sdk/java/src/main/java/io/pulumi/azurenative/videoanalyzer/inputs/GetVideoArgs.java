@@ -88,17 +88,14 @@ public final class GetVideoArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder videoName(String videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
-        }
-        public GetVideoArgs build() {
+        }        public GetVideoArgs build() {
             return new GetVideoArgs(accountName, resourceGroupName, videoName);
         }
     }

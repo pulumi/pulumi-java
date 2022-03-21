@@ -88,17 +88,14 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfig {
             this.defaultGid = defaultGid;
             return this;
         }
-
         public Builder defaultUid(@Nullable Integer defaultUid) {
             this.defaultUid = defaultUid;
             return this;
         }
-
         public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = mountPath;
             return this;
-        }
-        public AppImageConfigKernelGatewayImageConfigFileSystemConfig build() {
+        }        public AppImageConfigKernelGatewayImageConfigFileSystemConfig build() {
             return new AppImageConfigKernelGatewayImageConfigFileSystemConfig(defaultGid, defaultUid, mountPath);
         }
     }

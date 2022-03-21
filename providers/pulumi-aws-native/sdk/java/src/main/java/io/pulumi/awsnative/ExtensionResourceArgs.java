@@ -75,22 +75,18 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Map<String,Object> properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ExtensionResourceArgs build() {
+        }        public ExtensionResourceArgs build() {
             return new ExtensionResourceArgs(properties, type);
         }
     }

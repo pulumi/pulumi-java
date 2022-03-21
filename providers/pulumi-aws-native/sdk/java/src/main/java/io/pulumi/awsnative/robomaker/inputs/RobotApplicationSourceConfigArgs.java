@@ -90,32 +90,26 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder architecture(RobotApplicationSourceConfigArchitecture architecture) {
             this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
-
         public Builder s3Bucket(Output<String> s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
-
         public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Output.of(Objects.requireNonNull(s3Bucket));
             return this;
         }
-
         public Builder s3Key(Output<String> s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
-
         public Builder s3Key(String s3Key) {
             this.s3Key = Output.of(Objects.requireNonNull(s3Key));
             return this;
-        }
-        public RobotApplicationSourceConfigArgs build() {
+        }        public RobotApplicationSourceConfigArgs build() {
             return new RobotApplicationSourceConfigArgs(architecture, s3Bucket, s3Key);
         }
     }

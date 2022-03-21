@@ -96,32 +96,26 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
             this.allowMultiLabel = allowMultiLabel;
             return this;
         }
-
         public Builder allowMultiLabel(@Nullable Boolean allowMultiLabel) {
             this.allowMultiLabel = Output.ofNullable(allowMultiLabel);
             return this;
         }
-
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
-
         public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
-
         public Builder answerAggregationType(@Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
             this.answerAggregationType = answerAggregationType;
             return this;
         }
-
         public Builder answerAggregationType(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType answerAggregationType) {
             this.answerAggregationType = Output.ofNullable(answerAggregationType);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(allowMultiLabel, annotationSpecSet, answerAggregationType);
         }
     }

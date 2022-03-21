@@ -72,12 +72,16 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
             this.inventoryFilters = inventoryFilters;
             return this;
         }
-
+        public Builder inventoryFilters(OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter... inventoryFilters) {
+            return inventoryFilters(List.of(inventoryFilters));
+        }
         public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-        public OsPolicyAssignmentOsPolicyResourceGroup build() {
+        public Builder resources(OsPolicyAssignmentOsPolicyResourceGroupResource... resources) {
+            return resources(List.of(resources));
+        }        public OsPolicyAssignmentOsPolicyResourceGroup build() {
             return new OsPolicyAssignmentOsPolicyResourceGroup(inventoryFilters, resources);
         }
     }

@@ -79,22 +79,18 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
             this.linux = linux;
             return this;
         }
-
         public Builder linux(@Nullable String linux) {
             this.linux = Output.ofNullable(linux);
             return this;
         }
-
         public Builder windows(@Nullable Output<String> windows) {
             this.windows = windows;
             return this;
         }
-
         public Builder windows(@Nullable String windows) {
             this.windows = Output.ofNullable(windows);
             return this;
-        }
-        public LaunchProfileStreamingSessionStorageRootArgs build() {
+        }        public LaunchProfileStreamingSessionStorageRootArgs build() {
             return new LaunchProfileStreamingSessionStorageRootArgs(linux, windows);
         }
     }

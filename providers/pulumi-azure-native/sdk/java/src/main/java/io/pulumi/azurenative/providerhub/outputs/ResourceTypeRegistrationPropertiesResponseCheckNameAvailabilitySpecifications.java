@@ -57,12 +57,13 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
             this.enableDefaultValidation = enableDefaultValidation;
             return this;
         }
-
         public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }
-        public ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications build() {
+        public Builder resourceTypesWithCustomValidation(String... resourceTypesWithCustomValidation) {
+            return resourceTypesWithCustomValidation(List.of(resourceTypesWithCustomValidation));
+        }        public ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications build() {
             return new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(enableDefaultValidation, resourceTypesWithCustomValidation);
         }
     }

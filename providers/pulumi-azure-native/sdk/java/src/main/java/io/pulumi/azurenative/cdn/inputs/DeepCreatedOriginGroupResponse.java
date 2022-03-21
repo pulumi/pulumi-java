@@ -131,27 +131,25 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder origins(List<ResourceReferenceResponse> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
-
+        public Builder origins(ResourceReferenceResponse... origins) {
+            return origins(List.of(origins));
+        }
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
-
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
-        }
-        public DeepCreatedOriginGroupResponse build() {
+        }        public DeepCreatedOriginGroupResponse build() {
             return new DeepCreatedOriginGroupResponse(healthProbeSettings, name, origins, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
         }
     }

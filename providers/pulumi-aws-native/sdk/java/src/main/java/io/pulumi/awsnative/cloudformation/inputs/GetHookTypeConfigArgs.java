@@ -54,8 +54,7 @@ public final class GetHookTypeConfigArgs extends io.pulumi.resources.InvokeArgs 
         public Builder typeArn(String typeArn) {
             this.typeArn = Objects.requireNonNull(typeArn);
             return this;
-        }
-        public GetHookTypeConfigArgs build() {
+        }        public GetHookTypeConfigArgs build() {
             return new GetHookTypeConfigArgs(typeArn);
         }
     }

@@ -53,12 +53,10 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
             this.discoverySiteId = discoverySiteId;
             return this;
         }
-
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = Output.ofNullable(discoverySiteId);
             return this;
-        }
-        public ImportCollectorPropertiesArgs build() {
+        }        public ImportCollectorPropertiesArgs build() {
             return new ImportCollectorPropertiesArgs(discoverySiteId);
         }
     }

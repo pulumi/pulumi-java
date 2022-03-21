@@ -72,12 +72,10 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReference {
             this.priority = priority;
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatefulRuleGroupReference build() {
+        }        public FirewallPolicyFirewallPolicyStatefulRuleGroupReference build() {
             return new FirewallPolicyFirewallPolicyStatefulRuleGroupReference(priority, resourceArn);
         }
     }

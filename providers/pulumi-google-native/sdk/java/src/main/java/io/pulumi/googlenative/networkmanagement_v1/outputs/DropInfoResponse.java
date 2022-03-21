@@ -69,12 +69,10 @@ public final class DropInfoResponse {
             this.cause = Objects.requireNonNull(cause);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public DropInfoResponse build() {
+        }        public DropInfoResponse build() {
             return new DropInfoResponse(cause, resourceUri);
         }
     }

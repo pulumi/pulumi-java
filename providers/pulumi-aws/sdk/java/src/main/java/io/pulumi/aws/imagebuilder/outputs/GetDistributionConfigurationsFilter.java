@@ -70,12 +70,13 @@ public final class GetDistributionConfigurationsFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetDistributionConfigurationsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetDistributionConfigurationsFilter build() {
             return new GetDistributionConfigurationsFilter(name, values);
         }
     }

@@ -108,42 +108,37 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder alias(String alias) {
             this.alias = Output.of(Objects.requireNonNull(alias));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder plan(Output<List<ContactStageArgs>> plan) {
             this.plan = Objects.requireNonNull(plan);
             return this;
         }
-
         public Builder plan(List<ContactStageArgs> plan) {
             this.plan = Output.of(Objects.requireNonNull(plan));
             return this;
         }
-
+        public Builder plan(ContactStageArgs... plan) {
+            return plan(List.of(plan));
+        }
         public Builder type(Output<ContactType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ContactType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ContactArgs build() {
+        }        public ContactArgs build() {
             return new ContactArgs(alias, displayName, plan, type);
         }
     }

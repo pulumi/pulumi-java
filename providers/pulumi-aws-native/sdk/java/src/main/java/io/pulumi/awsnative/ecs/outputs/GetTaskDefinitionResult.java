@@ -65,12 +65,13 @@ public final class GetTaskDefinitionResult {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TaskDefinitionTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taskDefinitionArn(@Nullable String taskDefinitionArn) {
             this.taskDefinitionArn = taskDefinitionArn;
             return this;
-        }
-        public GetTaskDefinitionResult build() {
+        }        public GetTaskDefinitionResult build() {
             return new GetTaskDefinitionResult(tags, taskDefinitionArn);
         }
     }

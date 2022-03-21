@@ -105,22 +105,18 @@ public final class ManagedClusterIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public ManagedClusterIdentityResponse build() {
+        }        public ManagedClusterIdentityResponse build() {
             return new ManagedClusterIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

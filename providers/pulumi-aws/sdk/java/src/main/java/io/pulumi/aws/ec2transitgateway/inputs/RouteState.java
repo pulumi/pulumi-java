@@ -107,42 +107,34 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             this.blackhole = blackhole;
             return this;
         }
-
         public Builder blackhole(@Nullable Boolean blackhole) {
             this.blackhole = Output.ofNullable(blackhole);
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
-
         public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Output.ofNullable(transitGatewayRouteTableId);
             return this;
-        }
-        public RouteState build() {
+        }        public RouteState build() {
             return new RouteState(blackhole, destinationCidrBlock, transitGatewayAttachmentId, transitGatewayRouteTableId);
         }
     }

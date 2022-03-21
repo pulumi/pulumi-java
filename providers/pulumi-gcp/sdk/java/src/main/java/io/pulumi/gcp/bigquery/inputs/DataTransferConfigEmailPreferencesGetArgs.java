@@ -56,12 +56,10 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends io.pulumi.r
             this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
             return this;
         }
-
         public Builder enableFailureEmail(Boolean enableFailureEmail) {
             this.enableFailureEmail = Output.of(Objects.requireNonNull(enableFailureEmail));
             return this;
-        }
-        public DataTransferConfigEmailPreferencesGetArgs build() {
+        }        public DataTransferConfigEmailPreferencesGetArgs build() {
             return new DataTransferConfigEmailPreferencesGetArgs(enableFailureEmail);
         }
     }

@@ -138,62 +138,50 @@ public final class TopicRuleCloudwatchMetricGetArgs extends io.pulumi.resources.
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder metricNamespace(Output<String> metricNamespace) {
             this.metricNamespace = Objects.requireNonNull(metricNamespace);
             return this;
         }
-
         public Builder metricNamespace(String metricNamespace) {
             this.metricNamespace = Output.of(Objects.requireNonNull(metricNamespace));
             return this;
         }
-
         public Builder metricTimestamp(@Nullable Output<String> metricTimestamp) {
             this.metricTimestamp = metricTimestamp;
             return this;
         }
-
         public Builder metricTimestamp(@Nullable String metricTimestamp) {
             this.metricTimestamp = Output.ofNullable(metricTimestamp);
             return this;
         }
-
         public Builder metricUnit(Output<String> metricUnit) {
             this.metricUnit = Objects.requireNonNull(metricUnit);
             return this;
         }
-
         public Builder metricUnit(String metricUnit) {
             this.metricUnit = Output.of(Objects.requireNonNull(metricUnit));
             return this;
         }
-
         public Builder metricValue(Output<String> metricValue) {
             this.metricValue = Objects.requireNonNull(metricValue);
             return this;
         }
-
         public Builder metricValue(String metricValue) {
             this.metricValue = Output.of(Objects.requireNonNull(metricValue));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public TopicRuleCloudwatchMetricGetArgs build() {
+        }        public TopicRuleCloudwatchMetricGetArgs build() {
             return new TopicRuleCloudwatchMetricGetArgs(metricName, metricNamespace, metricTimestamp, metricUnit, metricValue, roleArn);
         }
     }

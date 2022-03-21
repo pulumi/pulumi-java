@@ -107,42 +107,37 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
             this.allowedPrefixes = allowedPrefixes;
             return this;
         }
-
         public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
             this.allowedPrefixes = Output.ofNullable(allowedPrefixes);
             return this;
         }
-
+        public Builder allowedPrefixes(String... allowedPrefixes) {
+            return allowedPrefixes(List.of(allowedPrefixes));
+        }
         public Builder associatedGatewayId(Output<String> associatedGatewayId) {
             this.associatedGatewayId = Objects.requireNonNull(associatedGatewayId);
             return this;
         }
-
         public Builder associatedGatewayId(String associatedGatewayId) {
             this.associatedGatewayId = Output.of(Objects.requireNonNull(associatedGatewayId));
             return this;
         }
-
         public Builder dxGatewayId(Output<String> dxGatewayId) {
             this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
             return this;
         }
-
         public Builder dxGatewayId(String dxGatewayId) {
             this.dxGatewayId = Output.of(Objects.requireNonNull(dxGatewayId));
             return this;
         }
-
         public Builder dxGatewayOwnerAccountId(Output<String> dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = Objects.requireNonNull(dxGatewayOwnerAccountId);
             return this;
         }
-
         public Builder dxGatewayOwnerAccountId(String dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = Output.of(Objects.requireNonNull(dxGatewayOwnerAccountId));
             return this;
-        }
-        public GatewayAssociationProposalArgs build() {
+        }        public GatewayAssociationProposalArgs build() {
             return new GatewayAssociationProposalArgs(allowedPrefixes, associatedGatewayId, dxGatewayId, dxGatewayOwnerAccountId);
         }
     }

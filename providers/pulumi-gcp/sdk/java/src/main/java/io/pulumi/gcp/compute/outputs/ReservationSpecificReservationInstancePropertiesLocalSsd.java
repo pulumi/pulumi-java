@@ -76,12 +76,10 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = $interface;
             return this;
-        }
-        public ReservationSpecificReservationInstancePropertiesLocalSsd build() {
+        }        public ReservationSpecificReservationInstancePropertiesLocalSsd build() {
             return new ReservationSpecificReservationInstancePropertiesLocalSsd(diskSizeGb, $interface);
         }
     }

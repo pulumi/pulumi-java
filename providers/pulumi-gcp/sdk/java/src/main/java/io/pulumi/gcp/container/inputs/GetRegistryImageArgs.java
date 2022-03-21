@@ -102,27 +102,22 @@ public final class GetRegistryImageArgs extends io.pulumi.resources.InvokeArgs {
             this.digest = digest;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public GetRegistryImageArgs build() {
+        }        public GetRegistryImageArgs build() {
             return new GetRegistryImageArgs(digest, name, project, region, tag);
         }
     }

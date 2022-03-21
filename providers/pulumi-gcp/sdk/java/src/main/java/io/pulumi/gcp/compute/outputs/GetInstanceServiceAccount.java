@@ -70,12 +70,13 @@ public final class GetInstanceServiceAccount {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-        public GetInstanceServiceAccount build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public GetInstanceServiceAccount build() {
             return new GetInstanceServiceAccount(email, scopes);
         }
     }

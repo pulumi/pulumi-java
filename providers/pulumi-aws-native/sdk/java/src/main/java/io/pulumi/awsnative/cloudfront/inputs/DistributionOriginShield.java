@@ -67,12 +67,10 @@ public final class DistributionOriginShield extends io.pulumi.resources.InvokeAr
             this.enabled = enabled;
             return this;
         }
-
         public Builder originShieldRegion(@Nullable String originShieldRegion) {
             this.originShieldRegion = originShieldRegion;
             return this;
-        }
-        public DistributionOriginShield build() {
+        }        public DistributionOriginShield build() {
             return new DistributionOriginShield(enabled, originShieldRegion);
         }
     }

@@ -112,27 +112,22 @@ public final class DetectorModelIotSiteWise {
             this.assetId = assetId;
             return this;
         }
-
         public Builder entryId(@Nullable String entryId) {
             this.entryId = entryId;
             return this;
         }
-
         public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
-
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
-
         public Builder propertyValue(DetectorModelAssetPropertyValue propertyValue) {
             this.propertyValue = Objects.requireNonNull(propertyValue);
             return this;
-        }
-        public DetectorModelIotSiteWise build() {
+        }        public DetectorModelIotSiteWise build() {
             return new DetectorModelIotSiteWise(assetId, entryId, propertyAlias, propertyId, propertyValue);
         }
     }

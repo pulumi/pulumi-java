@@ -80,22 +80,21 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable RevisionTemplateArgs template) {
             this.template = Output.ofNullable(template);
             return this;
         }
-
         public Builder traffic(@Nullable Output<List<TrafficTargetArgs>> traffic) {
             this.traffic = traffic;
             return this;
         }
-
         public Builder traffic(@Nullable List<TrafficTargetArgs> traffic) {
             this.traffic = Output.ofNullable(traffic);
             return this;
         }
-        public ServiceSpecArgs build() {
+        public Builder traffic(TrafficTargetArgs... traffic) {
+            return traffic(List.of(traffic));
+        }        public ServiceSpecArgs build() {
             return new ServiceSpecArgs(template, traffic);
         }
     }

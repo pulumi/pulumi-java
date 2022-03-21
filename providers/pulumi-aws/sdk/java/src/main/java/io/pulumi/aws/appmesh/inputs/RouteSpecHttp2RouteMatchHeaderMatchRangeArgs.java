@@ -73,22 +73,18 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeArgs extends io.pulum
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder end(Integer end) {
             this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
-
         public Builder start(Output<Integer> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder start(Integer start) {
             this.start = Output.of(Objects.requireNonNull(start));
             return this;
-        }
-        public RouteSpecHttp2RouteMatchHeaderMatchRangeArgs build() {
+        }        public RouteSpecHttp2RouteMatchHeaderMatchRangeArgs build() {
             return new RouteSpecHttp2RouteMatchHeaderMatchRangeArgs(end, start);
         }
     }

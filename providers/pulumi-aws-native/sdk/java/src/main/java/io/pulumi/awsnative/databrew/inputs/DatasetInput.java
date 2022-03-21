@@ -97,22 +97,18 @@ public final class DatasetInput extends io.pulumi.resources.InvokeArgs {
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
-
         public Builder databaseInputDefinition(@Nullable DatasetDatabaseInputDefinition databaseInputDefinition) {
             this.databaseInputDefinition = databaseInputDefinition;
             return this;
         }
-
         public Builder metadata(@Nullable DatasetMetadata metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder s3InputDefinition(@Nullable DatasetS3Location s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
-        }
-        public DatasetInput build() {
+        }        public DatasetInput build() {
             return new DatasetInput(dataCatalogInputDefinition, databaseInputDefinition, metadata, s3InputDefinition);
         }
     }

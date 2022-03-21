@@ -114,42 +114,46 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
-
         public Builder dateTimeParameters(@Nullable List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
             this.dateTimeParameters = Output.ofNullable(dateTimeParameters);
             return this;
         }
-
+        public Builder dateTimeParameters(AnalysisDateTimeParameterArgs... dateTimeParameters) {
+            return dateTimeParameters(List.of(dateTimeParameters));
+        }
         public Builder decimalParameters(@Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
-
         public Builder decimalParameters(@Nullable List<AnalysisDecimalParameterArgs> decimalParameters) {
             this.decimalParameters = Output.ofNullable(decimalParameters);
             return this;
         }
-
+        public Builder decimalParameters(AnalysisDecimalParameterArgs... decimalParameters) {
+            return decimalParameters(List.of(decimalParameters));
+        }
         public Builder integerParameters(@Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
-
         public Builder integerParameters(@Nullable List<AnalysisIntegerParameterArgs> integerParameters) {
             this.integerParameters = Output.ofNullable(integerParameters);
             return this;
         }
-
+        public Builder integerParameters(AnalysisIntegerParameterArgs... integerParameters) {
+            return integerParameters(List.of(integerParameters));
+        }
         public Builder stringParameters(@Nullable Output<List<AnalysisStringParameterArgs>> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
-
         public Builder stringParameters(@Nullable List<AnalysisStringParameterArgs> stringParameters) {
             this.stringParameters = Output.ofNullable(stringParameters);
             return this;
         }
-        public AnalysisParametersArgs build() {
+        public Builder stringParameters(AnalysisStringParameterArgs... stringParameters) {
+            return stringParameters(List.of(stringParameters));
+        }        public AnalysisParametersArgs build() {
             return new AnalysisParametersArgs(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }
     }

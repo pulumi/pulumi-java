@@ -66,12 +66,10 @@ public final class ConfigTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ConfigTag build() {
+        }        public ConfigTag build() {
             return new ConfigTag(key, value);
         }
     }

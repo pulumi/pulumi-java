@@ -92,32 +92,26 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
             this.day = day;
             return this;
         }
-
         public Builder day(@Nullable Integer day) {
             this.day = Output.ofNullable(day);
             return this;
         }
-
         public Builder hour(@Nullable Output<Integer> hour) {
             this.hour = hour;
             return this;
         }
-
         public Builder hour(@Nullable Integer hour) {
             this.hour = Output.ofNullable(hour);
             return this;
         }
-
         public Builder updateTrack(@Nullable Output<String> updateTrack) {
             this.updateTrack = updateTrack;
             return this;
         }
-
         public Builder updateTrack(@Nullable String updateTrack) {
             this.updateTrack = Output.ofNullable(updateTrack);
             return this;
-        }
-        public DatabaseInstanceSettingsMaintenanceWindowGetArgs build() {
+        }        public DatabaseInstanceSettingsMaintenanceWindowGetArgs build() {
             return new DatabaseInstanceSettingsMaintenanceWindowGetArgs(day, hour, updateTrack);
         }
     }

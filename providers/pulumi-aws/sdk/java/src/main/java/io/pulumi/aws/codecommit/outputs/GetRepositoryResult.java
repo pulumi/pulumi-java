@@ -125,32 +125,26 @@ public final class GetRepositoryResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder cloneUrlHttp(String cloneUrlHttp) {
             this.cloneUrlHttp = Objects.requireNonNull(cloneUrlHttp);
             return this;
         }
-
         public Builder cloneUrlSsh(String cloneUrlSsh) {
             this.cloneUrlSsh = Objects.requireNonNull(cloneUrlSsh);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder repositoryId(String repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
-        }
-        public GetRepositoryResult build() {
+        }        public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, cloneUrlHttp, cloneUrlSsh, id, repositoryId, repositoryName);
         }
     }

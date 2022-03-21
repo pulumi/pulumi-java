@@ -208,52 +208,45 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }
-
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
-
         public Builder jsonName(String jsonName) {
             this.jsonName = Objects.requireNonNull(jsonName);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder oneofIndex(Integer oneofIndex) {
             this.oneofIndex = Objects.requireNonNull(oneofIndex);
             return this;
         }
-
         public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
+        public Builder options(OptionResponse... options) {
+            return options(List.of(options));
+        }
         public Builder packed(Boolean packed) {
             this.packed = Objects.requireNonNull(packed);
             return this;
         }
-
         public Builder typeUrl(String typeUrl) {
             this.typeUrl = Objects.requireNonNull(typeUrl);
             return this;
-        }
-        public FieldResponse build() {
+        }        public FieldResponse build() {
             return new FieldResponse(cardinality, defaultValue, jsonName, kind, name, number, oneofIndex, options, packed, typeUrl);
         }
     }

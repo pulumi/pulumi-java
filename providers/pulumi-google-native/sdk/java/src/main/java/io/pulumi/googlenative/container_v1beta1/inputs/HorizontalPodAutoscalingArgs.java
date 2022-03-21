@@ -61,12 +61,10 @@ public final class HorizontalPodAutoscalingArgs extends io.pulumi.resources.Reso
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
-        }
-        public HorizontalPodAutoscalingArgs build() {
+        }        public HorizontalPodAutoscalingArgs build() {
             return new HorizontalPodAutoscalingArgs(disabled);
         }
     }

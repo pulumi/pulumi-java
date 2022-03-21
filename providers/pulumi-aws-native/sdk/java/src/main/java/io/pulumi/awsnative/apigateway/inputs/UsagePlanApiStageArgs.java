@@ -91,32 +91,26 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = Output.ofNullable(stage);
             return this;
         }
-
         public Builder throttle(@Nullable Output<Object> throttle) {
             this.throttle = throttle;
             return this;
         }
-
         public Builder throttle(@Nullable Object throttle) {
             this.throttle = Output.ofNullable(throttle);
             return this;
-        }
-        public UsagePlanApiStageArgs build() {
+        }        public UsagePlanApiStageArgs build() {
             return new UsagePlanApiStageArgs(apiId, stage, throttle);
         }
     }

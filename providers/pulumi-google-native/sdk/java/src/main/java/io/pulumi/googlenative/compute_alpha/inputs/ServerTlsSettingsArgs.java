@@ -97,32 +97,29 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
             this.proxyTlsContext = proxyTlsContext;
             return this;
         }
-
         public Builder proxyTlsContext(@Nullable TlsContextArgs proxyTlsContext) {
             this.proxyTlsContext = Output.ofNullable(proxyTlsContext);
             return this;
         }
-
         public Builder subjectAltNames(@Nullable Output<List<String>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
-
         public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
             this.subjectAltNames = Output.ofNullable(subjectAltNames);
             return this;
         }
-
+        public Builder subjectAltNames(String... subjectAltNames) {
+            return subjectAltNames(List.of(subjectAltNames));
+        }
         public Builder tlsMode(@Nullable Output<ServerTlsSettingsTlsMode> tlsMode) {
             this.tlsMode = tlsMode;
             return this;
         }
-
         public Builder tlsMode(@Nullable ServerTlsSettingsTlsMode tlsMode) {
             this.tlsMode = Output.ofNullable(tlsMode);
             return this;
-        }
-        public ServerTlsSettingsArgs build() {
+        }        public ServerTlsSettingsArgs build() {
             return new ServerTlsSettingsArgs(proxyTlsContext, subjectAltNames, tlsMode);
         }
     }

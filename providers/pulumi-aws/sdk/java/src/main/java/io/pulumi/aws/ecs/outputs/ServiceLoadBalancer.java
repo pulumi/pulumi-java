@@ -104,22 +104,18 @@ public final class ServiceLoadBalancer {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder elbName(@Nullable String elbName) {
             this.elbName = elbName;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
-        }
-        public ServiceLoadBalancer build() {
+        }        public ServiceLoadBalancer build() {
             return new ServiceLoadBalancer(containerName, containerPort, elbName, targetGroupArn);
         }
     }

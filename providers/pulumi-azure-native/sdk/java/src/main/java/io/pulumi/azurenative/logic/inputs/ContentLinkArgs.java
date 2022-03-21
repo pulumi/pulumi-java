@@ -61,12 +61,10 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ContentLinkArgs build() {
+        }        public ContentLinkArgs build() {
             return new ContentLinkArgs(uri);
         }
     }

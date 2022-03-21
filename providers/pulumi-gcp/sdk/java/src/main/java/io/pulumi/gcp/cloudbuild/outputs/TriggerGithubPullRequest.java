@@ -90,17 +90,14 @@ public final class TriggerGithubPullRequest {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
-
         public Builder commentControl(@Nullable String commentControl) {
             this.commentControl = commentControl;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = invertRegex;
             return this;
-        }
-        public TriggerGithubPullRequest build() {
+        }        public TriggerGithubPullRequest build() {
             return new TriggerGithubPullRequest(branch, commentControl, invertRegex);
         }
     }

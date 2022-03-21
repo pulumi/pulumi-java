@@ -53,8 +53,7 @@ public final class AzureNodePoolConfigRootVolume {
         public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = sizeGib;
             return this;
-        }
-        public AzureNodePoolConfigRootVolume build() {
+        }        public AzureNodePoolConfigRootVolume build() {
             return new AzureNodePoolConfigRootVolume(sizeGib);
         }
     }

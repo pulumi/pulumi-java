@@ -55,8 +55,7 @@ public final class PreventionJobTriggerTrigger {
         public Builder schedule(@Nullable PreventionJobTriggerTriggerSchedule schedule) {
             this.schedule = schedule;
             return this;
-        }
-        public PreventionJobTriggerTrigger build() {
+        }        public PreventionJobTriggerTrigger build() {
             return new PreventionJobTriggerTrigger(schedule);
         }
     }

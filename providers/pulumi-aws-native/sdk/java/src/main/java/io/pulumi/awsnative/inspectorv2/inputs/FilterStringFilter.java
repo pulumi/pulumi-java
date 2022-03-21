@@ -65,12 +65,10 @@ public final class FilterStringFilter extends io.pulumi.resources.InvokeArgs {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FilterStringFilter build() {
+        }        public FilterStringFilter build() {
             return new FilterStringFilter(comparison, value);
         }
     }

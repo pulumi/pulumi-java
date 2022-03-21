@@ -72,12 +72,10 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public GetCostAllocationRuleArgs build() {
+        }        public GetCostAllocationRuleArgs build() {
             return new GetCostAllocationRuleArgs(billingAccountId, ruleName);
         }
     }

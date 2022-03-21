@@ -139,82 +139,66 @@ public final class AnomalyDetectorRedshiftSourceConfigArgs extends io.pulumi.res
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
-
         public Builder databaseHost(Output<String> databaseHost) {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
-
         public Builder databaseHost(String databaseHost) {
             this.databaseHost = Output.of(Objects.requireNonNull(databaseHost));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder databasePort(Output<Integer> databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
-
         public Builder databasePort(Integer databasePort) {
             this.databasePort = Output.of(Objects.requireNonNull(databasePort));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder secretManagerArn(Output<String> secretManagerArn) {
             this.secretManagerArn = Objects.requireNonNull(secretManagerArn);
             return this;
         }
-
         public Builder secretManagerArn(String secretManagerArn) {
             this.secretManagerArn = Output.of(Objects.requireNonNull(secretManagerArn));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public Builder vpcConfiguration(Output<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
         }
-
         public Builder vpcConfiguration(AnomalyDetectorVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Output.of(Objects.requireNonNull(vpcConfiguration));
             return this;
-        }
-        public AnomalyDetectorRedshiftSourceConfigArgs build() {
+        }        public AnomalyDetectorRedshiftSourceConfigArgs build() {
             return new AnomalyDetectorRedshiftSourceConfigArgs(clusterIdentifier, databaseHost, databaseName, databasePort, roleArn, secretManagerArn, tableName, vpcConfiguration);
         }
     }

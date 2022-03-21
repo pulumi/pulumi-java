@@ -145,32 +145,29 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
             this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
             return this;
         }
-
         public Builder dataCenterLocation(@Nullable String dataCenterLocation) {
             this.dataCenterLocation = dataCenterLocation;
             return this;
         }
-
         public Builder delegatedSubnetId(@Nullable String delegatedSubnetId) {
             this.delegatedSubnetId = delegatedSubnetId;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }
-        public DataCenterResourceResponseProperties build() {
+        public Builder seedNodes(SeedNodeResponse... seedNodes) {
+            return seedNodes(List.of(seedNodes));
+        }        public DataCenterResourceResponseProperties build() {
             return new DataCenterResourceResponseProperties(base64EncodedCassandraYamlFragment, dataCenterLocation, delegatedSubnetId, nodeCount, provisioningState, seedNodes);
         }
     }

@@ -140,62 +140,53 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder destinationAccount(Output<String> destinationAccount) {
             this.destinationAccount = Objects.requireNonNull(destinationAccount);
             return this;
         }
-
         public Builder destinationAccount(String destinationAccount) {
             this.destinationAccount = Output.of(Objects.requireNonNull(destinationAccount));
             return this;
         }
-
         public Builder objectReplicationPolicyId(@Nullable Output<String> objectReplicationPolicyId) {
             this.objectReplicationPolicyId = objectReplicationPolicyId;
             return this;
         }
-
         public Builder objectReplicationPolicyId(@Nullable String objectReplicationPolicyId) {
             this.objectReplicationPolicyId = Output.ofNullable(objectReplicationPolicyId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rules(@Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<ObjectReplicationPolicyRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(ObjectReplicationPolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder sourceAccount(Output<String> sourceAccount) {
             this.sourceAccount = Objects.requireNonNull(sourceAccount);
             return this;
         }
-
         public Builder sourceAccount(String sourceAccount) {
             this.sourceAccount = Output.of(Objects.requireNonNull(sourceAccount));
             return this;
-        }
-        public ObjectReplicationPolicyArgs build() {
+        }        public ObjectReplicationPolicyArgs build() {
             return new ObjectReplicationPolicyArgs(accountName, destinationAccount, objectReplicationPolicyId, resourceGroupName, rules, sourceAccount);
         }
     }

@@ -105,37 +105,33 @@ public final class GetAppEngineServiceResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder moduleId(String moduleId) {
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder telemetries(List<GetAppEngineServiceTelemetry> telemetries) {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-        public GetAppEngineServiceResult build() {
+        public Builder telemetries(GetAppEngineServiceTelemetry... telemetries) {
+            return telemetries(List.of(telemetries));
+        }        public GetAppEngineServiceResult build() {
             return new GetAppEngineServiceResult(displayName, id, moduleId, name, project, serviceId, telemetries);
         }
     }

@@ -120,27 +120,22 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScaling {
             this.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
-
         public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
             this.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
-
         public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
             this.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder targetCapacity(@Nullable Integer targetCapacity) {
             this.targetCapacity = targetCapacity;
             return this;
-        }
-        public CapacityProviderAutoScalingGroupProviderManagedScaling build() {
+        }        public CapacityProviderAutoScalingGroupProviderManagedScaling build() {
             return new CapacityProviderAutoScalingGroupProviderManagedScaling(instanceWarmupPeriod, maximumScalingStepSize, minimumScalingStepSize, status, targetCapacity);
         }
     }

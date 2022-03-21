@@ -58,8 +58,7 @@ public final class ApplicationNotificationEndpointResponse extends io.pulumi.res
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ApplicationNotificationEndpointResponse build() {
+        }        public ApplicationNotificationEndpointResponse build() {
             return new ApplicationNotificationEndpointResponse(uri);
         }
     }

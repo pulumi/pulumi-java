@@ -182,92 +182,74 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
-
         public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
             this.messageRetentionDuration = Output.ofNullable(messageRetentionDuration);
             return this;
         }
-
         public Builder messageStoragePolicy(@Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy) {
             this.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
-
         public Builder messageStoragePolicy(@Nullable MessageStoragePolicyArgs messageStoragePolicy) {
             this.messageStoragePolicy = Output.ofNullable(messageStoragePolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
-
         public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
             this.satisfiesPzs = Output.ofNullable(satisfiesPzs);
             return this;
         }
-
         public Builder schemaSettings(@Nullable Output<SchemaSettingsArgs> schemaSettings) {
             this.schemaSettings = schemaSettings;
             return this;
         }
-
         public Builder schemaSettings(@Nullable SchemaSettingsArgs schemaSettings) {
             this.schemaSettings = Output.ofNullable(schemaSettings);
             return this;
         }
-
         public Builder topicId(Output<String> topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
-
         public Builder topicId(String topicId) {
             this.topicId = Output.of(Objects.requireNonNull(topicId));
             return this;
-        }
-        public TopicArgs build() {
+        }        public TopicArgs build() {
             return new TopicArgs(kmsKeyName, labels, messageRetentionDuration, messageStoragePolicy, name, project, satisfiesPzs, schemaSettings, topicId);
         }
     }

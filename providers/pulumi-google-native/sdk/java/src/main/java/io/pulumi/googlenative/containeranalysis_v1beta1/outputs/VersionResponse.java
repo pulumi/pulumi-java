@@ -119,27 +119,22 @@ public final class VersionResponse {
             this.epoch = Objects.requireNonNull(epoch);
             return this;
         }
-
         public Builder inclusive(Boolean inclusive) {
             this.inclusive = Objects.requireNonNull(inclusive);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
-        }
-        public VersionResponse build() {
+        }        public VersionResponse build() {
             return new VersionResponse(epoch, inclusive, kind, name, revision);
         }
     }

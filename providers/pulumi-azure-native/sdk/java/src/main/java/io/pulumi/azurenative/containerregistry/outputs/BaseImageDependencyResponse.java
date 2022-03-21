@@ -119,27 +119,22 @@ public final class BaseImageDependencyResponse {
             this.digest = digest;
             return this;
         }
-
         public Builder registry(@Nullable String registry) {
             this.registry = registry;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public BaseImageDependencyResponse build() {
+        }        public BaseImageDependencyResponse build() {
             return new BaseImageDependencyResponse(digest, registry, repository, tag, type);
         }
     }

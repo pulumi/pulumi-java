@@ -112,42 +112,34 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
             this.allocationWeight = allocationWeight;
             return this;
         }
-
         public Builder allocationWeight(@Nullable Integer allocationWeight) {
             this.allocationWeight = Output.ofNullable(allocationWeight);
             return this;
         }
-
         public Builder applyAllocationPolicy(@Nullable Output<Boolean> applyAllocationPolicy) {
             this.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
-
         public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
             this.applyAllocationPolicy = Output.ofNullable(applyAllocationPolicy);
             return this;
         }
-
         public Builder connectionString(Output<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder connectionString(String connectionString) {
             this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
-        }
-        public IotHubDefinitionDescriptionArgs build() {
+        }        public IotHubDefinitionDescriptionArgs build() {
             return new IotHubDefinitionDescriptionArgs(allocationWeight, applyAllocationPolicy, connectionString, location);
         }
     }

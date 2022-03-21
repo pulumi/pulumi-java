@@ -180,82 +180,66 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.blobUri = blobUri;
             return this;
         }
-
         public Builder blobUri(@Nullable String blobUri) {
             this.blobUri = Output.ofNullable(blobUri);
             return this;
         }
-
         public Builder caching(@Nullable Output<CachingTypes> caching) {
             this.caching = caching;
             return this;
         }
-
         public Builder caching(@Nullable CachingTypes caching) {
             this.caching = Output.ofNullable(caching);
             return this;
         }
-
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
             this.diskEncryptionSet = Output.ofNullable(diskEncryptionSet);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
-
         public Builder managedDisk(@Nullable Output<SubResourceArgs> managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder managedDisk(@Nullable SubResourceArgs managedDisk) {
             this.managedDisk = Output.ofNullable(managedDisk);
             return this;
         }
-
         public Builder snapshot(@Nullable Output<SubResourceArgs> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder snapshot(@Nullable SubResourceArgs snapshot) {
             this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
-        }
-        public ImageDataDiskArgs build() {
+        }        public ImageDataDiskArgs build() {
             return new ImageDataDiskArgs(blobUri, caching, diskEncryptionSet, diskSizeGB, lun, managedDisk, snapshot, storageAccountType);
         }
     }

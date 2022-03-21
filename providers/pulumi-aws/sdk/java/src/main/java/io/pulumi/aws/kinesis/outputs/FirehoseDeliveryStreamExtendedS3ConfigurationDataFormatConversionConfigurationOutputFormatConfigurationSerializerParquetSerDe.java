@@ -137,32 +137,26 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
             this.enableDictionaryCompression = enableDictionaryCompression;
             return this;
         }
-
         public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
             this.maxPaddingBytes = maxPaddingBytes;
             return this;
         }
-
         public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
             this.pageSizeBytes = pageSizeBytes;
             return this;
         }
-
         public Builder writerVersion(@Nullable String writerVersion) {
             this.writerVersion = writerVersion;
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe(blockSizeBytes, compression, enableDictionaryCompression, maxPaddingBytes, pageSizeBytes, writerVersion);
         }
     }

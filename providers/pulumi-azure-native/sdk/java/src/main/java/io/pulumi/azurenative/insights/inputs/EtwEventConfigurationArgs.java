@@ -79,32 +79,26 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder id(Output<Integer> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(Integer id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public EtwEventConfigurationArgs build() {
+        }        public EtwEventConfigurationArgs build() {
             return new EtwEventConfigurationArgs(filter, id, name);
         }
     }

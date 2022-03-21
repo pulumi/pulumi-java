@@ -53,12 +53,10 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
             this.resourceCreationBegin = resourceCreationBegin;
             return this;
         }
-
         public Builder resourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResourceCreationBeginArgs resourceCreationBegin) {
             this.resourceCreationBegin = Output.ofNullable(resourceCreationBegin);
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesExtensionOptionsArgs build() {
+        }        public ResourceTypeRegistrationPropertiesExtensionOptionsArgs build() {
             return new ResourceTypeRegistrationPropertiesExtensionOptionsArgs(resourceCreationBegin);
         }
     }

@@ -140,62 +140,53 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder vmGroupId(@Nullable Output<String> vmGroupId) {
             this.vmGroupId = vmGroupId;
             return this;
         }
-
         public Builder vmGroupId(@Nullable String vmGroupId) {
             this.vmGroupId = Output.ofNullable(vmGroupId);
             return this;
-        }
-        public WorkloadNetworkVMGroupArgs build() {
+        }        public WorkloadNetworkVMGroupArgs build() {
             return new WorkloadNetworkVMGroupArgs(displayName, members, privateCloudName, resourceGroupName, revision, vmGroupId);
         }
     }

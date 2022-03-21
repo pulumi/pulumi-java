@@ -56,12 +56,10 @@ public final class DomainNodeToNodeEncryptionArgs extends io.pulumi.resources.Re
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public DomainNodeToNodeEncryptionArgs build() {
+        }        public DomainNodeToNodeEncryptionArgs build() {
             return new DomainNodeToNodeEncryptionArgs(enabled);
         }
     }

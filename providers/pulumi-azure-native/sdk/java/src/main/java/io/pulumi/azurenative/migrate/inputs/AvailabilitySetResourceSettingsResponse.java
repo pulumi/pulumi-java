@@ -112,22 +112,18 @@ public final class AvailabilitySetResourceSettingsResponse extends io.pulumi.res
             this.faultDomain = faultDomain;
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder updateDomain(@Nullable Integer updateDomain) {
             this.updateDomain = updateDomain;
             return this;
-        }
-        public AvailabilitySetResourceSettingsResponse build() {
+        }        public AvailabilitySetResourceSettingsResponse build() {
             return new AvailabilitySetResourceSettingsResponse(faultDomain, resourceType, targetResourceName, updateDomain);
         }
     }

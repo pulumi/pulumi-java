@@ -57,12 +57,13 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
             this.authorizations = authorizations;
             return this;
         }
-
+        public Builder authorizations(LightHouseAuthorizationResponse... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
-        }
-        public ProviderHubMetadataResponseThirdPartyProviderAuthorization build() {
+        }        public ProviderHubMetadataResponseThirdPartyProviderAuthorization build() {
             return new ProviderHubMetadataResponseThirdPartyProviderAuthorization(authorizations, managedByTenantId);
         }
     }

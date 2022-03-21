@@ -71,12 +71,10 @@ public final class LaunchTemplateIamInstanceProfile {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public LaunchTemplateIamInstanceProfile build() {
+        }        public LaunchTemplateIamInstanceProfile build() {
             return new LaunchTemplateIamInstanceProfile(arn, name);
         }
     }

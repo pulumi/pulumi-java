@@ -74,22 +74,18 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
-
         public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = Output.ofNullable(recordSetId);
             return this;
-        }
-        public ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs build() {
+        }        public ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs(domainName, recordSetId);
         }
     }

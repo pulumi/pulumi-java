@@ -55,12 +55,10 @@ public final class LinkTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public LinkTag build() {
+        }        public LinkTag build() {
             return new LinkTag(key, value);
         }
     }

@@ -91,32 +91,26 @@ public final class SnapshotCopyGrantArgs extends io.pulumi.resources.ResourceArg
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder snapshotCopyGrantName(Output<String> snapshotCopyGrantName) {
             this.snapshotCopyGrantName = Objects.requireNonNull(snapshotCopyGrantName);
             return this;
         }
-
         public Builder snapshotCopyGrantName(String snapshotCopyGrantName) {
             this.snapshotCopyGrantName = Output.of(Objects.requireNonNull(snapshotCopyGrantName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SnapshotCopyGrantArgs build() {
+        }        public SnapshotCopyGrantArgs build() {
             return new SnapshotCopyGrantArgs(kmsKeyId, snapshotCopyGrantName, tags);
         }
     }

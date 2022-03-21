@@ -64,17 +64,14 @@ public final class GetCertificateResult {
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder status(@Nullable CertificateStatus status) {
             this.status = status;
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(arn, id, status);
         }
     }

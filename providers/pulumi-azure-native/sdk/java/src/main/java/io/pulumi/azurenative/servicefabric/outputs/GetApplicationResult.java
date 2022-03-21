@@ -319,87 +319,76 @@ public final class GetApplicationResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ManagedIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedIdentities(@Nullable List<ApplicationUserAssignedIdentityResponse> managedIdentities) {
             this.managedIdentities = managedIdentities;
             return this;
         }
-
+        public Builder managedIdentities(ApplicationUserAssignedIdentityResponse... managedIdentities) {
+            return managedIdentities(List.of(managedIdentities));
+        }
         public Builder maximumNodes(@Nullable Double maximumNodes) {
             this.maximumNodes = maximumNodes;
             return this;
         }
-
         public Builder metrics(@Nullable List<ApplicationMetricDescriptionResponse> metrics) {
             this.metrics = metrics;
             return this;
         }
-
+        public Builder metrics(ApplicationMetricDescriptionResponse... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minimumNodes(@Nullable Double minimumNodes) {
             this.minimumNodes = minimumNodes;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder removeApplicationCapacity(@Nullable Boolean removeApplicationCapacity) {
             this.removeApplicationCapacity = removeApplicationCapacity;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeVersion(@Nullable String typeVersion) {
             this.typeVersion = typeVersion;
             return this;
         }
-
         public Builder upgradePolicy(@Nullable ApplicationUpgradePolicyResponse upgradePolicy) {
             this.upgradePolicy = upgradePolicy;
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(etag, id, identity, location, managedIdentities, maximumNodes, metrics, minimumNodes, name, parameters, provisioningState, removeApplicationCapacity, tags, type, typeName, typeVersion, upgradePolicy);
         }
     }

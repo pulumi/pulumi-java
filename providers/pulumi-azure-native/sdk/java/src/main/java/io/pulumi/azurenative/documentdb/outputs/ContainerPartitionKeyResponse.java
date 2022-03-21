@@ -106,22 +106,21 @@ public final class ContainerPartitionKeyResponse {
             this.kind = kind;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder systemKey(Boolean systemKey) {
             this.systemKey = Objects.requireNonNull(systemKey);
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public ContainerPartitionKeyResponse build() {
+        }        public ContainerPartitionKeyResponse build() {
             return new ContainerPartitionKeyResponse(kind, paths, systemKey, version);
         }
     }

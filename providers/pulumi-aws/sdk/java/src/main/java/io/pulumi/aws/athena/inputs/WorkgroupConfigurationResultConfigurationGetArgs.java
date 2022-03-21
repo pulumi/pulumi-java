@@ -75,22 +75,18 @@ public final class WorkgroupConfigurationResultConfigurationGetArgs extends io.p
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = Output.ofNullable(outputLocation);
             return this;
-        }
-        public WorkgroupConfigurationResultConfigurationGetArgs build() {
+        }        public WorkgroupConfigurationResultConfigurationGetArgs build() {
             return new WorkgroupConfigurationResultConfigurationGetArgs(encryptionConfiguration, outputLocation);
         }
     }

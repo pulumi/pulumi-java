@@ -74,22 +74,18 @@ public final class VirtualNodeSpecListenerPortMappingArgs extends io.pulumi.reso
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public VirtualNodeSpecListenerPortMappingArgs build() {
+        }        public VirtualNodeSpecListenerPortMappingArgs build() {
             return new VirtualNodeSpecListenerPortMappingArgs(port, protocol);
         }
     }

@@ -130,37 +130,42 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
             this.apiVersions = apiVersions;
             return this;
         }
-
+        public Builder apiVersions(String... apiVersions) {
+            return apiVersions(List.of(apiVersions));
+        }
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder extensions(@Nullable List<ResourceTypeExtensionResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
-
+        public Builder extensions(ResourceTypeExtensionResponse... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder featuresRule(@Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public ResourceTypeEndpointResponse build() {
+        }        public ResourceTypeEndpointResponse build() {
             return new ResourceTypeEndpointResponse(apiVersions, enabled, extensions, featuresRule, locations, requiredFeatures, timeout);
         }
     }

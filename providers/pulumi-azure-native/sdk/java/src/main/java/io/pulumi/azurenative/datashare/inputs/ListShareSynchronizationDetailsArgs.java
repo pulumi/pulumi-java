@@ -283,77 +283,62 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder consumerEmail(@Nullable String consumerEmail) {
             this.consumerEmail = consumerEmail;
             return this;
         }
-
         public Builder consumerName(@Nullable String consumerName) {
             this.consumerName = consumerName;
             return this;
         }
-
         public Builder consumerTenantName(@Nullable String consumerTenantName) {
             this.consumerTenantName = consumerTenantName;
             return this;
         }
-
         public Builder durationMs(@Nullable Integer durationMs) {
             this.durationMs = durationMs;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder orderby(@Nullable String orderby) {
             this.orderby = orderby;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder synchronizationId(@Nullable String synchronizationId) {
             this.synchronizationId = synchronizationId;
             return this;
-        }
-        public ListShareSynchronizationDetailsArgs build() {
+        }        public ListShareSynchronizationDetailsArgs build() {
             return new ListShareSynchronizationDetailsArgs(accountName, consumerEmail, consumerName, consumerTenantName, durationMs, endTime, filter, message, orderby, resourceGroupName, shareName, skipToken, startTime, status, synchronizationId);
         }
     }

@@ -90,32 +90,26 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
             this.backupVaultArn = backupVaultArn;
             return this;
         }
-
         public Builder backupVaultArn(@Nullable String backupVaultArn) {
             this.backupVaultArn = Output.ofNullable(backupVaultArn);
             return this;
         }
-
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
             this.backupVaultName = backupVaultName;
             return this;
         }
-
         public Builder backupVaultName(@Nullable String backupVaultName) {
             this.backupVaultName = Output.ofNullable(backupVaultName);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public VaultPolicyState build() {
+        }        public VaultPolicyState build() {
             return new VaultPolicyState(backupVaultArn, backupVaultName, policy);
         }
     }

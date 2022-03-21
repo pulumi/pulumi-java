@@ -91,32 +91,26 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
         public Builder filters(InsightFiltersArgs filters) {
             this.filters = Output.of(Objects.requireNonNull(filters));
             return this;
         }
-
         public Builder groupByAttribute(Output<String> groupByAttribute) {
             this.groupByAttribute = Objects.requireNonNull(groupByAttribute);
             return this;
         }
-
         public Builder groupByAttribute(String groupByAttribute) {
             this.groupByAttribute = Output.of(Objects.requireNonNull(groupByAttribute));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public InsightArgs build() {
+        }        public InsightArgs build() {
             return new InsightArgs(filters, groupByAttribute, name);
         }
     }

@@ -69,12 +69,10 @@ public final class VoiceConnectorTerminationCredentialsCredential {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public VoiceConnectorTerminationCredentialsCredential build() {
+        }        public VoiceConnectorTerminationCredentialsCredential build() {
             return new VoiceConnectorTerminationCredentialsCredential(password, username);
         }
     }

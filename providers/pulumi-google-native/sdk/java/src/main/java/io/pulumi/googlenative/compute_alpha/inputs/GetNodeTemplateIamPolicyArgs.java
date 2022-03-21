@@ -90,22 +90,18 @@ public final class GetNodeTemplateIamPolicyArgs extends io.pulumi.resources.Invo
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetNodeTemplateIamPolicyArgs build() {
+        }        public GetNodeTemplateIamPolicyArgs build() {
             return new GetNodeTemplateIamPolicyArgs(optionsRequestedPolicyVersion, project, region, resource);
         }
     }

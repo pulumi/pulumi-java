@@ -152,37 +152,30 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
             this.sensitivityLabelSource = Objects.requireNonNull(sensitivityLabelSource);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public GetManagedDatabaseSensitivityLabelArgs build() {
+        }        public GetManagedDatabaseSensitivityLabelArgs build() {
             return new GetManagedDatabaseSensitivityLabelArgs(columnName, databaseName, managedInstanceName, resourceGroupName, schemaName, sensitivityLabelSource, tableName);
         }
     }

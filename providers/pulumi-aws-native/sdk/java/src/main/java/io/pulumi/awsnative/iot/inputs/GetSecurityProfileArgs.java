@@ -54,8 +54,7 @@ public final class GetSecurityProfileArgs extends io.pulumi.resources.InvokeArgs
         public Builder securityProfileName(String securityProfileName) {
             this.securityProfileName = Objects.requireNonNull(securityProfileName);
             return this;
-        }
-        public GetSecurityProfileArgs build() {
+        }        public GetSecurityProfileArgs build() {
             return new GetSecurityProfileArgs(securityProfileName);
         }
     }

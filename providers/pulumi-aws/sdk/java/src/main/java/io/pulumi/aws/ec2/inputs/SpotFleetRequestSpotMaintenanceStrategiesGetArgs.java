@@ -57,12 +57,10 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
             this.capacityRebalance = capacityRebalance;
             return this;
         }
-
         public Builder capacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
             this.capacityRebalance = Output.ofNullable(capacityRebalance);
             return this;
-        }
-        public SpotFleetRequestSpotMaintenanceStrategiesGetArgs build() {
+        }        public SpotFleetRequestSpotMaintenanceStrategiesGetArgs build() {
             return new SpotFleetRequestSpotMaintenanceStrategiesGetArgs(capacityRebalance);
         }
     }

@@ -53,8 +53,7 @@ public final class UserRoleResponseResponse {
         public Builder role(@Nullable String role) {
             this.role = role;
             return this;
-        }
-        public UserRoleResponseResponse build() {
+        }        public UserRoleResponseResponse build() {
             return new UserRoleResponseResponse(role);
         }
     }

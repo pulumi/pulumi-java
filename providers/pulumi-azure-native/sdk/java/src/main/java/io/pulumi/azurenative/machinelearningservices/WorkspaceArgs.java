@@ -370,202 +370,165 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
             return this;
         }
-
         public Builder allowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
             this.allowPublicAccessWhenBehindVnet = Output.ofNullable(allowPublicAccessWhenBehindVnet);
             return this;
         }
-
         public Builder applicationInsights(@Nullable Output<String> applicationInsights) {
             this.applicationInsights = applicationInsights;
             return this;
         }
-
         public Builder applicationInsights(@Nullable String applicationInsights) {
             this.applicationInsights = Output.ofNullable(applicationInsights);
             return this;
         }
-
         public Builder containerRegistry(@Nullable Output<String> containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
-
         public Builder containerRegistry(@Nullable String containerRegistry) {
             this.containerRegistry = Output.ofNullable(containerRegistry);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder discoveryUrl(@Nullable Output<String> discoveryUrl) {
             this.discoveryUrl = discoveryUrl;
             return this;
         }
-
         public Builder discoveryUrl(@Nullable String discoveryUrl) {
             this.discoveryUrl = Output.ofNullable(discoveryUrl);
             return this;
         }
-
         public Builder encryption(@Nullable Output<EncryptionPropertyArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionPropertyArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder hbiWorkspace(@Nullable Output<Boolean> hbiWorkspace) {
             this.hbiWorkspace = hbiWorkspace;
             return this;
         }
-
         public Builder hbiWorkspace(@Nullable Boolean hbiWorkspace) {
             this.hbiWorkspace = Output.ofNullable(hbiWorkspace);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder imageBuildCompute(@Nullable Output<String> imageBuildCompute) {
             this.imageBuildCompute = imageBuildCompute;
             return this;
         }
-
         public Builder imageBuildCompute(@Nullable String imageBuildCompute) {
             this.imageBuildCompute = Output.ofNullable(imageBuildCompute);
             return this;
         }
-
         public Builder keyVault(@Nullable Output<String> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
-
         public Builder keyVault(@Nullable String keyVault) {
             this.keyVault = Output.ofNullable(keyVault);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder primaryUserAssignedIdentity(@Nullable Output<String> primaryUserAssignedIdentity) {
             this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
             return this;
         }
-
         public Builder primaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
             this.primaryUserAssignedIdentity = Output.ofNullable(primaryUserAssignedIdentity);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceManagedResourcesSettings(@Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings) {
             this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
             return this;
         }
-
         public Builder serviceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsArgs serviceManagedResourcesSettings) {
             this.serviceManagedResourcesSettings = Output.ofNullable(serviceManagedResourcesSettings);
             return this;
         }
-
         public Builder sharedPrivateLinkResources(@Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = sharedPrivateLinkResources;
             return this;
         }
-
         public Builder sharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceArgs> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = Output.ofNullable(sharedPrivateLinkResources);
             return this;
         }
-
+        public Builder sharedPrivateLinkResources(SharedPrivateLinkResourceArgs... sharedPrivateLinkResources) {
+            return sharedPrivateLinkResources(List.of(sharedPrivateLinkResources));
+        }
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
-
         public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Output.ofNullable(workspaceName);
             return this;
-        }
-        public WorkspaceArgs build() {
+        }        public WorkspaceArgs build() {
             return new WorkspaceArgs(allowPublicAccessWhenBehindVnet, applicationInsights, containerRegistry, description, discoveryUrl, encryption, friendlyName, hbiWorkspace, identity, imageBuildCompute, keyVault, location, primaryUserAssignedIdentity, resourceGroupName, serviceManagedResourcesSettings, sharedPrivateLinkResources, sku, storageAccount, tags, workspaceName);
         }
     }

@@ -167,72 +167,61 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             this.alternativeNameServerConfig = alternativeNameServerConfig;
             return this;
         }
-
         public Builder alternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigGetArgs alternativeNameServerConfig) {
             this.alternativeNameServerConfig = Output.ofNullable(alternativeNameServerConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableInboundForwarding(@Nullable Output<Boolean> enableInboundForwarding) {
             this.enableInboundForwarding = enableInboundForwarding;
             return this;
         }
-
         public Builder enableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
             this.enableInboundForwarding = Output.ofNullable(enableInboundForwarding);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networks(@Nullable Output<List<PolicyNetworkGetArgs>> networks) {
             this.networks = networks;
             return this;
         }
-
         public Builder networks(@Nullable List<PolicyNetworkGetArgs> networks) {
             this.networks = Output.ofNullable(networks);
             return this;
         }
-
+        public Builder networks(PolicyNetworkGetArgs... networks) {
+            return networks(List.of(networks));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public PolicyState build() {
+        }        public PolicyState build() {
             return new PolicyState(alternativeNameServerConfig, description, enableInboundForwarding, enableLogging, name, networks, project);
         }
     }

@@ -72,12 +72,10 @@ public final class GetAppServiceEnvironmentArgs extends io.pulumi.resources.Invo
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAppServiceEnvironmentArgs build() {
+        }        public GetAppServiceEnvironmentArgs build() {
             return new GetAppServiceEnvironmentArgs(name, resourceGroupName);
         }
     }

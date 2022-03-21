@@ -72,12 +72,13 @@ public final class ListIotDpsResourceKeysResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
             this.value = value;
             return this;
         }
-        public ListIotDpsResourceKeysResult build() {
+        public Builder value(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse... value) {
+            return value(List.of(value));
+        }        public ListIotDpsResourceKeysResult build() {
             return new ListIotDpsResourceKeysResult(nextLink, value);
         }
     }

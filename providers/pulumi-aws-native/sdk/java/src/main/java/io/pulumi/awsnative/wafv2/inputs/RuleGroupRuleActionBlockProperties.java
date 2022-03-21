@@ -56,8 +56,7 @@ public final class RuleGroupRuleActionBlockProperties extends io.pulumi.resource
         public Builder customResponse(@Nullable RuleGroupCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
-        }
-        public RuleGroupRuleActionBlockProperties build() {
+        }        public RuleGroupRuleActionBlockProperties build() {
             return new RuleGroupRuleActionBlockProperties(customResponse);
         }
     }

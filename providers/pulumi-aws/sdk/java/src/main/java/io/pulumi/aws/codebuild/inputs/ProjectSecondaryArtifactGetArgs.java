@@ -203,102 +203,82 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
             this.artifactIdentifier = Objects.requireNonNull(artifactIdentifier);
             return this;
         }
-
         public Builder artifactIdentifier(String artifactIdentifier) {
             this.artifactIdentifier = Output.of(Objects.requireNonNull(artifactIdentifier));
             return this;
         }
-
         public Builder bucketOwnerAccess(@Nullable Output<String> bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
-
         public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = Output.ofNullable(bucketOwnerAccess);
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespaceType(@Nullable Output<String> namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
-
         public Builder namespaceType(@Nullable String namespaceType) {
             this.namespaceType = Output.ofNullable(namespaceType);
             return this;
         }
-
         public Builder overrideArtifactName(@Nullable Output<Boolean> overrideArtifactName) {
             this.overrideArtifactName = overrideArtifactName;
             return this;
         }
-
         public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
             this.overrideArtifactName = Output.ofNullable(overrideArtifactName);
             return this;
         }
-
         public Builder packaging(@Nullable Output<String> packaging) {
             this.packaging = packaging;
             return this;
         }
-
         public Builder packaging(@Nullable String packaging) {
             this.packaging = Output.ofNullable(packaging);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ProjectSecondaryArtifactGetArgs build() {
+        }        public ProjectSecondaryArtifactGetArgs build() {
             return new ProjectSecondaryArtifactGetArgs(artifactIdentifier, bucketOwnerAccess, encryptionDisabled, location, name, namespaceType, overrideArtifactName, packaging, path, type);
         }
     }

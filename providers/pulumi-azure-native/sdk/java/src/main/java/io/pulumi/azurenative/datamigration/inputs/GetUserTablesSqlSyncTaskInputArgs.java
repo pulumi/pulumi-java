@@ -111,42 +111,40 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
             this.selectedSourceDatabases = Objects.requireNonNull(selectedSourceDatabases);
             return this;
         }
-
         public Builder selectedSourceDatabases(List<String> selectedSourceDatabases) {
             this.selectedSourceDatabases = Output.of(Objects.requireNonNull(selectedSourceDatabases));
             return this;
         }
-
+        public Builder selectedSourceDatabases(String... selectedSourceDatabases) {
+            return selectedSourceDatabases(List.of(selectedSourceDatabases));
+        }
         public Builder selectedTargetDatabases(Output<List<String>> selectedTargetDatabases) {
             this.selectedTargetDatabases = Objects.requireNonNull(selectedTargetDatabases);
             return this;
         }
-
         public Builder selectedTargetDatabases(List<String> selectedTargetDatabases) {
             this.selectedTargetDatabases = Output.of(Objects.requireNonNull(selectedTargetDatabases));
             return this;
         }
-
+        public Builder selectedTargetDatabases(String... selectedTargetDatabases) {
+            return selectedTargetDatabases(List.of(selectedTargetDatabases));
+        }
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
-        }
-        public GetUserTablesSqlSyncTaskInputArgs build() {
+        }        public GetUserTablesSqlSyncTaskInputArgs build() {
             return new GetUserTablesSqlSyncTaskInputArgs(selectedSourceDatabases, selectedTargetDatabases, sourceConnectionInfo, targetConnectionInfo);
         }
     }

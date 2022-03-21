@@ -72,12 +72,16 @@ public final class CertificateTemplatePassthroughExtensions {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
+        public Builder additionalExtensions(CertificateTemplatePassthroughExtensionsAdditionalExtension... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder knownExtensions(@Nullable List<String> knownExtensions) {
             this.knownExtensions = knownExtensions;
             return this;
         }
-        public CertificateTemplatePassthroughExtensions build() {
+        public Builder knownExtensions(String... knownExtensions) {
+            return knownExtensions(List.of(knownExtensions));
+        }        public CertificateTemplatePassthroughExtensions build() {
             return new CertificateTemplatePassthroughExtensions(additionalExtensions, knownExtensions);
         }
     }

@@ -193,92 +193,77 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Output.ofNullable(environmentName);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder storageConfiguration(Output<Gen2StorageConfigurationInputArgs> storageConfiguration) {
             this.storageConfiguration = Objects.requireNonNull(storageConfiguration);
             return this;
         }
-
         public Builder storageConfiguration(Gen2StorageConfigurationInputArgs storageConfiguration) {
             this.storageConfiguration = Output.of(Objects.requireNonNull(storageConfiguration));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeSeriesIdProperties(Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
             this.timeSeriesIdProperties = Objects.requireNonNull(timeSeriesIdProperties);
             return this;
         }
-
         public Builder timeSeriesIdProperties(List<TimeSeriesIdPropertyArgs> timeSeriesIdProperties) {
             this.timeSeriesIdProperties = Output.of(Objects.requireNonNull(timeSeriesIdProperties));
             return this;
         }
-
+        public Builder timeSeriesIdProperties(TimeSeriesIdPropertyArgs... timeSeriesIdProperties) {
+            return timeSeriesIdProperties(List.of(timeSeriesIdProperties));
+        }
         public Builder warmStoreConfiguration(@Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
             this.warmStoreConfiguration = warmStoreConfiguration;
             return this;
         }
-
         public Builder warmStoreConfiguration(@Nullable WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
             this.warmStoreConfiguration = Output.ofNullable(warmStoreConfiguration);
             return this;
-        }
-        public Gen2EnvironmentArgs build() {
+        }        public Gen2EnvironmentArgs build() {
             return new Gen2EnvironmentArgs(environmentName, kind, location, resourceGroupName, sku, storageConfiguration, tags, timeSeriesIdProperties, warmStoreConfiguration);
         }
     }

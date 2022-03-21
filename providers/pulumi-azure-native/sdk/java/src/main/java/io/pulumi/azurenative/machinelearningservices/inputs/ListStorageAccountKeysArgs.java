@@ -72,12 +72,10 @@ public final class ListStorageAccountKeysArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListStorageAccountKeysArgs build() {
+        }        public ListStorageAccountKeysArgs build() {
             return new ListStorageAccountKeysArgs(resourceGroupName, workspaceName);
         }
     }

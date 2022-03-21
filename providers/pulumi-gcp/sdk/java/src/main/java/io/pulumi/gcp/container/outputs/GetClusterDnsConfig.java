@@ -61,17 +61,14 @@ public final class GetClusterDnsConfig {
             this.clusterDns = Objects.requireNonNull(clusterDns);
             return this;
         }
-
         public Builder clusterDnsDomain(String clusterDnsDomain) {
             this.clusterDnsDomain = Objects.requireNonNull(clusterDnsDomain);
             return this;
         }
-
         public Builder clusterDnsScope(String clusterDnsScope) {
             this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
             return this;
-        }
-        public GetClusterDnsConfig build() {
+        }        public GetClusterDnsConfig build() {
             return new GetClusterDnsConfig(clusterDns, clusterDnsDomain, clusterDnsScope);
         }
     }

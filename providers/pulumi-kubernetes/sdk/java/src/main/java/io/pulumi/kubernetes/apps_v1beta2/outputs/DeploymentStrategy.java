@@ -72,12 +72,10 @@ public final class DeploymentStrategy {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DeploymentStrategy build() {
+        }        public DeploymentStrategy build() {
             return new DeploymentStrategy(rollingUpdate, type);
         }
     }

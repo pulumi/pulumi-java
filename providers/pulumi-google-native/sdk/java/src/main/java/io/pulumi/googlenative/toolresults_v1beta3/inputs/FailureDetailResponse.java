@@ -156,37 +156,30 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
             this.crashed = Objects.requireNonNull(crashed);
             return this;
         }
-
         public Builder deviceOutOfMemory(Boolean deviceOutOfMemory) {
             this.deviceOutOfMemory = Objects.requireNonNull(deviceOutOfMemory);
             return this;
         }
-
         public Builder failedRoboscript(Boolean failedRoboscript) {
             this.failedRoboscript = Objects.requireNonNull(failedRoboscript);
             return this;
         }
-
         public Builder notInstalled(Boolean notInstalled) {
             this.notInstalled = Objects.requireNonNull(notInstalled);
             return this;
         }
-
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
         }
-
         public Builder timedOut(Boolean timedOut) {
             this.timedOut = Objects.requireNonNull(timedOut);
             return this;
         }
-
         public Builder unableToCrawl(Boolean unableToCrawl) {
             this.unableToCrawl = Objects.requireNonNull(unableToCrawl);
             return this;
-        }
-        public FailureDetailResponse build() {
+        }        public FailureDetailResponse build() {
             return new FailureDetailResponse(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);
         }
     }

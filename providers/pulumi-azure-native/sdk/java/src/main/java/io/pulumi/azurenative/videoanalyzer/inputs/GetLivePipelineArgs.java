@@ -88,17 +88,14 @@ public final class GetLivePipelineArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder livePipelineName(String livePipelineName) {
             this.livePipelineName = Objects.requireNonNull(livePipelineName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLivePipelineArgs build() {
+        }        public GetLivePipelineArgs build() {
             return new GetLivePipelineArgs(accountName, livePipelineName, resourceGroupName);
         }
     }

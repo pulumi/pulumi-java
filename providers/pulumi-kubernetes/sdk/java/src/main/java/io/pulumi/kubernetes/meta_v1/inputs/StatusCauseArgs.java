@@ -98,32 +98,26 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
-        }
-        public StatusCauseArgs build() {
+        }        public StatusCauseArgs build() {
             return new StatusCauseArgs(field, message, reason);
         }
     }

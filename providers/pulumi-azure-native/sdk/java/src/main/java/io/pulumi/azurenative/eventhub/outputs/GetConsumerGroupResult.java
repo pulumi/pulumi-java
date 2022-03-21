@@ -135,32 +135,26 @@ public final class GetConsumerGroupResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = userMetadata;
             return this;
-        }
-        public GetConsumerGroupResult build() {
+        }        public GetConsumerGroupResult build() {
             return new GetConsumerGroupResult(createdAt, id, name, type, updatedAt, userMetadata);
         }
     }

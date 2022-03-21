@@ -53,8 +53,7 @@ public final class ControllerDetailsResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ControllerDetailsResponse build() {
+        }        public ControllerDetailsResponse build() {
             return new ControllerDetailsResponse(id);
         }
     }

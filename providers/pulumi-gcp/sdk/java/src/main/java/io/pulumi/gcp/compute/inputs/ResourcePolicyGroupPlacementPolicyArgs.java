@@ -96,32 +96,26 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
             this.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
-
         public Builder availabilityDomainCount(@Nullable Integer availabilityDomainCount) {
             this.availabilityDomainCount = Output.ofNullable(availabilityDomainCount);
             return this;
         }
-
         public Builder collocation(@Nullable Output<String> collocation) {
             this.collocation = collocation;
             return this;
         }
-
         public Builder collocation(@Nullable String collocation) {
             this.collocation = Output.ofNullable(collocation);
             return this;
         }
-
         public Builder vmCount(@Nullable Output<Integer> vmCount) {
             this.vmCount = vmCount;
             return this;
         }
-
         public Builder vmCount(@Nullable Integer vmCount) {
             this.vmCount = Output.ofNullable(vmCount);
             return this;
-        }
-        public ResourcePolicyGroupPlacementPolicyArgs build() {
+        }        public ResourcePolicyGroupPlacementPolicyArgs build() {
             return new ResourcePolicyGroupPlacementPolicyArgs(availabilityDomainCount, collocation, vmCount);
         }
     }

@@ -187,47 +187,44 @@ public final class GetStorageInsightConfigResult {
             this.containers = containers;
             return this;
         }
-
+        public Builder containers(String... containers) {
+            return containers(List.of(containers));
+        }
         public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(StorageInsightStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageAccount(StorageAccountResponse storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public Builder tables(@Nullable List<String> tables) {
             this.tables = tables;
             return this;
         }
-
+        public Builder tables(String... tables) {
+            return tables(List.of(tables));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStorageInsightConfigResult build() {
+        }        public GetStorageInsightConfigResult build() {
             return new GetStorageInsightConfigResult(containers, eTag, id, name, status, storageAccount, tables, tags, type);
         }
     }

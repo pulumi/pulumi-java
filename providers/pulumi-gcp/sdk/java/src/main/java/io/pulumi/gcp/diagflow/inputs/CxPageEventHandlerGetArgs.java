@@ -127,52 +127,42 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
             this.event = event;
             return this;
         }
-
         public Builder event(@Nullable String event) {
             this.event = Output.ofNullable(event);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
-
         public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = Output.ofNullable(targetFlow);
             return this;
         }
-
         public Builder targetPage(@Nullable Output<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
-
         public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = Output.ofNullable(targetPage);
             return this;
         }
-
         public Builder triggerFulfillment(@Nullable Output<CxPageEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
-
         public Builder triggerFulfillment(@Nullable CxPageEventHandlerTriggerFulfillmentGetArgs triggerFulfillment) {
             this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
             return this;
-        }
-        public CxPageEventHandlerGetArgs build() {
+        }        public CxPageEventHandlerGetArgs build() {
             return new CxPageEventHandlerGetArgs(event, name, targetFlow, targetPage, triggerFulfillment);
         }
     }

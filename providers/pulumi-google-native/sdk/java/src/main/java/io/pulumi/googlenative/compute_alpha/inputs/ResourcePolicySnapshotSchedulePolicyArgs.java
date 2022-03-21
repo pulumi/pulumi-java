@@ -96,32 +96,26 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder schedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder snapshotProperties(@Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> snapshotProperties) {
             this.snapshotProperties = snapshotProperties;
             return this;
         }
-
         public Builder snapshotProperties(@Nullable ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs snapshotProperties) {
             this.snapshotProperties = Output.ofNullable(snapshotProperties);
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicyArgs build() {
+        }        public ResourcePolicySnapshotSchedulePolicyArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyArgs(retentionPolicy, schedule, snapshotProperties);
         }
     }

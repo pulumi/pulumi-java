@@ -105,22 +105,18 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
             this.canDefer = Objects.requireNonNull(canDefer);
             return this;
         }
-
         public Builder canReschedule(Boolean canReschedule) {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
-
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public SqlScheduledMaintenanceResponse build() {
+        }        public SqlScheduledMaintenanceResponse build() {
             return new SqlScheduledMaintenanceResponse(canDefer, canReschedule, scheduleDeadlineTime, startTime);
         }
     }

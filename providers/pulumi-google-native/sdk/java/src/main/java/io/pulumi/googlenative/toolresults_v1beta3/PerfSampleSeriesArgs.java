@@ -107,52 +107,42 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
             this.basicPerfSampleSeries = basicPerfSampleSeries;
             return this;
         }
-
         public Builder basicPerfSampleSeries(@Nullable BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
             this.basicPerfSampleSeries = Output.ofNullable(basicPerfSampleSeries);
             return this;
         }
-
         public Builder executionId(Output<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder executionId(String executionId) {
             this.executionId = Output.of(Objects.requireNonNull(executionId));
             return this;
         }
-
         public Builder historyId(Output<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder stepId(Output<String> stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Output.of(Objects.requireNonNull(stepId));
             return this;
-        }
-        public PerfSampleSeriesArgs build() {
+        }        public PerfSampleSeriesArgs build() {
             return new PerfSampleSeriesArgs(basicPerfSampleSeries, executionId, historyId, project, stepId);
         }
     }

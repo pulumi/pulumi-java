@@ -88,17 +88,14 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder scopeName(String scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
-        }
-        public GetPrivateLinkScopedResourceArgs build() {
+        }        public GetPrivateLinkScopedResourceArgs build() {
             return new GetPrivateLinkScopedResourceArgs(name, resourceGroupName, scopeName);
         }
     }

@@ -346,97 +346,78 @@ public final class GetNamespaceResult {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder critical(@Nullable Boolean critical) {
             this.critical = critical;
             return this;
         }
-
         public Builder dataCenter(@Nullable String dataCenter) {
             this.dataCenter = dataCenter;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder metricId(String metricId) {
             this.metricId = Objects.requireNonNull(metricId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespaceType(@Nullable String namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder scaleUnit(@Nullable String scaleUnit) {
             this.scaleUnit = scaleUnit;
             return this;
         }
-
         public Builder serviceBusEndpoint(@Nullable String serviceBusEndpoint) {
             this.serviceBusEndpoint = serviceBusEndpoint;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
-        }
-        public GetNamespaceResult build() {
+        }        public GetNamespaceResult build() {
             return new GetNamespaceResult(createdAt, critical, dataCenter, enabled, id, location, metricId, name, namespaceType, provisioningState, region, scaleUnit, serviceBusEndpoint, sku, status, subscriptionId, tags, type, updatedAt);
         }
     }

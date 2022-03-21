@@ -88,17 +88,14 @@ public final class GetNamespaceAuthorizationRuleArgs extends io.pulumi.resources
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNamespaceAuthorizationRuleArgs build() {
+        }        public GetNamespaceAuthorizationRuleArgs build() {
             return new GetNamespaceAuthorizationRuleArgs(authorizationRuleName, namespaceName, resourceGroupName);
         }
     }

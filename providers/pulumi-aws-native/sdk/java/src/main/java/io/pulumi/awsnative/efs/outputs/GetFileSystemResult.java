@@ -109,42 +109,40 @@ public final class GetFileSystemResult {
             this.arn = arn;
             return this;
         }
-
         public Builder backupPolicy(@Nullable FileSystemBackupPolicy backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemPolicy(@Nullable Object fileSystemPolicy) {
             this.fileSystemPolicy = fileSystemPolicy;
             return this;
         }
-
         public Builder fileSystemTags(@Nullable List<FileSystemElasticFileSystemTag> fileSystemTags) {
             this.fileSystemTags = fileSystemTags;
             return this;
         }
-
+        public Builder fileSystemTags(FileSystemElasticFileSystemTag... fileSystemTags) {
+            return fileSystemTags(List.of(fileSystemTags));
+        }
         public Builder lifecyclePolicies(@Nullable List<FileSystemLifecyclePolicy> lifecyclePolicies) {
             this.lifecyclePolicies = lifecyclePolicies;
             return this;
         }
-
+        public Builder lifecyclePolicies(FileSystemLifecyclePolicy... lifecyclePolicies) {
+            return lifecyclePolicies(List.of(lifecyclePolicies));
+        }
         public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
-
         public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = throughputMode;
             return this;
-        }
-        public GetFileSystemResult build() {
+        }        public GetFileSystemResult build() {
             return new GetFileSystemResult(arn, backupPolicy, fileSystemId, fileSystemPolicy, fileSystemTags, lifecyclePolicies, provisionedThroughputInMibps, throughputMode);
         }
     }

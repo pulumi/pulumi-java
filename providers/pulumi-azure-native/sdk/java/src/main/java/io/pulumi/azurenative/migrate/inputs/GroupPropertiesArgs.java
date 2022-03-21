@@ -61,12 +61,10 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.groupType = groupType;
             return this;
         }
-
         public Builder groupType(@Nullable String groupType) {
             this.groupType = Output.ofNullable(groupType);
             return this;
-        }
-        public GroupPropertiesArgs build() {
+        }        public GroupPropertiesArgs build() {
             return new GroupPropertiesArgs(groupType);
         }
     }

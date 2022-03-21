@@ -166,72 +166,64 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
             this.apiProperties = apiProperties;
             return this;
         }
-
         public Builder apiProperties(@Nullable CognitiveServicesAccountApiPropertiesArgs apiProperties) {
             this.apiProperties = Output.ofNullable(apiProperties);
             return this;
         }
-
         public Builder customSubDomainName(@Nullable Output<String> customSubDomainName) {
             this.customSubDomainName = customSubDomainName;
             return this;
         }
-
         public Builder customSubDomainName(@Nullable String customSubDomainName) {
             this.customSubDomainName = Output.ofNullable(customSubDomainName);
             return this;
         }
-
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder networkAcls(@Nullable Output<NetworkRuleSetArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
-
         public Builder networkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
             this.networkAcls = Output.ofNullable(networkAcls);
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder userOwnedStorage(@Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage) {
             this.userOwnedStorage = userOwnedStorage;
             return this;
         }
-
         public Builder userOwnedStorage(@Nullable List<UserOwnedStorageArgs> userOwnedStorage) {
             this.userOwnedStorage = Output.ofNullable(userOwnedStorage);
             return this;
         }
-        public CognitiveServicesAccountPropertiesArgs build() {
+        public Builder userOwnedStorage(UserOwnedStorageArgs... userOwnedStorage) {
+            return userOwnedStorage(List.of(userOwnedStorage));
+        }        public CognitiveServicesAccountPropertiesArgs build() {
             return new CognitiveServicesAccountPropertiesArgs(apiProperties, customSubDomainName, encryption, networkAcls, privateEndpointConnections, publicNetworkAccess, userOwnedStorage);
         }
     }

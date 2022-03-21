@@ -104,22 +104,18 @@ public final class GetSqlDBTableDataSetMappingArgs extends io.pulumi.resources.I
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataSetMappingName(String dataSetMappingName) {
             this.dataSetMappingName = Objects.requireNonNull(dataSetMappingName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
-        }
-        public GetSqlDBTableDataSetMappingArgs build() {
+        }        public GetSqlDBTableDataSetMappingArgs build() {
             return new GetSqlDBTableDataSetMappingArgs(accountName, dataSetMappingName, resourceGroupName, shareSubscriptionName);
         }
     }

@@ -320,172 +320,144 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
-
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             this.activeDirectoryId = Output.ofNullable(activeDirectoryId);
             return this;
         }
-
         public Builder adName(@Nullable Output<String> adName) {
             this.adName = adName;
             return this;
         }
-
         public Builder adName(@Nullable String adName) {
             this.adName = Output.ofNullable(adName);
             return this;
         }
-
         public Builder aesEncryption(@Nullable Output<Boolean> aesEncryption) {
             this.aesEncryption = aesEncryption;
             return this;
         }
-
         public Builder aesEncryption(@Nullable Boolean aesEncryption) {
             this.aesEncryption = Output.ofNullable(aesEncryption);
             return this;
         }
-
         public Builder allowLocalNfsUsersWithLdap(@Nullable Output<Boolean> allowLocalNfsUsersWithLdap) {
             this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
             return this;
         }
-
         public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
             this.allowLocalNfsUsersWithLdap = Output.ofNullable(allowLocalNfsUsersWithLdap);
             return this;
         }
-
         public Builder backupOperators(@Nullable Output<List<String>> backupOperators) {
             this.backupOperators = backupOperators;
             return this;
         }
-
         public Builder backupOperators(@Nullable List<String> backupOperators) {
             this.backupOperators = Output.ofNullable(backupOperators);
             return this;
         }
-
+        public Builder backupOperators(String... backupOperators) {
+            return backupOperators(List.of(backupOperators));
+        }
         public Builder dns(@Nullable Output<String> dns) {
             this.dns = dns;
             return this;
         }
-
         public Builder dns(@Nullable String dns) {
             this.dns = Output.ofNullable(dns);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder kdcIP(@Nullable Output<String> kdcIP) {
             this.kdcIP = kdcIP;
             return this;
         }
-
         public Builder kdcIP(@Nullable String kdcIP) {
             this.kdcIP = Output.ofNullable(kdcIP);
             return this;
         }
-
         public Builder ldapOverTLS(@Nullable Output<Boolean> ldapOverTLS) {
             this.ldapOverTLS = ldapOverTLS;
             return this;
         }
-
         public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
             this.ldapOverTLS = Output.ofNullable(ldapOverTLS);
             return this;
         }
-
         public Builder ldapSigning(@Nullable Output<Boolean> ldapSigning) {
             this.ldapSigning = ldapSigning;
             return this;
         }
-
         public Builder ldapSigning(@Nullable Boolean ldapSigning) {
             this.ldapSigning = Output.ofNullable(ldapSigning);
             return this;
         }
-
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder securityOperators(@Nullable Output<List<String>> securityOperators) {
             this.securityOperators = securityOperators;
             return this;
         }
-
         public Builder securityOperators(@Nullable List<String> securityOperators) {
             this.securityOperators = Output.ofNullable(securityOperators);
             return this;
         }
-
+        public Builder securityOperators(String... securityOperators) {
+            return securityOperators(List.of(securityOperators));
+        }
         public Builder serverRootCACertificate(@Nullable Output<String> serverRootCACertificate) {
             this.serverRootCACertificate = serverRootCACertificate;
             return this;
         }
-
         public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
             this.serverRootCACertificate = Output.ofNullable(serverRootCACertificate);
             return this;
         }
-
         public Builder site(@Nullable Output<String> site) {
             this.site = site;
             return this;
         }
-
         public Builder site(@Nullable String site) {
             this.site = Output.ofNullable(site);
             return this;
         }
-
         public Builder smbServerName(@Nullable Output<String> smbServerName) {
             this.smbServerName = smbServerName;
             return this;
         }
-
         public Builder smbServerName(@Nullable String smbServerName) {
             this.smbServerName = Output.ofNullable(smbServerName);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public ActiveDirectoryArgs build() {
+        }        public ActiveDirectoryArgs build() {
             return new ActiveDirectoryArgs(activeDirectoryId, adName, aesEncryption, allowLocalNfsUsersWithLdap, backupOperators, dns, domain, kdcIP, ldapOverTLS, ldapSigning, organizationalUnit, password, securityOperators, serverRootCACertificate, site, smbServerName, username);
         }
     }

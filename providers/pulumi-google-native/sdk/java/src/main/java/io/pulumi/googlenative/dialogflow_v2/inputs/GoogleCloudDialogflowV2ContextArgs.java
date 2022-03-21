@@ -96,32 +96,26 @@ public final class GoogleCloudDialogflowV2ContextArgs extends io.pulumi.resource
             this.lifespanCount = lifespanCount;
             return this;
         }
-
         public Builder lifespanCount(@Nullable Integer lifespanCount) {
             this.lifespanCount = Output.ofNullable(lifespanCount);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
-        }
-        public GoogleCloudDialogflowV2ContextArgs build() {
+        }        public GoogleCloudDialogflowV2ContextArgs build() {
             return new GoogleCloudDialogflowV2ContextArgs(lifespanCount, name, parameters);
         }
     }

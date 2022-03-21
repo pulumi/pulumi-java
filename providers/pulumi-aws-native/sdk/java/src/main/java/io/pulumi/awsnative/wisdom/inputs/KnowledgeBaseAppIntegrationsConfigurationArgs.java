@@ -66,22 +66,21 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends io.pulu
             this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn);
             return this;
         }
-
         public Builder appIntegrationArn(String appIntegrationArn) {
             this.appIntegrationArn = Output.of(Objects.requireNonNull(appIntegrationArn));
             return this;
         }
-
         public Builder objectFields(Output<List<String>> objectFields) {
             this.objectFields = Objects.requireNonNull(objectFields);
             return this;
         }
-
         public Builder objectFields(List<String> objectFields) {
             this.objectFields = Output.of(Objects.requireNonNull(objectFields));
             return this;
         }
-        public KnowledgeBaseAppIntegrationsConfigurationArgs build() {
+        public Builder objectFields(String... objectFields) {
+            return objectFields(List.of(objectFields));
+        }        public KnowledgeBaseAppIntegrationsConfigurationArgs build() {
             return new KnowledgeBaseAppIntegrationsConfigurationArgs(appIntegrationArn, objectFields);
         }
     }

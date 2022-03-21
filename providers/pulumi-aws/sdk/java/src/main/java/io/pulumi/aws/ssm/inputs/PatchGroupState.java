@@ -74,22 +74,18 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
             this.baselineId = baselineId;
             return this;
         }
-
         public Builder baselineId(@Nullable String baselineId) {
             this.baselineId = Output.ofNullable(baselineId);
             return this;
         }
-
         public Builder patchGroup(@Nullable Output<String> patchGroup) {
             this.patchGroup = patchGroup;
             return this;
         }
-
         public Builder patchGroup(@Nullable String patchGroup) {
             this.patchGroup = Output.ofNullable(patchGroup);
             return this;
-        }
-        public PatchGroupState build() {
+        }        public PatchGroupState build() {
             return new PatchGroupState(baselineId, patchGroup);
         }
     }

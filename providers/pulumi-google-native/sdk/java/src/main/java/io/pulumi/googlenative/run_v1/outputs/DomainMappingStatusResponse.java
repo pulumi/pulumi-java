@@ -121,27 +121,28 @@ public final class DomainMappingStatusResponse {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
+        public Builder conditions(GoogleCloudRunV1ConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder mappedRouteName(String mappedRouteName) {
             this.mappedRouteName = Objects.requireNonNull(mappedRouteName);
             return this;
         }
-
         public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
-
         public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
             this.resourceRecords = Objects.requireNonNull(resourceRecords);
             return this;
         }
-
+        public Builder resourceRecords(ResourceRecordResponse... resourceRecords) {
+            return resourceRecords(List.of(resourceRecords));
+        }
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public DomainMappingStatusResponse build() {
+        }        public DomainMappingStatusResponse build() {
             return new DomainMappingStatusResponse(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
         }
     }

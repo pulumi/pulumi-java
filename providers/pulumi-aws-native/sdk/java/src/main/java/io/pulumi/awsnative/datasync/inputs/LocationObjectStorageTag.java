@@ -76,12 +76,10 @@ public final class LocationObjectStorageTag extends io.pulumi.resources.InvokeAr
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public LocationObjectStorageTag build() {
+        }        public LocationObjectStorageTag build() {
             return new LocationObjectStorageTag(key, value);
         }
     }

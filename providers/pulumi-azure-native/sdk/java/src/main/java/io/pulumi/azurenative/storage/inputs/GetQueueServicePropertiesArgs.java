@@ -88,17 +88,14 @@ public final class GetQueueServicePropertiesArgs extends io.pulumi.resources.Inv
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder queueServiceName(String queueServiceName) {
             this.queueServiceName = Objects.requireNonNull(queueServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetQueueServicePropertiesArgs build() {
+        }        public GetQueueServicePropertiesArgs build() {
             return new GetQueueServicePropertiesArgs(accountName, queueServiceName, resourceGroupName);
         }
     }

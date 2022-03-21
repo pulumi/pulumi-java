@@ -342,62 +342,50 @@ public final class RegionBackendServiceBackend {
             this.balancingMode = balancingMode;
             return this;
         }
-
         public Builder capacityScaler(@Nullable Double capacityScaler) {
             this.capacityScaler = capacityScaler;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder failover(@Nullable Boolean failover) {
             this.failover = failover;
             return this;
         }
-
         public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
-
         public Builder maxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
             return this;
         }
-
         public Builder maxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = maxConnectionsPerInstance;
             return this;
         }
-
         public Builder maxRate(@Nullable Integer maxRate) {
             this.maxRate = maxRate;
             return this;
         }
-
         public Builder maxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
             this.maxRatePerEndpoint = maxRatePerEndpoint;
             return this;
         }
-
         public Builder maxRatePerInstance(@Nullable Double maxRatePerInstance) {
             this.maxRatePerInstance = maxRatePerInstance;
             return this;
         }
-
         public Builder maxUtilization(@Nullable Double maxUtilization) {
             this.maxUtilization = maxUtilization;
             return this;
-        }
-        public RegionBackendServiceBackend build() {
+        }        public RegionBackendServiceBackend build() {
             return new RegionBackendServiceBackend(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }
     }

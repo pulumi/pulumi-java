@@ -94,17 +94,14 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
             this.channelAccessToken = channelAccessToken;
             return this;
         }
-
         public Builder channelSecret(@Nullable String channelSecret) {
             this.channelSecret = channelSecret;
             return this;
         }
-
         public Builder generatedId(String generatedId) {
             this.generatedId = Objects.requireNonNull(generatedId);
             return this;
-        }
-        public LineRegistrationResponse build() {
+        }        public LineRegistrationResponse build() {
             return new LineRegistrationResponse(channelAccessToken, channelSecret, generatedId);
         }
     }

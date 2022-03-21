@@ -127,32 +127,26 @@ public final class GetGrantResult {
             this.grantArn = grantArn;
             return this;
         }
-
         public Builder grantName(@Nullable String grantName) {
             this.grantName = grantName;
             return this;
         }
-
         public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
-
         public Builder licenseArn(@Nullable String licenseArn) {
             this.licenseArn = licenseArn;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetGrantResult build() {
+        }        public GetGrantResult build() {
             return new GetGrantResult(grantArn, grantName, homeRegion, licenseArn, status, version);
         }
     }

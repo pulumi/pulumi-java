@@ -53,8 +53,7 @@ public final class TriggerActionNotificationProperty {
         public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
-        }
-        public TriggerActionNotificationProperty build() {
+        }        public TriggerActionNotificationProperty build() {
             return new TriggerActionNotificationProperty(notifyDelayAfter);
         }
     }

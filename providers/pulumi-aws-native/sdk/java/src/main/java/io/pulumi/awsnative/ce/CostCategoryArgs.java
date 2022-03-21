@@ -115,52 +115,42 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleVersion(Output<CostCategoryRuleVersion> ruleVersion) {
             this.ruleVersion = Objects.requireNonNull(ruleVersion);
             return this;
         }
-
         public Builder ruleVersion(CostCategoryRuleVersion ruleVersion) {
             this.ruleVersion = Output.of(Objects.requireNonNull(ruleVersion));
             return this;
         }
-
         public Builder rules(Output<String> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(String rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-
         public Builder splitChargeRules(@Nullable Output<String> splitChargeRules) {
             this.splitChargeRules = splitChargeRules;
             return this;
         }
-
         public Builder splitChargeRules(@Nullable String splitChargeRules) {
             this.splitChargeRules = Output.ofNullable(splitChargeRules);
             return this;
-        }
-        public CostCategoryArgs build() {
+        }        public CostCategoryArgs build() {
             return new CostCategoryArgs(defaultValue, name, ruleVersion, rules, splitChargeRules);
         }
     }

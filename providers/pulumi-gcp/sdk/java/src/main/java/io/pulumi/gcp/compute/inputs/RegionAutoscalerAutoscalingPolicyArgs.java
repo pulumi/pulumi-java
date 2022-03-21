@@ -236,102 +236,88 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
-
         public Builder cooldownPeriod(@Nullable Integer cooldownPeriod) {
             this.cooldownPeriod = Output.ofNullable(cooldownPeriod);
             return this;
         }
-
         public Builder cpuUtilization(@Nullable Output<RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs> cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
-
         public Builder cpuUtilization(@Nullable RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs cpuUtilization) {
             this.cpuUtilization = Output.ofNullable(cpuUtilization);
             return this;
         }
-
         public Builder loadBalancingUtilization(@Nullable Output<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization) {
             this.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
-
         public Builder loadBalancingUtilization(@Nullable RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs loadBalancingUtilization) {
             this.loadBalancingUtilization = Output.ofNullable(loadBalancingUtilization);
             return this;
         }
-
         public Builder maxReplicas(Output<Integer> maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
-
         public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Output.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
-
         public Builder metrics(@Nullable Output<List<RegionAutoscalerAutoscalingPolicyMetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<RegionAutoscalerAutoscalingPolicyMetricArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(RegionAutoscalerAutoscalingPolicyMetricArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minReplicas(Output<Integer> minReplicas) {
             this.minReplicas = Objects.requireNonNull(minReplicas);
             return this;
         }
-
         public Builder minReplicas(Integer minReplicas) {
             this.minReplicas = Output.of(Objects.requireNonNull(minReplicas));
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder scaleDownControl(@Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlArgs> scaleDownControl) {
             this.scaleDownControl = scaleDownControl;
             return this;
         }
-
         public Builder scaleDownControl(@Nullable RegionAutoscalerAutoscalingPolicyScaleDownControlArgs scaleDownControl) {
             this.scaleDownControl = Output.ofNullable(scaleDownControl);
             return this;
         }
-
         public Builder scaleInControl(@Nullable Output<RegionAutoscalerAutoscalingPolicyScaleInControlArgs> scaleInControl) {
             this.scaleInControl = scaleInControl;
             return this;
         }
-
         public Builder scaleInControl(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControlArgs scaleInControl) {
             this.scaleInControl = Output.ofNullable(scaleInControl);
             return this;
         }
-
         public Builder scalingSchedules(@Nullable Output<List<RegionAutoscalerAutoscalingPolicyScalingScheduleArgs>> scalingSchedules) {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
-
         public Builder scalingSchedules(@Nullable List<RegionAutoscalerAutoscalingPolicyScalingScheduleArgs> scalingSchedules) {
             this.scalingSchedules = Output.ofNullable(scalingSchedules);
             return this;
         }
-        public RegionAutoscalerAutoscalingPolicyArgs build() {
+        public Builder scalingSchedules(RegionAutoscalerAutoscalingPolicyScalingScheduleArgs... scalingSchedules) {
+            return scalingSchedules(List.of(scalingSchedules));
+        }        public RegionAutoscalerAutoscalingPolicyArgs build() {
             return new RegionAutoscalerAutoscalingPolicyArgs(cooldownPeriod, cpuUtilization, loadBalancingUtilization, maxReplicas, metrics, minReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
         }
     }

@@ -176,42 +176,34 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.abortCause = Objects.requireNonNull(abortCause);
             return this;
         }
-
         public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
             this.endpointInfo = Objects.requireNonNull(endpointInfo);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder probingLatency(LatencyDistributionResponse probingLatency) {
             this.probingLatency = Objects.requireNonNull(probingLatency);
             return this;
         }
-
         public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder sentProbeCount(Integer sentProbeCount) {
             this.sentProbeCount = Objects.requireNonNull(sentProbeCount);
             return this;
         }
-
         public Builder successfulProbeCount(Integer successfulProbeCount) {
             this.successfulProbeCount = Objects.requireNonNull(successfulProbeCount);
             return this;
         }
-
         public Builder verifyTime(String verifyTime) {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
-        }
-        public ProbingDetailsResponse build() {
+        }        public ProbingDetailsResponse build() {
             return new ProbingDetailsResponse(abortCause, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
         }
     }

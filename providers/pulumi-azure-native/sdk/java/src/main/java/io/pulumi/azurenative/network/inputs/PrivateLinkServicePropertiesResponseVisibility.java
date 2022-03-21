@@ -62,7 +62,9 @@ public final class PrivateLinkServicePropertiesResponseVisibility extends io.pul
             this.subscriptions = subscriptions;
             return this;
         }
-        public PrivateLinkServicePropertiesResponseVisibility build() {
+        public Builder subscriptions(String... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }        public PrivateLinkServicePropertiesResponseVisibility build() {
             return new PrivateLinkServicePropertiesResponseVisibility(subscriptions);
         }
     }

@@ -168,42 +168,34 @@ public final class StaticSiteBuildPropertiesResponse {
             this.apiBuildCommand = apiBuildCommand;
             return this;
         }
-
         public Builder apiLocation(@Nullable String apiLocation) {
             this.apiLocation = apiLocation;
             return this;
         }
-
         public Builder appArtifactLocation(@Nullable String appArtifactLocation) {
             this.appArtifactLocation = appArtifactLocation;
             return this;
         }
-
         public Builder appBuildCommand(@Nullable String appBuildCommand) {
             this.appBuildCommand = appBuildCommand;
             return this;
         }
-
         public Builder appLocation(@Nullable String appLocation) {
             this.appLocation = appLocation;
             return this;
         }
-
         public Builder githubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
             this.githubActionSecretNameOverride = githubActionSecretNameOverride;
             return this;
         }
-
         public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder skipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
             this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
-        }
-        public StaticSiteBuildPropertiesResponse build() {
+        }        public StaticSiteBuildPropertiesResponse build() {
             return new StaticSiteBuildPropertiesResponse(apiBuildCommand, apiLocation, appArtifactLocation, appBuildCommand, appLocation, githubActionSecretNameOverride, outputLocation, skipGithubActionWorkflowGeneration);
         }
     }

@@ -112,42 +112,34 @@ public final class DscConfigurationParameterArgs extends io.pulumi.resources.Res
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder isMandatory(@Nullable Output<Boolean> isMandatory) {
             this.isMandatory = isMandatory;
             return this;
         }
-
         public Builder isMandatory(@Nullable Boolean isMandatory) {
             this.isMandatory = Output.ofNullable(isMandatory);
             return this;
         }
-
         public Builder position(@Nullable Output<Integer> position) {
             this.position = position;
             return this;
         }
-
         public Builder position(@Nullable Integer position) {
             this.position = Output.ofNullable(position);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DscConfigurationParameterArgs build() {
+        }        public DscConfigurationParameterArgs build() {
             return new DscConfigurationParameterArgs(defaultValue, isMandatory, position, type);
         }
     }

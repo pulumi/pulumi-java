@@ -50,8 +50,7 @@ public final class GetReplicaKeyArgs extends io.pulumi.resources.InvokeArgs {
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
-        }
-        public GetReplicaKeyArgs build() {
+        }        public GetReplicaKeyArgs build() {
             return new GetReplicaKeyArgs(keyId);
         }
     }

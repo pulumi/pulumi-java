@@ -52,12 +52,10 @@ public final class NodePoolNodeConfigEphemeralStorageConfigArgs extends io.pulum
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Output.of(Objects.requireNonNull(localSsdCount));
             return this;
-        }
-        public NodePoolNodeConfigEphemeralStorageConfigArgs build() {
+        }        public NodePoolNodeConfigEphemeralStorageConfigArgs build() {
             return new NodePoolNodeConfigEphemeralStorageConfigArgs(localSsdCount);
         }
     }

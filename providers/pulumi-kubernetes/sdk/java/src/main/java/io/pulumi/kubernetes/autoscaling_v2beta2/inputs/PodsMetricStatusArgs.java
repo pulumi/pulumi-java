@@ -78,22 +78,18 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder current(MetricValueStatusArgs current) {
             this.current = Output.of(Objects.requireNonNull(current));
             return this;
         }
-
         public Builder metric(Output<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder metric(MetricIdentifierArgs metric) {
             this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
-        }
-        public PodsMetricStatusArgs build() {
+        }        public PodsMetricStatusArgs build() {
             return new PodsMetricStatusArgs(current, metric);
         }
     }

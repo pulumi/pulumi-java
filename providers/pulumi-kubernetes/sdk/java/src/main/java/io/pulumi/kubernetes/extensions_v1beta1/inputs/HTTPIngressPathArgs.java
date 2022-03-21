@@ -105,32 +105,26 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
             this.backend = Objects.requireNonNull(backend);
             return this;
         }
-
         public Builder backend(IngressBackendArgs backend) {
             this.backend = Output.of(Objects.requireNonNull(backend));
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder pathType(@Nullable Output<String> pathType) {
             this.pathType = pathType;
             return this;
         }
-
         public Builder pathType(@Nullable String pathType) {
             this.pathType = Output.ofNullable(pathType);
             return this;
-        }
-        public HTTPIngressPathArgs build() {
+        }        public HTTPIngressPathArgs build() {
             return new HTTPIngressPathArgs(backend, path, pathType);
         }
     }

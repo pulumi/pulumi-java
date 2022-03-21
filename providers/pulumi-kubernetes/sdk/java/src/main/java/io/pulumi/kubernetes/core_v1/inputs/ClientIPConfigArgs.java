@@ -61,12 +61,10 @@ public final class ClientIPConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
-        }
-        public ClientIPConfigArgs build() {
+        }        public ClientIPConfigArgs build() {
             return new ClientIPConfigArgs(timeoutSeconds);
         }
     }

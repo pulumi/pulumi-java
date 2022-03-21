@@ -65,17 +65,17 @@ public final class TaskDefinitionTmpfs {
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
+        public Builder mountOptions(String... mountOptions) {
+            return mountOptions(List.of(mountOptions));
+        }
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
-        }
-        public TaskDefinitionTmpfs build() {
+        }        public TaskDefinitionTmpfs build() {
             return new TaskDefinitionTmpfs(containerPath, mountOptions, size);
         }
     }

@@ -53,8 +53,7 @@ public final class HttpSettingsRoutesResponse {
         public Builder apiPrefix(@Nullable String apiPrefix) {
             this.apiPrefix = apiPrefix;
             return this;
-        }
-        public HttpSettingsRoutesResponse build() {
+        }        public HttpSettingsRoutesResponse build() {
             return new HttpSettingsRoutesResponse(apiPrefix);
         }
     }

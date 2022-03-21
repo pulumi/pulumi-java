@@ -122,52 +122,42 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder ingestionRole(Output<String> ingestionRole) {
             this.ingestionRole = Objects.requireNonNull(ingestionRole);
             return this;
         }
-
         public Builder ingestionRole(String ingestionRole) {
             this.ingestionRole = Output.of(Objects.requireNonNull(ingestionRole));
             return this;
         }
-
         public Builder sourceEngine(Output<String> sourceEngine) {
             this.sourceEngine = Objects.requireNonNull(sourceEngine);
             return this;
         }
-
         public Builder sourceEngine(String sourceEngine) {
             this.sourceEngine = Output.of(Objects.requireNonNull(sourceEngine));
             return this;
         }
-
         public Builder sourceEngineVersion(Output<String> sourceEngineVersion) {
             this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion);
             return this;
         }
-
         public Builder sourceEngineVersion(String sourceEngineVersion) {
             this.sourceEngineVersion = Output.of(Objects.requireNonNull(sourceEngineVersion));
             return this;
-        }
-        public ClusterS3ImportGetArgs build() {
+        }        public ClusterS3ImportGetArgs build() {
             return new ClusterS3ImportGetArgs(bucketName, bucketPrefix, ingestionRole, sourceEngine, sourceEngineVersion);
         }
     }

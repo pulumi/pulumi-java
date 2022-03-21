@@ -78,17 +78,14 @@ public final class BackupVaultLockConfigurationType extends io.pulumi.resources.
             this.changeableForDays = changeableForDays;
             return this;
         }
-
         public Builder maxRetentionDays(@Nullable Double maxRetentionDays) {
             this.maxRetentionDays = maxRetentionDays;
             return this;
         }
-
         public Builder minRetentionDays(Double minRetentionDays) {
             this.minRetentionDays = Objects.requireNonNull(minRetentionDays);
             return this;
-        }
-        public BackupVaultLockConfigurationType build() {
+        }        public BackupVaultLockConfigurationType build() {
             return new BackupVaultLockConfigurationType(changeableForDays, maxRetentionDays, minRetentionDays);
         }
     }

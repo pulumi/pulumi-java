@@ -45,8 +45,7 @@ public final class OutputOnlyObjectType {
         public Builder foo(@Nullable String foo) {
             this.foo = foo;
             return this;
-        }
-        public OutputOnlyObjectType build() {
+        }        public OutputOnlyObjectType build() {
             return new OutputOnlyObjectType(foo);
         }
     }

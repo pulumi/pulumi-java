@@ -67,22 +67,18 @@ public final class ServiceTaskSpecContainerSpecPrivilegesGetArgs extends io.pulu
             this.credentialSpec = credentialSpec;
             return this;
         }
-
         public Builder credentialSpec(@Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs credentialSpec) {
             this.credentialSpec = Output.ofNullable(credentialSpec);
             return this;
         }
-
         public Builder seLinuxContext(@Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs> seLinuxContext) {
             this.seLinuxContext = seLinuxContext;
             return this;
         }
-
         public Builder seLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs seLinuxContext) {
             this.seLinuxContext = Output.ofNullable(seLinuxContext);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecPrivilegesGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecPrivilegesGetArgs build() {
             return new ServiceTaskSpecContainerSpecPrivilegesGetArgs(credentialSpec, seLinuxContext);
         }
     }

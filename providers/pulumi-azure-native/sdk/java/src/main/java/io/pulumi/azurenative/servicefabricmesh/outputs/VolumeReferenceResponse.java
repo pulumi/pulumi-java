@@ -88,17 +88,14 @@ public final class VolumeReferenceResponse {
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
-        }
-        public VolumeReferenceResponse build() {
+        }        public VolumeReferenceResponse build() {
             return new VolumeReferenceResponse(destinationPath, name, readOnly);
         }
     }

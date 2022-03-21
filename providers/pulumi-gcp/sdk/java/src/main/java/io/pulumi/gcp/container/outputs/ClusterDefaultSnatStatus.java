@@ -53,8 +53,7 @@ public final class ClusterDefaultSnatStatus {
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public ClusterDefaultSnatStatus build() {
+        }        public ClusterDefaultSnatStatus build() {
             return new ClusterDefaultSnatStatus(disabled);
         }
     }

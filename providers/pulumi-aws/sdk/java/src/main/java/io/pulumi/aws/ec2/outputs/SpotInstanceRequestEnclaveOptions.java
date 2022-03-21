@@ -53,8 +53,7 @@ public final class SpotInstanceRequestEnclaveOptions {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public SpotInstanceRequestEnclaveOptions build() {
+        }        public SpotInstanceRequestEnclaveOptions build() {
             return new SpotInstanceRequestEnclaveOptions(enabled);
         }
     }

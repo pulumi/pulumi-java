@@ -128,27 +128,22 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
             this.bgpSession = bgpSession;
             return this;
         }
-
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
-
         public Builder connectionState(String connectionState) {
             this.connectionState = Objects.requireNonNull(connectionState);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
-        }
-        public ExchangeConnectionResponse build() {
+        }        public ExchangeConnectionResponse build() {
             return new ExchangeConnectionResponse(bgpSession, connectionIdentifier, connectionState, errorMessage, peeringDBFacilityId);
         }
     }

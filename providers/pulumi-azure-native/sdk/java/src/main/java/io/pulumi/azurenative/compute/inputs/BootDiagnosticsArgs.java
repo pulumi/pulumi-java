@@ -79,22 +79,18 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder storageUri(@Nullable Output<String> storageUri) {
             this.storageUri = storageUri;
             return this;
         }
-
         public Builder storageUri(@Nullable String storageUri) {
             this.storageUri = Output.ofNullable(storageUri);
             return this;
-        }
-        public BootDiagnosticsArgs build() {
+        }        public BootDiagnosticsArgs build() {
             return new BootDiagnosticsArgs(enabled, storageUri);
         }
     }

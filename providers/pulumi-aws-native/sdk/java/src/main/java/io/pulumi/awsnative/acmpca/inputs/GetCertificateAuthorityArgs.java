@@ -54,8 +54,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetCertificateAuthorityArgs build() {
+        }        public GetCertificateAuthorityArgs build() {
             return new GetCertificateAuthorityArgs(arn);
         }
     }

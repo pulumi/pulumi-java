@@ -219,52 +219,42 @@ public final class JobSpec {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-
         public Builder backoffLimit(@Nullable Integer backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
-
         public Builder completionMode(@Nullable String completionMode) {
             this.completionMode = completionMode;
             return this;
         }
-
         public Builder completions(@Nullable Integer completions) {
             this.completions = completions;
             return this;
         }
-
         public Builder manualSelector(@Nullable Boolean manualSelector) {
             this.manualSelector = manualSelector;
             return this;
         }
-
         public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
         }
-
         public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
-        }
-        public JobSpec build() {
+        }        public JobSpec build() {
             return new JobSpec(activeDeadlineSeconds, backoffLimit, completionMode, completions, manualSelector, parallelism, selector, suspend, template, ttlSecondsAfterFinished);
         }
     }

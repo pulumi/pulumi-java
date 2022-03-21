@@ -56,8 +56,7 @@ public final class PrivateEndpointPropertyResponse extends io.pulumi.resources.I
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public PrivateEndpointPropertyResponse build() {
+        }        public PrivateEndpointPropertyResponse build() {
             return new PrivateEndpointPropertyResponse(id);
         }
     }

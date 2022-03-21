@@ -57,12 +57,10 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageArgs extends io.pu
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable CxPageEventHandlerTriggerFulfillmentMessageTextArgs text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public CxPageEventHandlerTriggerFulfillmentMessageArgs build() {
+        }        public CxPageEventHandlerTriggerFulfillmentMessageArgs build() {
             return new CxPageEventHandlerTriggerFulfillmentMessageArgs(text);
         }
     }

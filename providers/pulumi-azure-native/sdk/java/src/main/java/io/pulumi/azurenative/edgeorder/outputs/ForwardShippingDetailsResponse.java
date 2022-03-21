@@ -101,22 +101,18 @@ public final class ForwardShippingDetailsResponse {
             this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName);
             return this;
         }
-
         public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
-
         public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
-        }
-        public ForwardShippingDetailsResponse build() {
+        }        public ForwardShippingDetailsResponse build() {
             return new ForwardShippingDetailsResponse(carrierDisplayName, carrierName, trackingId, trackingUrl);
         }
     }

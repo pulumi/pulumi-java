@@ -94,17 +94,14 @@ public final class DistributionLoggingConfig {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder includeCookies(@Nullable Boolean includeCookies) {
             this.includeCookies = includeCookies;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public DistributionLoggingConfig build() {
+        }        public DistributionLoggingConfig build() {
             return new DistributionLoggingConfig(bucket, includeCookies, prefix);
         }
     }

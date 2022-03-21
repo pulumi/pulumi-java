@@ -218,62 +218,50 @@ public final class SamplingRuleUpdate {
             this.attributes = attributes;
             return this;
         }
-
         public Builder fixedRate(@Nullable Double fixedRate) {
             this.fixedRate = fixedRate;
             return this;
         }
-
         public Builder hTTPMethod(@Nullable String hTTPMethod) {
             this.hTTPMethod = hTTPMethod;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder reservoirSize(@Nullable Integer reservoirSize) {
             this.reservoirSize = reservoirSize;
             return this;
         }
-
         public Builder resourceARN(@Nullable String resourceARN) {
             this.resourceARN = resourceARN;
             return this;
         }
-
         public Builder ruleARN(@Nullable String ruleARN) {
             this.ruleARN = ruleARN;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceType(@Nullable String serviceType) {
             this.serviceType = serviceType;
             return this;
         }
-
         public Builder uRLPath(@Nullable String uRLPath) {
             this.uRLPath = uRLPath;
             return this;
-        }
-        public SamplingRuleUpdate build() {
+        }        public SamplingRuleUpdate build() {
             return new SamplingRuleUpdate(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath);
         }
     }

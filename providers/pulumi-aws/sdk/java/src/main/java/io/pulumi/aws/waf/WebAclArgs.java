@@ -143,62 +143,53 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
-
         public Builder defaultAction(WebAclDefaultActionArgs defaultAction) {
             this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable Output<WebAclLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable WebAclLoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<WebAclRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<WebAclRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(WebAclRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public WebAclArgs build() {
+        }        public WebAclArgs build() {
             return new WebAclArgs(defaultAction, loggingConfiguration, metricName, name, rules, tags);
         }
     }

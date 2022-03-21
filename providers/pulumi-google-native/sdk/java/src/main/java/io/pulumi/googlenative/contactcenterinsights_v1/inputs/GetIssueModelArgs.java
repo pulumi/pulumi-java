@@ -78,17 +78,14 @@ public final class GetIssueModelArgs extends io.pulumi.resources.InvokeArgs {
             this.issueModelId = Objects.requireNonNull(issueModelId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetIssueModelArgs build() {
+        }        public GetIssueModelArgs build() {
             return new GetIssueModelArgs(issueModelId, location, project);
         }
     }

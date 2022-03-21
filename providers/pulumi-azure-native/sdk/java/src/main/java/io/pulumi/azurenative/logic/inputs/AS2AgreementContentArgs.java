@@ -77,22 +77,18 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
-
         public Builder receiveAgreement(AS2OneWayAgreementArgs receiveAgreement) {
             this.receiveAgreement = Output.of(Objects.requireNonNull(receiveAgreement));
             return this;
         }
-
         public Builder sendAgreement(Output<AS2OneWayAgreementArgs> sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public Builder sendAgreement(AS2OneWayAgreementArgs sendAgreement) {
             this.sendAgreement = Output.of(Objects.requireNonNull(sendAgreement));
             return this;
-        }
-        public AS2AgreementContentArgs build() {
+        }        public AS2AgreementContentArgs build() {
             return new AS2AgreementContentArgs(receiveAgreement, sendAgreement);
         }
     }

@@ -85,17 +85,14 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse build() {
+        }        public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse build() {
             return new GoogleCloudDatacatalogV1beta1SystemTimestampsResponse(createTime, expireTime, updateTime);
         }
     }

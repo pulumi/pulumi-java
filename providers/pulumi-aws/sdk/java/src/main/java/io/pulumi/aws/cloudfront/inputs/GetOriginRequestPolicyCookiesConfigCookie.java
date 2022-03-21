@@ -52,7 +52,9 @@ public final class GetOriginRequestPolicyCookiesConfigCookie extends io.pulumi.r
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GetOriginRequestPolicyCookiesConfigCookie build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public GetOriginRequestPolicyCookiesConfigCookie build() {
             return new GetOriginRequestPolicyCookiesConfigCookie(items);
         }
     }

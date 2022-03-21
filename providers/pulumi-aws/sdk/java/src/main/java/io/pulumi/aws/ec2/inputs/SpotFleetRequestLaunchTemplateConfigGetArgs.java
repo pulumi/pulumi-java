@@ -76,22 +76,21 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends io.pulumi
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
-
         public Builder launchTemplateSpecification(SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Output.of(Objects.requireNonNull(launchTemplateSpecification));
             return this;
         }
-
         public Builder overrides(@Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
-
         public Builder overrides(@Nullable List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs> overrides) {
             this.overrides = Output.ofNullable(overrides);
             return this;
         }
-        public SpotFleetRequestLaunchTemplateConfigGetArgs build() {
+        public Builder overrides(SpotFleetRequestLaunchTemplateConfigOverrideGetArgs... overrides) {
+            return overrides(List.of(overrides));
+        }        public SpotFleetRequestLaunchTemplateConfigGetArgs build() {
             return new SpotFleetRequestLaunchTemplateConfigGetArgs(launchTemplateSpecification, overrides);
         }
     }

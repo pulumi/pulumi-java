@@ -43,8 +43,7 @@ public final class GetClusterAddonsConfigNetworkPolicyConfig {
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public GetClusterAddonsConfigNetworkPolicyConfig build() {
+        }        public GetClusterAddonsConfigNetworkPolicyConfig build() {
             return new GetClusterAddonsConfigNetworkPolicyConfig(disabled);
         }
     }

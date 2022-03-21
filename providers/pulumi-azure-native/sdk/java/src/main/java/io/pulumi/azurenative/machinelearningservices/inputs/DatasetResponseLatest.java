@@ -340,92 +340,74 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder dataPath(@Nullable DatasetResponseDataPath dataPath) {
             this.dataPath = dataPath;
             return this;
         }
-
         public Builder dataflow(String dataflow) {
             this.dataflow = Objects.requireNonNull(dataflow);
             return this;
         }
-
         public Builder datasetDefinitionState(@Nullable DatasetStateResponse datasetDefinitionState) {
             this.datasetDefinitionState = datasetDefinitionState;
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
-
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
-
         public Builder notes(String notes) {
             this.notes = Objects.requireNonNull(notes);
             return this;
         }
-
         public Builder partitionFormatInPath(Boolean partitionFormatInPath) {
             this.partitionFormatInPath = Objects.requireNonNull(partitionFormatInPath);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder savedDatasetId(String savedDatasetId) {
             this.savedDatasetId = Objects.requireNonNull(savedDatasetId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder telemetryInfo(Map<String,String> telemetryInfo) {
             this.telemetryInfo = Objects.requireNonNull(telemetryInfo);
             return this;
         }
-
         public Builder useDescriptionTagsFromDefinition(Boolean useDescriptionTagsFromDefinition) {
             this.useDescriptionTagsFromDefinition = Objects.requireNonNull(useDescriptionTagsFromDefinition);
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
-        }
-        public DatasetResponseLatest build() {
+        }        public DatasetResponseLatest build() {
             return new DatasetResponseLatest(createdBy, createdTime, dataPath, dataflow, datasetDefinitionState, datasetId, description, etag, fileType, modifiedTime, notes, partitionFormatInPath, properties, savedDatasetId, tags, telemetryInfo, useDescriptionTagsFromDefinition, versionId);
         }
     }

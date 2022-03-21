@@ -107,22 +107,21 @@ public final class RouteSpecHttp2RouteMatch {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(RouteSpecHttp2RouteMatchHeader... headers) {
+            return headers(List.of(headers));
+        }
         public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder scheme(@Nullable String scheme) {
             this.scheme = scheme;
             return this;
-        }
-        public RouteSpecHttp2RouteMatch build() {
+        }        public RouteSpecHttp2RouteMatch build() {
             return new RouteSpecHttp2RouteMatch(headers, method, prefix, scheme);
         }
     }

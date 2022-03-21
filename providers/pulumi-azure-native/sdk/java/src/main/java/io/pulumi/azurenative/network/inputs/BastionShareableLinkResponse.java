@@ -109,22 +109,18 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
             this.bsl = Objects.requireNonNull(bsl);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder vm(VMResponse vm) {
             this.vm = Objects.requireNonNull(vm);
             return this;
-        }
-        public BastionShareableLinkResponse build() {
+        }        public BastionShareableLinkResponse build() {
             return new BastionShareableLinkResponse(bsl, createdAt, message, vm);
         }
     }

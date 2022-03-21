@@ -101,42 +101,37 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
             this.actionName = actionName;
             return this;
         }
-
         public Builder actionName(@Nullable String actionName) {
             this.actionName = Output.ofNullable(actionName);
             return this;
         }
-
         public Builder actionParams(Output<MitigationActionActionParamsArgs> actionParams) {
             this.actionParams = Objects.requireNonNull(actionParams);
             return this;
         }
-
         public Builder actionParams(MitigationActionActionParamsArgs actionParams) {
             this.actionParams = Output.of(Objects.requireNonNull(actionParams));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<MitigationActionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<MitigationActionTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public MitigationActionArgs build() {
+        public Builder tags(MitigationActionTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public MitigationActionArgs build() {
             return new MitigationActionArgs(actionName, actionParams, roleArn, tags);
         }
     }

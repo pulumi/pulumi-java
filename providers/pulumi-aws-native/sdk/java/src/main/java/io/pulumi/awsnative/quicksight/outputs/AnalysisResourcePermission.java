@@ -98,12 +98,13 @@ public final class AnalysisResourcePermission {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
-        }
-        public AnalysisResourcePermission build() {
+        }        public AnalysisResourcePermission build() {
             return new AnalysisResourcePermission(actions, principal);
         }
     }

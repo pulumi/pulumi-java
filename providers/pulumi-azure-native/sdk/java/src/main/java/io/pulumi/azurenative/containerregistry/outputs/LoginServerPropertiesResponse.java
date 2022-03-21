@@ -70,12 +70,10 @@ public final class LoginServerPropertiesResponse {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder tls(TlsPropertiesResponse tls) {
             this.tls = Objects.requireNonNull(tls);
             return this;
-        }
-        public LoginServerPropertiesResponse build() {
+        }        public LoginServerPropertiesResponse build() {
             return new LoginServerPropertiesResponse(host, tls);
         }
     }

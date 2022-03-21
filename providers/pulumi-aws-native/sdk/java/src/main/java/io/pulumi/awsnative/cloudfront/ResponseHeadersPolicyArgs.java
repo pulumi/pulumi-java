@@ -52,12 +52,10 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
             this.responseHeadersPolicyConfig = Objects.requireNonNull(responseHeadersPolicyConfig);
             return this;
         }
-
         public Builder responseHeadersPolicyConfig(ResponseHeadersPolicyConfigArgs responseHeadersPolicyConfig) {
             this.responseHeadersPolicyConfig = Output.of(Objects.requireNonNull(responseHeadersPolicyConfig));
             return this;
-        }
-        public ResponseHeadersPolicyArgs build() {
+        }        public ResponseHeadersPolicyArgs build() {
             return new ResponseHeadersPolicyArgs(responseHeadersPolicyConfig);
         }
     }

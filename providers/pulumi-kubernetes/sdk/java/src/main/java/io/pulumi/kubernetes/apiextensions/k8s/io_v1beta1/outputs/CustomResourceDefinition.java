@@ -114,27 +114,22 @@ public final class CustomResourceDefinition {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(CustomResourceDefinitionSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder status(@Nullable CustomResourceDefinitionStatus status) {
             this.status = status;
             return this;
-        }
-        public CustomResourceDefinition build() {
+        }        public CustomResourceDefinition build() {
             return new CustomResourceDefinition(apiVersion, kind, metadata, spec, status);
         }
     }

@@ -200,52 +200,42 @@ public final class ShareSynchronizationResponse {
             this.consumerEmail = consumerEmail;
             return this;
         }
-
         public Builder consumerName(@Nullable String consumerName) {
             this.consumerName = consumerName;
             return this;
         }
-
         public Builder consumerTenantName(@Nullable String consumerTenantName) {
             this.consumerTenantName = consumerTenantName;
             return this;
         }
-
         public Builder durationMs(@Nullable Integer durationMs) {
             this.durationMs = durationMs;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder synchronizationId(@Nullable String synchronizationId) {
             this.synchronizationId = synchronizationId;
             return this;
         }
-
         public Builder synchronizationMode(String synchronizationMode) {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
-        }
-        public ShareSynchronizationResponse build() {
+        }        public ShareSynchronizationResponse build() {
             return new ShareSynchronizationResponse(consumerEmail, consumerName, consumerTenantName, durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
         }
     }

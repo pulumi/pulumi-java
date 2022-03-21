@@ -82,22 +82,18 @@ public final class DetectorModelState {
             this.onEnter = onEnter;
             return this;
         }
-
         public Builder onExit(@Nullable DetectorModelOnExit onExit) {
             this.onExit = onExit;
             return this;
         }
-
         public Builder onInput(@Nullable DetectorModelOnInput onInput) {
             this.onInput = onInput;
             return this;
         }
-
         public Builder stateName(String stateName) {
             this.stateName = Objects.requireNonNull(stateName);
             return this;
-        }
-        public DetectorModelState build() {
+        }        public DetectorModelState build() {
             return new DetectorModelState(onEnter, onExit, onInput, stateName);
         }
     }

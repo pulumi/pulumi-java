@@ -113,42 +113,37 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
             this.excludedAccountIds = excludedAccountIds;
             return this;
         }
-
         public Builder excludedAccountIds(@Nullable List<String> excludedAccountIds) {
             this.excludedAccountIds = Output.ofNullable(excludedAccountIds);
             return this;
         }
-
+        public Builder excludedAccountIds(String... excludedAccountIds) {
+            return excludedAccountIds(List.of(excludedAccountIds));
+        }
         public Builder organizationMembershipType(@Nullable Output<Either<String,OrganizationMembershipType>> organizationMembershipType) {
             this.organizationMembershipType = organizationMembershipType;
             return this;
         }
-
         public Builder organizationMembershipType(@Nullable Either<String,OrganizationMembershipType> organizationMembershipType) {
             this.organizationMembershipType = Output.ofNullable(organizationMembershipType);
             return this;
         }
-
         public Builder parentHierarchyId(@Nullable Output<String> parentHierarchyId) {
             this.parentHierarchyId = parentHierarchyId;
             return this;
         }
-
         public Builder parentHierarchyId(@Nullable String parentHierarchyId) {
             this.parentHierarchyId = Output.ofNullable(parentHierarchyId);
             return this;
         }
-
         public Builder stacksetName(@Nullable Output<String> stacksetName) {
             this.stacksetName = stacksetName;
             return this;
         }
-
         public Builder stacksetName(@Nullable String stacksetName) {
             this.stacksetName = Output.ofNullable(stacksetName);
             return this;
-        }
-        public SecurityConnectorPropertiesOrganizationalDataArgs build() {
+        }        public SecurityConnectorPropertiesOrganizationalDataArgs build() {
             return new SecurityConnectorPropertiesOrganizationalDataArgs(excludedAccountIds, organizationMembershipType, parentHierarchyId, stacksetName);
         }
     }

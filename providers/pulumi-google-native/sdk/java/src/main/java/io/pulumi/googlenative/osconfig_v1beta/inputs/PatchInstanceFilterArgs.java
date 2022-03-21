@@ -129,52 +129,54 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
             this.all = all;
             return this;
         }
-
         public Builder all(@Nullable Boolean all) {
             this.all = Output.ofNullable(all);
             return this;
         }
-
         public Builder groupLabels(@Nullable Output<List<PatchInstanceFilterGroupLabelArgs>> groupLabels) {
             this.groupLabels = groupLabels;
             return this;
         }
-
         public Builder groupLabels(@Nullable List<PatchInstanceFilterGroupLabelArgs> groupLabels) {
             this.groupLabels = Output.ofNullable(groupLabels);
             return this;
         }
-
+        public Builder groupLabels(PatchInstanceFilterGroupLabelArgs... groupLabels) {
+            return groupLabels(List.of(groupLabels));
+        }
         public Builder instanceNamePrefixes(@Nullable Output<List<String>> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
-
         public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = Output.ofNullable(instanceNamePrefixes);
             return this;
         }
-
+        public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
+            return instanceNamePrefixes(List.of(instanceNamePrefixes));
+        }
         public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<String> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public PatchInstanceFilterArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public PatchInstanceFilterArgs build() {
             return new PatchInstanceFilterArgs(all, groupLabels, instanceNamePrefixes, instances, zones);
         }
     }

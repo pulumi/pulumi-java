@@ -72,12 +72,10 @@ public final class ListWebAppAuthSettingsArgs extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppAuthSettingsArgs build() {
+        }        public ListWebAppAuthSettingsArgs build() {
             return new ListWebAppAuthSettingsArgs(name, resourceGroupName);
         }
     }

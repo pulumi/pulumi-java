@@ -95,32 +95,26 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder properties(Output<LoadBalancerConfigurationPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(LoadBalancerConfigurationPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
-        }
-        public LoadBalancerConfigurationArgs build() {
+        }        public LoadBalancerConfigurationArgs build() {
             return new LoadBalancerConfigurationArgs(id, name, properties);
         }
     }

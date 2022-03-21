@@ -124,52 +124,45 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder diagnostics(@Nullable List<DiagnosticArgs> diagnostics) {
             this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
-
+        public Builder diagnostics(DiagnosticArgs... diagnostics) {
+            return diagnostics(List.of(diagnostics));
+        }
         public Builder failCondition(@Nullable Output<String> failCondition) {
             this.failCondition = failCondition;
             return this;
         }
-
         public Builder failCondition(@Nullable String failCondition) {
             this.failCondition = Output.ofNullable(failCondition);
             return this;
         }
-
         public Builder finishCondition(@Nullable Output<String> finishCondition) {
             this.finishCondition = finishCondition;
             return this;
         }
-
         public Builder finishCondition(@Nullable String finishCondition) {
             this.finishCondition = Output.ofNullable(finishCondition);
             return this;
         }
-
         public Builder pollingLink(@Nullable Output<String> pollingLink) {
             this.pollingLink = pollingLink;
             return this;
         }
-
         public Builder pollingLink(@Nullable String pollingLink) {
             this.pollingLink = Output.ofNullable(pollingLink);
             return this;
         }
-
         public Builder targetLink(@Nullable Output<String> targetLink) {
             this.targetLink = targetLink;
             return this;
         }
-
         public Builder targetLink(@Nullable String targetLink) {
             this.targetLink = Output.ofNullable(targetLink);
             return this;
-        }
-        public PollingOptionsArgs build() {
+        }        public PollingOptionsArgs build() {
             return new PollingOptionsArgs(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
         }
     }

@@ -204,52 +204,42 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder containerImage(String containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder framework(String framework) {
             this.framework = Objects.requireNonNull(framework);
             return this;
         }
-
         public Builder snapshot(String snapshot) {
             this.snapshot = Objects.requireNonNull(snapshot);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder targetImage(String targetImage) {
             this.targetImage = Objects.requireNonNull(targetImage);
             return this;
         }
-
         public Builder targetVersion(String targetVersion) {
             this.targetVersion = Objects.requireNonNull(targetVersion);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder vmImage(String vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
-        }
-        public UpgradeHistoryEntryResponse build() {
+        }        public UpgradeHistoryEntryResponse build() {
             return new UpgradeHistoryEntryResponse(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
         }
     }

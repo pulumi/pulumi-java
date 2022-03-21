@@ -94,32 +94,26 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
-
         public Builder virtualMachineConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig) {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
-
         public Builder virtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigArgs virtualMachineConfig) {
             this.virtualMachineConfig = Output.ofNullable(virtualMachineConfig);
             return this;
-        }
-        public RuntimeVirtualMachineArgs build() {
+        }        public RuntimeVirtualMachineArgs build() {
             return new RuntimeVirtualMachineArgs(instanceId, instanceName, virtualMachineConfig);
         }
     }

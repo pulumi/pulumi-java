@@ -130,27 +130,22 @@ public final class InstanceCluster {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = numNodes;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public InstanceCluster build() {
+        }        public InstanceCluster build() {
             return new InstanceCluster(clusterId, kmsKeyName, numNodes, storageType, zone);
         }
     }

@@ -75,22 +75,18 @@ public final class VirtualNodeSpecListenerTimeoutHttp2Args extends io.pulumi.res
             this.idle = idle;
             return this;
         }
-
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutHttp2IdleArgs idle) {
             this.idle = Output.ofNullable(idle);
             return this;
         }
-
         public Builder perRequest(@Nullable Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
-
         public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs perRequest) {
             this.perRequest = Output.ofNullable(perRequest);
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutHttp2Args build() {
+        }        public VirtualNodeSpecListenerTimeoutHttp2Args build() {
             return new VirtualNodeSpecListenerTimeoutHttp2Args(idle, perRequest);
         }
     }

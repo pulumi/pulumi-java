@@ -97,17 +97,17 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVolumeFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVolumeArgs build() {
+        }        public GetVolumeArgs build() {
             return new GetVolumeArgs(filters, mostRecent, tags);
         }
     }

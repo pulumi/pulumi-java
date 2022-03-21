@@ -125,32 +125,26 @@ public final class GetPortfolioConstraintsDetail {
             this.constraintId = Objects.requireNonNull(constraintId);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder portfolioId(String portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPortfolioConstraintsDetail build() {
+        }        public GetPortfolioConstraintsDetail build() {
             return new GetPortfolioConstraintsDetail(constraintId, description, owner, portfolioId, productId, type);
         }
     }

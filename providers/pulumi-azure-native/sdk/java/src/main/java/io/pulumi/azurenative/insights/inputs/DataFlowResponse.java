@@ -79,12 +79,16 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
             this.destinations = destinations;
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }
-        public DataFlowResponse build() {
+        public Builder streams(String... streams) {
+            return streams(List.of(streams));
+        }        public DataFlowResponse build() {
             return new DataFlowResponse(destinations, streams);
         }
     }

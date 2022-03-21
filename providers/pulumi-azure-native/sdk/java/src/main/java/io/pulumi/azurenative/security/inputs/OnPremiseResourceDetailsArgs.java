@@ -126,52 +126,42 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
-
         public Builder machineName(String machineName) {
             this.machineName = Output.of(Objects.requireNonNull(machineName));
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder sourceComputerId(Output<String> sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
-
         public Builder sourceComputerId(String sourceComputerId) {
             this.sourceComputerId = Output.of(Objects.requireNonNull(sourceComputerId));
             return this;
         }
-
         public Builder vmuuid(Output<String> vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
-
         public Builder vmuuid(String vmuuid) {
             this.vmuuid = Output.of(Objects.requireNonNull(vmuuid));
             return this;
         }
-
         public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
-        }
-        public OnPremiseResourceDetailsArgs build() {
+        }        public OnPremiseResourceDetailsArgs build() {
             return new OnPremiseResourceDetailsArgs(machineName, source, sourceComputerId, vmuuid, workspaceId);
         }
     }

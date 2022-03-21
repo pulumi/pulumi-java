@@ -58,8 +58,7 @@ public final class OSPolicyResourcePackageResourceAPTResponse extends io.pulumi.
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OSPolicyResourcePackageResourceAPTResponse build() {
+        }        public OSPolicyResourcePackageResourceAPTResponse build() {
             return new OSPolicyResourcePackageResourceAPTResponse(name);
         }
     }

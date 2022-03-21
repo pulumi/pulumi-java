@@ -88,17 +88,14 @@ public final class InstanceGroupManagerVersion {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder targetSize(@Nullable InstanceGroupManagerVersionTargetSize targetSize) {
             this.targetSize = targetSize;
             return this;
-        }
-        public InstanceGroupManagerVersion build() {
+        }        public InstanceGroupManagerVersion build() {
             return new InstanceGroupManagerVersion(instanceTemplate, name, targetSize);
         }
     }

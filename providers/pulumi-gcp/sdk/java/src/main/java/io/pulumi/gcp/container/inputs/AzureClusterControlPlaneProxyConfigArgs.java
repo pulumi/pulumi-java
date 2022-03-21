@@ -73,22 +73,18 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends io.pulumi.res
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
-
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
             return this;
         }
-
         public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
-        }
-        public AzureClusterControlPlaneProxyConfigArgs build() {
+        }        public AzureClusterControlPlaneProxyConfigArgs build() {
             return new AzureClusterControlPlaneProxyConfigArgs(resourceGroupId, secretId);
         }
     }

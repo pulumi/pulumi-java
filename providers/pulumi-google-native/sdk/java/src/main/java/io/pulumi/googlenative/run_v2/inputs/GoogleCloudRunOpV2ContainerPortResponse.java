@@ -77,12 +77,10 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends io.pulumi.res
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GoogleCloudRunOpV2ContainerPortResponse build() {
+        }        public GoogleCloudRunOpV2ContainerPortResponse build() {
             return new GoogleCloudRunOpV2ContainerPortResponse(containerPort, name);
         }
     }

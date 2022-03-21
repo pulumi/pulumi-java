@@ -45,8 +45,7 @@ public final class ThemeTileStyle {
         public Builder border(@Nullable ThemeBorderStyle border) {
             this.border = border;
             return this;
-        }
-        public ThemeTileStyle build() {
+        }        public ThemeTileStyle build() {
             return new ThemeTileStyle(border);
         }
     }

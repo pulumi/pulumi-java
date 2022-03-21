@@ -53,12 +53,10 @@ public final class FunctionConfig {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
-        }
-        public FunctionConfig build() {
+        }        public FunctionConfig build() {
             return new FunctionConfig(comment, runtime);
         }
     }

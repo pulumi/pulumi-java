@@ -209,102 +209,82 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.billingType = billingType;
             return this;
         }
-
         public Builder billingType(@Nullable Either<String,BillingType> billingType) {
             this.billingType = Output.ofNullable(billingType);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder isAvailabilityZonesEnabled(@Nullable Output<Boolean> isAvailabilityZonesEnabled) {
             this.isAvailabilityZonesEnabled = isAvailabilityZonesEnabled;
             return this;
         }
-
         public Builder isAvailabilityZonesEnabled(@Nullable Boolean isAvailabilityZonesEnabled) {
             this.isAvailabilityZonesEnabled = Output.ofNullable(isAvailabilityZonesEnabled);
             return this;
         }
-
         public Builder isDoubleEncryptionEnabled(@Nullable Output<Boolean> isDoubleEncryptionEnabled) {
             this.isDoubleEncryptionEnabled = isDoubleEncryptionEnabled;
             return this;
         }
-
         public Builder isDoubleEncryptionEnabled(@Nullable Boolean isDoubleEncryptionEnabled) {
             this.isDoubleEncryptionEnabled = Output.ofNullable(isDoubleEncryptionEnabled);
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<ClusterSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ClusterSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(billingType, clusterName, identity, isAvailabilityZonesEnabled, isDoubleEncryptionEnabled, keyVaultProperties, location, resourceGroupName, sku, tags);
         }
     }

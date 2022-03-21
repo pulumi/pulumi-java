@@ -89,17 +89,23 @@ public final class EventConnectionAuthParametersInvocationHttpParameters {
             this.bodies = bodies;
             return this;
         }
-
+        public Builder bodies(EventConnectionAuthParametersInvocationHttpParametersBody... bodies) {
+            return bodies(List.of(bodies));
+        }
         public Builder headers(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(EventConnectionAuthParametersInvocationHttpParametersHeader... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-        public EventConnectionAuthParametersInvocationHttpParameters build() {
+        public Builder queryStrings(EventConnectionAuthParametersInvocationHttpParametersQueryString... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public EventConnectionAuthParametersInvocationHttpParameters build() {
             return new EventConnectionAuthParametersInvocationHttpParameters(bodies, headers, queryStrings);
         }
     }

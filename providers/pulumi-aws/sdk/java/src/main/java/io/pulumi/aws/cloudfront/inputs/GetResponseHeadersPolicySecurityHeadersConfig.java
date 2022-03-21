@@ -142,32 +142,44 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
             this.contentSecurityPolicies = Objects.requireNonNull(contentSecurityPolicies);
             return this;
         }
-
+        public Builder contentSecurityPolicies(GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy... contentSecurityPolicies) {
+            return contentSecurityPolicies(List.of(contentSecurityPolicies));
+        }
         public Builder contentTypeOptions(List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions) {
             this.contentTypeOptions = Objects.requireNonNull(contentTypeOptions);
             return this;
         }
-
+        public Builder contentTypeOptions(GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption... contentTypeOptions) {
+            return contentTypeOptions(List.of(contentTypeOptions));
+        }
         public Builder frameOptions(List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions) {
             this.frameOptions = Objects.requireNonNull(frameOptions);
             return this;
         }
-
+        public Builder frameOptions(GetResponseHeadersPolicySecurityHeadersConfigFrameOption... frameOptions) {
+            return frameOptions(List.of(frameOptions));
+        }
         public Builder referrerPolicies(List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies) {
             this.referrerPolicies = Objects.requireNonNull(referrerPolicies);
             return this;
         }
-
+        public Builder referrerPolicies(GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy... referrerPolicies) {
+            return referrerPolicies(List.of(referrerPolicies));
+        }
         public Builder strictTransportSecurities(List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities) {
             this.strictTransportSecurities = Objects.requireNonNull(strictTransportSecurities);
             return this;
         }
-
+        public Builder strictTransportSecurities(GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity... strictTransportSecurities) {
+            return strictTransportSecurities(List.of(strictTransportSecurities));
+        }
         public Builder xssProtections(List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
             this.xssProtections = Objects.requireNonNull(xssProtections);
             return this;
         }
-        public GetResponseHeadersPolicySecurityHeadersConfig build() {
+        public Builder xssProtections(GetResponseHeadersPolicySecurityHeadersConfigXssProtection... xssProtections) {
+            return xssProtections(List.of(xssProtections));
+        }        public GetResponseHeadersPolicySecurityHeadersConfig build() {
             return new GetResponseHeadersPolicySecurityHeadersConfig(contentSecurityPolicies, contentTypeOptions, frameOptions, referrerPolicies, strictTransportSecurities, xssProtections);
         }
     }

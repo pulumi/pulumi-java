@@ -101,32 +101,26 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder phase(@Nullable Output<String> phase) {
             this.phase = phase;
             return this;
         }
-
         public Builder phase(@Nullable String phase) {
             this.phase = Output.ofNullable(phase);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
-        }
-        public PersistentVolumeStatusArgs build() {
+        }        public PersistentVolumeStatusArgs build() {
             return new PersistentVolumeStatusArgs(message, phase, reason);
         }
     }

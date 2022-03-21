@@ -89,32 +89,32 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
             this.containerImageNames = containerImageNames;
             return this;
         }
-
         public Builder containerImageNames(@Nullable List<String> containerImageNames) {
             this.containerImageNames = Output.ofNullable(containerImageNames);
             return this;
         }
-
+        public Builder containerImageNames(String... containerImageNames) {
+            return containerImageNames(List.of(containerImageNames));
+        }
         public Builder containerRegistries(@Nullable Output<List<ContainerRegistryArgs>> containerRegistries) {
             this.containerRegistries = containerRegistries;
             return this;
         }
-
         public Builder containerRegistries(@Nullable List<ContainerRegistryArgs> containerRegistries) {
             this.containerRegistries = Output.ofNullable(containerRegistries);
             return this;
         }
-
+        public Builder containerRegistries(ContainerRegistryArgs... containerRegistries) {
+            return containerRegistries(List.of(containerRegistries));
+        }
         public Builder type(Output<ContainerType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ContainerType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ContainerConfigurationArgs build() {
+        }        public ContainerConfigurationArgs build() {
             return new ContainerConfigurationArgs(containerImageNames, containerRegistries, type);
         }
     }

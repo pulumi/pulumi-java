@@ -292,152 +292,128 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             this.autodetect = autodetect;
             return this;
         }
-
         public Builder autodetect(@Nullable Boolean autodetect) {
             this.autodetect = Output.ofNullable(autodetect);
             return this;
         }
-
         public Builder avroOptions(@Nullable Output<AvroOptionsArgs> avroOptions) {
             this.avroOptions = avroOptions;
             return this;
         }
-
         public Builder avroOptions(@Nullable AvroOptionsArgs avroOptions) {
             this.avroOptions = Output.ofNullable(avroOptions);
             return this;
         }
-
         public Builder bigtableOptions(@Nullable Output<BigtableOptionsArgs> bigtableOptions) {
             this.bigtableOptions = bigtableOptions;
             return this;
         }
-
         public Builder bigtableOptions(@Nullable BigtableOptionsArgs bigtableOptions) {
             this.bigtableOptions = Output.ofNullable(bigtableOptions);
             return this;
         }
-
         public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder csvOptions(@Nullable Output<CsvOptionsArgs> csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
-
         public Builder csvOptions(@Nullable CsvOptionsArgs csvOptions) {
             this.csvOptions = Output.ofNullable(csvOptions);
             return this;
         }
-
         public Builder decimalTargetTypes(@Nullable Output<List<String>> decimalTargetTypes) {
             this.decimalTargetTypes = decimalTargetTypes;
             return this;
         }
-
         public Builder decimalTargetTypes(@Nullable List<String> decimalTargetTypes) {
             this.decimalTargetTypes = Output.ofNullable(decimalTargetTypes);
             return this;
         }
-
+        public Builder decimalTargetTypes(String... decimalTargetTypes) {
+            return decimalTargetTypes(List.of(decimalTargetTypes));
+        }
         public Builder googleSheetsOptions(@Nullable Output<GoogleSheetsOptionsArgs> googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
-
         public Builder googleSheetsOptions(@Nullable GoogleSheetsOptionsArgs googleSheetsOptions) {
             this.googleSheetsOptions = Output.ofNullable(googleSheetsOptions);
             return this;
         }
-
         public Builder hivePartitioningOptions(@Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
-
         public Builder hivePartitioningOptions(@Nullable HivePartitioningOptionsArgs hivePartitioningOptions) {
             this.hivePartitioningOptions = Output.ofNullable(hivePartitioningOptions);
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Output.ofNullable(ignoreUnknownValues);
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = Output.ofNullable(maxBadRecords);
             return this;
         }
-
         public Builder parquetOptions(@Nullable Output<ParquetOptionsArgs> parquetOptions) {
             this.parquetOptions = parquetOptions;
             return this;
         }
-
         public Builder parquetOptions(@Nullable ParquetOptionsArgs parquetOptions) {
             this.parquetOptions = Output.ofNullable(parquetOptions);
             return this;
         }
-
         public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable TableSchemaArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
-
         public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = Output.ofNullable(sourceFormat);
             return this;
         }
-
         public Builder sourceUris(@Nullable Output<List<String>> sourceUris) {
             this.sourceUris = sourceUris;
             return this;
         }
-
         public Builder sourceUris(@Nullable List<String> sourceUris) {
             this.sourceUris = Output.ofNullable(sourceUris);
             return this;
         }
-        public ExternalDataConfigurationArgs build() {
+        public Builder sourceUris(String... sourceUris) {
+            return sourceUris(List.of(sourceUris));
+        }        public ExternalDataConfigurationArgs build() {
             return new ExternalDataConfigurationArgs(autodetect, avroOptions, bigtableOptions, compression, connectionId, csvOptions, decimalTargetTypes, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, parquetOptions, schema, sourceFormat, sourceUris);
         }
     }

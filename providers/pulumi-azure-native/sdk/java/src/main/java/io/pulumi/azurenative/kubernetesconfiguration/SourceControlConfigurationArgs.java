@@ -288,152 +288,122 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder clusterResourceName(Output<String> clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
-
         public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Output.of(Objects.requireNonNull(clusterResourceName));
             return this;
         }
-
         public Builder clusterRp(Output<String> clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
-
         public Builder clusterRp(String clusterRp) {
             this.clusterRp = Output.of(Objects.requireNonNull(clusterRp));
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Output<Map<String,String>> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = Output.ofNullable(configurationProtectedSettings);
             return this;
         }
-
         public Builder enableHelmOperator(@Nullable Output<Boolean> enableHelmOperator) {
             this.enableHelmOperator = enableHelmOperator;
             return this;
         }
-
         public Builder enableHelmOperator(@Nullable Boolean enableHelmOperator) {
             this.enableHelmOperator = Output.ofNullable(enableHelmOperator);
             return this;
         }
-
         public Builder helmOperatorProperties(@Nullable Output<HelmOperatorPropertiesArgs> helmOperatorProperties) {
             this.helmOperatorProperties = helmOperatorProperties;
             return this;
         }
-
         public Builder helmOperatorProperties(@Nullable HelmOperatorPropertiesArgs helmOperatorProperties) {
             this.helmOperatorProperties = Output.ofNullable(helmOperatorProperties);
             return this;
         }
-
         public Builder operatorInstanceName(@Nullable Output<String> operatorInstanceName) {
             this.operatorInstanceName = operatorInstanceName;
             return this;
         }
-
         public Builder operatorInstanceName(@Nullable String operatorInstanceName) {
             this.operatorInstanceName = Output.ofNullable(operatorInstanceName);
             return this;
         }
-
         public Builder operatorNamespace(@Nullable Output<String> operatorNamespace) {
             this.operatorNamespace = operatorNamespace;
             return this;
         }
-
         public Builder operatorNamespace(@Nullable String operatorNamespace) {
             this.operatorNamespace = Output.ofNullable(operatorNamespace);
             return this;
         }
-
         public Builder operatorParams(@Nullable Output<String> operatorParams) {
             this.operatorParams = operatorParams;
             return this;
         }
-
         public Builder operatorParams(@Nullable String operatorParams) {
             this.operatorParams = Output.ofNullable(operatorParams);
             return this;
         }
-
         public Builder operatorScope(@Nullable Output<Either<String,OperatorScopeType>> operatorScope) {
             this.operatorScope = operatorScope;
             return this;
         }
-
         public Builder operatorScope(@Nullable Either<String,OperatorScopeType> operatorScope) {
             this.operatorScope = Output.ofNullable(operatorScope);
             return this;
         }
-
         public Builder operatorType(@Nullable Output<Either<String,OperatorType>> operatorType) {
             this.operatorType = operatorType;
             return this;
         }
-
         public Builder operatorType(@Nullable Either<String,OperatorType> operatorType) {
             this.operatorType = Output.ofNullable(operatorType);
             return this;
         }
-
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = Output.ofNullable(repositoryUrl);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sourceControlConfigurationName(@Nullable Output<String> sourceControlConfigurationName) {
             this.sourceControlConfigurationName = sourceControlConfigurationName;
             return this;
         }
-
         public Builder sourceControlConfigurationName(@Nullable String sourceControlConfigurationName) {
             this.sourceControlConfigurationName = Output.ofNullable(sourceControlConfigurationName);
             return this;
         }
-
         public Builder sshKnownHostsContents(@Nullable Output<String> sshKnownHostsContents) {
             this.sshKnownHostsContents = sshKnownHostsContents;
             return this;
         }
-
         public Builder sshKnownHostsContents(@Nullable String sshKnownHostsContents) {
             this.sshKnownHostsContents = Output.ofNullable(sshKnownHostsContents);
             return this;
-        }
-        public SourceControlConfigurationArgs build() {
+        }        public SourceControlConfigurationArgs build() {
             return new SourceControlConfigurationArgs(clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, enableHelmOperator, helmOperatorProperties, operatorInstanceName, operatorNamespace, operatorParams, operatorScope, operatorType, repositoryUrl, resourceGroupName, sourceControlConfigurationName, sshKnownHostsContents);
         }
     }

@@ -183,82 +183,69 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
             this.accessModes = accessModes;
             return this;
         }
-
         public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = Output.ofNullable(accessModes);
             return this;
         }
-
+        public Builder accessModes(String... accessModes) {
+            return accessModes(List.of(accessModes));
+        }
         public Builder dataSource(@Nullable Output<TypedLocalObjectReferenceArgs> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable TypedLocalObjectReferenceArgs dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder dataSourceRef(@Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef) {
             this.dataSourceRef = dataSourceRef;
             return this;
         }
-
         public Builder dataSourceRef(@Nullable TypedLocalObjectReferenceArgs dataSourceRef) {
             this.dataSourceRef = Output.ofNullable(dataSourceRef);
             return this;
         }
-
         public Builder resources(@Nullable Output<ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable ResourceRequirementsArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder storageClassName(@Nullable Output<String> storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
-
         public Builder storageClassName(@Nullable String storageClassName) {
             this.storageClassName = Output.ofNullable(storageClassName);
             return this;
         }
-
         public Builder volumeMode(@Nullable Output<String> volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
-
         public Builder volumeMode(@Nullable String volumeMode) {
             this.volumeMode = Output.ofNullable(volumeMode);
             return this;
         }
-
         public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Output.ofNullable(volumeName);
             return this;
-        }
-        public PersistentVolumeClaimSpecArgs build() {
+        }        public PersistentVolumeClaimSpecArgs build() {
             return new PersistentVolumeClaimSpecArgs(accessModes, dataSource, dataSourceRef, resources, selector, storageClassName, volumeMode, volumeName);
         }
     }

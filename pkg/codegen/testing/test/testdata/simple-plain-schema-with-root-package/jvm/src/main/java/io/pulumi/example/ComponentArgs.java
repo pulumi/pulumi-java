@@ -156,52 +156,45 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.a = Objects.requireNonNull(a);
             return this;
         }
-
         public Builder b(@Nullable Boolean b) {
             this.b = b;
             return this;
         }
-
         public Builder bar(@Nullable Foo bar) {
             this.bar = bar;
             return this;
         }
-
         public Builder baz(@Nullable List<Foo> baz) {
             this.baz = baz;
             return this;
         }
-
+        public Builder baz(Foo... baz) {
+            return baz(List.of(baz));
+        }
         public Builder c(Integer c) {
             this.c = Objects.requireNonNull(c);
             return this;
         }
-
         public Builder d(@Nullable Integer d) {
             this.d = d;
             return this;
         }
-
         public Builder e(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
-
         public Builder f(@Nullable String f) {
             this.f = f;
             return this;
         }
-
         public Builder foo(@Nullable Output<FooArgs> foo) {
             this.foo = foo;
             return this;
         }
-
         public Builder foo(@Nullable FooArgs foo) {
             this.foo = Output.ofNullable(foo);
             return this;
-        }
-        public ComponentArgs build() {
+        }        public ComponentArgs build() {
             return new ComponentArgs(a, b, bar, baz, c, d, e, f, foo);
         }
     }

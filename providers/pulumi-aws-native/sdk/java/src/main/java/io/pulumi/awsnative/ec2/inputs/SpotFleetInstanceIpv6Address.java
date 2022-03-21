@@ -50,8 +50,7 @@ public final class SpotFleetInstanceIpv6Address extends io.pulumi.resources.Invo
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
-        }
-        public SpotFleetInstanceIpv6Address build() {
+        }        public SpotFleetInstanceIpv6Address build() {
             return new SpotFleetInstanceIpv6Address(ipv6Address);
         }
     }

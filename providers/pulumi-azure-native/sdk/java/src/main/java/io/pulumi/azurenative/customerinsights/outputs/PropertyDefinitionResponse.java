@@ -300,82 +300,72 @@ public final class PropertyDefinitionResponse {
             this.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
-
         public Builder dataSourcePrecedenceRules(List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules) {
             this.dataSourcePrecedenceRules = Objects.requireNonNull(dataSourcePrecedenceRules);
             return this;
         }
-
+        public Builder dataSourcePrecedenceRules(DataSourcePrecedenceResponse... dataSourcePrecedenceRules) {
+            return dataSourcePrecedenceRules(List.of(dataSourcePrecedenceRules));
+        }
         public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues) {
             this.enumValidValues = enumValidValues;
             return this;
         }
-
+        public Builder enumValidValues(ProfileEnumValidValuesFormatResponse... enumValidValues) {
+            return enumValidValues(List.of(enumValidValues));
+        }
         public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public Builder fieldType(String fieldType) {
             this.fieldType = Objects.requireNonNull(fieldType);
             return this;
         }
-
         public Builder isArray(@Nullable Boolean isArray) {
             this.isArray = isArray;
             return this;
         }
-
         public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
             this.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
-
         public Builder isEnum(@Nullable Boolean isEnum) {
             this.isEnum = isEnum;
             return this;
         }
-
         public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
             this.isFlagEnum = isFlagEnum;
             return this;
         }
-
         public Builder isImage(@Nullable Boolean isImage) {
             this.isImage = isImage;
             return this;
         }
-
         public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
             this.isLocalizedString = isLocalizedString;
             return this;
         }
-
         public Builder isName(@Nullable Boolean isName) {
             this.isName = isName;
             return this;
         }
-
         public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
-
         public Builder maxLength(@Nullable Integer maxLength) {
             this.maxLength = maxLength;
             return this;
         }
-
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
-
         public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
-        }
-        public PropertyDefinitionResponse build() {
+        }        public PropertyDefinitionResponse build() {
             return new PropertyDefinitionResponse(arrayValueSeparator, dataSourcePrecedenceRules, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
         }
     }

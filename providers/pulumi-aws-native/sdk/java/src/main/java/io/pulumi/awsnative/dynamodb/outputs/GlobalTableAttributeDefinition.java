@@ -53,12 +53,10 @@ public final class GlobalTableAttributeDefinition {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder attributeType(String attributeType) {
             this.attributeType = Objects.requireNonNull(attributeType);
             return this;
-        }
-        public GlobalTableAttributeDefinition build() {
+        }        public GlobalTableAttributeDefinition build() {
             return new GlobalTableAttributeDefinition(attributeName, attributeType);
         }
     }

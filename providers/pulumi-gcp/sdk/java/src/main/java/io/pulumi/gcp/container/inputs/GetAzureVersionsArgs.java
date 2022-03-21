@@ -75,12 +75,10 @@ public final class GetAzureVersionsArgs extends io.pulumi.resources.InvokeArgs {
             this.location = location;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAzureVersionsArgs build() {
+        }        public GetAzureVersionsArgs build() {
             return new GetAzureVersionsArgs(location, project);
         }
     }

@@ -43,8 +43,7 @@ public final class WebACLLabel {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebACLLabel build() {
+        }        public WebACLLabel build() {
             return new WebACLLabel(name);
         }
     }

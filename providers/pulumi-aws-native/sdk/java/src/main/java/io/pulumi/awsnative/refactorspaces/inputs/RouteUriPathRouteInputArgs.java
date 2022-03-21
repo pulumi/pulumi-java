@@ -94,42 +94,37 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
             this.activationState = Objects.requireNonNull(activationState);
             return this;
         }
-
         public Builder activationState(RouteActivationState activationState) {
             this.activationState = Output.of(Objects.requireNonNull(activationState));
             return this;
         }
-
         public Builder includeChildPaths(@Nullable Output<Boolean> includeChildPaths) {
             this.includeChildPaths = includeChildPaths;
             return this;
         }
-
         public Builder includeChildPaths(@Nullable Boolean includeChildPaths) {
             this.includeChildPaths = Output.ofNullable(includeChildPaths);
             return this;
         }
-
         public Builder methods(@Nullable Output<List<RouteMethod>> methods) {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<RouteMethod> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(RouteMethod... methods) {
+            return methods(List.of(methods));
+        }
         public Builder sourcePath(@Nullable Output<String> sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }
-
         public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = Output.ofNullable(sourcePath);
             return this;
-        }
-        public RouteUriPathRouteInputArgs build() {
+        }        public RouteUriPathRouteInputArgs build() {
             return new RouteUriPathRouteInputArgs(activationState, includeChildPaths, methods, sourcePath);
         }
     }

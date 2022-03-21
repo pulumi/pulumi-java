@@ -72,12 +72,10 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
             this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn);
             return this;
         }
-
         public Builder logPrefix(String logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
-        }
-        public BotAliasCloudWatchLogGroupLogDestination build() {
+        }        public BotAliasCloudWatchLogGroupLogDestination build() {
             return new BotAliasCloudWatchLogGroupLogDestination(cloudWatchLogGroupArn, logPrefix);
         }
     }

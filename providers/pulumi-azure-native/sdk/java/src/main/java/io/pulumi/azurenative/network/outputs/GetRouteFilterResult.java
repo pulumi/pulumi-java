@@ -203,52 +203,51 @@ public final class GetRouteFilterResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipv6Peerings(List<ExpressRouteCircuitPeeringResponse> ipv6Peerings) {
             this.ipv6Peerings = Objects.requireNonNull(ipv6Peerings);
             return this;
         }
-
+        public Builder ipv6Peerings(ExpressRouteCircuitPeeringResponse... ipv6Peerings) {
+            return ipv6Peerings(List.of(ipv6Peerings));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peerings(List<ExpressRouteCircuitPeeringResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
-
+        public Builder peerings(ExpressRouteCircuitPeeringResponse... peerings) {
+            return peerings(List.of(peerings));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder rules(@Nullable List<RouteFilterRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(RouteFilterRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRouteFilterResult build() {
+        }        public GetRouteFilterResult build() {
             return new GetRouteFilterResult(etag, id, ipv6Peerings, location, name, peerings, provisioningState, rules, tags, type);
         }
     }

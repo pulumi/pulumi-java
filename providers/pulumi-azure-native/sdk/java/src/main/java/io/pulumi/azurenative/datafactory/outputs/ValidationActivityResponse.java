@@ -206,52 +206,48 @@ public final class ValidationActivityResponse {
             this.childItems = childItems;
             return this;
         }
-
         public Builder dataset(DatasetReferenceResponse dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder minimumSize(@Nullable Object minimumSize) {
             this.minimumSize = minimumSize;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sleep(@Nullable Object sleep) {
             this.sleep = sleep;
             return this;
         }
-
         public Builder timeout(@Nullable Object timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public ValidationActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public ValidationActivityResponse build() {
             return new ValidationActivityResponse(childItems, dataset, dependsOn, description, minimumSize, name, sleep, timeout, type, userProperties);
         }
     }

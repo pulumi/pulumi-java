@@ -71,12 +71,10 @@ public final class LinkBandwidth {
             this.downloadSpeed = downloadSpeed;
             return this;
         }
-
         public Builder uploadSpeed(@Nullable Integer uploadSpeed) {
             this.uploadSpeed = uploadSpeed;
             return this;
-        }
-        public LinkBandwidth build() {
+        }        public LinkBandwidth build() {
             return new LinkBandwidth(downloadSpeed, uploadSpeed);
         }
     }

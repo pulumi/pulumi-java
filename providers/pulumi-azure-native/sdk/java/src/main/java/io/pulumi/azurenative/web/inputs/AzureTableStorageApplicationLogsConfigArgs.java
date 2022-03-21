@@ -79,22 +79,18 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable LogLevel level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder sasUrl(Output<String> sasUrl) {
             this.sasUrl = Objects.requireNonNull(sasUrl);
             return this;
         }
-
         public Builder sasUrl(String sasUrl) {
             this.sasUrl = Output.of(Objects.requireNonNull(sasUrl));
             return this;
-        }
-        public AzureTableStorageApplicationLogsConfigArgs build() {
+        }        public AzureTableStorageApplicationLogsConfigArgs build() {
             return new AzureTableStorageApplicationLogsConfigArgs(level, sasUrl);
         }
     }

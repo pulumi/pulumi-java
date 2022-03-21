@@ -74,22 +74,18 @@ public final class InfrastructureConfigurationLoggingS3LogsGetArgs extends io.pu
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
-        }
-        public InfrastructureConfigurationLoggingS3LogsGetArgs build() {
+        }        public InfrastructureConfigurationLoggingS3LogsGetArgs build() {
             return new InfrastructureConfigurationLoggingS3LogsGetArgs(s3BucketName, s3KeyPrefix);
         }
     }

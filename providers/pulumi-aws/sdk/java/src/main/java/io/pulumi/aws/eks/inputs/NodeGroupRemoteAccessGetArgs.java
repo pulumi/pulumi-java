@@ -75,22 +75,21 @@ public final class NodeGroupRemoteAccessGetArgs extends io.pulumi.resources.Reso
             this.ec2SshKey = ec2SshKey;
             return this;
         }
-
         public Builder ec2SshKey(@Nullable String ec2SshKey) {
             this.ec2SshKey = Output.ofNullable(ec2SshKey);
             return this;
         }
-
         public Builder sourceSecurityGroupIds(@Nullable Output<List<String>> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }
-
         public Builder sourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = Output.ofNullable(sourceSecurityGroupIds);
             return this;
         }
-        public NodeGroupRemoteAccessGetArgs build() {
+        public Builder sourceSecurityGroupIds(String... sourceSecurityGroupIds) {
+            return sourceSecurityGroupIds(List.of(sourceSecurityGroupIds));
+        }        public NodeGroupRemoteAccessGetArgs build() {
             return new NodeGroupRemoteAccessGetArgs(ec2SshKey, sourceSecurityGroupIds);
         }
     }

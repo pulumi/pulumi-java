@@ -68,12 +68,10 @@ public final class GetLaunchProfileArgs extends io.pulumi.resources.InvokeArgs {
             this.launchProfileId = Objects.requireNonNull(launchProfileId);
             return this;
         }
-
         public Builder studioId(String studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
-        }
-        public GetLaunchProfileArgs build() {
+        }        public GetLaunchProfileArgs build() {
             return new GetLaunchProfileArgs(launchProfileId, studioId);
         }
     }

@@ -91,32 +91,26 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsArgs(bucket, generation, object);
         }
     }

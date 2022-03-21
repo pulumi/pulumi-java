@@ -104,22 +104,18 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse {
             this.enableTextToSpeech = Objects.requireNonNull(enableTextToSpeech);
             return this;
         }
-
         public Builder outputAudioEncoding(String outputAudioEncoding) {
             this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
             return this;
         }
-
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
-
         public Builder synthesizeSpeechConfigs(Map<String,String> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse build() {
+        }        public GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse build() {
             return new GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
         }
     }

@@ -169,82 +169,66 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder allQueryArguments(@Nullable Object allQueryArguments) {
             this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
-
         public Builder body(@Nullable Output<Object> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable Object body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder jsonBody(@Nullable Output<WebACLJsonBodyArgs> jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
-
         public Builder jsonBody(@Nullable WebACLJsonBodyArgs jsonBody) {
             this.jsonBody = Output.ofNullable(jsonBody);
             return this;
         }
-
         public Builder method(@Nullable Output<Object> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable Object method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder queryString(@Nullable Output<Object> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable Object queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder singleHeader(@Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebACLFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
             this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebACLFieldToMatchSingleQueryArgumentPropertiesArgs singleQueryArgument) {
             this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
-
         public Builder uriPath(@Nullable Output<Object> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
-
         public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = Output.ofNullable(uriPath);
             return this;
-        }
-        public WebACLFieldToMatchArgs build() {
+        }        public WebACLFieldToMatchArgs build() {
             return new WebACLFieldToMatchArgs(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

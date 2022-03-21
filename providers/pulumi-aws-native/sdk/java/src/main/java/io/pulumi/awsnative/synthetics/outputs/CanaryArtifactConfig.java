@@ -53,8 +53,7 @@ public final class CanaryArtifactConfig {
         public Builder s3Encryption(@Nullable CanaryS3Encryption s3Encryption) {
             this.s3Encryption = s3Encryption;
             return this;
-        }
-        public CanaryArtifactConfig build() {
+        }        public CanaryArtifactConfig build() {
             return new CanaryArtifactConfig(s3Encryption);
         }
     }

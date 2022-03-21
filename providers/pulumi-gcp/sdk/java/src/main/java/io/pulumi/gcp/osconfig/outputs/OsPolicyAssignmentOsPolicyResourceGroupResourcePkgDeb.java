@@ -72,12 +72,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
             this.pullDeps = pullDeps;
             return this;
         }
-
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb(pullDeps, source);
         }
     }

@@ -123,52 +123,42 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder pollingInterval(@Nullable Output<String> pollingInterval) {
             this.pollingInterval = pollingInterval;
             return this;
         }
-
         public Builder pollingInterval(@Nullable String pollingInterval) {
             this.pollingInterval = Output.ofNullable(pollingInterval);
             return this;
         }
-
         public Builder scaleType(Output<String> scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
-
         public Builder scaleType(String scaleType) {
             this.scaleType = Output.of(Objects.requireNonNull(scaleType));
             return this;
         }
-
         public Builder targetUtilizationPercentage(@Nullable Output<Integer> targetUtilizationPercentage) {
             this.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
         }
-
         public Builder targetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
             this.targetUtilizationPercentage = Output.ofNullable(targetUtilizationPercentage);
             return this;
-        }
-        public AutoScaleSettingsArgs build() {
+        }        public AutoScaleSettingsArgs build() {
             return new AutoScaleSettingsArgs(maxInstances, minInstances, pollingInterval, scaleType, targetUtilizationPercentage);
         }
     }

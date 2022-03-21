@@ -217,57 +217,49 @@ public final class GetFavoriteResult {
             this.category = category;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = config;
             return this;
         }
-
         public Builder favoriteId(String favoriteId) {
             this.favoriteId = Objects.requireNonNull(favoriteId);
             return this;
         }
-
         public Builder favoriteType(@Nullable String favoriteType) {
             this.favoriteType = favoriteType;
             return this;
         }
-
         public Builder isGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
             this.isGeneratedFromTemplate = isGeneratedFromTemplate;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeModified(String timeModified) {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetFavoriteResult build() {
+        }        public GetFavoriteResult build() {
             return new GetFavoriteResult(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, sourceType, tags, timeModified, userId, version);
         }
     }

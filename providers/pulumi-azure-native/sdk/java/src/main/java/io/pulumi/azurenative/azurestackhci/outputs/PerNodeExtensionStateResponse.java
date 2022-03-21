@@ -85,17 +85,14 @@ public final class PerNodeExtensionStateResponse {
             this.extension = Objects.requireNonNull(extension);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public PerNodeExtensionStateResponse build() {
+        }        public PerNodeExtensionStateResponse build() {
             return new PerNodeExtensionStateResponse(extension, name, state);
         }
     }

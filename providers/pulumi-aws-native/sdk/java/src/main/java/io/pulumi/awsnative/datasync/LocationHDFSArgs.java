@@ -252,132 +252,115 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
-
         public Builder agentArns(List<String> agentArns) {
             this.agentArns = Output.of(Objects.requireNonNull(agentArns));
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder authenticationType(Output<LocationHDFSAuthenticationType> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(LocationHDFSAuthenticationType authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder blockSize(@Nullable Output<Integer> blockSize) {
             this.blockSize = blockSize;
             return this;
         }
-
         public Builder blockSize(@Nullable Integer blockSize) {
             this.blockSize = Output.ofNullable(blockSize);
             return this;
         }
-
         public Builder kerberosKeytab(@Nullable Output<String> kerberosKeytab) {
             this.kerberosKeytab = kerberosKeytab;
             return this;
         }
-
         public Builder kerberosKeytab(@Nullable String kerberosKeytab) {
             this.kerberosKeytab = Output.ofNullable(kerberosKeytab);
             return this;
         }
-
         public Builder kerberosKrb5Conf(@Nullable Output<String> kerberosKrb5Conf) {
             this.kerberosKrb5Conf = kerberosKrb5Conf;
             return this;
         }
-
         public Builder kerberosKrb5Conf(@Nullable String kerberosKrb5Conf) {
             this.kerberosKrb5Conf = Output.ofNullable(kerberosKrb5Conf);
             return this;
         }
-
         public Builder kerberosPrincipal(@Nullable Output<String> kerberosPrincipal) {
             this.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
-
         public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
             this.kerberosPrincipal = Output.ofNullable(kerberosPrincipal);
             return this;
         }
-
         public Builder kmsKeyProviderUri(@Nullable Output<String> kmsKeyProviderUri) {
             this.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
-
         public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
             this.kmsKeyProviderUri = Output.ofNullable(kmsKeyProviderUri);
             return this;
         }
-
         public Builder nameNodes(Output<List<LocationHDFSNameNodeArgs>> nameNodes) {
             this.nameNodes = Objects.requireNonNull(nameNodes);
             return this;
         }
-
         public Builder nameNodes(List<LocationHDFSNameNodeArgs> nameNodes) {
             this.nameNodes = Output.of(Objects.requireNonNull(nameNodes));
             return this;
         }
-
+        public Builder nameNodes(LocationHDFSNameNodeArgs... nameNodes) {
+            return nameNodes(List.of(nameNodes));
+        }
         public Builder qopConfiguration(@Nullable Output<LocationHDFSQopConfigurationArgs> qopConfiguration) {
             this.qopConfiguration = qopConfiguration;
             return this;
         }
-
         public Builder qopConfiguration(@Nullable LocationHDFSQopConfigurationArgs qopConfiguration) {
             this.qopConfiguration = Output.ofNullable(qopConfiguration);
             return this;
         }
-
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
-
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
             this.replicationFactor = Output.ofNullable(replicationFactor);
             return this;
         }
-
         public Builder simpleUser(@Nullable Output<String> simpleUser) {
             this.simpleUser = simpleUser;
             return this;
         }
-
         public Builder simpleUser(@Nullable String simpleUser) {
             this.simpleUser = Output.ofNullable(simpleUser);
             return this;
         }
-
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LocationHDFSTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationHDFSTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LocationHDFSArgs build() {
+        public Builder tags(LocationHDFSTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LocationHDFSArgs build() {
             return new LocationHDFSArgs(agentArns, authenticationType, blockSize, kerberosKeytab, kerberosKrb5Conf, kerberosPrincipal, kmsKeyProviderUri, nameNodes, qopConfiguration, replicationFactor, simpleUser, subdirectory, tags);
         }
     }

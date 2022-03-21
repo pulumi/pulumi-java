@@ -92,32 +92,26 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
             this.and = and;
             return this;
         }
-
         public Builder and(@Nullable BucketReplicationConfigRuleFilterAndArgs and) {
             this.and = Output.ofNullable(and);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder tag(@Nullable Output<BucketReplicationConfigRuleFilterTagArgs> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable BucketReplicationConfigRuleFilterTagArgs tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public BucketReplicationConfigRuleFilterArgs build() {
+        }        public BucketReplicationConfigRuleFilterArgs build() {
             return new BucketReplicationConfigRuleFilterArgs(and, prefix, tag);
         }
     }

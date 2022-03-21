@@ -60,12 +60,10 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SSISExecutionParameterArgs build() {
+        }        public SSISExecutionParameterArgs build() {
             return new SSISExecutionParameterArgs(value);
         }
     }

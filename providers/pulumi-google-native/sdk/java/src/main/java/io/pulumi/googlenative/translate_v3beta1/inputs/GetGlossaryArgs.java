@@ -78,17 +78,14 @@ public final class GetGlossaryArgs extends io.pulumi.resources.InvokeArgs {
             this.glossaryId = Objects.requireNonNull(glossaryId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetGlossaryArgs build() {
+        }        public GetGlossaryArgs build() {
             return new GetGlossaryArgs(glossaryId, location, project);
         }
     }

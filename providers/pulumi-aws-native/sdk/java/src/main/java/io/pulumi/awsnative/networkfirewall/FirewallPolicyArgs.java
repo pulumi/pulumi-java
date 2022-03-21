@@ -92,42 +92,37 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder firewallPolicy(Output<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy) {
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
-
         public Builder firewallPolicy(io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs firewallPolicy) {
             this.firewallPolicy = Output.of(Objects.requireNonNull(firewallPolicy));
             return this;
         }
-
         public Builder firewallPolicyName(@Nullable Output<String> firewallPolicyName) {
             this.firewallPolicyName = firewallPolicyName;
             return this;
         }
-
         public Builder firewallPolicyName(@Nullable String firewallPolicyName) {
             this.firewallPolicyName = Output.ofNullable(firewallPolicyName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FirewallPolicyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallPolicyTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public FirewallPolicyArgs build() {
+        public Builder tags(FirewallPolicyTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public FirewallPolicyArgs build() {
             return new FirewallPolicyArgs(description, firewallPolicy, firewallPolicyName, tags);
         }
     }

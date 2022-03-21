@@ -191,92 +191,77 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkManagerName(@Nullable Output<String> networkManagerName) {
             this.networkManagerName = networkManagerName;
             return this;
         }
-
         public Builder networkManagerName(@Nullable String networkManagerName) {
             this.networkManagerName = Output.ofNullable(networkManagerName);
             return this;
         }
-
         public Builder networkManagerScopeAccesses(@Nullable Output<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses) {
             this.networkManagerScopeAccesses = networkManagerScopeAccesses;
             return this;
         }
-
         public Builder networkManagerScopeAccesses(@Nullable List<Either<String,ConfigurationType>> networkManagerScopeAccesses) {
             this.networkManagerScopeAccesses = Output.ofNullable(networkManagerScopeAccesses);
             return this;
         }
-
+        public Builder networkManagerScopeAccesses(Either<String,ConfigurationType>... networkManagerScopeAccesses) {
+            return networkManagerScopeAccesses(List.of(networkManagerScopeAccesses));
+        }
         public Builder networkManagerScopes(@Nullable Output<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes) {
             this.networkManagerScopes = networkManagerScopes;
             return this;
         }
-
         public Builder networkManagerScopes(@Nullable NetworkManagerPropertiesNetworkManagerScopesArgs networkManagerScopes) {
             this.networkManagerScopes = Output.ofNullable(networkManagerScopes);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NetworkManagerArgs build() {
+        }        public NetworkManagerArgs build() {
             return new NetworkManagerArgs(description, displayName, id, location, networkManagerName, networkManagerScopeAccesses, networkManagerScopes, resourceGroupName, tags);
         }
     }

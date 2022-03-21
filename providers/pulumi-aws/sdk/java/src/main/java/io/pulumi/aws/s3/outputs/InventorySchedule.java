@@ -51,8 +51,7 @@ public final class InventorySchedule {
         public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
-        }
-        public InventorySchedule build() {
+        }        public InventorySchedule build() {
             return new InventorySchedule(frequency);
         }
     }

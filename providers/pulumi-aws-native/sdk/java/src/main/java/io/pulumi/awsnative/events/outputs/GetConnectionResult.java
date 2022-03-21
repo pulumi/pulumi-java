@@ -105,27 +105,22 @@ public final class GetConnectionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder authParameters(@Nullable AuthParametersProperties authParameters) {
             this.authParameters = authParameters;
             return this;
         }
-
         public Builder authorizationType(@Nullable ConnectionAuthorizationType authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
-        }
-        public GetConnectionResult build() {
+        }        public GetConnectionResult build() {
             return new GetConnectionResult(arn, authParameters, authorizationType, description, secretArn);
         }
     }

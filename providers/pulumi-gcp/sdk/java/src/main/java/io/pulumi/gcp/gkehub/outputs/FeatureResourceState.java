@@ -56,12 +56,10 @@ public final class FeatureResourceState {
             this.hasResources = hasResources;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public FeatureResourceState build() {
+        }        public FeatureResourceState build() {
             return new FeatureResourceState(hasResources, state);
         }
     }

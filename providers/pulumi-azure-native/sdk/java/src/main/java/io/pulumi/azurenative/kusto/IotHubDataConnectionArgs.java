@@ -254,132 +254,109 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder consumerGroup(Output<String> consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
-
         public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = Output.of(Objects.requireNonNull(consumerGroup));
             return this;
         }
-
         public Builder dataConnectionName(@Nullable Output<String> dataConnectionName) {
             this.dataConnectionName = dataConnectionName;
             return this;
         }
-
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
             this.dataConnectionName = Output.ofNullable(dataConnectionName);
             return this;
         }
-
         public Builder dataFormat(@Nullable Output<Either<String,IotHubDataFormat>> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder dataFormat(@Nullable Either<String,IotHubDataFormat> dataFormat) {
             this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder eventSystemProperties(@Nullable Output<List<String>> eventSystemProperties) {
             this.eventSystemProperties = eventSystemProperties;
             return this;
         }
-
         public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
             this.eventSystemProperties = Output.ofNullable(eventSystemProperties);
             return this;
         }
-
+        public Builder eventSystemProperties(String... eventSystemProperties) {
+            return eventSystemProperties(List.of(eventSystemProperties));
+        }
         public Builder iotHubResourceId(Output<String> iotHubResourceId) {
             this.iotHubResourceId = Objects.requireNonNull(iotHubResourceId);
             return this;
         }
-
         public Builder iotHubResourceId(String iotHubResourceId) {
             this.iotHubResourceId = Output.of(Objects.requireNonNull(iotHubResourceId));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
-
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = Output.ofNullable(mappingRuleName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sharedAccessPolicyName(Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Objects.requireNonNull(sharedAccessPolicyName);
             return this;
         }
-
         public Builder sharedAccessPolicyName(String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Output.of(Objects.requireNonNull(sharedAccessPolicyName));
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
-        }
-        public IotHubDataConnectionArgs build() {
+        }        public IotHubDataConnectionArgs build() {
             return new IotHubDataConnectionArgs(clusterName, consumerGroup, dataConnectionName, dataFormat, databaseName, eventSystemProperties, iotHubResourceId, kind, location, mappingRuleName, resourceGroupName, sharedAccessPolicyName, tableName);
         }
     }

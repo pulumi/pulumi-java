@@ -138,32 +138,26 @@ public final class DataFlowSourceResponse {
             this.dataset = dataset;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
             this.flowlet = flowlet;
             return this;
         }
-
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schemaLinkedService(@Nullable LinkedServiceReferenceResponse schemaLinkedService) {
             this.schemaLinkedService = schemaLinkedService;
             return this;
-        }
-        public DataFlowSourceResponse build() {
+        }        public DataFlowSourceResponse build() {
             return new DataFlowSourceResponse(dataset, description, flowlet, linkedService, name, schemaLinkedService);
         }
     }

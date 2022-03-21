@@ -81,32 +81,29 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
             this.providerAuthentication = providerAuthentication;
             return this;
         }
-
         public Builder providerAuthentication(@Nullable ProviderHubMetadataProviderAuthenticationArgs providerAuthentication) {
             this.providerAuthentication = Output.ofNullable(providerAuthentication);
             return this;
         }
-
         public Builder providerAuthorizations(@Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
-
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
             this.providerAuthorizations = Output.ofNullable(providerAuthorizations);
             return this;
         }
-
+        public Builder providerAuthorizations(ResourceProviderAuthorizationArgs... providerAuthorizations) {
+            return providerAuthorizations(List.of(providerAuthorizations));
+        }
         public Builder thirdPartyProviderAuthorization(@Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }
-
         public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataThirdPartyProviderAuthorizationArgs thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = Output.ofNullable(thirdPartyProviderAuthorization);
             return this;
-        }
-        public ProviderRegistrationPropertiesProviderHubMetadataArgs build() {
+        }        public ProviderRegistrationPropertiesProviderHubMetadataArgs build() {
             return new ProviderRegistrationPropertiesProviderHubMetadataArgs(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);
         }
     }

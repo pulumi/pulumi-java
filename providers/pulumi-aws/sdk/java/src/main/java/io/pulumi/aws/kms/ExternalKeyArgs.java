@@ -189,92 +189,74 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
             this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyMaterialBase64(@Nullable Output<String> keyMaterialBase64) {
             this.keyMaterialBase64 = keyMaterialBase64;
             return this;
         }
-
         public Builder keyMaterialBase64(@Nullable String keyMaterialBase64) {
             this.keyMaterialBase64 = Output.ofNullable(keyMaterialBase64);
             return this;
         }
-
         public Builder multiRegion(@Nullable Output<Boolean> multiRegion) {
             this.multiRegion = multiRegion;
             return this;
         }
-
         public Builder multiRegion(@Nullable Boolean multiRegion) {
             this.multiRegion = Output.ofNullable(multiRegion);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder validTo(@Nullable Output<String> validTo) {
             this.validTo = validTo;
             return this;
         }
-
         public Builder validTo(@Nullable String validTo) {
             this.validTo = Output.ofNullable(validTo);
             return this;
-        }
-        public ExternalKeyArgs build() {
+        }        public ExternalKeyArgs build() {
             return new ExternalKeyArgs(bypassPolicyLockoutSafetyCheck, deletionWindowInDays, description, enabled, keyMaterialBase64, multiRegion, policy, tags, validTo);
         }
     }

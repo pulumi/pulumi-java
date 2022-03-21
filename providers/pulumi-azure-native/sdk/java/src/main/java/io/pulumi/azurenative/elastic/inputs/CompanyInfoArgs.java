@@ -126,52 +126,42 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.business = business;
             return this;
         }
-
         public Builder business(@Nullable String business) {
             this.business = Output.ofNullable(business);
             return this;
         }
-
         public Builder country(@Nullable Output<String> country) {
             this.country = country;
             return this;
         }
-
         public Builder country(@Nullable String country) {
             this.country = Output.ofNullable(country);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder employeesNumber(@Nullable Output<String> employeesNumber) {
             this.employeesNumber = employeesNumber;
             return this;
         }
-
         public Builder employeesNumber(@Nullable String employeesNumber) {
             this.employeesNumber = Output.ofNullable(employeesNumber);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public CompanyInfoArgs build() {
+        }        public CompanyInfoArgs build() {
             return new CompanyInfoArgs(business, country, domain, employeesNumber, state);
         }
     }

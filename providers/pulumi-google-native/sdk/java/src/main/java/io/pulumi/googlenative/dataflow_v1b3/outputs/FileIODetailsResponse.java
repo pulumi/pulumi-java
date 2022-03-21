@@ -51,8 +51,7 @@ public final class FileIODetailsResponse {
         public Builder filePattern(String filePattern) {
             this.filePattern = Objects.requireNonNull(filePattern);
             return this;
-        }
-        public FileIODetailsResponse build() {
+        }        public FileIODetailsResponse build() {
             return new FileIODetailsResponse(filePattern);
         }
     }

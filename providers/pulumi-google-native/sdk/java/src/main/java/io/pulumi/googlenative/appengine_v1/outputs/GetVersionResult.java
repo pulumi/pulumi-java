@@ -648,187 +648,162 @@ public final class GetVersionResult {
             this.apiConfig = Objects.requireNonNull(apiConfig);
             return this;
         }
-
         public Builder automaticScaling(AutomaticScalingResponse automaticScaling) {
             this.automaticScaling = Objects.requireNonNull(automaticScaling);
             return this;
         }
-
         public Builder basicScaling(BasicScalingResponse basicScaling) {
             this.basicScaling = Objects.requireNonNull(basicScaling);
             return this;
         }
-
         public Builder betaSettings(Map<String,String> betaSettings) {
             this.betaSettings = Objects.requireNonNull(betaSettings);
             return this;
         }
-
         public Builder buildEnvVariables(Map<String,String> buildEnvVariables) {
             this.buildEnvVariables = Objects.requireNonNull(buildEnvVariables);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder defaultExpiration(String defaultExpiration) {
             this.defaultExpiration = Objects.requireNonNull(defaultExpiration);
             return this;
         }
-
         public Builder deployment(DeploymentResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder diskUsageBytes(String diskUsageBytes) {
             this.diskUsageBytes = Objects.requireNonNull(diskUsageBytes);
             return this;
         }
-
         public Builder endpointsApiService(EndpointsApiServiceResponse endpointsApiService) {
             this.endpointsApiService = Objects.requireNonNull(endpointsApiService);
             return this;
         }
-
         public Builder entrypoint(EntrypointResponse entrypoint) {
             this.entrypoint = Objects.requireNonNull(entrypoint);
             return this;
         }
-
         public Builder env(String env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
         public Builder envVariables(Map<String,String> envVariables) {
             this.envVariables = Objects.requireNonNull(envVariables);
             return this;
         }
-
         public Builder errorHandlers(List<ErrorHandlerResponse> errorHandlers) {
             this.errorHandlers = Objects.requireNonNull(errorHandlers);
             return this;
         }
-
+        public Builder errorHandlers(ErrorHandlerResponse... errorHandlers) {
+            return errorHandlers(List.of(errorHandlers));
+        }
         public Builder handlers(List<UrlMapResponse> handlers) {
             this.handlers = Objects.requireNonNull(handlers);
             return this;
         }
-
+        public Builder handlers(UrlMapResponse... handlers) {
+            return handlers(List.of(handlers));
+        }
         public Builder healthCheck(HealthCheckResponse healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder inboundServices(List<String> inboundServices) {
             this.inboundServices = Objects.requireNonNull(inboundServices);
             return this;
         }
-
+        public Builder inboundServices(String... inboundServices) {
+            return inboundServices(List.of(inboundServices));
+        }
         public Builder instanceClass(String instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
-
         public Builder libraries(List<LibraryResponse> libraries) {
             this.libraries = Objects.requireNonNull(libraries);
             return this;
         }
-
+        public Builder libraries(LibraryResponse... libraries) {
+            return libraries(List.of(libraries));
+        }
         public Builder livenessCheck(LivenessCheckResponse livenessCheck) {
             this.livenessCheck = Objects.requireNonNull(livenessCheck);
             return this;
         }
-
         public Builder manualScaling(ManualScalingResponse manualScaling) {
             this.manualScaling = Objects.requireNonNull(manualScaling);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(NetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder nobuildFilesRegex(String nobuildFilesRegex) {
             this.nobuildFilesRegex = Objects.requireNonNull(nobuildFilesRegex);
             return this;
         }
-
         public Builder readinessCheck(ReadinessCheckResponse readinessCheck) {
             this.readinessCheck = Objects.requireNonNull(readinessCheck);
             return this;
         }
-
         public Builder resources(ResourcesResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtimeApiVersion(String runtimeApiVersion) {
             this.runtimeApiVersion = Objects.requireNonNull(runtimeApiVersion);
             return this;
         }
-
         public Builder runtimeChannel(String runtimeChannel) {
             this.runtimeChannel = Objects.requireNonNull(runtimeChannel);
             return this;
         }
-
         public Builder runtimeMainExecutablePath(String runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = Objects.requireNonNull(runtimeMainExecutablePath);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder servingStatus(String servingStatus) {
             this.servingStatus = Objects.requireNonNull(servingStatus);
             return this;
         }
-
         public Builder threadsafe(Boolean threadsafe) {
             this.threadsafe = Objects.requireNonNull(threadsafe);
             return this;
         }
-
         public Builder versionUrl(String versionUrl) {
             this.versionUrl = Objects.requireNonNull(versionUrl);
             return this;
         }
-
         public Builder vm(Boolean vm) {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
-
         public Builder vpcAccessConnector(VpcAccessConnectorResponse vpcAccessConnector) {
             this.vpcAccessConnector = Objects.requireNonNull(vpcAccessConnector);
             return this;
-        }
-        public GetVersionResult build() {
+        }        public GetVersionResult build() {
             return new GetVersionResult(apiConfig, automaticScaling, basicScaling, betaSettings, buildEnvVariables, createTime, createdBy, defaultExpiration, deployment, diskUsageBytes, endpointsApiService, entrypoint, env, envVariables, errorHandlers, handlers, healthCheck, inboundServices, instanceClass, libraries, livenessCheck, manualScaling, name, network, nobuildFilesRegex, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, serviceAccount, servingStatus, threadsafe, versionUrl, vm, vpcAccessConnector);
         }
     }

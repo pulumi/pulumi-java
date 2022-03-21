@@ -118,62 +118,53 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable List<InAppTemplateInAppMessageContentArgs> content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
+        public Builder content(InAppTemplateInAppMessageContentArgs... content) {
+            return content(List.of(content));
+        }
         public Builder customConfig(@Nullable Output<Object> customConfig) {
             this.customConfig = customConfig;
             return this;
         }
-
         public Builder customConfig(@Nullable Object customConfig) {
             this.customConfig = Output.ofNullable(customConfig);
             return this;
         }
-
         public Builder layout(@Nullable Output<InAppTemplateLayout> layout) {
             this.layout = layout;
             return this;
         }
-
         public Builder layout(@Nullable InAppTemplateLayout layout) {
             this.layout = Output.ofNullable(layout);
             return this;
         }
-
         public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder templateDescription(@Nullable Output<String> templateDescription) {
             this.templateDescription = templateDescription;
             return this;
         }
-
         public Builder templateDescription(@Nullable String templateDescription) {
             this.templateDescription = Output.ofNullable(templateDescription);
             return this;
         }
-
         public Builder templateName(Output<String> templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
-
         public Builder templateName(String templateName) {
             this.templateName = Output.of(Objects.requireNonNull(templateName));
             return this;
-        }
-        public InAppTemplateArgs build() {
+        }        public InAppTemplateArgs build() {
             return new InAppTemplateArgs(content, customConfig, layout, tags, templateDescription, templateName);
         }
     }

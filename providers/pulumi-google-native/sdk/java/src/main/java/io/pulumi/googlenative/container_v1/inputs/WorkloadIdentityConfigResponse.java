@@ -58,8 +58,7 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
         public Builder workloadPool(String workloadPool) {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
-        }
-        public WorkloadIdentityConfigResponse build() {
+        }        public WorkloadIdentityConfigResponse build() {
             return new WorkloadIdentityConfigResponse(workloadPool);
         }
     }

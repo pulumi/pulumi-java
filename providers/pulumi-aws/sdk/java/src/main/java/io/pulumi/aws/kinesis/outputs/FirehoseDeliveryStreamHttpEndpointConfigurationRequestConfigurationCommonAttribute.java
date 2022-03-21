@@ -69,12 +69,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute(name, value);
         }
     }

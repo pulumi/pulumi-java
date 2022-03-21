@@ -221,57 +221,46 @@ public final class SecurityContext {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
-
         public Builder capabilities(@Nullable Capabilities capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = privileged;
             return this;
         }
-
         public Builder procMount(@Nullable String procMount) {
             this.procMount = procMount;
             return this;
         }
-
         public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
-
         public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
-
         public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
-
         public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
-
         public Builder seccompProfile(@Nullable SeccompProfile seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
-
         public Builder windowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
-        }
-        public SecurityContext build() {
+        }        public SecurityContext build() {
             return new SecurityContext(allowPrivilegeEscalation, capabilities, privileged, procMount, readOnlyRootFilesystem, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, windowsOptions);
         }
     }

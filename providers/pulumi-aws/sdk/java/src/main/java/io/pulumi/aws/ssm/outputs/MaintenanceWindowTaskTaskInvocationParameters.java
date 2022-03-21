@@ -106,22 +106,18 @@ public final class MaintenanceWindowTaskTaskInvocationParameters {
             this.automationParameters = automationParameters;
             return this;
         }
-
         public Builder lambdaParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersLambdaParameters lambdaParameters) {
             this.lambdaParameters = lambdaParameters;
             return this;
         }
-
         public Builder runCommandParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters runCommandParameters) {
             this.runCommandParameters = runCommandParameters;
             return this;
         }
-
         public Builder stepFunctionsParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters stepFunctionsParameters) {
             this.stepFunctionsParameters = stepFunctionsParameters;
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParameters build() {
+        }        public MaintenanceWindowTaskTaskInvocationParameters build() {
             return new MaintenanceWindowTaskTaskInvocationParameters(automationParameters, lambdaParameters, runCommandParameters, stepFunctionsParameters);
         }
     }

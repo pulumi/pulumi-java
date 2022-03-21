@@ -73,22 +73,18 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
             this.rangeEnd = Objects.requireNonNull(rangeEnd);
             return this;
         }
-
         public Builder rangeEnd(Integer rangeEnd) {
             this.rangeEnd = Output.of(Objects.requireNonNull(rangeEnd));
             return this;
         }
-
         public Builder rangeStart(Output<Integer> rangeStart) {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
-
         public Builder rangeStart(Integer rangeStart) {
             this.rangeStart = Output.of(Objects.requireNonNull(rangeStart));
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs build() {
+        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs(rangeEnd, rangeStart);
         }
     }

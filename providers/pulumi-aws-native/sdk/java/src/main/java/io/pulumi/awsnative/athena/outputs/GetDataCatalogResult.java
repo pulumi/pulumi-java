@@ -107,22 +107,21 @@ public final class GetDataCatalogResult {
             this.description = description;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder tags(@Nullable List<DataCatalogTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DataCatalogTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable DataCatalogType type) {
             this.type = type;
             return this;
-        }
-        public GetDataCatalogResult build() {
+        }        public GetDataCatalogResult build() {
             return new GetDataCatalogResult(description, parameters, tags, type);
         }
     }

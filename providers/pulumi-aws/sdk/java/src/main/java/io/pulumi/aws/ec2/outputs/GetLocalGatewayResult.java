@@ -113,32 +113,29 @@ public final class GetLocalGatewayResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetLocalGatewayResult build() {
+        }        public GetLocalGatewayResult build() {
             return new GetLocalGatewayResult(filters, id, outpostArn, ownerId, state, tags);
         }
     }

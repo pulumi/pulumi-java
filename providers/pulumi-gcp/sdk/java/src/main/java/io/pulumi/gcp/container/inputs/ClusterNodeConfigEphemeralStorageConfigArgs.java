@@ -56,12 +56,10 @@ public final class ClusterNodeConfigEphemeralStorageConfigArgs extends io.pulumi
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Output.of(Objects.requireNonNull(localSsdCount));
             return this;
-        }
-        public ClusterNodeConfigEphemeralStorageConfigArgs build() {
+        }        public ClusterNodeConfigEphemeralStorageConfigArgs build() {
             return new ClusterNodeConfigEphemeralStorageConfigArgs(localSsdCount);
         }
     }

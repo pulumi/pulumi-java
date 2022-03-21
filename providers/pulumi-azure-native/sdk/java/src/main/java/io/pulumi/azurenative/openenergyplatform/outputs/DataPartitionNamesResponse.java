@@ -45,8 +45,7 @@ public final class DataPartitionNamesResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DataPartitionNamesResponse build() {
+        }        public DataPartitionNamesResponse build() {
             return new DataPartitionNamesResponse(name);
         }
     }

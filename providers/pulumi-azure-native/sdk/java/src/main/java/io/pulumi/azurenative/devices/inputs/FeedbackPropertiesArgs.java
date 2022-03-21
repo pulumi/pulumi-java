@@ -95,32 +95,26 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
-
         public Builder lockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
             this.lockDurationAsIso8601 = Output.ofNullable(lockDurationAsIso8601);
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = Output.ofNullable(maxDeliveryCount);
             return this;
         }
-
         public Builder ttlAsIso8601(@Nullable Output<String> ttlAsIso8601) {
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }
-
         public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
             this.ttlAsIso8601 = Output.ofNullable(ttlAsIso8601);
             return this;
-        }
-        public FeedbackPropertiesArgs build() {
+        }        public FeedbackPropertiesArgs build() {
             return new FeedbackPropertiesArgs(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
         }
     }

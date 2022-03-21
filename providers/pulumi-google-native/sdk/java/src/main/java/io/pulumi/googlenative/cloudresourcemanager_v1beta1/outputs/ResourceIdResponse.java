@@ -51,8 +51,7 @@ public final class ResourceIdResponse {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ResourceIdResponse build() {
+        }        public ResourceIdResponse build() {
             return new ResourceIdResponse(type);
         }
     }

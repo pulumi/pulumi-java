@@ -175,42 +175,40 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
             this.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
-
+        public Builder alternateVerificationKeys(Object... alternateVerificationKeys) {
+            return alternateVerificationKeys(List.of(alternateVerificationKeys));
+        }
         public Builder audience(String audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
-
         public Builder primaryVerificationKey(Object primaryVerificationKey) {
             this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
             return this;
         }
-
         public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
-
+        public Builder requiredClaims(ContentKeyPolicyTokenClaimResponse... requiredClaims) {
+            return requiredClaims(List.of(requiredClaims));
+        }
         public Builder restrictionTokenType(String restrictionTokenType) {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
-        }
-        public ContentKeyPolicyTokenRestrictionResponse build() {
+        }        public ContentKeyPolicyTokenRestrictionResponse build() {
             return new ContentKeyPolicyTokenRestrictionResponse(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
         }
     }

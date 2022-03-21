@@ -56,12 +56,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsA
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs build() {
             return new ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs(override);
         }
     }

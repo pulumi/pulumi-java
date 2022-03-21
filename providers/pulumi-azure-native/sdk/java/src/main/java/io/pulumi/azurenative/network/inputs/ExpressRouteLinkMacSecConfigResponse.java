@@ -110,22 +110,18 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
             this.cakSecretIdentifier = cakSecretIdentifier;
             return this;
         }
-
         public Builder cipher(@Nullable String cipher) {
             this.cipher = cipher;
             return this;
         }
-
         public Builder cknSecretIdentifier(@Nullable String cknSecretIdentifier) {
             this.cknSecretIdentifier = cknSecretIdentifier;
             return this;
         }
-
         public Builder sciState(@Nullable String sciState) {
             this.sciState = sciState;
             return this;
-        }
-        public ExpressRouteLinkMacSecConfigResponse build() {
+        }        public ExpressRouteLinkMacSecConfigResponse build() {
             return new ExpressRouteLinkMacSecConfigResponse(cakSecretIdentifier, cipher, cknSecretIdentifier, sciState);
         }
     }

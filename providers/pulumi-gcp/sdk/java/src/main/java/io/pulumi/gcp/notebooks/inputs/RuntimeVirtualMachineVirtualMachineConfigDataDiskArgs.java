@@ -280,122 +280,104 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
             this.autoDelete = autoDelete;
             return this;
         }
-
         public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
-
         public Builder boot(@Nullable Output<Boolean> boot) {
             this.boot = boot;
             return this;
         }
-
         public Builder boot(@Nullable Boolean boot) {
             this.boot = Output.ofNullable(boot);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable Output<List<String>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable List<String> guestOsFeatures) {
             this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(String... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder index(@Nullable Output<Integer> index) {
             this.index = index;
             return this;
         }
-
         public Builder index(@Nullable Integer index) {
             this.index = Output.ofNullable(index);
             return this;
         }
-
         public Builder initializeParams(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
-
         public Builder initializeParams(@Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs initializeParams) {
             this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
-
         public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
-
         public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Output.ofNullable(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }
     }

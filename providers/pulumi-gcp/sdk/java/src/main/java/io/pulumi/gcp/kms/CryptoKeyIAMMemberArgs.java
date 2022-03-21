@@ -108,42 +108,34 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable CryptoKeyIAMMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
-
         public Builder cryptoKeyId(String cryptoKeyId) {
             this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public CryptoKeyIAMMemberArgs build() {
+        }        public CryptoKeyIAMMemberArgs build() {
             return new CryptoKeyIAMMemberArgs(condition, cryptoKeyId, member, role);
         }
     }

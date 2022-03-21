@@ -74,22 +74,18 @@ public final class StudioComponentConfiguration {
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
-
         public Builder computeFarmConfiguration(@Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration) {
             this.computeFarmConfiguration = computeFarmConfiguration;
             return this;
         }
-
         public Builder licenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration) {
             this.licenseServiceConfiguration = licenseServiceConfiguration;
             return this;
         }
-
         public Builder sharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
-        }
-        public StudioComponentConfiguration build() {
+        }        public StudioComponentConfiguration build() {
             return new StudioComponentConfiguration(activeDirectoryConfiguration, computeFarmConfiguration, licenseServiceConfiguration, sharedFileSystemConfiguration);
         }
     }

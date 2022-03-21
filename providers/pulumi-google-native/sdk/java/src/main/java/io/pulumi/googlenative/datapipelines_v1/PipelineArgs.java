@@ -199,102 +199,82 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pipelineSources(@Nullable Output<Map<String,String>> pipelineSources) {
             this.pipelineSources = pipelineSources;
             return this;
         }
-
         public Builder pipelineSources(@Nullable Map<String,String> pipelineSources) {
             this.pipelineSources = Output.ofNullable(pipelineSources);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder scheduleInfo(@Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo) {
             this.scheduleInfo = scheduleInfo;
             return this;
         }
-
         public Builder scheduleInfo(@Nullable GoogleCloudDatapipelinesV1ScheduleSpecArgs scheduleInfo) {
             this.scheduleInfo = Output.ofNullable(scheduleInfo);
             return this;
         }
-
         public Builder schedulerServiceAccountEmail(@Nullable Output<String> schedulerServiceAccountEmail) {
             this.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
             return this;
         }
-
         public Builder schedulerServiceAccountEmail(@Nullable String schedulerServiceAccountEmail) {
             this.schedulerServiceAccountEmail = Output.ofNullable(schedulerServiceAccountEmail);
             return this;
         }
-
         public Builder state(Output<PipelineState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(PipelineState state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder type(Output<PipelineType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(PipelineType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder workload(@Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
             this.workload = workload;
             return this;
         }
-
         public Builder workload(@Nullable GoogleCloudDatapipelinesV1WorkloadArgs workload) {
             this.workload = Output.ofNullable(workload);
             return this;
-        }
-        public PipelineArgs build() {
+        }        public PipelineArgs build() {
             return new PipelineArgs(displayName, location, name, pipelineSources, project, scheduleInfo, schedulerServiceAccountEmail, state, type, workload);
         }
     }

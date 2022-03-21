@@ -72,12 +72,10 @@ public final class ClusterClientAuthentication {
             this.sasl = sasl;
             return this;
         }
-
         public Builder tls(@Nullable ClusterClientAuthenticationTls tls) {
             this.tls = tls;
             return this;
-        }
-        public ClusterClientAuthentication build() {
+        }        public ClusterClientAuthentication build() {
             return new ClusterClientAuthentication(sasl, tls);
         }
     }

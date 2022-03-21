@@ -64,17 +64,14 @@ public final class GetOriginRequestPolicyResult {
             this.id = id;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder originRequestPolicyConfig(@Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
             this.originRequestPolicyConfig = originRequestPolicyConfig;
             return this;
-        }
-        public GetOriginRequestPolicyResult build() {
+        }        public GetOriginRequestPolicyResult build() {
             return new GetOriginRequestPolicyResult(id, lastModifiedTime, originRequestPolicyConfig);
         }
     }

@@ -80,12 +80,10 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
             this.filePattern = filePattern;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JsonWriteSettingsResponse build() {
+        }        public JsonWriteSettingsResponse build() {
             return new JsonWriteSettingsResponse(filePattern, type);
         }
     }

@@ -57,12 +57,10 @@ public final class OrganizationsAccessState extends io.pulumi.resources.Resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public OrganizationsAccessState build() {
+        }        public OrganizationsAccessState build() {
             return new OrganizationsAccessState(enabled);
         }
     }

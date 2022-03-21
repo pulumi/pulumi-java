@@ -331,107 +331,89 @@ public final class GetClusterSnapshotResult {
             this.allocatedStorage = Objects.requireNonNull(allocatedStorage);
             return this;
         }
-
         public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
-
         public Builder dbClusterSnapshotArn(String dbClusterSnapshotArn) {
             this.dbClusterSnapshotArn = Objects.requireNonNull(dbClusterSnapshotArn);
             return this;
         }
-
         public Builder dbClusterSnapshotIdentifier(@Nullable String dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includePublic(@Nullable Boolean includePublic) {
             this.includePublic = includePublic;
             return this;
         }
-
         public Builder includeShared(@Nullable Boolean includeShared) {
             this.includeShared = includeShared;
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder licenseModel(String licenseModel) {
             this.licenseModel = Objects.requireNonNull(licenseModel);
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder snapshotCreateTime(String snapshotCreateTime) {
             this.snapshotCreateTime = Objects.requireNonNull(snapshotCreateTime);
             return this;
         }
-
         public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
-
         public Builder sourceDbClusterSnapshotArn(String sourceDbClusterSnapshotArn) {
             this.sourceDbClusterSnapshotArn = Objects.requireNonNull(sourceDbClusterSnapshotArn);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageEncrypted(Boolean storageEncrypted) {
             this.storageEncrypted = Objects.requireNonNull(storageEncrypted);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetClusterSnapshotResult build() {
+        }        public GetClusterSnapshotResult build() {
             return new GetClusterSnapshotResult(allocatedStorage, availabilityZones, dbClusterIdentifier, dbClusterSnapshotArn, dbClusterSnapshotIdentifier, engine, engineVersion, id, includePublic, includeShared, kmsKeyId, licenseModel, mostRecent, port, snapshotCreateTime, snapshotType, sourceDbClusterSnapshotArn, status, storageEncrypted, tags, vpcId);
         }
     }

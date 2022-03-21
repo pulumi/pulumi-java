@@ -53,8 +53,7 @@ public final class RegistryCredential {
         public Builder publicKeyCertificate(Map<String,Object> publicKeyCertificate) {
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
-        }
-        public RegistryCredential build() {
+        }        public RegistryCredential build() {
             return new RegistryCredential(publicKeyCertificate);
         }
     }

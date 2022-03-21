@@ -248,77 +248,68 @@ public final class GetOriginEndpointResult {
             this.arn = arn;
             return this;
         }
-
         public Builder authorization(@Nullable OriginEndpointAuthorization authorization) {
             this.authorization = authorization;
             return this;
         }
-
         public Builder channelId(@Nullable String channelId) {
             this.channelId = channelId;
             return this;
         }
-
         public Builder cmafPackage(@Nullable OriginEndpointCmafPackage cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
-
         public Builder dashPackage(@Nullable OriginEndpointDashPackage dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder hlsPackage(@Nullable OriginEndpointHlsPackage hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder mssPackage(@Nullable OriginEndpointMssPackage mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
-
         public Builder origination(@Nullable OriginEndpointOrigination origination) {
             this.origination = origination;
             return this;
         }
-
         public Builder startoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
             this.startoverWindowSeconds = startoverWindowSeconds;
             return this;
         }
-
         public Builder tags(@Nullable List<OriginEndpointTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(OriginEndpointTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeDelaySeconds(@Nullable Integer timeDelaySeconds) {
             this.timeDelaySeconds = timeDelaySeconds;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
-
         public Builder whitelist(@Nullable List<String> whitelist) {
             this.whitelist = whitelist;
             return this;
         }
-        public GetOriginEndpointResult build() {
+        public Builder whitelist(String... whitelist) {
+            return whitelist(List.of(whitelist));
+        }        public GetOriginEndpointResult build() {
             return new GetOriginEndpointResult(arn, authorization, channelId, cmafPackage, dashPackage, description, hlsPackage, manifestName, mssPackage, origination, startoverWindowSeconds, tags, timeDelaySeconds, url, whitelist);
         }
     }

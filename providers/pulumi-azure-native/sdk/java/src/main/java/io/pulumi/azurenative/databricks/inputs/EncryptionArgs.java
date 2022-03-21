@@ -112,42 +112,34 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder keySource(@Nullable Output<Either<String,KeySource>> keySource) {
             this.keySource = keySource;
             return this;
         }
-
         public Builder keySource(@Nullable Either<String,KeySource> keySource) {
             this.keySource = Output.ofNullable(keySource);
             return this;
         }
-
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = Output.ofNullable(keyVaultUri);
             return this;
         }
-
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Output.ofNullable(keyVersion);
             return this;
-        }
-        public EncryptionArgs build() {
+        }        public EncryptionArgs build() {
             return new EncryptionArgs(keyName, keySource, keyVaultUri, keyVersion);
         }
     }

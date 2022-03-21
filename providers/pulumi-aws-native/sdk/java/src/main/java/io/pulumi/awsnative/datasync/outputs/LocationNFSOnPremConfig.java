@@ -53,7 +53,9 @@ public final class LocationNFSOnPremConfig {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
-        public LocationNFSOnPremConfig build() {
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }        public LocationNFSOnPremConfig build() {
             return new LocationNFSOnPremConfig(agentArns);
         }
     }

@@ -128,27 +128,25 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder formParameters(@Nullable List<ParameterContractResponse> formParameters) {
             this.formParameters = formParameters;
             return this;
         }
-
+        public Builder formParameters(ParameterContractResponse... formParameters) {
+            return formParameters(List.of(formParameters));
+        }
         public Builder sample(@Nullable String sample) {
             this.sample = sample;
             return this;
         }
-
         public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = schemaId;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
-        }
-        public RepresentationContractResponse build() {
+        }        public RepresentationContractResponse build() {
             return new RepresentationContractResponse(contentType, formParameters, sample, schemaId, typeName);
         }
     }

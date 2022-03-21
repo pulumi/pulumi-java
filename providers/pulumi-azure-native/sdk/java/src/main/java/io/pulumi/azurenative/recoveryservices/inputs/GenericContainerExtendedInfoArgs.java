@@ -96,32 +96,26 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
             this.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
-
         public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoArgs containerIdentityInfo) {
             this.containerIdentityInfo = Output.ofNullable(containerIdentityInfo);
             return this;
         }
-
         public Builder rawCertData(@Nullable Output<String> rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
-
         public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = Output.ofNullable(rawCertData);
             return this;
         }
-
         public Builder serviceEndpoints(@Nullable Output<Map<String,String>> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
-
         public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
             this.serviceEndpoints = Output.ofNullable(serviceEndpoints);
             return this;
-        }
-        public GenericContainerExtendedInfoArgs build() {
+        }        public GenericContainerExtendedInfoArgs build() {
             return new GenericContainerExtendedInfoArgs(containerIdentityInfo, rawCertData, serviceEndpoints);
         }
     }

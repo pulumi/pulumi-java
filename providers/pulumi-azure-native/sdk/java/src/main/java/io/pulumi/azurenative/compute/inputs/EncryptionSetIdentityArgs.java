@@ -63,12 +63,10 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,DiskEncryptionSetIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public EncryptionSetIdentityArgs build() {
+        }        public EncryptionSetIdentityArgs build() {
             return new EncryptionSetIdentityArgs(type);
         }
     }

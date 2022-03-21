@@ -128,52 +128,42 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
             this.authCertificate = authCertificate;
             return this;
         }
-
         public Builder authCertificate(@Nullable String authCertificate) {
             this.authCertificate = Output.ofNullable(authCertificate);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder physicalSiteId(@Nullable Output<String> physicalSiteId) {
             this.physicalSiteId = physicalSiteId;
             return this;
         }
-
         public Builder physicalSiteId(@Nullable String physicalSiteId) {
             this.physicalSiteId = Output.ofNullable(physicalSiteId);
             return this;
         }
-
         public Builder sourceAgentIdentity(@Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity) {
             this.sourceAgentIdentity = sourceAgentIdentity;
             return this;
         }
-
         public Builder sourceAgentIdentity(@Nullable IdentityProviderInputArgs sourceAgentIdentity) {
             this.sourceAgentIdentity = Output.ofNullable(sourceAgentIdentity);
             return this;
         }
-
         public Builder vmwareSiteId(@Nullable Output<String> vmwareSiteId) {
             this.vmwareSiteId = vmwareSiteId;
             return this;
         }
-
         public Builder vmwareSiteId(@Nullable String vmwareSiteId) {
             this.vmwareSiteId = Output.ofNullable(vmwareSiteId);
             return this;
-        }
-        public InMageRcmFabricCreationInputArgs build() {
+        }        public InMageRcmFabricCreationInputArgs build() {
             return new InMageRcmFabricCreationInputArgs(authCertificate, instanceType, physicalSiteId, sourceAgentIdentity, vmwareSiteId);
         }
     }

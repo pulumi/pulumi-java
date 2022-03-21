@@ -78,32 +78,26 @@ public final class BackendServiceIamPolicyArgs extends io.pulumi.resources.Resou
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public BackendServiceIamPolicyArgs build() {
+        }        public BackendServiceIamPolicyArgs build() {
             return new BackendServiceIamPolicyArgs(name, policyData, project);
         }
     }

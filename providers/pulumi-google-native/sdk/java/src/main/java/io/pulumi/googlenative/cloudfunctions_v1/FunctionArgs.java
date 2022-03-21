@@ -508,292 +508,240 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.availableMemoryMb = availableMemoryMb;
             return this;
         }
-
         public Builder availableMemoryMb(@Nullable Integer availableMemoryMb) {
             this.availableMemoryMb = Output.ofNullable(availableMemoryMb);
             return this;
         }
-
         public Builder buildEnvironmentVariables(@Nullable Output<Map<String,String>> buildEnvironmentVariables) {
             this.buildEnvironmentVariables = buildEnvironmentVariables;
             return this;
         }
-
         public Builder buildEnvironmentVariables(@Nullable Map<String,String> buildEnvironmentVariables) {
             this.buildEnvironmentVariables = Output.ofNullable(buildEnvironmentVariables);
             return this;
         }
-
         public Builder buildWorkerPool(@Nullable Output<String> buildWorkerPool) {
             this.buildWorkerPool = buildWorkerPool;
             return this;
         }
-
         public Builder buildWorkerPool(@Nullable String buildWorkerPool) {
             this.buildWorkerPool = Output.ofNullable(buildWorkerPool);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dockerRepository(@Nullable Output<String> dockerRepository) {
             this.dockerRepository = dockerRepository;
             return this;
         }
-
         public Builder dockerRepository(@Nullable String dockerRepository) {
             this.dockerRepository = Output.ofNullable(dockerRepository);
             return this;
         }
-
         public Builder entryPoint(@Nullable Output<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
-
         public Builder entryPoint(@Nullable String entryPoint) {
             this.entryPoint = Output.ofNullable(entryPoint);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder eventTrigger(@Nullable Output<EventTriggerArgs> eventTrigger) {
             this.eventTrigger = eventTrigger;
             return this;
         }
-
         public Builder eventTrigger(@Nullable EventTriggerArgs eventTrigger) {
             this.eventTrigger = Output.ofNullable(eventTrigger);
             return this;
         }
-
         public Builder httpsTrigger(@Nullable Output<HttpsTriggerArgs> httpsTrigger) {
             this.httpsTrigger = httpsTrigger;
             return this;
         }
-
         public Builder httpsTrigger(@Nullable HttpsTriggerArgs httpsTrigger) {
             this.httpsTrigger = Output.ofNullable(httpsTrigger);
             return this;
         }
-
         public Builder ingressSettings(@Nullable Output<FunctionIngressSettings> ingressSettings) {
             this.ingressSettings = ingressSettings;
             return this;
         }
-
         public Builder ingressSettings(@Nullable FunctionIngressSettings ingressSettings) {
             this.ingressSettings = Output.ofNullable(ingressSettings);
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable String runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
         }
-
         public Builder secretEnvironmentVariables(@Nullable Output<List<SecretEnvVarArgs>> secretEnvironmentVariables) {
             this.secretEnvironmentVariables = secretEnvironmentVariables;
             return this;
         }
-
         public Builder secretEnvironmentVariables(@Nullable List<SecretEnvVarArgs> secretEnvironmentVariables) {
             this.secretEnvironmentVariables = Output.ofNullable(secretEnvironmentVariables);
             return this;
         }
-
+        public Builder secretEnvironmentVariables(SecretEnvVarArgs... secretEnvironmentVariables) {
+            return secretEnvironmentVariables(List.of(secretEnvironmentVariables));
+        }
         public Builder secretVolumes(@Nullable Output<List<SecretVolumeArgs>> secretVolumes) {
             this.secretVolumes = secretVolumes;
             return this;
         }
-
         public Builder secretVolumes(@Nullable List<SecretVolumeArgs> secretVolumes) {
             this.secretVolumes = Output.ofNullable(secretVolumes);
             return this;
         }
-
+        public Builder secretVolumes(SecretVolumeArgs... secretVolumes) {
+            return secretVolumes(List.of(secretVolumes));
+        }
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder sourceArchiveUrl(@Nullable Output<String> sourceArchiveUrl) {
             this.sourceArchiveUrl = sourceArchiveUrl;
             return this;
         }
-
         public Builder sourceArchiveUrl(@Nullable String sourceArchiveUrl) {
             this.sourceArchiveUrl = Output.ofNullable(sourceArchiveUrl);
             return this;
         }
-
         public Builder sourceRepository(@Nullable Output<SourceRepositoryArgs> sourceRepository) {
             this.sourceRepository = sourceRepository;
             return this;
         }
-
         public Builder sourceRepository(@Nullable SourceRepositoryArgs sourceRepository) {
             this.sourceRepository = Output.ofNullable(sourceRepository);
             return this;
         }
-
         public Builder sourceToken(@Nullable Output<String> sourceToken) {
             this.sourceToken = sourceToken;
             return this;
         }
-
         public Builder sourceToken(@Nullable String sourceToken) {
             this.sourceToken = Output.ofNullable(sourceToken);
             return this;
         }
-
         public Builder sourceUploadUrl(@Nullable Output<String> sourceUploadUrl) {
             this.sourceUploadUrl = sourceUploadUrl;
             return this;
         }
-
         public Builder sourceUploadUrl(@Nullable String sourceUploadUrl) {
             this.sourceUploadUrl = Output.ofNullable(sourceUploadUrl);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder vpcConnector(@Nullable Output<String> vpcConnector) {
             this.vpcConnector = vpcConnector;
             return this;
         }
-
         public Builder vpcConnector(@Nullable String vpcConnector) {
             this.vpcConnector = Output.ofNullable(vpcConnector);
             return this;
         }
-
         public Builder vpcConnectorEgressSettings(@Nullable Output<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings) {
             this.vpcConnectorEgressSettings = vpcConnectorEgressSettings;
             return this;
         }
-
         public Builder vpcConnectorEgressSettings(@Nullable FunctionVpcConnectorEgressSettings vpcConnectorEgressSettings) {
             this.vpcConnectorEgressSettings = Output.ofNullable(vpcConnectorEgressSettings);
             return this;
-        }
-        public FunctionArgs build() {
+        }        public FunctionArgs build() {
             return new FunctionArgs(availableMemoryMb, buildEnvironmentVariables, buildWorkerPool, description, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, location, maxInstances, minInstances, name, network, project, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, timeout, vpcConnector, vpcConnectorEgressSettings);
         }
     }

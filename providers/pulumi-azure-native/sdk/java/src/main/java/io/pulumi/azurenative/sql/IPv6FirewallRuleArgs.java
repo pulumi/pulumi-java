@@ -138,62 +138,50 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             this.endIPv6Address = endIPv6Address;
             return this;
         }
-
         public Builder endIPv6Address(@Nullable String endIPv6Address) {
             this.endIPv6Address = Output.ofNullable(endIPv6Address);
             return this;
         }
-
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
-
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
             this.firewallRuleName = Output.ofNullable(firewallRuleName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder startIPv6Address(@Nullable Output<String> startIPv6Address) {
             this.startIPv6Address = startIPv6Address;
             return this;
         }
-
         public Builder startIPv6Address(@Nullable String startIPv6Address) {
             this.startIPv6Address = Output.ofNullable(startIPv6Address);
             return this;
-        }
-        public IPv6FirewallRuleArgs build() {
+        }        public IPv6FirewallRuleArgs build() {
             return new IPv6FirewallRuleArgs(endIPv6Address, firewallRuleName, name, resourceGroupName, serverName, startIPv6Address);
         }
     }

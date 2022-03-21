@@ -54,7 +54,9 @@ public final class GetLabAccountRegionalAvailabilityResult {
             this.regionalAvailability = regionalAvailability;
             return this;
         }
-        public GetLabAccountRegionalAvailabilityResult build() {
+        public Builder regionalAvailability(RegionalAvailabilityResponse... regionalAvailability) {
+            return regionalAvailability(List.of(regionalAvailability));
+        }        public GetLabAccountRegionalAvailabilityResult build() {
             return new GetLabAccountRegionalAvailabilityResult(regionalAvailability);
         }
     }

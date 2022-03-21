@@ -104,42 +104,34 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable DicomStoreIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder dicomStoreId(Output<String> dicomStoreId) {
             this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
             return this;
         }
-
         public Builder dicomStoreId(String dicomStoreId) {
             this.dicomStoreId = Output.of(Objects.requireNonNull(dicomStoreId));
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public DicomStoreIamMemberArgs build() {
+        }        public DicomStoreIamMemberArgs build() {
             return new DicomStoreIamMemberArgs(condition, dicomStoreId, member, role);
         }
     }

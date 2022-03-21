@@ -74,22 +74,18 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
-
         public Builder actionDefinition(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs actionDefinition) {
             this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
             return this;
         }
-
         public Builder actionName(Output<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public Builder actionName(String actionName) {
             this.actionName = Output.of(Objects.requireNonNull(actionName));
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatelessCustomActionArgs build() {
+        }        public FirewallPolicyFirewallPolicyStatelessCustomActionArgs build() {
             return new FirewallPolicyFirewallPolicyStatelessCustomActionArgs(actionDefinition, actionName);
         }
     }

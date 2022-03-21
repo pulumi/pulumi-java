@@ -57,12 +57,10 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
             this.border = border;
             return this;
         }
-
         public Builder border(@Nullable ThemeBorderStyleArgs border) {
             this.border = Output.ofNullable(border);
             return this;
-        }
-        public ThemeTileStyleArgs build() {
+        }        public ThemeTileStyleArgs build() {
             return new ThemeTileStyleArgs(border);
         }
     }

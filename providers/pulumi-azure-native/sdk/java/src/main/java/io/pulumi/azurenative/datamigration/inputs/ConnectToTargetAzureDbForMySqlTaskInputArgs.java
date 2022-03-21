@@ -77,22 +77,18 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(MySqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public Builder targetConnectionInfo(Output<MySqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(MySqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
-        }
-        public ConnectToTargetAzureDbForMySqlTaskInputArgs build() {
+        }        public ConnectToTargetAzureDbForMySqlTaskInputArgs build() {
             return new ConnectToTargetAzureDbForMySqlTaskInputArgs(sourceConnectionInfo, targetConnectionInfo);
         }
     }

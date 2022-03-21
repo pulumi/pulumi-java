@@ -122,52 +122,42 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder recommendationId(Output<String> recommendationId) {
             this.recommendationId = Objects.requireNonNull(recommendationId);
             return this;
         }
-
         public Builder recommendationId(String recommendationId) {
             this.recommendationId = Output.of(Objects.requireNonNull(recommendationId));
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public Builder suppressionId(@Nullable Output<String> suppressionId) {
             this.suppressionId = suppressionId;
             return this;
         }
-
         public Builder suppressionId(@Nullable String suppressionId) {
             this.suppressionId = Output.ofNullable(suppressionId);
             return this;
         }
-
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public SuppressionArgs build() {
+        }        public SuppressionArgs build() {
             return new SuppressionArgs(name, recommendationId, resourceUri, suppressionId, ttl);
         }
     }

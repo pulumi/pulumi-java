@@ -87,17 +87,14 @@ public final class ServiceBusAuthenticationResponse {
             this.sasKey = sasKey;
             return this;
         }
-
         public Builder sasKeyName(@Nullable String sasKeyName) {
             this.sasKeyName = sasKeyName;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ServiceBusAuthenticationResponse build() {
+        }        public ServiceBusAuthenticationResponse build() {
             return new ServiceBusAuthenticationResponse(sasKey, sasKeyName, type);
         }
     }

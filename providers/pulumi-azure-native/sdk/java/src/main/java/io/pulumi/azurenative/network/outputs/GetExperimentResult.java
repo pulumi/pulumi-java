@@ -233,62 +233,50 @@ public final class GetExperimentResult {
             this.description = description;
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder endpointA(@Nullable ExperimentEndpointResponse endpointA) {
             this.endpointA = endpointA;
             return this;
         }
-
         public Builder endpointB(@Nullable ExperimentEndpointResponse endpointB) {
             this.endpointB = endpointB;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder scriptFileUri(String scriptFileUri) {
             this.scriptFileUri = Objects.requireNonNull(scriptFileUri);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetExperimentResult build() {
+        }        public GetExperimentResult build() {
             return new GetExperimentResult(description, enabledState, endpointA, endpointB, id, location, name, resourceState, scriptFileUri, status, tags, type);
         }
     }

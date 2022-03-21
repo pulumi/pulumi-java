@@ -146,62 +146,53 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             this.extra = extra;
             return this;
         }
-
         public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = Output.ofNullable(extra);
             return this;
         }
-
         public Builder group(@Nullable Output<List<String>> group) {
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable List<String> group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
+        public Builder group(String... group) {
+            return group(List.of(group));
+        }
         public Builder nonResourceAttributes(@Nullable Output<NonResourceAttributesArgs> nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
-
         public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
             this.nonResourceAttributes = Output.ofNullable(nonResourceAttributes);
             return this;
         }
-
         public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-
         public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
             this.resourceAttributes = Output.ofNullable(resourceAttributes);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public SubjectAccessReviewSpecArgs build() {
+        }        public SubjectAccessReviewSpecArgs build() {
             return new SubjectAccessReviewSpecArgs(extra, group, nonResourceAttributes, resourceAttributes, uid, user);
         }
     }

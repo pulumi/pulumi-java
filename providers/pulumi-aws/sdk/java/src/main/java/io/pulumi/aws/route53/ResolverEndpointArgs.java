@@ -128,52 +128,48 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder ipAddresses(Output<List<ResolverEndpointIpAddressArgs>> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
-
         public Builder ipAddresses(List<ResolverEndpointIpAddressArgs> ipAddresses) {
             this.ipAddresses = Output.of(Objects.requireNonNull(ipAddresses));
             return this;
         }
-
+        public Builder ipAddresses(ResolverEndpointIpAddressArgs... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResolverEndpointArgs build() {
+        }        public ResolverEndpointArgs build() {
             return new ResolverEndpointArgs(direction, ipAddresses, name, securityGroupIds, tags);
         }
     }

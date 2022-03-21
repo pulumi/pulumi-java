@@ -74,22 +74,18 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends io.pulumi.res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder properties(Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(LoadBalancerFrontendIPConfigurationPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
-        }
-        public LoadBalancerFrontendIPConfigurationArgs build() {
+        }        public LoadBalancerFrontendIPConfigurationArgs build() {
             return new LoadBalancerFrontendIPConfigurationArgs(name, properties);
         }
     }

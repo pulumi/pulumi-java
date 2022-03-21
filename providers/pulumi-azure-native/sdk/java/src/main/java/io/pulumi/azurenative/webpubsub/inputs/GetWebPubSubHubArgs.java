@@ -88,17 +88,14 @@ public final class GetWebPubSubHubArgs extends io.pulumi.resources.InvokeArgs {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetWebPubSubHubArgs build() {
+        }        public GetWebPubSubHubArgs build() {
             return new GetWebPubSubHubArgs(hubName, resourceGroupName, resourceName);
         }
     }

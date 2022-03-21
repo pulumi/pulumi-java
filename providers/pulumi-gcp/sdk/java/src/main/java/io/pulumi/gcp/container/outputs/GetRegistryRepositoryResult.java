@@ -79,22 +79,18 @@ public final class GetRegistryRepositoryResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
-        }
-        public GetRegistryRepositoryResult build() {
+        }        public GetRegistryRepositoryResult build() {
             return new GetRegistryRepositoryResult(id, project, region, repositoryUrl);
         }
     }

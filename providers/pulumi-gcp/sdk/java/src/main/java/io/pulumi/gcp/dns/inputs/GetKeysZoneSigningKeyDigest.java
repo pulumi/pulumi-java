@@ -74,12 +74,10 @@ public final class GetKeysZoneSigningKeyDigest extends io.pulumi.resources.Invok
             this.digest = digest;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetKeysZoneSigningKeyDigest build() {
+        }        public GetKeysZoneSigningKeyDigest build() {
             return new GetKeysZoneSigningKeyDigest(digest, type);
         }
     }

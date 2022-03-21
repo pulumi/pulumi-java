@@ -71,22 +71,21 @@ public final class GetInstanceMaintenancePolicy {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder weeklyMaintenanceWindows(List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
             this.weeklyMaintenanceWindows = Objects.requireNonNull(weeklyMaintenanceWindows);
             return this;
         }
-        public GetInstanceMaintenancePolicy build() {
+        public Builder weeklyMaintenanceWindows(GetInstanceMaintenancePolicyWeeklyMaintenanceWindow... weeklyMaintenanceWindows) {
+            return weeklyMaintenanceWindows(List.of(weeklyMaintenanceWindows));
+        }        public GetInstanceMaintenancePolicy build() {
             return new GetInstanceMaintenancePolicy(createTime, description, updateTime, weeklyMaintenanceWindows);
         }
     }

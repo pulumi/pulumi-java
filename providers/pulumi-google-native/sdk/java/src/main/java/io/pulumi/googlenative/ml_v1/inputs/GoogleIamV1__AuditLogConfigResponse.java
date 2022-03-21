@@ -77,12 +77,13 @@ public final class GoogleIamV1__AuditLogConfigResponse extends io.pulumi.resourc
             this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public GoogleIamV1__AuditLogConfigResponse build() {
+        }        public GoogleIamV1__AuditLogConfigResponse build() {
             return new GoogleIamV1__AuditLogConfigResponse(exemptedMembers, logType);
         }
     }

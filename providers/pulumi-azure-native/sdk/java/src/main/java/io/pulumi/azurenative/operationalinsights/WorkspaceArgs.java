@@ -259,132 +259,106 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder features(@Nullable Output<WorkspaceFeaturesArgs> features) {
             this.features = features;
             return this;
         }
-
         public Builder features(@Nullable WorkspaceFeaturesArgs features) {
             this.features = Output.ofNullable(features);
             return this;
         }
-
         public Builder forceCmkForQuery(@Nullable Output<Boolean> forceCmkForQuery) {
             this.forceCmkForQuery = forceCmkForQuery;
             return this;
         }
-
         public Builder forceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
             this.forceCmkForQuery = Output.ofNullable(forceCmkForQuery);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,WorkspaceEntityStatus> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccessForIngestion(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
             this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
         }
-
         public Builder publicNetworkAccessForIngestion(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForIngestion) {
             this.publicNetworkAccessForIngestion = Output.ofNullable(publicNetworkAccessForIngestion);
             return this;
         }
-
         public Builder publicNetworkAccessForQuery(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
             this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
         }
-
         public Builder publicNetworkAccessForQuery(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
             this.publicNetworkAccessForQuery = Output.ofNullable(publicNetworkAccessForQuery);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
-
         public Builder sku(@Nullable Output<WorkspaceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable WorkspaceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceCapping(@Nullable Output<WorkspaceCappingArgs> workspaceCapping) {
             this.workspaceCapping = workspaceCapping;
             return this;
         }
-
         public Builder workspaceCapping(@Nullable WorkspaceCappingArgs workspaceCapping) {
             this.workspaceCapping = Output.ofNullable(workspaceCapping);
             return this;
         }
-
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
-
         public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Output.ofNullable(workspaceName);
             return this;
-        }
-        public WorkspaceArgs build() {
+        }        public WorkspaceArgs build() {
             return new WorkspaceArgs(eTag, features, forceCmkForQuery, location, provisioningState, publicNetworkAccessForIngestion, publicNetworkAccessForQuery, resourceGroupName, retentionInDays, sku, tags, workspaceCapping, workspaceName);
         }
     }

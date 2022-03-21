@@ -61,12 +61,10 @@ public final class ContentKeyPolicyUnknownConfigurationArgs extends io.pulumi.re
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public ContentKeyPolicyUnknownConfigurationArgs build() {
+        }        public ContentKeyPolicyUnknownConfigurationArgs build() {
             return new ContentKeyPolicyUnknownConfigurationArgs(odataType);
         }
     }

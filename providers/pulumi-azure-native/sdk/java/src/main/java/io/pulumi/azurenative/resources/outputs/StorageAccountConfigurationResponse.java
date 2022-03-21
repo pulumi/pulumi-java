@@ -71,12 +71,10 @@ public final class StorageAccountConfigurationResponse {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
-        }
-        public StorageAccountConfigurationResponse build() {
+        }        public StorageAccountConfigurationResponse build() {
             return new StorageAccountConfigurationResponse(storageAccountKey, storageAccountName);
         }
     }

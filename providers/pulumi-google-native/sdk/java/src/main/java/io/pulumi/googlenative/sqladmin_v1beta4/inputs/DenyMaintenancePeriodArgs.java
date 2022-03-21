@@ -94,32 +94,26 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = Output.ofNullable(startDate);
             return this;
         }
-
         public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
-        }
-        public DenyMaintenancePeriodArgs build() {
+        }        public DenyMaintenancePeriodArgs build() {
             return new DenyMaintenancePeriodArgs(endDate, startDate, time);
         }
     }

@@ -96,22 +96,27 @@ public final class GetDistributionConfigurationsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetDistributionConfigurationsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-        public GetDistributionConfigurationsResult build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public GetDistributionConfigurationsResult build() {
             return new GetDistributionConfigurationsResult(arns, filters, id, names);
         }
     }

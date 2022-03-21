@@ -197,92 +197,83 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder blobPathBeginsWith(@Nullable Output<String> blobPathBeginsWith) {
             this.blobPathBeginsWith = blobPathBeginsWith;
             return this;
         }
-
         public Builder blobPathBeginsWith(@Nullable String blobPathBeginsWith) {
             this.blobPathBeginsWith = Output.ofNullable(blobPathBeginsWith);
             return this;
         }
-
         public Builder blobPathEndsWith(@Nullable Output<String> blobPathEndsWith) {
             this.blobPathEndsWith = blobPathEndsWith;
             return this;
         }
-
         public Builder blobPathEndsWith(@Nullable String blobPathEndsWith) {
             this.blobPathEndsWith = Output.ofNullable(blobPathEndsWith);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder events(Output<List<Either<String,BlobEventTypes>>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
         public Builder events(List<Either<String,BlobEventTypes>> events) {
             this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
-
+        public Builder events(Either<String,BlobEventTypes>... events) {
+            return events(List.of(events));
+        }
         public Builder ignoreEmptyBlobs(@Nullable Output<Boolean> ignoreEmptyBlobs) {
             this.ignoreEmptyBlobs = ignoreEmptyBlobs;
             return this;
         }
-
         public Builder ignoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
             this.ignoreEmptyBlobs = Output.ofNullable(ignoreEmptyBlobs);
             return this;
         }
-
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
-
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
             this.pipelines = Output.ofNullable(pipelines);
             return this;
         }
-
+        public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
+            return pipelines(List.of(pipelines));
+        }
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public BlobEventsTriggerArgs build() {
+        }        public BlobEventsTriggerArgs build() {
             return new BlobEventsTriggerArgs(annotations, blobPathBeginsWith, blobPathEndsWith, description, events, ignoreEmptyBlobs, pipelines, scope, type);
         }
     }

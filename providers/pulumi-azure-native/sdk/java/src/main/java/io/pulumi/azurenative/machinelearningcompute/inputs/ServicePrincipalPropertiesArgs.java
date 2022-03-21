@@ -77,22 +77,18 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
-        }
-        public ServicePrincipalPropertiesArgs build() {
+        }        public ServicePrincipalPropertiesArgs build() {
             return new ServicePrincipalPropertiesArgs(clientId, secret);
         }
     }

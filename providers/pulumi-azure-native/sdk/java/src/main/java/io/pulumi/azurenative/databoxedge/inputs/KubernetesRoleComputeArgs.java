@@ -60,12 +60,10 @@ public final class KubernetesRoleComputeArgs extends io.pulumi.resources.Resourc
             this.vmProfile = Objects.requireNonNull(vmProfile);
             return this;
         }
-
         public Builder vmProfile(String vmProfile) {
             this.vmProfile = Output.of(Objects.requireNonNull(vmProfile));
             return this;
-        }
-        public KubernetesRoleComputeArgs build() {
+        }        public KubernetesRoleComputeArgs build() {
             return new KubernetesRoleComputeArgs(vmProfile);
         }
     }

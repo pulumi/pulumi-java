@@ -110,42 +110,34 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
-
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = Output.ofNullable(datastoreId);
             return this;
         }
-
         public Builder hostId(@Nullable Output<String> hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder hostId(@Nullable String hostId) {
             this.hostId = Output.ofNullable(hostId);
             return this;
         }
-
         public Builder resourcePoolId(@Nullable Output<String> resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
-
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
             this.resourcePoolId = Output.ofNullable(resourcePoolId);
             return this;
-        }
-        public PlacementProfileArgs build() {
+        }        public PlacementProfileArgs build() {
             return new PlacementProfileArgs(clusterId, datastoreId, hostId, resourcePoolId);
         }
     }

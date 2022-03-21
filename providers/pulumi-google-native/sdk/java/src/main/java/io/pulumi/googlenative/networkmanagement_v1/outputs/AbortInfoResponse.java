@@ -69,12 +69,10 @@ public final class AbortInfoResponse {
             this.cause = Objects.requireNonNull(cause);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public AbortInfoResponse build() {
+        }        public AbortInfoResponse build() {
             return new AbortInfoResponse(cause, resourceUri);
         }
     }

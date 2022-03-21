@@ -50,8 +50,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
         public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
-        }
-        public GetBillingAccountArgs build() {
+        }        public GetBillingAccountArgs build() {
             return new GetBillingAccountArgs(billingAccountId);
         }
     }

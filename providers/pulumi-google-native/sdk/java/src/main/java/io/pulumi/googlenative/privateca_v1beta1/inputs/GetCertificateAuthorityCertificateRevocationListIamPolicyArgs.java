@@ -102,27 +102,22 @@ public final class GetCertificateAuthorityCertificateRevocationListIamPolicyArgs
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
-
         public Builder certificateRevocationListId(String certificateRevocationListId) {
             this.certificateRevocationListId = Objects.requireNonNull(certificateRevocationListId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCertificateAuthorityCertificateRevocationListIamPolicyArgs build() {
+        }        public GetCertificateAuthorityCertificateRevocationListIamPolicyArgs build() {
             return new GetCertificateAuthorityCertificateRevocationListIamPolicyArgs(certificateAuthorityId, certificateRevocationListId, location, optionsRequestedPolicyVersion, project);
         }
     }

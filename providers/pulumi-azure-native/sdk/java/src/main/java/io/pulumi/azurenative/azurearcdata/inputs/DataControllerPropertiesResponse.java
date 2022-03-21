@@ -176,42 +176,34 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
-
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
-
         public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig) {
             this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
-
         public Builder onPremiseProperty(@Nullable OnPremisePropertyResponse onPremiseProperty) {
             this.onPremiseProperty = onPremiseProperty;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalResponse uploadServicePrincipal) {
             this.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
-
         public Builder uploadWatermark(@Nullable UploadWatermarkResponse uploadWatermark) {
             this.uploadWatermark = uploadWatermark;
             return this;
-        }
-        public DataControllerPropertiesResponse build() {
+        }        public DataControllerPropertiesResponse build() {
             return new DataControllerPropertiesResponse(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, provisioningState, uploadServicePrincipal, uploadWatermark);
         }
     }

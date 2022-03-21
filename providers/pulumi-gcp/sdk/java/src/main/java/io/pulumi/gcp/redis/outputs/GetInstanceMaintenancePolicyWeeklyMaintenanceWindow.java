@@ -63,17 +63,17 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow {
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder startTimes(List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
             this.startTimes = Objects.requireNonNull(startTimes);
             return this;
         }
-        public GetInstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
+        public Builder startTimes(GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime... startTimes) {
+            return startTimes(List.of(startTimes));
+        }        public GetInstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
             return new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTimes);
         }
     }

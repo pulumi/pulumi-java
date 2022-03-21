@@ -78,12 +78,10 @@ public final class MasterProfileResponse extends io.pulumi.resources.InvokeArgs 
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public MasterProfileResponse build() {
+        }        public MasterProfileResponse build() {
             return new MasterProfileResponse(subnetId, vmSize);
         }
     }

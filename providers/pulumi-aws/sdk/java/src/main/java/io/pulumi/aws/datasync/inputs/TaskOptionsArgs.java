@@ -251,132 +251,106 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.atime = atime;
             return this;
         }
-
         public Builder atime(@Nullable String atime) {
             this.atime = Output.ofNullable(atime);
             return this;
         }
-
         public Builder bytesPerSecond(@Nullable Output<Integer> bytesPerSecond) {
             this.bytesPerSecond = bytesPerSecond;
             return this;
         }
-
         public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
             this.bytesPerSecond = Output.ofNullable(bytesPerSecond);
             return this;
         }
-
         public Builder gid(@Nullable Output<String> gid) {
             this.gid = gid;
             return this;
         }
-
         public Builder gid(@Nullable String gid) {
             this.gid = Output.ofNullable(gid);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder mtime(@Nullable Output<String> mtime) {
             this.mtime = mtime;
             return this;
         }
-
         public Builder mtime(@Nullable String mtime) {
             this.mtime = Output.ofNullable(mtime);
             return this;
         }
-
         public Builder overwriteMode(@Nullable Output<String> overwriteMode) {
             this.overwriteMode = overwriteMode;
             return this;
         }
-
         public Builder overwriteMode(@Nullable String overwriteMode) {
             this.overwriteMode = Output.ofNullable(overwriteMode);
             return this;
         }
-
         public Builder posixPermissions(@Nullable Output<String> posixPermissions) {
             this.posixPermissions = posixPermissions;
             return this;
         }
-
         public Builder posixPermissions(@Nullable String posixPermissions) {
             this.posixPermissions = Output.ofNullable(posixPermissions);
             return this;
         }
-
         public Builder preserveDeletedFiles(@Nullable Output<String> preserveDeletedFiles) {
             this.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
-
         public Builder preserveDeletedFiles(@Nullable String preserveDeletedFiles) {
             this.preserveDeletedFiles = Output.ofNullable(preserveDeletedFiles);
             return this;
         }
-
         public Builder preserveDevices(@Nullable Output<String> preserveDevices) {
             this.preserveDevices = preserveDevices;
             return this;
         }
-
         public Builder preserveDevices(@Nullable String preserveDevices) {
             this.preserveDevices = Output.ofNullable(preserveDevices);
             return this;
         }
-
         public Builder taskQueueing(@Nullable Output<String> taskQueueing) {
             this.taskQueueing = taskQueueing;
             return this;
         }
-
         public Builder taskQueueing(@Nullable String taskQueueing) {
             this.taskQueueing = Output.ofNullable(taskQueueing);
             return this;
         }
-
         public Builder transferMode(@Nullable Output<String> transferMode) {
             this.transferMode = transferMode;
             return this;
         }
-
         public Builder transferMode(@Nullable String transferMode) {
             this.transferMode = Output.ofNullable(transferMode);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder verifyMode(@Nullable Output<String> verifyMode) {
             this.verifyMode = verifyMode;
             return this;
         }
-
         public Builder verifyMode(@Nullable String verifyMode) {
             this.verifyMode = Output.ofNullable(verifyMode);
             return this;
-        }
-        public TaskOptionsArgs build() {
+        }        public TaskOptionsArgs build() {
             return new TaskOptionsArgs(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, taskQueueing, transferMode, uid, verifyMode);
         }
     }

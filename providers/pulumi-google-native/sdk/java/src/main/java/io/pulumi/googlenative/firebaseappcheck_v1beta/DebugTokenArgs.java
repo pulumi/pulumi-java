@@ -114,52 +114,42 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder token(Output<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Output.of(Objects.requireNonNull(token));
             return this;
-        }
-        public DebugTokenArgs build() {
+        }        public DebugTokenArgs build() {
             return new DebugTokenArgs(appId, displayName, name, project, token);
         }
     }

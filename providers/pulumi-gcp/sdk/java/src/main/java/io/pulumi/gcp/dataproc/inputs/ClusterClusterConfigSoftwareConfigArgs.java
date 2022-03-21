@@ -124,42 +124,37 @@ public final class ClusterClusterConfigSoftwareConfigArgs extends io.pulumi.reso
             this.imageVersion = imageVersion;
             return this;
         }
-
         public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = Output.ofNullable(imageVersion);
             return this;
         }
-
         public Builder optionalComponents(@Nullable Output<List<String>> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
-
         public Builder optionalComponents(@Nullable List<String> optionalComponents) {
             this.optionalComponents = Output.ofNullable(optionalComponents);
             return this;
         }
-
+        public Builder optionalComponents(String... optionalComponents) {
+            return optionalComponents(List.of(optionalComponents));
+        }
         public Builder overrideProperties(@Nullable Output<Map<String,String>> overrideProperties) {
             this.overrideProperties = overrideProperties;
             return this;
         }
-
         public Builder overrideProperties(@Nullable Map<String,String> overrideProperties) {
             this.overrideProperties = Output.ofNullable(overrideProperties);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,Object>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public ClusterClusterConfigSoftwareConfigArgs build() {
+        }        public ClusterClusterConfigSoftwareConfigArgs build() {
             return new ClusterClusterConfigSoftwareConfigArgs(imageVersion, optionalComponents, overrideProperties, properties);
         }
     }

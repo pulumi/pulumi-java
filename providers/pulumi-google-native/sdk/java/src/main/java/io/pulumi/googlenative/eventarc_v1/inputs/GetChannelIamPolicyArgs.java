@@ -90,22 +90,18 @@ public final class GetChannelIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetChannelIamPolicyArgs build() {
+        }        public GetChannelIamPolicyArgs build() {
             return new GetChannelIamPolicyArgs(channelId, location, optionsRequestedPolicyVersion, project);
         }
     }

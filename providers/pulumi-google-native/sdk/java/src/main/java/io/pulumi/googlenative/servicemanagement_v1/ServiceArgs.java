@@ -74,22 +74,18 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.producerProjectId = producerProjectId;
             return this;
         }
-
         public Builder producerProjectId(@Nullable String producerProjectId) {
             this.producerProjectId = Output.ofNullable(producerProjectId);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(producerProjectId, serviceName);
         }
     }

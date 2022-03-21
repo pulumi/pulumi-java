@@ -85,17 +85,14 @@ public final class ComputeInstanceCreatedByResponse {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userOrgId(String userOrgId) {
             this.userOrgId = Objects.requireNonNull(userOrgId);
             return this;
-        }
-        public ComputeInstanceCreatedByResponse build() {
+        }        public ComputeInstanceCreatedByResponse build() {
             return new ComputeInstanceCreatedByResponse(userId, userName, userOrgId);
         }
     }

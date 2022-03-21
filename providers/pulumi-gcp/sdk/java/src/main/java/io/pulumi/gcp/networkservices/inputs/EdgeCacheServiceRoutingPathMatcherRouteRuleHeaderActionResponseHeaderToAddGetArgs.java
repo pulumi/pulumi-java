@@ -92,32 +92,26 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public Builder headerValue(Output<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Output.of(Objects.requireNonNull(headerValue));
             return this;
         }
-
         public Builder replace(@Nullable Output<Boolean> replace) {
             this.replace = replace;
             return this;
         }
-
         public Builder replace(@Nullable Boolean replace) {
             this.replace = Output.ofNullable(replace);
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs(headerName, headerValue, replace);
         }
     }

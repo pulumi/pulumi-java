@@ -69,12 +69,10 @@ public final class DynamicGroupStatusResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusTime(String statusTime) {
             this.statusTime = Objects.requireNonNull(statusTime);
             return this;
-        }
-        public DynamicGroupStatusResponse build() {
+        }        public DynamicGroupStatusResponse build() {
             return new DynamicGroupStatusResponse(status, statusTime);
         }
     }

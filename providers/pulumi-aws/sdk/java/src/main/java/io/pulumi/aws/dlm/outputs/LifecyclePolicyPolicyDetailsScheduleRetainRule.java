@@ -51,8 +51,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRule {
         public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleRetainRule build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleRetainRule build() {
             return new LifecyclePolicyPolicyDetailsScheduleRetainRule(count);
         }
     }

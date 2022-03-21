@@ -70,12 +70,10 @@ public final class PreferredSchedulingTerm {
             this.preference = Objects.requireNonNull(preference);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public PreferredSchedulingTerm build() {
+        }        public PreferredSchedulingTerm build() {
             return new PreferredSchedulingTerm(preference, weight);
         }
     }

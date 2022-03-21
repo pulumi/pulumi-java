@@ -88,17 +88,14 @@ public final class GetResolverDNSSECConfigResult {
             this.id = id;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder validationStatus(@Nullable ResolverDNSSECConfigValidationStatus validationStatus) {
             this.validationStatus = validationStatus;
             return this;
-        }
-        public GetResolverDNSSECConfigResult build() {
+        }        public GetResolverDNSSECConfigResult build() {
             return new GetResolverDNSSECConfigResult(id, ownerId, validationStatus);
         }
     }

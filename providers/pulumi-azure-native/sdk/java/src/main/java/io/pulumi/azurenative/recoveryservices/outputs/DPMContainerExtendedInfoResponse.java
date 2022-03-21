@@ -53,8 +53,7 @@ public final class DPMContainerExtendedInfoResponse {
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
-        }
-        public DPMContainerExtendedInfoResponse build() {
+        }        public DPMContainerExtendedInfoResponse build() {
             return new DPMContainerExtendedInfoResponse(lastRefreshedAt);
         }
     }

@@ -85,17 +85,14 @@ public final class SkippedDetailResponse {
             this.incompatibleAppVersion = Objects.requireNonNull(incompatibleAppVersion);
             return this;
         }
-
         public Builder incompatibleArchitecture(Boolean incompatibleArchitecture) {
             this.incompatibleArchitecture = Objects.requireNonNull(incompatibleArchitecture);
             return this;
         }
-
         public Builder incompatibleDevice(Boolean incompatibleDevice) {
             this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice);
             return this;
-        }
-        public SkippedDetailResponse build() {
+        }        public SkippedDetailResponse build() {
             return new SkippedDetailResponse(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
         }
     }

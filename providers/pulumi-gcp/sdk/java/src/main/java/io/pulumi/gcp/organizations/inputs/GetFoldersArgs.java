@@ -54,8 +54,7 @@ public final class GetFoldersArgs extends io.pulumi.resources.InvokeArgs {
         public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
-        }
-        public GetFoldersArgs build() {
+        }        public GetFoldersArgs build() {
             return new GetFoldersArgs(parentId);
         }
     }

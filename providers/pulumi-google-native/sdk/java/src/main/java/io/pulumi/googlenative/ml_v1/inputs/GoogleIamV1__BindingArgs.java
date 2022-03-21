@@ -96,32 +96,29 @@ public final class GoogleIamV1__BindingArgs extends io.pulumi.resources.Resource
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable GoogleType__ExprArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public GoogleIamV1__BindingArgs build() {
+        }        public GoogleIamV1__BindingArgs build() {
             return new GoogleIamV1__BindingArgs(condition, members, role);
         }
     }

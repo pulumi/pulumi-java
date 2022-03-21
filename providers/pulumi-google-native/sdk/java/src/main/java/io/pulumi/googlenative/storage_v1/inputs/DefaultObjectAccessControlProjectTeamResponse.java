@@ -76,12 +76,10 @@ public final class DefaultObjectAccessControlProjectTeamResponse extends io.pulu
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
-
         public Builder team(String team) {
             this.team = Objects.requireNonNull(team);
             return this;
-        }
-        public DefaultObjectAccessControlProjectTeamResponse build() {
+        }        public DefaultObjectAccessControlProjectTeamResponse build() {
             return new DefaultObjectAccessControlProjectTeamResponse(projectNumber, team);
         }
     }

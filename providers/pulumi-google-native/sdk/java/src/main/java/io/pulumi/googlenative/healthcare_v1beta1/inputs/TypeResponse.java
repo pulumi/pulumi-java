@@ -94,17 +94,17 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
+        public Builder fields(FieldResponse... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primitive(String primitive) {
             this.primitive = Objects.requireNonNull(primitive);
             return this;
-        }
-        public TypeResponse build() {
+        }        public TypeResponse build() {
             return new TypeResponse(fields, name, primitive);
         }
     }

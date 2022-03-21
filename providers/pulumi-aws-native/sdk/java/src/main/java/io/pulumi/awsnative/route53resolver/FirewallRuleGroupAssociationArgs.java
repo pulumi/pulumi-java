@@ -142,62 +142,53 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
             this.firewallRuleGroupId = Objects.requireNonNull(firewallRuleGroupId);
             return this;
         }
-
         public Builder firewallRuleGroupId(String firewallRuleGroupId) {
             this.firewallRuleGroupId = Output.of(Objects.requireNonNull(firewallRuleGroupId));
             return this;
         }
-
         public Builder mutationProtection(@Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection) {
             this.mutationProtection = mutationProtection;
             return this;
         }
-
         public Builder mutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
             this.mutationProtection = Output.ofNullable(mutationProtection);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallRuleGroupAssociationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(FirewallRuleGroupAssociationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public FirewallRuleGroupAssociationArgs build() {
+        }        public FirewallRuleGroupAssociationArgs build() {
             return new FirewallRuleGroupAssociationArgs(firewallRuleGroupId, mutationProtection, name, priority, tags, vpcId);
         }
     }

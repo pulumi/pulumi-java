@@ -62,12 +62,13 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-        public LoginScopesArgs build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public LoginScopesArgs build() {
             return new LoginScopesArgs(scopes);
         }
     }

@@ -107,42 +107,34 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
-
         public Builder backupVaultName(String backupVaultName) {
             this.backupVaultName = Output.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
-
         public Builder changeableForDays(@Nullable Output<Integer> changeableForDays) {
             this.changeableForDays = changeableForDays;
             return this;
         }
-
         public Builder changeableForDays(@Nullable Integer changeableForDays) {
             this.changeableForDays = Output.ofNullable(changeableForDays);
             return this;
         }
-
         public Builder maxRetentionDays(@Nullable Output<Integer> maxRetentionDays) {
             this.maxRetentionDays = maxRetentionDays;
             return this;
         }
-
         public Builder maxRetentionDays(@Nullable Integer maxRetentionDays) {
             this.maxRetentionDays = Output.ofNullable(maxRetentionDays);
             return this;
         }
-
         public Builder minRetentionDays(@Nullable Output<Integer> minRetentionDays) {
             this.minRetentionDays = minRetentionDays;
             return this;
         }
-
         public Builder minRetentionDays(@Nullable Integer minRetentionDays) {
             this.minRetentionDays = Output.ofNullable(minRetentionDays);
             return this;
-        }
-        public VaultLockConfigurationArgs build() {
+        }        public VaultLockConfigurationArgs build() {
             return new VaultLockConfigurationArgs(backupVaultName, changeableForDays, maxRetentionDays, minRetentionDays);
         }
     }

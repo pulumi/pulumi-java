@@ -87,17 +87,17 @@ public final class ArtifactObjectsResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder timing(TimeSpanResponse timing) {
             this.timing = Objects.requireNonNull(timing);
             return this;
-        }
-        public ArtifactObjectsResponse build() {
+        }        public ArtifactObjectsResponse build() {
             return new ArtifactObjectsResponse(location, paths, timing);
         }
     }

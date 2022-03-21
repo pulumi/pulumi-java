@@ -60,8 +60,7 @@ public final class MultichannelResponse extends io.pulumi.resources.InvokeArgs {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public MultichannelResponse build() {
+        }        public MultichannelResponse build() {
             return new MultichannelResponse(enabled);
         }
     }

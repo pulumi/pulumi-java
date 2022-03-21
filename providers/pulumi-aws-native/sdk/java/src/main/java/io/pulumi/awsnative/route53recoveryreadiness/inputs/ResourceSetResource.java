@@ -108,22 +108,21 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
             this.componentId = componentId;
             return this;
         }
-
         public Builder dnsTargetResource(@Nullable ResourceSetDNSTargetResource dnsTargetResource) {
             this.dnsTargetResource = dnsTargetResource;
             return this;
         }
-
         public Builder readinessScopes(@Nullable List<String> readinessScopes) {
             this.readinessScopes = readinessScopes;
             return this;
         }
-
+        public Builder readinessScopes(String... readinessScopes) {
+            return readinessScopes(List.of(readinessScopes));
+        }
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = resourceArn;
             return this;
-        }
-        public ResourceSetResource build() {
+        }        public ResourceSetResource build() {
             return new ResourceSetResource(componentId, dnsTargetResource, readinessScopes, resourceArn);
         }
     }

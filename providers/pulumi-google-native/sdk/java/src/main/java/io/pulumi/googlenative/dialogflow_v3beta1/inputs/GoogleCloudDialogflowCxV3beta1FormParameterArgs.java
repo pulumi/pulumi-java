@@ -161,72 +161,58 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder entityType(Output<String> entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder entityType(String entityType) {
             this.entityType = Output.of(Objects.requireNonNull(entityType));
             return this;
         }
-
         public Builder fillBehavior(Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior) {
             this.fillBehavior = Objects.requireNonNull(fillBehavior);
             return this;
         }
-
         public Builder fillBehavior(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs fillBehavior) {
             this.fillBehavior = Output.of(Objects.requireNonNull(fillBehavior));
             return this;
         }
-
         public Builder isList(@Nullable Output<Boolean> isList) {
             this.isList = isList;
             return this;
         }
-
         public Builder isList(@Nullable Boolean isList) {
             this.isList = Output.ofNullable(isList);
             return this;
         }
-
         public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
-
         public Builder redact(@Nullable Boolean redact) {
             this.redact = Output.ofNullable(redact);
             return this;
         }
-
         public Builder required(@Nullable Output<Boolean> required) {
             this.required = required;
             return this;
         }
-
         public Builder required(@Nullable Boolean required) {
             this.required = Output.ofNullable(required);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1FormParameterArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1FormParameterArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FormParameterArgs(defaultValue, displayName, entityType, fillBehavior, isList, redact, required);
         }
     }

@@ -94,42 +94,46 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
             this.stringEquals = stringEquals;
             return this;
         }
-
         public Builder stringEquals(@Nullable List<SelectionConditionStringEqualArgs> stringEquals) {
             this.stringEquals = Output.ofNullable(stringEquals);
             return this;
         }
-
+        public Builder stringEquals(SelectionConditionStringEqualArgs... stringEquals) {
+            return stringEquals(List.of(stringEquals));
+        }
         public Builder stringLikes(@Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes) {
             this.stringLikes = stringLikes;
             return this;
         }
-
         public Builder stringLikes(@Nullable List<SelectionConditionStringLikeArgs> stringLikes) {
             this.stringLikes = Output.ofNullable(stringLikes);
             return this;
         }
-
+        public Builder stringLikes(SelectionConditionStringLikeArgs... stringLikes) {
+            return stringLikes(List.of(stringLikes));
+        }
         public Builder stringNotEquals(@Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals) {
             this.stringNotEquals = stringNotEquals;
             return this;
         }
-
         public Builder stringNotEquals(@Nullable List<SelectionConditionStringNotEqualArgs> stringNotEquals) {
             this.stringNotEquals = Output.ofNullable(stringNotEquals);
             return this;
         }
-
+        public Builder stringNotEquals(SelectionConditionStringNotEqualArgs... stringNotEquals) {
+            return stringNotEquals(List.of(stringNotEquals));
+        }
         public Builder stringNotLikes(@Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes) {
             this.stringNotLikes = stringNotLikes;
             return this;
         }
-
         public Builder stringNotLikes(@Nullable List<SelectionConditionStringNotLikeArgs> stringNotLikes) {
             this.stringNotLikes = Output.ofNullable(stringNotLikes);
             return this;
         }
-        public SelectionConditionArgs build() {
+        public Builder stringNotLikes(SelectionConditionStringNotLikeArgs... stringNotLikes) {
+            return stringNotLikes(List.of(stringNotLikes));
+        }        public SelectionConditionArgs build() {
             return new SelectionConditionArgs(stringEquals, stringLikes, stringNotEquals, stringNotLikes);
         }
     }

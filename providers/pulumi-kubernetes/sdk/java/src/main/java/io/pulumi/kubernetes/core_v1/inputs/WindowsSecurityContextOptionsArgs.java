@@ -111,42 +111,34 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
             this.gmsaCredentialSpec = gmsaCredentialSpec;
             return this;
         }
-
         public Builder gmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
             this.gmsaCredentialSpec = Output.ofNullable(gmsaCredentialSpec);
             return this;
         }
-
         public Builder gmsaCredentialSpecName(@Nullable Output<String> gmsaCredentialSpecName) {
             this.gmsaCredentialSpecName = gmsaCredentialSpecName;
             return this;
         }
-
         public Builder gmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
             this.gmsaCredentialSpecName = Output.ofNullable(gmsaCredentialSpecName);
             return this;
         }
-
         public Builder hostProcess(@Nullable Output<Boolean> hostProcess) {
             this.hostProcess = hostProcess;
             return this;
         }
-
         public Builder hostProcess(@Nullable Boolean hostProcess) {
             this.hostProcess = Output.ofNullable(hostProcess);
             return this;
         }
-
         public Builder runAsUserName(@Nullable Output<String> runAsUserName) {
             this.runAsUserName = runAsUserName;
             return this;
         }
-
         public Builder runAsUserName(@Nullable String runAsUserName) {
             this.runAsUserName = Output.ofNullable(runAsUserName);
             return this;
-        }
-        public WindowsSecurityContextOptionsArgs build() {
+        }        public WindowsSecurityContextOptionsArgs build() {
             return new WindowsSecurityContextOptionsArgs(gmsaCredentialSpec, gmsaCredentialSpecName, hostProcess, runAsUserName);
         }
     }

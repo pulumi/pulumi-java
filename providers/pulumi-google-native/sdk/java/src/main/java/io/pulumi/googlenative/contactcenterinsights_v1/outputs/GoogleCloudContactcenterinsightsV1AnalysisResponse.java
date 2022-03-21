@@ -102,22 +102,18 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse {
             this.analysisResult = Objects.requireNonNull(analysisResult);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requestTime(String requestTime) {
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1AnalysisResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1AnalysisResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResponse(analysisResult, createTime, name, requestTime);
         }
     }

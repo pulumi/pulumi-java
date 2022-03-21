@@ -88,17 +88,14 @@ public final class GetShareArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public GetShareArgs build() {
+        }        public GetShareArgs build() {
             return new GetShareArgs(accountName, resourceGroupName, shareName);
         }
     }

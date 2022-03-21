@@ -64,12 +64,10 @@ public final class GetBackendServiceConsistentHashHttpCookyTtl extends io.pulumi
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public GetBackendServiceConsistentHashHttpCookyTtl build() {
+        }        public GetBackendServiceConsistentHashHttpCookyTtl build() {
             return new GetBackendServiceConsistentHashHttpCookyTtl(nanos, seconds);
         }
     }

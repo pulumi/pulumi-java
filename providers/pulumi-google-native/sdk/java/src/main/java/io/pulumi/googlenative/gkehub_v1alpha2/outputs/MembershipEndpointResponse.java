@@ -138,32 +138,26 @@ public final class MembershipEndpointResponse {
             this.edgeCluster = Objects.requireNonNull(edgeCluster);
             return this;
         }
-
         public Builder gkeCluster(GkeClusterResponse gkeCluster) {
             this.gkeCluster = Objects.requireNonNull(gkeCluster);
             return this;
         }
-
         public Builder kubernetesMetadata(KubernetesMetadataResponse kubernetesMetadata) {
             this.kubernetesMetadata = Objects.requireNonNull(kubernetesMetadata);
             return this;
         }
-
         public Builder kubernetesResource(KubernetesResourceResponse kubernetesResource) {
             this.kubernetesResource = Objects.requireNonNull(kubernetesResource);
             return this;
         }
-
         public Builder multiCloudCluster(MultiCloudClusterResponse multiCloudCluster) {
             this.multiCloudCluster = Objects.requireNonNull(multiCloudCluster);
             return this;
         }
-
         public Builder onPremCluster(OnPremClusterResponse onPremCluster) {
             this.onPremCluster = Objects.requireNonNull(onPremCluster);
             return this;
-        }
-        public MembershipEndpointResponse build() {
+        }        public MembershipEndpointResponse build() {
             return new MembershipEndpointResponse(edgeCluster, gkeCluster, kubernetesMetadata, kubernetesResource, multiCloudCluster, onPremCluster);
         }
     }

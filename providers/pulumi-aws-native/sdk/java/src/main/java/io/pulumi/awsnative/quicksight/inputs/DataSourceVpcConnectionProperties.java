@@ -58,8 +58,7 @@ public final class DataSourceVpcConnectionProperties extends io.pulumi.resources
         public Builder vpcConnectionArn(String vpcConnectionArn) {
             this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
             return this;
-        }
-        public DataSourceVpcConnectionProperties build() {
+        }        public DataSourceVpcConnectionProperties build() {
             return new DataSourceVpcConnectionProperties(vpcConnectionArn);
         }
     }

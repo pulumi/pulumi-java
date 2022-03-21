@@ -61,12 +61,10 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
             this.webTest = webTest;
             return this;
         }
-
         public Builder webTest(@Nullable String webTest) {
             this.webTest = Output.ofNullable(webTest);
             return this;
-        }
-        public WebTestPropertiesConfigurationArgs build() {
+        }        public WebTestPropertiesConfigurationArgs build() {
             return new WebTestPropertiesConfigurationArgs(webTest);
         }
     }

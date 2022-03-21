@@ -290,77 +290,68 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
             this.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
-
+        public Builder customErrorConfigurations(ApplicationGatewayCustomErrorResponse... customErrorConfigurations) {
+            return customErrorConfigurations(List.of(customErrorConfigurations));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-
         public Builder frontendPort(@Nullable SubResourceResponse frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostNames(@Nullable List<String> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
-
+        public Builder hostNames(String... hostNames) {
+            return hostNames(List.of(hostNames));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder requireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
             this.requireServerNameIndication = requireServerNameIndication;
             return this;
         }
-
         public Builder sslCertificate(@Nullable SubResourceResponse sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
-
         public Builder sslProfile(@Nullable SubResourceResponse sslProfile) {
             this.sslProfile = sslProfile;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewayHttpListenerResponse build() {
+        }        public ApplicationGatewayHttpListenerResponse build() {
             return new ApplicationGatewayHttpListenerResponse(customErrorConfigurations, etag, firewallPolicy, frontendIPConfiguration, frontendPort, hostName, hostNames, id, name, protocol, provisioningState, requireServerNameIndication, sslCertificate, sslProfile, type);
         }
     }

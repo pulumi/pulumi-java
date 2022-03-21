@@ -135,32 +135,26 @@ public final class JobSpecResponse {
             this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
             return this;
         }
-
         public Builder backoffLimit(Integer backoffLimit) {
             this.backoffLimit = Objects.requireNonNull(backoffLimit);
             return this;
         }
-
         public Builder completions(Integer completions) {
             this.completions = Objects.requireNonNull(completions);
             return this;
         }
-
         public Builder parallelism(Integer parallelism) {
             this.parallelism = Objects.requireNonNull(parallelism);
             return this;
         }
-
         public Builder template(InstanceTemplateSpecResponse template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = Objects.requireNonNull(ttlSecondsAfterFinished);
             return this;
-        }
-        public JobSpecResponse build() {
+        }        public JobSpecResponse build() {
             return new JobSpecResponse(activeDeadlineSeconds, backoffLimit, completions, parallelism, template, ttlSecondsAfterFinished);
         }
     }

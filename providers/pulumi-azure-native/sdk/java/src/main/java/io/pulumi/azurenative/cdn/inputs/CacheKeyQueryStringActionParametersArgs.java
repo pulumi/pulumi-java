@@ -92,32 +92,26 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder queryParameters(@Nullable Output<String> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
-
         public Builder queryParameters(@Nullable String queryParameters) {
             this.queryParameters = Output.ofNullable(queryParameters);
             return this;
         }
-
         public Builder queryStringBehavior(Output<Either<String,QueryStringBehavior>> queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
-
         public Builder queryStringBehavior(Either<String,QueryStringBehavior> queryStringBehavior) {
             this.queryStringBehavior = Output.of(Objects.requireNonNull(queryStringBehavior));
             return this;
-        }
-        public CacheKeyQueryStringActionParametersArgs build() {
+        }        public CacheKeyQueryStringActionParametersArgs build() {
             return new CacheKeyQueryStringActionParametersArgs(odataType, queryParameters, queryStringBehavior);
         }
     }

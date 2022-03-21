@@ -96,17 +96,17 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
             this.databasesToTables = Objects.requireNonNull(databasesToTables);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public GetUserTablesSqlTaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public GetUserTablesSqlTaskOutputResponse build() {
             return new GetUserTablesSqlTaskOutputResponse(databasesToTables, id, validationErrors);
         }
     }

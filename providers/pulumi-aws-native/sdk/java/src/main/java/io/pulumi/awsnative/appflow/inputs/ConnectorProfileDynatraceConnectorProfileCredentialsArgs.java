@@ -56,12 +56,10 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
             this.apiToken = Objects.requireNonNull(apiToken);
             return this;
         }
-
         public Builder apiToken(String apiToken) {
             this.apiToken = Output.of(Objects.requireNonNull(apiToken));
             return this;
-        }
-        public ConnectorProfileDynatraceConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileDynatraceConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileDynatraceConnectorProfileCredentialsArgs(apiToken);
         }
     }

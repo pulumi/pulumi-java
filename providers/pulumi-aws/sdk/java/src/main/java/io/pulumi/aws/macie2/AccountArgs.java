@@ -74,22 +74,18 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
             this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public AccountArgs build() {
+        }        public AccountArgs build() {
             return new AccountArgs(findingPublishingFrequency, status);
         }
     }

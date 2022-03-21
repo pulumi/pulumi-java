@@ -69,12 +69,10 @@ public final class ServiceCorrelationDescriptionResponse {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public ServiceCorrelationDescriptionResponse build() {
+        }        public ServiceCorrelationDescriptionResponse build() {
             return new ServiceCorrelationDescriptionResponse(scheme, serviceName);
         }
     }

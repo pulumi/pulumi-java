@@ -130,72 +130,58 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
             this.abpV10x = abpV10x;
             return this;
         }
-
         public Builder abpV10x(@Nullable WirelessDeviceAbpV10xArgs abpV10x) {
             this.abpV10x = Output.ofNullable(abpV10x);
             return this;
         }
-
         public Builder abpV11(@Nullable Output<WirelessDeviceAbpV11Args> abpV11) {
             this.abpV11 = abpV11;
             return this;
         }
-
         public Builder abpV11(@Nullable WirelessDeviceAbpV11Args abpV11) {
             this.abpV11 = Output.ofNullable(abpV11);
             return this;
         }
-
         public Builder devEui(@Nullable Output<String> devEui) {
             this.devEui = devEui;
             return this;
         }
-
         public Builder devEui(@Nullable String devEui) {
             this.devEui = Output.ofNullable(devEui);
             return this;
         }
-
         public Builder deviceProfileId(@Nullable Output<String> deviceProfileId) {
             this.deviceProfileId = deviceProfileId;
             return this;
         }
-
         public Builder deviceProfileId(@Nullable String deviceProfileId) {
             this.deviceProfileId = Output.ofNullable(deviceProfileId);
             return this;
         }
-
         public Builder otaaV10x(@Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x) {
             this.otaaV10x = otaaV10x;
             return this;
         }
-
         public Builder otaaV10x(@Nullable WirelessDeviceOtaaV10xArgs otaaV10x) {
             this.otaaV10x = Output.ofNullable(otaaV10x);
             return this;
         }
-
         public Builder otaaV11(@Nullable Output<WirelessDeviceOtaaV11Args> otaaV11) {
             this.otaaV11 = otaaV11;
             return this;
         }
-
         public Builder otaaV11(@Nullable WirelessDeviceOtaaV11Args otaaV11) {
             this.otaaV11 = Output.ofNullable(otaaV11);
             return this;
         }
-
         public Builder serviceProfileId(@Nullable Output<String> serviceProfileId) {
             this.serviceProfileId = serviceProfileId;
             return this;
         }
-
         public Builder serviceProfileId(@Nullable String serviceProfileId) {
             this.serviceProfileId = Output.ofNullable(serviceProfileId);
             return this;
-        }
-        public WirelessDeviceLoRaWANDeviceArgs build() {
+        }        public WirelessDeviceLoRaWANDeviceArgs build() {
             return new WirelessDeviceLoRaWANDeviceArgs(abpV10x, abpV11, devEui, deviceProfileId, otaaV10x, otaaV11, serviceProfileId);
         }
     }

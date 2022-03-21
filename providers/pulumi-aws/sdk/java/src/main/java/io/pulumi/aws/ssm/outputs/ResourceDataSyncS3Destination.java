@@ -119,27 +119,22 @@ public final class ResourceDataSyncS3Destination {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder syncFormat(@Nullable String syncFormat) {
             this.syncFormat = syncFormat;
             return this;
-        }
-        public ResourceDataSyncS3Destination build() {
+        }        public ResourceDataSyncS3Destination build() {
             return new ResourceDataSyncS3Destination(bucketName, kmsKeyArn, prefix, region, syncFormat);
         }
     }

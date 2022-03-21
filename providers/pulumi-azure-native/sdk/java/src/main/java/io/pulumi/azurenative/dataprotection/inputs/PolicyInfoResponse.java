@@ -87,17 +87,14 @@ public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder policyParameters(@Nullable PolicyParametersResponse policyParameters) {
             this.policyParameters = policyParameters;
             return this;
         }
-
         public Builder policyVersion(String policyVersion) {
             this.policyVersion = Objects.requireNonNull(policyVersion);
             return this;
-        }
-        public PolicyInfoResponse build() {
+        }        public PolicyInfoResponse build() {
             return new PolicyInfoResponse(policyId, policyParameters, policyVersion);
         }
     }

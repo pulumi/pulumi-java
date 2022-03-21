@@ -54,8 +54,7 @@ public final class GetDestinationArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetDestinationArgs build() {
+        }        public GetDestinationArgs build() {
             return new GetDestinationArgs(name);
         }
     }

@@ -62,12 +62,10 @@ public final class DSSEAttestationOccurrenceResponse {
             this.envelope = Objects.requireNonNull(envelope);
             return this;
         }
-
         public Builder statement(InTotoStatementResponse statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
-        }
-        public DSSEAttestationOccurrenceResponse build() {
+        }        public DSSEAttestationOccurrenceResponse build() {
             return new DSSEAttestationOccurrenceResponse(envelope, statement);
         }
     }

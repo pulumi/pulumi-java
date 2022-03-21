@@ -539,302 +539,251 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.backendType = backendType;
             return this;
         }
-
         public Builder backendType(@Nullable InstanceBackendType backendType) {
             this.backendType = Output.ofNullable(backendType);
             return this;
         }
-
         public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder currentDiskSize(@Nullable Output<String> currentDiskSize) {
             this.currentDiskSize = currentDiskSize;
             return this;
         }
-
         public Builder currentDiskSize(@Nullable String currentDiskSize) {
             this.currentDiskSize = Output.ofNullable(currentDiskSize);
             return this;
         }
-
         public Builder databaseVersion(@Nullable Output<InstanceDatabaseVersion> databaseVersion) {
             this.databaseVersion = databaseVersion;
             return this;
         }
-
         public Builder databaseVersion(@Nullable InstanceDatabaseVersion databaseVersion) {
             this.databaseVersion = Output.ofNullable(databaseVersion);
             return this;
         }
-
         public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
-
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Output.ofNullable(diskEncryptionConfiguration);
             return this;
         }
-
         public Builder diskEncryptionStatus(@Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus) {
             this.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
-
         public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
             this.diskEncryptionStatus = Output.ofNullable(diskEncryptionStatus);
             return this;
         }
-
         public Builder failoverReplica(@Nullable Output<InstanceFailoverReplicaArgs> failoverReplica) {
             this.failoverReplica = failoverReplica;
             return this;
         }
-
         public Builder failoverReplica(@Nullable InstanceFailoverReplicaArgs failoverReplica) {
             this.failoverReplica = Output.ofNullable(failoverReplica);
             return this;
         }
-
         public Builder gceZone(@Nullable Output<String> gceZone) {
             this.gceZone = gceZone;
             return this;
         }
-
         public Builder gceZone(@Nullable String gceZone) {
             this.gceZone = Output.ofNullable(gceZone);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<InstanceInstanceType> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable InstanceInstanceType instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<IpMappingArgs>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<IpMappingArgs> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(IpMappingArgs... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
-
         public Builder masterInstanceName(@Nullable String masterInstanceName) {
             this.masterInstanceName = Output.ofNullable(masterInstanceName);
             return this;
         }
-
         public Builder maxDiskSize(@Nullable Output<String> maxDiskSize) {
             this.maxDiskSize = maxDiskSize;
             return this;
         }
-
         public Builder maxDiskSize(@Nullable String maxDiskSize) {
             this.maxDiskSize = Output.ofNullable(maxDiskSize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder onPremisesConfiguration(@Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration) {
             this.onPremisesConfiguration = onPremisesConfiguration;
             return this;
         }
-
         public Builder onPremisesConfiguration(@Nullable OnPremisesConfigurationArgs onPremisesConfiguration) {
             this.onPremisesConfiguration = Output.ofNullable(onPremisesConfiguration);
             return this;
         }
-
         public Builder outOfDiskReport(@Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport) {
             this.outOfDiskReport = outOfDiskReport;
             return this;
         }
-
         public Builder outOfDiskReport(@Nullable SqlOutOfDiskReportArgs outOfDiskReport) {
             this.outOfDiskReport = Output.ofNullable(outOfDiskReport);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder replicaConfiguration(@Nullable Output<ReplicaConfigurationArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
-
         public Builder replicaConfiguration(@Nullable ReplicaConfigurationArgs replicaConfiguration) {
             this.replicaConfiguration = Output.ofNullable(replicaConfiguration);
             return this;
         }
-
         public Builder replicaNames(@Nullable Output<List<String>> replicaNames) {
             this.replicaNames = replicaNames;
             return this;
         }
-
         public Builder replicaNames(@Nullable List<String> replicaNames) {
             this.replicaNames = Output.ofNullable(replicaNames);
             return this;
         }
-
+        public Builder replicaNames(String... replicaNames) {
+            return replicaNames(List.of(replicaNames));
+        }
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
-
         public Builder rootPassword(@Nullable String rootPassword) {
             this.rootPassword = Output.ofNullable(rootPassword);
             return this;
         }
-
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
-
         public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
             this.satisfiesPzs = Output.ofNullable(satisfiesPzs);
             return this;
         }
-
         public Builder scheduledMaintenance(@Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance) {
             this.scheduledMaintenance = scheduledMaintenance;
             return this;
         }
-
         public Builder scheduledMaintenance(@Nullable SqlScheduledMaintenanceArgs scheduledMaintenance) {
             this.scheduledMaintenance = Output.ofNullable(scheduledMaintenance);
             return this;
         }
-
         public Builder secondaryGceZone(@Nullable Output<String> secondaryGceZone) {
             this.secondaryGceZone = secondaryGceZone;
             return this;
         }
-
         public Builder secondaryGceZone(@Nullable String secondaryGceZone) {
             this.secondaryGceZone = Output.ofNullable(secondaryGceZone);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder serverCaCert(@Nullable Output<SslCertArgs> serverCaCert) {
             this.serverCaCert = serverCaCert;
             return this;
         }
-
         public Builder serverCaCert(@Nullable SslCertArgs serverCaCert) {
             this.serverCaCert = Output.ofNullable(serverCaCert);
             return this;
         }
-
         public Builder serviceAccountEmailAddress(@Nullable Output<String> serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
-
         public Builder serviceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = Output.ofNullable(serviceAccountEmailAddress);
             return this;
         }
-
         public Builder settings(@Nullable Output<SettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable SettingsArgs settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder state(@Nullable Output<InstanceState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable InstanceState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder suspensionReason(@Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason) {
             this.suspensionReason = suspensionReason;
             return this;
         }
-
         public Builder suspensionReason(@Nullable List<InstanceSuspensionReasonItem> suspensionReason) {
             this.suspensionReason = Output.ofNullable(suspensionReason);
             return this;
         }
-        public InstanceArgs build() {
+        public Builder suspensionReason(InstanceSuspensionReasonItem... suspensionReason) {
+            return suspensionReason(List.of(suspensionReason));
+        }        public InstanceArgs build() {
             return new InstanceArgs(backendType, connectionName, currentDiskSize, databaseVersion, diskEncryptionConfiguration, diskEncryptionStatus, failoverReplica, gceZone, instanceType, ipAddresses, kind, masterInstanceName, maxDiskSize, name, onPremisesConfiguration, outOfDiskReport, project, region, replicaConfiguration, replicaNames, rootPassword, satisfiesPzs, scheduledMaintenance, secondaryGceZone, selfLink, serverCaCert, serviceAccountEmailAddress, settings, state, suspensionReason);
         }
     }

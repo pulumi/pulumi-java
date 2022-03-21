@@ -171,42 +171,40 @@ public final class CertificateDescriptionResponse {
             this.aiaIssuingCertificateUrls = Objects.requireNonNull(aiaIssuingCertificateUrls);
             return this;
         }
-
+        public Builder aiaIssuingCertificateUrls(String... aiaIssuingCertificateUrls) {
+            return aiaIssuingCertificateUrls(List.of(aiaIssuingCertificateUrls));
+        }
         public Builder authorityKeyId(KeyIdResponse authorityKeyId) {
             this.authorityKeyId = Objects.requireNonNull(authorityKeyId);
             return this;
         }
-
         public Builder certFingerprint(CertificateFingerprintResponse certFingerprint) {
             this.certFingerprint = Objects.requireNonNull(certFingerprint);
             return this;
         }
-
         public Builder configValues(ReusableConfigValuesResponse configValues) {
             this.configValues = Objects.requireNonNull(configValues);
             return this;
         }
-
         public Builder crlDistributionPoints(List<String> crlDistributionPoints) {
             this.crlDistributionPoints = Objects.requireNonNull(crlDistributionPoints);
             return this;
         }
-
+        public Builder crlDistributionPoints(String... crlDistributionPoints) {
+            return crlDistributionPoints(List.of(crlDistributionPoints));
+        }
         public Builder publicKey(PublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder subjectDescription(SubjectDescriptionResponse subjectDescription) {
             this.subjectDescription = Objects.requireNonNull(subjectDescription);
             return this;
         }
-
         public Builder subjectKeyId(KeyIdResponse subjectKeyId) {
             this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
             return this;
-        }
-        public CertificateDescriptionResponse build() {
+        }        public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(aiaIssuingCertificateUrls, authorityKeyId, certFingerprint, configValues, crlDistributionPoints, publicKey, subjectDescription, subjectKeyId);
         }
     }

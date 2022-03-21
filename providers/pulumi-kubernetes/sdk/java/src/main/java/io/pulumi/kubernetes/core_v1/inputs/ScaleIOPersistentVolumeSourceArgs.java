@@ -208,102 +208,82 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder gateway(Output<String> gateway) {
             this.gateway = Objects.requireNonNull(gateway);
             return this;
         }
-
         public Builder gateway(String gateway) {
             this.gateway = Output.of(Objects.requireNonNull(gateway));
             return this;
         }
-
         public Builder protectionDomain(@Nullable Output<String> protectionDomain) {
             this.protectionDomain = protectionDomain;
             return this;
         }
-
         public Builder protectionDomain(@Nullable String protectionDomain) {
             this.protectionDomain = Output.ofNullable(protectionDomain);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretRef(Output<SecretReferenceArgs> secretRef) {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }
-
         public Builder secretRef(SecretReferenceArgs secretRef) {
             this.secretRef = Output.of(Objects.requireNonNull(secretRef));
             return this;
         }
-
         public Builder sslEnabled(@Nullable Output<Boolean> sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
-
         public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = Output.ofNullable(sslEnabled);
             return this;
         }
-
         public Builder storageMode(@Nullable Output<String> storageMode) {
             this.storageMode = storageMode;
             return this;
         }
-
         public Builder storageMode(@Nullable String storageMode) {
             this.storageMode = Output.ofNullable(storageMode);
             return this;
         }
-
         public Builder storagePool(@Nullable Output<String> storagePool) {
             this.storagePool = storagePool;
             return this;
         }
-
         public Builder storagePool(@Nullable String storagePool) {
             this.storagePool = Output.ofNullable(storagePool);
             return this;
         }
-
         public Builder system(Output<String> system) {
             this.system = Objects.requireNonNull(system);
             return this;
         }
-
         public Builder system(String system) {
             this.system = Output.of(Objects.requireNonNull(system));
             return this;
         }
-
         public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Output.ofNullable(volumeName);
             return this;
-        }
-        public ScaleIOPersistentVolumeSourceArgs build() {
+        }        public ScaleIOPersistentVolumeSourceArgs build() {
             return new ScaleIOPersistentVolumeSourceArgs(fsType, gateway, protectionDomain, readOnly, secretRef, sslEnabled, storageMode, storagePool, system, volumeName);
         }
     }

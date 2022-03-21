@@ -122,27 +122,22 @@ public final class TelegramChannelResponse {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder properties(@Nullable TelegramChannelPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public TelegramChannelResponse build() {
+        }        public TelegramChannelResponse build() {
             return new TelegramChannelResponse(channelName, etag, location, properties, provisioningState);
         }
     }

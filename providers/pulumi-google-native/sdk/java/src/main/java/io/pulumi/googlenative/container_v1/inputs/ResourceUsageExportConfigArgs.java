@@ -96,32 +96,26 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
             this.bigqueryDestination = bigqueryDestination;
             return this;
         }
-
         public Builder bigqueryDestination(@Nullable BigQueryDestinationArgs bigqueryDestination) {
             this.bigqueryDestination = Output.ofNullable(bigqueryDestination);
             return this;
         }
-
         public Builder consumptionMeteringConfig(@Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig) {
             this.consumptionMeteringConfig = consumptionMeteringConfig;
             return this;
         }
-
         public Builder consumptionMeteringConfig(@Nullable ConsumptionMeteringConfigArgs consumptionMeteringConfig) {
             this.consumptionMeteringConfig = Output.ofNullable(consumptionMeteringConfig);
             return this;
         }
-
         public Builder enableNetworkEgressMetering(@Nullable Output<Boolean> enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
-
         public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Output.ofNullable(enableNetworkEgressMetering);
             return this;
-        }
-        public ResourceUsageExportConfigArgs build() {
+        }        public ResourceUsageExportConfigArgs build() {
             return new ResourceUsageExportConfigArgs(bigqueryDestination, consumptionMeteringConfig, enableNetworkEgressMetering);
         }
     }

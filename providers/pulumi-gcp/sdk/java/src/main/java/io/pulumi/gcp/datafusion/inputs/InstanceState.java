@@ -366,192 +366,154 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
             this.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
-
         public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
             this.dataprocServiceAccount = Output.ofNullable(dataprocServiceAccount);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
         }
-
         public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
-
         public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = Output.ofNullable(enableStackdriverMonitoring);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<InstanceNetworkConfigGetArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable InstanceNetworkConfigGetArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder options(@Nullable Output<Map<String,String>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable Map<String,String> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
             this.privateInstance = privateInstance;
             return this;
         }
-
         public Builder privateInstance(@Nullable Boolean privateInstance) {
             this.privateInstance = Output.ofNullable(privateInstance);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder serviceEndpoint(@Nullable Output<String> serviceEndpoint) {
             this.serviceEndpoint = serviceEndpoint;
             return this;
         }
-
         public Builder serviceEndpoint(@Nullable String serviceEndpoint) {
             this.serviceEndpoint = Output.ofNullable(serviceEndpoint);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder stateMessage(@Nullable Output<String> stateMessage) {
             this.stateMessage = stateMessage;
             return this;
         }
-
         public Builder stateMessage(@Nullable String stateMessage) {
             this.stateMessage = Output.ofNullable(stateMessage);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public InstanceState build() {
+        }        public InstanceState build() {
             return new InstanceState(createTime, dataprocServiceAccount, description, enableStackdriverLogging, enableStackdriverMonitoring, labels, name, networkConfig, options, privateInstance, project, region, serviceAccount, serviceEndpoint, state, stateMessage, type, updateTime, version);
         }
     }

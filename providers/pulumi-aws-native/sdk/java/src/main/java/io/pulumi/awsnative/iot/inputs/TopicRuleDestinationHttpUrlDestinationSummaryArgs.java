@@ -53,12 +53,10 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
             this.confirmationUrl = confirmationUrl;
             return this;
         }
-
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = Output.ofNullable(confirmationUrl);
             return this;
-        }
-        public TopicRuleDestinationHttpUrlDestinationSummaryArgs build() {
+        }        public TopicRuleDestinationHttpUrlDestinationSummaryArgs build() {
             return new TopicRuleDestinationHttpUrlDestinationSummaryArgs(confirmationUrl);
         }
     }

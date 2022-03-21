@@ -79,12 +79,10 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
             this.quantity = quantity;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
-        }
-        public CommitmentQuotaResponse build() {
+        }        public CommitmentQuotaResponse build() {
             return new CommitmentQuotaResponse(quantity, unit);
         }
     }

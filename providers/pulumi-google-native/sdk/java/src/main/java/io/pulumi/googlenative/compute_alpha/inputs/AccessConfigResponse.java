@@ -222,57 +222,46 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.externalIpv6 = Objects.requireNonNull(externalIpv6);
             return this;
         }
-
         public Builder externalIpv6PrefixLength(Integer externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = Objects.requireNonNull(externalIpv6PrefixLength);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder natIP(String natIP) {
             this.natIP = Objects.requireNonNull(natIP);
             return this;
         }
-
         public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
-
         public Builder publicDnsName(String publicDnsName) {
             this.publicDnsName = Objects.requireNonNull(publicDnsName);
             return this;
         }
-
         public Builder publicPtrDomainName(String publicPtrDomainName) {
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public Builder setPublicDns(Boolean setPublicDns) {
             this.setPublicDns = Objects.requireNonNull(setPublicDns);
             return this;
         }
-
         public Builder setPublicPtr(Boolean setPublicPtr) {
             this.setPublicPtr = Objects.requireNonNull(setPublicPtr);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AccessConfigResponse build() {
+        }        public AccessConfigResponse build() {
             return new AccessConfigResponse(externalIpv6, externalIpv6PrefixLength, kind, name, natIP, networkTier, publicDnsName, publicPtrDomainName, setPublicDns, setPublicPtr, type);
         }
     }

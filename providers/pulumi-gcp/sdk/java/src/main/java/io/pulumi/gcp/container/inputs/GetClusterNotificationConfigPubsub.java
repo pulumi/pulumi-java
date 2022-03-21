@@ -65,12 +65,10 @@ public final class GetClusterNotificationConfigPubsub extends io.pulumi.resource
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GetClusterNotificationConfigPubsub build() {
+        }        public GetClusterNotificationConfigPubsub build() {
             return new GetClusterNotificationConfigPubsub(enabled, topic);
         }
     }

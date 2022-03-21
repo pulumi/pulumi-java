@@ -75,22 +75,18 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
-        }
-        public ConnectorSubnetArgs build() {
+        }        public ConnectorSubnetArgs build() {
             return new ConnectorSubnetArgs(name, projectId);
         }
     }

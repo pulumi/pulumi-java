@@ -79,22 +79,18 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
             this.frequency = frequency;
             return this;
         }
-
         public Builder frequency(@Nullable FrequencyTypes frequency) {
             this.frequency = Output.ofNullable(frequency);
             return this;
         }
-
         public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
-        }
-        public ConnectorMappingAvailabilityArgs build() {
+        }        public ConnectorMappingAvailabilityArgs build() {
             return new ConnectorMappingAvailabilityArgs(frequency, interval);
         }
     }

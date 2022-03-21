@@ -77,22 +77,18 @@ public final class AnalysisDataSetReferenceArgs extends io.pulumi.resources.Reso
             this.dataSetArn = Objects.requireNonNull(dataSetArn);
             return this;
         }
-
         public Builder dataSetArn(String dataSetArn) {
             this.dataSetArn = Output.of(Objects.requireNonNull(dataSetArn));
             return this;
         }
-
         public Builder dataSetPlaceholder(Output<String> dataSetPlaceholder) {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }
-
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
             this.dataSetPlaceholder = Output.of(Objects.requireNonNull(dataSetPlaceholder));
             return this;
-        }
-        public AnalysisDataSetReferenceArgs build() {
+        }        public AnalysisDataSetReferenceArgs build() {
             return new AnalysisDataSetReferenceArgs(dataSetArn, dataSetPlaceholder);
         }
     }

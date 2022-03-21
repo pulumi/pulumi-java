@@ -476,137 +476,119 @@ public final class GetInstanceResult {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
-
+        public Builder accelerators(AcceleratorResponse... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder apiEndpoint(String apiEndpoint) {
             this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
             return this;
         }
-
         public Builder availableVersion(List<VersionResponse> availableVersion) {
             this.availableVersion = Objects.requireNonNull(availableVersion);
             return this;
         }
-
+        public Builder availableVersion(VersionResponse... availableVersion) {
+            return availableVersion(List.of(availableVersion));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder cryptoKeyConfig(CryptoKeyConfigResponse cryptoKeyConfig) {
             this.cryptoKeyConfig = Objects.requireNonNull(cryptoKeyConfig);
             return this;
         }
-
         public Builder dataprocServiceAccount(String dataprocServiceAccount) {
             this.dataprocServiceAccount = Objects.requireNonNull(dataprocServiceAccount);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disabledReason(List<String> disabledReason) {
             this.disabledReason = Objects.requireNonNull(disabledReason);
             return this;
         }
-
+        public Builder disabledReason(String... disabledReason) {
+            return disabledReason(List.of(disabledReason));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enableRbac(Boolean enableRbac) {
             this.enableRbac = Objects.requireNonNull(enableRbac);
             return this;
         }
-
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
-
         public Builder enableStackdriverMonitoring(Boolean enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = Objects.requireNonNull(enableStackdriverMonitoring);
             return this;
         }
-
         public Builder gcsBucket(String gcsBucket) {
             this.gcsBucket = Objects.requireNonNull(gcsBucket);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
-
         public Builder options(Map<String,String> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder p4ServiceAccount(String p4ServiceAccount) {
             this.p4ServiceAccount = Objects.requireNonNull(p4ServiceAccount);
             return this;
         }
-
         public Builder privateInstance(Boolean privateInstance) {
             this.privateInstance = Objects.requireNonNull(privateInstance);
             return this;
         }
-
         public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
-
         public Builder tenantProjectId(String tenantProjectId) {
             this.tenantProjectId = Objects.requireNonNull(tenantProjectId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(accelerators, apiEndpoint, availableVersion, createTime, cryptoKeyConfig, dataprocServiceAccount, description, disabledReason, displayName, enableRbac, enableStackdriverLogging, enableStackdriverMonitoring, gcsBucket, labels, name, networkConfig, options, p4ServiceAccount, privateInstance, serviceEndpoint, state, stateMessage, tenantProjectId, type, updateTime, version, zone);
         }
     }

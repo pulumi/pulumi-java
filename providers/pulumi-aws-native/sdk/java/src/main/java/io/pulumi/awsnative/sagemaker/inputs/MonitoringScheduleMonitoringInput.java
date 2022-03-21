@@ -54,8 +54,7 @@ public final class MonitoringScheduleMonitoringInput extends io.pulumi.resources
         public Builder endpointInput(MonitoringScheduleEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
-        }
-        public MonitoringScheduleMonitoringInput build() {
+        }        public MonitoringScheduleMonitoringInput build() {
             return new MonitoringScheduleMonitoringInput(endpointInput);
         }
     }

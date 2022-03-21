@@ -131,52 +131,45 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             this.activatedPolicyTypes = activatedPolicyTypes;
             return this;
         }
-
         public Builder activatedPolicyTypes(@Nullable List<String> activatedPolicyTypes) {
             this.activatedPolicyTypes = Output.ofNullable(activatedPolicyTypes);
             return this;
         }
-
+        public Builder activatedPolicyTypes(String... activatedPolicyTypes) {
+            return activatedPolicyTypes(List.of(activatedPolicyTypes));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public TaxonomyArgs build() {
+        }        public TaxonomyArgs build() {
             return new TaxonomyArgs(activatedPolicyTypes, description, displayName, project, region);
         }
     }

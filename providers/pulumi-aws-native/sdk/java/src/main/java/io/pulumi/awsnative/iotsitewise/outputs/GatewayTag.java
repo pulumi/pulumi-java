@@ -53,12 +53,10 @@ public final class GatewayTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GatewayTag build() {
+        }        public GatewayTag build() {
             return new GatewayTag(key, value);
         }
     }

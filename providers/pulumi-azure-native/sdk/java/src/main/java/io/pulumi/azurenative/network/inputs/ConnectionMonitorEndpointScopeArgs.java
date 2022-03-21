@@ -79,22 +79,24 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
             this.exclude = exclude;
             return this;
         }
-
         public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> exclude) {
             this.exclude = Output.ofNullable(exclude);
             return this;
         }
-
+        public Builder exclude(ConnectionMonitorEndpointScopeItemArgs... exclude) {
+            return exclude(List.of(exclude));
+        }
         public Builder include(@Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
             this.include = include;
             return this;
         }
-
         public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> include) {
             this.include = Output.ofNullable(include);
             return this;
         }
-        public ConnectionMonitorEndpointScopeArgs build() {
+        public Builder include(ConnectionMonitorEndpointScopeItemArgs... include) {
+            return include(List.of(include));
+        }        public ConnectionMonitorEndpointScopeArgs build() {
             return new ConnectionMonitorEndpointScopeArgs(exclude, include);
         }
     }

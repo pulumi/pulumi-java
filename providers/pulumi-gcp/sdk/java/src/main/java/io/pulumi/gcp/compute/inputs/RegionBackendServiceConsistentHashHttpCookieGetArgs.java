@@ -92,32 +92,26 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends i
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder ttl(@Nullable Output<RegionBackendServiceConsistentHashHttpCookieTtlGetArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable RegionBackendServiceConsistentHashHttpCookieTtlGetArgs ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public RegionBackendServiceConsistentHashHttpCookieGetArgs build() {
+        }        public RegionBackendServiceConsistentHashHttpCookieGetArgs build() {
             return new RegionBackendServiceConsistentHashHttpCookieGetArgs(name, path, ttl);
         }
     }

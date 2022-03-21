@@ -229,112 +229,96 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder dagTimeout(@Nullable Output<String> dagTimeout) {
             this.dagTimeout = dagTimeout;
             return this;
         }
-
         public Builder dagTimeout(@Nullable String dagTimeout) {
             this.dagTimeout = Output.ofNullable(dagTimeout);
             return this;
         }
-
         public Builder jobs(@Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs) {
             this.jobs = jobs;
             return this;
         }
-
         public Builder jobs(@Nullable List<WorkflowTemplateJobGetArgs> jobs) {
             this.jobs = Output.ofNullable(jobs);
             return this;
         }
-
+        public Builder jobs(WorkflowTemplateJobGetArgs... jobs) {
+            return jobs(List.of(jobs));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<WorkflowTemplateParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(WorkflowTemplateParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder placement(@Nullable Output<WorkflowTemplatePlacementGetArgs> placement) {
             this.placement = placement;
             return this;
         }
-
         public Builder placement(@Nullable WorkflowTemplatePlacementGetArgs placement) {
             this.placement = Output.ofNullable(placement);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public WorkflowTemplateState build() {
+        }        public WorkflowTemplateState build() {
             return new WorkflowTemplateState(createTime, dagTimeout, jobs, labels, location, name, parameters, placement, project, updateTime, version);
         }
     }

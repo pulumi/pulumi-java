@@ -69,12 +69,10 @@ public final class ConnectorProfileVeevaConnectorProfileCredentials {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ConnectorProfileVeevaConnectorProfileCredentials build() {
+        }        public ConnectorProfileVeevaConnectorProfileCredentials build() {
             return new ConnectorProfileVeevaConnectorProfileCredentials(password, username);
         }
     }

@@ -93,17 +93,14 @@ public final class JobAppEngineHttpTargetAppEngineRouting {
             this.instance = instance;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public JobAppEngineHttpTargetAppEngineRouting build() {
+        }        public JobAppEngineHttpTargetAppEngineRouting build() {
             return new JobAppEngineHttpTargetAppEngineRouting(instance, service, version);
         }
     }

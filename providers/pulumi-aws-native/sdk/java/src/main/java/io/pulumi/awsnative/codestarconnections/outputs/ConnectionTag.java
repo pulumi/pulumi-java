@@ -69,12 +69,10 @@ public final class ConnectionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ConnectionTag build() {
+        }        public ConnectionTag build() {
             return new ConnectionTag(key, value);
         }
     }

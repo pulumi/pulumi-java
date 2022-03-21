@@ -129,52 +129,51 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
             this.allowCredentials = allowCredentials;
             return this;
         }
-
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = Output.ofNullable(allowCredentials);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }
         public Builder maxAge(@Nullable Output<Double> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
-
         public Builder maxAge(@Nullable Double maxAge) {
             this.maxAge = Output.ofNullable(maxAge);
             return this;
         }
-
         public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<String> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder origins(@Nullable Output<List<String>> origins) {
             this.origins = origins;
             return this;
         }
-
         public Builder origins(@Nullable List<String> origins) {
             this.origins = Output.ofNullable(origins);
             return this;
         }
-        public ServiceCorsConfigurationInfoArgs build() {
+        public Builder origins(String... origins) {
+            return origins(List.of(origins));
+        }        public ServiceCorsConfigurationInfoArgs build() {
             return new ServiceCorsConfigurationInfoArgs(allowCredentials, headers, maxAge, methods, origins);
         }
     }

@@ -77,12 +77,10 @@ public final class EventTargetInputTransformer {
             this.inputPaths = inputPaths;
             return this;
         }
-
         public Builder inputTemplate(String inputTemplate) {
             this.inputTemplate = Objects.requireNonNull(inputTemplate);
             return this;
-        }
-        public EventTargetInputTransformer build() {
+        }        public EventTargetInputTransformer build() {
             return new EventTargetInputTransformer(inputPaths, inputTemplate);
         }
     }

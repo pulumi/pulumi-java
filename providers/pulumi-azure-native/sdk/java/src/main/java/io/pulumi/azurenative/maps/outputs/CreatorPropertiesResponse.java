@@ -53,8 +53,7 @@ public final class CreatorPropertiesResponse {
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public CreatorPropertiesResponse build() {
+        }        public CreatorPropertiesResponse build() {
             return new CreatorPropertiesResponse(provisioningState);
         }
     }

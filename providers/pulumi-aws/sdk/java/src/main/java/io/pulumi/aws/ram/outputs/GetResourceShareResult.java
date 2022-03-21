@@ -145,42 +145,37 @@ public final class GetResourceShareResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder filters(@Nullable List<GetResourceShareFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetResourceShareFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder owningAccountId(String owningAccountId) {
             this.owningAccountId = Objects.requireNonNull(owningAccountId);
             return this;
         }
-
         public Builder resourceOwner(String resourceOwner) {
             this.resourceOwner = Objects.requireNonNull(resourceOwner);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetResourceShareResult build() {
+        }        public GetResourceShareResult build() {
             return new GetResourceShareResult(arn, filters, id, name, owningAccountId, resourceOwner, status, tags);
         }
     }

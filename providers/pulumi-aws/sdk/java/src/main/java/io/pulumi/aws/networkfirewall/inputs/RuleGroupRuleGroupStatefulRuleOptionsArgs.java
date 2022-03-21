@@ -56,12 +56,10 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsArgs extends io.pulumi.r
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
         }
-
         public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Output.of(Objects.requireNonNull(ruleOrder));
             return this;
-        }
-        public RuleGroupRuleGroupStatefulRuleOptionsArgs build() {
+        }        public RuleGroupRuleGroupStatefulRuleOptionsArgs build() {
             return new RuleGroupRuleGroupStatefulRuleOptionsArgs(ruleOrder);
         }
     }

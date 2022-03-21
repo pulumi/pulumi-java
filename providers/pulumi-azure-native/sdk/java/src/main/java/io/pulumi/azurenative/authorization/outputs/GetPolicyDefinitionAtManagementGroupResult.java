@@ -202,52 +202,42 @@ public final class GetPolicyDefinitionAtManagementGroupResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder policyRule(@Nullable Object policyRule) {
             this.policyRule = policyRule;
             return this;
         }
-
         public Builder policyType(@Nullable String policyType) {
             this.policyType = policyType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPolicyDefinitionAtManagementGroupResult build() {
+        }        public GetPolicyDefinitionAtManagementGroupResult build() {
             return new GetPolicyDefinitionAtManagementGroupResult(description, displayName, id, metadata, mode, name, parameters, policyRule, policyType, type);
         }
     }

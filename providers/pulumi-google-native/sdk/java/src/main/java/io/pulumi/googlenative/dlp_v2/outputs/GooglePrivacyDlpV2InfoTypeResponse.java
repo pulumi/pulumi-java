@@ -69,12 +69,10 @@ public final class GooglePrivacyDlpV2InfoTypeResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GooglePrivacyDlpV2InfoTypeResponse build() {
+        }        public GooglePrivacyDlpV2InfoTypeResponse build() {
             return new GooglePrivacyDlpV2InfoTypeResponse(name, version);
         }
     }

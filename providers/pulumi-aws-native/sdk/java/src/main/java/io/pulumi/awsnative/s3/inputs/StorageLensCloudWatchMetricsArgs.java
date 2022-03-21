@@ -60,12 +60,10 @@ public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
-        }
-        public StorageLensCloudWatchMetricsArgs build() {
+        }        public StorageLensCloudWatchMetricsArgs build() {
             return new StorageLensCloudWatchMetricsArgs(isEnabled);
         }
     }

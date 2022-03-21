@@ -58,8 +58,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
-        }
-        public UserInfoResponse build() {
+        }        public UserInfoResponse build() {
             return new UserInfoResponse(email);
         }
     }

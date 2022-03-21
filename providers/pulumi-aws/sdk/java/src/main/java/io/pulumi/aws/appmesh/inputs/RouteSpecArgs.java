@@ -127,52 +127,42 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.grpcRoute = grpcRoute;
             return this;
         }
-
         public Builder grpcRoute(@Nullable RouteSpecGrpcRouteArgs grpcRoute) {
             this.grpcRoute = Output.ofNullable(grpcRoute);
             return this;
         }
-
         public Builder http2Route(@Nullable Output<RouteSpecHttp2RouteArgs> http2Route) {
             this.http2Route = http2Route;
             return this;
         }
-
         public Builder http2Route(@Nullable RouteSpecHttp2RouteArgs http2Route) {
             this.http2Route = Output.ofNullable(http2Route);
             return this;
         }
-
         public Builder httpRoute(@Nullable Output<RouteSpecHttpRouteArgs> httpRoute) {
             this.httpRoute = httpRoute;
             return this;
         }
-
         public Builder httpRoute(@Nullable RouteSpecHttpRouteArgs httpRoute) {
             this.httpRoute = Output.ofNullable(httpRoute);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder tcpRoute(@Nullable Output<RouteSpecTcpRouteArgs> tcpRoute) {
             this.tcpRoute = tcpRoute;
             return this;
         }
-
         public Builder tcpRoute(@Nullable RouteSpecTcpRouteArgs tcpRoute) {
             this.tcpRoute = Output.ofNullable(tcpRoute);
             return this;
-        }
-        public RouteSpecArgs build() {
+        }        public RouteSpecArgs build() {
             return new RouteSpecArgs(grpcRoute, http2Route, httpRoute, priority, tcpRoute);
         }
     }

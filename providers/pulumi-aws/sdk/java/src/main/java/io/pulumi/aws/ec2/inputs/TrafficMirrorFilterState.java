@@ -124,52 +124,45 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder networkServices(@Nullable Output<List<String>> networkServices) {
             this.networkServices = networkServices;
             return this;
         }
-
         public Builder networkServices(@Nullable List<String> networkServices) {
             this.networkServices = Output.ofNullable(networkServices);
             return this;
         }
-
+        public Builder networkServices(String... networkServices) {
+            return networkServices(List.of(networkServices));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public TrafficMirrorFilterState build() {
+        }        public TrafficMirrorFilterState build() {
             return new TrafficMirrorFilterState(arn, description, networkServices, tags, tagsAll);
         }
     }

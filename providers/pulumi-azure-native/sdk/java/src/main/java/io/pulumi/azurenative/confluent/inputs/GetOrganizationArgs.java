@@ -72,12 +72,10 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationName = Objects.requireNonNull(organizationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetOrganizationArgs build() {
+        }        public GetOrganizationArgs build() {
             return new GetOrganizationArgs(organizationName, resourceGroupName);
         }
     }

@@ -138,62 +138,50 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder sshPublicKeyId(@Nullable Output<String> sshPublicKeyId) {
             this.sshPublicKeyId = sshPublicKeyId;
             return this;
         }
-
         public Builder sshPublicKeyId(@Nullable String sshPublicKeyId) {
             this.sshPublicKeyId = Output.ofNullable(sshPublicKeyId);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public SshKeyState build() {
+        }        public SshKeyState build() {
             return new SshKeyState(encoding, fingerprint, publicKey, sshPublicKeyId, status, username);
         }
     }

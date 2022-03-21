@@ -71,12 +71,13 @@ public final class GooglePrivacyDlpV2RegexResponse {
             this.groupIndexes = Objects.requireNonNull(groupIndexes);
             return this;
         }
-
+        public Builder groupIndexes(Integer... groupIndexes) {
+            return groupIndexes(List.of(groupIndexes));
+        }
         public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
-        }
-        public GooglePrivacyDlpV2RegexResponse build() {
+        }        public GooglePrivacyDlpV2RegexResponse build() {
             return new GooglePrivacyDlpV2RegexResponse(groupIndexes, pattern);
         }
     }

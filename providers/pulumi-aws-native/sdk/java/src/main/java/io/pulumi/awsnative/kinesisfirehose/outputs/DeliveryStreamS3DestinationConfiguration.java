@@ -107,42 +107,34 @@ public final class DeliveryStreamS3DestinationConfiguration {
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
-
         public Builder bufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder compressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
-        }
-        public DeliveryStreamS3DestinationConfiguration build() {
+        }        public DeliveryStreamS3DestinationConfiguration build() {
             return new DeliveryStreamS3DestinationConfiguration(bucketARN, bufferingHints, cloudWatchLoggingOptions, compressionFormat, encryptionConfiguration, errorOutputPrefix, prefix, roleARN);
         }
     }

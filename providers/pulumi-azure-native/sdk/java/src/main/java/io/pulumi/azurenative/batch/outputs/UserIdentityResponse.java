@@ -72,12 +72,10 @@ public final class UserIdentityResponse {
             this.autoUser = autoUser;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public UserIdentityResponse build() {
+        }        public UserIdentityResponse build() {
             return new UserIdentityResponse(autoUser, userName);
         }
     }

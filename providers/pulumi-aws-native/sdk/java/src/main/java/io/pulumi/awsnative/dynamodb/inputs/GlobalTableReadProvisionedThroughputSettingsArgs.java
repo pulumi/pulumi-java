@@ -67,22 +67,18 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
             this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
             return this;
         }
-
         public Builder readCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs readCapacityAutoScalingSettings) {
             this.readCapacityAutoScalingSettings = Output.ofNullable(readCapacityAutoScalingSettings);
             return this;
         }
-
         public Builder readCapacityUnits(@Nullable Output<Integer> readCapacityUnits) {
             this.readCapacityUnits = readCapacityUnits;
             return this;
         }
-
         public Builder readCapacityUnits(@Nullable Integer readCapacityUnits) {
             this.readCapacityUnits = Output.ofNullable(readCapacityUnits);
             return this;
-        }
-        public GlobalTableReadProvisionedThroughputSettingsArgs build() {
+        }        public GlobalTableReadProvisionedThroughputSettingsArgs build() {
             return new GlobalTableReadProvisionedThroughputSettingsArgs(readCapacityAutoScalingSettings, readCapacityUnits);
         }
     }

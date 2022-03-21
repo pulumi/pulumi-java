@@ -92,32 +92,26 @@ public final class RouteSpecHttpRouteMatchHeaderGetArgs extends io.pulumi.resour
             this.invert = invert;
             return this;
         }
-
         public Builder invert(@Nullable Boolean invert) {
             this.invert = Output.ofNullable(invert);
             return this;
         }
-
         public Builder match(@Nullable Output<RouteSpecHttpRouteMatchHeaderMatchGetArgs> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable RouteSpecHttpRouteMatchHeaderMatchGetArgs match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RouteSpecHttpRouteMatchHeaderGetArgs build() {
+        }        public RouteSpecHttpRouteMatchHeaderGetArgs build() {
             return new RouteSpecHttpRouteMatchHeaderGetArgs(invert, match, name);
         }
     }

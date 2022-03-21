@@ -66,22 +66,18 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
-
         public Builder primary(Boolean primary) {
             this.primary = Output.of(Objects.requireNonNull(primary));
             return this;
         }
-
         public Builder privateIpAddress(Output<String> privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Output.of(Objects.requireNonNull(privateIpAddress));
             return this;
-        }
-        public NetworkInterfacePrivateIpAddressSpecificationArgs build() {
+        }        public NetworkInterfacePrivateIpAddressSpecificationArgs build() {
             return new NetworkInterfacePrivateIpAddressSpecificationArgs(primary, privateIpAddress);
         }
     }

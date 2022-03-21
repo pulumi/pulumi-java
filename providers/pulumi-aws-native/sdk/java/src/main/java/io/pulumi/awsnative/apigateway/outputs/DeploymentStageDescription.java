@@ -352,97 +352,84 @@ public final class DeploymentStageDescription {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
-
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
-
         public Builder canarySetting(@Nullable DeploymentCanarySetting canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
-
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder methodSettings(@Nullable List<DeploymentMethodSetting> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
-
+        public Builder methodSettings(DeploymentMethodSetting... methodSettings) {
+            return methodSettings(List.of(methodSettings));
+        }
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
-
         public Builder tags(@Nullable List<DeploymentTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DeploymentTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
-
         public Builder variables(@Nullable Object variables) {
             this.variables = variables;
             return this;
-        }
-        public DeploymentStageDescription build() {
+        }        public DeploymentStageDescription build() {
             return new DeploymentStageDescription(accessLogSetting, cacheClusterEnabled, cacheClusterSize, cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, canarySetting, clientCertificateId, dataTraceEnabled, description, documentationVersion, loggingLevel, methodSettings, metricsEnabled, tags, throttlingBurstLimit, throttlingRateLimit, tracingEnabled, variables);
         }
     }

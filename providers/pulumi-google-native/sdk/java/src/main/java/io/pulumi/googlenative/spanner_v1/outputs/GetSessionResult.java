@@ -102,22 +102,18 @@ public final class GetSessionResult {
             this.approximateLastUseTime = Objects.requireNonNull(approximateLastUseTime);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSessionResult build() {
+        }        public GetSessionResult build() {
             return new GetSessionResult(approximateLastUseTime, createTime, labels, name);
         }
     }

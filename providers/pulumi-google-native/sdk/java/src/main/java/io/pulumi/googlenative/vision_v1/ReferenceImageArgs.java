@@ -140,72 +140,61 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
             this.boundingPolys = boundingPolys;
             return this;
         }
-
         public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
             this.boundingPolys = Output.ofNullable(boundingPolys);
             return this;
         }
-
+        public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
+            return boundingPolys(List.of(boundingPolys));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder referenceImageId(@Nullable Output<String> referenceImageId) {
             this.referenceImageId = referenceImageId;
             return this;
         }
-
         public Builder referenceImageId(@Nullable String referenceImageId) {
             this.referenceImageId = Output.ofNullable(referenceImageId);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public ReferenceImageArgs build() {
+        }        public ReferenceImageArgs build() {
             return new ReferenceImageArgs(boundingPolys, location, name, productId, project, referenceImageId, uri);
         }
     }

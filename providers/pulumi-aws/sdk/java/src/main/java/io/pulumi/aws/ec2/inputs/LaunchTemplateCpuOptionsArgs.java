@@ -75,22 +75,18 @@ public final class LaunchTemplateCpuOptionsArgs extends io.pulumi.resources.Reso
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
-        }
-        public LaunchTemplateCpuOptionsArgs build() {
+        }        public LaunchTemplateCpuOptionsArgs build() {
             return new LaunchTemplateCpuOptionsArgs(coreCount, threadsPerCore);
         }
     }

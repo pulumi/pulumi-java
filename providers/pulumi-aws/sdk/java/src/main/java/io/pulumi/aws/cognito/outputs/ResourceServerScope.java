@@ -69,12 +69,10 @@ public final class ResourceServerScope {
             this.scopeDescription = Objects.requireNonNull(scopeDescription);
             return this;
         }
-
         public Builder scopeName(String scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
-        }
-        public ResourceServerScope build() {
+        }        public ResourceServerScope build() {
             return new ResourceServerScope(scopeDescription, scopeName);
         }
     }

@@ -54,8 +54,7 @@ public final class ArtifactHashesResponse extends io.pulumi.resources.InvokeArgs
         public Builder sha256(String sha256) {
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
-        }
-        public ArtifactHashesResponse build() {
+        }        public ArtifactHashesResponse build() {
             return new ArtifactHashesResponse(sha256);
         }
     }

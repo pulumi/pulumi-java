@@ -74,22 +74,18 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = Output.ofNullable(restApiId);
             return this;
-        }
-        public RestApiPolicyState build() {
+        }        public RestApiPolicyState build() {
             return new RestApiPolicyState(policy, restApiId);
         }
     }

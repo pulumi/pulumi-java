@@ -43,8 +43,7 @@ public final class IntegrationZendeskSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public IntegrationZendeskSourceProperties build() {
+        }        public IntegrationZendeskSourceProperties build() {
             return new IntegrationZendeskSourceProperties(object);
         }
     }

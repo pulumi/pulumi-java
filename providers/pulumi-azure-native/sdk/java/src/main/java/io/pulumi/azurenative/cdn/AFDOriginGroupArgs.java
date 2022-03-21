@@ -176,82 +176,66 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
             this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable LoadBalancingSettingsParametersArgs loadBalancingSettings) {
             this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
             return this;
         }
-
         public Builder originGroupName(@Nullable Output<String> originGroupName) {
             this.originGroupName = originGroupName;
             return this;
         }
-
         public Builder originGroupName(@Nullable String originGroupName) {
             this.originGroupName = Output.ofNullable(originGroupName);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings) {
             this.responseBasedAfdOriginErrorDetectionSettings = responseBasedAfdOriginErrorDetectionSettings;
             return this;
         }
-
         public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedAfdOriginErrorDetectionSettings) {
             this.responseBasedAfdOriginErrorDetectionSettings = Output.ofNullable(responseBasedAfdOriginErrorDetectionSettings);
             return this;
         }
-
         public Builder sessionAffinityState(@Nullable Output<Either<String,EnabledState>> sessionAffinityState) {
             this.sessionAffinityState = sessionAffinityState;
             return this;
         }
-
         public Builder sessionAffinityState(@Nullable Either<String,EnabledState> sessionAffinityState) {
             this.sessionAffinityState = Output.ofNullable(sessionAffinityState);
             return this;
         }
-
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
-        }
-        public AFDOriginGroupArgs build() {
+        }        public AFDOriginGroupArgs build() {
             return new AFDOriginGroupArgs(healthProbeSettings, loadBalancingSettings, originGroupName, profileName, resourceGroupName, responseBasedAfdOriginErrorDetectionSettings, sessionAffinityState, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
         }
     }

@@ -62,7 +62,9 @@ public final class UniqueKeyPolicyResponse extends io.pulumi.resources.InvokeArg
             this.uniqueKeys = uniqueKeys;
             return this;
         }
-        public UniqueKeyPolicyResponse build() {
+        public Builder uniqueKeys(UniqueKeyResponse... uniqueKeys) {
+            return uniqueKeys(List.of(uniqueKeys));
+        }        public UniqueKeyPolicyResponse build() {
             return new UniqueKeyPolicyResponse(uniqueKeys);
         }
     }

@@ -81,22 +81,18 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
-
         public Builder failoverPolicy(Either<String,ReadWriteEndpointFailoverPolicy> failoverPolicy) {
             this.failoverPolicy = Output.of(Objects.requireNonNull(failoverPolicy));
             return this;
         }
-
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Output<Integer> failoverWithDataLossGracePeriodMinutes) {
             this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
         }
-
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
             this.failoverWithDataLossGracePeriodMinutes = Output.ofNullable(failoverWithDataLossGracePeriodMinutes);
             return this;
-        }
-        public FailoverGroupReadWriteEndpointArgs build() {
+        }        public FailoverGroupReadWriteEndpointArgs build() {
             return new FailoverGroupReadWriteEndpointArgs(failoverPolicy, failoverWithDataLossGracePeriodMinutes);
         }
     }

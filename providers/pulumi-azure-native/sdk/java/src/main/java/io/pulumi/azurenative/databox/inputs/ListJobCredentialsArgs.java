@@ -72,12 +72,10 @@ public final class ListJobCredentialsArgs extends io.pulumi.resources.InvokeArgs
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListJobCredentialsArgs build() {
+        }        public ListJobCredentialsArgs build() {
             return new ListJobCredentialsArgs(jobName, resourceGroupName);
         }
     }

@@ -93,32 +93,26 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
             this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
             return this;
         }
-
         public Builder encryptionKeyName(String encryptionKeyName) {
             this.encryptionKeyName = Output.of(Objects.requireNonNull(encryptionKeyName));
             return this;
         }
-
         public Builder encryptionKeyVersion(Output<String> encryptionKeyVersion) {
             this.encryptionKeyVersion = Objects.requireNonNull(encryptionKeyVersion);
             return this;
         }
-
         public Builder encryptionKeyVersion(String encryptionKeyVersion) {
             this.encryptionKeyVersion = Output.of(Objects.requireNonNull(encryptionKeyVersion));
             return this;
         }
-
         public Builder keyVaultResourceId(Output<String> keyVaultResourceId) {
             this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId);
             return this;
         }
-
         public Builder keyVaultResourceId(String keyVaultResourceId) {
             this.keyVaultResourceId = Output.of(Objects.requireNonNull(keyVaultResourceId));
             return this;
-        }
-        public KeyVaultMetaInfoArgs build() {
+        }        public KeyVaultMetaInfoArgs build() {
             return new KeyVaultMetaInfoArgs(encryptionKeyName, encryptionKeyVersion, keyVaultResourceId);
         }
     }

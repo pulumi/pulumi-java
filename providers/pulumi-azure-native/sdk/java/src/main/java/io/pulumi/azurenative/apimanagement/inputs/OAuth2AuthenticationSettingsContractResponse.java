@@ -78,12 +78,10 @@ public final class OAuth2AuthenticationSettingsContractResponse extends io.pulum
             this.authorizationServerId = authorizationServerId;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
-        }
-        public OAuth2AuthenticationSettingsContractResponse build() {
+        }        public OAuth2AuthenticationSettingsContractResponse build() {
             return new OAuth2AuthenticationSettingsContractResponse(authorizationServerId, scope);
         }
     }

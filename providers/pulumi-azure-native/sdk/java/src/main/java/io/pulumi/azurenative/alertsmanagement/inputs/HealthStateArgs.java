@@ -80,22 +80,18 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
             this.healthStateName = Objects.requireNonNull(healthStateName);
             return this;
         }
-
         public Builder healthStateName(Either<String,HealthStateName> healthStateName) {
             this.healthStateName = Output.of(Objects.requireNonNull(healthStateName));
             return this;
         }
-
         public Builder severity(Output<Double> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder severity(Double severity) {
             this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
-        }
-        public HealthStateArgs build() {
+        }        public HealthStateArgs build() {
             return new HealthStateArgs(healthStateName, severity);
         }
     }

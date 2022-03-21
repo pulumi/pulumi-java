@@ -106,22 +106,18 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
             this.groupConnectivity = groupConnectivity;
             return this;
         }
-
         public Builder isGlobal(@Nullable String isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
-
         public Builder networkGroupId(@Nullable String networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }
-
         public Builder useHubGateway(@Nullable String useHubGateway) {
             this.useHubGateway = useHubGateway;
             return this;
-        }
-        public ConnectivityGroupItemResponse build() {
+        }        public ConnectivityGroupItemResponse build() {
             return new ConnectivityGroupItemResponse(groupConnectivity, isGlobal, networkGroupId, useHubGateway);
         }
     }

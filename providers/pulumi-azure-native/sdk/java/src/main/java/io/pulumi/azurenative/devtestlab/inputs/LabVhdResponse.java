@@ -60,8 +60,7 @@ public final class LabVhdResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public LabVhdResponse build() {
+        }        public LabVhdResponse build() {
             return new LabVhdResponse(id);
         }
     }

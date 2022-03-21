@@ -88,17 +88,14 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
             this.assignmentName = Objects.requireNonNull(assignmentName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRoleAssignmentArgs build() {
+        }        public GetRoleAssignmentArgs build() {
             return new GetRoleAssignmentArgs(assignmentName, hubName, resourceGroupName);
         }
     }

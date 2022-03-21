@@ -220,112 +220,90 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
             return this;
         }
-
         public Builder meshName(@Nullable Output<String> meshName) {
             this.meshName = meshName;
             return this;
         }
-
         public Builder meshName(@Nullable String meshName) {
             this.meshName = Output.ofNullable(meshName);
             return this;
         }
-
         public Builder meshOwner(@Nullable Output<String> meshOwner) {
             this.meshOwner = meshOwner;
             return this;
         }
-
         public Builder meshOwner(@Nullable String meshOwner) {
             this.meshOwner = Output.ofNullable(meshOwner);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
-
         public Builder resourceOwner(@Nullable String resourceOwner) {
             this.resourceOwner = Output.ofNullable(resourceOwner);
             return this;
         }
-
         public Builder spec(@Nullable Output<RouteSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable RouteSpecGetArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder virtualRouterName(@Nullable Output<String> virtualRouterName) {
             this.virtualRouterName = virtualRouterName;
             return this;
         }
-
         public Builder virtualRouterName(@Nullable String virtualRouterName) {
             this.virtualRouterName = Output.ofNullable(virtualRouterName);
             return this;
-        }
-        public RouteState build() {
+        }        public RouteState build() {
             return new RouteState(arn, createdDate, lastUpdatedDate, meshName, meshOwner, name, resourceOwner, spec, tags, tagsAll, virtualRouterName);
         }
     }

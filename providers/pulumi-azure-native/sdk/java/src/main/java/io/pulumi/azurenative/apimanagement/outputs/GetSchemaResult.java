@@ -135,32 +135,26 @@ public final class GetSchemaResult {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schemaType(String schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GetSchemaResult build() {
+        }        public GetSchemaResult build() {
             return new GetSchemaResult(description, id, name, schemaType, type, value);
         }
     }

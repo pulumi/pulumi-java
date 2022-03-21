@@ -255,132 +255,106 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             this.azureOrigin = azureOrigin;
             return this;
         }
-
         public Builder azureOrigin(@Nullable ResourceReferenceArgs azureOrigin) {
             this.azureOrigin = Output.ofNullable(azureOrigin);
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-
         public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = Output.ofNullable(httpPort);
             return this;
         }
-
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-
         public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = Output.ofNullable(httpsPort);
             return this;
         }
-
         public Builder originGroupName(Output<String> originGroupName) {
             this.originGroupName = Objects.requireNonNull(originGroupName);
             return this;
         }
-
         public Builder originGroupName(String originGroupName) {
             this.originGroupName = Output.of(Objects.requireNonNull(originGroupName));
             return this;
         }
-
         public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
-
         public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = Output.ofNullable(originHostHeader);
             return this;
         }
-
         public Builder originName(@Nullable Output<String> originName) {
             this.originName = originName;
             return this;
         }
-
         public Builder originName(@Nullable String originName) {
             this.originName = Output.ofNullable(originName);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sharedPrivateLinkResource(@Nullable Output<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource) {
             this.sharedPrivateLinkResource = sharedPrivateLinkResource;
             return this;
         }
-
         public Builder sharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesArgs sharedPrivateLinkResource) {
             this.sharedPrivateLinkResource = Output.ofNullable(sharedPrivateLinkResource);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public AFDOriginArgs build() {
+        }        public AFDOriginArgs build() {
             return new AFDOriginArgs(azureOrigin, enabledState, hostName, httpPort, httpsPort, originGroupName, originHostHeader, originName, priority, profileName, resourceGroupName, sharedPrivateLinkResource, weight);
         }
     }

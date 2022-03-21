@@ -57,12 +57,13 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public Builder dimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs> dimensions) {
             this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
-        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs build() {
+        public Builder dimensions(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs build() {
             return new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs(dimensions);
         }
     }

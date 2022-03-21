@@ -72,12 +72,10 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
             this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName);
             return this;
-        }
-        public ListSqlMigrationServiceAuthKeysArgs build() {
+        }        public ListSqlMigrationServiceAuthKeysArgs build() {
             return new ListSqlMigrationServiceAuthKeysArgs(resourceGroupName, sqlMigrationServiceName);
         }
     }

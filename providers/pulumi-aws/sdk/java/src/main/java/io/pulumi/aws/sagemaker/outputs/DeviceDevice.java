@@ -87,17 +87,14 @@ public final class DeviceDevice {
             this.description = description;
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder iotThingName(@Nullable String iotThingName) {
             this.iotThingName = iotThingName;
             return this;
-        }
-        public DeviceDevice build() {
+        }        public DeviceDevice build() {
             return new DeviceDevice(description, deviceName, iotThingName);
         }
     }

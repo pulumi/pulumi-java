@@ -168,42 +168,34 @@ public final class UrlMapResponse {
             this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
             return this;
         }
-
         public Builder authFailAction(String authFailAction) {
             this.authFailAction = Objects.requireNonNull(authFailAction);
             return this;
         }
-
         public Builder login(String login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
-
         public Builder redirectHttpResponseCode(String redirectHttpResponseCode) {
             this.redirectHttpResponseCode = Objects.requireNonNull(redirectHttpResponseCode);
             return this;
         }
-
         public Builder script(ScriptHandlerResponse script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public Builder securityLevel(String securityLevel) {
             this.securityLevel = Objects.requireNonNull(securityLevel);
             return this;
         }
-
         public Builder staticFiles(StaticFilesHandlerResponse staticFiles) {
             this.staticFiles = Objects.requireNonNull(staticFiles);
             return this;
         }
-
         public Builder urlRegex(String urlRegex) {
             this.urlRegex = Objects.requireNonNull(urlRegex);
             return this;
-        }
-        public UrlMapResponse build() {
+        }        public UrlMapResponse build() {
             return new UrlMapResponse(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }
     }

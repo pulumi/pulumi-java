@@ -146,82 +146,69 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
-
         public Builder dataSourceConfiguration(@Nullable DataSourceConfigurationArgs dataSourceConfiguration) {
             this.dataSourceConfiguration = Output.ofNullable(dataSourceConfiguration);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder indexId(Output<String> indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
-
         public Builder indexId(String indexId) {
             this.indexId = Output.of(Objects.requireNonNull(indexId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DataSourceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DataSourceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DataSourceTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(Output<DataSourceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(DataSourceType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DataSourceArgs build() {
+        }        public DataSourceArgs build() {
             return new DataSourceArgs(dataSourceConfiguration, description, indexId, name, roleArn, schedule, tags, type);
         }
     }

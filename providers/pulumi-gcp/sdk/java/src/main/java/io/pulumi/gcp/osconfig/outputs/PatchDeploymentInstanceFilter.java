@@ -130,27 +130,34 @@ public final class PatchDeploymentInstanceFilter {
             this.all = all;
             return this;
         }
-
         public Builder groupLabels(@Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels) {
             this.groupLabels = groupLabels;
             return this;
         }
-
+        public Builder groupLabels(PatchDeploymentInstanceFilterGroupLabel... groupLabels) {
+            return groupLabels(List.of(groupLabels));
+        }
         public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
-
+        public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
+            return instanceNamePrefixes(List.of(instanceNamePrefixes));
+        }
         public Builder instances(@Nullable List<String> instances) {
             this.instances = instances;
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public PatchDeploymentInstanceFilter build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public PatchDeploymentInstanceFilter build() {
             return new PatchDeploymentInstanceFilter(all, groupLabels, instanceNamePrefixes, instances, zones);
         }
     }

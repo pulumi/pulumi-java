@@ -106,42 +106,37 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
             this.builder = builder;
             return this;
         }
-
         public Builder builder(@Nullable SlsaBuilderArgs builder) {
             this.builder = Output.ofNullable(builder);
             return this;
         }
-
         public Builder materials(@Nullable Output<List<MaterialArgs>> materials) {
             this.materials = materials;
             return this;
         }
-
         public Builder materials(@Nullable List<MaterialArgs> materials) {
             this.materials = Output.ofNullable(materials);
             return this;
         }
-
+        public Builder materials(MaterialArgs... materials) {
+            return materials(List.of(materials));
+        }
         public Builder metadata(@Nullable Output<SlsaMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable SlsaMetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder recipe(@Nullable Output<SlsaRecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
-
         public Builder recipe(@Nullable SlsaRecipeArgs recipe) {
             this.recipe = Output.ofNullable(recipe);
             return this;
-        }
-        public SlsaProvenanceArgs build() {
+        }        public SlsaProvenanceArgs build() {
             return new SlsaProvenanceArgs(builder, materials, metadata, recipe);
         }
     }

@@ -182,47 +182,38 @@ public final class GetServerKeyResult {
             this.autoRotationEnabled = Objects.requireNonNull(autoRotationEnabled);
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subregion(String subregion) {
             this.subregion = Objects.requireNonNull(subregion);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerKeyResult build() {
+        }        public GetServerKeyResult build() {
             return new GetServerKeyResult(autoRotationEnabled, creationDate, id, kind, location, name, subregion, thumbprint, type);
         }
     }

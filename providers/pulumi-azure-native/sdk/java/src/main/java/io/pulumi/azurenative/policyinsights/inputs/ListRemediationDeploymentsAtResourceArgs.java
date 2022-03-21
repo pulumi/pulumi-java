@@ -91,17 +91,14 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder top(@Nullable Integer top) {
             this.top = top;
             return this;
-        }
-        public ListRemediationDeploymentsAtResourceArgs build() {
+        }        public ListRemediationDeploymentsAtResourceArgs build() {
             return new ListRemediationDeploymentsAtResourceArgs(remediationName, resourceId, top);
         }
     }

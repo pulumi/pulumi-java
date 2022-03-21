@@ -182,92 +182,83 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisId = Objects.requireNonNull(analysisId);
             return this;
         }
-
         public Builder analysisId(String analysisId) {
             this.analysisId = Output.of(Objects.requireNonNull(analysisId));
             return this;
         }
-
         public Builder awsAccountId(Output<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
-
         public Builder errors(@Nullable Output<List<AnalysisErrorArgs>> errors) {
             this.errors = errors;
             return this;
         }
-
         public Builder errors(@Nullable List<AnalysisErrorArgs> errors) {
             this.errors = Output.ofNullable(errors);
             return this;
         }
-
+        public Builder errors(AnalysisErrorArgs... errors) {
+            return errors(List.of(errors));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<AnalysisParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable AnalysisParametersArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<AnalysisResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<AnalysisResourcePermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(AnalysisResourcePermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder sourceEntity(Output<AnalysisSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
-
         public Builder sourceEntity(AnalysisSourceEntityArgs sourceEntity) {
             this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AnalysisTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(AnalysisTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder themeArn(@Nullable Output<String> themeArn) {
             this.themeArn = themeArn;
             return this;
         }
-
         public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = Output.ofNullable(themeArn);
             return this;
-        }
-        public AnalysisArgs build() {
+        }        public AnalysisArgs build() {
             return new AnalysisArgs(analysisId, awsAccountId, errors, name, parameters, permissions, sourceEntity, tags, themeArn);
         }
     }

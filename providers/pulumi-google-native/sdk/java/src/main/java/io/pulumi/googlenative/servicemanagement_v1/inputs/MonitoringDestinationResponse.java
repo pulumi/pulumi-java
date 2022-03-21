@@ -77,12 +77,13 @@ public final class MonitoringDestinationResponse extends io.pulumi.resources.Inv
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(String... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder monitoredResource(String monitoredResource) {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
-        }
-        public MonitoringDestinationResponse build() {
+        }        public MonitoringDestinationResponse build() {
             return new MonitoringDestinationResponse(metrics, monitoredResource);
         }
     }

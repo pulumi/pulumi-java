@@ -78,12 +78,10 @@ public final class AutomationRulePropertyValuesConditionResponse extends io.pulu
             this.conditionProperties = Objects.requireNonNull(conditionProperties);
             return this;
         }
-
         public Builder conditionType(String conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
-        }
-        public AutomationRulePropertyValuesConditionResponse build() {
+        }        public AutomationRulePropertyValuesConditionResponse build() {
             return new AutomationRulePropertyValuesConditionResponse(conditionProperties, conditionType);
         }
     }

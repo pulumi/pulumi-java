@@ -91,17 +91,14 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetEnvironmentArgs build() {
+        }        public GetEnvironmentArgs build() {
             return new GetEnvironmentArgs(name, project, region);
         }
     }

@@ -54,7 +54,9 @@ public final class ListKeyByAutomationAccountResult {
             this.keys = keys;
             return this;
         }
-        public ListKeyByAutomationAccountResult build() {
+        public Builder keys(KeyResponse... keys) {
+            return keys(List.of(keys));
+        }        public ListKeyByAutomationAccountResult build() {
             return new ListKeyByAutomationAccountResult(keys);
         }
     }

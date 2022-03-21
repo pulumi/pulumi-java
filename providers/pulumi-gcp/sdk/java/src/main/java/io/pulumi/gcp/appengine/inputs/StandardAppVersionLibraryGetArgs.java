@@ -74,22 +74,18 @@ public final class StandardAppVersionLibraryGetArgs extends io.pulumi.resources.
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public StandardAppVersionLibraryGetArgs build() {
+        }        public StandardAppVersionLibraryGetArgs build() {
             return new StandardAppVersionLibraryGetArgs(name, version);
         }
     }

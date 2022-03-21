@@ -171,42 +171,34 @@ public final class JobOutputAssetResponse {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder error(JobErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public JobOutputAssetResponse build() {
+        }        public JobOutputAssetResponse build() {
             return new JobOutputAssetResponse(assetName, endTime, error, label, odataType, progress, startTime, state);
         }
     }

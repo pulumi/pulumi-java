@@ -52,12 +52,10 @@ public final class WebACLFieldToMatchSingleHeaderPropertiesArgs extends io.pulum
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebACLFieldToMatchSingleHeaderPropertiesArgs build() {
+        }        public WebACLFieldToMatchSingleHeaderPropertiesArgs build() {
             return new WebACLFieldToMatchSingleHeaderPropertiesArgs(name);
         }
     }

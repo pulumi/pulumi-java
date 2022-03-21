@@ -79,22 +79,18 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder algorithm(@Nullable AutoscalingSettingsAlgorithm algorithm) {
             this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
-
         public Builder maxNumWorkers(@Nullable Output<Integer> maxNumWorkers) {
             this.maxNumWorkers = maxNumWorkers;
             return this;
         }
-
         public Builder maxNumWorkers(@Nullable Integer maxNumWorkers) {
             this.maxNumWorkers = Output.ofNullable(maxNumWorkers);
             return this;
-        }
-        public AutoscalingSettingsArgs build() {
+        }        public AutoscalingSettingsArgs build() {
             return new AutoscalingSettingsArgs(algorithm, maxNumWorkers);
         }
     }

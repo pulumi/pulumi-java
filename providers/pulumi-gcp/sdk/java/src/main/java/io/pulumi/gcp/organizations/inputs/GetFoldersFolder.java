@@ -168,42 +168,34 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetFoldersFolder build() {
+        }        public GetFoldersFolder build() {
             return new GetFoldersFolder(createTime, deleteTime, displayName, etag, name, parent, state, updateTime);
         }
     }

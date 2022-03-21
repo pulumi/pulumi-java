@@ -85,17 +85,14 @@ public final class GetNatAddressResult {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetNatAddressResult build() {
+        }        public GetNatAddressResult build() {
             return new GetNatAddressResult(ipAddress, name, state);
         }
     }

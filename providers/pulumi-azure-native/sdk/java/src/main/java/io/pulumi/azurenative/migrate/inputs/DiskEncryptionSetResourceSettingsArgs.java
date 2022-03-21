@@ -78,22 +78,18 @@ public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resou
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
-        }
-        public DiskEncryptionSetResourceSettingsArgs build() {
+        }        public DiskEncryptionSetResourceSettingsArgs build() {
             return new DiskEncryptionSetResourceSettingsArgs(resourceType, targetResourceName);
         }
     }

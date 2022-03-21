@@ -55,12 +55,16 @@ public final class TaskDefinitionKernelCapabilities {
             this.add = add;
             return this;
         }
-
+        public Builder add(String... add) {
+            return add(List.of(add));
+        }
         public Builder drop(@Nullable List<String> drop) {
             this.drop = drop;
             return this;
         }
-        public TaskDefinitionKernelCapabilities build() {
+        public Builder drop(String... drop) {
+            return drop(List.of(drop));
+        }        public TaskDefinitionKernelCapabilities build() {
             return new TaskDefinitionKernelCapabilities(add, drop);
         }
     }

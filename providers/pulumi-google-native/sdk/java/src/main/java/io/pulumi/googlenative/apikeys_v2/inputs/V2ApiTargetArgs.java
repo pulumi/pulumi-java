@@ -79,22 +79,21 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<String> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public V2ApiTargetArgs build() {
+        }        public V2ApiTargetArgs build() {
             return new V2ApiTargetArgs(methods, service);
         }
     }

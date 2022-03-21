@@ -104,22 +104,18 @@ public final class ListWCFRelayKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder relayName(String relayName) {
             this.relayName = Objects.requireNonNull(relayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWCFRelayKeysArgs build() {
+        }        public ListWCFRelayKeysArgs build() {
             return new ListWCFRelayKeysArgs(authorizationRuleName, namespaceName, relayName, resourceGroupName);
         }
     }

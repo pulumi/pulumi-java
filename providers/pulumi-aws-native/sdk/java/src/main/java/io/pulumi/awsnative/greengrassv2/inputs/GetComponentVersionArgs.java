@@ -50,8 +50,7 @@ public final class GetComponentVersionArgs extends io.pulumi.resources.InvokeArg
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetComponentVersionArgs build() {
+        }        public GetComponentVersionArgs build() {
             return new GetComponentVersionArgs(arn);
         }
     }

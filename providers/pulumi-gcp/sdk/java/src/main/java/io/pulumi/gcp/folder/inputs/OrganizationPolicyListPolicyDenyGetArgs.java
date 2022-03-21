@@ -76,22 +76,21 @@ public final class OrganizationPolicyListPolicyDenyGetArgs extends io.pulumi.res
             this.all = all;
             return this;
         }
-
         public Builder all(@Nullable Boolean all) {
             this.all = Output.ofNullable(all);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public OrganizationPolicyListPolicyDenyGetArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public OrganizationPolicyListPolicyDenyGetArgs build() {
             return new OrganizationPolicyListPolicyDenyGetArgs(all, values);
         }
     }

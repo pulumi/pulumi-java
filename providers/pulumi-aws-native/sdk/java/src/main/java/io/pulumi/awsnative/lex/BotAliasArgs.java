@@ -151,82 +151,72 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.botAliasLocaleSettings = botAliasLocaleSettings;
             return this;
         }
-
         public Builder botAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItemArgs> botAliasLocaleSettings) {
             this.botAliasLocaleSettings = Output.ofNullable(botAliasLocaleSettings);
             return this;
         }
-
+        public Builder botAliasLocaleSettings(BotAliasLocaleSettingsItemArgs... botAliasLocaleSettings) {
+            return botAliasLocaleSettings(List.of(botAliasLocaleSettings));
+        }
         public Builder botAliasName(@Nullable Output<String> botAliasName) {
             this.botAliasName = botAliasName;
             return this;
         }
-
         public Builder botAliasName(@Nullable String botAliasName) {
             this.botAliasName = Output.ofNullable(botAliasName);
             return this;
         }
-
         public Builder botAliasTags(@Nullable Output<List<BotAliasTagArgs>> botAliasTags) {
             this.botAliasTags = botAliasTags;
             return this;
         }
-
         public Builder botAliasTags(@Nullable List<BotAliasTagArgs> botAliasTags) {
             this.botAliasTags = Output.ofNullable(botAliasTags);
             return this;
         }
-
+        public Builder botAliasTags(BotAliasTagArgs... botAliasTags) {
+            return botAliasTags(List.of(botAliasTags));
+        }
         public Builder botId(Output<String> botId) {
             this.botId = Objects.requireNonNull(botId);
             return this;
         }
-
         public Builder botId(String botId) {
             this.botId = Output.of(Objects.requireNonNull(botId));
             return this;
         }
-
         public Builder botVersion(@Nullable Output<String> botVersion) {
             this.botVersion = botVersion;
             return this;
         }
-
         public Builder botVersion(@Nullable String botVersion) {
             this.botVersion = Output.ofNullable(botVersion);
             return this;
         }
-
         public Builder conversationLogSettings(@Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings) {
             this.conversationLogSettings = conversationLogSettings;
             return this;
         }
-
         public Builder conversationLogSettings(@Nullable BotAliasConversationLogSettingsArgs conversationLogSettings) {
             this.conversationLogSettings = Output.ofNullable(conversationLogSettings);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder sentimentAnalysisSettings(@Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
             this.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }
-
         public Builder sentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsPropertiesArgs sentimentAnalysisSettings) {
             this.sentimentAnalysisSettings = Output.ofNullable(sentimentAnalysisSettings);
             return this;
-        }
-        public BotAliasArgs build() {
+        }        public BotAliasArgs build() {
             return new BotAliasArgs(botAliasLocaleSettings, botAliasName, botAliasTags, botId, botVersion, conversationLogSettings, description, sentimentAnalysisSettings);
         }
     }

@@ -56,12 +56,10 @@ public final class BackupPolicyBackupPolicyGetArgs extends io.pulumi.resources.R
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public BackupPolicyBackupPolicyGetArgs build() {
+        }        public BackupPolicyBackupPolicyGetArgs build() {
             return new BackupPolicyBackupPolicyGetArgs(status);
         }
     }

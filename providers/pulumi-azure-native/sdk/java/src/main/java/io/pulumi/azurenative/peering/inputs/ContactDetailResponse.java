@@ -94,17 +94,14 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
             this.email = email;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = role;
             return this;
-        }
-        public ContactDetailResponse build() {
+        }        public ContactDetailResponse build() {
             return new ContactDetailResponse(email, phone, role);
         }
     }

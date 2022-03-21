@@ -50,8 +50,7 @@ public final class FlowDatadogSourceProperties extends io.pulumi.resources.Invok
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowDatadogSourceProperties build() {
+        }        public FlowDatadogSourceProperties build() {
             return new FlowDatadogSourceProperties(object);
         }
     }

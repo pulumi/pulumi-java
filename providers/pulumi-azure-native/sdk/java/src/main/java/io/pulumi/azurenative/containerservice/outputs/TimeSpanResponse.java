@@ -71,12 +71,10 @@ public final class TimeSpanResponse {
             this.end = end;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = start;
             return this;
-        }
-        public TimeSpanResponse build() {
+        }        public TimeSpanResponse build() {
             return new TimeSpanResponse(end, start);
         }
     }

@@ -90,32 +90,26 @@ public final class InsightFiltersNetworkSourcePortGetArgs extends io.pulumi.reso
             this.eq = eq;
             return this;
         }
-
         public Builder eq(@Nullable String eq) {
             this.eq = Output.ofNullable(eq);
             return this;
         }
-
         public Builder gte(@Nullable Output<String> gte) {
             this.gte = gte;
             return this;
         }
-
         public Builder gte(@Nullable String gte) {
             this.gte = Output.ofNullable(gte);
             return this;
         }
-
         public Builder lte(@Nullable Output<String> lte) {
             this.lte = lte;
             return this;
         }
-
         public Builder lte(@Nullable String lte) {
             this.lte = Output.ofNullable(lte);
             return this;
-        }
-        public InsightFiltersNetworkSourcePortGetArgs build() {
+        }        public InsightFiltersNetworkSourcePortGetArgs build() {
             return new InsightFiltersNetworkSourcePortGetArgs(eq, gte, lte);
         }
     }

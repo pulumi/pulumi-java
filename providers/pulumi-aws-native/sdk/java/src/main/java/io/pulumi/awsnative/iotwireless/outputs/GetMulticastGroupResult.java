@@ -186,47 +186,41 @@ public final class GetMulticastGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder loRaWAN(@Nullable MulticastGroupLoRaWAN loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<MulticastGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetMulticastGroupResult build() {
+        public Builder tags(MulticastGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetMulticastGroupResult build() {
             return new GetMulticastGroupResult(arn, associateWirelessDevice, description, disassociateWirelessDevice, id, loRaWAN, name, status, tags);
         }
     }

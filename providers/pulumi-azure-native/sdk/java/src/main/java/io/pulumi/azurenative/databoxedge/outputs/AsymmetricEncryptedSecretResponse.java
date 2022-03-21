@@ -87,17 +87,14 @@ public final class AsymmetricEncryptedSecretResponse {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
-
         public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
             this.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AsymmetricEncryptedSecretResponse build() {
+        }        public AsymmetricEncryptedSecretResponse build() {
             return new AsymmetricEncryptedSecretResponse(encryptionAlgorithm, encryptionCertThumbprint, value);
         }
     }

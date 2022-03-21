@@ -58,8 +58,7 @@ public final class ClientCertificateConfigResponse extends io.pulumi.resources.I
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
-        }
-        public ClientCertificateConfigResponse build() {
+        }        public ClientCertificateConfigResponse build() {
             return new ClientCertificateConfigResponse(issueClientCertificate);
         }
     }

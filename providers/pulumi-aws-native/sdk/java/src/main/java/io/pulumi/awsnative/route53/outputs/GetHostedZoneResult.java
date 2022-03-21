@@ -112,32 +112,35 @@ public final class GetHostedZoneResult {
             this.hostedZoneConfig = hostedZoneConfig;
             return this;
         }
-
         public Builder hostedZoneTags(@Nullable List<HostedZoneTag> hostedZoneTags) {
             this.hostedZoneTags = hostedZoneTags;
             return this;
         }
-
+        public Builder hostedZoneTags(HostedZoneTag... hostedZoneTags) {
+            return hostedZoneTags(List.of(hostedZoneTags));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder nameServers(@Nullable List<String> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder queryLoggingConfig(@Nullable HostedZoneQueryLoggingConfig queryLoggingConfig) {
             this.queryLoggingConfig = queryLoggingConfig;
             return this;
         }
-
         public Builder vPCs(@Nullable List<HostedZoneVPC> vPCs) {
             this.vPCs = vPCs;
             return this;
         }
-        public GetHostedZoneResult build() {
+        public Builder vPCs(HostedZoneVPC... vPCs) {
+            return vPCs(List.of(vPCs));
+        }        public GetHostedZoneResult build() {
             return new GetHostedZoneResult(hostedZoneConfig, hostedZoneTags, id, nameServers, queryLoggingConfig, vPCs);
         }
     }

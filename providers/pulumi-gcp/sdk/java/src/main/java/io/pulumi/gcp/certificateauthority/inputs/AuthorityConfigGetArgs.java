@@ -76,22 +76,18 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
-
         public Builder subjectConfig(AuthorityConfigSubjectConfigGetArgs subjectConfig) {
             this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
             return this;
         }
-
         public Builder x509Config(Output<AuthorityConfigX509ConfigGetArgs> x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public Builder x509Config(AuthorityConfigX509ConfigGetArgs x509Config) {
             this.x509Config = Output.of(Objects.requireNonNull(x509Config));
             return this;
-        }
-        public AuthorityConfigGetArgs build() {
+        }        public AuthorityConfigGetArgs build() {
             return new AuthorityConfigGetArgs(subjectConfig, x509Config);
         }
     }

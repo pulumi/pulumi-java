@@ -87,32 +87,26 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public Builder folderId(String folderId) {
             this.folderId = Output.of(Objects.requireNonNull(folderId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder spec(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
-        }
-        public FolderPolicyArgs build() {
+        }        public FolderPolicyArgs build() {
             return new FolderPolicyArgs(folderId, name, spec);
         }
     }

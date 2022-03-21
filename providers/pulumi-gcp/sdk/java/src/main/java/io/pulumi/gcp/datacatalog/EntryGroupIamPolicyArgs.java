@@ -104,42 +104,34 @@ public final class EntryGroupIamPolicyArgs extends io.pulumi.resources.ResourceA
             this.entryGroup = Objects.requireNonNull(entryGroup);
             return this;
         }
-
         public Builder entryGroup(String entryGroup) {
             this.entryGroup = Output.of(Objects.requireNonNull(entryGroup));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public EntryGroupIamPolicyArgs build() {
+        }        public EntryGroupIamPolicyArgs build() {
             return new EntryGroupIamPolicyArgs(entryGroup, policyData, project, region);
         }
     }

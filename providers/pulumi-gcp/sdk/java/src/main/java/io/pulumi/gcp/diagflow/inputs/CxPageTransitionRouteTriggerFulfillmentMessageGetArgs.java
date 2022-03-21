@@ -57,12 +57,10 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageGetArgs extends
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public CxPageTransitionRouteTriggerFulfillmentMessageGetArgs build() {
+        }        public CxPageTransitionRouteTriggerFulfillmentMessageGetArgs build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessageGetArgs(text);
         }
     }

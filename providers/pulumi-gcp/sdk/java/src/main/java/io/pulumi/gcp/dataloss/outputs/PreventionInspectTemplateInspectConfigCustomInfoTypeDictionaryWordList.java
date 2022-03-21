@@ -55,7 +55,9 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.words = Objects.requireNonNull(words);
             return this;
         }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList build() {
+        public Builder words(String... words) {
+            return words(List.of(words));
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList(words);
         }
     }

@@ -61,12 +61,13 @@ public final class InputDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(List<InputAttributeArgs> attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-        public InputDefinitionArgs build() {
+        public Builder attributes(InputAttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }        public InputDefinitionArgs build() {
             return new InputDefinitionArgs(attributes);
         }
     }

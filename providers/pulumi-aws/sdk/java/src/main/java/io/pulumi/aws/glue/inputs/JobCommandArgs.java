@@ -90,32 +90,26 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
-
         public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
-
         public Builder scriptLocation(Output<String> scriptLocation) {
             this.scriptLocation = Objects.requireNonNull(scriptLocation);
             return this;
         }
-
         public Builder scriptLocation(String scriptLocation) {
             this.scriptLocation = Output.of(Objects.requireNonNull(scriptLocation));
             return this;
-        }
-        public JobCommandArgs build() {
+        }        public JobCommandArgs build() {
             return new JobCommandArgs(name, pythonVersion, scriptLocation);
         }
     }

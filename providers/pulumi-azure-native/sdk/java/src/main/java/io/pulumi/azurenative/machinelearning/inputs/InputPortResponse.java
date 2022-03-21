@@ -60,8 +60,7 @@ public final class InputPortResponse extends io.pulumi.resources.InvokeArgs {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public InputPortResponse build() {
+        }        public InputPortResponse build() {
             return new InputPortResponse(type);
         }
     }

@@ -105,32 +105,26 @@ public final class GetAttributeGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder attributes(@Nullable Object attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable AttributeGroupTags tags) {
             this.tags = tags;
             return this;
-        }
-        public GetAttributeGroupResult build() {
+        }        public GetAttributeGroupResult build() {
             return new GetAttributeGroupResult(arn, attributes, description, id, name, tags);
         }
     }

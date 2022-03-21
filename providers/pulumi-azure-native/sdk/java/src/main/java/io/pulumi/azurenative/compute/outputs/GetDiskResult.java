@@ -613,177 +613,151 @@ public final class GetDiskResult {
             this.burstingEnabled = burstingEnabled;
             return this;
         }
-
         public Builder creationData(CreationDataResponse creationData) {
             this.creationData = Objects.requireNonNull(creationData);
             return this;
         }
-
         public Builder diskAccessId(@Nullable String diskAccessId) {
             this.diskAccessId = diskAccessId;
             return this;
         }
-
         public Builder diskIOPSReadOnly(@Nullable Double diskIOPSReadOnly) {
             this.diskIOPSReadOnly = diskIOPSReadOnly;
             return this;
         }
-
         public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
             this.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
-
         public Builder diskMBpsReadOnly(@Nullable Double diskMBpsReadOnly) {
             this.diskMBpsReadOnly = diskMBpsReadOnly;
             return this;
         }
-
         public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
             this.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
-
         public Builder diskSizeBytes(Double diskSizeBytes) {
             this.diskSizeBytes = Objects.requireNonNull(diskSizeBytes);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskState(String diskState) {
             this.diskState = Objects.requireNonNull(diskState);
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection) {
             this.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedBy(String managedBy) {
             this.managedBy = Objects.requireNonNull(managedBy);
             return this;
         }
-
         public Builder managedByExtended(List<String> managedByExtended) {
             this.managedByExtended = Objects.requireNonNull(managedByExtended);
             return this;
         }
-
+        public Builder managedByExtended(String... managedByExtended) {
+            return managedByExtended(List.of(managedByExtended));
+        }
         public Builder maxShares(@Nullable Integer maxShares) {
             this.maxShares = maxShares;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkAccessPolicy(@Nullable String networkAccessPolicy) {
             this.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder propertyUpdatesInProgress(PropertyUpdatesInProgressResponse propertyUpdatesInProgress) {
             this.propertyUpdatesInProgress = Objects.requireNonNull(propertyUpdatesInProgress);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder purchasePlan(@Nullable PurchasePlanResponse purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
-
         public Builder securityProfile(@Nullable DiskSecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder shareInfo(List<ShareInfoElementResponse> shareInfo) {
             this.shareInfo = Objects.requireNonNull(shareInfo);
             return this;
         }
-
+        public Builder shareInfo(ShareInfoElementResponse... shareInfo) {
+            return shareInfo(List.of(shareInfo));
+        }
         public Builder sku(@Nullable DiskSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
             this.supportsHibernation = supportsHibernation;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetDiskResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetDiskResult build() {
             return new GetDiskResult(burstingEnabled, creationData, diskAccessId, diskIOPSReadOnly, diskIOPSReadWrite, diskMBpsReadOnly, diskMBpsReadWrite, diskSizeBytes, diskSizeGB, diskState, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, id, location, managedBy, managedByExtended, maxShares, name, networkAccessPolicy, osType, propertyUpdatesInProgress, provisioningState, purchasePlan, securityProfile, shareInfo, sku, supportsHibernation, tags, tier, timeCreated, type, uniqueId, zones);
         }
     }

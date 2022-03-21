@@ -129,52 +129,45 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
             this.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
-
         public Builder loadBalancerResourceId(@Nullable String loadBalancerResourceId) {
             this.loadBalancerResourceId = Output.ofNullable(loadBalancerResourceId);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<PrivateIPAddressArgs> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable PrivateIPAddressArgs privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder probePort(@Nullable Output<Integer> probePort) {
             this.probePort = probePort;
             return this;
         }
-
         public Builder probePort(@Nullable Integer probePort) {
             this.probePort = Output.ofNullable(probePort);
             return this;
         }
-
         public Builder publicIpAddressResourceId(@Nullable Output<String> publicIpAddressResourceId) {
             this.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
-
         public Builder publicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
             this.publicIpAddressResourceId = Output.ofNullable(publicIpAddressResourceId);
             return this;
         }
-
         public Builder sqlVirtualMachineInstances(@Nullable Output<List<String>> sqlVirtualMachineInstances) {
             this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
-
         public Builder sqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
             this.sqlVirtualMachineInstances = Output.ofNullable(sqlVirtualMachineInstances);
             return this;
         }
-        public LoadBalancerConfigurationArgs build() {
+        public Builder sqlVirtualMachineInstances(String... sqlVirtualMachineInstances) {
+            return sqlVirtualMachineInstances(List.of(sqlVirtualMachineInstances));
+        }        public LoadBalancerConfigurationArgs build() {
             return new LoadBalancerConfigurationArgs(loadBalancerResourceId, privateIpAddress, probePort, publicIpAddressResourceId, sqlVirtualMachineInstances);
         }
     }

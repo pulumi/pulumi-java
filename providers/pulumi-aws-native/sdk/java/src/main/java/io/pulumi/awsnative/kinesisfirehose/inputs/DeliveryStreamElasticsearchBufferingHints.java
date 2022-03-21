@@ -66,12 +66,10 @@ public final class DeliveryStreamElasticsearchBufferingHints extends io.pulumi.r
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
-        }
-        public DeliveryStreamElasticsearchBufferingHints build() {
+        }        public DeliveryStreamElasticsearchBufferingHints build() {
             return new DeliveryStreamElasticsearchBufferingHints(intervalInSeconds, sizeInMBs);
         }
     }

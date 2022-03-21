@@ -50,8 +50,7 @@ public final class GetEnvironmentConfigWebServerConfig extends io.pulumi.resourc
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
-        }
-        public GetEnvironmentConfigWebServerConfig build() {
+        }        public GetEnvironmentConfigWebServerConfig build() {
             return new GetEnvironmentConfigWebServerConfig(machineType);
         }
     }

@@ -92,32 +92,29 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public Builder columns(List<String> columns) {
             this.columns = Output.of(Objects.requireNonNull(columns));
             return this;
         }
-
+        public Builder columns(String... columns) {
+            return columns(List.of(columns));
+        }
         public Builder countryCode(@Nullable Output<DataSetGeoSpatialCountryCode> countryCode) {
             this.countryCode = countryCode;
             return this;
         }
-
         public Builder countryCode(@Nullable DataSetGeoSpatialCountryCode countryCode) {
             this.countryCode = Output.ofNullable(countryCode);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public DataSetGeoSpatialColumnGroupArgs build() {
+        }        public DataSetGeoSpatialColumnGroupArgs build() {
             return new DataSetGeoSpatialColumnGroupArgs(columns, countryCode, name);
         }
     }

@@ -58,8 +58,7 @@ public final class ReservationConfigResponse extends io.pulumi.resources.InvokeA
         public Builder throughputReservation(String throughputReservation) {
             this.throughputReservation = Objects.requireNonNull(throughputReservation);
             return this;
-        }
-        public ReservationConfigResponse build() {
+        }        public ReservationConfigResponse build() {
             return new ReservationConfigResponse(throughputReservation);
         }
     }

@@ -90,32 +90,26 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ApprovalRuleTemplateArgs build() {
+        }        public ApprovalRuleTemplateArgs build() {
             return new ApprovalRuleTemplateArgs(content, description, name);
         }
     }

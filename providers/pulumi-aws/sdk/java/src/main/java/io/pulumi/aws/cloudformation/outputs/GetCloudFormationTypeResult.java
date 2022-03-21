@@ -274,87 +274,73 @@ public final class GetCloudFormationTypeResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder defaultVersionId(String defaultVersionId) {
             this.defaultVersionId = Objects.requireNonNull(defaultVersionId);
             return this;
         }
-
         public Builder deprecatedStatus(String deprecatedStatus) {
             this.deprecatedStatus = Objects.requireNonNull(deprecatedStatus);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder documentationUrl(String documentationUrl) {
             this.documentationUrl = Objects.requireNonNull(documentationUrl);
             return this;
         }
-
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isDefaultVersion(Boolean isDefaultVersion) {
             this.isDefaultVersion = Objects.requireNonNull(isDefaultVersion);
             return this;
         }
-
         public Builder loggingConfigs(List<GetCloudFormationTypeLoggingConfig> loggingConfigs) {
             this.loggingConfigs = Objects.requireNonNull(loggingConfigs);
             return this;
         }
-
+        public Builder loggingConfigs(GetCloudFormationTypeLoggingConfig... loggingConfigs) {
+            return loggingConfigs(List.of(loggingConfigs));
+        }
         public Builder provisioningType(String provisioningType) {
             this.provisioningType = Objects.requireNonNull(provisioningType);
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeArn(String typeArn) {
             this.typeArn = Objects.requireNonNull(typeArn);
             return this;
         }
-
         public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder visibility(String visibility) {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
-        }
-        public GetCloudFormationTypeResult build() {
+        }        public GetCloudFormationTypeResult build() {
             return new GetCloudFormationTypeResult(arn, defaultVersionId, deprecatedStatus, description, documentationUrl, executionRoleArn, id, isDefaultVersion, loggingConfigs, provisioningType, schema, sourceUrl, type, typeArn, typeName, versionId, visibility);
         }
     }

@@ -158,72 +158,61 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
-
         public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Output.ofNullable(domainOwner);
             return this;
         }
-
         public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsArgs> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
-
         public Builder externalConnections(@Nullable RepositoryExternalConnectionsArgs externalConnections) {
             this.externalConnections = Output.ofNullable(externalConnections);
             return this;
         }
-
         public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder upstreams(@Nullable Output<List<RepositoryUpstreamArgs>> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
-
         public Builder upstreams(@Nullable List<RepositoryUpstreamArgs> upstreams) {
             this.upstreams = Output.ofNullable(upstreams);
             return this;
         }
-        public RepositoryArgs build() {
+        public Builder upstreams(RepositoryUpstreamArgs... upstreams) {
+            return upstreams(List.of(upstreams));
+        }        public RepositoryArgs build() {
             return new RepositoryArgs(description, domain, domainOwner, externalConnections, repository, tags, upstreams);
         }
     }

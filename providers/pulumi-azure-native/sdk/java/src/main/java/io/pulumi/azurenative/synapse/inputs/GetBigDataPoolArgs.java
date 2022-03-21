@@ -88,17 +88,14 @@ public final class GetBigDataPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.bigDataPoolName = Objects.requireNonNull(bigDataPoolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetBigDataPoolArgs build() {
+        }        public GetBigDataPoolArgs build() {
             return new GetBigDataPoolArgs(bigDataPoolName, resourceGroupName, workspaceName);
         }
     }

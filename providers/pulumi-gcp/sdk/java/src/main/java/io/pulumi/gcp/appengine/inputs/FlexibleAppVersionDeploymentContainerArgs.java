@@ -57,12 +57,10 @@ public final class FlexibleAppVersionDeploymentContainerArgs extends io.pulumi.r
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
-        }
-        public FlexibleAppVersionDeploymentContainerArgs build() {
+        }        public FlexibleAppVersionDeploymentContainerArgs build() {
             return new FlexibleAppVersionDeploymentContainerArgs(image);
         }
     }

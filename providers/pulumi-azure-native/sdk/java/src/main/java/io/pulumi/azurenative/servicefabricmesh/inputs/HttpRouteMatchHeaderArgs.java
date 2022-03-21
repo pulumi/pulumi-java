@@ -96,32 +96,26 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,HeaderMatchType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,HeaderMatchType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public HttpRouteMatchHeaderArgs build() {
+        }        public HttpRouteMatchHeaderArgs build() {
             return new HttpRouteMatchHeaderArgs(name, type, value);
         }
     }

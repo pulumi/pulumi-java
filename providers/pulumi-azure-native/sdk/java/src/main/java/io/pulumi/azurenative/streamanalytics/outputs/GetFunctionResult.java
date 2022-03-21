@@ -104,22 +104,18 @@ public final class GetFunctionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(ScalarFunctionPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFunctionResult build() {
+        }        public GetFunctionResult build() {
             return new GetFunctionResult(id, name, properties, type);
         }
     }

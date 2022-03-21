@@ -53,12 +53,10 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
             this.object = object;
             return this;
         }
-
         public Builder object(@Nullable String object) {
             this.object = Output.ofNullable(object);
             return this;
-        }
-        public FlowLookoutMetricsDestinationPropertiesArgs build() {
+        }        public FlowLookoutMetricsDestinationPropertiesArgs build() {
             return new FlowLookoutMetricsDestinationPropertiesArgs(object);
         }
     }

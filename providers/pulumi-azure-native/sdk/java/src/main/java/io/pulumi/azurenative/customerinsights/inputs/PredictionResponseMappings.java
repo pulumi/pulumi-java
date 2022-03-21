@@ -92,17 +92,14 @@ public final class PredictionResponseMappings extends io.pulumi.resources.Invoke
             this.grade = Objects.requireNonNull(grade);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder score(String score) {
             this.score = Objects.requireNonNull(score);
             return this;
-        }
-        public PredictionResponseMappings build() {
+        }        public PredictionResponseMappings build() {
             return new PredictionResponseMappings(grade, reason, score);
         }
     }

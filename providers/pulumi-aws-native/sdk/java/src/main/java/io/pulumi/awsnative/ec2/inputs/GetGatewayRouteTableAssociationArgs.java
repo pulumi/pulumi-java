@@ -54,8 +54,7 @@ public final class GetGatewayRouteTableAssociationArgs extends io.pulumi.resourc
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
-        }
-        public GetGatewayRouteTableAssociationArgs build() {
+        }        public GetGatewayRouteTableAssociationArgs build() {
             return new GetGatewayRouteTableAssociationArgs(gatewayId);
         }
     }

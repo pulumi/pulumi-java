@@ -272,142 +272,114 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
             this.allowedClients = allowedClients;
             return this;
         }
-
         public Builder allowedClients(@Nullable String allowedClients) {
             this.allowedClients = Output.ofNullable(allowedClients);
             return this;
         }
-
         public Builder cifs(@Nullable Output<Boolean> cifs) {
             this.cifs = cifs;
             return this;
         }
-
         public Builder cifs(@Nullable Boolean cifs) {
             this.cifs = Output.ofNullable(cifs);
             return this;
         }
-
         public Builder hasRootAccess(@Nullable Output<Boolean> hasRootAccess) {
             this.hasRootAccess = hasRootAccess;
             return this;
         }
-
         public Builder hasRootAccess(@Nullable Boolean hasRootAccess) {
             this.hasRootAccess = Output.ofNullable(hasRootAccess);
             return this;
         }
-
         public Builder kerberos5ReadOnly(@Nullable Output<Boolean> kerberos5ReadOnly) {
             this.kerberos5ReadOnly = kerberos5ReadOnly;
             return this;
         }
-
         public Builder kerberos5ReadOnly(@Nullable Boolean kerberos5ReadOnly) {
             this.kerberos5ReadOnly = Output.ofNullable(kerberos5ReadOnly);
             return this;
         }
-
         public Builder kerberos5ReadWrite(@Nullable Output<Boolean> kerberos5ReadWrite) {
             this.kerberos5ReadWrite = kerberos5ReadWrite;
             return this;
         }
-
         public Builder kerberos5ReadWrite(@Nullable Boolean kerberos5ReadWrite) {
             this.kerberos5ReadWrite = Output.ofNullable(kerberos5ReadWrite);
             return this;
         }
-
         public Builder kerberos5iReadOnly(@Nullable Output<Boolean> kerberos5iReadOnly) {
             this.kerberos5iReadOnly = kerberos5iReadOnly;
             return this;
         }
-
         public Builder kerberos5iReadOnly(@Nullable Boolean kerberos5iReadOnly) {
             this.kerberos5iReadOnly = Output.ofNullable(kerberos5iReadOnly);
             return this;
         }
-
         public Builder kerberos5iReadWrite(@Nullable Output<Boolean> kerberos5iReadWrite) {
             this.kerberos5iReadWrite = kerberos5iReadWrite;
             return this;
         }
-
         public Builder kerberos5iReadWrite(@Nullable Boolean kerberos5iReadWrite) {
             this.kerberos5iReadWrite = Output.ofNullable(kerberos5iReadWrite);
             return this;
         }
-
         public Builder kerberos5pReadOnly(@Nullable Output<Boolean> kerberos5pReadOnly) {
             this.kerberos5pReadOnly = kerberos5pReadOnly;
             return this;
         }
-
         public Builder kerberos5pReadOnly(@Nullable Boolean kerberos5pReadOnly) {
             this.kerberos5pReadOnly = Output.ofNullable(kerberos5pReadOnly);
             return this;
         }
-
         public Builder kerberos5pReadWrite(@Nullable Output<Boolean> kerberos5pReadWrite) {
             this.kerberos5pReadWrite = kerberos5pReadWrite;
             return this;
         }
-
         public Builder kerberos5pReadWrite(@Nullable Boolean kerberos5pReadWrite) {
             this.kerberos5pReadWrite = Output.ofNullable(kerberos5pReadWrite);
             return this;
         }
-
         public Builder nfsv3(@Nullable Output<Boolean> nfsv3) {
             this.nfsv3 = nfsv3;
             return this;
         }
-
         public Builder nfsv3(@Nullable Boolean nfsv3) {
             this.nfsv3 = Output.ofNullable(nfsv3);
             return this;
         }
-
         public Builder nfsv41(@Nullable Output<Boolean> nfsv41) {
             this.nfsv41 = nfsv41;
             return this;
         }
-
         public Builder nfsv41(@Nullable Boolean nfsv41) {
             this.nfsv41 = Output.ofNullable(nfsv41);
             return this;
         }
-
         public Builder ruleIndex(@Nullable Output<Integer> ruleIndex) {
             this.ruleIndex = ruleIndex;
             return this;
         }
-
         public Builder ruleIndex(@Nullable Integer ruleIndex) {
             this.ruleIndex = Output.ofNullable(ruleIndex);
             return this;
         }
-
         public Builder unixReadOnly(@Nullable Output<Boolean> unixReadOnly) {
             this.unixReadOnly = unixReadOnly;
             return this;
         }
-
         public Builder unixReadOnly(@Nullable Boolean unixReadOnly) {
             this.unixReadOnly = Output.ofNullable(unixReadOnly);
             return this;
         }
-
         public Builder unixReadWrite(@Nullable Output<Boolean> unixReadWrite) {
             this.unixReadWrite = unixReadWrite;
             return this;
         }
-
         public Builder unixReadWrite(@Nullable Boolean unixReadWrite) {
             this.unixReadWrite = Output.ofNullable(unixReadWrite);
             return this;
-        }
-        public ExportPolicyRuleArgs build() {
+        }        public ExportPolicyRuleArgs build() {
             return new ExportPolicyRuleArgs(allowedClients, cifs, hasRootAccess, kerberos5ReadOnly, kerberos5ReadWrite, kerberos5iReadOnly, kerberos5iReadWrite, kerberos5pReadOnly, kerberos5pReadWrite, nfsv3, nfsv41, ruleIndex, unixReadOnly, unixReadWrite);
         }
     }

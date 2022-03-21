@@ -175,77 +175,62 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             this.contentHandling = contentHandling;
             return this;
         }
-
         public Builder contentHandling(@Nullable String contentHandling) {
             this.contentHandling = Output.ofNullable(contentHandling);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder responseParameters(@Nullable Output<Map<String,String>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
             this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
-
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
-
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
             this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
-
         public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
-
         public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
-
         public Builder selectionPattern(@Nullable String selectionPattern) {
             this.selectionPattern = Output.ofNullable(selectionPattern);
             return this;
         }
-
         public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Output.ofNullable(statusCode);
             return this;
-        }
-        public IntegrationResponseState build() {
+        }        public IntegrationResponseState build() {
             return new IntegrationResponseState(contentHandling, httpMethod, resourceId, responseParameters, responseTemplates, restApi, selectionPattern, statusCode);
         }
     }

@@ -70,12 +70,13 @@ public final class GetVpcDhcpOptionsFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetVpcDhcpOptionsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetVpcDhcpOptionsFilter build() {
             return new GetVpcDhcpOptionsFilter(name, values);
         }
     }

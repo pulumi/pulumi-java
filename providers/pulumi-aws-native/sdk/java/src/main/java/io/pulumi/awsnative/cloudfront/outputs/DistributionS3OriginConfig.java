@@ -45,8 +45,7 @@ public final class DistributionS3OriginConfig {
         public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
-        }
-        public DistributionS3OriginConfig build() {
+        }        public DistributionS3OriginConfig build() {
             return new DistributionS3OriginConfig(originAccessIdentity);
         }
     }

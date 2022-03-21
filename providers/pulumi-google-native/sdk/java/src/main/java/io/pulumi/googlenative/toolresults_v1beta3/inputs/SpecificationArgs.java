@@ -79,22 +79,18 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
             this.androidTest = androidTest;
             return this;
         }
-
         public Builder androidTest(@Nullable AndroidTestArgs androidTest) {
             this.androidTest = Output.ofNullable(androidTest);
             return this;
         }
-
         public Builder iosTest(@Nullable Output<IosTestArgs> iosTest) {
             this.iosTest = iosTest;
             return this;
         }
-
         public Builder iosTest(@Nullable IosTestArgs iosTest) {
             this.iosTest = Output.ofNullable(iosTest);
             return this;
-        }
-        public SpecificationArgs build() {
+        }        public SpecificationArgs build() {
             return new SpecificationArgs(androidTest, iosTest);
         }
     }

@@ -64,12 +64,10 @@ public final class CloudFormationProvisionedProductTag extends io.pulumi.resourc
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CloudFormationProvisionedProductTag build() {
+        }        public CloudFormationProvisionedProductTag build() {
             return new CloudFormationProvisionedProductTag(key, value);
         }
     }

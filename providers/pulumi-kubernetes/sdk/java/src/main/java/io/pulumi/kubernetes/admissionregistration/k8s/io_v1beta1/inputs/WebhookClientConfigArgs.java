@@ -107,32 +107,26 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
             this.caBundle = caBundle;
             return this;
         }
-
         public Builder caBundle(@Nullable String caBundle) {
             this.caBundle = Output.ofNullable(caBundle);
             return this;
         }
-
         public Builder service(@Nullable Output<ServiceReferenceArgs> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable ServiceReferenceArgs service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public WebhookClientConfigArgs build() {
+        }        public WebhookClientConfigArgs build() {
             return new WebhookClientConfigArgs(caBundle, service, url);
         }
     }

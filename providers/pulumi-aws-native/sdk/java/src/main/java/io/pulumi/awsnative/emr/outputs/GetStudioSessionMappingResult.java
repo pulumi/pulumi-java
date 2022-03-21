@@ -53,8 +53,7 @@ public final class GetStudioSessionMappingResult {
         public Builder sessionPolicyArn(@Nullable String sessionPolicyArn) {
             this.sessionPolicyArn = sessionPolicyArn;
             return this;
-        }
-        public GetStudioSessionMappingResult build() {
+        }        public GetStudioSessionMappingResult build() {
             return new GetStudioSessionMappingResult(sessionPolicyArn);
         }
     }

@@ -364,102 +364,82 @@ public final class GetBlobContainerResult {
             this.defaultEncryptionScope = defaultEncryptionScope;
             return this;
         }
-
         public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
-
         public Builder deletedTime(String deletedTime) {
             this.deletedTime = Objects.requireNonNull(deletedTime);
             return this;
         }
-
         public Builder denyEncryptionScopeOverride(@Nullable Boolean denyEncryptionScopeOverride) {
             this.denyEncryptionScopeOverride = denyEncryptionScopeOverride;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder hasImmutabilityPolicy(Boolean hasImmutabilityPolicy) {
             this.hasImmutabilityPolicy = Objects.requireNonNull(hasImmutabilityPolicy);
             return this;
         }
-
         public Builder hasLegalHold(Boolean hasLegalHold) {
             this.hasLegalHold = Objects.requireNonNull(hasLegalHold);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder immutabilityPolicy(ImmutabilityPolicyPropertiesResponse immutabilityPolicy) {
             this.immutabilityPolicy = Objects.requireNonNull(immutabilityPolicy);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder leaseDuration(String leaseDuration) {
             this.leaseDuration = Objects.requireNonNull(leaseDuration);
             return this;
         }
-
         public Builder leaseState(String leaseState) {
             this.leaseState = Objects.requireNonNull(leaseState);
             return this;
         }
-
         public Builder leaseStatus(String leaseStatus) {
             this.leaseStatus = Objects.requireNonNull(leaseStatus);
             return this;
         }
-
         public Builder legalHold(LegalHoldPropertiesResponse legalHold) {
             this.legalHold = Objects.requireNonNull(legalHold);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicAccess(@Nullable String publicAccess) {
             this.publicAccess = publicAccess;
             return this;
         }
-
         public Builder remainingRetentionDays(Integer remainingRetentionDays) {
             this.remainingRetentionDays = Objects.requireNonNull(remainingRetentionDays);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetBlobContainerResult build() {
+        }        public GetBlobContainerResult build() {
             return new GetBlobContainerResult(defaultEncryptionScope, deleted, deletedTime, denyEncryptionScopeOverride, etag, hasImmutabilityPolicy, hasLegalHold, id, immutabilityPolicy, lastModifiedTime, leaseDuration, leaseState, leaseStatus, legalHold, metadata, name, publicAccess, remainingRetentionDays, type, version);
         }
     }

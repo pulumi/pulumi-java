@@ -88,17 +88,14 @@ public final class KeyToPath {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public KeyToPath build() {
+        }        public KeyToPath build() {
             return new KeyToPath(key, mode, path);
         }
     }

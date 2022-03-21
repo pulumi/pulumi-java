@@ -71,12 +71,10 @@ public final class DatabaseEncryptionConfiguration {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
-        }
-        public DatabaseEncryptionConfiguration build() {
+        }        public DatabaseEncryptionConfiguration build() {
             return new DatabaseEncryptionConfiguration(encryptionOption, kmsKey);
         }
     }

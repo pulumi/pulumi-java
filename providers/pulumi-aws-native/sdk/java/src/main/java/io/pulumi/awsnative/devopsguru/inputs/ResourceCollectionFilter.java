@@ -56,8 +56,7 @@ public final class ResourceCollectionFilter extends io.pulumi.resources.InvokeAr
         public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
             this.cloudFormation = cloudFormation;
             return this;
-        }
-        public ResourceCollectionFilter build() {
+        }        public ResourceCollectionFilter build() {
             return new ResourceCollectionFilter(cloudFormation);
         }
     }

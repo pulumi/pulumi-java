@@ -90,17 +90,17 @@ public final class GetBucketResult {
             this.arn = arn;
             return this;
         }
-
         public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfiguration lifecycleConfiguration) {
             this.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
-
         public Builder tags(@Nullable List<BucketTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetBucketResult build() {
+        public Builder tags(BucketTag... tags) {
+            return tags(List.of(tags));
+        }        public GetBucketResult build() {
             return new GetBucketResult(arn, lifecycleConfiguration, tags);
         }
     }

@@ -53,7 +53,9 @@ public final class TableFieldSchemaCategoriesResponse {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-        public TableFieldSchemaCategoriesResponse build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public TableFieldSchemaCategoriesResponse build() {
             return new TableFieldSchemaCategoriesResponse(names);
         }
     }

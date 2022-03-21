@@ -91,42 +91,37 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
             this.aliases = aliases;
             return this;
         }
-
         public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = Output.ofNullable(aliases);
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
-
         public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = Output.ofNullable(ipv4Address);
             return this;
         }
-
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ContainerNetworksAdvancedArgs build() {
+        }        public ContainerNetworksAdvancedArgs build() {
             return new ContainerNetworksAdvancedArgs(aliases, ipv4Address, ipv6Address, name);
         }
     }

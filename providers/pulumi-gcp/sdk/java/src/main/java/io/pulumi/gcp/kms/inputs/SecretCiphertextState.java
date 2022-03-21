@@ -109,42 +109,34 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
-
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
             this.additionalAuthenticatedData = Output.ofNullable(additionalAuthenticatedData);
             return this;
         }
-
         public Builder ciphertext(@Nullable Output<String> ciphertext) {
             this.ciphertext = ciphertext;
             return this;
         }
-
         public Builder ciphertext(@Nullable String ciphertext) {
             this.ciphertext = Output.ofNullable(ciphertext);
             return this;
         }
-
         public Builder cryptoKey(@Nullable Output<String> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
-
         public Builder cryptoKey(@Nullable String cryptoKey) {
             this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
-
         public Builder plaintext(@Nullable Output<String> plaintext) {
             this.plaintext = plaintext;
             return this;
         }
-
         public Builder plaintext(@Nullable String plaintext) {
             this.plaintext = Output.ofNullable(plaintext);
             return this;
-        }
-        public SecretCiphertextState build() {
+        }        public SecretCiphertextState build() {
             return new SecretCiphertextState(additionalAuthenticatedData, ciphertext, cryptoKey, plaintext);
         }
     }

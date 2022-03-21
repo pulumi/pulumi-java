@@ -113,42 +113,37 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
             this.chainName = chainName;
             return this;
         }
-
         public Builder chainName(@Nullable String chainName) {
             this.chainName = Output.ofNullable(chainName);
             return this;
         }
-
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
-
         public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Output.ofNullable(guestFlush);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
-        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(chainName, guestFlush, labels, storageLocations);
         }
     }

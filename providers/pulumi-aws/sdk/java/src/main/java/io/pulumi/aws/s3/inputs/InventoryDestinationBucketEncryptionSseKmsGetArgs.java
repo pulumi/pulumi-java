@@ -56,12 +56,10 @@ public final class InventoryDestinationBucketEncryptionSseKmsGetArgs extends io.
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
-        }
-        public InventoryDestinationBucketEncryptionSseKmsGetArgs build() {
+        }        public InventoryDestinationBucketEncryptionSseKmsGetArgs build() {
             return new InventoryDestinationBucketEncryptionSseKmsGetArgs(keyId);
         }
     }

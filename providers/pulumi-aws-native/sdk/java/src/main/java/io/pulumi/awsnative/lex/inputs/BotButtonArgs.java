@@ -77,22 +77,18 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public BotButtonArgs build() {
+        }        public BotButtonArgs build() {
             return new BotButtonArgs(text, value);
         }
     }

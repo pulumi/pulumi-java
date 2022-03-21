@@ -90,17 +90,14 @@ public final class ParquetWriteSettingsResponse {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
-
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ParquetWriteSettingsResponse build() {
+        }        public ParquetWriteSettingsResponse build() {
             return new ParquetWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, type);
         }
     }

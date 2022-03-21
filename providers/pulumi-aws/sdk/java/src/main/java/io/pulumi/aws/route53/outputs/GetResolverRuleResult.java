@@ -160,52 +160,42 @@ public final class GetResolverRuleResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder resolverEndpointId(String resolverEndpointId) {
             this.resolverEndpointId = Objects.requireNonNull(resolverEndpointId);
             return this;
         }
-
         public Builder resolverRuleId(String resolverRuleId) {
             this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder shareStatus(String shareStatus) {
             this.shareStatus = Objects.requireNonNull(shareStatus);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetResolverRuleResult build() {
+        }        public GetResolverRuleResult build() {
             return new GetResolverRuleResult(arn, domainName, id, name, ownerId, resolverEndpointId, resolverRuleId, ruleType, shareStatus, tags);
         }
     }

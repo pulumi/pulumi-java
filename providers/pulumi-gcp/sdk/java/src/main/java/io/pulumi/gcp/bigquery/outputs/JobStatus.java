@@ -66,17 +66,20 @@ public final class JobStatus {
             this.errorResults = errorResults;
             return this;
         }
-
+        public Builder errorResults(JobStatusErrorResult... errorResults) {
+            return errorResults(List.of(errorResults));
+        }
         public Builder errors(@Nullable List<JobStatusError> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(JobStatusError... errors) {
+            return errors(List.of(errors));
+        }
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public JobStatus build() {
+        }        public JobStatus build() {
             return new JobStatus(errorResults, errors, state);
         }
     }

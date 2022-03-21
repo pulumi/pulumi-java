@@ -119,27 +119,22 @@ public final class TemplateLinkResponse {
             this.contentVersion = contentVersion;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public TemplateLinkResponse build() {
+        }        public TemplateLinkResponse build() {
             return new TemplateLinkResponse(contentVersion, id, queryString, relativePath, uri);
         }
     }

@@ -73,12 +73,10 @@ public final class CryptoKeyVersionTemplate {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder protectionLevel(@Nullable String protectionLevel) {
             this.protectionLevel = protectionLevel;
             return this;
-        }
-        public CryptoKeyVersionTemplate build() {
+        }        public CryptoKeyVersionTemplate build() {
             return new CryptoKeyVersionTemplate(algorithm, protectionLevel);
         }
     }

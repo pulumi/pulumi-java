@@ -133,37 +133,30 @@ public final class GetImageResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operatingSystemType(String operatingSystemType) {
             this.operatingSystemType = Objects.requireNonNull(operatingSystemType);
             return this;
         }
-
         public Builder requiredTenancy(String requiredTenancy) {
             this.requiredTenancy = Objects.requireNonNull(requiredTenancy);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetImageResult build() {
+        }        public GetImageResult build() {
             return new GetImageResult(description, id, imageId, name, operatingSystemType, requiredTenancy, state);
         }
     }

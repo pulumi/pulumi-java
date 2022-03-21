@@ -43,8 +43,7 @@ public final class ModelQualityJobDefinitionMonitoringResources {
         public Builder clusterConfig(ModelQualityJobDefinitionClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
-        }
-        public ModelQualityJobDefinitionMonitoringResources build() {
+        }        public ModelQualityJobDefinitionMonitoringResources build() {
             return new ModelQualityJobDefinitionMonitoringResources(clusterConfig);
         }
     }

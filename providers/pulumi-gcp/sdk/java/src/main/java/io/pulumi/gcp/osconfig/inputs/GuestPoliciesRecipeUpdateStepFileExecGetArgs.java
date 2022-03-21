@@ -108,42 +108,40 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends io.pulum
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
-
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder artifactId(@Nullable Output<String> artifactId) {
             this.artifactId = artifactId;
             return this;
         }
-
         public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = Output.ofNullable(artifactId);
             return this;
         }
-
         public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = Output.ofNullable(localPath);
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStepFileExecGetArgs build() {
+        }        public GuestPoliciesRecipeUpdateStepFileExecGetArgs build() {
             return new GuestPoliciesRecipeUpdateStepFileExecGetArgs(allowedExitCodes, args, artifactId, localPath);
         }
     }

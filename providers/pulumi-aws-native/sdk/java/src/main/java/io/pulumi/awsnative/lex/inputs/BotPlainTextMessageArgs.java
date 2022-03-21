@@ -60,12 +60,10 @@ public final class BotPlainTextMessageArgs extends io.pulumi.resources.ResourceA
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public BotPlainTextMessageArgs build() {
+        }        public BotPlainTextMessageArgs build() {
             return new BotPlainTextMessageArgs(value);
         }
     }

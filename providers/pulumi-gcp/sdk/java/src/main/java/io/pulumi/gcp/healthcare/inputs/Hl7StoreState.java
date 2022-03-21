@@ -180,72 +180,61 @@ public final class Hl7StoreState extends io.pulumi.resources.ResourceArgs {
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable Hl7StoreNotificationConfigGetArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder notificationConfigs(@Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs) {
             this.notificationConfigs = notificationConfigs;
             return this;
         }
-
         public Builder notificationConfigs(@Nullable List<Hl7StoreNotificationConfigsGetArgs> notificationConfigs) {
             this.notificationConfigs = Output.ofNullable(notificationConfigs);
             return this;
         }
-
+        public Builder notificationConfigs(Hl7StoreNotificationConfigsGetArgs... notificationConfigs) {
+            return notificationConfigs(List.of(notificationConfigs));
+        }
         public Builder parserConfig(@Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig) {
             this.parserConfig = parserConfig;
             return this;
         }
-
         public Builder parserConfig(@Nullable Hl7StoreParserConfigGetArgs parserConfig) {
             this.parserConfig = Output.ofNullable(parserConfig);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public Hl7StoreState build() {
+        }        public Hl7StoreState build() {
             return new Hl7StoreState(dataset, labels, name, notificationConfig, notificationConfigs, parserConfig, selfLink);
         }
     }

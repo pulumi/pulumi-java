@@ -127,27 +127,22 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends io.pu
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder policyState(@Nullable String policyState) {
             this.policyState = policyState;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder resourceStateSyncTime(String resourceStateSyncTime) {
             this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime);
             return this;
-        }
-        public AzureFileshareProtectedItemExtendedInfoResponse build() {
+        }        public AzureFileshareProtectedItemExtendedInfoResponse build() {
             return new AzureFileshareProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount, resourceState, resourceStateSyncTime);
         }
     }

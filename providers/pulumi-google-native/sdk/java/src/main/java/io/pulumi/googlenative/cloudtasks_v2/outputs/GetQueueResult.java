@@ -153,37 +153,30 @@ public final class GetQueueResult {
             this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder purgeTime(String purgeTime) {
             this.purgeTime = Objects.requireNonNull(purgeTime);
             return this;
         }
-
         public Builder rateLimits(RateLimitsResponse rateLimits) {
             this.rateLimits = Objects.requireNonNull(rateLimits);
             return this;
         }
-
         public Builder retryConfig(RetryConfigResponse retryConfig) {
             this.retryConfig = Objects.requireNonNull(retryConfig);
             return this;
         }
-
         public Builder stackdriverLoggingConfig(StackdriverLoggingConfigResponse stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = Objects.requireNonNull(stackdriverLoggingConfig);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetQueueResult build() {
+        }        public GetQueueResult build() {
             return new GetQueueResult(appEngineRoutingOverride, name, purgeTime, rateLimits, retryConfig, stackdriverLoggingConfig, state);
         }
     }

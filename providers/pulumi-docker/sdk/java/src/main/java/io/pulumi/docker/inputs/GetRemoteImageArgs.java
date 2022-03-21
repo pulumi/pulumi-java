@@ -50,8 +50,7 @@ public final class GetRemoteImageArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRemoteImageArgs build() {
+        }        public GetRemoteImageArgs build() {
             return new GetRemoteImageArgs(name);
         }
     }

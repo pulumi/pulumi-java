@@ -267,72 +267,61 @@ public final class GetSpacecraftResult {
             this.authorizationStatus = Objects.requireNonNull(authorizationStatus);
             return this;
         }
-
         public Builder authorizationStatusExtended(String authorizationStatusExtended) {
             this.authorizationStatusExtended = Objects.requireNonNull(authorizationStatusExtended);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder links(@Nullable List<SpacecraftLinkResponse> links) {
             this.links = links;
             return this;
         }
-
+        public Builder links(SpacecraftLinkResponse... links) {
+            return links(List.of(links));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder noradId(String noradId) {
             this.noradId = Objects.requireNonNull(noradId);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder titleLine(@Nullable String titleLine) {
             this.titleLine = titleLine;
             return this;
         }
-
         public Builder tleLine1(@Nullable String tleLine1) {
             this.tleLine1 = tleLine1;
             return this;
         }
-
         public Builder tleLine2(@Nullable String tleLine2) {
             this.tleLine2 = tleLine2;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSpacecraftResult build() {
+        }        public GetSpacecraftResult build() {
             return new GetSpacecraftResult(authorizationStatus, authorizationStatusExtended, etag, id, links, location, name, noradId, systemData, tags, titleLine, tleLine1, tleLine2, type);
         }
     }

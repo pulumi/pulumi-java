@@ -69,12 +69,10 @@ public final class WebAclDefaultActionBlockCustomResponseResponseHeader {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WebAclDefaultActionBlockCustomResponseResponseHeader build() {
+        }        public WebAclDefaultActionBlockCustomResponseResponseHeader build() {
             return new WebAclDefaultActionBlockCustomResponseResponseHeader(name, value);
         }
     }

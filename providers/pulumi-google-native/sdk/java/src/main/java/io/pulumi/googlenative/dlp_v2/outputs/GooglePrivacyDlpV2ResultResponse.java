@@ -104,22 +104,21 @@ public final class GooglePrivacyDlpV2ResultResponse {
             this.hybridStats = Objects.requireNonNull(hybridStats);
             return this;
         }
-
         public Builder infoTypeStats(List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats) {
             this.infoTypeStats = Objects.requireNonNull(infoTypeStats);
             return this;
         }
-
+        public Builder infoTypeStats(GooglePrivacyDlpV2InfoTypeStatsResponse... infoTypeStats) {
+            return infoTypeStats(List.of(infoTypeStats));
+        }
         public Builder processedBytes(String processedBytes) {
             this.processedBytes = Objects.requireNonNull(processedBytes);
             return this;
         }
-
         public Builder totalEstimatedBytes(String totalEstimatedBytes) {
             this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes);
             return this;
-        }
-        public GooglePrivacyDlpV2ResultResponse build() {
+        }        public GooglePrivacyDlpV2ResultResponse build() {
             return new GooglePrivacyDlpV2ResultResponse(hybridStats, infoTypeStats, processedBytes, totalEstimatedBytes);
         }
     }

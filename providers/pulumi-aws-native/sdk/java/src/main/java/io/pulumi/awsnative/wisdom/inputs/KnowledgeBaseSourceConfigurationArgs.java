@@ -53,12 +53,10 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
             this.appIntegrations = appIntegrations;
             return this;
         }
-
         public Builder appIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfigurationArgs appIntegrations) {
             this.appIntegrations = Output.ofNullable(appIntegrations);
             return this;
-        }
-        public KnowledgeBaseSourceConfigurationArgs build() {
+        }        public KnowledgeBaseSourceConfigurationArgs build() {
             return new KnowledgeBaseSourceConfigurationArgs(appIntegrations);
         }
     }

@@ -318,87 +318,73 @@ public final class GetWorkspaceResult {
             this.authorizations = authorizations;
             return this;
         }
-
+        public Builder authorizations(WorkspaceProviderAuthorizationResponse... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder createdBy(@Nullable CreatedByResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdDateTime(String createdDateTime) {
             this.createdDateTime = Objects.requireNonNull(createdDateTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedResourceGroupId(String managedResourceGroupId) {
             this.managedResourceGroupId = Objects.requireNonNull(managedResourceGroupId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable WorkspaceCustomParametersResponse parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder storageAccountIdentity(@Nullable ManagedIdentityConfigurationResponse storageAccountIdentity) {
             this.storageAccountIdentity = storageAccountIdentity;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uiDefinitionUri(@Nullable String uiDefinitionUri) {
             this.uiDefinitionUri = uiDefinitionUri;
             return this;
         }
-
         public Builder updatedBy(@Nullable CreatedByResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceUrl(String workspaceUrl) {
             this.workspaceUrl = Objects.requireNonNull(workspaceUrl);
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(authorizations, createdBy, createdDateTime, id, location, managedResourceGroupId, name, parameters, provisioningState, sku, storageAccountIdentity, tags, type, uiDefinitionUri, updatedBy, workspaceId, workspaceUrl);
         }
     }

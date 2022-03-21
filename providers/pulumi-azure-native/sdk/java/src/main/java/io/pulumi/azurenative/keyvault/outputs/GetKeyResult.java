@@ -227,62 +227,53 @@ public final class GetKeyResult {
             this.attributes = attributes;
             return this;
         }
-
         public Builder curveName(@Nullable String curveName) {
             this.curveName = curveName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyOps(@Nullable List<String> keyOps) {
             this.keyOps = keyOps;
             return this;
         }
-
+        public Builder keyOps(String... keyOps) {
+            return keyOps(List.of(keyOps));
+        }
         public Builder keySize(@Nullable Integer keySize) {
             this.keySize = keySize;
             return this;
         }
-
         public Builder keyUri(String keyUri) {
             this.keyUri = Objects.requireNonNull(keyUri);
             return this;
         }
-
         public Builder keyUriWithVersion(String keyUriWithVersion) {
             this.keyUriWithVersion = Objects.requireNonNull(keyUriWithVersion);
             return this;
         }
-
         public Builder kty(@Nullable String kty) {
             this.kty = kty;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetKeyResult build() {
+        }        public GetKeyResult build() {
             return new GetKeyResult(attributes, curveName, id, keyOps, keySize, keyUri, keyUriWithVersion, kty, location, name, tags, type);
         }
     }

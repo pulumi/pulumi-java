@@ -159,72 +159,58 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
-
         public Builder affectedCpeUri(String affectedCpeUri) {
             this.affectedCpeUri = Output.of(Objects.requireNonNull(affectedCpeUri));
             return this;
         }
-
         public Builder affectedPackage(Output<String> affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
-
         public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Output.of(Objects.requireNonNull(affectedPackage));
             return this;
         }
-
         public Builder affectedVersion(Output<VersionArgs> affectedVersion) {
             this.affectedVersion = Objects.requireNonNull(affectedVersion);
             return this;
         }
-
         public Builder affectedVersion(VersionArgs affectedVersion) {
             this.affectedVersion = Output.of(Objects.requireNonNull(affectedVersion));
             return this;
         }
-
         public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
             this.fixedCpeUri = fixedCpeUri;
             return this;
         }
-
         public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
             this.fixedCpeUri = Output.ofNullable(fixedCpeUri);
             return this;
         }
-
         public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
             this.fixedPackage = fixedPackage;
             return this;
         }
-
         public Builder fixedPackage(@Nullable String fixedPackage) {
             this.fixedPackage = Output.ofNullable(fixedPackage);
             return this;
         }
-
         public Builder fixedVersion(Output<VersionArgs> fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
-
         public Builder fixedVersion(VersionArgs fixedVersion) {
             this.fixedVersion = Output.of(Objects.requireNonNull(fixedVersion));
             return this;
         }
-
         public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder packageType(@Nullable String packageType) {
             this.packageType = Output.ofNullable(packageType);
             return this;
-        }
-        public PackageIssueArgs build() {
+        }        public PackageIssueArgs build() {
             return new PackageIssueArgs(affectedCpeUri, affectedPackage, affectedVersion, fixedCpeUri, fixedPackage, fixedVersion, packageType);
         }
     }

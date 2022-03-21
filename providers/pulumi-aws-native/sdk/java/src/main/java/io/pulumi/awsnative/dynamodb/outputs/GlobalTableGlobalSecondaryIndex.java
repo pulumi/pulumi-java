@@ -75,22 +75,21 @@ public final class GlobalTableGlobalSecondaryIndex {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder keySchema(List<GlobalTableKeySchema> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
-
+        public Builder keySchema(GlobalTableKeySchema... keySchema) {
+            return keySchema(List.of(keySchema));
+        }
         public Builder projection(GlobalTableProjection projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
-
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
-        }
-        public GlobalTableGlobalSecondaryIndex build() {
+        }        public GlobalTableGlobalSecondaryIndex build() {
             return new GlobalTableGlobalSecondaryIndex(indexName, keySchema, projection, writeProvisionedThroughputSettings);
         }
     }

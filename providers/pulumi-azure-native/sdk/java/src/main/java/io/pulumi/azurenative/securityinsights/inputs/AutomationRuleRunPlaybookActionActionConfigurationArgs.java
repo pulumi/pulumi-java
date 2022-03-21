@@ -78,22 +78,18 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
-
         public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             this.logicAppResourceId = Output.ofNullable(logicAppResourceId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public AutomationRuleRunPlaybookActionActionConfigurationArgs build() {
+        }        public AutomationRuleRunPlaybookActionActionConfigurationArgs build() {
             return new AutomationRuleRunPlaybookActionActionConfigurationArgs(logicAppResourceId, tenantId);
         }
     }

@@ -53,12 +53,10 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
             this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN);
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
-        }
-        public DeliveryStreamKinesisStreamSourceConfiguration build() {
+        }        public DeliveryStreamKinesisStreamSourceConfiguration build() {
             return new DeliveryStreamKinesisStreamSourceConfiguration(kinesisStreamARN, roleARN);
         }
     }

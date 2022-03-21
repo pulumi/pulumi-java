@@ -72,12 +72,10 @@ public final class ListDelegationSettingSecretsArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public ListDelegationSettingSecretsArgs build() {
+        }        public ListDelegationSettingSecretsArgs build() {
             return new ListDelegationSettingSecretsArgs(resourceGroupName, serviceName);
         }
     }

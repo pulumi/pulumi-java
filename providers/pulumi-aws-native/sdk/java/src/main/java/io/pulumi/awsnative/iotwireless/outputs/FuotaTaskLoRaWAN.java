@@ -71,12 +71,10 @@ public final class FuotaTaskLoRaWAN {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public FuotaTaskLoRaWAN build() {
+        }        public FuotaTaskLoRaWAN build() {
             return new FuotaTaskLoRaWAN(rfRegion, startTime);
         }
     }

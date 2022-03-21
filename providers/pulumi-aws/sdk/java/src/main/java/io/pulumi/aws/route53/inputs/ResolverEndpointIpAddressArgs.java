@@ -86,32 +86,26 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = Output.ofNullable(ip);
             return this;
         }
-
         public Builder ipId(@Nullable Output<String> ipId) {
             this.ipId = ipId;
             return this;
         }
-
         public Builder ipId(@Nullable String ipId) {
             this.ipId = Output.ofNullable(ipId);
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public ResolverEndpointIpAddressArgs build() {
+        }        public ResolverEndpointIpAddressArgs build() {
             return new ResolverEndpointIpAddressArgs(ip, ipId, subnetId);
         }
     }

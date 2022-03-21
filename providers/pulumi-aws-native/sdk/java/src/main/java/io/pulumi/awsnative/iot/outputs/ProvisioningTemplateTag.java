@@ -53,12 +53,10 @@ public final class ProvisioningTemplateTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ProvisioningTemplateTag build() {
+        }        public ProvisioningTemplateTag build() {
             return new ProvisioningTemplateTag(key, value);
         }
     }

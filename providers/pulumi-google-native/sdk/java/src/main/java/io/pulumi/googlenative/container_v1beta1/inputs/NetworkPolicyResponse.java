@@ -77,12 +77,10 @@ public final class NetworkPolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
-        }
-        public NetworkPolicyResponse build() {
+        }        public NetworkPolicyResponse build() {
             return new NetworkPolicyResponse(enabled, provider);
         }
     }

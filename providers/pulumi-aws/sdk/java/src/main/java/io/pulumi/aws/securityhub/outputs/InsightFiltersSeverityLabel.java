@@ -69,12 +69,10 @@ public final class InsightFiltersSeverityLabel {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersSeverityLabel build() {
+        }        public InsightFiltersSeverityLabel build() {
             return new InsightFiltersSeverityLabel(comparison, value);
         }
     }

@@ -77,12 +77,10 @@ public final class AutoscalingPolicyScaleDownControlResponse extends io.pulumi.r
             this.maxScaledDownReplicas = Objects.requireNonNull(maxScaledDownReplicas);
             return this;
         }
-
         public Builder timeWindowSec(Integer timeWindowSec) {
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
-        }
-        public AutoscalingPolicyScaleDownControlResponse build() {
+        }        public AutoscalingPolicyScaleDownControlResponse build() {
             return new AutoscalingPolicyScaleDownControlResponse(maxScaledDownReplicas, timeWindowSec);
         }
     }

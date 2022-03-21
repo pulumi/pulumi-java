@@ -43,8 +43,7 @@ public final class RuleGroupDimension {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RuleGroupDimension build() {
+        }        public RuleGroupDimension build() {
             return new RuleGroupDimension(value);
         }
     }

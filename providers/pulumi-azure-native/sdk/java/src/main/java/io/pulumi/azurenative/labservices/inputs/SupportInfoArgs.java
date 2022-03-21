@@ -110,42 +110,34 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder instructions(@Nullable Output<String> instructions) {
             this.instructions = instructions;
             return this;
         }
-
         public Builder instructions(@Nullable String instructions) {
             this.instructions = Output.ofNullable(instructions);
             return this;
         }
-
         public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = Output.ofNullable(phone);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public SupportInfoArgs build() {
+        }        public SupportInfoArgs build() {
             return new SupportInfoArgs(email, instructions, phone, url);
         }
     }

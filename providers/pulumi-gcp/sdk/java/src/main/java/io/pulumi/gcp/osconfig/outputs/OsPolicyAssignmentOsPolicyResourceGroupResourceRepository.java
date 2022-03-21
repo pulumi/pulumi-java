@@ -106,22 +106,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
             this.apt = apt;
             return this;
         }
-
         public Builder goo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
             this.zypper = zypper;
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepository build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepository build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepository(apt, goo, yum, zypper);
         }
     }

@@ -259,132 +259,106 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
-
         public Builder acceleratorConfig(@Nullable SchedulerAcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
             return this;
         }
-
         public Builder containerImageUri(@Nullable Output<String> containerImageUri) {
             this.containerImageUri = containerImageUri;
             return this;
         }
-
         public Builder containerImageUri(@Nullable String containerImageUri) {
             this.containerImageUri = Output.ofNullable(containerImageUri);
             return this;
         }
-
         public Builder dataprocParameters(@Nullable Output<DataprocParametersArgs> dataprocParameters) {
             this.dataprocParameters = dataprocParameters;
             return this;
         }
-
         public Builder dataprocParameters(@Nullable DataprocParametersArgs dataprocParameters) {
             this.dataprocParameters = Output.ofNullable(dataprocParameters);
             return this;
         }
-
         public Builder inputNotebookFile(@Nullable Output<String> inputNotebookFile) {
             this.inputNotebookFile = inputNotebookFile;
             return this;
         }
-
         public Builder inputNotebookFile(@Nullable String inputNotebookFile) {
             this.inputNotebookFile = Output.ofNullable(inputNotebookFile);
             return this;
         }
-
         public Builder jobType(@Nullable Output<ExecutionTemplateJobType> jobType) {
             this.jobType = jobType;
             return this;
         }
-
         public Builder jobType(@Nullable ExecutionTemplateJobType jobType) {
             this.jobType = Output.ofNullable(jobType);
             return this;
         }
-
         public Builder kernelSpec(@Nullable Output<String> kernelSpec) {
             this.kernelSpec = kernelSpec;
             return this;
         }
-
         public Builder kernelSpec(@Nullable String kernelSpec) {
             this.kernelSpec = Output.ofNullable(kernelSpec);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder masterType(@Nullable Output<String> masterType) {
             this.masterType = masterType;
             return this;
         }
-
         public Builder masterType(@Nullable String masterType) {
             this.masterType = Output.ofNullable(masterType);
             return this;
         }
-
         public Builder outputNotebookFolder(@Nullable Output<String> outputNotebookFolder) {
             this.outputNotebookFolder = outputNotebookFolder;
             return this;
         }
-
         public Builder outputNotebookFolder(@Nullable String outputNotebookFolder) {
             this.outputNotebookFolder = Output.ofNullable(outputNotebookFolder);
             return this;
         }
-
         public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder paramsYamlFile(@Nullable Output<String> paramsYamlFile) {
             this.paramsYamlFile = paramsYamlFile;
             return this;
         }
-
         public Builder paramsYamlFile(@Nullable String paramsYamlFile) {
             this.paramsYamlFile = Output.ofNullable(paramsYamlFile);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder vertexAiParameters(@Nullable Output<VertexAIParametersArgs> vertexAiParameters) {
             this.vertexAiParameters = vertexAiParameters;
             return this;
         }
-
         public Builder vertexAiParameters(@Nullable VertexAIParametersArgs vertexAiParameters) {
             this.vertexAiParameters = Output.ofNullable(vertexAiParameters);
             return this;
-        }
-        public ExecutionTemplateArgs build() {
+        }        public ExecutionTemplateArgs build() {
             return new ExecutionTemplateArgs(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, serviceAccount, vertexAiParameters);
         }
     }

@@ -78,12 +78,13 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
             this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl);
             return this;
         }
-
         public Builder billingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
             this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
             return this;
         }
-        public CostInformationResponse build() {
+        public Builder billingMeterDetails(BillingMeterDetailsResponse... billingMeterDetails) {
+            return billingMeterDetails(List.of(billingMeterDetails));
+        }        public CostInformationResponse build() {
             return new CostInformationResponse(billingInfoUrl, billingMeterDetails);
         }
     }

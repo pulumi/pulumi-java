@@ -235,62 +235,59 @@ public final class GetConfigResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder gatewayConfig(ApigatewayGatewayConfigResponse gatewayConfig) {
             this.gatewayConfig = Objects.requireNonNull(gatewayConfig);
             return this;
         }
-
         public Builder gatewayServiceAccount(String gatewayServiceAccount) {
             this.gatewayServiceAccount = Objects.requireNonNull(gatewayServiceAccount);
             return this;
         }
-
         public Builder grpcServices(List<ApigatewayApiConfigGrpcServiceDefinitionResponse> grpcServices) {
             this.grpcServices = Objects.requireNonNull(grpcServices);
             return this;
         }
-
+        public Builder grpcServices(ApigatewayApiConfigGrpcServiceDefinitionResponse... grpcServices) {
+            return grpcServices(List.of(grpcServices));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder managedServiceConfigs(List<ApigatewayApiConfigFileResponse> managedServiceConfigs) {
             this.managedServiceConfigs = Objects.requireNonNull(managedServiceConfigs);
             return this;
         }
-
+        public Builder managedServiceConfigs(ApigatewayApiConfigFileResponse... managedServiceConfigs) {
+            return managedServiceConfigs(List.of(managedServiceConfigs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder openapiDocuments(List<ApigatewayApiConfigOpenApiDocumentResponse> openapiDocuments) {
             this.openapiDocuments = Objects.requireNonNull(openapiDocuments);
             return this;
         }
-
+        public Builder openapiDocuments(ApigatewayApiConfigOpenApiDocumentResponse... openapiDocuments) {
+            return openapiDocuments(List.of(openapiDocuments));
+        }
         public Builder serviceConfigId(String serviceConfigId) {
             this.serviceConfigId = Objects.requireNonNull(serviceConfigId);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetConfigResult build() {
+        }        public GetConfigResult build() {
             return new GetConfigResult(createTime, displayName, gatewayConfig, gatewayServiceAccount, grpcServices, labels, managedServiceConfigs, name, openapiDocuments, serviceConfigId, state, updateTime);
         }
     }

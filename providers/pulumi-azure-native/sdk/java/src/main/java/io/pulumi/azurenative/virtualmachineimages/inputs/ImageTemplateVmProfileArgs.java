@@ -96,32 +96,26 @@ public final class ImageTemplateVmProfileArgs extends io.pulumi.resources.Resour
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
-
         public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             this.osDiskSizeGB = Output.ofNullable(osDiskSizeGB);
             return this;
         }
-
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
-
         public Builder vnetConfig(@Nullable Output<VirtualNetworkConfigArgs> vnetConfig) {
             this.vnetConfig = vnetConfig;
             return this;
         }
-
         public Builder vnetConfig(@Nullable VirtualNetworkConfigArgs vnetConfig) {
             this.vnetConfig = Output.ofNullable(vnetConfig);
             return this;
-        }
-        public ImageTemplateVmProfileArgs build() {
+        }        public ImageTemplateVmProfileArgs build() {
             return new ImageTemplateVmProfileArgs(osDiskSizeGB, vmSize, vnetConfig);
         }
     }

@@ -89,17 +89,14 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scope(RegexPatternSetScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetRegexPatternSetArgs build() {
+        }        public GetRegexPatternSetArgs build() {
             return new GetRegexPatternSetArgs(id, name, scope);
         }
     }

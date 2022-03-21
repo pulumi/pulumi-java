@@ -104,22 +104,18 @@ public final class BatchAccountIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,BatchAccountIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public BatchAccountIdentityResponse build() {
+        }        public BatchAccountIdentityResponse build() {
             return new BatchAccountIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

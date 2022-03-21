@@ -108,22 +108,18 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public SmsReceiverResponse build() {
+        }        public SmsReceiverResponse build() {
             return new SmsReceiverResponse(countryCode, name, phoneNumber, status);
         }
     }

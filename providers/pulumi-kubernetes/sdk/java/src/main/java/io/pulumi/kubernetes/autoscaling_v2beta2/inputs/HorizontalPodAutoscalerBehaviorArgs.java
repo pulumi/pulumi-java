@@ -81,22 +81,18 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
             this.scaleDown = scaleDown;
             return this;
         }
-
         public Builder scaleDown(@Nullable HPAScalingRulesArgs scaleDown) {
             this.scaleDown = Output.ofNullable(scaleDown);
             return this;
         }
-
         public Builder scaleUp(@Nullable Output<HPAScalingRulesArgs> scaleUp) {
             this.scaleUp = scaleUp;
             return this;
         }
-
         public Builder scaleUp(@Nullable HPAScalingRulesArgs scaleUp) {
             this.scaleUp = Output.ofNullable(scaleUp);
             return this;
-        }
-        public HorizontalPodAutoscalerBehaviorArgs build() {
+        }        public HorizontalPodAutoscalerBehaviorArgs build() {
             return new HorizontalPodAutoscalerBehaviorArgs(scaleDown, scaleUp);
         }
     }

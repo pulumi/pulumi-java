@@ -72,12 +72,10 @@ public final class SizeAvailabilityResponse {
             this.isAvailable = isAvailable;
             return this;
         }
-
         public Builder sizeCategory(@Nullable String sizeCategory) {
             this.sizeCategory = sizeCategory;
             return this;
-        }
-        public SizeAvailabilityResponse build() {
+        }        public SizeAvailabilityResponse build() {
             return new SizeAvailabilityResponse(isAvailable, sizeCategory);
         }
     }

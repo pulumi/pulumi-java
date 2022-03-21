@@ -231,62 +231,53 @@ public final class GetPublicAdvertisedPrefixResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dnsVerificationIp(String dnsVerificationIp) {
             this.dnsVerificationIp = Objects.requireNonNull(dnsVerificationIp);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicDelegatedPrefixs(List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs) {
             this.publicDelegatedPrefixs = Objects.requireNonNull(publicDelegatedPrefixs);
             return this;
         }
-
+        public Builder publicDelegatedPrefixs(PublicAdvertisedPrefixPublicDelegatedPrefixResponse... publicDelegatedPrefixs) {
+            return publicDelegatedPrefixs(List.of(publicDelegatedPrefixs));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder sharedSecret(String sharedSecret) {
             this.sharedSecret = Objects.requireNonNull(sharedSecret);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetPublicAdvertisedPrefixResult build() {
+        }        public GetPublicAdvertisedPrefixResult build() {
             return new GetPublicAdvertisedPrefixResult(creationTimestamp, description, dnsVerificationIp, fingerprint, ipCidrRange, kind, name, publicDelegatedPrefixs, selfLink, selfLinkWithId, sharedSecret, status);
         }
     }

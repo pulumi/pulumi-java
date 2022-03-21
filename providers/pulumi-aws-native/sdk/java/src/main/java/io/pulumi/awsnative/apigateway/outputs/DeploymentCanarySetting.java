@@ -89,17 +89,14 @@ public final class DeploymentCanarySetting {
             this.percentTraffic = percentTraffic;
             return this;
         }
-
         public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
             this.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
-
         public Builder useStageCache(@Nullable Boolean useStageCache) {
             this.useStageCache = useStageCache;
             return this;
-        }
-        public DeploymentCanarySetting build() {
+        }        public DeploymentCanarySetting build() {
             return new DeploymentCanarySetting(percentTraffic, stageVariableOverrides, useStageCache);
         }
     }

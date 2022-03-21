@@ -188,112 +188,90 @@ public final class DefaultSubnetArgs extends io.pulumi.resources.ResourceArgs {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
-
         public Builder enableDns64(@Nullable Output<Boolean> enableDns64) {
             this.enableDns64 = enableDns64;
             return this;
         }
-
         public Builder enableDns64(@Nullable Boolean enableDns64) {
             this.enableDns64 = Output.ofNullable(enableDns64);
             return this;
         }
-
         public Builder enableResourceNameDnsARecordOnLaunch(@Nullable Output<Boolean> enableResourceNameDnsARecordOnLaunch) {
             this.enableResourceNameDnsARecordOnLaunch = enableResourceNameDnsARecordOnLaunch;
             return this;
         }
-
         public Builder enableResourceNameDnsARecordOnLaunch(@Nullable Boolean enableResourceNameDnsARecordOnLaunch) {
             this.enableResourceNameDnsARecordOnLaunch = Output.ofNullable(enableResourceNameDnsARecordOnLaunch);
             return this;
         }
-
         public Builder enableResourceNameDnsAaaaRecordOnLaunch(@Nullable Output<Boolean> enableResourceNameDnsAaaaRecordOnLaunch) {
             this.enableResourceNameDnsAaaaRecordOnLaunch = enableResourceNameDnsAaaaRecordOnLaunch;
             return this;
         }
-
         public Builder enableResourceNameDnsAaaaRecordOnLaunch(@Nullable Boolean enableResourceNameDnsAaaaRecordOnLaunch) {
             this.enableResourceNameDnsAaaaRecordOnLaunch = Output.ofNullable(enableResourceNameDnsAaaaRecordOnLaunch);
             return this;
         }
-
         public Builder ipv6Native(@Nullable Output<Boolean> ipv6Native) {
             this.ipv6Native = ipv6Native;
             return this;
         }
-
         public Builder ipv6Native(@Nullable Boolean ipv6Native) {
             this.ipv6Native = Output.ofNullable(ipv6Native);
             return this;
         }
-
         public Builder mapCustomerOwnedIpOnLaunch(@Nullable Output<Boolean> mapCustomerOwnedIpOnLaunch) {
             this.mapCustomerOwnedIpOnLaunch = mapCustomerOwnedIpOnLaunch;
             return this;
         }
-
         public Builder mapCustomerOwnedIpOnLaunch(@Nullable Boolean mapCustomerOwnedIpOnLaunch) {
             this.mapCustomerOwnedIpOnLaunch = Output.ofNullable(mapCustomerOwnedIpOnLaunch);
             return this;
         }
-
         public Builder mapPublicIpOnLaunch(@Nullable Output<Boolean> mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
-
         public Builder mapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = Output.ofNullable(mapPublicIpOnLaunch);
             return this;
         }
-
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
-
         public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
-
         public Builder privateDnsHostnameTypeOnLaunch(@Nullable Output<String> privateDnsHostnameTypeOnLaunch) {
             this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch;
             return this;
         }
-
         public Builder privateDnsHostnameTypeOnLaunch(@Nullable String privateDnsHostnameTypeOnLaunch) {
             this.privateDnsHostnameTypeOnLaunch = Output.ofNullable(privateDnsHostnameTypeOnLaunch);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DefaultSubnetArgs build() {
+        }        public DefaultSubnetArgs build() {
             return new DefaultSubnetArgs(availabilityZone, customerOwnedIpv4Pool, enableDns64, enableResourceNameDnsARecordOnLaunch, enableResourceNameDnsAaaaRecordOnLaunch, ipv6Native, mapCustomerOwnedIpOnLaunch, mapPublicIpOnLaunch, outpostArn, privateDnsHostnameTypeOnLaunch, tags);
         }
     }

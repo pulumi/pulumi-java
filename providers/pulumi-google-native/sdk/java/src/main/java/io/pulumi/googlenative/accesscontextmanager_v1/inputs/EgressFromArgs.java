@@ -80,22 +80,21 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
             this.identities = identities;
             return this;
         }
-
         public Builder identities(@Nullable List<String> identities) {
             this.identities = Output.ofNullable(identities);
             return this;
         }
-
+        public Builder identities(String... identities) {
+            return identities(List.of(identities));
+        }
         public Builder identityType(@Nullable Output<EgressFromIdentityType> identityType) {
             this.identityType = identityType;
             return this;
         }
-
         public Builder identityType(@Nullable EgressFromIdentityType identityType) {
             this.identityType = Output.ofNullable(identityType);
             return this;
-        }
-        public EgressFromArgs build() {
+        }        public EgressFromArgs build() {
             return new EgressFromArgs(identities, identityType);
         }
     }

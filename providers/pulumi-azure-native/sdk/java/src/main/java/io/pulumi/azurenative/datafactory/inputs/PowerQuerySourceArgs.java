@@ -161,72 +161,58 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder flowlet(@Nullable Output<DataFlowReferenceArgs> flowlet) {
             this.flowlet = flowlet;
             return this;
         }
-
         public Builder flowlet(@Nullable DataFlowReferenceArgs flowlet) {
             this.flowlet = Output.ofNullable(flowlet);
             return this;
         }
-
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = linkedService;
             return this;
         }
-
         public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
             this.linkedService = Output.ofNullable(linkedService);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder schemaLinkedService(@Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService) {
             this.schemaLinkedService = schemaLinkedService;
             return this;
         }
-
         public Builder schemaLinkedService(@Nullable LinkedServiceReferenceArgs schemaLinkedService) {
             this.schemaLinkedService = Output.ofNullable(schemaLinkedService);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
-        }
-        public PowerQuerySourceArgs build() {
+        }        public PowerQuerySourceArgs build() {
             return new PowerQuerySourceArgs(dataset, description, flowlet, linkedService, name, schemaLinkedService, script);
         }
     }

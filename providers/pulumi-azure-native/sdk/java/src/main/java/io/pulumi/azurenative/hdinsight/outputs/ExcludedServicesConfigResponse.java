@@ -71,12 +71,10 @@ public final class ExcludedServicesConfigResponse {
             this.excludedServicesConfigId = excludedServicesConfigId;
             return this;
         }
-
         public Builder excludedServicesList(@Nullable String excludedServicesList) {
             this.excludedServicesList = excludedServicesList;
             return this;
-        }
-        public ExcludedServicesConfigResponse build() {
+        }        public ExcludedServicesConfigResponse build() {
             return new ExcludedServicesConfigResponse(excludedServicesConfigId, excludedServicesList);
         }
     }

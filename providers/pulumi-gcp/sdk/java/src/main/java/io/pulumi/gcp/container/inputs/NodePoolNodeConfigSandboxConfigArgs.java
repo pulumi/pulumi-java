@@ -52,12 +52,10 @@ public final class NodePoolNodeConfigSandboxConfigArgs extends io.pulumi.resourc
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
-
         public Builder sandboxType(String sandboxType) {
             this.sandboxType = Output.of(Objects.requireNonNull(sandboxType));
             return this;
-        }
-        public NodePoolNodeConfigSandboxConfigArgs build() {
+        }        public NodePoolNodeConfigSandboxConfigArgs build() {
             return new NodePoolNodeConfigSandboxConfigArgs(sandboxType);
         }
     }

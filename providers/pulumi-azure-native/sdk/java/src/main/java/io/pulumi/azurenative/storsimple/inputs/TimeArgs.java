@@ -93,32 +93,26 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder hours(Integer hours) {
             this.hours = Output.of(Objects.requireNonNull(hours));
             return this;
         }
-
         public Builder minutes(Output<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
         }
-
         public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public TimeArgs build() {
+        }        public TimeArgs build() {
             return new TimeArgs(hours, minutes, seconds);
         }
     }

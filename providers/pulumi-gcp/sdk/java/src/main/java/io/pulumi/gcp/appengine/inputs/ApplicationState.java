@@ -276,142 +276,117 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder authDomain(@Nullable Output<String> authDomain) {
             this.authDomain = authDomain;
             return this;
         }
-
         public Builder authDomain(@Nullable String authDomain) {
             this.authDomain = Output.ofNullable(authDomain);
             return this;
         }
-
         public Builder codeBucket(@Nullable Output<String> codeBucket) {
             this.codeBucket = codeBucket;
             return this;
         }
-
         public Builder codeBucket(@Nullable String codeBucket) {
             this.codeBucket = Output.ofNullable(codeBucket);
             return this;
         }
-
         public Builder databaseType(@Nullable Output<String> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
-
         public Builder databaseType(@Nullable String databaseType) {
             this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
-
         public Builder defaultBucket(@Nullable Output<String> defaultBucket) {
             this.defaultBucket = defaultBucket;
             return this;
         }
-
         public Builder defaultBucket(@Nullable String defaultBucket) {
             this.defaultBucket = Output.ofNullable(defaultBucket);
             return this;
         }
-
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
             this.defaultHostname = defaultHostname;
             return this;
         }
-
         public Builder defaultHostname(@Nullable String defaultHostname) {
             this.defaultHostname = Output.ofNullable(defaultHostname);
             return this;
         }
-
         public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings) {
             this.featureSettings = featureSettings;
             return this;
         }
-
         public Builder featureSettings(@Nullable ApplicationFeatureSettingsGetArgs featureSettings) {
             this.featureSettings = Output.ofNullable(featureSettings);
             return this;
         }
-
         public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
             this.gcrDomain = gcrDomain;
             return this;
         }
-
         public Builder gcrDomain(@Nullable String gcrDomain) {
             this.gcrDomain = Output.ofNullable(gcrDomain);
             return this;
         }
-
         public Builder iap(@Nullable Output<ApplicationIapGetArgs> iap) {
             this.iap = iap;
             return this;
         }
-
         public Builder iap(@Nullable ApplicationIapGetArgs iap) {
             this.iap = Output.ofNullable(iap);
             return this;
         }
-
         public Builder locationId(@Nullable Output<String> locationId) {
             this.locationId = locationId;
             return this;
         }
-
         public Builder locationId(@Nullable String locationId) {
             this.locationId = Output.ofNullable(locationId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
-
         public Builder servingStatus(@Nullable String servingStatus) {
             this.servingStatus = Output.ofNullable(servingStatus);
             return this;
         }
-
         public Builder urlDispatchRules(@Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
             this.urlDispatchRules = urlDispatchRules;
             return this;
         }
-
         public Builder urlDispatchRules(@Nullable List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
             this.urlDispatchRules = Output.ofNullable(urlDispatchRules);
             return this;
         }
-        public ApplicationState build() {
+        public Builder urlDispatchRules(ApplicationUrlDispatchRuleGetArgs... urlDispatchRules) {
+            return urlDispatchRules(List.of(urlDispatchRules));
+        }        public ApplicationState build() {
             return new ApplicationState(appId, authDomain, codeBucket, databaseType, defaultBucket, defaultHostname, featureSettings, gcrDomain, iap, locationId, name, project, servingStatus, urlDispatchRules);
         }
     }

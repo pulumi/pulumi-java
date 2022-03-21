@@ -43,8 +43,7 @@ public final class GetSecretRotationRotationRule {
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
             this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
             return this;
-        }
-        public GetSecretRotationRotationRule build() {
+        }        public GetSecretRotationRotationRule build() {
             return new GetSecretRotationRotationRule(automaticallyAfterDays);
         }
     }

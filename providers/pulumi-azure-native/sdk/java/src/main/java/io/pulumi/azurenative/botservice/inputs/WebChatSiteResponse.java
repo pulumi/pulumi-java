@@ -141,32 +141,26 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
             this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
-        }
-        public WebChatSiteResponse build() {
+        }        public WebChatSiteResponse build() {
             return new WebChatSiteResponse(isEnabled, isWebchatPreviewEnabled, key, key2, siteId, siteName);
         }
     }

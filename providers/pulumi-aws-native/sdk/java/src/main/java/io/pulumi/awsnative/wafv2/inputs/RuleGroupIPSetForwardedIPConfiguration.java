@@ -78,17 +78,14 @@ public final class RuleGroupIPSetForwardedIPConfiguration extends io.pulumi.reso
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder position(RuleGroupIPSetForwardedIPConfigurationPosition position) {
             this.position = Objects.requireNonNull(position);
             return this;
-        }
-        public RuleGroupIPSetForwardedIPConfiguration build() {
+        }        public RuleGroupIPSetForwardedIPConfiguration build() {
             return new RuleGroupIPSetForwardedIPConfiguration(fallbackBehavior, headerName, position);
         }
     }

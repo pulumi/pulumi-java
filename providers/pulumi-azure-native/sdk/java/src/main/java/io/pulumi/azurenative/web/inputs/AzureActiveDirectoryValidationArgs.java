@@ -80,22 +80,21 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = Output.ofNullable(allowedAudiences);
             return this;
         }
-
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }
         public Builder jwtClaimChecks(@Nullable Output<JwtClaimChecksArgs> jwtClaimChecks) {
             this.jwtClaimChecks = jwtClaimChecks;
             return this;
         }
-
         public Builder jwtClaimChecks(@Nullable JwtClaimChecksArgs jwtClaimChecks) {
             this.jwtClaimChecks = Output.ofNullable(jwtClaimChecks);
             return this;
-        }
-        public AzureActiveDirectoryValidationArgs build() {
+        }        public AzureActiveDirectoryValidationArgs build() {
             return new AzureActiveDirectoryValidationArgs(allowedAudiences, jwtClaimChecks);
         }
     }

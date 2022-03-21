@@ -333,92 +333,86 @@ public final class GetDefaultAdminRuleResult {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder destinationPortRanges(List<String> destinationPortRanges) {
             this.destinationPortRanges = Objects.requireNonNull(destinationPortRanges);
             return this;
         }
-
+        public Builder destinationPortRanges(String... destinationPortRanges) {
+            return destinationPortRanges(List.of(destinationPortRanges));
+        }
         public Builder destinations(List<AddressPrefixItemResponse> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
-
+        public Builder destinations(AddressPrefixItemResponse... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder flag(@Nullable String flag) {
             this.flag = flag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sourcePortRanges(List<String> sourcePortRanges) {
             this.sourcePortRanges = Objects.requireNonNull(sourcePortRanges);
             return this;
         }
-
+        public Builder sourcePortRanges(String... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }
         public Builder sources(List<AddressPrefixItemResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
+        public Builder sources(AddressPrefixItemResponse... sources) {
+            return sources(List.of(sources));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDefaultAdminRuleResult build() {
+        }        public GetDefaultAdminRuleResult build() {
             return new GetDefaultAdminRuleResult(access, description, destinationPortRanges, destinations, direction, displayName, etag, flag, id, kind, name, priority, protocol, provisioningState, sourcePortRanges, sources, systemData, type);
         }
     }

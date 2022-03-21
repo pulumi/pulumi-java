@@ -76,22 +76,18 @@ public final class TableServerSideEncryptionArgs extends io.pulumi.resources.Res
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
-        }
-        public TableServerSideEncryptionArgs build() {
+        }        public TableServerSideEncryptionArgs build() {
             return new TableServerSideEncryptionArgs(enabled, kmsKeyArn);
         }
     }

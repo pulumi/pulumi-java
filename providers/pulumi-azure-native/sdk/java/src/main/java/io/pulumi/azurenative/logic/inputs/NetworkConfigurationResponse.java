@@ -97,17 +97,17 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
             this.accessEndpoint = accessEndpoint;
             return this;
         }
-
         public Builder subnets(@Nullable List<ResourceReferenceResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
-
+        public Builder subnets(ResourceReferenceResponse... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder virtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
             this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
-        }
-        public NetworkConfigurationResponse build() {
+        }        public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(accessEndpoint, subnets, virtualNetworkAddressSpace);
         }
     }

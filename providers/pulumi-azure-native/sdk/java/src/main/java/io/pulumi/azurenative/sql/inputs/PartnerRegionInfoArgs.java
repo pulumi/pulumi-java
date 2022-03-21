@@ -61,12 +61,10 @@ public final class PartnerRegionInfoArgs extends io.pulumi.resources.ResourceArg
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
-        }
-        public PartnerRegionInfoArgs build() {
+        }        public PartnerRegionInfoArgs build() {
             return new PartnerRegionInfoArgs(location);
         }
     }

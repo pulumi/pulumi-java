@@ -175,42 +175,34 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder privateIPAddress(String privateIPAddress) {
             this.privateIPAddress = Objects.requireNonNull(privateIPAddress);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureFirewallIPConfigurationResponse build() {
+        }        public AzureFirewallIPConfigurationResponse build() {
             return new AzureFirewallIPConfigurationResponse(etag, id, name, privateIPAddress, provisioningState, publicIPAddress, subnet, type);
         }
     }

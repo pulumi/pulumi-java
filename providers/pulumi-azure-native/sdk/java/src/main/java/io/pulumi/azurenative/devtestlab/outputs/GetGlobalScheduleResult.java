@@ -300,82 +300,66 @@ public final class GetGlobalScheduleResult {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder dailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
             this.dailyRecurrence = dailyRecurrence;
             return this;
         }
-
         public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
             this.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
-
         public Builder taskType(@Nullable String taskType) {
             this.taskType = taskType;
             return this;
         }
-
         public Builder timeZoneId(@Nullable String timeZoneId) {
             this.timeZoneId = timeZoneId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
-        }
-        public GetGlobalScheduleResult build() {
+        }        public GetGlobalScheduleResult build() {
             return new GetGlobalScheduleResult(createdDate, dailyRecurrence, hourlyRecurrence, id, location, name, notificationSettings, provisioningState, status, tags, targetResourceId, taskType, timeZoneId, type, uniqueIdentifier, weeklyRecurrence);
         }
     }

@@ -209,102 +209,85 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
             this.age = age;
             return this;
         }
-
         public Builder age(@Nullable Integer age) {
             this.age = Output.ofNullable(age);
             return this;
         }
-
         public Builder createdBefore(@Nullable Output<String> createdBefore) {
             this.createdBefore = createdBefore;
             return this;
         }
-
         public Builder createdBefore(@Nullable String createdBefore) {
             this.createdBefore = Output.ofNullable(createdBefore);
             return this;
         }
-
         public Builder customTimeBefore(@Nullable Output<String> customTimeBefore) {
             this.customTimeBefore = customTimeBefore;
             return this;
         }
-
         public Builder customTimeBefore(@Nullable String customTimeBefore) {
             this.customTimeBefore = Output.ofNullable(customTimeBefore);
             return this;
         }
-
         public Builder daysSinceCustomTime(@Nullable Output<Integer> daysSinceCustomTime) {
             this.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
-
         public Builder daysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = Output.ofNullable(daysSinceCustomTime);
             return this;
         }
-
         public Builder daysSinceNoncurrentTime(@Nullable Output<Integer> daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
-
         public Builder daysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = Output.ofNullable(daysSinceNoncurrentTime);
             return this;
         }
-
         public Builder isLive(@Nullable Output<Boolean> isLive) {
             this.isLive = isLive;
             return this;
         }
-
         public Builder isLive(@Nullable Boolean isLive) {
             this.isLive = Output.ofNullable(isLive);
             return this;
         }
-
         public Builder matchesPattern(@Nullable Output<String> matchesPattern) {
             this.matchesPattern = matchesPattern;
             return this;
         }
-
         public Builder matchesPattern(@Nullable String matchesPattern) {
             this.matchesPattern = Output.ofNullable(matchesPattern);
             return this;
         }
-
         public Builder matchesStorageClass(@Nullable Output<List<String>> matchesStorageClass) {
             this.matchesStorageClass = matchesStorageClass;
             return this;
         }
-
         public Builder matchesStorageClass(@Nullable List<String> matchesStorageClass) {
             this.matchesStorageClass = Output.ofNullable(matchesStorageClass);
             return this;
         }
-
+        public Builder matchesStorageClass(String... matchesStorageClass) {
+            return matchesStorageClass(List.of(matchesStorageClass));
+        }
         public Builder noncurrentTimeBefore(@Nullable Output<String> noncurrentTimeBefore) {
             this.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
-
         public Builder noncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = Output.ofNullable(noncurrentTimeBefore);
             return this;
         }
-
         public Builder numNewerVersions(@Nullable Output<Integer> numNewerVersions) {
             this.numNewerVersions = numNewerVersions;
             return this;
         }
-
         public Builder numNewerVersions(@Nullable Integer numNewerVersions) {
             this.numNewerVersions = Output.ofNullable(numNewerVersions);
             return this;
-        }
-        public BucketLifecycleRuleItemConditionArgs build() {
+        }        public BucketLifecycleRuleItemConditionArgs build() {
             return new BucketLifecycleRuleItemConditionArgs(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, isLive, matchesPattern, matchesStorageClass, noncurrentTimeBefore, numNewerVersions);
         }
     }

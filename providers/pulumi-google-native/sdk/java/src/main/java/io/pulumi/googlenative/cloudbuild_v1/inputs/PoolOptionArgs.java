@@ -61,12 +61,10 @@ public final class PoolOptionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public PoolOptionArgs build() {
+        }        public PoolOptionArgs build() {
             return new PoolOptionArgs(name);
         }
     }

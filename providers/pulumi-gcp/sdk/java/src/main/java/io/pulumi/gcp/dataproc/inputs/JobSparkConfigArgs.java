@@ -169,82 +169,78 @@ public final class JobSparkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.archiveUris = archiveUris;
             return this;
         }
-
         public Builder archiveUris(@Nullable List<String> archiveUris) {
             this.archiveUris = Output.ofNullable(archiveUris);
             return this;
         }
-
+        public Builder archiveUris(String... archiveUris) {
+            return archiveUris(List.of(archiveUris));
+        }
         public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
-
         public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = Output.ofNullable(fileUris);
             return this;
         }
-
+        public Builder fileUris(String... fileUris) {
+            return fileUris(List.of(fileUris));
+        }
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(@Nullable Output<JobSparkConfigLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable JobSparkConfigLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder mainClass(@Nullable Output<String> mainClass) {
             this.mainClass = mainClass;
             return this;
         }
-
         public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = Output.ofNullable(mainClass);
             return this;
         }
-
         public Builder mainJarFileUri(@Nullable Output<String> mainJarFileUri) {
             this.mainJarFileUri = mainJarFileUri;
             return this;
         }
-
         public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
             this.mainJarFileUri = Output.ofNullable(mainJarFileUri);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public JobSparkConfigArgs build() {
+        }        public JobSparkConfigArgs build() {
             return new JobSparkConfigArgs(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }
     }

@@ -93,42 +93,43 @@ public final class ServiceTaskSpecPlacementArgs extends io.pulumi.resources.Reso
             this.constraints = constraints;
             return this;
         }
-
         public Builder constraints(@Nullable List<String> constraints) {
             this.constraints = Output.ofNullable(constraints);
             return this;
         }
-
+        public Builder constraints(String... constraints) {
+            return constraints(List.of(constraints));
+        }
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
-
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = Output.ofNullable(maxReplicas);
             return this;
         }
-
         public Builder platforms(@Nullable Output<List<ServiceTaskSpecPlacementPlatformArgs>> platforms) {
             this.platforms = platforms;
             return this;
         }
-
         public Builder platforms(@Nullable List<ServiceTaskSpecPlacementPlatformArgs> platforms) {
             this.platforms = Output.ofNullable(platforms);
             return this;
         }
-
+        public Builder platforms(ServiceTaskSpecPlacementPlatformArgs... platforms) {
+            return platforms(List.of(platforms));
+        }
         public Builder prefs(@Nullable Output<List<String>> prefs) {
             this.prefs = prefs;
             return this;
         }
-
         public Builder prefs(@Nullable List<String> prefs) {
             this.prefs = Output.ofNullable(prefs);
             return this;
         }
-        public ServiceTaskSpecPlacementArgs build() {
+        public Builder prefs(String... prefs) {
+            return prefs(List.of(prefs));
+        }        public ServiceTaskSpecPlacementArgs build() {
             return new ServiceTaskSpecPlacementArgs(constraints, maxReplicas, platforms, prefs);
         }
     }

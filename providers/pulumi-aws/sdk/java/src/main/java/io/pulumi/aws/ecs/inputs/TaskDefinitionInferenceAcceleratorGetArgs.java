@@ -73,22 +73,18 @@ public final class TaskDefinitionInferenceAcceleratorGetArgs extends io.pulumi.r
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder deviceType(Output<String> deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
-
         public Builder deviceType(String deviceType) {
             this.deviceType = Output.of(Objects.requireNonNull(deviceType));
             return this;
-        }
-        public TaskDefinitionInferenceAcceleratorGetArgs build() {
+        }        public TaskDefinitionInferenceAcceleratorGetArgs build() {
             return new TaskDefinitionInferenceAcceleratorGetArgs(deviceName, deviceType);
         }
     }

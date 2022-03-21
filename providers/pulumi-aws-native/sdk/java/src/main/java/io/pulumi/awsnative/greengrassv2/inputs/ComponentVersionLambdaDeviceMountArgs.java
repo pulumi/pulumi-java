@@ -80,32 +80,26 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
             this.addGroupOwner = addGroupOwner;
             return this;
         }
-
         public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
             this.addGroupOwner = Output.ofNullable(addGroupOwner);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder permission(@Nullable Output<ComponentVersionLambdaFilesystemPermission> permission) {
             this.permission = permission;
             return this;
         }
-
         public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
             this.permission = Output.ofNullable(permission);
             return this;
-        }
-        public ComponentVersionLambdaDeviceMountArgs build() {
+        }        public ComponentVersionLambdaDeviceMountArgs build() {
             return new ComponentVersionLambdaDeviceMountArgs(addGroupOwner, path, permission);
         }
     }

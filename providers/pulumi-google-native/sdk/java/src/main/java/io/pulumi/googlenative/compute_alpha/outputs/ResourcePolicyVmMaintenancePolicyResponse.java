@@ -62,12 +62,10 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
             this.concurrencyControlGroup = Objects.requireNonNull(concurrencyControlGroup);
             return this;
         }
-
         public Builder maintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
-        }
-        public ResourcePolicyVmMaintenancePolicyResponse build() {
+        }        public ResourcePolicyVmMaintenancePolicyResponse build() {
             return new ResourcePolicyVmMaintenancePolicyResponse(concurrencyControlGroup, maintenanceWindow);
         }
     }

@@ -102,52 +102,42 @@ public final class PipelineDeviceShadowEnrichArgs extends io.pulumi.resources.Re
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder attribute(String attribute) {
             this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = Output.ofNullable(next);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder thingName(Output<String> thingName) {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }
-
         public Builder thingName(String thingName) {
             this.thingName = Output.of(Objects.requireNonNull(thingName));
             return this;
-        }
-        public PipelineDeviceShadowEnrichArgs build() {
+        }        public PipelineDeviceShadowEnrichArgs build() {
             return new PipelineDeviceShadowEnrichArgs(attribute, name, next, roleArn, thingName);
         }
     }

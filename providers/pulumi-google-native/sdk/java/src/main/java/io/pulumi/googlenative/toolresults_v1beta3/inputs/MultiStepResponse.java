@@ -94,17 +94,14 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
             this.multistepNumber = Objects.requireNonNull(multistepNumber);
             return this;
         }
-
         public Builder primaryStep(PrimaryStepResponse primaryStep) {
             this.primaryStep = Objects.requireNonNull(primaryStep);
             return this;
         }
-
         public Builder primaryStepId(String primaryStepId) {
             this.primaryStepId = Objects.requireNonNull(primaryStepId);
             return this;
-        }
-        public MultiStepResponse build() {
+        }        public MultiStepResponse build() {
             return new MultiStepResponse(multistepNumber, primaryStep, primaryStepId);
         }
     }

@@ -80,27 +80,22 @@ public final class GetServerCollectorResult {
             this.eTag = eTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(CollectorPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerCollectorResult build() {
+        }        public GetServerCollectorResult build() {
             return new GetServerCollectorResult(eTag, id, name, properties, type);
         }
     }

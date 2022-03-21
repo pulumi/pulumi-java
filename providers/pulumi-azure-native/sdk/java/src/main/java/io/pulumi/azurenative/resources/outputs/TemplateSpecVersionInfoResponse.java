@@ -85,17 +85,14 @@ public final class TemplateSpecVersionInfoResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public Builder timeModified(String timeModified) {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
-        }
-        public TemplateSpecVersionInfoResponse build() {
+        }        public TemplateSpecVersionInfoResponse build() {
             return new TemplateSpecVersionInfoResponse(description, timeCreated, timeModified);
         }
     }

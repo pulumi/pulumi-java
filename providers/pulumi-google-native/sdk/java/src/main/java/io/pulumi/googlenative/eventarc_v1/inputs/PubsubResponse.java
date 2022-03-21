@@ -76,12 +76,10 @@ public final class PubsubResponse extends io.pulumi.resources.InvokeArgs {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public PubsubResponse build() {
+        }        public PubsubResponse build() {
             return new PubsubResponse(subscription, topic);
         }
     }

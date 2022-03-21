@@ -95,32 +95,26 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = Output.ofNullable(datastoreId);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder referenceType(Output<String> referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
-
         public Builder referenceType(String referenceType) {
             this.referenceType = Output.of(Objects.requireNonNull(referenceType));
             return this;
-        }
-        public DataPathAssetReferenceArgs build() {
+        }        public DataPathAssetReferenceArgs build() {
             return new DataPathAssetReferenceArgs(datastoreId, path, referenceType);
         }
     }

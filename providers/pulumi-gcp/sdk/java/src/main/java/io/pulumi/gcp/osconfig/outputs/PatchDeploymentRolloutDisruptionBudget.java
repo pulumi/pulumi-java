@@ -71,12 +71,10 @@ public final class PatchDeploymentRolloutDisruptionBudget {
             this.fixed = fixed;
             return this;
         }
-
         public Builder percentage(@Nullable Integer percentage) {
             this.percentage = percentage;
             return this;
-        }
-        public PatchDeploymentRolloutDisruptionBudget build() {
+        }        public PatchDeploymentRolloutDisruptionBudget build() {
             return new PatchDeploymentRolloutDisruptionBudget(fixed, percentage);
         }
     }

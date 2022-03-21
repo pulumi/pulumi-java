@@ -56,12 +56,10 @@ public final class CertificateApiPassthrough {
             this.extensions = extensions;
             return this;
         }
-
         public Builder subject(@Nullable CertificateSubject subject) {
             this.subject = subject;
             return this;
-        }
-        public CertificateApiPassthrough build() {
+        }        public CertificateApiPassthrough build() {
             return new CertificateApiPassthrough(extensions, subject);
         }
     }

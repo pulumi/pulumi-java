@@ -259,112 +259,99 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             this.alertStrategy = alertStrategy;
             return this;
         }
-
         public Builder alertStrategy(@Nullable AlertPolicyAlertStrategyGetArgs alertStrategy) {
             this.alertStrategy = Output.ofNullable(alertStrategy);
             return this;
         }
-
         public Builder combiner(@Nullable Output<String> combiner) {
             this.combiner = combiner;
             return this;
         }
-
         public Builder combiner(@Nullable String combiner) {
             this.combiner = Output.ofNullable(combiner);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<AlertPolicyConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<AlertPolicyConditionGetArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(AlertPolicyConditionGetArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder creationRecords(@Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords) {
             this.creationRecords = creationRecords;
             return this;
         }
-
         public Builder creationRecords(@Nullable List<AlertPolicyCreationRecordGetArgs> creationRecords) {
             this.creationRecords = Output.ofNullable(creationRecords);
             return this;
         }
-
+        public Builder creationRecords(AlertPolicyCreationRecordGetArgs... creationRecords) {
+            return creationRecords(List.of(creationRecords));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder documentation(@Nullable Output<AlertPolicyDocumentationGetArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
-
         public Builder documentation(@Nullable AlertPolicyDocumentationGetArgs documentation) {
             this.documentation = Output.ofNullable(documentation);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationChannels(@Nullable Output<List<String>> notificationChannels) {
             this.notificationChannels = notificationChannels;
             return this;
         }
-
         public Builder notificationChannels(@Nullable List<String> notificationChannels) {
             this.notificationChannels = Output.ofNullable(notificationChannels);
             return this;
         }
-
+        public Builder notificationChannels(String... notificationChannels) {
+            return notificationChannels(List.of(notificationChannels));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
-        }
-        public AlertPolicyState build() {
+        }        public AlertPolicyState build() {
             return new AlertPolicyState(alertStrategy, combiner, conditions, creationRecords, displayName, documentation, enabled, name, notificationChannels, project, userLabels);
         }
     }

@@ -102,22 +102,18 @@ public final class SpacecraftLinkResponse {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
-
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder polarization(String polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
-        }
-        public SpacecraftLinkResponse build() {
+        }        public SpacecraftLinkResponse build() {
             return new SpacecraftLinkResponse(bandwidthMHz, centerFrequencyMHz, direction, polarization);
         }
     }

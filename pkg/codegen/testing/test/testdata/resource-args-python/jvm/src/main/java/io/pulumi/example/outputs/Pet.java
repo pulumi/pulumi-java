@@ -45,8 +45,7 @@ public final class Pet {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public Pet build() {
+        }        public Pet build() {
             return new Pet(name);
         }
     }

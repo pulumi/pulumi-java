@@ -57,12 +57,13 @@ public final class PhpAppLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public PhpAppLayerCloudwatchConfiguration build() {
+        public Builder logStreams(PhpAppLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public PhpAppLayerCloudwatchConfiguration build() {
             return new PhpAppLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

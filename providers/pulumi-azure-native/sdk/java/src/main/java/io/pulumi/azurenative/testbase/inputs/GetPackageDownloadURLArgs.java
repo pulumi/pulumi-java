@@ -88,17 +88,14 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
-        }
-        public GetPackageDownloadURLArgs build() {
+        }        public GetPackageDownloadURLArgs build() {
             return new GetPackageDownloadURLArgs(packageName, resourceGroupName, testBaseAccountName);
         }
     }

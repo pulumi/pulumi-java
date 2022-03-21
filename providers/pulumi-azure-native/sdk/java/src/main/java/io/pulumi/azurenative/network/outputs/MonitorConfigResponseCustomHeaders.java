@@ -71,12 +71,10 @@ public final class MonitorConfigResponseCustomHeaders {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public MonitorConfigResponseCustomHeaders build() {
+        }        public MonitorConfigResponseCustomHeaders build() {
             return new MonitorConfigResponseCustomHeaders(name, value);
         }
     }

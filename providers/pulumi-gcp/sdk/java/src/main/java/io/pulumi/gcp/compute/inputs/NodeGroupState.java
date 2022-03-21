@@ -241,122 +241,98 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-
         public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyGetArgs autoscalingPolicy) {
             this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder initialSize(@Nullable Output<Integer> initialSize) {
             this.initialSize = initialSize;
             return this;
         }
-
         public Builder initialSize(@Nullable Integer initialSize) {
             this.initialSize = Output.ofNullable(initialSize);
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable Output<String> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable String maintenancePolicy) {
             this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowGetArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeTemplate(@Nullable Output<String> nodeTemplate) {
             this.nodeTemplate = nodeTemplate;
             return this;
         }
-
         public Builder nodeTemplate(@Nullable String nodeTemplate) {
             this.nodeTemplate = Output.ofNullable(nodeTemplate);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public NodeGroupState build() {
+        }        public NodeGroupState build() {
             return new NodeGroupState(autoscalingPolicy, creationTimestamp, description, initialSize, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, selfLink, size, zone);
         }
     }

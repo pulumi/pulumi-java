@@ -96,17 +96,17 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
             this.containerIds = containerIds;
             return this;
         }
-
+        public Builder containerIds(String... containerIds) {
+            return containerIds(List.of(containerIds));
+        }
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
-        }
-        public AzureFabricSpecificDetailsResponse build() {
+        }        public AzureFabricSpecificDetailsResponse build() {
             return new AzureFabricSpecificDetailsResponse(containerIds, instanceType, location);
         }
     }

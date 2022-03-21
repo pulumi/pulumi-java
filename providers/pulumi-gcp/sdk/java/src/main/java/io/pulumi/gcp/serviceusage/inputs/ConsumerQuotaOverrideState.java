@@ -174,82 +174,66 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
         public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable Boolean force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder limit(@Nullable Output<String> limit) {
             this.limit = limit;
             return this;
         }
-
         public Builder limit(@Nullable String limit) {
             this.limit = Output.ofNullable(limit);
             return this;
         }
-
         public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable String metric) {
             this.metric = Output.ofNullable(metric);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder overrideValue(@Nullable Output<String> overrideValue) {
             this.overrideValue = overrideValue;
             return this;
         }
-
         public Builder overrideValue(@Nullable String overrideValue) {
             this.overrideValue = Output.ofNullable(overrideValue);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public ConsumerQuotaOverrideState build() {
+        }        public ConsumerQuotaOverrideState build() {
             return new ConsumerQuotaOverrideState(dimensions, force, limit, metric, name, overrideValue, project, service);
         }
     }

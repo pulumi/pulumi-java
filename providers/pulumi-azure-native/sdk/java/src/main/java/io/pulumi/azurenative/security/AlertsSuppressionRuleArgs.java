@@ -157,72 +157,58 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
             this.alertType = Objects.requireNonNull(alertType);
             return this;
         }
-
         public Builder alertType(String alertType) {
             this.alertType = Output.of(Objects.requireNonNull(alertType));
             return this;
         }
-
         public Builder alertsSuppressionRuleName(@Nullable Output<String> alertsSuppressionRuleName) {
             this.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;
         }
-
         public Builder alertsSuppressionRuleName(@Nullable String alertsSuppressionRuleName) {
             this.alertsSuppressionRuleName = Output.ofNullable(alertsSuppressionRuleName);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder expirationDateUtc(@Nullable Output<String> expirationDateUtc) {
             this.expirationDateUtc = expirationDateUtc;
             return this;
         }
-
         public Builder expirationDateUtc(@Nullable String expirationDateUtc) {
             this.expirationDateUtc = Output.ofNullable(expirationDateUtc);
             return this;
         }
-
         public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
-
         public Builder state(Output<Either<String,RuleState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(Either<String,RuleState> state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder suppressionAlertsScope(@Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
             this.suppressionAlertsScope = suppressionAlertsScope;
             return this;
         }
-
         public Builder suppressionAlertsScope(@Nullable SuppressionAlertsScopeArgs suppressionAlertsScope) {
             this.suppressionAlertsScope = Output.ofNullable(suppressionAlertsScope);
             return this;
-        }
-        public AlertsSuppressionRuleArgs build() {
+        }        public AlertsSuppressionRuleArgs build() {
             return new AlertsSuppressionRuleArgs(alertType, alertsSuppressionRuleName, comment, expirationDateUtc, reason, state, suppressionAlertsScope);
         }
     }

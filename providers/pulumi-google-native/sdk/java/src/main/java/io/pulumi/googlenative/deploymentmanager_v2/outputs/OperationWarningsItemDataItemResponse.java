@@ -69,12 +69,10 @@ public final class OperationWarningsItemDataItemResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public OperationWarningsItemDataItemResponse build() {
+        }        public OperationWarningsItemDataItemResponse build() {
             return new OperationWarningsItemDataItemResponse(key, value);
         }
     }

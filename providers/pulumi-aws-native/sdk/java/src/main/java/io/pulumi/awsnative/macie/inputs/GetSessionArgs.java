@@ -54,8 +54,7 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
-        }
-        public GetSessionArgs build() {
+        }        public GetSessionArgs build() {
             return new GetSessionArgs(awsAccountId);
         }
     }

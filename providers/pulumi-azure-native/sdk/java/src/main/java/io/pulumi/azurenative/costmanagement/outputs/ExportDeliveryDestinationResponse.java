@@ -87,17 +87,14 @@ public final class ExportDeliveryDestinationResponse {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder rootFolderPath(@Nullable String rootFolderPath) {
             this.rootFolderPath = rootFolderPath;
             return this;
-        }
-        public ExportDeliveryDestinationResponse build() {
+        }        public ExportDeliveryDestinationResponse build() {
             return new ExportDeliveryDestinationResponse(container, resourceId, rootFolderPath);
         }
     }

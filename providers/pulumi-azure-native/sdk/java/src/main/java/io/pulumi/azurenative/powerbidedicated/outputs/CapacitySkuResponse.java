@@ -88,17 +88,14 @@ public final class CapacitySkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public CapacitySkuResponse build() {
+        }        public CapacitySkuResponse build() {
             return new CapacitySkuResponse(capacity, name, tier);
         }
     }

@@ -50,8 +50,7 @@ public final class GetRobotApplicationVersionArgs extends io.pulumi.resources.In
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetRobotApplicationVersionArgs build() {
+        }        public GetRobotApplicationVersionArgs build() {
             return new GetRobotApplicationVersionArgs(arn);
         }
     }

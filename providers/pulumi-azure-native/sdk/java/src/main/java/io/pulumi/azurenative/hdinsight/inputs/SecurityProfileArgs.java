@@ -192,92 +192,80 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.aaddsResourceId = aaddsResourceId;
             return this;
         }
-
         public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
             this.aaddsResourceId = Output.ofNullable(aaddsResourceId);
             return this;
         }
-
         public Builder clusterUsersGroupDNs(@Nullable Output<List<String>> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
-
         public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = Output.ofNullable(clusterUsersGroupDNs);
             return this;
         }
-
+        public Builder clusterUsersGroupDNs(String... clusterUsersGroupDNs) {
+            return clusterUsersGroupDNs(List.of(clusterUsersGroupDNs));
+        }
         public Builder directoryType(@Nullable Output<DirectoryType> directoryType) {
             this.directoryType = directoryType;
             return this;
         }
-
         public Builder directoryType(@Nullable DirectoryType directoryType) {
             this.directoryType = Output.ofNullable(directoryType);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder domainUserPassword(@Nullable Output<String> domainUserPassword) {
             this.domainUserPassword = domainUserPassword;
             return this;
         }
-
         public Builder domainUserPassword(@Nullable String domainUserPassword) {
             this.domainUserPassword = Output.ofNullable(domainUserPassword);
             return this;
         }
-
         public Builder domainUsername(@Nullable Output<String> domainUsername) {
             this.domainUsername = domainUsername;
             return this;
         }
-
         public Builder domainUsername(@Nullable String domainUsername) {
             this.domainUsername = Output.ofNullable(domainUsername);
             return this;
         }
-
         public Builder ldapsUrls(@Nullable Output<List<String>> ldapsUrls) {
             this.ldapsUrls = ldapsUrls;
             return this;
         }
-
         public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
             this.ldapsUrls = Output.ofNullable(ldapsUrls);
             return this;
         }
-
+        public Builder ldapsUrls(String... ldapsUrls) {
+            return ldapsUrls(List.of(ldapsUrls));
+        }
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
-
         public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = Output.ofNullable(msiResourceId);
             return this;
         }
-
         public Builder organizationalUnitDN(@Nullable Output<String> organizationalUnitDN) {
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
         }
-
         public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
             this.organizationalUnitDN = Output.ofNullable(organizationalUnitDN);
             return this;
-        }
-        public SecurityProfileArgs build() {
+        }        public SecurityProfileArgs build() {
             return new SecurityProfileArgs(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);
         }
     }

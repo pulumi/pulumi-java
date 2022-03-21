@@ -61,17 +61,14 @@ public final class GetNotificationChannelSensitiveLabel {
             this.authToken = Objects.requireNonNull(authToken);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder serviceKey(String serviceKey) {
             this.serviceKey = Objects.requireNonNull(serviceKey);
             return this;
-        }
-        public GetNotificationChannelSensitiveLabel build() {
+        }        public GetNotificationChannelSensitiveLabel build() {
             return new GetNotificationChannelSensitiveLabel(authToken, password, serviceKey);
         }
     }

@@ -106,42 +106,34 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder reservationType(Output<String> reservationType) {
             this.reservationType = Objects.requireNonNull(reservationType);
             return this;
         }
-
         public Builder reservationType(String reservationType) {
             this.reservationType = Output.of(Objects.requireNonNull(reservationType));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public SubnetCidrReservationArgs build() {
+        }        public SubnetCidrReservationArgs build() {
             return new SubnetCidrReservationArgs(cidrBlock, description, reservationType, subnetId);
         }
     }

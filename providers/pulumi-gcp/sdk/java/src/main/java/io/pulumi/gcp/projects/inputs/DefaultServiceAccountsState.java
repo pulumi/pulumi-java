@@ -111,42 +111,34 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder restorePolicy(@Nullable Output<String> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
-
         public Builder restorePolicy(@Nullable String restorePolicy) {
             this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
-
         public Builder serviceAccounts(@Nullable Output<Map<String,Object>> serviceAccounts) {
             this.serviceAccounts = serviceAccounts;
             return this;
         }
-
         public Builder serviceAccounts(@Nullable Map<String,Object> serviceAccounts) {
             this.serviceAccounts = Output.ofNullable(serviceAccounts);
             return this;
-        }
-        public DefaultServiceAccountsState build() {
+        }        public DefaultServiceAccountsState build() {
             return new DefaultServiceAccountsState(action, project, restorePolicy, serviceAccounts);
         }
     }

@@ -72,12 +72,10 @@ public final class ListWorkspaceNotebookAccessTokenArgs extends io.pulumi.resour
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListWorkspaceNotebookAccessTokenArgs build() {
+        }        public ListWorkspaceNotebookAccessTokenArgs build() {
             return new ListWorkspaceNotebookAccessTokenArgs(resourceGroupName, workspaceName);
         }
     }

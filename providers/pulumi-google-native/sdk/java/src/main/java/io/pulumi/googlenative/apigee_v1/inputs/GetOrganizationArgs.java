@@ -50,8 +50,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetOrganizationArgs build() {
+        }        public GetOrganizationArgs build() {
             return new GetOrganizationArgs(organizationId);
         }
     }

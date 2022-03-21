@@ -108,32 +108,26 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends io.pulumi.r
             this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
             return this;
         }
-
         public Builder disableConnectionDrainOnFailover(@Nullable Boolean disableConnectionDrainOnFailover) {
             this.disableConnectionDrainOnFailover = Output.ofNullable(disableConnectionDrainOnFailover);
             return this;
         }
-
         public Builder dropTrafficIfUnhealthy(@Nullable Output<Boolean> dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
             return this;
         }
-
         public Builder dropTrafficIfUnhealthy(@Nullable Boolean dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = Output.ofNullable(dropTrafficIfUnhealthy);
             return this;
         }
-
         public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
         }
-
         public Builder failoverRatio(@Nullable Double failoverRatio) {
             this.failoverRatio = Output.ofNullable(failoverRatio);
             return this;
-        }
-        public RegionBackendServiceFailoverPolicyGetArgs build() {
+        }        public RegionBackendServiceFailoverPolicyGetArgs build() {
             return new RegionBackendServiceFailoverPolicyGetArgs(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }
     }

@@ -101,22 +101,18 @@ public final class ExternalRefResponse {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder locator(String locator) {
             this.locator = Objects.requireNonNull(locator);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ExternalRefResponse build() {
+        }        public ExternalRefResponse build() {
             return new ExternalRefResponse(category, comment, locator, type);
         }
     }

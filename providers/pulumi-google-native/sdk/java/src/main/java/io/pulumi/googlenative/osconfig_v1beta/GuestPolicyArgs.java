@@ -183,92 +183,83 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.assignment = Objects.requireNonNull(assignment);
             return this;
         }
-
         public Builder assignment(AssignmentArgs assignment) {
             this.assignment = Output.of(Objects.requireNonNull(assignment));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder guestPolicyId(Output<String> guestPolicyId) {
             this.guestPolicyId = Objects.requireNonNull(guestPolicyId);
             return this;
         }
-
         public Builder guestPolicyId(String guestPolicyId) {
             this.guestPolicyId = Output.of(Objects.requireNonNull(guestPolicyId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageRepositories(@Nullable Output<List<PackageRepositoryArgs>> packageRepositories) {
             this.packageRepositories = packageRepositories;
             return this;
         }
-
         public Builder packageRepositories(@Nullable List<PackageRepositoryArgs> packageRepositories) {
             this.packageRepositories = Output.ofNullable(packageRepositories);
             return this;
         }
-
+        public Builder packageRepositories(PackageRepositoryArgs... packageRepositories) {
+            return packageRepositories(List.of(packageRepositories));
+        }
         public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
             this.packages = packages;
             return this;
         }
-
         public Builder packages(@Nullable List<PackageArgs> packages) {
             this.packages = Output.ofNullable(packages);
             return this;
         }
-
+        public Builder packages(PackageArgs... packages) {
+            return packages(List.of(packages));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder recipes(@Nullable Output<List<SoftwareRecipeArgs>> recipes) {
             this.recipes = recipes;
             return this;
         }
-
         public Builder recipes(@Nullable List<SoftwareRecipeArgs> recipes) {
             this.recipes = Output.ofNullable(recipes);
             return this;
         }
-        public GuestPolicyArgs build() {
+        public Builder recipes(SoftwareRecipeArgs... recipes) {
+            return recipes(List.of(recipes));
+        }        public GuestPolicyArgs build() {
             return new GuestPolicyArgs(assignment, description, etag, guestPolicyId, name, packageRepositories, packages, project, recipes);
         }
     }

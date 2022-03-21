@@ -93,32 +93,26 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
             this.maximum = maximum;
             return this;
         }
-
         public Builder maximum(@Nullable Integer maximum) {
             this.maximum = Output.ofNullable(maximum);
             return this;
         }
-
         public Builder minimum(@Nullable Output<Integer> minimum) {
             this.minimum = minimum;
             return this;
         }
-
         public Builder minimum(@Nullable Integer minimum) {
             this.minimum = Output.ofNullable(minimum);
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
-        }
-        public ClusterClusterAutoscalingResourceLimitGetArgs build() {
+        }        public ClusterClusterAutoscalingResourceLimitGetArgs build() {
             return new ClusterClusterAutoscalingResourceLimitGetArgs(maximum, minimum, resourceType);
         }
     }

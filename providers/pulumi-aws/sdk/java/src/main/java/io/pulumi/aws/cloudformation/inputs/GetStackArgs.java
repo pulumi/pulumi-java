@@ -75,12 +75,10 @@ public final class GetStackArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetStackArgs build() {
+        }        public GetStackArgs build() {
             return new GetStackArgs(name, tags);
         }
     }

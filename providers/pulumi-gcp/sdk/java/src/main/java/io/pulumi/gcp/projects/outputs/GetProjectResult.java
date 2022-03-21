@@ -79,17 +79,17 @@ public final class GetProjectResult {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder projects(List<GetProjectProject> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
-        public GetProjectResult build() {
+        public Builder projects(GetProjectProject... projects) {
+            return projects(List.of(projects));
+        }        public GetProjectResult build() {
             return new GetProjectResult(filter, id, projects);
         }
     }

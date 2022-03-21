@@ -253,67 +253,54 @@ public final class TransferSpecResponse {
             this.awsS3DataSource = Objects.requireNonNull(awsS3DataSource);
             return this;
         }
-
         public Builder azureBlobStorageDataSource(AzureBlobStorageDataResponse azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = Objects.requireNonNull(azureBlobStorageDataSource);
             return this;
         }
-
         public Builder gcsDataSink(GcsDataResponse gcsDataSink) {
             this.gcsDataSink = Objects.requireNonNull(gcsDataSink);
             return this;
         }
-
         public Builder gcsDataSource(GcsDataResponse gcsDataSource) {
             this.gcsDataSource = Objects.requireNonNull(gcsDataSource);
             return this;
         }
-
         public Builder gcsIntermediateDataLocation(GcsDataResponse gcsIntermediateDataLocation) {
             this.gcsIntermediateDataLocation = Objects.requireNonNull(gcsIntermediateDataLocation);
             return this;
         }
-
         public Builder httpDataSource(HttpDataResponse httpDataSource) {
             this.httpDataSource = Objects.requireNonNull(httpDataSource);
             return this;
         }
-
         public Builder objectConditions(ObjectConditionsResponse objectConditions) {
             this.objectConditions = Objects.requireNonNull(objectConditions);
             return this;
         }
-
         public Builder posixDataSink(PosixFilesystemResponse posixDataSink) {
             this.posixDataSink = Objects.requireNonNull(posixDataSink);
             return this;
         }
-
         public Builder posixDataSource(PosixFilesystemResponse posixDataSource) {
             this.posixDataSource = Objects.requireNonNull(posixDataSource);
             return this;
         }
-
         public Builder sinkAgentPoolName(String sinkAgentPoolName) {
             this.sinkAgentPoolName = Objects.requireNonNull(sinkAgentPoolName);
             return this;
         }
-
         public Builder sourceAgentPoolName(String sourceAgentPoolName) {
             this.sourceAgentPoolName = Objects.requireNonNull(sourceAgentPoolName);
             return this;
         }
-
         public Builder transferManifest(TransferManifestResponse transferManifest) {
             this.transferManifest = Objects.requireNonNull(transferManifest);
             return this;
         }
-
         public Builder transferOptions(TransferOptionsResponse transferOptions) {
             this.transferOptions = Objects.requireNonNull(transferOptions);
             return this;
-        }
-        public TransferSpecResponse build() {
+        }        public TransferSpecResponse build() {
             return new TransferSpecResponse(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);
         }
     }

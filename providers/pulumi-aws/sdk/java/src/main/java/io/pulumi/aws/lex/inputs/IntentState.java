@@ -345,172 +345,144 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder checksum(@Nullable Output<String> checksum) {
             this.checksum = checksum;
             return this;
         }
-
         public Builder checksum(@Nullable String checksum) {
             this.checksum = Output.ofNullable(checksum);
             return this;
         }
-
         public Builder conclusionStatement(@Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement) {
             this.conclusionStatement = conclusionStatement;
             return this;
         }
-
         public Builder conclusionStatement(@Nullable IntentConclusionStatementGetArgs conclusionStatement) {
             this.conclusionStatement = Output.ofNullable(conclusionStatement);
             return this;
         }
-
         public Builder confirmationPrompt(@Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt) {
             this.confirmationPrompt = confirmationPrompt;
             return this;
         }
-
         public Builder confirmationPrompt(@Nullable IntentConfirmationPromptGetArgs confirmationPrompt) {
             this.confirmationPrompt = Output.ofNullable(confirmationPrompt);
             return this;
         }
-
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
-
         public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Output.ofNullable(createVersion);
             return this;
         }
-
         public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dialogCodeHook(@Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
-
         public Builder dialogCodeHook(@Nullable IntentDialogCodeHookGetArgs dialogCodeHook) {
             this.dialogCodeHook = Output.ofNullable(dialogCodeHook);
             return this;
         }
-
         public Builder followUpPrompt(@Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt) {
             this.followUpPrompt = followUpPrompt;
             return this;
         }
-
         public Builder followUpPrompt(@Nullable IntentFollowUpPromptGetArgs followUpPrompt) {
             this.followUpPrompt = Output.ofNullable(followUpPrompt);
             return this;
         }
-
         public Builder fulfillmentActivity(@Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity) {
             this.fulfillmentActivity = fulfillmentActivity;
             return this;
         }
-
         public Builder fulfillmentActivity(@Nullable IntentFulfillmentActivityGetArgs fulfillmentActivity) {
             this.fulfillmentActivity = Output.ofNullable(fulfillmentActivity);
             return this;
         }
-
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentIntentSignature(@Nullable Output<String> parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
-
         public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = Output.ofNullable(parentIntentSignature);
             return this;
         }
-
         public Builder rejectionStatement(@Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement) {
             this.rejectionStatement = rejectionStatement;
             return this;
         }
-
         public Builder rejectionStatement(@Nullable IntentRejectionStatementGetArgs rejectionStatement) {
             this.rejectionStatement = Output.ofNullable(rejectionStatement);
             return this;
         }
-
         public Builder sampleUtterances(@Nullable Output<List<String>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
-
         public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
             this.sampleUtterances = Output.ofNullable(sampleUtterances);
             return this;
         }
-
+        public Builder sampleUtterances(String... sampleUtterances) {
+            return sampleUtterances(List.of(sampleUtterances));
+        }
         public Builder slots(@Nullable Output<List<IntentSlotGetArgs>> slots) {
             this.slots = slots;
             return this;
         }
-
         public Builder slots(@Nullable List<IntentSlotGetArgs> slots) {
             this.slots = Output.ofNullable(slots);
             return this;
         }
-
+        public Builder slots(IntentSlotGetArgs... slots) {
+            return slots(List.of(slots));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public IntentState build() {
+        }        public IntentState build() {
             return new IntentState(arn, checksum, conclusionStatement, confirmationPrompt, createVersion, createdDate, description, dialogCodeHook, followUpPrompt, fulfillmentActivity, lastUpdatedDate, name, parentIntentSignature, rejectionStatement, sampleUtterances, slots, version);
         }
     }

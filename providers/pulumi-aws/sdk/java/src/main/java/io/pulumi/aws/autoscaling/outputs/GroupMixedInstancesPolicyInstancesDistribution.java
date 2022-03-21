@@ -136,32 +136,26 @@ public final class GroupMixedInstancesPolicyInstancesDistribution {
             this.onDemandAllocationStrategy = onDemandAllocationStrategy;
             return this;
         }
-
         public Builder onDemandBaseCapacity(@Nullable Integer onDemandBaseCapacity) {
             this.onDemandBaseCapacity = onDemandBaseCapacity;
             return this;
         }
-
         public Builder onDemandPercentageAboveBaseCapacity(@Nullable Integer onDemandPercentageAboveBaseCapacity) {
             this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
             return this;
         }
-
         public Builder spotAllocationStrategy(@Nullable String spotAllocationStrategy) {
             this.spotAllocationStrategy = spotAllocationStrategy;
             return this;
         }
-
         public Builder spotInstancePools(@Nullable Integer spotInstancePools) {
             this.spotInstancePools = spotInstancePools;
             return this;
         }
-
         public Builder spotMaxPrice(@Nullable String spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
-        }
-        public GroupMixedInstancesPolicyInstancesDistribution build() {
+        }        public GroupMixedInstancesPolicyInstancesDistribution build() {
             return new GroupMixedInstancesPolicyInstancesDistribution(onDemandAllocationStrategy, onDemandBaseCapacity, onDemandPercentageAboveBaseCapacity, spotAllocationStrategy, spotInstancePools, spotMaxPrice);
         }
     }

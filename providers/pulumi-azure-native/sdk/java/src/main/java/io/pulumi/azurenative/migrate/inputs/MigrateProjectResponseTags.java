@@ -56,8 +56,7 @@ public final class MigrateProjectResponseTags extends io.pulumi.resources.Invoke
         public Builder additionalProperties(@Nullable String additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
-        }
-        public MigrateProjectResponseTags build() {
+        }        public MigrateProjectResponseTags build() {
             return new MigrateProjectResponseTags(additionalProperties);
         }
     }

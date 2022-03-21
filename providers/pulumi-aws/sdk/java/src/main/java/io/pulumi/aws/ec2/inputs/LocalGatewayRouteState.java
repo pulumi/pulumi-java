@@ -90,32 +90,26 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
-
         public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
-
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Output.ofNullable(localGatewayRouteTableId);
             return this;
         }
-
         public Builder localGatewayVirtualInterfaceGroupId(@Nullable Output<String> localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
             return this;
         }
-
         public Builder localGatewayVirtualInterfaceGroupId(@Nullable String localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = Output.ofNullable(localGatewayVirtualInterfaceGroupId);
             return this;
-        }
-        public LocalGatewayRouteState build() {
+        }        public LocalGatewayRouteState build() {
             return new LocalGatewayRouteState(destinationCidrBlock, localGatewayRouteTableId, localGatewayVirtualInterfaceGroupId);
         }
     }

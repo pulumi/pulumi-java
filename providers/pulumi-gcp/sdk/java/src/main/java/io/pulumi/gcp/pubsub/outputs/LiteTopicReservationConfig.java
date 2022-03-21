@@ -53,8 +53,7 @@ public final class LiteTopicReservationConfig {
         public Builder throughputReservation(@Nullable String throughputReservation) {
             this.throughputReservation = throughputReservation;
             return this;
-        }
-        public LiteTopicReservationConfig build() {
+        }        public LiteTopicReservationConfig build() {
             return new LiteTopicReservationConfig(throughputReservation);
         }
     }

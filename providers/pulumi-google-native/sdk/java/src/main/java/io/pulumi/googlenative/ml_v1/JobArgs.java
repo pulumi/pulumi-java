@@ -171,82 +171,66 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder jobId(Output<String> jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder jobId(String jobId) {
             this.jobId = Output.of(Objects.requireNonNull(jobId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder predictionInput(@Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput) {
             this.predictionInput = predictionInput;
             return this;
         }
-
         public Builder predictionInput(@Nullable GoogleCloudMlV1__PredictionInputArgs predictionInput) {
             this.predictionInput = Output.ofNullable(predictionInput);
             return this;
         }
-
         public Builder predictionOutput(@Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput) {
             this.predictionOutput = predictionOutput;
             return this;
         }
-
         public Builder predictionOutput(@Nullable GoogleCloudMlV1__PredictionOutputArgs predictionOutput) {
             this.predictionOutput = Output.ofNullable(predictionOutput);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder trainingInput(@Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput) {
             this.trainingInput = trainingInput;
             return this;
         }
-
         public Builder trainingInput(@Nullable GoogleCloudMlV1__TrainingInputArgs trainingInput) {
             this.trainingInput = Output.ofNullable(trainingInput);
             return this;
         }
-
         public Builder trainingOutput(@Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput) {
             this.trainingOutput = trainingOutput;
             return this;
         }
-
         public Builder trainingOutput(@Nullable GoogleCloudMlV1__TrainingOutputArgs trainingOutput) {
             this.trainingOutput = Output.ofNullable(trainingOutput);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(etag, jobId, labels, predictionInput, predictionOutput, project, trainingInput, trainingOutput);
         }
     }

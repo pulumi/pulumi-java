@@ -89,17 +89,14 @@ public final class ClassificationJobScheduleFrequency {
             this.dailySchedule = dailySchedule;
             return this;
         }
-
         public Builder monthlySchedule(@Nullable Integer monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
-
         public Builder weeklySchedule(@Nullable String weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
-        }
-        public ClassificationJobScheduleFrequency build() {
+        }        public ClassificationJobScheduleFrequency build() {
             return new ClassificationJobScheduleFrequency(dailySchedule, monthlySchedule, weeklySchedule);
         }
     }

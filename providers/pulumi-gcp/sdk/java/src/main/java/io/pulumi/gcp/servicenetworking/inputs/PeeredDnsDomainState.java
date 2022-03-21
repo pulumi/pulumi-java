@@ -138,62 +138,50 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             this.dnsSuffix = dnsSuffix;
             return this;
         }
-
         public Builder dnsSuffix(@Nullable String dnsSuffix) {
             this.dnsSuffix = Output.ofNullable(dnsSuffix);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public PeeredDnsDomainState build() {
+        }        public PeeredDnsDomainState build() {
             return new PeeredDnsDomainState(dnsSuffix, name, network, parent, project, service);
         }
     }

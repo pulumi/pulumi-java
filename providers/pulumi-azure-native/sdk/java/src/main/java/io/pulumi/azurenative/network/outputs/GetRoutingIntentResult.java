@@ -137,32 +137,29 @@ public final class GetRoutingIntentResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routingPolicies(@Nullable List<RoutingPolicyResponse> routingPolicies) {
             this.routingPolicies = routingPolicies;
             return this;
         }
-
+        public Builder routingPolicies(RoutingPolicyResponse... routingPolicies) {
+            return routingPolicies(List.of(routingPolicies));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRoutingIntentResult build() {
+        }        public GetRoutingIntentResult build() {
             return new GetRoutingIntentResult(etag, id, name, provisioningState, routingPolicies, type);
         }
     }

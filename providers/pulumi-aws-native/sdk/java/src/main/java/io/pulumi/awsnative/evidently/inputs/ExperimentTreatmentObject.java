@@ -90,22 +90,18 @@ public final class ExperimentTreatmentObject extends io.pulumi.resources.InvokeA
             this.description = description;
             return this;
         }
-
         public Builder feature(String feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
-
         public Builder treatmentName(String treatmentName) {
             this.treatmentName = Objects.requireNonNull(treatmentName);
             return this;
         }
-
         public Builder variation(String variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
-        }
-        public ExperimentTreatmentObject build() {
+        }        public ExperimentTreatmentObject build() {
             return new ExperimentTreatmentObject(description, feature, treatmentName, variation);
         }
     }

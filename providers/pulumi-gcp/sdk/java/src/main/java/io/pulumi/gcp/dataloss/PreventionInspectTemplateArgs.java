@@ -112,42 +112,34 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder inspectConfig(@Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
-
         public Builder inspectConfig(@Nullable PreventionInspectTemplateInspectConfigArgs inspectConfig) {
             this.inspectConfig = Output.ofNullable(inspectConfig);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
-        }
-        public PreventionInspectTemplateArgs build() {
+        }        public PreventionInspectTemplateArgs build() {
             return new PreventionInspectTemplateArgs(description, displayName, inspectConfig, parent);
         }
     }

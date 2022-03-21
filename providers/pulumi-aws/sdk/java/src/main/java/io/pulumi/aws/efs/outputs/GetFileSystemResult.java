@@ -260,77 +260,62 @@ public final class GetFileSystemResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
-
         public Builder availabilityZoneName(String availabilityZoneName) {
             this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
             return this;
         }
-
         public Builder creationToken(String creationToken) {
             this.creationToken = Objects.requireNonNull(creationToken);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder lifecyclePolicy(GetFileSystemLifecyclePolicy lifecyclePolicy) {
             this.lifecyclePolicy = Objects.requireNonNull(lifecyclePolicy);
             return this;
         }
-
         public Builder performanceMode(String performanceMode) {
             this.performanceMode = Objects.requireNonNull(performanceMode);
             return this;
         }
-
         public Builder provisionedThroughputInMibps(Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Objects.requireNonNull(provisionedThroughputInMibps);
             return this;
         }
-
         public Builder sizeInBytes(Integer sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder throughputMode(String throughputMode) {
             this.throughputMode = Objects.requireNonNull(throughputMode);
             return this;
-        }
-        public GetFileSystemResult build() {
+        }        public GetFileSystemResult build() {
             return new GetFileSystemResult(arn, availabilityZoneId, availabilityZoneName, creationToken, dnsName, encrypted, fileSystemId, id, kmsKeyId, lifecyclePolicy, performanceMode, provisionedThroughputInMibps, sizeInBytes, tags, throughputMode);
         }
     }

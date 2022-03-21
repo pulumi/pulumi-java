@@ -172,82 +172,66 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             this.activate = activate;
             return this;
         }
-
         public Builder activate(@Nullable Boolean activate) {
             this.activate = Output.ofNullable(activate);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
-
         public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ThreatIntelSetState build() {
+        }        public ThreatIntelSetState build() {
             return new ThreatIntelSetState(activate, arn, detectorId, format, location, name, tags, tagsAll);
         }
     }

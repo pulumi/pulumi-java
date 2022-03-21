@@ -128,52 +128,42 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
             this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource);
             return this;
         }
-
         public Builder bitbucketServerConfigResource(String bitbucketServerConfigResource) {
             this.bitbucketServerConfigResource = Output.of(Objects.requireNonNull(bitbucketServerConfigResource));
             return this;
         }
-
         public Builder projectKey(Output<String> projectKey) {
             this.projectKey = Objects.requireNonNull(projectKey);
             return this;
         }
-
         public Builder projectKey(String projectKey) {
             this.projectKey = Output.of(Objects.requireNonNull(projectKey));
             return this;
         }
-
         public Builder pullRequest(@Nullable Output<PullRequestFilterArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
-
         public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
             this.pullRequest = Output.ofNullable(pullRequest);
             return this;
         }
-
         public Builder push(@Nullable Output<PushFilterArgs> push) {
             this.push = push;
             return this;
         }
-
         public Builder push(@Nullable PushFilterArgs push) {
             this.push = Output.ofNullable(push);
             return this;
         }
-
         public Builder repoSlug(Output<String> repoSlug) {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
-
         public Builder repoSlug(String repoSlug) {
             this.repoSlug = Output.of(Objects.requireNonNull(repoSlug));
             return this;
-        }
-        public BitbucketServerTriggerConfigArgs build() {
+        }        public BitbucketServerTriggerConfigArgs build() {
             return new BitbucketServerTriggerConfigArgs(bitbucketServerConfigResource, projectKey, pullRequest, push, repoSlug);
         }
     }

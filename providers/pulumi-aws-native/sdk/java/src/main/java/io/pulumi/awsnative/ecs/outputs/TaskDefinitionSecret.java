@@ -53,12 +53,10 @@ public final class TaskDefinitionSecret {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder valueFrom(String valueFrom) {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
-        }
-        public TaskDefinitionSecret build() {
+        }        public TaskDefinitionSecret build() {
             return new TaskDefinitionSecret(name, valueFrom);
         }
     }

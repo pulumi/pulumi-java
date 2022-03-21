@@ -310,82 +310,75 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
             this.autoscaling = Objects.requireNonNull(autoscaling);
             return this;
         }
-
         public Builder conditions(List<StatusConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
+        public Builder conditions(StatusConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder config(NodeConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder initialNodeCount(Integer initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
-
         public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
             this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
             return this;
         }
-
+        public Builder instanceGroupUrls(String... instanceGroupUrls) {
+            return instanceGroupUrls(List.of(instanceGroupUrls));
+        }
         public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder management(NodeManagementResponse management) {
             this.management = Objects.requireNonNull(management);
             return this;
         }
-
         public Builder maxPodsConstraint(MaxPodsConstraintResponse maxPodsConstraint) {
             this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkConfig(NodeNetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
-
         public Builder placementPolicy(PlacementPolicyResponse placementPolicy) {
             this.placementPolicy = Objects.requireNonNull(placementPolicy);
             return this;
         }
-
         public Builder podIpv4CidrSize(Integer podIpv4CidrSize) {
             this.podIpv4CidrSize = Objects.requireNonNull(podIpv4CidrSize);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public NodePoolResponse build() {
+        }        public NodePoolResponse build() {
             return new NodePoolResponse(autoscaling, conditions, config, initialNodeCount, instanceGroupUrls, locations, management, maxPodsConstraint, name, networkConfig, placementPolicy, podIpv4CidrSize, selfLink, status, upgradeSettings, version);
         }
     }

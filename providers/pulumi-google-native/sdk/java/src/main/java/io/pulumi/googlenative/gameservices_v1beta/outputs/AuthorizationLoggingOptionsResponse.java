@@ -51,8 +51,7 @@ public final class AuthorizationLoggingOptionsResponse {
         public Builder permissionType(String permissionType) {
             this.permissionType = Objects.requireNonNull(permissionType);
             return this;
-        }
-        public AuthorizationLoggingOptionsResponse build() {
+        }        public AuthorizationLoggingOptionsResponse build() {
             return new AuthorizationLoggingOptionsResponse(permissionType);
         }
     }

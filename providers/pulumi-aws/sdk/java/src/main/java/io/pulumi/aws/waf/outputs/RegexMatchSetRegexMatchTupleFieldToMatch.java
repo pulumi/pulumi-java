@@ -79,12 +79,10 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatch {
             this.data = data;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RegexMatchSetRegexMatchTupleFieldToMatch build() {
+        }        public RegexMatchSetRegexMatchTupleFieldToMatch build() {
             return new RegexMatchSetRegexMatchTupleFieldToMatch(data, type);
         }
     }

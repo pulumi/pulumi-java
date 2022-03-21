@@ -122,27 +122,22 @@ public final class ResourceQuota {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable ResourceQuotaSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable ResourceQuotaStatus status) {
             this.status = status;
             return this;
-        }
-        public ResourceQuota build() {
+        }        public ResourceQuota build() {
             return new ResourceQuota(apiVersion, kind, metadata, spec, status);
         }
     }

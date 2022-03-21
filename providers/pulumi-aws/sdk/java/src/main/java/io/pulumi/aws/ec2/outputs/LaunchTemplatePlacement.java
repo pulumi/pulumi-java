@@ -168,42 +168,34 @@ public final class LaunchTemplatePlacement {
             this.affinity = affinity;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder hostResourceGroupArn(@Nullable String hostResourceGroupArn) {
             this.hostResourceGroupArn = hostResourceGroupArn;
             return this;
         }
-
         public Builder partitionNumber(@Nullable Integer partitionNumber) {
             this.partitionNumber = partitionNumber;
             return this;
         }
-
         public Builder spreadDomain(@Nullable String spreadDomain) {
             this.spreadDomain = spreadDomain;
             return this;
         }
-
         public Builder tenancy(@Nullable String tenancy) {
             this.tenancy = tenancy;
             return this;
-        }
-        public LaunchTemplatePlacement build() {
+        }        public LaunchTemplatePlacement build() {
             return new LaunchTemplatePlacement(affinity, availabilityZone, groupName, hostId, hostResourceGroupArn, partitionNumber, spreadDomain, tenancy);
         }
     }

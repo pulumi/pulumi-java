@@ -53,8 +53,7 @@ public final class ReferencedPublicIpAddressResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ReferencedPublicIpAddressResponse build() {
+        }        public ReferencedPublicIpAddressResponse build() {
             return new ReferencedPublicIpAddressResponse(id);
         }
     }

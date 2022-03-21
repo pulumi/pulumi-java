@@ -64,12 +64,10 @@ public final class GetRegistryPolicyResult {
             this.policyText = policyText;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
-        }
-        public GetRegistryPolicyResult build() {
+        }        public GetRegistryPolicyResult build() {
             return new GetRegistryPolicyResult(policyText, registryId);
         }
     }

@@ -76,12 +76,10 @@ public final class HealthCheckTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public HealthCheckTag build() {
+        }        public HealthCheckTag build() {
             return new HealthCheckTag(key, value);
         }
     }

@@ -152,37 +152,33 @@ public final class GetServiceEndpointPolicyDefinitionResult {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
-
         public Builder serviceResources(@Nullable List<String> serviceResources) {
             this.serviceResources = serviceResources;
             return this;
         }
-        public GetServiceEndpointPolicyDefinitionResult build() {
+        public Builder serviceResources(String... serviceResources) {
+            return serviceResources(List.of(serviceResources));
+        }        public GetServiceEndpointPolicyDefinitionResult build() {
             return new GetServiceEndpointPolicyDefinitionResult(description, etag, id, name, provisioningState, service, serviceResources);
         }
     }

@@ -90,32 +90,26 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
             this.clientContext = clientContext;
             return this;
         }
-
         public Builder clientContext(@Nullable String clientContext) {
             this.clientContext = Output.ofNullable(clientContext);
             return this;
         }
-
         public Builder payload(@Nullable Output<String> payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable String payload) {
             this.payload = Output.ofNullable(payload);
             return this;
         }
-
         public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Output.ofNullable(qualifier);
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs build() {
+        }        public MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs(clientContext, payload, qualifier);
         }
     }

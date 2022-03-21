@@ -86,17 +86,14 @@ public final class GetOverrideResult {
             this.apiProxy = Objects.requireNonNull(apiProxy);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder samplingConfig(GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig) {
             this.samplingConfig = Objects.requireNonNull(samplingConfig);
             return this;
-        }
-        public GetOverrideResult build() {
+        }        public GetOverrideResult build() {
             return new GetOverrideResult(apiProxy, name, samplingConfig);
         }
     }

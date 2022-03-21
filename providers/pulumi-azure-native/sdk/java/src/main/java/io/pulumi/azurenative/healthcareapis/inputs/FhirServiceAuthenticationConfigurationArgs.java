@@ -95,32 +95,26 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder authority(@Nullable Output<String> authority) {
             this.authority = authority;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = Output.ofNullable(authority);
             return this;
         }
-
         public Builder smartProxyEnabled(@Nullable Output<Boolean> smartProxyEnabled) {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
-
         public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
             this.smartProxyEnabled = Output.ofNullable(smartProxyEnabled);
             return this;
-        }
-        public FhirServiceAuthenticationConfigurationArgs build() {
+        }        public FhirServiceAuthenticationConfigurationArgs build() {
             return new FhirServiceAuthenticationConfigurationArgs(audience, authority, smartProxyEnabled);
         }
     }

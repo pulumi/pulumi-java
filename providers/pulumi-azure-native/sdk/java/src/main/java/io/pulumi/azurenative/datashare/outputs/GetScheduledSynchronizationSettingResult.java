@@ -200,52 +200,42 @@ public final class GetScheduledSynchronizationSettingResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder recurrenceInterval(String recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
-
         public Builder synchronizationTime(String synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetScheduledSynchronizationSettingResult build() {
+        }        public GetScheduledSynchronizationSettingResult build() {
             return new GetScheduledSynchronizationSettingResult(createdAt, id, kind, name, provisioningState, recurrenceInterval, synchronizationTime, systemData, type, userName);
         }
     }

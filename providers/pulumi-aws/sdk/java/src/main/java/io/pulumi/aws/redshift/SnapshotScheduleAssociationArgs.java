@@ -73,22 +73,18 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
-
         public Builder scheduleIdentifier(Output<String> scheduleIdentifier) {
             this.scheduleIdentifier = Objects.requireNonNull(scheduleIdentifier);
             return this;
         }
-
         public Builder scheduleIdentifier(String scheduleIdentifier) {
             this.scheduleIdentifier = Output.of(Objects.requireNonNull(scheduleIdentifier));
             return this;
-        }
-        public SnapshotScheduleAssociationArgs build() {
+        }        public SnapshotScheduleAssociationArgs build() {
             return new SnapshotScheduleAssociationArgs(clusterIdentifier, scheduleIdentifier);
         }
     }

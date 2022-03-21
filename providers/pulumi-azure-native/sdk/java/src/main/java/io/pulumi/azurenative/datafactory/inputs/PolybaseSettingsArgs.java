@@ -113,42 +113,34 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.rejectSampleValue = rejectSampleValue;
             return this;
         }
-
         public Builder rejectSampleValue(@Nullable Object rejectSampleValue) {
             this.rejectSampleValue = Output.ofNullable(rejectSampleValue);
             return this;
         }
-
         public Builder rejectType(@Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType) {
             this.rejectType = rejectType;
             return this;
         }
-
         public Builder rejectType(@Nullable Either<String,PolybaseSettingsRejectType> rejectType) {
             this.rejectType = Output.ofNullable(rejectType);
             return this;
         }
-
         public Builder rejectValue(@Nullable Output<Object> rejectValue) {
             this.rejectValue = rejectValue;
             return this;
         }
-
         public Builder rejectValue(@Nullable Object rejectValue) {
             this.rejectValue = Output.ofNullable(rejectValue);
             return this;
         }
-
         public Builder useTypeDefault(@Nullable Output<Object> useTypeDefault) {
             this.useTypeDefault = useTypeDefault;
             return this;
         }
-
         public Builder useTypeDefault(@Nullable Object useTypeDefault) {
             this.useTypeDefault = Output.ofNullable(useTypeDefault);
             return this;
-        }
-        public PolybaseSettingsArgs build() {
+        }        public PolybaseSettingsArgs build() {
             return new PolybaseSettingsArgs(rejectSampleValue, rejectType, rejectValue, useTypeDefault);
         }
     }

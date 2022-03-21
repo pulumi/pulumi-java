@@ -56,7 +56,9 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader build() {
             return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(items);
         }
     }

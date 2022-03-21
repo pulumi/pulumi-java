@@ -137,42 +137,34 @@ public final class GetLaunchTemplatePlacement extends io.pulumi.resources.Invoke
             this.affinity = Objects.requireNonNull(affinity);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
-
         public Builder hostResourceGroupArn(String hostResourceGroupArn) {
             this.hostResourceGroupArn = Objects.requireNonNull(hostResourceGroupArn);
             return this;
         }
-
         public Builder partitionNumber(Integer partitionNumber) {
             this.partitionNumber = Objects.requireNonNull(partitionNumber);
             return this;
         }
-
         public Builder spreadDomain(String spreadDomain) {
             this.spreadDomain = Objects.requireNonNull(spreadDomain);
             return this;
         }
-
         public Builder tenancy(String tenancy) {
             this.tenancy = Objects.requireNonNull(tenancy);
             return this;
-        }
-        public GetLaunchTemplatePlacement build() {
+        }        public GetLaunchTemplatePlacement build() {
             return new GetLaunchTemplatePlacement(affinity, availabilityZone, groupName, hostId, hostResourceGroupArn, partitionNumber, spreadDomain, tenancy);
         }
     }

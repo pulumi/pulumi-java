@@ -76,22 +76,21 @@ public final class CxEntityTypeEntityArgs extends io.pulumi.resources.ResourceAr
             this.synonyms = synonyms;
             return this;
         }
-
         public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public CxEntityTypeEntityArgs build() {
+        }        public CxEntityTypeEntityArgs build() {
             return new CxEntityTypeEntityArgs(synonyms, value);
         }
     }

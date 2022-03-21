@@ -54,12 +54,13 @@ public final class KnowledgeBaseAppIntegrationsConfiguration {
             this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn);
             return this;
         }
-
         public Builder objectFields(List<String> objectFields) {
             this.objectFields = Objects.requireNonNull(objectFields);
             return this;
         }
-        public KnowledgeBaseAppIntegrationsConfiguration build() {
+        public Builder objectFields(String... objectFields) {
+            return objectFields(List.of(objectFields));
+        }        public KnowledgeBaseAppIntegrationsConfiguration build() {
             return new KnowledgeBaseAppIntegrationsConfiguration(appIntegrationArn, objectFields);
         }
     }

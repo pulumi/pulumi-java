@@ -76,12 +76,10 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.language = Objects.requireNonNull(language);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public SDKInfoResponse build() {
+        }        public SDKInfoResponse build() {
             return new SDKInfoResponse(language, version);
         }
     }

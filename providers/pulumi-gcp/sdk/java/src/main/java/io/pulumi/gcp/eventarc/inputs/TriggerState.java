@@ -241,122 +241,104 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder destination(@Nullable Output<TriggerDestinationGetArgs> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable TriggerDestinationGetArgs destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder matchingCriterias(@Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias) {
             this.matchingCriterias = matchingCriterias;
             return this;
         }
-
         public Builder matchingCriterias(@Nullable List<TriggerMatchingCriteriaGetArgs> matchingCriterias) {
             this.matchingCriterias = Output.ofNullable(matchingCriterias);
             return this;
         }
-
+        public Builder matchingCriterias(TriggerMatchingCriteriaGetArgs... matchingCriterias) {
+            return matchingCriterias(List.of(matchingCriterias));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder transports(@Nullable Output<List<TriggerTransportGetArgs>> transports) {
             this.transports = transports;
             return this;
         }
-
         public Builder transports(@Nullable List<TriggerTransportGetArgs> transports) {
             this.transports = Output.ofNullable(transports);
             return this;
         }
-
+        public Builder transports(TriggerTransportGetArgs... transports) {
+            return transports(List.of(transports));
+        }
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public TriggerState build() {
+        }        public TriggerState build() {
             return new TriggerState(createTime, destination, etag, labels, location, matchingCriterias, name, project, serviceAccount, transports, uid, updateTime);
         }
     }

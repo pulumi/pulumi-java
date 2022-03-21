@@ -85,17 +85,14 @@ public final class AnalyticsApplicationReferenceDataSourcesS3 {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesS3 build() {
+        }        public AnalyticsApplicationReferenceDataSourcesS3 build() {
             return new AnalyticsApplicationReferenceDataSourcesS3(bucketArn, fileKey, roleArn);
         }
     }

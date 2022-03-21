@@ -176,72 +176,58 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder capacity(@Nullable Output<String> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable String capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder maximumVolumeSize(@Nullable Output<String> maximumVolumeSize) {
             this.maximumVolumeSize = maximumVolumeSize;
             return this;
         }
-
         public Builder maximumVolumeSize(@Nullable String maximumVolumeSize) {
             this.maximumVolumeSize = Output.ofNullable(maximumVolumeSize);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder nodeTopology(@Nullable Output<LabelSelectorArgs> nodeTopology) {
             this.nodeTopology = nodeTopology;
             return this;
         }
-
         public Builder nodeTopology(@Nullable LabelSelectorArgs nodeTopology) {
             this.nodeTopology = Output.ofNullable(nodeTopology);
             return this;
         }
-
         public Builder storageClassName(Output<String> storageClassName) {
             this.storageClassName = Objects.requireNonNull(storageClassName);
             return this;
         }
-
         public Builder storageClassName(String storageClassName) {
             this.storageClassName = Output.of(Objects.requireNonNull(storageClassName));
             return this;
-        }
-        public CSIStorageCapacityArgs build() {
+        }        public CSIStorageCapacityArgs build() {
             return new CSIStorageCapacityArgs(apiVersion, capacity, kind, maximumVolumeSize, metadata, nodeTopology, storageClassName);
         }
     }

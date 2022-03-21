@@ -145,62 +145,50 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.mountPoint = mountPoint;
             return this;
         }
-
         public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = Output.ofNullable(mountPoint);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
-
         public Builder sizeGb(@Nullable Integer sizeGb) {
             this.sizeGb = Output.ofNullable(sizeGb);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder type(Output<DiskType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(DiskType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DiskArgs build() {
+        }        public DiskArgs build() {
             return new DiskArgs(mountPoint, name, readOnly, sizeGb, source, type);
         }
     }

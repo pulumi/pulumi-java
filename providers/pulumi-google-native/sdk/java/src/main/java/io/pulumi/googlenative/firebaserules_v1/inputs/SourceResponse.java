@@ -60,7 +60,9 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.files = Objects.requireNonNull(files);
             return this;
         }
-        public SourceResponse build() {
+        public Builder files(FileResponse... files) {
+            return files(List.of(files));
+        }        public SourceResponse build() {
             return new SourceResponse(files);
         }
     }

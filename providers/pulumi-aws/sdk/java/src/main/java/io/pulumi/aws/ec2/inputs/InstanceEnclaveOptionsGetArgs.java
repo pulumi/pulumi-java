@@ -57,12 +57,10 @@ public final class InstanceEnclaveOptionsGetArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public InstanceEnclaveOptionsGetArgs build() {
+        }        public InstanceEnclaveOptionsGetArgs build() {
             return new InstanceEnclaveOptionsGetArgs(enabled);
         }
     }

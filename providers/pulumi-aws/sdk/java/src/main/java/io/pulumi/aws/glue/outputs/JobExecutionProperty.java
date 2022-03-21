@@ -53,8 +53,7 @@ public final class JobExecutionProperty {
         public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
             this.maxConcurrentRuns = maxConcurrentRuns;
             return this;
-        }
-        public JobExecutionProperty build() {
+        }        public JobExecutionProperty build() {
             return new JobExecutionProperty(maxConcurrentRuns);
         }
     }

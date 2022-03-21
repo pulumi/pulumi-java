@@ -394,112 +394,90 @@ public final class GetClusterResult {
             this.aadClientId = Objects.requireNonNull(aadClientId);
             return this;
         }
-
         public Builder aadTenantId(String aadTenantId) {
             this.aadTenantId = Objects.requireNonNull(aadTenantId);
             return this;
         }
-
         public Builder billingModel(String billingModel) {
             this.billingModel = Objects.requireNonNull(billingModel);
             return this;
         }
-
         public Builder cloudId(String cloudId) {
             this.cloudId = Objects.requireNonNull(cloudId);
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdByType(@Nullable String createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastBillingTimestamp(String lastBillingTimestamp) {
             this.lastBillingTimestamp = Objects.requireNonNull(lastBillingTimestamp);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder lastSyncTimestamp(String lastSyncTimestamp) {
             this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder registrationTimestamp(String registrationTimestamp) {
             this.registrationTimestamp = Objects.requireNonNull(registrationTimestamp);
             return this;
         }
-
         public Builder reportedProperties(@Nullable ClusterReportedPropertiesResponse reportedProperties) {
             this.reportedProperties = reportedProperties;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder trialDaysRemaining(Double trialDaysRemaining) {
             this.trialDaysRemaining = Objects.requireNonNull(trialDaysRemaining);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(aadClientId, aadTenantId, billingModel, cloudId, createdAt, createdBy, createdByType, id, lastBillingTimestamp, lastModifiedAt, lastModifiedBy, lastModifiedByType, lastSyncTimestamp, location, name, provisioningState, registrationTimestamp, reportedProperties, status, tags, trialDaysRemaining, type);
         }
     }

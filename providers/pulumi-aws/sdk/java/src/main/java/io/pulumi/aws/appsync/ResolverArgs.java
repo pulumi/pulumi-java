@@ -222,112 +222,90 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder cachingConfig(@Nullable Output<ResolverCachingConfigArgs> cachingConfig) {
             this.cachingConfig = cachingConfig;
             return this;
         }
-
         public Builder cachingConfig(@Nullable ResolverCachingConfigArgs cachingConfig) {
             this.cachingConfig = Output.ofNullable(cachingConfig);
             return this;
         }
-
         public Builder dataSource(@Nullable Output<String> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable String dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder field(String field) {
             this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
             this.maxBatchSize = Output.ofNullable(maxBatchSize);
             return this;
         }
-
         public Builder pipelineConfig(@Nullable Output<ResolverPipelineConfigArgs> pipelineConfig) {
             this.pipelineConfig = pipelineConfig;
             return this;
         }
-
         public Builder pipelineConfig(@Nullable ResolverPipelineConfigArgs pipelineConfig) {
             this.pipelineConfig = Output.ofNullable(pipelineConfig);
             return this;
         }
-
         public Builder requestTemplate(@Nullable Output<String> requestTemplate) {
             this.requestTemplate = requestTemplate;
             return this;
         }
-
         public Builder requestTemplate(@Nullable String requestTemplate) {
             this.requestTemplate = Output.ofNullable(requestTemplate);
             return this;
         }
-
         public Builder responseTemplate(@Nullable Output<String> responseTemplate) {
             this.responseTemplate = responseTemplate;
             return this;
         }
-
         public Builder responseTemplate(@Nullable String responseTemplate) {
             this.responseTemplate = Output.ofNullable(responseTemplate);
             return this;
         }
-
         public Builder syncConfig(@Nullable Output<ResolverSyncConfigArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
-
         public Builder syncConfig(@Nullable ResolverSyncConfigArgs syncConfig) {
             this.syncConfig = Output.ofNullable(syncConfig);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ResolverArgs build() {
+        }        public ResolverArgs build() {
             return new ResolverArgs(apiId, cachingConfig, dataSource, field, kind, maxBatchSize, pipelineConfig, requestTemplate, responseTemplate, syncConfig, type);
         }
     }

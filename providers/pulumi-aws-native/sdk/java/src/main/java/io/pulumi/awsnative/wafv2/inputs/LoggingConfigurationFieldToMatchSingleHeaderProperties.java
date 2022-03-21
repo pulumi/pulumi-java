@@ -58,8 +58,7 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties extend
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public LoggingConfigurationFieldToMatchSingleHeaderProperties build() {
+        }        public LoggingConfigurationFieldToMatchSingleHeaderProperties build() {
             return new LoggingConfigurationFieldToMatchSingleHeaderProperties(name);
         }
     }

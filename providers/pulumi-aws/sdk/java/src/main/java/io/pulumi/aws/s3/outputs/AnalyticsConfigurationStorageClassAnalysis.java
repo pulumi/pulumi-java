@@ -51,8 +51,7 @@ public final class AnalyticsConfigurationStorageClassAnalysis {
         public Builder dataExport(AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
             this.dataExport = Objects.requireNonNull(dataExport);
             return this;
-        }
-        public AnalyticsConfigurationStorageClassAnalysis build() {
+        }        public AnalyticsConfigurationStorageClassAnalysis build() {
             return new AnalyticsConfigurationStorageClassAnalysis(dataExport);
         }
     }

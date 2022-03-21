@@ -75,22 +75,18 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder healthCheck(@Nullable String healthCheck) {
             this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
-
         public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
-
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
             this.initialDelaySec = Output.ofNullable(initialDelaySec);
             return this;
-        }
-        public InstanceGroupManagerAutoHealingPolicyArgs build() {
+        }        public InstanceGroupManagerAutoHealingPolicyArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyArgs(healthCheck, initialDelaySec);
         }
     }

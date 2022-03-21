@@ -76,12 +76,10 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
             this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
             return this;
         }
-
         public Builder profilePropertyName(String profilePropertyName) {
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
-        }
-        public ParticipantProfilePropertyReferenceResponse build() {
+        }        public ParticipantProfilePropertyReferenceResponse build() {
             return new ParticipantProfilePropertyReferenceResponse(interactionPropertyName, profilePropertyName);
         }
     }

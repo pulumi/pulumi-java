@@ -114,42 +114,37 @@ public final class TargetCostAllocationResourceArgs extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policyType(Output<Either<String,CostAllocationPolicyType>> policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public Builder policyType(Either<String,CostAllocationPolicyType> policyType) {
             this.policyType = Output.of(Objects.requireNonNull(policyType));
             return this;
         }
-
         public Builder resourceType(Output<Either<String,CostAllocationResourceType>> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder values(Output<List<CostAllocationProportionArgs>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<CostAllocationProportionArgs> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public TargetCostAllocationResourceArgs build() {
+        public Builder values(CostAllocationProportionArgs... values) {
+            return values(List.of(values));
+        }        public TargetCostAllocationResourceArgs build() {
             return new TargetCostAllocationResourceArgs(name, policyType, resourceType, values);
         }
     }

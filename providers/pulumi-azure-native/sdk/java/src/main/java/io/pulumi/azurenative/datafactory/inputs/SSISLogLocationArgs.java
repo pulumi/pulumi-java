@@ -114,42 +114,34 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
             this.accessCredential = accessCredential;
             return this;
         }
-
         public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
             this.accessCredential = Output.ofNullable(accessCredential);
             return this;
         }
-
         public Builder logPath(Output<Object> logPath) {
             this.logPath = Objects.requireNonNull(logPath);
             return this;
         }
-
         public Builder logPath(Object logPath) {
             this.logPath = Output.of(Objects.requireNonNull(logPath));
             return this;
         }
-
         public Builder logRefreshInterval(@Nullable Output<Object> logRefreshInterval) {
             this.logRefreshInterval = logRefreshInterval;
             return this;
         }
-
         public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
             this.logRefreshInterval = Output.ofNullable(logRefreshInterval);
             return this;
         }
-
         public Builder type(Output<Either<String,SsisLogLocationType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,SsisLogLocationType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SSISLogLocationArgs build() {
+        }        public SSISLogLocationArgs build() {
             return new SSISLogLocationArgs(accessCredential, logPath, logRefreshInterval, type);
         }
     }

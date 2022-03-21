@@ -61,12 +61,10 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder authType(String authType) {
             this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
-        }
-        public SystemAssignedIdentityAuthInfoArgs build() {
+        }        public SystemAssignedIdentityAuthInfoArgs build() {
             return new SystemAssignedIdentityAuthInfoArgs(authType);
         }
     }

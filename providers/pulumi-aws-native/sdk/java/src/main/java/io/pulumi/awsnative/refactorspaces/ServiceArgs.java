@@ -159,92 +159,77 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
-
         public Builder applicationIdentifier(String applicationIdentifier) {
             this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpointType(@Nullable Output<ServiceEndpointType> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder endpointType(@Nullable ServiceEndpointType endpointType) {
             this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
-
         public Builder environmentIdentifier(Output<String> environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
         }
-
         public Builder environmentIdentifier(String environmentIdentifier) {
             this.environmentIdentifier = Output.of(Objects.requireNonNull(environmentIdentifier));
             return this;
         }
-
         public Builder lambdaEndpoint(@Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint) {
             this.lambdaEndpoint = lambdaEndpoint;
             return this;
         }
-
         public Builder lambdaEndpoint(@Nullable ServiceLambdaEndpointInputArgs lambdaEndpoint) {
             this.lambdaEndpoint = Output.ofNullable(lambdaEndpoint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ServiceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ServiceTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder urlEndpoint(@Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint) {
             this.urlEndpoint = urlEndpoint;
             return this;
         }
-
         public Builder urlEndpoint(@Nullable ServiceUrlEndpointInputArgs urlEndpoint) {
             this.urlEndpoint = Output.ofNullable(urlEndpoint);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(applicationIdentifier, description, endpointType, environmentIdentifier, lambdaEndpoint, name, tags, urlEndpoint, vpcId);
         }
     }

@@ -53,8 +53,7 @@ public final class AssignedComponentItemResponse {
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public AssignedComponentItemResponse build() {
+        }        public AssignedComponentItemResponse build() {
             return new AssignedComponentItemResponse(key);
         }
     }

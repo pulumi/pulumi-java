@@ -74,22 +74,18 @@ public final class BudgetActionActionThresholdArgs extends io.pulumi.resources.R
             this.actionThresholdType = Objects.requireNonNull(actionThresholdType);
             return this;
         }
-
         public Builder actionThresholdType(String actionThresholdType) {
             this.actionThresholdType = Output.of(Objects.requireNonNull(actionThresholdType));
             return this;
         }
-
         public Builder actionThresholdValue(Output<Double> actionThresholdValue) {
             this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue);
             return this;
         }
-
         public Builder actionThresholdValue(Double actionThresholdValue) {
             this.actionThresholdValue = Output.of(Objects.requireNonNull(actionThresholdValue));
             return this;
-        }
-        public BudgetActionActionThresholdArgs build() {
+        }        public BudgetActionActionThresholdArgs build() {
             return new BudgetActionActionThresholdArgs(actionThresholdType, actionThresholdValue);
         }
     }

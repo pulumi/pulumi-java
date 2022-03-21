@@ -54,8 +54,7 @@ public final class GetMitigationActionArgs extends io.pulumi.resources.InvokeArg
         public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
-        }
-        public GetMitigationActionArgs build() {
+        }        public GetMitigationActionArgs build() {
             return new GetMitigationActionArgs(actionName);
         }
     }

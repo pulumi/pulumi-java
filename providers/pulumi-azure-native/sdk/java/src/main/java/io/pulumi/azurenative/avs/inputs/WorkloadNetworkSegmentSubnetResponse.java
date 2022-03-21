@@ -79,12 +79,13 @@ public final class WorkloadNetworkSegmentSubnetResponse extends io.pulumi.resour
             this.dhcpRanges = dhcpRanges;
             return this;
         }
-
+        public Builder dhcpRanges(String... dhcpRanges) {
+            return dhcpRanges(List.of(dhcpRanges));
+        }
         public Builder gatewayAddress(@Nullable String gatewayAddress) {
             this.gatewayAddress = gatewayAddress;
             return this;
-        }
-        public WorkloadNetworkSegmentSubnetResponse build() {
+        }        public WorkloadNetworkSegmentSubnetResponse build() {
             return new WorkloadNetworkSegmentSubnetResponse(dhcpRanges, gatewayAddress);
         }
     }

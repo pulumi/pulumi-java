@@ -50,8 +50,7 @@ public final class InstanceGroupManagerStandbyPolicyResponse extends io.pulumi.r
         public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
-        }
-        public InstanceGroupManagerStandbyPolicyResponse build() {
+        }        public InstanceGroupManagerStandbyPolicyResponse build() {
             return new InstanceGroupManagerStandbyPolicyResponse(initialDelaySec);
         }
     }

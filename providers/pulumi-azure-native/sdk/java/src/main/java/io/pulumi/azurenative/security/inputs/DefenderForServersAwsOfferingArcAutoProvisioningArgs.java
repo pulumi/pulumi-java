@@ -79,22 +79,18 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder servicePrincipalSecretMetadata(@Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata) {
             this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }
-
         public Builder servicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs servicePrincipalSecretMetadata) {
             this.servicePrincipalSecretMetadata = Output.ofNullable(servicePrincipalSecretMetadata);
             return this;
-        }
-        public DefenderForServersAwsOfferingArcAutoProvisioningArgs build() {
+        }        public DefenderForServersAwsOfferingArcAutoProvisioningArgs build() {
             return new DefenderForServersAwsOfferingArcAutoProvisioningArgs(enabled, servicePrincipalSecretMetadata);
         }
     }

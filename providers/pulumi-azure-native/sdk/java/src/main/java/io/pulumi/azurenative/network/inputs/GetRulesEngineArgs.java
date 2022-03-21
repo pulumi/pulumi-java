@@ -88,17 +88,14 @@ public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
             this.frontDoorName = Objects.requireNonNull(frontDoorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder rulesEngineName(String rulesEngineName) {
             this.rulesEngineName = Objects.requireNonNull(rulesEngineName);
             return this;
-        }
-        public GetRulesEngineArgs build() {
+        }        public GetRulesEngineArgs build() {
             return new GetRulesEngineArgs(frontDoorName, resourceGroupName, rulesEngineName);
         }
     }

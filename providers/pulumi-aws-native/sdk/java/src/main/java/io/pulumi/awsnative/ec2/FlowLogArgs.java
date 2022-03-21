@@ -221,112 +221,93 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             this.deliverLogsPermissionArn = deliverLogsPermissionArn;
             return this;
         }
-
         public Builder deliverLogsPermissionArn(@Nullable String deliverLogsPermissionArn) {
             this.deliverLogsPermissionArn = Output.ofNullable(deliverLogsPermissionArn);
             return this;
         }
-
         public Builder destinationOptions(@Nullable Output<DestinationOptionsPropertiesArgs> destinationOptions) {
             this.destinationOptions = destinationOptions;
             return this;
         }
-
         public Builder destinationOptions(@Nullable DestinationOptionsPropertiesArgs destinationOptions) {
             this.destinationOptions = Output.ofNullable(destinationOptions);
             return this;
         }
-
         public Builder logDestination(@Nullable Output<String> logDestination) {
             this.logDestination = logDestination;
             return this;
         }
-
         public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = Output.ofNullable(logDestination);
             return this;
         }
-
         public Builder logDestinationType(@Nullable Output<FlowLogLogDestinationType> logDestinationType) {
             this.logDestinationType = logDestinationType;
             return this;
         }
-
         public Builder logDestinationType(@Nullable FlowLogLogDestinationType logDestinationType) {
             this.logDestinationType = Output.ofNullable(logDestinationType);
             return this;
         }
-
         public Builder logFormat(@Nullable Output<String> logFormat) {
             this.logFormat = logFormat;
             return this;
         }
-
         public Builder logFormat(@Nullable String logFormat) {
             this.logFormat = Output.ofNullable(logFormat);
             return this;
         }
-
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder maxAggregationInterval(@Nullable Output<Integer> maxAggregationInterval) {
             this.maxAggregationInterval = maxAggregationInterval;
             return this;
         }
-
         public Builder maxAggregationInterval(@Nullable Integer maxAggregationInterval) {
             this.maxAggregationInterval = Output.ofNullable(maxAggregationInterval);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder resourceType(Output<FlowLogResourceType> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(FlowLogResourceType resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FlowLogTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FlowLogTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(FlowLogTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder trafficType(Output<FlowLogTrafficType> trafficType) {
             this.trafficType = Objects.requireNonNull(trafficType);
             return this;
         }
-
         public Builder trafficType(FlowLogTrafficType trafficType) {
             this.trafficType = Output.of(Objects.requireNonNull(trafficType));
             return this;
-        }
-        public FlowLogArgs build() {
+        }        public FlowLogArgs build() {
             return new FlowLogArgs(deliverLogsPermissionArn, destinationOptions, logDestination, logDestinationType, logFormat, logGroupName, maxAggregationInterval, resourceId, resourceType, tags, trafficType);
         }
     }

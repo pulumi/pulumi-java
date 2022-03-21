@@ -114,42 +114,40 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
             this.apiSource = Objects.requireNonNull(apiSource);
             return this;
         }
-
         public Builder apiSource(String apiSource) {
             this.apiSource = Output.of(Objects.requireNonNull(apiSource));
             return this;
         }
-
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder operations(Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
-
         public Builder operations(List<GoogleCloudApigeeV1GraphQLOperationArgs> operations) {
             this.operations = Output.of(Objects.requireNonNull(operations));
             return this;
         }
-
+        public Builder operations(GoogleCloudApigeeV1GraphQLOperationArgs... operations) {
+            return operations(List.of(operations));
+        }
         public Builder quota(@Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
-
         public Builder quota(@Nullable GoogleCloudApigeeV1QuotaArgs quota) {
             this.quota = Output.ofNullable(quota);
             return this;
-        }
-        public GoogleCloudApigeeV1GraphQLOperationConfigArgs build() {
+        }        public GoogleCloudApigeeV1GraphQLOperationConfigArgs build() {
             return new GoogleCloudApigeeV1GraphQLOperationConfigArgs(apiSource, attributes, operations, quota);
         }
     }

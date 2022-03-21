@@ -60,12 +60,10 @@ public final class OSPolicyResourcePackageResourceZypperArgs extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public OSPolicyResourcePackageResourceZypperArgs build() {
+        }        public OSPolicyResourcePackageResourceZypperArgs build() {
             return new OSPolicyResourcePackageResourceZypperArgs(name);
         }
     }

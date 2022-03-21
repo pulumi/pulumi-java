@@ -88,17 +88,14 @@ public final class GetIntegrationAccountSchemaArgs extends io.pulumi.resources.I
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
-        }
-        public GetIntegrationAccountSchemaArgs build() {
+        }        public GetIntegrationAccountSchemaArgs build() {
             return new GetIntegrationAccountSchemaArgs(integrationAccountName, resourceGroupName, schemaName);
         }
     }

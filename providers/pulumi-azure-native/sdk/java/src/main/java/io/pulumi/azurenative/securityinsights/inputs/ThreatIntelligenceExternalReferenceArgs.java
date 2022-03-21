@@ -127,52 +127,42 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder hashes(@Nullable Output<Map<String,String>> hashes) {
             this.hashes = hashes;
             return this;
         }
-
         public Builder hashes(@Nullable Map<String,String> hashes) {
             this.hashes = Output.ofNullable(hashes);
             return this;
         }
-
         public Builder sourceName(@Nullable Output<String> sourceName) {
             this.sourceName = sourceName;
             return this;
         }
-
         public Builder sourceName(@Nullable String sourceName) {
             this.sourceName = Output.ofNullable(sourceName);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ThreatIntelligenceExternalReferenceArgs build() {
+        }        public ThreatIntelligenceExternalReferenceArgs build() {
             return new ThreatIntelligenceExternalReferenceArgs(description, externalId, hashes, sourceName, url);
         }
     }

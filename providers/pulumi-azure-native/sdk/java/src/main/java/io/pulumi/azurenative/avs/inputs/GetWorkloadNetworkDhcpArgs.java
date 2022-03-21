@@ -88,17 +88,14 @@ public final class GetWorkloadNetworkDhcpArgs extends io.pulumi.resources.Invoke
             this.dhcpId = Objects.requireNonNull(dhcpId);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWorkloadNetworkDhcpArgs build() {
+        }        public GetWorkloadNetworkDhcpArgs build() {
             return new GetWorkloadNetworkDhcpArgs(dhcpId, privateCloudName, resourceGroupName);
         }
     }

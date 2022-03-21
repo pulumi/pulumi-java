@@ -288,77 +288,62 @@ public final class EnvironmentConfigResponse {
             this.airflowUri = Objects.requireNonNull(airflowUri);
             return this;
         }
-
         public Builder dagGcsPrefix(String dagGcsPrefix) {
             this.dagGcsPrefix = Objects.requireNonNull(dagGcsPrefix);
             return this;
         }
-
         public Builder databaseConfig(DatabaseConfigResponse databaseConfig) {
             this.databaseConfig = Objects.requireNonNull(databaseConfig);
             return this;
         }
-
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
-
         public Builder environmentSize(String environmentSize) {
             this.environmentSize = Objects.requireNonNull(environmentSize);
             return this;
         }
-
         public Builder gkeCluster(String gkeCluster) {
             this.gkeCluster = Objects.requireNonNull(gkeCluster);
             return this;
         }
-
         public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public Builder masterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = Objects.requireNonNull(masterAuthorizedNetworksConfig);
             return this;
         }
-
         public Builder nodeConfig(NodeConfigResponse nodeConfig) {
             this.nodeConfig = Objects.requireNonNull(nodeConfig);
             return this;
         }
-
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder privateEnvironmentConfig(PrivateEnvironmentConfigResponse privateEnvironmentConfig) {
             this.privateEnvironmentConfig = Objects.requireNonNull(privateEnvironmentConfig);
             return this;
         }
-
         public Builder softwareConfig(SoftwareConfigResponse softwareConfig) {
             this.softwareConfig = Objects.requireNonNull(softwareConfig);
             return this;
         }
-
         public Builder webServerConfig(WebServerConfigResponse webServerConfig) {
             this.webServerConfig = Objects.requireNonNull(webServerConfig);
             return this;
         }
-
         public Builder webServerNetworkAccessControl(WebServerNetworkAccessControlResponse webServerNetworkAccessControl) {
             this.webServerNetworkAccessControl = Objects.requireNonNull(webServerNetworkAccessControl);
             return this;
         }
-
         public Builder workloadsConfig(WorkloadsConfigResponse workloadsConfig) {
             this.workloadsConfig = Objects.requireNonNull(workloadsConfig);
             return this;
-        }
-        public EnvironmentConfigResponse build() {
+        }        public EnvironmentConfigResponse build() {
             return new EnvironmentConfigResponse(airflowUri, dagGcsPrefix, databaseConfig, encryptionConfig, environmentSize, gkeCluster, maintenanceWindow, masterAuthorizedNetworksConfig, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);
         }
     }

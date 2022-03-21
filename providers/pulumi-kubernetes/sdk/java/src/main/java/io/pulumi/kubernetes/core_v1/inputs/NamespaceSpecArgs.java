@@ -62,12 +62,13 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.finalizers = finalizers;
             return this;
         }
-
         public Builder finalizers(@Nullable List<String> finalizers) {
             this.finalizers = Output.ofNullable(finalizers);
             return this;
         }
-        public NamespaceSpecArgs build() {
+        public Builder finalizers(String... finalizers) {
+            return finalizers(List.of(finalizers));
+        }        public NamespaceSpecArgs build() {
             return new NamespaceSpecArgs(finalizers);
         }
     }

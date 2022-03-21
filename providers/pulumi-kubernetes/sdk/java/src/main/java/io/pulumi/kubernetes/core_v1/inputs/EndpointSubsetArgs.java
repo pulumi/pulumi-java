@@ -103,32 +103,35 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
             this.addresses = addresses;
             return this;
         }
-
         public Builder addresses(@Nullable List<EndpointAddressArgs> addresses) {
             this.addresses = Output.ofNullable(addresses);
             return this;
         }
-
+        public Builder addresses(EndpointAddressArgs... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder notReadyAddresses(@Nullable Output<List<EndpointAddressArgs>> notReadyAddresses) {
             this.notReadyAddresses = notReadyAddresses;
             return this;
         }
-
         public Builder notReadyAddresses(@Nullable List<EndpointAddressArgs> notReadyAddresses) {
             this.notReadyAddresses = Output.ofNullable(notReadyAddresses);
             return this;
         }
-
+        public Builder notReadyAddresses(EndpointAddressArgs... notReadyAddresses) {
+            return notReadyAddresses(List.of(notReadyAddresses));
+        }
         public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<EndpointPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public EndpointSubsetArgs build() {
+        public Builder ports(EndpointPortArgs... ports) {
+            return ports(List.of(ports));
+        }        public EndpointSubsetArgs build() {
             return new EndpointSubsetArgs(addresses, notReadyAddresses, ports);
         }
     }

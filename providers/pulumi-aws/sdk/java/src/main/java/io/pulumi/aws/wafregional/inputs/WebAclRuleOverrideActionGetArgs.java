@@ -56,12 +56,10 @@ public final class WebAclRuleOverrideActionGetArgs extends io.pulumi.resources.R
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WebAclRuleOverrideActionGetArgs build() {
+        }        public WebAclRuleOverrideActionGetArgs build() {
             return new WebAclRuleOverrideActionGetArgs(type);
         }
     }

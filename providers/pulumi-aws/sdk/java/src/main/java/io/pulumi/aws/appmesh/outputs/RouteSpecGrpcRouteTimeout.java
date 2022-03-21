@@ -72,12 +72,10 @@ public final class RouteSpecGrpcRouteTimeout {
             this.idle = idle;
             return this;
         }
-
         public Builder perRequest(@Nullable RouteSpecGrpcRouteTimeoutPerRequest perRequest) {
             this.perRequest = perRequest;
             return this;
-        }
-        public RouteSpecGrpcRouteTimeout build() {
+        }        public RouteSpecGrpcRouteTimeout build() {
             return new RouteSpecGrpcRouteTimeout(idle, perRequest);
         }
     }

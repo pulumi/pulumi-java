@@ -61,12 +61,10 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
-        }
-        public BigQueryDestinationArgs build() {
+        }        public BigQueryDestinationArgs build() {
             return new BigQueryDestinationArgs(datasetId);
         }
     }

@@ -66,22 +66,18 @@ public final class RealtimeLogConfigEndPointArgs extends io.pulumi.resources.Res
             this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
             return this;
         }
-
         public Builder kinesisStreamConfig(RealtimeLogConfigKinesisStreamConfigArgs kinesisStreamConfig) {
             this.kinesisStreamConfig = Output.of(Objects.requireNonNull(kinesisStreamConfig));
             return this;
         }
-
         public Builder streamType(Output<String> streamType) {
             this.streamType = Objects.requireNonNull(streamType);
             return this;
         }
-
         public Builder streamType(String streamType) {
             this.streamType = Output.of(Objects.requireNonNull(streamType));
             return this;
-        }
-        public RealtimeLogConfigEndPointArgs build() {
+        }        public RealtimeLogConfigEndPointArgs build() {
             return new RealtimeLogConfigEndPointArgs(kinesisStreamConfig, streamType);
         }
     }

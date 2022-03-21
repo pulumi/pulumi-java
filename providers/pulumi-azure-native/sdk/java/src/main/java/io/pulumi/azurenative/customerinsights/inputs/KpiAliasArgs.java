@@ -77,22 +77,18 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.aliasName = Objects.requireNonNull(aliasName);
             return this;
         }
-
         public Builder aliasName(String aliasName) {
             this.aliasName = Output.of(Objects.requireNonNull(aliasName));
             return this;
         }
-
         public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
-        }
-        public KpiAliasArgs build() {
+        }        public KpiAliasArgs build() {
             return new KpiAliasArgs(aliasName, expression);
         }
     }

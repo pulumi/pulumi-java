@@ -118,27 +118,25 @@ public final class GetPolicyTagResult {
             this.childPolicyTags = Objects.requireNonNull(childPolicyTags);
             return this;
         }
-
+        public Builder childPolicyTags(String... childPolicyTags) {
+            return childPolicyTags(List.of(childPolicyTags));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parentPolicyTag(String parentPolicyTag) {
             this.parentPolicyTag = Objects.requireNonNull(parentPolicyTag);
             return this;
-        }
-        public GetPolicyTagResult build() {
+        }        public GetPolicyTagResult build() {
             return new GetPolicyTagResult(childPolicyTags, description, displayName, name, parentPolicyTag);
         }
     }

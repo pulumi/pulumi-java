@@ -69,12 +69,10 @@ public final class DataSourceParametersS3ManifestFileLocation {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public DataSourceParametersS3ManifestFileLocation build() {
+        }        public DataSourceParametersS3ManifestFileLocation build() {
             return new DataSourceParametersS3ManifestFileLocation(bucket, key);
         }
     }

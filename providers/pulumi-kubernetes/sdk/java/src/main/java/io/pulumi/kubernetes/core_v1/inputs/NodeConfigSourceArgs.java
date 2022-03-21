@@ -61,12 +61,10 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
             this.configMap = configMap;
             return this;
         }
-
         public Builder configMap(@Nullable ConfigMapNodeConfigSourceArgs configMap) {
             this.configMap = Output.ofNullable(configMap);
             return this;
-        }
-        public NodeConfigSourceArgs build() {
+        }        public NodeConfigSourceArgs build() {
             return new NodeConfigSourceArgs(configMap);
         }
     }

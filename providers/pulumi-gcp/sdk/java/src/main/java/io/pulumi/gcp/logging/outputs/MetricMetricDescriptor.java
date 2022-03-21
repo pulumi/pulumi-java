@@ -147,27 +147,25 @@ public final class MetricMetricDescriptor {
             this.displayName = displayName;
             return this;
         }
-
         public Builder labels(@Nullable List<MetricMetricDescriptorLabel> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(MetricMetricDescriptorLabel... labels) {
+            return labels(List.of(labels));
+        }
         public Builder metricKind(String metricKind) {
             this.metricKind = Objects.requireNonNull(metricKind);
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
-        }
-        public MetricMetricDescriptor build() {
+        }        public MetricMetricDescriptor build() {
             return new MetricMetricDescriptor(displayName, labels, metricKind, unit, valueType);
         }
     }

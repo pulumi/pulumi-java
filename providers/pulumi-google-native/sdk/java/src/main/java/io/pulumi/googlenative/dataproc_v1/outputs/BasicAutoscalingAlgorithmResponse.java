@@ -87,17 +87,14 @@ public final class BasicAutoscalingAlgorithmResponse {
             this.cooldownPeriod = Objects.requireNonNull(cooldownPeriod);
             return this;
         }
-
         public Builder sparkStandaloneConfig(SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig) {
             this.sparkStandaloneConfig = Objects.requireNonNull(sparkStandaloneConfig);
             return this;
         }
-
         public Builder yarnConfig(BasicYarnAutoscalingConfigResponse yarnConfig) {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
-        }
-        public BasicAutoscalingAlgorithmResponse build() {
+        }        public BasicAutoscalingAlgorithmResponse build() {
             return new BasicAutoscalingAlgorithmResponse(cooldownPeriod, sparkStandaloneConfig, yarnConfig);
         }
     }

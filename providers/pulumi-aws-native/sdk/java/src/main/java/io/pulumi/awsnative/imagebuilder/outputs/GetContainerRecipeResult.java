@@ -53,8 +53,7 @@ public final class GetContainerRecipeResult {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public GetContainerRecipeResult build() {
+        }        public GetContainerRecipeResult build() {
             return new GetContainerRecipeResult(arn);
         }
     }

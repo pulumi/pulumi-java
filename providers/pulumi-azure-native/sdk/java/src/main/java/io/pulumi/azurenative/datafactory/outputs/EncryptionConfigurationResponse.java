@@ -104,22 +104,18 @@ public final class EncryptionConfigurationResponse {
             this.identity = identity;
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
-        }
-        public EncryptionConfigurationResponse build() {
+        }        public EncryptionConfigurationResponse build() {
             return new EncryptionConfigurationResponse(identity, keyName, keyVersion, vaultBaseUrl);
         }
     }

@@ -90,17 +90,14 @@ public final class GetOrderItemByNameArgs extends io.pulumi.resources.InvokeArgs
             this.expand = expand;
             return this;
         }
-
         public Builder orderItemName(String orderItemName) {
             this.orderItemName = Objects.requireNonNull(orderItemName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetOrderItemByNameArgs build() {
+        }        public GetOrderItemByNameArgs build() {
             return new GetOrderItemByNameArgs(expand, orderItemName, resourceGroupName);
         }
     }

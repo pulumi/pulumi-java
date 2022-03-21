@@ -120,27 +120,22 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
             this.badRecords = Objects.requireNonNull(badRecords);
             return this;
         }
-
         public Builder inputFileBytes(String inputFileBytes) {
             this.inputFileBytes = Objects.requireNonNull(inputFileBytes);
             return this;
         }
-
         public Builder inputFiles(String inputFiles) {
             this.inputFiles = Objects.requireNonNull(inputFiles);
             return this;
         }
-
         public Builder outputBytes(String outputBytes) {
             this.outputBytes = Objects.requireNonNull(outputBytes);
             return this;
         }
-
         public Builder outputRows(String outputRows) {
             this.outputRows = Objects.requireNonNull(outputRows);
             return this;
-        }
-        public JobStatistics3Response build() {
+        }        public JobStatistics3Response build() {
             return new JobStatistics3Response(badRecords, inputFileBytes, inputFiles, outputBytes, outputRows);
         }
     }

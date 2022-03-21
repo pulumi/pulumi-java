@@ -144,62 +144,50 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.bgpProperties = bgpProperties;
             return this;
         }
-
         public Builder bgpProperties(@Nullable VpnLinkBgpSettingsArgs bgpProperties) {
             this.bgpProperties = Output.ofNullable(bgpProperties);
             return this;
         }
-
         public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder linkProperties(@Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties) {
             this.linkProperties = linkProperties;
             return this;
         }
-
         public Builder linkProperties(@Nullable VpnLinkProviderPropertiesArgs linkProperties) {
             this.linkProperties = Output.ofNullable(linkProperties);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public VpnSiteLinkArgs build() {
+        }        public VpnSiteLinkArgs build() {
             return new VpnSiteLinkArgs(bgpProperties, fqdn, id, ipAddress, linkProperties, name);
         }
     }

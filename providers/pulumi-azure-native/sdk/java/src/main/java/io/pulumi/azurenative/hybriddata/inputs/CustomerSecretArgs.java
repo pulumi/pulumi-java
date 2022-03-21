@@ -94,32 +94,26 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder algorithm(SupportedAlgorithm algorithm) {
             this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
-
         public Builder keyIdentifier(Output<String> keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
-
         public Builder keyIdentifier(String keyIdentifier) {
             this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
             return this;
         }
-
         public Builder keyValue(Output<String> keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
-
         public Builder keyValue(String keyValue) {
             this.keyValue = Output.of(Objects.requireNonNull(keyValue));
             return this;
-        }
-        public CustomerSecretArgs build() {
+        }        public CustomerSecretArgs build() {
             return new CustomerSecretArgs(algorithm, keyIdentifier, keyValue);
         }
     }

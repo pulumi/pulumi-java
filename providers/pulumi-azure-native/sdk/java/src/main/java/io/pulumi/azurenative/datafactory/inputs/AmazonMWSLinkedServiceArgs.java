@@ -295,152 +295,125 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
-
         public Builder accessKeyId(Object accessKeyId) {
             this.accessKeyId = Output.of(Objects.requireNonNull(accessKeyId));
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder endpoint(Output<Object> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(Object endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder marketplaceID(Output<Object> marketplaceID) {
             this.marketplaceID = Objects.requireNonNull(marketplaceID);
             return this;
         }
-
         public Builder marketplaceID(Object marketplaceID) {
             this.marketplaceID = Output.of(Objects.requireNonNull(marketplaceID));
             return this;
         }
-
         public Builder mwsAuthToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken) {
             this.mwsAuthToken = mwsAuthToken;
             return this;
         }
-
         public Builder mwsAuthToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> mwsAuthToken) {
             this.mwsAuthToken = Output.ofNullable(mwsAuthToken);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder secretKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
-
         public Builder secretKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretKey) {
             this.secretKey = Output.ofNullable(secretKey);
             return this;
         }
-
         public Builder sellerID(Output<Object> sellerID) {
             this.sellerID = Objects.requireNonNull(sellerID);
             return this;
         }
-
         public Builder sellerID(Object sellerID) {
             this.sellerID = Output.of(Objects.requireNonNull(sellerID));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
             return this;
         }
-
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
-
         public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = Output.ofNullable(useHostVerification);
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = Output.ofNullable(usePeerVerification);
             return this;
-        }
-        public AmazonMWSLinkedServiceArgs build() {
+        }        public AmazonMWSLinkedServiceArgs build() {
             return new AmazonMWSLinkedServiceArgs(accessKeyId, annotations, connectVia, description, encryptedCredential, endpoint, marketplaceID, mwsAuthToken, parameters, secretKey, sellerID, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }
     }

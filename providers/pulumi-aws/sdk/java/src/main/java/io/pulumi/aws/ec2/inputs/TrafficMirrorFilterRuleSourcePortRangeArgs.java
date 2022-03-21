@@ -74,22 +74,18 @@ public final class TrafficMirrorFilterRuleSourcePortRangeArgs extends io.pulumi.
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
-
         public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Output.ofNullable(toPort);
             return this;
-        }
-        public TrafficMirrorFilterRuleSourcePortRangeArgs build() {
+        }        public TrafficMirrorFilterRuleSourcePortRangeArgs build() {
             return new TrafficMirrorFilterRuleSourcePortRangeArgs(fromPort, toPort);
         }
     }

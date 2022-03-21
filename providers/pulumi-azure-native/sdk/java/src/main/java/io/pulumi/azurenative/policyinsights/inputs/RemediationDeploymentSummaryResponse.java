@@ -92,17 +92,14 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
             this.failedDeployments = Objects.requireNonNull(failedDeployments);
             return this;
         }
-
         public Builder successfulDeployments(Integer successfulDeployments) {
             this.successfulDeployments = Objects.requireNonNull(successfulDeployments);
             return this;
         }
-
         public Builder totalDeployments(Integer totalDeployments) {
             this.totalDeployments = Objects.requireNonNull(totalDeployments);
             return this;
-        }
-        public RemediationDeploymentSummaryResponse build() {
+        }        public RemediationDeploymentSummaryResponse build() {
             return new RemediationDeploymentSummaryResponse(failedDeployments, successfulDeployments, totalDeployments);
         }
     }

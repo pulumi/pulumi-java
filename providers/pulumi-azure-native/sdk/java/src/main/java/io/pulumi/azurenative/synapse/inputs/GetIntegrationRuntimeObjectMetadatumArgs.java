@@ -106,22 +106,18 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
             this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
             return this;
         }
-
         public Builder metadataPath(@Nullable String metadataPath) {
             this.metadataPath = metadataPath;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIntegrationRuntimeObjectMetadatumArgs build() {
+        }        public GetIntegrationRuntimeObjectMetadatumArgs build() {
             return new GetIntegrationRuntimeObjectMetadatumArgs(integrationRuntimeName, metadataPath, resourceGroupName, workspaceName);
         }
     }

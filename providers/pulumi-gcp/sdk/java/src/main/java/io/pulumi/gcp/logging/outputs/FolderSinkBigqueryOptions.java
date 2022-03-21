@@ -57,8 +57,7 @@ public final class FolderSinkBigqueryOptions {
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
-        }
-        public FolderSinkBigqueryOptions build() {
+        }        public FolderSinkBigqueryOptions build() {
             return new FolderSinkBigqueryOptions(usePartitionedTables);
         }
     }

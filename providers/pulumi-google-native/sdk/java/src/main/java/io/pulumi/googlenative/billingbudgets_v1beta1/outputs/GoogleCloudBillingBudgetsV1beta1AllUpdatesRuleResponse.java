@@ -103,22 +103,21 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse {
             this.disableDefaultIamRecipients = Objects.requireNonNull(disableDefaultIamRecipients);
             return this;
         }
-
         public Builder monitoringNotificationChannels(List<String> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = Objects.requireNonNull(monitoringNotificationChannels);
             return this;
         }
-
+        public Builder monitoringNotificationChannels(String... monitoringNotificationChannels) {
+            return monitoringNotificationChannels(List.of(monitoringNotificationChannels));
+        }
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
-        }
-        public GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse build() {
+        }        public GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }
     }

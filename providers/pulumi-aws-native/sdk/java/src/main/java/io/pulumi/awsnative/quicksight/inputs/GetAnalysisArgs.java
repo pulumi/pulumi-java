@@ -64,12 +64,10 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
             this.analysisId = Objects.requireNonNull(analysisId);
             return this;
         }
-
         public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
-        }
-        public GetAnalysisArgs build() {
+        }        public GetAnalysisArgs build() {
             return new GetAnalysisArgs(analysisId, awsAccountId);
         }
     }

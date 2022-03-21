@@ -61,12 +61,10 @@ public final class GroupMembersItemArgs extends io.pulumi.resources.ResourceArgs
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public GroupMembersItemArgs build() {
+        }        public GroupMembersItemArgs build() {
             return new GroupMembersItemArgs(resourceId);
         }
     }

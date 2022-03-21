@@ -108,42 +108,40 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
             this.clientIdLists = Objects.requireNonNull(clientIdLists);
             return this;
         }
-
         public Builder clientIdLists(List<String> clientIdLists) {
             this.clientIdLists = Output.of(Objects.requireNonNull(clientIdLists));
             return this;
         }
-
+        public Builder clientIdLists(String... clientIdLists) {
+            return clientIdLists(List.of(clientIdLists));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder thumbprintLists(Output<List<String>> thumbprintLists) {
             this.thumbprintLists = Objects.requireNonNull(thumbprintLists);
             return this;
         }
-
         public Builder thumbprintLists(List<String> thumbprintLists) {
             this.thumbprintLists = Output.of(Objects.requireNonNull(thumbprintLists));
             return this;
         }
-
+        public Builder thumbprintLists(String... thumbprintLists) {
+            return thumbprintLists(List.of(thumbprintLists));
+        }
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public OpenIdConnectProviderArgs build() {
+        }        public OpenIdConnectProviderArgs build() {
             return new OpenIdConnectProviderArgs(clientIdLists, tags, thumbprintLists, url);
         }
     }

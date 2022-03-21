@@ -72,12 +72,10 @@ public final class VirtualNodeSpecBackendVirtualService {
             this.clientPolicy = clientPolicy;
             return this;
         }
-
         public Builder virtualServiceName(String virtualServiceName) {
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualService build() {
+        }        public VirtualNodeSpecBackendVirtualService build() {
             return new VirtualNodeSpecBackendVirtualService(clientPolicy, virtualServiceName);
         }
     }

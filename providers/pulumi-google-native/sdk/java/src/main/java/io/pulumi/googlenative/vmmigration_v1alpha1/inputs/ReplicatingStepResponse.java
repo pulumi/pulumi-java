@@ -108,22 +108,18 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
             this.lastThirtyMinutesAverageBytesPerSecond = Objects.requireNonNull(lastThirtyMinutesAverageBytesPerSecond);
             return this;
         }
-
         public Builder lastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
             this.lastTwoMinutesAverageBytesPerSecond = Objects.requireNonNull(lastTwoMinutesAverageBytesPerSecond);
             return this;
         }
-
         public Builder replicatedBytes(String replicatedBytes) {
             this.replicatedBytes = Objects.requireNonNull(replicatedBytes);
             return this;
         }
-
         public Builder totalBytes(String totalBytes) {
             this.totalBytes = Objects.requireNonNull(totalBytes);
             return this;
-        }
-        public ReplicatingStepResponse build() {
+        }        public ReplicatingStepResponse build() {
             return new ReplicatingStepResponse(lastThirtyMinutesAverageBytesPerSecond, lastTwoMinutesAverageBytesPerSecond, replicatedBytes, totalBytes);
         }
     }

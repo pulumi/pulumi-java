@@ -56,12 +56,10 @@ public final class WebAclDefaultActionArgs extends io.pulumi.resources.ResourceA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WebAclDefaultActionArgs build() {
+        }        public WebAclDefaultActionArgs build() {
             return new WebAclDefaultActionArgs(type);
         }
     }

@@ -120,27 +120,22 @@ public final class OperationResponse {
             this.done = Objects.requireNonNull(done);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder response(Map<String,String> response) {
             this.response = Objects.requireNonNull(response);
             return this;
-        }
-        public OperationResponse build() {
+        }        public OperationResponse build() {
             return new OperationResponse(done, error, metadata, name, response);
         }
     }

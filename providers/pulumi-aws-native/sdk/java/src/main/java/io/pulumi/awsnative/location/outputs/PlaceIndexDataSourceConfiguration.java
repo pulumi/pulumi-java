@@ -45,8 +45,7 @@ public final class PlaceIndexDataSourceConfiguration {
         public Builder intendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
             this.intendedUse = intendedUse;
             return this;
-        }
-        public PlaceIndexDataSourceConfiguration build() {
+        }        public PlaceIndexDataSourceConfiguration build() {
             return new PlaceIndexDataSourceConfiguration(intendedUse);
         }
     }

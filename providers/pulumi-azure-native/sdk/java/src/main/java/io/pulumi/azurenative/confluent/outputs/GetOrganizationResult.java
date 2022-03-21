@@ -218,57 +218,46 @@ public final class GetOrganizationResult {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder offerDetail(@Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail) {
             this.offerDetail = offerDetail;
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder ssoUrl(String ssoUrl) {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userDetail(@Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
             this.userDetail = userDetail;
             return this;
-        }
-        public GetOrganizationResult build() {
+        }        public GetOrganizationResult build() {
             return new GetOrganizationResult(createdTime, id, location, name, offerDetail, organizationId, provisioningState, ssoUrl, tags, type, userDetail);
         }
     }

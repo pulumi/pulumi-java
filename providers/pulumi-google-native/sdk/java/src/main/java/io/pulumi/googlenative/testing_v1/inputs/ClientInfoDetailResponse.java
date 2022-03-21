@@ -76,12 +76,10 @@ public final class ClientInfoDetailResponse extends io.pulumi.resources.InvokeAr
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ClientInfoDetailResponse build() {
+        }        public ClientInfoDetailResponse build() {
             return new ClientInfoDetailResponse(key, value);
         }
     }

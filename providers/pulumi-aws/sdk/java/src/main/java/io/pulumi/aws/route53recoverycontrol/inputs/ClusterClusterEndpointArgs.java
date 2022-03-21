@@ -74,22 +74,18 @@ public final class ClusterClusterEndpointArgs extends io.pulumi.resources.Resour
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public ClusterClusterEndpointArgs build() {
+        }        public ClusterClusterEndpointArgs build() {
             return new ClusterClusterEndpointArgs(endpoint, region);
         }
     }

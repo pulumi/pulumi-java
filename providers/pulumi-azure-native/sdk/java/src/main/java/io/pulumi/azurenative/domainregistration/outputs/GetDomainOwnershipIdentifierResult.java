@@ -136,32 +136,26 @@ public final class GetDomainOwnershipIdentifierResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ownershipId(@Nullable String ownershipId) {
             this.ownershipId = ownershipId;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDomainOwnershipIdentifierResult build() {
+        }        public GetDomainOwnershipIdentifierResult build() {
             return new GetDomainOwnershipIdentifierResult(id, kind, name, ownershipId, systemData, type);
         }
     }

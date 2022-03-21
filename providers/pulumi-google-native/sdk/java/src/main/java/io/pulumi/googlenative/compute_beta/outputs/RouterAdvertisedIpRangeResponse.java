@@ -69,12 +69,10 @@ public final class RouterAdvertisedIpRangeResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder range(String range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public RouterAdvertisedIpRangeResponse build() {
+        }        public RouterAdvertisedIpRangeResponse build() {
             return new RouterAdvertisedIpRangeResponse(description, range);
         }
     }

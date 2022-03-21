@@ -238,62 +238,53 @@ public final class GetAutomationRuleResult {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>... actions) {
+            return actions(List.of(actions));
+        }
         public Builder createdBy(ClientInfoResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedBy(ClientInfoResponse lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder triggeringLogic(AutomationRuleTriggeringLogicResponse triggeringLogic) {
             this.triggeringLogic = Objects.requireNonNull(triggeringLogic);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAutomationRuleResult build() {
+        }        public GetAutomationRuleResult build() {
             return new GetAutomationRuleResult(actions, createdBy, createdTimeUtc, displayName, etag, id, lastModifiedBy, lastModifiedTimeUtc, name, order, triggeringLogic, type);
         }
     }

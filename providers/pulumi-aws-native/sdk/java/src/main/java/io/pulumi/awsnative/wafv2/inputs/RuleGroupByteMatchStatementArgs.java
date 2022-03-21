@@ -110,52 +110,45 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder positionalConstraint(Output<RuleGroupPositionalConstraint> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder positionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
-
         public Builder searchString(@Nullable Output<String> searchString) {
             this.searchString = searchString;
             return this;
         }
-
         public Builder searchString(@Nullable String searchString) {
             this.searchString = Output.ofNullable(searchString);
             return this;
         }
-
         public Builder searchStringBase64(@Nullable Output<String> searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
-
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = Output.ofNullable(searchStringBase64);
             return this;
         }
-
         public Builder textTransformations(Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public RuleGroupByteMatchStatementArgs build() {
+        public Builder textTransformations(RuleGroupTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupByteMatchStatementArgs build() {
             return new RuleGroupByteMatchStatementArgs(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }
     }

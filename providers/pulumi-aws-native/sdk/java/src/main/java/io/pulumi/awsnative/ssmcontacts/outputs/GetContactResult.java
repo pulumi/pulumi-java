@@ -71,12 +71,10 @@ public final class GetContactResult {
             this.arn = arn;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
-        }
-        public GetContactResult build() {
+        }        public GetContactResult build() {
             return new GetContactResult(arn, displayName);
         }
     }

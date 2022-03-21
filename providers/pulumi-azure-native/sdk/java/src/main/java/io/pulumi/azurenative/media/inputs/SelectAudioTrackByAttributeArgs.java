@@ -131,52 +131,42 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder attribute(Either<String,TrackAttribute> attribute) {
             this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
-
         public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
-
         public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
             this.channelMapping = Output.ofNullable(channelMapping);
             return this;
         }
-
         public Builder filter(Output<Either<String,AttributeFilter>> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(Either<String,AttributeFilter> filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder filterValue(@Nullable Output<String> filterValue) {
             this.filterValue = filterValue;
             return this;
         }
-
         public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = Output.ofNullable(filterValue);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public SelectAudioTrackByAttributeArgs build() {
+        }        public SelectAudioTrackByAttributeArgs build() {
             return new SelectAudioTrackByAttributeArgs(attribute, channelMapping, filter, filterValue, odataType);
         }
     }

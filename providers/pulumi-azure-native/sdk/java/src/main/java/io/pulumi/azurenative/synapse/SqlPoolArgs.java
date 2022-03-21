@@ -312,162 +312,130 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
             this.createMode = Output.ofNullable(createMode);
             return this;
         }
-
         public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
-
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
             this.recoverableDatabaseId = Output.ofNullable(recoverableDatabaseId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
-
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
-
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
             this.sourceDatabaseId = Output.ofNullable(sourceDatabaseId);
             return this;
         }
-
         public Builder sqlPoolName(@Nullable Output<String> sqlPoolName) {
             this.sqlPoolName = sqlPoolName;
             return this;
         }
-
         public Builder sqlPoolName(@Nullable String sqlPoolName) {
             this.sqlPoolName = Output.ofNullable(sqlPoolName);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public SqlPoolArgs build() {
+        }        public SqlPoolArgs build() {
             return new SqlPoolArgs(collation, createMode, creationDate, location, maxSizeBytes, provisioningState, recoverableDatabaseId, resourceGroupName, restorePointInTime, sku, sourceDatabaseId, sqlPoolName, status, storageAccountType, tags, workspaceName);
         }
     }

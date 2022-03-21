@@ -139,62 +139,50 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
             this.administratorType = Objects.requireNonNull(administratorType);
             return this;
         }
-
         public Builder administratorType(Either<String,AdministratorType> administratorType) {
             this.administratorType = Output.of(Objects.requireNonNull(administratorType));
             return this;
         }
-
         public Builder login(Output<String> login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
-
         public Builder login(String login) {
             this.login = Output.of(Objects.requireNonNull(login));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder sid(Output<String> sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
-
         public Builder sid(String sid) {
             this.sid = Output.of(Objects.requireNonNull(sid));
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
-        }
-        public ServerAdministratorArgs build() {
+        }        public ServerAdministratorArgs build() {
             return new ServerAdministratorArgs(administratorType, login, resourceGroupName, serverName, sid, tenantId);
         }
     }

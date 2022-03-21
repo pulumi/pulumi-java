@@ -204,52 +204,42 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
             this.annotationId = Objects.requireNonNull(annotationId);
             return this;
         }
-
         public Builder answerFeedback(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback) {
             this.answerFeedback = Objects.requireNonNull(answerFeedback);
             return this;
         }
-
         public Builder articleSuggestion(GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion) {
             this.articleSuggestion = Objects.requireNonNull(articleSuggestion);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dialogflowInteraction(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction) {
             this.dialogflowInteraction = Objects.requireNonNull(dialogflowInteraction);
             return this;
         }
-
         public Builder endBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary) {
             this.endBoundary = Objects.requireNonNull(endBoundary);
             return this;
         }
-
         public Builder faqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer) {
             this.faqAnswer = Objects.requireNonNull(faqAnswer);
             return this;
         }
-
         public Builder smartComposeSuggestion(GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion) {
             this.smartComposeSuggestion = Objects.requireNonNull(smartComposeSuggestion);
             return this;
         }
-
         public Builder smartReply(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply) {
             this.smartReply = Objects.requireNonNull(smartReply);
             return this;
         }
-
         public Builder startBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
             this.startBoundary = Objects.requireNonNull(startBoundary);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse build() {
             return new GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(annotationId, answerFeedback, articleSuggestion, createTime, dialogflowInteraction, endBoundary, faqAnswer, smartComposeSuggestion, smartReply, startBoundary);
         }
     }

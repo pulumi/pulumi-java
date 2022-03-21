@@ -151,37 +151,30 @@ public final class OsProfileResponse {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder computerName(@Nullable String computerName) {
             this.computerName = computerName;
             return this;
         }
-
         public Builder osName(String osName) {
             this.osName = Objects.requireNonNull(osName);
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder toolsRunningStatus(String toolsRunningStatus) {
             this.toolsRunningStatus = Objects.requireNonNull(toolsRunningStatus);
             return this;
         }
-
         public Builder toolsVersion(String toolsVersion) {
             this.toolsVersion = Objects.requireNonNull(toolsVersion);
             return this;
         }
-
         public Builder toolsVersionStatus(String toolsVersionStatus) {
             this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
             return this;
-        }
-        public OsProfileResponse build() {
+        }        public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, computerName, osName, osType, toolsRunningStatus, toolsVersion, toolsVersionStatus);
         }
     }

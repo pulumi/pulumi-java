@@ -160,37 +160,30 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
             this.attachedTo = attachedTo;
             return this;
         }
-
         public Builder attachmentState(@Nullable String attachmentState) {
             this.attachmentState = attachmentState;
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder iOPS(@Nullable Integer iOPS) {
             this.iOPS = iOPS;
             return this;
         }
-
         public Builder isSystemDisk(@Nullable Boolean isSystemDisk) {
             this.isSystemDisk = isSystemDisk;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder sizeInGb(@Nullable String sizeInGb) {
             this.sizeInGb = sizeInGb;
             return this;
-        }
-        public InstanceDisk build() {
+        }        public InstanceDisk build() {
             return new InstanceDisk(attachedTo, attachmentState, diskName, iOPS, isSystemDisk, path, sizeInGb);
         }
     }

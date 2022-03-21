@@ -79,22 +79,18 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable PrivateEndpointConnectionPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public PrivateEndpointConnectionArgs build() {
+        }        public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(location, properties);
         }
     }

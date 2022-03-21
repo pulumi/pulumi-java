@@ -123,52 +123,42 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
             this.configmanagement = Objects.requireNonNull(configmanagement);
             return this;
         }
-
         public Builder configmanagement(FeatureMembershipConfigmanagementArgs configmanagement) {
             this.configmanagement = Output.of(Objects.requireNonNull(configmanagement));
             return this;
         }
-
         public Builder feature(Output<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
-
         public Builder feature(String feature) {
             this.feature = Output.of(Objects.requireNonNull(feature));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder membership(Output<String> membership) {
             this.membership = Objects.requireNonNull(membership);
             return this;
         }
-
         public Builder membership(String membership) {
             this.membership = Output.of(Objects.requireNonNull(membership));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public FeatureMembershipArgs build() {
+        }        public FeatureMembershipArgs build() {
             return new FeatureMembershipArgs(configmanagement, feature, location, membership, project);
         }
     }

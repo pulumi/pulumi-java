@@ -71,12 +71,10 @@ public final class RegionInstanceGroupManagerStatefulDisk {
             this.deleteRule = deleteRule;
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
-        }
-        public RegionInstanceGroupManagerStatefulDisk build() {
+        }        public RegionInstanceGroupManagerStatefulDisk build() {
             return new RegionInstanceGroupManagerStatefulDisk(deleteRule, deviceName);
         }
     }

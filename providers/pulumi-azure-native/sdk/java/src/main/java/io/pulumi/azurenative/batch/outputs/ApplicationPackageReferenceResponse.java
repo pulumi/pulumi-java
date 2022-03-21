@@ -63,12 +63,10 @@ public final class ApplicationPackageReferenceResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ApplicationPackageReferenceResponse build() {
+        }        public ApplicationPackageReferenceResponse build() {
             return new ApplicationPackageReferenceResponse(id, version);
         }
     }

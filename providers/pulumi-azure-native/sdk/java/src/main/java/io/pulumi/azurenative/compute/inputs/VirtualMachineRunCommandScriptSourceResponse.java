@@ -94,17 +94,14 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
             this.commandId = commandId;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
-
         public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
-        }
-        public VirtualMachineRunCommandScriptSourceResponse build() {
+        }        public VirtualMachineRunCommandScriptSourceResponse build() {
             return new VirtualMachineRunCommandScriptSourceResponse(commandId, script, scriptUri);
         }
     }

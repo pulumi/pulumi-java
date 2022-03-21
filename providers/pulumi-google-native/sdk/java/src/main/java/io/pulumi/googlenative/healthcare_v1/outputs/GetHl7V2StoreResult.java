@@ -122,27 +122,25 @@ public final class GetHl7V2StoreResult {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationConfigs(List<Hl7V2NotificationConfigResponse> notificationConfigs) {
             this.notificationConfigs = Objects.requireNonNull(notificationConfigs);
             return this;
         }
-
+        public Builder notificationConfigs(Hl7V2NotificationConfigResponse... notificationConfigs) {
+            return notificationConfigs(List.of(notificationConfigs));
+        }
         public Builder parserConfig(ParserConfigResponse parserConfig) {
             this.parserConfig = Objects.requireNonNull(parserConfig);
             return this;
         }
-
         public Builder rejectDuplicateMessage(Boolean rejectDuplicateMessage) {
             this.rejectDuplicateMessage = Objects.requireNonNull(rejectDuplicateMessage);
             return this;
-        }
-        public GetHl7V2StoreResult build() {
+        }        public GetHl7V2StoreResult build() {
             return new GetHl7V2StoreResult(labels, name, notificationConfigs, parserConfig, rejectDuplicateMessage);
         }
     }

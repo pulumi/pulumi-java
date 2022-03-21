@@ -135,32 +135,26 @@ public final class PlanResponse {
             this.accessibility = accessibility;
             return this;
         }
-
         public Builder altStackReference(String altStackReference) {
             this.altStackReference = Objects.requireNonNull(altStackReference);
             return this;
         }
-
         public Builder planDisplayName(String planDisplayName) {
             this.planDisplayName = Objects.requireNonNull(planDisplayName);
             return this;
         }
-
         public Builder planId(String planId) {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
-
         public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }
-
         public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
-        }
-        public PlanResponse build() {
+        }        public PlanResponse build() {
             return new PlanResponse(accessibility, altStackReference, planDisplayName, planId, skuId, stackType);
         }
     }

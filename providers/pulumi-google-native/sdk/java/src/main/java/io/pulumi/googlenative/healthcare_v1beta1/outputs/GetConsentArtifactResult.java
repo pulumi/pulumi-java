@@ -169,42 +169,37 @@ public final class GetConsentArtifactResult {
             this.consentContentScreenshots = Objects.requireNonNull(consentContentScreenshots);
             return this;
         }
-
+        public Builder consentContentScreenshots(ImageResponse... consentContentScreenshots) {
+            return consentContentScreenshots(List.of(consentContentScreenshots));
+        }
         public Builder consentContentVersion(String consentContentVersion) {
             this.consentContentVersion = Objects.requireNonNull(consentContentVersion);
             return this;
         }
-
         public Builder guardianSignature(SignatureResponse guardianSignature) {
             this.guardianSignature = Objects.requireNonNull(guardianSignature);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userSignature(SignatureResponse userSignature) {
             this.userSignature = Objects.requireNonNull(userSignature);
             return this;
         }
-
         public Builder witnessSignature(SignatureResponse witnessSignature) {
             this.witnessSignature = Objects.requireNonNull(witnessSignature);
             return this;
-        }
-        public GetConsentArtifactResult build() {
+        }        public GetConsentArtifactResult build() {
             return new GetConsentArtifactResult(consentContentScreenshots, consentContentVersion, guardianSignature, metadata, name, userId, userSignature, witnessSignature);
         }
     }

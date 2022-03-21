@@ -110,22 +110,21 @@ public final class FileShareConfigResponse extends io.pulumi.resources.InvokeArg
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nfsExportOptions(List<NfsExportOptionsResponse> nfsExportOptions) {
             this.nfsExportOptions = Objects.requireNonNull(nfsExportOptions);
             return this;
         }
-
+        public Builder nfsExportOptions(NfsExportOptionsResponse... nfsExportOptions) {
+            return nfsExportOptions(List.of(nfsExportOptions));
+        }
         public Builder sourceBackup(String sourceBackup) {
             this.sourceBackup = Objects.requireNonNull(sourceBackup);
             return this;
-        }
-        public FileShareConfigResponse build() {
+        }        public FileShareConfigResponse build() {
             return new FileShareConfigResponse(capacityGb, name, nfsExportOptions, sourceBackup);
         }
     }

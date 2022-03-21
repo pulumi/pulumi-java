@@ -134,72 +134,64 @@ public final class ScheduledQueryTimestreamConfigurationArgs extends io.pulumi.r
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder dimensionMappings(Output<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings) {
             this.dimensionMappings = Objects.requireNonNull(dimensionMappings);
             return this;
         }
-
         public Builder dimensionMappings(List<ScheduledQueryDimensionMappingArgs> dimensionMappings) {
             this.dimensionMappings = Output.of(Objects.requireNonNull(dimensionMappings));
             return this;
         }
-
+        public Builder dimensionMappings(ScheduledQueryDimensionMappingArgs... dimensionMappings) {
+            return dimensionMappings(List.of(dimensionMappings));
+        }
         public Builder measureNameColumn(@Nullable Output<String> measureNameColumn) {
             this.measureNameColumn = measureNameColumn;
             return this;
         }
-
         public Builder measureNameColumn(@Nullable String measureNameColumn) {
             this.measureNameColumn = Output.ofNullable(measureNameColumn);
             return this;
         }
-
         public Builder mixedMeasureMappings(@Nullable Output<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings) {
             this.mixedMeasureMappings = mixedMeasureMappings;
             return this;
         }
-
         public Builder mixedMeasureMappings(@Nullable List<ScheduledQueryMixedMeasureMappingArgs> mixedMeasureMappings) {
             this.mixedMeasureMappings = Output.ofNullable(mixedMeasureMappings);
             return this;
         }
-
+        public Builder mixedMeasureMappings(ScheduledQueryMixedMeasureMappingArgs... mixedMeasureMappings) {
+            return mixedMeasureMappings(List.of(mixedMeasureMappings));
+        }
         public Builder multiMeasureMappings(@Nullable Output<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings) {
             this.multiMeasureMappings = multiMeasureMappings;
             return this;
         }
-
         public Builder multiMeasureMappings(@Nullable ScheduledQueryMultiMeasureMappingsArgs multiMeasureMappings) {
             this.multiMeasureMappings = Output.ofNullable(multiMeasureMappings);
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public Builder timeColumn(Output<String> timeColumn) {
             this.timeColumn = Objects.requireNonNull(timeColumn);
             return this;
         }
-
         public Builder timeColumn(String timeColumn) {
             this.timeColumn = Output.of(Objects.requireNonNull(timeColumn));
             return this;
-        }
-        public ScheduledQueryTimestreamConfigurationArgs build() {
+        }        public ScheduledQueryTimestreamConfigurationArgs build() {
             return new ScheduledQueryTimestreamConfigurationArgs(databaseName, dimensionMappings, measureNameColumn, mixedMeasureMappings, multiMeasureMappings, tableName, timeColumn);
         }
     }

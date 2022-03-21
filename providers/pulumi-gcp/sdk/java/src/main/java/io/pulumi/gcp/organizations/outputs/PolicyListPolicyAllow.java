@@ -73,12 +73,13 @@ public final class PolicyListPolicyAllow {
             this.all = all;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public PolicyListPolicyAllow build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public PolicyListPolicyAllow build() {
             return new PolicyListPolicyAllow(all, values);
         }
     }

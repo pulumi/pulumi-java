@@ -102,27 +102,22 @@ public final class GetConsentArgs extends io.pulumi.resources.InvokeArgs {
             this.consentId = Objects.requireNonNull(consentId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConsentArgs build() {
+        }        public GetConsentArgs build() {
             return new GetConsentArgs(consentId, consentStoreId, datasetId, location, project);
         }
     }

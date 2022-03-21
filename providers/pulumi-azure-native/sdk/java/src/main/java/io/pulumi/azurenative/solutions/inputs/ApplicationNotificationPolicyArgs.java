@@ -61,12 +61,13 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }
-
         public Builder notificationEndpoints(List<ApplicationNotificationEndpointArgs> notificationEndpoints) {
             this.notificationEndpoints = Output.of(Objects.requireNonNull(notificationEndpoints));
             return this;
         }
-        public ApplicationNotificationPolicyArgs build() {
+        public Builder notificationEndpoints(ApplicationNotificationEndpointArgs... notificationEndpoints) {
+            return notificationEndpoints(List.of(notificationEndpoints));
+        }        public ApplicationNotificationPolicyArgs build() {
             return new ApplicationNotificationPolicyArgs(notificationEndpoints);
         }
     }

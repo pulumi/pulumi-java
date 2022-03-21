@@ -77,22 +77,18 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
             this.fixedDelay = fixedDelay;
             return this;
         }
-
         public Builder fixedDelay(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs fixedDelay) {
             this.fixedDelay = Output.ofNullable(fixedDelay);
             return this;
         }
-
         public Builder percentage(@Nullable Output<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = Output.ofNullable(percentage);
             return this;
-        }
-        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayGetArgs build() {
+        }        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayGetArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayGetArgs(fixedDelay, percentage);
         }
     }

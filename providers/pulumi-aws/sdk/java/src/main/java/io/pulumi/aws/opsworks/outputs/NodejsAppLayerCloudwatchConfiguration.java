@@ -57,12 +57,13 @@ public final class NodejsAppLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<NodejsAppLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public NodejsAppLayerCloudwatchConfiguration build() {
+        public Builder logStreams(NodejsAppLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public NodejsAppLayerCloudwatchConfiguration build() {
             return new NodejsAppLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

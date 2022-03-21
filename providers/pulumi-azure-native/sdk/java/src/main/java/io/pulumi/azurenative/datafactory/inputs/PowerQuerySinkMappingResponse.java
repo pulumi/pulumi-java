@@ -80,12 +80,13 @@ public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.Inv
             this.dataflowSinks = dataflowSinks;
             return this;
         }
-
+        public Builder dataflowSinks(PowerQuerySinkResponse... dataflowSinks) {
+            return dataflowSinks(List.of(dataflowSinks));
+        }
         public Builder queryName(@Nullable String queryName) {
             this.queryName = queryName;
             return this;
-        }
-        public PowerQuerySinkMappingResponse build() {
+        }        public PowerQuerySinkMappingResponse build() {
             return new PowerQuerySinkMappingResponse(dataflowSinks, queryName);
         }
     }

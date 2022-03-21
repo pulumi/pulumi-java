@@ -126,52 +126,42 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
             this.apiGroup = apiGroup;
             return this;
         }
-
         public Builder apiGroup(@Nullable String apiGroup) {
             this.apiGroup = Output.ofNullable(apiGroup);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public IngressClassParametersReferenceArgs build() {
+        }        public IngressClassParametersReferenceArgs build() {
             return new IngressClassParametersReferenceArgs(apiGroup, kind, name, namespace, scope);
         }
     }

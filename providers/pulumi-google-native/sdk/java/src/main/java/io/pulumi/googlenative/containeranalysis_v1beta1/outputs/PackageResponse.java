@@ -71,12 +71,13 @@ public final class PackageResponse {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-
+        public Builder distribution(DistributionResponse... distribution) {
+            return distribution(List.of(distribution));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PackageResponse build() {
+        }        public PackageResponse build() {
             return new PackageResponse(distribution, name);
         }
     }

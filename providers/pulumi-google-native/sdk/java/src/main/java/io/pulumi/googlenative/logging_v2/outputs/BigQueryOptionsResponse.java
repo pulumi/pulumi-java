@@ -69,12 +69,10 @@ public final class BigQueryOptionsResponse {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
-
         public Builder usesTimestampColumnPartitioning(Boolean usesTimestampColumnPartitioning) {
             this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
             return this;
-        }
-        public BigQueryOptionsResponse build() {
+        }        public BigQueryOptionsResponse build() {
             return new BigQueryOptionsResponse(usePartitionedTables, usesTimestampColumnPartitioning);
         }
     }

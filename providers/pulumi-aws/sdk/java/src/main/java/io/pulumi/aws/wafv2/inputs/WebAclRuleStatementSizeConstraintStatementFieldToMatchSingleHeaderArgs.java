@@ -56,12 +56,10 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleH
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs build() {
+        }        public WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs build() {
             return new WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs(name);
         }
     }

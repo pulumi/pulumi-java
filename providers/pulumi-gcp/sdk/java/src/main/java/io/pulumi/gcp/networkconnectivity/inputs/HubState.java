@@ -192,92 +192,77 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder routingVpcs(@Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs) {
             this.routingVpcs = routingVpcs;
             return this;
         }
-
         public Builder routingVpcs(@Nullable List<HubRoutingVpcGetArgs> routingVpcs) {
             this.routingVpcs = Output.ofNullable(routingVpcs);
             return this;
         }
-
+        public Builder routingVpcs(HubRoutingVpcGetArgs... routingVpcs) {
+            return routingVpcs(List.of(routingVpcs));
+        }
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
-
         public Builder uniqueId(@Nullable String uniqueId) {
             this.uniqueId = Output.ofNullable(uniqueId);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public HubState build() {
+        }        public HubState build() {
             return new HubState(createTime, description, labels, name, project, routingVpcs, state, uniqueId, updateTime);
         }
     }

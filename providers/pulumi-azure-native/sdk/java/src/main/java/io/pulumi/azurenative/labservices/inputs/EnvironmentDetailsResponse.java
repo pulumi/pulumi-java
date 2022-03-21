@@ -190,47 +190,38 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder environmentState(String environmentState) {
             this.environmentState = Objects.requireNonNull(environmentState);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder passwordLastReset(String passwordLastReset) {
             this.passwordLastReset = Objects.requireNonNull(passwordLastReset);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder totalUsage(String totalUsage) {
             this.totalUsage = Objects.requireNonNull(totalUsage);
             return this;
         }
-
         public Builder virtualMachineDetails(VirtualMachineDetailsResponse virtualMachineDetails) {
             this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
             return this;
-        }
-        public EnvironmentDetailsResponse build() {
+        }        public EnvironmentDetailsResponse build() {
             return new EnvironmentDetailsResponse(description, environmentState, id, latestOperationResult, name, passwordLastReset, provisioningState, totalUsage, virtualMachineDetails);
         }
     }

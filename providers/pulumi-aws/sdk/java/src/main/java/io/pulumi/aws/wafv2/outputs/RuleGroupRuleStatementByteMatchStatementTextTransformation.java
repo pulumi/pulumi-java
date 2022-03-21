@@ -70,12 +70,10 @@ public final class RuleGroupRuleStatementByteMatchStatementTextTransformation {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RuleGroupRuleStatementByteMatchStatementTextTransformation build() {
+        }        public RuleGroupRuleStatementByteMatchStatementTextTransformation build() {
             return new RuleGroupRuleStatementByteMatchStatementTextTransformation(priority, type);
         }
     }

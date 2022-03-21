@@ -81,22 +81,18 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
             this.day = day;
             return this;
         }
-
         public Builder day(@Nullable Either<String,ScheduleDay> day) {
             this.day = Output.ofNullable(day);
             return this;
         }
-
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
             this.occurrence = occurrence;
             return this;
         }
-
         public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = Output.ofNullable(occurrence);
             return this;
-        }
-        public AdvancedScheduleMonthlyOccurrenceArgs build() {
+        }        public AdvancedScheduleMonthlyOccurrenceArgs build() {
             return new AdvancedScheduleMonthlyOccurrenceArgs(day, occurrence);
         }
     }

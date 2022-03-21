@@ -111,42 +111,34 @@ public final class TaskSetLoadBalancerArgs extends io.pulumi.resources.ResourceA
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
-
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
-
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
-
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
-        }
-        public TaskSetLoadBalancerArgs build() {
+        }        public TaskSetLoadBalancerArgs build() {
             return new TaskSetLoadBalancerArgs(containerName, containerPort, loadBalancerName, targetGroupArn);
         }
     }

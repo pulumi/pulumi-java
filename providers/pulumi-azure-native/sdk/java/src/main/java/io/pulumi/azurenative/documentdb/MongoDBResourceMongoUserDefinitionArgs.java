@@ -188,92 +188,77 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = Output.ofNullable(customData);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder mechanisms(@Nullable Output<String> mechanisms) {
             this.mechanisms = mechanisms;
             return this;
         }
-
         public Builder mechanisms(@Nullable String mechanisms) {
             this.mechanisms = Output.ofNullable(mechanisms);
             return this;
         }
-
         public Builder mongoUserDefinitionId(@Nullable Output<String> mongoUserDefinitionId) {
             this.mongoUserDefinitionId = mongoUserDefinitionId;
             return this;
         }
-
         public Builder mongoUserDefinitionId(@Nullable String mongoUserDefinitionId) {
             this.mongoUserDefinitionId = Output.ofNullable(mongoUserDefinitionId);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<RoleArgs> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-
+        public Builder roles(RoleArgs... roles) {
+            return roles(List.of(roles));
+        }
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public MongoDBResourceMongoUserDefinitionArgs build() {
+        }        public MongoDBResourceMongoUserDefinitionArgs build() {
             return new MongoDBResourceMongoUserDefinitionArgs(accountName, customData, databaseName, mechanisms, mongoUserDefinitionId, password, resourceGroupName, roles, userName);
         }
     }

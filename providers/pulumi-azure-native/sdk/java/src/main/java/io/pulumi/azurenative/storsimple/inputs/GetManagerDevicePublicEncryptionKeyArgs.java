@@ -88,17 +88,14 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagerDevicePublicEncryptionKeyArgs build() {
+        }        public GetManagerDevicePublicEncryptionKeyArgs build() {
             return new GetManagerDevicePublicEncryptionKeyArgs(deviceName, managerName, resourceGroupName);
         }
     }

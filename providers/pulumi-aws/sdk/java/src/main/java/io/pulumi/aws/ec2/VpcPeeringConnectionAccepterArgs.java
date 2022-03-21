@@ -128,52 +128,42 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
             this.accepter = accepter;
             return this;
         }
-
         public Builder accepter(@Nullable VpcPeeringConnectionAccepterAccepterArgs accepter) {
             this.accepter = Output.ofNullable(accepter);
             return this;
         }
-
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
-
         public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = Output.ofNullable(autoAccept);
             return this;
         }
-
         public Builder requester(@Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester) {
             this.requester = requester;
             return this;
         }
-
         public Builder requester(@Nullable VpcPeeringConnectionAccepterRequesterArgs requester) {
             this.requester = Output.ofNullable(requester);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcPeeringConnectionId(Output<String> vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
             return this;
         }
-
         public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Output.of(Objects.requireNonNull(vpcPeeringConnectionId));
             return this;
-        }
-        public VpcPeeringConnectionAccepterArgs build() {
+        }        public VpcPeeringConnectionAccepterArgs build() {
             return new VpcPeeringConnectionAccepterArgs(accepter, autoAccept, requester, tags, vpcPeeringConnectionId);
         }
     }

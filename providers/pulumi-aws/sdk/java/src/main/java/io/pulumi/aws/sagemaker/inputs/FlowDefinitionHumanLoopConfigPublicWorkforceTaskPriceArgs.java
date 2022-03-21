@@ -57,12 +57,10 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs ext
             this.amountInUsd = amountInUsd;
             return this;
         }
-
         public Builder amountInUsd(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs amountInUsd) {
             this.amountInUsd = Output.ofNullable(amountInUsd);
             return this;
-        }
-        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs build() {
+        }        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs build() {
             return new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs(amountInUsd);
         }
     }

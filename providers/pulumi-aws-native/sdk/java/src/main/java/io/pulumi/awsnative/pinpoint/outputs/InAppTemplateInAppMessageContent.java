@@ -90,32 +90,26 @@ public final class InAppTemplateInAppMessageContent {
             this.backgroundColor = backgroundColor;
             return this;
         }
-
         public Builder bodyConfig(@Nullable InAppTemplateBodyConfig bodyConfig) {
             this.bodyConfig = bodyConfig;
             return this;
         }
-
         public Builder headerConfig(@Nullable InAppTemplateHeaderConfig headerConfig) {
             this.headerConfig = headerConfig;
             return this;
         }
-
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
-
         public Builder primaryBtn(@Nullable InAppTemplateButtonConfig primaryBtn) {
             this.primaryBtn = primaryBtn;
             return this;
         }
-
         public Builder secondaryBtn(@Nullable InAppTemplateButtonConfig secondaryBtn) {
             this.secondaryBtn = secondaryBtn;
             return this;
-        }
-        public InAppTemplateInAppMessageContent build() {
+        }        public InAppTemplateInAppMessageContent build() {
             return new InAppTemplateInAppMessageContent(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
         }
     }

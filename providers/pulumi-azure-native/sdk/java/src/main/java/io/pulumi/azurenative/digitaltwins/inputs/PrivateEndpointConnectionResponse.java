@@ -105,22 +105,18 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(PrivateEndpointConnectionResponseProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PrivateEndpointConnectionResponse build() {
+        }        public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(id, name, properties, type);
         }
     }

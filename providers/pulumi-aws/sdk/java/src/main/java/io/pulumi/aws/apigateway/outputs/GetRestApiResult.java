@@ -225,62 +225,56 @@ public final class GetRestApiResult {
             this.apiKeySource = Objects.requireNonNull(apiKeySource);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder binaryMediaTypes(List<String> binaryMediaTypes) {
             this.binaryMediaTypes = Objects.requireNonNull(binaryMediaTypes);
             return this;
         }
-
+        public Builder binaryMediaTypes(String... binaryMediaTypes) {
+            return binaryMediaTypes(List.of(binaryMediaTypes));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endpointConfigurations(List<GetRestApiEndpointConfiguration> endpointConfigurations) {
             this.endpointConfigurations = Objects.requireNonNull(endpointConfigurations);
             return this;
         }
-
+        public Builder endpointConfigurations(GetRestApiEndpointConfiguration... endpointConfigurations) {
+            return endpointConfigurations(List.of(endpointConfigurations));
+        }
         public Builder executionArn(String executionArn) {
             this.executionArn = Objects.requireNonNull(executionArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder minimumCompressionSize(Integer minimumCompressionSize) {
             this.minimumCompressionSize = Objects.requireNonNull(minimumCompressionSize);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder rootResourceId(String rootResourceId) {
             this.rootResourceId = Objects.requireNonNull(rootResourceId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetRestApiResult build() {
+        }        public GetRestApiResult build() {
             return new GetRestApiResult(apiKeySource, arn, binaryMediaTypes, description, endpointConfigurations, executionArn, id, minimumCompressionSize, name, policy, rootResourceId, tags);
         }
     }

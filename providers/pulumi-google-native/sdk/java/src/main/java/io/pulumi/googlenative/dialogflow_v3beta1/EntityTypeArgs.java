@@ -224,122 +224,104 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder agentId(String agentId) {
             this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
-
         public Builder autoExpansionMode(@Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode) {
             this.autoExpansionMode = autoExpansionMode;
             return this;
         }
-
         public Builder autoExpansionMode(@Nullable EntityTypeAutoExpansionMode autoExpansionMode) {
             this.autoExpansionMode = Output.ofNullable(autoExpansionMode);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
             return this;
         }
-
         public Builder entities(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities) {
             this.entities = entities;
             return this;
         }
-
         public Builder entities(@Nullable List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs> entities) {
             this.entities = Output.ofNullable(entities);
             return this;
         }
-
+        public Builder entities(GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs... entities) {
+            return entities(List.of(entities));
+        }
         public Builder excludedPhrases(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs>> excludedPhrases) {
             this.excludedPhrases = excludedPhrases;
             return this;
         }
-
         public Builder excludedPhrases(@Nullable List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs> excludedPhrases) {
             this.excludedPhrases = Output.ofNullable(excludedPhrases);
             return this;
         }
-
+        public Builder excludedPhrases(GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs... excludedPhrases) {
+            return excludedPhrases(List.of(excludedPhrases));
+        }
         public Builder kind(Output<EntityTypeKind> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(EntityTypeKind kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
-
         public Builder redact(@Nullable Boolean redact) {
             this.redact = Output.ofNullable(redact);
             return this;
-        }
-        public EntityTypeArgs build() {
+        }        public EntityTypeArgs build() {
             return new EntityTypeArgs(agentId, autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, languageCode, location, name, project, redact);
         }
     }

@@ -86,17 +86,14 @@ public final class PullRequestFilterResponse {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
-
         public Builder commentControl(String commentControl) {
             this.commentControl = Objects.requireNonNull(commentControl);
             return this;
         }
-
         public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
-        }
-        public PullRequestFilterResponse build() {
+        }        public PullRequestFilterResponse build() {
             return new PullRequestFilterResponse(branch, commentControl, invertRegex);
         }
     }

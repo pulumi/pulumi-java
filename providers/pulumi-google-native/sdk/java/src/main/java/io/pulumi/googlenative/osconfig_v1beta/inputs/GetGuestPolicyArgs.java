@@ -66,12 +66,10 @@ public final class GetGuestPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.guestPolicyId = Objects.requireNonNull(guestPolicyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetGuestPolicyArgs build() {
+        }        public GetGuestPolicyArgs build() {
             return new GetGuestPolicyArgs(guestPolicyId, project);
         }
     }

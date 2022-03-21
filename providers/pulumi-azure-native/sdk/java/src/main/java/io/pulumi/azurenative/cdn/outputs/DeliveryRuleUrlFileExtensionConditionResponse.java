@@ -72,12 +72,10 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(UrlFileExtensionMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleUrlFileExtensionConditionResponse build() {
+        }        public DeliveryRuleUrlFileExtensionConditionResponse build() {
             return new DeliveryRuleUrlFileExtensionConditionResponse(name, parameters);
         }
     }

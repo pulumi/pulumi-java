@@ -168,42 +168,34 @@ public final class IdentityProviderConfigOidc {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder groupsClaim(@Nullable String groupsClaim) {
             this.groupsClaim = groupsClaim;
             return this;
         }
-
         public Builder groupsPrefix(@Nullable String groupsPrefix) {
             this.groupsPrefix = groupsPrefix;
             return this;
         }
-
         public Builder identityProviderConfigName(String identityProviderConfigName) {
             this.identityProviderConfigName = Objects.requireNonNull(identityProviderConfigName);
             return this;
         }
-
         public Builder issuerUrl(String issuerUrl) {
             this.issuerUrl = Objects.requireNonNull(issuerUrl);
             return this;
         }
-
         public Builder requiredClaims(@Nullable Map<String,String> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
-
         public Builder usernameClaim(@Nullable String usernameClaim) {
             this.usernameClaim = usernameClaim;
             return this;
         }
-
         public Builder usernamePrefix(@Nullable String usernamePrefix) {
             this.usernamePrefix = usernamePrefix;
             return this;
-        }
-        public IdentityProviderConfigOidc build() {
+        }        public IdentityProviderConfigOidc build() {
             return new IdentityProviderConfigOidc(clientId, groupsClaim, groupsPrefix, identityProviderConfigName, issuerUrl, requiredClaims, usernameClaim, usernamePrefix);
         }
     }

@@ -113,27 +113,25 @@ public final class GetPortfolioConstraintsResult {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder details(List<GetPortfolioConstraintsDetail> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
+        public Builder details(GetPortfolioConstraintsDetail... details) {
+            return details(List.of(details));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder portfolioId(String portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = productId;
             return this;
-        }
-        public GetPortfolioConstraintsResult build() {
+        }        public GetPortfolioConstraintsResult build() {
             return new GetPortfolioConstraintsResult(acceptLanguage, details, id, portfolioId, productId);
         }
     }

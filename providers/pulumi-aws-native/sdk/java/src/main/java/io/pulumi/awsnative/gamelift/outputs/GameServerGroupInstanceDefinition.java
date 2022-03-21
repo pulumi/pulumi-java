@@ -55,12 +55,10 @@ public final class GameServerGroupInstanceDefinition {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public GameServerGroupInstanceDefinition build() {
+        }        public GameServerGroupInstanceDefinition build() {
             return new GameServerGroupInstanceDefinition(instanceType, weightedCapacity);
         }
     }

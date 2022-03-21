@@ -53,12 +53,10 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
             this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
             return this;
         }
-
         public Builder writeCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs writeCapacityAutoScalingSettings) {
             this.writeCapacityAutoScalingSettings = Output.ofNullable(writeCapacityAutoScalingSettings);
             return this;
-        }
-        public GlobalTableWriteProvisionedThroughputSettingsArgs build() {
+        }        public GlobalTableWriteProvisionedThroughputSettingsArgs build() {
             return new GlobalTableWriteProvisionedThroughputSettingsArgs(writeCapacityAutoScalingSettings);
         }
     }

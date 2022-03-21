@@ -133,62 +133,50 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
             this.actionType = actionType;
             return this;
         }
-
         public Builder actionType(@Nullable String actionType) {
             this.actionType = Output.ofNullable(actionType);
             return this;
         }
-
         public Builder display(Output<OperationsDefinitionDisplayArgs> display) {
             this.display = Objects.requireNonNull(display);
             return this;
         }
-
         public Builder display(OperationsDefinitionDisplayArgs display) {
             this.display = Output.of(Objects.requireNonNull(display));
             return this;
         }
-
         public Builder isDataAction(@Nullable Output<Boolean> isDataAction) {
             this.isDataAction = isDataAction;
             return this;
         }
-
         public Builder isDataAction(@Nullable Boolean isDataAction) {
             this.isDataAction = Output.ofNullable(isDataAction);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder origin(@Nullable String origin) {
             this.origin = Output.ofNullable(origin);
             return this;
         }
-
         public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Object properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public OperationsDefinitionArgs build() {
+        }        public OperationsDefinitionArgs build() {
             return new OperationsDefinitionArgs(actionType, display, isDataAction, name, origin, properties);
         }
     }

@@ -138,62 +138,50 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleAssignmentId(@Nullable Output<String> roleAssignmentId) {
             this.roleAssignmentId = roleAssignmentId;
             return this;
         }
-
         public Builder roleAssignmentId(@Nullable String roleAssignmentId) {
             this.roleAssignmentId = Output.ofNullable(roleAssignmentId);
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public SqlResourceSqlRoleAssignmentArgs build() {
+        }        public SqlResourceSqlRoleAssignmentArgs build() {
             return new SqlResourceSqlRoleAssignmentArgs(accountName, principalId, resourceGroupName, roleAssignmentId, roleDefinitionId, scope);
         }
     }

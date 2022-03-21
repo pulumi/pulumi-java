@@ -107,42 +107,37 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
             this.logGroupNames = logGroupNames;
             return this;
         }
-
         public Builder logGroupNames(@Nullable List<String> logGroupNames) {
             this.logGroupNames = Output.ofNullable(logGroupNames);
             return this;
         }
-
+        public Builder logGroupNames(String... logGroupNames) {
+            return logGroupNames(List.of(logGroupNames));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder queryDefinitionId(@Nullable Output<String> queryDefinitionId) {
             this.queryDefinitionId = queryDefinitionId;
             return this;
         }
-
         public Builder queryDefinitionId(@Nullable String queryDefinitionId) {
             this.queryDefinitionId = Output.ofNullable(queryDefinitionId);
             return this;
         }
-
         public Builder queryString(@Nullable Output<String> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
-        }
-        public QueryDefinitionState build() {
+        }        public QueryDefinitionState build() {
             return new QueryDefinitionState(logGroupNames, name, queryDefinitionId, queryString);
         }
     }

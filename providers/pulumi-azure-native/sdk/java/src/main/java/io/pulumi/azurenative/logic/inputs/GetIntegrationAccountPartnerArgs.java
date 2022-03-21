@@ -88,17 +88,14 @@ public final class GetIntegrationAccountPartnerArgs extends io.pulumi.resources.
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIntegrationAccountPartnerArgs build() {
+        }        public GetIntegrationAccountPartnerArgs build() {
             return new GetIntegrationAccountPartnerArgs(integrationAccountName, partnerName, resourceGroupName);
         }
     }

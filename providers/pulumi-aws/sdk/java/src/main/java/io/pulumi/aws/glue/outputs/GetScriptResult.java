@@ -114,32 +114,32 @@ public final class GetScriptResult {
             this.dagEdges = Objects.requireNonNull(dagEdges);
             return this;
         }
-
+        public Builder dagEdges(GetScriptDagEdge... dagEdges) {
+            return dagEdges(List.of(dagEdges));
+        }
         public Builder dagNodes(List<GetScriptDagNode> dagNodes) {
             this.dagNodes = Objects.requireNonNull(dagNodes);
             return this;
         }
-
+        public Builder dagNodes(GetScriptDagNode... dagNodes) {
+            return dagNodes(List.of(dagNodes));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
-
         public Builder pythonScript(String pythonScript) {
             this.pythonScript = Objects.requireNonNull(pythonScript);
             return this;
         }
-
         public Builder scalaCode(String scalaCode) {
             this.scalaCode = Objects.requireNonNull(scalaCode);
             return this;
-        }
-        public GetScriptResult build() {
+        }        public GetScriptResult build() {
             return new GetScriptResult(dagEdges, dagNodes, id, language, pythonScript, scalaCode);
         }
     }

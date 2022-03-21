@@ -88,17 +88,14 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
             this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAttachedDatabaseConfigurationArgs build() {
+        }        public GetAttachedDatabaseConfigurationArgs build() {
             return new GetAttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, clusterName, resourceGroupName);
         }
     }

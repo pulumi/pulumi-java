@@ -202,52 +202,42 @@ public final class SalesforceServiceCloudSinkResponse {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder externalIdFieldName(@Nullable Object externalIdFieldName) {
             this.externalIdFieldName = externalIdFieldName;
             return this;
         }
-
         public Builder ignoreNullValues(@Nullable Object ignoreNullValues) {
             this.ignoreNullValues = ignoreNullValues;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public Builder writeBehavior(@Nullable String writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
-        }
-        public SalesforceServiceCloudSinkResponse build() {
+        }        public SalesforceServiceCloudSinkResponse build() {
             return new SalesforceServiceCloudSinkResponse(disableMetricsCollection, externalIdFieldName, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }
     }

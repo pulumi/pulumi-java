@@ -97,17 +97,23 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
             this.alarmMetrics = alarmMetrics;
             return this;
         }
-
+        public Builder alarmMetrics(ApplicationAlarmMetric... alarmMetrics) {
+            return alarmMetrics(List.of(alarmMetrics));
+        }
         public Builder logs(@Nullable List<ApplicationLog> logs) {
             this.logs = logs;
             return this;
         }
-
+        public Builder logs(ApplicationLog... logs) {
+            return logs(List.of(logs));
+        }
         public Builder windowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
             this.windowsEvents = windowsEvents;
             return this;
         }
-        public ApplicationSubComponentConfigurationDetails build() {
+        public Builder windowsEvents(ApplicationWindowsEvent... windowsEvents) {
+            return windowsEvents(List.of(windowsEvents));
+        }        public ApplicationSubComponentConfigurationDetails build() {
             return new ApplicationSubComponentConfigurationDetails(alarmMetrics, logs, windowsEvents);
         }
     }

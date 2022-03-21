@@ -222,112 +222,90 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
-
         public Builder bufferingInterval(@Nullable Output<Integer> bufferingInterval) {
             this.bufferingInterval = bufferingInterval;
             return this;
         }
-
         public Builder bufferingInterval(@Nullable Integer bufferingInterval) {
             this.bufferingInterval = Output.ofNullable(bufferingInterval);
             return this;
         }
-
         public Builder bufferingSize(@Nullable Output<Integer> bufferingSize) {
             this.bufferingSize = bufferingSize;
             return this;
         }
-
         public Builder bufferingSize(@Nullable Integer bufferingSize) {
             this.bufferingSize = Output.ofNullable(bufferingSize);
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs processingConfiguration) {
             this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
-
         public Builder requestConfiguration(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> requestConfiguration) {
             this.requestConfiguration = requestConfiguration;
             return this;
         }
-
         public Builder requestConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs requestConfiguration) {
             this.requestConfiguration = Output.ofNullable(requestConfiguration);
             return this;
         }
-
         public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
-
         public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = Output.ofNullable(retryDuration);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs(accessKey, bufferingInterval, bufferingSize, cloudwatchLoggingOptions, name, processingConfiguration, requestConfiguration, retryDuration, roleArn, s3BackupMode, url);
         }
     }

@@ -69,12 +69,10 @@ public final class SkuResponse {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(family, name);
         }
     }

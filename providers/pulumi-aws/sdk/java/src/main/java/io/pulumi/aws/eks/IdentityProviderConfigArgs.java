@@ -92,32 +92,26 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder oidc(Output<IdentityProviderConfigOidcArgs> oidc) {
             this.oidc = Objects.requireNonNull(oidc);
             return this;
         }
-
         public Builder oidc(IdentityProviderConfigOidcArgs oidc) {
             this.oidc = Output.of(Objects.requireNonNull(oidc));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IdentityProviderConfigArgs build() {
+        }        public IdentityProviderConfigArgs build() {
             return new IdentityProviderConfigArgs(clusterName, oidc, tags);
         }
     }

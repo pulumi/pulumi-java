@@ -139,32 +139,29 @@ public final class SubjectAccessReviewSpec {
             this.extra = extra;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder nonResourceAttributes(@Nullable NonResourceAttributes nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
-
         public Builder resourceAttributes(@Nullable ResourceAttributes resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = user;
             return this;
-        }
-        public SubjectAccessReviewSpec build() {
+        }        public SubjectAccessReviewSpec build() {
             return new SubjectAccessReviewSpec(extra, groups, nonResourceAttributes, resourceAttributes, uid, user);
         }
     }

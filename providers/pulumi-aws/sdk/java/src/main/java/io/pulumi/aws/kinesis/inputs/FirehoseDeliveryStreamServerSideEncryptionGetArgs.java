@@ -91,32 +91,26 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyArn(@Nullable Output<String> keyArn) {
             this.keyArn = keyArn;
             return this;
         }
-
         public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = Output.ofNullable(keyArn);
             return this;
         }
-
         public Builder keyType(@Nullable Output<String> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable String keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
-        }
-        public FirehoseDeliveryStreamServerSideEncryptionGetArgs build() {
+        }        public FirehoseDeliveryStreamServerSideEncryptionGetArgs build() {
             return new FirehoseDeliveryStreamServerSideEncryptionGetArgs(enabled, keyArn, keyType);
         }
     }

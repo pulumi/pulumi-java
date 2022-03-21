@@ -120,27 +120,22 @@ public final class PolicyPredictiveScalingConfiguration {
             this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
             return this;
         }
-
         public Builder maxCapacityBuffer(@Nullable String maxCapacityBuffer) {
             this.maxCapacityBuffer = maxCapacityBuffer;
             return this;
         }
-
         public Builder metricSpecification(PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification) {
             this.metricSpecification = Objects.requireNonNull(metricSpecification);
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder schedulingBufferTime(@Nullable String schedulingBufferTime) {
             this.schedulingBufferTime = schedulingBufferTime;
             return this;
-        }
-        public PolicyPredictiveScalingConfiguration build() {
+        }        public PolicyPredictiveScalingConfiguration build() {
             return new PolicyPredictiveScalingConfiguration(maxCapacityBreachBehavior, maxCapacityBuffer, metricSpecification, mode, schedulingBufferTime);
         }
     }

@@ -71,12 +71,10 @@ public final class SecurityContactPropertiesResponseAlertNotifications {
             this.minimalSeverity = minimalSeverity;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public SecurityContactPropertiesResponseAlertNotifications build() {
+        }        public SecurityContactPropertiesResponseAlertNotifications build() {
             return new SecurityContactPropertiesResponseAlertNotifications(minimalSeverity, state);
         }
     }

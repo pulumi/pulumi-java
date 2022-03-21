@@ -170,82 +170,66 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.azureFileShareName = azureFileShareName;
             return this;
         }
-
         public Builder azureFileShareName(@Nullable String azureFileShareName) {
             this.azureFileShareName = Output.ofNullable(azureFileShareName);
             return this;
         }
-
         public Builder cloudEndpointName(@Nullable Output<String> cloudEndpointName) {
             this.cloudEndpointName = cloudEndpointName;
             return this;
         }
-
         public Builder cloudEndpointName(@Nullable String cloudEndpointName) {
             this.cloudEndpointName = Output.ofNullable(cloudEndpointName);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = Output.ofNullable(storageAccountResourceId);
             return this;
         }
-
         public Builder storageAccountTenantId(@Nullable Output<String> storageAccountTenantId) {
             this.storageAccountTenantId = storageAccountTenantId;
             return this;
         }
-
         public Builder storageAccountTenantId(@Nullable String storageAccountTenantId) {
             this.storageAccountTenantId = Output.ofNullable(storageAccountTenantId);
             return this;
         }
-
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
-
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
-
         public Builder syncGroupName(Output<String> syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
-
         public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Output.of(Objects.requireNonNull(syncGroupName));
             return this;
-        }
-        public CloudEndpointArgs build() {
+        }        public CloudEndpointArgs build() {
             return new CloudEndpointArgs(azureFileShareName, cloudEndpointName, friendlyName, resourceGroupName, storageAccountResourceId, storageAccountTenantId, storageSyncServiceName, syncGroupName);
         }
     }

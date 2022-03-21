@@ -201,92 +201,74 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             this.apple = apple;
             return this;
         }
-
         public Builder apple(@Nullable AppleArgs apple) {
             this.apple = Output.ofNullable(apple);
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
             this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
             return this;
         }
-
         public Builder azureStaticWebApps(@Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps) {
             this.azureStaticWebApps = azureStaticWebApps;
             return this;
         }
-
         public Builder azureStaticWebApps(@Nullable AzureStaticWebAppsArgs azureStaticWebApps) {
             this.azureStaticWebApps = Output.ofNullable(azureStaticWebApps);
             return this;
         }
-
         public Builder customOpenIdConnectProviders(@Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders) {
             this.customOpenIdConnectProviders = customOpenIdConnectProviders;
             return this;
         }
-
         public Builder customOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderArgs> customOpenIdConnectProviders) {
             this.customOpenIdConnectProviders = Output.ofNullable(customOpenIdConnectProviders);
             return this;
         }
-
         public Builder facebook(@Nullable Output<FacebookArgs> facebook) {
             this.facebook = facebook;
             return this;
         }
-
         public Builder facebook(@Nullable FacebookArgs facebook) {
             this.facebook = Output.ofNullable(facebook);
             return this;
         }
-
         public Builder gitHub(@Nullable Output<GitHubArgs> gitHub) {
             this.gitHub = gitHub;
             return this;
         }
-
         public Builder gitHub(@Nullable GitHubArgs gitHub) {
             this.gitHub = Output.ofNullable(gitHub);
             return this;
         }
-
         public Builder google(@Nullable Output<GoogleArgs> google) {
             this.google = google;
             return this;
         }
-
         public Builder google(@Nullable GoogleArgs google) {
             this.google = Output.ofNullable(google);
             return this;
         }
-
         public Builder legacyMicrosoftAccount(@Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount) {
             this.legacyMicrosoftAccount = legacyMicrosoftAccount;
             return this;
         }
-
         public Builder legacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountArgs legacyMicrosoftAccount) {
             this.legacyMicrosoftAccount = Output.ofNullable(legacyMicrosoftAccount);
             return this;
         }
-
         public Builder twitter(@Nullable Output<TwitterArgs> twitter) {
             this.twitter = twitter;
             return this;
         }
-
         public Builder twitter(@Nullable TwitterArgs twitter) {
             this.twitter = Output.ofNullable(twitter);
             return this;
-        }
-        public IdentityProvidersArgs build() {
+        }        public IdentityProvidersArgs build() {
             return new IdentityProvidersArgs(apple, azureActiveDirectory, azureStaticWebApps, customOpenIdConnectProviders, facebook, gitHub, google, legacyMicrosoftAccount, twitter);
         }
     }

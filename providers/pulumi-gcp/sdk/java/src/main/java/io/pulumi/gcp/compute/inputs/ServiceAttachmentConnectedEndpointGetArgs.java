@@ -66,22 +66,18 @@ public final class ServiceAttachmentConnectedEndpointGetArgs extends io.pulumi.r
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ServiceAttachmentConnectedEndpointGetArgs build() {
+        }        public ServiceAttachmentConnectedEndpointGetArgs build() {
             return new ServiceAttachmentConnectedEndpointGetArgs(endpoint, status);
         }
     }

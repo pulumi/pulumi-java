@@ -87,17 +87,14 @@ public final class ResourceReferenceResponse {
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ResourceReferenceResponse build() {
+        }        public ResourceReferenceResponse build() {
             return new ResourceReferenceResponse(id, name, type);
         }
     }

@@ -75,22 +75,18 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DeploymentTargetImportArgs build() {
+        }        public DeploymentTargetImportArgs build() {
             return new DeploymentTargetImportArgs(content, name);
         }
     }

@@ -104,42 +104,34 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(Output<CertificateSigningRequestSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder spec(CertificateSigningRequestSpecArgs spec) {
             this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
-        }
-        public CertificateSigningRequestArgs build() {
+        }        public CertificateSigningRequestArgs build() {
             return new CertificateSigningRequestArgs(apiVersion, kind, metadata, spec);
         }
     }

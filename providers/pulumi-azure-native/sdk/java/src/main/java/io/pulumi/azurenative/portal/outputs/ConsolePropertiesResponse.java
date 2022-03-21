@@ -85,17 +85,14 @@ public final class ConsolePropertiesResponse {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ConsolePropertiesResponse build() {
+        }        public ConsolePropertiesResponse build() {
             return new ConsolePropertiesResponse(osType, provisioningState, uri);
         }
     }

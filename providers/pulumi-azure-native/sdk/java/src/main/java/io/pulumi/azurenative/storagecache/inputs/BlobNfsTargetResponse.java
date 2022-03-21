@@ -78,12 +78,10 @@ public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs 
             this.target = target;
             return this;
         }
-
         public Builder usageModel(@Nullable String usageModel) {
             this.usageModel = usageModel;
             return this;
-        }
-        public BlobNfsTargetResponse build() {
+        }        public BlobNfsTargetResponse build() {
             return new BlobNfsTargetResponse(target, usageModel);
         }
     }

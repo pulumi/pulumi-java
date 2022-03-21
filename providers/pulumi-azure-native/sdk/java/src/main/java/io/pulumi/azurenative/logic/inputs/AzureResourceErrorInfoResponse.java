@@ -95,17 +95,17 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(@Nullable List<AzureResourceErrorInfoResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(AzureResourceErrorInfoResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public AzureResourceErrorInfoResponse build() {
+        }        public AzureResourceErrorInfoResponse build() {
             return new AzureResourceErrorInfoResponse(code, details, message);
         }
     }

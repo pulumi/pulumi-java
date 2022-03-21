@@ -72,12 +72,10 @@ public final class GetManagementGroupDiagnosticSettingArgs extends io.pulumi.res
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetManagementGroupDiagnosticSettingArgs build() {
+        }        public GetManagementGroupDiagnosticSettingArgs build() {
             return new GetManagementGroupDiagnosticSettingArgs(managementGroupId, name);
         }
     }

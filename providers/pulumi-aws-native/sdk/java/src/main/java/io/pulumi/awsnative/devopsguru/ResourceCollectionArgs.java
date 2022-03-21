@@ -52,12 +52,10 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
             this.resourceCollectionFilter = Objects.requireNonNull(resourceCollectionFilter);
             return this;
         }
-
         public Builder resourceCollectionFilter(ResourceCollectionFilterArgs resourceCollectionFilter) {
             this.resourceCollectionFilter = Output.of(Objects.requireNonNull(resourceCollectionFilter));
             return this;
-        }
-        public ResourceCollectionArgs build() {
+        }        public ResourceCollectionArgs build() {
             return new ResourceCollectionArgs(resourceCollectionFilter);
         }
     }

@@ -72,12 +72,10 @@ public final class ListAdminKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder searchServiceName(String searchServiceName) {
             this.searchServiceName = Objects.requireNonNull(searchServiceName);
             return this;
-        }
-        public ListAdminKeyArgs build() {
+        }        public ListAdminKeyArgs build() {
             return new ListAdminKeyArgs(resourceGroupName, searchServiceName);
         }
     }

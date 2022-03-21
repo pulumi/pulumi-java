@@ -87,17 +87,14 @@ public final class QueueOutboundCallerConfig {
             this.outboundCallerIdName = outboundCallerIdName;
             return this;
         }
-
         public Builder outboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
             this.outboundCallerIdNumberId = outboundCallerIdNumberId;
             return this;
         }
-
         public Builder outboundFlowId(@Nullable String outboundFlowId) {
             this.outboundFlowId = outboundFlowId;
             return this;
-        }
-        public QueueOutboundCallerConfig build() {
+        }        public QueueOutboundCallerConfig build() {
             return new QueueOutboundCallerConfig(outboundCallerIdName, outboundCallerIdNumberId, outboundFlowId);
         }
     }

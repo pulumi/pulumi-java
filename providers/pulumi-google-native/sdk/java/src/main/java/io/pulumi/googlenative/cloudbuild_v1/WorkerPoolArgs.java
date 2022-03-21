@@ -140,72 +140,58 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privatePoolV1Config(@Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
             this.privatePoolV1Config = privatePoolV1Config;
             return this;
         }
-
         public Builder privatePoolV1Config(@Nullable PrivatePoolV1ConfigArgs privatePoolV1Config) {
             this.privatePoolV1Config = Output.ofNullable(privatePoolV1Config);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
-
         public Builder workerPoolId(Output<String> workerPoolId) {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }
-
         public Builder workerPoolId(String workerPoolId) {
             this.workerPoolId = Output.of(Objects.requireNonNull(workerPoolId));
             return this;
-        }
-        public WorkerPoolArgs build() {
+        }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(annotations, displayName, location, privatePoolV1Config, project, validateOnly, workerPoolId);
         }
     }

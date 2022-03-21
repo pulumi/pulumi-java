@@ -167,72 +167,64 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
-
         public Builder end(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder files(@Nullable Output<List<String>> files) {
             this.files = files;
             return this;
         }
-
         public Builder files(@Nullable List<String> files) {
             this.files = Output.ofNullable(files);
             return this;
         }
-
+        public Builder files(String... files) {
+            return files(List.of(files));
+        }
         public Builder inputDefinitions(@Nullable Output<List<Object>> inputDefinitions) {
             this.inputDefinitions = inputDefinitions;
             return this;
         }
-
         public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
             this.inputDefinitions = Output.ofNullable(inputDefinitions);
             return this;
         }
-
+        public Builder inputDefinitions(Object... inputDefinitions) {
+            return inputDefinitions(List.of(inputDefinitions));
+        }
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder start(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public JobInputAssetArgs build() {
+        }        public JobInputAssetArgs build() {
             return new JobInputAssetArgs(assetName, end, files, inputDefinitions, label, odataType, start);
         }
     }

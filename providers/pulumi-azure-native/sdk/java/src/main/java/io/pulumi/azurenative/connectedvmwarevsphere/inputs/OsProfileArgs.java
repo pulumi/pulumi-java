@@ -112,42 +112,34 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
-
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
-
         public Builder computerName(@Nullable Output<String> computerName) {
             this.computerName = computerName;
             return this;
         }
-
         public Builder computerName(@Nullable String computerName) {
             this.computerName = Output.ofNullable(computerName);
             return this;
         }
-
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable Either<String,OsType> osType) {
             this.osType = Output.ofNullable(osType);
             return this;
-        }
-        public OsProfileArgs build() {
+        }        public OsProfileArgs build() {
             return new OsProfileArgs(adminPassword, adminUsername, computerName, osType);
         }
     }

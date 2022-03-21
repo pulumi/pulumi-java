@@ -223,107 +223,92 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.assumeRolePolicy = Objects.requireNonNull(assumeRolePolicy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder forceDetachPolicies(@Nullable Output<Boolean> forceDetachPolicies) {
             this.forceDetachPolicies = forceDetachPolicies;
             return this;
         }
-
         public Builder forceDetachPolicies(@Nullable Boolean forceDetachPolicies) {
             this.forceDetachPolicies = Output.ofNullable(forceDetachPolicies);
             return this;
         }
-
         public Builder inlinePolicies(@Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies) {
             this.inlinePolicies = inlinePolicies;
             return this;
         }
-
         public Builder inlinePolicies(@Nullable List<RoleInlinePolicyArgs> inlinePolicies) {
             this.inlinePolicies = Output.ofNullable(inlinePolicies);
             return this;
         }
-
+        public Builder inlinePolicies(RoleInlinePolicyArgs... inlinePolicies) {
+            return inlinePolicies(List.of(inlinePolicies));
+        }
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
-
         public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
             this.managedPolicyArns = Output.ofNullable(managedPolicyArns);
             return this;
         }
-
+        public Builder managedPolicyArns(String... managedPolicyArns) {
+            return managedPolicyArns(List.of(managedPolicyArns));
+        }
         public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
-
         public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
             this.maxSessionDuration = Output.ofNullable(maxSessionDuration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RoleArgs build() {
+        }        public RoleArgs build() {
             return new RoleArgs(assumeRolePolicy, description, forceDetachPolicies, inlinePolicies, managedPolicyArns, maxSessionDuration, name, namePrefix, path, permissionsBoundary, tags);
         }
     }

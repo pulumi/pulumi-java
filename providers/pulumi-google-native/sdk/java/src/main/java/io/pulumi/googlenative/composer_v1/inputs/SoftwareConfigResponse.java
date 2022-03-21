@@ -142,32 +142,26 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
             this.airflowConfigOverrides = Objects.requireNonNull(airflowConfigOverrides);
             return this;
         }
-
         public Builder envVariables(Map<String,String> envVariables) {
             this.envVariables = Objects.requireNonNull(envVariables);
             return this;
         }
-
         public Builder imageVersion(String imageVersion) {
             this.imageVersion = Objects.requireNonNull(imageVersion);
             return this;
         }
-
         public Builder pypiPackages(Map<String,String> pypiPackages) {
             this.pypiPackages = Objects.requireNonNull(pypiPackages);
             return this;
         }
-
         public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
-
         public Builder schedulerCount(Integer schedulerCount) {
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
-        }
-        public SoftwareConfigResponse build() {
+        }        public SoftwareConfigResponse build() {
             return new SoftwareConfigResponse(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }
     }

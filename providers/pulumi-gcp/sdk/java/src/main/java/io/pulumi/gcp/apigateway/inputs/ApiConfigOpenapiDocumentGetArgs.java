@@ -57,12 +57,10 @@ public final class ApiConfigOpenapiDocumentGetArgs extends io.pulumi.resources.R
             this.document = Objects.requireNonNull(document);
             return this;
         }
-
         public Builder document(ApiConfigOpenapiDocumentDocumentGetArgs document) {
             this.document = Output.of(Objects.requireNonNull(document));
             return this;
-        }
-        public ApiConfigOpenapiDocumentGetArgs build() {
+        }        public ApiConfigOpenapiDocumentGetArgs build() {
             return new ApiConfigOpenapiDocumentGetArgs(document);
         }
     }

@@ -208,102 +208,91 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.allowProfileCreation = allowProfileCreation;
             return this;
         }
-
         public Builder allowProfileCreation(@Nullable Boolean allowProfileCreation) {
             this.allowProfileCreation = Output.ofNullable(allowProfileCreation);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder expirationDays(@Nullable Output<Integer> expirationDays) {
             this.expirationDays = expirationDays;
             return this;
         }
-
         public Builder expirationDays(@Nullable Integer expirationDays) {
             this.expirationDays = Output.ofNullable(expirationDays);
             return this;
         }
-
         public Builder fields(@Nullable Output<List<ObjectTypeFieldMapArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<ObjectTypeFieldMapArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(ObjectTypeFieldMapArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder keys(@Nullable Output<List<ObjectTypeKeyMapArgs>> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable List<ObjectTypeKeyMapArgs> keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
+        public Builder keys(ObjectTypeKeyMapArgs... keys) {
+            return keys(List.of(keys));
+        }
         public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
-
         public Builder objectTypeName(@Nullable String objectTypeName) {
             this.objectTypeName = Output.ofNullable(objectTypeName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ObjectTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ObjectTypeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ObjectTypeTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
-
         public Builder templateId(@Nullable String templateId) {
             this.templateId = Output.ofNullable(templateId);
             return this;
-        }
-        public ObjectTypeArgs build() {
+        }        public ObjectTypeArgs build() {
             return new ObjectTypeArgs(allowProfileCreation, description, domainName, encryptionKey, expirationDays, fields, keys, objectTypeName, tags, templateId);
         }
     }

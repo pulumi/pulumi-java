@@ -128,52 +128,42 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder type(@Nullable Output<JobScheduleType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable JobScheduleType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public JobScheduleArgs build() {
+        }        public JobScheduleArgs build() {
             return new JobScheduleArgs(enabled, endTime, interval, startTime, type);
         }
     }

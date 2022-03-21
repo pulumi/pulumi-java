@@ -78,12 +78,10 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends io.pulu
             this.headerName = headerName;
             return this;
         }
-
         public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = headerValue;
             return this;
-        }
-        public ApplicationGatewayHeaderConfigurationResponse build() {
+        }        public ApplicationGatewayHeaderConfigurationResponse build() {
             return new ApplicationGatewayHeaderConfigurationResponse(headerName, headerValue);
         }
     }

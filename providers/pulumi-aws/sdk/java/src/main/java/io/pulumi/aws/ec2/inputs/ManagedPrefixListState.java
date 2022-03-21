@@ -186,92 +186,77 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             this.addressFamily = addressFamily;
             return this;
         }
-
         public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Output.ofNullable(addressFamily);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder entries(@Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries) {
             this.entries = entries;
             return this;
         }
-
         public Builder entries(@Nullable List<ManagedPrefixListEntryGetArgs> entries) {
             this.entries = Output.ofNullable(entries);
             return this;
         }
-
+        public Builder entries(ManagedPrefixListEntryGetArgs... entries) {
+            return entries(List.of(entries));
+        }
         public Builder maxEntries(@Nullable Output<Integer> maxEntries) {
             this.maxEntries = maxEntries;
             return this;
         }
-
         public Builder maxEntries(@Nullable Integer maxEntries) {
             this.maxEntries = Output.ofNullable(maxEntries);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ManagedPrefixListState build() {
+        }        public ManagedPrefixListState build() {
             return new ManagedPrefixListState(addressFamily, arn, entries, maxEntries, name, ownerId, tags, tagsAll, version);
         }
     }

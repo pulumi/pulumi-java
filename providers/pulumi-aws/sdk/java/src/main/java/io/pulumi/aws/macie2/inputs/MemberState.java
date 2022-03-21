@@ -260,142 +260,114 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
             this.administratorAccountId = administratorAccountId;
             return this;
         }
-
         public Builder administratorAccountId(@Nullable String administratorAccountId) {
             this.administratorAccountId = Output.ofNullable(administratorAccountId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
-
         public Builder invitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = Output.ofNullable(invitationDisableEmailNotification);
             return this;
         }
-
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
-
         public Builder invitationMessage(@Nullable String invitationMessage) {
             this.invitationMessage = Output.ofNullable(invitationMessage);
             return this;
         }
-
         public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
-
         public Builder invite(@Nullable Boolean invite) {
             this.invite = Output.ofNullable(invite);
             return this;
         }
-
         public Builder invitedAt(@Nullable Output<String> invitedAt) {
             this.invitedAt = invitedAt;
             return this;
         }
-
         public Builder invitedAt(@Nullable String invitedAt) {
             this.invitedAt = Output.ofNullable(invitedAt);
             return this;
         }
-
         public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
-
         public Builder masterAccountId(@Nullable String masterAccountId) {
             this.masterAccountId = Output.ofNullable(masterAccountId);
             return this;
         }
-
         public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
             this.relationshipStatus = relationshipStatus;
             return this;
         }
-
         public Builder relationshipStatus(@Nullable String relationshipStatus) {
             this.relationshipStatus = Output.ofNullable(relationshipStatus);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
-
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = Output.ofNullable(updatedAt);
             return this;
-        }
-        public MemberState build() {
+        }        public MemberState build() {
             return new MemberState(accountId, administratorAccountId, arn, email, invitationDisableEmailNotification, invitationMessage, invite, invitedAt, masterAccountId, relationshipStatus, status, tags, tagsAll, updatedAt);
         }
     }

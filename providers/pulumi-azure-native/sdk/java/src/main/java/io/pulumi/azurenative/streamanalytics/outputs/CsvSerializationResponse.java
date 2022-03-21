@@ -89,17 +89,14 @@ public final class CsvSerializationResponse {
             this.encoding = encoding;
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CsvSerializationResponse build() {
+        }        public CsvSerializationResponse build() {
             return new CsvSerializationResponse(encoding, fieldDelimiter, type);
         }
     }

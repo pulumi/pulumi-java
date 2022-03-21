@@ -58,8 +58,7 @@ public final class CertificateFingerprintResponse extends io.pulumi.resources.In
         public Builder sha256Hash(String sha256Hash) {
             this.sha256Hash = Objects.requireNonNull(sha256Hash);
             return this;
-        }
-        public CertificateFingerprintResponse build() {
+        }        public CertificateFingerprintResponse build() {
             return new CertificateFingerprintResponse(sha256Hash);
         }
     }

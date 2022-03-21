@@ -69,22 +69,18 @@ public final class WirelessDeviceSessionKeysAbpV11 {
             this.appSKey = Objects.requireNonNull(appSKey);
             return this;
         }
-
         public Builder fNwkSIntKey(String fNwkSIntKey) {
             this.fNwkSIntKey = Objects.requireNonNull(fNwkSIntKey);
             return this;
         }
-
         public Builder nwkSEncKey(String nwkSEncKey) {
             this.nwkSEncKey = Objects.requireNonNull(nwkSEncKey);
             return this;
         }
-
         public Builder sNwkSIntKey(String sNwkSIntKey) {
             this.sNwkSIntKey = Objects.requireNonNull(sNwkSIntKey);
             return this;
-        }
-        public WirelessDeviceSessionKeysAbpV11 build() {
+        }        public WirelessDeviceSessionKeysAbpV11 build() {
             return new WirelessDeviceSessionKeysAbpV11(appSKey, fNwkSIntKey, nwkSEncKey, sNwkSIntKey);
         }
     }

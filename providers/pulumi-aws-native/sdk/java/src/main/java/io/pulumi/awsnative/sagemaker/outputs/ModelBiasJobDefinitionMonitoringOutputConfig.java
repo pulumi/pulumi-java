@@ -73,12 +73,13 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder monitoringOutputs(List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-        public ModelBiasJobDefinitionMonitoringOutputConfig build() {
+        public Builder monitoringOutputs(ModelBiasJobDefinitionMonitoringOutput... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public ModelBiasJobDefinitionMonitoringOutputConfig build() {
             return new ModelBiasJobDefinitionMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }
     }

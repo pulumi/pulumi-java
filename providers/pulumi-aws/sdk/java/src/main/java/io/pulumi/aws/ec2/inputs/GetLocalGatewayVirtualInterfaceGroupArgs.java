@@ -109,22 +109,21 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends io.pulumi.re
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayVirtualInterfaceGroupFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetLocalGatewayVirtualInterfaceGroupArgs build() {
+        }        public GetLocalGatewayVirtualInterfaceGroupArgs build() {
             return new GetLocalGatewayVirtualInterfaceGroupArgs(filters, id, localGatewayId, tags);
         }
     }

@@ -60,8 +60,7 @@ public final class ManagementResourcePreferencesResponse extends io.pulumi.resou
         public Builder preferredManagementResourceId(@Nullable String preferredManagementResourceId) {
             this.preferredManagementResourceId = preferredManagementResourceId;
             return this;
-        }
-        public ManagementResourcePreferencesResponse build() {
+        }        public ManagementResourcePreferencesResponse build() {
             return new ManagementResourcePreferencesResponse(preferredManagementResourceId);
         }
     }

@@ -76,12 +76,13 @@ public final class GetEntitiesGetTimelineResult {
             this.metaData = metaData;
             return this;
         }
-
         public Builder value(@Nullable List<Object> value) {
             this.value = value;
             return this;
         }
-        public GetEntitiesGetTimelineResult build() {
+        public Builder value(Object... value) {
+            return value(List.of(value));
+        }        public GetEntitiesGetTimelineResult build() {
             return new GetEntitiesGetTimelineResult(metaData, value);
         }
     }

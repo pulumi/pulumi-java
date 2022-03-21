@@ -91,32 +91,26 @@ public final class CapacityProviderAutoScalingGroupProviderArgs extends io.pulum
             this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
             return this;
         }
-
         public Builder autoScalingGroupArn(String autoScalingGroupArn) {
             this.autoScalingGroupArn = Output.of(Objects.requireNonNull(autoScalingGroupArn));
             return this;
         }
-
         public Builder managedScaling(@Nullable Output<CapacityProviderAutoScalingGroupProviderManagedScalingArgs> managedScaling) {
             this.managedScaling = managedScaling;
             return this;
         }
-
         public Builder managedScaling(@Nullable CapacityProviderAutoScalingGroupProviderManagedScalingArgs managedScaling) {
             this.managedScaling = Output.ofNullable(managedScaling);
             return this;
         }
-
         public Builder managedTerminationProtection(@Nullable Output<String> managedTerminationProtection) {
             this.managedTerminationProtection = managedTerminationProtection;
             return this;
         }
-
         public Builder managedTerminationProtection(@Nullable String managedTerminationProtection) {
             this.managedTerminationProtection = Output.ofNullable(managedTerminationProtection);
             return this;
-        }
-        public CapacityProviderAutoScalingGroupProviderArgs build() {
+        }        public CapacityProviderAutoScalingGroupProviderArgs build() {
             return new CapacityProviderAutoScalingGroupProviderArgs(autoScalingGroupArn, managedScaling, managedTerminationProtection);
         }
     }

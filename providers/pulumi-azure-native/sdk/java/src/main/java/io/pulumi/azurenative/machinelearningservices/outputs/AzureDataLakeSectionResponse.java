@@ -248,67 +248,54 @@ public final class AzureDataLakeSectionResponse {
             this.authorityUrl = authorityUrl;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder credentialType(@Nullable String credentialType) {
             this.credentialType = credentialType;
             return this;
         }
-
         public Builder isCertAuth(@Nullable Boolean isCertAuth) {
             this.isCertAuth = isCertAuth;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
-
         public Builder storeName(@Nullable String storeName) {
             this.storeName = storeName;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public AzureDataLakeSectionResponse build() {
+        }        public AzureDataLakeSectionResponse build() {
             return new AzureDataLakeSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, isCertAuth, resourceGroup, resourceUri, serviceDataAccessAuthIdentity, storeName, subscriptionId, tenantId, thumbprint);
         }
     }

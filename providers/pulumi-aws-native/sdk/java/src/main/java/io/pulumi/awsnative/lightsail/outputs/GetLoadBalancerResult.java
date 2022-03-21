@@ -130,32 +130,32 @@ public final class GetLoadBalancerResult {
             this.attachedInstances = attachedInstances;
             return this;
         }
-
+        public Builder attachedInstances(String... attachedInstances) {
+            return attachedInstances(List.of(attachedInstances));
+        }
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
-
         public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
             this.loadBalancerArn = loadBalancerArn;
             return this;
         }
-
         public Builder sessionStickinessEnabled(@Nullable Boolean sessionStickinessEnabled) {
             this.sessionStickinessEnabled = sessionStickinessEnabled;
             return this;
         }
-
         public Builder sessionStickinessLBCookieDurationSeconds(@Nullable String sessionStickinessLBCookieDurationSeconds) {
             this.sessionStickinessLBCookieDurationSeconds = sessionStickinessLBCookieDurationSeconds;
             return this;
         }
-
         public Builder tags(@Nullable List<LoadBalancerTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetLoadBalancerResult build() {
+        public Builder tags(LoadBalancerTag... tags) {
+            return tags(List.of(tags));
+        }        public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(attachedInstances, healthCheckPath, loadBalancerArn, sessionStickinessEnabled, sessionStickinessLBCookieDurationSeconds, tags);
         }
     }

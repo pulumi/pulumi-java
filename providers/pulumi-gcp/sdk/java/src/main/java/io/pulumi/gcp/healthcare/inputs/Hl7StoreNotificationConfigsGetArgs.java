@@ -87,22 +87,18 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder pubsubTopic(Output<String> pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
-        }
-        public Hl7StoreNotificationConfigsGetArgs build() {
+        }        public Hl7StoreNotificationConfigsGetArgs build() {
             return new Hl7StoreNotificationConfigsGetArgs(filter, pubsubTopic);
         }
     }

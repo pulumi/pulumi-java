@@ -143,62 +143,50 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder blockOwnerDeletion(@Nullable Output<Boolean> blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
-
         public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = Output.ofNullable(blockOwnerDeletion);
             return this;
         }
-
         public Builder controller(@Nullable Output<Boolean> controller) {
             this.controller = controller;
             return this;
         }
-
         public Builder controller(@Nullable Boolean controller) {
             this.controller = Output.ofNullable(controller);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public OwnerReferenceArgs build() {
+        }        public OwnerReferenceArgs build() {
             return new OwnerReferenceArgs(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }
     }

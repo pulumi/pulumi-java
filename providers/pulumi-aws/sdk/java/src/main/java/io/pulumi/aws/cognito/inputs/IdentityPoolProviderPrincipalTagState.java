@@ -102,42 +102,34 @@ public final class IdentityPoolProviderPrincipalTagState extends io.pulumi.resou
             this.identityPoolId = identityPoolId;
             return this;
         }
-
         public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Output.ofNullable(identityPoolId);
             return this;
         }
-
         public Builder identityProviderName(@Nullable Output<String> identityProviderName) {
             this.identityProviderName = identityProviderName;
             return this;
         }
-
         public Builder identityProviderName(@Nullable String identityProviderName) {
             this.identityProviderName = Output.ofNullable(identityProviderName);
             return this;
         }
-
         public Builder principalTags(@Nullable Output<Map<String,String>> principalTags) {
             this.principalTags = principalTags;
             return this;
         }
-
         public Builder principalTags(@Nullable Map<String,String> principalTags) {
             this.principalTags = Output.ofNullable(principalTags);
             return this;
         }
-
         public Builder useDefaults(@Nullable Output<Boolean> useDefaults) {
             this.useDefaults = useDefaults;
             return this;
         }
-
         public Builder useDefaults(@Nullable Boolean useDefaults) {
             this.useDefaults = Output.ofNullable(useDefaults);
             return this;
-        }
-        public IdentityPoolProviderPrincipalTagState build() {
+        }        public IdentityPoolProviderPrincipalTagState build() {
             return new IdentityPoolProviderPrincipalTagState(identityPoolId, identityProviderName, principalTags, useDefaults);
         }
     }

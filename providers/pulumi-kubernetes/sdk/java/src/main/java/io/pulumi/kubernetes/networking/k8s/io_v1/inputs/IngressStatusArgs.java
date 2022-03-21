@@ -61,12 +61,10 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
             this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
-        }
-        public IngressStatusArgs build() {
+        }        public IngressStatusArgs build() {
             return new IngressStatusArgs(loadBalancer);
         }
     }

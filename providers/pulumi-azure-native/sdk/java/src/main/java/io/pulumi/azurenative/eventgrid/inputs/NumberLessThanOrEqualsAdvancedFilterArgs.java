@@ -96,32 +96,26 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder operatorType(Output<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Output.of(Objects.requireNonNull(operatorType));
             return this;
         }
-
         public Builder value(@Nullable Output<Double> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public NumberLessThanOrEqualsAdvancedFilterArgs build() {
+        }        public NumberLessThanOrEqualsAdvancedFilterArgs build() {
             return new NumberLessThanOrEqualsAdvancedFilterArgs(key, operatorType, value);
         }
     }

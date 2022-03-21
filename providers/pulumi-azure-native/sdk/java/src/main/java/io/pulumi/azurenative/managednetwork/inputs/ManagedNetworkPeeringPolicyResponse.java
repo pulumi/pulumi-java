@@ -127,27 +127,22 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(@Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagedNetworkPeeringPolicyResponse build() {
+        }        public ManagedNetworkPeeringPolicyResponse build() {
             return new ManagedNetworkPeeringPolicyResponse(id, location, name, properties, type);
         }
     }

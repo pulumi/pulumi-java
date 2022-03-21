@@ -79,22 +79,18 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.isCa = isCa;
             return this;
         }
-
         public Builder isCa(@Nullable Boolean isCa) {
             this.isCa = Output.ofNullable(isCa);
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
             return this;
-        }
-        public CaOptionsArgs build() {
+        }        public CaOptionsArgs build() {
             return new CaOptionsArgs(isCa, maxIssuerPathLength);
         }
     }

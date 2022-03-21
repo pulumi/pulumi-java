@@ -62,17 +62,14 @@ public final class GetAcceleratorAttribute {
             this.flowLogsEnabled = Objects.requireNonNull(flowLogsEnabled);
             return this;
         }
-
         public Builder flowLogsS3Bucket(String flowLogsS3Bucket) {
             this.flowLogsS3Bucket = Objects.requireNonNull(flowLogsS3Bucket);
             return this;
         }
-
         public Builder flowLogsS3Prefix(String flowLogsS3Prefix) {
             this.flowLogsS3Prefix = Objects.requireNonNull(flowLogsS3Prefix);
             return this;
-        }
-        public GetAcceleratorAttribute build() {
+        }        public GetAcceleratorAttribute build() {
             return new GetAcceleratorAttribute(flowLogsEnabled, flowLogsS3Bucket, flowLogsS3Prefix);
         }
     }

@@ -107,42 +107,34 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
             this.ciphertextBlob = ciphertextBlob;
             return this;
         }
-
         public Builder ciphertextBlob(@Nullable String ciphertextBlob) {
             this.ciphertextBlob = Output.ofNullable(ciphertextBlob);
             return this;
         }
-
         public Builder context(@Nullable Output<Map<String,String>> context) {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable Map<String,String> context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder plaintext(@Nullable Output<String> plaintext) {
             this.plaintext = plaintext;
             return this;
         }
-
         public Builder plaintext(@Nullable String plaintext) {
             this.plaintext = Output.ofNullable(plaintext);
             return this;
-        }
-        public CiphertextState build() {
+        }        public CiphertextState build() {
             return new CiphertextState(ciphertextBlob, context, keyId, plaintext);
         }
     }

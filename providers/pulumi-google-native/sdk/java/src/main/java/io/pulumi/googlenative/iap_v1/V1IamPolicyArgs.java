@@ -105,42 +105,37 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder v1Id(Output<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
-
         public Builder v1Id(String v1Id) {
             this.v1Id = Output.of(Objects.requireNonNull(v1Id));
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public V1IamPolicyArgs build() {
+        }        public V1IamPolicyArgs build() {
             return new V1IamPolicyArgs(bindings, etag, v1Id, version);
         }
     }

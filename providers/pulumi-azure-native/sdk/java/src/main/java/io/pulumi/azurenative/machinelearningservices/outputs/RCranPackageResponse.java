@@ -71,12 +71,10 @@ public final class RCranPackageResponse {
             this.name = name;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
-        }
-        public RCranPackageResponse build() {
+        }        public RCranPackageResponse build() {
             return new RCranPackageResponse(name, repository);
         }
     }

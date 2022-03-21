@@ -95,32 +95,26 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.deviceModel = deviceModel;
             return this;
         }
-
         public Builder deviceModel(@Nullable String deviceModel) {
             this.deviceModel = Output.ofNullable(deviceModel);
             return this;
         }
-
         public Builder deviceVendor(@Nullable Output<String> deviceVendor) {
             this.deviceVendor = deviceVendor;
             return this;
         }
-
         public Builder deviceVendor(@Nullable String deviceVendor) {
             this.deviceVendor = Output.ofNullable(deviceVendor);
             return this;
         }
-
         public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             this.linkSpeedInMbps = Output.ofNullable(linkSpeedInMbps);
             return this;
-        }
-        public DevicePropertiesArgs build() {
+        }        public DevicePropertiesArgs build() {
             return new DevicePropertiesArgs(deviceModel, deviceVendor, linkSpeedInMbps);
         }
     }

@@ -53,12 +53,10 @@ public final class InterconnectAttachmentPrivateInterconnectInfoArgs extends io.
             this.tag8021q = tag8021q;
             return this;
         }
-
         public Builder tag8021q(@Nullable Integer tag8021q) {
             this.tag8021q = Output.ofNullable(tag8021q);
             return this;
-        }
-        public InterconnectAttachmentPrivateInterconnectInfoArgs build() {
+        }        public InterconnectAttachmentPrivateInterconnectInfoArgs build() {
             return new InterconnectAttachmentPrivateInterconnectInfoArgs(tag8021q);
         }
     }

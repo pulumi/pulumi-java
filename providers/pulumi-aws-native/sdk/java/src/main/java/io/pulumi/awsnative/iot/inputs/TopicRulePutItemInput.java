@@ -50,8 +50,7 @@ public final class TopicRulePutItemInput extends io.pulumi.resources.InvokeArgs 
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public TopicRulePutItemInput build() {
+        }        public TopicRulePutItemInput build() {
             return new TopicRulePutItemInput(tableName);
         }
     }

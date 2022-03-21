@@ -280,77 +280,65 @@ public final class GetPolicyResult {
             this.customRules = customRules;
             return this;
         }
-
         public Builder endpointLinks(List<CdnEndpointResponse> endpointLinks) {
             this.endpointLinks = Objects.requireNonNull(endpointLinks);
             return this;
         }
-
+        public Builder endpointLinks(CdnEndpointResponse... endpointLinks) {
+            return endpointLinks(List.of(endpointLinks));
+        }
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedRules(@Nullable ManagedRuleSetListResponse managedRules) {
             this.managedRules = managedRules;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policySettings(@Nullable PolicySettingsResponse policySettings) {
             this.policySettings = policySettings;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder rateLimitRules(@Nullable RateLimitRuleListResponse rateLimitRules) {
             this.rateLimitRules = rateLimitRules;
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPolicyResult build() {
+        }        public GetPolicyResult build() {
             return new GetPolicyResult(customRules, endpointLinks, etag, id, location, managedRules, name, policySettings, provisioningState, rateLimitRules, resourceState, sku, systemData, tags, type);
         }
     }

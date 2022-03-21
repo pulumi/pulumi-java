@@ -72,12 +72,10 @@ public final class GetVirtualHubArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
-        }
-        public GetVirtualHubArgs build() {
+        }        public GetVirtualHubArgs build() {
             return new GetVirtualHubArgs(resourceGroupName, virtualHubName);
         }
     }

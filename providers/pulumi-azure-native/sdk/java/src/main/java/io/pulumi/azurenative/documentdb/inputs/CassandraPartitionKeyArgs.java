@@ -61,12 +61,10 @@ public final class CassandraPartitionKeyArgs extends io.pulumi.resources.Resourc
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public CassandraPartitionKeyArgs build() {
+        }        public CassandraPartitionKeyArgs build() {
             return new CassandraPartitionKeyArgs(name);
         }
     }

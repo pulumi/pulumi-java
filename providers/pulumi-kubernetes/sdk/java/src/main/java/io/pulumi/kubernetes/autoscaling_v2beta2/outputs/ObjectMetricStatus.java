@@ -79,17 +79,14 @@ public final class ObjectMetricStatus {
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder describedObject(CrossVersionObjectReference describedObject) {
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
-
         public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
-        }
-        public ObjectMetricStatus build() {
+        }        public ObjectMetricStatus build() {
             return new ObjectMetricStatus(current, describedObject, metric);
         }
     }

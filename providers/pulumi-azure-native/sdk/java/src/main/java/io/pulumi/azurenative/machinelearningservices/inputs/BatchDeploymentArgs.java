@@ -274,132 +274,109 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder codeConfiguration(@Nullable CodeConfigurationArgs codeConfiguration) {
             this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
-
         public Builder compute(@Nullable Output<ComputeConfigurationArgs> compute) {
             this.compute = compute;
             return this;
         }
-
         public Builder compute(@Nullable ComputeConfigurationArgs compute) {
             this.compute = Output.ofNullable(compute);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder errorThreshold(@Nullable Output<Integer> errorThreshold) {
             this.errorThreshold = errorThreshold;
             return this;
         }
-
         public Builder errorThreshold(@Nullable Integer errorThreshold) {
             this.errorThreshold = Output.ofNullable(errorThreshold);
             return this;
         }
-
         public Builder loggingLevel(@Nullable Output<Either<String,BatchLoggingLevel>> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder loggingLevel(@Nullable Either<String,BatchLoggingLevel> loggingLevel) {
             this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
-
         public Builder miniBatchSize(@Nullable Output<Double> miniBatchSize) {
             this.miniBatchSize = miniBatchSize;
             return this;
         }
-
         public Builder miniBatchSize(@Nullable Double miniBatchSize) {
             this.miniBatchSize = Output.ofNullable(miniBatchSize);
             return this;
         }
-
         public Builder model(@Nullable Output<Object> model) {
             this.model = model;
             return this;
         }
-
         public Builder model(@Nullable Object model) {
             this.model = Output.ofNullable(model);
             return this;
         }
-
         public Builder outputConfiguration(@Nullable Output<BatchOutputConfigurationArgs> outputConfiguration) {
             this.outputConfiguration = outputConfiguration;
             return this;
         }
-
         public Builder outputConfiguration(@Nullable BatchOutputConfigurationArgs outputConfiguration) {
             this.outputConfiguration = Output.ofNullable(outputConfiguration);
             return this;
         }
-
         public Builder partitionKeys(@Nullable Output<List<String>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
-
         public Builder partitionKeys(@Nullable List<String> partitionKeys) {
             this.partitionKeys = Output.ofNullable(partitionKeys);
             return this;
         }
-
+        public Builder partitionKeys(String... partitionKeys) {
+            return partitionKeys(List.of(partitionKeys));
+        }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder retrySettings(@Nullable Output<BatchRetrySettingsArgs> retrySettings) {
             this.retrySettings = retrySettings;
             return this;
         }
-
         public Builder retrySettings(@Nullable BatchRetrySettingsArgs retrySettings) {
             this.retrySettings = Output.ofNullable(retrySettings);
             return this;
-        }
-        public BatchDeploymentArgs build() {
+        }        public BatchDeploymentArgs build() {
             return new BatchDeploymentArgs(codeConfiguration, compute, description, environmentId, environmentVariables, errorThreshold, loggingLevel, miniBatchSize, model, outputConfiguration, partitionKeys, properties, retrySettings);
         }
     }

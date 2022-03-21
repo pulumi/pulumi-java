@@ -55,12 +55,10 @@ public final class ProvisioningTemplateProvisioningHook {
             this.payloadVersion = payloadVersion;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
-        }
-        public ProvisioningTemplateProvisioningHook build() {
+        }        public ProvisioningTemplateProvisioningHook build() {
             return new ProvisioningTemplateProvisioningHook(payloadVersion, targetArn);
         }
     }

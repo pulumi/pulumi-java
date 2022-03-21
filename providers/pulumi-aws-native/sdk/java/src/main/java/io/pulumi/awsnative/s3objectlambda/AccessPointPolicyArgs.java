@@ -74,22 +74,18 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
             this.objectLambdaAccessPoint = Objects.requireNonNull(objectLambdaAccessPoint);
             return this;
         }
-
         public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
             this.objectLambdaAccessPoint = Output.of(Objects.requireNonNull(objectLambdaAccessPoint));
             return this;
         }
-
         public Builder policyDocument(Output<Object> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
-
         public Builder policyDocument(Object policyDocument) {
             this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
             return this;
-        }
-        public AccessPointPolicyArgs build() {
+        }        public AccessPointPolicyArgs build() {
             return new AccessPointPolicyArgs(objectLambdaAccessPoint, policyDocument);
         }
     }

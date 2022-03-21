@@ -66,22 +66,18 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
             this.transitionToIA = transitionToIA;
             return this;
         }
-
         public Builder transitionToIA(@Nullable String transitionToIA) {
             this.transitionToIA = Output.ofNullable(transitionToIA);
             return this;
         }
-
         public Builder transitionToPrimaryStorageClass(@Nullable Output<String> transitionToPrimaryStorageClass) {
             this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }
-
         public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
             this.transitionToPrimaryStorageClass = Output.ofNullable(transitionToPrimaryStorageClass);
             return this;
-        }
-        public FileSystemLifecyclePolicyArgs build() {
+        }        public FileSystemLifecyclePolicyArgs build() {
             return new FileSystemLifecyclePolicyArgs(transitionToIA, transitionToPrimaryStorageClass);
         }
     }

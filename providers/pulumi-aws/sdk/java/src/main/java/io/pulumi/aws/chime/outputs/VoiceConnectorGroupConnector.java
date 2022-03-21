@@ -70,12 +70,10 @@ public final class VoiceConnectorGroupConnector {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
-        }
-        public VoiceConnectorGroupConnector build() {
+        }        public VoiceConnectorGroupConnector build() {
             return new VoiceConnectorGroupConnector(priority, voiceConnectorId);
         }
     }

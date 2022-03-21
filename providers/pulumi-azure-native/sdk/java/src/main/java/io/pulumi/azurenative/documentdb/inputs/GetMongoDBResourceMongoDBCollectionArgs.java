@@ -104,22 +104,18 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends io.pulumi.res
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder collectionName(String collectionName) {
             this.collectionName = Objects.requireNonNull(collectionName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMongoDBResourceMongoDBCollectionArgs build() {
+        }        public GetMongoDBResourceMongoDBCollectionArgs build() {
             return new GetMongoDBResourceMongoDBCollectionArgs(accountName, collectionName, databaseName, resourceGroupName);
         }
     }

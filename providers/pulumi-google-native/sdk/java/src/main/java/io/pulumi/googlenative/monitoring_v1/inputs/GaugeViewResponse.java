@@ -76,12 +76,10 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
-
         public Builder upperBound(Double upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
-        }
-        public GaugeViewResponse build() {
+        }        public GaugeViewResponse build() {
             return new GaugeViewResponse(lowerBound, upperBound);
         }
     }

@@ -71,12 +71,10 @@ public final class OsPolicyAssignmentInstanceFilterInventory {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
-        }
-        public OsPolicyAssignmentInstanceFilterInventory build() {
+        }        public OsPolicyAssignmentInstanceFilterInventory build() {
             return new OsPolicyAssignmentInstanceFilterInventory(osShortName, osVersion);
         }
     }

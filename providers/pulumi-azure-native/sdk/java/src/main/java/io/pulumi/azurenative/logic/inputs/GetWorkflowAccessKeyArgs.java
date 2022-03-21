@@ -88,17 +88,14 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
             this.accessKeyName = Objects.requireNonNull(accessKeyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public GetWorkflowAccessKeyArgs build() {
+        }        public GetWorkflowAccessKeyArgs build() {
             return new GetWorkflowAccessKeyArgs(accessKeyName, resourceGroupName, workflowName);
         }
     }

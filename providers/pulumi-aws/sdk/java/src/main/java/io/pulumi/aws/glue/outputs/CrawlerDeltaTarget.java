@@ -87,17 +87,17 @@ public final class CrawlerDeltaTarget {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder deltaTables(List<String> deltaTables) {
             this.deltaTables = Objects.requireNonNull(deltaTables);
             return this;
         }
-
+        public Builder deltaTables(String... deltaTables) {
+            return deltaTables(List.of(deltaTables));
+        }
         public Builder writeManifest(Boolean writeManifest) {
             this.writeManifest = Objects.requireNonNull(writeManifest);
             return this;
-        }
-        public CrawlerDeltaTarget build() {
+        }        public CrawlerDeltaTarget build() {
             return new CrawlerDeltaTarget(connectionName, deltaTables, writeManifest);
         }
     }

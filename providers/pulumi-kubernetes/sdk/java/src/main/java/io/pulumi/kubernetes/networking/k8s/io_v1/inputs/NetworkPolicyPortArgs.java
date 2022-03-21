@@ -96,32 +96,26 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
             this.endPort = endPort;
             return this;
         }
-
         public Builder endPort(@Nullable Integer endPort) {
             this.endPort = Output.ofNullable(endPort);
             return this;
         }
-
         public Builder port(@Nullable Output<Either<Integer,String>> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Either<Integer,String> port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public NetworkPolicyPortArgs build() {
+        }        public NetworkPolicyPortArgs build() {
             return new NetworkPolicyPortArgs(endPort, port, protocol);
         }
     }

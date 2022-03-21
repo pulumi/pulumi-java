@@ -114,42 +114,34 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
             this.configId = configId;
             return this;
         }
-
         public Builder configId(@Nullable String configId) {
             this.configId = Output.ofNullable(configId);
             return this;
         }
-
         public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
-
         public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
             this.disableTraceSampling = Output.ofNullable(disableTraceSampling);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder rolloutStrategy(@Nullable Output<String> rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }
-
         public Builder rolloutStrategy(@Nullable String rolloutStrategy) {
             this.rolloutStrategy = Output.ofNullable(rolloutStrategy);
             return this;
-        }
-        public FlexibleAppVersionEndpointsApiServiceGetArgs build() {
+        }        public FlexibleAppVersionEndpointsApiServiceGetArgs build() {
             return new FlexibleAppVersionEndpointsApiServiceGetArgs(configId, disableTraceSampling, name, rolloutStrategy);
         }
     }

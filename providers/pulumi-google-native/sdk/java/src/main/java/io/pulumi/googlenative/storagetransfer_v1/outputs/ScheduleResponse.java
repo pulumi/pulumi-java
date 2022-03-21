@@ -119,27 +119,22 @@ public final class ScheduleResponse {
             this.endTimeOfDay = Objects.requireNonNull(endTimeOfDay);
             return this;
         }
-
         public Builder repeatInterval(String repeatInterval) {
             this.repeatInterval = Objects.requireNonNull(repeatInterval);
             return this;
         }
-
         public Builder scheduleEndDate(DateResponse scheduleEndDate) {
             this.scheduleEndDate = Objects.requireNonNull(scheduleEndDate);
             return this;
         }
-
         public Builder scheduleStartDate(DateResponse scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
-
         public Builder startTimeOfDay(TimeOfDayResponse startTimeOfDay) {
             this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay);
             return this;
-        }
-        public ScheduleResponse build() {
+        }        public ScheduleResponse build() {
             return new ScheduleResponse(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }
     }

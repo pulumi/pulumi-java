@@ -181,47 +181,38 @@ public final class GetExportResult {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder error(String error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder executionTime(String executionTime) {
             this.executionTime = Objects.requireNonNull(executionTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
-        }
-        public GetExportResult build() {
+        }        public GetExportResult build() {
             return new GetExportResult(created, datastoreName, description, error, executionTime, name, self, state, updated);
         }
     }

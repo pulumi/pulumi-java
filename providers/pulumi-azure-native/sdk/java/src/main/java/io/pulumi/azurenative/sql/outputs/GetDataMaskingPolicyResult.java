@@ -183,47 +183,38 @@ public final class GetDataMaskingPolicyResult {
             this.applicationPrincipals = Objects.requireNonNull(applicationPrincipals);
             return this;
         }
-
         public Builder dataMaskingState(String dataMaskingState) {
             this.dataMaskingState = Objects.requireNonNull(dataMaskingState);
             return this;
         }
-
         public Builder exemptPrincipals(@Nullable String exemptPrincipals) {
             this.exemptPrincipals = exemptPrincipals;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maskingLevel(String maskingLevel) {
             this.maskingLevel = Objects.requireNonNull(maskingLevel);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataMaskingPolicyResult build() {
+        }        public GetDataMaskingPolicyResult build() {
             return new GetDataMaskingPolicyResult(applicationPrincipals, dataMaskingState, exemptPrincipals, id, kind, location, maskingLevel, name, type);
         }
     }

@@ -106,22 +106,18 @@ public final class AzureNodePoolConfig {
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder sshConfig(AzureNodePoolConfigSshConfig sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public AzureNodePoolConfig build() {
+        }        public AzureNodePoolConfig build() {
             return new AzureNodePoolConfig(rootVolume, sshConfig, tags, vmSize);
         }
     }

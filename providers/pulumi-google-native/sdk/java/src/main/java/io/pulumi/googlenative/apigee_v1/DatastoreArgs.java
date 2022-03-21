@@ -103,42 +103,34 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             this.datastoreConfig = datastoreConfig;
             return this;
         }
-
         public Builder datastoreConfig(@Nullable GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
             this.datastoreConfig = Output.ofNullable(datastoreConfig);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
-
         public Builder targetType(@Nullable String targetType) {
             this.targetType = Output.ofNullable(targetType);
             return this;
-        }
-        public DatastoreArgs build() {
+        }        public DatastoreArgs build() {
             return new DatastoreArgs(datastoreConfig, displayName, organizationId, targetType);
         }
     }

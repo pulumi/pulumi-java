@@ -90,32 +90,26 @@ public final class ManagedPrefixListEntryState extends io.pulumi.resources.Resou
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder prefixListId(@Nullable Output<String> prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }
-
         public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = Output.ofNullable(prefixListId);
             return this;
-        }
-        public ManagedPrefixListEntryState build() {
+        }        public ManagedPrefixListEntryState build() {
             return new ManagedPrefixListEntryState(cidr, description, prefixListId);
         }
     }

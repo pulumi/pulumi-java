@@ -62,7 +62,9 @@ public final class FhirServiceAcrConfigurationResponse extends io.pulumi.resourc
             this.loginServers = loginServers;
             return this;
         }
-        public FhirServiceAcrConfigurationResponse build() {
+        public Builder loginServers(String... loginServers) {
+            return loginServers(List.of(loginServers));
+        }        public FhirServiceAcrConfigurationResponse build() {
             return new FhirServiceAcrConfigurationResponse(loginServers);
         }
     }

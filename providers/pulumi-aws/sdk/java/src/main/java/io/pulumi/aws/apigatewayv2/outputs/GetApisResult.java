@@ -97,27 +97,25 @@ public final class GetApisResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetApisResult build() {
+        }        public GetApisResult build() {
             return new GetApisResult(id, ids, name, protocolType, tags);
         }
     }

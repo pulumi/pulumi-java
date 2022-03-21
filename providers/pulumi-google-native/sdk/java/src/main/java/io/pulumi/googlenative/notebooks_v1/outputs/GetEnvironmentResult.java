@@ -151,37 +151,30 @@ public final class GetEnvironmentResult {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder postStartupScript(String postStartupScript) {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
-
         public Builder vmImage(VmImageResponse vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
-        }
-        public GetEnvironmentResult build() {
+        }        public GetEnvironmentResult build() {
             return new GetEnvironmentResult(containerImage, createTime, description, displayName, name, postStartupScript, vmImage);
         }
     }

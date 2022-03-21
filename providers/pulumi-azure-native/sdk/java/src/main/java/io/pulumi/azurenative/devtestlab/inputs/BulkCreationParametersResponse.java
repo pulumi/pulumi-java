@@ -60,8 +60,7 @@ public final class BulkCreationParametersResponse extends io.pulumi.resources.In
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
-        }
-        public BulkCreationParametersResponse build() {
+        }        public BulkCreationParametersResponse build() {
             return new BulkCreationParametersResponse(instanceCount);
         }
     }

@@ -70,12 +70,10 @@ public final class ImageNoteResponse {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
-        }
-        public ImageNoteResponse build() {
+        }        public ImageNoteResponse build() {
             return new ImageNoteResponse(fingerprint, resourceUrl);
         }
     }

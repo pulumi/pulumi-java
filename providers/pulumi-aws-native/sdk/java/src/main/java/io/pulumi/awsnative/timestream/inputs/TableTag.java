@@ -70,12 +70,10 @@ public final class TableTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TableTag build() {
+        }        public TableTag build() {
             return new TableTag(key, value);
         }
     }

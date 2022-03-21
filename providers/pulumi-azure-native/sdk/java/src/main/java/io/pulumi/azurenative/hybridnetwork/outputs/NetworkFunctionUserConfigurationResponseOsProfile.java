@@ -53,8 +53,7 @@ public final class NetworkFunctionUserConfigurationResponseOsProfile {
         public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
-        }
-        public NetworkFunctionUserConfigurationResponseOsProfile build() {
+        }        public NetworkFunctionUserConfigurationResponseOsProfile build() {
             return new NetworkFunctionUserConfigurationResponseOsProfile(customData);
         }
     }

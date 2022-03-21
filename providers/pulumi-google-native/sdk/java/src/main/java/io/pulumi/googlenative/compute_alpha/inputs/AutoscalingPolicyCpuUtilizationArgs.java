@@ -79,22 +79,18 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
             this.predictiveMethod = predictiveMethod;
             return this;
         }
-
         public Builder predictiveMethod(@Nullable AutoscalingPolicyCpuUtilizationPredictiveMethod predictiveMethod) {
             this.predictiveMethod = Output.ofNullable(predictiveMethod);
             return this;
         }
-
         public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
             this.utilizationTarget = utilizationTarget;
             return this;
         }
-
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
             this.utilizationTarget = Output.ofNullable(utilizationTarget);
             return this;
-        }
-        public AutoscalingPolicyCpuUtilizationArgs build() {
+        }        public AutoscalingPolicyCpuUtilizationArgs build() {
             return new AutoscalingPolicyCpuUtilizationArgs(predictiveMethod, utilizationTarget);
         }
     }

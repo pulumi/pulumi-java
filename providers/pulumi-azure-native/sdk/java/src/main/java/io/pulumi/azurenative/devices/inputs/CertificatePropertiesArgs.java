@@ -61,12 +61,10 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
-        }
-        public CertificatePropertiesArgs build() {
+        }        public CertificatePropertiesArgs build() {
             return new CertificatePropertiesArgs(certificate);
         }
     }

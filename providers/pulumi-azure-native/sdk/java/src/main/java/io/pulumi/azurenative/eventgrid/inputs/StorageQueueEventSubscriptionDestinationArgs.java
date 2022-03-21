@@ -95,32 +95,26 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = Output.ofNullable(queueName);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public StorageQueueEventSubscriptionDestinationArgs build() {
+        }        public StorageQueueEventSubscriptionDestinationArgs build() {
             return new StorageQueueEventSubscriptionDestinationArgs(endpointType, queueName, resourceId);
         }
     }

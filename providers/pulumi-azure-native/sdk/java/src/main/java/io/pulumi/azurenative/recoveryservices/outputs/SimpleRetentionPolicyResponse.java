@@ -74,12 +74,10 @@ public final class SimpleRetentionPolicyResponse {
             this.retentionDuration = retentionDuration;
             return this;
         }
-
         public Builder retentionPolicyType(String retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
-        }
-        public SimpleRetentionPolicyResponse build() {
+        }        public SimpleRetentionPolicyResponse build() {
             return new SimpleRetentionPolicyResponse(retentionDuration, retentionPolicyType);
         }
     }

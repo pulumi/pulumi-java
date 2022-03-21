@@ -61,12 +61,10 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGet
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs build() {
+        }        public WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs build() {
             return new WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs(name);
         }
     }

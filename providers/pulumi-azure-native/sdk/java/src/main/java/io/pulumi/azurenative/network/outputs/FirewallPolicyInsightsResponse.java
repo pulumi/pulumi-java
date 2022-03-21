@@ -89,17 +89,14 @@ public final class FirewallPolicyInsightsResponse {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder logAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources) {
             this.logAnalyticsResources = logAnalyticsResources;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
-        }
-        public FirewallPolicyInsightsResponse build() {
+        }        public FirewallPolicyInsightsResponse build() {
             return new FirewallPolicyInsightsResponse(isEnabled, logAnalyticsResources, retentionDays);
         }
     }

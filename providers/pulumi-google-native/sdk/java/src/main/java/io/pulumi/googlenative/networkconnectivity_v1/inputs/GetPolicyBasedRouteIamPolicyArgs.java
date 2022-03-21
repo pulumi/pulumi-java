@@ -78,17 +78,14 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends io.pulumi.resources.
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder policyBasedRouteId(String policyBasedRouteId) {
             this.policyBasedRouteId = Objects.requireNonNull(policyBasedRouteId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPolicyBasedRouteIamPolicyArgs build() {
+        }        public GetPolicyBasedRouteIamPolicyArgs build() {
             return new GetPolicyBasedRouteIamPolicyArgs(optionsRequestedPolicyVersion, policyBasedRouteId, project);
         }
     }

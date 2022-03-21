@@ -88,17 +88,14 @@ public final class GetNotificationHubPnsCredentialsArgs extends io.pulumi.resour
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder notificationHubName(String notificationHubName) {
             this.notificationHubName = Objects.requireNonNull(notificationHubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNotificationHubPnsCredentialsArgs build() {
+        }        public GetNotificationHubPnsCredentialsArgs build() {
             return new GetNotificationHubPnsCredentialsArgs(namespaceName, notificationHubName, resourceGroupName);
         }
     }

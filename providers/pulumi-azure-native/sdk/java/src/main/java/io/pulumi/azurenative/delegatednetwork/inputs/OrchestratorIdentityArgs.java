@@ -57,12 +57,10 @@ public final class OrchestratorIdentityArgs extends io.pulumi.resources.Resource
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public OrchestratorIdentityArgs build() {
+        }        public OrchestratorIdentityArgs build() {
             return new OrchestratorIdentityArgs(type);
         }
     }

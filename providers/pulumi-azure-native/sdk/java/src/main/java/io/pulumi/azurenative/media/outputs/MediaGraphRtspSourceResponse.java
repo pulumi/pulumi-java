@@ -106,22 +106,18 @@ public final class MediaGraphRtspSourceResponse {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder transport(String transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
-        }
-        public MediaGraphRtspSourceResponse build() {
+        }        public MediaGraphRtspSourceResponse build() {
             return new MediaGraphRtspSourceResponse(endpoint, name, odataType, transport);
         }
     }

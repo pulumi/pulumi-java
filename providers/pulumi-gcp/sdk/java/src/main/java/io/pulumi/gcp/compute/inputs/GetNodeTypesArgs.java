@@ -77,12 +77,10 @@ public final class GetNodeTypesArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public GetNodeTypesArgs build() {
+        }        public GetNodeTypesArgs build() {
             return new GetNodeTypesArgs(project, zone);
         }
     }

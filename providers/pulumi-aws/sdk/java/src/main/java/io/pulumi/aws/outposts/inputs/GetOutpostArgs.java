@@ -106,22 +106,18 @@ public final class GetOutpostArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
-        }
-        public GetOutpostArgs build() {
+        }        public GetOutpostArgs build() {
             return new GetOutpostArgs(arn, id, name, ownerId);
         }
     }

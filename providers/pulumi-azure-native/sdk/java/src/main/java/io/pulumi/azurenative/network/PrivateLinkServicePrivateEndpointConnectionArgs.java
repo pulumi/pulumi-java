@@ -139,62 +139,50 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder peConnectionName(@Nullable Output<String> peConnectionName) {
             this.peConnectionName = peConnectionName;
             return this;
         }
-
         public Builder peConnectionName(@Nullable String peConnectionName) {
             this.peConnectionName = Output.ofNullable(peConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public PrivateLinkServicePrivateEndpointConnectionArgs build() {
+        }        public PrivateLinkServicePrivateEndpointConnectionArgs build() {
             return new PrivateLinkServicePrivateEndpointConnectionArgs(id, name, peConnectionName, privateLinkServiceConnectionState, resourceGroupName, serviceName);
         }
     }

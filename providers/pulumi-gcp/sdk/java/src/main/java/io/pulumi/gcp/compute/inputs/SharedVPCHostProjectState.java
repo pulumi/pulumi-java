@@ -57,12 +57,10 @@ public final class SharedVPCHostProjectState extends io.pulumi.resources.Resourc
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public SharedVPCHostProjectState build() {
+        }        public SharedVPCHostProjectState build() {
             return new SharedVPCHostProjectState(project);
         }
     }

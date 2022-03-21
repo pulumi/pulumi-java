@@ -95,32 +95,26 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
-
         public Builder fileUri(String fileUri) {
             this.fileUri = Output.of(Objects.requireNonNull(fileUri));
             return this;
         }
-
         public Builder height(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height) {
             this.height = height;
             return this;
         }
-
         public Builder height(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight height) {
             this.height = Output.ofNullable(height);
             return this;
         }
-
         public Builder thumbnailUri(@Nullable Output<String> thumbnailUri) {
             this.thumbnailUri = thumbnailUri;
             return this;
         }
-
         public Builder thumbnailUri(@Nullable String thumbnailUri) {
             this.thumbnailUri = Output.ofNullable(thumbnailUri);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(fileUri, height, thumbnailUri);
         }
     }

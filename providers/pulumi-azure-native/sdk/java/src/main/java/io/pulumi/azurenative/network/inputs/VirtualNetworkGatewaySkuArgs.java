@@ -81,22 +81,18 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,VirtualNetworkGatewaySkuName> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,VirtualNetworkGatewaySkuTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public VirtualNetworkGatewaySkuArgs build() {
+        }        public VirtualNetworkGatewaySkuArgs build() {
             return new VirtualNetworkGatewaySkuArgs(name, tier);
         }
     }

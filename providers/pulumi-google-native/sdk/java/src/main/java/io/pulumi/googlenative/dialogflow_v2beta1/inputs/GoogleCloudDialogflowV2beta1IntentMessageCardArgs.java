@@ -112,42 +112,37 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
             this.buttons = buttons;
             return this;
         }
-
         public Builder buttons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs> buttons) {
             this.buttons = Output.ofNullable(buttons);
             return this;
         }
-
+        public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageCardArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardArgs(buttons, imageUri, subtitle, title);
         }
     }

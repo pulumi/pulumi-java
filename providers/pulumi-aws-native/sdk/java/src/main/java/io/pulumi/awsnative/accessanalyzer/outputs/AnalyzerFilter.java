@@ -81,27 +81,31 @@ public final class AnalyzerFilter {
             this.contains = contains;
             return this;
         }
-
+        public Builder contains(String... contains) {
+            return contains(List.of(contains));
+        }
         public Builder eq(@Nullable List<String> eq) {
             this.eq = eq;
             return this;
         }
-
+        public Builder eq(String... eq) {
+            return eq(List.of(eq));
+        }
         public Builder exists(@Nullable Boolean exists) {
             this.exists = exists;
             return this;
         }
-
         public Builder neq(@Nullable List<String> neq) {
             this.neq = neq;
             return this;
         }
-
+        public Builder neq(String... neq) {
+            return neq(List.of(neq));
+        }
         public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
-        }
-        public AnalyzerFilter build() {
+        }        public AnalyzerFilter build() {
             return new AnalyzerFilter(contains, eq, exists, neq, property);
         }
     }

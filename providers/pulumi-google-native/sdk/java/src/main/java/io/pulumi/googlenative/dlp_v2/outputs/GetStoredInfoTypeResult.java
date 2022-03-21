@@ -87,17 +87,17 @@ public final class GetStoredInfoTypeResult {
             this.currentVersion = Objects.requireNonNull(currentVersion);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pendingVersions(List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
             this.pendingVersions = Objects.requireNonNull(pendingVersions);
             return this;
         }
-        public GetStoredInfoTypeResult build() {
+        public Builder pendingVersions(GooglePrivacyDlpV2StoredInfoTypeVersionResponse... pendingVersions) {
+            return pendingVersions(List.of(pendingVersions));
+        }        public GetStoredInfoTypeResult build() {
             return new GetStoredInfoTypeResult(currentVersion, name, pendingVersions);
         }
     }

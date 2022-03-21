@@ -95,17 +95,14 @@ public final class PatchSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.assessmentMode = assessmentMode;
             return this;
         }
-
         public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
             this.enableHotpatching = enableHotpatching;
             return this;
         }
-
         public Builder patchMode(@Nullable String patchMode) {
             this.patchMode = patchMode;
             return this;
-        }
-        public PatchSettingsResponse build() {
+        }        public PatchSettingsResponse build() {
             return new PatchSettingsResponse(assessmentMode, enableHotpatching, patchMode);
         }
     }

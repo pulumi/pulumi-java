@@ -70,12 +70,13 @@ public final class GetNodeGroupRemoteAccess {
             this.ec2SshKey = Objects.requireNonNull(ec2SshKey);
             return this;
         }
-
         public Builder sourceSecurityGroupIds(List<String> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = Objects.requireNonNull(sourceSecurityGroupIds);
             return this;
         }
-        public GetNodeGroupRemoteAccess build() {
+        public Builder sourceSecurityGroupIds(String... sourceSecurityGroupIds) {
+            return sourceSecurityGroupIds(List.of(sourceSecurityGroupIds));
+        }        public GetNodeGroupRemoteAccess build() {
             return new GetNodeGroupRemoteAccess(ec2SshKey, sourceSecurityGroupIds);
         }
     }

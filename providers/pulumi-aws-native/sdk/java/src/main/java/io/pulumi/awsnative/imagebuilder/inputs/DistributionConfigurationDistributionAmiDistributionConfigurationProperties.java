@@ -145,32 +145,29 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.amiTags = amiTags;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder launchPermissionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration) {
             this.launchPermissionConfiguration = launchPermissionConfiguration;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
             this.targetAccountIds = targetAccountIds;
             return this;
         }
-        public DistributionConfigurationDistributionAmiDistributionConfigurationProperties build() {
+        public Builder targetAccountIds(String... targetAccountIds) {
+            return targetAccountIds(List.of(targetAccountIds));
+        }        public DistributionConfigurationDistributionAmiDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationProperties(amiTags, description, kmsKeyId, launchPermissionConfiguration, name, targetAccountIds);
         }
     }

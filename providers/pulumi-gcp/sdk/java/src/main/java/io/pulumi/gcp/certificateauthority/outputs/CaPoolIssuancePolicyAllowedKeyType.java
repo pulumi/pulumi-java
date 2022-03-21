@@ -76,12 +76,10 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
             this.ellipticCurve = ellipticCurve;
             return this;
         }
-
         public Builder rsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
             this.rsa = rsa;
             return this;
-        }
-        public CaPoolIssuancePolicyAllowedKeyType build() {
+        }        public CaPoolIssuancePolicyAllowedKeyType build() {
             return new CaPoolIssuancePolicyAllowedKeyType(ellipticCurve, rsa);
         }
     }

@@ -71,22 +71,18 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
-
         public Builder encryptionOption(WorkGroupEncryptionOption encryptionOption) {
             this.encryptionOption = Output.of(Objects.requireNonNull(encryptionOption));
             return this;
         }
-
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
-        }
-        public WorkGroupEncryptionConfigurationArgs build() {
+        }        public WorkGroupEncryptionConfigurationArgs build() {
             return new WorkGroupEncryptionConfigurationArgs(encryptionOption, kmsKey);
         }
     }

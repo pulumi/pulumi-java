@@ -108,22 +108,18 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public NetworkEndpointGroupServerlessDeploymentResponse build() {
+        }        public NetworkEndpointGroupServerlessDeploymentResponse build() {
             return new NetworkEndpointGroupServerlessDeploymentResponse(platform, resource, urlMask, version);
         }
     }

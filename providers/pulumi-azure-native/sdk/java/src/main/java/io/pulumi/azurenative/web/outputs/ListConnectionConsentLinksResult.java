@@ -54,7 +54,9 @@ public final class ListConnectionConsentLinksResult {
             this.value = value;
             return this;
         }
-        public ListConnectionConsentLinksResult build() {
+        public Builder value(ConsentLinkDefinitionResponse... value) {
+            return value(List.of(value));
+        }        public ListConnectionConsentLinksResult build() {
             return new ListConnectionConsentLinksResult(value);
         }
     }

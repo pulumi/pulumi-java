@@ -56,12 +56,10 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsGetArgs extends 
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
-
         public Builder defaultResourceSpec(UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
             this.defaultResourceSpec = Output.of(Objects.requireNonNull(defaultResourceSpec));
             return this;
-        }
-        public UserProfileUserSettingsTensorBoardAppSettingsGetArgs build() {
+        }        public UserProfileUserSettingsTensorBoardAppSettingsGetArgs build() {
             return new UserProfileUserSettingsTensorBoardAppSettingsGetArgs(defaultResourceSpec);
         }
     }

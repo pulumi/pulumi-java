@@ -109,22 +109,21 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(List<MoveResourceErrorBodyResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
+        public Builder details(MoveResourceErrorBodyResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public MoveResourceErrorBodyResponse build() {
+        }        public MoveResourceErrorBodyResponse build() {
             return new MoveResourceErrorBodyResponse(code, details, message, target);
         }
     }

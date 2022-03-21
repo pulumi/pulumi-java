@@ -69,12 +69,10 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModes {
             this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
             return this;
         }
-
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
-        }
-        public CaPoolIssuancePolicyAllowedIssuanceModes build() {
+        }        public CaPoolIssuancePolicyAllowedIssuanceModes build() {
             return new CaPoolIssuancePolicyAllowedIssuanceModes(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }
     }

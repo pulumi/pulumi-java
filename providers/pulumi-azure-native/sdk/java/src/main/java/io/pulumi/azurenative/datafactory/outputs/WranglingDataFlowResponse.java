@@ -157,37 +157,36 @@ public final class WranglingDataFlowResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder documentLocale(@Nullable String documentLocale) {
             this.documentLocale = documentLocale;
             return this;
         }
-
         public Builder folder(@Nullable DataFlowResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
-
         public Builder sources(@Nullable List<PowerQuerySourceResponse> sources) {
             this.sources = sources;
             return this;
         }
-
+        public Builder sources(PowerQuerySourceResponse... sources) {
+            return sources(List.of(sources));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WranglingDataFlowResponse build() {
+        }        public WranglingDataFlowResponse build() {
             return new WranglingDataFlowResponse(annotations, description, documentLocale, folder, script, sources, type);
         }
     }

@@ -65,17 +65,20 @@ public final class GroupQuery {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
-
+        public Builder resourceTypeFilters(String... resourceTypeFilters) {
+            return resourceTypeFilters(List.of(resourceTypeFilters));
+        }
         public Builder stackIdentifier(@Nullable String stackIdentifier) {
             this.stackIdentifier = stackIdentifier;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<GroupTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-        public GroupQuery build() {
+        public Builder tagFilters(GroupTagFilter... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public GroupQuery build() {
             return new GroupQuery(resourceTypeFilters, stackIdentifier, tagFilters);
         }
     }

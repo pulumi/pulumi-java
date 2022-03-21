@@ -80,12 +80,13 @@ public final class EnterpriseChannelPropertiesResponse extends io.pulumi.resourc
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
+        public Builder nodes(EnterpriseChannelNodeResponse... nodes) {
+            return nodes(List.of(nodes));
+        }
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public EnterpriseChannelPropertiesResponse build() {
+        }        public EnterpriseChannelPropertiesResponse build() {
             return new EnterpriseChannelPropertiesResponse(nodes, state);
         }
     }

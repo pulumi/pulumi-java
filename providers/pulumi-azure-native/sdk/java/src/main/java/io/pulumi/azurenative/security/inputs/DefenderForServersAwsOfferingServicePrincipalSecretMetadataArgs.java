@@ -94,32 +94,26 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
             this.expiryDate = expiryDate;
             return this;
         }
-
         public Builder expiryDate(@Nullable String expiryDate) {
             this.expiryDate = Output.ofNullable(expiryDate);
             return this;
         }
-
         public Builder parameterNameInStore(@Nullable Output<String> parameterNameInStore) {
             this.parameterNameInStore = parameterNameInStore;
             return this;
         }
-
         public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
             this.parameterNameInStore = Output.ofNullable(parameterNameInStore);
             return this;
         }
-
         public Builder parameterStoreRegion(@Nullable Output<String> parameterStoreRegion) {
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
         }
-
         public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
             this.parameterStoreRegion = Output.ofNullable(parameterStoreRegion);
             return this;
-        }
-        public DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs build() {
+        }        public DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs build() {
             return new DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs(expiryDate, parameterNameInStore, parameterStoreRegion);
         }
     }

@@ -119,27 +119,22 @@ public final class IconUrisResponse {
             this.hero = hero;
             return this;
         }
-
         public Builder large(@Nullable String large) {
             this.large = large;
             return this;
         }
-
         public Builder medium(@Nullable String medium) {
             this.medium = medium;
             return this;
         }
-
         public Builder small(@Nullable String small) {
             this.small = small;
             return this;
         }
-
         public Builder wide(@Nullable String wide) {
             this.wide = wide;
             return this;
-        }
-        public IconUrisResponse build() {
+        }        public IconUrisResponse build() {
             return new IconUrisResponse(hero, large, medium, small, wide);
         }
     }

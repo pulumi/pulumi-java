@@ -199,52 +199,42 @@ public final class X12EnvelopeOverrideResponse {
             this.dateFormat = Objects.requireNonNull(dateFormat);
             return this;
         }
-
         public Builder functionalIdentifierCode(@Nullable String functionalIdentifierCode) {
             this.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
-
         public Builder headerVersion(String headerVersion) {
             this.headerVersion = Objects.requireNonNull(headerVersion);
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder protocolVersion(String protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
-
         public Builder receiverApplicationId(String receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
-
         public Builder responsibleAgencyCode(String responsibleAgencyCode) {
             this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode);
             return this;
         }
-
         public Builder senderApplicationId(String senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
-
         public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
-
         public Builder timeFormat(String timeFormat) {
             this.timeFormat = Objects.requireNonNull(timeFormat);
             return this;
-        }
-        public X12EnvelopeOverrideResponse build() {
+        }        public X12EnvelopeOverrideResponse build() {
             return new X12EnvelopeOverrideResponse(dateFormat, functionalIdentifierCode, headerVersion, messageId, protocolVersion, receiverApplicationId, responsibleAgencyCode, senderApplicationId, targetNamespace, timeFormat);
         }
     }

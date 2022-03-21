@@ -191,92 +191,74 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             this.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
             return this;
         }
-
         public Builder maxPrefixesAdvertisedV4(@Nullable Integer maxPrefixesAdvertisedV4) {
             this.maxPrefixesAdvertisedV4 = Output.ofNullable(maxPrefixesAdvertisedV4);
             return this;
         }
-
         public Builder maxPrefixesAdvertisedV6(@Nullable Output<Integer> maxPrefixesAdvertisedV6) {
             this.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
             return this;
         }
-
         public Builder maxPrefixesAdvertisedV6(@Nullable Integer maxPrefixesAdvertisedV6) {
             this.maxPrefixesAdvertisedV6 = Output.ofNullable(maxPrefixesAdvertisedV6);
             return this;
         }
-
         public Builder md5AuthenticationKey(@Nullable Output<String> md5AuthenticationKey) {
             this.md5AuthenticationKey = md5AuthenticationKey;
             return this;
         }
-
         public Builder md5AuthenticationKey(@Nullable String md5AuthenticationKey) {
             this.md5AuthenticationKey = Output.ofNullable(md5AuthenticationKey);
             return this;
         }
-
         public Builder microsoftSessionIPv4Address(@Nullable Output<String> microsoftSessionIPv4Address) {
             this.microsoftSessionIPv4Address = microsoftSessionIPv4Address;
             return this;
         }
-
         public Builder microsoftSessionIPv4Address(@Nullable String microsoftSessionIPv4Address) {
             this.microsoftSessionIPv4Address = Output.ofNullable(microsoftSessionIPv4Address);
             return this;
         }
-
         public Builder microsoftSessionIPv6Address(@Nullable Output<String> microsoftSessionIPv6Address) {
             this.microsoftSessionIPv6Address = microsoftSessionIPv6Address;
             return this;
         }
-
         public Builder microsoftSessionIPv6Address(@Nullable String microsoftSessionIPv6Address) {
             this.microsoftSessionIPv6Address = Output.ofNullable(microsoftSessionIPv6Address);
             return this;
         }
-
         public Builder peerSessionIPv4Address(@Nullable Output<String> peerSessionIPv4Address) {
             this.peerSessionIPv4Address = peerSessionIPv4Address;
             return this;
         }
-
         public Builder peerSessionIPv4Address(@Nullable String peerSessionIPv4Address) {
             this.peerSessionIPv4Address = Output.ofNullable(peerSessionIPv4Address);
             return this;
         }
-
         public Builder peerSessionIPv6Address(@Nullable Output<String> peerSessionIPv6Address) {
             this.peerSessionIPv6Address = peerSessionIPv6Address;
             return this;
         }
-
         public Builder peerSessionIPv6Address(@Nullable String peerSessionIPv6Address) {
             this.peerSessionIPv6Address = Output.ofNullable(peerSessionIPv6Address);
             return this;
         }
-
         public Builder sessionPrefixV4(@Nullable Output<String> sessionPrefixV4) {
             this.sessionPrefixV4 = sessionPrefixV4;
             return this;
         }
-
         public Builder sessionPrefixV4(@Nullable String sessionPrefixV4) {
             this.sessionPrefixV4 = Output.ofNullable(sessionPrefixV4);
             return this;
         }
-
         public Builder sessionPrefixV6(@Nullable Output<String> sessionPrefixV6) {
             this.sessionPrefixV6 = sessionPrefixV6;
             return this;
         }
-
         public Builder sessionPrefixV6(@Nullable String sessionPrefixV6) {
             this.sessionPrefixV6 = Output.ofNullable(sessionPrefixV6);
             return this;
-        }
-        public BgpSessionArgs build() {
+        }        public BgpSessionArgs build() {
             return new BgpSessionArgs(maxPrefixesAdvertisedV4, maxPrefixesAdvertisedV6, md5AuthenticationKey, microsoftSessionIPv4Address, microsoftSessionIPv6Address, peerSessionIPv4Address, peerSessionIPv6Address, sessionPrefixV4, sessionPrefixV6);
         }
     }

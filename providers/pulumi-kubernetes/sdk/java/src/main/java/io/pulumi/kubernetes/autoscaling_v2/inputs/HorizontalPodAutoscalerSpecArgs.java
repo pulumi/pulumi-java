@@ -130,52 +130,45 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
             this.behavior = behavior;
             return this;
         }
-
         public Builder behavior(@Nullable HorizontalPodAutoscalerBehaviorArgs behavior) {
             this.behavior = Output.ofNullable(behavior);
             return this;
         }
-
         public Builder maxReplicas(Output<Integer> maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
-
         public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Output.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
-
         public Builder metrics(@Nullable Output<List<MetricSpecArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<MetricSpecArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(MetricSpecArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Output.ofNullable(minReplicas);
             return this;
         }
-
         public Builder scaleTargetRef(Output<CrossVersionObjectReferenceArgs> scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
-
         public Builder scaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
             this.scaleTargetRef = Output.of(Objects.requireNonNull(scaleTargetRef));
             return this;
-        }
-        public HorizontalPodAutoscalerSpecArgs build() {
+        }        public HorizontalPodAutoscalerSpecArgs build() {
             return new HorizontalPodAutoscalerSpecArgs(behavior, maxReplicas, metrics, minReplicas, scaleTargetRef);
         }
     }

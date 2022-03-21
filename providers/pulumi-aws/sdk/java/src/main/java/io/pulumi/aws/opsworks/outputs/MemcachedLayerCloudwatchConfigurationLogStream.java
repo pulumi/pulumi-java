@@ -128,57 +128,46 @@ public final class MemcachedLayerCloudwatchConfigurationLogStream {
             this.batchCount = batchCount;
             return this;
         }
-
         public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder bufferDuration(@Nullable Integer bufferDuration) {
             this.bufferDuration = bufferDuration;
             return this;
         }
-
         public Builder datetimeFormat(@Nullable String datetimeFormat) {
             this.datetimeFormat = datetimeFormat;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder fileFingerprintLines(@Nullable String fileFingerprintLines) {
             this.fileFingerprintLines = fileFingerprintLines;
             return this;
         }
-
         public Builder initialPosition(@Nullable String initialPosition) {
             this.initialPosition = initialPosition;
             return this;
         }
-
         public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder multilineStartPattern(@Nullable String multilineStartPattern) {
             this.multilineStartPattern = multilineStartPattern;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public MemcachedLayerCloudwatchConfigurationLogStream build() {
+        }        public MemcachedLayerCloudwatchConfigurationLogStream build() {
             return new MemcachedLayerCloudwatchConfigurationLogStream(batchCount, batchSize, bufferDuration, datetimeFormat, encoding, file, fileFingerprintLines, initialPosition, logGroupName, multilineStartPattern, timeZone);
         }
     }

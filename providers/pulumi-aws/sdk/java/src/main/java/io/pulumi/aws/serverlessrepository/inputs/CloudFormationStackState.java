@@ -172,82 +172,69 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputs(@Nullable Output<Map<String,String>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable Map<String,String> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
             this.semanticVersion = semanticVersion;
             return this;
         }
-
         public Builder semanticVersion(@Nullable String semanticVersion) {
             this.semanticVersion = Output.ofNullable(semanticVersion);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public CloudFormationStackState build() {
+        }        public CloudFormationStackState build() {
             return new CloudFormationStackState(applicationId, capabilities, name, outputs, parameters, semanticVersion, tags, tagsAll);
         }
     }

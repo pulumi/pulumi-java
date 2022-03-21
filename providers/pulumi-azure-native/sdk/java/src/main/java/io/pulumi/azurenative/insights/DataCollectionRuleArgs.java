@@ -194,92 +194,77 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             this.dataCollectionRuleName = dataCollectionRuleName;
             return this;
         }
-
         public Builder dataCollectionRuleName(@Nullable String dataCollectionRuleName) {
             this.dataCollectionRuleName = Output.ofNullable(dataCollectionRuleName);
             return this;
         }
-
         public Builder dataFlows(@Nullable Output<List<DataFlowArgs>> dataFlows) {
             this.dataFlows = dataFlows;
             return this;
         }
-
         public Builder dataFlows(@Nullable List<DataFlowArgs> dataFlows) {
             this.dataFlows = Output.ofNullable(dataFlows);
             return this;
         }
-
+        public Builder dataFlows(DataFlowArgs... dataFlows) {
+            return dataFlows(List.of(dataFlows));
+        }
         public Builder dataSources(@Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources) {
             this.dataSources = dataSources;
             return this;
         }
-
         public Builder dataSources(@Nullable DataCollectionRuleDataSourcesArgs dataSources) {
             this.dataSources = Output.ofNullable(dataSources);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinations(@Nullable Output<DataCollectionRuleDestinationsArgs> destinations) {
             this.destinations = destinations;
             return this;
         }
-
         public Builder destinations(@Nullable DataCollectionRuleDestinationsArgs destinations) {
             this.destinations = Output.ofNullable(destinations);
             return this;
         }
-
         public Builder kind(@Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,KnownDataCollectionRuleResourceKind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DataCollectionRuleArgs build() {
+        }        public DataCollectionRuleArgs build() {
             return new DataCollectionRuleArgs(dataCollectionRuleName, dataFlows, dataSources, description, destinations, kind, location, resourceGroupName, tags);
         }
     }

@@ -67,22 +67,18 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder retryOptions(@Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public Builder retryOptions(@Nullable DeliveryStreamRetryOptionsArgs retryOptions) {
             this.retryOptions = Output.ofNullable(retryOptions);
             return this;
-        }
-        public DeliveryStreamDynamicPartitioningConfigurationArgs build() {
+        }        public DeliveryStreamDynamicPartitioningConfigurationArgs build() {
             return new DeliveryStreamDynamicPartitioningConfigurationArgs(enabled, retryOptions);
         }
     }

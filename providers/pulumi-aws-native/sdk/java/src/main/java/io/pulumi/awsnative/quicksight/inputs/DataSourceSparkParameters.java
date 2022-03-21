@@ -77,12 +77,10 @@ public final class DataSourceSparkParameters extends io.pulumi.resources.InvokeA
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceSparkParameters build() {
+        }        public DataSourceSparkParameters build() {
             return new DataSourceSparkParameters(host, port);
         }
     }

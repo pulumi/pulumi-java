@@ -129,52 +129,48 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             this.gatewayIds = gatewayIds;
             return this;
         }
-
         public Builder gatewayIds(@Nullable List<String> gatewayIds) {
             this.gatewayIds = Output.ofNullable(gatewayIds);
             return this;
         }
-
+        public Builder gatewayIds(String... gatewayIds) {
+            return gatewayIds(List.of(gatewayIds));
+        }
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
-
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
-
         public Builder $public(@Nullable Output<Boolean> $public) {
             this.$public = $public;
             return this;
         }
-
         public Builder $public(@Nullable Boolean $public) {
             this.$public = Output.ofNullable($public);
             return this;
         }
-
         public Builder sourceUrls(@Nullable Output<List<String>> sourceUrls) {
             this.sourceUrls = sourceUrls;
             return this;
         }
-
         public Builder sourceUrls(@Nullable List<String> sourceUrls) {
             this.sourceUrls = Output.ofNullable(sourceUrls);
             return this;
         }
-
+        public Builder sourceUrls(String... sourceUrls) {
+            return sourceUrls(List.of(sourceUrls));
+        }
         public Builder ssoProperties(@Nullable Output<SsoPropertiesArgs> ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
-
         public Builder ssoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
             this.ssoProperties = Output.ofNullable(ssoProperties);
             return this;
-        }
-        public ApiPortalPropertiesArgs build() {
+        }        public ApiPortalPropertiesArgs build() {
             return new ApiPortalPropertiesArgs(gatewayIds, httpsOnly, $public, sourceUrls, ssoProperties);
         }
     }

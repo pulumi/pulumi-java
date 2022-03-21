@@ -247,62 +247,50 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse extends io.
             this.bucketingConfig = Objects.requireNonNull(bucketingConfig);
             return this;
         }
-
         public Builder characterMaskConfig(GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig) {
             this.characterMaskConfig = Objects.requireNonNull(characterMaskConfig);
             return this;
         }
-
         public Builder cryptoDeterministicConfig(GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig) {
             this.cryptoDeterministicConfig = Objects.requireNonNull(cryptoDeterministicConfig);
             return this;
         }
-
         public Builder cryptoHashConfig(GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig) {
             this.cryptoHashConfig = Objects.requireNonNull(cryptoHashConfig);
             return this;
         }
-
         public Builder cryptoReplaceFfxFpeConfig(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig) {
             this.cryptoReplaceFfxFpeConfig = Objects.requireNonNull(cryptoReplaceFfxFpeConfig);
             return this;
         }
-
         public Builder dateShiftConfig(GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig) {
             this.dateShiftConfig = Objects.requireNonNull(dateShiftConfig);
             return this;
         }
-
         public Builder fixedSizeBucketingConfig(GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig) {
             this.fixedSizeBucketingConfig = Objects.requireNonNull(fixedSizeBucketingConfig);
             return this;
         }
-
         public Builder redactConfig(GooglePrivacyDlpV2RedactConfigResponse redactConfig) {
             this.redactConfig = Objects.requireNonNull(redactConfig);
             return this;
         }
-
         public Builder replaceConfig(GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig) {
             this.replaceConfig = Objects.requireNonNull(replaceConfig);
             return this;
         }
-
         public Builder replaceDictionaryConfig(GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig) {
             this.replaceDictionaryConfig = Objects.requireNonNull(replaceDictionaryConfig);
             return this;
         }
-
         public Builder replaceWithInfoTypeConfig(GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig) {
             this.replaceWithInfoTypeConfig = Objects.requireNonNull(replaceWithInfoTypeConfig);
             return this;
         }
-
         public Builder timePartConfig(GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
             this.timePartConfig = Objects.requireNonNull(timePartConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2PrimitiveTransformationResponse build() {
+        }        public GooglePrivacyDlpV2PrimitiveTransformationResponse build() {
             return new GooglePrivacyDlpV2PrimitiveTransformationResponse(bucketingConfig, characterMaskConfig, cryptoDeterministicConfig, cryptoHashConfig, cryptoReplaceFfxFpeConfig, dateShiftConfig, fixedSizeBucketingConfig, redactConfig, replaceConfig, replaceDictionaryConfig, replaceWithInfoTypeConfig, timePartConfig);
         }
     }

@@ -119,27 +119,22 @@ public final class ProjectFileSystemLocation {
             this.identifier = identifier;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ProjectFileSystemLocation build() {
+        }        public ProjectFileSystemLocation build() {
             return new ProjectFileSystemLocation(identifier, location, mountOptions, mountPoint, type);
         }
     }

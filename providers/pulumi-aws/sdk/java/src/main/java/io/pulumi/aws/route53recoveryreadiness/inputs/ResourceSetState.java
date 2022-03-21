@@ -141,62 +141,53 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
             this.resourceSetName = resourceSetName;
             return this;
         }
-
         public Builder resourceSetName(@Nullable String resourceSetName) {
             this.resourceSetName = Output.ofNullable(resourceSetName);
             return this;
         }
-
         public Builder resourceSetType(@Nullable Output<String> resourceSetType) {
             this.resourceSetType = resourceSetType;
             return this;
         }
-
         public Builder resourceSetType(@Nullable String resourceSetType) {
             this.resourceSetType = Output.ofNullable(resourceSetType);
             return this;
         }
-
         public Builder resources(@Nullable Output<List<ResourceSetResourceGetArgs>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<ResourceSetResourceGetArgs> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(ResourceSetResourceGetArgs... resources) {
+            return resources(List.of(resources));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ResourceSetState build() {
+        }        public ResourceSetState build() {
             return new ResourceSetState(arn, resourceSetName, resourceSetType, resources, tags, tagsAll);
         }
     }

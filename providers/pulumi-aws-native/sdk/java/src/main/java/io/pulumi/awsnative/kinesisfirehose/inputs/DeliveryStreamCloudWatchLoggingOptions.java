@@ -79,17 +79,14 @@ public final class DeliveryStreamCloudWatchLoggingOptions extends io.pulumi.reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
-        }
-        public DeliveryStreamCloudWatchLoggingOptions build() {
+        }        public DeliveryStreamCloudWatchLoggingOptions build() {
             return new DeliveryStreamCloudWatchLoggingOptions(enabled, logGroupName, logStreamName);
         }
     }

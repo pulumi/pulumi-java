@@ -207,102 +207,82 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder overrideItem(@Nullable Output<Boolean> overrideItem) {
             this.overrideItem = overrideItem;
             return this;
         }
-
         public Builder overrideItem(@Nullable Boolean overrideItem) {
             this.overrideItem = Output.ofNullable(overrideItem);
             return this;
         }
-
         public Builder properties(@Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder scope(@Nullable Output<Either<String,ItemScope>> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable Either<String,ItemScope> scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder scopePath(Output<String> scopePath) {
             this.scopePath = Objects.requireNonNull(scopePath);
             return this;
         }
-
         public Builder scopePath(String scopePath) {
             this.scopePath = Output.of(Objects.requireNonNull(scopePath));
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ItemType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ItemType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AnalyticsItemArgs build() {
+        }        public AnalyticsItemArgs build() {
             return new AnalyticsItemArgs(content, id, name, overrideItem, properties, resourceGroupName, resourceName, scope, scopePath, type);
         }
     }

@@ -88,17 +88,14 @@ public final class GetTopicRuleDestinationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder status(@Nullable TopicRuleDestinationStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = statusReason;
             return this;
-        }
-        public GetTopicRuleDestinationResult build() {
+        }        public GetTopicRuleDestinationResult build() {
             return new GetTopicRuleDestinationResult(arn, status, statusReason);
         }
     }

@@ -107,42 +107,37 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.secretBinary = secretBinary;
             return this;
         }
-
         public Builder secretBinary(@Nullable String secretBinary) {
             this.secretBinary = Output.ofNullable(secretBinary);
             return this;
         }
-
         public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public Builder secretString(@Nullable Output<String> secretString) {
             this.secretString = secretString;
             return this;
         }
-
         public Builder secretString(@Nullable String secretString) {
             this.secretString = Output.ofNullable(secretString);
             return this;
         }
-
         public Builder versionStages(@Nullable Output<List<String>> versionStages) {
             this.versionStages = versionStages;
             return this;
         }
-
         public Builder versionStages(@Nullable List<String> versionStages) {
             this.versionStages = Output.ofNullable(versionStages);
             return this;
         }
-        public SecretVersionArgs build() {
+        public Builder versionStages(String... versionStages) {
+            return versionStages(List.of(versionStages));
+        }        public SecretVersionArgs build() {
             return new SecretVersionArgs(secretBinary, secretId, secretString, versionStages);
         }
     }

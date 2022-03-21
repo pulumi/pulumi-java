@@ -122,27 +122,22 @@ public final class AmazonS3LocationResponse {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
-        }
-        public AmazonS3LocationResponse build() {
+        }        public AmazonS3LocationResponse build() {
             return new AmazonS3LocationResponse(bucketName, fileName, folderPath, type, version);
         }
     }

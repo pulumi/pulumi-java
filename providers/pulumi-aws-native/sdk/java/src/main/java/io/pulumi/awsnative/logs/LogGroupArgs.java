@@ -109,42 +109,37 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LogGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LogGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LogGroupArgs build() {
+        public Builder tags(LogGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LogGroupArgs build() {
             return new LogGroupArgs(kmsKeyId, logGroupName, retentionInDays, tags);
         }
     }

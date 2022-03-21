@@ -152,37 +152,30 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
             this.sensitivityLabelSource = Objects.requireNonNull(sensitivityLabelSource);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public GetSensitivityLabelArgs build() {
+        }        public GetSensitivityLabelArgs build() {
             return new GetSensitivityLabelArgs(columnName, databaseName, resourceGroupName, schemaName, sensitivityLabelSource, serverName, tableName);
         }
     }

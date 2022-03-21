@@ -77,22 +77,18 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
-
         public Builder cloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs cloudStoragePath) {
             this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
             return this;
         }
-
         public Builder wordList(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
-
         public Builder wordList(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs wordList) {
             this.wordList = Output.ofNullable(wordList);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs build() {
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs(cloudStoragePath, wordList);
         }
     }

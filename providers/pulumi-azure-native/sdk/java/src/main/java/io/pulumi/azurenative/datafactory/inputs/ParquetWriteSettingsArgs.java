@@ -96,32 +96,26 @@ public final class ParquetWriteSettingsArgs extends io.pulumi.resources.Resource
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
-
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             this.fileNamePrefix = Output.ofNullable(fileNamePrefix);
             return this;
         }
-
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = Output.ofNullable(maxRowsPerFile);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ParquetWriteSettingsArgs build() {
+        }        public ParquetWriteSettingsArgs build() {
             return new ParquetWriteSettingsArgs(fileNamePrefix, maxRowsPerFile, type);
         }
     }

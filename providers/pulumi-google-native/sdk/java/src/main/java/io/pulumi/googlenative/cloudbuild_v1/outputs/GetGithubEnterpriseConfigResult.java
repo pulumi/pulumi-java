@@ -182,47 +182,38 @@ public final class GetGithubEnterpriseConfigResult {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder hostUrl(String hostUrl) {
             this.hostUrl = Objects.requireNonNull(hostUrl);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
-
         public Builder secrets(GitHubEnterpriseSecretsResponse secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
-
         public Builder sslCa(String sslCa) {
             this.sslCa = Objects.requireNonNull(sslCa);
             return this;
         }
-
         public Builder webhookKey(String webhookKey) {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
-        }
-        public GetGithubEnterpriseConfigResult build() {
+        }        public GetGithubEnterpriseConfigResult build() {
             return new GetGithubEnterpriseConfigResult(appId, createTime, displayName, hostUrl, name, peeredNetwork, secrets, sslCa, webhookKey);
         }
     }

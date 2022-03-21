@@ -80,22 +80,21 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable RestResponseRegexArgs regex) {
             this.regex = Output.ofNullable(regex);
             return this;
         }
-
         public Builder successStatusCodes(@Nullable Output<List<String>> successStatusCodes) {
             this.successStatusCodes = successStatusCodes;
             return this;
         }
-
         public Builder successStatusCodes(@Nullable List<String> successStatusCodes) {
             this.successStatusCodes = Output.ofNullable(successStatusCodes);
             return this;
         }
-        public RestResponseArgs build() {
+        public Builder successStatusCodes(String... successStatusCodes) {
+            return successStatusCodes(List.of(successStatusCodes));
+        }        public RestResponseArgs build() {
             return new RestResponseArgs(regex, successStatusCodes);
         }
     }

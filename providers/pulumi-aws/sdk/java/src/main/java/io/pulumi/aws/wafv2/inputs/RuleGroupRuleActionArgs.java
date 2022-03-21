@@ -92,32 +92,26 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable RuleGroupRuleActionAllowArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder block(@Nullable Output<RuleGroupRuleActionBlockArgs> block) {
             this.block = block;
             return this;
         }
-
         public Builder block(@Nullable RuleGroupRuleActionBlockArgs block) {
             this.block = Output.ofNullable(block);
             return this;
         }
-
         public Builder count(@Nullable Output<RuleGroupRuleActionCountArgs> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable RuleGroupRuleActionCountArgs count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public RuleGroupRuleActionArgs build() {
+        }        public RuleGroupRuleActionArgs build() {
             return new RuleGroupRuleActionArgs(allow, block, count);
         }
     }

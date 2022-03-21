@@ -76,22 +76,18 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public GuestPoliciesPackageRepositoryGooArgs build() {
+        }        public GuestPoliciesPackageRepositoryGooArgs build() {
             return new GuestPoliciesPackageRepositoryGooArgs(name, url);
         }
     }

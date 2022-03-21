@@ -90,17 +90,14 @@ public final class DistributedNodesInfoResponse {
             this.errorDetail = errorDetail;
             return this;
         }
-
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public DistributedNodesInfoResponse build() {
+        }        public DistributedNodesInfoResponse build() {
             return new DistributedNodesInfoResponse(errorDetail, nodeName, status);
         }
     }

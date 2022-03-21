@@ -65,22 +65,18 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
-
         public Builder tagKey(String tagKey) {
             this.tagKey = Output.of(Objects.requireNonNull(tagKey));
             return this;
         }
-
         public Builder tagValue(Output<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
-
         public Builder tagValue(String tagValue) {
             this.tagValue = Output.of(Objects.requireNonNull(tagValue));
             return this;
-        }
-        public AppBlockTagArgs build() {
+        }        public AppBlockTagArgs build() {
             return new AppBlockTagArgs(tagKey, tagValue);
         }
     }

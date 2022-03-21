@@ -105,52 +105,42 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.autoPublish = autoPublish;
             return this;
         }
-
         public Builder autoPublish(@Nullable Boolean autoPublish) {
             this.autoPublish = Output.ofNullable(autoPublish);
             return this;
         }
-
         public Builder functionCode(@Nullable Output<String> functionCode) {
             this.functionCode = functionCode;
             return this;
         }
-
         public Builder functionCode(@Nullable String functionCode) {
             this.functionCode = Output.ofNullable(functionCode);
             return this;
         }
-
         public Builder functionConfig(@Nullable Output<FunctionConfigArgs> functionConfig) {
             this.functionConfig = functionConfig;
             return this;
         }
-
         public Builder functionConfig(@Nullable FunctionConfigArgs functionConfig) {
             this.functionConfig = Output.ofNullable(functionConfig);
             return this;
         }
-
         public Builder functionMetadata(@Nullable Output<FunctionMetadataArgs> functionMetadata) {
             this.functionMetadata = functionMetadata;
             return this;
         }
-
         public Builder functionMetadata(@Nullable FunctionMetadataArgs functionMetadata) {
             this.functionMetadata = Output.ofNullable(functionMetadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FunctionArgs build() {
+        }        public FunctionArgs build() {
             return new FunctionArgs(autoPublish, functionCode, functionConfig, functionMetadata, name);
         }
     }

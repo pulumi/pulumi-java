@@ -128,52 +128,42 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
-
         public Builder alg(Either<String,AccessPolicyEccAlgo> alg) {
             this.alg = Output.of(Objects.requireNonNull(alg));
             return this;
         }
-
         public Builder kid(Output<String> kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
-
         public Builder kid(String kid) {
             this.kid = Output.of(Objects.requireNonNull(kid));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder x(Output<String> x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
-
         public Builder x(String x) {
             this.x = Output.of(Objects.requireNonNull(x));
             return this;
         }
-
         public Builder y(Output<String> y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public Builder y(String y) {
             this.y = Output.of(Objects.requireNonNull(y));
             return this;
-        }
-        public EccTokenKeyArgs build() {
+        }        public EccTokenKeyArgs build() {
             return new EccTokenKeyArgs(alg, kid, type, x, y);
         }
     }

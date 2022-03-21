@@ -286,152 +286,122 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.hadoopJob = hadoopJob;
             return this;
         }
-
         public Builder hadoopJob(@Nullable HadoopJobArgs hadoopJob) {
             this.hadoopJob = Output.ofNullable(hadoopJob);
             return this;
         }
-
         public Builder hiveJob(@Nullable Output<HiveJobArgs> hiveJob) {
             this.hiveJob = hiveJob;
             return this;
         }
-
         public Builder hiveJob(@Nullable HiveJobArgs hiveJob) {
             this.hiveJob = Output.ofNullable(hiveJob);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder pigJob(@Nullable Output<PigJobArgs> pigJob) {
             this.pigJob = pigJob;
             return this;
         }
-
         public Builder pigJob(@Nullable PigJobArgs pigJob) {
             this.pigJob = Output.ofNullable(pigJob);
             return this;
         }
-
         public Builder placement(Output<JobPlacementArgs> placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
-
         public Builder placement(JobPlacementArgs placement) {
             this.placement = Output.of(Objects.requireNonNull(placement));
             return this;
         }
-
         public Builder prestoJob(@Nullable Output<PrestoJobArgs> prestoJob) {
             this.prestoJob = prestoJob;
             return this;
         }
-
         public Builder prestoJob(@Nullable PrestoJobArgs prestoJob) {
             this.prestoJob = Output.ofNullable(prestoJob);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pysparkJob(@Nullable Output<PySparkJobArgs> pysparkJob) {
             this.pysparkJob = pysparkJob;
             return this;
         }
-
         public Builder pysparkJob(@Nullable PySparkJobArgs pysparkJob) {
             this.pysparkJob = Output.ofNullable(pysparkJob);
             return this;
         }
-
         public Builder reference(@Nullable Output<JobReferenceArgs> reference) {
             this.reference = reference;
             return this;
         }
-
         public Builder reference(@Nullable JobReferenceArgs reference) {
             this.reference = Output.ofNullable(reference);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder scheduling(@Nullable Output<JobSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable JobSchedulingArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
-
         public Builder sparkJob(@Nullable Output<SparkJobArgs> sparkJob) {
             this.sparkJob = sparkJob;
             return this;
         }
-
         public Builder sparkJob(@Nullable SparkJobArgs sparkJob) {
             this.sparkJob = Output.ofNullable(sparkJob);
             return this;
         }
-
         public Builder sparkRJob(@Nullable Output<SparkRJobArgs> sparkRJob) {
             this.sparkRJob = sparkRJob;
             return this;
         }
-
         public Builder sparkRJob(@Nullable SparkRJobArgs sparkRJob) {
             this.sparkRJob = Output.ofNullable(sparkRJob);
             return this;
         }
-
         public Builder sparkSqlJob(@Nullable Output<SparkSqlJobArgs> sparkSqlJob) {
             this.sparkSqlJob = sparkSqlJob;
             return this;
         }
-
         public Builder sparkSqlJob(@Nullable SparkSqlJobArgs sparkSqlJob) {
             this.sparkSqlJob = Output.ofNullable(sparkSqlJob);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(hadoopJob, hiveJob, labels, pigJob, placement, prestoJob, project, pysparkJob, reference, region, requestId, scheduling, sparkJob, sparkRJob, sparkSqlJob);
         }
     }

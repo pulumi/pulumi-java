@@ -51,8 +51,7 @@ public final class ConditionContextResponse {
         public Builder accessTime(String accessTime) {
             this.accessTime = Objects.requireNonNull(accessTime);
             return this;
-        }
-        public ConditionContextResponse build() {
+        }        public ConditionContextResponse build() {
             return new ConditionContextResponse(accessTime);
         }
     }

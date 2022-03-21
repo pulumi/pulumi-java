@@ -122,27 +122,25 @@ public final class ApiErrorResponse {
             this.code = code;
             return this;
         }
-
         public Builder details(@Nullable List<ApiErrorBaseResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(ApiErrorBaseResponse... details) {
+            return details(List.of(details));
+        }
         public Builder innererror(@Nullable InnerErrorResponse innererror) {
             this.innererror = innererror;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ApiErrorResponse build() {
+        }        public ApiErrorResponse build() {
             return new ApiErrorResponse(code, details, innererror, message, target);
         }
     }

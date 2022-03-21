@@ -142,62 +142,53 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
             this.dataSources = dataSources;
             return this;
         }
-
         public Builder dataSources(@Nullable List<Either<String,UebaDataSources>> dataSources) {
             this.dataSources = Output.ofNullable(dataSources);
             return this;
         }
-
+        public Builder dataSources(Either<String,UebaDataSources>... dataSources) {
+            return dataSources(List.of(dataSources));
+        }
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder settingsName(@Nullable Output<String> settingsName) {
             this.settingsName = settingsName;
             return this;
         }
-
         public Builder settingsName(@Nullable String settingsName) {
             this.settingsName = Output.ofNullable(settingsName);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public UebaArgs build() {
+        }        public UebaArgs build() {
             return new UebaArgs(dataSources, kind, operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
         }
     }

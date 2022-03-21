@@ -138,62 +138,50 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder domainServiceName(Output<String> domainServiceName) {
             this.domainServiceName = Objects.requireNonNull(domainServiceName);
             return this;
         }
-
         public Builder domainServiceName(String domainServiceName) {
             this.domainServiceName = Output.of(Objects.requireNonNull(domainServiceName));
             return this;
         }
-
         public Builder ouContainerName(@Nullable Output<String> ouContainerName) {
             this.ouContainerName = ouContainerName;
             return this;
         }
-
         public Builder ouContainerName(@Nullable String ouContainerName) {
             this.ouContainerName = Output.ofNullable(ouContainerName);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder spn(@Nullable Output<String> spn) {
             this.spn = spn;
             return this;
         }
-
         public Builder spn(@Nullable String spn) {
             this.spn = Output.ofNullable(spn);
             return this;
-        }
-        public OuContainerArgs build() {
+        }        public OuContainerArgs build() {
             return new OuContainerArgs(accountName, domainServiceName, ouContainerName, password, resourceGroupName, spn);
         }
     }

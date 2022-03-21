@@ -57,12 +57,10 @@ public final class SpotInstanceRequestCreditSpecificationGetArgs extends io.pulu
             this.cpuCredits = cpuCredits;
             return this;
         }
-
         public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = Output.ofNullable(cpuCredits);
             return this;
-        }
-        public SpotInstanceRequestCreditSpecificationGetArgs build() {
+        }        public SpotInstanceRequestCreditSpecificationGetArgs build() {
             return new SpotInstanceRequestCreditSpecificationGetArgs(cpuCredits);
         }
     }

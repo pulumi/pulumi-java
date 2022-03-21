@@ -115,42 +115,46 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs e
             this.requestHeaderToAdds = requestHeaderToAdds;
             return this;
         }
-
         public Builder requestHeaderToAdds(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs> requestHeaderToAdds) {
             this.requestHeaderToAdds = Output.ofNullable(requestHeaderToAdds);
             return this;
         }
-
+        public Builder requestHeaderToAdds(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs... requestHeaderToAdds) {
+            return requestHeaderToAdds(List.of(requestHeaderToAdds));
+        }
         public Builder requestHeaderToRemoves(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs>> requestHeaderToRemoves) {
             this.requestHeaderToRemoves = requestHeaderToRemoves;
             return this;
         }
-
         public Builder requestHeaderToRemoves(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs> requestHeaderToRemoves) {
             this.requestHeaderToRemoves = Output.ofNullable(requestHeaderToRemoves);
             return this;
         }
-
+        public Builder requestHeaderToRemoves(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs... requestHeaderToRemoves) {
+            return requestHeaderToRemoves(List.of(requestHeaderToRemoves));
+        }
         public Builder responseHeaderToAdds(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs>> responseHeaderToAdds) {
             this.responseHeaderToAdds = responseHeaderToAdds;
             return this;
         }
-
         public Builder responseHeaderToAdds(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs> responseHeaderToAdds) {
             this.responseHeaderToAdds = Output.ofNullable(responseHeaderToAdds);
             return this;
         }
-
+        public Builder responseHeaderToAdds(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs... responseHeaderToAdds) {
+            return responseHeaderToAdds(List.of(responseHeaderToAdds));
+        }
         public Builder responseHeaderToRemoves(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArgs>> responseHeaderToRemoves) {
             this.responseHeaderToRemoves = responseHeaderToRemoves;
             return this;
         }
-
         public Builder responseHeaderToRemoves(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArgs> responseHeaderToRemoves) {
             this.responseHeaderToRemoves = Output.ofNullable(responseHeaderToRemoves);
             return this;
         }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs build() {
+        public Builder responseHeaderToRemoves(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArgs... responseHeaderToRemoves) {
+            return responseHeaderToRemoves(List.of(responseHeaderToRemoves));
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs(requestHeaderToAdds, requestHeaderToRemoves, responseHeaderToAdds, responseHeaderToRemoves);
         }
     }

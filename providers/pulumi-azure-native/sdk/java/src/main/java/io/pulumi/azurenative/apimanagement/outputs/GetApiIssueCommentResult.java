@@ -135,32 +135,26 @@ public final class GetApiIssueCommentResult {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GetApiIssueCommentResult build() {
+        }        public GetApiIssueCommentResult build() {
             return new GetApiIssueCommentResult(createdDate, id, name, text, type, userId);
         }
     }

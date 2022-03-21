@@ -85,27 +85,22 @@ public final class GetWebAppResult {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetWebAppResult build() {
+        }        public GetWebAppResult build() {
             return new GetWebAppResult(appId, displayName, id, name, project);
         }
     }

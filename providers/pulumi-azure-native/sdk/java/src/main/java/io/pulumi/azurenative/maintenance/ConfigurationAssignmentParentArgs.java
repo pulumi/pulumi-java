@@ -202,102 +202,82 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
             this.configurationAssignmentName = configurationAssignmentName;
             return this;
         }
-
         public Builder configurationAssignmentName(@Nullable String configurationAssignmentName) {
             this.configurationAssignmentName = Output.ofNullable(configurationAssignmentName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
-
         public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder resourceParentName(Output<String> resourceParentName) {
             this.resourceParentName = Objects.requireNonNull(resourceParentName);
             return this;
         }
-
         public Builder resourceParentName(String resourceParentName) {
             this.resourceParentName = Output.of(Objects.requireNonNull(resourceParentName));
             return this;
         }
-
         public Builder resourceParentType(Output<String> resourceParentType) {
             this.resourceParentType = Objects.requireNonNull(resourceParentType);
             return this;
         }
-
         public Builder resourceParentType(String resourceParentType) {
             this.resourceParentType = Output.of(Objects.requireNonNull(resourceParentType));
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
-        }
-        public ConfigurationAssignmentParentArgs build() {
+        }        public ConfigurationAssignmentParentArgs build() {
             return new ConfigurationAssignmentParentArgs(configurationAssignmentName, location, maintenanceConfigurationId, providerName, resourceGroupName, resourceId, resourceName, resourceParentName, resourceParentType, resourceType);
         }
     }

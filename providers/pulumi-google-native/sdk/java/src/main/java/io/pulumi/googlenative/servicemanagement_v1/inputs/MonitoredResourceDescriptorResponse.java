@@ -142,32 +142,29 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder labels(List<LabelDescriptorResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(LabelDescriptorResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder launchStage(String launchStage) {
             this.launchStage = Objects.requireNonNull(launchStage);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public MonitoredResourceDescriptorResponse build() {
+        }        public MonitoredResourceDescriptorResponse build() {
             return new MonitoredResourceDescriptorResponse(description, displayName, labels, launchStage, name, type);
         }
     }

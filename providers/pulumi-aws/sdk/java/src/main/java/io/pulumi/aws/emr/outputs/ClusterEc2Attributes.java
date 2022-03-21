@@ -184,47 +184,41 @@ public final class ClusterEc2Attributes {
             this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
             return this;
         }
-
         public Builder additionalSlaveSecurityGroups(@Nullable String additionalSlaveSecurityGroups) {
             this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
             return this;
         }
-
         public Builder emrManagedMasterSecurityGroup(@Nullable String emrManagedMasterSecurityGroup) {
             this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
             return this;
         }
-
         public Builder emrManagedSlaveSecurityGroup(@Nullable String emrManagedSlaveSecurityGroup) {
             this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
             return this;
         }
-
         public Builder instanceProfile(String instanceProfile) {
             this.instanceProfile = Objects.requireNonNull(instanceProfile);
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder serviceAccessSecurityGroup(@Nullable String serviceAccessSecurityGroup) {
             this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-        public ClusterEc2Attributes build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public ClusterEc2Attributes build() {
             return new ClusterEc2Attributes(additionalMasterSecurityGroups, additionalSlaveSecurityGroups, emrManagedMasterSecurityGroup, emrManagedSlaveSecurityGroup, instanceProfile, keyName, serviceAccessSecurityGroup, subnetId, subnetIds);
         }
     }

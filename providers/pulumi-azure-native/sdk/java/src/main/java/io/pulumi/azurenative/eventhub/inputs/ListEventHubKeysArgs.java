@@ -104,22 +104,18 @@ public final class ListEventHubKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder eventHubName(String eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListEventHubKeysArgs build() {
+        }        public ListEventHubKeysArgs build() {
             return new ListEventHubKeysArgs(authorizationRuleName, eventHubName, namespaceName, resourceGroupName);
         }
     }

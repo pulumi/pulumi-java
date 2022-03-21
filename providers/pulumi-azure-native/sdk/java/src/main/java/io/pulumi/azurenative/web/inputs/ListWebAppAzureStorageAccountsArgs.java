@@ -72,12 +72,10 @@ public final class ListWebAppAzureStorageAccountsArgs extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppAzureStorageAccountsArgs build() {
+        }        public ListWebAppAzureStorageAccountsArgs build() {
             return new ListWebAppAzureStorageAccountsArgs(name, resourceGroupName);
         }
     }

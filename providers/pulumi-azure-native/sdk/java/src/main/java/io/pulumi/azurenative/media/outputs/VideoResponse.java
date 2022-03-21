@@ -121,27 +121,22 @@ public final class VideoResponse {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
-        }
-        public VideoResponse build() {
+        }        public VideoResponse build() {
             return new VideoResponse(keyFrameInterval, label, odataType, stretchMode, syncMode);
         }
     }

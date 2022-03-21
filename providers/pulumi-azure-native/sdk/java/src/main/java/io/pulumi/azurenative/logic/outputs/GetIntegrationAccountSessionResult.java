@@ -169,42 +169,34 @@ public final class GetIntegrationAccountSessionResult {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
-
         public Builder content(@Nullable Object content) {
             this.content = content;
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIntegrationAccountSessionResult build() {
+        }        public GetIntegrationAccountSessionResult build() {
             return new GetIntegrationAccountSessionResult(changedTime, content, createdTime, id, location, name, tags, type);
         }
     }

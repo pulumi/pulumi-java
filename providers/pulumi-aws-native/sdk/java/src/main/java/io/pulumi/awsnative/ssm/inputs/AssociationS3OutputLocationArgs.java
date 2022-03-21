@@ -78,32 +78,26 @@ public final class AssociationS3OutputLocationArgs extends io.pulumi.resources.R
             this.outputS3BucketName = outputS3BucketName;
             return this;
         }
-
         public Builder outputS3BucketName(@Nullable String outputS3BucketName) {
             this.outputS3BucketName = Output.ofNullable(outputS3BucketName);
             return this;
         }
-
         public Builder outputS3KeyPrefix(@Nullable Output<String> outputS3KeyPrefix) {
             this.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
-
         public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
             this.outputS3KeyPrefix = Output.ofNullable(outputS3KeyPrefix);
             return this;
         }
-
         public Builder outputS3Region(@Nullable Output<String> outputS3Region) {
             this.outputS3Region = outputS3Region;
             return this;
         }
-
         public Builder outputS3Region(@Nullable String outputS3Region) {
             this.outputS3Region = Output.ofNullable(outputS3Region);
             return this;
-        }
-        public AssociationS3OutputLocationArgs build() {
+        }        public AssociationS3OutputLocationArgs build() {
             return new AssociationS3OutputLocationArgs(outputS3BucketName, outputS3KeyPrefix, outputS3Region);
         }
     }

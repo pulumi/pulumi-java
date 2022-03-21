@@ -69,12 +69,10 @@ public final class RuntimeAcceleratorConfigResponse {
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RuntimeAcceleratorConfigResponse build() {
+        }        public RuntimeAcceleratorConfigResponse build() {
             return new RuntimeAcceleratorConfigResponse(coreCount, type);
         }
     }

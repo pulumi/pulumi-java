@@ -66,12 +66,10 @@ public final class EncryptionConfigProperties extends io.pulumi.resources.Invoke
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public EncryptionConfigProperties build() {
+        }        public EncryptionConfigProperties build() {
             return new EncryptionConfigProperties(kmsKeyArn, roleArn);
         }
     }

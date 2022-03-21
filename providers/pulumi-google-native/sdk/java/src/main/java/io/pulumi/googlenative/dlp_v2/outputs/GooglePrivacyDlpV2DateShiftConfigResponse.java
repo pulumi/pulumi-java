@@ -103,22 +103,18 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder lowerBoundDays(Integer lowerBoundDays) {
             this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
             return this;
         }
-
         public Builder upperBoundDays(Integer upperBoundDays) {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
-        }
-        public GooglePrivacyDlpV2DateShiftConfigResponse build() {
+        }        public GooglePrivacyDlpV2DateShiftConfigResponse build() {
             return new GooglePrivacyDlpV2DateShiftConfigResponse(context, cryptoKey, lowerBoundDays, upperBoundDays);
         }
     }

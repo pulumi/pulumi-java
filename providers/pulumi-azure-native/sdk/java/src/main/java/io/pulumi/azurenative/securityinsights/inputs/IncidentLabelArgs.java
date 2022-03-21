@@ -60,12 +60,10 @@ public final class IncidentLabelArgs extends io.pulumi.resources.ResourceArgs {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelName(String labelName) {
             this.labelName = Output.of(Objects.requireNonNull(labelName));
             return this;
-        }
-        public IncidentLabelArgs build() {
+        }        public IncidentLabelArgs build() {
             return new IncidentLabelArgs(labelName);
         }
     }

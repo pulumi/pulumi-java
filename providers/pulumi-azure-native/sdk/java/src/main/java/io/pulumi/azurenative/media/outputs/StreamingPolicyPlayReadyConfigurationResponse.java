@@ -71,12 +71,10 @@ public final class StreamingPolicyPlayReadyConfigurationResponse {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-
         public Builder playReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
             this.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
-        }
-        public StreamingPolicyPlayReadyConfigurationResponse build() {
+        }        public StreamingPolicyPlayReadyConfigurationResponse build() {
             return new StreamingPolicyPlayReadyConfigurationResponse(customLicenseAcquisitionUrlTemplate, playReadyCustomAttributes);
         }
     }

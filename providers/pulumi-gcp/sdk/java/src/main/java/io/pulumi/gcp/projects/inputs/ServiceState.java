@@ -111,42 +111,34 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             this.disableDependentServices = disableDependentServices;
             return this;
         }
-
         public Builder disableDependentServices(@Nullable Boolean disableDependentServices) {
             this.disableDependentServices = Output.ofNullable(disableDependentServices);
             return this;
         }
-
         public Builder disableOnDestroy(@Nullable Output<Boolean> disableOnDestroy) {
             this.disableOnDestroy = disableOnDestroy;
             return this;
         }
-
         public Builder disableOnDestroy(@Nullable Boolean disableOnDestroy) {
             this.disableOnDestroy = Output.ofNullable(disableOnDestroy);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public ServiceState build() {
+        }        public ServiceState build() {
             return new ServiceState(disableDependentServices, disableOnDestroy, project, service);
         }
     }

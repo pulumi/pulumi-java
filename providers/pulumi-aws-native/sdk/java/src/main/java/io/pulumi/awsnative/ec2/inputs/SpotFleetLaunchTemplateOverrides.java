@@ -116,32 +116,26 @@ public final class SpotFleetLaunchTemplateOverrides extends io.pulumi.resources.
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public SpotFleetLaunchTemplateOverrides build() {
+        }        public SpotFleetLaunchTemplateOverrides build() {
             return new SpotFleetLaunchTemplateOverrides(availabilityZone, instanceRequirements, instanceType, spotPrice, subnetId, weightedCapacity);
         }
     }

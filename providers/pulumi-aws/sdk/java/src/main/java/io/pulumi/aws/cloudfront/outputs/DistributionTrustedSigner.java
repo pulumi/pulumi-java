@@ -73,12 +73,13 @@ public final class DistributionTrustedSigner {
             this.enabled = enabled;
             return this;
         }
-
         public Builder items(@Nullable List<DistributionTrustedSignerItem> items) {
             this.items = items;
             return this;
         }
-        public DistributionTrustedSigner build() {
+        public Builder items(DistributionTrustedSignerItem... items) {
+            return items(List.of(items));
+        }        public DistributionTrustedSigner build() {
             return new DistributionTrustedSigner(enabled, items);
         }
     }

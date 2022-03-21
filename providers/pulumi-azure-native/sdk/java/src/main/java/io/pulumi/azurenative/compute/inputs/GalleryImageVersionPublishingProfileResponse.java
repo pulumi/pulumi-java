@@ -146,32 +146,29 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
-
         public Builder publishedDate(String publishedDate) {
             this.publishedDate = Objects.requireNonNull(publishedDate);
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder targetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }
-        public GalleryImageVersionPublishingProfileResponse build() {
+        public Builder targetRegions(TargetRegionResponse... targetRegions) {
+            return targetRegions(List.of(targetRegions));
+        }        public GalleryImageVersionPublishingProfileResponse build() {
             return new GalleryImageVersionPublishingProfileResponse(endOfLifeDate, excludeFromLatest, publishedDate, replicaCount, storageAccountType, targetRegions);
         }
     }

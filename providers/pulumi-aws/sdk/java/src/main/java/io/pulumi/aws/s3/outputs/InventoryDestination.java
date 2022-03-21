@@ -51,8 +51,7 @@ public final class InventoryDestination {
         public Builder bucket(InventoryDestinationBucket bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
-        }
-        public InventoryDestination build() {
+        }        public InventoryDestination build() {
             return new InventoryDestination(bucket);
         }
     }

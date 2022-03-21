@@ -110,42 +110,34 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.archiveNameFormat = archiveNameFormat;
             return this;
         }
-
         public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
             this.archiveNameFormat = Output.ofNullable(archiveNameFormat);
             return this;
         }
-
         public Builder blobContainer(@Nullable Output<String> blobContainer) {
             this.blobContainer = blobContainer;
             return this;
         }
-
         public Builder blobContainer(@Nullable String blobContainer) {
             this.blobContainer = Output.ofNullable(blobContainer);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = Output.ofNullable(storageAccountResourceId);
             return this;
-        }
-        public DestinationArgs build() {
+        }        public DestinationArgs build() {
             return new DestinationArgs(archiveNameFormat, blobContainer, name, storageAccountResourceId);
         }
     }

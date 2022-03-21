@@ -121,42 +121,40 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
             this.enrolledServices = Objects.requireNonNull(enrolledServices);
             return this;
         }
-
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
             this.enrolledServices = Output.of(Objects.requireNonNull(enrolledServices));
             return this;
         }
-
+        public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
+            return enrolledServices(List.of(enrolledServices));
+        }
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
-
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
             this.notificationEmails = Output.ofNullable(notificationEmails);
             return this;
         }
-
+        public Builder notificationEmails(String... notificationEmails) {
+            return notificationEmails(List.of(notificationEmails));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
-        }
-        public AccessApprovalSettingsArgs build() {
+        }        public AccessApprovalSettingsArgs build() {
             return new AccessApprovalSettingsArgs(enrolledServices, notificationEmails, project, projectId);
         }
     }

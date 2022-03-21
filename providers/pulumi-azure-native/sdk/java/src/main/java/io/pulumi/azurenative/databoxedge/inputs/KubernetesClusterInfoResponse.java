@@ -95,17 +95,17 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
             this.etcdInfo = Objects.requireNonNull(etcdInfo);
             return this;
         }
-
         public Builder nodes(List<NodeInfoResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
+        public Builder nodes(NodeInfoResponse... nodes) {
+            return nodes(List.of(nodes));
+        }
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public KubernetesClusterInfoResponse build() {
+        }        public KubernetesClusterInfoResponse build() {
             return new KubernetesClusterInfoResponse(etcdInfo, nodes, version);
         }
     }

@@ -79,12 +79,10 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
             this.actionGroupId = Objects.requireNonNull(actionGroupId);
             return this;
         }
-
         public Builder webhookProperties(@Nullable Map<String,String> webhookProperties) {
             this.webhookProperties = webhookProperties;
             return this;
-        }
-        public ActionGroupResponse build() {
+        }        public ActionGroupResponse build() {
             return new ActionGroupResponse(actionGroupId, webhookProperties);
         }
     }

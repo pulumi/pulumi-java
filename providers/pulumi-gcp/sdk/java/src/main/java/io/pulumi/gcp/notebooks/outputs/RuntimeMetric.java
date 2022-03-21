@@ -45,8 +45,7 @@ public final class RuntimeMetric {
         public Builder systemMetrics(@Nullable Map<String,String> systemMetrics) {
             this.systemMetrics = systemMetrics;
             return this;
-        }
-        public RuntimeMetric build() {
+        }        public RuntimeMetric build() {
             return new RuntimeMetric(systemMetrics);
         }
     }

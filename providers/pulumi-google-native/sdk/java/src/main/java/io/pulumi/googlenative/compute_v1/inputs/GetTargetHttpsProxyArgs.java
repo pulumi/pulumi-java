@@ -66,12 +66,10 @@ public final class GetTargetHttpsProxyArgs extends io.pulumi.resources.InvokeArg
             this.project = project;
             return this;
         }
-
         public Builder targetHttpsProxy(String targetHttpsProxy) {
             this.targetHttpsProxy = Objects.requireNonNull(targetHttpsProxy);
             return this;
-        }
-        public GetTargetHttpsProxyArgs build() {
+        }        public GetTargetHttpsProxyArgs build() {
             return new GetTargetHttpsProxyArgs(project, targetHttpsProxy);
         }
     }

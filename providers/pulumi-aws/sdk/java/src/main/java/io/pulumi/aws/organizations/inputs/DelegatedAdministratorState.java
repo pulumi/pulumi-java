@@ -186,92 +186,74 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder delegationEnabledDate(@Nullable Output<String> delegationEnabledDate) {
             this.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
-
         public Builder delegationEnabledDate(@Nullable String delegationEnabledDate) {
             this.delegationEnabledDate = Output.ofNullable(delegationEnabledDate);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder joinedMethod(@Nullable Output<String> joinedMethod) {
             this.joinedMethod = joinedMethod;
             return this;
         }
-
         public Builder joinedMethod(@Nullable String joinedMethod) {
             this.joinedMethod = Output.ofNullable(joinedMethod);
             return this;
         }
-
         public Builder joinedTimestamp(@Nullable Output<String> joinedTimestamp) {
             this.joinedTimestamp = joinedTimestamp;
             return this;
         }
-
         public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
             this.joinedTimestamp = Output.ofNullable(joinedTimestamp);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
-
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = Output.ofNullable(servicePrincipal);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public DelegatedAdministratorState build() {
+        }        public DelegatedAdministratorState build() {
             return new DelegatedAdministratorState(accountId, arn, delegationEnabledDate, email, joinedMethod, joinedTimestamp, name, servicePrincipal, status);
         }
     }

@@ -178,42 +178,37 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(DependsOnDefinitionResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder force(@Nullable Boolean force) {
             this.force = force;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder prune(@Nullable Boolean prune) {
             this.prune = prune;
             return this;
         }
-
         public Builder retryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
-
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder validation(@Nullable String validation) {
             this.validation = validation;
             return this;
-        }
-        public KustomizationDefinitionResponse build() {
+        }        public KustomizationDefinitionResponse build() {
             return new KustomizationDefinitionResponse(dependsOn, force, path, prune, retryIntervalInSeconds, syncIntervalInSeconds, timeoutInSeconds, validation);
         }
     }

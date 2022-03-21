@@ -94,17 +94,14 @@ public final class HttpRouteConfigResponse extends io.pulumi.resources.InvokeArg
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder match(HttpRouteMatchRuleResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public HttpRouteConfigResponse build() {
+        }        public HttpRouteConfigResponse build() {
             return new HttpRouteConfigResponse(destination, match, name);
         }
     }

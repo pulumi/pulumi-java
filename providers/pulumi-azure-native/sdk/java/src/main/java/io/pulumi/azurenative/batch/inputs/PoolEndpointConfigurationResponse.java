@@ -56,7 +56,9 @@ public final class PoolEndpointConfigurationResponse extends io.pulumi.resources
             this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
             return this;
         }
-        public PoolEndpointConfigurationResponse build() {
+        public Builder inboundNatPools(InboundNatPoolResponse... inboundNatPools) {
+            return inboundNatPools(List.of(inboundNatPools));
+        }        public PoolEndpointConfigurationResponse build() {
             return new PoolEndpointConfigurationResponse(inboundNatPools);
         }
     }

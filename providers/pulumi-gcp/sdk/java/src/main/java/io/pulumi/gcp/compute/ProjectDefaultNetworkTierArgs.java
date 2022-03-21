@@ -76,22 +76,18 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
-
         public Builder networkTier(String networkTier) {
             this.networkTier = Output.of(Objects.requireNonNull(networkTier));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProjectDefaultNetworkTierArgs build() {
+        }        public ProjectDefaultNetworkTierArgs build() {
             return new ProjectDefaultNetworkTierArgs(networkTier, project);
         }
     }

@@ -56,12 +56,10 @@ public final class LaunchTemplateElasticInferenceAcceleratorGetArgs extends io.p
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public LaunchTemplateElasticInferenceAcceleratorGetArgs build() {
+        }        public LaunchTemplateElasticInferenceAcceleratorGetArgs build() {
             return new LaunchTemplateElasticInferenceAcceleratorGetArgs(type);
         }
     }

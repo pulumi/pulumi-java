@@ -58,12 +58,10 @@ public final class ManagedZonePeeringConfigTargetNetworkGetArgs extends io.pulum
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Output.of(Objects.requireNonNull(networkUrl));
             return this;
-        }
-        public ManagedZonePeeringConfigTargetNetworkGetArgs build() {
+        }        public ManagedZonePeeringConfigTargetNetworkGetArgs build() {
             return new ManagedZonePeeringConfigTargetNetworkGetArgs(networkUrl);
         }
     }

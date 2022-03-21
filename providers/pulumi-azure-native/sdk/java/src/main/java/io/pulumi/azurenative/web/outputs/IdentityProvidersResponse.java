@@ -195,47 +195,38 @@ public final class IdentityProvidersResponse {
             this.apple = apple;
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
-
         public Builder azureStaticWebApps(@Nullable AzureStaticWebAppsResponse azureStaticWebApps) {
             this.azureStaticWebApps = azureStaticWebApps;
             return this;
         }
-
         public Builder customOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders) {
             this.customOpenIdConnectProviders = customOpenIdConnectProviders;
             return this;
         }
-
         public Builder facebook(@Nullable FacebookResponse facebook) {
             this.facebook = facebook;
             return this;
         }
-
         public Builder gitHub(@Nullable GitHubResponse gitHub) {
             this.gitHub = gitHub;
             return this;
         }
-
         public Builder google(@Nullable GoogleResponse google) {
             this.google = google;
             return this;
         }
-
         public Builder legacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount) {
             this.legacyMicrosoftAccount = legacyMicrosoftAccount;
             return this;
         }
-
         public Builder twitter(@Nullable TwitterResponse twitter) {
             this.twitter = twitter;
             return this;
-        }
-        public IdentityProvidersResponse build() {
+        }        public IdentityProvidersResponse build() {
             return new IdentityProvidersResponse(apple, azureActiveDirectory, azureStaticWebApps, customOpenIdConnectProviders, facebook, gitHub, google, legacyMicrosoftAccount, twitter);
         }
     }

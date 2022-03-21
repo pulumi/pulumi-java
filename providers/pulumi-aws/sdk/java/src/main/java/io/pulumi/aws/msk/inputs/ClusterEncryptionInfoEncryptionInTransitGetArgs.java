@@ -75,22 +75,18 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
             this.clientBroker = clientBroker;
             return this;
         }
-
         public Builder clientBroker(@Nullable String clientBroker) {
             this.clientBroker = Output.ofNullable(clientBroker);
             return this;
         }
-
         public Builder inCluster(@Nullable Output<Boolean> inCluster) {
             this.inCluster = inCluster;
             return this;
         }
-
         public Builder inCluster(@Nullable Boolean inCluster) {
             this.inCluster = Output.ofNullable(inCluster);
             return this;
-        }
-        public ClusterEncryptionInfoEncryptionInTransitGetArgs build() {
+        }        public ClusterEncryptionInfoEncryptionInTransitGetArgs build() {
             return new ClusterEncryptionInfoEncryptionInTransitGetArgs(clientBroker, inCluster);
         }
     }

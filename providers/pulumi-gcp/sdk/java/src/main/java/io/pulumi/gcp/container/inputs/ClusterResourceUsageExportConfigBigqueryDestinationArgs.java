@@ -52,12 +52,10 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationArgs exten
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
-        }
-        public ClusterResourceUsageExportConfigBigqueryDestinationArgs build() {
+        }        public ClusterResourceUsageExportConfigBigqueryDestinationArgs build() {
             return new ClusterResourceUsageExportConfigBigqueryDestinationArgs(datasetId);
         }
     }

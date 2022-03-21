@@ -69,12 +69,10 @@ public final class InsightFiltersSourceUrl {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersSourceUrl build() {
+        }        public InsightFiltersSourceUrl build() {
             return new InsightFiltersSourceUrl(comparison, value);
         }
     }

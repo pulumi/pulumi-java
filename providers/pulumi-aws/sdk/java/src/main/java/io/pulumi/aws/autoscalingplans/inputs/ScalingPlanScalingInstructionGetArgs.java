@@ -276,142 +276,117 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
             this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
             return this;
         }
-
         public Builder customizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs customizedLoadMetricSpecification) {
             this.customizedLoadMetricSpecification = Output.ofNullable(customizedLoadMetricSpecification);
             return this;
         }
-
         public Builder disableDynamicScaling(@Nullable Output<Boolean> disableDynamicScaling) {
             this.disableDynamicScaling = disableDynamicScaling;
             return this;
         }
-
         public Builder disableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
             this.disableDynamicScaling = Output.ofNullable(disableDynamicScaling);
             return this;
         }
-
         public Builder maxCapacity(Output<Integer> maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
-
         public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Output.of(Objects.requireNonNull(maxCapacity));
             return this;
         }
-
         public Builder minCapacity(Output<Integer> minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
             return this;
         }
-
         public Builder predefinedLoadMetricSpecification(@Nullable Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
-
         public Builder predefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = Output.ofNullable(predefinedLoadMetricSpecification);
             return this;
         }
-
         public Builder predictiveScalingMaxCapacityBehavior(@Nullable Output<String> predictiveScalingMaxCapacityBehavior) {
             this.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
             return this;
         }
-
         public Builder predictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
             this.predictiveScalingMaxCapacityBehavior = Output.ofNullable(predictiveScalingMaxCapacityBehavior);
             return this;
         }
-
         public Builder predictiveScalingMaxCapacityBuffer(@Nullable Output<Integer> predictiveScalingMaxCapacityBuffer) {
             this.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
             return this;
         }
-
         public Builder predictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
             this.predictiveScalingMaxCapacityBuffer = Output.ofNullable(predictiveScalingMaxCapacityBuffer);
             return this;
         }
-
         public Builder predictiveScalingMode(@Nullable Output<String> predictiveScalingMode) {
             this.predictiveScalingMode = predictiveScalingMode;
             return this;
         }
-
         public Builder predictiveScalingMode(@Nullable String predictiveScalingMode) {
             this.predictiveScalingMode = Output.ofNullable(predictiveScalingMode);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder scalableDimension(Output<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
-
         public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
-
         public Builder scalingPolicyUpdateBehavior(@Nullable Output<String> scalingPolicyUpdateBehavior) {
             this.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
             return this;
         }
-
         public Builder scalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
             this.scalingPolicyUpdateBehavior = Output.ofNullable(scalingPolicyUpdateBehavior);
             return this;
         }
-
         public Builder scheduledActionBufferTime(@Nullable Output<Integer> scheduledActionBufferTime) {
             this.scheduledActionBufferTime = scheduledActionBufferTime;
             return this;
         }
-
         public Builder scheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
             this.scheduledActionBufferTime = Output.ofNullable(scheduledActionBufferTime);
             return this;
         }
-
         public Builder serviceNamespace(Output<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
-
         public Builder targetTrackingConfigurations(Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations) {
             this.targetTrackingConfigurations = Objects.requireNonNull(targetTrackingConfigurations);
             return this;
         }
-
         public Builder targetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs> targetTrackingConfigurations) {
             this.targetTrackingConfigurations = Output.of(Objects.requireNonNull(targetTrackingConfigurations));
             return this;
         }
-        public ScalingPlanScalingInstructionGetArgs build() {
+        public Builder targetTrackingConfigurations(ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs... targetTrackingConfigurations) {
+            return targetTrackingConfigurations(List.of(targetTrackingConfigurations));
+        }        public ScalingPlanScalingInstructionGetArgs build() {
             return new ScalingPlanScalingInstructionGetArgs(customizedLoadMetricSpecification, disableDynamicScaling, maxCapacity, minCapacity, predefinedLoadMetricSpecification, predictiveScalingMaxCapacityBehavior, predictiveScalingMaxCapacityBuffer, predictiveScalingMode, resourceId, scalableDimension, scalingPolicyUpdateBehavior, scheduledActionBufferTime, serviceNamespace, targetTrackingConfigurations);
         }
     }

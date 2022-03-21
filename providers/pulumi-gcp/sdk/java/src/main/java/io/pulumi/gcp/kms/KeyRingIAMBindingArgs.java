@@ -110,42 +110,37 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable KeyRingIAMBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder keyRingId(Output<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public KeyRingIAMBindingArgs build() {
+        }        public KeyRingIAMBindingArgs build() {
             return new KeyRingIAMBindingArgs(condition, keyRingId, members, role);
         }
     }

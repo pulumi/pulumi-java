@@ -58,8 +58,7 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
         public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
-        }
-        public NodeConfigDefaultsResponse build() {
+        }        public NodeConfigDefaultsResponse build() {
             return new NodeConfigDefaultsResponse(gcfsConfig);
         }
     }

@@ -53,12 +53,10 @@ public final class CertificateAuthorityOtherName {
             this.typeId = Objects.requireNonNull(typeId);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CertificateAuthorityOtherName build() {
+        }        public CertificateAuthorityOtherName build() {
             return new CertificateAuthorityOtherName(typeId, value);
         }
     }

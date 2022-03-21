@@ -124,52 +124,45 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
             this.connectionBorrowTimeout = connectionBorrowTimeout;
             return this;
         }
-
         public Builder connectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
             this.connectionBorrowTimeout = Output.ofNullable(connectionBorrowTimeout);
             return this;
         }
-
         public Builder initQuery(@Nullable Output<String> initQuery) {
             this.initQuery = initQuery;
             return this;
         }
-
         public Builder initQuery(@Nullable String initQuery) {
             this.initQuery = Output.ofNullable(initQuery);
             return this;
         }
-
         public Builder maxConnectionsPercent(@Nullable Output<Integer> maxConnectionsPercent) {
             this.maxConnectionsPercent = maxConnectionsPercent;
             return this;
         }
-
         public Builder maxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
             this.maxConnectionsPercent = Output.ofNullable(maxConnectionsPercent);
             return this;
         }
-
         public Builder maxIdleConnectionsPercent(@Nullable Output<Integer> maxIdleConnectionsPercent) {
             this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
             return this;
         }
-
         public Builder maxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
             this.maxIdleConnectionsPercent = Output.ofNullable(maxIdleConnectionsPercent);
             return this;
         }
-
         public Builder sessionPinningFilters(@Nullable Output<List<String>> sessionPinningFilters) {
             this.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
-
         public Builder sessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
             this.sessionPinningFilters = Output.ofNullable(sessionPinningFilters);
             return this;
         }
-        public DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs build() {
+        public Builder sessionPinningFilters(String... sessionPinningFilters) {
+            return sessionPinningFilters(List.of(sessionPinningFilters));
+        }        public DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs build() {
             return new DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs(connectionBorrowTimeout, initQuery, maxConnectionsPercent, maxIdleConnectionsPercent, sessionPinningFilters);
         }
     }

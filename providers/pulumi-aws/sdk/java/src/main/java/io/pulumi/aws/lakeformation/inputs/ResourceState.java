@@ -90,32 +90,26 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder lastModified(@Nullable Output<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
-
         public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = Output.ofNullable(lastModified);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public ResourceState build() {
+        }        public ResourceState build() {
             return new ResourceState(arn, lastModified, roleArn);
         }
     }

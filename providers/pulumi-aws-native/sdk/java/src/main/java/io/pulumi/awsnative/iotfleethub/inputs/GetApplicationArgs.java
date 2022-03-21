@@ -54,8 +54,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
         public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
-        }
-        public GetApplicationArgs build() {
+        }        public GetApplicationArgs build() {
             return new GetApplicationArgs(applicationId);
         }
     }

@@ -66,12 +66,10 @@ public final class NetworkInsightsAnalysisTag extends io.pulumi.resources.Invoke
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public NetworkInsightsAnalysisTag build() {
+        }        public NetworkInsightsAnalysisTag build() {
             return new NetworkInsightsAnalysisTag(key, value);
         }
     }

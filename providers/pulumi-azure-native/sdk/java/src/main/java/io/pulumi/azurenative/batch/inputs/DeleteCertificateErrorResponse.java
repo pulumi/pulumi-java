@@ -111,22 +111,21 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(@Nullable List<DeleteCertificateErrorResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(DeleteCertificateErrorResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public DeleteCertificateErrorResponse build() {
+        }        public DeleteCertificateErrorResponse build() {
             return new DeleteCertificateErrorResponse(code, details, message, target);
         }
     }

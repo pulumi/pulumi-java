@@ -128,52 +128,45 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder formParameters(@Nullable Output<List<ParameterContractArgs>> formParameters) {
             this.formParameters = formParameters;
             return this;
         }
-
         public Builder formParameters(@Nullable List<ParameterContractArgs> formParameters) {
             this.formParameters = Output.ofNullable(formParameters);
             return this;
         }
-
+        public Builder formParameters(ParameterContractArgs... formParameters) {
+            return formParameters(List.of(formParameters));
+        }
         public Builder sample(@Nullable Output<String> sample) {
             this.sample = sample;
             return this;
         }
-
         public Builder sample(@Nullable String sample) {
             this.sample = Output.ofNullable(sample);
             return this;
         }
-
         public Builder schemaId(@Nullable Output<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
-
         public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
-        }
-        public RepresentationContractArgs build() {
+        }        public RepresentationContractArgs build() {
             return new RepresentationContractArgs(contentType, formParameters, sample, schemaId, typeName);
         }
     }

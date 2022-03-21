@@ -92,17 +92,14 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
-
         public Builder guardian(String guardian) {
             this.guardian = Objects.requireNonNull(guardian);
             return this;
         }
-
         public Builder scan(String scan) {
             this.scan = Objects.requireNonNull(scan);
             return this;
-        }
-        public AccountPropertiesResponseEndpoints build() {
+        }        public AccountPropertiesResponseEndpoints build() {
             return new AccountPropertiesResponseEndpoints(catalog, guardian, scan);
         }
     }

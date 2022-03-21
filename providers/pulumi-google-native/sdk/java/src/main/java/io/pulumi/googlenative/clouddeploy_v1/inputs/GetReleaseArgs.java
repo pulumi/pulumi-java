@@ -90,22 +90,18 @@ public final class GetReleaseArgs extends io.pulumi.resources.InvokeArgs {
             this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder releaseId(String releaseId) {
             this.releaseId = Objects.requireNonNull(releaseId);
             return this;
-        }
-        public GetReleaseArgs build() {
+        }        public GetReleaseArgs build() {
             return new GetReleaseArgs(deliveryPipelineId, location, project, releaseId);
         }
     }

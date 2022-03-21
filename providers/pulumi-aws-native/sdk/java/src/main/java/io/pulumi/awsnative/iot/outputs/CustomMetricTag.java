@@ -69,12 +69,10 @@ public final class CustomMetricTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CustomMetricTag build() {
+        }        public CustomMetricTag build() {
             return new CustomMetricTag(key, value);
         }
     }

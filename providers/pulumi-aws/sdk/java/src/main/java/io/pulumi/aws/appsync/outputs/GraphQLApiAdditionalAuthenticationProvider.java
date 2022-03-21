@@ -106,22 +106,18 @@ public final class GraphQLApiAdditionalAuthenticationProvider {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
-
         public Builder openidConnectConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig) {
             this.openidConnectConfig = openidConnectConfig;
             return this;
         }
-
         public Builder userPoolConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
             this.userPoolConfig = userPoolConfig;
             return this;
-        }
-        public GraphQLApiAdditionalAuthenticationProvider build() {
+        }        public GraphQLApiAdditionalAuthenticationProvider build() {
             return new GraphQLApiAdditionalAuthenticationProvider(authenticationType, lambdaAuthorizerConfig, openidConnectConfig, userPoolConfig);
         }
     }

@@ -434,122 +434,104 @@ public final class SettingsResponse {
             this.activationPolicy = Objects.requireNonNull(activationPolicy);
             return this;
         }
-
         public Builder activeDirectoryConfig(SqlActiveDirectoryConfigResponse activeDirectoryConfig) {
             this.activeDirectoryConfig = Objects.requireNonNull(activeDirectoryConfig);
             return this;
         }
-
         public Builder availabilityType(String availabilityType) {
             this.availabilityType = Objects.requireNonNull(availabilityType);
             return this;
         }
-
         public Builder backupConfiguration(BackupConfigurationResponse backupConfiguration) {
             this.backupConfiguration = Objects.requireNonNull(backupConfiguration);
             return this;
         }
-
         public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
-
         public Builder crashSafeReplicationEnabled(Boolean crashSafeReplicationEnabled) {
             this.crashSafeReplicationEnabled = Objects.requireNonNull(crashSafeReplicationEnabled);
             return this;
         }
-
         public Builder dataDiskSizeGb(String dataDiskSizeGb) {
             this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
             return this;
         }
-
         public Builder dataDiskType(String dataDiskType) {
             this.dataDiskType = Objects.requireNonNull(dataDiskType);
             return this;
         }
-
         public Builder databaseFlags(List<DatabaseFlagsResponse> databaseFlags) {
             this.databaseFlags = Objects.requireNonNull(databaseFlags);
             return this;
         }
-
+        public Builder databaseFlags(DatabaseFlagsResponse... databaseFlags) {
+            return databaseFlags(List.of(databaseFlags));
+        }
         public Builder databaseReplicationEnabled(Boolean databaseReplicationEnabled) {
             this.databaseReplicationEnabled = Objects.requireNonNull(databaseReplicationEnabled);
             return this;
         }
-
         public Builder denyMaintenancePeriods(List<DenyMaintenancePeriodResponse> denyMaintenancePeriods) {
             this.denyMaintenancePeriods = Objects.requireNonNull(denyMaintenancePeriods);
             return this;
         }
-
+        public Builder denyMaintenancePeriods(DenyMaintenancePeriodResponse... denyMaintenancePeriods) {
+            return denyMaintenancePeriods(List.of(denyMaintenancePeriods));
+        }
         public Builder insightsConfig(InsightsConfigResponse insightsConfig) {
             this.insightsConfig = Objects.requireNonNull(insightsConfig);
             return this;
         }
-
         public Builder ipConfiguration(IpConfigurationResponse ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder locationPreference(LocationPreferenceResponse locationPreference) {
             this.locationPreference = Objects.requireNonNull(locationPreference);
             return this;
         }
-
         public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public Builder passwordValidationPolicy(PasswordValidationPolicyResponse passwordValidationPolicy) {
             this.passwordValidationPolicy = Objects.requireNonNull(passwordValidationPolicy);
             return this;
         }
-
         public Builder pricingPlan(String pricingPlan) {
             this.pricingPlan = Objects.requireNonNull(pricingPlan);
             return this;
         }
-
         public Builder settingsVersion(String settingsVersion) {
             this.settingsVersion = Objects.requireNonNull(settingsVersion);
             return this;
         }
-
         public Builder sqlServerAuditConfig(SqlServerAuditConfigResponse sqlServerAuditConfig) {
             this.sqlServerAuditConfig = Objects.requireNonNull(sqlServerAuditConfig);
             return this;
         }
-
         public Builder storageAutoResize(Boolean storageAutoResize) {
             this.storageAutoResize = Objects.requireNonNull(storageAutoResize);
             return this;
         }
-
         public Builder storageAutoResizeLimit(String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
-        }
-        public SettingsResponse build() {
+        }        public SettingsResponse build() {
             return new SettingsResponse(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }
     }

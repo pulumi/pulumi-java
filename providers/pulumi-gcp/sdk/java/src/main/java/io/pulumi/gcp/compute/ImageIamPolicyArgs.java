@@ -92,32 +92,26 @@ public final class ImageIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ImageIamPolicyArgs build() {
+        }        public ImageIamPolicyArgs build() {
             return new ImageIamPolicyArgs(image, policyData, project);
         }
     }

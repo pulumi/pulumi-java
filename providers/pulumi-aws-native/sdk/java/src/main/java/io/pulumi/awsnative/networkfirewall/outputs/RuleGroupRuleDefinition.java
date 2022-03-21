@@ -55,12 +55,13 @@ public final class RuleGroupRuleDefinition {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder matchAttributes(RuleGroupMatchAttributes matchAttributes) {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
-        }
-        public RuleGroupRuleDefinition build() {
+        }        public RuleGroupRuleDefinition build() {
             return new RuleGroupRuleDefinition(actions, matchAttributes);
         }
     }

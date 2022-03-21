@@ -77,22 +77,18 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
         }
-
         public Builder loadBalancerType(@Nullable Output<String> loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
-
         public Builder loadBalancerType(@Nullable String loadBalancerType) {
             this.loadBalancerType = Output.ofNullable(loadBalancerType);
             return this;
-        }
-        public ClusterAddonsConfigCloudrunConfigGetArgs build() {
+        }        public ClusterAddonsConfigCloudrunConfigGetArgs build() {
             return new ClusterAddonsConfigCloudrunConfigGetArgs(disabled, loadBalancerType);
         }
     }

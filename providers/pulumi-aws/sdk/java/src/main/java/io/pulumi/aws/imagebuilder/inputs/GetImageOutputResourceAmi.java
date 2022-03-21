@@ -120,27 +120,22 @@ public final class GetImageOutputResourceAmi extends io.pulumi.resources.InvokeA
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetImageOutputResourceAmi build() {
+        }        public GetImageOutputResourceAmi build() {
             return new GetImageOutputResourceAmi(accountId, description, image, name, region);
         }
     }

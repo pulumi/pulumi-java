@@ -115,42 +115,34 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder dockerSpecificationType(Output<String> dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
-
         public Builder dockerSpecificationType(String dockerSpecificationType) {
             this.dockerSpecificationType = Output.of(Objects.requireNonNull(dockerSpecificationType));
             return this;
         }
-
         public Builder dockerfile(Output<String> dockerfile) {
             this.dockerfile = Objects.requireNonNull(dockerfile);
             return this;
         }
-
         public Builder dockerfile(String dockerfile) {
             this.dockerfile = Output.of(Objects.requireNonNull(dockerfile));
             return this;
         }
-
         public Builder platform(@Nullable Output<DockerImagePlatformArgs> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable DockerImagePlatformArgs platform) {
             this.platform = Output.ofNullable(platform);
             return this;
-        }
-        public DockerBuildArgs build() {
+        }        public DockerBuildArgs build() {
             return new DockerBuildArgs(context, dockerSpecificationType, dockerfile, platform);
         }
     }

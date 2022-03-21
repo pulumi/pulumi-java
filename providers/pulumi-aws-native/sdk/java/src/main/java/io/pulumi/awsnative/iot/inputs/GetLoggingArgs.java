@@ -54,8 +54,7 @@ public final class GetLoggingArgs extends io.pulumi.resources.InvokeArgs {
         public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
-        }
-        public GetLoggingArgs build() {
+        }        public GetLoggingArgs build() {
             return new GetLoggingArgs(accountId);
         }
     }

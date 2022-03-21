@@ -94,32 +94,26 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public EmailTemplateParametersContractPropertiesArgs build() {
+        }        public EmailTemplateParametersContractPropertiesArgs build() {
             return new EmailTemplateParametersContractPropertiesArgs(description, name, title);
         }
     }

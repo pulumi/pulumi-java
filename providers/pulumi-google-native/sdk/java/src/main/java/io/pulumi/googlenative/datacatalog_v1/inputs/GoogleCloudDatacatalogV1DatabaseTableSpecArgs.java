@@ -61,12 +61,10 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudDatacatalogV1DatabaseTableSpecArgs build() {
+        }        public GoogleCloudDatacatalogV1DatabaseTableSpecArgs build() {
             return new GoogleCloudDatacatalogV1DatabaseTableSpecArgs(type);
         }
     }

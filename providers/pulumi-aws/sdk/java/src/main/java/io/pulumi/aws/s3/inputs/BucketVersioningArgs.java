@@ -74,22 +74,18 @@ public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder mfaDelete(@Nullable Output<Boolean> mfaDelete) {
             this.mfaDelete = mfaDelete;
             return this;
         }
-
         public Builder mfaDelete(@Nullable Boolean mfaDelete) {
             this.mfaDelete = Output.ofNullable(mfaDelete);
             return this;
-        }
-        public BucketVersioningArgs build() {
+        }        public BucketVersioningArgs build() {
             return new BucketVersioningArgs(enabled, mfaDelete);
         }
     }

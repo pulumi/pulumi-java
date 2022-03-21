@@ -85,17 +85,14 @@ public final class AssignmentOsTypeResponse {
             this.osArchitecture = Objects.requireNonNull(osArchitecture);
             return this;
         }
-
         public Builder osShortName(String osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
-
         public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
-        }
-        public AssignmentOsTypeResponse build() {
+        }        public AssignmentOsTypeResponse build() {
             return new AssignmentOsTypeResponse(osArchitecture, osShortName, osVersion);
         }
     }

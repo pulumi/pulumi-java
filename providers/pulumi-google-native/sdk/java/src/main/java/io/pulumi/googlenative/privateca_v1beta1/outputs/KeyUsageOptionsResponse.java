@@ -181,47 +181,38 @@ public final class KeyUsageOptionsResponse {
             this.certSign = Objects.requireNonNull(certSign);
             return this;
         }
-
         public Builder contentCommitment(Boolean contentCommitment) {
             this.contentCommitment = Objects.requireNonNull(contentCommitment);
             return this;
         }
-
         public Builder crlSign(Boolean crlSign) {
             this.crlSign = Objects.requireNonNull(crlSign);
             return this;
         }
-
         public Builder dataEncipherment(Boolean dataEncipherment) {
             this.dataEncipherment = Objects.requireNonNull(dataEncipherment);
             return this;
         }
-
         public Builder decipherOnly(Boolean decipherOnly) {
             this.decipherOnly = Objects.requireNonNull(decipherOnly);
             return this;
         }
-
         public Builder digitalSignature(Boolean digitalSignature) {
             this.digitalSignature = Objects.requireNonNull(digitalSignature);
             return this;
         }
-
         public Builder encipherOnly(Boolean encipherOnly) {
             this.encipherOnly = Objects.requireNonNull(encipherOnly);
             return this;
         }
-
         public Builder keyAgreement(Boolean keyAgreement) {
             this.keyAgreement = Objects.requireNonNull(keyAgreement);
             return this;
         }
-
         public Builder keyEncipherment(Boolean keyEncipherment) {
             this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
             return this;
-        }
-        public KeyUsageOptionsResponse build() {
+        }        public KeyUsageOptionsResponse build() {
             return new KeyUsageOptionsResponse(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }
     }

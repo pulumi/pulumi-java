@@ -140,62 +140,56 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
-
         public Builder notificationType(Output<String> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
-
         public Builder notificationType(String notificationType) {
             this.notificationType = Output.of(Objects.requireNonNull(notificationType));
             return this;
         }
-
         public Builder subscriberEmailAddresses(@Nullable Output<List<String>> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
-
         public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = Output.ofNullable(subscriberEmailAddresses);
             return this;
         }
-
+        public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
+            return subscriberEmailAddresses(List.of(subscriberEmailAddresses));
+        }
         public Builder subscriberSnsTopicArns(@Nullable Output<List<String>> subscriberSnsTopicArns) {
             this.subscriberSnsTopicArns = subscriberSnsTopicArns;
             return this;
         }
-
         public Builder subscriberSnsTopicArns(@Nullable List<String> subscriberSnsTopicArns) {
             this.subscriberSnsTopicArns = Output.ofNullable(subscriberSnsTopicArns);
             return this;
         }
-
+        public Builder subscriberSnsTopicArns(String... subscriberSnsTopicArns) {
+            return subscriberSnsTopicArns(List.of(subscriberSnsTopicArns));
+        }
         public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder thresholdType(Output<String> thresholdType) {
             this.thresholdType = Objects.requireNonNull(thresholdType);
             return this;
         }
-
         public Builder thresholdType(String thresholdType) {
             this.thresholdType = Output.of(Objects.requireNonNull(thresholdType));
             return this;
-        }
-        public BudgetNotificationGetArgs build() {
+        }        public BudgetNotificationGetArgs build() {
             return new BudgetNotificationGetArgs(comparisonOperator, notificationType, subscriberEmailAddresses, subscriberSnsTopicArns, threshold, thresholdType);
         }
     }

@@ -224,112 +224,96 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             this.hostKey = hostKey;
             return this;
         }
-
         public Builder hostKey(@Nullable String hostKey) {
             this.hostKey = Output.ofNullable(hostKey);
             return this;
         }
-
         public Builder hostKeyAlgorithm(@Nullable Output<String> hostKeyAlgorithm) {
             this.hostKeyAlgorithm = hostKeyAlgorithm;
             return this;
         }
-
         public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
             this.hostKeyAlgorithm = Output.ofNullable(hostKeyAlgorithm);
             return this;
         }
-
         public Builder label(Output<String> label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Output.of(Objects.requireNonNull(label));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder patterns(Output<List<String>> patterns) {
             this.patterns = Objects.requireNonNull(patterns);
             return this;
         }
-
         public Builder patterns(List<String> patterns) {
             this.patterns = Output.of(Objects.requireNonNull(patterns));
             return this;
         }
-
+        public Builder patterns(String... patterns) {
+            return patterns(List.of(patterns));
+        }
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder searchPaths(@Nullable Output<List<String>> searchPaths) {
             this.searchPaths = searchPaths;
             return this;
         }
-
         public Builder searchPaths(@Nullable List<String> searchPaths) {
             this.searchPaths = Output.ofNullable(searchPaths);
             return this;
         }
-
+        public Builder searchPaths(String... searchPaths) {
+            return searchPaths(List.of(searchPaths));
+        }
         public Builder strictHostKeyChecking(@Nullable Output<Boolean> strictHostKeyChecking) {
             this.strictHostKeyChecking = strictHostKeyChecking;
             return this;
         }
-
         public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
             this.strictHostKeyChecking = Output.ofNullable(strictHostKeyChecking);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public ConfigurationServiceGitRepositoryArgs build() {
+        }        public ConfigurationServiceGitRepositoryArgs build() {
             return new ConfigurationServiceGitRepositoryArgs(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);
         }
     }

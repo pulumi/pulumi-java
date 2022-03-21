@@ -78,12 +78,10 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
             this.field = field;
             return this;
         }
-
         public Builder order(@Nullable String order) {
             this.order = order;
             return this;
-        }
-        public OrderBy build() {
+        }        public OrderBy build() {
             return new OrderBy(field, order);
         }
     }

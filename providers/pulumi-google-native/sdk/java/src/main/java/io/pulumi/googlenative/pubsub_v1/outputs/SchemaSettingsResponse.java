@@ -69,12 +69,10 @@ public final class SchemaSettingsResponse {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
-        }
-        public SchemaSettingsResponse build() {
+        }        public SchemaSettingsResponse build() {
             return new SchemaSettingsResponse(encoding, schema);
         }
     }

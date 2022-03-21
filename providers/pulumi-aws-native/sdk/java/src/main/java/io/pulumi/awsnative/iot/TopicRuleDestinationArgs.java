@@ -92,32 +92,26 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
             this.httpUrlProperties = httpUrlProperties;
             return this;
         }
-
         public Builder httpUrlProperties(@Nullable TopicRuleDestinationHttpUrlDestinationSummaryArgs httpUrlProperties) {
             this.httpUrlProperties = Output.ofNullable(httpUrlProperties);
             return this;
         }
-
         public Builder status(@Nullable Output<TopicRuleDestinationStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable TopicRuleDestinationStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder vpcProperties(@Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties) {
             this.vpcProperties = vpcProperties;
             return this;
         }
-
         public Builder vpcProperties(@Nullable TopicRuleDestinationVpcDestinationPropertiesArgs vpcProperties) {
             this.vpcProperties = Output.ofNullable(vpcProperties);
             return this;
-        }
-        public TopicRuleDestinationArgs build() {
+        }        public TopicRuleDestinationArgs build() {
             return new TopicRuleDestinationArgs(httpUrlProperties, status, vpcProperties);
         }
     }

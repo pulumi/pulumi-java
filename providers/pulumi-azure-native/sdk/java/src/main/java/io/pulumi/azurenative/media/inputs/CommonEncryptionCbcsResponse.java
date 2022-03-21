@@ -114,22 +114,21 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
             this.clearTracks = clearTracks;
             return this;
         }
-
+        public Builder clearTracks(TrackSelectionResponse... clearTracks) {
+            return clearTracks(List.of(clearTracks));
+        }
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
-
         public Builder drm(@Nullable CbcsDrmConfigurationResponse drm) {
             this.drm = drm;
             return this;
         }
-
         public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
-        }
-        public CommonEncryptionCbcsResponse build() {
+        }        public CommonEncryptionCbcsResponse build() {
             return new CommonEncryptionCbcsResponse(clearTracks, contentKeys, drm, enabledProtocols);
         }
     }

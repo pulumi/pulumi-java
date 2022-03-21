@@ -64,12 +64,10 @@ public final class ServiceActionDefinitionParameter extends io.pulumi.resources.
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ServiceActionDefinitionParameter build() {
+        }        public ServiceActionDefinitionParameter build() {
             return new ServiceActionDefinitionParameter(key, value);
         }
     }

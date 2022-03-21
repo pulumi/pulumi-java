@@ -90,17 +90,17 @@ public final class PrivateEndpointConnectionPropertiesResponse {
             this.groupIds = groupIds;
             return this;
         }
-
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
-        }
-        public PrivateEndpointConnectionPropertiesResponse build() {
+        }        public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(groupIds, privateEndpoint, privateLinkServiceConnectionState);
         }
     }

@@ -69,12 +69,10 @@ public final class EventDestinationKinesisDestination {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder streamArn(String streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
-        }
-        public EventDestinationKinesisDestination build() {
+        }        public EventDestinationKinesisDestination build() {
             return new EventDestinationKinesisDestination(roleArn, streamArn);
         }
     }

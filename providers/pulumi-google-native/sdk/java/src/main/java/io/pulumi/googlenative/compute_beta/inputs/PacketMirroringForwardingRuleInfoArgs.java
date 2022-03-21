@@ -57,12 +57,10 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public PacketMirroringForwardingRuleInfoArgs build() {
+        }        public PacketMirroringForwardingRuleInfoArgs build() {
             return new PacketMirroringForwardingRuleInfoArgs(url);
         }
     }

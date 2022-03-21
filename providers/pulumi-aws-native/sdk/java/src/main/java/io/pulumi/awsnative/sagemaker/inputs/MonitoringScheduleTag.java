@@ -76,12 +76,10 @@ public final class MonitoringScheduleTag extends io.pulumi.resources.InvokeArgs 
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public MonitoringScheduleTag build() {
+        }        public MonitoringScheduleTag build() {
             return new MonitoringScheduleTag(key, value);
         }
     }

@@ -77,17 +77,14 @@ public final class GetServiceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(id, serviceCode, serviceName);
         }
     }

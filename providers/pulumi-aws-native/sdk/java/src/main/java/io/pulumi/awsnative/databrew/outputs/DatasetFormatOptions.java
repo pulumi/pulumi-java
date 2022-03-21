@@ -65,17 +65,14 @@ public final class DatasetFormatOptions {
             this.csv = csv;
             return this;
         }
-
         public Builder excel(@Nullable DatasetExcelOptions excel) {
             this.excel = excel;
             return this;
         }
-
         public Builder json(@Nullable DatasetJsonOptions json) {
             this.json = json;
             return this;
-        }
-        public DatasetFormatOptions build() {
+        }        public DatasetFormatOptions build() {
             return new DatasetFormatOptions(csv, excel, json);
         }
     }

@@ -365,212 +365,200 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.boostControlIds = boostControlIds;
             return this;
         }
-
         public Builder boostControlIds(@Nullable List<String> boostControlIds) {
             this.boostControlIds = Output.ofNullable(boostControlIds);
             return this;
         }
-
+        public Builder boostControlIds(String... boostControlIds) {
+            return boostControlIds(List.of(boostControlIds));
+        }
         public Builder catalogId(Output<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder diversityLevel(@Nullable Output<String> diversityLevel) {
             this.diversityLevel = diversityLevel;
             return this;
         }
-
         public Builder diversityLevel(@Nullable String diversityLevel) {
             this.diversityLevel = Output.ofNullable(diversityLevel);
             return this;
         }
-
         public Builder doNotAssociateControlIds(@Nullable Output<List<String>> doNotAssociateControlIds) {
             this.doNotAssociateControlIds = doNotAssociateControlIds;
             return this;
         }
-
         public Builder doNotAssociateControlIds(@Nullable List<String> doNotAssociateControlIds) {
             this.doNotAssociateControlIds = Output.ofNullable(doNotAssociateControlIds);
             return this;
         }
-
+        public Builder doNotAssociateControlIds(String... doNotAssociateControlIds) {
+            return doNotAssociateControlIds(List.of(doNotAssociateControlIds));
+        }
         public Builder dynamicFacetSpec(@Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec) {
             this.dynamicFacetSpec = dynamicFacetSpec;
             return this;
         }
-
         public Builder dynamicFacetSpec(@Nullable GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs dynamicFacetSpec) {
             this.dynamicFacetSpec = Output.ofNullable(dynamicFacetSpec);
             return this;
         }
-
         public Builder enableCategoryFilterLevel(@Nullable Output<String> enableCategoryFilterLevel) {
             this.enableCategoryFilterLevel = enableCategoryFilterLevel;
             return this;
         }
-
         public Builder enableCategoryFilterLevel(@Nullable String enableCategoryFilterLevel) {
             this.enableCategoryFilterLevel = Output.ofNullable(enableCategoryFilterLevel);
             return this;
         }
-
         public Builder facetControlIds(@Nullable Output<List<String>> facetControlIds) {
             this.facetControlIds = facetControlIds;
             return this;
         }
-
         public Builder facetControlIds(@Nullable List<String> facetControlIds) {
             this.facetControlIds = Output.ofNullable(facetControlIds);
             return this;
         }
-
+        public Builder facetControlIds(String... facetControlIds) {
+            return facetControlIds(List.of(facetControlIds));
+        }
         public Builder filterControlIds(@Nullable Output<List<String>> filterControlIds) {
             this.filterControlIds = filterControlIds;
             return this;
         }
-
         public Builder filterControlIds(@Nullable List<String> filterControlIds) {
             this.filterControlIds = Output.ofNullable(filterControlIds);
             return this;
         }
-
+        public Builder filterControlIds(String... filterControlIds) {
+            return filterControlIds(List.of(filterControlIds));
+        }
         public Builder ignoreControlIds(@Nullable Output<List<String>> ignoreControlIds) {
             this.ignoreControlIds = ignoreControlIds;
             return this;
         }
-
         public Builder ignoreControlIds(@Nullable List<String> ignoreControlIds) {
             this.ignoreControlIds = Output.ofNullable(ignoreControlIds);
             return this;
         }
-
+        public Builder ignoreControlIds(String... ignoreControlIds) {
+            return ignoreControlIds(List.of(ignoreControlIds));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder modelId(@Nullable Output<String> modelId) {
             this.modelId = modelId;
             return this;
         }
-
         public Builder modelId(@Nullable String modelId) {
             this.modelId = Output.ofNullable(modelId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder onewaySynonymsControlIds(@Nullable Output<List<String>> onewaySynonymsControlIds) {
             this.onewaySynonymsControlIds = onewaySynonymsControlIds;
             return this;
         }
-
         public Builder onewaySynonymsControlIds(@Nullable List<String> onewaySynonymsControlIds) {
             this.onewaySynonymsControlIds = Output.ofNullable(onewaySynonymsControlIds);
             return this;
         }
-
+        public Builder onewaySynonymsControlIds(String... onewaySynonymsControlIds) {
+            return onewaySynonymsControlIds(List.of(onewaySynonymsControlIds));
+        }
         public Builder priceRerankingLevel(@Nullable Output<String> priceRerankingLevel) {
             this.priceRerankingLevel = priceRerankingLevel;
             return this;
         }
-
         public Builder priceRerankingLevel(@Nullable String priceRerankingLevel) {
             this.priceRerankingLevel = Output.ofNullable(priceRerankingLevel);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder redirectControlIds(@Nullable Output<List<String>> redirectControlIds) {
             this.redirectControlIds = redirectControlIds;
             return this;
         }
-
         public Builder redirectControlIds(@Nullable List<String> redirectControlIds) {
             this.redirectControlIds = Output.ofNullable(redirectControlIds);
             return this;
         }
-
+        public Builder redirectControlIds(String... redirectControlIds) {
+            return redirectControlIds(List.of(redirectControlIds));
+        }
         public Builder replacementControlIds(@Nullable Output<List<String>> replacementControlIds) {
             this.replacementControlIds = replacementControlIds;
             return this;
         }
-
         public Builder replacementControlIds(@Nullable List<String> replacementControlIds) {
             this.replacementControlIds = Output.ofNullable(replacementControlIds);
             return this;
         }
-
+        public Builder replacementControlIds(String... replacementControlIds) {
+            return replacementControlIds(List.of(replacementControlIds));
+        }
         public Builder servingConfigId(Output<String> servingConfigId) {
             this.servingConfigId = Objects.requireNonNull(servingConfigId);
             return this;
         }
-
         public Builder servingConfigId(String servingConfigId) {
             this.servingConfigId = Output.of(Objects.requireNonNull(servingConfigId));
             return this;
         }
-
         public Builder solutionTypes(Output<List<ServingConfigSolutionTypesItem>> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
-
         public Builder solutionTypes(List<ServingConfigSolutionTypesItem> solutionTypes) {
             this.solutionTypes = Output.of(Objects.requireNonNull(solutionTypes));
             return this;
         }
-
+        public Builder solutionTypes(ServingConfigSolutionTypesItem... solutionTypes) {
+            return solutionTypes(List.of(solutionTypes));
+        }
         public Builder twowaySynonymsControlIds(@Nullable Output<List<String>> twowaySynonymsControlIds) {
             this.twowaySynonymsControlIds = twowaySynonymsControlIds;
             return this;
         }
-
         public Builder twowaySynonymsControlIds(@Nullable List<String> twowaySynonymsControlIds) {
             this.twowaySynonymsControlIds = Output.ofNullable(twowaySynonymsControlIds);
             return this;
         }
-        public ServingConfigArgs build() {
+        public Builder twowaySynonymsControlIds(String... twowaySynonymsControlIds) {
+            return twowaySynonymsControlIds(List.of(twowaySynonymsControlIds));
+        }        public ServingConfigArgs build() {
             return new ServingConfigArgs(boostControlIds, catalogId, displayName, diversityLevel, doNotAssociateControlIds, dynamicFacetSpec, enableCategoryFilterLevel, facetControlIds, filterControlIds, ignoreControlIds, location, modelId, name, onewaySynonymsControlIds, priceRerankingLevel, project, redirectControlIds, replacementControlIds, servingConfigId, solutionTypes, twowaySynonymsControlIds);
         }
     }

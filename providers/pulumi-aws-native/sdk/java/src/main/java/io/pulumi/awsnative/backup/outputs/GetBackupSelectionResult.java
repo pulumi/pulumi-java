@@ -55,12 +55,10 @@ public final class GetBackupSelectionResult {
             this.id = id;
             return this;
         }
-
         public Builder selectionId(@Nullable String selectionId) {
             this.selectionId = selectionId;
             return this;
-        }
-        public GetBackupSelectionResult build() {
+        }        public GetBackupSelectionResult build() {
             return new GetBackupSelectionResult(id, selectionId);
         }
     }

@@ -131,52 +131,42 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder isAutoProvisioned(@Nullable Output<Boolean> isAutoProvisioned) {
             this.isAutoProvisioned = isAutoProvisioned;
             return this;
         }
-
         public Builder isAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
             this.isAutoProvisioned = Output.ofNullable(isAutoProvisioned);
             return this;
         }
-
         public Builder login(@Nullable Output<AzureActiveDirectoryLoginArgs> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable AzureActiveDirectoryLoginArgs login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder registration(@Nullable Output<AzureActiveDirectoryRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder registration(@Nullable AzureActiveDirectoryRegistrationArgs registration) {
             this.registration = Output.ofNullable(registration);
             return this;
         }
-
         public Builder validation(@Nullable Output<AzureActiveDirectoryValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
-
         public Builder validation(@Nullable AzureActiveDirectoryValidationArgs validation) {
             this.validation = Output.ofNullable(validation);
             return this;
-        }
-        public AzureActiveDirectoryArgs build() {
+        }        public AzureActiveDirectoryArgs build() {
             return new AzureActiveDirectoryArgs(enabled, isAutoProvisioned, login, registration, validation);
         }
     }

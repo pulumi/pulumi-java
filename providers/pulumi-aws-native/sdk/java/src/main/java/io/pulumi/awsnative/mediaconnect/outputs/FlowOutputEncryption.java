@@ -105,22 +105,18 @@ public final class FlowOutputEncryption {
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder keyType(@Nullable FlowOutputEncryptionKeyType keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
-        }
-        public FlowOutputEncryption build() {
+        }        public FlowOutputEncryption build() {
             return new FlowOutputEncryption(algorithm, keyType, roleArn, secretArn);
         }
     }

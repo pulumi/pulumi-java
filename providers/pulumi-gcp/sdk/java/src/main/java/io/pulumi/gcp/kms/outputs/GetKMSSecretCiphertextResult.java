@@ -85,22 +85,18 @@ public final class GetKMSSecretCiphertextResult {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
-
         public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
-        }
-        public GetKMSSecretCiphertextResult build() {
+        }        public GetKMSSecretCiphertextResult build() {
             return new GetKMSSecretCiphertextResult(ciphertext, cryptoKey, id, plaintext);
         }
     }

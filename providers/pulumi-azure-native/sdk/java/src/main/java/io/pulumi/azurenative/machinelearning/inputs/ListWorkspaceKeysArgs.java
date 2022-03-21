@@ -72,12 +72,10 @@ public final class ListWorkspaceKeysArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListWorkspaceKeysArgs build() {
+        }        public ListWorkspaceKeysArgs build() {
             return new ListWorkspaceKeysArgs(resourceGroupName, workspaceName);
         }
     }

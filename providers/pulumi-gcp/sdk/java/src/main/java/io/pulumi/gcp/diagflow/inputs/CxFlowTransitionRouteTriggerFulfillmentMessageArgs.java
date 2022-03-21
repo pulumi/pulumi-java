@@ -57,12 +57,10 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public CxFlowTransitionRouteTriggerFulfillmentMessageArgs build() {
+        }        public CxFlowTransitionRouteTriggerFulfillmentMessageArgs build() {
             return new CxFlowTransitionRouteTriggerFulfillmentMessageArgs(text);
         }
     }

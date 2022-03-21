@@ -111,42 +111,34 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder metricSelector(@Nullable Output<LabelSelectorArgs> metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
-
         public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
             this.metricSelector = Output.ofNullable(metricSelector);
             return this;
         }
-
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
-
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = Output.ofNullable(targetAverageValue);
             return this;
         }
-
         public Builder targetValue(@Nullable Output<String> targetValue) {
             this.targetValue = targetValue;
             return this;
         }
-
         public Builder targetValue(@Nullable String targetValue) {
             this.targetValue = Output.ofNullable(targetValue);
             return this;
-        }
-        public ExternalMetricSourceArgs build() {
+        }        public ExternalMetricSourceArgs build() {
             return new ExternalMetricSourceArgs(metricName, metricSelector, targetAverageValue, targetValue);
         }
     }

@@ -79,22 +79,24 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.ipBlocks = ipBlocks;
             return this;
         }
-
         public Builder ipBlocks(@Nullable List<String> ipBlocks) {
             this.ipBlocks = Output.ofNullable(ipBlocks);
             return this;
         }
-
+        public Builder ipBlocks(String... ipBlocks) {
+            return ipBlocks(List.of(ipBlocks));
+        }
         public Builder principals(@Nullable Output<List<String>> principals) {
             this.principals = principals;
             return this;
         }
-
         public Builder principals(@Nullable List<String> principals) {
             this.principals = Output.ofNullable(principals);
             return this;
         }
-        public SourceArgs build() {
+        public Builder principals(String... principals) {
+            return principals(List.of(principals));
+        }        public SourceArgs build() {
             return new SourceArgs(ipBlocks, principals);
         }
     }

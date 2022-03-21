@@ -71,12 +71,10 @@ public final class GetModelQualityJobDefinitionResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder jobDefinitionArn(@Nullable String jobDefinitionArn) {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
-        }
-        public GetModelQualityJobDefinitionResult build() {
+        }        public GetModelQualityJobDefinitionResult build() {
             return new GetModelQualityJobDefinitionResult(creationTime, jobDefinitionArn);
         }
     }

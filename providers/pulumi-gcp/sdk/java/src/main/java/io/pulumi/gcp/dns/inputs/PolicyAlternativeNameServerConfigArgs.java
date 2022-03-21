@@ -60,12 +60,13 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
             this.targetNameServers = Output.of(Objects.requireNonNull(targetNameServers));
             return this;
         }
-        public PolicyAlternativeNameServerConfigArgs build() {
+        public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerArgs... targetNameServers) {
+            return targetNameServers(List.of(targetNameServers));
+        }        public PolicyAlternativeNameServerConfigArgs build() {
             return new PolicyAlternativeNameServerConfigArgs(targetNameServers);
         }
     }

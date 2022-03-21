@@ -54,12 +54,10 @@ public final class ScheduledQueryDimensionMapping {
             this.dimensionValueType = Objects.requireNonNull(dimensionValueType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ScheduledQueryDimensionMapping build() {
+        }        public ScheduledQueryDimensionMapping build() {
             return new ScheduledQueryDimensionMapping(dimensionValueType, name);
         }
     }

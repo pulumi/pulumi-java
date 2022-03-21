@@ -76,22 +76,21 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable List<String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
+        public Builder properties(String... properties) {
+            return properties(List.of(properties));
+        }
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(properties, source);
         }
     }

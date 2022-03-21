@@ -73,12 +73,13 @@ public final class WebPubSubHubPropertiesResponse {
             this.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
-
         public Builder eventHandlers(@Nullable List<EventHandlerResponse> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
-        public WebPubSubHubPropertiesResponse build() {
+        public Builder eventHandlers(EventHandlerResponse... eventHandlers) {
+            return eventHandlers(List.of(eventHandlers));
+        }        public WebPubSubHubPropertiesResponse build() {
             return new WebPubSubHubPropertiesResponse(anonymousConnectPolicy, eventHandlers);
         }
     }

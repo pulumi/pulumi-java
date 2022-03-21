@@ -78,17 +78,14 @@ public final class DataSourceToIndexFieldMapping extends io.pulumi.resources.Inv
             this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
             this.dateFieldFormat = dateFieldFormat;
             return this;
         }
-
         public Builder indexFieldName(String indexFieldName) {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
-        }
-        public DataSourceToIndexFieldMapping build() {
+        }        public DataSourceToIndexFieldMapping build() {
             return new DataSourceToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }
     }

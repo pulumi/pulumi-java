@@ -156,72 +156,58 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder configurationSet(@Nullable Output<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
-
         public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = Output.ofNullable(configurationSet);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder fromAddress(@Nullable Output<String> fromAddress) {
             this.fromAddress = fromAddress;
             return this;
         }
-
         public Builder fromAddress(@Nullable String fromAddress) {
             this.fromAddress = Output.ofNullable(fromAddress);
             return this;
         }
-
         public Builder identity(@Nullable Output<String> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable String identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder messagesPerSecond(@Nullable Output<Integer> messagesPerSecond) {
             this.messagesPerSecond = messagesPerSecond;
             return this;
         }
-
         public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
             this.messagesPerSecond = Output.ofNullable(messagesPerSecond);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public EmailChannelState build() {
+        }        public EmailChannelState build() {
             return new EmailChannelState(applicationId, configurationSet, enabled, fromAddress, identity, messagesPerSecond, roleArn);
         }
     }

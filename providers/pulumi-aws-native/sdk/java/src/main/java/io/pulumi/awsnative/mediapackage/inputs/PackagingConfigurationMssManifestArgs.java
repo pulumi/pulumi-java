@@ -71,22 +71,18 @@ public final class PackagingConfigurationMssManifestArgs extends io.pulumi.resou
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
-
         public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
             this.streamSelection = Output.ofNullable(streamSelection);
             return this;
-        }
-        public PackagingConfigurationMssManifestArgs build() {
+        }        public PackagingConfigurationMssManifestArgs build() {
             return new PackagingConfigurationMssManifestArgs(manifestName, streamSelection);
         }
     }

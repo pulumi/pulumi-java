@@ -70,12 +70,10 @@ public final class DataSourceParametersSpark {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersSpark build() {
+        }        public DataSourceParametersSpark build() {
             return new DataSourceParametersSpark(host, port);
         }
     }

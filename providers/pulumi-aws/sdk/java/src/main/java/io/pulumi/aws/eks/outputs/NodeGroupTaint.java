@@ -87,17 +87,14 @@ public final class NodeGroupTaint {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public NodeGroupTaint build() {
+        }        public NodeGroupTaint build() {
             return new NodeGroupTaint(effect, key, value);
         }
     }

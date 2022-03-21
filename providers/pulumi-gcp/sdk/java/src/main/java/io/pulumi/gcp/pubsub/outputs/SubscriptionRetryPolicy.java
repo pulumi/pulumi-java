@@ -75,12 +75,10 @@ public final class SubscriptionRetryPolicy {
             this.maximumBackoff = maximumBackoff;
             return this;
         }
-
         public Builder minimumBackoff(@Nullable String minimumBackoff) {
             this.minimumBackoff = minimumBackoff;
             return this;
-        }
-        public SubscriptionRetryPolicy build() {
+        }        public SubscriptionRetryPolicy build() {
             return new SubscriptionRetryPolicy(maximumBackoff, minimumBackoff);
         }
     }

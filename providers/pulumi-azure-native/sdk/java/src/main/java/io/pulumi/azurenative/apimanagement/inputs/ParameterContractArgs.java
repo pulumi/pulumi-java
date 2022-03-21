@@ -144,62 +144,53 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder required(@Nullable Output<Boolean> required) {
             this.required = required;
             return this;
         }
-
         public Builder required(@Nullable Boolean required) {
             this.required = Output.ofNullable(required);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ParameterContractArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ParameterContractArgs build() {
             return new ParameterContractArgs(defaultValue, description, name, required, type, values);
         }
     }

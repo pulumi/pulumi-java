@@ -137,62 +137,53 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
             this.caPool = Objects.requireNonNull(caPool);
             return this;
         }
-
         public Builder caPool(String caPool) {
             this.caPool = Output.of(Objects.requireNonNull(caPool));
             return this;
         }
-
         public Builder condition(@Nullable Output<CaPoolIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable CaPoolIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public CaPoolIamBindingArgs build() {
+        }        public CaPoolIamBindingArgs build() {
             return new CaPoolIamBindingArgs(caPool, condition, location, members, project, role);
         }
     }

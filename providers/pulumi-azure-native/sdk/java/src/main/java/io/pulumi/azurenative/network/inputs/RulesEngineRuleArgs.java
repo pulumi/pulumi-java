@@ -132,52 +132,45 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(RulesEngineActionArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder matchConditions(@Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions) {
             this.matchConditions = matchConditions;
             return this;
         }
-
         public Builder matchConditions(@Nullable List<RulesEngineMatchConditionArgs> matchConditions) {
             this.matchConditions = Output.ofNullable(matchConditions);
             return this;
         }
-
+        public Builder matchConditions(RulesEngineMatchConditionArgs... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder matchProcessingBehavior(@Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
-
         public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
             this.matchProcessingBehavior = Output.ofNullable(matchProcessingBehavior);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
-        }
-        public RulesEngineRuleArgs build() {
+        }        public RulesEngineRuleArgs build() {
             return new RulesEngineRuleArgs(action, matchConditions, matchProcessingBehavior, name, priority);
         }
     }

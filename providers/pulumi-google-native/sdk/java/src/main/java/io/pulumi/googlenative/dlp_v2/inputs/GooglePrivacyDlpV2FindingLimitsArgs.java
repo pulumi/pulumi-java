@@ -96,32 +96,29 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
             this.maxFindingsPerInfoType = maxFindingsPerInfoType;
             return this;
         }
-
         public Builder maxFindingsPerInfoType(@Nullable List<GooglePrivacyDlpV2InfoTypeLimitArgs> maxFindingsPerInfoType) {
             this.maxFindingsPerInfoType = Output.ofNullable(maxFindingsPerInfoType);
             return this;
         }
-
+        public Builder maxFindingsPerInfoType(GooglePrivacyDlpV2InfoTypeLimitArgs... maxFindingsPerInfoType) {
+            return maxFindingsPerInfoType(List.of(maxFindingsPerInfoType));
+        }
         public Builder maxFindingsPerItem(@Nullable Output<Integer> maxFindingsPerItem) {
             this.maxFindingsPerItem = maxFindingsPerItem;
             return this;
         }
-
         public Builder maxFindingsPerItem(@Nullable Integer maxFindingsPerItem) {
             this.maxFindingsPerItem = Output.ofNullable(maxFindingsPerItem);
             return this;
         }
-
         public Builder maxFindingsPerRequest(@Nullable Output<Integer> maxFindingsPerRequest) {
             this.maxFindingsPerRequest = maxFindingsPerRequest;
             return this;
         }
-
         public Builder maxFindingsPerRequest(@Nullable Integer maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Output.ofNullable(maxFindingsPerRequest);
             return this;
-        }
-        public GooglePrivacyDlpV2FindingLimitsArgs build() {
+        }        public GooglePrivacyDlpV2FindingLimitsArgs build() {
             return new GooglePrivacyDlpV2FindingLimitsArgs(maxFindingsPerInfoType, maxFindingsPerItem, maxFindingsPerRequest);
         }
     }

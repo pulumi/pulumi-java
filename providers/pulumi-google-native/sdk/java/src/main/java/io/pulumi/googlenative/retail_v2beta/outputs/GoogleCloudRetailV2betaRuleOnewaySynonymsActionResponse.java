@@ -86,17 +86,23 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse {
             this.onewayTerms = Objects.requireNonNull(onewayTerms);
             return this;
         }
-
+        public Builder onewayTerms(String... onewayTerms) {
+            return onewayTerms(List.of(onewayTerms));
+        }
         public Builder queryTerms(List<String> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
-
+        public Builder queryTerms(String... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }
         public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-        public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse build() {
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse build() {
             return new GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse(onewayTerms, queryTerms, synonyms);
         }
     }

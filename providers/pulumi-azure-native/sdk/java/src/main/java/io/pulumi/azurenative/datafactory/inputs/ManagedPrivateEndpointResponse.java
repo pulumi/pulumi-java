@@ -145,32 +145,29 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
             this.connectionState = connectionState;
             return this;
         }
-
         public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder isReserved(Boolean isReserved) {
             this.isReserved = Objects.requireNonNull(isReserved);
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ManagedPrivateEndpointResponse build() {
+        }        public ManagedPrivateEndpointResponse build() {
             return new ManagedPrivateEndpointResponse(connectionState, fqdns, groupId, isReserved, privateLinkResourceId, provisioningState);
         }
     }

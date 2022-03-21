@@ -82,17 +82,14 @@ public final class LoggingConfigurationLogDestinationConfig extends io.pulumi.re
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
-
         public Builder logDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
-
         public Builder logType(LoggingConfigurationLogDestinationConfigLogType logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public LoggingConfigurationLogDestinationConfig build() {
+        }        public LoggingConfigurationLogDestinationConfig build() {
             return new LoggingConfigurationLogDestinationConfig(logDestination, logDestinationType, logType);
         }
     }

@@ -167,32 +167,35 @@ public final class GuestPoliciesRecipe {
             this.artifacts = artifacts;
             return this;
         }
-
+        public Builder artifacts(GuestPoliciesRecipeArtifact... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = desiredState;
             return this;
         }
-
         public Builder installSteps(@Nullable List<GuestPoliciesRecipeInstallStep> installSteps) {
             this.installSteps = installSteps;
             return this;
         }
-
+        public Builder installSteps(GuestPoliciesRecipeInstallStep... installSteps) {
+            return installSteps(List.of(installSteps));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateSteps(@Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps) {
             this.updateSteps = updateSteps;
             return this;
         }
-
+        public Builder updateSteps(GuestPoliciesRecipeUpdateStep... updateSteps) {
+            return updateSteps(List.of(updateSteps));
+        }
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GuestPoliciesRecipe build() {
+        }        public GuestPoliciesRecipe build() {
             return new GuestPoliciesRecipe(artifacts, desiredState, installSteps, name, updateSteps, version);
         }
     }

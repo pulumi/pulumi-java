@@ -52,7 +52,9 @@ public final class ProviderHubMetadataResponseProviderAuthentication extends io.
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-        public ProviderHubMetadataResponseProviderAuthentication build() {
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }        public ProviderHubMetadataResponseProviderAuthentication build() {
             return new ProviderHubMetadataResponseProviderAuthentication(allowedAudiences);
         }
     }

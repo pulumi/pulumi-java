@@ -105,22 +105,18 @@ public final class GetPublisherResult {
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
-
         public Builder publisherProfile(@Nullable String publisherProfile) {
             this.publisherProfile = publisherProfile;
             return this;
         }
-
         public Builder publisherStatus(@Nullable PublisherStatus publisherStatus) {
             this.publisherStatus = publisherStatus;
             return this;
-        }
-        public GetPublisherResult build() {
+        }        public GetPublisherResult build() {
             return new GetPublisherResult(identityProvider, publisherId, publisherProfile, publisherStatus);
         }
     }

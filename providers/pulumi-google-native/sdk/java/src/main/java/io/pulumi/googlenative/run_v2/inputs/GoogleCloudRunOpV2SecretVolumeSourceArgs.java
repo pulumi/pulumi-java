@@ -97,32 +97,29 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends io.pulumi.re
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
-
         public Builder items(@Nullable Output<List<GoogleCloudRunOpV2VersionToPathArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<GoogleCloudRunOpV2VersionToPathArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(GoogleCloudRunOpV2VersionToPathArgs... items) {
+            return items(List.of(items));
+        }
         public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
-        }
-        public GoogleCloudRunOpV2SecretVolumeSourceArgs build() {
+        }        public GoogleCloudRunOpV2SecretVolumeSourceArgs build() {
             return new GoogleCloudRunOpV2SecretVolumeSourceArgs(defaultMode, items, secret);
         }
     }

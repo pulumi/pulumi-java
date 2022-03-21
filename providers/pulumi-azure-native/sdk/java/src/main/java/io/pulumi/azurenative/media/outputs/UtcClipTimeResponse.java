@@ -71,12 +71,10 @@ public final class UtcClipTimeResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public UtcClipTimeResponse build() {
+        }        public UtcClipTimeResponse build() {
             return new UtcClipTimeResponse(odataType, time);
         }
     }

@@ -107,42 +107,34 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder targetGroupArn(Output<String> targetGroupArn) {
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }
-
         public Builder targetGroupArn(String targetGroupArn) {
             this.targetGroupArn = Output.of(Objects.requireNonNull(targetGroupArn));
             return this;
         }
-
         public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
-        }
-        public TargetGroupAttachmentArgs build() {
+        }        public TargetGroupAttachmentArgs build() {
             return new TargetGroupAttachmentArgs(availabilityZone, port, targetGroupArn, targetId);
         }
     }

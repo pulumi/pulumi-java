@@ -74,22 +74,18 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public Builder intervalUnit(Output<String> intervalUnit) {
             this.intervalUnit = Objects.requireNonNull(intervalUnit);
             return this;
         }
-
         public Builder intervalUnit(String intervalUnit) {
             this.intervalUnit = Output.of(Objects.requireNonNull(intervalUnit));
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs build() {
             return new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs(interval, intervalUnit);
         }
     }

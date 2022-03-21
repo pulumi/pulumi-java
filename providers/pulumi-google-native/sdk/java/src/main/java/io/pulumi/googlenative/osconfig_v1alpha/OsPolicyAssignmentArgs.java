@@ -178,92 +178,77 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder instanceFilter(Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
-
         public Builder instanceFilter(OSPolicyAssignmentInstanceFilterArgs instanceFilter) {
             this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osPolicies(Output<List<OSPolicyArgs>> osPolicies) {
             this.osPolicies = Objects.requireNonNull(osPolicies);
             return this;
         }
-
         public Builder osPolicies(List<OSPolicyArgs> osPolicies) {
             this.osPolicies = Output.of(Objects.requireNonNull(osPolicies));
             return this;
         }
-
+        public Builder osPolicies(OSPolicyArgs... osPolicies) {
+            return osPolicies(List.of(osPolicies));
+        }
         public Builder osPolicyAssignmentId(Output<String> osPolicyAssignmentId) {
             this.osPolicyAssignmentId = Objects.requireNonNull(osPolicyAssignmentId);
             return this;
         }
-
         public Builder osPolicyAssignmentId(String osPolicyAssignmentId) {
             this.osPolicyAssignmentId = Output.of(Objects.requireNonNull(osPolicyAssignmentId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rollout(Output<OSPolicyAssignmentRolloutArgs> rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
-
         public Builder rollout(OSPolicyAssignmentRolloutArgs rollout) {
             this.rollout = Output.of(Objects.requireNonNull(rollout));
             return this;
-        }
-        public OsPolicyAssignmentArgs build() {
+        }        public OsPolicyAssignmentArgs build() {
             return new OsPolicyAssignmentArgs(description, etag, instanceFilter, location, name, osPolicies, osPolicyAssignmentId, project, rollout);
         }
     }

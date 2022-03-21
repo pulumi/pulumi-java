@@ -90,22 +90,18 @@ public final class GetProviderIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
-        }
-        public GetProviderIamPolicyArgs build() {
+        }        public GetProviderIamPolicyArgs build() {
             return new GetProviderIamPolicyArgs(location, optionsRequestedPolicyVersion, project, providerId);
         }
     }

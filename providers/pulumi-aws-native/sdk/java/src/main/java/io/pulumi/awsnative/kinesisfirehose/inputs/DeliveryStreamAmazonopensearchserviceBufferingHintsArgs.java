@@ -66,22 +66,18 @@ public final class DeliveryStreamAmazonopensearchserviceBufferingHintsArgs exten
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
-
         public Builder sizeInMBs(@Nullable Output<Integer> sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
         }
-
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
             this.sizeInMBs = Output.ofNullable(sizeInMBs);
             return this;
-        }
-        public DeliveryStreamAmazonopensearchserviceBufferingHintsArgs build() {
+        }        public DeliveryStreamAmazonopensearchserviceBufferingHintsArgs build() {
             return new DeliveryStreamAmazonopensearchserviceBufferingHintsArgs(intervalInSeconds, sizeInMBs);
         }
     }

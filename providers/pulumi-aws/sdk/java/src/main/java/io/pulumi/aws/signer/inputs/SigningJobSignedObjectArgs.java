@@ -58,12 +58,13 @@ public final class SigningJobSignedObjectArgs extends io.pulumi.resources.Resour
             this.s3s = s3s;
             return this;
         }
-
         public Builder s3s(@Nullable List<SigningJobSignedObjectS3Args> s3s) {
             this.s3s = Output.ofNullable(s3s);
             return this;
         }
-        public SigningJobSignedObjectArgs build() {
+        public Builder s3s(SigningJobSignedObjectS3Args... s3s) {
+            return s3s(List.of(s3s));
+        }        public SigningJobSignedObjectArgs build() {
             return new SigningJobSignedObjectArgs(s3s);
         }
     }

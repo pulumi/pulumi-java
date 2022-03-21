@@ -117,42 +117,37 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
             this.binding = binding;
             return this;
         }
-
         public Builder binding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs> binding) {
             this.binding = Output.ofNullable(binding);
             return this;
         }
-
         public Builder inputs(@Nullable Output<List<FunctionInputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<FunctionInputArgs> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(FunctionInputArgs... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder output(@Nullable Output<FunctionOutputArgs> output) {
             this.output = output;
             return this;
         }
-
         public Builder output(@Nullable FunctionOutputArgs output) {
             this.output = Output.ofNullable(output);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ScalarFunctionPropertiesArgs build() {
+        }        public ScalarFunctionPropertiesArgs build() {
             return new ScalarFunctionPropertiesArgs(binding, inputs, output, type);
         }
     }

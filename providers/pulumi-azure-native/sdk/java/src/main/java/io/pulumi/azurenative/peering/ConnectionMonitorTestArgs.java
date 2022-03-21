@@ -155,72 +155,58 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
             this.connectionMonitorTestName = connectionMonitorTestName;
             return this;
         }
-
         public Builder connectionMonitorTestName(@Nullable String connectionMonitorTestName) {
             this.connectionMonitorTestName = Output.ofNullable(connectionMonitorTestName);
             return this;
         }
-
         public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
-
         public Builder peeringServiceName(Output<String> peeringServiceName) {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
-
         public Builder peeringServiceName(String peeringServiceName) {
             this.peeringServiceName = Output.of(Objects.requireNonNull(peeringServiceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sourceAgent(@Nullable Output<String> sourceAgent) {
             this.sourceAgent = sourceAgent;
             return this;
         }
-
         public Builder sourceAgent(@Nullable String sourceAgent) {
             this.sourceAgent = Output.ofNullable(sourceAgent);
             return this;
         }
-
         public Builder testFrequencyInSec(@Nullable Output<Integer> testFrequencyInSec) {
             this.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
-
         public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
             this.testFrequencyInSec = Output.ofNullable(testFrequencyInSec);
             return this;
-        }
-        public ConnectionMonitorTestArgs build() {
+        }        public ConnectionMonitorTestArgs build() {
             return new ConnectionMonitorTestArgs(connectionMonitorTestName, destination, destinationPort, peeringServiceName, resourceGroupName, sourceAgent, testFrequencyInSec);
         }
     }

@@ -53,7 +53,9 @@ public final class WorkflowTemplateJobHiveJobQueryList {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-        public WorkflowTemplateJobHiveJobQueryList build() {
+        public Builder queries(String... queries) {
+            return queries(List.of(queries));
+        }        public WorkflowTemplateJobHiveJobQueryList build() {
             return new WorkflowTemplateJobHiveJobQueryList(queries);
         }
     }

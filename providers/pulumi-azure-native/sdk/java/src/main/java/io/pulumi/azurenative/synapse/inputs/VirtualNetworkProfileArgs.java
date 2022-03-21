@@ -61,12 +61,10 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
             this.computeSubnetId = computeSubnetId;
             return this;
         }
-
         public Builder computeSubnetId(@Nullable String computeSubnetId) {
             this.computeSubnetId = Output.ofNullable(computeSubnetId);
             return this;
-        }
-        public VirtualNetworkProfileArgs build() {
+        }        public VirtualNetworkProfileArgs build() {
             return new VirtualNetworkProfileArgs(computeSubnetId);
         }
     }

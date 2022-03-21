@@ -121,52 +121,42 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
             this.rotationEnabled = rotationEnabled;
             return this;
         }
-
         public Builder rotationEnabled(@Nullable Boolean rotationEnabled) {
             this.rotationEnabled = Output.ofNullable(rotationEnabled);
             return this;
         }
-
         public Builder rotationLambdaArn(@Nullable Output<String> rotationLambdaArn) {
             this.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
-
         public Builder rotationLambdaArn(@Nullable String rotationLambdaArn) {
             this.rotationLambdaArn = Output.ofNullable(rotationLambdaArn);
             return this;
         }
-
         public Builder rotationRules(@Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules) {
             this.rotationRules = rotationRules;
             return this;
         }
-
         public Builder rotationRules(@Nullable SecretRotationRotationRulesGetArgs rotationRules) {
             this.rotationRules = Output.ofNullable(rotationRules);
             return this;
         }
-
         public Builder secretId(@Nullable Output<String> secretId) {
             this.secretId = secretId;
             return this;
         }
-
         public Builder secretId(@Nullable String secretId) {
             this.secretId = Output.ofNullable(secretId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SecretRotationState build() {
+        }        public SecretRotationState build() {
             return new SecretRotationState(rotationEnabled, rotationLambdaArn, rotationRules, secretId, tags);
         }
     }

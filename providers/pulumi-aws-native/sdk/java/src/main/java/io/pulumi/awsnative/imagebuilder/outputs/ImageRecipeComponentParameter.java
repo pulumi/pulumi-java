@@ -70,12 +70,13 @@ public final class ImageRecipeComponentParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ImageRecipeComponentParameter build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public ImageRecipeComponentParameter build() {
             return new ImageRecipeComponentParameter(name, value);
         }
     }

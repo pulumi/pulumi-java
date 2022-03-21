@@ -63,17 +63,14 @@ public final class GetAssistantAssociationResult {
             this.assistantArn = assistantArn;
             return this;
         }
-
         public Builder assistantAssociationArn(@Nullable String assistantAssociationArn) {
             this.assistantAssociationArn = assistantAssociationArn;
             return this;
         }
-
         public Builder assistantAssociationId(@Nullable String assistantAssociationId) {
             this.assistantAssociationId = assistantAssociationId;
             return this;
-        }
-        public GetAssistantAssociationResult build() {
+        }        public GetAssistantAssociationResult build() {
             return new GetAssistantAssociationResult(assistantArn, assistantAssociationArn, assistantAssociationId);
         }
     }

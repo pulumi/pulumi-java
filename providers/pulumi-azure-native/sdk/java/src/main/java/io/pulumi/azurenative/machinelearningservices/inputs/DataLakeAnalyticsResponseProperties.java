@@ -56,8 +56,7 @@ public final class DataLakeAnalyticsResponseProperties extends io.pulumi.resourc
         public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
-        }
-        public DataLakeAnalyticsResponseProperties build() {
+        }        public DataLakeAnalyticsResponseProperties build() {
             return new DataLakeAnalyticsResponseProperties(dataLakeStoreAccountName);
         }
     }

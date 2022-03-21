@@ -43,8 +43,7 @@ public final class SpotFleetClassicLoadBalancer {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public SpotFleetClassicLoadBalancer build() {
+        }        public SpotFleetClassicLoadBalancer build() {
             return new SpotFleetClassicLoadBalancer(name);
         }
     }

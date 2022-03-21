@@ -172,82 +172,66 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
             this.inventoryItemName = inventoryItemName;
             return this;
         }
-
         public Builder inventoryItemName(@Nullable String inventoryItemName) {
             this.inventoryItemName = Output.ofNullable(inventoryItemName);
             return this;
         }
-
         public Builder inventoryType(Output<Either<String,InventoryType>> inventoryType) {
             this.inventoryType = Objects.requireNonNull(inventoryType);
             return this;
         }
-
         public Builder inventoryType(Either<String,InventoryType> inventoryType) {
             this.inventoryType = Output.of(Objects.requireNonNull(inventoryType));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managedResourceId(@Nullable Output<String> managedResourceId) {
             this.managedResourceId = managedResourceId;
             return this;
         }
-
         public Builder managedResourceId(@Nullable String managedResourceId) {
             this.managedResourceId = Output.ofNullable(managedResourceId);
             return this;
         }
-
         public Builder moName(@Nullable Output<String> moName) {
             this.moName = moName;
             return this;
         }
-
         public Builder moName(@Nullable String moName) {
             this.moName = Output.ofNullable(moName);
             return this;
         }
-
         public Builder moRefId(@Nullable Output<String> moRefId) {
             this.moRefId = moRefId;
             return this;
         }
-
         public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = Output.ofNullable(moRefId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder vcenterName(Output<String> vcenterName) {
             this.vcenterName = Objects.requireNonNull(vcenterName);
             return this;
         }
-
         public Builder vcenterName(String vcenterName) {
             this.vcenterName = Output.of(Objects.requireNonNull(vcenterName));
             return this;
-        }
-        public InventoryItemArgs build() {
+        }        public InventoryItemArgs build() {
             return new InventoryItemArgs(inventoryItemName, inventoryType, kind, managedResourceId, moName, moRefId, resourceGroupName, vcenterName);
         }
     }

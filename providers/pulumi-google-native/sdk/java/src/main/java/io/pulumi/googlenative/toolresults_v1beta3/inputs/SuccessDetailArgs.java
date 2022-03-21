@@ -61,12 +61,10 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.otherNativeCrash = otherNativeCrash;
             return this;
         }
-
         public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
             this.otherNativeCrash = Output.ofNullable(otherNativeCrash);
             return this;
-        }
-        public SuccessDetailArgs build() {
+        }        public SuccessDetailArgs build() {
             return new SuccessDetailArgs(otherNativeCrash);
         }
     }

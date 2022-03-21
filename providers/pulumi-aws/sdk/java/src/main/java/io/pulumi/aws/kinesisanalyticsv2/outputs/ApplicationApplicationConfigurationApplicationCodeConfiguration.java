@@ -72,12 +72,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             this.codeContent = codeContent;
             return this;
         }
-
         public Builder codeContentType(String codeContentType) {
             this.codeContentType = Objects.requireNonNull(codeContentType);
             return this;
-        }
-        public ApplicationApplicationConfigurationApplicationCodeConfiguration build() {
+        }        public ApplicationApplicationConfigurationApplicationCodeConfiguration build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfiguration(codeContent, codeContentType);
         }
     }

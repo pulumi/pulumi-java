@@ -143,32 +143,26 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
             this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion);
             return this;
         }
-
         public Builder cognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
             this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey);
             return this;
         }
-
         public Builder customSpeechModelId(@Nullable String customSpeechModelId) {
             this.customSpeechModelId = customSpeechModelId;
             return this;
         }
-
         public Builder customVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
             this.customVoiceDeploymentId = customVoiceDeploymentId;
             return this;
         }
-
         public Builder isDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
             this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
-        }
-        public DirectLineSpeechChannelPropertiesResponse build() {
+        }        public DirectLineSpeechChannelPropertiesResponse build() {
             return new DirectLineSpeechChannelPropertiesResponse(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);
         }
     }

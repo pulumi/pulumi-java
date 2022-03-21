@@ -70,12 +70,10 @@ public final class RouteSpecGrpcRouteTimeoutPerRequest {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RouteSpecGrpcRouteTimeoutPerRequest build() {
+        }        public RouteSpecGrpcRouteTimeoutPerRequest build() {
             return new RouteSpecGrpcRouteTimeoutPerRequest(unit, value);
         }
     }

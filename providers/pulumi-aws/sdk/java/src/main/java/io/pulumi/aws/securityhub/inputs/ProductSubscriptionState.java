@@ -74,22 +74,18 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder productArn(@Nullable Output<String> productArn) {
             this.productArn = productArn;
             return this;
         }
-
         public Builder productArn(@Nullable String productArn) {
             this.productArn = Output.ofNullable(productArn);
             return this;
-        }
-        public ProductSubscriptionState build() {
+        }        public ProductSubscriptionState build() {
             return new ProductSubscriptionState(arn, productArn);
         }
     }

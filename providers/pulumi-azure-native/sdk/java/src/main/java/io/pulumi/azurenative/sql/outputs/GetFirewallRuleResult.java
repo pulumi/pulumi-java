@@ -119,27 +119,22 @@ public final class GetFirewallRuleResult {
             this.endIpAddress = endIpAddress;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder startIpAddress(@Nullable String startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFirewallRuleResult build() {
+        }        public GetFirewallRuleResult build() {
             return new GetFirewallRuleResult(endIpAddress, id, name, startIpAddress, type);
         }
     }

@@ -194,102 +194,88 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder agentId(String agentId) {
             this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder lastTestResult(@Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultArgs> lastTestResult) {
             this.lastTestResult = lastTestResult;
             return this;
         }
-
         public Builder lastTestResult(@Nullable GoogleCloudDialogflowCxV3beta1TestCaseResultArgs lastTestResult) {
             this.lastTestResult = Output.ofNullable(lastTestResult);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder testCaseConversationTurns(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> testCaseConversationTurns) {
             this.testCaseConversationTurns = testCaseConversationTurns;
             return this;
         }
-
         public Builder testCaseConversationTurns(@Nullable List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs> testCaseConversationTurns) {
             this.testCaseConversationTurns = Output.ofNullable(testCaseConversationTurns);
             return this;
         }
-
+        public Builder testCaseConversationTurns(GoogleCloudDialogflowCxV3beta1ConversationTurnArgs... testCaseConversationTurns) {
+            return testCaseConversationTurns(List.of(testCaseConversationTurns));
+        }
         public Builder testConfig(@Nullable Output<GoogleCloudDialogflowCxV3beta1TestConfigArgs> testConfig) {
             this.testConfig = testConfig;
             return this;
         }
-
         public Builder testConfig(@Nullable GoogleCloudDialogflowCxV3beta1TestConfigArgs testConfig) {
             this.testConfig = Output.ofNullable(testConfig);
             return this;
-        }
-        public TestCaseArgs build() {
+        }        public TestCaseArgs build() {
             return new TestCaseArgs(agentId, displayName, lastTestResult, location, name, notes, project, tags, testCaseConversationTurns, testConfig);
         }
     }

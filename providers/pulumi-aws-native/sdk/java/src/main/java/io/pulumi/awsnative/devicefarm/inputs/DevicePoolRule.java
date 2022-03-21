@@ -96,17 +96,14 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
             this.attribute = attribute;
             return this;
         }
-
         public Builder operator(@Nullable DevicePoolRuleOperator operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DevicePoolRule build() {
+        }        public DevicePoolRule build() {
             return new DevicePoolRule(attribute, operator, value);
         }
     }

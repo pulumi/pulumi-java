@@ -124,52 +124,42 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder executionRoleArn(Output<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
-
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
-
         public Builder policyDetails(Output<LifecyclePolicyPolicyDetailsArgs> policyDetails) {
             this.policyDetails = Objects.requireNonNull(policyDetails);
             return this;
         }
-
         public Builder policyDetails(LifecyclePolicyPolicyDetailsArgs policyDetails) {
             this.policyDetails = Output.of(Objects.requireNonNull(policyDetails));
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LifecyclePolicyArgs build() {
+        }        public LifecyclePolicyArgs build() {
             return new LifecyclePolicyArgs(description, executionRoleArn, policyDetails, state, tags);
         }
     }

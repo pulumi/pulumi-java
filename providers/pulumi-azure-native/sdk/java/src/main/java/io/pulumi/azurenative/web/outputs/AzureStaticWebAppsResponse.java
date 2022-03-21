@@ -72,12 +72,10 @@ public final class AzureStaticWebAppsResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder registration(@Nullable AzureStaticWebAppsRegistrationResponse registration) {
             this.registration = registration;
             return this;
-        }
-        public AzureStaticWebAppsResponse build() {
+        }        public AzureStaticWebAppsResponse build() {
             return new AzureStaticWebAppsResponse(enabled, registration);
         }
     }

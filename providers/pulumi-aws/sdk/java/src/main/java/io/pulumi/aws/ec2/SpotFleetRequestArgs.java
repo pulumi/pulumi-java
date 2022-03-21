@@ -421,222 +421,190 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
-
         public Builder excessCapacityTerminationPolicy(@Nullable Output<String> excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
-
         public Builder excessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = Output.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
-
         public Builder fleetType(@Nullable Output<String> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
-
         public Builder fleetType(@Nullable String fleetType) {
             this.fleetType = Output.ofNullable(fleetType);
             return this;
         }
-
         public Builder iamFleetRole(Output<String> iamFleetRole) {
             this.iamFleetRole = Objects.requireNonNull(iamFleetRole);
             return this;
         }
-
         public Builder iamFleetRole(String iamFleetRole) {
             this.iamFleetRole = Output.of(Objects.requireNonNull(iamFleetRole));
             return this;
         }
-
         public Builder instanceInterruptionBehaviour(@Nullable Output<String> instanceInterruptionBehaviour) {
             this.instanceInterruptionBehaviour = instanceInterruptionBehaviour;
             return this;
         }
-
         public Builder instanceInterruptionBehaviour(@Nullable String instanceInterruptionBehaviour) {
             this.instanceInterruptionBehaviour = Output.ofNullable(instanceInterruptionBehaviour);
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
             return this;
         }
-
         public Builder launchSpecifications(@Nullable Output<List<SpotFleetRequestLaunchSpecificationArgs>> launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
-
         public Builder launchSpecifications(@Nullable List<SpotFleetRequestLaunchSpecificationArgs> launchSpecifications) {
             this.launchSpecifications = Output.ofNullable(launchSpecifications);
             return this;
         }
-
+        public Builder launchSpecifications(SpotFleetRequestLaunchSpecificationArgs... launchSpecifications) {
+            return launchSpecifications(List.of(launchSpecifications));
+        }
         public Builder launchTemplateConfigs(@Nullable Output<List<SpotFleetRequestLaunchTemplateConfigArgs>> launchTemplateConfigs) {
             this.launchTemplateConfigs = launchTemplateConfigs;
             return this;
         }
-
         public Builder launchTemplateConfigs(@Nullable List<SpotFleetRequestLaunchTemplateConfigArgs> launchTemplateConfigs) {
             this.launchTemplateConfigs = Output.ofNullable(launchTemplateConfigs);
             return this;
         }
-
+        public Builder launchTemplateConfigs(SpotFleetRequestLaunchTemplateConfigArgs... launchTemplateConfigs) {
+            return launchTemplateConfigs(List.of(launchTemplateConfigs));
+        }
         public Builder loadBalancers(@Nullable Output<List<String>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
-
         public Builder loadBalancers(@Nullable List<String> loadBalancers) {
             this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
-
+        public Builder loadBalancers(String... loadBalancers) {
+            return loadBalancers(List.of(loadBalancers));
+        }
         public Builder onDemandAllocationStrategy(@Nullable Output<String> onDemandAllocationStrategy) {
             this.onDemandAllocationStrategy = onDemandAllocationStrategy;
             return this;
         }
-
         public Builder onDemandAllocationStrategy(@Nullable String onDemandAllocationStrategy) {
             this.onDemandAllocationStrategy = Output.ofNullable(onDemandAllocationStrategy);
             return this;
         }
-
         public Builder onDemandMaxTotalPrice(@Nullable Output<String> onDemandMaxTotalPrice) {
             this.onDemandMaxTotalPrice = onDemandMaxTotalPrice;
             return this;
         }
-
         public Builder onDemandMaxTotalPrice(@Nullable String onDemandMaxTotalPrice) {
             this.onDemandMaxTotalPrice = Output.ofNullable(onDemandMaxTotalPrice);
             return this;
         }
-
         public Builder onDemandTargetCapacity(@Nullable Output<Integer> onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
-
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = Output.ofNullable(onDemandTargetCapacity);
             return this;
         }
-
         public Builder replaceUnhealthyInstances(@Nullable Output<Boolean> replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
-
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = Output.ofNullable(replaceUnhealthyInstances);
             return this;
         }
-
         public Builder spotMaintenanceStrategies(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesArgs> spotMaintenanceStrategies) {
             this.spotMaintenanceStrategies = spotMaintenanceStrategies;
             return this;
         }
-
         public Builder spotMaintenanceStrategies(@Nullable SpotFleetRequestSpotMaintenanceStrategiesArgs spotMaintenanceStrategies) {
             this.spotMaintenanceStrategies = Output.ofNullable(spotMaintenanceStrategies);
             return this;
         }
-
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetCapacity(Output<Integer> targetCapacity) {
             this.targetCapacity = Objects.requireNonNull(targetCapacity);
             return this;
         }
-
         public Builder targetCapacity(Integer targetCapacity) {
             this.targetCapacity = Output.of(Objects.requireNonNull(targetCapacity));
             return this;
         }
-
         public Builder targetGroupArns(@Nullable Output<List<String>> targetGroupArns) {
             this.targetGroupArns = targetGroupArns;
             return this;
         }
-
         public Builder targetGroupArns(@Nullable List<String> targetGroupArns) {
             this.targetGroupArns = Output.ofNullable(targetGroupArns);
             return this;
         }
-
+        public Builder targetGroupArns(String... targetGroupArns) {
+            return targetGroupArns(List.of(targetGroupArns));
+        }
         public Builder terminateInstancesWithExpiration(@Nullable Output<Boolean> terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
-
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = Output.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
-
         public Builder validFrom(@Nullable Output<String> validFrom) {
             this.validFrom = validFrom;
             return this;
         }
-
         public Builder validFrom(@Nullable String validFrom) {
             this.validFrom = Output.ofNullable(validFrom);
             return this;
         }
-
         public Builder validUntil(@Nullable Output<String> validUntil) {
             this.validUntil = validUntil;
             return this;
         }
-
         public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = Output.ofNullable(validUntil);
             return this;
         }
-
         public Builder waitForFulfillment(@Nullable Output<Boolean> waitForFulfillment) {
             this.waitForFulfillment = waitForFulfillment;
             return this;
         }
-
         public Builder waitForFulfillment(@Nullable Boolean waitForFulfillment) {
             this.waitForFulfillment = Output.ofNullable(waitForFulfillment);
             return this;
-        }
-        public SpotFleetRequestArgs build() {
+        }        public SpotFleetRequestArgs build() {
             return new SpotFleetRequestArgs(allocationStrategy, excessCapacityTerminationPolicy, fleetType, iamFleetRole, instanceInterruptionBehaviour, instancePoolsToUseCount, launchSpecifications, launchTemplateConfigs, loadBalancers, onDemandAllocationStrategy, onDemandMaxTotalPrice, onDemandTargetCapacity, replaceUnhealthyInstances, spotMaintenanceStrategies, spotPrice, tags, targetCapacity, targetGroupArns, terminateInstancesWithExpiration, validFrom, validUntil, waitForFulfillment);
         }
     }

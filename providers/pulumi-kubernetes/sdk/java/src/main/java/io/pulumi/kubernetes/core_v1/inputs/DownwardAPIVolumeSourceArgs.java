@@ -80,22 +80,21 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
-
         public Builder items(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<DownwardAPIVolumeFileArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public DownwardAPIVolumeSourceArgs build() {
+        public Builder items(DownwardAPIVolumeFileArgs... items) {
+            return items(List.of(items));
+        }        public DownwardAPIVolumeSourceArgs build() {
             return new DownwardAPIVolumeSourceArgs(defaultMode, items);
         }
     }

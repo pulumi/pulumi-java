@@ -121,42 +121,37 @@ public final class URLMapPathMatcherPathRuleArgs extends io.pulumi.resources.Res
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
         public Builder paths(List<String> paths) {
             this.paths = Output.of(Objects.requireNonNull(paths));
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder routeAction(@Nullable Output<URLMapPathMatcherPathRuleRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder routeAction(@Nullable URLMapPathMatcherPathRuleRouteActionArgs routeAction) {
             this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder urlRedirect(@Nullable Output<URLMapPathMatcherPathRuleUrlRedirectArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public Builder urlRedirect(@Nullable URLMapPathMatcherPathRuleUrlRedirectArgs urlRedirect) {
             this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
-        }
-        public URLMapPathMatcherPathRuleArgs build() {
+        }        public URLMapPathMatcherPathRuleArgs build() {
             return new URLMapPathMatcherPathRuleArgs(paths, routeAction, service, urlRedirect);
         }
     }

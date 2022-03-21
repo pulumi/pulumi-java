@@ -103,22 +103,18 @@ public final class PolicySpecRuleCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public PolicySpecRuleCondition build() {
+        }        public PolicySpecRuleCondition build() {
             return new PolicySpecRuleCondition(description, expression, location, title);
         }
     }

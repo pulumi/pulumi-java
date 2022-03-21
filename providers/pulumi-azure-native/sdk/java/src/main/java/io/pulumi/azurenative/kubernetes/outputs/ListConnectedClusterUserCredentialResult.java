@@ -71,12 +71,13 @@ public final class ListConnectedClusterUserCredentialResult {
             this.hybridConnectionConfig = Objects.requireNonNull(hybridConnectionConfig);
             return this;
         }
-
         public Builder kubeconfigs(List<CredentialResultResponse> kubeconfigs) {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }
-        public ListConnectedClusterUserCredentialResult build() {
+        public Builder kubeconfigs(CredentialResultResponse... kubeconfigs) {
+            return kubeconfigs(List.of(kubeconfigs));
+        }        public ListConnectedClusterUserCredentialResult build() {
             return new ListConnectedClusterUserCredentialResult(hybridConnectionConfig, kubeconfigs);
         }
     }

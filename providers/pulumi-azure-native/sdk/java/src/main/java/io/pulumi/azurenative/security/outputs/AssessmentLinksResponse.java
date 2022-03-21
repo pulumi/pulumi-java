@@ -51,8 +51,7 @@ public final class AssessmentLinksResponse {
         public Builder azurePortalUri(String azurePortalUri) {
             this.azurePortalUri = Objects.requireNonNull(azurePortalUri);
             return this;
-        }
-        public AssessmentLinksResponse build() {
+        }        public AssessmentLinksResponse build() {
             return new AssessmentLinksResponse(azurePortalUri);
         }
     }

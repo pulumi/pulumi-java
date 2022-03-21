@@ -103,22 +103,18 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
             this.enableRenewal = Objects.requireNonNull(enableRenewal);
             return this;
         }
-
         public Builder paymentCycle(GoogleCloudChannelV1PeriodResponse paymentCycle) {
             this.paymentCycle = Objects.requireNonNull(paymentCycle);
             return this;
         }
-
         public Builder paymentPlan(String paymentPlan) {
             this.paymentPlan = Objects.requireNonNull(paymentPlan);
             return this;
         }
-
         public Builder resizeUnitCount(Boolean resizeUnitCount) {
             this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
             return this;
-        }
-        public GoogleCloudChannelV1RenewalSettingsResponse build() {
+        }        public GoogleCloudChannelV1RenewalSettingsResponse build() {
             return new GoogleCloudChannelV1RenewalSettingsResponse(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);
         }
     }

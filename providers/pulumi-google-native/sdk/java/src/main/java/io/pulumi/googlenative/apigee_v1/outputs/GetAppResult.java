@@ -248,67 +248,66 @@ public final class GetAppResult {
             this.apiProducts = Objects.requireNonNull(apiProducts);
             return this;
         }
-
+        public Builder apiProducts(String... apiProducts) {
+            return apiProducts(List.of(apiProducts));
+        }
         public Builder appFamily(String appFamily) {
             this.appFamily = Objects.requireNonNull(appFamily);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder credentials(List<GoogleCloudApigeeV1CredentialResponse> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
-
+        public Builder credentials(GoogleCloudApigeeV1CredentialResponse... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder developerId(String developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
-
         public Builder keyExpiresIn(String keyExpiresIn) {
             this.keyExpiresIn = Objects.requireNonNull(keyExpiresIn);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetAppResult build() {
+        }        public GetAppResult build() {
             return new GetAppResult(apiProducts, appFamily, appId, attributes, callbackUrl, createdAt, credentials, developerId, keyExpiresIn, lastModifiedAt, name, scopes, status);
         }
     }

@@ -57,12 +57,13 @@ public final class LoggingConfigurationLoggingConfigurationGetArgs extends io.pu
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-
         public Builder logDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs> logDestinationConfigs) {
             this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
-        public LoggingConfigurationLoggingConfigurationGetArgs build() {
+        public Builder logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }        public LoggingConfigurationLoggingConfigurationGetArgs build() {
             return new LoggingConfigurationLoggingConfigurationGetArgs(logDestinationConfigs);
         }
     }

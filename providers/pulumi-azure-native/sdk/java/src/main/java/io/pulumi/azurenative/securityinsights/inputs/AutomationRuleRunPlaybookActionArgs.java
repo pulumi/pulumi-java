@@ -96,32 +96,26 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
             this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
             return this;
         }
-
         public Builder actionConfiguration(AutomationRuleRunPlaybookActionActionConfigurationArgs actionConfiguration) {
             this.actionConfiguration = Output.of(Objects.requireNonNull(actionConfiguration));
             return this;
         }
-
         public Builder actionType(Output<String> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder actionType(String actionType) {
             this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
-
         public Builder order(Output<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Output.of(Objects.requireNonNull(order));
             return this;
-        }
-        public AutomationRuleRunPlaybookActionArgs build() {
+        }        public AutomationRuleRunPlaybookActionArgs build() {
             return new AutomationRuleRunPlaybookActionArgs(actionConfiguration, actionType, order);
         }
     }

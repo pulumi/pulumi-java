@@ -53,12 +53,10 @@ public final class VolumeLabel {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public VolumeLabel build() {
+        }        public VolumeLabel build() {
             return new VolumeLabel(label, value);
         }
     }

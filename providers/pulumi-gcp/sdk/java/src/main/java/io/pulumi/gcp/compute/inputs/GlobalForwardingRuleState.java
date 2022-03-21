@@ -338,142 +338,117 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder ipProtocol(@Nullable Output<String> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
-
         public Builder ipProtocol(@Nullable String ipProtocol) {
             this.ipProtocol = Output.ofNullable(ipProtocol);
             return this;
         }
-
         public Builder ipVersion(@Nullable Output<String> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
-
         public Builder ipVersion(@Nullable String ipVersion) {
             this.ipVersion = Output.ofNullable(ipVersion);
             return this;
         }
-
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
-
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
             this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
             return this;
         }
-
         public Builder metadataFilters(@Nullable Output<List<GlobalForwardingRuleMetadataFilterGetArgs>> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
-
         public Builder metadataFilters(@Nullable List<GlobalForwardingRuleMetadataFilterGetArgs> metadataFilters) {
             this.metadataFilters = Output.ofNullable(metadataFilters);
             return this;
         }
-
+        public Builder metadataFilters(GlobalForwardingRuleMetadataFilterGetArgs... metadataFilters) {
+            return metadataFilters(List.of(metadataFilters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder portRange(@Nullable Output<String> portRange) {
             this.portRange = portRange;
             return this;
         }
-
         public Builder portRange(@Nullable String portRange) {
             this.portRange = Output.ofNullable(portRange);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public GlobalForwardingRuleState build() {
+        }        public GlobalForwardingRuleState build() {
             return new GlobalForwardingRuleState(description, ipAddress, ipProtocol, ipVersion, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, portRange, project, selfLink, target);
         }
     }

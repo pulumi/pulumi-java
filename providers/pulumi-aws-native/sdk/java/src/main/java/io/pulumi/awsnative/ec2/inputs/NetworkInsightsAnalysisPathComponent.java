@@ -179,57 +179,46 @@ public final class NetworkInsightsAnalysisPathComponent extends io.pulumi.resour
             this.aclRule = aclRule;
             return this;
         }
-
         public Builder component(@Nullable NetworkInsightsAnalysisAnalysisComponent component) {
             this.component = component;
             return this;
         }
-
         public Builder destinationVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc) {
             this.destinationVpc = destinationVpc;
             return this;
         }
-
         public Builder inboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader) {
             this.inboundHeader = inboundHeader;
             return this;
         }
-
         public Builder outboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader) {
             this.outboundHeader = outboundHeader;
             return this;
         }
-
         public Builder routeTableRoute(@Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute) {
             this.routeTableRoute = routeTableRoute;
             return this;
         }
-
         public Builder securityGroupRule(@Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule) {
             this.securityGroupRule = securityGroupRule;
             return this;
         }
-
         public Builder sequenceNumber(@Nullable Integer sequenceNumber) {
             this.sequenceNumber = sequenceNumber;
             return this;
         }
-
         public Builder sourceVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc) {
             this.sourceVpc = sourceVpc;
             return this;
         }
-
         public Builder subnet(@Nullable NetworkInsightsAnalysisAnalysisComponent subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder vpc(@Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
             this.vpc = vpc;
             return this;
-        }
-        public NetworkInsightsAnalysisPathComponent build() {
+        }        public NetworkInsightsAnalysisPathComponent build() {
             return new NetworkInsightsAnalysisPathComponent(aclRule, component, destinationVpc, inboundHeader, outboundHeader, routeTableRoute, securityGroupRule, sequenceNumber, sourceVpc, subnet, vpc);
         }
     }

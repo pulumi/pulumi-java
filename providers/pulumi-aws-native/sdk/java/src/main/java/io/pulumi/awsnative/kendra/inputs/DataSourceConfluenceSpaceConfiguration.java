@@ -105,27 +105,31 @@ public final class DataSourceConfluenceSpaceConfiguration extends io.pulumi.reso
             this.crawlArchivedSpaces = crawlArchivedSpaces;
             return this;
         }
-
         public Builder crawlPersonalSpaces(@Nullable Boolean crawlPersonalSpaces) {
             this.crawlPersonalSpaces = crawlPersonalSpaces;
             return this;
         }
-
         public Builder excludeSpaces(@Nullable List<String> excludeSpaces) {
             this.excludeSpaces = excludeSpaces;
             return this;
         }
-
+        public Builder excludeSpaces(String... excludeSpaces) {
+            return excludeSpaces(List.of(excludeSpaces));
+        }
         public Builder includeSpaces(@Nullable List<String> includeSpaces) {
             this.includeSpaces = includeSpaces;
             return this;
         }
-
+        public Builder includeSpaces(String... includeSpaces) {
+            return includeSpaces(List.of(includeSpaces));
+        }
         public Builder spaceFieldMappings(@Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
             this.spaceFieldMappings = spaceFieldMappings;
             return this;
         }
-        public DataSourceConfluenceSpaceConfiguration build() {
+        public Builder spaceFieldMappings(DataSourceConfluenceSpaceToIndexFieldMapping... spaceFieldMappings) {
+            return spaceFieldMappings(List.of(spaceFieldMappings));
+        }        public DataSourceConfluenceSpaceConfiguration build() {
             return new DataSourceConfluenceSpaceConfiguration(crawlArchivedSpaces, crawlPersonalSpaces, excludeSpaces, includeSpaces, spaceFieldMappings);
         }
     }

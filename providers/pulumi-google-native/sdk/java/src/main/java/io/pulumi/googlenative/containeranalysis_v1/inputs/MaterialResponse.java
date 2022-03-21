@@ -65,12 +65,10 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public MaterialResponse build() {
+        }        public MaterialResponse build() {
             return new MaterialResponse(digest, uri);
         }
     }

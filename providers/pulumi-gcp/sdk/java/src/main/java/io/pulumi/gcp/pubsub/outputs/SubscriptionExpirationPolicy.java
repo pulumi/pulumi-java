@@ -59,8 +59,7 @@ public final class SubscriptionExpirationPolicy {
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public SubscriptionExpirationPolicy build() {
+        }        public SubscriptionExpirationPolicy build() {
             return new SubscriptionExpirationPolicy(ttl);
         }
     }

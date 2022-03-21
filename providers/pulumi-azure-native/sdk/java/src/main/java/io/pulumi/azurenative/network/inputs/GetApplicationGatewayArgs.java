@@ -72,12 +72,10 @@ public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeA
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetApplicationGatewayArgs build() {
+        }        public GetApplicationGatewayArgs build() {
             return new GetApplicationGatewayArgs(applicationGatewayName, resourceGroupName);
         }
     }

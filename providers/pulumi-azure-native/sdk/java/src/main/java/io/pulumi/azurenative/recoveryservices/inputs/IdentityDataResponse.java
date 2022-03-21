@@ -112,22 +112,18 @@ public final class IdentityDataResponse extends io.pulumi.resources.InvokeArgs {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public IdentityDataResponse build() {
+        }        public IdentityDataResponse build() {
             return new IdentityDataResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

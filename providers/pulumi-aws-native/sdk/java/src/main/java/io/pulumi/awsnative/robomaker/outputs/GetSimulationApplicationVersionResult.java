@@ -55,12 +55,10 @@ public final class GetSimulationApplicationVersionResult {
             this.applicationVersion = applicationVersion;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public GetSimulationApplicationVersionResult build() {
+        }        public GetSimulationApplicationVersionResult build() {
             return new GetSimulationApplicationVersionResult(applicationVersion, arn);
         }
     }

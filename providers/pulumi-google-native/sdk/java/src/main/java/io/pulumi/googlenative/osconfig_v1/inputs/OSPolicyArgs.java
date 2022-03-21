@@ -130,52 +130,45 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
-
         public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = Output.ofNullable(allowNoResourceGroupMatch);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder mode(Output<OSPolicyMode> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(OSPolicyMode mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public Builder resourceGroups(Output<List<OSPolicyResourceGroupArgs>> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public Builder resourceGroups(List<OSPolicyResourceGroupArgs> resourceGroups) {
             this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
-        public OSPolicyArgs build() {
+        public Builder resourceGroups(OSPolicyResourceGroupArgs... resourceGroups) {
+            return resourceGroups(List.of(resourceGroups));
+        }        public OSPolicyArgs build() {
             return new OSPolicyArgs(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
         }
     }

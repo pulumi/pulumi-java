@@ -85,17 +85,14 @@ public final class EncryptionPropertiesResponse {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyVersion(String keyVersion) {
             this.keyVersion = Objects.requireNonNull(keyVersion);
             return this;
         }
-
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
-        }
-        public EncryptionPropertiesResponse build() {
+        }        public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keyName, keyVersion, vaultBaseUrl);
         }
     }

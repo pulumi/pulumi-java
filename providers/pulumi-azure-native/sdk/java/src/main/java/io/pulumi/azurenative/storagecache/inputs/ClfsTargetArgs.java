@@ -61,12 +61,10 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public ClfsTargetArgs build() {
+        }        public ClfsTargetArgs build() {
             return new ClfsTargetArgs(target);
         }
     }

@@ -149,62 +149,50 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder disk(Output<String> disk) {
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
-
         public Builder disk(String disk) {
             this.disk = Output.of(Objects.requireNonNull(disk));
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public AttachedDiskArgs build() {
+        }        public AttachedDiskArgs build() {
             return new AttachedDiskArgs(deviceName, disk, instance, mode, project, zone);
         }
     }

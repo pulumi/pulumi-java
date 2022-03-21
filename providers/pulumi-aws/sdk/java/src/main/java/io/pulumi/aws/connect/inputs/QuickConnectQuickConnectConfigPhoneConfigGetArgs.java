@@ -56,12 +56,10 @@ public final class QuickConnectQuickConnectConfigPhoneConfigGetArgs extends io.p
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
-        }
-        public QuickConnectQuickConnectConfigPhoneConfigGetArgs build() {
+        }        public QuickConnectQuickConnectConfigPhoneConfigGetArgs build() {
             return new QuickConnectQuickConnectConfigPhoneConfigGetArgs(phoneNumber);
         }
     }

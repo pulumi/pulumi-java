@@ -74,22 +74,18 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder cidr(String cidr) {
             this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
-        }
-        public ManagedPrefixListEntryArgs build() {
+        }        public ManagedPrefixListEntryArgs build() {
             return new ManagedPrefixListEntryArgs(cidr, description);
         }
     }

@@ -57,12 +57,10 @@ public final class PatchDeploymentOneTimeScheduleArgs extends io.pulumi.resource
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }
-
         public Builder executeTime(String executeTime) {
             this.executeTime = Output.of(Objects.requireNonNull(executeTime));
             return this;
-        }
-        public PatchDeploymentOneTimeScheduleArgs build() {
+        }        public PatchDeploymentOneTimeScheduleArgs build() {
             return new PatchDeploymentOneTimeScheduleArgs(executeTime);
         }
     }

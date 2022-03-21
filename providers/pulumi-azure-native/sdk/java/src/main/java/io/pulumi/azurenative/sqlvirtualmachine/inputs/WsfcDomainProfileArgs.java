@@ -174,82 +174,66 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
             this.clusterBootstrapAccount = clusterBootstrapAccount;
             return this;
         }
-
         public Builder clusterBootstrapAccount(@Nullable String clusterBootstrapAccount) {
             this.clusterBootstrapAccount = Output.ofNullable(clusterBootstrapAccount);
             return this;
         }
-
         public Builder clusterOperatorAccount(@Nullable Output<String> clusterOperatorAccount) {
             this.clusterOperatorAccount = clusterOperatorAccount;
             return this;
         }
-
         public Builder clusterOperatorAccount(@Nullable String clusterOperatorAccount) {
             this.clusterOperatorAccount = Output.ofNullable(clusterOperatorAccount);
             return this;
         }
-
         public Builder domainFqdn(@Nullable Output<String> domainFqdn) {
             this.domainFqdn = domainFqdn;
             return this;
         }
-
         public Builder domainFqdn(@Nullable String domainFqdn) {
             this.domainFqdn = Output.ofNullable(domainFqdn);
             return this;
         }
-
         public Builder fileShareWitnessPath(@Nullable Output<String> fileShareWitnessPath) {
             this.fileShareWitnessPath = fileShareWitnessPath;
             return this;
         }
-
         public Builder fileShareWitnessPath(@Nullable String fileShareWitnessPath) {
             this.fileShareWitnessPath = Output.ofNullable(fileShareWitnessPath);
             return this;
         }
-
         public Builder ouPath(@Nullable Output<String> ouPath) {
             this.ouPath = ouPath;
             return this;
         }
-
         public Builder ouPath(@Nullable String ouPath) {
             this.ouPath = Output.ofNullable(ouPath);
             return this;
         }
-
         public Builder sqlServiceAccount(@Nullable Output<String> sqlServiceAccount) {
             this.sqlServiceAccount = sqlServiceAccount;
             return this;
         }
-
         public Builder sqlServiceAccount(@Nullable String sqlServiceAccount) {
             this.sqlServiceAccount = Output.ofNullable(sqlServiceAccount);
             return this;
         }
-
         public Builder storageAccountPrimaryKey(@Nullable Output<String> storageAccountPrimaryKey) {
             this.storageAccountPrimaryKey = storageAccountPrimaryKey;
             return this;
         }
-
         public Builder storageAccountPrimaryKey(@Nullable String storageAccountPrimaryKey) {
             this.storageAccountPrimaryKey = Output.ofNullable(storageAccountPrimaryKey);
             return this;
         }
-
         public Builder storageAccountUrl(@Nullable Output<String> storageAccountUrl) {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }
-
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             this.storageAccountUrl = Output.ofNullable(storageAccountUrl);
             return this;
-        }
-        public WsfcDomainProfileArgs build() {
+        }        public WsfcDomainProfileArgs build() {
             return new WsfcDomainProfileArgs(clusterBootstrapAccount, clusterOperatorAccount, domainFqdn, fileShareWitnessPath, ouPath, sqlServiceAccount, storageAccountPrimaryKey, storageAccountUrl);
         }
     }

@@ -92,17 +92,14 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfig 
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
-
         public Builder logDestinationType(String logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public LoggingConfigurationLoggingConfigurationLogDestinationConfig build() {
+        }        public LoggingConfigurationLoggingConfigurationLogDestinationConfig build() {
             return new LoggingConfigurationLoggingConfigurationLogDestinationConfig(logDestination, logDestinationType, logType);
         }
     }

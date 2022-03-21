@@ -87,17 +87,14 @@ public final class RemediationConfigurationParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceValue(@Nullable String resourceValue) {
             this.resourceValue = resourceValue;
             return this;
         }
-
         public Builder staticValue(@Nullable String staticValue) {
             this.staticValue = staticValue;
             return this;
-        }
-        public RemediationConfigurationParameter build() {
+        }        public RemediationConfigurationParameter build() {
             return new RemediationConfigurationParameter(name, resourceValue, staticValue);
         }
     }

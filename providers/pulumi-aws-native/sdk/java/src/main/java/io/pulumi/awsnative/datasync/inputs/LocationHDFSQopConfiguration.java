@@ -79,12 +79,10 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
             this.dataTransferProtection = dataTransferProtection;
             return this;
         }
-
         public Builder rpcProtection(@Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection) {
             this.rpcProtection = rpcProtection;
             return this;
-        }
-        public LocationHDFSQopConfiguration build() {
+        }        public LocationHDFSQopConfiguration build() {
             return new LocationHDFSQopConfiguration(dataTransferProtection, rpcProtection);
         }
     }

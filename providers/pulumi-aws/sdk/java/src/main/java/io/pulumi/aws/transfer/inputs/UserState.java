@@ -222,112 +222,93 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
-
         public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Output.ofNullable(homeDirectory);
             return this;
         }
-
         public Builder homeDirectoryMappings(@Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
-
         public Builder homeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
             this.homeDirectoryMappings = Output.ofNullable(homeDirectoryMappings);
             return this;
         }
-
+        public Builder homeDirectoryMappings(UserHomeDirectoryMappingGetArgs... homeDirectoryMappings) {
+            return homeDirectoryMappings(List.of(homeDirectoryMappings));
+        }
         public Builder homeDirectoryType(@Nullable Output<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
-
         public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
             this.homeDirectoryType = Output.ofNullable(homeDirectoryType);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder posixProfile(@Nullable Output<UserPosixProfileGetArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
-
         public Builder posixProfile(@Nullable UserPosixProfileGetArgs posixProfile) {
             this.posixProfile = Output.ofNullable(posixProfile);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder serverId(@Nullable Output<String> serverId) {
             this.serverId = serverId;
             return this;
         }
-
         public Builder serverId(@Nullable String serverId) {
             this.serverId = Output.ofNullable(serverId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public UserState build() {
+        }        public UserState build() {
             return new UserState(arn, homeDirectory, homeDirectoryMappings, homeDirectoryType, policy, posixProfile, role, serverId, tags, tagsAll, userName);
         }
     }

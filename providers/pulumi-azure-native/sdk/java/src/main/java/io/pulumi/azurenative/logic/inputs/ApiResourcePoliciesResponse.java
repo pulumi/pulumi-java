@@ -78,12 +78,10 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
             this.content = content;
             return this;
         }
-
         public Builder contentLink(@Nullable String contentLink) {
             this.contentLink = contentLink;
             return this;
-        }
-        public ApiResourcePoliciesResponse build() {
+        }        public ApiResourcePoliciesResponse build() {
             return new ApiResourcePoliciesResponse(content, contentLink);
         }
     }

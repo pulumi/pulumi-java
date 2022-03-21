@@ -78,12 +78,10 @@ public final class CustomRPValidationsResponse extends io.pulumi.resources.Invok
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
-
         public Builder validationType(@Nullable String validationType) {
             this.validationType = validationType;
             return this;
-        }
-        public CustomRPValidationsResponse build() {
+        }        public CustomRPValidationsResponse build() {
             return new CustomRPValidationsResponse(specification, validationType);
         }
     }

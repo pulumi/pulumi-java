@@ -66,22 +66,18 @@ public final class SigningProfileSignatureValidityPeriodArgs extends io.pulumi.r
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SigningProfileSignatureValidityPeriodArgs build() {
+        }        public SigningProfileSignatureValidityPeriodArgs build() {
             return new SigningProfileSignatureValidityPeriodArgs(type, value);
         }
     }

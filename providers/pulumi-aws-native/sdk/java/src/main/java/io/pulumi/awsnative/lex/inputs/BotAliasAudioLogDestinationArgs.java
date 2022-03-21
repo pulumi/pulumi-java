@@ -57,12 +57,10 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestinationArgs s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
-        }
-        public BotAliasAudioLogDestinationArgs build() {
+        }        public BotAliasAudioLogDestinationArgs build() {
             return new BotAliasAudioLogDestinationArgs(s3Bucket);
         }
     }

@@ -205,102 +205,82 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
-
         public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = Output.ofNullable(expiryTime);
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder runOn(@Nullable Output<String> runOn) {
             this.runOn = runOn;
             return this;
         }
-
         public Builder runOn(@Nullable String runOn) {
             this.runOn = Output.ofNullable(runOn);
             return this;
         }
-
         public Builder runbook(@Nullable Output<RunbookAssociationPropertyArgs> runbook) {
             this.runbook = runbook;
             return this;
         }
-
         public Builder runbook(@Nullable RunbookAssociationPropertyArgs runbook) {
             this.runbook = Output.ofNullable(runbook);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
         }
-
         public Builder webhookName(@Nullable Output<String> webhookName) {
             this.webhookName = webhookName;
             return this;
         }
-
         public Builder webhookName(@Nullable String webhookName) {
             this.webhookName = Output.ofNullable(webhookName);
             return this;
-        }
-        public WebhookArgs build() {
+        }        public WebhookArgs build() {
             return new WebhookArgs(automationAccountName, expiryTime, isEnabled, name, parameters, resourceGroupName, runOn, runbook, uri, webhookName);
         }
     }

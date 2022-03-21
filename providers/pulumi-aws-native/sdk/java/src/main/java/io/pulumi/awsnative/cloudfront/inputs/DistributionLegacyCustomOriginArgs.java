@@ -104,52 +104,45 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
-
         public Builder dNSName(String dNSName) {
             this.dNSName = Output.of(Objects.requireNonNull(dNSName));
             return this;
         }
-
         public Builder hTTPPort(@Nullable Output<Integer> hTTPPort) {
             this.hTTPPort = hTTPPort;
             return this;
         }
-
         public Builder hTTPPort(@Nullable Integer hTTPPort) {
             this.hTTPPort = Output.ofNullable(hTTPPort);
             return this;
         }
-
         public Builder hTTPSPort(@Nullable Output<Integer> hTTPSPort) {
             this.hTTPSPort = hTTPSPort;
             return this;
         }
-
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
             this.hTTPSPort = Output.ofNullable(hTTPSPort);
             return this;
         }
-
         public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
-
         public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Output.of(Objects.requireNonNull(originProtocolPolicy));
             return this;
         }
-
         public Builder originSSLProtocols(Output<List<String>> originSSLProtocols) {
             this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols);
             return this;
         }
-
         public Builder originSSLProtocols(List<String> originSSLProtocols) {
             this.originSSLProtocols = Output.of(Objects.requireNonNull(originSSLProtocols));
             return this;
         }
-        public DistributionLegacyCustomOriginArgs build() {
+        public Builder originSSLProtocols(String... originSSLProtocols) {
+            return originSSLProtocols(List.of(originSSLProtocols));
+        }        public DistributionLegacyCustomOriginArgs build() {
             return new DistributionLegacyCustomOriginArgs(dNSName, hTTPPort, hTTPSPort, originProtocolPolicy, originSSLProtocols);
         }
     }

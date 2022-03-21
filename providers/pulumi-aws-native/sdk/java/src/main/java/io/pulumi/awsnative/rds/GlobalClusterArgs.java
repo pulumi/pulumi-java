@@ -142,62 +142,50 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder engine(@Nullable Output<GlobalClusterEngine> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable GlobalClusterEngine engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
             this.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
-
         public Builder globalClusterIdentifier(@Nullable String globalClusterIdentifier) {
             this.globalClusterIdentifier = Output.ofNullable(globalClusterIdentifier);
             return this;
         }
-
         public Builder sourceDBClusterIdentifier(@Nullable Output<String> sourceDBClusterIdentifier) {
             this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
             return this;
         }
-
         public Builder sourceDBClusterIdentifier(@Nullable String sourceDBClusterIdentifier) {
             this.sourceDBClusterIdentifier = Output.ofNullable(sourceDBClusterIdentifier);
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
-        }
-        public GlobalClusterArgs build() {
+        }        public GlobalClusterArgs build() {
             return new GlobalClusterArgs(deletionProtection, engine, engineVersion, globalClusterIdentifier, sourceDBClusterIdentifier, storageEncrypted);
         }
     }

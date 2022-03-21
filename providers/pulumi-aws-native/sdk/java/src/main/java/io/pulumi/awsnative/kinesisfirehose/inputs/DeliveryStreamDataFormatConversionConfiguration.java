@@ -93,22 +93,18 @@ public final class DeliveryStreamDataFormatConversionConfiguration extends io.pu
             this.enabled = enabled;
             return this;
         }
-
         public Builder inputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration) {
             this.inputFormatConfiguration = inputFormatConfiguration;
             return this;
         }
-
         public Builder outputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration) {
             this.outputFormatConfiguration = outputFormatConfiguration;
             return this;
         }
-
         public Builder schemaConfiguration(@Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
             this.schemaConfiguration = schemaConfiguration;
             return this;
-        }
-        public DeliveryStreamDataFormatConversionConfiguration build() {
+        }        public DeliveryStreamDataFormatConversionConfiguration build() {
             return new DeliveryStreamDataFormatConversionConfiguration(enabled, inputFormatConfiguration, outputFormatConfiguration, schemaConfiguration);
         }
     }

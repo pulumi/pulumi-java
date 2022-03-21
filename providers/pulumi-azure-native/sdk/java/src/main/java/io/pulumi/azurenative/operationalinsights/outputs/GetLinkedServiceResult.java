@@ -152,37 +152,30 @@ public final class GetLinkedServiceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder writeAccessResourceId(@Nullable String writeAccessResourceId) {
             this.writeAccessResourceId = writeAccessResourceId;
             return this;
-        }
-        public GetLinkedServiceResult build() {
+        }        public GetLinkedServiceResult build() {
             return new GetLinkedServiceResult(id, name, provisioningState, resourceId, tags, type, writeAccessResourceId);
         }
     }

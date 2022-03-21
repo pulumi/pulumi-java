@@ -90,32 +90,32 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
             this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
             return this;
         }
-
         public Builder generatedRulesType(String generatedRulesType) {
             this.generatedRulesType = Output.of(Objects.requireNonNull(generatedRulesType));
             return this;
         }
-
         public Builder targetTypes(Output<List<String>> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
-
         public Builder targetTypes(List<String> targetTypes) {
             this.targetTypes = Output.of(Objects.requireNonNull(targetTypes));
             return this;
         }
-
+        public Builder targetTypes(String... targetTypes) {
+            return targetTypes(List.of(targetTypes));
+        }
         public Builder targets(Output<List<String>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-
         public Builder targets(List<String> targets) {
             this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs build() {
+        public Builder targets(String... targets) {
+            return targets(List.of(targets));
+        }        public RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs build() {
             return new RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs(generatedRulesType, targetTypes, targets);
         }
     }

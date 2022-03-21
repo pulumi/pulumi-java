@@ -51,8 +51,7 @@ public final class BandwidthLimitResponse {
         public Builder limitMbps(String limitMbps) {
             this.limitMbps = Objects.requireNonNull(limitMbps);
             return this;
-        }
-        public BandwidthLimitResponse build() {
+        }        public BandwidthLimitResponse build() {
             return new BandwidthLimitResponse(limitMbps);
         }
     }

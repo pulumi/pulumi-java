@@ -81,22 +81,18 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
             this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
             return this;
         }
-
         public Builder ingestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
             this.ingestionWaitTimeInHours = Output.ofNullable(ingestionWaitTimeInHours);
             return this;
         }
-
         public Builder waitForSpiceIngestion(@Nullable Output<Boolean> waitForSpiceIngestion) {
             this.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }
-
         public Builder waitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
             this.waitForSpiceIngestion = Output.ofNullable(waitForSpiceIngestion);
             return this;
-        }
-        public DataSetIngestionWaitPolicyArgs build() {
+        }        public DataSetIngestionWaitPolicyArgs build() {
             return new DataSetIngestionWaitPolicyArgs(ingestionWaitTimeInHours, waitForSpiceIngestion);
         }
     }

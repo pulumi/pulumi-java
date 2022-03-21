@@ -121,27 +121,22 @@ public final class IosTestResponse {
             this.iosAppInfo = Objects.requireNonNull(iosAppInfo);
             return this;
         }
-
         public Builder iosRoboTest(IosRoboTestResponse iosRoboTest) {
             this.iosRoboTest = Objects.requireNonNull(iosRoboTest);
             return this;
         }
-
         public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
             this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
             return this;
         }
-
         public Builder iosXcTest(IosXcTestResponse iosXcTest) {
             this.iosXcTest = Objects.requireNonNull(iosXcTest);
             return this;
         }
-
         public Builder testTimeout(DurationResponse testTimeout) {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
-        }
-        public IosTestResponse build() {
+        }        public IosTestResponse build() {
             return new IosTestResponse(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
         }
     }

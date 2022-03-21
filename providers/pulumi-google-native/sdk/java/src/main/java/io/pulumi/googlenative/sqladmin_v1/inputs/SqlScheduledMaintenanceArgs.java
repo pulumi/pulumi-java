@@ -107,42 +107,34 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
             this.canDefer = canDefer;
             return this;
         }
-
         public Builder canDefer(@Nullable Boolean canDefer) {
             this.canDefer = Output.ofNullable(canDefer);
             return this;
         }
-
         public Builder canReschedule(@Nullable Output<Boolean> canReschedule) {
             this.canReschedule = canReschedule;
             return this;
         }
-
         public Builder canReschedule(@Nullable Boolean canReschedule) {
             this.canReschedule = Output.ofNullable(canReschedule);
             return this;
         }
-
         public Builder scheduleDeadlineTime(@Nullable Output<String> scheduleDeadlineTime) {
             this.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
-
         public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Output.ofNullable(scheduleDeadlineTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public SqlScheduledMaintenanceArgs build() {
+        }        public SqlScheduledMaintenanceArgs build() {
             return new SqlScheduledMaintenanceArgs(canDefer, canReschedule, scheduleDeadlineTime, startTime);
         }
     }

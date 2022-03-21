@@ -125,52 +125,42 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder max(@Nullable Output<Integer> max) {
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Integer max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Integer> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = Output.ofNullable(min);
             return this;
         }
-
         public Builder result(@Nullable Output<Integer> result) {
             this.result = result;
             return this;
         }
-
         public Builder result(@Nullable Integer result) {
             this.result = Output.ofNullable(result);
             return this;
         }
-
         public Builder seed(@Nullable Output<String> seed) {
             this.seed = seed;
             return this;
         }
-
         public Builder seed(@Nullable String seed) {
             this.seed = Output.ofNullable(seed);
             return this;
-        }
-        public RandomIntegerState build() {
+        }        public RandomIntegerState build() {
             return new RandomIntegerState(keepers, max, min, result, seed);
         }
     }

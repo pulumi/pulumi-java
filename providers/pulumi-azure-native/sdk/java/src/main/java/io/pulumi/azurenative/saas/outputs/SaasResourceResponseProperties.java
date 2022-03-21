@@ -315,87 +315,70 @@ public final class SaasResourceResponseProperties {
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder isFreeTrial(@Nullable Boolean isFreeTrial) {
             this.isFreeTrial = isFreeTrial;
             return this;
         }
-
         public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = lastModified;
             return this;
         }
-
         public Builder offerId(@Nullable String offerId) {
             this.offerId = offerId;
             return this;
         }
-
         public Builder paymentChannelMetadata(@Nullable Map<String,String> paymentChannelMetadata) {
             this.paymentChannelMetadata = paymentChannelMetadata;
             return this;
         }
-
         public Builder paymentChannelType(@Nullable String paymentChannelType) {
             this.paymentChannelType = paymentChannelType;
             return this;
         }
-
         public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
-
         public Builder publisherTestEnvironment(@Nullable String publisherTestEnvironment) {
             this.publisherTestEnvironment = publisherTestEnvironment;
             return this;
         }
-
         public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
-
         public Builder saasResourceName(@Nullable String saasResourceName) {
             this.saasResourceName = saasResourceName;
             return this;
         }
-
         public Builder saasSessionId(@Nullable String saasSessionId) {
             this.saasSessionId = saasSessionId;
             return this;
         }
-
         public Builder saasSubscriptionId(@Nullable String saasSubscriptionId) {
             this.saasSubscriptionId = saasSubscriptionId;
             return this;
         }
-
         public Builder skuId(@Nullable String skuId) {
             this.skuId = skuId;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder term(@Nullable SaasPropertiesResponseTerm term) {
             this.term = term;
             return this;
         }
-
         public Builder termId(@Nullable String termId) {
             this.termId = termId;
             return this;
-        }
-        public SaasResourceResponseProperties build() {
+        }        public SaasResourceResponseProperties build() {
             return new SaasResourceResponseProperties(autoRenew, created, isFreeTrial, lastModified, offerId, paymentChannelMetadata, paymentChannelType, publisherId, publisherTestEnvironment, quantity, saasResourceName, saasSessionId, saasSubscriptionId, skuId, status, term, termId);
         }
     }

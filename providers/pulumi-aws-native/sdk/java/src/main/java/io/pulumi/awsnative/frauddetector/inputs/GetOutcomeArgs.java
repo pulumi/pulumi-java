@@ -54,8 +54,7 @@ public final class GetOutcomeArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetOutcomeArgs build() {
+        }        public GetOutcomeArgs build() {
             return new GetOutcomeArgs(arn);
         }
     }

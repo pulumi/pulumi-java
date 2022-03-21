@@ -45,8 +45,7 @@ public final class IndexServerSideEncryptionConfiguration {
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
-        }
-        public IndexServerSideEncryptionConfiguration build() {
+        }        public IndexServerSideEncryptionConfiguration build() {
             return new IndexServerSideEncryptionConfiguration(kmsKeyId);
         }
     }

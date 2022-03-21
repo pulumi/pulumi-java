@@ -79,22 +79,18 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder coreCount(@Nullable String coreCount) {
             this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
-
         public Builder type(@Nullable Output<AcceleratorConfigType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable AcceleratorConfigType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AcceleratorConfigArgs build() {
+        }        public AcceleratorConfigArgs build() {
             return new AcceleratorConfigArgs(coreCount, type);
         }
     }

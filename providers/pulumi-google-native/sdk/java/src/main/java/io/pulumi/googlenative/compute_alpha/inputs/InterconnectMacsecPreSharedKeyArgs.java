@@ -78,22 +78,18 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public InterconnectMacsecPreSharedKeyArgs build() {
+        }        public InterconnectMacsecPreSharedKeyArgs build() {
             return new InterconnectMacsecPreSharedKeyArgs(name, startTime);
         }
     }

@@ -160,42 +160,40 @@ public final class GetThemeResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder permissions(@Nullable List<ThemeResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
-
+        public Builder permissions(ThemeResourcePermission... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder tags(@Nullable List<ThemeTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ThemeTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable ThemeType type) {
             this.type = type;
             return this;
         }
-
         public Builder version(@Nullable ThemeVersion version) {
             this.version = version;
             return this;
-        }
-        public GetThemeResult build() {
+        }        public GetThemeResult build() {
             return new GetThemeResult(arn, createdTime, lastUpdatedTime, name, permissions, tags, type, version);
         }
     }

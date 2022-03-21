@@ -136,32 +136,26 @@ public final class OwnerReference {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
-
         public Builder controller(@Nullable Boolean controller) {
             this.controller = controller;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public OwnerReference build() {
+        }        public OwnerReference build() {
             return new OwnerReference(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }
     }

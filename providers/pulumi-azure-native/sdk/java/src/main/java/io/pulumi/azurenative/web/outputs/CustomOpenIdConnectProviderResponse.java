@@ -89,17 +89,14 @@ public final class CustomOpenIdConnectProviderResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder login(@Nullable OpenIdConnectLoginResponse login) {
             this.login = login;
             return this;
         }
-
         public Builder registration(@Nullable OpenIdConnectRegistrationResponse registration) {
             this.registration = registration;
             return this;
-        }
-        public CustomOpenIdConnectProviderResponse build() {
+        }        public CustomOpenIdConnectProviderResponse build() {
             return new CustomOpenIdConnectProviderResponse(enabled, login, registration);
         }
     }

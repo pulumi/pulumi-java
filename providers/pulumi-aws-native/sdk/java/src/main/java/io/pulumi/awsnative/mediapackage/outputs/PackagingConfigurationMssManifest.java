@@ -56,12 +56,10 @@ public final class PackagingConfigurationMssManifest {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
-        }
-        public PackagingConfigurationMssManifest build() {
+        }        public PackagingConfigurationMssManifest build() {
             return new PackagingConfigurationMssManifest(manifestName, streamSelection);
         }
     }

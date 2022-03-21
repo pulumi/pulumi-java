@@ -183,47 +183,38 @@ public final class AzureVmDiskDetailsResponse {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-
         public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
-
         public Builder lunId(@Nullable String lunId) {
             this.lunId = lunId;
             return this;
         }
-
         public Builder maxSizeMB(@Nullable String maxSizeMB) {
             this.maxSizeMB = maxSizeMB;
             return this;
         }
-
         public Builder targetDiskLocation(@Nullable String targetDiskLocation) {
             this.targetDiskLocation = targetDiskLocation;
             return this;
         }
-
         public Builder targetDiskName(@Nullable String targetDiskName) {
             this.targetDiskName = targetDiskName;
             return this;
         }
-
         public Builder vhdId(@Nullable String vhdId) {
             this.vhdId = vhdId;
             return this;
         }
-
         public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }
-
         public Builder vhdType(@Nullable String vhdType) {
             this.vhdType = vhdType;
             return this;
-        }
-        public AzureVmDiskDetailsResponse build() {
+        }        public AzureVmDiskDetailsResponse build() {
             return new AzureVmDiskDetailsResponse(diskEncryptionSetId, diskId, lunId, maxSizeMB, targetDiskLocation, targetDiskName, vhdId, vhdName, vhdType);
         }
     }

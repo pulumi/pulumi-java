@@ -79,22 +79,18 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder guestConfiguration(@Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration) {
             this.guestConfiguration = guestConfiguration;
             return this;
         }
-
         public Builder guestConfiguration(@Nullable GuestConfigurationNavigationArgs guestConfiguration) {
             this.guestConfiguration = Output.ofNullable(guestConfiguration);
             return this;
-        }
-        public GuestConfigurationAssignmentPropertiesArgs build() {
+        }        public GuestConfigurationAssignmentPropertiesArgs build() {
             return new GuestConfigurationAssignmentPropertiesArgs(context, guestConfiguration);
         }
     }

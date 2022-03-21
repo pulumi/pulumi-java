@@ -88,17 +88,17 @@ public final class InstanceSchedulingNodeAffinity {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public InstanceSchedulingNodeAffinity build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public InstanceSchedulingNodeAffinity build() {
             return new InstanceSchedulingNodeAffinity(key, operator, values);
         }
     }

@@ -75,22 +75,18 @@ public final class ListenerDefaultActionForwardTargetGroupGetArgs extends io.pul
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public ListenerDefaultActionForwardTargetGroupGetArgs build() {
+        }        public ListenerDefaultActionForwardTargetGroupGetArgs build() {
             return new ListenerDefaultActionForwardTargetGroupGetArgs(arn, weight);
         }
     }

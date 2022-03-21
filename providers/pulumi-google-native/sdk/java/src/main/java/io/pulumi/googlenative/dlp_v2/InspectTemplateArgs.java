@@ -131,62 +131,50 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder inspectConfig(@Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
-
         public Builder inspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
             this.inspectConfig = Output.ofNullable(inspectConfig);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
-
         public Builder templateId(@Nullable String templateId) {
             this.templateId = Output.ofNullable(templateId);
             return this;
-        }
-        public InspectTemplateArgs build() {
+        }        public InspectTemplateArgs build() {
             return new InspectTemplateArgs(description, displayName, inspectConfig, location, project, templateId);
         }
     }

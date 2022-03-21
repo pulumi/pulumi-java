@@ -71,12 +71,10 @@ public final class TypeActivationLoggingConfig {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logRoleArn(@Nullable String logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
-        }
-        public TypeActivationLoggingConfig build() {
+        }        public TypeActivationLoggingConfig build() {
             return new TypeActivationLoggingConfig(logGroupName, logRoleArn);
         }
     }

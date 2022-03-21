@@ -62,12 +62,13 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
             this.oracleSchemas = oracleSchemas;
             return this;
         }
-
         public Builder oracleSchemas(@Nullable List<OracleSchemaArgs> oracleSchemas) {
             this.oracleSchemas = Output.ofNullable(oracleSchemas);
             return this;
         }
-        public OracleRdbmsArgs build() {
+        public Builder oracleSchemas(OracleSchemaArgs... oracleSchemas) {
+            return oracleSchemas(List.of(oracleSchemas));
+        }        public OracleRdbmsArgs build() {
             return new OracleRdbmsArgs(oracleSchemas);
         }
     }

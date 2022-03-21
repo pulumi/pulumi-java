@@ -69,12 +69,10 @@ public final class IncidentLabelResponse {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelType(String labelType) {
             this.labelType = Objects.requireNonNull(labelType);
             return this;
-        }
-        public IncidentLabelResponse build() {
+        }        public IncidentLabelResponse build() {
             return new IncidentLabelResponse(labelName, labelType);
         }
     }

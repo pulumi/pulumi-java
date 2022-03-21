@@ -141,32 +141,26 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder firstTimestamp(String firstTimestamp) {
             this.firstTimestamp = Objects.requireNonNull(firstTimestamp);
             return this;
         }
-
         public Builder lastTimestamp(String lastTimestamp) {
             this.lastTimestamp = Objects.requireNonNull(lastTimestamp);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EventResponse build() {
+        }        public EventResponse build() {
             return new EventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }
     }

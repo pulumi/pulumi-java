@@ -248,67 +248,54 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
             this.databaseCount = Objects.requireNonNull(databaseCount);
             return this;
         }
-
         public Builder databaseErrorCount(Integer databaseErrorCount) {
             this.databaseErrorCount = Objects.requireNonNull(databaseErrorCount);
             return this;
         }
-
         public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
             return this;
         }
-
         public Builder sourceServerName(String sourceServerName) {
             this.sourceServerName = Objects.requireNonNull(sourceServerName);
             return this;
         }
-
         public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
-
         public Builder targetServerName(String targetServerName) {
             this.targetServerName = Objects.requireNonNull(targetServerName);
             return this;
         }
-
         public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
-        }
-        public MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse build() {
+        }        public MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse(databaseCount, databaseErrorCount, endedOn, id, resultType, sourceServerBrandVersion, sourceServerName, sourceServerVersion, startedOn, state, targetServerBrandVersion, targetServerName, targetServerVersion);
         }
     }

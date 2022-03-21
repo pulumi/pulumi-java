@@ -96,32 +96,26 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ManagedIdentityType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ManagedIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ManagedIdentityPropertiesArgs build() {
+        }        public ManagedIdentityPropertiesArgs build() {
             return new ManagedIdentityPropertiesArgs(principalId, tenantId, type);
         }
     }

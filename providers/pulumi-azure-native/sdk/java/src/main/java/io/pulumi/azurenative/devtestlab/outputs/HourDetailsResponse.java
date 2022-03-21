@@ -53,8 +53,7 @@ public final class HourDetailsResponse {
         public Builder minute(@Nullable Integer minute) {
             this.minute = minute;
             return this;
-        }
-        public HourDetailsResponse build() {
+        }        public HourDetailsResponse build() {
             return new HourDetailsResponse(minute);
         }
     }

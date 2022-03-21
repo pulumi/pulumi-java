@@ -97,42 +97,34 @@ public final class StudioComponentConfigurationArgs extends io.pulumi.resources.
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
-
         public Builder activeDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = Output.ofNullable(activeDirectoryConfiguration);
             return this;
         }
-
         public Builder computeFarmConfiguration(@Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration) {
             this.computeFarmConfiguration = computeFarmConfiguration;
             return this;
         }
-
         public Builder computeFarmConfiguration(@Nullable StudioComponentComputeFarmConfigurationArgs computeFarmConfiguration) {
             this.computeFarmConfiguration = Output.ofNullable(computeFarmConfiguration);
             return this;
         }
-
         public Builder licenseServiceConfiguration(@Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration) {
             this.licenseServiceConfiguration = licenseServiceConfiguration;
             return this;
         }
-
         public Builder licenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfigurationArgs licenseServiceConfiguration) {
             this.licenseServiceConfiguration = Output.ofNullable(licenseServiceConfiguration);
             return this;
         }
-
         public Builder sharedFileSystemConfiguration(@Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration) {
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }
-
         public Builder sharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfigurationArgs sharedFileSystemConfiguration) {
             this.sharedFileSystemConfiguration = Output.ofNullable(sharedFileSystemConfiguration);
             return this;
-        }
-        public StudioComponentConfigurationArgs build() {
+        }        public StudioComponentConfigurationArgs build() {
             return new StudioComponentConfigurationArgs(activeDirectoryConfiguration, computeFarmConfiguration, licenseServiceConfiguration, sharedFileSystemConfiguration);
         }
     }

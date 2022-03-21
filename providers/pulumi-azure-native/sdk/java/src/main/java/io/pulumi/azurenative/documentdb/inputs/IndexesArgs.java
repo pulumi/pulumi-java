@@ -98,32 +98,26 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable Either<String,DataType> dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder kind(@Nullable Output<Either<String,IndexKind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,IndexKind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder precision(@Nullable Output<Integer> precision) {
             this.precision = precision;
             return this;
         }
-
         public Builder precision(@Nullable Integer precision) {
             this.precision = Output.ofNullable(precision);
             return this;
-        }
-        public IndexesArgs build() {
+        }        public IndexesArgs build() {
             return new IndexesArgs(dataType, kind, precision);
         }
     }

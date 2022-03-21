@@ -56,12 +56,10 @@ public final class StackApplicationSettings {
             this.enabled = enabled;
             return this;
         }
-
         public Builder settingsGroup(@Nullable String settingsGroup) {
             this.settingsGroup = settingsGroup;
             return this;
-        }
-        public StackApplicationSettings build() {
+        }        public StackApplicationSettings build() {
             return new StackApplicationSettings(enabled, settingsGroup);
         }
     }

@@ -77,12 +77,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
             this.channelTag = Objects.requireNonNull(channelTag);
             return this;
         }
-
         public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
             this.sentimentData = Objects.requireNonNull(sentimentData);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(channelTag, sentimentData);
         }
     }

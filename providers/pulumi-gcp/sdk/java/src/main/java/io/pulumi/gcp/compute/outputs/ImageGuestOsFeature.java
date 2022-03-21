@@ -53,8 +53,7 @@ public final class ImageGuestOsFeature {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageGuestOsFeature build() {
+        }        public ImageGuestOsFeature build() {
             return new ImageGuestOsFeature(type);
         }
     }

@@ -72,12 +72,10 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends i
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public ImageTemplateIdentityResponseUserAssignedIdentities build() {
+        }        public ImageTemplateIdentityResponseUserAssignedIdentities build() {
             return new ImageTemplateIdentityResponseUserAssignedIdentities(clientId, principalId);
         }
     }

@@ -105,22 +105,21 @@ public final class GetGlobalReplicationGroupResult {
             this.cacheParameterGroupName = cacheParameterGroupName;
             return this;
         }
-
         public Builder globalReplicationGroupId(@Nullable String globalReplicationGroupId) {
             this.globalReplicationGroupId = globalReplicationGroupId;
             return this;
         }
-
         public Builder members(@Nullable List<GlobalReplicationGroupMember> members) {
             this.members = members;
             return this;
         }
-
+        public Builder members(GlobalReplicationGroupMember... members) {
+            return members(List.of(members));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetGlobalReplicationGroupResult build() {
+        }        public GetGlobalReplicationGroupResult build() {
             return new GetGlobalReplicationGroupResult(cacheParameterGroupName, globalReplicationGroupId, members, status);
         }
     }

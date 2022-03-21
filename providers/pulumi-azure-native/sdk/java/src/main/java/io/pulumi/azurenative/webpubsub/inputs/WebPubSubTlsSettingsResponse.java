@@ -60,8 +60,7 @@ public final class WebPubSubTlsSettingsResponse extends io.pulumi.resources.Invo
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
-        }
-        public WebPubSubTlsSettingsResponse build() {
+        }        public WebPubSubTlsSettingsResponse build() {
             return new WebPubSubTlsSettingsResponse(clientCertEnabled);
         }
     }

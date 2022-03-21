@@ -136,32 +136,26 @@ public final class ReportableExceptionResponse {
             this.actionableMessage = actionableMessage;
             return this;
         }
-
         public Builder filePath(String filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
-
         public Builder hResult(Integer hResult) {
             this.hResult = Objects.requireNonNull(hResult);
             return this;
         }
-
         public Builder lineNumber(String lineNumber) {
             this.lineNumber = Objects.requireNonNull(lineNumber);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder stackTrace(String stackTrace) {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
-        }
-        public ReportableExceptionResponse build() {
+        }        public ReportableExceptionResponse build() {
             return new ReportableExceptionResponse(actionableMessage, filePath, hResult, lineNumber, message, stackTrace);
         }
     }

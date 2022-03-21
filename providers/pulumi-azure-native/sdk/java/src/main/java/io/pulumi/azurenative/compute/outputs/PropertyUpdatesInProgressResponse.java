@@ -53,8 +53,7 @@ public final class PropertyUpdatesInProgressResponse {
         public Builder targetTier(@Nullable String targetTier) {
             this.targetTier = targetTier;
             return this;
-        }
-        public PropertyUpdatesInProgressResponse build() {
+        }        public PropertyUpdatesInProgressResponse build() {
             return new PropertyUpdatesInProgressResponse(targetTier);
         }
     }

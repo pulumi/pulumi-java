@@ -59,8 +59,7 @@ public final class SingletonPartitionSchemeDescriptionResponse extends io.pulumi
         public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
-        }
-        public SingletonPartitionSchemeDescriptionResponse build() {
+        }        public SingletonPartitionSchemeDescriptionResponse build() {
             return new SingletonPartitionSchemeDescriptionResponse(partitionScheme);
         }
     }

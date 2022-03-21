@@ -155,67 +155,54 @@ public final class DetectorModelAction {
             this.clearTimer = clearTimer;
             return this;
         }
-
         public Builder dynamoDB(@Nullable DetectorModelDynamoDB dynamoDB) {
             this.dynamoDB = dynamoDB;
             return this;
         }
-
         public Builder dynamoDBv2(@Nullable DetectorModelDynamoDBv2 dynamoDBv2) {
             this.dynamoDBv2 = dynamoDBv2;
             return this;
         }
-
         public Builder firehose(@Nullable DetectorModelFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder iotEvents(@Nullable DetectorModelIotEvents iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
-
         public Builder iotSiteWise(@Nullable DetectorModelIotSiteWise iotSiteWise) {
             this.iotSiteWise = iotSiteWise;
             return this;
         }
-
         public Builder iotTopicPublish(@Nullable DetectorModelIotTopicPublish iotTopicPublish) {
             this.iotTopicPublish = iotTopicPublish;
             return this;
         }
-
         public Builder lambda(@Nullable DetectorModelLambda lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder resetTimer(@Nullable DetectorModelResetTimer resetTimer) {
             this.resetTimer = resetTimer;
             return this;
         }
-
         public Builder setTimer(@Nullable DetectorModelSetTimer setTimer) {
             this.setTimer = setTimer;
             return this;
         }
-
         public Builder setVariable(@Nullable DetectorModelSetVariable setVariable) {
             this.setVariable = setVariable;
             return this;
         }
-
         public Builder sns(@Nullable DetectorModelSns sns) {
             this.sns = sns;
             return this;
         }
-
         public Builder sqs(@Nullable DetectorModelSqs sqs) {
             this.sqs = sqs;
             return this;
-        }
-        public DetectorModelAction build() {
+        }        public DetectorModelAction build() {
             return new DetectorModelAction(clearTimer, dynamoDB, dynamoDBv2, firehose, iotEvents, iotSiteWise, iotTopicPublish, lambda, resetTimer, setTimer, setVariable, sns, sqs);
         }
     }

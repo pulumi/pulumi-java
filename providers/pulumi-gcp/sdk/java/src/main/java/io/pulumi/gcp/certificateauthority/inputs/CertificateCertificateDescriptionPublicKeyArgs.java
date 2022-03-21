@@ -75,22 +75,18 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public CertificateCertificateDescriptionPublicKeyArgs build() {
+        }        public CertificateCertificateDescriptionPublicKeyArgs build() {
             return new CertificateCertificateDescriptionPublicKeyArgs(format, key);
         }
     }

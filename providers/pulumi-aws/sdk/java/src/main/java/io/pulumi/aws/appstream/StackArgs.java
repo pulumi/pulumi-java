@@ -216,112 +216,102 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             this.accessEndpoints = accessEndpoints;
             return this;
         }
-
         public Builder accessEndpoints(@Nullable List<StackAccessEndpointArgs> accessEndpoints) {
             this.accessEndpoints = Output.ofNullable(accessEndpoints);
             return this;
         }
-
+        public Builder accessEndpoints(StackAccessEndpointArgs... accessEndpoints) {
+            return accessEndpoints(List.of(accessEndpoints));
+        }
         public Builder applicationSettings(@Nullable Output<StackApplicationSettingsArgs> applicationSettings) {
             this.applicationSettings = applicationSettings;
             return this;
         }
-
         public Builder applicationSettings(@Nullable StackApplicationSettingsArgs applicationSettings) {
             this.applicationSettings = Output.ofNullable(applicationSettings);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder embedHostDomains(@Nullable Output<List<String>> embedHostDomains) {
             this.embedHostDomains = embedHostDomains;
             return this;
         }
-
         public Builder embedHostDomains(@Nullable List<String> embedHostDomains) {
             this.embedHostDomains = Output.ofNullable(embedHostDomains);
             return this;
         }
-
+        public Builder embedHostDomains(String... embedHostDomains) {
+            return embedHostDomains(List.of(embedHostDomains));
+        }
         public Builder feedbackUrl(@Nullable Output<String> feedbackUrl) {
             this.feedbackUrl = feedbackUrl;
             return this;
         }
-
         public Builder feedbackUrl(@Nullable String feedbackUrl) {
             this.feedbackUrl = Output.ofNullable(feedbackUrl);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
-
         public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = Output.ofNullable(redirectUrl);
             return this;
         }
-
         public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorArgs>> storageConnectors) {
             this.storageConnectors = storageConnectors;
             return this;
         }
-
         public Builder storageConnectors(@Nullable List<StackStorageConnectorArgs> storageConnectors) {
             this.storageConnectors = Output.ofNullable(storageConnectors);
             return this;
         }
-
+        public Builder storageConnectors(StackStorageConnectorArgs... storageConnectors) {
+            return storageConnectors(List.of(storageConnectors));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userSettings(@Nullable Output<List<StackUserSettingArgs>> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
-
         public Builder userSettings(@Nullable List<StackUserSettingArgs> userSettings) {
             this.userSettings = Output.ofNullable(userSettings);
             return this;
         }
-        public StackArgs build() {
+        public Builder userSettings(StackUserSettingArgs... userSettings) {
+            return userSettings(List.of(userSettings));
+        }        public StackArgs build() {
             return new StackArgs(accessEndpoints, applicationSettings, description, displayName, embedHostDomains, feedbackUrl, name, redirectUrl, storageConnectors, tags, userSettings);
         }
     }

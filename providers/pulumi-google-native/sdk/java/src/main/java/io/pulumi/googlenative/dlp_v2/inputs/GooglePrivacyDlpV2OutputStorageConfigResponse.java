@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
             this.outputSchema = Objects.requireNonNull(outputSchema);
             return this;
         }
-
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             this.table = Objects.requireNonNull(table);
             return this;
-        }
-        public GooglePrivacyDlpV2OutputStorageConfigResponse build() {
+        }        public GooglePrivacyDlpV2OutputStorageConfigResponse build() {
             return new GooglePrivacyDlpV2OutputStorageConfigResponse(outputSchema, table);
         }
     }

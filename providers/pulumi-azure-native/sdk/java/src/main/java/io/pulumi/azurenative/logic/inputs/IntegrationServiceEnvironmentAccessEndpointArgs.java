@@ -63,12 +63,10 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends io.pu
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,IntegrationServiceEnvironmentAccessEndpointType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public IntegrationServiceEnvironmentAccessEndpointArgs build() {
+        }        public IntegrationServiceEnvironmentAccessEndpointArgs build() {
             return new IntegrationServiceEnvironmentAccessEndpointArgs(type);
         }
     }

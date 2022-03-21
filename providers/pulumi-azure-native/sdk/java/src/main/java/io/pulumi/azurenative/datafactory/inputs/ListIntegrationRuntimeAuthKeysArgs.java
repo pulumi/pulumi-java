@@ -88,17 +88,14 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resource
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder integrationRuntimeName(String integrationRuntimeName) {
             this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListIntegrationRuntimeAuthKeysArgs build() {
+        }        public ListIntegrationRuntimeAuthKeysArgs build() {
             return new ListIntegrationRuntimeAuthKeysArgs(factoryName, integrationRuntimeName, resourceGroupName);
         }
     }

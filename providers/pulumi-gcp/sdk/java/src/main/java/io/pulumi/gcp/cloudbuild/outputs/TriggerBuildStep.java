@@ -291,57 +291,61 @@ public final class TriggerBuildStep {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder dir(@Nullable String dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
-
         public Builder envs(@Nullable List<String> envs) {
             this.envs = envs;
             return this;
         }
-
+        public Builder envs(String... envs) {
+            return envs(List.of(envs));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secretEnvs(@Nullable List<String> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
-
+        public Builder secretEnvs(String... secretEnvs) {
+            return secretEnvs(List.of(secretEnvs));
+        }
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timing(@Nullable String timing) {
             this.timing = timing;
             return this;
         }
-
         public Builder volumes(@Nullable List<TriggerBuildStepVolume> volumes) {
             this.volumes = volumes;
             return this;
         }
-
+        public Builder volumes(TriggerBuildStepVolume... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder waitFors(@Nullable List<String> waitFors) {
             this.waitFors = waitFors;
             return this;
         }
-        public TriggerBuildStep build() {
+        public Builder waitFors(String... waitFors) {
+            return waitFors(List.of(waitFors));
+        }        public TriggerBuildStep build() {
             return new TriggerBuildStep(args, dir, entrypoint, envs, id, name, secretEnvs, timeout, timing, volumes, waitFors);
         }
     }

@@ -70,12 +70,16 @@ public final class GoogleCloudRetailV2alphaAudienceResponse {
             this.ageGroups = Objects.requireNonNull(ageGroups);
             return this;
         }
-
+        public Builder ageGroups(String... ageGroups) {
+            return ageGroups(List.of(ageGroups));
+        }
         public Builder genders(List<String> genders) {
             this.genders = Objects.requireNonNull(genders);
             return this;
         }
-        public GoogleCloudRetailV2alphaAudienceResponse build() {
+        public Builder genders(String... genders) {
+            return genders(List.of(genders));
+        }        public GoogleCloudRetailV2alphaAudienceResponse build() {
             return new GoogleCloudRetailV2alphaAudienceResponse(ageGroups, genders);
         }
     }

@@ -95,32 +95,26 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.maxBurstSize = maxBurstSize;
             return this;
         }
-
         public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
             this.maxBurstSize = Output.ofNullable(maxBurstSize);
             return this;
         }
-
         public Builder maxConcurrentTasks(@Nullable Output<Integer> maxConcurrentTasks) {
             this.maxConcurrentTasks = maxConcurrentTasks;
             return this;
         }
-
         public Builder maxConcurrentTasks(@Nullable Integer maxConcurrentTasks) {
             this.maxConcurrentTasks = Output.ofNullable(maxConcurrentTasks);
             return this;
         }
-
         public Builder maxTasksDispatchedPerSecond(@Nullable Output<Double> maxTasksDispatchedPerSecond) {
             this.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
             return this;
         }
-
         public Builder maxTasksDispatchedPerSecond(@Nullable Double maxTasksDispatchedPerSecond) {
             this.maxTasksDispatchedPerSecond = Output.ofNullable(maxTasksDispatchedPerSecond);
             return this;
-        }
-        public RateLimitsArgs build() {
+        }        public RateLimitsArgs build() {
             return new RateLimitsArgs(maxBurstSize, maxConcurrentTasks, maxTasksDispatchedPerSecond);
         }
     }

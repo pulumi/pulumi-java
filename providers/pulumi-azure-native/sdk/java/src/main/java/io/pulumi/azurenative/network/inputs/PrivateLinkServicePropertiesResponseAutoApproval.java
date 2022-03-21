@@ -62,7 +62,9 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends io.p
             this.subscriptions = subscriptions;
             return this;
         }
-        public PrivateLinkServicePropertiesResponseAutoApproval build() {
+        public Builder subscriptions(String... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }        public PrivateLinkServicePropertiesResponseAutoApproval build() {
             return new PrivateLinkServicePropertiesResponseAutoApproval(subscriptions);
         }
     }

@@ -62,12 +62,13 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<APIServiceConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-        public APIServiceStatusArgs build() {
+        public Builder conditions(APIServiceConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }        public APIServiceStatusArgs build() {
             return new APIServiceStatusArgs(conditions);
         }
     }

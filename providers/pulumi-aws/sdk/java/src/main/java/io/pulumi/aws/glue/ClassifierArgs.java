@@ -126,52 +126,42 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
             this.csvClassifier = csvClassifier;
             return this;
         }
-
         public Builder csvClassifier(@Nullable ClassifierCsvClassifierArgs csvClassifier) {
             this.csvClassifier = Output.ofNullable(csvClassifier);
             return this;
         }
-
         public Builder grokClassifier(@Nullable Output<ClassifierGrokClassifierArgs> grokClassifier) {
             this.grokClassifier = grokClassifier;
             return this;
         }
-
         public Builder grokClassifier(@Nullable ClassifierGrokClassifierArgs grokClassifier) {
             this.grokClassifier = Output.ofNullable(grokClassifier);
             return this;
         }
-
         public Builder jsonClassifier(@Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier) {
             this.jsonClassifier = jsonClassifier;
             return this;
         }
-
         public Builder jsonClassifier(@Nullable ClassifierJsonClassifierArgs jsonClassifier) {
             this.jsonClassifier = Output.ofNullable(jsonClassifier);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder xmlClassifier(@Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier) {
             this.xmlClassifier = xmlClassifier;
             return this;
         }
-
         public Builder xmlClassifier(@Nullable ClassifierXmlClassifierArgs xmlClassifier) {
             this.xmlClassifier = Output.ofNullable(xmlClassifier);
             return this;
-        }
-        public ClassifierArgs build() {
+        }        public ClassifierArgs build() {
             return new ClassifierArgs(csvClassifier, grokClassifier, jsonClassifier, name, xmlClassifier);
         }
     }

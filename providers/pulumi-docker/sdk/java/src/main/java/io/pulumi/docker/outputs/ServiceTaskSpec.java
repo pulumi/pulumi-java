@@ -110,42 +110,37 @@ public final class ServiceTaskSpec {
             this.containerSpec = Objects.requireNonNull(containerSpec);
             return this;
         }
-
         public Builder forceUpdate(@Nullable Integer forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
-
         public Builder logDriver(@Nullable ServiceTaskSpecLogDriver logDriver) {
             this.logDriver = logDriver;
             return this;
         }
-
         public Builder networks(@Nullable List<String> networks) {
             this.networks = networks;
             return this;
         }
-
+        public Builder networks(String... networks) {
+            return networks(List.of(networks));
+        }
         public Builder placement(@Nullable ServiceTaskSpecPlacement placement) {
             this.placement = placement;
             return this;
         }
-
         public Builder resources(@Nullable ServiceTaskSpecResources resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder restartPolicy(@Nullable ServiceTaskSpecRestartPolicy restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
-
         public Builder runtime(@Nullable String runtime) {
             this.runtime = runtime;
             return this;
-        }
-        public ServiceTaskSpec build() {
+        }        public ServiceTaskSpec build() {
             return new ServiceTaskSpec(containerSpec, forceUpdate, logDriver, networks, placement, resources, restartPolicy, runtime);
         }
     }

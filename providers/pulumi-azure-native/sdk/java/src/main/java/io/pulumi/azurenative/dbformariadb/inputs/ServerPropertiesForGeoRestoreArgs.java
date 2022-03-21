@@ -165,72 +165,58 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
             this.createMode = Objects.requireNonNull(createMode);
             return this;
         }
-
         public Builder createMode(String createMode) {
             this.createMode = Output.of(Objects.requireNonNull(createMode));
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
             this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder sourceServerId(Output<String> sourceServerId) {
             this.sourceServerId = Objects.requireNonNull(sourceServerId);
             return this;
         }
-
         public Builder sourceServerId(String sourceServerId) {
             this.sourceServerId = Output.of(Objects.requireNonNull(sourceServerId));
             return this;
         }
-
         public Builder sslEnforcement(@Nullable Output<SslEnforcementEnum> sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
-
         public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
             this.sslEnforcement = Output.ofNullable(sslEnforcement);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder version(@Nullable Output<Either<String,ServerVersion>> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Either<String,ServerVersion> version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ServerPropertiesForGeoRestoreArgs build() {
+        }        public ServerPropertiesForGeoRestoreArgs build() {
             return new ServerPropertiesForGeoRestoreArgs(createMode, minimalTlsVersion, publicNetworkAccess, sourceServerId, sslEnforcement, storageProfile, version);
         }
     }

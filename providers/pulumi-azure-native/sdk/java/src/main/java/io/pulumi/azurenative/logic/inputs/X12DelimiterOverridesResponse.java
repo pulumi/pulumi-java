@@ -192,47 +192,38 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
-
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder protocolVersion(@Nullable String protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
-
         public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
-
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
-
         public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
-        }
-        public X12DelimiterOverridesResponse build() {
+        }        public X12DelimiterOverridesResponse build() {
             return new X12DelimiterOverridesResponse(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }
     }

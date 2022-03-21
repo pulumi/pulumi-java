@@ -122,27 +122,22 @@ public final class Pod {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable PodSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable PodStatus status) {
             this.status = status;
             return this;
-        }
-        public Pod build() {
+        }        public Pod build() {
             return new Pod(apiVersion, kind, metadata, spec, status);
         }
     }

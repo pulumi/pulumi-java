@@ -290,152 +290,128 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder deletionGracePeriodSeconds(@Nullable Output<Integer> deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
             return this;
         }
-
         public Builder deletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = Output.ofNullable(deletionGracePeriodSeconds);
             return this;
         }
-
         public Builder deletionTimestamp(@Nullable Output<String> deletionTimestamp) {
             this.deletionTimestamp = deletionTimestamp;
             return this;
         }
-
         public Builder deletionTimestamp(@Nullable String deletionTimestamp) {
             this.deletionTimestamp = Output.ofNullable(deletionTimestamp);
             return this;
         }
-
         public Builder finalizers(@Nullable Output<List<String>> finalizers) {
             this.finalizers = finalizers;
             return this;
         }
-
         public Builder finalizers(@Nullable List<String> finalizers) {
             this.finalizers = Output.ofNullable(finalizers);
             return this;
         }
-
+        public Builder finalizers(String... finalizers) {
+            return finalizers(List.of(finalizers));
+        }
         public Builder generateName(@Nullable Output<String> generateName) {
             this.generateName = generateName;
             return this;
         }
-
         public Builder generateName(@Nullable String generateName) {
             this.generateName = Output.ofNullable(generateName);
             return this;
         }
-
         public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder ownerReferences(@Nullable Output<List<OwnerReferenceArgs>> ownerReferences) {
             this.ownerReferences = ownerReferences;
             return this;
         }
-
         public Builder ownerReferences(@Nullable List<OwnerReferenceArgs> ownerReferences) {
             this.ownerReferences = Output.ofNullable(ownerReferences);
             return this;
         }
-
+        public Builder ownerReferences(OwnerReferenceArgs... ownerReferences) {
+            return ownerReferences(List.of(ownerReferences));
+        }
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public ObjectMetaArgs build() {
+        }        public ObjectMetaArgs build() {
             return new ObjectMetaArgs(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }
     }

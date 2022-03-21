@@ -81,12 +81,10 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
             this.parameters = parameters;
             return this;
         }
-
         public Builder pipelineReference(@Nullable PipelineReferenceResponse pipelineReference) {
             this.pipelineReference = pipelineReference;
             return this;
-        }
-        public TriggerPipelineReferenceResponse build() {
+        }        public TriggerPipelineReferenceResponse build() {
             return new TriggerPipelineReferenceResponse(parameters, pipelineReference);
         }
     }

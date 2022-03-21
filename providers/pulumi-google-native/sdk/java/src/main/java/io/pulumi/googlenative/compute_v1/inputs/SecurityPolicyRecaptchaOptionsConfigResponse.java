@@ -54,8 +54,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse extends io.pulum
         public Builder redirectSiteKey(String redirectSiteKey) {
             this.redirectSiteKey = Objects.requireNonNull(redirectSiteKey);
             return this;
-        }
-        public SecurityPolicyRecaptchaOptionsConfigResponse build() {
+        }        public SecurityPolicyRecaptchaOptionsConfigResponse build() {
             return new SecurityPolicyRecaptchaOptionsConfigResponse(redirectSiteKey);
         }
     }

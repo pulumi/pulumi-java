@@ -196,92 +196,77 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             this.accessConfig = accessConfig;
             return this;
         }
-
         public Builder accessConfig(@Nullable RuntimeAccessConfigGetArgs accessConfig) {
             this.accessConfig = Output.ofNullable(accessConfig);
             return this;
         }
-
         public Builder healthState(@Nullable Output<String> healthState) {
             this.healthState = healthState;
             return this;
         }
-
         public Builder healthState(@Nullable String healthState) {
             this.healthState = Output.ofNullable(healthState);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metrics(@Nullable Output<List<RuntimeMetricGetArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<RuntimeMetricGetArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(RuntimeMetricGetArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
-
         public Builder softwareConfig(@Nullable RuntimeSoftwareConfigGetArgs softwareConfig) {
             this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
-
         public Builder virtualMachine(@Nullable RuntimeVirtualMachineGetArgs virtualMachine) {
             this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
-        }
-        public RuntimeState build() {
+        }        public RuntimeState build() {
             return new RuntimeState(accessConfig, healthState, location, metrics, name, project, softwareConfig, state, virtualMachine);
         }
     }

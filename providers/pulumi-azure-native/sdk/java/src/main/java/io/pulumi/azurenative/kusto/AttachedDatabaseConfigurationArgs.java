@@ -173,82 +173,66 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
             this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
-
         public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Output.ofNullable(attachedDatabaseConfigurationName);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder clusterResourceId(Output<String> clusterResourceId) {
             this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
             return this;
         }
-
         public Builder clusterResourceId(String clusterResourceId) {
             this.clusterResourceId = Output.of(Objects.requireNonNull(clusterResourceId));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder defaultPrincipalsModificationKind(Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
             return this;
         }
-
         public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Output.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tableLevelSharingProperties(@Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
             this.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
-
         public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
             this.tableLevelSharingProperties = Output.ofNullable(tableLevelSharingProperties);
             return this;
-        }
-        public AttachedDatabaseConfigurationArgs build() {
+        }        public AttachedDatabaseConfigurationArgs build() {
             return new AttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, clusterName, clusterResourceId, databaseName, defaultPrincipalsModificationKind, location, resourceGroupName, tableLevelSharingProperties);
         }
     }

@@ -72,22 +72,18 @@ public final class GetRegistryPolicyResult {
             this.id = id;
             return this;
         }
-
         public Builder policy(@Nullable Object policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder registryName(@Nullable String registryName) {
             this.registryName = registryName;
             return this;
         }
-
         public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = revisionId;
             return this;
-        }
-        public GetRegistryPolicyResult build() {
+        }        public GetRegistryPolicyResult build() {
             return new GetRegistryPolicyResult(id, policy, registryName, revisionId);
         }
     }

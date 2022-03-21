@@ -88,17 +88,14 @@ public final class GetTemplateArtifactArgs extends io.pulumi.resources.InvokeArg
             this.artifactName = Objects.requireNonNull(artifactName);
             return this;
         }
-
         public Builder blueprintName(String blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
-        }
-        public GetTemplateArtifactArgs build() {
+        }        public GetTemplateArtifactArgs build() {
             return new GetTemplateArtifactArgs(artifactName, blueprintName, resourceScope);
         }
     }

@@ -184,47 +184,38 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nestedResourceProvisioningState(String nestedResourceProvisioningState) {
             this.nestedResourceProvisioningState = Objects.requireNonNull(nestedResourceProvisioningState);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder serverUri(String serverUri) {
             this.serverUri = Objects.requireNonNull(serverUri);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public HiveMetastoreResponse build() {
+        }        public HiveMetastoreResponse build() {
             return new HiveMetastoreResponse(databaseName, id, name, nestedResourceProvisioningState, password, runtimeVersion, serverUri, type, userName);
         }
     }

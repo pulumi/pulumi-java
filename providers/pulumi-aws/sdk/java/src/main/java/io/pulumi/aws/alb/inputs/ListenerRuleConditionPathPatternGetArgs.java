@@ -57,12 +57,13 @@ public final class ListenerRuleConditionPathPatternGetArgs extends io.pulumi.res
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ListenerRuleConditionPathPatternGetArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionPathPatternGetArgs build() {
             return new ListenerRuleConditionPathPatternGetArgs(values);
         }
     }

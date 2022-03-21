@@ -152,37 +152,30 @@ public final class AutomationRunbookReceiverResponse {
             this.automationAccountId = Objects.requireNonNull(automationAccountId);
             return this;
         }
-
         public Builder isGlobalRunbook(Boolean isGlobalRunbook) {
             this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder runbookName(String runbookName) {
             this.runbookName = Objects.requireNonNull(runbookName);
             return this;
         }
-
         public Builder serviceUri(@Nullable String serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public Builder webhookResourceId(String webhookResourceId) {
             this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
             return this;
-        }
-        public AutomationRunbookReceiverResponse build() {
+        }        public AutomationRunbookReceiverResponse build() {
             return new AutomationRunbookReceiverResponse(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
         }
     }

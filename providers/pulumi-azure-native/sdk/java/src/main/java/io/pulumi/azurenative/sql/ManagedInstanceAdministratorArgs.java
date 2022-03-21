@@ -152,72 +152,58 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
             this.administratorName = administratorName;
             return this;
         }
-
         public Builder administratorName(@Nullable String administratorName) {
             this.administratorName = Output.ofNullable(administratorName);
             return this;
         }
-
         public Builder administratorType(Output<Either<String,ManagedInstanceAdministratorType>> administratorType) {
             this.administratorType = Objects.requireNonNull(administratorType);
             return this;
         }
-
         public Builder administratorType(Either<String,ManagedInstanceAdministratorType> administratorType) {
             this.administratorType = Output.of(Objects.requireNonNull(administratorType));
             return this;
         }
-
         public Builder login(Output<String> login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
-
         public Builder login(String login) {
             this.login = Output.of(Objects.requireNonNull(login));
             return this;
         }
-
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sid(Output<String> sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
-
         public Builder sid(String sid) {
             this.sid = Output.of(Objects.requireNonNull(sid));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public ManagedInstanceAdministratorArgs build() {
+        }        public ManagedInstanceAdministratorArgs build() {
             return new ManagedInstanceAdministratorArgs(administratorName, administratorType, login, managedInstanceName, resourceGroupName, sid, tenantId);
         }
     }

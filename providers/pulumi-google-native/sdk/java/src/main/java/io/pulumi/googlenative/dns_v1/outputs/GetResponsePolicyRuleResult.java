@@ -110,27 +110,22 @@ public final class GetResponsePolicyRuleResult {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder localData(ResponsePolicyRuleLocalDataResponse localData) {
             this.localData = Objects.requireNonNull(localData);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public GetResponsePolicyRuleResult build() {
+        }        public GetResponsePolicyRuleResult build() {
             return new GetResponsePolicyRuleResult(behavior, dnsName, kind, localData, ruleName);
         }
     }

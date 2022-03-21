@@ -73,12 +73,13 @@ public final class ContainerRecipeInstanceConfiguration {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-
+        public Builder blockDeviceMappings(ContainerRecipeInstanceBlockDeviceMapping... blockDeviceMappings) {
+            return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
-        }
-        public ContainerRecipeInstanceConfiguration build() {
+        }        public ContainerRecipeInstanceConfiguration build() {
             return new ContainerRecipeInstanceConfiguration(blockDeviceMappings, image);
         }
     }

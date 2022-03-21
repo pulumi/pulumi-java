@@ -93,32 +93,29 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder routes(Output<List<VoiceConnectorOrganizationRouteArgs>> routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-
         public Builder routes(List<VoiceConnectorOrganizationRouteArgs> routes) {
             this.routes = Output.of(Objects.requireNonNull(routes));
             return this;
         }
-
+        public Builder routes(VoiceConnectorOrganizationRouteArgs... routes) {
+            return routes(List.of(routes));
+        }
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
-
         public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
-        }
-        public VoiceConnectorOrganizationArgs build() {
+        }        public VoiceConnectorOrganizationArgs build() {
             return new VoiceConnectorOrganizationArgs(disabled, routes, voiceConnectorId);
         }
     }

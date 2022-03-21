@@ -71,12 +71,10 @@ public final class FlowDefinitionOutputConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder s3OutputPath(String s3OutputPath) {
             this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
             return this;
-        }
-        public FlowDefinitionOutputConfig build() {
+        }        public FlowDefinitionOutputConfig build() {
             return new FlowDefinitionOutputConfig(kmsKeyId, s3OutputPath);
         }
     }

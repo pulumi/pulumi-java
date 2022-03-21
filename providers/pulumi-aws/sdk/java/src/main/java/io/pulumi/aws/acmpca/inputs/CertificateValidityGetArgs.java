@@ -73,22 +73,18 @@ public final class CertificateValidityGetArgs extends io.pulumi.resources.Resour
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public CertificateValidityGetArgs build() {
+        }        public CertificateValidityGetArgs build() {
             return new CertificateValidityGetArgs(type, value);
         }
     }

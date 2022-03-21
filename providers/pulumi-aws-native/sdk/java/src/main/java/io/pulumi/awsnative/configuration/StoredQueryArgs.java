@@ -96,42 +96,37 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.queryDescription = queryDescription;
             return this;
         }
-
         public Builder queryDescription(@Nullable String queryDescription) {
             this.queryDescription = Output.ofNullable(queryDescription);
             return this;
         }
-
         public Builder queryExpression(Output<String> queryExpression) {
             this.queryExpression = Objects.requireNonNull(queryExpression);
             return this;
         }
-
         public Builder queryExpression(String queryExpression) {
             this.queryExpression = Output.of(Objects.requireNonNull(queryExpression));
             return this;
         }
-
         public Builder queryName(Output<String> queryName) {
             this.queryName = Objects.requireNonNull(queryName);
             return this;
         }
-
         public Builder queryName(String queryName) {
             this.queryName = Output.of(Objects.requireNonNull(queryName));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<StoredQueryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<StoredQueryTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public StoredQueryArgs build() {
+        public Builder tags(StoredQueryTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public StoredQueryArgs build() {
             return new StoredQueryArgs(queryDescription, queryExpression, queryName, tags);
         }
     }

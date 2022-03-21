@@ -172,82 +172,66 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyType(@Nullable Output<String> policyType) {
             this.policyType = policyType;
             return this;
         }
-
         public Builder policyType(@Nullable String policyType) {
             this.policyType = Output.ofNullable(policyType);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
             this.scalableDimension = scalableDimension;
             return this;
         }
-
         public Builder scalableDimension(@Nullable String scalableDimension) {
             this.scalableDimension = Output.ofNullable(scalableDimension);
             return this;
         }
-
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
-
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
         }
-
         public Builder stepScalingPolicyConfiguration(@Nullable Output<PolicyStepScalingPolicyConfigurationGetArgs> stepScalingPolicyConfiguration) {
             this.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
             return this;
         }
-
         public Builder stepScalingPolicyConfiguration(@Nullable PolicyStepScalingPolicyConfigurationGetArgs stepScalingPolicyConfiguration) {
             this.stepScalingPolicyConfiguration = Output.ofNullable(stepScalingPolicyConfiguration);
             return this;
         }
-
         public Builder targetTrackingScalingPolicyConfiguration(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationGetArgs> targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
             return this;
         }
-
         public Builder targetTrackingScalingPolicyConfiguration(@Nullable PolicyTargetTrackingScalingPolicyConfigurationGetArgs targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = Output.ofNullable(targetTrackingScalingPolicyConfiguration);
             return this;
-        }
-        public PolicyState build() {
+        }        public PolicyState build() {
             return new PolicyState(arn, name, policyType, resourceId, scalableDimension, serviceNamespace, stepScalingPolicyConfiguration, targetTrackingScalingPolicyConfiguration);
         }
     }

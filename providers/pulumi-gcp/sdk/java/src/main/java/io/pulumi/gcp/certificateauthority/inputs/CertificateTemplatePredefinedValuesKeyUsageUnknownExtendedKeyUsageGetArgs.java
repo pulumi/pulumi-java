@@ -57,12 +57,13 @@ public final class CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKey
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs build() {
             return new CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs(objectIdPaths);
         }
     }

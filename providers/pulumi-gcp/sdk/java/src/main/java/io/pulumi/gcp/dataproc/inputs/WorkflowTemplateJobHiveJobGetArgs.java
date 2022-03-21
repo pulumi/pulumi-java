@@ -142,62 +142,53 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             this.continueOnFailure = continueOnFailure;
             return this;
         }
-
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = Output.ofNullable(continueOnFailure);
             return this;
         }
-
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Output.ofNullable(queryFileUri);
             return this;
         }
-
         public Builder queryList(@Nullable Output<WorkflowTemplateJobHiveJobQueryListGetArgs> queryList) {
             this.queryList = queryList;
             return this;
         }
-
         public Builder queryList(@Nullable WorkflowTemplateJobHiveJobQueryListGetArgs queryList) {
             this.queryList = Output.ofNullable(queryList);
             return this;
         }
-
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = Output.ofNullable(scriptVariables);
             return this;
-        }
-        public WorkflowTemplateJobHiveJobGetArgs build() {
+        }        public WorkflowTemplateJobHiveJobGetArgs build() {
             return new WorkflowTemplateJobHiveJobGetArgs(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }
     }

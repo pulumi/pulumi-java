@@ -192,92 +192,86 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.autoConfigurationEnabled = autoConfigurationEnabled;
             return this;
         }
-
         public Builder autoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
             this.autoConfigurationEnabled = Output.ofNullable(autoConfigurationEnabled);
             return this;
         }
-
         public Builder cWEMonitorEnabled(@Nullable Output<Boolean> cWEMonitorEnabled) {
             this.cWEMonitorEnabled = cWEMonitorEnabled;
             return this;
         }
-
         public Builder cWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
             this.cWEMonitorEnabled = Output.ofNullable(cWEMonitorEnabled);
             return this;
         }
-
         public Builder componentMonitoringSettings(@Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings) {
             this.componentMonitoringSettings = componentMonitoringSettings;
             return this;
         }
-
         public Builder componentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSettingArgs> componentMonitoringSettings) {
             this.componentMonitoringSettings = Output.ofNullable(componentMonitoringSettings);
             return this;
         }
-
+        public Builder componentMonitoringSettings(ApplicationComponentMonitoringSettingArgs... componentMonitoringSettings) {
+            return componentMonitoringSettings(List.of(componentMonitoringSettings));
+        }
         public Builder customComponents(@Nullable Output<List<ApplicationCustomComponentArgs>> customComponents) {
             this.customComponents = customComponents;
             return this;
         }
-
         public Builder customComponents(@Nullable List<ApplicationCustomComponentArgs> customComponents) {
             this.customComponents = Output.ofNullable(customComponents);
             return this;
         }
-
+        public Builder customComponents(ApplicationCustomComponentArgs... customComponents) {
+            return customComponents(List.of(customComponents));
+        }
         public Builder logPatternSets(@Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets) {
             this.logPatternSets = logPatternSets;
             return this;
         }
-
         public Builder logPatternSets(@Nullable List<ApplicationLogPatternSetArgs> logPatternSets) {
             this.logPatternSets = Output.ofNullable(logPatternSets);
             return this;
         }
-
+        public Builder logPatternSets(ApplicationLogPatternSetArgs... logPatternSets) {
+            return logPatternSets(List.of(logPatternSets));
+        }
         public Builder opsCenterEnabled(@Nullable Output<Boolean> opsCenterEnabled) {
             this.opsCenterEnabled = opsCenterEnabled;
             return this;
         }
-
         public Builder opsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
             this.opsCenterEnabled = Output.ofNullable(opsCenterEnabled);
             return this;
         }
-
         public Builder opsItemSNSTopicArn(@Nullable Output<String> opsItemSNSTopicArn) {
             this.opsItemSNSTopicArn = opsItemSNSTopicArn;
             return this;
         }
-
         public Builder opsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
             this.opsItemSNSTopicArn = Output.ofNullable(opsItemSNSTopicArn);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ApplicationArgs build() {
+        public Builder tags(ApplicationTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(autoConfigurationEnabled, cWEMonitorEnabled, componentMonitoringSettings, customComponents, logPatternSets, opsCenterEnabled, opsItemSNSTopicArn, resourceGroupName, tags);
         }
     }

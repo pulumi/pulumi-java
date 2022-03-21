@@ -78,22 +78,18 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
-        }
-        public ErrorResponseArgs build() {
+        }        public ErrorResponseArgs build() {
             return new ErrorResponseArgs(code, message);
         }
     }

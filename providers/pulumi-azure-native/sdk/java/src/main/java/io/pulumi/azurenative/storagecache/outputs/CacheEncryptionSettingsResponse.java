@@ -53,8 +53,7 @@ public final class CacheEncryptionSettingsResponse {
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
-        }
-        public CacheEncryptionSettingsResponse build() {
+        }        public CacheEncryptionSettingsResponse build() {
             return new CacheEncryptionSettingsResponse(keyEncryptionKey);
         }
     }

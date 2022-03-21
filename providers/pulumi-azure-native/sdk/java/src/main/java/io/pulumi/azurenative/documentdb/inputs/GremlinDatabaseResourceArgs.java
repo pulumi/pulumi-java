@@ -60,12 +60,10 @@ public final class GremlinDatabaseResourceArgs extends io.pulumi.resources.Resou
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public GremlinDatabaseResourceArgs build() {
+        }        public GremlinDatabaseResourceArgs build() {
             return new GremlinDatabaseResourceArgs(id);
         }
     }

@@ -163,72 +163,58 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
             this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
             return this;
         }
-
         public Builder customizedScalingMetricSpecification(@Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationGetArgs customizedScalingMetricSpecification) {
             this.customizedScalingMetricSpecification = Output.ofNullable(customizedScalingMetricSpecification);
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Output<Boolean> disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = Output.ofNullable(disableScaleIn);
             return this;
         }
-
         public Builder estimatedInstanceWarmup(@Nullable Output<Integer> estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
-
         public Builder estimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = Output.ofNullable(estimatedInstanceWarmup);
             return this;
         }
-
         public Builder predefinedScalingMetricSpecification(@Nullable Output<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
             return this;
         }
-
         public Builder predefinedScalingMetricSpecification(@Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = Output.ofNullable(predefinedScalingMetricSpecification);
             return this;
         }
-
         public Builder scaleInCooldown(@Nullable Output<Integer> scaleInCooldown) {
             this.scaleInCooldown = scaleInCooldown;
             return this;
         }
-
         public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
             this.scaleInCooldown = Output.ofNullable(scaleInCooldown);
             return this;
         }
-
         public Builder scaleOutCooldown(@Nullable Output<Integer> scaleOutCooldown) {
             this.scaleOutCooldown = scaleOutCooldown;
             return this;
         }
-
         public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
             this.scaleOutCooldown = Output.ofNullable(scaleOutCooldown);
             return this;
         }
-
         public Builder targetValue(Output<Double> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
-        }
-        public ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs build() {
+        }        public ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs build() {
             return new ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs(customizedScalingMetricSpecification, disableScaleIn, estimatedInstanceWarmup, predefinedScalingMetricSpecification, scaleInCooldown, scaleOutCooldown, targetValue);
         }
     }

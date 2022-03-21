@@ -90,32 +90,26 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupArn(@Nullable Output<String> resourceGroupArn) {
             this.resourceGroupArn = resourceGroupArn;
             return this;
         }
-
         public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
             this.resourceGroupArn = Output.ofNullable(resourceGroupArn);
             return this;
-        }
-        public AssessmentTargetState build() {
+        }        public AssessmentTargetState build() {
             return new AssessmentTargetState(arn, name, resourceGroupArn);
         }
     }

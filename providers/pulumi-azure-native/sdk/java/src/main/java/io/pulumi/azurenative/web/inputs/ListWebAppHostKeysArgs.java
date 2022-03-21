@@ -72,12 +72,10 @@ public final class ListWebAppHostKeysArgs extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppHostKeysArgs build() {
+        }        public ListWebAppHostKeysArgs build() {
             return new ListWebAppHostKeysArgs(name, resourceGroupName);
         }
     }

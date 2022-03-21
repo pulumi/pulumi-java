@@ -87,17 +87,17 @@ public final class OperationWarningsItemResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder data(List<OperationWarningsItemDataItemResponse> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
+        public Builder data(OperationWarningsItemDataItemResponse... data) {
+            return data(List.of(data));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public OperationWarningsItemResponse build() {
+        }        public OperationWarningsItemResponse build() {
             return new OperationWarningsItemResponse(code, data, message);
         }
     }

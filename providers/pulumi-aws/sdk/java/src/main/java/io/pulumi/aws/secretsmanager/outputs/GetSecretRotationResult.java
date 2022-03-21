@@ -112,27 +112,25 @@ public final class GetSecretRotationResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder rotationEnabled(Boolean rotationEnabled) {
             this.rotationEnabled = Objects.requireNonNull(rotationEnabled);
             return this;
         }
-
         public Builder rotationLambdaArn(String rotationLambdaArn) {
             this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
             return this;
         }
-
         public Builder rotationRules(List<GetSecretRotationRotationRule> rotationRules) {
             this.rotationRules = Objects.requireNonNull(rotationRules);
             return this;
         }
-
+        public Builder rotationRules(GetSecretRotationRotationRule... rotationRules) {
+            return rotationRules(List.of(rotationRules));
+        }
         public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
-        }
-        public GetSecretRotationResult build() {
+        }        public GetSecretRotationResult build() {
             return new GetSecretRotationResult(id, rotationEnabled, rotationLambdaArn, rotationRules, secretId);
         }
     }

@@ -78,22 +78,18 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
             this.claimType = claimType;
             return this;
         }
-
         public Builder claimType(@Nullable String claimType) {
             this.claimType = Output.ofNullable(claimType);
             return this;
         }
-
         public Builder claimValue(@Nullable Output<String> claimValue) {
             this.claimValue = claimValue;
             return this;
         }
-
         public Builder claimValue(@Nullable String claimValue) {
             this.claimValue = Output.ofNullable(claimValue);
             return this;
-        }
-        public ContentKeyPolicyTokenClaimArgs build() {
+        }        public ContentKeyPolicyTokenClaimArgs build() {
             return new ContentKeyPolicyTokenClaimArgs(claimType, claimValue);
         }
     }

@@ -57,12 +57,10 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-
         public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Output.ofNullable(useAvroLogicalTypes);
             return this;
-        }
-        public AvroOptionsArgs build() {
+        }        public AvroOptionsArgs build() {
             return new AvroOptionsArgs(useAvroLogicalTypes);
         }
     }

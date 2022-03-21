@@ -63,12 +63,13 @@ public final class DatasetAccessEntryResponse {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder targetTypes(List<String> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
-        public DatasetAccessEntryResponse build() {
+        public Builder targetTypes(String... targetTypes) {
+            return targetTypes(List.of(targetTypes));
+        }        public DatasetAccessEntryResponse build() {
             return new DatasetAccessEntryResponse(dataset, targetTypes);
         }
     }

@@ -51,8 +51,7 @@ public final class FlowDistinguisherMethod {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FlowDistinguisherMethod build() {
+        }        public FlowDistinguisherMethod build() {
             return new FlowDistinguisherMethod(type);
         }
     }

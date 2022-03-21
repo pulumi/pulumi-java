@@ -92,32 +92,26 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends io.pu
             this.acm = acm;
             return this;
         }
-
         public Builder acm(@Nullable VirtualGatewaySpecListenerTlsCertificateAcmGetArgs acm) {
             this.acm = Output.ofNullable(acm);
             return this;
         }
-
         public Builder file(@Nullable Output<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable VirtualGatewaySpecListenerTlsCertificateFileGetArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder sds(@Nullable Output<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
-
         public Builder sds(@Nullable VirtualGatewaySpecListenerTlsCertificateSdsGetArgs sds) {
             this.sds = Output.ofNullable(sds);
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsCertificateGetArgs build() {
+        }        public VirtualGatewaySpecListenerTlsCertificateGetArgs build() {
             return new VirtualGatewaySpecListenerTlsCertificateGetArgs(acm, file, sds);
         }
     }

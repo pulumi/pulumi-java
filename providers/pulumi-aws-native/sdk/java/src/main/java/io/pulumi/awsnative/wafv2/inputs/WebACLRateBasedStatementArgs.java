@@ -93,42 +93,34 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
-
         public Builder aggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Output.of(Objects.requireNonNull(aggregateKeyType));
             return this;
         }
-
         public Builder forwardedIPConfig(@Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
         }
-
         public Builder limit(Output<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder limit(Integer limit) {
             this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable Output<WebACLStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
-        }
-        public WebACLRateBasedStatementArgs build() {
+        }        public WebACLRateBasedStatementArgs build() {
             return new WebACLRateBasedStatementArgs(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }
     }

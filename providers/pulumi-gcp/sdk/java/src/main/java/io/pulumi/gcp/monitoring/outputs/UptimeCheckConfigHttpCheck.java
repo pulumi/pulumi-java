@@ -211,52 +211,42 @@ public final class UptimeCheckConfigHttpCheck {
             this.authInfo = authInfo;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder maskHeaders(@Nullable Boolean maskHeaders) {
             this.maskHeaders = maskHeaders;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder requestMethod(@Nullable String requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder useSsl(@Nullable Boolean useSsl) {
             this.useSsl = useSsl;
             return this;
         }
-
         public Builder validateSsl(@Nullable Boolean validateSsl) {
             this.validateSsl = validateSsl;
             return this;
-        }
-        public UptimeCheckConfigHttpCheck build() {
+        }        public UptimeCheckConfigHttpCheck build() {
             return new UptimeCheckConfigHttpCheck(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
         }
     }

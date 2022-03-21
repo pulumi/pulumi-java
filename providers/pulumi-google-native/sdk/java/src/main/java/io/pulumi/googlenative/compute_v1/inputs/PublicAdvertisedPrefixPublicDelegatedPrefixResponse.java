@@ -124,27 +124,22 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public PublicAdvertisedPrefixPublicDelegatedPrefixResponse build() {
+        }        public PublicAdvertisedPrefixPublicDelegatedPrefixResponse build() {
             return new PublicAdvertisedPrefixPublicDelegatedPrefixResponse(ipRange, name, project, region, status);
         }
     }

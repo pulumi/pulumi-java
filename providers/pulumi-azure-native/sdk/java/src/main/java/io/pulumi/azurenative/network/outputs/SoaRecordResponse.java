@@ -152,37 +152,30 @@ public final class SoaRecordResponse {
             this.email = email;
             return this;
         }
-
         public Builder expireTime(@Nullable Double expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder minimumTtl(@Nullable Double minimumTtl) {
             this.minimumTtl = minimumTtl;
             return this;
         }
-
         public Builder refreshTime(@Nullable Double refreshTime) {
             this.refreshTime = refreshTime;
             return this;
         }
-
         public Builder retryTime(@Nullable Double retryTime) {
             this.retryTime = retryTime;
             return this;
         }
-
         public Builder serialNumber(@Nullable Double serialNumber) {
             this.serialNumber = serialNumber;
             return this;
-        }
-        public SoaRecordResponse build() {
+        }        public SoaRecordResponse build() {
             return new SoaRecordResponse(email, expireTime, host, minimumTtl, refreshTime, retryTime, serialNumber);
         }
     }

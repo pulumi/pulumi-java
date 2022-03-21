@@ -226,112 +226,93 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             this.chapAuthDiscovery = chapAuthDiscovery;
             return this;
         }
-
         public Builder chapAuthDiscovery(@Nullable Boolean chapAuthDiscovery) {
             this.chapAuthDiscovery = Output.ofNullable(chapAuthDiscovery);
             return this;
         }
-
         public Builder chapAuthSession(@Nullable Output<Boolean> chapAuthSession) {
             this.chapAuthSession = chapAuthSession;
             return this;
         }
-
         public Builder chapAuthSession(@Nullable Boolean chapAuthSession) {
             this.chapAuthSession = Output.ofNullable(chapAuthSession);
             return this;
         }
-
         public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder initiatorName(@Nullable Output<String> initiatorName) {
             this.initiatorName = initiatorName;
             return this;
         }
-
         public Builder initiatorName(@Nullable String initiatorName) {
             this.initiatorName = Output.ofNullable(initiatorName);
             return this;
         }
-
         public Builder iqn(Output<String> iqn) {
             this.iqn = Objects.requireNonNull(iqn);
             return this;
         }
-
         public Builder iqn(String iqn) {
             this.iqn = Output.of(Objects.requireNonNull(iqn));
             return this;
         }
-
         public Builder iscsiInterface(@Nullable Output<String> iscsiInterface) {
             this.iscsiInterface = iscsiInterface;
             return this;
         }
-
         public Builder iscsiInterface(@Nullable String iscsiInterface) {
             this.iscsiInterface = Output.ofNullable(iscsiInterface);
             return this;
         }
-
         public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
-
         public Builder portals(@Nullable Output<List<String>> portals) {
             this.portals = portals;
             return this;
         }
-
         public Builder portals(@Nullable List<String> portals) {
             this.portals = Output.ofNullable(portals);
             return this;
         }
-
+        public Builder portals(String... portals) {
+            return portals(List.of(portals));
+        }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
-
         public Builder targetPortal(Output<String> targetPortal) {
             this.targetPortal = Objects.requireNonNull(targetPortal);
             return this;
         }
-
         public Builder targetPortal(String targetPortal) {
             this.targetPortal = Output.of(Objects.requireNonNull(targetPortal));
             return this;
-        }
-        public ISCSIPersistentVolumeSourceArgs build() {
+        }        public ISCSIPersistentVolumeSourceArgs build() {
             return new ISCSIPersistentVolumeSourceArgs(chapAuthDiscovery, chapAuthSession, fsType, initiatorName, iqn, iscsiInterface, lun, portals, readOnly, secretRef, targetPortal);
         }
     }

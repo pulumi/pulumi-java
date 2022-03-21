@@ -257,132 +257,109 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             this.blockchainMemberName = blockchainMemberName;
             return this;
         }
-
         public Builder blockchainMemberName(@Nullable String blockchainMemberName) {
             this.blockchainMemberName = Output.ofNullable(blockchainMemberName);
             return this;
         }
-
         public Builder consortium(@Nullable Output<String> consortium) {
             this.consortium = consortium;
             return this;
         }
-
         public Builder consortium(@Nullable String consortium) {
             this.consortium = Output.ofNullable(consortium);
             return this;
         }
-
         public Builder consortiumManagementAccountPassword(@Nullable Output<String> consortiumManagementAccountPassword) {
             this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
             return this;
         }
-
         public Builder consortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
             this.consortiumManagementAccountPassword = Output.ofNullable(consortiumManagementAccountPassword);
             return this;
         }
-
         public Builder consortiumMemberDisplayName(@Nullable Output<String> consortiumMemberDisplayName) {
             this.consortiumMemberDisplayName = consortiumMemberDisplayName;
             return this;
         }
-
         public Builder consortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
             this.consortiumMemberDisplayName = Output.ofNullable(consortiumMemberDisplayName);
             return this;
         }
-
         public Builder consortiumRole(@Nullable Output<String> consortiumRole) {
             this.consortiumRole = consortiumRole;
             return this;
         }
-
         public Builder consortiumRole(@Nullable String consortiumRole) {
             this.consortiumRole = Output.ofNullable(consortiumRole);
             return this;
         }
-
         public Builder firewallRules(@Nullable Output<List<FirewallRuleArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
             this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
-
+        public Builder firewallRules(FirewallRuleArgs... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,BlockchainProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,BlockchainProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder validatorNodesSku(@Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku) {
             this.validatorNodesSku = validatorNodesSku;
             return this;
         }
-
         public Builder validatorNodesSku(@Nullable BlockchainMemberNodesSkuArgs validatorNodesSku) {
             this.validatorNodesSku = Output.ofNullable(validatorNodesSku);
             return this;
-        }
-        public BlockchainMemberArgs build() {
+        }        public BlockchainMemberArgs build() {
             return new BlockchainMemberArgs(blockchainMemberName, consortium, consortiumManagementAccountPassword, consortiumMemberDisplayName, consortiumRole, firewallRules, location, password, protocol, resourceGroupName, sku, tags, validatorNodesSku);
         }
     }

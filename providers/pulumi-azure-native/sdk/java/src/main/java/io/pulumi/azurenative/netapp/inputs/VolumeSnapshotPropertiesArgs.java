@@ -61,12 +61,10 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
             this.snapshotPolicyId = snapshotPolicyId;
             return this;
         }
-
         public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
             this.snapshotPolicyId = Output.ofNullable(snapshotPolicyId);
             return this;
-        }
-        public VolumeSnapshotPropertiesArgs build() {
+        }        public VolumeSnapshotPropertiesArgs build() {
             return new VolumeSnapshotPropertiesArgs(snapshotPolicyId);
         }
     }

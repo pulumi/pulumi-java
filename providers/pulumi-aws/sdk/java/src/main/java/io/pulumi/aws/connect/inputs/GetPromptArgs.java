@@ -72,12 +72,10 @@ public final class GetPromptArgs extends io.pulumi.resources.InvokeArgs {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetPromptArgs build() {
+        }        public GetPromptArgs build() {
             return new GetPromptArgs(instanceId, name);
         }
     }

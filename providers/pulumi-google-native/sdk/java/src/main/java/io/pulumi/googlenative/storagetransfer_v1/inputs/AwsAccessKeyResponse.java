@@ -76,12 +76,10 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
-
         public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
-        }
-        public AwsAccessKeyResponse build() {
+        }        public AwsAccessKeyResponse build() {
             return new AwsAccessKeyResponse(accessKeyId, secretAccessKey);
         }
     }

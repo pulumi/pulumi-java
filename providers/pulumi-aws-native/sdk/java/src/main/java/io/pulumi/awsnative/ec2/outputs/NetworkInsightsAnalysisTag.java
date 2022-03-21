@@ -55,12 +55,10 @@ public final class NetworkInsightsAnalysisTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public NetworkInsightsAnalysisTag build() {
+        }        public NetworkInsightsAnalysisTag build() {
             return new NetworkInsightsAnalysisTag(key, value);
         }
     }

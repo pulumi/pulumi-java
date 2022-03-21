@@ -51,8 +51,7 @@ public final class ConnectionDrainingResponse {
         public Builder drainingTimeoutSec(Integer drainingTimeoutSec) {
             this.drainingTimeoutSec = Objects.requireNonNull(drainingTimeoutSec);
             return this;
-        }
-        public ConnectionDrainingResponse build() {
+        }        public ConnectionDrainingResponse build() {
             return new ConnectionDrainingResponse(drainingTimeoutSec);
         }
     }

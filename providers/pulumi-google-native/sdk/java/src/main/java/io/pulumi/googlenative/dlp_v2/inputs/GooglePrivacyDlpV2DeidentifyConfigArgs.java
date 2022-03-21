@@ -96,32 +96,26 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
             this.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
-
         public Builder infoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
             this.infoTypeTransformations = Output.ofNullable(infoTypeTransformations);
             return this;
         }
-
         public Builder recordTransformations(@Nullable Output<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations) {
             this.recordTransformations = recordTransformations;
             return this;
         }
-
         public Builder recordTransformations(@Nullable GooglePrivacyDlpV2RecordTransformationsArgs recordTransformations) {
             this.recordTransformations = Output.ofNullable(recordTransformations);
             return this;
         }
-
         public Builder transformationErrorHandling(@Nullable Output<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
             this.transformationErrorHandling = transformationErrorHandling;
             return this;
         }
-
         public Builder transformationErrorHandling(@Nullable GooglePrivacyDlpV2TransformationErrorHandlingArgs transformationErrorHandling) {
             this.transformationErrorHandling = Output.ofNullable(transformationErrorHandling);
             return this;
-        }
-        public GooglePrivacyDlpV2DeidentifyConfigArgs build() {
+        }        public GooglePrivacyDlpV2DeidentifyConfigArgs build() {
             return new GooglePrivacyDlpV2DeidentifyConfigArgs(infoTypeTransformations, recordTransformations, transformationErrorHandling);
         }
     }

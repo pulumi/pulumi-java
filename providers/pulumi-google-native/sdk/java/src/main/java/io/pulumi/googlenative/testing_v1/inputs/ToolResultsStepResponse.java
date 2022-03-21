@@ -108,22 +108,18 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
-        }
-        public ToolResultsStepResponse build() {
+        }        public ToolResultsStepResponse build() {
             return new ToolResultsStepResponse(executionId, historyId, project, stepId);
         }
     }

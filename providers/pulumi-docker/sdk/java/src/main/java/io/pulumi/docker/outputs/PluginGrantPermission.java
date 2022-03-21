@@ -54,12 +54,13 @@ public final class PluginGrantPermission {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public PluginGrantPermission build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public PluginGrantPermission build() {
             return new PluginGrantPermission(name, values);
         }
     }

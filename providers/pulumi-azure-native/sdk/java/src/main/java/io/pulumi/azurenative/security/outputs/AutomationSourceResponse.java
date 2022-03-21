@@ -73,12 +73,13 @@ public final class AutomationSourceResponse {
             this.eventSource = eventSource;
             return this;
         }
-
         public Builder ruleSets(@Nullable List<AutomationRuleSetResponse> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
-        public AutomationSourceResponse build() {
+        public Builder ruleSets(AutomationRuleSetResponse... ruleSets) {
+            return ruleSets(List.of(ruleSets));
+        }        public AutomationSourceResponse build() {
             return new AutomationSourceResponse(eventSource, ruleSets);
         }
     }

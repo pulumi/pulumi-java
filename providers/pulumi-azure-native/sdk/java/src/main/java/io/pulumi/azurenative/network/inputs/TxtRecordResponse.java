@@ -62,7 +62,9 @@ public final class TxtRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-        public TxtRecordResponse build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public TxtRecordResponse build() {
             return new TxtRecordResponse(value);
         }
     }

@@ -72,12 +72,10 @@ public final class ListWebAppSyncFunctionTriggersArgs extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppSyncFunctionTriggersArgs build() {
+        }        public ListWebAppSyncFunctionTriggersArgs build() {
             return new ListWebAppSyncFunctionTriggersArgs(name, resourceGroupName);
         }
     }

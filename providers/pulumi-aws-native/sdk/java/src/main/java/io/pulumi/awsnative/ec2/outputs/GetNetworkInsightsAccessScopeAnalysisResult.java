@@ -116,47 +116,41 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
             this.analyzedEniCount = analyzedEniCount;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder findingsFound(@Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound) {
             this.findingsFound = findingsFound;
             return this;
         }
-
         public Builder networkInsightsAccessScopeAnalysisArn(@Nullable String networkInsightsAccessScopeAnalysisArn) {
             this.networkInsightsAccessScopeAnalysisArn = networkInsightsAccessScopeAnalysisArn;
             return this;
         }
-
         public Builder networkInsightsAccessScopeAnalysisId(@Nullable String networkInsightsAccessScopeAnalysisId) {
             this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder status(@Nullable NetworkInsightsAccessScopeAnalysisStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetNetworkInsightsAccessScopeAnalysisResult build() {
+        public Builder tags(NetworkInsightsAccessScopeAnalysisTag... tags) {
+            return tags(List.of(tags));
+        }        public GetNetworkInsightsAccessScopeAnalysisResult build() {
             return new GetNetworkInsightsAccessScopeAnalysisResult(analyzedEniCount, endDate, findingsFound, networkInsightsAccessScopeAnalysisArn, networkInsightsAccessScopeAnalysisId, startDate, status, statusMessage, tags);
         }
     }

@@ -88,17 +88,14 @@ public final class ObjectTypeField {
             this.contentType = contentType;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ObjectTypeField build() {
+        }        public ObjectTypeField build() {
             return new ObjectTypeField(contentType, source, target);
         }
     }

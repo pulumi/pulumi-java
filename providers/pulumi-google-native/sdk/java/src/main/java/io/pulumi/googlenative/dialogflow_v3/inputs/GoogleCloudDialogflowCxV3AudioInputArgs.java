@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowCxV3AudioInputArgs extends io.pulumi.res
             this.audio = audio;
             return this;
         }
-
         public Builder audio(@Nullable String audio) {
             this.audio = Output.ofNullable(audio);
             return this;
         }
-
         public Builder config(Output<GoogleCloudDialogflowCxV3InputAudioConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(GoogleCloudDialogflowCxV3InputAudioConfigArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3AudioInputArgs build() {
+        }        public GoogleCloudDialogflowCxV3AudioInputArgs build() {
             return new GoogleCloudDialogflowCxV3AudioInputArgs(audio, config);
         }
     }

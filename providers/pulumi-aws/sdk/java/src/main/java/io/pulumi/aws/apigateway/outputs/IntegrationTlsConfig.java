@@ -53,8 +53,7 @@ public final class IntegrationTlsConfig {
         public Builder insecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
             this.insecureSkipVerification = insecureSkipVerification;
             return this;
-        }
-        public IntegrationTlsConfig build() {
+        }        public IntegrationTlsConfig build() {
             return new IntegrationTlsConfig(insecureSkipVerification);
         }
     }

@@ -124,52 +124,42 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedNetworkName(@Nullable Output<String> managedNetworkName) {
             this.managedNetworkName = managedNetworkName;
             return this;
         }
-
         public Builder managedNetworkName(@Nullable String managedNetworkName) {
             this.managedNetworkName = Output.ofNullable(managedNetworkName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable ScopeArgs scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ManagedNetworkArgs build() {
+        }        public ManagedNetworkArgs build() {
             return new ManagedNetworkArgs(location, managedNetworkName, resourceGroupName, scope, tags);
         }
     }

@@ -80,12 +80,13 @@ public final class MetricRulesResponse extends io.pulumi.resources.InvokeArgs {
             this.filteringTags = filteringTags;
             return this;
         }
-
+        public Builder filteringTags(FilteringTagResponse... filteringTags) {
+            return filteringTags(List.of(filteringTags));
+        }
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
-        }
-        public MetricRulesResponse build() {
+        }        public MetricRulesResponse build() {
             return new MetricRulesResponse(filteringTags, subscriptionId);
         }
     }

@@ -90,22 +90,18 @@ public final class GetDicomStoreArgs extends io.pulumi.resources.InvokeArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder dicomStoreId(String dicomStoreId) {
             this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDicomStoreArgs build() {
+        }        public GetDicomStoreArgs build() {
             return new GetDicomStoreArgs(datasetId, dicomStoreId, location, project);
         }
     }

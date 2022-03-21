@@ -69,12 +69,10 @@ public final class InsightFiltersResourcePartition {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourcePartition build() {
+        }        public InsightFiltersResourcePartition build() {
             return new InsightFiltersResourcePartition(comparison, value);
         }
     }

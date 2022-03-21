@@ -127,52 +127,42 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
-
         public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder mountPath(@Nullable Output<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
-
         public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Output.ofNullable(mountPath);
             return this;
         }
-
         public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = Output.ofNullable(shareName);
             return this;
         }
-
         public Builder type(@Nullable Output<AzureStorageType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable AzureStorageType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AzureStorageInfoValueArgs build() {
+        }        public AzureStorageInfoValueArgs build() {
             return new AzureStorageInfoValueArgs(accessKey, accountName, mountPath, shareName, type);
         }
     }

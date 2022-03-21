@@ -94,32 +94,26 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder variableName(Output<String> variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public Builder variableName(String variableName) {
             this.variableName = Output.of(Objects.requireNonNull(variableName));
             return this;
         }
-
         public Builder variableValue(Output<String> variableValue) {
             this.variableValue = Objects.requireNonNull(variableValue);
             return this;
         }
-
         public Builder variableValue(String variableValue) {
             this.variableValue = Output.of(Objects.requireNonNull(variableValue));
             return this;
-        }
-        public EnvironmentVariableSetupArgs build() {
+        }        public EnvironmentVariableSetupArgs build() {
             return new EnvironmentVariableSetupArgs(type, variableName, variableValue);
         }
     }

@@ -61,12 +61,10 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
             this.policyUri = policyUri;
             return this;
         }
-
         public Builder policyUri(@Nullable String policyUri) {
             this.policyUri = Output.ofNullable(policyUri);
             return this;
-        }
-        public AutoscalingConfigArgs build() {
+        }        public AutoscalingConfigArgs build() {
             return new AutoscalingConfigArgs(policyUri);
         }
     }

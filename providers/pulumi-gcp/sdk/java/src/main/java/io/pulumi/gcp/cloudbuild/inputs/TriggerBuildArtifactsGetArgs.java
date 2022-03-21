@@ -84,22 +84,21 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
             this.images = images;
             return this;
         }
-
         public Builder images(@Nullable List<String> images) {
             this.images = Output.ofNullable(images);
             return this;
         }
-
+        public Builder images(String... images) {
+            return images(List.of(images));
+        }
         public Builder objects(@Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects) {
             this.objects = objects;
             return this;
         }
-
         public Builder objects(@Nullable TriggerBuildArtifactsObjectsGetArgs objects) {
             this.objects = Output.ofNullable(objects);
             return this;
-        }
-        public TriggerBuildArtifactsGetArgs build() {
+        }        public TriggerBuildArtifactsGetArgs build() {
             return new TriggerBuildArtifactsGetArgs(images, objects);
         }
     }

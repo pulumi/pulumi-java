@@ -89,17 +89,20 @@ public final class AzureQueryPropertiesResponse {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder scope(@Nullable List<String> scope) {
             this.scope = scope;
             return this;
         }
-
+        public Builder scope(String... scope) {
+            return scope(List.of(scope));
+        }
         public Builder tagSettings(@Nullable TagSettingsPropertiesResponse tagSettings) {
             this.tagSettings = tagSettings;
             return this;
-        }
-        public AzureQueryPropertiesResponse build() {
+        }        public AzureQueryPropertiesResponse build() {
             return new AzureQueryPropertiesResponse(locations, scope, tagSettings);
         }
     }

@@ -282,77 +282,62 @@ public final class GetkustoPoolResult {
             this.dataIngestionUri = Objects.requireNonNull(dataIngestionUri);
             return this;
         }
-
         public Builder engineType(@Nullable String engineType) {
             this.engineType = engineType;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(AzureSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateReason(String stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder workspaceUid(@Nullable String workspaceUid) {
             this.workspaceUid = workspaceUid;
             return this;
-        }
-        public GetkustoPoolResult build() {
+        }        public GetkustoPoolResult build() {
             return new GetkustoPoolResult(dataIngestionUri, engineType, etag, id, location, name, provisioningState, sku, state, stateReason, systemData, tags, type, uri, workspaceUid);
         }
     }

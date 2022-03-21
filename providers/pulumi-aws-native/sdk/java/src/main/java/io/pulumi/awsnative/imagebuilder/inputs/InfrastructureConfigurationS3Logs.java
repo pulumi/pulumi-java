@@ -78,12 +78,10 @@ public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }
-        public InfrastructureConfigurationS3Logs build() {
+        }        public InfrastructureConfigurationS3Logs build() {
             return new InfrastructureConfigurationS3Logs(s3BucketName, s3KeyPrefix);
         }
     }

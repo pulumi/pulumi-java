@@ -61,12 +61,10 @@ public final class DatabaseConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
-        }
-        public DatabaseConfigArgs build() {
+        }        public DatabaseConfigArgs build() {
             return new DatabaseConfigArgs(machineType);
         }
     }

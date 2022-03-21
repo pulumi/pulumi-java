@@ -76,12 +76,10 @@ public final class InputTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InputTag build() {
+        }        public InputTag build() {
             return new InputTag(key, value);
         }
     }

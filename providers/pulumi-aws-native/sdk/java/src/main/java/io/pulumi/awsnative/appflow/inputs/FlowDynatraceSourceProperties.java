@@ -50,8 +50,7 @@ public final class FlowDynatraceSourceProperties extends io.pulumi.resources.Inv
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowDynatraceSourceProperties build() {
+        }        public FlowDynatraceSourceProperties build() {
             return new FlowDynatraceSourceProperties(object);
         }
     }

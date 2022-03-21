@@ -78,12 +78,13 @@ public final class BlobRestoreParametersResponse extends io.pulumi.resources.Inv
             this.blobRanges = Objects.requireNonNull(blobRanges);
             return this;
         }
-
+        public Builder blobRanges(BlobRestoreRangeResponse... blobRanges) {
+            return blobRanges(List.of(blobRanges));
+        }
         public Builder timeToRestore(String timeToRestore) {
             this.timeToRestore = Objects.requireNonNull(timeToRestore);
             return this;
-        }
-        public BlobRestoreParametersResponse build() {
+        }        public BlobRestoreParametersResponse build() {
             return new BlobRestoreParametersResponse(blobRanges, timeToRestore);
         }
     }

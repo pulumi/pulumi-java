@@ -54,8 +54,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse e
         public Builder concurrencyLimit(Integer concurrencyLimit) {
             this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit);
             return this;
-        }
-        public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse build() {
+        }        public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse build() {
             return new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(concurrencyLimit);
         }
     }

@@ -56,12 +56,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             this.awsLambda = Objects.requireNonNull(awsLambda);
             return this;
         }
-
         public Builder awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs awsLambda) {
             this.awsLambda = Output.of(Objects.requireNonNull(awsLambda));
             return this;
-        }
-        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs build() {
+        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs build() {
             return new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs(awsLambda);
         }
     }

@@ -240,92 +240,92 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder commands(@Nullable Output<List<String>> commands) {
             this.commands = commands;
             return this;
         }
-
         public Builder commands(@Nullable List<String> commands) {
             this.commands = Output.ofNullable(commands);
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder envFroms(@Nullable Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms) {
             this.envFroms = envFroms;
             return this;
         }
-
         public Builder envFroms(@Nullable List<ServiceTemplateSpecContainerEnvFromGetArgs> envFroms) {
             this.envFroms = Output.ofNullable(envFroms);
             return this;
         }
-
+        public Builder envFroms(ServiceTemplateSpecContainerEnvFromGetArgs... envFroms) {
+            return envFroms(List.of(envFroms));
+        }
         public Builder envs(@Nullable Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs) {
             this.envs = envs;
             return this;
         }
-
         public Builder envs(@Nullable List<ServiceTemplateSpecContainerEnvGetArgs> envs) {
             this.envs = Output.ofNullable(envs);
             return this;
         }
-
+        public Builder envs(ServiceTemplateSpecContainerEnvGetArgs... envs) {
+            return envs(List.of(envs));
+        }
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder ports(@Nullable Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<ServiceTemplateSpecContainerPortGetArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(ServiceTemplateSpecContainerPortGetArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder resources(@Nullable Output<ServiceTemplateSpecContainerResourcesGetArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable ServiceTemplateSpecContainerResourcesGetArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
         public Builder volumeMounts(@Nullable Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMountGetArgs> volumeMounts) {
             this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
-
+        public Builder volumeMounts(ServiceTemplateSpecContainerVolumeMountGetArgs... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder workingDir(@Nullable Output<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
-
         public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = Output.ofNullable(workingDir);
             return this;
-        }
-        public ServiceTemplateSpecContainerGetArgs build() {
+        }        public ServiceTemplateSpecContainerGetArgs build() {
             return new ServiceTemplateSpecContainerGetArgs(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }
     }

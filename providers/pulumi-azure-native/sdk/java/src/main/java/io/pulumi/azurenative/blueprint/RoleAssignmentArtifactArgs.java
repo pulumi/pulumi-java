@@ -205,102 +205,85 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
             this.artifactName = artifactName;
             return this;
         }
-
         public Builder artifactName(@Nullable String artifactName) {
             this.artifactName = Output.ofNullable(artifactName);
             return this;
         }
-
         public Builder blueprintName(Output<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder blueprintName(String blueprintName) {
             this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<String> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(String... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder principalIds(Output<Object> principalIds) {
             this.principalIds = Objects.requireNonNull(principalIds);
             return this;
         }
-
         public Builder principalIds(Object principalIds) {
             this.principalIds = Output.of(Objects.requireNonNull(principalIds));
             return this;
         }
-
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
-
         public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
         }
-
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
-        }
-        public RoleAssignmentArtifactArgs build() {
+        }        public RoleAssignmentArtifactArgs build() {
             return new RoleAssignmentArtifactArgs(artifactName, blueprintName, dependsOn, description, displayName, kind, principalIds, resourceGroup, resourceScope, roleDefinitionId);
         }
     }

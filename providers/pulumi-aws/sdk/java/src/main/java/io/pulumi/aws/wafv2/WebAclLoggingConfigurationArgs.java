@@ -109,42 +109,40 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-
         public Builder logDestinationConfigs(List<String> logDestinationConfigs) {
             this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
-
+        public Builder logDestinationConfigs(String... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }
         public Builder loggingFilter(@Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter) {
             this.loggingFilter = loggingFilter;
             return this;
         }
-
         public Builder loggingFilter(@Nullable WebAclLoggingConfigurationLoggingFilterArgs loggingFilter) {
             this.loggingFilter = Output.ofNullable(loggingFilter);
             return this;
         }
-
         public Builder redactedFields(@Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
-
         public Builder redactedFields(@Nullable List<WebAclLoggingConfigurationRedactedFieldArgs> redactedFields) {
             this.redactedFields = Output.ofNullable(redactedFields);
             return this;
         }
-
+        public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldArgs... redactedFields) {
+            return redactedFields(List.of(redactedFields));
+        }
         public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
-        }
-        public WebAclLoggingConfigurationArgs build() {
+        }        public WebAclLoggingConfigurationArgs build() {
             return new WebAclLoggingConfigurationArgs(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);
         }
     }

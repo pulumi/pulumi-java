@@ -69,12 +69,10 @@ public final class UserPoolSmsConfiguration {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
-
         public Builder snsCallerArn(String snsCallerArn) {
             this.snsCallerArn = Objects.requireNonNull(snsCallerArn);
             return this;
-        }
-        public UserPoolSmsConfiguration build() {
+        }        public UserPoolSmsConfiguration build() {
             return new UserPoolSmsConfiguration(externalId, snsCallerArn);
         }
     }

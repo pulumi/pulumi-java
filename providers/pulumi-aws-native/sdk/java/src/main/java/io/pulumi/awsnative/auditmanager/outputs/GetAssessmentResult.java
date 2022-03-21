@@ -143,47 +143,47 @@ public final class GetAssessmentResult {
             this.arn = arn;
             return this;
         }
-
         public Builder assessmentId(@Nullable String assessmentId) {
             this.assessmentId = assessmentId;
             return this;
         }
-
         public Builder assessmentReportsDestination(@Nullable AssessmentReportsDestination assessmentReportsDestination) {
             this.assessmentReportsDestination = assessmentReportsDestination;
             return this;
         }
-
         public Builder creationTime(@Nullable Double creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder delegations(@Nullable List<AssessmentDelegation> delegations) {
             this.delegations = delegations;
             return this;
         }
-
+        public Builder delegations(AssessmentDelegation... delegations) {
+            return delegations(List.of(delegations));
+        }
         public Builder roles(@Nullable List<AssessmentRole> roles) {
             this.roles = roles;
             return this;
         }
-
+        public Builder roles(AssessmentRole... roles) {
+            return roles(List.of(roles));
+        }
         public Builder scope(@Nullable AssessmentScope scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder status(@Nullable AssessmentStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<AssessmentTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAssessmentResult build() {
+        public Builder tags(AssessmentTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAssessmentResult build() {
             return new GetAssessmentResult(arn, assessmentId, assessmentReportsDestination, creationTime, delegations, roles, scope, status, tags);
         }
     }

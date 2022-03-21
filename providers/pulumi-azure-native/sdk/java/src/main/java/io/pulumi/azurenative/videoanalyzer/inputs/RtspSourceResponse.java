@@ -114,22 +114,18 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder transport(@Nullable String transport) {
             this.transport = transport;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RtspSourceResponse build() {
+        }        public RtspSourceResponse build() {
             return new RtspSourceResponse(endpoint, name, transport, type);
         }
     }

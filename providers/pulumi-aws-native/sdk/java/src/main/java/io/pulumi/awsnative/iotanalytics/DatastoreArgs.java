@@ -120,62 +120,53 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             this.datastoreName = datastoreName;
             return this;
         }
-
         public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
-
         public Builder datastorePartitions(@Nullable Output<DatastorePartitionsArgs> datastorePartitions) {
             this.datastorePartitions = datastorePartitions;
             return this;
         }
-
         public Builder datastorePartitions(@Nullable DatastorePartitionsArgs datastorePartitions) {
             this.datastorePartitions = Output.ofNullable(datastorePartitions);
             return this;
         }
-
         public Builder datastoreStorage(@Nullable Output<DatastoreStorageArgs> datastoreStorage) {
             this.datastoreStorage = datastoreStorage;
             return this;
         }
-
         public Builder datastoreStorage(@Nullable DatastoreStorageArgs datastoreStorage) {
             this.datastoreStorage = Output.ofNullable(datastoreStorage);
             return this;
         }
-
         public Builder fileFormatConfiguration(@Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration) {
             this.fileFormatConfiguration = fileFormatConfiguration;
             return this;
         }
-
         public Builder fileFormatConfiguration(@Nullable DatastoreFileFormatConfigurationArgs fileFormatConfiguration) {
             this.fileFormatConfiguration = Output.ofNullable(fileFormatConfiguration);
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable DatastoreRetentionPeriodArgs retentionPeriod) {
             this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DatastoreTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DatastoreTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DatastoreArgs build() {
+        public Builder tags(DatastoreTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DatastoreArgs build() {
             return new DatastoreArgs(datastoreName, datastorePartitions, datastoreStorage, fileFormatConfiguration, retentionPeriod, tags);
         }
     }

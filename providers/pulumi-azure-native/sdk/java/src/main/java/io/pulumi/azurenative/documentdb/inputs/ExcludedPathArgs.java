@@ -57,12 +57,10 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public ExcludedPathArgs build() {
+        }        public ExcludedPathArgs build() {
             return new ExcludedPathArgs(path);
         }
     }

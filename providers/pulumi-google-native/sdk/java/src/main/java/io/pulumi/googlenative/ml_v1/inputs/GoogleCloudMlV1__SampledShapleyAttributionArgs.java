@@ -61,12 +61,10 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
             this.numPaths = numPaths;
             return this;
         }
-
         public Builder numPaths(@Nullable Integer numPaths) {
             this.numPaths = Output.ofNullable(numPaths);
             return this;
-        }
-        public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {
+        }        public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {
             return new GoogleCloudMlV1__SampledShapleyAttributionArgs(numPaths);
         }
     }

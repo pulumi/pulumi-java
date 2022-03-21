@@ -45,8 +45,7 @@ public final class BotGrammarSlotTypeSetting {
         public Builder source(@Nullable BotGrammarSlotTypeSource source) {
             this.source = source;
             return this;
-        }
-        public BotGrammarSlotTypeSetting build() {
+        }        public BotGrammarSlotTypeSetting build() {
             return new BotGrammarSlotTypeSetting(source);
         }
     }

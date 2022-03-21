@@ -92,17 +92,14 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
             this.max = Objects.requireNonNull(max);
             return this;
         }
-
         public Builder min(GooglePrivacyDlpV2ValueResponse min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public Builder replacementValue(GooglePrivacyDlpV2ValueResponse replacementValue) {
             this.replacementValue = Objects.requireNonNull(replacementValue);
             return this;
-        }
-        public GooglePrivacyDlpV2BucketResponse build() {
+        }        public GooglePrivacyDlpV2BucketResponse build() {
             return new GooglePrivacyDlpV2BucketResponse(max, min, replacementValue);
         }
     }

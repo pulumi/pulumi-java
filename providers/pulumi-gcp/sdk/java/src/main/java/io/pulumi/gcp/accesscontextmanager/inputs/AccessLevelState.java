@@ -146,62 +146,50 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             this.basic = basic;
             return this;
         }
-
         public Builder basic(@Nullable AccessLevelBasicGetArgs basic) {
             this.basic = Output.ofNullable(basic);
             return this;
         }
-
         public Builder custom(@Nullable Output<AccessLevelCustomGetArgs> custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder custom(@Nullable AccessLevelCustomGetArgs custom) {
             this.custom = Output.ofNullable(custom);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public AccessLevelState build() {
+        }        public AccessLevelState build() {
             return new AccessLevelState(basic, custom, description, name, parent, title);
         }
     }

@@ -79,22 +79,18 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
             this.leaveUntransformed = leaveUntransformed;
             return this;
         }
-
         public Builder leaveUntransformed(@Nullable GooglePrivacyDlpV2LeaveUntransformedArgs leaveUntransformed) {
             this.leaveUntransformed = Output.ofNullable(leaveUntransformed);
             return this;
         }
-
         public Builder throwError(@Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
             this.throwError = throwError;
             return this;
         }
-
         public Builder throwError(@Nullable GooglePrivacyDlpV2ThrowErrorArgs throwError) {
             this.throwError = Output.ofNullable(throwError);
             return this;
-        }
-        public GooglePrivacyDlpV2TransformationErrorHandlingArgs build() {
+        }        public GooglePrivacyDlpV2TransformationErrorHandlingArgs build() {
             return new GooglePrivacyDlpV2TransformationErrorHandlingArgs(leaveUntransformed, throwError);
         }
     }

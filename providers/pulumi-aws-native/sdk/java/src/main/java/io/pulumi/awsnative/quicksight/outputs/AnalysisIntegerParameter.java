@@ -71,12 +71,13 @@ public final class AnalysisIntegerParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<Double> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public AnalysisIntegerParameter build() {
+        public Builder values(Double... values) {
+            return values(List.of(values));
+        }        public AnalysisIntegerParameter build() {
             return new AnalysisIntegerParameter(name, values);
         }
     }

@@ -72,12 +72,10 @@ public final class SkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder plan(@Nullable ResourceReferenceResponse plan) {
             this.plan = plan;
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(name, plan);
         }
     }

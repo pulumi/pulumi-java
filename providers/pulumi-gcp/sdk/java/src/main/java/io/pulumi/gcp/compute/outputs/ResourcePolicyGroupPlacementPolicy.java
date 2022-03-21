@@ -98,17 +98,14 @@ public final class ResourcePolicyGroupPlacementPolicy {
             this.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
-
         public Builder collocation(@Nullable String collocation) {
             this.collocation = collocation;
             return this;
         }
-
         public Builder vmCount(@Nullable Integer vmCount) {
             this.vmCount = vmCount;
             return this;
-        }
-        public ResourcePolicyGroupPlacementPolicy build() {
+        }        public ResourcePolicyGroupPlacementPolicy build() {
             return new ResourcePolicyGroupPlacementPolicy(availabilityDomainCount, collocation, vmCount);
         }
     }

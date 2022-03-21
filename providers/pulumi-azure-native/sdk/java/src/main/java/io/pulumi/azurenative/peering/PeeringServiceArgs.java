@@ -188,92 +188,74 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder peeringServiceLocation(@Nullable Output<String> peeringServiceLocation) {
             this.peeringServiceLocation = peeringServiceLocation;
             return this;
         }
-
         public Builder peeringServiceLocation(@Nullable String peeringServiceLocation) {
             this.peeringServiceLocation = Output.ofNullable(peeringServiceLocation);
             return this;
         }
-
         public Builder peeringServiceName(@Nullable Output<String> peeringServiceName) {
             this.peeringServiceName = peeringServiceName;
             return this;
         }
-
         public Builder peeringServiceName(@Nullable String peeringServiceName) {
             this.peeringServiceName = Output.ofNullable(peeringServiceName);
             return this;
         }
-
         public Builder peeringServiceProvider(@Nullable Output<String> peeringServiceProvider) {
             this.peeringServiceProvider = peeringServiceProvider;
             return this;
         }
-
         public Builder peeringServiceProvider(@Nullable String peeringServiceProvider) {
             this.peeringServiceProvider = Output.ofNullable(peeringServiceProvider);
             return this;
         }
-
         public Builder providerBackupPeeringLocation(@Nullable Output<String> providerBackupPeeringLocation) {
             this.providerBackupPeeringLocation = providerBackupPeeringLocation;
             return this;
         }
-
         public Builder providerBackupPeeringLocation(@Nullable String providerBackupPeeringLocation) {
             this.providerBackupPeeringLocation = Output.ofNullable(providerBackupPeeringLocation);
             return this;
         }
-
         public Builder providerPrimaryPeeringLocation(@Nullable Output<String> providerPrimaryPeeringLocation) {
             this.providerPrimaryPeeringLocation = providerPrimaryPeeringLocation;
             return this;
         }
-
         public Builder providerPrimaryPeeringLocation(@Nullable String providerPrimaryPeeringLocation) {
             this.providerPrimaryPeeringLocation = Output.ofNullable(providerPrimaryPeeringLocation);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<PeeringServiceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable PeeringServiceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PeeringServiceArgs build() {
+        }        public PeeringServiceArgs build() {
             return new PeeringServiceArgs(location, peeringServiceLocation, peeringServiceName, peeringServiceProvider, providerBackupPeeringLocation, providerPrimaryPeeringLocation, resourceGroupName, sku, tags);
         }
     }

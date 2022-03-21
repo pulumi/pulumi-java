@@ -408,227 +408,203 @@ public final class NetworkInsightsAnalysisExplanation {
             this.acl = acl;
             return this;
         }
-
         public Builder aclRule(@Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule) {
             this.aclRule = aclRule;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
-
         public Builder addresses(@Nullable List<String> addresses) {
             this.addresses = addresses;
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder attachedTo(@Nullable NetworkInsightsAnalysisAnalysisComponent attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
-
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }
         public Builder classicLoadBalancerListener(@Nullable NetworkInsightsAnalysisAnalysisLoadBalancerListener classicLoadBalancerListener) {
             this.classicLoadBalancerListener = classicLoadBalancerListener;
             return this;
         }
-
         public Builder component(@Nullable NetworkInsightsAnalysisAnalysisComponent component) {
             this.component = component;
             return this;
         }
-
         public Builder customerGateway(@Nullable NetworkInsightsAnalysisAnalysisComponent customerGateway) {
             this.customerGateway = customerGateway;
             return this;
         }
-
         public Builder destination(@Nullable NetworkInsightsAnalysisAnalysisComponent destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destinationVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc) {
             this.destinationVpc = destinationVpc;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder elasticLoadBalancerListener(@Nullable NetworkInsightsAnalysisAnalysisComponent elasticLoadBalancerListener) {
             this.elasticLoadBalancerListener = elasticLoadBalancerListener;
             return this;
         }
-
         public Builder explanationCode(@Nullable String explanationCode) {
             this.explanationCode = explanationCode;
             return this;
         }
-
         public Builder ingressRouteTable(@Nullable NetworkInsightsAnalysisAnalysisComponent ingressRouteTable) {
             this.ingressRouteTable = ingressRouteTable;
             return this;
         }
-
         public Builder internetGateway(@Nullable NetworkInsightsAnalysisAnalysisComponent internetGateway) {
             this.internetGateway = internetGateway;
             return this;
         }
-
         public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
             this.loadBalancerArn = loadBalancerArn;
             return this;
         }
-
         public Builder loadBalancerListenerPort(@Nullable Integer loadBalancerListenerPort) {
             this.loadBalancerListenerPort = loadBalancerListenerPort;
             return this;
         }
-
         public Builder loadBalancerTarget(@Nullable NetworkInsightsAnalysisAnalysisLoadBalancerTarget loadBalancerTarget) {
             this.loadBalancerTarget = loadBalancerTarget;
             return this;
         }
-
         public Builder loadBalancerTargetGroup(@Nullable NetworkInsightsAnalysisAnalysisComponent loadBalancerTargetGroup) {
             this.loadBalancerTargetGroup = loadBalancerTargetGroup;
             return this;
         }
-
         public Builder loadBalancerTargetGroups(@Nullable List<NetworkInsightsAnalysisAnalysisComponent> loadBalancerTargetGroups) {
             this.loadBalancerTargetGroups = loadBalancerTargetGroups;
             return this;
         }
-
+        public Builder loadBalancerTargetGroups(NetworkInsightsAnalysisAnalysisComponent... loadBalancerTargetGroups) {
+            return loadBalancerTargetGroups(List.of(loadBalancerTargetGroups));
+        }
         public Builder loadBalancerTargetPort(@Nullable Integer loadBalancerTargetPort) {
             this.loadBalancerTargetPort = loadBalancerTargetPort;
             return this;
         }
-
         public Builder missingComponent(@Nullable String missingComponent) {
             this.missingComponent = missingComponent;
             return this;
         }
-
         public Builder natGateway(@Nullable NetworkInsightsAnalysisAnalysisComponent natGateway) {
             this.natGateway = natGateway;
             return this;
         }
-
         public Builder networkInterface(@Nullable NetworkInsightsAnalysisAnalysisComponent networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
-
         public Builder packetField(@Nullable String packetField) {
             this.packetField = packetField;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder portRanges(@Nullable List<NetworkInsightsAnalysisPortRange> portRanges) {
             this.portRanges = portRanges;
             return this;
         }
-
+        public Builder portRanges(NetworkInsightsAnalysisPortRange... portRanges) {
+            return portRanges(List.of(portRanges));
+        }
         public Builder prefixList(@Nullable NetworkInsightsAnalysisAnalysisComponent prefixList) {
             this.prefixList = prefixList;
             return this;
         }
-
         public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(String... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder routeTable(@Nullable NetworkInsightsAnalysisAnalysisComponent routeTable) {
             this.routeTable = routeTable;
             return this;
         }
-
         public Builder routeTableRoute(@Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute) {
             this.routeTableRoute = routeTableRoute;
             return this;
         }
-
         public Builder securityGroup(@Nullable NetworkInsightsAnalysisAnalysisComponent securityGroup) {
             this.securityGroup = securityGroup;
             return this;
         }
-
         public Builder securityGroupRule(@Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule) {
             this.securityGroupRule = securityGroupRule;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<NetworkInsightsAnalysisAnalysisComponent> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(NetworkInsightsAnalysisAnalysisComponent... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sourceVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc) {
             this.sourceVpc = sourceVpc;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder subnet(@Nullable NetworkInsightsAnalysisAnalysisComponent subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnetRouteTable(@Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable) {
             this.subnetRouteTable = subnetRouteTable;
             return this;
         }
-
         public Builder vpc(@Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
             this.vpc = vpc;
             return this;
         }
-
         public Builder vpcEndpoint(@Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint) {
             this.vpcEndpoint = vpcEndpoint;
             return this;
         }
-
         public Builder vpcPeeringConnection(@Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection) {
             this.vpcPeeringConnection = vpcPeeringConnection;
             return this;
         }
-
         public Builder vpnConnection(@Nullable NetworkInsightsAnalysisAnalysisComponent vpnConnection) {
             this.vpnConnection = vpnConnection;
             return this;
         }
-
         public Builder vpnGateway(@Nullable NetworkInsightsAnalysisAnalysisComponent vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
-        }
-        public NetworkInsightsAnalysisExplanation build() {
+        }        public NetworkInsightsAnalysisExplanation build() {
             return new NetworkInsightsAnalysisExplanation(acl, aclRule, address, addresses, attachedTo, availabilityZones, cidrs, classicLoadBalancerListener, component, customerGateway, destination, destinationVpc, direction, elasticLoadBalancerListener, explanationCode, ingressRouteTable, internetGateway, loadBalancerArn, loadBalancerListenerPort, loadBalancerTarget, loadBalancerTargetGroup, loadBalancerTargetGroups, loadBalancerTargetPort, missingComponent, natGateway, networkInterface, packetField, port, portRanges, prefixList, protocols, routeTable, routeTableRoute, securityGroup, securityGroupRule, securityGroups, sourceVpc, state, subnet, subnetRouteTable, vpc, vpcEndpoint, vpcPeeringConnection, vpnConnection, vpnGateway);
         }
     }

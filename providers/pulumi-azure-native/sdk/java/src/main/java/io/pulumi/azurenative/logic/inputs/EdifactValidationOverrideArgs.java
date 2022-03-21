@@ -160,72 +160,58 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
-
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
-
         public Builder enforceCharacterSet(Output<Boolean> enforceCharacterSet) {
             this.enforceCharacterSet = Objects.requireNonNull(enforceCharacterSet);
             return this;
         }
-
         public Builder enforceCharacterSet(Boolean enforceCharacterSet) {
             this.enforceCharacterSet = Output.of(Objects.requireNonNull(enforceCharacterSet));
             return this;
         }
-
         public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
-
         public Builder trailingSeparatorPolicy(Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
-
         public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Output.of(Objects.requireNonNull(trailingSeparatorPolicy));
             return this;
         }
-
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
-
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
-
         public Builder validateEDITypes(Output<Boolean> validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
-
         public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Output.of(Objects.requireNonNull(validateEDITypes));
             return this;
         }
-
         public Builder validateXSDTypes(Output<Boolean> validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
-
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Output.of(Objects.requireNonNull(validateXSDTypes));
             return this;
-        }
-        public EdifactValidationOverrideArgs build() {
+        }        public EdifactValidationOverrideArgs build() {
             return new EdifactValidationOverrideArgs(allowLeadingAndTrailingSpacesAndZeroes, enforceCharacterSet, messageId, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateEDITypes, validateXSDTypes);
         }
     }

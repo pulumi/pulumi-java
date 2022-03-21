@@ -140,32 +140,29 @@ public final class EndpointConfigurationDataCaptureConfig {
             this.captureContentTypeHeader = captureContentTypeHeader;
             return this;
         }
-
         public Builder captureOptions(List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions) {
             this.captureOptions = Objects.requireNonNull(captureOptions);
             return this;
         }
-
+        public Builder captureOptions(EndpointConfigurationDataCaptureConfigCaptureOption... captureOptions) {
+            return captureOptions(List.of(captureOptions));
+        }
         public Builder destinationS3Uri(String destinationS3Uri) {
             this.destinationS3Uri = Objects.requireNonNull(destinationS3Uri);
             return this;
         }
-
         public Builder enableCapture(@Nullable Boolean enableCapture) {
             this.enableCapture = enableCapture;
             return this;
         }
-
         public Builder initialSamplingPercentage(Integer initialSamplingPercentage) {
             this.initialSamplingPercentage = Objects.requireNonNull(initialSamplingPercentage);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
-        }
-        public EndpointConfigurationDataCaptureConfig build() {
+        }        public EndpointConfigurationDataCaptureConfig build() {
             return new EndpointConfigurationDataCaptureConfig(captureContentTypeHeader, captureOptions, destinationS3Uri, enableCapture, initialSamplingPercentage, kmsKeyId);
         }
     }

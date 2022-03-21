@@ -222,57 +222,46 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
             this.autoCreateRoutes = Objects.requireNonNull(autoCreateRoutes);
             return this;
         }
-
         public Builder exchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
             this.exchangeSubnetRoutes = Objects.requireNonNull(exchangeSubnetRoutes);
             return this;
         }
-
         public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
             this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes);
             return this;
         }
-
         public Builder exportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
             this.exportSubnetRoutesWithPublicIp = Objects.requireNonNull(exportSubnetRoutesWithPublicIp);
             return this;
         }
-
         public Builder importCustomRoutes(Boolean importCustomRoutes) {
             this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes);
             return this;
         }
-
         public Builder importSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
             this.importSubnetRoutesWithPublicIp = Objects.requireNonNull(importSubnetRoutesWithPublicIp);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder peerMtu(Integer peerMtu) {
             this.peerMtu = Objects.requireNonNull(peerMtu);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateDetails(String stateDetails) {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
-        }
-        public NetworkPeeringResponse build() {
+        }        public NetworkPeeringResponse build() {
             return new NetworkPeeringResponse(autoCreateRoutes, exchangeSubnetRoutes, exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerMtu, state, stateDetails);
         }
     }

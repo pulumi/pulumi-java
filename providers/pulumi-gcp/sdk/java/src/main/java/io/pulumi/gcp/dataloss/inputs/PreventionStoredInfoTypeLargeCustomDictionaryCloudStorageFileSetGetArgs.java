@@ -56,12 +56,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs build() {
+        }        public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs(url);
         }
     }

@@ -109,42 +109,34 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
-
         public Builder predefinedLoadMetricSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = Output.ofNullable(predefinedLoadMetricSpecification);
             return this;
         }
-
         public Builder predefinedMetricPairSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification) {
             this.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
             return this;
         }
-
         public Builder predefinedMetricPairSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs predefinedMetricPairSpecification) {
             this.predefinedMetricPairSpecification = Output.ofNullable(predefinedMetricPairSpecification);
             return this;
         }
-
         public Builder predefinedScalingMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
             return this;
         }
-
         public Builder predefinedScalingMetricSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = Output.ofNullable(predefinedScalingMetricSpecification);
             return this;
         }
-
         public Builder targetValue(Output<Integer> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public Builder targetValue(Integer targetValue) {
             this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
-        }
-        public PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs build() {
+        }        public PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs build() {
             return new PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs(predefinedLoadMetricSpecification, predefinedMetricPairSpecification, predefinedScalingMetricSpecification, targetValue);
         }
     }

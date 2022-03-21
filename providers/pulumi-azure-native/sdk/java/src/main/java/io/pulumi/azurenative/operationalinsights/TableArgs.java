@@ -192,92 +192,74 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable Either<String,TablePlanEnum> plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restoredLogs(@Nullable Output<RestoredLogsArgs> restoredLogs) {
             this.restoredLogs = restoredLogs;
             return this;
         }
-
         public Builder restoredLogs(@Nullable RestoredLogsArgs restoredLogs) {
             this.restoredLogs = Output.ofNullable(restoredLogs);
             return this;
         }
-
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
-
         public Builder schema(@Nullable Output<SchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable SchemaArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder searchResults(@Nullable Output<SearchResultsArgs> searchResults) {
             this.searchResults = searchResults;
             return this;
         }
-
         public Builder searchResults(@Nullable SearchResultsArgs searchResults) {
             this.searchResults = Output.ofNullable(searchResults);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
         }
-
         public Builder totalRetentionInDays(@Nullable Output<Integer> totalRetentionInDays) {
             this.totalRetentionInDays = totalRetentionInDays;
             return this;
         }
-
         public Builder totalRetentionInDays(@Nullable Integer totalRetentionInDays) {
             this.totalRetentionInDays = Output.ofNullable(totalRetentionInDays);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public TableArgs build() {
+        }        public TableArgs build() {
             return new TableArgs(plan, resourceGroupName, restoredLogs, retentionInDays, schema, searchResults, tableName, totalRetentionInDays, workspaceName);
         }
     }

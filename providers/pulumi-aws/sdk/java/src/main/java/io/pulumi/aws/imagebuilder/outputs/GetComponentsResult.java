@@ -105,27 +105,31 @@ public final class GetComponentsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder filters(@Nullable List<GetComponentsFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetComponentsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
-        }
-        public GetComponentsResult build() {
+        }        public GetComponentsResult build() {
             return new GetComponentsResult(arns, filters, id, names, owner);
         }
     }

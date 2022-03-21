@@ -122,27 +122,22 @@ public final class RouteSpecHttp2RouteMatchHeaderMatch {
             this.exact = exact;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder range(@Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range) {
             this.range = range;
             return this;
         }
-
         public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder suffix(@Nullable String suffix) {
             this.suffix = suffix;
             return this;
-        }
-        public RouteSpecHttp2RouteMatchHeaderMatch build() {
+        }        public RouteSpecHttp2RouteMatchHeaderMatch build() {
             return new RouteSpecHttp2RouteMatchHeaderMatch(exact, prefix, range, regex, suffix);
         }
     }

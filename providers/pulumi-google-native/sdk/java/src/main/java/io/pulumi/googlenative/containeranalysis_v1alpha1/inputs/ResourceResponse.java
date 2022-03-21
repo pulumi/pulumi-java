@@ -93,17 +93,14 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
             this.contentHash = Objects.requireNonNull(contentHash);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ResourceResponse build() {
+        }        public ResourceResponse build() {
             return new ResourceResponse(contentHash, name, uri);
         }
     }

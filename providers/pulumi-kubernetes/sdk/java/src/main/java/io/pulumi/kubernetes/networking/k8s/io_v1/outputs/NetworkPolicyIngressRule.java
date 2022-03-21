@@ -72,12 +72,16 @@ public final class NetworkPolicyIngressRule {
             this.from = from;
             return this;
         }
-
+        public Builder from(NetworkPolicyPeer... from) {
+            return from(List.of(from));
+        }
         public Builder ports(@Nullable List<NetworkPolicyPort> ports) {
             this.ports = ports;
             return this;
         }
-        public NetworkPolicyIngressRule build() {
+        public Builder ports(NetworkPolicyPort... ports) {
+            return ports(List.of(ports));
+        }        public NetworkPolicyIngressRule build() {
             return new NetworkPolicyIngressRule(from, ports);
         }
     }

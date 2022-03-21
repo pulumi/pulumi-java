@@ -51,8 +51,7 @@ public final class InsightFiltersKeyword {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersKeyword build() {
+        }        public InsightFiltersKeyword build() {
             return new InsightFiltersKeyword(value);
         }
     }

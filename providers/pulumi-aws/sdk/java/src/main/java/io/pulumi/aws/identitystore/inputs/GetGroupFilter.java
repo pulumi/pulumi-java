@@ -72,12 +72,10 @@ public final class GetGroupFilter extends io.pulumi.resources.InvokeArgs {
             this.attributePath = Objects.requireNonNull(attributePath);
             return this;
         }
-
         public Builder attributeValue(String attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
-        }
-        public GetGroupFilter build() {
+        }        public GetGroupFilter build() {
             return new GetGroupFilter(attributePath, attributeValue);
         }
     }

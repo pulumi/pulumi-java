@@ -60,7 +60,9 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse exten
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-        public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse build() {
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse build() {
             return new GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(synonyms);
         }
     }

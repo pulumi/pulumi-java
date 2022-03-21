@@ -57,12 +57,13 @@ public final class WorkflowTemplateParameterValidationValuesArgs extends io.pulu
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public WorkflowTemplateParameterValidationValuesArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public WorkflowTemplateParameterValidationValuesArgs build() {
             return new WorkflowTemplateParameterValidationValuesArgs(values);
         }
     }

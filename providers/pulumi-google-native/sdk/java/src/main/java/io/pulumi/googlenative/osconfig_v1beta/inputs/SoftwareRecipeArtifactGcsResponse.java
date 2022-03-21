@@ -92,17 +92,14 @@ public final class SoftwareRecipeArtifactGcsResponse extends io.pulumi.resources
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(String generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public SoftwareRecipeArtifactGcsResponse build() {
+        }        public SoftwareRecipeArtifactGcsResponse build() {
             return new SoftwareRecipeArtifactGcsResponse(bucket, generation, object);
         }
     }

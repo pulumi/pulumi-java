@@ -222,102 +222,85 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder replication(@Nullable Output<SecretReplicationGetArgs> replication) {
             this.replication = replication;
             return this;
         }
-
         public Builder replication(@Nullable SecretReplicationGetArgs replication) {
             this.replication = Output.ofNullable(replication);
             return this;
         }
-
         public Builder rotation(@Nullable Output<SecretRotationGetArgs> rotation) {
             this.rotation = rotation;
             return this;
         }
-
         public Builder rotation(@Nullable SecretRotationGetArgs rotation) {
             this.rotation = Output.ofNullable(rotation);
             return this;
         }
-
         public Builder secretId(@Nullable Output<String> secretId) {
             this.secretId = secretId;
             return this;
         }
-
         public Builder secretId(@Nullable String secretId) {
             this.secretId = Output.ofNullable(secretId);
             return this;
         }
-
         public Builder topics(@Nullable Output<List<SecretTopicGetArgs>> topics) {
             this.topics = topics;
             return this;
         }
-
         public Builder topics(@Nullable List<SecretTopicGetArgs> topics) {
             this.topics = Output.ofNullable(topics);
             return this;
         }
-
+        public Builder topics(SecretTopicGetArgs... topics) {
+            return topics(List.of(topics));
+        }
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public SecretState build() {
+        }        public SecretState build() {
             return new SecretState(createTime, expireTime, labels, name, project, replication, rotation, secretId, topics, ttl);
         }
     }

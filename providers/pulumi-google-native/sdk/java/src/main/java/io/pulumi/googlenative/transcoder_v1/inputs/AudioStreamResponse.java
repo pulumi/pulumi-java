@@ -143,32 +143,32 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
-
         public Builder channelCount(Integer channelCount) {
             this.channelCount = Objects.requireNonNull(channelCount);
             return this;
         }
-
         public Builder channelLayout(List<String> channelLayout) {
             this.channelLayout = Objects.requireNonNull(channelLayout);
             return this;
         }
-
+        public Builder channelLayout(String... channelLayout) {
+            return channelLayout(List.of(channelLayout));
+        }
         public Builder codec(String codec) {
             this.codec = Objects.requireNonNull(codec);
             return this;
         }
-
         public Builder mapping(List<AudioMappingResponse> mapping) {
             this.mapping = Objects.requireNonNull(mapping);
             return this;
         }
-
+        public Builder mapping(AudioMappingResponse... mapping) {
+            return mapping(List.of(mapping));
+        }
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
-        }
-        public AudioStreamResponse build() {
+        }        public AudioStreamResponse build() {
             return new AudioStreamResponse(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);
         }
     }

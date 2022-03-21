@@ -80,17 +80,14 @@ public final class EnvironmentLoggingConfigurationDagProcessingLogs {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
-        }
-        public EnvironmentLoggingConfigurationDagProcessingLogs build() {
+        }        public EnvironmentLoggingConfigurationDagProcessingLogs build() {
             return new EnvironmentLoggingConfigurationDagProcessingLogs(cloudWatchLogGroupArn, enabled, logLevel);
         }
     }

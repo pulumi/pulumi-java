@@ -104,22 +104,18 @@ public final class GetReadWriteDatabaseArgs extends io.pulumi.resources.InvokeAr
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetReadWriteDatabaseArgs build() {
+        }        public GetReadWriteDatabaseArgs build() {
             return new GetReadWriteDatabaseArgs(databaseName, kustoPoolName, resourceGroupName, workspaceName);
         }
     }

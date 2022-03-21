@@ -145,37 +145,33 @@ public final class DetectorOutcome extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder inline(@Nullable Boolean inline) {
             this.inline = inline;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }
-        public DetectorOutcome build() {
+        public Builder tags(DetectorTag... tags) {
+            return tags(List.of(tags));
+        }        public DetectorOutcome build() {
             return new DetectorOutcome(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }
     }

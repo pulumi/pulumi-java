@@ -158,72 +158,64 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
-
         public Builder advancedBackupSettings(@Nullable List<PlanAdvancedBackupSettingGetArgs> advancedBackupSettings) {
             this.advancedBackupSettings = Output.ofNullable(advancedBackupSettings);
             return this;
         }
-
+        public Builder advancedBackupSettings(PlanAdvancedBackupSettingGetArgs... advancedBackupSettings) {
+            return advancedBackupSettings(List.of(advancedBackupSettings));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<PlanRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<PlanRuleGetArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(PlanRuleGetArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public PlanState build() {
+        }        public PlanState build() {
             return new PlanState(advancedBackupSettings, arn, name, rules, tags, tagsAll, version);
         }
     }

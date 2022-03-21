@@ -78,12 +78,10 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
             this.range = range;
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
-        }
-        public TableExternalDataConfigurationGoogleSheetsOptions build() {
+        }        public TableExternalDataConfigurationGoogleSheetsOptions build() {
             return new TableExternalDataConfigurationGoogleSheetsOptions(range, skipLeadingRows);
         }
     }

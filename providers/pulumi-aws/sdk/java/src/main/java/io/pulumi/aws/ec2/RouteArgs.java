@@ -266,142 +266,114 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.carrierGatewayId = carrierGatewayId;
             return this;
         }
-
         public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
             this.carrierGatewayId = Output.ofNullable(carrierGatewayId);
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
-
         public Builder destinationIpv6CidrBlock(@Nullable Output<String> destinationIpv6CidrBlock) {
             this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
             return this;
         }
-
         public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
             this.destinationIpv6CidrBlock = Output.ofNullable(destinationIpv6CidrBlock);
             return this;
         }
-
         public Builder destinationPrefixListId(@Nullable Output<String> destinationPrefixListId) {
             this.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
-
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
             this.destinationPrefixListId = Output.ofNullable(destinationPrefixListId);
             return this;
         }
-
         public Builder egressOnlyGatewayId(@Nullable Output<String> egressOnlyGatewayId) {
             this.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
-
         public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
             this.egressOnlyGatewayId = Output.ofNullable(egressOnlyGatewayId);
             return this;
         }
-
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
-
         public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = Output.ofNullable(localGatewayId);
             return this;
         }
-
         public Builder natGatewayId(@Nullable Output<String> natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
         }
-
         public Builder natGatewayId(@Nullable String natGatewayId) {
             this.natGatewayId = Output.ofNullable(natGatewayId);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
-
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Output.ofNullable(transitGatewayId);
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
-
         public Builder vpcPeeringConnectionId(@Nullable Output<String> vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
-
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Output.ofNullable(vpcPeeringConnectionId);
             return this;
-        }
-        public RouteArgs build() {
+        }        public RouteArgs build() {
             return new RouteArgs(carrierGatewayId, destinationCidrBlock, destinationIpv6CidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, localGatewayId, natGatewayId, networkInterfaceId, routeTableId, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
         }
     }

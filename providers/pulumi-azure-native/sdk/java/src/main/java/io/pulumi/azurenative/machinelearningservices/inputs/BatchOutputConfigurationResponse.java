@@ -78,12 +78,10 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
             this.appendRowFileName = appendRowFileName;
             return this;
         }
-
         public Builder outputAction(@Nullable String outputAction) {
             this.outputAction = outputAction;
             return this;
-        }
-        public BatchOutputConfigurationResponse build() {
+        }        public BatchOutputConfigurationResponse build() {
             return new BatchOutputConfigurationResponse(appendRowFileName, outputAction);
         }
     }

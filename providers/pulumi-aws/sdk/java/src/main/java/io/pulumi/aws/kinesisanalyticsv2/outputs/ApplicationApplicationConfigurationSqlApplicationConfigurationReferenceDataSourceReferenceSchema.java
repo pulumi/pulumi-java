@@ -90,17 +90,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
+        public Builder recordColumns(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema(recordColumns, recordEncoding, recordFormat);
         }
     }

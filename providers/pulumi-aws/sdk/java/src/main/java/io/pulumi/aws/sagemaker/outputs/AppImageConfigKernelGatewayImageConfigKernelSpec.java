@@ -71,12 +71,10 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpec {
             this.displayName = displayName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AppImageConfigKernelGatewayImageConfigKernelSpec build() {
+        }        public AppImageConfigKernelGatewayImageConfigKernelSpec build() {
             return new AppImageConfigKernelGatewayImageConfigKernelSpec(displayName, name);
         }
     }

@@ -252,132 +252,109 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.canonicalName = canonicalName;
             return this;
         }
-
         public Builder canonicalName(@Nullable String canonicalName) {
             this.canonicalName = Output.ofNullable(canonicalName);
             return this;
         }
-
         public Builder domainValidationMethod(@Nullable Output<String> domainValidationMethod) {
             this.domainValidationMethod = domainValidationMethod;
             return this;
         }
-
         public Builder domainValidationMethod(@Nullable String domainValidationMethod) {
             this.domainValidationMethod = Output.ofNullable(domainValidationMethod);
             return this;
         }
-
         public Builder hostNames(@Nullable Output<List<String>> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
-
         public Builder hostNames(@Nullable List<String> hostNames) {
             this.hostNames = Output.ofNullable(hostNames);
             return this;
         }
-
+        public Builder hostNames(String... hostNames) {
+            return hostNames(List.of(hostNames));
+        }
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Output.ofNullable(keyVaultId);
             return this;
         }
-
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
-
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
             this.keyVaultSecretName = Output.ofNullable(keyVaultSecretName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder pfxBlob(@Nullable Output<String> pfxBlob) {
             this.pfxBlob = pfxBlob;
             return this;
         }
-
         public Builder pfxBlob(@Nullable String pfxBlob) {
             this.pfxBlob = Output.ofNullable(pfxBlob);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverFarmId(@Nullable Output<String> serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
-
         public Builder serverFarmId(@Nullable String serverFarmId) {
             this.serverFarmId = Output.ofNullable(serverFarmId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(canonicalName, domainValidationMethod, hostNames, keyVaultId, keyVaultSecretName, kind, location, name, password, pfxBlob, resourceGroupName, serverFarmId, tags);
         }
     }

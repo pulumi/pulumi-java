@@ -293,152 +293,140 @@ public final class RecordState extends io.pulumi.resources.ResourceArgs {
             this.aliases = aliases;
             return this;
         }
-
         public Builder aliases(@Nullable List<RecordAliasGetArgs> aliases) {
             this.aliases = Output.ofNullable(aliases);
             return this;
         }
-
+        public Builder aliases(RecordAliasGetArgs... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder allowOverwrite(@Nullable Output<Boolean> allowOverwrite) {
             this.allowOverwrite = allowOverwrite;
             return this;
         }
-
         public Builder allowOverwrite(@Nullable Boolean allowOverwrite) {
             this.allowOverwrite = Output.ofNullable(allowOverwrite);
             return this;
         }
-
         public Builder failoverRoutingPolicies(@Nullable Output<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies) {
             this.failoverRoutingPolicies = failoverRoutingPolicies;
             return this;
         }
-
         public Builder failoverRoutingPolicies(@Nullable List<RecordFailoverRoutingPolicyGetArgs> failoverRoutingPolicies) {
             this.failoverRoutingPolicies = Output.ofNullable(failoverRoutingPolicies);
             return this;
         }
-
+        public Builder failoverRoutingPolicies(RecordFailoverRoutingPolicyGetArgs... failoverRoutingPolicies) {
+            return failoverRoutingPolicies(List.of(failoverRoutingPolicies));
+        }
         public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder geolocationRoutingPolicies(@Nullable Output<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies) {
             this.geolocationRoutingPolicies = geolocationRoutingPolicies;
             return this;
         }
-
         public Builder geolocationRoutingPolicies(@Nullable List<RecordGeolocationRoutingPolicyGetArgs> geolocationRoutingPolicies) {
             this.geolocationRoutingPolicies = Output.ofNullable(geolocationRoutingPolicies);
             return this;
         }
-
+        public Builder geolocationRoutingPolicies(RecordGeolocationRoutingPolicyGetArgs... geolocationRoutingPolicies) {
+            return geolocationRoutingPolicies(List.of(geolocationRoutingPolicies));
+        }
         public Builder healthCheckId(@Nullable Output<String> healthCheckId) {
             this.healthCheckId = healthCheckId;
             return this;
         }
-
         public Builder healthCheckId(@Nullable String healthCheckId) {
             this.healthCheckId = Output.ofNullable(healthCheckId);
             return this;
         }
-
         public Builder latencyRoutingPolicies(@Nullable Output<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies) {
             this.latencyRoutingPolicies = latencyRoutingPolicies;
             return this;
         }
-
         public Builder latencyRoutingPolicies(@Nullable List<RecordLatencyRoutingPolicyGetArgs> latencyRoutingPolicies) {
             this.latencyRoutingPolicies = Output.ofNullable(latencyRoutingPolicies);
             return this;
         }
-
+        public Builder latencyRoutingPolicies(RecordLatencyRoutingPolicyGetArgs... latencyRoutingPolicies) {
+            return latencyRoutingPolicies(List.of(latencyRoutingPolicies));
+        }
         public Builder multivalueAnswerRoutingPolicy(@Nullable Output<Boolean> multivalueAnswerRoutingPolicy) {
             this.multivalueAnswerRoutingPolicy = multivalueAnswerRoutingPolicy;
             return this;
         }
-
         public Builder multivalueAnswerRoutingPolicy(@Nullable Boolean multivalueAnswerRoutingPolicy) {
             this.multivalueAnswerRoutingPolicy = Output.ofNullable(multivalueAnswerRoutingPolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder records(@Nullable Output<List<String>> records) {
             this.records = records;
             return this;
         }
-
         public Builder records(@Nullable List<String> records) {
             this.records = Output.ofNullable(records);
             return this;
         }
-
+        public Builder records(String... records) {
+            return records(List.of(records));
+        }
         public Builder setIdentifier(@Nullable Output<String> setIdentifier) {
             this.setIdentifier = setIdentifier;
             return this;
         }
-
         public Builder setIdentifier(@Nullable String setIdentifier) {
             this.setIdentifier = Output.ofNullable(setIdentifier);
             return this;
         }
-
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,RecordType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,RecordType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder weightedRoutingPolicies(@Nullable Output<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies) {
             this.weightedRoutingPolicies = weightedRoutingPolicies;
             return this;
         }
-
         public Builder weightedRoutingPolicies(@Nullable List<RecordWeightedRoutingPolicyGetArgs> weightedRoutingPolicies) {
             this.weightedRoutingPolicies = Output.ofNullable(weightedRoutingPolicies);
             return this;
         }
-
+        public Builder weightedRoutingPolicies(RecordWeightedRoutingPolicyGetArgs... weightedRoutingPolicies) {
+            return weightedRoutingPolicies(List.of(weightedRoutingPolicies));
+        }
         public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
-
         public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Output.ofNullable(zoneId);
             return this;
-        }
-        public RecordState build() {
+        }        public RecordState build() {
             return new RecordState(aliases, allowOverwrite, failoverRoutingPolicies, fqdn, geolocationRoutingPolicies, healthCheckId, latencyRoutingPolicies, multivalueAnswerRoutingPolicy, name, records, setIdentifier, ttl, type, weightedRoutingPolicies, zoneId);
         }
     }

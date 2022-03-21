@@ -90,32 +90,26 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
             this.masterUserArn = masterUserArn;
             return this;
         }
-
         public Builder masterUserArn(@Nullable String masterUserArn) {
             this.masterUserArn = Output.ofNullable(masterUserArn);
             return this;
         }
-
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
-
         public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = Output.ofNullable(masterUserName);
             return this;
         }
-
         public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
-
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
             this.masterUserPassword = Output.ofNullable(masterUserPassword);
             return this;
-        }
-        public DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs build() {
+        }        public DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs build() {
             return new DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs(masterUserArn, masterUserName, masterUserPassword);
         }
     }

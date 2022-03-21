@@ -55,8 +55,7 @@ public final class CxPageFormParameterFillBehavior {
         public Builder initialPromptFulfillment(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment) {
             this.initialPromptFulfillment = initialPromptFulfillment;
             return this;
-        }
-        public CxPageFormParameterFillBehavior build() {
+        }        public CxPageFormParameterFillBehavior build() {
             return new CxPageFormParameterFillBehavior(initialPromptFulfillment);
         }
     }

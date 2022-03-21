@@ -88,17 +88,14 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
             this.privateDnsZoneGroupName = Objects.requireNonNull(privateDnsZoneGroupName);
             return this;
         }
-
         public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateDnsZoneGroupArgs build() {
+        }        public GetPrivateDnsZoneGroupArgs build() {
             return new GetPrivateDnsZoneGroupArgs(privateDnsZoneGroupName, privateEndpointName, resourceGroupName);
         }
     }

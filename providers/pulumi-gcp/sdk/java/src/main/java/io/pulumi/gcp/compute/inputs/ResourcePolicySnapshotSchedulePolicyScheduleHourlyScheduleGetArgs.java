@@ -74,22 +74,18 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGet
             this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
             return this;
         }
-
         public Builder hoursInCycle(Integer hoursInCycle) {
             this.hoursInCycle = Output.of(Objects.requireNonNull(hoursInCycle));
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs build() {
+        }        public ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs(hoursInCycle, startTime);
         }
     }

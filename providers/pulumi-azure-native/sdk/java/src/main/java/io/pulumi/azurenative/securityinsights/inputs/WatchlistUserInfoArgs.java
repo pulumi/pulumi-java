@@ -61,12 +61,10 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
-        }
-        public WatchlistUserInfoArgs build() {
+        }        public WatchlistUserInfoArgs build() {
             return new WatchlistUserInfoArgs(objectId);
         }
     }

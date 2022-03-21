@@ -74,22 +74,18 @@ public final class WebAclRuleStatementOrStatementStatementXssMatchStatementTextT
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementXssMatchStatementTextTransformationArgs build() {
+        }        public WebAclRuleStatementOrStatementStatementXssMatchStatementTextTransformationArgs build() {
             return new WebAclRuleStatementOrStatementStatementXssMatchStatementTextTransformationArgs(priority, type);
         }
     }

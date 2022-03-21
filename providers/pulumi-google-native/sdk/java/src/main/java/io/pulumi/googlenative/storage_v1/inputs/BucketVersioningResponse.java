@@ -58,8 +58,7 @@ public final class BucketVersioningResponse extends io.pulumi.resources.InvokeAr
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public BucketVersioningResponse build() {
+        }        public BucketVersioningResponse build() {
             return new BucketVersioningResponse(enabled);
         }
     }

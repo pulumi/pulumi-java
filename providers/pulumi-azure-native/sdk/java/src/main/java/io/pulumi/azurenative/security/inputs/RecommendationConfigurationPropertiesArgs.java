@@ -80,22 +80,18 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
             this.recommendationType = Objects.requireNonNull(recommendationType);
             return this;
         }
-
         public Builder recommendationType(Either<String,RecommendationType> recommendationType) {
             this.recommendationType = Output.of(Objects.requireNonNull(recommendationType));
             return this;
         }
-
         public Builder status(Output<Either<String,RecommendationConfigStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(Either<String,RecommendationConfigStatus> status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public RecommendationConfigurationPropertiesArgs build() {
+        }        public RecommendationConfigurationPropertiesArgs build() {
             return new RecommendationConfigurationPropertiesArgs(recommendationType, status);
         }
     }

@@ -184,42 +184,37 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.bcdrState = bcdrState;
             return this;
         }
-
         public Builder customDetails(@Nullable Object customDetails) {
             this.customDetails = customDetails;
             return this;
         }
-
         public Builder encryptionDetails(@Nullable EncryptionDetailsResponse encryptionDetails) {
             this.encryptionDetails = encryptionDetails;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder health(@Nullable String health) {
             this.health = health;
             return this;
         }
-
         public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             this.healthErrorDetails = healthErrorDetails;
             return this;
         }
-
+        public Builder healthErrorDetails(HealthErrorResponse... healthErrorDetails) {
+            return healthErrorDetails(List.of(healthErrorDetails));
+        }
         public Builder internalIdentifier(@Nullable String internalIdentifier) {
             this.internalIdentifier = internalIdentifier;
             return this;
         }
-
         public Builder rolloverEncryptionDetails(@Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
             this.rolloverEncryptionDetails = rolloverEncryptionDetails;
             return this;
-        }
-        public FabricPropertiesResponse build() {
+        }        public FabricPropertiesResponse build() {
             return new FabricPropertiesResponse(bcdrState, customDetails, encryptionDetails, friendlyName, health, healthErrorDetails, internalIdentifier, rolloverEncryptionDetails);
         }
     }

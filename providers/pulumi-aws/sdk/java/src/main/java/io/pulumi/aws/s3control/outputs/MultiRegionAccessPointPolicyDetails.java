@@ -69,12 +69,10 @@ public final class MultiRegionAccessPointPolicyDetails {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
-        }
-        public MultiRegionAccessPointPolicyDetails build() {
+        }        public MultiRegionAccessPointPolicyDetails build() {
             return new MultiRegionAccessPointPolicyDetails(name, policy);
         }
     }

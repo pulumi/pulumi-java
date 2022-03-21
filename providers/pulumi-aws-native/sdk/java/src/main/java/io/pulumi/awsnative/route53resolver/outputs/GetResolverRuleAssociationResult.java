@@ -53,8 +53,7 @@ public final class GetResolverRuleAssociationResult {
         public Builder resolverRuleAssociationId(@Nullable String resolverRuleAssociationId) {
             this.resolverRuleAssociationId = resolverRuleAssociationId;
             return this;
-        }
-        public GetResolverRuleAssociationResult build() {
+        }        public GetResolverRuleAssociationResult build() {
             return new GetResolverRuleAssociationResult(resolverRuleAssociationId);
         }
     }

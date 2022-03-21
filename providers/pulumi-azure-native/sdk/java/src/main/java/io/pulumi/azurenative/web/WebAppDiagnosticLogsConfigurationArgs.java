@@ -157,72 +157,58 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
             this.applicationLogs = applicationLogs;
             return this;
         }
-
         public Builder applicationLogs(@Nullable ApplicationLogsConfigArgs applicationLogs) {
             this.applicationLogs = Output.ofNullable(applicationLogs);
             return this;
         }
-
         public Builder detailedErrorMessages(@Nullable Output<EnabledConfigArgs> detailedErrorMessages) {
             this.detailedErrorMessages = detailedErrorMessages;
             return this;
         }
-
         public Builder detailedErrorMessages(@Nullable EnabledConfigArgs detailedErrorMessages) {
             this.detailedErrorMessages = Output.ofNullable(detailedErrorMessages);
             return this;
         }
-
         public Builder failedRequestsTracing(@Nullable Output<EnabledConfigArgs> failedRequestsTracing) {
             this.failedRequestsTracing = failedRequestsTracing;
             return this;
         }
-
         public Builder failedRequestsTracing(@Nullable EnabledConfigArgs failedRequestsTracing) {
             this.failedRequestsTracing = Output.ofNullable(failedRequestsTracing);
             return this;
         }
-
         public Builder httpLogs(@Nullable Output<HttpLogsConfigArgs> httpLogs) {
             this.httpLogs = httpLogs;
             return this;
         }
-
         public Builder httpLogs(@Nullable HttpLogsConfigArgs httpLogs) {
             this.httpLogs = Output.ofNullable(httpLogs);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public WebAppDiagnosticLogsConfigurationArgs build() {
+        }        public WebAppDiagnosticLogsConfigurationArgs build() {
             return new WebAppDiagnosticLogsConfigurationArgs(applicationLogs, detailedErrorMessages, failedRequestsTracing, httpLogs, kind, name, resourceGroupName);
         }
     }

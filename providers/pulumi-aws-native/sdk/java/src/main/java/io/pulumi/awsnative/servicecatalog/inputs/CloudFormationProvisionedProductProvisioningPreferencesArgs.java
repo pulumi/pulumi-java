@@ -129,72 +129,64 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
             this.stackSetAccounts = stackSetAccounts;
             return this;
         }
-
         public Builder stackSetAccounts(@Nullable List<String> stackSetAccounts) {
             this.stackSetAccounts = Output.ofNullable(stackSetAccounts);
             return this;
         }
-
+        public Builder stackSetAccounts(String... stackSetAccounts) {
+            return stackSetAccounts(List.of(stackSetAccounts));
+        }
         public Builder stackSetFailureToleranceCount(@Nullable Output<Integer> stackSetFailureToleranceCount) {
             this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
             return this;
         }
-
         public Builder stackSetFailureToleranceCount(@Nullable Integer stackSetFailureToleranceCount) {
             this.stackSetFailureToleranceCount = Output.ofNullable(stackSetFailureToleranceCount);
             return this;
         }
-
         public Builder stackSetFailureTolerancePercentage(@Nullable Output<Integer> stackSetFailureTolerancePercentage) {
             this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
             return this;
         }
-
         public Builder stackSetFailureTolerancePercentage(@Nullable Integer stackSetFailureTolerancePercentage) {
             this.stackSetFailureTolerancePercentage = Output.ofNullable(stackSetFailureTolerancePercentage);
             return this;
         }
-
         public Builder stackSetMaxConcurrencyCount(@Nullable Output<Integer> stackSetMaxConcurrencyCount) {
             this.stackSetMaxConcurrencyCount = stackSetMaxConcurrencyCount;
             return this;
         }
-
         public Builder stackSetMaxConcurrencyCount(@Nullable Integer stackSetMaxConcurrencyCount) {
             this.stackSetMaxConcurrencyCount = Output.ofNullable(stackSetMaxConcurrencyCount);
             return this;
         }
-
         public Builder stackSetMaxConcurrencyPercentage(@Nullable Output<Integer> stackSetMaxConcurrencyPercentage) {
             this.stackSetMaxConcurrencyPercentage = stackSetMaxConcurrencyPercentage;
             return this;
         }
-
         public Builder stackSetMaxConcurrencyPercentage(@Nullable Integer stackSetMaxConcurrencyPercentage) {
             this.stackSetMaxConcurrencyPercentage = Output.ofNullable(stackSetMaxConcurrencyPercentage);
             return this;
         }
-
         public Builder stackSetOperationType(@Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType) {
             this.stackSetOperationType = stackSetOperationType;
             return this;
         }
-
         public Builder stackSetOperationType(@Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType) {
             this.stackSetOperationType = Output.ofNullable(stackSetOperationType);
             return this;
         }
-
         public Builder stackSetRegions(@Nullable Output<List<String>> stackSetRegions) {
             this.stackSetRegions = stackSetRegions;
             return this;
         }
-
         public Builder stackSetRegions(@Nullable List<String> stackSetRegions) {
             this.stackSetRegions = Output.ofNullable(stackSetRegions);
             return this;
         }
-        public CloudFormationProvisionedProductProvisioningPreferencesArgs build() {
+        public Builder stackSetRegions(String... stackSetRegions) {
+            return stackSetRegions(List.of(stackSetRegions));
+        }        public CloudFormationProvisionedProductProvisioningPreferencesArgs build() {
             return new CloudFormationProvisionedProductProvisioningPreferencesArgs(stackSetAccounts, stackSetFailureToleranceCount, stackSetFailureTolerancePercentage, stackSetMaxConcurrencyCount, stackSetMaxConcurrencyPercentage, stackSetOperationType, stackSetRegions);
         }
     }

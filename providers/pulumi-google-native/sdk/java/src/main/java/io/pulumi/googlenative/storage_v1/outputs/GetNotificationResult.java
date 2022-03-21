@@ -167,42 +167,37 @@ public final class GetNotificationResult {
             this.customAttributes = Objects.requireNonNull(customAttributes);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder eventTypes(List<String> eventTypes) {
             this.eventTypes = Objects.requireNonNull(eventTypes);
             return this;
         }
-
+        public Builder eventTypes(String... eventTypes) {
+            return eventTypes(List.of(eventTypes));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder objectNamePrefix(String objectNamePrefix) {
             this.objectNamePrefix = Objects.requireNonNull(objectNamePrefix);
             return this;
         }
-
         public Builder payloadFormat(String payloadFormat) {
             this.payloadFormat = Objects.requireNonNull(payloadFormat);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GetNotificationResult build() {
+        }        public GetNotificationResult build() {
             return new GetNotificationResult(customAttributes, etag, eventTypes, kind, objectNamePrefix, payloadFormat, selfLink, topic);
         }
     }

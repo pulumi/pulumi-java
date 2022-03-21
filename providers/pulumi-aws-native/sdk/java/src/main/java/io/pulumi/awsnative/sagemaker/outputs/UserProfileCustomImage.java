@@ -88,17 +88,14 @@ public final class UserProfileCustomImage {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
             this.imageVersionNumber = imageVersionNumber;
             return this;
-        }
-        public UserProfileCustomImage build() {
+        }        public UserProfileCustomImage build() {
             return new UserProfileCustomImage(appImageConfigName, imageName, imageVersionNumber);
         }
     }

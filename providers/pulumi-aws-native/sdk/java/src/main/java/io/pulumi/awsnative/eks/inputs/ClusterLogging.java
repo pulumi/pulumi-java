@@ -59,8 +59,7 @@ public final class ClusterLogging extends io.pulumi.resources.InvokeArgs {
         public Builder clusterLogging(@Nullable ClusterLogging clusterLogging) {
             this.clusterLogging = clusterLogging;
             return this;
-        }
-        public ClusterLogging build() {
+        }        public ClusterLogging build() {
             return new ClusterLogging(clusterLogging);
         }
     }

@@ -56,12 +56,10 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(ConnectorKafkaClusterClientAuthenticationType authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
-        }
-        public ConnectorKafkaClusterClientAuthenticationArgs build() {
+        }        public ConnectorKafkaClusterClientAuthenticationArgs build() {
             return new ConnectorKafkaClusterClientAuthenticationArgs(authenticationType);
         }
     }

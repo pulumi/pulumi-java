@@ -174,42 +174,34 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
             this.bmcDefaultUserPassword = bmcDefaultUserPassword;
             return this;
         }
-
         public Builder hcsDataVolumeBitLockerExternalKey(@Nullable SecretResponse hcsDataVolumeBitLockerExternalKey) {
             this.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
             return this;
         }
-
         public Builder hcsInternalVolumeBitLockerExternalKey(@Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey) {
             this.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;
             return this;
         }
-
         public Builder rotateKeyForDataVolumeBitlocker(@Nullable SecretResponse rotateKeyForDataVolumeBitlocker) {
             this.rotateKeyForDataVolumeBitlocker = rotateKeyForDataVolumeBitlocker;
             return this;
         }
-
         public Builder rotateKeysForSedDrivesSerialized(@Nullable SecretResponse rotateKeysForSedDrivesSerialized) {
             this.rotateKeysForSedDrivesSerialized = rotateKeysForSedDrivesSerialized;
             return this;
         }
-
         public Builder sedEncryptionExternalKey(@Nullable SecretResponse sedEncryptionExternalKey) {
             this.sedEncryptionExternalKey = sedEncryptionExternalKey;
             return this;
         }
-
         public Builder sedEncryptionExternalKeyId(@Nullable SecretResponse sedEncryptionExternalKeyId) {
             this.sedEncryptionExternalKeyId = sedEncryptionExternalKeyId;
             return this;
         }
-
         public Builder systemVolumeBitLockerRecoveryKey(@Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
             this.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
             return this;
-        }
-        public DeviceSecretsResponse build() {
+        }        public DeviceSecretsResponse build() {
             return new DeviceSecretsResponse(bmcDefaultUserPassword, hcsDataVolumeBitLockerExternalKey, hcsInternalVolumeBitLockerExternalKey, rotateKeyForDataVolumeBitlocker, rotateKeysForSedDrivesSerialized, sedEncryptionExternalKey, sedEncryptionExternalKeyId, systemVolumeBitLockerRecoveryKey);
         }
     }

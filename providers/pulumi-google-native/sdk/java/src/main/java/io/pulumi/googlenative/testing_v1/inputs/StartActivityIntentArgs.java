@@ -95,32 +95,29 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder categories(@Nullable Output<List<String>> categories) {
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable List<String> categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public StartActivityIntentArgs build() {
+        }        public StartActivityIntentArgs build() {
             return new StartActivityIntentArgs(action, categories, uri);
         }
     }

@@ -80,22 +80,21 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder weeklyMaintenanceWindow(@Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
             return this;
         }
-
         public Builder weeklyMaintenanceWindow(@Nullable List<WeeklyMaintenanceWindowArgs> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = Output.ofNullable(weeklyMaintenanceWindow);
             return this;
         }
-        public MaintenancePolicyArgs build() {
+        public Builder weeklyMaintenanceWindow(WeeklyMaintenanceWindowArgs... weeklyMaintenanceWindow) {
+            return weeklyMaintenanceWindow(List.of(weeklyMaintenanceWindow));
+        }        public MaintenancePolicyArgs build() {
             return new MaintenancePolicyArgs(description, weeklyMaintenanceWindow);
         }
     }

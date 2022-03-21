@@ -96,32 +96,26 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
             this.bindingParameters = bindingParameters;
             return this;
         }
-
         public Builder bindingParameters(@Nullable Map<String,Object> bindingParameters) {
             this.bindingParameters = Output.ofNullable(bindingParameters);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public BindingResourcePropertiesArgs build() {
+        }        public BindingResourcePropertiesArgs build() {
             return new BindingResourcePropertiesArgs(bindingParameters, key, resourceId);
         }
     }

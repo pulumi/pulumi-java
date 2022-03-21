@@ -88,17 +88,14 @@ public final class GetEventHubArgs extends io.pulumi.resources.InvokeArgs {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetEventHubArgs build() {
+        }        public GetEventHubArgs build() {
             return new GetEventHubArgs(eventHubName, namespaceName, resourceGroupName);
         }
     }

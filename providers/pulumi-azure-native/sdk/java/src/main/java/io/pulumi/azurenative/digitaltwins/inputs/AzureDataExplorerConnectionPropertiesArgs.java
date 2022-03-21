@@ -191,92 +191,74 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
             this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName);
             return this;
         }
-
         public Builder adxDatabaseName(String adxDatabaseName) {
             this.adxDatabaseName = Output.of(Objects.requireNonNull(adxDatabaseName));
             return this;
         }
-
         public Builder adxEndpointUri(Output<String> adxEndpointUri) {
             this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri);
             return this;
         }
-
         public Builder adxEndpointUri(String adxEndpointUri) {
             this.adxEndpointUri = Output.of(Objects.requireNonNull(adxEndpointUri));
             return this;
         }
-
         public Builder adxResourceId(Output<String> adxResourceId) {
             this.adxResourceId = Objects.requireNonNull(adxResourceId);
             return this;
         }
-
         public Builder adxResourceId(String adxResourceId) {
             this.adxResourceId = Output.of(Objects.requireNonNull(adxResourceId));
             return this;
         }
-
         public Builder adxTableName(@Nullable Output<String> adxTableName) {
             this.adxTableName = adxTableName;
             return this;
         }
-
         public Builder adxTableName(@Nullable String adxTableName) {
             this.adxTableName = Output.ofNullable(adxTableName);
             return this;
         }
-
         public Builder connectionType(Output<String> connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
-
         public Builder connectionType(String connectionType) {
             this.connectionType = Output.of(Objects.requireNonNull(connectionType));
             return this;
         }
-
         public Builder eventHubConsumerGroup(@Nullable Output<String> eventHubConsumerGroup) {
             this.eventHubConsumerGroup = eventHubConsumerGroup;
             return this;
         }
-
         public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
             this.eventHubConsumerGroup = Output.ofNullable(eventHubConsumerGroup);
             return this;
         }
-
         public Builder eventHubEndpointUri(Output<String> eventHubEndpointUri) {
             this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri);
             return this;
         }
-
         public Builder eventHubEndpointUri(String eventHubEndpointUri) {
             this.eventHubEndpointUri = Output.of(Objects.requireNonNull(eventHubEndpointUri));
             return this;
         }
-
         public Builder eventHubEntityPath(Output<String> eventHubEntityPath) {
             this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath);
             return this;
         }
-
         public Builder eventHubEntityPath(String eventHubEntityPath) {
             this.eventHubEntityPath = Output.of(Objects.requireNonNull(eventHubEntityPath));
             return this;
         }
-
         public Builder eventHubNamespaceResourceId(Output<String> eventHubNamespaceResourceId) {
             this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId);
             return this;
         }
-
         public Builder eventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
             this.eventHubNamespaceResourceId = Output.of(Objects.requireNonNull(eventHubNamespaceResourceId));
             return this;
-        }
-        public AzureDataExplorerConnectionPropertiesArgs build() {
+        }        public AzureDataExplorerConnectionPropertiesArgs build() {
             return new AzureDataExplorerConnectionPropertiesArgs(adxDatabaseName, adxEndpointUri, adxResourceId, adxTableName, connectionType, eventHubConsumerGroup, eventHubEndpointUri, eventHubEntityPath, eventHubNamespaceResourceId);
         }
     }

@@ -86,17 +86,14 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
             this.force = Objects.requireNonNull(force);
             return this;
         }
-
         public Builder tableUri(String tableUri) {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
-
         public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
-        }
-        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse build() {
+        }        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse build() {
             return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(force, tableUri, writeDisposition);
         }
     }

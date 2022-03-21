@@ -369,202 +369,162 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
             this.allowOpenGop = allowOpenGop;
             return this;
         }
-
         public Builder allowOpenGop(@Nullable Boolean allowOpenGop) {
             this.allowOpenGop = Output.ofNullable(allowOpenGop);
             return this;
         }
-
         public Builder aqStrength(@Nullable Output<Double> aqStrength) {
             this.aqStrength = aqStrength;
             return this;
         }
-
         public Builder aqStrength(@Nullable Double aqStrength) {
             this.aqStrength = Output.ofNullable(aqStrength);
             return this;
         }
-
         public Builder bFrameCount(@Nullable Output<Integer> bFrameCount) {
             this.bFrameCount = bFrameCount;
             return this;
         }
-
         public Builder bFrameCount(@Nullable Integer bFrameCount) {
             this.bFrameCount = Output.ofNullable(bFrameCount);
             return this;
         }
-
         public Builder bPyramid(@Nullable Output<Boolean> bPyramid) {
             this.bPyramid = bPyramid;
             return this;
         }
-
         public Builder bPyramid(@Nullable Boolean bPyramid) {
             this.bPyramid = Output.ofNullable(bPyramid);
             return this;
         }
-
         public Builder bitrateBps(Output<Integer> bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
-
         public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Output.of(Objects.requireNonNull(bitrateBps));
             return this;
         }
-
         public Builder crfLevel(@Nullable Output<Integer> crfLevel) {
             this.crfLevel = crfLevel;
             return this;
         }
-
         public Builder crfLevel(@Nullable Integer crfLevel) {
             this.crfLevel = Output.ofNullable(crfLevel);
             return this;
         }
-
         public Builder enableTwoPass(@Nullable Output<Boolean> enableTwoPass) {
             this.enableTwoPass = enableTwoPass;
             return this;
         }
-
         public Builder enableTwoPass(@Nullable Boolean enableTwoPass) {
             this.enableTwoPass = Output.ofNullable(enableTwoPass);
             return this;
         }
-
         public Builder entropyCoder(@Nullable Output<String> entropyCoder) {
             this.entropyCoder = entropyCoder;
             return this;
         }
-
         public Builder entropyCoder(@Nullable String entropyCoder) {
             this.entropyCoder = Output.ofNullable(entropyCoder);
             return this;
         }
-
         public Builder frameRate(Output<Double> frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
-
         public Builder frameRate(Double frameRate) {
             this.frameRate = Output.of(Objects.requireNonNull(frameRate));
             return this;
         }
-
         public Builder gopDuration(@Nullable Output<String> gopDuration) {
             this.gopDuration = gopDuration;
             return this;
         }
-
         public Builder gopDuration(@Nullable String gopDuration) {
             this.gopDuration = Output.ofNullable(gopDuration);
             return this;
         }
-
         public Builder gopFrameCount(@Nullable Output<Integer> gopFrameCount) {
             this.gopFrameCount = gopFrameCount;
             return this;
         }
-
         public Builder gopFrameCount(@Nullable Integer gopFrameCount) {
             this.gopFrameCount = Output.ofNullable(gopFrameCount);
             return this;
         }
-
         public Builder heightPixels(@Nullable Output<Integer> heightPixels) {
             this.heightPixels = heightPixels;
             return this;
         }
-
         public Builder heightPixels(@Nullable Integer heightPixels) {
             this.heightPixels = Output.ofNullable(heightPixels);
             return this;
         }
-
         public Builder pixelFormat(@Nullable Output<String> pixelFormat) {
             this.pixelFormat = pixelFormat;
             return this;
         }
-
         public Builder pixelFormat(@Nullable String pixelFormat) {
             this.pixelFormat = Output.ofNullable(pixelFormat);
             return this;
         }
-
         public Builder preset(@Nullable Output<String> preset) {
             this.preset = preset;
             return this;
         }
-
         public Builder preset(@Nullable String preset) {
             this.preset = Output.ofNullable(preset);
             return this;
         }
-
         public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder rateControlMode(@Nullable Output<String> rateControlMode) {
             this.rateControlMode = rateControlMode;
             return this;
         }
-
         public Builder rateControlMode(@Nullable String rateControlMode) {
             this.rateControlMode = Output.ofNullable(rateControlMode);
             return this;
         }
-
         public Builder tune(@Nullable Output<String> tune) {
             this.tune = tune;
             return this;
         }
-
         public Builder tune(@Nullable String tune) {
             this.tune = Output.ofNullable(tune);
             return this;
         }
-
         public Builder vbvFullnessBits(@Nullable Output<Integer> vbvFullnessBits) {
             this.vbvFullnessBits = vbvFullnessBits;
             return this;
         }
-
         public Builder vbvFullnessBits(@Nullable Integer vbvFullnessBits) {
             this.vbvFullnessBits = Output.ofNullable(vbvFullnessBits);
             return this;
         }
-
         public Builder vbvSizeBits(@Nullable Output<Integer> vbvSizeBits) {
             this.vbvSizeBits = vbvSizeBits;
             return this;
         }
-
         public Builder vbvSizeBits(@Nullable Integer vbvSizeBits) {
             this.vbvSizeBits = Output.ofNullable(vbvSizeBits);
             return this;
         }
-
         public Builder widthPixels(@Nullable Output<Integer> widthPixels) {
             this.widthPixels = widthPixels;
             return this;
         }
-
         public Builder widthPixels(@Nullable Integer widthPixels) {
             this.widthPixels = Output.ofNullable(widthPixels);
             return this;
-        }
-        public H264CodecSettingsArgs build() {
+        }        public H264CodecSettingsArgs build() {
             return new H264CodecSettingsArgs(allowOpenGop, aqStrength, bFrameCount, bPyramid, bitrateBps, crfLevel, enableTwoPass, entropyCoder, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, preset, profile, rateControlMode, tune, vbvFullnessBits, vbvSizeBits, widthPixels);
         }
     }

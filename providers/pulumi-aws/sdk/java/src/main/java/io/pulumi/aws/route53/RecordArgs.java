@@ -277,142 +277,132 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             this.aliases = aliases;
             return this;
         }
-
         public Builder aliases(@Nullable List<RecordAliasArgs> aliases) {
             this.aliases = Output.ofNullable(aliases);
             return this;
         }
-
+        public Builder aliases(RecordAliasArgs... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder allowOverwrite(@Nullable Output<Boolean> allowOverwrite) {
             this.allowOverwrite = allowOverwrite;
             return this;
         }
-
         public Builder allowOverwrite(@Nullable Boolean allowOverwrite) {
             this.allowOverwrite = Output.ofNullable(allowOverwrite);
             return this;
         }
-
         public Builder failoverRoutingPolicies(@Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies) {
             this.failoverRoutingPolicies = failoverRoutingPolicies;
             return this;
         }
-
         public Builder failoverRoutingPolicies(@Nullable List<RecordFailoverRoutingPolicyArgs> failoverRoutingPolicies) {
             this.failoverRoutingPolicies = Output.ofNullable(failoverRoutingPolicies);
             return this;
         }
-
+        public Builder failoverRoutingPolicies(RecordFailoverRoutingPolicyArgs... failoverRoutingPolicies) {
+            return failoverRoutingPolicies(List.of(failoverRoutingPolicies));
+        }
         public Builder geolocationRoutingPolicies(@Nullable Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies) {
             this.geolocationRoutingPolicies = geolocationRoutingPolicies;
             return this;
         }
-
         public Builder geolocationRoutingPolicies(@Nullable List<RecordGeolocationRoutingPolicyArgs> geolocationRoutingPolicies) {
             this.geolocationRoutingPolicies = Output.ofNullable(geolocationRoutingPolicies);
             return this;
         }
-
+        public Builder geolocationRoutingPolicies(RecordGeolocationRoutingPolicyArgs... geolocationRoutingPolicies) {
+            return geolocationRoutingPolicies(List.of(geolocationRoutingPolicies));
+        }
         public Builder healthCheckId(@Nullable Output<String> healthCheckId) {
             this.healthCheckId = healthCheckId;
             return this;
         }
-
         public Builder healthCheckId(@Nullable String healthCheckId) {
             this.healthCheckId = Output.ofNullable(healthCheckId);
             return this;
         }
-
         public Builder latencyRoutingPolicies(@Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies) {
             this.latencyRoutingPolicies = latencyRoutingPolicies;
             return this;
         }
-
         public Builder latencyRoutingPolicies(@Nullable List<RecordLatencyRoutingPolicyArgs> latencyRoutingPolicies) {
             this.latencyRoutingPolicies = Output.ofNullable(latencyRoutingPolicies);
             return this;
         }
-
+        public Builder latencyRoutingPolicies(RecordLatencyRoutingPolicyArgs... latencyRoutingPolicies) {
+            return latencyRoutingPolicies(List.of(latencyRoutingPolicies));
+        }
         public Builder multivalueAnswerRoutingPolicy(@Nullable Output<Boolean> multivalueAnswerRoutingPolicy) {
             this.multivalueAnswerRoutingPolicy = multivalueAnswerRoutingPolicy;
             return this;
         }
-
         public Builder multivalueAnswerRoutingPolicy(@Nullable Boolean multivalueAnswerRoutingPolicy) {
             this.multivalueAnswerRoutingPolicy = Output.ofNullable(multivalueAnswerRoutingPolicy);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder records(@Nullable Output<List<String>> records) {
             this.records = records;
             return this;
         }
-
         public Builder records(@Nullable List<String> records) {
             this.records = Output.ofNullable(records);
             return this;
         }
-
+        public Builder records(String... records) {
+            return records(List.of(records));
+        }
         public Builder setIdentifier(@Nullable Output<String> setIdentifier) {
             this.setIdentifier = setIdentifier;
             return this;
         }
-
         public Builder setIdentifier(@Nullable String setIdentifier) {
             this.setIdentifier = Output.ofNullable(setIdentifier);
             return this;
         }
-
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder type(Output<Either<String,RecordType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,RecordType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder weightedRoutingPolicies(@Nullable Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies) {
             this.weightedRoutingPolicies = weightedRoutingPolicies;
             return this;
         }
-
         public Builder weightedRoutingPolicies(@Nullable List<RecordWeightedRoutingPolicyArgs> weightedRoutingPolicies) {
             this.weightedRoutingPolicies = Output.ofNullable(weightedRoutingPolicies);
             return this;
         }
-
+        public Builder weightedRoutingPolicies(RecordWeightedRoutingPolicyArgs... weightedRoutingPolicies) {
+            return weightedRoutingPolicies(List.of(weightedRoutingPolicies));
+        }
         public Builder zoneId(Output<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Output.of(Objects.requireNonNull(zoneId));
             return this;
-        }
-        public RecordArgs build() {
+        }        public RecordArgs build() {
             return new RecordArgs(aliases, allowOverwrite, failoverRoutingPolicies, geolocationRoutingPolicies, healthCheckId, latencyRoutingPolicies, multivalueAnswerRoutingPolicy, name, records, setIdentifier, ttl, type, weightedRoutingPolicies, zoneId);
         }
     }

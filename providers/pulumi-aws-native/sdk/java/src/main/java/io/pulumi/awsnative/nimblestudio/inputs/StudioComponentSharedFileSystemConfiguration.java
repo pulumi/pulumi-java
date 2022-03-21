@@ -126,27 +126,22 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder linuxMountPoint(@Nullable String linuxMountPoint) {
             this.linuxMountPoint = linuxMountPoint;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder windowsMountDrive(@Nullable String windowsMountDrive) {
             this.windowsMountDrive = windowsMountDrive;
             return this;
-        }
-        public StudioComponentSharedFileSystemConfiguration build() {
+        }        public StudioComponentSharedFileSystemConfiguration build() {
             return new StudioComponentSharedFileSystemConfiguration(endpoint, fileSystemId, linuxMountPoint, shareName, windowsMountDrive);
         }
     }

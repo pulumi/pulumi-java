@@ -105,22 +105,21 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
             this.localGatewayId = localGatewayId;
             return this;
         }
-
         public Builder localGatewayRouteTableVpcAssociationId(@Nullable String localGatewayRouteTableVpcAssociationId) {
             this.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetLocalGatewayRouteTableVPCAssociationResult build() {
+        public Builder tags(LocalGatewayRouteTableVPCAssociationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetLocalGatewayRouteTableVPCAssociationResult build() {
             return new GetLocalGatewayRouteTableVPCAssociationResult(localGatewayId, localGatewayRouteTableVpcAssociationId, state, tags);
         }
     }

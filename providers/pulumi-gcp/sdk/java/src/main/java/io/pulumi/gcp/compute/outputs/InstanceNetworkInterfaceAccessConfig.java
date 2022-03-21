@@ -93,17 +93,14 @@ public final class InstanceNetworkInterfaceAccessConfig {
             this.natIp = natIp;
             return this;
         }
-
         public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
-        }
-        public InstanceNetworkInterfaceAccessConfig build() {
+        }        public InstanceNetworkInterfaceAccessConfig build() {
             return new InstanceNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }
     }

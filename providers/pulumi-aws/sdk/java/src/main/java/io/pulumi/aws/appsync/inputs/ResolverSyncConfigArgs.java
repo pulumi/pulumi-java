@@ -91,32 +91,26 @@ public final class ResolverSyncConfigArgs extends io.pulumi.resources.ResourceAr
             this.conflictDetection = conflictDetection;
             return this;
         }
-
         public Builder conflictDetection(@Nullable String conflictDetection) {
             this.conflictDetection = Output.ofNullable(conflictDetection);
             return this;
         }
-
         public Builder conflictHandler(@Nullable Output<String> conflictHandler) {
             this.conflictHandler = conflictHandler;
             return this;
         }
-
         public Builder conflictHandler(@Nullable String conflictHandler) {
             this.conflictHandler = Output.ofNullable(conflictHandler);
             return this;
         }
-
         public Builder lambdaConflictHandlerConfig(@Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
             return this;
         }
-
         public Builder lambdaConflictHandlerConfig(@Nullable ResolverSyncConfigLambdaConflictHandlerConfigArgs lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = Output.ofNullable(lambdaConflictHandlerConfig);
             return this;
-        }
-        public ResolverSyncConfigArgs build() {
+        }        public ResolverSyncConfigArgs build() {
             return new ResolverSyncConfigArgs(conflictDetection, conflictHandler, lambdaConflictHandlerConfig);
         }
     }

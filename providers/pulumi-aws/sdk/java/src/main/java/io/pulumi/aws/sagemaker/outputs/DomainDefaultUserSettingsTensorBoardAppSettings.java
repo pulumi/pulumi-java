@@ -53,8 +53,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettings {
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }
-        public DomainDefaultUserSettingsTensorBoardAppSettings build() {
+        }        public DomainDefaultUserSettingsTensorBoardAppSettings build() {
             return new DomainDefaultUserSettingsTensorBoardAppSettings(defaultResourceSpec);
         }
     }

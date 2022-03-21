@@ -178,82 +178,69 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder inspectJob(@Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
             this.inspectJob = inspectJob;
             return this;
         }
-
         public Builder inspectJob(@Nullable PreventionJobTriggerInspectJobGetArgs inspectJob) {
             this.inspectJob = Output.ofNullable(inspectJob);
             return this;
         }
-
         public Builder lastRunTime(@Nullable Output<String> lastRunTime) {
             this.lastRunTime = lastRunTime;
             return this;
         }
-
         public Builder lastRunTime(@Nullable String lastRunTime) {
             this.lastRunTime = Output.ofNullable(lastRunTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder triggers(@Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable List<PreventionJobTriggerTriggerGetArgs> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
         }
-        public PreventionJobTriggerState build() {
+        public Builder triggers(PreventionJobTriggerTriggerGetArgs... triggers) {
+            return triggers(List.of(triggers));
+        }        public PreventionJobTriggerState build() {
             return new PreventionJobTriggerState(description, displayName, inspectJob, lastRunTime, name, parent, status, triggers);
         }
     }

@@ -90,17 +90,17 @@ public final class BigtableOptionsResponse extends io.pulumi.resources.InvokeArg
             this.columnFamilies = Objects.requireNonNull(columnFamilies);
             return this;
         }
-
+        public Builder columnFamilies(BigtableColumnFamilyResponse... columnFamilies) {
+            return columnFamilies(List.of(columnFamilies));
+        }
         public Builder ignoreUnspecifiedColumnFamilies(Boolean ignoreUnspecifiedColumnFamilies) {
             this.ignoreUnspecifiedColumnFamilies = Objects.requireNonNull(ignoreUnspecifiedColumnFamilies);
             return this;
         }
-
         public Builder readRowkeyAsString(Boolean readRowkeyAsString) {
             this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString);
             return this;
-        }
-        public BigtableOptionsResponse build() {
+        }        public BigtableOptionsResponse build() {
             return new BigtableOptionsResponse(columnFamilies, ignoreUnspecifiedColumnFamilies, readRowkeyAsString);
         }
     }

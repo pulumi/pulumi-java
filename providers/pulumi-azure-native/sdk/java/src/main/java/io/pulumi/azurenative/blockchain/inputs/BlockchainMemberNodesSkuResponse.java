@@ -60,8 +60,7 @@ public final class BlockchainMemberNodesSkuResponse extends io.pulumi.resources.
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
-        }
-        public BlockchainMemberNodesSkuResponse build() {
+        }        public BlockchainMemberNodesSkuResponse build() {
             return new BlockchainMemberNodesSkuResponse(capacity);
         }
     }

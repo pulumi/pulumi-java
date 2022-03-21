@@ -120,27 +120,22 @@ public final class InventoryDestinationBucket {
             this.accountId = accountId;
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder encryption(@Nullable InventoryDestinationBucketEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public InventoryDestinationBucket build() {
+        }        public InventoryDestinationBucket build() {
             return new InventoryDestinationBucket(accountId, bucketArn, encryption, format, prefix);
         }
     }

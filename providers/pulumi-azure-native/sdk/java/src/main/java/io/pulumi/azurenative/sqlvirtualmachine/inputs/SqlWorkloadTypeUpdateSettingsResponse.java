@@ -60,8 +60,7 @@ public final class SqlWorkloadTypeUpdateSettingsResponse extends io.pulumi.resou
         public Builder sqlWorkloadType(@Nullable String sqlWorkloadType) {
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
-        }
-        public SqlWorkloadTypeUpdateSettingsResponse build() {
+        }        public SqlWorkloadTypeUpdateSettingsResponse build() {
             return new SqlWorkloadTypeUpdateSettingsResponse(sqlWorkloadType);
         }
     }

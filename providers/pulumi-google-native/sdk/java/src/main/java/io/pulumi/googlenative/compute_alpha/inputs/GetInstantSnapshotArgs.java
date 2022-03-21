@@ -78,17 +78,14 @@ public final class GetInstantSnapshotArgs extends io.pulumi.resources.InvokeArgs
             this.instantSnapshot = Objects.requireNonNull(instantSnapshot);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstantSnapshotArgs build() {
+        }        public GetInstantSnapshotArgs build() {
             return new GetInstantSnapshotArgs(instantSnapshot, project, zone);
         }
     }

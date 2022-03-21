@@ -78,22 +78,18 @@ public final class LoadBalancerTagArgs extends io.pulumi.resources.ResourceArgs 
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public LoadBalancerTagArgs build() {
+        }        public LoadBalancerTagArgs build() {
             return new LoadBalancerTagArgs(key, value);
         }
     }

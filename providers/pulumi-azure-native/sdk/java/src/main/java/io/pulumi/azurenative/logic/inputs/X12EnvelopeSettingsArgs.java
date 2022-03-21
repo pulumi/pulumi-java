@@ -436,242 +436,194 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
             this.controlStandardsId = Objects.requireNonNull(controlStandardsId);
             return this;
         }
-
         public Builder controlStandardsId(Integer controlStandardsId) {
             this.controlStandardsId = Output.of(Objects.requireNonNull(controlStandardsId));
             return this;
         }
-
         public Builder controlVersionNumber(Output<String> controlVersionNumber) {
             this.controlVersionNumber = Objects.requireNonNull(controlVersionNumber);
             return this;
         }
-
         public Builder controlVersionNumber(String controlVersionNumber) {
             this.controlVersionNumber = Output.of(Objects.requireNonNull(controlVersionNumber));
             return this;
         }
-
         public Builder enableDefaultGroupHeaders(Output<Boolean> enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
             return this;
         }
-
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Output.of(Objects.requireNonNull(enableDefaultGroupHeaders));
             return this;
         }
-
         public Builder functionalGroupId(@Nullable Output<String> functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
-
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = Output.ofNullable(functionalGroupId);
             return this;
         }
-
         public Builder groupControlNumberLowerBound(Output<Integer> groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
             return this;
         }
-
         public Builder groupControlNumberLowerBound(Integer groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Output.of(Objects.requireNonNull(groupControlNumberLowerBound));
             return this;
         }
-
         public Builder groupControlNumberUpperBound(Output<Integer> groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
             return this;
         }
-
         public Builder groupControlNumberUpperBound(Integer groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Output.of(Objects.requireNonNull(groupControlNumberUpperBound));
             return this;
         }
-
         public Builder groupHeaderAgencyCode(Output<String> groupHeaderAgencyCode) {
             this.groupHeaderAgencyCode = Objects.requireNonNull(groupHeaderAgencyCode);
             return this;
         }
-
         public Builder groupHeaderAgencyCode(String groupHeaderAgencyCode) {
             this.groupHeaderAgencyCode = Output.of(Objects.requireNonNull(groupHeaderAgencyCode));
             return this;
         }
-
         public Builder groupHeaderDateFormat(Output<Either<String,X12DateFormat>> groupHeaderDateFormat) {
             this.groupHeaderDateFormat = Objects.requireNonNull(groupHeaderDateFormat);
             return this;
         }
-
         public Builder groupHeaderDateFormat(Either<String,X12DateFormat> groupHeaderDateFormat) {
             this.groupHeaderDateFormat = Output.of(Objects.requireNonNull(groupHeaderDateFormat));
             return this;
         }
-
         public Builder groupHeaderTimeFormat(Output<Either<String,X12TimeFormat>> groupHeaderTimeFormat) {
             this.groupHeaderTimeFormat = Objects.requireNonNull(groupHeaderTimeFormat);
             return this;
         }
-
         public Builder groupHeaderTimeFormat(Either<String,X12TimeFormat> groupHeaderTimeFormat) {
             this.groupHeaderTimeFormat = Output.of(Objects.requireNonNull(groupHeaderTimeFormat));
             return this;
         }
-
         public Builder groupHeaderVersion(Output<String> groupHeaderVersion) {
             this.groupHeaderVersion = Objects.requireNonNull(groupHeaderVersion);
             return this;
         }
-
         public Builder groupHeaderVersion(String groupHeaderVersion) {
             this.groupHeaderVersion = Output.of(Objects.requireNonNull(groupHeaderVersion));
             return this;
         }
-
         public Builder interchangeControlNumberLowerBound(Output<Integer> interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
             return this;
         }
-
         public Builder interchangeControlNumberLowerBound(Integer interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Output.of(Objects.requireNonNull(interchangeControlNumberLowerBound));
             return this;
         }
-
         public Builder interchangeControlNumberUpperBound(Output<Integer> interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
             return this;
         }
-
         public Builder interchangeControlNumberUpperBound(Integer interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Output.of(Objects.requireNonNull(interchangeControlNumberUpperBound));
             return this;
         }
-
         public Builder overwriteExistingTransactionSetControlNumber(Output<Boolean> overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
             return this;
         }
-
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Output.of(Objects.requireNonNull(overwriteExistingTransactionSetControlNumber));
             return this;
         }
-
         public Builder receiverApplicationId(Output<String> receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
-
         public Builder receiverApplicationId(String receiverApplicationId) {
             this.receiverApplicationId = Output.of(Objects.requireNonNull(receiverApplicationId));
             return this;
         }
-
         public Builder rolloverGroupControlNumber(Output<Boolean> rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
             return this;
         }
-
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Output.of(Objects.requireNonNull(rolloverGroupControlNumber));
             return this;
         }
-
         public Builder rolloverInterchangeControlNumber(Output<Boolean> rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
             return this;
         }
-
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Output.of(Objects.requireNonNull(rolloverInterchangeControlNumber));
             return this;
         }
-
         public Builder rolloverTransactionSetControlNumber(Output<Boolean> rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
             return this;
         }
-
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Output.of(Objects.requireNonNull(rolloverTransactionSetControlNumber));
             return this;
         }
-
         public Builder senderApplicationId(Output<String> senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
-
         public Builder senderApplicationId(String senderApplicationId) {
             this.senderApplicationId = Output.of(Objects.requireNonNull(senderApplicationId));
             return this;
         }
-
         public Builder transactionSetControlNumberLowerBound(Output<Integer> transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
             return this;
         }
-
         public Builder transactionSetControlNumberLowerBound(Integer transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Output.of(Objects.requireNonNull(transactionSetControlNumberLowerBound));
             return this;
         }
-
         public Builder transactionSetControlNumberPrefix(@Nullable Output<String> transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
-
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = Output.ofNullable(transactionSetControlNumberPrefix);
             return this;
         }
-
         public Builder transactionSetControlNumberSuffix(@Nullable Output<String> transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
-
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = Output.ofNullable(transactionSetControlNumberSuffix);
             return this;
         }
-
         public Builder transactionSetControlNumberUpperBound(Output<Integer> transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
             return this;
         }
-
         public Builder transactionSetControlNumberUpperBound(Integer transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Output.of(Objects.requireNonNull(transactionSetControlNumberUpperBound));
             return this;
         }
-
         public Builder usageIndicator(Output<Either<String,UsageIndicator>> usageIndicator) {
             this.usageIndicator = Objects.requireNonNull(usageIndicator);
             return this;
         }
-
         public Builder usageIndicator(Either<String,UsageIndicator> usageIndicator) {
             this.usageIndicator = Output.of(Objects.requireNonNull(usageIndicator));
             return this;
         }
-
         public Builder useControlStandardsIdAsRepetitionCharacter(Output<Boolean> useControlStandardsIdAsRepetitionCharacter) {
             this.useControlStandardsIdAsRepetitionCharacter = Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter);
             return this;
         }
-
         public Builder useControlStandardsIdAsRepetitionCharacter(Boolean useControlStandardsIdAsRepetitionCharacter) {
             this.useControlStandardsIdAsRepetitionCharacter = Output.of(Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter));
             return this;
-        }
-        public X12EnvelopeSettingsArgs build() {
+        }        public X12EnvelopeSettingsArgs build() {
             return new X12EnvelopeSettingsArgs(controlStandardsId, controlVersionNumber, enableDefaultGroupHeaders, functionalGroupId, groupControlNumberLowerBound, groupControlNumberUpperBound, groupHeaderAgencyCode, groupHeaderDateFormat, groupHeaderTimeFormat, groupHeaderVersion, interchangeControlNumberLowerBound, interchangeControlNumberUpperBound, overwriteExistingTransactionSetControlNumber, receiverApplicationId, rolloverGroupControlNumber, rolloverInterchangeControlNumber, rolloverTransactionSetControlNumber, senderApplicationId, transactionSetControlNumberLowerBound, transactionSetControlNumberPrefix, transactionSetControlNumberSuffix, transactionSetControlNumberUpperBound, usageIndicator, useControlStandardsIdAsRepetitionCharacter);
         }
     }

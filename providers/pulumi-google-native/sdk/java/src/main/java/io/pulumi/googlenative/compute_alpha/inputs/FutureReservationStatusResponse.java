@@ -109,22 +109,21 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
             this.autoCreatedReservations = Objects.requireNonNull(autoCreatedReservations);
             return this;
         }
-
+        public Builder autoCreatedReservations(String... autoCreatedReservations) {
+            return autoCreatedReservations(List.of(autoCreatedReservations));
+        }
         public Builder fulfilledCount(String fulfilledCount) {
             this.fulfilledCount = Objects.requireNonNull(fulfilledCount);
             return this;
         }
-
         public Builder lockTime(String lockTime) {
             this.lockTime = Objects.requireNonNull(lockTime);
             return this;
         }
-
         public Builder procurementStatus(String procurementStatus) {
             this.procurementStatus = Objects.requireNonNull(procurementStatus);
             return this;
-        }
-        public FutureReservationStatusResponse build() {
+        }        public FutureReservationStatusResponse build() {
             return new FutureReservationStatusResponse(autoCreatedReservations, fulfilledCount, lockTime, procurementStatus);
         }
     }

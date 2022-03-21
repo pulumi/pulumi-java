@@ -78,32 +78,26 @@ public final class ClassificationJobUserPausedDetailArgs extends io.pulumi.resou
             this.jobExpiresAt = jobExpiresAt;
             return this;
         }
-
         public Builder jobExpiresAt(@Nullable String jobExpiresAt) {
             this.jobExpiresAt = Output.ofNullable(jobExpiresAt);
             return this;
         }
-
         public Builder jobImminentExpirationHealthEventArn(@Nullable Output<String> jobImminentExpirationHealthEventArn) {
             this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
             return this;
         }
-
         public Builder jobImminentExpirationHealthEventArn(@Nullable String jobImminentExpirationHealthEventArn) {
             this.jobImminentExpirationHealthEventArn = Output.ofNullable(jobImminentExpirationHealthEventArn);
             return this;
         }
-
         public Builder jobPausedAt(@Nullable Output<String> jobPausedAt) {
             this.jobPausedAt = jobPausedAt;
             return this;
         }
-
         public Builder jobPausedAt(@Nullable String jobPausedAt) {
             this.jobPausedAt = Output.ofNullable(jobPausedAt);
             return this;
-        }
-        public ClassificationJobUserPausedDetailArgs build() {
+        }        public ClassificationJobUserPausedDetailArgs build() {
             return new ClassificationJobUserPausedDetailArgs(jobExpiresAt, jobImminentExpirationHealthEventArn, jobPausedAt);
         }
     }

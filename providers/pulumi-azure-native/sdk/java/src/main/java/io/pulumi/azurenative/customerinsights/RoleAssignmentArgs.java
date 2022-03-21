@@ -367,202 +367,165 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.assignmentName = assignmentName;
             return this;
         }
-
         public Builder assignmentName(@Nullable String assignmentName) {
             this.assignmentName = Output.ofNullable(assignmentName);
             return this;
         }
-
         public Builder conflationPolicies(@Nullable Output<ResourceSetDescriptionArgs> conflationPolicies) {
             this.conflationPolicies = conflationPolicies;
             return this;
         }
-
         public Builder conflationPolicies(@Nullable ResourceSetDescriptionArgs conflationPolicies) {
             this.conflationPolicies = Output.ofNullable(conflationPolicies);
             return this;
         }
-
         public Builder connectors(@Nullable Output<ResourceSetDescriptionArgs> connectors) {
             this.connectors = connectors;
             return this;
         }
-
         public Builder connectors(@Nullable ResourceSetDescriptionArgs connectors) {
             this.connectors = Output.ofNullable(connectors);
             return this;
         }
-
         public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder interactions(@Nullable Output<ResourceSetDescriptionArgs> interactions) {
             this.interactions = interactions;
             return this;
         }
-
         public Builder interactions(@Nullable ResourceSetDescriptionArgs interactions) {
             this.interactions = Output.ofNullable(interactions);
             return this;
         }
-
         public Builder kpis(@Nullable Output<ResourceSetDescriptionArgs> kpis) {
             this.kpis = kpis;
             return this;
         }
-
         public Builder kpis(@Nullable ResourceSetDescriptionArgs kpis) {
             this.kpis = Output.ofNullable(kpis);
             return this;
         }
-
         public Builder links(@Nullable Output<ResourceSetDescriptionArgs> links) {
             this.links = links;
             return this;
         }
-
         public Builder links(@Nullable ResourceSetDescriptionArgs links) {
             this.links = Output.ofNullable(links);
             return this;
         }
-
         public Builder principals(Output<List<AssignmentPrincipalArgs>> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-
         public Builder principals(List<AssignmentPrincipalArgs> principals) {
             this.principals = Output.of(Objects.requireNonNull(principals));
             return this;
         }
-
+        public Builder principals(AssignmentPrincipalArgs... principals) {
+            return principals(List.of(principals));
+        }
         public Builder profiles(@Nullable Output<ResourceSetDescriptionArgs> profiles) {
             this.profiles = profiles;
             return this;
         }
-
         public Builder profiles(@Nullable ResourceSetDescriptionArgs profiles) {
             this.profiles = Output.ofNullable(profiles);
             return this;
         }
-
         public Builder relationshipLinks(@Nullable Output<ResourceSetDescriptionArgs> relationshipLinks) {
             this.relationshipLinks = relationshipLinks;
             return this;
         }
-
         public Builder relationshipLinks(@Nullable ResourceSetDescriptionArgs relationshipLinks) {
             this.relationshipLinks = Output.ofNullable(relationshipLinks);
             return this;
         }
-
         public Builder relationships(@Nullable Output<ResourceSetDescriptionArgs> relationships) {
             this.relationships = relationships;
             return this;
         }
-
         public Builder relationships(@Nullable ResourceSetDescriptionArgs relationships) {
             this.relationships = Output.ofNullable(relationships);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder role(Output<RoleTypes> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(RoleTypes role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder roleAssignments(@Nullable Output<ResourceSetDescriptionArgs> roleAssignments) {
             this.roleAssignments = roleAssignments;
             return this;
         }
-
         public Builder roleAssignments(@Nullable ResourceSetDescriptionArgs roleAssignments) {
             this.roleAssignments = Output.ofNullable(roleAssignments);
             return this;
         }
-
         public Builder sasPolicies(@Nullable Output<ResourceSetDescriptionArgs> sasPolicies) {
             this.sasPolicies = sasPolicies;
             return this;
         }
-
         public Builder sasPolicies(@Nullable ResourceSetDescriptionArgs sasPolicies) {
             this.sasPolicies = Output.ofNullable(sasPolicies);
             return this;
         }
-
         public Builder segments(@Nullable Output<ResourceSetDescriptionArgs> segments) {
             this.segments = segments;
             return this;
         }
-
         public Builder segments(@Nullable ResourceSetDescriptionArgs segments) {
             this.segments = Output.ofNullable(segments);
             return this;
         }
-
         public Builder views(@Nullable Output<ResourceSetDescriptionArgs> views) {
             this.views = views;
             return this;
         }
-
         public Builder views(@Nullable ResourceSetDescriptionArgs views) {
             this.views = Output.ofNullable(views);
             return this;
         }
-
         public Builder widgetTypes(@Nullable Output<ResourceSetDescriptionArgs> widgetTypes) {
             this.widgetTypes = widgetTypes;
             return this;
         }
-
         public Builder widgetTypes(@Nullable ResourceSetDescriptionArgs widgetTypes) {
             this.widgetTypes = Output.ofNullable(widgetTypes);
             return this;
-        }
-        public RoleAssignmentArgs build() {
+        }        public RoleAssignmentArgs build() {
             return new RoleAssignmentArgs(assignmentName, conflationPolicies, connectors, description, displayName, hubName, interactions, kpis, links, principals, profiles, relationshipLinks, relationships, resourceGroupName, role, roleAssignments, sasPolicies, segments, views, widgetTypes);
         }
     }

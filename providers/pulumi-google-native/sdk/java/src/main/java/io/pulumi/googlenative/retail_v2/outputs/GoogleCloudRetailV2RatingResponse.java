@@ -87,17 +87,17 @@ public final class GoogleCloudRetailV2RatingResponse {
             this.averageRating = Objects.requireNonNull(averageRating);
             return this;
         }
-
         public Builder ratingCount(Integer ratingCount) {
             this.ratingCount = Objects.requireNonNull(ratingCount);
             return this;
         }
-
         public Builder ratingHistogram(List<Integer> ratingHistogram) {
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }
-        public GoogleCloudRetailV2RatingResponse build() {
+        public Builder ratingHistogram(Integer... ratingHistogram) {
+            return ratingHistogram(List.of(ratingHistogram));
+        }        public GoogleCloudRetailV2RatingResponse build() {
             return new GoogleCloudRetailV2RatingResponse(averageRating, ratingCount, ratingHistogram);
         }
     }

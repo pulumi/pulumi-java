@@ -93,32 +93,29 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.loRaWAN = loRaWAN;
             return this;
         }
-
         public Builder loRaWAN(@Nullable ServiceProfileLoRaWANServiceProfileArgs loRaWAN) {
             this.loRaWAN = Output.ofNullable(loRaWAN);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ServiceProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ServiceProfileTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ServiceProfileArgs build() {
+        public Builder tags(ServiceProfileTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ServiceProfileArgs build() {
             return new ServiceProfileArgs(loRaWAN, name, tags);
         }
     }

@@ -80,17 +80,14 @@ public final class FlowS3OutputFormatConfig extends io.pulumi.resources.InvokeAr
             this.aggregationConfig = aggregationConfig;
             return this;
         }
-
         public Builder fileType(@Nullable FlowFileType fileType) {
             this.fileType = fileType;
             return this;
         }
-
         public Builder prefixConfig(@Nullable FlowPrefixConfig prefixConfig) {
             this.prefixConfig = prefixConfig;
             return this;
-        }
-        public FlowS3OutputFormatConfig build() {
+        }        public FlowS3OutputFormatConfig build() {
             return new FlowS3OutputFormatConfig(aggregationConfig, fileType, prefixConfig);
         }
     }

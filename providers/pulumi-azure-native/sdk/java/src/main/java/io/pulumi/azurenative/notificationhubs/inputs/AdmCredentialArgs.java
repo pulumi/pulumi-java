@@ -94,32 +94,26 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.authTokenUrl = authTokenUrl;
             return this;
         }
-
         public Builder authTokenUrl(@Nullable String authTokenUrl) {
             this.authTokenUrl = Output.ofNullable(authTokenUrl);
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
-        }
-        public AdmCredentialArgs build() {
+        }        public AdmCredentialArgs build() {
             return new AdmCredentialArgs(authTokenUrl, clientId, clientSecret);
         }
     }

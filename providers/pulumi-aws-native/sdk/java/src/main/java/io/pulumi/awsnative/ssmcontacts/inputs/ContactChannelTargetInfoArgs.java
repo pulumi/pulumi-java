@@ -78,22 +78,18 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
-
         public Builder channelId(String channelId) {
             this.channelId = Output.of(Objects.requireNonNull(channelId));
             return this;
         }
-
         public Builder retryIntervalInMinutes(Output<Integer> retryIntervalInMinutes) {
             this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
             return this;
         }
-
         public Builder retryIntervalInMinutes(Integer retryIntervalInMinutes) {
             this.retryIntervalInMinutes = Output.of(Objects.requireNonNull(retryIntervalInMinutes));
             return this;
-        }
-        public ContactChannelTargetInfoArgs build() {
+        }        public ContactChannelTargetInfoArgs build() {
             return new ContactChannelTargetInfoArgs(channelId, retryIntervalInMinutes);
         }
     }

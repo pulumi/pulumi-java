@@ -75,12 +75,10 @@ public final class S3BucketAssociationClassificationType {
             this.continuous = continuous;
             return this;
         }
-
         public Builder oneTime(@Nullable String oneTime) {
             this.oneTime = oneTime;
             return this;
-        }
-        public S3BucketAssociationClassificationType build() {
+        }        public S3BucketAssociationClassificationType build() {
             return new S3BucketAssociationClassificationType(continuous, oneTime);
         }
     }

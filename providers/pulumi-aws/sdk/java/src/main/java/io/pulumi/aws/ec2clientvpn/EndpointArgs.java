@@ -207,102 +207,88 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.authenticationOptions = Objects.requireNonNull(authenticationOptions);
             return this;
         }
-
         public Builder authenticationOptions(List<EndpointAuthenticationOptionArgs> authenticationOptions) {
             this.authenticationOptions = Output.of(Objects.requireNonNull(authenticationOptions));
             return this;
         }
-
+        public Builder authenticationOptions(EndpointAuthenticationOptionArgs... authenticationOptions) {
+            return authenticationOptions(List.of(authenticationOptions));
+        }
         public Builder clientCidrBlock(Output<String> clientCidrBlock) {
             this.clientCidrBlock = Objects.requireNonNull(clientCidrBlock);
             return this;
         }
-
         public Builder clientCidrBlock(String clientCidrBlock) {
             this.clientCidrBlock = Output.of(Objects.requireNonNull(clientCidrBlock));
             return this;
         }
-
         public Builder connectionLogOptions(Output<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
             this.connectionLogOptions = Objects.requireNonNull(connectionLogOptions);
             return this;
         }
-
         public Builder connectionLogOptions(EndpointConnectionLogOptionsArgs connectionLogOptions) {
             this.connectionLogOptions = Output.of(Objects.requireNonNull(connectionLogOptions));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder selfServicePortal(@Nullable Output<String> selfServicePortal) {
             this.selfServicePortal = selfServicePortal;
             return this;
         }
-
         public Builder selfServicePortal(@Nullable String selfServicePortal) {
             this.selfServicePortal = Output.ofNullable(selfServicePortal);
             return this;
         }
-
         public Builder serverCertificateArn(Output<String> serverCertificateArn) {
             this.serverCertificateArn = Objects.requireNonNull(serverCertificateArn);
             return this;
         }
-
         public Builder serverCertificateArn(String serverCertificateArn) {
             this.serverCertificateArn = Output.of(Objects.requireNonNull(serverCertificateArn));
             return this;
         }
-
         public Builder splitTunnel(@Nullable Output<Boolean> splitTunnel) {
             this.splitTunnel = splitTunnel;
             return this;
         }
-
         public Builder splitTunnel(@Nullable Boolean splitTunnel) {
             this.splitTunnel = Output.ofNullable(splitTunnel);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transportProtocol(@Nullable Output<String> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = Output.ofNullable(transportProtocol);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(authenticationOptions, clientCidrBlock, connectionLogOptions, description, dnsServers, selfServicePortal, serverCertificateArn, splitTunnel, tags, transportProtocol);
         }
     }

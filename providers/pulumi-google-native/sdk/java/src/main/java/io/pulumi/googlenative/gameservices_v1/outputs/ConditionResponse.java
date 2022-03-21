@@ -118,27 +118,25 @@ public final class ConditionResponse {
             this.iam = Objects.requireNonNull(iam);
             return this;
         }
-
         public Builder op(String op) {
             this.op = Objects.requireNonNull(op);
             return this;
         }
-
         public Builder svc(String svc) {
             this.svc = Objects.requireNonNull(svc);
             return this;
         }
-
         public Builder sys(String sys) {
             this.sys = Objects.requireNonNull(sys);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ConditionResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ConditionResponse build() {
             return new ConditionResponse(iam, op, svc, sys, values);
         }
     }

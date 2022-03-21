@@ -53,8 +53,7 @@ public final class StudioComponentLicenseServiceConfiguration {
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
-        }
-        public StudioComponentLicenseServiceConfiguration build() {
+        }        public StudioComponentLicenseServiceConfiguration build() {
             return new StudioComponentLicenseServiceConfiguration(endpoint);
         }
     }

@@ -112,42 +112,34 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
             this.denominator = denominator;
             return this;
         }
-
         public Builder denominator(@Nullable RatioPartArgs denominator) {
             this.denominator = Output.ofNullable(denominator);
             return this;
         }
-
         public Builder numerator(@Nullable Output<RatioPartArgs> numerator) {
             this.numerator = numerator;
             return this;
         }
-
         public Builder numerator(@Nullable RatioPartArgs numerator) {
             this.numerator = Output.ofNullable(numerator);
             return this;
         }
-
         public Builder pickTimeSeriesFilter(@Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
-
         public Builder pickTimeSeriesFilter(@Nullable PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Output.ofNullable(pickTimeSeriesFilter);
             return this;
         }
-
         public Builder secondaryAggregation(@Nullable Output<AggregationArgs> secondaryAggregation) {
             this.secondaryAggregation = secondaryAggregation;
             return this;
         }
-
         public Builder secondaryAggregation(@Nullable AggregationArgs secondaryAggregation) {
             this.secondaryAggregation = Output.ofNullable(secondaryAggregation);
             return this;
-        }
-        public TimeSeriesFilterRatioArgs build() {
+        }        public TimeSeriesFilterRatioArgs build() {
             return new TimeSeriesFilterRatioArgs(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
         }
     }

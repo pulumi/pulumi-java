@@ -69,12 +69,10 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public ManagedServiceIdentityResponseUserAssignedIdentities build() {
+        }        public ManagedServiceIdentityResponseUserAssignedIdentities build() {
             return new ManagedServiceIdentityResponseUserAssignedIdentities(clientId, principalId);
         }
     }

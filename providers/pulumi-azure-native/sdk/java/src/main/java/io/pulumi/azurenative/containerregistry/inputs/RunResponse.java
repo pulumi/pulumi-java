@@ -471,132 +471,112 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder customRegistries(@Nullable List<String> customRegistries) {
             this.customRegistries = customRegistries;
             return this;
         }
-
+        public Builder customRegistries(String... customRegistries) {
+            return customRegistries(List.of(customRegistries));
+        }
         public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageUpdateTrigger(@Nullable ImageUpdateTriggerResponse imageUpdateTrigger) {
             this.imageUpdateTrigger = imageUpdateTrigger;
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder logArtifact(ImageDescriptorResponse logArtifact) {
             this.logArtifact = Objects.requireNonNull(logArtifact);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputImages(@Nullable List<ImageDescriptorResponse> outputImages) {
             this.outputImages = outputImages;
             return this;
         }
-
+        public Builder outputImages(ImageDescriptorResponse... outputImages) {
+            return outputImages(List.of(outputImages));
+        }
         public Builder platform(@Nullable PlatformPropertiesResponse platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder runErrorMessage(String runErrorMessage) {
             this.runErrorMessage = Objects.requireNonNull(runErrorMessage);
             return this;
         }
-
         public Builder runId(@Nullable String runId) {
             this.runId = runId;
             return this;
         }
-
         public Builder runType(@Nullable String runType) {
             this.runType = runType;
             return this;
         }
-
         public Builder sourceRegistryAuth(@Nullable String sourceRegistryAuth) {
             this.sourceRegistryAuth = sourceRegistryAuth;
             return this;
         }
-
         public Builder sourceTrigger(@Nullable SourceTriggerDescriptorResponse sourceTrigger) {
             this.sourceTrigger = sourceTrigger;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder task(@Nullable String task) {
             this.task = task;
             return this;
         }
-
         public Builder timerTrigger(@Nullable TimerTriggerDescriptorResponse timerTrigger) {
             this.timerTrigger = timerTrigger;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             this.updateTriggerToken = updateTriggerToken;
             return this;
-        }
-        public RunResponse build() {
+        }        public RunResponse build() {
             return new RunResponse(agentConfiguration, agentPoolName, createTime, customRegistries, finishTime, id, imageUpdateTrigger, isArchiveEnabled, lastUpdatedTime, logArtifact, name, outputImages, platform, provisioningState, runErrorMessage, runId, runType, sourceRegistryAuth, sourceTrigger, startTime, status, systemData, task, timerTrigger, type, updateTriggerToken);
         }
     }

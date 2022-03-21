@@ -113,42 +113,37 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.folderMap = folderMap;
             return this;
         }
-
         public Builder folderMap(@Nullable Map<String,String> folderMap) {
             this.folderMap = Output.ofNullable(folderMap);
             return this;
         }
-
         public Builder projectMap(@Nullable Output<Map<String,String>> projectMap) {
             this.projectMap = projectMap;
             return this;
         }
-
         public Builder projectMap(@Nullable Map<String,String> projectMap) {
             this.projectMap = Output.ofNullable(projectMap);
             return this;
         }
-
         public Builder projects(@Nullable Output<List<String>> projects) {
             this.projects = projects;
             return this;
         }
-
         public Builder projects(@Nullable List<String> projects) {
             this.projects = Output.ofNullable(projects);
             return this;
         }
-
+        public Builder projects(String... projects) {
+            return projects(List.of(projects));
+        }
         public Builder shareType(@Nullable Output<ShareSettingsShareType> shareType) {
             this.shareType = shareType;
             return this;
         }
-
         public Builder shareType(@Nullable ShareSettingsShareType shareType) {
             this.shareType = Output.ofNullable(shareType);
             return this;
-        }
-        public ShareSettingsArgs build() {
+        }        public ShareSettingsArgs build() {
             return new ShareSettingsArgs(folderMap, projectMap, projects, shareType);
         }
     }

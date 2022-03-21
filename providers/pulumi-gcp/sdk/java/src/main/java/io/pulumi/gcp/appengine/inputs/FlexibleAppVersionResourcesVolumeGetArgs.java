@@ -90,32 +90,26 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder sizeGb(Output<Integer> sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
-
         public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Output.of(Objects.requireNonNull(sizeGb));
             return this;
         }
-
         public Builder volumeType(Output<String> volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Output.of(Objects.requireNonNull(volumeType));
             return this;
-        }
-        public FlexibleAppVersionResourcesVolumeGetArgs build() {
+        }        public FlexibleAppVersionResourcesVolumeGetArgs build() {
             return new FlexibleAppVersionResourcesVolumeGetArgs(name, sizeGb, volumeType);
         }
     }

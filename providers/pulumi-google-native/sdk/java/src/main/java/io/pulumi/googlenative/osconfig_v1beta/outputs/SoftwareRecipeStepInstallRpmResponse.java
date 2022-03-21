@@ -51,8 +51,7 @@ public final class SoftwareRecipeStepInstallRpmResponse {
         public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
-        }
-        public SoftwareRecipeStepInstallRpmResponse build() {
+        }        public SoftwareRecipeStepInstallRpmResponse build() {
             return new SoftwareRecipeStepInstallRpmResponse(artifactId);
         }
     }

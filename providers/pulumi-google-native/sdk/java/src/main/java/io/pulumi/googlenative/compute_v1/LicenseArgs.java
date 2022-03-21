@@ -128,62 +128,50 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder resourceRequirements(@Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
-
         public Builder resourceRequirements(@Nullable LicenseResourceRequirementsArgs resourceRequirements) {
             this.resourceRequirements = Output.ofNullable(resourceRequirements);
             return this;
         }
-
         public Builder transferable(@Nullable Output<Boolean> transferable) {
             this.transferable = transferable;
             return this;
         }
-
         public Builder transferable(@Nullable Boolean transferable) {
             this.transferable = Output.ofNullable(transferable);
             return this;
-        }
-        public LicenseArgs build() {
+        }        public LicenseArgs build() {
             return new LicenseArgs(description, name, project, requestId, resourceRequirements, transferable);
         }
     }

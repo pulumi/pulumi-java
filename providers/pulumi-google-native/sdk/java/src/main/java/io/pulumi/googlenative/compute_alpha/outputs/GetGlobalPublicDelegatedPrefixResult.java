@@ -248,67 +248,57 @@ public final class GetGlobalPublicDelegatedPrefixResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder isLiveMigration(Boolean isLiveMigration) {
             this.isLiveMigration = Objects.requireNonNull(isLiveMigration);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parentPrefix(String parentPrefix) {
             this.parentPrefix = Objects.requireNonNull(parentPrefix);
             return this;
         }
-
         public Builder publicDelegatedSubPrefixs(List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> publicDelegatedSubPrefixs) {
             this.publicDelegatedSubPrefixs = Objects.requireNonNull(publicDelegatedSubPrefixs);
             return this;
         }
-
+        public Builder publicDelegatedSubPrefixs(PublicDelegatedPrefixPublicDelegatedSubPrefixResponse... publicDelegatedSubPrefixs) {
+            return publicDelegatedSubPrefixs(List.of(publicDelegatedSubPrefixs));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetGlobalPublicDelegatedPrefixResult build() {
+        }        public GetGlobalPublicDelegatedPrefixResult build() {
             return new GetGlobalPublicDelegatedPrefixResult(creationTimestamp, description, fingerprint, ipCidrRange, isLiveMigration, kind, name, parentPrefix, publicDelegatedSubPrefixs, region, selfLink, selfLinkWithId, status);
         }
     }

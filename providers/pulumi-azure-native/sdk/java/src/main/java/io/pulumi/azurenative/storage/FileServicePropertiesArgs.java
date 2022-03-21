@@ -141,62 +141,50 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
-
         public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Output.ofNullable(cors);
             return this;
         }
-
         public Builder fileServicesName(@Nullable Output<String> fileServicesName) {
             this.fileServicesName = fileServicesName;
             return this;
         }
-
         public Builder fileServicesName(@Nullable String fileServicesName) {
             this.fileServicesName = Output.ofNullable(fileServicesName);
             return this;
         }
-
         public Builder protocolSettings(@Nullable Output<ProtocolSettingsArgs> protocolSettings) {
             this.protocolSettings = protocolSettings;
             return this;
         }
-
         public Builder protocolSettings(@Nullable ProtocolSettingsArgs protocolSettings) {
             this.protocolSettings = Output.ofNullable(protocolSettings);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareDeleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy) {
             this.shareDeleteRetentionPolicy = shareDeleteRetentionPolicy;
             return this;
         }
-
         public Builder shareDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs shareDeleteRetentionPolicy) {
             this.shareDeleteRetentionPolicy = Output.ofNullable(shareDeleteRetentionPolicy);
             return this;
-        }
-        public FileServicePropertiesArgs build() {
+        }        public FileServicePropertiesArgs build() {
             return new FileServicePropertiesArgs(accountName, cors, fileServicesName, protocolSettings, resourceGroupName, shareDeleteRetentionPolicy);
         }
     }

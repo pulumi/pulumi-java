@@ -51,8 +51,7 @@ public final class GetUserSettingsWithLocationResult {
         public Builder properties(UserPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public GetUserSettingsWithLocationResult build() {
+        }        public GetUserSettingsWithLocationResult build() {
             return new GetUserSettingsWithLocationResult(properties);
         }
     }

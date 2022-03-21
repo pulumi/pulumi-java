@@ -380,107 +380,92 @@ public final class GetIncidentResult {
             this.additionalData = Objects.requireNonNull(additionalData);
             return this;
         }
-
         public Builder classification(@Nullable String classification) {
             this.classification = classification;
             return this;
         }
-
         public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
-
         public Builder classificationReason(@Nullable String classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
-
         public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder firstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
             this.firstActivityTimeUtc = firstActivityTimeUtc;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder incidentNumber(Integer incidentNumber) {
             this.incidentNumber = Objects.requireNonNull(incidentNumber);
             return this;
         }
-
         public Builder incidentUrl(String incidentUrl) {
             this.incidentUrl = Objects.requireNonNull(incidentUrl);
             return this;
         }
-
         public Builder labels(@Nullable List<IncidentLabelResponse> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(IncidentLabelResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder lastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
             this.lastActivityTimeUtc = lastActivityTimeUtc;
             return this;
         }
-
         public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder owner(@Nullable IncidentOwnerInfoResponse owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder relatedAnalyticRuleIds(List<String> relatedAnalyticRuleIds) {
             this.relatedAnalyticRuleIds = Objects.requireNonNull(relatedAnalyticRuleIds);
             return this;
         }
-
+        public Builder relatedAnalyticRuleIds(String... relatedAnalyticRuleIds) {
+            return relatedAnalyticRuleIds(List.of(relatedAnalyticRuleIds));
+        }
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIncidentResult build() {
+        }        public GetIncidentResult build() {
             return new GetIncidentResult(additionalData, classification, classificationComment, classificationReason, createdTimeUtc, description, etag, firstActivityTimeUtc, id, incidentNumber, incidentUrl, labels, lastActivityTimeUtc, lastModifiedTimeUtc, name, owner, relatedAnalyticRuleIds, severity, status, title, type);
         }
     }

@@ -191,92 +191,80 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
             this.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
-
         public Builder automaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
             this.automaticFailoverEnabled = Output.ofNullable(automaticFailoverEnabled);
             return this;
         }
-
         public Builder cacheNodeType(@Nullable Output<String> cacheNodeType) {
             this.cacheNodeType = cacheNodeType;
             return this;
         }
-
         public Builder cacheNodeType(@Nullable String cacheNodeType) {
             this.cacheNodeType = Output.ofNullable(cacheNodeType);
             return this;
         }
-
         public Builder cacheParameterGroupName(@Nullable Output<String> cacheParameterGroupName) {
             this.cacheParameterGroupName = cacheParameterGroupName;
             return this;
         }
-
         public Builder cacheParameterGroupName(@Nullable String cacheParameterGroupName) {
             this.cacheParameterGroupName = Output.ofNullable(cacheParameterGroupName);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder globalNodeGroupCount(@Nullable Output<Integer> globalNodeGroupCount) {
             this.globalNodeGroupCount = globalNodeGroupCount;
             return this;
         }
-
         public Builder globalNodeGroupCount(@Nullable Integer globalNodeGroupCount) {
             this.globalNodeGroupCount = Output.ofNullable(globalNodeGroupCount);
             return this;
         }
-
         public Builder globalReplicationGroupDescription(@Nullable Output<String> globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
-
         public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = Output.ofNullable(globalReplicationGroupDescription);
             return this;
         }
-
         public Builder globalReplicationGroupIdSuffix(@Nullable Output<String> globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
-
         public Builder globalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = Output.ofNullable(globalReplicationGroupIdSuffix);
             return this;
         }
-
         public Builder members(Output<List<GlobalReplicationGroupMemberArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<GlobalReplicationGroupMemberArgs> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(GlobalReplicationGroupMemberArgs... members) {
+            return members(List.of(members));
+        }
         public Builder regionalConfigurations(@Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
             this.regionalConfigurations = regionalConfigurations;
             return this;
         }
-
         public Builder regionalConfigurations(@Nullable List<GlobalReplicationGroupRegionalConfigurationArgs> regionalConfigurations) {
             this.regionalConfigurations = Output.ofNullable(regionalConfigurations);
             return this;
         }
-        public GlobalReplicationGroupArgs build() {
+        public Builder regionalConfigurations(GlobalReplicationGroupRegionalConfigurationArgs... regionalConfigurations) {
+            return regionalConfigurations(List.of(regionalConfigurations));
+        }        public GlobalReplicationGroupArgs build() {
             return new GlobalReplicationGroupArgs(automaticFailoverEnabled, cacheNodeType, cacheParameterGroupName, engineVersion, globalNodeGroupCount, globalReplicationGroupDescription, globalReplicationGroupIdSuffix, members, regionalConfigurations);
         }
     }

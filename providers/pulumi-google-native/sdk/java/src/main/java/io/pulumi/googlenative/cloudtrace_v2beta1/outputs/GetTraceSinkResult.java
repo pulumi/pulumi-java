@@ -86,17 +86,14 @@ public final class GetTraceSinkResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputConfig(OutputConfigResponse outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public Builder writerIdentity(String writerIdentity) {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
-        }
-        public GetTraceSinkResult build() {
+        }        public GetTraceSinkResult build() {
             return new GetTraceSinkResult(name, outputConfig, writerIdentity);
         }
     }

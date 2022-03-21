@@ -52,12 +52,10 @@ public final class RuleGroupLabelArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RuleGroupLabelArgs build() {
+        }        public RuleGroupLabelArgs build() {
             return new RuleGroupLabelArgs(name);
         }
     }

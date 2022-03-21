@@ -234,62 +234,50 @@ public final class GetVolumeContainerResult {
             this.bandWidthRateInMbps = bandWidthRateInMbps;
             return this;
         }
-
         public Builder bandwidthSettingId(@Nullable String bandwidthSettingId) {
             this.bandwidthSettingId = bandwidthSettingId;
             return this;
         }
-
         public Builder encryptionKey(@Nullable AsymmetricEncryptedSecretResponse encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionStatus(String encryptionStatus) {
             this.encryptionStatus = Objects.requireNonNull(encryptionStatus);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ownerShipStatus(String ownerShipStatus) {
             this.ownerShipStatus = Objects.requireNonNull(ownerShipStatus);
             return this;
         }
-
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
-
         public Builder totalCloudStorageUsageInBytes(Double totalCloudStorageUsageInBytes) {
             this.totalCloudStorageUsageInBytes = Objects.requireNonNull(totalCloudStorageUsageInBytes);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumeCount(Integer volumeCount) {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
-        }
-        public GetVolumeContainerResult build() {
+        }        public GetVolumeContainerResult build() {
             return new GetVolumeContainerResult(bandWidthRateInMbps, bandwidthSettingId, encryptionKey, encryptionStatus, id, kind, name, ownerShipStatus, storageAccountCredentialId, totalCloudStorageUsageInBytes, type, volumeCount);
         }
     }

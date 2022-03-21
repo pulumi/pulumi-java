@@ -78,22 +78,18 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public RelatedUrlArgs build() {
+        }        public RelatedUrlArgs build() {
             return new RelatedUrlArgs(label, url);
         }
     }

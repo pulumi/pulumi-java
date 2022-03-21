@@ -76,12 +76,10 @@ public final class ServiceAuthConfigurationResponse extends io.pulumi.resources.
             this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
             return this;
         }
-
         public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
             this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
             return this;
-        }
-        public ServiceAuthConfigurationResponse build() {
+        }        public ServiceAuthConfigurationResponse build() {
             return new ServiceAuthConfigurationResponse(primaryAuthKeyHash, secondaryAuthKeyHash);
         }
     }

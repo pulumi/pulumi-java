@@ -105,22 +105,21 @@ public final class GroupInstanceRefreshPreferences {
             this.checkpointDelay = checkpointDelay;
             return this;
         }
-
         public Builder checkpointPercentages(@Nullable List<Integer> checkpointPercentages) {
             this.checkpointPercentages = checkpointPercentages;
             return this;
         }
-
+        public Builder checkpointPercentages(Integer... checkpointPercentages) {
+            return checkpointPercentages(List.of(checkpointPercentages));
+        }
         public Builder instanceWarmup(@Nullable String instanceWarmup) {
             this.instanceWarmup = instanceWarmup;
             return this;
         }
-
         public Builder minHealthyPercentage(@Nullable Integer minHealthyPercentage) {
             this.minHealthyPercentage = minHealthyPercentage;
             return this;
-        }
-        public GroupInstanceRefreshPreferences build() {
+        }        public GroupInstanceRefreshPreferences build() {
             return new GroupInstanceRefreshPreferences(checkpointDelay, checkpointPercentages, instanceWarmup, minHealthyPercentage);
         }
     }

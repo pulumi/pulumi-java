@@ -78,32 +78,26 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public DeliveryStreamHttpEndpointConfigurationArgs build() {
+        }        public DeliveryStreamHttpEndpointConfigurationArgs build() {
             return new DeliveryStreamHttpEndpointConfigurationArgs(accessKey, name, url);
         }
     }

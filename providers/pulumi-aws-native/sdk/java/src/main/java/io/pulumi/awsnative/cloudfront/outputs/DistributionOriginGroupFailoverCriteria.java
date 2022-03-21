@@ -43,8 +43,7 @@ public final class DistributionOriginGroupFailoverCriteria {
         public Builder statusCodes(DistributionStatusCodes statusCodes) {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
-        }
-        public DistributionOriginGroupFailoverCriteria build() {
+        }        public DistributionOriginGroupFailoverCriteria build() {
             return new DistributionOriginGroupFailoverCriteria(statusCodes);
         }
     }

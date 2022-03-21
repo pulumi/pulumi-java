@@ -146,72 +146,64 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
             return this;
         }
-
         public Builder contactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
             this.contactPostPassDurationSeconds = Output.ofNullable(contactPostPassDurationSeconds);
             return this;
         }
-
         public Builder contactPrePassDurationSeconds(@Nullable Output<Integer> contactPrePassDurationSeconds) {
             this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
             return this;
         }
-
         public Builder contactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
             this.contactPrePassDurationSeconds = Output.ofNullable(contactPrePassDurationSeconds);
             return this;
         }
-
         public Builder dataflowEdges(Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges) {
             this.dataflowEdges = Objects.requireNonNull(dataflowEdges);
             return this;
         }
-
         public Builder dataflowEdges(List<MissionProfileDataflowEdgeArgs> dataflowEdges) {
             this.dataflowEdges = Output.of(Objects.requireNonNull(dataflowEdges));
             return this;
         }
-
+        public Builder dataflowEdges(MissionProfileDataflowEdgeArgs... dataflowEdges) {
+            return dataflowEdges(List.of(dataflowEdges));
+        }
         public Builder minimumViableContactDurationSeconds(Output<Integer> minimumViableContactDurationSeconds) {
             this.minimumViableContactDurationSeconds = Objects.requireNonNull(minimumViableContactDurationSeconds);
             return this;
         }
-
         public Builder minimumViableContactDurationSeconds(Integer minimumViableContactDurationSeconds) {
             this.minimumViableContactDurationSeconds = Output.of(Objects.requireNonNull(minimumViableContactDurationSeconds));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<MissionProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<MissionProfileTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(MissionProfileTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder trackingConfigArn(Output<String> trackingConfigArn) {
             this.trackingConfigArn = Objects.requireNonNull(trackingConfigArn);
             return this;
         }
-
         public Builder trackingConfigArn(String trackingConfigArn) {
             this.trackingConfigArn = Output.of(Objects.requireNonNull(trackingConfigArn));
             return this;
-        }
-        public MissionProfileArgs build() {
+        }        public MissionProfileArgs build() {
             return new MissionProfileArgs(contactPostPassDurationSeconds, contactPrePassDurationSeconds, dataflowEdges, minimumViableContactDurationSeconds, name, tags, trackingConfigArn);
         }
     }

@@ -126,52 +126,42 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
-
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             this.keyVaultSecretId = Output.ofNullable(keyVaultSecretId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
-        }
-        public ApplicationGatewaySslCertificateArgs build() {
+        }        public ApplicationGatewaySslCertificateArgs build() {
             return new ApplicationGatewaySslCertificateArgs(data, id, keyVaultSecretId, name, password);
         }
     }

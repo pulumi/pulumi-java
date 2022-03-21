@@ -271,142 +271,117 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
-
         public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Output.ofNullable(dateCreated);
             return this;
         }
-
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
-
         public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
             this.distributionConfigurationArn = Output.ofNullable(distributionConfigurationArn);
             return this;
         }
-
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
-
         public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = Output.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
-
         public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
             this.imageRecipeArn = imageRecipeArn;
             return this;
         }
-
         public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
             this.imageRecipeArn = Output.ofNullable(imageRecipeArn);
             return this;
         }
-
         public Builder imageTestsConfiguration(@Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
-
         public Builder imageTestsConfiguration(@Nullable ImageImageTestsConfigurationGetArgs imageTestsConfiguration) {
             this.imageTestsConfiguration = Output.ofNullable(imageTestsConfiguration);
             return this;
         }
-
         public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
-
         public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Output.ofNullable(infrastructureConfigurationArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osVersion(@Nullable Output<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = Output.ofNullable(osVersion);
             return this;
         }
-
         public Builder outputResources(@Nullable Output<List<ImageOutputResourceGetArgs>> outputResources) {
             this.outputResources = outputResources;
             return this;
         }
-
         public Builder outputResources(@Nullable List<ImageOutputResourceGetArgs> outputResources) {
             this.outputResources = Output.ofNullable(outputResources);
             return this;
         }
-
+        public Builder outputResources(ImageOutputResourceGetArgs... outputResources) {
+            return outputResources(List.of(outputResources));
+        }
         public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ImageState build() {
+        }        public ImageState build() {
             return new ImageState(arn, dateCreated, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, name, osVersion, outputResources, platform, tags, tagsAll, version);
         }
     }

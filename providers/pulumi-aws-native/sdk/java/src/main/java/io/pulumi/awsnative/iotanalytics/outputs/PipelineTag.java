@@ -53,12 +53,10 @@ public final class PipelineTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PipelineTag build() {
+        }        public PipelineTag build() {
             return new PipelineTag(key, value);
         }
     }

@@ -117,27 +117,22 @@ public final class PeeringServicePrefixEventResponse {
             this.eventDescription = Objects.requireNonNull(eventDescription);
             return this;
         }
-
         public Builder eventLevel(String eventLevel) {
             this.eventLevel = Objects.requireNonNull(eventLevel);
             return this;
         }
-
         public Builder eventSummary(String eventSummary) {
             this.eventSummary = Objects.requireNonNull(eventSummary);
             return this;
         }
-
         public Builder eventTimestamp(String eventTimestamp) {
             this.eventTimestamp = Objects.requireNonNull(eventTimestamp);
             return this;
         }
-
         public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
-        }
-        public PeeringServicePrefixEventResponse build() {
+        }        public PeeringServicePrefixEventResponse build() {
             return new PeeringServicePrefixEventResponse(eventDescription, eventLevel, eventSummary, eventTimestamp, eventType);
         }
     }

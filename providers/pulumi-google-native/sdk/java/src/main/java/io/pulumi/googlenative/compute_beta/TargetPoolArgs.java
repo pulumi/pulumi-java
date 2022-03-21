@@ -193,102 +193,88 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.backupPool = backupPool;
             return this;
         }
-
         public Builder backupPool(@Nullable String backupPool) {
             this.backupPool = Output.ofNullable(backupPool);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
         }
-
         public Builder failoverRatio(@Nullable Double failoverRatio) {
             this.failoverRatio = Output.ofNullable(failoverRatio);
             return this;
         }
-
         public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
-
         public Builder healthChecks(@Nullable List<String> healthChecks) {
             this.healthChecks = Output.ofNullable(healthChecks);
             return this;
         }
-
+        public Builder healthChecks(String... healthChecks) {
+            return healthChecks(List.of(healthChecks));
+        }
         public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<String> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder sessionAffinity(@Nullable Output<TargetPoolSessionAffinity> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
-
         public Builder sessionAffinity(@Nullable TargetPoolSessionAffinity sessionAffinity) {
             this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
-        }
-        public TargetPoolArgs build() {
+        }        public TargetPoolArgs build() {
             return new TargetPoolArgs(backupPool, description, failoverRatio, healthChecks, instances, name, project, region, requestId, sessionAffinity);
         }
     }

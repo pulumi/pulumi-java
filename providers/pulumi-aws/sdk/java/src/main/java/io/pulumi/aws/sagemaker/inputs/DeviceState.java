@@ -103,42 +103,34 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder device(@Nullable Output<DeviceDeviceGetArgs> device) {
             this.device = device;
             return this;
         }
-
         public Builder device(@Nullable DeviceDeviceGetArgs device) {
             this.device = Output.ofNullable(device);
             return this;
         }
-
         public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
-
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
             this.deviceFleetName = Output.ofNullable(deviceFleetName);
             return this;
-        }
-        public DeviceState build() {
+        }        public DeviceState build() {
             return new DeviceState(agentVersion, arn, device, deviceFleetName);
         }
     }

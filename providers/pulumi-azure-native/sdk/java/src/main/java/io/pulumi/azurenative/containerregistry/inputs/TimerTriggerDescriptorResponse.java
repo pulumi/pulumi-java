@@ -74,12 +74,10 @@ public final class TimerTriggerDescriptorResponse extends io.pulumi.resources.In
             this.scheduleOccurrence = scheduleOccurrence;
             return this;
         }
-
         public Builder timerTriggerName(@Nullable String timerTriggerName) {
             this.timerTriggerName = timerTriggerName;
             return this;
-        }
-        public TimerTriggerDescriptorResponse build() {
+        }        public TimerTriggerDescriptorResponse build() {
             return new TimerTriggerDescriptorResponse(scheduleOccurrence, timerTriggerName);
         }
     }

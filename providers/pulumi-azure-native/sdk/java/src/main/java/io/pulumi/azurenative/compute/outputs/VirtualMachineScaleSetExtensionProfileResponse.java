@@ -73,12 +73,13 @@ public final class VirtualMachineScaleSetExtensionProfileResponse {
             this.extensions = extensions;
             return this;
         }
-
+        public Builder extensions(VirtualMachineScaleSetExtensionResponse... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
-        }
-        public VirtualMachineScaleSetExtensionProfileResponse build() {
+        }        public VirtualMachineScaleSetExtensionProfileResponse build() {
             return new VirtualMachineScaleSetExtensionProfileResponse(extensions, extensionsTimeBudget);
         }
     }

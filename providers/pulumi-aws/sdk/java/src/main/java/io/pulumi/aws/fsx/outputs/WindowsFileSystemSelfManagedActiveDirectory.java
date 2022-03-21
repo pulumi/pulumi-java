@@ -136,32 +136,29 @@ public final class WindowsFileSystemSelfManagedActiveDirectory {
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
-
+        public Builder dnsIps(String... dnsIps) {
+            return dnsIps(List.of(dnsIps));
+        }
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public WindowsFileSystemSelfManagedActiveDirectory build() {
+        }        public WindowsFileSystemSelfManagedActiveDirectory build() {
             return new WindowsFileSystemSelfManagedActiveDirectory(dnsIps, domainName, fileSystemAdministratorsGroup, organizationalUnitDistinguishedName, password, username);
         }
     }

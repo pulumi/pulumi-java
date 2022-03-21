@@ -77,12 +77,16 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
             this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
             return this;
         }
-
+        public Builder includeHttpHeaders(String... includeHttpHeaders) {
+            return includeHttpHeaders(List.of(includeHttpHeaders));
+        }
         public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
             return this;
         }
-        public BackendBucketCdnPolicyCacheKeyPolicyResponse build() {
+        public Builder queryStringWhitelist(String... queryStringWhitelist) {
+            return queryStringWhitelist(List.of(queryStringWhitelist));
+        }        public BackendBucketCdnPolicyCacheKeyPolicyResponse build() {
             return new BackendBucketCdnPolicyCacheKeyPolicyResponse(includeHttpHeaders, queryStringWhitelist);
         }
     }

@@ -58,8 +58,7 @@ public final class ConnectToTargetSqlMITaskInputResponse extends io.pulumi.resou
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public ConnectToTargetSqlMITaskInputResponse build() {
+        }        public ConnectToTargetSqlMITaskInputResponse build() {
             return new ConnectToTargetSqlMITaskInputResponse(targetConnectionInfo);
         }
     }

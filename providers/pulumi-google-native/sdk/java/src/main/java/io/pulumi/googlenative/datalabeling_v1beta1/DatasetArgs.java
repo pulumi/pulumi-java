@@ -102,42 +102,34 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder lastMigrateTime(@Nullable Output<String> lastMigrateTime) {
             this.lastMigrateTime = lastMigrateTime;
             return this;
         }
-
         public Builder lastMigrateTime(@Nullable String lastMigrateTime) {
             this.lastMigrateTime = Output.ofNullable(lastMigrateTime);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DatasetArgs build() {
+        }        public DatasetArgs build() {
             return new DatasetArgs(description, displayName, lastMigrateTime, project);
         }
     }

@@ -70,12 +70,10 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder time(BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationReplicationTime build() {
+        }        public BucketReplicationConfigRuleDestinationReplicationTime build() {
             return new BucketReplicationConfigRuleDestinationReplicationTime(status, time);
         }
     }

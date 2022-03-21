@@ -61,12 +61,10 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ClusterTelemetryType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ClusterTelemetryArgs build() {
+        }        public ClusterTelemetryArgs build() {
             return new ClusterTelemetryArgs(type);
         }
     }

@@ -45,7 +45,9 @@ public final class ResponseHeadersPolicyCustomHeadersConfig {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public ResponseHeadersPolicyCustomHeadersConfig build() {
+        public Builder items(ResponseHeadersPolicyCustomHeader... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCustomHeadersConfig build() {
             return new ResponseHeadersPolicyCustomHeadersConfig(items);
         }
     }

@@ -51,8 +51,7 @@ public final class TableColumnFamily {
         public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
-        }
-        public TableColumnFamily build() {
+        }        public TableColumnFamily build() {
             return new TableColumnFamily(family);
         }
     }

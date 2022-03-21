@@ -62,12 +62,13 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.uniqueKeys = uniqueKeys;
             return this;
         }
-
         public Builder uniqueKeys(@Nullable List<UniqueKeyArgs> uniqueKeys) {
             this.uniqueKeys = Output.ofNullable(uniqueKeys);
             return this;
         }
-        public UniqueKeyPolicyArgs build() {
+        public Builder uniqueKeys(UniqueKeyArgs... uniqueKeys) {
+            return uniqueKeys(List.of(uniqueKeys));
+        }        public UniqueKeyPolicyArgs build() {
             return new UniqueKeyPolicyArgs(uniqueKeys);
         }
     }

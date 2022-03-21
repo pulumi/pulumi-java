@@ -78,12 +78,10 @@ public final class Ipv6CircuitConnectionConfigResponse extends io.pulumi.resourc
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder circuitConnectionStatus(String circuitConnectionStatus) {
             this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
             return this;
-        }
-        public Ipv6CircuitConnectionConfigResponse build() {
+        }        public Ipv6CircuitConnectionConfigResponse build() {
             return new Ipv6CircuitConnectionConfigResponse(addressPrefix, circuitConnectionStatus);
         }
     }

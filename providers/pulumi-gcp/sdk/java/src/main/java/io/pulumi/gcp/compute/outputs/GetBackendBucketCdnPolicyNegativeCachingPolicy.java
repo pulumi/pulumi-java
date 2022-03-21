@@ -53,12 +53,10 @@ public final class GetBackendBucketCdnPolicyNegativeCachingPolicy {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public GetBackendBucketCdnPolicyNegativeCachingPolicy build() {
+        }        public GetBackendBucketCdnPolicyNegativeCachingPolicy build() {
             return new GetBackendBucketCdnPolicyNegativeCachingPolicy(code, ttl);
         }
     }

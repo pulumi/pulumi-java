@@ -182,82 +182,69 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             this.complexity = complexity;
             return this;
         }
-
         public Builder complexity(@Nullable Either<String,H264Complexity> complexity) {
             this.complexity = Output.ofNullable(complexity);
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder layers(@Nullable Output<List<H264LayerArgs>> layers) {
             this.layers = layers;
             return this;
         }
-
         public Builder layers(@Nullable List<H264LayerArgs> layers) {
             this.layers = Output.ofNullable(layers);
             return this;
         }
-
+        public Builder layers(H264LayerArgs... layers) {
+            return layers(List.of(layers));
+        }
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder sceneChangeDetection(@Nullable Output<Boolean> sceneChangeDetection) {
             this.sceneChangeDetection = sceneChangeDetection;
             return this;
         }
-
         public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
             this.sceneChangeDetection = Output.ofNullable(sceneChangeDetection);
             return this;
         }
-
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
             this.stretchMode = Output.ofNullable(stretchMode);
             return this;
         }
-
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
             this.syncMode = syncMode;
             return this;
         }
-
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
             this.syncMode = Output.ofNullable(syncMode);
             return this;
-        }
-        public H264VideoArgs build() {
+        }        public H264VideoArgs build() {
             return new H264VideoArgs(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);
         }
     }

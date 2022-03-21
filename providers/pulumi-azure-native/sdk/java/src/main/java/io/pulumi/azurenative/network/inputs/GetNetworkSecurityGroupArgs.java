@@ -90,17 +90,14 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
             this.expand = expand;
             return this;
         }
-
         public Builder networkSecurityGroupName(String networkSecurityGroupName) {
             this.networkSecurityGroupName = Objects.requireNonNull(networkSecurityGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNetworkSecurityGroupArgs build() {
+        }        public GetNetworkSecurityGroupArgs build() {
             return new GetNetworkSecurityGroupArgs(expand, networkSecurityGroupName, resourceGroupName);
         }
     }

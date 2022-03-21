@@ -173,42 +173,34 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
             this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent);
             return this;
         }
-
         public Builder cpuMaxPercent(Integer cpuMaxPercent) {
             this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent);
             return this;
         }
-
         public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps);
             return this;
         }
-
         public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps);
             return this;
         }
-
         public Builder memoryAveragePercent(Integer memoryAveragePercent) {
             this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent);
             return this;
         }
-
         public Builder memoryMaxPercent(Integer memoryMaxPercent) {
             this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent);
             return this;
         }
-
         public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps);
             return this;
         }
-
         public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
             return this;
-        }
-        public VmUtilizationMetricsResponse build() {
+        }        public VmUtilizationMetricsResponse build() {
             return new VmUtilizationMetricsResponse(cpuAveragePercent, cpuMaxPercent, diskIoRateAverageKbps, diskIoRateMaxKbps, memoryAveragePercent, memoryMaxPercent, networkThroughputAverageKbps, networkThroughputMaxKbps);
         }
     }

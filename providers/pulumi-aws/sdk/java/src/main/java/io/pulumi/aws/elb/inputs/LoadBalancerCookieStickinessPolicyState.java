@@ -111,42 +111,34 @@ public final class LoadBalancerCookieStickinessPolicyState extends io.pulumi.res
             this.cookieExpirationPeriod = cookieExpirationPeriod;
             return this;
         }
-
         public Builder cookieExpirationPeriod(@Nullable Integer cookieExpirationPeriod) {
             this.cookieExpirationPeriod = Output.ofNullable(cookieExpirationPeriod);
             return this;
         }
-
         public Builder lbPort(@Nullable Output<Integer> lbPort) {
             this.lbPort = lbPort;
             return this;
         }
-
         public Builder lbPort(@Nullable Integer lbPort) {
             this.lbPort = Output.ofNullable(lbPort);
             return this;
         }
-
         public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public Builder loadBalancer(@Nullable String loadBalancer) {
             this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public LoadBalancerCookieStickinessPolicyState build() {
+        }        public LoadBalancerCookieStickinessPolicyState build() {
             return new LoadBalancerCookieStickinessPolicyState(cookieExpirationPeriod, lbPort, loadBalancer, name);
         }
     }

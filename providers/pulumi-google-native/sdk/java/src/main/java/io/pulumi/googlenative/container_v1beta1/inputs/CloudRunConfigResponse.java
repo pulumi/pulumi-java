@@ -77,12 +77,10 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
-        }
-        public CloudRunConfigResponse build() {
+        }        public CloudRunConfigResponse build() {
             return new CloudRunConfigResponse(disabled, loadBalancerType);
         }
     }

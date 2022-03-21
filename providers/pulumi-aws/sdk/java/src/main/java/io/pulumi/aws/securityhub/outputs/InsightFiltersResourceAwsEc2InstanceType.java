@@ -69,12 +69,10 @@ public final class InsightFiltersResourceAwsEc2InstanceType {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceType build() {
+        }        public InsightFiltersResourceAwsEc2InstanceType build() {
             return new InsightFiltersResourceAwsEc2InstanceType(comparison, value);
         }
     }

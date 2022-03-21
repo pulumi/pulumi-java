@@ -88,17 +88,14 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
             this.authprovider = Objects.requireNonNull(authprovider);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListStaticSiteUsersArgs build() {
+        }        public ListStaticSiteUsersArgs build() {
             return new ListStaticSiteUsersArgs(authprovider, name, resourceGroupName);
         }
     }

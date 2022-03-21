@@ -95,32 +95,26 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
             this.containerImage = containerImage;
             return this;
         }
-
         public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder useSingleCorePerContainer(@Nullable Output<Boolean> useSingleCorePerContainer) {
             this.useSingleCorePerContainer = useSingleCorePerContainer;
             return this;
         }
-
         public Builder useSingleCorePerContainer(@Nullable Boolean useSingleCorePerContainer) {
             this.useSingleCorePerContainer = Output.ofNullable(useSingleCorePerContainer);
             return this;
-        }
-        public SdkHarnessContainerImageArgs build() {
+        }        public SdkHarnessContainerImageArgs build() {
             return new SdkHarnessContainerImageArgs(containerImage, environmentId, useSingleCorePerContainer);
         }
     }

@@ -72,12 +72,10 @@ public final class DeliveryRuleUrlPathConditionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(UrlPathMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleUrlPathConditionResponse build() {
+        }        public DeliveryRuleUrlPathConditionResponse build() {
             return new DeliveryRuleUrlPathConditionResponse(name, parameters);
         }
     }

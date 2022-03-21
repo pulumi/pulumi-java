@@ -62,12 +62,10 @@ public final class BucketDataExport {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder outputSchemaVersion(String outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
-        }
-        public BucketDataExport build() {
+        }        public BucketDataExport build() {
             return new BucketDataExport(destination, outputSchemaVersion);
         }
     }

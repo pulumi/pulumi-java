@@ -254,67 +254,69 @@ public final class GetEventSubscriptionResult {
             this.custSubscriptionId = custSubscriptionId;
             return this;
         }
-
         public Builder customerAwsId(@Nullable String customerAwsId) {
             this.customerAwsId = customerAwsId;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder eventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
-
+        public Builder eventCategories(EventSubscriptionEventCategoriesItem... eventCategories) {
+            return eventCategories(List.of(eventCategories));
+        }
         public Builder eventCategoriesList(@Nullable List<String> eventCategoriesList) {
             this.eventCategoriesList = eventCategoriesList;
             return this;
         }
-
+        public Builder eventCategoriesList(String... eventCategoriesList) {
+            return eventCategoriesList(List.of(eventCategoriesList));
+        }
         public Builder severity(@Nullable EventSubscriptionSeverity severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public Builder sourceIds(@Nullable List<String> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
-
+        public Builder sourceIds(String... sourceIds) {
+            return sourceIds(List.of(sourceIds));
+        }
         public Builder sourceIdsList(@Nullable List<String> sourceIdsList) {
             this.sourceIdsList = sourceIdsList;
             return this;
         }
-
+        public Builder sourceIdsList(String... sourceIdsList) {
+            return sourceIdsList(List.of(sourceIdsList));
+        }
         public Builder sourceType(@Nullable EventSubscriptionSourceType sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder status(@Nullable EventSubscriptionStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder subscriptionCreationTime(@Nullable String subscriptionCreationTime) {
             this.subscriptionCreationTime = subscriptionCreationTime;
             return this;
         }
-
         public Builder tags(@Nullable List<EventSubscriptionTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetEventSubscriptionResult build() {
+        public Builder tags(EventSubscriptionTag... tags) {
+            return tags(List.of(tags));
+        }        public GetEventSubscriptionResult build() {
             return new GetEventSubscriptionResult(custSubscriptionId, customerAwsId, enabled, eventCategories, eventCategoriesList, severity, snsTopicArn, sourceIds, sourceIdsList, sourceType, status, subscriptionCreationTime, tags);
         }
     }

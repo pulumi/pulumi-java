@@ -162,52 +162,42 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(@Nullable String generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
             this.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
-
         public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
             this.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
-
         public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
             this.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
-
         public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder projection(@Nullable String projection) {
             this.projection = projection;
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetBucketObjectArgs build() {
+        }        public GetBucketObjectArgs build() {
             return new GetBucketObjectArgs(bucket, generation, ifGenerationMatch, ifGenerationNotMatch, ifMetagenerationMatch, ifMetagenerationNotMatch, object, projection, provisionalUserProject, userProject);
         }
     }

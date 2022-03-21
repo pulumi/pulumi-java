@@ -60,12 +60,10 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(String identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
-        }
-        public IdentitySelectorArgs build() {
+        }        public IdentitySelectorArgs build() {
             return new IdentitySelectorArgs(identity);
         }
     }

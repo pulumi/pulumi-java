@@ -145,27 +145,25 @@ public final class InstanceFileSharesNfsExportOption {
             this.accessMode = accessMode;
             return this;
         }
-
         public Builder anonGid(@Nullable Integer anonGid) {
             this.anonGid = anonGid;
             return this;
         }
-
         public Builder anonUid(@Nullable Integer anonUid) {
             this.anonUid = anonUid;
             return this;
         }
-
         public Builder ipRanges(@Nullable List<String> ipRanges) {
             this.ipRanges = ipRanges;
             return this;
         }
-
+        public Builder ipRanges(String... ipRanges) {
+            return ipRanges(List.of(ipRanges));
+        }
         public Builder squashMode(@Nullable String squashMode) {
             this.squashMode = squashMode;
             return this;
-        }
-        public InstanceFileSharesNfsExportOption build() {
+        }        public InstanceFileSharesNfsExportOption build() {
             return new InstanceFileSharesNfsExportOption(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }
     }

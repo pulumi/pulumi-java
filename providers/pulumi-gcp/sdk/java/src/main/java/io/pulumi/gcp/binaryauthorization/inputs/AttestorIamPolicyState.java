@@ -108,42 +108,34 @@ public final class AttestorIamPolicyState extends io.pulumi.resources.ResourceAr
             this.attestor = attestor;
             return this;
         }
-
         public Builder attestor(@Nullable String attestor) {
             this.attestor = Output.ofNullable(attestor);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public AttestorIamPolicyState build() {
+        }        public AttestorIamPolicyState build() {
             return new AttestorIamPolicyState(attestor, etag, policyData, project);
         }
     }

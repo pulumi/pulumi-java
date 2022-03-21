@@ -69,12 +69,10 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public WebAclRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatement build() {
+        }        public WebAclRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatement build() {
             return new WebAclRuleStatementNotStatementStatementNotStatementStatementLabelMatchStatement(key, scope);
         }
     }

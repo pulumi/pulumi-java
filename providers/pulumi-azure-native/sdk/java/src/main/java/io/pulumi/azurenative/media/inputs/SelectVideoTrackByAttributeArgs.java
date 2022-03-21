@@ -114,42 +114,34 @@ public final class SelectVideoTrackByAttributeArgs extends io.pulumi.resources.R
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder attribute(Either<String,TrackAttribute> attribute) {
             this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
-
         public Builder filter(Output<Either<String,AttributeFilter>> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(Either<String,AttributeFilter> filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder filterValue(@Nullable Output<String> filterValue) {
             this.filterValue = filterValue;
             return this;
         }
-
         public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = Output.ofNullable(filterValue);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public SelectVideoTrackByAttributeArgs build() {
+        }        public SelectVideoTrackByAttributeArgs build() {
             return new SelectVideoTrackByAttributeArgs(attribute, filter, filterValue, odataType);
         }
     }

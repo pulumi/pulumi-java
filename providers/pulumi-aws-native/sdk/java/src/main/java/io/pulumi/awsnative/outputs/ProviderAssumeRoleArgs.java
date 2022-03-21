@@ -170,42 +170,34 @@ public final class ProviderAssumeRoleArgs {
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policyArns(@Nullable Output<List<String>> policyArns) {
             this.policyArns = policyArns;
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder transitiveTagKeys(@Nullable Output<List<String>> transitiveTagKeys) {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
-        }
-        public ProviderAssumeRoleArgs build() {
+        }        public ProviderAssumeRoleArgs build() {
             return new ProviderAssumeRoleArgs(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }
     }

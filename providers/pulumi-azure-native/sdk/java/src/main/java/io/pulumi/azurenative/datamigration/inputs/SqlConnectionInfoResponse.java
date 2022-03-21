@@ -192,47 +192,38 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
             this.additionalSettings = additionalSettings;
             return this;
         }
-
         public Builder authentication(@Nullable String authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder dataSource(String dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
-
         public Builder encryptConnection(@Nullable Boolean encryptConnection) {
             this.encryptConnection = encryptConnection;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
             this.trustServerCertificate = trustServerCertificate;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public SqlConnectionInfoResponse build() {
+        }        public SqlConnectionInfoResponse build() {
             return new SqlConnectionInfoResponse(additionalSettings, authentication, dataSource, encryptConnection, password, platform, trustServerCertificate, type, userName);
         }
     }

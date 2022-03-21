@@ -78,22 +78,18 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
-        }
-        public OAuthTokenArgs build() {
+        }        public OAuthTokenArgs build() {
             return new OAuthTokenArgs(scope, serviceAccountEmail);
         }
     }

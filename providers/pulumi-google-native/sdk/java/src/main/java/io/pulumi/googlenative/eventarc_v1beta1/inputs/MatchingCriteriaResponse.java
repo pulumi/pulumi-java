@@ -76,12 +76,10 @@ public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeAr
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public MatchingCriteriaResponse build() {
+        }        public MatchingCriteriaResponse build() {
             return new MatchingCriteriaResponse(attribute, value);
         }
     }

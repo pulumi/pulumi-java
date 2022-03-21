@@ -88,17 +88,17 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder sessionCount(Integer sessionCount) {
             this.sessionCount = Objects.requireNonNull(sessionCount);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse(metrics, sessionCount, version);
         }
     }

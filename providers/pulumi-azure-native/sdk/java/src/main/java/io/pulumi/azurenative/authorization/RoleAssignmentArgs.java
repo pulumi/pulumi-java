@@ -188,92 +188,74 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder conditionVersion(@Nullable Output<String> conditionVersion) {
             this.conditionVersion = conditionVersion;
             return this;
         }
-
         public Builder conditionVersion(@Nullable String conditionVersion) {
             this.conditionVersion = Output.ofNullable(conditionVersion);
             return this;
         }
-
         public Builder delegatedManagedIdentityResourceId(@Nullable Output<String> delegatedManagedIdentityResourceId) {
             this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
             return this;
         }
-
         public Builder delegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
             this.delegatedManagedIdentityResourceId = Output.ofNullable(delegatedManagedIdentityResourceId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder principalType(@Nullable Output<Either<String,PrincipalType>> principalType) {
             this.principalType = principalType;
             return this;
         }
-
         public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
             this.principalType = Output.ofNullable(principalType);
             return this;
         }
-
         public Builder roleAssignmentName(@Nullable Output<String> roleAssignmentName) {
             this.roleAssignmentName = roleAssignmentName;
             return this;
         }
-
         public Builder roleAssignmentName(@Nullable String roleAssignmentName) {
             this.roleAssignmentName = Output.ofNullable(roleAssignmentName);
             return this;
         }
-
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public RoleAssignmentArgs build() {
+        }        public RoleAssignmentArgs build() {
             return new RoleAssignmentArgs(condition, conditionVersion, delegatedManagedIdentityResourceId, description, principalId, principalType, roleAssignmentName, roleDefinitionId, scope);
         }
     }

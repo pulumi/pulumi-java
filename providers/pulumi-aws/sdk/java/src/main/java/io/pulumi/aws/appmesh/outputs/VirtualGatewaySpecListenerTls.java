@@ -89,17 +89,14 @@ public final class VirtualGatewaySpecListenerTls {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder validation(@Nullable VirtualGatewaySpecListenerTlsValidation validation) {
             this.validation = validation;
             return this;
-        }
-        public VirtualGatewaySpecListenerTls build() {
+        }        public VirtualGatewaySpecListenerTls build() {
             return new VirtualGatewaySpecListenerTls(certificate, mode, validation);
         }
     }

@@ -113,42 +113,37 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder parameters(Output<List<ArmTemplateParameterArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(List<ArmTemplateParameterArgs> parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
+        public Builder parameters(ArmTemplateParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder parentResourceType(Output<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
-
         public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
-
         public Builder template(Output<Object> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder template(Object template) {
             this.template = Output.of(Objects.requireNonNull(template));
             return this;
-        }
-        public ManagementConfigurationPropertiesArgs build() {
+        }        public ManagementConfigurationPropertiesArgs build() {
             return new ManagementConfigurationPropertiesArgs(applicationId, parameters, parentResourceType, template);
         }
     }

@@ -51,8 +51,7 @@ public final class MonitoringConfigResponse {
         public Builder componentConfig(MonitoringComponentConfigResponse componentConfig) {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
-        }
-        public MonitoringConfigResponse build() {
+        }        public MonitoringConfigResponse build() {
             return new MonitoringConfigResponse(componentConfig);
         }
     }

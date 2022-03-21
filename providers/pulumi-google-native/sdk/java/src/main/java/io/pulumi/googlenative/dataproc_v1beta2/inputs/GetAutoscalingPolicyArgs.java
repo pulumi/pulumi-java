@@ -78,17 +78,14 @@ public final class GetAutoscalingPolicyArgs extends io.pulumi.resources.InvokeAr
             this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAutoscalingPolicyArgs build() {
+        }        public GetAutoscalingPolicyArgs build() {
             return new GetAutoscalingPolicyArgs(autoscalingPolicyId, location, project);
         }
     }

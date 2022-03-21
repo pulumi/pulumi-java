@@ -60,8 +60,7 @@ public final class RealtimeConfigurationResponse extends io.pulumi.resources.Inv
         public Builder maxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
             this.maxConcurrentCalls = maxConcurrentCalls;
             return this;
-        }
-        public RealtimeConfigurationResponse build() {
+        }        public RealtimeConfigurationResponse build() {
             return new RealtimeConfigurationResponse(maxConcurrentCalls);
         }
     }

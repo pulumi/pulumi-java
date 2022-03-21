@@ -61,12 +61,10 @@ public final class PipelineFolderArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public PipelineFolderArgs build() {
+        }        public PipelineFolderArgs build() {
             return new PipelineFolderArgs(name);
         }
     }

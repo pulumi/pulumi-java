@@ -77,22 +77,18 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends i
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public OSPolicyResourceRepositoryResourceGooRepositoryArgs build() {
+        }        public OSPolicyResourceRepositoryResourceGooRepositoryArgs build() {
             return new OSPolicyResourceRepositoryResourceGooRepositoryArgs(name, url);
         }
     }

@@ -57,12 +57,10 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
             this.awsVpcConfiguration = awsVpcConfiguration;
             return this;
         }
-
         public Builder awsVpcConfiguration(@Nullable TaskSetAwsVpcConfigurationArgs awsVpcConfiguration) {
             this.awsVpcConfiguration = Output.ofNullable(awsVpcConfiguration);
             return this;
-        }
-        public TaskSetNetworkConfigurationArgs build() {
+        }        public TaskSetNetworkConfigurationArgs build() {
             return new TaskSetNetworkConfigurationArgs(awsVpcConfiguration);
         }
     }

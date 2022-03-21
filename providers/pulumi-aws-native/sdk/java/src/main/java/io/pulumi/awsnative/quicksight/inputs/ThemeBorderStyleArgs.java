@@ -61,12 +61,10 @@ public final class ThemeBorderStyleArgs extends io.pulumi.resources.ResourceArgs
             this.show = show;
             return this;
         }
-
         public Builder show(@Nullable Boolean show) {
             this.show = Output.ofNullable(show);
             return this;
-        }
-        public ThemeBorderStyleArgs build() {
+        }        public ThemeBorderStyleArgs build() {
             return new ThemeBorderStyleArgs(show);
         }
     }

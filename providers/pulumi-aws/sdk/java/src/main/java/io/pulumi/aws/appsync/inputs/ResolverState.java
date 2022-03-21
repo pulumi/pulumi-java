@@ -238,122 +238,98 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cachingConfig(@Nullable Output<ResolverCachingConfigGetArgs> cachingConfig) {
             this.cachingConfig = cachingConfig;
             return this;
         }
-
         public Builder cachingConfig(@Nullable ResolverCachingConfigGetArgs cachingConfig) {
             this.cachingConfig = Output.ofNullable(cachingConfig);
             return this;
         }
-
         public Builder dataSource(@Nullable Output<String> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable String dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
             this.maxBatchSize = Output.ofNullable(maxBatchSize);
             return this;
         }
-
         public Builder pipelineConfig(@Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig) {
             this.pipelineConfig = pipelineConfig;
             return this;
         }
-
         public Builder pipelineConfig(@Nullable ResolverPipelineConfigGetArgs pipelineConfig) {
             this.pipelineConfig = Output.ofNullable(pipelineConfig);
             return this;
         }
-
         public Builder requestTemplate(@Nullable Output<String> requestTemplate) {
             this.requestTemplate = requestTemplate;
             return this;
         }
-
         public Builder requestTemplate(@Nullable String requestTemplate) {
             this.requestTemplate = Output.ofNullable(requestTemplate);
             return this;
         }
-
         public Builder responseTemplate(@Nullable Output<String> responseTemplate) {
             this.responseTemplate = responseTemplate;
             return this;
         }
-
         public Builder responseTemplate(@Nullable String responseTemplate) {
             this.responseTemplate = Output.ofNullable(responseTemplate);
             return this;
         }
-
         public Builder syncConfig(@Nullable Output<ResolverSyncConfigGetArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
-
         public Builder syncConfig(@Nullable ResolverSyncConfigGetArgs syncConfig) {
             this.syncConfig = Output.ofNullable(syncConfig);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ResolverState build() {
+        }        public ResolverState build() {
             return new ResolverState(apiId, arn, cachingConfig, dataSource, field, kind, maxBatchSize, pipelineConfig, requestTemplate, responseTemplate, syncConfig, type);
         }
     }

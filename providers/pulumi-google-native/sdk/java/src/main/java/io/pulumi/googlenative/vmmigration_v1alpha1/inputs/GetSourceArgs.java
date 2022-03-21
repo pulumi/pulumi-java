@@ -78,17 +78,14 @@ public final class GetSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
-        }
-        public GetSourceArgs build() {
+        }        public GetSourceArgs build() {
             return new GetSourceArgs(location, project, sourceId);
         }
     }

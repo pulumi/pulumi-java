@@ -78,12 +78,13 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
             this.phraseMatchRules = Objects.requireNonNull(phraseMatchRules);
             return this;
         }
-
+        public Builder phraseMatchRules(GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse... phraseMatchRules) {
+            return phraseMatchRules(List.of(phraseMatchRules));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(phraseMatchRules, type);
         }
     }

@@ -82,32 +82,26 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable List<Map<String,Object>> details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
-
         public Builder number(@Nullable Integer number) {
             this.number = Output.ofNullable(number);
             return this;
-        }
-        public DeviceLastErrorStatusGetArgs build() {
+        }        public DeviceLastErrorStatusGetArgs build() {
             return new DeviceLastErrorStatusGetArgs(details, message, number);
         }
     }

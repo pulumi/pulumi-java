@@ -233,62 +233,50 @@ public final class SsisParameterResponse {
             this.dataType = dataType;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder designDefaultValue(@Nullable String designDefaultValue) {
             this.designDefaultValue = designDefaultValue;
             return this;
         }
-
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
-
         public Builder sensitive(@Nullable Boolean sensitive) {
             this.sensitive = sensitive;
             return this;
         }
-
         public Builder sensitiveDefaultValue(@Nullable String sensitiveDefaultValue) {
             this.sensitiveDefaultValue = sensitiveDefaultValue;
             return this;
         }
-
         public Builder valueSet(@Nullable Boolean valueSet) {
             this.valueSet = valueSet;
             return this;
         }
-
         public Builder valueType(@Nullable String valueType) {
             this.valueType = valueType;
             return this;
         }
-
         public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
-        }
-        public SsisParameterResponse build() {
+        }        public SsisParameterResponse build() {
             return new SsisParameterResponse(dataType, defaultValue, description, designDefaultValue, id, name, required, sensitive, sensitiveDefaultValue, valueSet, valueType, variable);
         }
     }

@@ -200,112 +200,96 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
-
         public Builder allowedValues(List<String> allowedValues) {
             this.allowedValues = Output.of(Objects.requireNonNull(allowedValues));
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder attributeDefinitionId(Output<String> attributeDefinitionId) {
             this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
             return this;
         }
-
         public Builder attributeDefinitionId(String attributeDefinitionId) {
             this.attributeDefinitionId = Output.of(Objects.requireNonNull(attributeDefinitionId));
             return this;
         }
-
         public Builder category(Output<AttributeDefinitionCategory> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder category(AttributeDefinitionCategory category) {
             this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
-
         public Builder consentDefaultValues(@Nullable Output<List<String>> consentDefaultValues) {
             this.consentDefaultValues = consentDefaultValues;
             return this;
         }
-
         public Builder consentDefaultValues(@Nullable List<String> consentDefaultValues) {
             this.consentDefaultValues = Output.ofNullable(consentDefaultValues);
             return this;
         }
-
+        public Builder consentDefaultValues(String... consentDefaultValues) {
+            return consentDefaultValues(List.of(consentDefaultValues));
+        }
         public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
-
         public Builder dataMappingDefaultValue(@Nullable Output<String> dataMappingDefaultValue) {
             this.dataMappingDefaultValue = dataMappingDefaultValue;
             return this;
         }
-
         public Builder dataMappingDefaultValue(@Nullable String dataMappingDefaultValue) {
             this.dataMappingDefaultValue = Output.ofNullable(dataMappingDefaultValue);
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public AttributeDefinitionArgs build() {
+        }        public AttributeDefinitionArgs build() {
             return new AttributeDefinitionArgs(allowedValues, attributeDefinitionId, category, consentDefaultValues, consentStoreId, dataMappingDefaultValue, datasetId, description, location, name, project);
         }
     }

@@ -137,52 +137,45 @@ public final class CaPoolIssuancePolicyArgs extends io.pulumi.resources.Resource
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
-
         public Builder allowedIssuanceModes(@Nullable CaPoolIssuancePolicyAllowedIssuanceModesArgs allowedIssuanceModes) {
             this.allowedIssuanceModes = Output.ofNullable(allowedIssuanceModes);
             return this;
         }
-
         public Builder allowedKeyTypes(@Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeArgs>> allowedKeyTypes) {
             this.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
-
         public Builder allowedKeyTypes(@Nullable List<CaPoolIssuancePolicyAllowedKeyTypeArgs> allowedKeyTypes) {
             this.allowedKeyTypes = Output.ofNullable(allowedKeyTypes);
             return this;
         }
-
+        public Builder allowedKeyTypes(CaPoolIssuancePolicyAllowedKeyTypeArgs... allowedKeyTypes) {
+            return allowedKeyTypes(List.of(allowedKeyTypes));
+        }
         public Builder baselineValues(@Nullable Output<CaPoolIssuancePolicyBaselineValuesArgs> baselineValues) {
             this.baselineValues = baselineValues;
             return this;
         }
-
         public Builder baselineValues(@Nullable CaPoolIssuancePolicyBaselineValuesArgs baselineValues) {
             this.baselineValues = Output.ofNullable(baselineValues);
             return this;
         }
-
         public Builder identityConstraints(@Nullable Output<CaPoolIssuancePolicyIdentityConstraintsArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
-
         public Builder identityConstraints(@Nullable CaPoolIssuancePolicyIdentityConstraintsArgs identityConstraints) {
             this.identityConstraints = Output.ofNullable(identityConstraints);
             return this;
         }
-
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
         }
-
         public Builder maximumLifetime(@Nullable String maximumLifetime) {
             this.maximumLifetime = Output.ofNullable(maximumLifetime);
             return this;
-        }
-        public CaPoolIssuancePolicyArgs build() {
+        }        public CaPoolIssuancePolicyArgs build() {
             return new CaPoolIssuancePolicyArgs(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime);
         }
     }

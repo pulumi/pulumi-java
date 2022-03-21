@@ -89,32 +89,32 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder operatingRegions(@Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions) {
             this.operatingRegions = operatingRegions;
             return this;
         }
-
         public Builder operatingRegions(@Nullable List<IPAMIpamOperatingRegionArgs> operatingRegions) {
             this.operatingRegions = Output.ofNullable(operatingRegions);
             return this;
         }
-
+        public Builder operatingRegions(IPAMIpamOperatingRegionArgs... operatingRegions) {
+            return operatingRegions(List.of(operatingRegions));
+        }
         public Builder tags(@Nullable Output<List<IPAMTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<IPAMTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public IPAMArgs build() {
+        public Builder tags(IPAMTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public IPAMArgs build() {
             return new IPAMArgs(description, operatingRegions, tags);
         }
     }

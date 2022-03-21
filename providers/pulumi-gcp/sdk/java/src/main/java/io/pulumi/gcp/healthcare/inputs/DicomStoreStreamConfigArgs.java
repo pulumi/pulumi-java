@@ -57,12 +57,10 @@ public final class DicomStoreStreamConfigArgs extends io.pulumi.resources.Resour
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestinationArgs bigqueryDestination) {
             this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
             return this;
-        }
-        public DicomStoreStreamConfigArgs build() {
+        }        public DicomStoreStreamConfigArgs build() {
             return new DicomStoreStreamConfigArgs(bigqueryDestination);
         }
     }

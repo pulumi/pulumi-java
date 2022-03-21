@@ -129,52 +129,42 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
-
         public Builder driver(String driver) {
             this.driver = Output.of(Objects.requireNonNull(driver));
             return this;
         }
-
         public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder options(@Nullable Output<Map<String,String>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable Map<String,String> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
-        }
-        public FlexVolumeSourceArgs build() {
+        }        public FlexVolumeSourceArgs build() {
             return new FlexVolumeSourceArgs(driver, fsType, options, readOnly, secretRef);
         }
     }

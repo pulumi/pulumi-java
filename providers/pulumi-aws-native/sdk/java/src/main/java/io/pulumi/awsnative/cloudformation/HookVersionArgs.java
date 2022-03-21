@@ -111,42 +111,34 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<HookVersionLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable HookVersionLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
             return this;
         }
-
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
             this.schemaHandlerPackage = Output.of(Objects.requireNonNull(schemaHandlerPackage));
             return this;
         }
-
         public Builder typeName(Output<String> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder typeName(String typeName) {
             this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
-        }
-        public HookVersionArgs build() {
+        }        public HookVersionArgs build() {
             return new HookVersionArgs(executionRoleArn, loggingConfig, schemaHandlerPackage, typeName);
         }
     }

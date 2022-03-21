@@ -96,32 +96,26 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
             this.quarantinePolicy = quarantinePolicy;
             return this;
         }
-
         public Builder quarantinePolicy(@Nullable QuarantinePolicyArgs quarantinePolicy) {
             this.quarantinePolicy = Output.ofNullable(quarantinePolicy);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder trustPolicy(@Nullable Output<TrustPolicyArgs> trustPolicy) {
             this.trustPolicy = trustPolicy;
             return this;
         }
-
         public Builder trustPolicy(@Nullable TrustPolicyArgs trustPolicy) {
             this.trustPolicy = Output.ofNullable(trustPolicy);
             return this;
-        }
-        public PoliciesArgs build() {
+        }        public PoliciesArgs build() {
             return new PoliciesArgs(quarantinePolicy, retentionPolicy, trustPolicy);
         }
     }

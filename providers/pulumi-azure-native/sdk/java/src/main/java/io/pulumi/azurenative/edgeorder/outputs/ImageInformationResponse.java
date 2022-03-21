@@ -69,12 +69,10 @@ public final class ImageInformationResponse {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
-
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
-        }
-        public ImageInformationResponse build() {
+        }        public ImageInformationResponse build() {
             return new ImageInformationResponse(imageType, imageUrl);
         }
     }

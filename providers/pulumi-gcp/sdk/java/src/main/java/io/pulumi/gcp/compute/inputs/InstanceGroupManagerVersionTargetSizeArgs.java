@@ -76,22 +76,18 @@ public final class InstanceGroupManagerVersionTargetSizeArgs extends io.pulumi.r
             this.fixed = fixed;
             return this;
         }
-
         public Builder fixed(@Nullable Integer fixed) {
             this.fixed = Output.ofNullable(fixed);
             return this;
         }
-
         public Builder percent(@Nullable Output<Integer> percent) {
             this.percent = percent;
             return this;
         }
-
         public Builder percent(@Nullable Integer percent) {
             this.percent = Output.ofNullable(percent);
             return this;
-        }
-        public InstanceGroupManagerVersionTargetSizeArgs build() {
+        }        public InstanceGroupManagerVersionTargetSizeArgs build() {
             return new InstanceGroupManagerVersionTargetSizeArgs(fixed, percent);
         }
     }

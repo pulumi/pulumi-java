@@ -54,8 +54,7 @@ public final class GetFleetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder fleetId(String fleetId) {
             this.fleetId = Objects.requireNonNull(fleetId);
             return this;
-        }
-        public GetFleetArgs build() {
+        }        public GetFleetArgs build() {
             return new GetFleetArgs(fleetId);
         }
     }

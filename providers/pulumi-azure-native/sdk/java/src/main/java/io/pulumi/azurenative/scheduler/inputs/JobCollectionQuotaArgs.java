@@ -91,32 +91,26 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
             this.maxJobCount = maxJobCount;
             return this;
         }
-
         public Builder maxJobCount(@Nullable Integer maxJobCount) {
             this.maxJobCount = Output.ofNullable(maxJobCount);
             return this;
         }
-
         public Builder maxJobOccurrence(@Nullable Output<Integer> maxJobOccurrence) {
             this.maxJobOccurrence = maxJobOccurrence;
             return this;
         }
-
         public Builder maxJobOccurrence(@Nullable Integer maxJobOccurrence) {
             this.maxJobOccurrence = Output.ofNullable(maxJobOccurrence);
             return this;
         }
-
         public Builder maxRecurrence(@Nullable Output<JobMaxRecurrenceArgs> maxRecurrence) {
             this.maxRecurrence = maxRecurrence;
             return this;
         }
-
         public Builder maxRecurrence(@Nullable JobMaxRecurrenceArgs maxRecurrence) {
             this.maxRecurrence = Output.ofNullable(maxRecurrence);
             return this;
-        }
-        public JobCollectionQuotaArgs build() {
+        }        public JobCollectionQuotaArgs build() {
             return new JobCollectionQuotaArgs(maxJobCount, maxJobOccurrence, maxRecurrence);
         }
     }

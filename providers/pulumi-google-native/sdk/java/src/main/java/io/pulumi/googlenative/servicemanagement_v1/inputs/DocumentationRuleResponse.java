@@ -92,17 +92,14 @@ public final class DocumentationRuleResponse extends io.pulumi.resources.InvokeA
             this.deprecationDescription = Objects.requireNonNull(deprecationDescription);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
-        }
-        public DocumentationRuleResponse build() {
+        }        public DocumentationRuleResponse build() {
             return new DocumentationRuleResponse(deprecationDescription, description, selector);
         }
     }

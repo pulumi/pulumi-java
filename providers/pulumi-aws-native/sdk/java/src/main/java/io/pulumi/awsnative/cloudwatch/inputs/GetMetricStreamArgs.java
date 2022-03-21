@@ -54,8 +54,7 @@ public final class GetMetricStreamArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetMetricStreamArgs build() {
+        }        public GetMetricStreamArgs build() {
             return new GetMetricStreamArgs(name);
         }
     }

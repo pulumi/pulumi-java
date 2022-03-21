@@ -238,62 +238,50 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
             this.creationTimeUtc = creationTimeUtc;
             return this;
         }
-
         public Builder entityId(@Nullable String entityId) {
             this.entityId = entityId;
             return this;
         }
-
         public Builder errorCategory(@Nullable String errorCategory) {
             this.errorCategory = errorCategory;
             return this;
         }
-
         public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
-
         public Builder errorLevel(@Nullable String errorLevel) {
             this.errorLevel = errorLevel;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder errorSource(@Nullable String errorSource) {
             this.errorSource = errorSource;
             return this;
         }
-
         public Builder errorType(@Nullable String errorType) {
             this.errorType = errorType;
             return this;
         }
-
         public Builder possibleCauses(@Nullable String possibleCauses) {
             this.possibleCauses = possibleCauses;
             return this;
         }
-
         public Builder recommendedAction(@Nullable String recommendedAction) {
             this.recommendedAction = recommendedAction;
             return this;
         }
-
         public Builder recoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
             this.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
             return this;
         }
-
         public Builder summaryMessage(@Nullable String summaryMessage) {
             this.summaryMessage = summaryMessage;
             return this;
-        }
-        public InnerHealthErrorResponse build() {
+        }        public InnerHealthErrorResponse build() {
             return new InnerHealthErrorResponse(creationTimeUtc, entityId, errorCategory, errorCode, errorLevel, errorMessage, errorSource, errorType, possibleCauses, recommendedAction, recoveryProviderErrorMessage, summaryMessage);
         }
     }

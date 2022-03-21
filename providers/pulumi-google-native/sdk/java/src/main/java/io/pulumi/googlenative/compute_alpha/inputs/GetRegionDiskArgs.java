@@ -78,17 +78,14 @@ public final class GetRegionDiskArgs extends io.pulumi.resources.InvokeArgs {
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionDiskArgs build() {
+        }        public GetRegionDiskArgs build() {
             return new GetRegionDiskArgs(disk, project, region);
         }
     }

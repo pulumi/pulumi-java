@@ -209,102 +209,82 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
             this.dateFormat = Objects.requireNonNull(dateFormat);
             return this;
         }
-
         public Builder dateFormat(Either<String,X12DateFormat> dateFormat) {
             this.dateFormat = Output.of(Objects.requireNonNull(dateFormat));
             return this;
         }
-
         public Builder functionalIdentifierCode(@Nullable Output<String> functionalIdentifierCode) {
             this.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
-
         public Builder functionalIdentifierCode(@Nullable String functionalIdentifierCode) {
             this.functionalIdentifierCode = Output.ofNullable(functionalIdentifierCode);
             return this;
         }
-
         public Builder headerVersion(Output<String> headerVersion) {
             this.headerVersion = Objects.requireNonNull(headerVersion);
             return this;
         }
-
         public Builder headerVersion(String headerVersion) {
             this.headerVersion = Output.of(Objects.requireNonNull(headerVersion));
             return this;
         }
-
         public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
-
         public Builder protocolVersion(Output<String> protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
-
         public Builder protocolVersion(String protocolVersion) {
             this.protocolVersion = Output.of(Objects.requireNonNull(protocolVersion));
             return this;
         }
-
         public Builder receiverApplicationId(Output<String> receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
-
         public Builder receiverApplicationId(String receiverApplicationId) {
             this.receiverApplicationId = Output.of(Objects.requireNonNull(receiverApplicationId));
             return this;
         }
-
         public Builder responsibleAgencyCode(Output<String> responsibleAgencyCode) {
             this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode);
             return this;
         }
-
         public Builder responsibleAgencyCode(String responsibleAgencyCode) {
             this.responsibleAgencyCode = Output.of(Objects.requireNonNull(responsibleAgencyCode));
             return this;
         }
-
         public Builder senderApplicationId(Output<String> senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
-
         public Builder senderApplicationId(String senderApplicationId) {
             this.senderApplicationId = Output.of(Objects.requireNonNull(senderApplicationId));
             return this;
         }
-
         public Builder targetNamespace(Output<String> targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
-
         public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Output.of(Objects.requireNonNull(targetNamespace));
             return this;
         }
-
         public Builder timeFormat(Output<Either<String,X12TimeFormat>> timeFormat) {
             this.timeFormat = Objects.requireNonNull(timeFormat);
             return this;
         }
-
         public Builder timeFormat(Either<String,X12TimeFormat> timeFormat) {
             this.timeFormat = Output.of(Objects.requireNonNull(timeFormat));
             return this;
-        }
-        public X12EnvelopeOverrideArgs build() {
+        }        public X12EnvelopeOverrideArgs build() {
             return new X12EnvelopeOverrideArgs(dateFormat, functionalIdentifierCode, headerVersion, messageId, protocolVersion, receiverApplicationId, responsibleAgencyCode, senderApplicationId, targetNamespace, timeFormat);
         }
     }

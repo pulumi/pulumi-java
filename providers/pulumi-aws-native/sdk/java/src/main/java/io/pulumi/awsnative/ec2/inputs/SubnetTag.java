@@ -64,12 +64,10 @@ public final class SubnetTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SubnetTag build() {
+        }        public SubnetTag build() {
             return new SubnetTag(key, value);
         }
     }

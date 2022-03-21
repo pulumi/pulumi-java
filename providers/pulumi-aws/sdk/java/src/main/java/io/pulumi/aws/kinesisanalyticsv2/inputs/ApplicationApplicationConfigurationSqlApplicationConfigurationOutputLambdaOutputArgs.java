@@ -56,12 +56,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs(resourceArn);
         }
     }

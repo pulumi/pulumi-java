@@ -221,112 +221,93 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder audio(@Nullable Output<PresetAudioGetArgs> audio) {
             this.audio = audio;
             return this;
         }
-
         public Builder audio(@Nullable PresetAudioGetArgs audio) {
             this.audio = Output.ofNullable(audio);
             return this;
         }
-
         public Builder audioCodecOptions(@Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions) {
             this.audioCodecOptions = audioCodecOptions;
             return this;
         }
-
         public Builder audioCodecOptions(@Nullable PresetAudioCodecOptionsGetArgs audioCodecOptions) {
             this.audioCodecOptions = Output.ofNullable(audioCodecOptions);
             return this;
         }
-
         public Builder container(@Nullable Output<String> container) {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable String container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder thumbnails(@Nullable Output<PresetThumbnailsGetArgs> thumbnails) {
             this.thumbnails = thumbnails;
             return this;
         }
-
         public Builder thumbnails(@Nullable PresetThumbnailsGetArgs thumbnails) {
             this.thumbnails = Output.ofNullable(thumbnails);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder video(@Nullable Output<PresetVideoGetArgs> video) {
             this.video = video;
             return this;
         }
-
         public Builder video(@Nullable PresetVideoGetArgs video) {
             this.video = Output.ofNullable(video);
             return this;
         }
-
         public Builder videoCodecOptions(@Nullable Output<Map<String,String>> videoCodecOptions) {
             this.videoCodecOptions = videoCodecOptions;
             return this;
         }
-
         public Builder videoCodecOptions(@Nullable Map<String,String> videoCodecOptions) {
             this.videoCodecOptions = Output.ofNullable(videoCodecOptions);
             return this;
         }
-
         public Builder videoWatermarks(@Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks) {
             this.videoWatermarks = videoWatermarks;
             return this;
         }
-
         public Builder videoWatermarks(@Nullable List<PresetVideoWatermarkGetArgs> videoWatermarks) {
             this.videoWatermarks = Output.ofNullable(videoWatermarks);
             return this;
         }
-        public PresetState build() {
+        public Builder videoWatermarks(PresetVideoWatermarkGetArgs... videoWatermarks) {
+            return videoWatermarks(List.of(videoWatermarks));
+        }        public PresetState build() {
             return new PresetState(arn, audio, audioCodecOptions, container, description, name, thumbnails, type, video, videoCodecOptions, videoWatermarks);
         }
     }

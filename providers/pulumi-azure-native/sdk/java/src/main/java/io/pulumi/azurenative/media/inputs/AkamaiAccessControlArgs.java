@@ -62,12 +62,13 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
             this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
-
         public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable List<AkamaiSignatureHeaderAuthenticationKeyArgs> akamaiSignatureHeaderAuthenticationKeyList) {
             this.akamaiSignatureHeaderAuthenticationKeyList = Output.ofNullable(akamaiSignatureHeaderAuthenticationKeyList);
             return this;
         }
-        public AkamaiAccessControlArgs build() {
+        public Builder akamaiSignatureHeaderAuthenticationKeyList(AkamaiSignatureHeaderAuthenticationKeyArgs... akamaiSignatureHeaderAuthenticationKeyList) {
+            return akamaiSignatureHeaderAuthenticationKeyList(List.of(akamaiSignatureHeaderAuthenticationKeyList));
+        }        public AkamaiAccessControlArgs build() {
             return new AkamaiAccessControlArgs(akamaiSignatureHeaderAuthenticationKeyList);
         }
     }

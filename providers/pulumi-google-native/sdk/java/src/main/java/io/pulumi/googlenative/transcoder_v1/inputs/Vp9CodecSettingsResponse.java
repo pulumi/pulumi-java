@@ -206,52 +206,42 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
-
         public Builder crfLevel(Integer crfLevel) {
             this.crfLevel = Objects.requireNonNull(crfLevel);
             return this;
         }
-
         public Builder frameRate(Double frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
-
         public Builder gopDuration(String gopDuration) {
             this.gopDuration = Objects.requireNonNull(gopDuration);
             return this;
         }
-
         public Builder gopFrameCount(Integer gopFrameCount) {
             this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
             return this;
         }
-
         public Builder heightPixels(Integer heightPixels) {
             this.heightPixels = Objects.requireNonNull(heightPixels);
             return this;
         }
-
         public Builder pixelFormat(String pixelFormat) {
             this.pixelFormat = Objects.requireNonNull(pixelFormat);
             return this;
         }
-
         public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
-
         public Builder rateControlMode(String rateControlMode) {
             this.rateControlMode = Objects.requireNonNull(rateControlMode);
             return this;
         }
-
         public Builder widthPixels(Integer widthPixels) {
             this.widthPixels = Objects.requireNonNull(widthPixels);
             return this;
-        }
-        public Vp9CodecSettingsResponse build() {
+        }        public Vp9CodecSettingsResponse build() {
             return new Vp9CodecSettingsResponse(bitrateBps, crfLevel, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, profile, rateControlMode, widthPixels);
         }
     }

@@ -119,27 +119,22 @@ public final class ArmPlanResponse {
             this.name = name;
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ArmPlanResponse build() {
+        }        public ArmPlanResponse build() {
             return new ArmPlanResponse(name, product, promotionCode, publisher, version);
         }
     }

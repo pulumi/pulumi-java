@@ -56,8 +56,7 @@ public final class WindowsUserConfigurationResponse extends io.pulumi.resources.
         public Builder loginMode(@Nullable String loginMode) {
             this.loginMode = loginMode;
             return this;
-        }
-        public WindowsUserConfigurationResponse build() {
+        }        public WindowsUserConfigurationResponse build() {
             return new WindowsUserConfigurationResponse(loginMode);
         }
     }

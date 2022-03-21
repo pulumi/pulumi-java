@@ -53,8 +53,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType 
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType build() {
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType(name);
         }
     }

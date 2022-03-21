@@ -93,17 +93,14 @@ public final class BackendServiceIap {
             this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
             return this;
         }
-
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
             return this;
         }
-
         public Builder oauth2ClientSecretSha256(@Nullable String oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
-        }
-        public BackendServiceIap build() {
+        }        public BackendServiceIap build() {
             return new BackendServiceIap(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }
     }

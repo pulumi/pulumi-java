@@ -110,32 +110,29 @@ public final class URLMapDefaultRouteActionRetryPolicyArgs extends io.pulumi.res
             this.numRetries = numRetries;
             return this;
         }
-
         public Builder numRetries(@Nullable Integer numRetries) {
             this.numRetries = Output.ofNullable(numRetries);
             return this;
         }
-
         public Builder perTryTimeout(@Nullable Output<URLMapDefaultRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
-
         public Builder perTryTimeout(@Nullable URLMapDefaultRouteActionRetryPolicyPerTryTimeoutArgs perTryTimeout) {
             this.perTryTimeout = Output.ofNullable(perTryTimeout);
             return this;
         }
-
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = Output.ofNullable(retryConditions);
             return this;
         }
-        public URLMapDefaultRouteActionRetryPolicyArgs build() {
+        public Builder retryConditions(String... retryConditions) {
+            return retryConditions(List.of(retryConditions));
+        }        public URLMapDefaultRouteActionRetryPolicyArgs build() {
             return new URLMapDefaultRouteActionRetryPolicyArgs(numRetries, perTryTimeout, retryConditions);
         }
     }

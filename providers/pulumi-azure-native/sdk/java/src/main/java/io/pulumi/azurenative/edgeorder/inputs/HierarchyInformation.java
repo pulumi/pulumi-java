@@ -110,22 +110,18 @@ public final class HierarchyInformation extends io.pulumi.resources.InvokeArgs {
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder productFamilyName(@Nullable String productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
-
         public Builder productLineName(@Nullable String productLineName) {
             this.productLineName = productLineName;
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
-        }
-        public HierarchyInformation build() {
+        }        public HierarchyInformation build() {
             return new HierarchyInformation(configurationName, productFamilyName, productLineName, productName);
         }
     }

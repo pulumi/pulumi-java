@@ -84,32 +84,26 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
             this.adHocFilteringOption = adHocFilteringOption;
             return this;
         }
-
         public Builder adHocFilteringOption(@Nullable DashboardAdHocFilteringOptionArgs adHocFilteringOption) {
             this.adHocFilteringOption = Output.ofNullable(adHocFilteringOption);
             return this;
         }
-
         public Builder exportToCSVOption(@Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption) {
             this.exportToCSVOption = exportToCSVOption;
             return this;
         }
-
         public Builder exportToCSVOption(@Nullable DashboardExportToCSVOptionArgs exportToCSVOption) {
             this.exportToCSVOption = Output.ofNullable(exportToCSVOption);
             return this;
         }
-
         public Builder sheetControlsOption(@Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption) {
             this.sheetControlsOption = sheetControlsOption;
             return this;
         }
-
         public Builder sheetControlsOption(@Nullable DashboardSheetControlsOptionArgs sheetControlsOption) {
             this.sheetControlsOption = Output.ofNullable(sheetControlsOption);
             return this;
-        }
-        public DashboardPublishOptionsArgs build() {
+        }        public DashboardPublishOptionsArgs build() {
             return new DashboardPublishOptionsArgs(adHocFilteringOption, exportToCSVOption, sheetControlsOption);
         }
     }

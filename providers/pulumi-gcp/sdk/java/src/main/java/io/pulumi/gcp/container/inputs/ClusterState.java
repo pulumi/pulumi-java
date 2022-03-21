@@ -1131,592 +1131,480 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.addonsConfig = addonsConfig;
             return this;
         }
-
         public Builder addonsConfig(@Nullable ClusterAddonsConfigGetArgs addonsConfig) {
             this.addonsConfig = Output.ofNullable(addonsConfig);
             return this;
         }
-
         public Builder authenticatorGroupsConfig(@Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig) {
             this.authenticatorGroupsConfig = authenticatorGroupsConfig;
             return this;
         }
-
         public Builder authenticatorGroupsConfig(@Nullable ClusterAuthenticatorGroupsConfigGetArgs authenticatorGroupsConfig) {
             this.authenticatorGroupsConfig = Output.ofNullable(authenticatorGroupsConfig);
             return this;
         }
-
         public Builder clusterAutoscaling(@Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling) {
             this.clusterAutoscaling = clusterAutoscaling;
             return this;
         }
-
         public Builder clusterAutoscaling(@Nullable ClusterClusterAutoscalingGetArgs clusterAutoscaling) {
             this.clusterAutoscaling = Output.ofNullable(clusterAutoscaling);
             return this;
         }
-
         public Builder clusterIpv4Cidr(@Nullable Output<String> clusterIpv4Cidr) {
             this.clusterIpv4Cidr = clusterIpv4Cidr;
             return this;
         }
-
         public Builder clusterIpv4Cidr(@Nullable String clusterIpv4Cidr) {
             this.clusterIpv4Cidr = Output.ofNullable(clusterIpv4Cidr);
             return this;
         }
-
         public Builder clusterTelemetry(@Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry) {
             this.clusterTelemetry = clusterTelemetry;
             return this;
         }
-
         public Builder clusterTelemetry(@Nullable ClusterClusterTelemetryGetArgs clusterTelemetry) {
             this.clusterTelemetry = Output.ofNullable(clusterTelemetry);
             return this;
         }
-
         public Builder confidentialNodes(@Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes) {
             this.confidentialNodes = confidentialNodes;
             return this;
         }
-
         public Builder confidentialNodes(@Nullable ClusterConfidentialNodesGetArgs confidentialNodes) {
             this.confidentialNodes = Output.ofNullable(confidentialNodes);
             return this;
         }
-
         public Builder databaseEncryption(@Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption) {
             this.databaseEncryption = databaseEncryption;
             return this;
         }
-
         public Builder databaseEncryption(@Nullable ClusterDatabaseEncryptionGetArgs databaseEncryption) {
             this.databaseEncryption = Output.ofNullable(databaseEncryption);
             return this;
         }
-
         public Builder datapathProvider(@Nullable Output<String> datapathProvider) {
             this.datapathProvider = datapathProvider;
             return this;
         }
-
         public Builder datapathProvider(@Nullable String datapathProvider) {
             this.datapathProvider = Output.ofNullable(datapathProvider);
             return this;
         }
-
         public Builder defaultMaxPodsPerNode(@Nullable Output<Integer> defaultMaxPodsPerNode) {
             this.defaultMaxPodsPerNode = defaultMaxPodsPerNode;
             return this;
         }
-
         public Builder defaultMaxPodsPerNode(@Nullable Integer defaultMaxPodsPerNode) {
             this.defaultMaxPodsPerNode = Output.ofNullable(defaultMaxPodsPerNode);
             return this;
         }
-
         public Builder defaultSnatStatus(@Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus) {
             this.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
-
         public Builder defaultSnatStatus(@Nullable ClusterDefaultSnatStatusGetArgs defaultSnatStatus) {
             this.defaultSnatStatus = Output.ofNullable(defaultSnatStatus);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsConfig(@Nullable Output<ClusterDnsConfigGetArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder dnsConfig(@Nullable ClusterDnsConfigGetArgs dnsConfig) {
             this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
-
         public Builder enableAutopilot(@Nullable Output<Boolean> enableAutopilot) {
             this.enableAutopilot = enableAutopilot;
             return this;
         }
-
         public Builder enableAutopilot(@Nullable Boolean enableAutopilot) {
             this.enableAutopilot = Output.ofNullable(enableAutopilot);
             return this;
         }
-
         public Builder enableBinaryAuthorization(@Nullable Output<Boolean> enableBinaryAuthorization) {
             this.enableBinaryAuthorization = enableBinaryAuthorization;
             return this;
         }
-
         public Builder enableBinaryAuthorization(@Nullable Boolean enableBinaryAuthorization) {
             this.enableBinaryAuthorization = Output.ofNullable(enableBinaryAuthorization);
             return this;
         }
-
         public Builder enableIntranodeVisibility(@Nullable Output<Boolean> enableIntranodeVisibility) {
             this.enableIntranodeVisibility = enableIntranodeVisibility;
             return this;
         }
-
         public Builder enableIntranodeVisibility(@Nullable Boolean enableIntranodeVisibility) {
             this.enableIntranodeVisibility = Output.ofNullable(enableIntranodeVisibility);
             return this;
         }
-
         public Builder enableKubernetesAlpha(@Nullable Output<Boolean> enableKubernetesAlpha) {
             this.enableKubernetesAlpha = enableKubernetesAlpha;
             return this;
         }
-
         public Builder enableKubernetesAlpha(@Nullable Boolean enableKubernetesAlpha) {
             this.enableKubernetesAlpha = Output.ofNullable(enableKubernetesAlpha);
             return this;
         }
-
         public Builder enableL4IlbSubsetting(@Nullable Output<Boolean> enableL4IlbSubsetting) {
             this.enableL4IlbSubsetting = enableL4IlbSubsetting;
             return this;
         }
-
         public Builder enableL4IlbSubsetting(@Nullable Boolean enableL4IlbSubsetting) {
             this.enableL4IlbSubsetting = Output.ofNullable(enableL4IlbSubsetting);
             return this;
         }
-
         public Builder enableLegacyAbac(@Nullable Output<Boolean> enableLegacyAbac) {
             this.enableLegacyAbac = enableLegacyAbac;
             return this;
         }
-
         public Builder enableLegacyAbac(@Nullable Boolean enableLegacyAbac) {
             this.enableLegacyAbac = Output.ofNullable(enableLegacyAbac);
             return this;
         }
-
         public Builder enableShieldedNodes(@Nullable Output<Boolean> enableShieldedNodes) {
             this.enableShieldedNodes = enableShieldedNodes;
             return this;
         }
-
         public Builder enableShieldedNodes(@Nullable Boolean enableShieldedNodes) {
             this.enableShieldedNodes = Output.ofNullable(enableShieldedNodes);
             return this;
         }
-
         public Builder enableTpu(@Nullable Output<Boolean> enableTpu) {
             this.enableTpu = enableTpu;
             return this;
         }
-
         public Builder enableTpu(@Nullable Boolean enableTpu) {
             this.enableTpu = Output.ofNullable(enableTpu);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder identityServiceConfig(@Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig) {
             this.identityServiceConfig = identityServiceConfig;
             return this;
         }
-
         public Builder identityServiceConfig(@Nullable ClusterIdentityServiceConfigGetArgs identityServiceConfig) {
             this.identityServiceConfig = Output.ofNullable(identityServiceConfig);
             return this;
         }
-
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
-
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
             this.initialNodeCount = Output.ofNullable(initialNodeCount);
             return this;
         }
-
         public Builder ipAllocationPolicy(@Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
-
         public Builder ipAllocationPolicy(@Nullable ClusterIpAllocationPolicyGetArgs ipAllocationPolicy) {
             this.ipAllocationPolicy = Output.ofNullable(ipAllocationPolicy);
             return this;
         }
-
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
-
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable ClusterLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder loggingService(@Nullable Output<String> loggingService) {
             this.loggingService = loggingService;
             return this;
         }
-
         public Builder loggingService(@Nullable String loggingService) {
             this.loggingService = Output.ofNullable(loggingService);
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable ClusterMaintenancePolicyGetArgs maintenancePolicy) {
             this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
-
         public Builder masterAuth(@Nullable Output<ClusterMasterAuthGetArgs> masterAuth) {
             this.masterAuth = masterAuth;
             return this;
         }
-
         public Builder masterAuth(@Nullable ClusterMasterAuthGetArgs masterAuth) {
             this.masterAuth = Output.ofNullable(masterAuth);
             return this;
         }
-
         public Builder masterAuthorizedNetworksConfig(@Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
-
         public Builder masterAuthorizedNetworksConfig(@Nullable ClusterMasterAuthorizedNetworksConfigGetArgs masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = Output.ofNullable(masterAuthorizedNetworksConfig);
             return this;
         }
-
         public Builder masterVersion(@Nullable Output<String> masterVersion) {
             this.masterVersion = masterVersion;
             return this;
         }
-
         public Builder masterVersion(@Nullable String masterVersion) {
             this.masterVersion = Output.ofNullable(masterVersion);
             return this;
         }
-
         public Builder minMasterVersion(@Nullable Output<String> minMasterVersion) {
             this.minMasterVersion = minMasterVersion;
             return this;
         }
-
         public Builder minMasterVersion(@Nullable String minMasterVersion) {
             this.minMasterVersion = Output.ofNullable(minMasterVersion);
             return this;
         }
-
         public Builder monitoringConfig(@Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
-
         public Builder monitoringConfig(@Nullable ClusterMonitoringConfigGetArgs monitoringConfig) {
             this.monitoringConfig = Output.ofNullable(monitoringConfig);
             return this;
         }
-
         public Builder monitoringService(@Nullable Output<String> monitoringService) {
             this.monitoringService = monitoringService;
             return this;
         }
-
         public Builder monitoringService(@Nullable String monitoringService) {
             this.monitoringService = Output.ofNullable(monitoringService);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkPolicy(@Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy) {
             this.networkPolicy = networkPolicy;
             return this;
         }
-
         public Builder networkPolicy(@Nullable ClusterNetworkPolicyGetArgs networkPolicy) {
             this.networkPolicy = Output.ofNullable(networkPolicy);
             return this;
         }
-
         public Builder networkingMode(@Nullable Output<String> networkingMode) {
             this.networkingMode = networkingMode;
             return this;
         }
-
         public Builder networkingMode(@Nullable String networkingMode) {
             this.networkingMode = Output.ofNullable(networkingMode);
             return this;
         }
-
         public Builder nodeConfig(@Nullable Output<ClusterNodeConfigGetArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
-
         public Builder nodeConfig(@Nullable ClusterNodeConfigGetArgs nodeConfig) {
             this.nodeConfig = Output.ofNullable(nodeConfig);
             return this;
         }
-
         public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
             this.nodeLocations = nodeLocations;
             return this;
         }
-
         public Builder nodeLocations(@Nullable List<String> nodeLocations) {
             this.nodeLocations = Output.ofNullable(nodeLocations);
             return this;
         }
-
+        public Builder nodeLocations(String... nodeLocations) {
+            return nodeLocations(List.of(nodeLocations));
+        }
         public Builder nodePools(@Nullable Output<List<ClusterNodePoolGetArgs>> nodePools) {
             this.nodePools = nodePools;
             return this;
         }
-
         public Builder nodePools(@Nullable List<ClusterNodePoolGetArgs> nodePools) {
             this.nodePools = Output.ofNullable(nodePools);
             return this;
         }
-
+        public Builder nodePools(ClusterNodePoolGetArgs... nodePools) {
+            return nodePools(List.of(nodePools));
+        }
         public Builder nodeVersion(@Nullable Output<String> nodeVersion) {
             this.nodeVersion = nodeVersion;
             return this;
         }
-
         public Builder nodeVersion(@Nullable String nodeVersion) {
             this.nodeVersion = Output.ofNullable(nodeVersion);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable ClusterNotificationConfigGetArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = Output.ofNullable(operation);
             return this;
         }
-
         public Builder podSecurityPolicyConfig(@Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig) {
             this.podSecurityPolicyConfig = podSecurityPolicyConfig;
             return this;
         }
-
         public Builder podSecurityPolicyConfig(@Nullable ClusterPodSecurityPolicyConfigGetArgs podSecurityPolicyConfig) {
             this.podSecurityPolicyConfig = Output.ofNullable(podSecurityPolicyConfig);
             return this;
         }
-
         public Builder privateClusterConfig(@Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig) {
             this.privateClusterConfig = privateClusterConfig;
             return this;
         }
-
         public Builder privateClusterConfig(@Nullable ClusterPrivateClusterConfigGetArgs privateClusterConfig) {
             this.privateClusterConfig = Output.ofNullable(privateClusterConfig);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder releaseChannel(@Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel) {
             this.releaseChannel = releaseChannel;
             return this;
         }
-
         public Builder releaseChannel(@Nullable ClusterReleaseChannelGetArgs releaseChannel) {
             this.releaseChannel = Output.ofNullable(releaseChannel);
             return this;
         }
-
         public Builder removeDefaultNodePool(@Nullable Output<Boolean> removeDefaultNodePool) {
             this.removeDefaultNodePool = removeDefaultNodePool;
             return this;
         }
-
         public Builder removeDefaultNodePool(@Nullable Boolean removeDefaultNodePool) {
             this.removeDefaultNodePool = Output.ofNullable(removeDefaultNodePool);
             return this;
         }
-
         public Builder resourceLabels(@Nullable Output<Map<String,String>> resourceLabels) {
             this.resourceLabels = resourceLabels;
             return this;
         }
-
         public Builder resourceLabels(@Nullable Map<String,String> resourceLabels) {
             this.resourceLabels = Output.ofNullable(resourceLabels);
             return this;
         }
-
         public Builder resourceUsageExportConfig(@Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig) {
             this.resourceUsageExportConfig = resourceUsageExportConfig;
             return this;
         }
-
         public Builder resourceUsageExportConfig(@Nullable ClusterResourceUsageExportConfigGetArgs resourceUsageExportConfig) {
             this.resourceUsageExportConfig = Output.ofNullable(resourceUsageExportConfig);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder servicesIpv4Cidr(@Nullable Output<String> servicesIpv4Cidr) {
             this.servicesIpv4Cidr = servicesIpv4Cidr;
             return this;
         }
-
         public Builder servicesIpv4Cidr(@Nullable String servicesIpv4Cidr) {
             this.servicesIpv4Cidr = Output.ofNullable(servicesIpv4Cidr);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder tpuIpv4CidrBlock(@Nullable Output<String> tpuIpv4CidrBlock) {
             this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
             return this;
         }
-
         public Builder tpuIpv4CidrBlock(@Nullable String tpuIpv4CidrBlock) {
             this.tpuIpv4CidrBlock = Output.ofNullable(tpuIpv4CidrBlock);
             return this;
         }
-
         public Builder verticalPodAutoscaling(@Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling) {
             this.verticalPodAutoscaling = verticalPodAutoscaling;
             return this;
         }
-
         public Builder verticalPodAutoscaling(@Nullable ClusterVerticalPodAutoscalingGetArgs verticalPodAutoscaling) {
             this.verticalPodAutoscaling = Output.ofNullable(verticalPodAutoscaling);
             return this;
         }
-
         public Builder workloadIdentityConfig(@Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig) {
             this.workloadIdentityConfig = workloadIdentityConfig;
             return this;
         }
-
         public Builder workloadIdentityConfig(@Nullable ClusterWorkloadIdentityConfigGetArgs workloadIdentityConfig) {
             this.workloadIdentityConfig = Output.ofNullable(workloadIdentityConfig);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(addonsConfig, authenticatorGroupsConfig, clusterAutoscaling, clusterIpv4Cidr, clusterTelemetry, confidentialNodes, databaseEncryption, datapathProvider, defaultMaxPodsPerNode, defaultSnatStatus, description, dnsConfig, enableAutopilot, enableBinaryAuthorization, enableIntranodeVisibility, enableKubernetesAlpha, enableL4IlbSubsetting, enableLegacyAbac, enableShieldedNodes, enableTpu, endpoint, identityServiceConfig, initialNodeCount, ipAllocationPolicy, labelFingerprint, location, loggingConfig, loggingService, maintenancePolicy, masterAuth, masterAuthorizedNetworksConfig, masterVersion, minMasterVersion, monitoringConfig, monitoringService, name, network, networkPolicy, networkingMode, nodeConfig, nodeLocations, nodePools, nodeVersion, notificationConfig, operation, podSecurityPolicyConfig, privateClusterConfig, privateIpv6GoogleAccess, project, releaseChannel, removeDefaultNodePool, resourceLabels, resourceUsageExportConfig, selfLink, servicesIpv4Cidr, subnetwork, tpuIpv4CidrBlock, verticalPodAutoscaling, workloadIdentityConfig);
         }
     }

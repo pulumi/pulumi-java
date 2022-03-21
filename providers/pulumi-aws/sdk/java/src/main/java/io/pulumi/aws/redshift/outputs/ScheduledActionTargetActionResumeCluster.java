@@ -51,8 +51,7 @@ public final class ScheduledActionTargetActionResumeCluster {
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
-        }
-        public ScheduledActionTargetActionResumeCluster build() {
+        }        public ScheduledActionTargetActionResumeCluster build() {
             return new ScheduledActionTargetActionResumeCluster(clusterIdentifier);
         }
     }

@@ -143,72 +143,58 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder configId(String configId) {
             this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
-
         public Builder failure(@Nullable Output<EndConditionArgs> failure) {
             this.failure = failure;
             return this;
         }
-
         public Builder failure(@Nullable EndConditionArgs failure) {
             this.failure = Output.ofNullable(failure);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder success(@Nullable Output<EndConditionArgs> success) {
             this.success = success;
             return this;
         }
-
         public Builder success(@Nullable EndConditionArgs success) {
             this.success = Output.ofNullable(success);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public WaiterArgs build() {
+        }        public WaiterArgs build() {
             return new WaiterArgs(configId, failure, name, project, requestId, success, timeout);
         }
     }

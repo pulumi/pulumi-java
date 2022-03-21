@@ -77,12 +77,10 @@ public final class ManagedZoneForwardingConfigTargetNameServer {
             this.forwardingPath = forwardingPath;
             return this;
         }
-
         public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
-        }
-        public ManagedZoneForwardingConfigTargetNameServer build() {
+        }        public ManagedZoneForwardingConfigTargetNameServer build() {
             return new ManagedZoneForwardingConfigTargetNameServer(forwardingPath, ipv4Address);
         }
     }

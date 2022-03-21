@@ -92,32 +92,29 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
-
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = Output.ofNullable(disallowedCidrs);
             return this;
         }
-
+        public Builder disallowedCidrs(String... disallowedCidrs) {
+            return disallowedCidrs(List.of(disallowedCidrs));
+        }
         public Builder ipamPoolId(Output<String> ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
-
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Output.of(Objects.requireNonNull(ipamPoolId));
             return this;
         }
-
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
-
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = Output.ofNullable(netmaskLength);
             return this;
-        }
-        public VpcIpamPreviewNextCidrArgs build() {
+        }        public VpcIpamPreviewNextCidrArgs build() {
             return new VpcIpamPreviewNextCidrArgs(disallowedCidrs, ipamPoolId, netmaskLength);
         }
     }

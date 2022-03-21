@@ -78,22 +78,18 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable String credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public BlobLocationArgs build() {
+        }        public BlobLocationArgs build() {
             return new BlobLocationArgs(credentials, uri);
         }
     }

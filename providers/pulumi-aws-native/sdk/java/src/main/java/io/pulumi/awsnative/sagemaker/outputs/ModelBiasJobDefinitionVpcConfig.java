@@ -70,12 +70,16 @@ public final class ModelBiasJobDefinitionVpcConfig {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-        public ModelBiasJobDefinitionVpcConfig build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ModelBiasJobDefinitionVpcConfig build() {
             return new ModelBiasJobDefinitionVpcConfig(securityGroupIds, subnets);
         }
     }

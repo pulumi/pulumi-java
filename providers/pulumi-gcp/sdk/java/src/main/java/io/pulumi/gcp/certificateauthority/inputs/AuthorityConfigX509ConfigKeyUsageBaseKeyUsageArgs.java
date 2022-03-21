@@ -186,92 +186,74 @@ public final class AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs extends io.
             this.certSign = certSign;
             return this;
         }
-
         public Builder certSign(@Nullable Boolean certSign) {
             this.certSign = Output.ofNullable(certSign);
             return this;
         }
-
         public Builder contentCommitment(@Nullable Output<Boolean> contentCommitment) {
             this.contentCommitment = contentCommitment;
             return this;
         }
-
         public Builder contentCommitment(@Nullable Boolean contentCommitment) {
             this.contentCommitment = Output.ofNullable(contentCommitment);
             return this;
         }
-
         public Builder crlSign(@Nullable Output<Boolean> crlSign) {
             this.crlSign = crlSign;
             return this;
         }
-
         public Builder crlSign(@Nullable Boolean crlSign) {
             this.crlSign = Output.ofNullable(crlSign);
             return this;
         }
-
         public Builder dataEncipherment(@Nullable Output<Boolean> dataEncipherment) {
             this.dataEncipherment = dataEncipherment;
             return this;
         }
-
         public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
             this.dataEncipherment = Output.ofNullable(dataEncipherment);
             return this;
         }
-
         public Builder decipherOnly(@Nullable Output<Boolean> decipherOnly) {
             this.decipherOnly = decipherOnly;
             return this;
         }
-
         public Builder decipherOnly(@Nullable Boolean decipherOnly) {
             this.decipherOnly = Output.ofNullable(decipherOnly);
             return this;
         }
-
         public Builder digitalSignature(@Nullable Output<Boolean> digitalSignature) {
             this.digitalSignature = digitalSignature;
             return this;
         }
-
         public Builder digitalSignature(@Nullable Boolean digitalSignature) {
             this.digitalSignature = Output.ofNullable(digitalSignature);
             return this;
         }
-
         public Builder encipherOnly(@Nullable Output<Boolean> encipherOnly) {
             this.encipherOnly = encipherOnly;
             return this;
         }
-
         public Builder encipherOnly(@Nullable Boolean encipherOnly) {
             this.encipherOnly = Output.ofNullable(encipherOnly);
             return this;
         }
-
         public Builder keyAgreement(@Nullable Output<Boolean> keyAgreement) {
             this.keyAgreement = keyAgreement;
             return this;
         }
-
         public Builder keyAgreement(@Nullable Boolean keyAgreement) {
             this.keyAgreement = Output.ofNullable(keyAgreement);
             return this;
         }
-
         public Builder keyEncipherment(@Nullable Output<Boolean> keyEncipherment) {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
             this.keyEncipherment = Output.ofNullable(keyEncipherment);
             return this;
-        }
-        public AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs build() {
+        }        public AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs build() {
             return new AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }
     }

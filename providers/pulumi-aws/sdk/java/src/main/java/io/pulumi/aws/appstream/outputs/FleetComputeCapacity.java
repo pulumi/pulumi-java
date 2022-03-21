@@ -103,22 +103,18 @@ public final class FleetComputeCapacity {
             this.available = available;
             return this;
         }
-
         public Builder desiredInstances(Integer desiredInstances) {
             this.desiredInstances = Objects.requireNonNull(desiredInstances);
             return this;
         }
-
         public Builder inUse(@Nullable Integer inUse) {
             this.inUse = inUse;
             return this;
         }
-
         public Builder running(@Nullable Integer running) {
             this.running = running;
             return this;
-        }
-        public FleetComputeCapacity build() {
+        }        public FleetComputeCapacity build() {
             return new FleetComputeCapacity(available, desiredInstances, inUse, running);
         }
     }

@@ -160,82 +160,72 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable List<ClusterEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
+        public Builder encryptionConfig(ClusterEncryptionConfigArgs... encryptionConfig) {
+            return encryptionConfig(List.of(encryptionConfig));
+        }
         public Builder kubernetesNetworkConfig(@Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
-
         public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = Output.ofNullable(kubernetesNetworkConfig);
             return this;
         }
-
         public Builder logging(@Nullable Output<ClusterLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable ClusterLoggingArgs logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourcesVpcConfig(Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig) {
             this.resourcesVpcConfig = Objects.requireNonNull(resourcesVpcConfig);
             return this;
         }
-
         public Builder resourcesVpcConfig(ClusterResourcesVpcConfigArgs resourcesVpcConfig) {
             this.resourcesVpcConfig = Output.of(Objects.requireNonNull(resourcesVpcConfig));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ClusterTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ClusterTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(encryptionConfig, kubernetesNetworkConfig, logging, name, resourcesVpcConfig, roleArn, tags, version);
         }
     }

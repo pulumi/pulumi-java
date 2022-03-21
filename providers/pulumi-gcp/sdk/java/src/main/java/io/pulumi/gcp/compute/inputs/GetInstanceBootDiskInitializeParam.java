@@ -107,22 +107,18 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder labels(Map<String,Object> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInstanceBootDiskInitializeParam build() {
+        }        public GetInstanceBootDiskInitializeParam build() {
             return new GetInstanceBootDiskInitializeParam(image, labels, size, type);
         }
     }

@@ -158,72 +158,58 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlImageOffer(@Nullable Output<String> sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
-
         public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
             this.sqlImageOffer = Output.ofNullable(sqlImageOffer);
             return this;
         }
-
         public Builder sqlImageSku(@Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
-
         public Builder sqlImageSku(@Nullable Either<String,SqlVmGroupImageSku> sqlImageSku) {
             this.sqlImageSku = Output.ofNullable(sqlImageSku);
             return this;
         }
-
         public Builder sqlVirtualMachineGroupName(@Nullable Output<String> sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
         }
-
         public Builder sqlVirtualMachineGroupName(@Nullable String sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Output.ofNullable(sqlVirtualMachineGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder wsfcDomainProfile(@Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile) {
             this.wsfcDomainProfile = wsfcDomainProfile;
             return this;
         }
-
         public Builder wsfcDomainProfile(@Nullable WsfcDomainProfileArgs wsfcDomainProfile) {
             this.wsfcDomainProfile = Output.ofNullable(wsfcDomainProfile);
             return this;
-        }
-        public SqlVirtualMachineGroupArgs build() {
+        }        public SqlVirtualMachineGroupArgs build() {
             return new SqlVirtualMachineGroupArgs(location, resourceGroupName, sqlImageOffer, sqlImageSku, sqlVirtualMachineGroupName, tags, wsfcDomainProfile);
         }
     }

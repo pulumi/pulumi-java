@@ -129,52 +129,42 @@ public final class AccessLevelsAccessLevelGetArgs extends io.pulumi.resources.Re
             this.basic = basic;
             return this;
         }
-
         public Builder basic(@Nullable AccessLevelsAccessLevelBasicGetArgs basic) {
             this.basic = Output.ofNullable(basic);
             return this;
         }
-
         public Builder custom(@Nullable Output<AccessLevelsAccessLevelCustomGetArgs> custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder custom(@Nullable AccessLevelsAccessLevelCustomGetArgs custom) {
             this.custom = Output.ofNullable(custom);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public AccessLevelsAccessLevelGetArgs build() {
+        }        public AccessLevelsAccessLevelGetArgs build() {
             return new AccessLevelsAccessLevelGetArgs(basic, custom, description, name, title);
         }
     }

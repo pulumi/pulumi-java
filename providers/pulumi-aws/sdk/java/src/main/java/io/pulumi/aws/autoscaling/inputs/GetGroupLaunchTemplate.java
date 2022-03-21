@@ -84,17 +84,14 @@ public final class GetGroupLaunchTemplate extends io.pulumi.resources.InvokeArgs
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetGroupLaunchTemplate build() {
+        }        public GetGroupLaunchTemplate build() {
             return new GetGroupLaunchTemplate(id, name, version);
         }
     }

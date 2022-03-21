@@ -78,12 +78,10 @@ public final class PatchDeploymentRecurringScheduleMonthly {
             this.monthDay = monthDay;
             return this;
         }
-
         public Builder weekDayOfMonth(@Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth) {
             this.weekDayOfMonth = weekDayOfMonth;
             return this;
-        }
-        public PatchDeploymentRecurringScheduleMonthly build() {
+        }        public PatchDeploymentRecurringScheduleMonthly build() {
             return new PatchDeploymentRecurringScheduleMonthly(monthDay, weekDayOfMonth);
         }
     }

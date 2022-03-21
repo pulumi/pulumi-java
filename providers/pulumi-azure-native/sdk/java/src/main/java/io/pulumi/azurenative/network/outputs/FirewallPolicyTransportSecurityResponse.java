@@ -53,8 +53,7 @@ public final class FirewallPolicyTransportSecurityResponse {
         public Builder certificateAuthority(@Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
-        }
-        public FirewallPolicyTransportSecurityResponse build() {
+        }        public FirewallPolicyTransportSecurityResponse build() {
             return new FirewallPolicyTransportSecurityResponse(certificateAuthority);
         }
     }

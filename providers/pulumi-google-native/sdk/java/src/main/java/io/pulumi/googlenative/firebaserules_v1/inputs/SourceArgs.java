@@ -61,12 +61,13 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.files = Objects.requireNonNull(files);
             return this;
         }
-
         public Builder files(List<FileArgs> files) {
             this.files = Output.of(Objects.requireNonNull(files));
             return this;
         }
-        public SourceArgs build() {
+        public Builder files(FileArgs... files) {
+            return files(List.of(files));
+        }        public SourceArgs build() {
             return new SourceArgs(files);
         }
     }

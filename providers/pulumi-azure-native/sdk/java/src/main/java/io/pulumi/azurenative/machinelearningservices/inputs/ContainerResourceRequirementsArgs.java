@@ -147,62 +147,50 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder cpuLimit(@Nullable Output<Double> cpuLimit) {
             this.cpuLimit = cpuLimit;
             return this;
         }
-
         public Builder cpuLimit(@Nullable Double cpuLimit) {
             this.cpuLimit = Output.ofNullable(cpuLimit);
             return this;
         }
-
         public Builder fpga(@Nullable Output<Integer> fpga) {
             this.fpga = fpga;
             return this;
         }
-
         public Builder fpga(@Nullable Integer fpga) {
             this.fpga = Output.ofNullable(fpga);
             return this;
         }
-
         public Builder gpu(@Nullable Output<Integer> gpu) {
             this.gpu = gpu;
             return this;
         }
-
         public Builder gpu(@Nullable Integer gpu) {
             this.gpu = Output.ofNullable(gpu);
             return this;
         }
-
         public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
-
         public Builder memoryInGB(@Nullable Double memoryInGB) {
             this.memoryInGB = Output.ofNullable(memoryInGB);
             return this;
         }
-
         public Builder memoryInGBLimit(@Nullable Output<Double> memoryInGBLimit) {
             this.memoryInGBLimit = memoryInGBLimit;
             return this;
         }
-
         public Builder memoryInGBLimit(@Nullable Double memoryInGBLimit) {
             this.memoryInGBLimit = Output.ofNullable(memoryInGBLimit);
             return this;
-        }
-        public ContainerResourceRequirementsArgs build() {
+        }        public ContainerResourceRequirementsArgs build() {
             return new ContainerResourceRequirementsArgs(cpu, cpuLimit, fpga, gpu, memoryInGB, memoryInGBLimit);
         }
     }

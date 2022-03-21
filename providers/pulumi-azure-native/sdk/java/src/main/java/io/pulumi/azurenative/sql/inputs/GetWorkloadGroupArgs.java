@@ -104,22 +104,18 @@ public final class GetWorkloadGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder workloadGroupName(String workloadGroupName) {
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
-        }
-        public GetWorkloadGroupArgs build() {
+        }        public GetWorkloadGroupArgs build() {
             return new GetWorkloadGroupArgs(databaseName, resourceGroupName, serverName, workloadGroupName);
         }
     }

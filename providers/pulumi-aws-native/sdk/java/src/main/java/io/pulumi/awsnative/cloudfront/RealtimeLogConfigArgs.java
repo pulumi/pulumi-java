@@ -93,42 +93,40 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
             this.endPoints = Objects.requireNonNull(endPoints);
             return this;
         }
-
         public Builder endPoints(List<RealtimeLogConfigEndPointArgs> endPoints) {
             this.endPoints = Output.of(Objects.requireNonNull(endPoints));
             return this;
         }
-
+        public Builder endPoints(RealtimeLogConfigEndPointArgs... endPoints) {
+            return endPoints(List.of(endPoints));
+        }
         public Builder fields(Output<List<String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public Builder fields(List<String> fields) {
             this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
-
+        public Builder fields(String... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder samplingRate(Output<Double> samplingRate) {
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
         }
-
         public Builder samplingRate(Double samplingRate) {
             this.samplingRate = Output.of(Objects.requireNonNull(samplingRate));
             return this;
-        }
-        public RealtimeLogConfigArgs build() {
+        }        public RealtimeLogConfigArgs build() {
             return new RealtimeLogConfigArgs(endPoints, fields, name, samplingRate);
         }
     }

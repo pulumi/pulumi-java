@@ -138,62 +138,50 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
-
         public Builder channel(String channel) {
             this.channel = Output.of(Objects.requireNonNull(channel));
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subchannel(Output<String> subchannel) {
             this.subchannel = Objects.requireNonNull(subchannel);
             return this;
         }
-
         public Builder subchannel(String subchannel) {
             this.subchannel = Output.of(Objects.requireNonNull(subchannel));
             return this;
-        }
-        public SettingsPropertiesCacheArgs build() {
+        }        public SettingsPropertiesCacheArgs build() {
             return new SettingsPropertiesCacheArgs(channel, id, name, parent, status, subchannel);
         }
     }

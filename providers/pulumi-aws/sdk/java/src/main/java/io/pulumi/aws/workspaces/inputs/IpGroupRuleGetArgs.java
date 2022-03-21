@@ -74,22 +74,18 @@ public final class IpGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public IpGroupRuleGetArgs build() {
+        }        public IpGroupRuleGetArgs build() {
             return new IpGroupRuleGetArgs(description, source);
         }
     }

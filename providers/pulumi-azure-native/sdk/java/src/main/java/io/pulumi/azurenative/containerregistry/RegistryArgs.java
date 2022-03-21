@@ -192,92 +192,74 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
             this.adminUserEnabled = adminUserEnabled;
             return this;
         }
-
         public Builder adminUserEnabled(@Nullable Boolean adminUserEnabled) {
             this.adminUserEnabled = Output.ofNullable(adminUserEnabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
-
         public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
             this.networkRuleSet = Output.ofNullable(networkRuleSet);
             return this;
         }
-
         public Builder policies(@Nullable Output<PoliciesArgs> policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder policies(@Nullable PoliciesArgs policies) {
             this.policies = Output.ofNullable(policies);
             return this;
         }
-
         public Builder registryName(@Nullable Output<String> registryName) {
             this.registryName = registryName;
             return this;
         }
-
         public Builder registryName(@Nullable String registryName) {
             this.registryName = Output.ofNullable(registryName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder storageAccount(@Nullable Output<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
             this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RegistryArgs build() {
+        }        public RegistryArgs build() {
             return new RegistryArgs(adminUserEnabled, location, networkRuleSet, policies, registryName, resourceGroupName, sku, storageAccount, tags);
         }
     }

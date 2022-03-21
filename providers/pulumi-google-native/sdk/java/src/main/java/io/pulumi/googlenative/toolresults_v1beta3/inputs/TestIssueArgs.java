@@ -130,52 +130,42 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable TestIssueCategory category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder errorMessage(@Nullable Output<String> errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = Output.ofNullable(errorMessage);
             return this;
         }
-
         public Builder severity(@Nullable Output<TestIssueSeverity> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable TestIssueSeverity severity) {
             this.severity = Output.ofNullable(severity);
             return this;
         }
-
         public Builder type(@Nullable Output<TestIssueType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable TestIssueType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder warning(@Nullable Output<AnyArgs> warning) {
             this.warning = warning;
             return this;
         }
-
         public Builder warning(@Nullable AnyArgs warning) {
             this.warning = Output.ofNullable(warning);
             return this;
-        }
-        public TestIssueArgs build() {
+        }        public TestIssueArgs build() {
             return new TestIssueArgs(category, errorMessage, severity, type, warning);
         }
     }

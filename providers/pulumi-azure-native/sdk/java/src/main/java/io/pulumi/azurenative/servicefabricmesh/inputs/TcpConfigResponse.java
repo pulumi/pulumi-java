@@ -94,17 +94,14 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public TcpConfigResponse build() {
+        }        public TcpConfigResponse build() {
             return new TcpConfigResponse(destination, name, port);
         }
     }

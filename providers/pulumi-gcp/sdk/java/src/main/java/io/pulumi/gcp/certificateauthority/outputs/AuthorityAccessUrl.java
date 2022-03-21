@@ -56,12 +56,13 @@ public final class AuthorityAccessUrl {
             this.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
-
         public Builder crlAccessUrls(@Nullable List<String> crlAccessUrls) {
             this.crlAccessUrls = crlAccessUrls;
             return this;
         }
-        public AuthorityAccessUrl build() {
+        public Builder crlAccessUrls(String... crlAccessUrls) {
+            return crlAccessUrls(List.of(crlAccessUrls));
+        }        public AuthorityAccessUrl build() {
             return new AuthorityAccessUrl(caCertificateAccessUrl, crlAccessUrls);
         }
     }

@@ -53,8 +53,7 @@ public final class AwsCloudTrailDataConnectorDataTypesResponseLogs {
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public AwsCloudTrailDataConnectorDataTypesResponseLogs build() {
+        }        public AwsCloudTrailDataConnectorDataTypesResponseLogs build() {
             return new AwsCloudTrailDataConnectorDataTypesResponseLogs(state);
         }
     }

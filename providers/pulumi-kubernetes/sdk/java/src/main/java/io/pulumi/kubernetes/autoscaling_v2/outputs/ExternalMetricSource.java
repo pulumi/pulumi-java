@@ -70,12 +70,10 @@ public final class ExternalMetricSource {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ExternalMetricSource build() {
+        }        public ExternalMetricSource build() {
             return new ExternalMetricSource(metric, target);
         }
     }

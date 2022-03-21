@@ -94,17 +94,14 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
             this.expiryDetail = Objects.requireNonNull(expiryDetail);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restrictionEvaluations(RestrictionEvaluationsResponse restrictionEvaluations) {
             this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
             return this;
-        }
-        public MembershipRoleResponse build() {
+        }        public MembershipRoleResponse build() {
             return new MembershipRoleResponse(expiryDetail, name, restrictionEvaluations);
         }
     }

@@ -92,17 +92,14 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse extends io.pulumi.re
             this.arrayConfig = Objects.requireNonNull(arrayConfig);
             return this;
         }
-
         public Builder fieldPath(String fieldPath) {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
-
         public Builder order(String order) {
             this.order = Objects.requireNonNull(order);
             return this;
-        }
-        public GoogleFirestoreAdminV1IndexFieldResponse build() {
+        }        public GoogleFirestoreAdminV1IndexFieldResponse build() {
             return new GoogleFirestoreAdminV1IndexFieldResponse(arrayConfig, fieldPath, order);
         }
     }

@@ -68,22 +68,21 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             this.distributionConfig = Objects.requireNonNull(distributionConfig);
             return this;
         }
-
         public Builder distributionConfig(DistributionConfigArgs distributionConfig) {
             this.distributionConfig = Output.of(Objects.requireNonNull(distributionConfig));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DistributionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DistributionTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DistributionArgs build() {
+        public Builder tags(DistributionTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DistributionArgs build() {
             return new DistributionArgs(distributionConfig, tags);
         }
     }

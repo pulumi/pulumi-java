@@ -109,42 +109,37 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }
-
         public Builder dataRetention(Integer dataRetention) {
             this.dataRetention = Output.of(Objects.requireNonNull(dataRetention));
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder streamingNotificationTargets(@Nullable Output<List<String>> streamingNotificationTargets) {
             this.streamingNotificationTargets = streamingNotificationTargets;
             return this;
         }
-
         public Builder streamingNotificationTargets(@Nullable List<String> streamingNotificationTargets) {
             this.streamingNotificationTargets = Output.ofNullable(streamingNotificationTargets);
             return this;
         }
-
+        public Builder streamingNotificationTargets(String... streamingNotificationTargets) {
+            return streamingNotificationTargets(List.of(streamingNotificationTargets));
+        }
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
-
         public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
-        }
-        public VoiceConnectorStreamingArgs build() {
+        }        public VoiceConnectorStreamingArgs build() {
             return new VoiceConnectorStreamingArgs(dataRetention, disabled, streamingNotificationTargets, voiceConnectorId);
         }
     }

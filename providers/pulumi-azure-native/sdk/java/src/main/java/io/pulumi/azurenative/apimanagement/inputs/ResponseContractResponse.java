@@ -114,22 +114,24 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
             this.description = description;
             return this;
         }
-
         public Builder headers(@Nullable List<ParameterContractResponse> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(ParameterContractResponse... headers) {
+            return headers(List.of(headers));
+        }
         public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
             this.representations = representations;
             return this;
         }
-
+        public Builder representations(RepresentationContractResponse... representations) {
+            return representations(List.of(representations));
+        }
         public Builder statusCode(Integer statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public ResponseContractResponse build() {
+        }        public ResponseContractResponse build() {
             return new ResponseContractResponse(description, headers, representations, statusCode);
         }
     }

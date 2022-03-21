@@ -139,62 +139,50 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
-
         public Builder mappingName(@Nullable Output<String> mappingName) {
             this.mappingName = mappingName;
             return this;
         }
-
         public Builder mappingName(@Nullable String mappingName) {
             this.mappingName = Output.ofNullable(mappingName);
             return this;
         }
-
         public Builder properties(@Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable CreateProtectionContainerMappingInputPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder protectionContainerName(Output<String> protectionContainerName) {
             this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
             return this;
         }
-
         public Builder protectionContainerName(String protectionContainerName) {
             this.protectionContainerName = Output.of(Objects.requireNonNull(protectionContainerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public ReplicationProtectionContainerMappingArgs build() {
+        }        public ReplicationProtectionContainerMappingArgs build() {
             return new ReplicationProtectionContainerMappingArgs(fabricName, mappingName, properties, protectionContainerName, resourceGroupName, resourceName);
         }
     }

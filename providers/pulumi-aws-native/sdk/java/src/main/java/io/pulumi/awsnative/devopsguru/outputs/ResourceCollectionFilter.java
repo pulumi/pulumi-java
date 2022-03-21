@@ -45,8 +45,7 @@ public final class ResourceCollectionFilter {
         public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
             this.cloudFormation = cloudFormation;
             return this;
-        }
-        public ResourceCollectionFilter build() {
+        }        public ResourceCollectionFilter build() {
             return new ResourceCollectionFilter(cloudFormation);
         }
     }

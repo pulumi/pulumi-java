@@ -74,22 +74,18 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable String input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs build() {
+        }        public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs(input, name);
         }
     }

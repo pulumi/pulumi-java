@@ -107,22 +107,21 @@ public final class RouteSpecGrpcRouteMatch {
             this.metadatas = metadatas;
             return this;
         }
-
+        public Builder metadatas(RouteSpecGrpcRouteMatchMetadata... metadatas) {
+            return metadatas(List.of(metadatas));
+        }
         public Builder methodName(@Nullable String methodName) {
             this.methodName = methodName;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
-        }
-        public RouteSpecGrpcRouteMatch build() {
+        }        public RouteSpecGrpcRouteMatch build() {
             return new RouteSpecGrpcRouteMatch(metadatas, methodName, prefix, serviceName);
         }
     }

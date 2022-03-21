@@ -95,32 +95,26 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends io.pulumi.re
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder sharePercentage(@Nullable Output<Double> sharePercentage) {
             this.sharePercentage = sharePercentage;
             return this;
         }
-
         public Builder sharePercentage(@Nullable Double sharePercentage) {
             this.sharePercentage = Output.ofNullable(sharePercentage);
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public GoogleCloudApigeeV1RevenueShareRangeArgs build() {
+        }        public GoogleCloudApigeeV1RevenueShareRangeArgs build() {
             return new GoogleCloudApigeeV1RevenueShareRangeArgs(end, sharePercentage, start);
         }
     }

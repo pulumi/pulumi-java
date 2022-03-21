@@ -108,42 +108,37 @@ public final class OrganizationRootArgs extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyTypes(@Nullable Output<List<OrganizationRootPolicyTypeArgs>> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }
-
         public Builder policyTypes(@Nullable List<OrganizationRootPolicyTypeArgs> policyTypes) {
             this.policyTypes = Output.ofNullable(policyTypes);
             return this;
         }
-        public OrganizationRootArgs build() {
+        public Builder policyTypes(OrganizationRootPolicyTypeArgs... policyTypes) {
+            return policyTypes(List.of(policyTypes));
+        }        public OrganizationRootArgs build() {
             return new OrganizationRootArgs(arn, id, name, policyTypes);
         }
     }

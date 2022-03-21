@@ -129,27 +129,31 @@ public final class FhirServiceCorsConfigurationResponse extends io.pulumi.resour
             this.allowCredentials = allowCredentials;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }
         public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = maxAge;
             return this;
         }
-
         public Builder methods(@Nullable List<String> methods) {
             this.methods = methods;
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder origins(@Nullable List<String> origins) {
             this.origins = origins;
             return this;
         }
-        public FhirServiceCorsConfigurationResponse build() {
+        public Builder origins(String... origins) {
+            return origins(List.of(origins));
+        }        public FhirServiceCorsConfigurationResponse build() {
             return new FhirServiceCorsConfigurationResponse(allowCredentials, headers, maxAge, methods, origins);
         }
     }

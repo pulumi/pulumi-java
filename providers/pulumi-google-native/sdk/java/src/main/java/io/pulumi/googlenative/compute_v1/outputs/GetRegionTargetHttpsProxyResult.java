@@ -263,72 +263,61 @@ public final class GetRegionTargetHttpsProxyResult {
             this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder proxyBind(Boolean proxyBind) {
             this.proxyBind = Objects.requireNonNull(proxyBind);
             return this;
         }
-
         public Builder quicOverride(String quicOverride) {
             this.quicOverride = Objects.requireNonNull(quicOverride);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder serverTlsPolicy(String serverTlsPolicy) {
             this.serverTlsPolicy = Objects.requireNonNull(serverTlsPolicy);
             return this;
         }
-
         public Builder sslCertificates(List<String> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
-
+        public Builder sslCertificates(String... sslCertificates) {
+            return sslCertificates(List.of(sslCertificates));
+        }
         public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
-
         public Builder urlMap(String urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
-        }
-        public GetRegionTargetHttpsProxyResult build() {
+        }        public GetRegionTargetHttpsProxyResult build() {
             return new GetRegionTargetHttpsProxyResult(authorizationPolicy, creationTimestamp, description, fingerprint, kind, name, proxyBind, quicOverride, region, selfLink, serverTlsPolicy, sslCertificates, sslPolicy, urlMap);
         }
     }

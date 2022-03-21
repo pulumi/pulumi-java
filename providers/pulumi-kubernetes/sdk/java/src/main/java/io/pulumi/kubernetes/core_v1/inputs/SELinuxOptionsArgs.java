@@ -110,42 +110,34 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public SELinuxOptionsArgs build() {
+        }        public SELinuxOptionsArgs build() {
             return new SELinuxOptionsArgs(level, role, type, user);
         }
     }

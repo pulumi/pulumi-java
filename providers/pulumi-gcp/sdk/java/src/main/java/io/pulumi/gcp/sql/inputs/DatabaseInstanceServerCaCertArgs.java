@@ -107,52 +107,42 @@ public final class DatabaseInstanceServerCaCertArgs extends io.pulumi.resources.
             this.cert = cert;
             return this;
         }
-
         public Builder cert(@Nullable String cert) {
             this.cert = Output.ofNullable(cert);
             return this;
         }
-
         public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
-
         public Builder commonName(@Nullable String commonName) {
             this.commonName = Output.ofNullable(commonName);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
             return this;
-        }
-        public DatabaseInstanceServerCaCertArgs build() {
+        }        public DatabaseInstanceServerCaCertArgs build() {
             return new DatabaseInstanceServerCaCertArgs(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }
     }

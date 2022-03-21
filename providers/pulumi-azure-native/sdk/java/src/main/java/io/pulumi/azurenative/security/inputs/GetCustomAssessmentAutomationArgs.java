@@ -72,12 +72,10 @@ public final class GetCustomAssessmentAutomationArgs extends io.pulumi.resources
             this.customAssessmentAutomationName = Objects.requireNonNull(customAssessmentAutomationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCustomAssessmentAutomationArgs build() {
+        }        public GetCustomAssessmentAutomationArgs build() {
             return new GetCustomAssessmentAutomationArgs(customAssessmentAutomationName, resourceGroupName);
         }
     }

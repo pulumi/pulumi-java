@@ -272,132 +272,109 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
-
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkEndpoints(@Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints) {
             this.networkEndpoints = networkEndpoints;
             return this;
         }
-
         public Builder networkEndpoints(@Nullable List<NodeNetworkEndpointGetArgs> networkEndpoints) {
             this.networkEndpoints = Output.ofNullable(networkEndpoints);
             return this;
         }
-
+        public Builder networkEndpoints(NodeNetworkEndpointGetArgs... networkEndpoints) {
+            return networkEndpoints(List.of(networkEndpoints));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedulingConfig(@Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig) {
             this.schedulingConfig = schedulingConfig;
             return this;
         }
-
         public Builder schedulingConfig(@Nullable NodeSchedulingConfigGetArgs schedulingConfig) {
             this.schedulingConfig = Output.ofNullable(schedulingConfig);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder tensorflowVersion(@Nullable Output<String> tensorflowVersion) {
             this.tensorflowVersion = tensorflowVersion;
             return this;
         }
-
         public Builder tensorflowVersion(@Nullable String tensorflowVersion) {
             this.tensorflowVersion = Output.ofNullable(tensorflowVersion);
             return this;
         }
-
         public Builder useServiceNetworking(@Nullable Output<Boolean> useServiceNetworking) {
             this.useServiceNetworking = useServiceNetworking;
             return this;
         }
-
         public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
             this.useServiceNetworking = Output.ofNullable(useServiceNetworking);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public NodeState build() {
+        }        public NodeState build() {
             return new NodeState(acceleratorType, cidrBlock, description, labels, name, network, networkEndpoints, project, schedulingConfig, serviceAccount, tensorflowVersion, useServiceNetworking, zone);
         }
     }

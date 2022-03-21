@@ -58,12 +58,10 @@ public final class DatasetDefaultEncryptionConfigurationGetArgs extends io.pulum
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
-        }
-        public DatasetDefaultEncryptionConfigurationGetArgs build() {
+        }        public DatasetDefaultEncryptionConfigurationGetArgs build() {
             return new DatasetDefaultEncryptionConfigurationGetArgs(kmsKeyName);
         }
     }

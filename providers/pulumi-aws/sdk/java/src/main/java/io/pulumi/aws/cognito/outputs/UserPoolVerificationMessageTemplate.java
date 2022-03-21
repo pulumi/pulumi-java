@@ -135,32 +135,26 @@ public final class UserPoolVerificationMessageTemplate {
             this.defaultEmailOption = defaultEmailOption;
             return this;
         }
-
         public Builder emailMessage(@Nullable String emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
-
         public Builder emailMessageByLink(@Nullable String emailMessageByLink) {
             this.emailMessageByLink = emailMessageByLink;
             return this;
         }
-
         public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
-
         public Builder emailSubjectByLink(@Nullable String emailSubjectByLink) {
             this.emailSubjectByLink = emailSubjectByLink;
             return this;
         }
-
         public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = smsMessage;
             return this;
-        }
-        public UserPoolVerificationMessageTemplate build() {
+        }        public UserPoolVerificationMessageTemplate build() {
             return new UserPoolVerificationMessageTemplate(defaultEmailOption, emailMessage, emailMessageByLink, emailSubject, emailSubjectByLink, smsMessage);
         }
     }

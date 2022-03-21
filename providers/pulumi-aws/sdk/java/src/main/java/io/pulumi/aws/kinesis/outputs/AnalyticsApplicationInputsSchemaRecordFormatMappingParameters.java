@@ -76,12 +76,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
             this.csv = csv;
             return this;
         }
-
         public Builder json(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json) {
             this.json = json;
             return this;
-        }
-        public AnalyticsApplicationInputsSchemaRecordFormatMappingParameters build() {
+        }        public AnalyticsApplicationInputsSchemaRecordFormatMappingParameters build() {
             return new AnalyticsApplicationInputsSchemaRecordFormatMappingParameters(csv, json);
         }
     }

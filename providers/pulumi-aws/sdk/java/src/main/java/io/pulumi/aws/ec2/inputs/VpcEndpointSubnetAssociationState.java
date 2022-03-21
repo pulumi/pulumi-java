@@ -74,22 +74,18 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
-        }
-        public VpcEndpointSubnetAssociationState build() {
+        }        public VpcEndpointSubnetAssociationState build() {
             return new VpcEndpointSubnetAssociationState(subnetId, vpcEndpointId);
         }
     }

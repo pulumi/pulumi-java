@@ -91,17 +91,14 @@ public final class CertificateConfigX509ConfigAdditionalExtension {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
-
         public Builder objectId(CertificateConfigX509ConfigAdditionalExtensionObjectId objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CertificateConfigX509ConfigAdditionalExtension build() {
+        }        public CertificateConfigX509ConfigAdditionalExtension build() {
             return new CertificateConfigX509ConfigAdditionalExtension(critical, objectId, value);
         }
     }

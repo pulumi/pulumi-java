@@ -173,42 +173,37 @@ public final class StatefulSetSpec {
             this.podManagementPolicy = podManagementPolicy;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-
         public Builder selector(LabelSelector selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder updateStrategy(@Nullable StatefulSetUpdateStrategy updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
-
         public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }
-        public StatefulSetSpec build() {
+        public Builder volumeClaimTemplates(PersistentVolumeClaim... volumeClaimTemplates) {
+            return volumeClaimTemplates(List.of(volumeClaimTemplates));
+        }        public StatefulSetSpec build() {
             return new StatefulSetSpec(podManagementPolicy, replicas, revisionHistoryLimit, selector, serviceName, template, updateStrategy, volumeClaimTemplates);
         }
     }

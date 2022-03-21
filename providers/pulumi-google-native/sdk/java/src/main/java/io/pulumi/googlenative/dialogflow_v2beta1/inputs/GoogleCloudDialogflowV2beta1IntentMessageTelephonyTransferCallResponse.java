@@ -58,8 +58,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(phoneNumber);
         }
     }

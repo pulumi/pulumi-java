@@ -87,17 +87,14 @@ public final class DaprMetadataResponse {
             this.name = name;
             return this;
         }
-
         public Builder secretRef(@Nullable String secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DaprMetadataResponse build() {
+        }        public DaprMetadataResponse build() {
             return new DaprMetadataResponse(name, secretRef, value);
         }
     }

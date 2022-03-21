@@ -111,22 +111,18 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
             this.aofEnabled = aofEnabled;
             return this;
         }
-
         public Builder aofFrequency(@Nullable String aofFrequency) {
             this.aofFrequency = aofFrequency;
             return this;
         }
-
         public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
             this.rdbEnabled = rdbEnabled;
             return this;
         }
-
         public Builder rdbFrequency(@Nullable String rdbFrequency) {
             this.rdbFrequency = rdbFrequency;
             return this;
-        }
-        public PersistenceResponse build() {
+        }        public PersistenceResponse build() {
             return new PersistenceResponse(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);
         }
     }

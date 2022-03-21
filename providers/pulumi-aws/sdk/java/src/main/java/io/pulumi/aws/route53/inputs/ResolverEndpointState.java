@@ -176,82 +176,72 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder hostVpcId(@Nullable Output<String> hostVpcId) {
             this.hostVpcId = hostVpcId;
             return this;
         }
-
         public Builder hostVpcId(@Nullable String hostVpcId) {
             this.hostVpcId = Output.ofNullable(hostVpcId);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<ResolverEndpointIpAddressGetArgs> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(ResolverEndpointIpAddressGetArgs... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ResolverEndpointState build() {
+        }        public ResolverEndpointState build() {
             return new ResolverEndpointState(arn, direction, hostVpcId, ipAddresses, name, securityGroupIds, tags, tagsAll);
         }
     }

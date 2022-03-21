@@ -198,92 +198,83 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.acceptedProtocols = acceptedProtocols;
             return this;
         }
-
         public Builder acceptedProtocols(@Nullable List<Either<String,FrontDoorProtocol>> acceptedProtocols) {
             this.acceptedProtocols = Output.ofNullable(acceptedProtocols);
             return this;
         }
-
+        public Builder acceptedProtocols(Either<String,FrontDoorProtocol>... acceptedProtocols) {
+            return acceptedProtocols(List.of(acceptedProtocols));
+        }
         public Builder enabledState(@Nullable Output<Either<String,RoutingRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,RoutingRuleEnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder frontendEndpoints(@Nullable Output<List<SubResourceArgs>> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
-
         public Builder frontendEndpoints(@Nullable List<SubResourceArgs> frontendEndpoints) {
             this.frontendEndpoints = Output.ofNullable(frontendEndpoints);
             return this;
         }
-
+        public Builder frontendEndpoints(SubResourceArgs... frontendEndpoints) {
+            return frontendEndpoints(List.of(frontendEndpoints));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = Output.ofNullable(patternsToMatch);
             return this;
         }
-
+        public Builder patternsToMatch(String... patternsToMatch) {
+            return patternsToMatch(List.of(patternsToMatch));
+        }
         public Builder routeConfiguration(@Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration) {
             this.routeConfiguration = routeConfiguration;
             return this;
         }
-
         public Builder routeConfiguration(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfiguration) {
             this.routeConfiguration = Output.ofNullable(routeConfiguration);
             return this;
         }
-
         public Builder rulesEngine(@Nullable Output<SubResourceArgs> rulesEngine) {
             this.rulesEngine = rulesEngine;
             return this;
         }
-
         public Builder rulesEngine(@Nullable SubResourceArgs rulesEngine) {
             this.rulesEngine = Output.ofNullable(rulesEngine);
             return this;
         }
-
         public Builder webApplicationFirewallPolicyLink(@Nullable Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public Builder webApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
             return this;
-        }
-        public RoutingRuleArgs build() {
+        }        public RoutingRuleArgs build() {
             return new RoutingRuleArgs(acceptedProtocols, enabledState, frontendEndpoints, id, name, patternsToMatch, routeConfiguration, rulesEngine, webApplicationFirewallPolicyLink);
         }
     }

@@ -81,12 +81,10 @@ public final class JsonFieldWithDefaultResponse extends io.pulumi.resources.Invo
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = sourceField;
             return this;
-        }
-        public JsonFieldWithDefaultResponse build() {
+        }        public JsonFieldWithDefaultResponse build() {
             return new JsonFieldWithDefaultResponse(defaultValue, sourceField);
         }
     }

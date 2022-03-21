@@ -79,22 +79,24 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
             this.allowedValues = allowedValues;
             return this;
         }
-
         public Builder allowedValues(@Nullable List<String> allowedValues) {
             this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder deniedValues(@Nullable Output<List<String>> deniedValues) {
             this.deniedValues = deniedValues;
             return this;
         }
-
         public Builder deniedValues(@Nullable List<String> deniedValues) {
             this.deniedValues = Output.ofNullable(deniedValues);
             return this;
         }
-        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs build() {
+        public Builder deniedValues(String... deniedValues) {
+            return deniedValues(List.of(deniedValues));
+        }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(allowedValues, deniedValues);
         }
     }

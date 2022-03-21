@@ -90,22 +90,18 @@ public final class GetInterconnectAttachmentIamPolicyArgs extends io.pulumi.reso
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetInterconnectAttachmentIamPolicyArgs build() {
+        }        public GetInterconnectAttachmentIamPolicyArgs build() {
             return new GetInterconnectAttachmentIamPolicyArgs(optionsRequestedPolicyVersion, project, region, resource);
         }
     }

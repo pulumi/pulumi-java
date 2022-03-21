@@ -120,27 +120,25 @@ public final class RuntimeScriptActionResponse {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder roles(List<String> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public RuntimeScriptActionResponse build() {
+        }        public RuntimeScriptActionResponse build() {
             return new RuntimeScriptActionResponse(applicationName, name, parameters, roles, uri);
         }
     }

@@ -53,12 +53,10 @@ public final class ServiceTaskSpecContainerSpecLabel {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecLabel build() {
+        }        public ServiceTaskSpecContainerSpecLabel build() {
             return new ServiceTaskSpecContainerSpecLabel(label, value);
         }
     }

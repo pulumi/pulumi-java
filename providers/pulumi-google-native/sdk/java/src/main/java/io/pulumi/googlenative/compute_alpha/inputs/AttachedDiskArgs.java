@@ -263,132 +263,109 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.autoDelete = autoDelete;
             return this;
         }
-
         public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
-
         public Builder boot(@Nullable Output<Boolean> boot) {
             this.boot = boot;
             return this;
         }
-
         public Builder boot(@Nullable Boolean boot) {
             this.boot = Output.ofNullable(boot);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
             this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder forceAttach(@Nullable Output<Boolean> forceAttach) {
             this.forceAttach = forceAttach;
             return this;
         }
-
         public Builder forceAttach(@Nullable Boolean forceAttach) {
             this.forceAttach = Output.ofNullable(forceAttach);
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
             this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder initializeParams(@Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
-
         public Builder initializeParams(@Nullable AttachedDiskInitializeParamsArgs initializeParams) {
             this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
-
         public Builder $interface(@Nullable Output<AttachedDiskInterface> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable AttachedDiskInterface $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
         }
-
         public Builder mode(@Nullable Output<AttachedDiskMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable AttachedDiskMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder savedState(@Nullable Output<AttachedDiskSavedState> savedState) {
             this.savedState = savedState;
             return this;
         }
-
         public Builder savedState(@Nullable AttachedDiskSavedState savedState) {
             this.savedState = Output.ofNullable(savedState);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder type(@Nullable Output<AttachedDiskType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable AttachedDiskType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AttachedDiskArgs build() {
+        }        public AttachedDiskArgs build() {
             return new AttachedDiskArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, initializeParams, $interface, mode, savedState, source, type);
         }
     }

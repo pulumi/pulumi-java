@@ -51,8 +51,7 @@ public final class ModelContainerImageConfig {
         public Builder repositoryAccessMode(String repositoryAccessMode) {
             this.repositoryAccessMode = Objects.requireNonNull(repositoryAccessMode);
             return this;
-        }
-        public ModelContainerImageConfig build() {
+        }        public ModelContainerImageConfig build() {
             return new ModelContainerImageConfig(repositoryAccessMode);
         }
     }

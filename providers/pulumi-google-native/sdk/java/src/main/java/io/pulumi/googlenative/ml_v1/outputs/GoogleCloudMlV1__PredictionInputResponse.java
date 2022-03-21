@@ -230,62 +230,53 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
             this.batchSize = Objects.requireNonNull(batchSize);
             return this;
         }
-
         public Builder dataFormat(String dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
-
         public Builder inputPaths(List<String> inputPaths) {
             this.inputPaths = Objects.requireNonNull(inputPaths);
             return this;
         }
-
+        public Builder inputPaths(String... inputPaths) {
+            return inputPaths(List.of(inputPaths));
+        }
         public Builder maxWorkerCount(String maxWorkerCount) {
             this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
             return this;
         }
-
         public Builder modelName(String modelName) {
             this.modelName = Objects.requireNonNull(modelName);
             return this;
         }
-
         public Builder outputDataFormat(String outputDataFormat) {
             this.outputDataFormat = Objects.requireNonNull(outputDataFormat);
             return this;
         }
-
         public Builder outputPath(String outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder signatureName(String signatureName) {
             this.signatureName = Objects.requireNonNull(signatureName);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
-        }
-        public GoogleCloudMlV1__PredictionInputResponse build() {
+        }        public GoogleCloudMlV1__PredictionInputResponse build() {
             return new GoogleCloudMlV1__PredictionInputResponse(batchSize, dataFormat, inputPaths, maxWorkerCount, modelName, outputDataFormat, outputPath, region, runtimeVersion, signatureName, uri, versionName);
         }
     }

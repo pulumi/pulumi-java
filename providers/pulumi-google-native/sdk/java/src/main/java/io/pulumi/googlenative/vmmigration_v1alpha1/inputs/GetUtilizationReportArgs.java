@@ -102,27 +102,22 @@ public final class GetUtilizationReportArgs extends io.pulumi.resources.InvokeAr
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder utilizationReportId(String utilizationReportId) {
             this.utilizationReportId = Objects.requireNonNull(utilizationReportId);
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetUtilizationReportArgs build() {
+        }        public GetUtilizationReportArgs build() {
             return new GetUtilizationReportArgs(location, project, sourceId, utilizationReportId, view);
         }
     }

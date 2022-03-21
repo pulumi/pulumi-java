@@ -57,12 +57,13 @@ public final class CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs build() {
             return new CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs(objectIdPaths);
         }
     }

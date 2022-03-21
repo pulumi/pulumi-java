@@ -255,132 +255,106 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             this.administratorLogin = administratorLogin;
             return this;
         }
-
         public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = Output.ofNullable(administratorLogin);
             return this;
         }
-
         public Builder administratorLoginPassword(@Nullable Output<String> administratorLoginPassword) {
             this.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
-
         public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
             this.administratorLoginPassword = Output.ofNullable(administratorLoginPassword);
             return this;
         }
-
         public Builder administrators(@Nullable Output<ServerExternalAdministratorArgs> administrators) {
             this.administrators = administrators;
             return this;
         }
-
         public Builder administrators(@Nullable ServerExternalAdministratorArgs administrators) {
             this.administrators = Output.ofNullable(administrators);
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Output<String> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
-
         public Builder primaryUserAssignedIdentityId(@Nullable Output<String> primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
-
         public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = Output.ofNullable(primaryUserAssignedIdentityId);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,ServerPublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = Output.ofNullable(serverName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ServerArgs build() {
+        }        public ServerArgs build() {
             return new ServerArgs(administratorLogin, administratorLoginPassword, administrators, identity, keyId, location, minimalTlsVersion, primaryUserAssignedIdentityId, publicNetworkAccess, resourceGroupName, serverName, tags, version);
         }
     }

@@ -154,37 +154,33 @@ public final class BackendPoolResponse {
             this.backends = backends;
             return this;
         }
-
+        public Builder backends(BackendResponse... backends) {
+            return backends(List.of(backends));
+        }
         public Builder healthProbeSettings(@Nullable SubResourceResponse healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable SubResourceResponse loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BackendPoolResponse build() {
+        }        public BackendPoolResponse build() {
             return new BackendPoolResponse(backends, healthProbeSettings, id, loadBalancingSettings, name, resourceState, type);
         }
     }

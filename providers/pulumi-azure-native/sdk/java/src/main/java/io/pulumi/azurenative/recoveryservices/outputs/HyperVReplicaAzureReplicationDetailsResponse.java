@@ -480,137 +480,116 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
             this.azureVmDiskDetails = azureVmDiskDetails;
             return this;
         }
-
+        public Builder azureVmDiskDetails(AzureVmDiskDetailsResponse... azureVmDiskDetails) {
+            return azureVmDiskDetails(List.of(azureVmDiskDetails));
+        }
         public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
-
         public Builder encryption(@Nullable String encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
             this.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
             this.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
-
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder oSDetails(@Nullable OSDetailsResponse oSDetails) {
             this.oSDetails = oSDetails;
             return this;
         }
-
         public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
             this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
-
         public Builder recoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
             this.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
             return this;
         }
-
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
-
         public Builder recoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
             this.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
             return this;
         }
-
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             this.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
-
         public Builder recoveryAzureVmName(@Nullable String recoveryAzureVmName) {
             this.recoveryAzureVmName = recoveryAzureVmName;
             return this;
         }
-
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
-
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
-
         public Builder selectedSourceNicId(@Nullable String selectedSourceNicId) {
             this.selectedSourceNicId = selectedSourceNicId;
             return this;
         }
-
         public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
             this.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
-
         public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
             this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
-
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
-
         public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
-
         public Builder useManagedDisks(@Nullable String useManagedDisks) {
             this.useManagedDisks = useManagedDisks;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
-
+        public Builder vmNics(VMNicDetailsResponse... vmNics) {
+            return vmNics(List.of(vmNics));
+        }
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
-
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
-        }
-        public HyperVReplicaAzureReplicationDetailsResponse build() {
+        }        public HyperVReplicaAzureReplicationDetailsResponse build() {
             return new HyperVReplicaAzureReplicationDetailsResponse(azureVmDiskDetails, enableRdpOnTargetOption, encryption, initialReplicationDetails, instanceType, lastReplicatedTime, lastRpoCalculatedTime, licenseType, oSDetails, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMSize, recoveryAzureVmName, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, useManagedDisks, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }
     }

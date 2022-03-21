@@ -60,8 +60,7 @@ public final class AssignedStandardItemResponse extends io.pulumi.resources.Invo
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public AssignedStandardItemResponse build() {
+        }        public AssignedStandardItemResponse build() {
             return new AssignedStandardItemResponse(id);
         }
     }

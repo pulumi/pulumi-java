@@ -51,8 +51,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput(resourceArn);
         }
     }

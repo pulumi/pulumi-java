@@ -77,22 +77,18 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder terminationWaitTimeInMinutes(@Nullable Output<Integer> terminationWaitTimeInMinutes) {
             this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
             return this;
         }
-
         public Builder terminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
             this.terminationWaitTimeInMinutes = Output.ofNullable(terminationWaitTimeInMinutes);
             return this;
-        }
-        public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs build() {
+        }        public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs build() {
             return new DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs(action, terminationWaitTimeInMinutes);
         }
     }

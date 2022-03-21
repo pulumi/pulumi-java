@@ -114,42 +114,34 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends io.pulumi.resour
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder partition(@Nullable Output<Integer> partition) {
             this.partition = partition;
             return this;
         }
-
         public Builder partition(@Nullable Integer partition) {
             this.partition = Output.ofNullable(partition);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder volumeID(Output<String> volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
-
         public Builder volumeID(String volumeID) {
             this.volumeID = Output.of(Objects.requireNonNull(volumeID));
             return this;
-        }
-        public AWSElasticBlockStoreVolumeSourceArgs build() {
+        }        public AWSElasticBlockStoreVolumeSourceArgs build() {
             return new AWSElasticBlockStoreVolumeSourceArgs(fsType, partition, readOnly, volumeID);
         }
     }

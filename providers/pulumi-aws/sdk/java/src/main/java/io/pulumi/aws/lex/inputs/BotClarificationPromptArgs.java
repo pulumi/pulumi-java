@@ -97,32 +97,29 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
-
         public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Output.of(Objects.requireNonNull(maxAttempts));
             return this;
         }
-
         public Builder messages(Output<List<BotClarificationPromptMessageArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
         public Builder messages(List<BotClarificationPromptMessageArgs> messages) {
             this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
-
+        public Builder messages(BotClarificationPromptMessageArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Output.ofNullable(responseCard);
             return this;
-        }
-        public BotClarificationPromptArgs build() {
+        }        public BotClarificationPromptArgs build() {
             return new BotClarificationPromptArgs(maxAttempts, messages, responseCard);
         }
     }

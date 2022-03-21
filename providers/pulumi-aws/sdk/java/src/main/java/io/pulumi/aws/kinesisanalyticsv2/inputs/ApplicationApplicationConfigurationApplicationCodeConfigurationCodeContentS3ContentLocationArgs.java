@@ -90,32 +90,26 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
-
         public Builder fileKey(Output<String> fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
-
         public Builder fileKey(String fileKey) {
             this.fileKey = Output.of(Objects.requireNonNull(fileKey));
             return this;
         }
-
         public Builder objectVersion(@Nullable Output<String> objectVersion) {
             this.objectVersion = objectVersion;
             return this;
         }
-
         public Builder objectVersion(@Nullable String objectVersion) {
             this.objectVersion = Output.ofNullable(objectVersion);
             return this;
-        }
-        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs build() {
+        }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(bucketArn, fileKey, objectVersion);
         }
     }

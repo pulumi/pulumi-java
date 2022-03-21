@@ -56,7 +56,9 @@ public final class GetInfrastructureConfigurationLogging extends io.pulumi.resou
             this.s3Logs = Objects.requireNonNull(s3Logs);
             return this;
         }
-        public GetInfrastructureConfigurationLogging build() {
+        public Builder s3Logs(GetInfrastructureConfigurationLoggingS3Log... s3Logs) {
+            return s3Logs(List.of(s3Logs));
+        }        public GetInfrastructureConfigurationLogging build() {
             return new GetInfrastructureConfigurationLogging(s3Logs);
         }
     }

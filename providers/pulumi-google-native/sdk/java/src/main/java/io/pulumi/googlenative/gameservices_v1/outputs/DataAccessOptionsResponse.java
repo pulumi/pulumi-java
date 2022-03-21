@@ -43,8 +43,7 @@ public final class DataAccessOptionsResponse {
         public Builder logMode(String logMode) {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
-        }
-        public DataAccessOptionsResponse build() {
+        }        public DataAccessOptionsResponse build() {
             return new DataAccessOptionsResponse(logMode);
         }
     }

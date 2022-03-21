@@ -113,42 +113,34 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ParameterType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public WorkflowParameterArgs build() {
+        }        public WorkflowParameterArgs build() {
             return new WorkflowParameterArgs(description, metadata, type, value);
         }
     }

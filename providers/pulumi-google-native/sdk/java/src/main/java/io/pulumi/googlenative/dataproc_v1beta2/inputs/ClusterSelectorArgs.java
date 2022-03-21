@@ -79,22 +79,18 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
-
         public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Output.of(Objects.requireNonNull(clusterLabels));
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public ClusterSelectorArgs build() {
+        }        public ClusterSelectorArgs build() {
             return new ClusterSelectorArgs(clusterLabels, zone);
         }
     }

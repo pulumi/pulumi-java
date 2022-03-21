@@ -129,52 +129,42 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
             this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
             return this;
         }
-
         public Builder base64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
             this.base64EncodedCassandraYamlFragment = Output.ofNullable(base64EncodedCassandraYamlFragment);
             return this;
         }
-
         public Builder dataCenterLocation(@Nullable Output<String> dataCenterLocation) {
             this.dataCenterLocation = dataCenterLocation;
             return this;
         }
-
         public Builder dataCenterLocation(@Nullable String dataCenterLocation) {
             this.dataCenterLocation = Output.ofNullable(dataCenterLocation);
             return this;
         }
-
         public Builder delegatedSubnetId(@Nullable Output<String> delegatedSubnetId) {
             this.delegatedSubnetId = delegatedSubnetId;
             return this;
         }
-
         public Builder delegatedSubnetId(@Nullable String delegatedSubnetId) {
             this.delegatedSubnetId = Output.ofNullable(delegatedSubnetId);
             return this;
         }
-
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
-        }
-        public DataCenterResourcePropertiesArgs build() {
+        }        public DataCenterResourcePropertiesArgs build() {
             return new DataCenterResourcePropertiesArgs(base64EncodedCassandraYamlFragment, dataCenterLocation, delegatedSubnetId, nodeCount, provisioningState);
         }
     }

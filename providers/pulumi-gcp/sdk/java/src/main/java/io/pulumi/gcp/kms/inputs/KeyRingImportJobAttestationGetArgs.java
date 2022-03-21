@@ -66,22 +66,18 @@ public final class KeyRingImportJobAttestationGetArgs extends io.pulumi.resource
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
-        }
-        public KeyRingImportJobAttestationGetArgs build() {
+        }        public KeyRingImportJobAttestationGetArgs build() {
             return new KeyRingImportJobAttestationGetArgs(content, format);
         }
     }

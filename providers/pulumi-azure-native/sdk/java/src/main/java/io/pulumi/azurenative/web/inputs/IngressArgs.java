@@ -128,52 +128,45 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
-
         public Builder external(@Nullable Output<Boolean> external) {
             this.external = external;
             return this;
         }
-
         public Builder external(@Nullable Boolean external) {
             this.external = Output.ofNullable(external);
             return this;
         }
-
         public Builder targetPort(@Nullable Output<Integer> targetPort) {
             this.targetPort = targetPort;
             return this;
         }
-
         public Builder targetPort(@Nullable Integer targetPort) {
             this.targetPort = Output.ofNullable(targetPort);
             return this;
         }
-
         public Builder traffic(@Nullable Output<List<TrafficWeightArgs>> traffic) {
             this.traffic = traffic;
             return this;
         }
-
         public Builder traffic(@Nullable List<TrafficWeightArgs> traffic) {
             this.traffic = Output.ofNullable(traffic);
             return this;
         }
-
+        public Builder traffic(TrafficWeightArgs... traffic) {
+            return traffic(List.of(traffic));
+        }
         public Builder transport(@Nullable Output<Either<String,IngressTransportMethod>> transport) {
             this.transport = transport;
             return this;
         }
-
         public Builder transport(@Nullable Either<String,IngressTransportMethod> transport) {
             this.transport = Output.ofNullable(transport);
             return this;
-        }
-        public IngressArgs build() {
+        }        public IngressArgs build() {
             return new IngressArgs(allowInsecure, external, targetPort, traffic, transport);
         }
     }

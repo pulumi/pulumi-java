@@ -54,12 +54,13 @@ public final class ListenerRulePathPatternConfigArgs extends io.pulumi.resources
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ListenerRulePathPatternConfigArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRulePathPatternConfigArgs build() {
             return new ListenerRulePathPatternConfigArgs(values);
         }
     }

@@ -213,102 +213,82 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
             this.allowTestDevices = Objects.requireNonNull(allowTestDevices);
             return this;
         }
-
         public Builder allowTestDevices(Boolean allowTestDevices) {
             this.allowTestDevices = Output.of(Objects.requireNonNull(allowTestDevices));
             return this;
         }
-
         public Builder beginDate(@Nullable Output<String> beginDate) {
             this.beginDate = beginDate;
             return this;
         }
-
         public Builder beginDate(@Nullable String beginDate) {
             this.beginDate = Output.ofNullable(beginDate);
             return this;
         }
-
         public Builder contentKeyLocation(Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation) {
             this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation);
             return this;
         }
-
         public Builder contentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs> contentKeyLocation) {
             this.contentKeyLocation = Output.of(Objects.requireNonNull(contentKeyLocation));
             return this;
         }
-
         public Builder contentType(Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(Either<String,ContentKeyPolicyPlayReadyContentType> contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder gracePeriod(@Nullable Output<String> gracePeriod) {
             this.gracePeriod = gracePeriod;
             return this;
         }
-
         public Builder gracePeriod(@Nullable String gracePeriod) {
             this.gracePeriod = Output.ofNullable(gracePeriod);
             return this;
         }
-
         public Builder licenseType(Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
-
         public Builder licenseType(Either<String,ContentKeyPolicyPlayReadyLicenseType> licenseType) {
             this.licenseType = Output.of(Objects.requireNonNull(licenseType));
             return this;
         }
-
         public Builder playRight(@Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight) {
             this.playRight = playRight;
             return this;
         }
-
         public Builder playRight(@Nullable ContentKeyPolicyPlayReadyPlayRightArgs playRight) {
             this.playRight = Output.ofNullable(playRight);
             return this;
         }
-
         public Builder relativeBeginDate(@Nullable Output<String> relativeBeginDate) {
             this.relativeBeginDate = relativeBeginDate;
             return this;
         }
-
         public Builder relativeBeginDate(@Nullable String relativeBeginDate) {
             this.relativeBeginDate = Output.ofNullable(relativeBeginDate);
             return this;
         }
-
         public Builder relativeExpirationDate(@Nullable Output<String> relativeExpirationDate) {
             this.relativeExpirationDate = relativeExpirationDate;
             return this;
         }
-
         public Builder relativeExpirationDate(@Nullable String relativeExpirationDate) {
             this.relativeExpirationDate = Output.ofNullable(relativeExpirationDate);
             return this;
-        }
-        public ContentKeyPolicyPlayReadyLicenseArgs build() {
+        }        public ContentKeyPolicyPlayReadyLicenseArgs build() {
             return new ContentKeyPolicyPlayReadyLicenseArgs(allowTestDevices, beginDate, contentKeyLocation, contentType, expirationDate, gracePeriod, licenseType, playRight, relativeBeginDate, relativeExpirationDate);
         }
     }

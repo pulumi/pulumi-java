@@ -155,37 +155,36 @@ public final class ManagedIntegrationRuntimeStatusResponse {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dataFactoryName(String dataFactoryName) {
             this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
             return this;
         }
-
         public Builder lastOperation(ManagedIntegrationRuntimeOperationResultResponse lastOperation) {
             this.lastOperation = Objects.requireNonNull(lastOperation);
             return this;
         }
-
         public Builder nodes(List<ManagedIntegrationRuntimeNodeResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
+        public Builder nodes(ManagedIntegrationRuntimeNodeResponse... nodes) {
+            return nodes(List.of(nodes));
+        }
         public Builder otherErrors(List<ManagedIntegrationRuntimeErrorResponse> otherErrors) {
             this.otherErrors = Objects.requireNonNull(otherErrors);
             return this;
         }
-
+        public Builder otherErrors(ManagedIntegrationRuntimeErrorResponse... otherErrors) {
+            return otherErrors(List.of(otherErrors));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagedIntegrationRuntimeStatusResponse build() {
+        }        public ManagedIntegrationRuntimeStatusResponse build() {
             return new ManagedIntegrationRuntimeStatusResponse(createTime, dataFactoryName, lastOperation, nodes, otherErrors, state, type);
         }
     }

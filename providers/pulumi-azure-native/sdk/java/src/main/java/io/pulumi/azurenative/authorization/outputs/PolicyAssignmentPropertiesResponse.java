@@ -89,17 +89,14 @@ public final class PolicyAssignmentPropertiesResponse {
             this.policy = policy;
             return this;
         }
-
         public Builder roleDefinition(@Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition) {
             this.roleDefinition = roleDefinition;
             return this;
         }
-
         public Builder scope(@Nullable PolicyAssignmentPropertiesResponseScope scope) {
             this.scope = scope;
             return this;
-        }
-        public PolicyAssignmentPropertiesResponse build() {
+        }        public PolicyAssignmentPropertiesResponse build() {
             return new PolicyAssignmentPropertiesResponse(policy, roleDefinition, scope);
         }
     }

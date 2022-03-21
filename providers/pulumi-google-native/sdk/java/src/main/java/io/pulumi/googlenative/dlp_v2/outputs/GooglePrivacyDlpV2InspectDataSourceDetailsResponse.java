@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
             this.requestedOptions = Objects.requireNonNull(requestedOptions);
             return this;
         }
-
         public Builder result(GooglePrivacyDlpV2ResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
-        }
-        public GooglePrivacyDlpV2InspectDataSourceDetailsResponse build() {
+        }        public GooglePrivacyDlpV2InspectDataSourceDetailsResponse build() {
             return new GooglePrivacyDlpV2InspectDataSourceDetailsResponse(requestedOptions, result);
         }
     }

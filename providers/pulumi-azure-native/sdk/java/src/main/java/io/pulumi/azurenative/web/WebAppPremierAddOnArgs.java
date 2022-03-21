@@ -219,112 +219,90 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder marketplaceOffer(@Nullable Output<String> marketplaceOffer) {
             this.marketplaceOffer = marketplaceOffer;
             return this;
         }
-
         public Builder marketplaceOffer(@Nullable String marketplaceOffer) {
             this.marketplaceOffer = Output.ofNullable(marketplaceOffer);
             return this;
         }
-
         public Builder marketplacePublisher(@Nullable Output<String> marketplacePublisher) {
             this.marketplacePublisher = marketplacePublisher;
             return this;
         }
-
         public Builder marketplacePublisher(@Nullable String marketplacePublisher) {
             this.marketplacePublisher = Output.ofNullable(marketplacePublisher);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder premierAddOnName(@Nullable Output<String> premierAddOnName) {
             this.premierAddOnName = premierAddOnName;
             return this;
         }
-
         public Builder premierAddOnName(@Nullable String premierAddOnName) {
             this.premierAddOnName = Output.ofNullable(premierAddOnName);
             return this;
         }
-
         public Builder product(@Nullable Output<String> product) {
             this.product = product;
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = Output.ofNullable(product);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = Output.ofNullable(vendor);
             return this;
-        }
-        public WebAppPremierAddOnArgs build() {
+        }        public WebAppPremierAddOnArgs build() {
             return new WebAppPremierAddOnArgs(kind, location, marketplaceOffer, marketplacePublisher, name, premierAddOnName, product, resourceGroupName, sku, tags, vendor);
         }
     }

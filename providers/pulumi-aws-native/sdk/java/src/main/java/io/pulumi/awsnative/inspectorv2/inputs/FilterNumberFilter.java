@@ -66,12 +66,10 @@ public final class FilterNumberFilter extends io.pulumi.resources.InvokeArgs {
             this.lowerInclusive = lowerInclusive;
             return this;
         }
-
         public Builder upperInclusive(@Nullable Double upperInclusive) {
             this.upperInclusive = upperInclusive;
             return this;
-        }
-        public FilterNumberFilter build() {
+        }        public FilterNumberFilter build() {
             return new FilterNumberFilter(lowerInclusive, upperInclusive);
         }
     }

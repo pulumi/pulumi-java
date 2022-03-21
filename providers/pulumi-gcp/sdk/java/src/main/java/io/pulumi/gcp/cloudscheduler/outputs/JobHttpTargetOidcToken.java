@@ -75,12 +75,10 @@ public final class JobHttpTargetOidcToken {
             this.audience = audience;
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
-        }
-        public JobHttpTargetOidcToken build() {
+        }        public JobHttpTargetOidcToken build() {
             return new JobHttpTargetOidcToken(audience, serviceAccountEmail);
         }
     }

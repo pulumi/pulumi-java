@@ -108,37 +108,39 @@ public final class GetFeatureResult {
             this.arn = arn;
             return this;
         }
-
         public Builder defaultVariation(@Nullable String defaultVariation) {
             this.defaultVariation = defaultVariation;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder entityOverrides(@Nullable List<FeatureEntityOverride> entityOverrides) {
             this.entityOverrides = entityOverrides;
             return this;
         }
-
+        public Builder entityOverrides(FeatureEntityOverride... entityOverrides) {
+            return entityOverrides(List.of(entityOverrides));
+        }
         public Builder evaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
             this.evaluationStrategy = evaluationStrategy;
             return this;
         }
-
         public Builder tags(@Nullable List<FeatureTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(FeatureTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder variations(@Nullable List<FeatureVariationObject> variations) {
             this.variations = variations;
             return this;
         }
-        public GetFeatureResult build() {
+        public Builder variations(FeatureVariationObject... variations) {
+            return variations(List.of(variations));
+        }        public GetFeatureResult build() {
             return new GetFeatureResult(arn, defaultVariation, description, entityOverrides, evaluationStrategy, tags, variations);
         }
     }

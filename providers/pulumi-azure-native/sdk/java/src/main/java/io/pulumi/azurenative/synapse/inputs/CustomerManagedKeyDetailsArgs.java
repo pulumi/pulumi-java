@@ -61,12 +61,10 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable WorkspaceKeyDetailsArgs key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public CustomerManagedKeyDetailsArgs build() {
+        }        public CustomerManagedKeyDetailsArgs build() {
             return new CustomerManagedKeyDetailsArgs(key);
         }
     }

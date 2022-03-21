@@ -138,37 +138,30 @@ public final class MonitorPropertiesResponse {
             this.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
         }
-
         public Builder liftrResourceCategory(String liftrResourceCategory) {
             this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
             return this;
         }
-
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
             return this;
         }
-
         public Builder marketplaceSubscriptionStatus(String marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = Objects.requireNonNull(marketplaceSubscriptionStatus);
             return this;
         }
-
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder userInfo(@Nullable UserInfoResponse userInfo) {
             this.userInfo = userInfo;
             return this;
-        }
-        public MonitorPropertiesResponse build() {
+        }        public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(datadogOrganizationProperties, liftrResourceCategory, liftrResourcePreference, marketplaceSubscriptionStatus, monitoringStatus, provisioningState, userInfo);
         }
     }

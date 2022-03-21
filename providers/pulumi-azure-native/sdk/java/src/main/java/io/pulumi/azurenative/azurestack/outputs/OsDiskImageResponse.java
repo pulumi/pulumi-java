@@ -69,12 +69,10 @@ public final class OsDiskImageResponse {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
-
         public Builder sourceBlobSasUri(String sourceBlobSasUri) {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
-        }
-        public OsDiskImageResponse build() {
+        }        public OsDiskImageResponse build() {
             return new OsDiskImageResponse(operatingSystem, sourceBlobSasUri);
         }
     }

@@ -54,12 +54,10 @@ public final class ModelQualityJobDefinitionModelQualityJobInput {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
-
         public Builder groundTruthS3Input(ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
             this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
             return this;
-        }
-        public ModelQualityJobDefinitionModelQualityJobInput build() {
+        }        public ModelQualityJobDefinitionModelQualityJobInput build() {
             return new ModelQualityJobDefinitionModelQualityJobInput(endpointInput, groundTruthS3Input);
         }
     }

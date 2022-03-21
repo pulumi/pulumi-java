@@ -51,8 +51,7 @@ public final class UserPoolUserPoolAddOns {
         public Builder advancedSecurityMode(String advancedSecurityMode) {
             this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode);
             return this;
-        }
-        public UserPoolUserPoolAddOns build() {
+        }        public UserPoolUserPoolAddOns build() {
             return new UserPoolUserPoolAddOns(advancedSecurityMode);
         }
     }

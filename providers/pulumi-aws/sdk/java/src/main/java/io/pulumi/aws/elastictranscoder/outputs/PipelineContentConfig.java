@@ -71,12 +71,10 @@ public final class PipelineContentConfig {
             this.bucket = bucket;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
-        }
-        public PipelineContentConfig build() {
+        }        public PipelineContentConfig build() {
             return new PipelineContentConfig(bucket, storageClass);
         }
     }

@@ -53,7 +53,9 @@ public final class TableDisplayOptionsResponse {
             this.shownColumns = Objects.requireNonNull(shownColumns);
             return this;
         }
-        public TableDisplayOptionsResponse build() {
+        public Builder shownColumns(String... shownColumns) {
+            return shownColumns(List.of(shownColumns));
+        }        public TableDisplayOptionsResponse build() {
             return new TableDisplayOptionsResponse(shownColumns);
         }
     }

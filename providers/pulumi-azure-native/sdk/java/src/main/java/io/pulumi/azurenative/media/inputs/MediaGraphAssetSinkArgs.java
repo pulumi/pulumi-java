@@ -111,42 +111,37 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
-
         public Builder inputs(Output<List<String>> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
         public Builder inputs(List<String> inputs) {
             this.inputs = Output.of(Objects.requireNonNull(inputs));
             return this;
         }
-
+        public Builder inputs(String... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public MediaGraphAssetSinkArgs build() {
+        }        public MediaGraphAssetSinkArgs build() {
             return new MediaGraphAssetSinkArgs(assetName, inputs, name, odataType);
         }
     }

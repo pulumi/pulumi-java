@@ -81,22 +81,18 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public RetentionPolicyArgs build() {
+        }        public RetentionPolicyArgs build() {
             return new RetentionPolicyArgs(days, status);
         }
     }

@@ -85,17 +85,14 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObje
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generationNumber(String generationNumber) {
             this.generationNumber = Objects.requireNonNull(generationNumber);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject build() {
+        }        public PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject build() {
             return new PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject(bucket, generationNumber, object);
         }
     }

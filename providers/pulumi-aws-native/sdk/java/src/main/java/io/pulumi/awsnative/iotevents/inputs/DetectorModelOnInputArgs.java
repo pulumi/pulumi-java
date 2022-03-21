@@ -80,22 +80,24 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable List<DetectorModelEventArgs> events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-
+        public Builder events(DetectorModelEventArgs... events) {
+            return events(List.of(events));
+        }
         public Builder transitionEvents(@Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents) {
             this.transitionEvents = transitionEvents;
             return this;
         }
-
         public Builder transitionEvents(@Nullable List<DetectorModelTransitionEventArgs> transitionEvents) {
             this.transitionEvents = Output.ofNullable(transitionEvents);
             return this;
         }
-        public DetectorModelOnInputArgs build() {
+        public Builder transitionEvents(DetectorModelTransitionEventArgs... transitionEvents) {
+            return transitionEvents(List.of(transitionEvents));
+        }        public DetectorModelOnInputArgs build() {
             return new DetectorModelOnInputArgs(events, transitionEvents);
         }
     }

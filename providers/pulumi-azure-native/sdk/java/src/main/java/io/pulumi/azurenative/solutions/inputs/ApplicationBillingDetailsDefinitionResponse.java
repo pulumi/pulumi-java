@@ -60,8 +60,7 @@ public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
             this.resourceUsageId = resourceUsageId;
             return this;
-        }
-        public ApplicationBillingDetailsDefinitionResponse build() {
+        }        public ApplicationBillingDetailsDefinitionResponse build() {
             return new ApplicationBillingDetailsDefinitionResponse(resourceUsageId);
         }
     }

@@ -92,17 +92,14 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
             this.objectName = Objects.requireNonNull(objectName);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder updateAction(String updateAction) {
             this.updateAction = Objects.requireNonNull(updateAction);
             return this;
-        }
-        public SchemaComparisonValidationResultTypeResponse build() {
+        }        public SchemaComparisonValidationResultTypeResponse build() {
             return new SchemaComparisonValidationResultTypeResponse(objectName, objectType, updateAction);
         }
     }

@@ -91,32 +91,26 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder routingStrategy(Output<AliasRoutingStrategyArgs> routingStrategy) {
             this.routingStrategy = Objects.requireNonNull(routingStrategy);
             return this;
         }
-
         public Builder routingStrategy(AliasRoutingStrategyArgs routingStrategy) {
             this.routingStrategy = Output.of(Objects.requireNonNull(routingStrategy));
             return this;
-        }
-        public AliasArgs build() {
+        }        public AliasArgs build() {
             return new AliasArgs(description, name, routingStrategy);
         }
     }

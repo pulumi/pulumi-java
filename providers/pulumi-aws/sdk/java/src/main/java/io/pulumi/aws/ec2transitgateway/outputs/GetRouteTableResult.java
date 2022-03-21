@@ -146,37 +146,33 @@ public final class GetRouteTableResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder defaultAssociationRouteTable(Boolean defaultAssociationRouteTable) {
             this.defaultAssociationRouteTable = Objects.requireNonNull(defaultAssociationRouteTable);
             return this;
         }
-
         public Builder defaultPropagationRouteTable(Boolean defaultPropagationRouteTable) {
             this.defaultPropagationRouteTable = Objects.requireNonNull(defaultPropagationRouteTable);
             return this;
         }
-
         public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetRouteTableFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
-        }
-        public GetRouteTableResult build() {
+        }        public GetRouteTableResult build() {
             return new GetRouteTableResult(arn, defaultAssociationRouteTable, defaultPropagationRouteTable, filters, id, tags, transitGatewayId);
         }
     }

@@ -73,17 +73,14 @@ public final class DetectorModelAssetPropertyValue {
             this.quality = quality;
             return this;
         }
-
         public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestamp timestamp) {
             this.timestamp = timestamp;
             return this;
         }
-
         public Builder value(DetectorModelAssetPropertyVariant value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DetectorModelAssetPropertyValue build() {
+        }        public DetectorModelAssetPropertyValue build() {
             return new DetectorModelAssetPropertyValue(quality, timestamp, value);
         }
     }

@@ -70,12 +70,16 @@ public final class DataQualityJobDefinitionVpcConfig {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-        public DataQualityJobDefinitionVpcConfig build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public DataQualityJobDefinitionVpcConfig build() {
             return new DataQualityJobDefinitionVpcConfig(securityGroupIds, subnets);
         }
     }

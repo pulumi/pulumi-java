@@ -75,22 +75,18 @@ public final class ImageImageTestsConfigurationArgs extends io.pulumi.resources.
             this.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
-
         public Builder imageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
             this.imageTestsEnabled = Output.ofNullable(imageTestsEnabled);
             return this;
         }
-
         public Builder timeoutMinutes(@Nullable Output<Integer> timeoutMinutes) {
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }
-
         public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
             this.timeoutMinutes = Output.ofNullable(timeoutMinutes);
             return this;
-        }
-        public ImageImageTestsConfigurationArgs build() {
+        }        public ImageImageTestsConfigurationArgs build() {
             return new ImageImageTestsConfigurationArgs(imageTestsEnabled, timeoutMinutes);
         }
     }

@@ -61,12 +61,10 @@ public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArg
             this.resourceLink = resourceLink;
             return this;
         }
-
         public Builder resourceLink(@Nullable String resourceLink) {
             this.resourceLink = Output.ofNullable(resourceLink);
             return this;
-        }
-        public MultiCloudClusterArgs build() {
+        }        public MultiCloudClusterArgs build() {
             return new MultiCloudClusterArgs(resourceLink);
         }
     }

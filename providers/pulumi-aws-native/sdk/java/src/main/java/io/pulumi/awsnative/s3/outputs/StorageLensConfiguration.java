@@ -124,42 +124,34 @@ public final class StorageLensConfiguration {
             this.accountLevel = Objects.requireNonNull(accountLevel);
             return this;
         }
-
         public Builder awsOrg(@Nullable StorageLensAwsOrg awsOrg) {
             this.awsOrg = awsOrg;
             return this;
         }
-
         public Builder dataExport(@Nullable StorageLensDataExport dataExport) {
             this.dataExport = dataExport;
             return this;
         }
-
         public Builder exclude(@Nullable StorageLensBucketsAndRegions exclude) {
             this.exclude = exclude;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder include(@Nullable StorageLensBucketsAndRegions include) {
             this.include = include;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder storageLensArn(@Nullable String storageLensArn) {
             this.storageLensArn = storageLensArn;
             return this;
-        }
-        public StorageLensConfiguration build() {
+        }        public StorageLensConfiguration build() {
             return new StorageLensConfiguration(accountLevel, awsOrg, dataExport, exclude, id, include, isEnabled, storageLensArn);
         }
     }

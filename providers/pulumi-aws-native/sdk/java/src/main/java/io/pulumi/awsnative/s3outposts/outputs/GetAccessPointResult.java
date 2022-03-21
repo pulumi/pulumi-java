@@ -72,12 +72,10 @@ public final class GetAccessPointResult {
             this.arn = arn;
             return this;
         }
-
         public Builder policy(@Nullable Object policy) {
             this.policy = policy;
             return this;
-        }
-        public GetAccessPointResult build() {
+        }        public GetAccessPointResult build() {
             return new GetAccessPointResult(arn, policy);
         }
     }

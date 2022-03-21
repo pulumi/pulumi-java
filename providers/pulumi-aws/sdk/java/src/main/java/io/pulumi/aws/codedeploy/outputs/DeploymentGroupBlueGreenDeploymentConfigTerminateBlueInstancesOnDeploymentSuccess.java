@@ -76,12 +76,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
             this.action = action;
             return this;
         }
-
         public Builder terminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
             this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
             return this;
-        }
-        public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess build() {
+        }        public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess build() {
             return new DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess(action, terminationWaitTimeInMinutes);
         }
     }

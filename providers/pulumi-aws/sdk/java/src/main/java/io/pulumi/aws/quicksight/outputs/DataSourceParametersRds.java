@@ -69,12 +69,10 @@ public final class DataSourceParametersRds {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
-        }
-        public DataSourceParametersRds build() {
+        }        public DataSourceParametersRds build() {
             return new DataSourceParametersRds(database, instanceId);
         }
     }

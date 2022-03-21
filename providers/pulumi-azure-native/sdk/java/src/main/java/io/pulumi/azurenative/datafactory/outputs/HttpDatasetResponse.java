@@ -281,72 +281,61 @@ public final class HttpDatasetResponse {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder format(@Nullable Object format) {
             this.format = format;
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder relativeUrl(@Nullable Object relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
-
         public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = requestBody;
             return this;
         }
-
         public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HttpDatasetResponse build() {
+        }        public HttpDatasetResponse build() {
             return new HttpDatasetResponse(additionalHeaders, annotations, compression, description, folder, format, linkedServiceName, parameters, relativeUrl, requestBody, requestMethod, schema, structure, type);
         }
     }

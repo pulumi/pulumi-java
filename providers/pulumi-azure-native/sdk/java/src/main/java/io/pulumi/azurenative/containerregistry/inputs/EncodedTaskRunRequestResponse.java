@@ -247,62 +247,53 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
             this.agentConfiguration = agentConfiguration;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder credentials(@Nullable CredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder encodedTaskContent(String encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
-
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder platform(PlatformPropertiesResponse platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }
-        public EncodedTaskRunRequestResponse build() {
+        public Builder values(SetValueResponse... values) {
+            return values(List.of(values));
+        }        public EncodedTaskRunRequestResponse build() {
             return new EncodedTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, encodedTaskContent, encodedValuesContent, isArchiveEnabled, logTemplate, platform, sourceLocation, timeout, type, values);
         }
     }

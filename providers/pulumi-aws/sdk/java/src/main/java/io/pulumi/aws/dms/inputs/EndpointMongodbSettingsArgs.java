@@ -138,62 +138,50 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
             this.authMechanism = authMechanism;
             return this;
         }
-
         public Builder authMechanism(@Nullable String authMechanism) {
             this.authMechanism = Output.ofNullable(authMechanism);
             return this;
         }
-
         public Builder authSource(@Nullable Output<String> authSource) {
             this.authSource = authSource;
             return this;
         }
-
         public Builder authSource(@Nullable String authSource) {
             this.authSource = Output.ofNullable(authSource);
             return this;
         }
-
         public Builder authType(@Nullable Output<String> authType) {
             this.authType = authType;
             return this;
         }
-
         public Builder authType(@Nullable String authType) {
             this.authType = Output.ofNullable(authType);
             return this;
         }
-
         public Builder docsToInvestigate(@Nullable Output<String> docsToInvestigate) {
             this.docsToInvestigate = docsToInvestigate;
             return this;
         }
-
         public Builder docsToInvestigate(@Nullable String docsToInvestigate) {
             this.docsToInvestigate = Output.ofNullable(docsToInvestigate);
             return this;
         }
-
         public Builder extractDocId(@Nullable Output<String> extractDocId) {
             this.extractDocId = extractDocId;
             return this;
         }
-
         public Builder extractDocId(@Nullable String extractDocId) {
             this.extractDocId = Output.ofNullable(extractDocId);
             return this;
         }
-
         public Builder nestingLevel(@Nullable Output<String> nestingLevel) {
             this.nestingLevel = nestingLevel;
             return this;
         }
-
         public Builder nestingLevel(@Nullable String nestingLevel) {
             this.nestingLevel = Output.ofNullable(nestingLevel);
             return this;
-        }
-        public EndpointMongodbSettingsArgs build() {
+        }        public EndpointMongodbSettingsArgs build() {
             return new EndpointMongodbSettingsArgs(authMechanism, authSource, authType, docsToInvestigate, extractDocId, nestingLevel);
         }
     }

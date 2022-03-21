@@ -127,32 +127,38 @@ public final class DirectoryConnectSettings {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder connectIps(@Nullable List<String> connectIps) {
             this.connectIps = connectIps;
             return this;
         }
-
+        public Builder connectIps(String... connectIps) {
+            return connectIps(List.of(connectIps));
+        }
         public Builder customerDnsIps(List<String> customerDnsIps) {
             this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
             return this;
         }
-
+        public Builder customerDnsIps(String... customerDnsIps) {
+            return customerDnsIps(List.of(customerDnsIps));
+        }
         public Builder customerUsername(String customerUsername) {
             this.customerUsername = Objects.requireNonNull(customerUsername);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public DirectoryConnectSettings build() {
+        }        public DirectoryConnectSettings build() {
             return new DirectoryConnectSettings(availabilityZones, connectIps, customerDnsIps, customerUsername, subnetIds, vpcId);
         }
     }

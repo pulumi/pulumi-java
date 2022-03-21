@@ -88,17 +88,14 @@ public final class PredictionResponseGrades {
             this.gradeName = gradeName;
             return this;
         }
-
         public Builder maxScoreThreshold(@Nullable Integer maxScoreThreshold) {
             this.maxScoreThreshold = maxScoreThreshold;
             return this;
         }
-
         public Builder minScoreThreshold(@Nullable Integer minScoreThreshold) {
             this.minScoreThreshold = minScoreThreshold;
             return this;
-        }
-        public PredictionResponseGrades build() {
+        }        public PredictionResponseGrades build() {
             return new PredictionResponseGrades(gradeName, maxScoreThreshold, minScoreThreshold);
         }
     }

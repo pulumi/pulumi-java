@@ -78,12 +78,10 @@ public final class RestorePointCollectionSourcePropertiesResponse extends io.pul
             this.id = id;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public RestorePointCollectionSourcePropertiesResponse build() {
+        }        public RestorePointCollectionSourcePropertiesResponse build() {
             return new RestorePointCollectionSourcePropertiesResponse(id, location);
         }
     }

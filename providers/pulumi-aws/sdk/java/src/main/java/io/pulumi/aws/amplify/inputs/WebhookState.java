@@ -122,52 +122,42 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder branchName(@Nullable Output<String> branchName) {
             this.branchName = branchName;
             return this;
         }
-
         public Builder branchName(@Nullable String branchName) {
             this.branchName = Output.ofNullable(branchName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public WebhookState build() {
+        }        public WebhookState build() {
             return new WebhookState(appId, arn, branchName, description, url);
         }
     }

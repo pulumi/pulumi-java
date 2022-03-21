@@ -51,8 +51,7 @@ public final class GetConsoleResult {
         public Builder properties(ConsolePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public GetConsoleResult build() {
+        }        public GetConsoleResult build() {
             return new GetConsoleResult(properties);
         }
     }

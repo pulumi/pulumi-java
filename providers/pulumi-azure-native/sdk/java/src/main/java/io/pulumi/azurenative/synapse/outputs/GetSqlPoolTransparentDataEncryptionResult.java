@@ -119,27 +119,22 @@ public final class GetSqlPoolTransparentDataEncryptionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSqlPoolTransparentDataEncryptionResult build() {
+        }        public GetSqlPoolTransparentDataEncryptionResult build() {
             return new GetSqlPoolTransparentDataEncryptionResult(id, location, name, status, type);
         }
     }

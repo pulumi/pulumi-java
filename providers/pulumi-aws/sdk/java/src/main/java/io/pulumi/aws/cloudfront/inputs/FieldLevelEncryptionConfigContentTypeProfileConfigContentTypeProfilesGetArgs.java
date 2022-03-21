@@ -53,12 +53,13 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs build() {
+        public Builder items(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs... items) {
+            return items(List.of(items));
+        }        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs build() {
             return new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs(items);
         }
     }

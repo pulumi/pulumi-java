@@ -92,32 +92,26 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
             this.timeBasedCanary = timeBasedCanary;
             return this;
         }
-
         public Builder timeBasedCanary(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs timeBasedCanary) {
             this.timeBasedCanary = Output.ofNullable(timeBasedCanary);
             return this;
         }
-
         public Builder timeBasedLinear(@Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear) {
             this.timeBasedLinear = timeBasedLinear;
             return this;
         }
-
         public Builder timeBasedLinear(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs timeBasedLinear) {
             this.timeBasedLinear = Output.ofNullable(timeBasedLinear);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DeploymentConfigTrafficRoutingConfigArgs build() {
+        }        public DeploymentConfigTrafficRoutingConfigArgs build() {
             return new DeploymentConfigTrafficRoutingConfigArgs(timeBasedCanary, timeBasedLinear, type);
         }
     }

@@ -198,92 +198,77 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
-
         public Builder criterionType(String criterionType) {
             this.criterionType = Output.of(Objects.requireNonNull(criterionType));
             return this;
         }
-
         public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
+        public Builder dimensions(MetricDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder operator(Output<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,Operator> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
-
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             this.skipMetricValidation = Output.ofNullable(skipMetricValidation);
             return this;
         }
-
         public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             this.timeAggregation = Output.of(Objects.requireNonNull(timeAggregation));
             return this;
-        }
-        public MetricCriteriaArgs build() {
+        }        public MetricCriteriaArgs build() {
             return new MetricCriteriaArgs(criterionType, dimensions, metricName, metricNamespace, name, operator, skipMetricValidation, threshold, timeAggregation);
         }
     }

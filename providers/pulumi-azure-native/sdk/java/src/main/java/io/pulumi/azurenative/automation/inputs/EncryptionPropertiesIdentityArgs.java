@@ -61,12 +61,10 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable Object userAssignedIdentity) {
             this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
-        }
-        public EncryptionPropertiesIdentityArgs build() {
+        }        public EncryptionPropertiesIdentityArgs build() {
             return new EncryptionPropertiesIdentityArgs(userAssignedIdentity);
         }
     }

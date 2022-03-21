@@ -69,12 +69,10 @@ public final class PipelineDefinitionParameterObjectAttribute {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
-        }
-        public PipelineDefinitionParameterObjectAttribute build() {
+        }        public PipelineDefinitionParameterObjectAttribute build() {
             return new PipelineDefinitionParameterObjectAttribute(key, stringValue);
         }
     }

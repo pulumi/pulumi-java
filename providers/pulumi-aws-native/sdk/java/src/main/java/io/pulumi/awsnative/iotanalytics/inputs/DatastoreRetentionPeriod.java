@@ -67,12 +67,10 @@ public final class DatastoreRetentionPeriod extends io.pulumi.resources.InvokeAr
             this.numberOfDays = numberOfDays;
             return this;
         }
-
         public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = unlimited;
             return this;
-        }
-        public DatastoreRetentionPeriod build() {
+        }        public DatastoreRetentionPeriod build() {
             return new DatastoreRetentionPeriod(numberOfDays, unlimited);
         }
     }

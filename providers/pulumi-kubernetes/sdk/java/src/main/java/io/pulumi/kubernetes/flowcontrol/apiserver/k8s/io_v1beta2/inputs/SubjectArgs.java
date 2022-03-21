@@ -113,42 +113,34 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable GroupSubjectArgs group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<ServiceAccountSubjectArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable ServiceAccountSubjectArgs serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder user(@Nullable Output<UserSubjectArgs> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable UserSubjectArgs user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public SubjectArgs build() {
+        }        public SubjectArgs build() {
             return new SubjectArgs(group, kind, serviceAccount, user);
         }
     }

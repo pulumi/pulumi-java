@@ -54,8 +54,7 @@ public final class GetPublicTypeVersionArgs extends io.pulumi.resources.InvokeAr
         public Builder publicTypeArn(String publicTypeArn) {
             this.publicTypeArn = Objects.requireNonNull(publicTypeArn);
             return this;
-        }
-        public GetPublicTypeVersionArgs build() {
+        }        public GetPublicTypeVersionArgs build() {
             return new GetPublicTypeVersionArgs(publicTypeArn);
         }
     }

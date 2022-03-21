@@ -78,17 +78,14 @@ public final class GetNodeArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetNodeArgs build() {
+        }        public GetNodeArgs build() {
             return new GetNodeArgs(location, nodeId, project);
         }
     }

@@ -111,42 +111,37 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
-
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Output.ofNullable(endTimeOffset);
             return this;
         }
-
         public Builder inputs(@Nullable Output<List<String>> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<String> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(String... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
-        }
-        public EditAtomArgs build() {
+        }        public EditAtomArgs build() {
             return new EditAtomArgs(endTimeOffset, inputs, key, startTimeOffset);
         }
     }

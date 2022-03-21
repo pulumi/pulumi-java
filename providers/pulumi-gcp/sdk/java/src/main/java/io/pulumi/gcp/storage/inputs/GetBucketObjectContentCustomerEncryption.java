@@ -64,12 +64,10 @@ public final class GetBucketObjectContentCustomerEncryption extends io.pulumi.re
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
-
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
-        }
-        public GetBucketObjectContentCustomerEncryption build() {
+        }        public GetBucketObjectContentCustomerEncryption build() {
             return new GetBucketObjectContentCustomerEncryption(encryptionAlgorithm, encryptionKey);
         }
     }

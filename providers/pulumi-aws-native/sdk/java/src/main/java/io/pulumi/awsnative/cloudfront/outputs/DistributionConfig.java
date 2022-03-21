@@ -203,97 +203,93 @@ public final class DistributionConfig {
             this.aliases = aliases;
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder cNAMEs(@Nullable List<String> cNAMEs) {
             this.cNAMEs = cNAMEs;
             return this;
         }
-
+        public Builder cNAMEs(String... cNAMEs) {
+            return cNAMEs(List.of(cNAMEs));
+        }
         public Builder cacheBehaviors(@Nullable List<DistributionCacheBehavior> cacheBehaviors) {
             this.cacheBehaviors = cacheBehaviors;
             return this;
         }
-
+        public Builder cacheBehaviors(DistributionCacheBehavior... cacheBehaviors) {
+            return cacheBehaviors(List.of(cacheBehaviors));
+        }
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponse> customErrorResponses) {
             this.customErrorResponses = customErrorResponses;
             return this;
         }
-
+        public Builder customErrorResponses(DistributionCustomErrorResponse... customErrorResponses) {
+            return customErrorResponses(List.of(customErrorResponses));
+        }
         public Builder customOrigin(@Nullable DistributionLegacyCustomOrigin customOrigin) {
             this.customOrigin = customOrigin;
             return this;
         }
-
         public Builder defaultCacheBehavior(@Nullable DistributionDefaultCacheBehavior defaultCacheBehavior) {
             this.defaultCacheBehavior = defaultCacheBehavior;
             return this;
         }
-
         public Builder defaultRootObject(@Nullable String defaultRootObject) {
             this.defaultRootObject = defaultRootObject;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder httpVersion(@Nullable String httpVersion) {
             this.httpVersion = httpVersion;
             return this;
         }
-
         public Builder iPV6Enabled(@Nullable Boolean iPV6Enabled) {
             this.iPV6Enabled = iPV6Enabled;
             return this;
         }
-
         public Builder logging(@Nullable DistributionLogging logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder originGroups(@Nullable DistributionOriginGroups originGroups) {
             this.originGroups = originGroups;
             return this;
         }
-
         public Builder origins(@Nullable List<DistributionOrigin> origins) {
             this.origins = origins;
             return this;
         }
-
+        public Builder origins(DistributionOrigin... origins) {
+            return origins(List.of(origins));
+        }
         public Builder priceClass(@Nullable String priceClass) {
             this.priceClass = priceClass;
             return this;
         }
-
         public Builder restrictions(@Nullable DistributionRestrictions restrictions) {
             this.restrictions = restrictions;
             return this;
         }
-
         public Builder s3Origin(@Nullable DistributionLegacyS3Origin s3Origin) {
             this.s3Origin = s3Origin;
             return this;
         }
-
         public Builder viewerCertificate(@Nullable DistributionViewerCertificate viewerCertificate) {
             this.viewerCertificate = viewerCertificate;
             return this;
         }
-
         public Builder webACLId(@Nullable String webACLId) {
             this.webACLId = webACLId;
             return this;
-        }
-        public DistributionConfig build() {
+        }        public DistributionConfig build() {
             return new DistributionConfig(aliases, cNAMEs, cacheBehaviors, comment, customErrorResponses, customOrigin, defaultCacheBehavior, defaultRootObject, enabled, httpVersion, iPV6Enabled, logging, originGroups, origins, priceClass, restrictions, s3Origin, viewerCertificate, webACLId);
         }
     }

@@ -556,302 +556,320 @@ public final class GetClusterResult {
             this.addonsConfigs = Objects.requireNonNull(addonsConfigs);
             return this;
         }
-
+        public Builder addonsConfigs(GetClusterAddonsConfig... addonsConfigs) {
+            return addonsConfigs(List.of(addonsConfigs));
+        }
         public Builder authenticatorGroupsConfigs(List<GetClusterAuthenticatorGroupsConfig> authenticatorGroupsConfigs) {
             this.authenticatorGroupsConfigs = Objects.requireNonNull(authenticatorGroupsConfigs);
             return this;
         }
-
+        public Builder authenticatorGroupsConfigs(GetClusterAuthenticatorGroupsConfig... authenticatorGroupsConfigs) {
+            return authenticatorGroupsConfigs(List.of(authenticatorGroupsConfigs));
+        }
         public Builder clusterAutoscalings(List<GetClusterClusterAutoscaling> clusterAutoscalings) {
             this.clusterAutoscalings = Objects.requireNonNull(clusterAutoscalings);
             return this;
         }
-
+        public Builder clusterAutoscalings(GetClusterClusterAutoscaling... clusterAutoscalings) {
+            return clusterAutoscalings(List.of(clusterAutoscalings));
+        }
         public Builder clusterIpv4Cidr(String clusterIpv4Cidr) {
             this.clusterIpv4Cidr = Objects.requireNonNull(clusterIpv4Cidr);
             return this;
         }
-
         public Builder clusterTelemetries(List<GetClusterClusterTelemetry> clusterTelemetries) {
             this.clusterTelemetries = Objects.requireNonNull(clusterTelemetries);
             return this;
         }
-
+        public Builder clusterTelemetries(GetClusterClusterTelemetry... clusterTelemetries) {
+            return clusterTelemetries(List.of(clusterTelemetries));
+        }
         public Builder confidentialNodes(List<GetClusterConfidentialNode> confidentialNodes) {
             this.confidentialNodes = Objects.requireNonNull(confidentialNodes);
             return this;
         }
-
+        public Builder confidentialNodes(GetClusterConfidentialNode... confidentialNodes) {
+            return confidentialNodes(List.of(confidentialNodes));
+        }
         public Builder databaseEncryptions(List<GetClusterDatabaseEncryption> databaseEncryptions) {
             this.databaseEncryptions = Objects.requireNonNull(databaseEncryptions);
             return this;
         }
-
+        public Builder databaseEncryptions(GetClusterDatabaseEncryption... databaseEncryptions) {
+            return databaseEncryptions(List.of(databaseEncryptions));
+        }
         public Builder datapathProvider(String datapathProvider) {
             this.datapathProvider = Objects.requireNonNull(datapathProvider);
             return this;
         }
-
         public Builder defaultMaxPodsPerNode(Integer defaultMaxPodsPerNode) {
             this.defaultMaxPodsPerNode = Objects.requireNonNull(defaultMaxPodsPerNode);
             return this;
         }
-
         public Builder defaultSnatStatuses(List<GetClusterDefaultSnatStatus> defaultSnatStatuses) {
             this.defaultSnatStatuses = Objects.requireNonNull(defaultSnatStatuses);
             return this;
         }
-
+        public Builder defaultSnatStatuses(GetClusterDefaultSnatStatus... defaultSnatStatuses) {
+            return defaultSnatStatuses(List.of(defaultSnatStatuses));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dnsConfigs(List<GetClusterDnsConfig> dnsConfigs) {
             this.dnsConfigs = Objects.requireNonNull(dnsConfigs);
             return this;
         }
-
+        public Builder dnsConfigs(GetClusterDnsConfig... dnsConfigs) {
+            return dnsConfigs(List.of(dnsConfigs));
+        }
         public Builder enableAutopilot(Boolean enableAutopilot) {
             this.enableAutopilot = Objects.requireNonNull(enableAutopilot);
             return this;
         }
-
         public Builder enableBinaryAuthorization(Boolean enableBinaryAuthorization) {
             this.enableBinaryAuthorization = Objects.requireNonNull(enableBinaryAuthorization);
             return this;
         }
-
         public Builder enableIntranodeVisibility(Boolean enableIntranodeVisibility) {
             this.enableIntranodeVisibility = Objects.requireNonNull(enableIntranodeVisibility);
             return this;
         }
-
         public Builder enableKubernetesAlpha(Boolean enableKubernetesAlpha) {
             this.enableKubernetesAlpha = Objects.requireNonNull(enableKubernetesAlpha);
             return this;
         }
-
         public Builder enableL4IlbSubsetting(Boolean enableL4IlbSubsetting) {
             this.enableL4IlbSubsetting = Objects.requireNonNull(enableL4IlbSubsetting);
             return this;
         }
-
         public Builder enableLegacyAbac(Boolean enableLegacyAbac) {
             this.enableLegacyAbac = Objects.requireNonNull(enableLegacyAbac);
             return this;
         }
-
         public Builder enableShieldedNodes(Boolean enableShieldedNodes) {
             this.enableShieldedNodes = Objects.requireNonNull(enableShieldedNodes);
             return this;
         }
-
         public Builder enableTpu(Boolean enableTpu) {
             this.enableTpu = Objects.requireNonNull(enableTpu);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identityServiceConfigs(List<GetClusterIdentityServiceConfig> identityServiceConfigs) {
             this.identityServiceConfigs = Objects.requireNonNull(identityServiceConfigs);
             return this;
         }
-
+        public Builder identityServiceConfigs(GetClusterIdentityServiceConfig... identityServiceConfigs) {
+            return identityServiceConfigs(List.of(identityServiceConfigs));
+        }
         public Builder initialNodeCount(Integer initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
-
         public Builder ipAllocationPolicies(List<GetClusterIpAllocationPolicy> ipAllocationPolicies) {
             this.ipAllocationPolicies = Objects.requireNonNull(ipAllocationPolicies);
             return this;
         }
-
+        public Builder ipAllocationPolicies(GetClusterIpAllocationPolicy... ipAllocationPolicies) {
+            return ipAllocationPolicies(List.of(ipAllocationPolicies));
+        }
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder loggingConfigs(List<GetClusterLoggingConfig> loggingConfigs) {
             this.loggingConfigs = Objects.requireNonNull(loggingConfigs);
             return this;
         }
-
+        public Builder loggingConfigs(GetClusterLoggingConfig... loggingConfigs) {
+            return loggingConfigs(List.of(loggingConfigs));
+        }
         public Builder loggingService(String loggingService) {
             this.loggingService = Objects.requireNonNull(loggingService);
             return this;
         }
-
         public Builder maintenancePolicies(List<GetClusterMaintenancePolicy> maintenancePolicies) {
             this.maintenancePolicies = Objects.requireNonNull(maintenancePolicies);
             return this;
         }
-
+        public Builder maintenancePolicies(GetClusterMaintenancePolicy... maintenancePolicies) {
+            return maintenancePolicies(List.of(maintenancePolicies));
+        }
         public Builder masterAuthorizedNetworksConfigs(List<GetClusterMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs) {
             this.masterAuthorizedNetworksConfigs = Objects.requireNonNull(masterAuthorizedNetworksConfigs);
             return this;
         }
-
+        public Builder masterAuthorizedNetworksConfigs(GetClusterMasterAuthorizedNetworksConfig... masterAuthorizedNetworksConfigs) {
+            return masterAuthorizedNetworksConfigs(List.of(masterAuthorizedNetworksConfigs));
+        }
         public Builder masterAuths(List<GetClusterMasterAuth> masterAuths) {
             this.masterAuths = Objects.requireNonNull(masterAuths);
             return this;
         }
-
+        public Builder masterAuths(GetClusterMasterAuth... masterAuths) {
+            return masterAuths(List.of(masterAuths));
+        }
         public Builder masterVersion(String masterVersion) {
             this.masterVersion = Objects.requireNonNull(masterVersion);
             return this;
         }
-
         public Builder minMasterVersion(String minMasterVersion) {
             this.minMasterVersion = Objects.requireNonNull(minMasterVersion);
             return this;
         }
-
         public Builder monitoringConfigs(List<GetClusterMonitoringConfig> monitoringConfigs) {
             this.monitoringConfigs = Objects.requireNonNull(monitoringConfigs);
             return this;
         }
-
+        public Builder monitoringConfigs(GetClusterMonitoringConfig... monitoringConfigs) {
+            return monitoringConfigs(List.of(monitoringConfigs));
+        }
         public Builder monitoringService(String monitoringService) {
             this.monitoringService = Objects.requireNonNull(monitoringService);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkPolicies(List<GetClusterNetworkPolicy> networkPolicies) {
             this.networkPolicies = Objects.requireNonNull(networkPolicies);
             return this;
         }
-
+        public Builder networkPolicies(GetClusterNetworkPolicy... networkPolicies) {
+            return networkPolicies(List.of(networkPolicies));
+        }
         public Builder networkingMode(String networkingMode) {
             this.networkingMode = Objects.requireNonNull(networkingMode);
             return this;
         }
-
         public Builder nodeConfigs(List<GetClusterNodeConfig> nodeConfigs) {
             this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
             return this;
         }
-
+        public Builder nodeConfigs(GetClusterNodeConfig... nodeConfigs) {
+            return nodeConfigs(List.of(nodeConfigs));
+        }
         public Builder nodeLocations(List<String> nodeLocations) {
             this.nodeLocations = Objects.requireNonNull(nodeLocations);
             return this;
         }
-
+        public Builder nodeLocations(String... nodeLocations) {
+            return nodeLocations(List.of(nodeLocations));
+        }
         public Builder nodePools(List<GetClusterNodePool> nodePools) {
             this.nodePools = Objects.requireNonNull(nodePools);
             return this;
         }
-
+        public Builder nodePools(GetClusterNodePool... nodePools) {
+            return nodePools(List.of(nodePools));
+        }
         public Builder nodeVersion(String nodeVersion) {
             this.nodeVersion = Objects.requireNonNull(nodeVersion);
             return this;
         }
-
         public Builder notificationConfigs(List<GetClusterNotificationConfig> notificationConfigs) {
             this.notificationConfigs = Objects.requireNonNull(notificationConfigs);
             return this;
         }
-
+        public Builder notificationConfigs(GetClusterNotificationConfig... notificationConfigs) {
+            return notificationConfigs(List.of(notificationConfigs));
+        }
         public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder podSecurityPolicyConfigs(List<GetClusterPodSecurityPolicyConfig> podSecurityPolicyConfigs) {
             this.podSecurityPolicyConfigs = Objects.requireNonNull(podSecurityPolicyConfigs);
             return this;
         }
-
+        public Builder podSecurityPolicyConfigs(GetClusterPodSecurityPolicyConfig... podSecurityPolicyConfigs) {
+            return podSecurityPolicyConfigs(List.of(podSecurityPolicyConfigs));
+        }
         public Builder privateClusterConfigs(List<GetClusterPrivateClusterConfig> privateClusterConfigs) {
             this.privateClusterConfigs = Objects.requireNonNull(privateClusterConfigs);
             return this;
         }
-
+        public Builder privateClusterConfigs(GetClusterPrivateClusterConfig... privateClusterConfigs) {
+            return privateClusterConfigs(List.of(privateClusterConfigs));
+        }
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder releaseChannels(List<GetClusterReleaseChannel> releaseChannels) {
             this.releaseChannels = Objects.requireNonNull(releaseChannels);
             return this;
         }
-
+        public Builder releaseChannels(GetClusterReleaseChannel... releaseChannels) {
+            return releaseChannels(List.of(releaseChannels));
+        }
         public Builder removeDefaultNodePool(Boolean removeDefaultNodePool) {
             this.removeDefaultNodePool = Objects.requireNonNull(removeDefaultNodePool);
             return this;
         }
-
         public Builder resourceLabels(Map<String,String> resourceLabels) {
             this.resourceLabels = Objects.requireNonNull(resourceLabels);
             return this;
         }
-
         public Builder resourceUsageExportConfigs(List<GetClusterResourceUsageExportConfig> resourceUsageExportConfigs) {
             this.resourceUsageExportConfigs = Objects.requireNonNull(resourceUsageExportConfigs);
             return this;
         }
-
+        public Builder resourceUsageExportConfigs(GetClusterResourceUsageExportConfig... resourceUsageExportConfigs) {
+            return resourceUsageExportConfigs(List.of(resourceUsageExportConfigs));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder servicesIpv4Cidr(String servicesIpv4Cidr) {
             this.servicesIpv4Cidr = Objects.requireNonNull(servicesIpv4Cidr);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
             this.tpuIpv4CidrBlock = Objects.requireNonNull(tpuIpv4CidrBlock);
             return this;
         }
-
         public Builder verticalPodAutoscalings(List<GetClusterVerticalPodAutoscaling> verticalPodAutoscalings) {
             this.verticalPodAutoscalings = Objects.requireNonNull(verticalPodAutoscalings);
             return this;
         }
-
+        public Builder verticalPodAutoscalings(GetClusterVerticalPodAutoscaling... verticalPodAutoscalings) {
+            return verticalPodAutoscalings(List.of(verticalPodAutoscalings));
+        }
         public Builder workloadIdentityConfigs(List<GetClusterWorkloadIdentityConfig> workloadIdentityConfigs) {
             this.workloadIdentityConfigs = Objects.requireNonNull(workloadIdentityConfigs);
             return this;
         }
-        public GetClusterResult build() {
+        public Builder workloadIdentityConfigs(GetClusterWorkloadIdentityConfig... workloadIdentityConfigs) {
+            return workloadIdentityConfigs(List.of(workloadIdentityConfigs));
+        }        public GetClusterResult build() {
             return new GetClusterResult(addonsConfigs, authenticatorGroupsConfigs, clusterAutoscalings, clusterIpv4Cidr, clusterTelemetries, confidentialNodes, databaseEncryptions, datapathProvider, defaultMaxPodsPerNode, defaultSnatStatuses, description, dnsConfigs, enableAutopilot, enableBinaryAuthorization, enableIntranodeVisibility, enableKubernetesAlpha, enableL4IlbSubsetting, enableLegacyAbac, enableShieldedNodes, enableTpu, endpoint, id, identityServiceConfigs, initialNodeCount, ipAllocationPolicies, labelFingerprint, location, loggingConfigs, loggingService, maintenancePolicies, masterAuthorizedNetworksConfigs, masterAuths, masterVersion, minMasterVersion, monitoringConfigs, monitoringService, name, network, networkPolicies, networkingMode, nodeConfigs, nodeLocations, nodePools, nodeVersion, notificationConfigs, operation, podSecurityPolicyConfigs, privateClusterConfigs, privateIpv6GoogleAccess, project, releaseChannels, removeDefaultNodePool, resourceLabels, resourceUsageExportConfigs, selfLink, servicesIpv4Cidr, subnetwork, tpuIpv4CidrBlock, verticalPodAutoscalings, workloadIdentityConfigs);
         }
     }

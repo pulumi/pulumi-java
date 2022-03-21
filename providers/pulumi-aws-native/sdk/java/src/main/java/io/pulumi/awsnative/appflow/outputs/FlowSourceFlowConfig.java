@@ -106,22 +106,18 @@ public final class FlowSourceFlowConfig {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
-
         public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder incrementalPullConfig(@Nullable FlowIncrementalPullConfig incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
-
         public Builder sourceConnectorProperties(FlowSourceConnectorProperties sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
-        }
-        public FlowSourceFlowConfig build() {
+        }        public FlowSourceFlowConfig build() {
             return new FlowSourceFlowConfig(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }
     }

@@ -140,62 +140,56 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
             this.accounts = accounts;
             return this;
         }
-
         public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = Output.ofNullable(accounts);
             return this;
         }
-
+        public Builder accounts(String... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder failureToleranceCount(@Nullable Output<Integer> failureToleranceCount) {
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
-
         public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
             this.failureToleranceCount = Output.ofNullable(failureToleranceCount);
             return this;
         }
-
         public Builder failureTolerancePercentage(@Nullable Output<Integer> failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
-
         public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = Output.ofNullable(failureTolerancePercentage);
             return this;
         }
-
         public Builder maxConcurrencyCount(@Nullable Output<Integer> maxConcurrencyCount) {
             this.maxConcurrencyCount = maxConcurrencyCount;
             return this;
         }
-
         public Builder maxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
             this.maxConcurrencyCount = Output.ofNullable(maxConcurrencyCount);
             return this;
         }
-
         public Builder maxConcurrencyPercentage(@Nullable Output<Integer> maxConcurrencyPercentage) {
             this.maxConcurrencyPercentage = maxConcurrencyPercentage;
             return this;
         }
-
         public Builder maxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
             this.maxConcurrencyPercentage = Output.ofNullable(maxConcurrencyPercentage);
             return this;
         }
-
         public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = Output.ofNullable(regions);
             return this;
         }
-        public ProvisionedProductStackSetProvisioningPreferencesGetArgs build() {
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }        public ProvisionedProductStackSetProvisioningPreferencesGetArgs build() {
             return new ProvisionedProductStackSetProvisioningPreferencesGetArgs(accounts, failureToleranceCount, failureTolerancePercentage, maxConcurrencyCount, maxConcurrencyPercentage, regions);
         }
     }

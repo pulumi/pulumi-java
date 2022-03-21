@@ -53,8 +53,7 @@ public final class VirtualNodeSpecLoggingAccessLog {
         public Builder file(@Nullable VirtualNodeSpecLoggingAccessLogFile file) {
             this.file = file;
             return this;
-        }
-        public VirtualNodeSpecLoggingAccessLog build() {
+        }        public VirtualNodeSpecLoggingAccessLog build() {
             return new VirtualNodeSpecLoggingAccessLog(file);
         }
     }

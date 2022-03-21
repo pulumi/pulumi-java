@@ -95,32 +95,29 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(GeoFilterActions action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder countryCodes(Output<List<String>> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
-
         public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Output.of(Objects.requireNonNull(countryCodes));
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder relativePath(Output<String> relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
-
         public Builder relativePath(String relativePath) {
             this.relativePath = Output.of(Objects.requireNonNull(relativePath));
             return this;
-        }
-        public GeoFilterArgs build() {
+        }        public GeoFilterArgs build() {
             return new GeoFilterArgs(action, countryCodes, relativePath);
         }
     }

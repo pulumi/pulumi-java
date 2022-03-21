@@ -121,27 +121,22 @@ public final class ImageTemplateFileCustomizerResponse {
             this.destination = destination;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
-
         public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageTemplateFileCustomizerResponse build() {
+        }        public ImageTemplateFileCustomizerResponse build() {
             return new ImageTemplateFileCustomizerResponse(destination, name, sha256Checksum, sourceUri, type);
         }
     }

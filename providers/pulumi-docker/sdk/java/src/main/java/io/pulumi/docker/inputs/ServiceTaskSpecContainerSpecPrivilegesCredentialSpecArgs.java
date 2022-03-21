@@ -66,22 +66,18 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs exte
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable String file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder registry(@Nullable Output<String> registry) {
             this.registry = registry;
             return this;
         }
-
         public Builder registry(@Nullable String registry) {
             this.registry = Output.ofNullable(registry);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs build() {
+        }        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs build() {
             return new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs(file, registry);
         }
     }

@@ -131,57 +131,49 @@ public final class GetDomainNameResult {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder distributionDomainName(@Nullable String distributionDomainName) {
             this.distributionDomainName = distributionDomainName;
             return this;
         }
-
         public Builder distributionHostedZoneId(@Nullable String distributionHostedZoneId) {
             this.distributionHostedZoneId = distributionHostedZoneId;
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable DomainNameEndpointConfiguration endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
-
         public Builder ownershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
             this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
             return this;
         }
-
         public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
-
         public Builder regionalDomainName(@Nullable String regionalDomainName) {
             this.regionalDomainName = regionalDomainName;
             return this;
         }
-
         public Builder regionalHostedZoneId(@Nullable String regionalHostedZoneId) {
             this.regionalHostedZoneId = regionalHostedZoneId;
             return this;
         }
-
         public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainNameTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDomainNameResult build() {
+        public Builder tags(DomainNameTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDomainNameResult build() {
             return new GetDomainNameResult(certificateArn, distributionDomainName, distributionHostedZoneId, endpointConfiguration, mutualTlsAuthentication, ownershipVerificationCertificateArn, regionalCertificateArn, regionalDomainName, regionalHostedZoneId, securityPolicy, tags);
         }
     }

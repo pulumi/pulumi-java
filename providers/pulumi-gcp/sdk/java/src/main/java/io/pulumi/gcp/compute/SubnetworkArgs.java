@@ -304,142 +304,117 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipCidrRange(Output<String> ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Output.of(Objects.requireNonNull(ipCidrRange));
             return this;
         }
-
         public Builder ipv6AccessType(@Nullable Output<String> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
-
         public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
             this.ipv6AccessType = Output.ofNullable(ipv6AccessType);
             return this;
         }
-
         public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
-
         public Builder logConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
             this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder privateIpGoogleAccess(@Nullable Output<Boolean> privateIpGoogleAccess) {
             this.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
-
         public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
             this.privateIpGoogleAccess = Output.ofNullable(privateIpGoogleAccess);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder purpose(@Nullable String purpose) {
             this.purpose = Output.ofNullable(purpose);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
             this.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
-
         public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
             this.secondaryIpRanges = Output.ofNullable(secondaryIpRanges);
             return this;
         }
-
+        public Builder secondaryIpRanges(SubnetworkSecondaryIpRangeArgs... secondaryIpRanges) {
+            return secondaryIpRanges(List.of(secondaryIpRanges));
+        }
         public Builder stackType(@Nullable Output<String> stackType) {
             this.stackType = stackType;
             return this;
         }
-
         public Builder stackType(@Nullable String stackType) {
             this.stackType = Output.ofNullable(stackType);
             return this;
-        }
-        public SubnetworkArgs build() {
+        }        public SubnetworkArgs build() {
             return new SubnetworkArgs(description, ipCidrRange, ipv6AccessType, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, project, purpose, region, role, secondaryIpRanges, stackType);
         }
     }

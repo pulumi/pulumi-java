@@ -155,47 +155,41 @@ public final class GetGroupsGroup extends io.pulumi.resources.InvokeArgs {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder groupKeys(List<GetGroupsGroupGroupKey> groupKeys) {
             this.groupKeys = Objects.requireNonNull(groupKeys);
             return this;
         }
-
+        public Builder groupKeys(GetGroupsGroupGroupKey... groupKeys) {
+            return groupKeys(List.of(groupKeys));
+        }
         public Builder initialGroupConfig(String initialGroupConfig) {
             this.initialGroupConfig = Objects.requireNonNull(initialGroupConfig);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetGroupsGroup build() {
+        }        public GetGroupsGroup build() {
             return new GetGroupsGroup(createTime, description, displayName, groupKeys, initialGroupConfig, labels, name, parent, updateTime);
         }
     }

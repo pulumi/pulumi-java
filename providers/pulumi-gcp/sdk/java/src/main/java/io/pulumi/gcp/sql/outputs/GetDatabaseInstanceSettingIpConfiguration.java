@@ -80,27 +80,25 @@ public final class GetDatabaseInstanceSettingIpConfiguration {
             this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange);
             return this;
         }
-
         public Builder authorizedNetworks(List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks) {
             this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
             return this;
         }
-
+        public Builder authorizedNetworks(GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork... authorizedNetworks) {
+            return authorizedNetworks(List.of(authorizedNetworks));
+        }
         public Builder ipv4Enabled(Boolean ipv4Enabled) {
             this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled);
             return this;
         }
-
         public Builder privateNetwork(String privateNetwork) {
             this.privateNetwork = Objects.requireNonNull(privateNetwork);
             return this;
         }
-
         public Builder requireSsl(Boolean requireSsl) {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
-        }
-        public GetDatabaseInstanceSettingIpConfiguration build() {
+        }        public GetDatabaseInstanceSettingIpConfiguration build() {
             return new GetDatabaseInstanceSettingIpConfiguration(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }
     }

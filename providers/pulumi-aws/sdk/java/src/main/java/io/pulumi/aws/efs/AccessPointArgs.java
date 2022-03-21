@@ -109,42 +109,34 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
-
         public Builder posixUser(@Nullable Output<AccessPointPosixUserArgs> posixUser) {
             this.posixUser = posixUser;
             return this;
         }
-
         public Builder posixUser(@Nullable AccessPointPosixUserArgs posixUser) {
             this.posixUser = Output.ofNullable(posixUser);
             return this;
         }
-
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryArgs> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
-
         public Builder rootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
             this.rootDirectory = Output.ofNullable(rootDirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AccessPointArgs build() {
+        }        public AccessPointArgs build() {
             return new AccessPointArgs(fileSystemId, posixUser, rootDirectory, tags);
         }
     }

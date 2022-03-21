@@ -51,8 +51,7 @@ public final class DataCollectionEndpointResponseLogsIngestion {
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
-        }
-        public DataCollectionEndpointResponseLogsIngestion build() {
+        }        public DataCollectionEndpointResponseLogsIngestion build() {
             return new DataCollectionEndpointResponseLogsIngestion(endpoint);
         }
     }

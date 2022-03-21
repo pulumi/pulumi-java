@@ -73,12 +73,10 @@ public final class CustomCopyOptionResponse {
             this.duration = duration;
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
-        }
-        public CustomCopyOptionResponse build() {
+        }        public CustomCopyOptionResponse build() {
             return new CustomCopyOptionResponse(duration, objectType);
         }
     }

@@ -112,42 +112,34 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseType = databaseType;
             return this;
         }
-
         public Builder databaseType(@Nullable DatabaseDumpDatabaseType databaseType) {
             this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
-
         public Builder gcsUri(@Nullable Output<String> gcsUri) {
             this.gcsUri = gcsUri;
             return this;
         }
-
         public Builder gcsUri(@Nullable String gcsUri) {
             this.gcsUri = Output.ofNullable(gcsUri);
             return this;
         }
-
         public Builder sourceDatabase(@Nullable Output<String> sourceDatabase) {
             this.sourceDatabase = sourceDatabase;
             return this;
         }
-
         public Builder sourceDatabase(@Nullable String sourceDatabase) {
             this.sourceDatabase = Output.ofNullable(sourceDatabase);
             return this;
         }
-
         public Builder type(@Nullable Output<DatabaseDumpType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable DatabaseDumpType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DatabaseDumpArgs build() {
+        }        public DatabaseDumpArgs build() {
             return new DatabaseDumpArgs(databaseType, gcsUri, sourceDatabase, type);
         }
     }

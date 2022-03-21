@@ -94,22 +94,24 @@ public final class GetAccessPointsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-        public GetAccessPointsResult build() {
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }        public GetAccessPointsResult build() {
             return new GetAccessPointsResult(arns, fileSystemId, id, ids);
         }
     }

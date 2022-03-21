@@ -72,12 +72,10 @@ public final class GetIntegrationServiceEnvironmentArgs extends io.pulumi.resour
             this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
-        }
-        public GetIntegrationServiceEnvironmentArgs build() {
+        }        public GetIntegrationServiceEnvironmentArgs build() {
             return new GetIntegrationServiceEnvironmentArgs(integrationServiceEnvironmentName, resourceGroup);
         }
     }

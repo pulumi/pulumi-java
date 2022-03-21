@@ -123,27 +123,25 @@ public final class ClusterRole {
             this.aggregationRule = aggregationRule;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder rules(@Nullable List<PolicyRule> rules) {
             this.rules = rules;
             return this;
         }
-        public ClusterRole build() {
+        public Builder rules(PolicyRule... rules) {
+            return rules(List.of(rules));
+        }        public ClusterRole build() {
             return new ClusterRole(aggregationRule, apiVersion, kind, metadata, rules);
         }
     }

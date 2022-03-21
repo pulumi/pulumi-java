@@ -89,17 +89,20 @@ public final class StorageProfileResponse {
             this.hanaSids = hanaSids;
             return this;
         }
-
+        public Builder hanaSids(SAPSystemIDResponse... hanaSids) {
+            return hanaSids(List.of(hanaSids));
+        }
         public Builder nfsIpAddress(String nfsIpAddress) {
             this.nfsIpAddress = Objects.requireNonNull(nfsIpAddress);
             return this;
         }
-
         public Builder osDisks(@Nullable List<DiskResponse> osDisks) {
             this.osDisks = osDisks;
             return this;
         }
-        public StorageProfileResponse build() {
+        public Builder osDisks(DiskResponse... osDisks) {
+            return osDisks(List.of(osDisks));
+        }        public StorageProfileResponse build() {
             return new StorageProfileResponse(hanaSids, nfsIpAddress, osDisks);
         }
     }

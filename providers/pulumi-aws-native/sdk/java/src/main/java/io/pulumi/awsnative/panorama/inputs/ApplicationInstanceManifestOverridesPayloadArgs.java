@@ -53,12 +53,10 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
             this.payloadData = payloadData;
             return this;
         }
-
         public Builder payloadData(@Nullable String payloadData) {
             this.payloadData = Output.ofNullable(payloadData);
             return this;
-        }
-        public ApplicationInstanceManifestOverridesPayloadArgs build() {
+        }        public ApplicationInstanceManifestOverridesPayloadArgs build() {
             return new ApplicationInstanceManifestOverridesPayloadArgs(payloadData);
         }
     }

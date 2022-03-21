@@ -212,57 +212,46 @@ public final class GetAFDOriginGroupResult {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
-
         public Builder healthProbeSettings(@Nullable HealthProbeParametersResponse healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings) {
             this.responseBasedAfdOriginErrorDetectionSettings = responseBasedAfdOriginErrorDetectionSettings;
             return this;
         }
-
         public Builder sessionAffinityState(@Nullable String sessionAffinityState) {
             this.sessionAffinityState = sessionAffinityState;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAFDOriginGroupResult build() {
+        }        public GetAFDOriginGroupResult build() {
             return new GetAFDOriginGroupResult(deploymentStatus, healthProbeSettings, id, loadBalancingSettings, name, provisioningState, responseBasedAfdOriginErrorDetectionSettings, sessionAffinityState, systemData, trafficRestorationTimeToHealedOrNewEndpointsInMinutes, type);
         }
     }

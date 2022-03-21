@@ -79,17 +79,17 @@ public final class WebACLRegexPatternSetReferenceStatement extends io.pulumi.res
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebACLRegexPatternSetReferenceStatement build() {
+        public Builder textTransformations(WebACLTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLRegexPatternSetReferenceStatement build() {
             return new WebACLRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
         }
     }

@@ -57,12 +57,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
             this.sns = sns;
             return this;
         }
-
         public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTargetArgs sns) {
             this.sns = Output.ofNullable(sns);
             return this;
-        }
-        public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs build() {
+        }        public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs build() {
             return new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(sns);
         }
     }

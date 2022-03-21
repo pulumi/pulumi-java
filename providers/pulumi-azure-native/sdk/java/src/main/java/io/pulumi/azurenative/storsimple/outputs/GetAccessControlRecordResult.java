@@ -136,32 +136,26 @@ public final class GetAccessControlRecordResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder initiatorName(String initiatorName) {
             this.initiatorName = Objects.requireNonNull(initiatorName);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumeCount(Integer volumeCount) {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
-        }
-        public GetAccessControlRecordResult build() {
+        }        public GetAccessControlRecordResult build() {
             return new GetAccessControlRecordResult(id, initiatorName, kind, name, type, volumeCount);
         }
     }

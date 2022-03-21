@@ -92,32 +92,26 @@ public final class ServiceSourceConfigurationCodeRepositoryArgs extends io.pulum
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder codeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs codeConfiguration) {
             this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
-
         public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
-
         public Builder sourceCodeVersion(Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs> sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }
-
         public Builder sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs sourceCodeVersion) {
             this.sourceCodeVersion = Output.of(Objects.requireNonNull(sourceCodeVersion));
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositoryArgs build() {
+        }        public ServiceSourceConfigurationCodeRepositoryArgs build() {
             return new ServiceSourceConfigurationCodeRepositoryArgs(codeConfiguration, repositoryUrl, sourceCodeVersion);
         }
     }

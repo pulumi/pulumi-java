@@ -112,22 +112,21 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(GooglePrivacyDlpV2ActionResponse... actions) {
+            return actions(List.of(actions));
+        }
         public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
             this.inspectConfig = Objects.requireNonNull(inspectConfig);
             return this;
         }
-
         public Builder inspectTemplateName(String inspectTemplateName) {
             this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
             return this;
         }
-
         public Builder storageConfig(GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2InspectJobConfigResponse build() {
+        }        public GooglePrivacyDlpV2InspectJobConfigResponse build() {
             return new GooglePrivacyDlpV2InspectJobConfigResponse(actions, inspectConfig, inspectTemplateName, storageConfig);
         }
     }

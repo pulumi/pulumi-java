@@ -58,8 +58,7 @@ public final class HostedZoneQueryLoggingConfig extends io.pulumi.resources.Invo
         public Builder cloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
             return this;
-        }
-        public HostedZoneQueryLoggingConfig build() {
+        }        public HostedZoneQueryLoggingConfig build() {
             return new HostedZoneQueryLoggingConfig(cloudWatchLogsLogGroupArn);
         }
     }

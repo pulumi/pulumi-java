@@ -54,8 +54,7 @@ public final class GetSigningJobArgs extends io.pulumi.resources.InvokeArgs {
         public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
-        }
-        public GetSigningJobArgs build() {
+        }        public GetSigningJobArgs build() {
             return new GetSigningJobArgs(jobId);
         }
     }

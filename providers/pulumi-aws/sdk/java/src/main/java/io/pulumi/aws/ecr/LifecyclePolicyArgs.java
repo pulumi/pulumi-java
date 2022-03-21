@@ -73,17 +73,14 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
-        }
-        public LifecyclePolicyArgs build() {
+        }        public LifecyclePolicyArgs build() {
             return new LifecyclePolicyArgs(policy, repository);
         }
     }

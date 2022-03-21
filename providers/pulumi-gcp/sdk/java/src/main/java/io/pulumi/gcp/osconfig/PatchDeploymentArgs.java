@@ -203,92 +203,74 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder instanceFilter(Output<PatchDeploymentInstanceFilterArgs> instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
-
         public Builder instanceFilter(PatchDeploymentInstanceFilterArgs instanceFilter) {
             this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
             return this;
         }
-
         public Builder oneTimeSchedule(@Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule) {
             this.oneTimeSchedule = oneTimeSchedule;
             return this;
         }
-
         public Builder oneTimeSchedule(@Nullable PatchDeploymentOneTimeScheduleArgs oneTimeSchedule) {
             this.oneTimeSchedule = Output.ofNullable(oneTimeSchedule);
             return this;
         }
-
         public Builder patchConfig(@Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig) {
             this.patchConfig = patchConfig;
             return this;
         }
-
         public Builder patchConfig(@Nullable PatchDeploymentPatchConfigArgs patchConfig) {
             this.patchConfig = Output.ofNullable(patchConfig);
             return this;
         }
-
         public Builder patchDeploymentId(Output<String> patchDeploymentId) {
             this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId);
             return this;
         }
-
         public Builder patchDeploymentId(String patchDeploymentId) {
             this.patchDeploymentId = Output.of(Objects.requireNonNull(patchDeploymentId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder recurringSchedule(@Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule) {
             this.recurringSchedule = recurringSchedule;
             return this;
         }
-
         public Builder recurringSchedule(@Nullable PatchDeploymentRecurringScheduleArgs recurringSchedule) {
             this.recurringSchedule = Output.ofNullable(recurringSchedule);
             return this;
         }
-
         public Builder rollout(@Nullable Output<PatchDeploymentRolloutArgs> rollout) {
             this.rollout = rollout;
             return this;
         }
-
         public Builder rollout(@Nullable PatchDeploymentRolloutArgs rollout) {
             this.rollout = Output.ofNullable(rollout);
             return this;
-        }
-        public PatchDeploymentArgs build() {
+        }        public PatchDeploymentArgs build() {
             return new PatchDeploymentArgs(description, duration, instanceFilter, oneTimeSchedule, patchConfig, patchDeploymentId, project, recurringSchedule, rollout);
         }
     }

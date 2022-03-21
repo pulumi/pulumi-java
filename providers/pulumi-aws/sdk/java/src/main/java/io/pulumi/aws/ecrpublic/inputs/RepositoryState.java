@@ -136,62 +136,50 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder catalogData(@Nullable Output<RepositoryCatalogDataGetArgs> catalogData) {
             this.catalogData = catalogData;
             return this;
         }
-
         public Builder catalogData(@Nullable RepositoryCatalogDataGetArgs catalogData) {
             this.catalogData = Output.ofNullable(catalogData);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = Output.ofNullable(registryId);
             return this;
         }
-
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
-
         public Builder repositoryUri(@Nullable Output<String> repositoryUri) {
             this.repositoryUri = repositoryUri;
             return this;
         }
-
         public Builder repositoryUri(@Nullable String repositoryUri) {
             this.repositoryUri = Output.ofNullable(repositoryUri);
             return this;
-        }
-        public RepositoryState build() {
+        }        public RepositoryState build() {
             return new RepositoryState(arn, catalogData, forceDestroy, registryId, repositoryName, repositoryUri);
         }
     }

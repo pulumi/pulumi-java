@@ -144,62 +144,50 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-
         public Builder activeDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
             return this;
         }
-
         public Builder backoffLimit(@Nullable Output<Integer> backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
-
         public Builder backoffLimit(@Nullable Integer backoffLimit) {
             this.backoffLimit = Output.ofNullable(backoffLimit);
             return this;
         }
-
         public Builder completions(@Nullable Output<Integer> completions) {
             this.completions = completions;
             return this;
         }
-
         public Builder completions(@Nullable Integer completions) {
             this.completions = Output.ofNullable(completions);
             return this;
         }
-
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
-
         public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = Output.ofNullable(parallelism);
             return this;
         }
-
         public Builder template(@Nullable Output<InstanceTemplateSpecArgs> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable InstanceTemplateSpecArgs template) {
             this.template = Output.ofNullable(template);
             return this;
         }
-
         public Builder ttlSecondsAfterFinished(@Nullable Output<Integer> ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }
-
         public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = Output.ofNullable(ttlSecondsAfterFinished);
             return this;
-        }
-        public JobSpecArgs build() {
+        }        public JobSpecArgs build() {
             return new JobSpecArgs(activeDeadlineSeconds, backoffLimit, completions, parallelism, template, ttlSecondsAfterFinished);
         }
     }

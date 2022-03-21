@@ -70,12 +70,10 @@ public final class CommonFeatureStateResponse {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
-
         public Builder state(FeatureStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public CommonFeatureStateResponse build() {
+        }        public CommonFeatureStateResponse build() {
             return new CommonFeatureStateResponse(appdevexperience, state);
         }
     }

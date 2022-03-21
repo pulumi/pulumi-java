@@ -101,22 +101,18 @@ public final class GetRegionResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRegionResult build() {
+        }        public GetRegionResult build() {
             return new GetRegionResult(description, endpoint, id, name);
         }
     }

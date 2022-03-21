@@ -94,42 +94,40 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
             this.devices = devices;
             return this;
         }
-
         public Builder devices(@Nullable List<ComponentVersionLambdaDeviceMountArgs> devices) {
             this.devices = Output.ofNullable(devices);
             return this;
         }
-
+        public Builder devices(ComponentVersionLambdaDeviceMountArgs... devices) {
+            return devices(List.of(devices));
+        }
         public Builder memorySizeInKB(@Nullable Output<Integer> memorySizeInKB) {
             this.memorySizeInKB = memorySizeInKB;
             return this;
         }
-
         public Builder memorySizeInKB(@Nullable Integer memorySizeInKB) {
             this.memorySizeInKB = Output.ofNullable(memorySizeInKB);
             return this;
         }
-
         public Builder mountROSysfs(@Nullable Output<Boolean> mountROSysfs) {
             this.mountROSysfs = mountROSysfs;
             return this;
         }
-
         public Builder mountROSysfs(@Nullable Boolean mountROSysfs) {
             this.mountROSysfs = Output.ofNullable(mountROSysfs);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<ComponentVersionLambdaVolumeMountArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public ComponentVersionLambdaContainerParamsArgs build() {
+        public Builder volumes(ComponentVersionLambdaVolumeMountArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public ComponentVersionLambdaContainerParamsArgs build() {
             return new ComponentVersionLambdaContainerParamsArgs(devices, memorySizeInKB, mountROSysfs, volumes);
         }
     }

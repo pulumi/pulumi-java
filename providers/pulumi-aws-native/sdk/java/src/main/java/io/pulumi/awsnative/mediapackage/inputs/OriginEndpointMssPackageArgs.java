@@ -104,42 +104,34 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable OriginEndpointMssEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
-
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = Output.ofNullable(manifestWindowSeconds);
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Output.ofNullable(streamSelection);
             return this;
-        }
-        public OriginEndpointMssPackageArgs build() {
+        }        public OriginEndpointMssPackageArgs build() {
             return new OriginEndpointMssPackageArgs(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);
         }
     }

@@ -57,12 +57,13 @@ public final class MemcachedLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<MemcachedLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public MemcachedLayerCloudwatchConfiguration build() {
+        public Builder logStreams(MemcachedLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public MemcachedLayerCloudwatchConfiguration build() {
             return new MemcachedLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

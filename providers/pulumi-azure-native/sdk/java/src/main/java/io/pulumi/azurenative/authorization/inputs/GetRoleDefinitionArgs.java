@@ -72,12 +72,10 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetRoleDefinitionArgs build() {
+        }        public GetRoleDefinitionArgs build() {
             return new GetRoleDefinitionArgs(roleDefinitionId, scope);
         }
     }

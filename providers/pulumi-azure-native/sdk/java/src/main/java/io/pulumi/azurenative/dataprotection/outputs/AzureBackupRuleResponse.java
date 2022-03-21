@@ -116,27 +116,22 @@ public final class AzureBackupRuleResponse {
             this.backupParameters = backupParameters;
             return this;
         }
-
         public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder trigger(Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
-        }
-        public AzureBackupRuleResponse build() {
+        }        public AzureBackupRuleResponse build() {
             return new AzureBackupRuleResponse(backupParameters, dataStore, name, objectType, trigger);
         }
     }

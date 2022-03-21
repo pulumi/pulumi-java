@@ -127,52 +127,42 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
-
         public Builder initialDelay(@Nullable Output<String> initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
-
         public Builder initialDelay(@Nullable String initialDelay) {
             this.initialDelay = Output.ofNullable(initialDelay);
             return this;
         }
-
         public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = Output.ofNullable(period);
             return this;
         }
-
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public ProbeSettingsArgs build() {
+        }        public ProbeSettingsArgs build() {
             return new ProbeSettingsArgs(failureThreshold, initialDelay, period, successThreshold, timeout);
         }
     }

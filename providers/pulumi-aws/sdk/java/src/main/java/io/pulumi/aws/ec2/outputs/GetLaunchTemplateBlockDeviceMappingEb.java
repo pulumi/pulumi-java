@@ -102,42 +102,34 @@ public final class GetLaunchTemplateBlockDeviceMappingEb {
             this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
             return this;
         }
-
         public Builder encrypted(String encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
-
         public Builder throughput(Integer throughput) {
             this.throughput = Objects.requireNonNull(throughput);
             return this;
         }
-
         public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public GetLaunchTemplateBlockDeviceMappingEb build() {
+        }        public GetLaunchTemplateBlockDeviceMappingEb build() {
             return new GetLaunchTemplateBlockDeviceMappingEb(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, throughput, volumeSize, volumeType);
         }
     }

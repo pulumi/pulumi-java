@@ -57,12 +57,10 @@ public final class ResolverDNSSECConfigArgs extends io.pulumi.resources.Resource
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public ResolverDNSSECConfigArgs build() {
+        }        public ResolverDNSSECConfigArgs build() {
             return new ResolverDNSSECConfigArgs(resourceId);
         }
     }

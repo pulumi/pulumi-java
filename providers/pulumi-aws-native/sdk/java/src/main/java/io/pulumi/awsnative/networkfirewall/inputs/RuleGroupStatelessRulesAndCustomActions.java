@@ -68,12 +68,16 @@ public final class RuleGroupStatelessRulesAndCustomActions extends io.pulumi.res
             this.customActions = customActions;
             return this;
         }
-
+        public Builder customActions(RuleGroupCustomAction... customActions) {
+            return customActions(List.of(customActions));
+        }
         public Builder statelessRules(List<RuleGroupStatelessRule> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
-        public RuleGroupStatelessRulesAndCustomActions build() {
+        public Builder statelessRules(RuleGroupStatelessRule... statelessRules) {
+            return statelessRules(List.of(statelessRules));
+        }        public RuleGroupStatelessRulesAndCustomActions build() {
             return new RuleGroupStatelessRulesAndCustomActions(customActions, statelessRules);
         }
     }

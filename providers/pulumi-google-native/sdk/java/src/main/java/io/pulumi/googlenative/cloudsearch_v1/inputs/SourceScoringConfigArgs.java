@@ -61,12 +61,10 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
             this.sourceImportance = sourceImportance;
             return this;
         }
-
         public Builder sourceImportance(@Nullable SourceScoringConfigSourceImportance sourceImportance) {
             this.sourceImportance = Output.ofNullable(sourceImportance);
             return this;
-        }
-        public SourceScoringConfigArgs build() {
+        }        public SourceScoringConfigArgs build() {
             return new SourceScoringConfigArgs(sourceImportance);
         }
     }

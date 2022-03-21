@@ -145,62 +145,62 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             this.cidrs = cidrs;
             return this;
         }
-
         public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = Output.ofNullable(cidrs);
             return this;
         }
-
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }
         public Builder count(@Nullable Output<String> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable String count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder number(@Nullable Output<Double> number) {
             this.number = number;
             return this;
         }
-
         public Builder number(@Nullable Double number) {
             this.number = Output.ofNullable(number);
             return this;
         }
-
         public Builder numbers(@Nullable Output<List<Double>> numbers) {
             this.numbers = numbers;
             return this;
         }
-
         public Builder numbers(@Nullable List<Double> numbers) {
             this.numbers = Output.ofNullable(numbers);
             return this;
         }
-
+        public Builder numbers(Double... numbers) {
+            return numbers(List.of(numbers));
+        }
         public Builder ports(@Nullable Output<List<Integer>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<Integer> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(Integer... ports) {
+            return ports(List.of(ports));
+        }
         public Builder strings(@Nullable Output<List<String>> strings) {
             this.strings = strings;
             return this;
         }
-
         public Builder strings(@Nullable List<String> strings) {
             this.strings = Output.ofNullable(strings);
             return this;
         }
-        public SecurityProfileMetricValueArgs build() {
+        public Builder strings(String... strings) {
+            return strings(List.of(strings));
+        }        public SecurityProfileMetricValueArgs build() {
             return new SecurityProfileMetricValueArgs(cidrs, count, number, numbers, ports, strings);
         }
     }

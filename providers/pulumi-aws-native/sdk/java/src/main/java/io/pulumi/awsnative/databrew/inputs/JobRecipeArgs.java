@@ -74,22 +74,18 @@ public final class JobRecipeArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public JobRecipeArgs build() {
+        }        public JobRecipeArgs build() {
             return new JobRecipeArgs(name, version);
         }
     }

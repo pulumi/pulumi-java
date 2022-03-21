@@ -120,27 +120,22 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
             this.attachmentTarget = Objects.requireNonNull(attachmentTarget);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder firewallPolicyId(String firewallPolicyId) {
             this.firewallPolicyId = Objects.requireNonNull(firewallPolicyId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
-        }
-        public FirewallPolicyAssociationResponse build() {
+        }        public FirewallPolicyAssociationResponse build() {
             return new FirewallPolicyAssociationResponse(attachmentTarget, displayName, firewallPolicyId, name, shortName);
         }
     }

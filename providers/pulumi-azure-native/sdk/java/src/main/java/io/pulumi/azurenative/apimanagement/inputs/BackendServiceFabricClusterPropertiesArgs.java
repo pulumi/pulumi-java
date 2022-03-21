@@ -145,62 +145,59 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
             this.clientCertificateId = clientCertificateId;
             return this;
         }
-
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
-
         public Builder clientCertificatethumbprint(@Nullable Output<String> clientCertificatethumbprint) {
             this.clientCertificatethumbprint = clientCertificatethumbprint;
             return this;
         }
-
         public Builder clientCertificatethumbprint(@Nullable String clientCertificatethumbprint) {
             this.clientCertificatethumbprint = Output.ofNullable(clientCertificatethumbprint);
             return this;
         }
-
         public Builder managementEndpoints(Output<List<String>> managementEndpoints) {
             this.managementEndpoints = Objects.requireNonNull(managementEndpoints);
             return this;
         }
-
         public Builder managementEndpoints(List<String> managementEndpoints) {
             this.managementEndpoints = Output.of(Objects.requireNonNull(managementEndpoints));
             return this;
         }
-
+        public Builder managementEndpoints(String... managementEndpoints) {
+            return managementEndpoints(List.of(managementEndpoints));
+        }
         public Builder maxPartitionResolutionRetries(@Nullable Output<Integer> maxPartitionResolutionRetries) {
             this.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
             return this;
         }
-
         public Builder maxPartitionResolutionRetries(@Nullable Integer maxPartitionResolutionRetries) {
             this.maxPartitionResolutionRetries = Output.ofNullable(maxPartitionResolutionRetries);
             return this;
         }
-
         public Builder serverCertificateThumbprints(@Nullable Output<List<String>> serverCertificateThumbprints) {
             this.serverCertificateThumbprints = serverCertificateThumbprints;
             return this;
         }
-
         public Builder serverCertificateThumbprints(@Nullable List<String> serverCertificateThumbprints) {
             this.serverCertificateThumbprints = Output.ofNullable(serverCertificateThumbprints);
             return this;
         }
-
+        public Builder serverCertificateThumbprints(String... serverCertificateThumbprints) {
+            return serverCertificateThumbprints(List.of(serverCertificateThumbprints));
+        }
         public Builder serverX509Names(@Nullable Output<List<X509CertificateNameArgs>> serverX509Names) {
             this.serverX509Names = serverX509Names;
             return this;
         }
-
         public Builder serverX509Names(@Nullable List<X509CertificateNameArgs> serverX509Names) {
             this.serverX509Names = Output.ofNullable(serverX509Names);
             return this;
         }
-        public BackendServiceFabricClusterPropertiesArgs build() {
+        public Builder serverX509Names(X509CertificateNameArgs... serverX509Names) {
+            return serverX509Names(List.of(serverX509Names));
+        }        public BackendServiceFabricClusterPropertiesArgs build() {
             return new BackendServiceFabricClusterPropertiesArgs(clientCertificateId, clientCertificatethumbprint, managementEndpoints, maxPartitionResolutionRetries, serverCertificateThumbprints, serverX509Names);
         }
     }

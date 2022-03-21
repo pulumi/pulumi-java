@@ -110,22 +110,24 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder copyLogDetailsType(String copyLogDetailsType) {
             this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
             return this;
         }
-
         public Builder copyLogLink(List<String> copyLogLink) {
             this.copyLogLink = Objects.requireNonNull(copyLogLink);
             return this;
         }
-
+        public Builder copyLogLink(String... copyLogLink) {
+            return copyLogLink(List.of(copyLogLink));
+        }
         public Builder copyVerboseLogLink(List<String> copyVerboseLogLink) {
             this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
             return this;
         }
-        public DataBoxHeavyAccountCopyLogDetailsResponse build() {
+        public Builder copyVerboseLogLink(String... copyVerboseLogLink) {
+            return copyVerboseLogLink(List.of(copyVerboseLogLink));
+        }        public DataBoxHeavyAccountCopyLogDetailsResponse build() {
             return new DataBoxHeavyAccountCopyLogDetailsResponse(accountName, copyLogDetailsType, copyLogLink, copyVerboseLogLink);
         }
     }

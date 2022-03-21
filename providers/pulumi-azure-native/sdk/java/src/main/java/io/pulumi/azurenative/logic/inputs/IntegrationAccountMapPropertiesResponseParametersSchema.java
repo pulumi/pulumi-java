@@ -60,8 +60,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
         public Builder ref(@Nullable String ref) {
             this.ref = ref;
             return this;
-        }
-        public IntegrationAccountMapPropertiesResponseParametersSchema build() {
+        }        public IntegrationAccountMapPropertiesResponseParametersSchema build() {
             return new IntegrationAccountMapPropertiesResponseParametersSchema(ref);
         }
     }

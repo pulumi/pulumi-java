@@ -72,12 +72,10 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends io.pulumi
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public GetEnclaveCertificateIamRoleAssociationArgs build() {
+        }        public GetEnclaveCertificateIamRoleAssociationArgs build() {
             return new GetEnclaveCertificateIamRoleAssociationArgs(certificateArn, roleArn);
         }
     }

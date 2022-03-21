@@ -151,62 +151,50 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
             this.datasource = datasource;
             return this;
         }
-
         public Builder datasource(@Nullable Object datasource) {
             this.datasource = Output.ofNullable(datasource);
             return this;
         }
-
         public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputName(@Nullable Output<String> outputName) {
             this.outputName = outputName;
             return this;
         }
-
         public Builder outputName(@Nullable String outputName) {
             this.outputName = Output.ofNullable(outputName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serialization(@Nullable Output<Object> serialization) {
             this.serialization = serialization;
             return this;
         }
-
         public Builder serialization(@Nullable Object serialization) {
             this.serialization = Output.ofNullable(serialization);
             return this;
-        }
-        public OutputArgs build() {
+        }        public OutputArgs build() {
             return new OutputArgs(datasource, jobName, name, outputName, resourceGroupName, serialization);
         }
     }

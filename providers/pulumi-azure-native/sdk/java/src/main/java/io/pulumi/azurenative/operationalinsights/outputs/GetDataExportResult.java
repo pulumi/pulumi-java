@@ -201,52 +201,45 @@ public final class GetDataExportResult {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder dataExportId(@Nullable String dataExportId) {
             this.dataExportId = dataExportId;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder tableNames(List<String> tableNames) {
             this.tableNames = Objects.requireNonNull(tableNames);
             return this;
         }
-
+        public Builder tableNames(String... tableNames) {
+            return tableNames(List.of(tableNames));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataExportResult build() {
+        }        public GetDataExportResult build() {
             return new GetDataExportResult(createdDate, dataExportId, enable, eventHubName, id, lastModifiedDate, name, resourceId, tableNames, type);
         }
     }

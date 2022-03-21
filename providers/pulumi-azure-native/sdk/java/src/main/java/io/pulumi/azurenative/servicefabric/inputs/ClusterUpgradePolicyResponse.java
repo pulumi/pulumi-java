@@ -193,47 +193,38 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
             this.deltaHealthPolicy = deltaHealthPolicy;
             return this;
         }
-
         public Builder forceRestart(@Nullable Boolean forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
-
         public Builder healthCheckRetryTimeout(String healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = Objects.requireNonNull(healthCheckRetryTimeout);
             return this;
         }
-
         public Builder healthCheckStableDuration(String healthCheckStableDuration) {
             this.healthCheckStableDuration = Objects.requireNonNull(healthCheckStableDuration);
             return this;
         }
-
         public Builder healthCheckWaitDuration(String healthCheckWaitDuration) {
             this.healthCheckWaitDuration = Objects.requireNonNull(healthCheckWaitDuration);
             return this;
         }
-
         public Builder healthPolicy(ClusterHealthPolicyResponse healthPolicy) {
             this.healthPolicy = Objects.requireNonNull(healthPolicy);
             return this;
         }
-
         public Builder upgradeDomainTimeout(String upgradeDomainTimeout) {
             this.upgradeDomainTimeout = Objects.requireNonNull(upgradeDomainTimeout);
             return this;
         }
-
         public Builder upgradeReplicaSetCheckTimeout(String upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = Objects.requireNonNull(upgradeReplicaSetCheckTimeout);
             return this;
         }
-
         public Builder upgradeTimeout(String upgradeTimeout) {
             this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
             return this;
-        }
-        public ClusterUpgradePolicyResponse build() {
+        }        public ClusterUpgradePolicyResponse build() {
             return new ClusterUpgradePolicyResponse(deltaHealthPolicy, forceRestart, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, healthPolicy, upgradeDomainTimeout, upgradeReplicaSetCheckTimeout, upgradeTimeout);
         }
     }

@@ -53,8 +53,7 @@ public final class ThingGroupPropertiesAttributePayload {
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
-        }
-        public ThingGroupPropertiesAttributePayload build() {
+        }        public ThingGroupPropertiesAttributePayload build() {
             return new ThingGroupPropertiesAttributePayload(attributes);
         }
     }

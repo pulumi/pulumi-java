@@ -62,12 +62,13 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             this.eventType = eventType;
             return this;
         }
-
         public Builder eventType(@Nullable List<FilterEventTypeItem> eventType) {
             this.eventType = Output.ofNullable(eventType);
             return this;
         }
-        public FilterArgs build() {
+        public Builder eventType(FilterEventTypeItem... eventType) {
+            return eventType(List.of(eventType));
+        }        public FilterArgs build() {
             return new FilterArgs(eventType);
         }
     }

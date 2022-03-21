@@ -94,17 +94,14 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ConnectionStateResponse build() {
+        }        public ConnectionStateResponse build() {
             return new ConnectionStateResponse(actionsRequired, description, status);
         }
     }

@@ -341,182 +341,149 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disallowed(@Nullable Output<DisallowedArgs> disallowed) {
             this.disallowed = disallowed;
             return this;
         }
-
         public Builder disallowed(@Nullable DisallowedArgs disallowed) {
             this.disallowed = Output.ofNullable(disallowed);
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
             return this;
         }
-
         public Builder eula(@Nullable Output<String> eula) {
             this.eula = eula;
             return this;
         }
-
         public Builder eula(@Nullable String eula) {
             this.eula = Output.ofNullable(eula);
             return this;
         }
-
         public Builder features(@Nullable Output<List<GalleryImageFeatureArgs>> features) {
             this.features = features;
             return this;
         }
-
         public Builder features(@Nullable List<GalleryImageFeatureArgs> features) {
             this.features = Output.ofNullable(features);
             return this;
         }
-
+        public Builder features(GalleryImageFeatureArgs... features) {
+            return features(List.of(features));
+        }
         public Builder galleryImageName(@Nullable Output<String> galleryImageName) {
             this.galleryImageName = galleryImageName;
             return this;
         }
-
         public Builder galleryImageName(@Nullable String galleryImageName) {
             this.galleryImageName = Output.ofNullable(galleryImageName);
             return this;
         }
-
         public Builder galleryName(Output<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
-
         public Builder galleryName(String galleryName) {
             this.galleryName = Output.of(Objects.requireNonNull(galleryName));
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
             this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
             return this;
         }
-
         public Builder identifier(Output<GalleryImageIdentifierArgs> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
-
         public Builder identifier(GalleryImageIdentifierArgs identifier) {
             this.identifier = Output.of(Objects.requireNonNull(identifier));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder osState(Output<OperatingSystemStateTypes> osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
-
         public Builder osState(OperatingSystemStateTypes osState) {
             this.osState = Output.of(Objects.requireNonNull(osState));
             return this;
         }
-
         public Builder osType(Output<OperatingSystemTypes> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(OperatingSystemTypes osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
-
         public Builder privacyStatementUri(@Nullable Output<String> privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
-
         public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
             this.privacyStatementUri = Output.ofNullable(privacyStatementUri);
             return this;
         }
-
         public Builder purchasePlan(@Nullable Output<ImagePurchasePlanArgs> purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
-
         public Builder purchasePlan(@Nullable ImagePurchasePlanArgs purchasePlan) {
             this.purchasePlan = Output.ofNullable(purchasePlan);
             return this;
         }
-
         public Builder recommended(@Nullable Output<RecommendedMachineConfigurationArgs> recommended) {
             this.recommended = recommended;
             return this;
         }
-
         public Builder recommended(@Nullable RecommendedMachineConfigurationArgs recommended) {
             this.recommended = Output.ofNullable(recommended);
             return this;
         }
-
         public Builder releaseNoteUri(@Nullable Output<String> releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
-
         public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
             this.releaseNoteUri = Output.ofNullable(releaseNoteUri);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GalleryImageArgs build() {
+        }        public GalleryImageArgs build() {
             return new GalleryImageArgs(description, disallowed, endOfLifeDate, eula, features, galleryImageName, galleryName, hyperVGeneration, identifier, location, osState, osType, privacyStatementUri, purchasePlan, recommended, releaseNoteUri, resourceGroupName, tags);
         }
     }

@@ -176,82 +176,69 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             this.backendAddressPool = backendAddressPool;
             return this;
         }
-
         public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
             this.backendAddressPool = Output.ofNullable(backendAddressPool);
             return this;
         }
-
         public Builder backendHttpSettings(@Nullable Output<SubResourceArgs> backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
-
         public Builder backendHttpSettings(@Nullable SubResourceArgs backendHttpSettings) {
             this.backendHttpSettings = Output.ofNullable(backendHttpSettings);
             return this;
         }
-
         public Builder firewallPolicy(@Nullable Output<SubResourceArgs> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
-
         public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
             this.firewallPolicy = Output.ofNullable(firewallPolicy);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = Output.ofNullable(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder redirectConfiguration(@Nullable Output<SubResourceArgs> redirectConfiguration) {
             this.redirectConfiguration = redirectConfiguration;
             return this;
         }
-
         public Builder redirectConfiguration(@Nullable SubResourceArgs redirectConfiguration) {
             this.redirectConfiguration = Output.ofNullable(redirectConfiguration);
             return this;
         }
-
         public Builder rewriteRuleSet(@Nullable Output<SubResourceArgs> rewriteRuleSet) {
             this.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
-
         public Builder rewriteRuleSet(@Nullable SubResourceArgs rewriteRuleSet) {
             this.rewriteRuleSet = Output.ofNullable(rewriteRuleSet);
             return this;
-        }
-        public ApplicationGatewayPathRuleArgs build() {
+        }        public ApplicationGatewayPathRuleArgs build() {
             return new ApplicationGatewayPathRuleArgs(backendAddressPool, backendHttpSettings, firewallPolicy, id, name, paths, redirectConfiguration, rewriteRuleSet);
         }
     }

@@ -130,52 +130,45 @@ public final class ClusterRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.aggregationRule = aggregationRule;
             return this;
         }
-
         public Builder aggregationRule(@Nullable AggregationRuleArgs aggregationRule) {
             this.aggregationRule = Output.ofNullable(aggregationRule);
             return this;
         }
-
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<PolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<PolicyRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public ClusterRoleArgs build() {
+        public Builder rules(PolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public ClusterRoleArgs build() {
             return new ClusterRoleArgs(aggregationRule, apiVersion, kind, metadata, rules);
         }
     }

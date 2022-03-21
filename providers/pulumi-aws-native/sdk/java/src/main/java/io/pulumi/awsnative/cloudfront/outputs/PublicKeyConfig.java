@@ -71,22 +71,18 @@ public final class PublicKeyConfig {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder encodedKey(String encodedKey) {
             this.encodedKey = Objects.requireNonNull(encodedKey);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PublicKeyConfig build() {
+        }        public PublicKeyConfig build() {
             return new PublicKeyConfig(callerReference, comment, encodedKey, name);
         }
     }

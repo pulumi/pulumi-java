@@ -271,142 +271,120 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authenticationOptions(@Nullable Output<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions) {
             this.authenticationOptions = authenticationOptions;
             return this;
         }
-
         public Builder authenticationOptions(@Nullable List<EndpointAuthenticationOptionGetArgs> authenticationOptions) {
             this.authenticationOptions = Output.ofNullable(authenticationOptions);
             return this;
         }
-
+        public Builder authenticationOptions(EndpointAuthenticationOptionGetArgs... authenticationOptions) {
+            return authenticationOptions(List.of(authenticationOptions));
+        }
         public Builder clientCidrBlock(@Nullable Output<String> clientCidrBlock) {
             this.clientCidrBlock = clientCidrBlock;
             return this;
         }
-
         public Builder clientCidrBlock(@Nullable String clientCidrBlock) {
             this.clientCidrBlock = Output.ofNullable(clientCidrBlock);
             return this;
         }
-
         public Builder connectionLogOptions(@Nullable Output<EndpointConnectionLogOptionsGetArgs> connectionLogOptions) {
             this.connectionLogOptions = connectionLogOptions;
             return this;
         }
-
         public Builder connectionLogOptions(@Nullable EndpointConnectionLogOptionsGetArgs connectionLogOptions) {
             this.connectionLogOptions = Output.ofNullable(connectionLogOptions);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder selfServicePortal(@Nullable Output<String> selfServicePortal) {
             this.selfServicePortal = selfServicePortal;
             return this;
         }
-
         public Builder selfServicePortal(@Nullable String selfServicePortal) {
             this.selfServicePortal = Output.ofNullable(selfServicePortal);
             return this;
         }
-
         public Builder serverCertificateArn(@Nullable Output<String> serverCertificateArn) {
             this.serverCertificateArn = serverCertificateArn;
             return this;
         }
-
         public Builder serverCertificateArn(@Nullable String serverCertificateArn) {
             this.serverCertificateArn = Output.ofNullable(serverCertificateArn);
             return this;
         }
-
         public Builder splitTunnel(@Nullable Output<Boolean> splitTunnel) {
             this.splitTunnel = splitTunnel;
             return this;
         }
-
         public Builder splitTunnel(@Nullable Boolean splitTunnel) {
             this.splitTunnel = Output.ofNullable(splitTunnel);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder transportProtocol(@Nullable Output<String> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = Output.ofNullable(transportProtocol);
             return this;
-        }
-        public EndpointState build() {
+        }        public EndpointState build() {
             return new EndpointState(arn, authenticationOptions, clientCidrBlock, connectionLogOptions, description, dnsName, dnsServers, selfServicePortal, serverCertificateArn, splitTunnel, status, tags, tagsAll, transportProtocol);
         }
     }

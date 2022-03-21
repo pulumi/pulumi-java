@@ -204,52 +204,42 @@ public final class GetStreamingPolicyResult {
             this.commonEncryptionCbcs = commonEncryptionCbcs;
             return this;
         }
-
         public Builder commonEncryptionCenc(@Nullable CommonEncryptionCencResponse commonEncryptionCenc) {
             this.commonEncryptionCenc = commonEncryptionCenc;
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
-
         public Builder envelopeEncryption(@Nullable EnvelopeEncryptionResponse envelopeEncryption) {
             this.envelopeEncryption = envelopeEncryption;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder noEncryption(@Nullable NoEncryptionResponse noEncryption) {
             this.noEncryption = noEncryption;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStreamingPolicyResult build() {
+        }        public GetStreamingPolicyResult build() {
             return new GetStreamingPolicyResult(commonEncryptionCbcs, commonEncryptionCenc, created, defaultContentKeyPolicyName, envelopeEncryption, id, name, noEncryption, systemData, type);
         }
     }

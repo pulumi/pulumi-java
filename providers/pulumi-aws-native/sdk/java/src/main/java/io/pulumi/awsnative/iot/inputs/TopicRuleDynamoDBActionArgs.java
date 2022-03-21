@@ -150,92 +150,74 @@ public final class TopicRuleDynamoDBActionArgs extends io.pulumi.resources.Resou
             this.hashKeyField = Objects.requireNonNull(hashKeyField);
             return this;
         }
-
         public Builder hashKeyField(String hashKeyField) {
             this.hashKeyField = Output.of(Objects.requireNonNull(hashKeyField));
             return this;
         }
-
         public Builder hashKeyType(@Nullable Output<String> hashKeyType) {
             this.hashKeyType = hashKeyType;
             return this;
         }
-
         public Builder hashKeyType(@Nullable String hashKeyType) {
             this.hashKeyType = Output.ofNullable(hashKeyType);
             return this;
         }
-
         public Builder hashKeyValue(Output<String> hashKeyValue) {
             this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
             return this;
         }
-
         public Builder hashKeyValue(String hashKeyValue) {
             this.hashKeyValue = Output.of(Objects.requireNonNull(hashKeyValue));
             return this;
         }
-
         public Builder payloadField(@Nullable Output<String> payloadField) {
             this.payloadField = payloadField;
             return this;
         }
-
         public Builder payloadField(@Nullable String payloadField) {
             this.payloadField = Output.ofNullable(payloadField);
             return this;
         }
-
         public Builder rangeKeyField(@Nullable Output<String> rangeKeyField) {
             this.rangeKeyField = rangeKeyField;
             return this;
         }
-
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
             this.rangeKeyField = Output.ofNullable(rangeKeyField);
             return this;
         }
-
         public Builder rangeKeyType(@Nullable Output<String> rangeKeyType) {
             this.rangeKeyType = rangeKeyType;
             return this;
         }
-
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
             this.rangeKeyType = Output.ofNullable(rangeKeyType);
             return this;
         }
-
         public Builder rangeKeyValue(@Nullable Output<String> rangeKeyValue) {
             this.rangeKeyValue = rangeKeyValue;
             return this;
         }
-
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
             this.rangeKeyValue = Output.ofNullable(rangeKeyValue);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public TopicRuleDynamoDBActionArgs build() {
+        }        public TopicRuleDynamoDBActionArgs build() {
             return new TopicRuleDynamoDBActionArgs(hashKeyField, hashKeyType, hashKeyValue, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, roleArn, tableName);
         }
     }

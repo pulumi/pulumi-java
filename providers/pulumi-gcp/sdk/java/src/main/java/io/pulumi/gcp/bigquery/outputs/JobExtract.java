@@ -183,42 +183,37 @@ public final class JobExtract {
             this.compression = compression;
             return this;
         }
-
         public Builder destinationFormat(@Nullable String destinationFormat) {
             this.destinationFormat = destinationFormat;
             return this;
         }
-
         public Builder destinationUris(List<String> destinationUris) {
             this.destinationUris = Objects.requireNonNull(destinationUris);
             return this;
         }
-
+        public Builder destinationUris(String... destinationUris) {
+            return destinationUris(List.of(destinationUris));
+        }
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder printHeader(@Nullable Boolean printHeader) {
             this.printHeader = printHeader;
             return this;
         }
-
         public Builder sourceModel(@Nullable JobExtractSourceModel sourceModel) {
             this.sourceModel = sourceModel;
             return this;
         }
-
         public Builder sourceTable(@Nullable JobExtractSourceTable sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
-
         public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
-        }
-        public JobExtract build() {
+        }        public JobExtract build() {
             return new JobExtract(compression, destinationFormat, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }
     }

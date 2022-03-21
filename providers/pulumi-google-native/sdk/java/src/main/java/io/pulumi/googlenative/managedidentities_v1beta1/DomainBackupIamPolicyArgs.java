@@ -129,62 +129,53 @@ public final class DomainBackupIamPolicyArgs extends io.pulumi.resources.Resourc
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder backupId(String backupId) {
             this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
-
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder domainId(Output<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder domainId(String domainId) {
             this.domainId = Output.of(Objects.requireNonNull(domainId));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DomainBackupIamPolicyArgs build() {
+        }        public DomainBackupIamPolicyArgs build() {
             return new DomainBackupIamPolicyArgs(backupId, bindings, domainId, etag, project, version);
         }
     }

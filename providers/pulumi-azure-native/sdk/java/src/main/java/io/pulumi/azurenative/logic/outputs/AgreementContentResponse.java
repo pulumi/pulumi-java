@@ -89,17 +89,14 @@ public final class AgreementContentResponse {
             this.aS2 = aS2;
             return this;
         }
-
         public Builder edifact(@Nullable EdifactAgreementContentResponse edifact) {
             this.edifact = edifact;
             return this;
         }
-
         public Builder x12(@Nullable X12AgreementContentResponse x12) {
             this.x12 = x12;
             return this;
-        }
-        public AgreementContentResponse build() {
+        }        public AgreementContentResponse build() {
             return new AgreementContentResponse(aS2, edifact, x12);
         }
     }

@@ -78,22 +78,18 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public SecretVersionArgs build() {
+        }        public SecretVersionArgs build() {
             return new SecretVersionArgs(path, version);
         }
     }

@@ -72,12 +72,10 @@ public final class GetScheduledQueryRuleArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public GetScheduledQueryRuleArgs build() {
+        }        public GetScheduledQueryRuleArgs build() {
             return new GetScheduledQueryRuleArgs(resourceGroupName, ruleName);
         }
     }

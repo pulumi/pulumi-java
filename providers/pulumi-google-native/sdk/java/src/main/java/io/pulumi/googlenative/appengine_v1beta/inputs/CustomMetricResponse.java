@@ -125,27 +125,22 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment);
             return this;
         }
-
         public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder targetUtilization(Double targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
-        }
-        public CustomMetricResponse build() {
+        }        public CustomMetricResponse build() {
             return new CustomMetricResponse(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);
         }
     }

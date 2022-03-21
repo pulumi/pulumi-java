@@ -51,8 +51,7 @@ public final class DataSourceLambdaConfig {
         public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
-        }
-        public DataSourceLambdaConfig build() {
+        }        public DataSourceLambdaConfig build() {
             return new DataSourceLambdaConfig(functionArn);
         }
     }

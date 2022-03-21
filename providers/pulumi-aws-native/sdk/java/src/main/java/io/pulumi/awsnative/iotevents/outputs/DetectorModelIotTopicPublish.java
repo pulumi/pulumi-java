@@ -64,12 +64,10 @@ public final class DetectorModelIotTopicPublish {
             this.mqttTopic = Objects.requireNonNull(mqttTopic);
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
-        }
-        public DetectorModelIotTopicPublish build() {
+        }        public DetectorModelIotTopicPublish build() {
             return new DetectorModelIotTopicPublish(mqttTopic, payload);
         }
     }

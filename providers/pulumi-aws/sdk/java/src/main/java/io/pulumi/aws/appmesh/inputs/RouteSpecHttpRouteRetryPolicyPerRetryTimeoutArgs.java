@@ -74,22 +74,18 @@ public final class RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs extends io.p
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Output.of(Objects.requireNonNull(unit));
             return this;
         }
-
         public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs build() {
+        }        public RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs build() {
             return new RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs(unit, value);
         }
     }

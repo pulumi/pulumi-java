@@ -97,32 +97,26 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder actionsRequired(@Nullable Either<String,ActionsRequired> actionsRequired) {
             this.actionsRequired = Output.ofNullable(actionsRequired);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,PrivateEndpointServiceConnectionStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public MHSMPrivateLinkServiceConnectionStateArgs build() {
+        }        public MHSMPrivateLinkServiceConnectionStateArgs build() {
             return new MHSMPrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);
         }
     }

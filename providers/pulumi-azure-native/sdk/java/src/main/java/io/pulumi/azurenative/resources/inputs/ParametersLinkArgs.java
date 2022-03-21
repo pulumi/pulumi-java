@@ -78,22 +78,18 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.contentVersion = contentVersion;
             return this;
         }
-
         public Builder contentVersion(@Nullable String contentVersion) {
             this.contentVersion = Output.ofNullable(contentVersion);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public ParametersLinkArgs build() {
+        }        public ParametersLinkArgs build() {
             return new ParametersLinkArgs(contentVersion, uri);
         }
     }

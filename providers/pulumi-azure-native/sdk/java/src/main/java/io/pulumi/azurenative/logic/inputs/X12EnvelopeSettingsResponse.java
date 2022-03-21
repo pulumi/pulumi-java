@@ -432,122 +432,98 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
             this.controlStandardsId = Objects.requireNonNull(controlStandardsId);
             return this;
         }
-
         public Builder controlVersionNumber(String controlVersionNumber) {
             this.controlVersionNumber = Objects.requireNonNull(controlVersionNumber);
             return this;
         }
-
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
             return this;
         }
-
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
-
         public Builder groupControlNumberLowerBound(Integer groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
             return this;
         }
-
         public Builder groupControlNumberUpperBound(Integer groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
             return this;
         }
-
         public Builder groupHeaderAgencyCode(String groupHeaderAgencyCode) {
             this.groupHeaderAgencyCode = Objects.requireNonNull(groupHeaderAgencyCode);
             return this;
         }
-
         public Builder groupHeaderDateFormat(String groupHeaderDateFormat) {
             this.groupHeaderDateFormat = Objects.requireNonNull(groupHeaderDateFormat);
             return this;
         }
-
         public Builder groupHeaderTimeFormat(String groupHeaderTimeFormat) {
             this.groupHeaderTimeFormat = Objects.requireNonNull(groupHeaderTimeFormat);
             return this;
         }
-
         public Builder groupHeaderVersion(String groupHeaderVersion) {
             this.groupHeaderVersion = Objects.requireNonNull(groupHeaderVersion);
             return this;
         }
-
         public Builder interchangeControlNumberLowerBound(Integer interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
             return this;
         }
-
         public Builder interchangeControlNumberUpperBound(Integer interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
             return this;
         }
-
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
             return this;
         }
-
         public Builder receiverApplicationId(String receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
-
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
             return this;
         }
-
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
             return this;
         }
-
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
             return this;
         }
-
         public Builder senderApplicationId(String senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
-
         public Builder transactionSetControlNumberLowerBound(Integer transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
             return this;
         }
-
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
-
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
-
         public Builder transactionSetControlNumberUpperBound(Integer transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
             return this;
         }
-
         public Builder usageIndicator(String usageIndicator) {
             this.usageIndicator = Objects.requireNonNull(usageIndicator);
             return this;
         }
-
         public Builder useControlStandardsIdAsRepetitionCharacter(Boolean useControlStandardsIdAsRepetitionCharacter) {
             this.useControlStandardsIdAsRepetitionCharacter = Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter);
             return this;
-        }
-        public X12EnvelopeSettingsResponse build() {
+        }        public X12EnvelopeSettingsResponse build() {
             return new X12EnvelopeSettingsResponse(controlStandardsId, controlVersionNumber, enableDefaultGroupHeaders, functionalGroupId, groupControlNumberLowerBound, groupControlNumberUpperBound, groupHeaderAgencyCode, groupHeaderDateFormat, groupHeaderTimeFormat, groupHeaderVersion, interchangeControlNumberLowerBound, interchangeControlNumberUpperBound, overwriteExistingTransactionSetControlNumber, receiverApplicationId, rolloverGroupControlNumber, rolloverInterchangeControlNumber, rolloverTransactionSetControlNumber, senderApplicationId, transactionSetControlNumberLowerBound, transactionSetControlNumberPrefix, transactionSetControlNumberSuffix, transactionSetControlNumberUpperBound, usageIndicator, useControlStandardsIdAsRepetitionCharacter);
         }
     }

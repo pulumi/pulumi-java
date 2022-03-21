@@ -71,12 +71,10 @@ public final class SqlDWUpsertSettingsResponse {
             this.interimSchemaName = interimSchemaName;
             return this;
         }
-
         public Builder keys(@Nullable Object keys) {
             this.keys = keys;
             return this;
-        }
-        public SqlDWUpsertSettingsResponse build() {
+        }        public SqlDWUpsertSettingsResponse build() {
             return new SqlDWUpsertSettingsResponse(interimSchemaName, keys);
         }
     }

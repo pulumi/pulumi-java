@@ -62,12 +62,10 @@ public final class EdifactMessageFilterArgs extends io.pulumi.resources.Resource
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
         }
-
         public Builder messageFilterType(Either<String,MessageFilterType> messageFilterType) {
             this.messageFilterType = Output.of(Objects.requireNonNull(messageFilterType));
             return this;
-        }
-        public EdifactMessageFilterArgs build() {
+        }        public EdifactMessageFilterArgs build() {
             return new EdifactMessageFilterArgs(messageFilterType);
         }
     }

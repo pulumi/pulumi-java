@@ -81,22 +81,21 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
             this.disableWWWAuthenticate = disableWWWAuthenticate;
             return this;
         }
-
         public Builder disableWWWAuthenticate(@Nullable Boolean disableWWWAuthenticate) {
             this.disableWWWAuthenticate = Output.ofNullable(disableWWWAuthenticate);
             return this;
         }
-
         public Builder loginParameters(@Nullable Output<List<String>> loginParameters) {
             this.loginParameters = loginParameters;
             return this;
         }
-
         public Builder loginParameters(@Nullable List<String> loginParameters) {
             this.loginParameters = Output.ofNullable(loginParameters);
             return this;
         }
-        public AzureActiveDirectoryLoginArgs build() {
+        public Builder loginParameters(String... loginParameters) {
+            return loginParameters(List.of(loginParameters));
+        }        public AzureActiveDirectoryLoginArgs build() {
             return new AzureActiveDirectoryLoginArgs(disableWWWAuthenticate, loginParameters);
         }
     }

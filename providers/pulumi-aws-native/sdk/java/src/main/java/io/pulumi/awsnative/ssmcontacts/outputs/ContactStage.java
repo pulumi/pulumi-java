@@ -72,12 +72,13 @@ public final class ContactStage {
             this.durationInMinutes = Objects.requireNonNull(durationInMinutes);
             return this;
         }
-
         public Builder targets(@Nullable List<ContactTargets> targets) {
             this.targets = targets;
             return this;
         }
-        public ContactStage build() {
+        public Builder targets(ContactTargets... targets) {
+            return targets(List.of(targets));
+        }        public ContactStage build() {
             return new ContactStage(durationInMinutes, targets);
         }
     }

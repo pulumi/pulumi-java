@@ -53,12 +53,10 @@ public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends io
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public KnowledgeBaseServerSideEncryptionConfigurationArgs build() {
+        }        public KnowledgeBaseServerSideEncryptionConfigurationArgs build() {
             return new KnowledgeBaseServerSideEncryptionConfigurationArgs(kmsKeyId);
         }
     }

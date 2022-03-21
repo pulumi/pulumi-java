@@ -50,8 +50,7 @@ public final class WebACLNotStatement extends io.pulumi.resources.InvokeArgs {
         public Builder statement(WebACLStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
-        }
-        public WebACLNotStatement build() {
+        }        public WebACLNotStatement build() {
             return new WebACLNotStatement(statement);
         }
     }

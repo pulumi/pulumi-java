@@ -107,42 +107,37 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<String> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
-
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Output.of(Objects.requireNonNull(certificateAuthorityArn));
             return this;
         }
-
         public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public Builder sourceAccount(@Nullable Output<String> sourceAccount) {
             this.sourceAccount = sourceAccount;
             return this;
         }
-
         public Builder sourceAccount(@Nullable String sourceAccount) {
             this.sourceAccount = Output.ofNullable(sourceAccount);
             return this;
-        }
-        public PermissionArgs build() {
+        }        public PermissionArgs build() {
             return new PermissionArgs(actions, certificateAuthorityArn, principal, sourceAccount);
         }
     }

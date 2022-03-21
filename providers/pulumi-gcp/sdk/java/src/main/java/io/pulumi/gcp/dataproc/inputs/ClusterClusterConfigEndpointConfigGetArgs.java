@@ -74,22 +74,18 @@ public final class ClusterClusterConfigEndpointConfigGetArgs extends io.pulumi.r
             this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
             return this;
         }
-
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
             this.enableHttpPortAccess = Output.of(Objects.requireNonNull(enableHttpPortAccess));
             return this;
         }
-
         public Builder httpPorts(@Nullable Output<Map<String,Object>> httpPorts) {
             this.httpPorts = httpPorts;
             return this;
         }
-
         public Builder httpPorts(@Nullable Map<String,Object> httpPorts) {
             this.httpPorts = Output.ofNullable(httpPorts);
             return this;
-        }
-        public ClusterClusterConfigEndpointConfigGetArgs build() {
+        }        public ClusterClusterConfigEndpointConfigGetArgs build() {
             return new ClusterClusterConfigEndpointConfigGetArgs(enableHttpPortAccess, httpPorts);
         }
     }

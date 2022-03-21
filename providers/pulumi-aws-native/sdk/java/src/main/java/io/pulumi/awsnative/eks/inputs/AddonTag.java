@@ -76,12 +76,10 @@ public final class AddonTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AddonTag build() {
+        }        public AddonTag build() {
             return new AddonTag(key, value);
         }
     }

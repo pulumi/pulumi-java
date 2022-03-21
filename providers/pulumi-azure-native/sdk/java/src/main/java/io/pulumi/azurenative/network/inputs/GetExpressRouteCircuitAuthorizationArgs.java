@@ -88,17 +88,14 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends io.pulumi.res
             this.authorizationName = Objects.requireNonNull(authorizationName);
             return this;
         }
-
         public Builder circuitName(String circuitName) {
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExpressRouteCircuitAuthorizationArgs build() {
+        }        public GetExpressRouteCircuitAuthorizationArgs build() {
             return new GetExpressRouteCircuitAuthorizationArgs(authorizationName, circuitName, resourceGroupName);
         }
     }

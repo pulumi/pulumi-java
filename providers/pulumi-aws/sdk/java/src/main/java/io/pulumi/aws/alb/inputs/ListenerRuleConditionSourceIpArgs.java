@@ -57,12 +57,13 @@ public final class ListenerRuleConditionSourceIpArgs extends io.pulumi.resources
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ListenerRuleConditionSourceIpArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionSourceIpArgs build() {
             return new ListenerRuleConditionSourceIpArgs(values);
         }
     }

@@ -78,12 +78,10 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
             this.packageContentLink = packageContentLink;
             return this;
         }
-
         public Builder redisCacheConnectionString(@Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
             this.redisCacheConnectionString = redisCacheConnectionString;
             return this;
-        }
-        public ApiDeploymentParameterMetadataSetResponse build() {
+        }        public ApiDeploymentParameterMetadataSetResponse build() {
             return new ApiDeploymentParameterMetadataSetResponse(packageContentLink, redisCacheConnectionString);
         }
     }

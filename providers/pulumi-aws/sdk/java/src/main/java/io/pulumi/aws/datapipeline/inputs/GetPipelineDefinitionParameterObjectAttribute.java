@@ -72,12 +72,10 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends io.pulu
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
-        }
-        public GetPipelineDefinitionParameterObjectAttribute build() {
+        }        public GetPipelineDefinitionParameterObjectAttribute build() {
             return new GetPipelineDefinitionParameterObjectAttribute(key, stringValue);
         }
     }

@@ -152,37 +152,33 @@ public final class MethodResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
+        public Builder options(OptionResponse... options) {
+            return options(List.of(options));
+        }
         public Builder requestStreaming(Boolean requestStreaming) {
             this.requestStreaming = Objects.requireNonNull(requestStreaming);
             return this;
         }
-
         public Builder requestTypeUrl(String requestTypeUrl) {
             this.requestTypeUrl = Objects.requireNonNull(requestTypeUrl);
             return this;
         }
-
         public Builder responseStreaming(Boolean responseStreaming) {
             this.responseStreaming = Objects.requireNonNull(responseStreaming);
             return this;
         }
-
         public Builder responseTypeUrl(String responseTypeUrl) {
             this.responseTypeUrl = Objects.requireNonNull(responseTypeUrl);
             return this;
         }
-
         public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
-        }
-        public MethodResponse build() {
+        }        public MethodResponse build() {
             return new MethodResponse(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
         }
     }

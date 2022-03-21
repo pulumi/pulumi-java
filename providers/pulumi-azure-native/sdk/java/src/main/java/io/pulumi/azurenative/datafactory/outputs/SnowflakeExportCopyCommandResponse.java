@@ -90,17 +90,14 @@ public final class SnowflakeExportCopyCommandResponse {
             this.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
-
         public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
             this.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SnowflakeExportCopyCommandResponse build() {
+        }        public SnowflakeExportCopyCommandResponse build() {
             return new SnowflakeExportCopyCommandResponse(additionalCopyOptions, additionalFormatOptions, type);
         }
     }

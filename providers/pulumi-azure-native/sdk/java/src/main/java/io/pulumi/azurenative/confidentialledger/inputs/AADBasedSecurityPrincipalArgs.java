@@ -96,32 +96,26 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
-
         public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
             this.ledgerRoleName = Output.ofNullable(ledgerRoleName);
             return this;
         }
-
         public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public AADBasedSecurityPrincipalArgs build() {
+        }        public AADBasedSecurityPrincipalArgs build() {
             return new AADBasedSecurityPrincipalArgs(ledgerRoleName, principalId, tenantId);
         }
     }

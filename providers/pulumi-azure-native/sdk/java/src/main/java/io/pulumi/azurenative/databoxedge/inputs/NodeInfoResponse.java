@@ -96,17 +96,17 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
+        public Builder ipConfiguration(KubernetesIPConfigurationResponse... ipConfiguration) {
+            return ipConfiguration(List.of(ipConfiguration));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public NodeInfoResponse build() {
+        }        public NodeInfoResponse build() {
             return new NodeInfoResponse(ipConfiguration, name, type);
         }
     }

@@ -61,12 +61,10 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
-        }
-        public DayDetailsArgs build() {
+        }        public DayDetailsArgs build() {
             return new DayDetailsArgs(time);
         }
     }

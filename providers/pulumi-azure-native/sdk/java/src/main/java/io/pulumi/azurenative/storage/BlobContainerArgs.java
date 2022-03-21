@@ -157,72 +157,58 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder defaultEncryptionScope(@Nullable Output<String> defaultEncryptionScope) {
             this.defaultEncryptionScope = defaultEncryptionScope;
             return this;
         }
-
         public Builder defaultEncryptionScope(@Nullable String defaultEncryptionScope) {
             this.defaultEncryptionScope = Output.ofNullable(defaultEncryptionScope);
             return this;
         }
-
         public Builder denyEncryptionScopeOverride(@Nullable Output<Boolean> denyEncryptionScopeOverride) {
             this.denyEncryptionScopeOverride = denyEncryptionScopeOverride;
             return this;
         }
-
         public Builder denyEncryptionScopeOverride(@Nullable Boolean denyEncryptionScopeOverride) {
             this.denyEncryptionScopeOverride = Output.ofNullable(denyEncryptionScopeOverride);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder publicAccess(@Nullable Output<PublicAccess> publicAccess) {
             this.publicAccess = publicAccess;
             return this;
         }
-
         public Builder publicAccess(@Nullable PublicAccess publicAccess) {
             this.publicAccess = Output.ofNullable(publicAccess);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public BlobContainerArgs build() {
+        }        public BlobContainerArgs build() {
             return new BlobContainerArgs(accountName, containerName, defaultEncryptionScope, denyEncryptionScopeOverride, metadata, publicAccess, resourceGroupName);
         }
     }

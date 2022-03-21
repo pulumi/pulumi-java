@@ -90,17 +90,14 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
-        }
-        public GetVirtualNetworkArgs build() {
+        }        public GetVirtualNetworkArgs build() {
             return new GetVirtualNetworkArgs(expand, resourceGroupName, virtualNetworkName);
         }
     }

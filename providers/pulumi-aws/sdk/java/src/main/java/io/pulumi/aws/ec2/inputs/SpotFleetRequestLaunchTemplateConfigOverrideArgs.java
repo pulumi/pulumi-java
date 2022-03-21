@@ -139,62 +139,50 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder priority(@Nullable Output<Double> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Double priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
-        }
-        public SpotFleetRequestLaunchTemplateConfigOverrideArgs build() {
+        }        public SpotFleetRequestLaunchTemplateConfigOverrideArgs build() {
             return new SpotFleetRequestLaunchTemplateConfigOverrideArgs(availabilityZone, instanceType, priority, spotPrice, subnetId, weightedCapacity);
         }
     }

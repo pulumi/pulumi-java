@@ -387,202 +387,171 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder clusterAddress(@Nullable Output<String> clusterAddress) {
             this.clusterAddress = clusterAddress;
             return this;
         }
-
         public Builder clusterAddress(@Nullable String clusterAddress) {
             this.clusterAddress = Output.ofNullable(clusterAddress);
             return this;
         }
-
         public Builder clusterEndpointEncryptionType(@Nullable Output<String> clusterEndpointEncryptionType) {
             this.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
             return this;
         }
-
         public Builder clusterEndpointEncryptionType(@Nullable String clusterEndpointEncryptionType) {
             this.clusterEndpointEncryptionType = Output.ofNullable(clusterEndpointEncryptionType);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder configurationEndpoint(@Nullable Output<String> configurationEndpoint) {
             this.configurationEndpoint = configurationEndpoint;
             return this;
         }
-
         public Builder configurationEndpoint(@Nullable String configurationEndpoint) {
             this.configurationEndpoint = Output.ofNullable(configurationEndpoint);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
-
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
-
         public Builder nodes(@Nullable Output<List<ClusterNodeGetArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
-
         public Builder nodes(@Nullable List<ClusterNodeGetArgs> nodes) {
             this.nodes = Output.ofNullable(nodes);
             return this;
         }
-
+        public Builder nodes(ClusterNodeGetArgs... nodes) {
+            return nodes(List.of(nodes));
+        }
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }
-
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
             this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
             return this;
         }
-
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
-
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
-
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
             this.replicationFactor = Output.ofNullable(replicationFactor);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder serverSideEncryption(@Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable ClusterServerSideEncryptionGetArgs serverSideEncryption) {
             this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
-
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
-
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(arn, availabilityZones, clusterAddress, clusterEndpointEncryptionType, clusterName, configurationEndpoint, description, iamRoleArn, maintenanceWindow, nodeType, nodes, notificationTopicArn, parameterGroupName, port, replicationFactor, securityGroupIds, serverSideEncryption, subnetGroupName, tags, tagsAll);
         }
     }

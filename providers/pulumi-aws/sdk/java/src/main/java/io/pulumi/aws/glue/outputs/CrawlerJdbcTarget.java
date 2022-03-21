@@ -87,17 +87,17 @@ public final class CrawlerJdbcTarget {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder exclusions(@Nullable List<String> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
+        public Builder exclusions(String... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public CrawlerJdbcTarget build() {
+        }        public CrawlerJdbcTarget build() {
             return new CrawlerJdbcTarget(connectionName, exclusions, path);
         }
     }

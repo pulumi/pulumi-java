@@ -71,12 +71,13 @@ public final class VpcAccessibleServicesResponse {
             this.allowedServices = Objects.requireNonNull(allowedServices);
             return this;
         }
-
+        public Builder allowedServices(String... allowedServices) {
+            return allowedServices(List.of(allowedServices));
+        }
         public Builder enableRestriction(Boolean enableRestriction) {
             this.enableRestriction = Objects.requireNonNull(enableRestriction);
             return this;
-        }
-        public VpcAccessibleServicesResponse build() {
+        }        public VpcAccessibleServicesResponse build() {
             return new VpcAccessibleServicesResponse(allowedServices, enableRestriction);
         }
     }

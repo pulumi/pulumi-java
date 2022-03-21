@@ -127,52 +127,45 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder peerAsn(@Nullable Integer peerAsn) {
             this.peerAsn = Output.ofNullable(peerAsn);
             return this;
         }
-
         public Builder peerAsnName(@Nullable Output<String> peerAsnName) {
             this.peerAsnName = peerAsnName;
             return this;
         }
-
         public Builder peerAsnName(@Nullable String peerAsnName) {
             this.peerAsnName = Output.ofNullable(peerAsnName);
             return this;
         }
-
         public Builder peerContactDetail(@Nullable Output<List<ContactDetailArgs>> peerContactDetail) {
             this.peerContactDetail = peerContactDetail;
             return this;
         }
-
         public Builder peerContactDetail(@Nullable List<ContactDetailArgs> peerContactDetail) {
             this.peerContactDetail = Output.ofNullable(peerContactDetail);
             return this;
         }
-
+        public Builder peerContactDetail(ContactDetailArgs... peerContactDetail) {
+            return peerContactDetail(List.of(peerContactDetail));
+        }
         public Builder peerName(@Nullable Output<String> peerName) {
             this.peerName = peerName;
             return this;
         }
-
         public Builder peerName(@Nullable String peerName) {
             this.peerName = Output.ofNullable(peerName);
             return this;
         }
-
         public Builder validationState(@Nullable Output<Either<String,ValidationState>> validationState) {
             this.validationState = validationState;
             return this;
         }
-
         public Builder validationState(@Nullable Either<String,ValidationState> validationState) {
             this.validationState = Output.ofNullable(validationState);
             return this;
-        }
-        public PeerAsnArgs build() {
+        }        public PeerAsnArgs build() {
             return new PeerAsnArgs(peerAsn, peerAsnName, peerContactDetail, peerName, validationState);
         }
     }

@@ -124,52 +124,42 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.projectDescription = projectDescription;
             return this;
         }
-
         public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = Output.ofNullable(projectDescription);
             return this;
         }
-
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
-
         public Builder serviceCatalogProvisioningDetails(Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Objects.requireNonNull(serviceCatalogProvisioningDetails);
             return this;
         }
-
         public Builder serviceCatalogProvisioningDetails(ProjectServiceCatalogProvisioningDetailsArgs serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Output.of(Objects.requireNonNull(serviceCatalogProvisioningDetails));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ProjectArgs build() {
+        }        public ProjectArgs build() {
             return new ProjectArgs(projectDescription, projectName, serviceCatalogProvisioningDetails, tags, tagsAll);
         }
     }

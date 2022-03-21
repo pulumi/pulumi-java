@@ -91,32 +91,26 @@ public final class VpcIpamPoolCidrState extends io.pulumi.resources.ResourceArgs
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder cidrAuthorizationContext(@Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs> cidrAuthorizationContext) {
             this.cidrAuthorizationContext = cidrAuthorizationContext;
             return this;
         }
-
         public Builder cidrAuthorizationContext(@Nullable VpcIpamPoolCidrCidrAuthorizationContextGetArgs cidrAuthorizationContext) {
             this.cidrAuthorizationContext = Output.ofNullable(cidrAuthorizationContext);
             return this;
         }
-
         public Builder ipamPoolId(@Nullable Output<String> ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
-
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = Output.ofNullable(ipamPoolId);
             return this;
-        }
-        public VpcIpamPoolCidrState build() {
+        }        public VpcIpamPoolCidrState build() {
             return new VpcIpamPoolCidrState(cidr, cidrAuthorizationContext, ipamPoolId);
         }
     }

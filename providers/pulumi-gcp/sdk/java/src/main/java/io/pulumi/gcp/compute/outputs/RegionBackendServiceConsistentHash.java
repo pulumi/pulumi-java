@@ -109,17 +109,14 @@ public final class RegionBackendServiceConsistentHash {
             this.httpCookie = httpCookie;
             return this;
         }
-
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
-
         public Builder minimumRingSize(@Nullable Integer minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
-        }
-        public RegionBackendServiceConsistentHash build() {
+        }        public RegionBackendServiceConsistentHash build() {
             return new RegionBackendServiceConsistentHash(httpCookie, httpHeaderName, minimumRingSize);
         }
     }

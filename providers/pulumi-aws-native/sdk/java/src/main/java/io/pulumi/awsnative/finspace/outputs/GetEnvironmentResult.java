@@ -210,57 +210,46 @@ public final class GetEnvironmentResult {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder dedicatedServiceAccountId(@Nullable String dedicatedServiceAccountId) {
             this.dedicatedServiceAccountId = dedicatedServiceAccountId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder environmentArn(@Nullable String environmentArn) {
             this.environmentArn = environmentArn;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentUrl(@Nullable String environmentUrl) {
             this.environmentUrl = environmentUrl;
             return this;
         }
-
         public Builder federationMode(@Nullable EnvironmentFederationMode federationMode) {
             this.federationMode = federationMode;
             return this;
         }
-
         public Builder federationParameters(@Nullable EnvironmentFederationParameters federationParameters) {
             this.federationParameters = federationParameters;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sageMakerStudioDomainUrl(@Nullable String sageMakerStudioDomainUrl) {
             this.sageMakerStudioDomainUrl = sageMakerStudioDomainUrl;
             return this;
         }
-
         public Builder status(@Nullable EnvironmentStatus status) {
             this.status = status;
             return this;
-        }
-        public GetEnvironmentResult build() {
+        }        public GetEnvironmentResult build() {
             return new GetEnvironmentResult(awsAccountId, dedicatedServiceAccountId, description, environmentArn, environmentId, environmentUrl, federationMode, federationParameters, name, sageMakerStudioDomainUrl, status);
         }
     }

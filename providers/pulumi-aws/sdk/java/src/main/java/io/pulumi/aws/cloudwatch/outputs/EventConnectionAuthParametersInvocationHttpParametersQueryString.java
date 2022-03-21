@@ -88,17 +88,14 @@ public final class EventConnectionAuthParametersInvocationHttpParametersQueryStr
             this.isValueSecret = isValueSecret;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public EventConnectionAuthParametersInvocationHttpParametersQueryString build() {
+        }        public EventConnectionAuthParametersInvocationHttpParametersQueryString build() {
             return new EventConnectionAuthParametersInvocationHttpParametersQueryString(isValueSecret, key, value);
         }
     }

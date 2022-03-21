@@ -123,52 +123,42 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
             this.applicationArn = applicationArn;
             return this;
         }
-
         public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = Output.ofNullable(applicationArn);
             return this;
         }
-
         public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder userDataShared(@Nullable Output<Boolean> userDataShared) {
             this.userDataShared = userDataShared;
             return this;
         }
-
         public Builder userDataShared(@Nullable Boolean userDataShared) {
             this.userDataShared = Output.ofNullable(userDataShared);
             return this;
-        }
-        public UserPoolClientAnalyticsConfigurationArgs build() {
+        }        public UserPoolClientAnalyticsConfigurationArgs build() {
             return new UserPoolClientAnalyticsConfigurationArgs(applicationArn, applicationId, externalId, roleArn, userDataShared);
         }
     }

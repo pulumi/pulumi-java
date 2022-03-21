@@ -75,22 +75,18 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
             this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration);
             return this;
         }
-
         public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.of(Objects.requireNonNull(encryptionConfiguration));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SecurityConfigurationArgs build() {
+        }        public SecurityConfigurationArgs build() {
             return new SecurityConfigurationArgs(encryptionConfiguration, name);
         }
     }

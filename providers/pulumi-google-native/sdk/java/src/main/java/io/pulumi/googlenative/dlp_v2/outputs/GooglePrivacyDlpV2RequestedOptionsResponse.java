@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
             this.jobConfig = Objects.requireNonNull(jobConfig);
             return this;
         }
-
         public Builder snapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
             this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate);
             return this;
-        }
-        public GooglePrivacyDlpV2RequestedOptionsResponse build() {
+        }        public GooglePrivacyDlpV2RequestedOptionsResponse build() {
             return new GooglePrivacyDlpV2RequestedOptionsResponse(jobConfig, snapshotInspectTemplate);
         }
     }

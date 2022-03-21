@@ -76,22 +76,21 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs build() {
+        }        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorGetArgs(parameters, type);
         }
     }

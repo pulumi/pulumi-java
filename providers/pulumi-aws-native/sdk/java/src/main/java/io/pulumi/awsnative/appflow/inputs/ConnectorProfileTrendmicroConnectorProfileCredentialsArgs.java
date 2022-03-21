@@ -56,12 +56,10 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
             this.apiSecretKey = Objects.requireNonNull(apiSecretKey);
             return this;
         }
-
         public Builder apiSecretKey(String apiSecretKey) {
             this.apiSecretKey = Output.of(Objects.requireNonNull(apiSecretKey));
             return this;
-        }
-        public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(apiSecretKey);
         }
     }

@@ -135,32 +135,38 @@ public final class AllowedSubjectAltNamesResponse {
             this.allowCustomSans = Objects.requireNonNull(allowCustomSans);
             return this;
         }
-
         public Builder allowGlobbingDnsWildcards(Boolean allowGlobbingDnsWildcards) {
             this.allowGlobbingDnsWildcards = Objects.requireNonNull(allowGlobbingDnsWildcards);
             return this;
         }
-
         public Builder allowedDnsNames(List<String> allowedDnsNames) {
             this.allowedDnsNames = Objects.requireNonNull(allowedDnsNames);
             return this;
         }
-
+        public Builder allowedDnsNames(String... allowedDnsNames) {
+            return allowedDnsNames(List.of(allowedDnsNames));
+        }
         public Builder allowedEmailAddresses(List<String> allowedEmailAddresses) {
             this.allowedEmailAddresses = Objects.requireNonNull(allowedEmailAddresses);
             return this;
         }
-
+        public Builder allowedEmailAddresses(String... allowedEmailAddresses) {
+            return allowedEmailAddresses(List.of(allowedEmailAddresses));
+        }
         public Builder allowedIps(List<String> allowedIps) {
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }
-
+        public Builder allowedIps(String... allowedIps) {
+            return allowedIps(List.of(allowedIps));
+        }
         public Builder allowedUris(List<String> allowedUris) {
             this.allowedUris = Objects.requireNonNull(allowedUris);
             return this;
         }
-        public AllowedSubjectAltNamesResponse build() {
+        public Builder allowedUris(String... allowedUris) {
+            return allowedUris(List.of(allowedUris));
+        }        public AllowedSubjectAltNamesResponse build() {
             return new AllowedSubjectAltNamesResponse(allowCustomSans, allowGlobbingDnsWildcards, allowedDnsNames, allowedEmailAddresses, allowedIps, allowedUris);
         }
     }

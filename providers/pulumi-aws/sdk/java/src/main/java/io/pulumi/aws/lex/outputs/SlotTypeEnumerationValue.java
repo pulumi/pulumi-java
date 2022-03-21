@@ -71,12 +71,13 @@ public final class SlotTypeEnumerationValue {
             this.synonyms = synonyms;
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SlotTypeEnumerationValue build() {
+        }        public SlotTypeEnumerationValue build() {
             return new SlotTypeEnumerationValue(synonyms, value);
         }
     }

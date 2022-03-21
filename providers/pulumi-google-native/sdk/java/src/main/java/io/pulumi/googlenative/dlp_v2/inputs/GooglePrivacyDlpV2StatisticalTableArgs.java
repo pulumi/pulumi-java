@@ -96,32 +96,29 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs> quasiIds) {
             this.quasiIds = Output.of(Objects.requireNonNull(quasiIds));
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2QuasiIdentifierFieldArgs... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder relativeFrequency(Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency) {
             this.relativeFrequency = Objects.requireNonNull(relativeFrequency);
             return this;
         }
-
         public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdArgs relativeFrequency) {
             this.relativeFrequency = Output.of(Objects.requireNonNull(relativeFrequency));
             return this;
         }
-
         public Builder table(Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder table(GooglePrivacyDlpV2BigQueryTableArgs table) {
             this.table = Output.of(Objects.requireNonNull(table));
             return this;
-        }
-        public GooglePrivacyDlpV2StatisticalTableArgs build() {
+        }        public GooglePrivacyDlpV2StatisticalTableArgs build() {
             return new GooglePrivacyDlpV2StatisticalTableArgs(quasiIds, relativeFrequency, table);
         }
     }

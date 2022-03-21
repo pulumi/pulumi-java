@@ -250,67 +250,54 @@ public final class GetPacketMirroringResult {
             this.collectorIlb = Objects.requireNonNull(collectorIlb);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enable(String enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder filter(PacketMirroringFilterResponse filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder mirroredResources(PacketMirroringMirroredResourceInfoResponse mirroredResources) {
             this.mirroredResources = Objects.requireNonNull(mirroredResources);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(PacketMirroringNetworkInfoResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
-        }
-        public GetPacketMirroringResult build() {
+        }        public GetPacketMirroringResult build() {
             return new GetPacketMirroringResult(collectorIlb, creationTimestamp, description, enable, filter, kind, mirroredResources, name, network, priority, region, selfLink, selfLinkWithId);
         }
     }

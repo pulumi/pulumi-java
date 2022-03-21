@@ -91,32 +91,26 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<QueryParameterTypeArgs> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable QueryParameterTypeArgs type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public QueryParameterTypeStructTypesItemArgs build() {
+        }        public QueryParameterTypeStructTypesItemArgs build() {
             return new QueryParameterTypeStructTypesItemArgs(description, name, type);
         }
     }

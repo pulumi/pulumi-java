@@ -75,22 +75,18 @@ public final class AnalyticsConfigurationFilterArgs extends io.pulumi.resources.
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AnalyticsConfigurationFilterArgs build() {
+        }        public AnalyticsConfigurationFilterArgs build() {
             return new AnalyticsConfigurationFilterArgs(prefix, tags);
         }
     }

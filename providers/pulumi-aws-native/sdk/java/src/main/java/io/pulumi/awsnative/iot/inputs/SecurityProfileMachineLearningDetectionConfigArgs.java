@@ -61,12 +61,10 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
             this.confidenceLevel = confidenceLevel;
             return this;
         }
-
         public Builder confidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
             this.confidenceLevel = Output.ofNullable(confidenceLevel);
             return this;
-        }
-        public SecurityProfileMachineLearningDetectionConfigArgs build() {
+        }        public SecurityProfileMachineLearningDetectionConfigArgs build() {
             return new SecurityProfileMachineLearningDetectionConfigArgs(confidenceLevel);
         }
     }

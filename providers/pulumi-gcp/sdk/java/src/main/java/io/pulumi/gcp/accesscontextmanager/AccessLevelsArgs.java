@@ -78,22 +78,21 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
             this.accessLevels = accessLevels;
             return this;
         }
-
         public Builder accessLevels(@Nullable List<AccessLevelsAccessLevelArgs> accessLevels) {
             this.accessLevels = Output.ofNullable(accessLevels);
             return this;
         }
-
+        public Builder accessLevels(AccessLevelsAccessLevelArgs... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
-        }
-        public AccessLevelsArgs build() {
+        }        public AccessLevelsArgs build() {
             return new AccessLevelsArgs(accessLevels, parent);
         }
     }

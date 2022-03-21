@@ -161,62 +161,50 @@ public final class URLMapPathMatcherDefaultUrlRedirectGetArgs extends io.pulumi.
             this.hostRedirect = hostRedirect;
             return this;
         }
-
         public Builder hostRedirect(@Nullable String hostRedirect) {
             this.hostRedirect = Output.ofNullable(hostRedirect);
             return this;
         }
-
         public Builder httpsRedirect(@Nullable Output<Boolean> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
-
         public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
             this.httpsRedirect = Output.ofNullable(httpsRedirect);
             return this;
         }
-
         public Builder pathRedirect(@Nullable Output<String> pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
-
         public Builder pathRedirect(@Nullable String pathRedirect) {
             this.pathRedirect = Output.ofNullable(pathRedirect);
             return this;
         }
-
         public Builder prefixRedirect(@Nullable Output<String> prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
-
         public Builder prefixRedirect(@Nullable String prefixRedirect) {
             this.prefixRedirect = Output.ofNullable(prefixRedirect);
             return this;
         }
-
         public Builder redirectResponseCode(@Nullable Output<String> redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
-
         public Builder redirectResponseCode(@Nullable String redirectResponseCode) {
             this.redirectResponseCode = Output.ofNullable(redirectResponseCode);
             return this;
         }
-
         public Builder stripQuery(Output<Boolean> stripQuery) {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }
-
         public Builder stripQuery(Boolean stripQuery) {
             this.stripQuery = Output.of(Objects.requireNonNull(stripQuery));
             return this;
-        }
-        public URLMapPathMatcherDefaultUrlRedirectGetArgs build() {
+        }        public URLMapPathMatcherDefaultUrlRedirectGetArgs build() {
             return new URLMapPathMatcherDefaultUrlRedirectGetArgs(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }
     }

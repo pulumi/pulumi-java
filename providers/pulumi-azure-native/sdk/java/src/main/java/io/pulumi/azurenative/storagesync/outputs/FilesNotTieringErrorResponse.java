@@ -70,12 +70,10 @@ public final class FilesNotTieringErrorResponse {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder fileCount(Double fileCount) {
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
-        }
-        public FilesNotTieringErrorResponse build() {
+        }        public FilesNotTieringErrorResponse build() {
             return new FilesNotTieringErrorResponse(errorCode, fileCount);
         }
     }

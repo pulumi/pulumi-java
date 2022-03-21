@@ -93,32 +93,26 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
-
         public Builder dataId(String dataId) {
             this.dataId = Output.of(Objects.requireNonNull(dataId));
             return this;
         }
-
         public Builder negated(Output<Boolean> negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
-
         public Builder negated(Boolean negated) {
             this.negated = Output.of(Objects.requireNonNull(negated));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RateBasedRulePredicateArgs build() {
+        }        public RateBasedRulePredicateArgs build() {
             return new RateBasedRulePredicateArgs(dataId, negated, type);
         }
     }

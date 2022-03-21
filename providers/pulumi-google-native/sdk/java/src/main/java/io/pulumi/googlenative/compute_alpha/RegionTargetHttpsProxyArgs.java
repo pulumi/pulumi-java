@@ -257,142 +257,120 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
             this.authorizationPolicy = authorizationPolicy;
             return this;
         }
-
         public Builder authorizationPolicy(@Nullable String authorizationPolicy) {
             this.authorizationPolicy = Output.ofNullable(authorizationPolicy);
             return this;
         }
-
         public Builder certificateMap(@Nullable Output<String> certificateMap) {
             this.certificateMap = certificateMap;
             return this;
         }
-
         public Builder certificateMap(@Nullable String certificateMap) {
             this.certificateMap = Output.ofNullable(certificateMap);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder httpFilters(@Nullable Output<List<String>> httpFilters) {
             this.httpFilters = httpFilters;
             return this;
         }
-
         public Builder httpFilters(@Nullable List<String> httpFilters) {
             this.httpFilters = Output.ofNullable(httpFilters);
             return this;
         }
-
+        public Builder httpFilters(String... httpFilters) {
+            return httpFilters(List.of(httpFilters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
             this.proxyBind = proxyBind;
             return this;
         }
-
         public Builder proxyBind(@Nullable Boolean proxyBind) {
             this.proxyBind = Output.ofNullable(proxyBind);
             return this;
         }
-
         public Builder quicOverride(@Nullable Output<RegionTargetHttpsProxyQuicOverride> quicOverride) {
             this.quicOverride = quicOverride;
             return this;
         }
-
         public Builder quicOverride(@Nullable RegionTargetHttpsProxyQuicOverride quicOverride) {
             this.quicOverride = Output.ofNullable(quicOverride);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serverTlsPolicy(@Nullable Output<String> serverTlsPolicy) {
             this.serverTlsPolicy = serverTlsPolicy;
             return this;
         }
-
         public Builder serverTlsPolicy(@Nullable String serverTlsPolicy) {
             this.serverTlsPolicy = Output.ofNullable(serverTlsPolicy);
             return this;
         }
-
         public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
-
         public Builder sslCertificates(@Nullable List<String> sslCertificates) {
             this.sslCertificates = Output.ofNullable(sslCertificates);
             return this;
         }
-
+        public Builder sslCertificates(String... sslCertificates) {
+            return sslCertificates(List.of(sslCertificates));
+        }
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
-
         public Builder urlMap(@Nullable Output<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
-
         public Builder urlMap(@Nullable String urlMap) {
             this.urlMap = Output.ofNullable(urlMap);
             return this;
-        }
-        public RegionTargetHttpsProxyArgs build() {
+        }        public RegionTargetHttpsProxyArgs build() {
             return new RegionTargetHttpsProxyArgs(authorizationPolicy, certificateMap, description, httpFilters, name, project, proxyBind, quicOverride, region, requestId, serverTlsPolicy, sslCertificates, sslPolicy, urlMap);
         }
     }

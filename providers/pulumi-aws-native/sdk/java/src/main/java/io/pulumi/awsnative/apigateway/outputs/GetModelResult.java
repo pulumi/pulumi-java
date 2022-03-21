@@ -72,12 +72,10 @@ public final class GetModelResult {
             this.description = description;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
-        }
-        public GetModelResult build() {
+        }        public GetModelResult build() {
             return new GetModelResult(description, schema);
         }
     }

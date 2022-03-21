@@ -74,22 +74,18 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends io.pul
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
-
         public Builder mountPath(String mountPath) {
             this.mountPath = Output.of(Objects.requireNonNull(mountPath));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ServiceTemplateSpecContainerVolumeMountGetArgs build() {
+        }        public ServiceTemplateSpecContainerVolumeMountGetArgs build() {
             return new ServiceTemplateSpecContainerVolumeMountGetArgs(mountPath, name);
         }
     }

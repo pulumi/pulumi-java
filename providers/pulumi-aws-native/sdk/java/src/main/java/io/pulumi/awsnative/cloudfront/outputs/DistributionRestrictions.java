@@ -43,8 +43,7 @@ public final class DistributionRestrictions {
         public Builder geoRestriction(DistributionGeoRestriction geoRestriction) {
             this.geoRestriction = Objects.requireNonNull(geoRestriction);
             return this;
-        }
-        public DistributionRestrictions build() {
+        }        public DistributionRestrictions build() {
             return new DistributionRestrictions(geoRestriction);
         }
     }

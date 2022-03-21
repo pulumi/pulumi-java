@@ -157,72 +157,67 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.assertedControls = assertedControls;
             return this;
         }
-
         public Builder assertedControls(@Nullable List<String> assertedControls) {
             this.assertedControls = Output.ofNullable(assertedControls);
             return this;
         }
-
+        public Builder assertedControls(String... assertedControls) {
+            return assertedControls(List.of(assertedControls));
+        }
         public Builder controlPanelArn(Output<String> controlPanelArn) {
             this.controlPanelArn = Objects.requireNonNull(controlPanelArn);
             return this;
         }
-
         public Builder controlPanelArn(String controlPanelArn) {
             this.controlPanelArn = Output.of(Objects.requireNonNull(controlPanelArn));
             return this;
         }
-
         public Builder gatingControls(@Nullable Output<List<String>> gatingControls) {
             this.gatingControls = gatingControls;
             return this;
         }
-
         public Builder gatingControls(@Nullable List<String> gatingControls) {
             this.gatingControls = Output.ofNullable(gatingControls);
             return this;
         }
-
+        public Builder gatingControls(String... gatingControls) {
+            return gatingControls(List.of(gatingControls));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleConfig(Output<SafetyRuleRuleConfigArgs> ruleConfig) {
             this.ruleConfig = Objects.requireNonNull(ruleConfig);
             return this;
         }
-
         public Builder ruleConfig(SafetyRuleRuleConfigArgs ruleConfig) {
             this.ruleConfig = Output.of(Objects.requireNonNull(ruleConfig));
             return this;
         }
-
         public Builder targetControls(@Nullable Output<List<String>> targetControls) {
             this.targetControls = targetControls;
             return this;
         }
-
         public Builder targetControls(@Nullable List<String> targetControls) {
             this.targetControls = Output.ofNullable(targetControls);
             return this;
         }
-
+        public Builder targetControls(String... targetControls) {
+            return targetControls(List.of(targetControls));
+        }
         public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
-
         public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
             return this;
-        }
-        public SafetyRuleArgs build() {
+        }        public SafetyRuleArgs build() {
             return new SafetyRuleArgs(assertedControls, controlPanelArn, gatingControls, name, ruleConfig, targetControls, waitPeriodMs);
         }
     }

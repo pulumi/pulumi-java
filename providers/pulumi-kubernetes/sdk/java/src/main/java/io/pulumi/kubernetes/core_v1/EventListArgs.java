@@ -109,42 +109,37 @@ public final class EventListArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder items(Output<List<EventArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<EventArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-
+        public Builder items(EventArgs... items) {
+            return items(List.of(items));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ListMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public EventListArgs build() {
+        }        public EventListArgs build() {
             return new EventListArgs(apiVersion, items, kind, metadata);
         }
     }

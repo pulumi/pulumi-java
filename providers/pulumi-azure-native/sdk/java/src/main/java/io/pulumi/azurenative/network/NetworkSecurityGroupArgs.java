@@ -141,62 +141,53 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkSecurityGroupName(@Nullable Output<String> networkSecurityGroupName) {
             this.networkSecurityGroupName = networkSecurityGroupName;
             return this;
         }
-
         public Builder networkSecurityGroupName(@Nullable String networkSecurityGroupName) {
             this.networkSecurityGroupName = Output.ofNullable(networkSecurityGroupName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityRules(@Nullable Output<List<SecurityRuleArgs>> securityRules) {
             this.securityRules = securityRules;
             return this;
         }
-
         public Builder securityRules(@Nullable List<SecurityRuleArgs> securityRules) {
             this.securityRules = Output.ofNullable(securityRules);
             return this;
         }
-
+        public Builder securityRules(SecurityRuleArgs... securityRules) {
+            return securityRules(List.of(securityRules));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NetworkSecurityGroupArgs build() {
+        }        public NetworkSecurityGroupArgs build() {
             return new NetworkSecurityGroupArgs(id, location, networkSecurityGroupName, resourceGroupName, securityRules, tags);
         }
     }

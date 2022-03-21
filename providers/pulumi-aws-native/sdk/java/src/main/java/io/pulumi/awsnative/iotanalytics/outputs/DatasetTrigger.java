@@ -56,12 +56,10 @@ public final class DatasetTrigger {
             this.schedule = schedule;
             return this;
         }
-
         public Builder triggeringDataset(@Nullable DatasetTriggeringDataset triggeringDataset) {
             this.triggeringDataset = triggeringDataset;
             return this;
-        }
-        public DatasetTrigger build() {
+        }        public DatasetTrigger build() {
             return new DatasetTrigger(schedule, triggeringDataset);
         }
     }

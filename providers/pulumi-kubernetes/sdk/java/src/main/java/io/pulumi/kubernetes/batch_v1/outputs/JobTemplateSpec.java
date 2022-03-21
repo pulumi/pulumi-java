@@ -72,12 +72,10 @@ public final class JobTemplateSpec {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable JobSpec spec) {
             this.spec = spec;
             return this;
-        }
-        public JobTemplateSpec build() {
+        }        public JobTemplateSpec build() {
             return new JobTemplateSpec(metadata, spec);
         }
     }

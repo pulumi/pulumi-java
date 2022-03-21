@@ -274,132 +274,106 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder addressType(@Nullable Output<String> addressType) {
             this.addressType = addressType;
             return this;
         }
-
         public Builder addressType(@Nullable String addressType) {
             this.addressType = Output.ofNullable(addressType);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipVersion(@Nullable Output<String> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
-
         public Builder ipVersion(@Nullable String ipVersion) {
             this.ipVersion = Output.ofNullable(ipVersion);
             return this;
         }
-
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
-
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
-
         public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = Output.ofNullable(prefixLength);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder purpose(@Nullable String purpose) {
             this.purpose = Output.ofNullable(purpose);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public GlobalAddressState build() {
+        }        public GlobalAddressState build() {
             return new GlobalAddressState(address, addressType, creationTimestamp, description, ipVersion, labelFingerprint, labels, name, network, prefixLength, project, purpose, selfLink);
         }
     }

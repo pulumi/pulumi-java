@@ -460,132 +460,109 @@ public final class GetWatchlistResult {
             this.contentType = contentType;
             return this;
         }
-
         public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
-
         public Builder createdBy(@Nullable WatchlistUserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder defaultDuration(@Nullable String defaultDuration) {
             this.defaultDuration = defaultDuration;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isDeleted(@Nullable Boolean isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
-
         public Builder itemsSearchKey(String itemsSearchKey) {
             this.itemsSearchKey = Objects.requireNonNull(itemsSearchKey);
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberOfLinesToSkip(@Nullable Integer numberOfLinesToSkip) {
             this.numberOfLinesToSkip = numberOfLinesToSkip;
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder rawContent(@Nullable String rawContent) {
             this.rawContent = rawContent;
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updated(@Nullable String updated) {
             this.updated = updated;
             return this;
         }
-
         public Builder updatedBy(@Nullable WatchlistUserInfoResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public Builder uploadStatus(@Nullable String uploadStatus) {
             this.uploadStatus = uploadStatus;
             return this;
         }
-
         public Builder watchlistAlias(@Nullable String watchlistAlias) {
             this.watchlistAlias = watchlistAlias;
             return this;
         }
-
         public Builder watchlistId(@Nullable String watchlistId) {
             this.watchlistId = watchlistId;
             return this;
         }
-
         public Builder watchlistItemsCount(@Nullable Integer watchlistItemsCount) {
             this.watchlistItemsCount = watchlistItemsCount;
             return this;
         }
-
         public Builder watchlistType(@Nullable String watchlistType) {
             this.watchlistType = watchlistType;
             return this;
-        }
-        public GetWatchlistResult build() {
+        }        public GetWatchlistResult build() {
             return new GetWatchlistResult(contentType, created, createdBy, defaultDuration, description, displayName, etag, id, isDeleted, itemsSearchKey, labels, name, numberOfLinesToSkip, provider, rawContent, source, systemData, tenantId, type, updated, updatedBy, uploadStatus, watchlistAlias, watchlistId, watchlistItemsCount, watchlistType);
         }
     }

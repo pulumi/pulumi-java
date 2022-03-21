@@ -126,52 +126,42 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
             this.copyStepDetails = copyStepDetails;
             return this;
         }
-
         public Builder copyStepDetails(@Nullable WorkflowStepCopyStepDetailsPropertiesArgs copyStepDetails) {
             this.copyStepDetails = Output.ofNullable(copyStepDetails);
             return this;
         }
-
         public Builder customStepDetails(@Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails) {
             this.customStepDetails = customStepDetails;
             return this;
         }
-
         public Builder customStepDetails(@Nullable WorkflowStepCustomStepDetailsPropertiesArgs customStepDetails) {
             this.customStepDetails = Output.ofNullable(customStepDetails);
             return this;
         }
-
         public Builder deleteStepDetails(@Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails) {
             this.deleteStepDetails = deleteStepDetails;
             return this;
         }
-
         public Builder deleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsPropertiesArgs deleteStepDetails) {
             this.deleteStepDetails = Output.ofNullable(deleteStepDetails);
             return this;
         }
-
         public Builder tagStepDetails(@Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails) {
             this.tagStepDetails = tagStepDetails;
             return this;
         }
-
         public Builder tagStepDetails(@Nullable WorkflowStepTagStepDetailsPropertiesArgs tagStepDetails) {
             this.tagStepDetails = Output.ofNullable(tagStepDetails);
             return this;
         }
-
         public Builder type(@Nullable Output<WorkflowStepType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable WorkflowStepType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public WorkflowStepArgs build() {
+        }        public WorkflowStepArgs build() {
             return new WorkflowStepArgs(copyStepDetails, customStepDetails, deleteStepDetails, tagStepDetails, type);
         }
     }

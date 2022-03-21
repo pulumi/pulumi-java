@@ -86,17 +86,14 @@ public final class QueueReservationPlanSettings {
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
-
         public Builder renewalType(String renewalType) {
             this.renewalType = Objects.requireNonNull(renewalType);
             return this;
         }
-
         public Builder reservedSlots(Integer reservedSlots) {
             this.reservedSlots = Objects.requireNonNull(reservedSlots);
             return this;
-        }
-        public QueueReservationPlanSettings build() {
+        }        public QueueReservationPlanSettings build() {
             return new QueueReservationPlanSettings(commitment, renewalType, reservedSlots);
         }
     }

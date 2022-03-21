@@ -114,42 +114,37 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.charactersToIgnores = charactersToIgnores;
             return this;
         }
-
         public Builder charactersToIgnores(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs> charactersToIgnores) {
             this.charactersToIgnores = Output.ofNullable(charactersToIgnores);
             return this;
         }
-
+        public Builder charactersToIgnores(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs... charactersToIgnores) {
+            return charactersToIgnores(List.of(charactersToIgnores));
+        }
         public Builder maskingCharacter(@Nullable Output<String> maskingCharacter) {
             this.maskingCharacter = maskingCharacter;
             return this;
         }
-
         public Builder maskingCharacter(@Nullable String maskingCharacter) {
             this.maskingCharacter = Output.ofNullable(maskingCharacter);
             return this;
         }
-
         public Builder numberToMask(@Nullable Output<Integer> numberToMask) {
             this.numberToMask = numberToMask;
             return this;
         }
-
         public Builder numberToMask(@Nullable Integer numberToMask) {
             this.numberToMask = Output.ofNullable(numberToMask);
             return this;
         }
-
         public Builder reverseOrder(@Nullable Output<Boolean> reverseOrder) {
             this.reverseOrder = reverseOrder;
             return this;
         }
-
         public Builder reverseOrder(@Nullable Boolean reverseOrder) {
             this.reverseOrder = Output.ofNullable(reverseOrder);
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs(charactersToIgnores, maskingCharacter, numberToMask, reverseOrder);
         }
     }

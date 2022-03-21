@@ -75,22 +75,18 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder storageClass(Output<String> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
-        }
-        public BucketLifecycleRuleNoncurrentVersionTransitionGetArgs build() {
+        }        public BucketLifecycleRuleNoncurrentVersionTransitionGetArgs build() {
             return new BucketLifecycleRuleNoncurrentVersionTransitionGetArgs(days, storageClass);
         }
     }

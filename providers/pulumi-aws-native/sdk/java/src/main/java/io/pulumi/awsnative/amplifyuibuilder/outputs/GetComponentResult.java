@@ -158,72 +158,64 @@ public final class GetComponentResult {
             this.appId = appId;
             return this;
         }
-
         public Builder bindingProperties(@Nullable ComponentBindingProperties bindingProperties) {
             this.bindingProperties = bindingProperties;
             return this;
         }
-
         public Builder children(@Nullable List<ComponentChild> children) {
             this.children = children;
             return this;
         }
-
+        public Builder children(ComponentChild... children) {
+            return children(List.of(children));
+        }
         public Builder collectionProperties(@Nullable ComponentCollectionProperties collectionProperties) {
             this.collectionProperties = collectionProperties;
             return this;
         }
-
         public Builder componentType(@Nullable String componentType) {
             this.componentType = componentType;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder overrides(@Nullable ComponentOverrides overrides) {
             this.overrides = overrides;
             return this;
         }
-
         public Builder properties(@Nullable ComponentProperties properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }
-
         public Builder variants(@Nullable List<ComponentVariant> variants) {
             this.variants = variants;
             return this;
         }
-        public GetComponentResult build() {
+        public Builder variants(ComponentVariant... variants) {
+            return variants(List.of(variants));
+        }        public GetComponentResult build() {
             return new GetComponentResult(appId, bindingProperties, children, collectionProperties, componentType, createdAt, environmentName, id, modifiedAt, name, overrides, properties, sourceId, variants);
         }
     }

@@ -113,42 +113,34 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
-
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = Output.ofNullable(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
-
         public Builder enableStrongAffinity(@Nullable Output<Boolean> enableStrongAffinity) {
             this.enableStrongAffinity = enableStrongAffinity;
             return this;
         }
-
         public Builder enableStrongAffinity(@Nullable Boolean enableStrongAffinity) {
             this.enableStrongAffinity = Output.ofNullable(enableStrongAffinity);
             return this;
         }
-
         public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
-
         public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
             this.idleTimeoutSec = Output.ofNullable(idleTimeoutSec);
             return this;
         }
-
         public Builder trackingMode(@Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
             this.trackingMode = trackingMode;
             return this;
         }
-
         public Builder trackingMode(@Nullable BackendServiceConnectionTrackingPolicyTrackingMode trackingMode) {
             this.trackingMode = Output.ofNullable(trackingMode);
             return this;
-        }
-        public BackendServiceConnectionTrackingPolicyArgs build() {
+        }        public BackendServiceConnectionTrackingPolicyArgs build() {
             return new BackendServiceConnectionTrackingPolicyArgs(connectionPersistenceOnUnhealthyBackends, enableStrongAffinity, idleTimeoutSec, trackingMode);
         }
     }

@@ -69,12 +69,10 @@ public final class GetFluidRelayServerKeysResult {
             this.key1 = Objects.requireNonNull(key1);
             return this;
         }
-
         public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
-        }
-        public GetFluidRelayServerKeysResult build() {
+        }        public GetFluidRelayServerKeysResult build() {
             return new GetFluidRelayServerKeysResult(key1, key2);
         }
     }

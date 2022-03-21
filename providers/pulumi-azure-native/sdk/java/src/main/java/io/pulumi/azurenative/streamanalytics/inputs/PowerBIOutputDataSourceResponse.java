@@ -175,42 +175,34 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
             this.dataset = dataset;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = table;
             return this;
         }
-
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
-
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PowerBIOutputDataSourceResponse build() {
+        }        public PowerBIOutputDataSourceResponse build() {
             return new PowerBIOutputDataSourceResponse(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
         }
     }

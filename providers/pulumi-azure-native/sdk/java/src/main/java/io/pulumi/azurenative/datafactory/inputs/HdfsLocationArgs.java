@@ -96,32 +96,26 @@ public final class HdfsLocationArgs extends io.pulumi.resources.ResourceArgs {
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable Object fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
         }
-
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public HdfsLocationArgs build() {
+        }        public HdfsLocationArgs build() {
             return new HdfsLocationArgs(fileName, folderPath, type);
         }
     }

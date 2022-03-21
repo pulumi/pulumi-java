@@ -79,22 +79,21 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
-
         public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
             this.endpointQualifiedNames = Output.ofNullable(endpointQualifiedNames);
             return this;
         }
-
+        public Builder endpointQualifiedNames(String... endpointQualifiedNames) {
+            return endpointQualifiedNames(List.of(endpointQualifiedNames));
+        }
         public Builder qualifiedName(Output<String> qualifiedName) {
             this.qualifiedName = Objects.requireNonNull(qualifiedName);
             return this;
         }
-
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = Output.of(Objects.requireNonNull(qualifiedName));
             return this;
-        }
-        public WsdlServiceArgs build() {
+        }        public WsdlServiceArgs build() {
             return new WsdlServiceArgs(endpointQualifiedNames, qualifiedName);
         }
     }

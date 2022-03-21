@@ -168,42 +168,37 @@ public final class GetBandwidthScheduleResult {
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
+        public Builder days(String... days) {
+            return days(List.of(days));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder stop(String stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBandwidthScheduleResult build() {
+        }        public GetBandwidthScheduleResult build() {
             return new GetBandwidthScheduleResult(days, id, name, rateInMbps, start, stop, systemData, type);
         }
     }

@@ -69,22 +69,24 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
             this.request = request;
             return this;
         }
-
         public Builder request(@Nullable List<Either<String,ExtensionOptionType>> request) {
             this.request = Output.ofNullable(request);
             return this;
         }
-
+        public Builder request(Either<String,ExtensionOptionType>... request) {
+            return request(List.of(request));
+        }
         public Builder response(@Nullable Output<List<Either<String,ExtensionOptionType>>> response) {
             this.response = response;
             return this;
         }
-
         public Builder response(@Nullable List<Either<String,ExtensionOptionType>> response) {
             this.response = Output.ofNullable(response);
             return this;
         }
-        public ResourceTypeExtensionOptionsResourceCreationBeginArgs build() {
+        public Builder response(Either<String,ExtensionOptionType>... response) {
+            return response(List.of(response));
+        }        public ResourceTypeExtensionOptionsResourceCreationBeginArgs build() {
             return new ResourceTypeExtensionOptionsResourceCreationBeginArgs(request, response);
         }
     }

@@ -162,37 +162,33 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
             this.appliedBy = appliedBy;
             return this;
         }
-
         public Builder complianceState(@Nullable String complianceState) {
             this.complianceState = complianceState;
             return this;
         }
-
         public Builder helmReleaseProperties(@Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties) {
             this.helmReleaseProperties = helmReleaseProperties;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder statusConditions(@Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
             this.statusConditions = statusConditions;
             return this;
         }
-        public ObjectStatusDefinitionResponse build() {
+        public Builder statusConditions(ObjectStatusConditionDefinitionResponse... statusConditions) {
+            return statusConditions(List.of(statusConditions));
+        }        public ObjectStatusDefinitionResponse build() {
             return new ObjectStatusDefinitionResponse(appliedBy, complianceState, helmReleaseProperties, kind, name, namespace, statusConditions);
         }
     }

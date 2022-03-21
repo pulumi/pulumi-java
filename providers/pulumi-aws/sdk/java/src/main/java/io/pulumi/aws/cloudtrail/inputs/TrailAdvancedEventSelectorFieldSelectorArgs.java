@@ -155,72 +155,76 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
             this.endsWiths = endsWiths;
             return this;
         }
-
         public Builder endsWiths(@Nullable List<String> endsWiths) {
             this.endsWiths = Output.ofNullable(endsWiths);
             return this;
         }
-
+        public Builder endsWiths(String... endsWiths) {
+            return endsWiths(List.of(endsWiths));
+        }
         public Builder equals(@Nullable Output<List<String>> equals) {
             this.equals = equals;
             return this;
         }
-
         public Builder equals(@Nullable List<String> equals) {
             this.equals = Output.ofNullable(equals);
             return this;
         }
-
+        public Builder equals(String... equals) {
+            return equals(List.of(equals));
+        }
         public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder field(String field) {
             this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
-
         public Builder notEndsWiths(@Nullable Output<List<String>> notEndsWiths) {
             this.notEndsWiths = notEndsWiths;
             return this;
         }
-
         public Builder notEndsWiths(@Nullable List<String> notEndsWiths) {
             this.notEndsWiths = Output.ofNullable(notEndsWiths);
             return this;
         }
-
+        public Builder notEndsWiths(String... notEndsWiths) {
+            return notEndsWiths(List.of(notEndsWiths));
+        }
         public Builder notEquals(@Nullable Output<List<String>> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
-
         public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = Output.ofNullable(notEquals);
             return this;
         }
-
+        public Builder notEquals(String... notEquals) {
+            return notEquals(List.of(notEquals));
+        }
         public Builder notStartsWiths(@Nullable Output<List<String>> notStartsWiths) {
             this.notStartsWiths = notStartsWiths;
             return this;
         }
-
         public Builder notStartsWiths(@Nullable List<String> notStartsWiths) {
             this.notStartsWiths = Output.ofNullable(notStartsWiths);
             return this;
         }
-
+        public Builder notStartsWiths(String... notStartsWiths) {
+            return notStartsWiths(List.of(notStartsWiths));
+        }
         public Builder startsWiths(@Nullable Output<List<String>> startsWiths) {
             this.startsWiths = startsWiths;
             return this;
         }
-
         public Builder startsWiths(@Nullable List<String> startsWiths) {
             this.startsWiths = Output.ofNullable(startsWiths);
             return this;
         }
-        public TrailAdvancedEventSelectorFieldSelectorArgs build() {
+        public Builder startsWiths(String... startsWiths) {
+            return startsWiths(List.of(startsWiths));
+        }        public TrailAdvancedEventSelectorFieldSelectorArgs build() {
             return new TrailAdvancedEventSelectorFieldSelectorArgs(endsWiths, equals, field, notEndsWiths, notEquals, notStartsWiths, startsWiths);
         }
     }

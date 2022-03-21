@@ -121,27 +121,22 @@ public final class OAuthAuthenticationResponse {
             this.audience = audience;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder tenant(@Nullable String tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public OAuthAuthenticationResponse build() {
+        }        public OAuthAuthenticationResponse build() {
             return new OAuthAuthenticationResponse(audience, clientId, secret, tenant, type);
         }
     }

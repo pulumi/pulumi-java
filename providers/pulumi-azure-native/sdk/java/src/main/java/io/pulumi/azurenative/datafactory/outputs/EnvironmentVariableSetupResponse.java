@@ -87,17 +87,14 @@ public final class EnvironmentVariableSetupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public Builder variableValue(String variableValue) {
             this.variableValue = Objects.requireNonNull(variableValue);
             return this;
-        }
-        public EnvironmentVariableSetupResponse build() {
+        }        public EnvironmentVariableSetupResponse build() {
             return new EnvironmentVariableSetupResponse(type, variableName, variableValue);
         }
     }

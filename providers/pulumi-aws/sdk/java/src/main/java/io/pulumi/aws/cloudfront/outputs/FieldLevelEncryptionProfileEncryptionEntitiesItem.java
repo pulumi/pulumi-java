@@ -86,17 +86,14 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItem {
             this.fieldPatterns = Objects.requireNonNull(fieldPatterns);
             return this;
         }
-
         public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
-
         public Builder publicKeyId(String publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
-        }
-        public FieldLevelEncryptionProfileEncryptionEntitiesItem build() {
+        }        public FieldLevelEncryptionProfileEncryptionEntitiesItem build() {
             return new FieldLevelEncryptionProfileEncryptionEntitiesItem(fieldPatterns, providerId, publicKeyId);
         }
     }

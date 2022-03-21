@@ -106,42 +106,34 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
             this.created = created;
             return this;
         }
-
         public Builder created(@Nullable String created) {
             this.created = Output.ofNullable(created);
             return this;
         }
-
         public Builder lastModified(@Nullable Output<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
-
         public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = Output.ofNullable(lastModified);
             return this;
         }
-
         public Builder lastStarted(@Nullable Output<String> lastStarted) {
             this.lastStarted = lastStarted;
             return this;
         }
-
         public Builder lastStarted(@Nullable String lastStarted) {
             this.lastStarted = Output.ofNullable(lastStarted);
             return this;
         }
-
         public Builder lastStopped(@Nullable Output<String> lastStopped) {
             this.lastStopped = lastStopped;
             return this;
         }
-
         public Builder lastStopped(@Nullable String lastStopped) {
             this.lastStopped = Output.ofNullable(lastStopped);
             return this;
-        }
-        public CanaryTimelineGetArgs build() {
+        }        public CanaryTimelineGetArgs build() {
             return new CanaryTimelineGetArgs(created, lastModified, lastStarted, lastStopped);
         }
     }

@@ -73,22 +73,18 @@ public final class SelectionConditionStringNotEqualGetArgs extends io.pulumi.res
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SelectionConditionStringNotEqualGetArgs build() {
+        }        public SelectionConditionStringNotEqualGetArgs build() {
             return new SelectionConditionStringNotEqualGetArgs(key, value);
         }
     }

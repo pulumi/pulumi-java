@@ -73,22 +73,21 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration build() {
+        }        public DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration build() {
             return new DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }
     }

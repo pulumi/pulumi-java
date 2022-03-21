@@ -264,72 +264,58 @@ public final class CryptoKeyVersionResponse {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder attestation(KeyOperationAttestationResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder destroyEventTime(String destroyEventTime) {
             this.destroyEventTime = Objects.requireNonNull(destroyEventTime);
             return this;
         }
-
         public Builder destroyTime(String destroyTime) {
             this.destroyTime = Objects.requireNonNull(destroyTime);
             return this;
         }
-
         public Builder externalProtectionLevelOptions(ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions) {
             this.externalProtectionLevelOptions = Objects.requireNonNull(externalProtectionLevelOptions);
             return this;
         }
-
         public Builder generateTime(String generateTime) {
             this.generateTime = Objects.requireNonNull(generateTime);
             return this;
         }
-
         public Builder importFailureReason(String importFailureReason) {
             this.importFailureReason = Objects.requireNonNull(importFailureReason);
             return this;
         }
-
         public Builder importJob(String importJob) {
             this.importJob = Objects.requireNonNull(importJob);
             return this;
         }
-
         public Builder importTime(String importTime) {
             this.importTime = Objects.requireNonNull(importTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
-
         public Builder reimportEligible(Boolean reimportEligible) {
             this.reimportEligible = Objects.requireNonNull(reimportEligible);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public CryptoKeyVersionResponse build() {
+        }        public CryptoKeyVersionResponse build() {
             return new CryptoKeyVersionResponse(algorithm, attestation, createTime, destroyEventTime, destroyTime, externalProtectionLevelOptions, generateTime, importFailureReason, importJob, importTime, name, protectionLevel, reimportEligible, state);
         }
     }

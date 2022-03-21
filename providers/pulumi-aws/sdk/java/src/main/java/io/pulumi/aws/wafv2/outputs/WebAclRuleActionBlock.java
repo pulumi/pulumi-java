@@ -53,8 +53,7 @@ public final class WebAclRuleActionBlock {
         public Builder customResponse(@Nullable WebAclRuleActionBlockCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
-        }
-        public WebAclRuleActionBlock build() {
+        }        public WebAclRuleActionBlock build() {
             return new WebAclRuleActionBlock(customResponse);
         }
     }

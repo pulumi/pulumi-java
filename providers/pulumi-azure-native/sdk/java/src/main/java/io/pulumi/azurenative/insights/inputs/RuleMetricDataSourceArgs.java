@@ -143,62 +143,50 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
             this.legacyResourceId = legacyResourceId;
             return this;
         }
-
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = Output.ofNullable(legacyResourceId);
             return this;
         }
-
         public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = Output.ofNullable(metricName);
             return this;
         }
-
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder resourceLocation(@Nullable Output<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
-
         public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = Output.ofNullable(resourceLocation);
             return this;
         }
-
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Output.ofNullable(resourceUri);
             return this;
-        }
-        public RuleMetricDataSourceArgs build() {
+        }        public RuleMetricDataSourceArgs build() {
             return new RuleMetricDataSourceArgs(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
         }
     }

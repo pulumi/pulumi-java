@@ -112,22 +112,18 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
             this.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
-        }
-        public MigrateSqlServerSqlDbDatabaseInputResponse build() {
+        }        public MigrateSqlServerSqlDbDatabaseInputResponse build() {
             return new MigrateSqlServerSqlDbDatabaseInputResponse(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);
         }
     }

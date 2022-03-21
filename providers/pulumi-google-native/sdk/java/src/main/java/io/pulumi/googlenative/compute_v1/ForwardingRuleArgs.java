@@ -416,242 +416,203 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.allPorts = allPorts;
             return this;
         }
-
         public Builder allPorts(@Nullable Boolean allPorts) {
             this.allPorts = Output.ofNullable(allPorts);
             return this;
         }
-
         public Builder allowGlobalAccess(@Nullable Output<Boolean> allowGlobalAccess) {
             this.allowGlobalAccess = allowGlobalAccess;
             return this;
         }
-
         public Builder allowGlobalAccess(@Nullable Boolean allowGlobalAccess) {
             this.allowGlobalAccess = Output.ofNullable(allowGlobalAccess);
             return this;
         }
-
         public Builder backendService(@Nullable Output<String> backendService) {
             this.backendService = backendService;
             return this;
         }
-
         public Builder backendService(@Nullable String backendService) {
             this.backendService = Output.ofNullable(backendService);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder ipProtocol(@Nullable Output<ForwardingRuleIpProtocol> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
-
         public Builder ipProtocol(@Nullable ForwardingRuleIpProtocol ipProtocol) {
             this.ipProtocol = Output.ofNullable(ipProtocol);
             return this;
         }
-
         public Builder ipVersion(@Nullable Output<ForwardingRuleIpVersion> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
-
         public Builder ipVersion(@Nullable ForwardingRuleIpVersion ipVersion) {
             this.ipVersion = Output.ofNullable(ipVersion);
             return this;
         }
-
         public Builder isMirroringCollector(@Nullable Output<Boolean> isMirroringCollector) {
             this.isMirroringCollector = isMirroringCollector;
             return this;
         }
-
         public Builder isMirroringCollector(@Nullable Boolean isMirroringCollector) {
             this.isMirroringCollector = Output.ofNullable(isMirroringCollector);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable Output<ForwardingRuleLoadBalancingScheme> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable ForwardingRuleLoadBalancingScheme loadBalancingScheme) {
             this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
             return this;
         }
-
         public Builder metadataFilters(@Nullable Output<List<MetadataFilterArgs>> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
-
         public Builder metadataFilters(@Nullable List<MetadataFilterArgs> metadataFilters) {
             this.metadataFilters = Output.ofNullable(metadataFilters);
             return this;
         }
-
+        public Builder metadataFilters(MetadataFilterArgs... metadataFilters) {
+            return metadataFilters(List.of(metadataFilters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkTier(@Nullable Output<ForwardingRuleNetworkTier> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder networkTier(@Nullable ForwardingRuleNetworkTier networkTier) {
             this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
-
         public Builder portRange(@Nullable Output<String> portRange) {
             this.portRange = portRange;
             return this;
         }
-
         public Builder portRange(@Nullable String portRange) {
             this.portRange = Output.ofNullable(portRange);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<String> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pscConnectionStatus(@Nullable Output<ForwardingRulePscConnectionStatus> pscConnectionStatus) {
             this.pscConnectionStatus = pscConnectionStatus;
             return this;
         }
-
         public Builder pscConnectionStatus(@Nullable ForwardingRulePscConnectionStatus pscConnectionStatus) {
             this.pscConnectionStatus = Output.ofNullable(pscConnectionStatus);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serviceDirectoryRegistrations(@Nullable Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations) {
             this.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
             return this;
         }
-
         public Builder serviceDirectoryRegistrations(@Nullable List<ForwardingRuleServiceDirectoryRegistrationArgs> serviceDirectoryRegistrations) {
             this.serviceDirectoryRegistrations = Output.ofNullable(serviceDirectoryRegistrations);
             return this;
         }
-
+        public Builder serviceDirectoryRegistrations(ForwardingRuleServiceDirectoryRegistrationArgs... serviceDirectoryRegistrations) {
+            return serviceDirectoryRegistrations(List.of(serviceDirectoryRegistrations));
+        }
         public Builder serviceLabel(@Nullable Output<String> serviceLabel) {
             this.serviceLabel = serviceLabel;
             return this;
         }
-
         public Builder serviceLabel(@Nullable String serviceLabel) {
             this.serviceLabel = Output.ofNullable(serviceLabel);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public ForwardingRuleArgs build() {
+        }        public ForwardingRuleArgs build() {
             return new ForwardingRuleArgs(allPorts, allowGlobalAccess, backendService, description, ipAddress, ipProtocol, ipVersion, isMirroringCollector, labels, loadBalancingScheme, metadataFilters, name, network, networkTier, portRange, ports, project, pscConnectionStatus, region, requestId, serviceDirectoryRegistrations, serviceLabel, subnetwork, target);
         }
     }

@@ -89,17 +89,14 @@ public final class HttpSettingsResponse {
             this.forwardProxy = forwardProxy;
             return this;
         }
-
         public Builder requireHttps(@Nullable Boolean requireHttps) {
             this.requireHttps = requireHttps;
             return this;
         }
-
         public Builder routes(@Nullable HttpSettingsRoutesResponse routes) {
             this.routes = routes;
             return this;
-        }
-        public HttpSettingsResponse build() {
+        }        public HttpSettingsResponse build() {
             return new HttpSettingsResponse(forwardProxy, requireHttps, routes);
         }
     }

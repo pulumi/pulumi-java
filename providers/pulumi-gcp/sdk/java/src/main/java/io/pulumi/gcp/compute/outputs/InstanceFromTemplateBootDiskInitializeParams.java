@@ -74,22 +74,18 @@ public final class InstanceFromTemplateBootDiskInitializeParams {
             this.image = image;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = size;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public InstanceFromTemplateBootDiskInitializeParams build() {
+        }        public InstanceFromTemplateBootDiskInitializeParams build() {
             return new InstanceFromTemplateBootDiskInitializeParams(image, labels, size, type);
         }
     }

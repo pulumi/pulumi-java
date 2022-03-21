@@ -120,27 +120,22 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public Builder repetitionName(String repetitionName) {
             this.repetitionName = Objects.requireNonNull(repetitionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder runName(String runName) {
             this.runName = Objects.requireNonNull(runName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public ListWorkflowRunActionRepetitionExpressionTracesArgs build() {
+        }        public ListWorkflowRunActionRepetitionExpressionTracesArgs build() {
             return new ListWorkflowRunActionRepetitionExpressionTracesArgs(actionName, repetitionName, resourceGroupName, runName, workflowName);
         }
     }

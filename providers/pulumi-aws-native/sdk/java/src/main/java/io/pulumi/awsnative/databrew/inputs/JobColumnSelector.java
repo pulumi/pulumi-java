@@ -66,12 +66,10 @@ public final class JobColumnSelector extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
-        }
-        public JobColumnSelector build() {
+        }        public JobColumnSelector build() {
             return new JobColumnSelector(name, regex);
         }
     }

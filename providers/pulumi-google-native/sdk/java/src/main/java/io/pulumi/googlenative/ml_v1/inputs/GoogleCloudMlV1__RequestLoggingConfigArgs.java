@@ -79,22 +79,18 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
             this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName);
             return this;
         }
-
         public Builder bigqueryTableName(String bigqueryTableName) {
             this.bigqueryTableName = Output.of(Objects.requireNonNull(bigqueryTableName));
             return this;
         }
-
         public Builder samplingPercentage(@Nullable Output<Double> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
-
         public Builder samplingPercentage(@Nullable Double samplingPercentage) {
             this.samplingPercentage = Output.ofNullable(samplingPercentage);
             return this;
-        }
-        public GoogleCloudMlV1__RequestLoggingConfigArgs build() {
+        }        public GoogleCloudMlV1__RequestLoggingConfigArgs build() {
             return new GoogleCloudMlV1__RequestLoggingConfigArgs(bigqueryTableName, samplingPercentage);
         }
     }

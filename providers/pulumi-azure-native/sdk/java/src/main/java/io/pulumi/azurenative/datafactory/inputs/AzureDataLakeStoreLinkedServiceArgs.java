@@ -296,152 +296,125 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable Object accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
-
         public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = Output.ofNullable(azureCloudType);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder dataLakeStoreUri(Output<Object> dataLakeStoreUri) {
             this.dataLakeStoreUri = Objects.requireNonNull(dataLakeStoreUri);
             return this;
         }
-
         public Builder dataLakeStoreUri(Object dataLakeStoreUri) {
             this.dataLakeStoreUri = Output.of(Objects.requireNonNull(dataLakeStoreUri));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceGroupName(@Nullable Output<Object> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable Object resourceGroupName) {
             this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<Object> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable Object subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder tenant(@Nullable Output<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder tenant(@Nullable Object tenant) {
             this.tenant = Output.ofNullable(tenant);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureDataLakeStoreLinkedServiceArgs build() {
+        }        public AzureDataLakeStoreLinkedServiceArgs build() {
             return new AzureDataLakeStoreLinkedServiceArgs(accountName, annotations, azureCloudType, connectVia, credential, dataLakeStoreUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
         }
     }

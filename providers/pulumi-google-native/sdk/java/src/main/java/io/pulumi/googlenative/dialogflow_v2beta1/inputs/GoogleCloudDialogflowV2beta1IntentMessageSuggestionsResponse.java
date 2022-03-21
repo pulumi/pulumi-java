@@ -60,7 +60,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
-        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse build() {
+        public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse... suggestions) {
+            return suggestions(List.of(suggestions));
+        }        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse(suggestions);
         }
     }

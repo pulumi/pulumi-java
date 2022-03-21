@@ -77,22 +77,18 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
             this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
             return this;
         }
-
         public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
             this.primaryAuthKeyHash = Output.of(Objects.requireNonNull(primaryAuthKeyHash));
             return this;
         }
-
         public Builder secondaryAuthKeyHash(Output<String> secondaryAuthKeyHash) {
             this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
             return this;
         }
-
         public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
             this.secondaryAuthKeyHash = Output.of(Objects.requireNonNull(secondaryAuthKeyHash));
             return this;
-        }
-        public ServiceAuthConfigurationArgs build() {
+        }        public ServiceAuthConfigurationArgs build() {
             return new ServiceAuthConfigurationArgs(primaryAuthKeyHash, secondaryAuthKeyHash);
         }
     }

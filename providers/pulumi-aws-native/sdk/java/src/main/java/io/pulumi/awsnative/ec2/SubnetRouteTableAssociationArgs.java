@@ -65,22 +65,18 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public SubnetRouteTableAssociationArgs build() {
+        }        public SubnetRouteTableAssociationArgs build() {
             return new SubnetRouteTableAssociationArgs(routeTableId, subnetId);
         }
     }

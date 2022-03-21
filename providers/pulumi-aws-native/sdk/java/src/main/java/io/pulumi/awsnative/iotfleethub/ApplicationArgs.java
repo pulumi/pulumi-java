@@ -108,42 +108,37 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationDescription = applicationDescription;
             return this;
         }
-
         public Builder applicationDescription(@Nullable String applicationDescription) {
             this.applicationDescription = Output.ofNullable(applicationDescription);
             return this;
         }
-
         public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ApplicationArgs build() {
+        public Builder tags(ApplicationTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationDescription, applicationName, roleArn, tags);
         }
     }

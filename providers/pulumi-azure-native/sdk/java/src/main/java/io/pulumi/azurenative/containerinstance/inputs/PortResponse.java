@@ -79,12 +79,10 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public PortResponse build() {
+        }        public PortResponse build() {
             return new PortResponse(port, protocol);
         }
     }

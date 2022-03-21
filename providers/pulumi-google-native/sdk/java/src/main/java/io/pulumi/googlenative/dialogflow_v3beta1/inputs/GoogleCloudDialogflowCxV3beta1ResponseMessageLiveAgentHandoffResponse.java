@@ -59,8 +59,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse(metadata);
         }
     }

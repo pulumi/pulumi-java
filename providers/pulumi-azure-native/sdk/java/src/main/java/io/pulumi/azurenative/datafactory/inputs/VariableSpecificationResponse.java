@@ -79,12 +79,10 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VariableSpecificationResponse build() {
+        }        public VariableSpecificationResponse build() {
             return new VariableSpecificationResponse(defaultValue, type);
         }
     }

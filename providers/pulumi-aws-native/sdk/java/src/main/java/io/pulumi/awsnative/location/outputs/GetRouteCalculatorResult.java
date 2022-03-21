@@ -71,22 +71,18 @@ public final class GetRouteCalculatorResult {
             this.arn = arn;
             return this;
         }
-
         public Builder calculatorArn(@Nullable String calculatorArn) {
             this.calculatorArn = calculatorArn;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public GetRouteCalculatorResult build() {
+        }        public GetRouteCalculatorResult build() {
             return new GetRouteCalculatorResult(arn, calculatorArn, createTime, updateTime);
         }
     }

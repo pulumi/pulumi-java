@@ -53,8 +53,7 @@ public final class CMKIdentityDefinitionResponse {
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }
-        public CMKIdentityDefinitionResponse build() {
+        }        public CMKIdentityDefinitionResponse build() {
             return new CMKIdentityDefinitionResponse(userAssignedIdentity);
         }
     }

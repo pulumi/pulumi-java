@@ -72,12 +72,10 @@ public final class ListDeviceRegistrationKeyArgs extends io.pulumi.resources.Inv
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListDeviceRegistrationKeyArgs build() {
+        }        public ListDeviceRegistrationKeyArgs build() {
             return new ListDeviceRegistrationKeyArgs(deviceName, resourceGroupName);
         }
     }

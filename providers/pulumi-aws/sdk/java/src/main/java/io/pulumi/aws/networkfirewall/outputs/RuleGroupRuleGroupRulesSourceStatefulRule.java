@@ -88,17 +88,17 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRule {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeader header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatefulRule build() {
+        public Builder ruleOptions(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption... ruleOptions) {
+            return ruleOptions(List.of(ruleOptions));
+        }        public RuleGroupRuleGroupRulesSourceStatefulRule build() {
             return new RuleGroupRuleGroupRulesSourceStatefulRule(action, header, ruleOptions);
         }
     }

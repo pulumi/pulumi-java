@@ -61,12 +61,10 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Output.ofNullable(bundleId);
             return this;
-        }
-        public IosTestLoopArgs build() {
+        }        public IosTestLoopArgs build() {
             return new IosTestLoopArgs(bundleId);
         }
     }

@@ -114,32 +114,29 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
             this.delegationServiceAccountEmail = delegationServiceAccountEmail;
             return this;
         }
-
         public Builder delegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
             this.delegationServiceAccountEmail = Output.ofNullable(delegationServiceAccountEmail);
             return this;
         }
-
         public Builder noteReference(Output<String> noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
-
         public Builder noteReference(String noteReference) {
             this.noteReference = Output.of(Objects.requireNonNull(noteReference));
             return this;
         }
-
         public Builder publicKeys(@Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public Builder publicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKeyGetArgs> publicKeys) {
             this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
-        public AttestorAttestationAuthorityNoteGetArgs build() {
+        public Builder publicKeys(AttestorAttestationAuthorityNotePublicKeyGetArgs... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public AttestorAttestationAuthorityNoteGetArgs build() {
             return new AttestorAttestationAuthorityNoteGetArgs(delegationServiceAccountEmail, noteReference, publicKeys);
         }
     }

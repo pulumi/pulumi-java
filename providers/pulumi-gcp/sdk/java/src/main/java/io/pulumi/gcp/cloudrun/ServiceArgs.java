@@ -177,72 +177,61 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.autogenerateRevisionName = autogenerateRevisionName;
             return this;
         }
-
         public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
             this.autogenerateRevisionName = Output.ofNullable(autogenerateRevisionName);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder metadata(@Nullable Output<ServiceMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ServiceMetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder template(@Nullable Output<ServiceTemplateArgs> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable ServiceTemplateArgs template) {
             this.template = Output.ofNullable(template);
             return this;
         }
-
         public Builder traffics(@Nullable Output<List<ServiceTrafficArgs>> traffics) {
             this.traffics = traffics;
             return this;
         }
-
         public Builder traffics(@Nullable List<ServiceTrafficArgs> traffics) {
             this.traffics = Output.ofNullable(traffics);
             return this;
         }
-        public ServiceArgs build() {
+        public Builder traffics(ServiceTrafficArgs... traffics) {
+            return traffics(List.of(traffics));
+        }        public ServiceArgs build() {
             return new ServiceArgs(autogenerateRevisionName, location, metadata, name, project, template, traffics);
         }
     }

@@ -56,12 +56,13 @@ public final class DefaultRolloutSpecificationResponseHighTraffic {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = waitDuration;
             return this;
-        }
-        public DefaultRolloutSpecificationResponseHighTraffic build() {
+        }        public DefaultRolloutSpecificationResponseHighTraffic build() {
             return new DefaultRolloutSpecificationResponseHighTraffic(regions, waitDuration);
         }
     }

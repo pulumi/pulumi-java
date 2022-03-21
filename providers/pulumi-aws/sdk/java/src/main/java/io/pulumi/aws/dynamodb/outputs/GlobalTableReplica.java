@@ -51,8 +51,7 @@ public final class GlobalTableReplica {
         public Builder regionName(String regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
-        }
-        public GlobalTableReplica build() {
+        }        public GlobalTableReplica build() {
             return new GlobalTableReplica(regionName);
         }
     }

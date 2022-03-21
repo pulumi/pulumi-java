@@ -93,32 +93,29 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
             this.prodTrafficRoute = Objects.requireNonNull(prodTrafficRoute);
             return this;
         }
-
         public Builder prodTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs prodTrafficRoute) {
             this.prodTrafficRoute = Output.of(Objects.requireNonNull(prodTrafficRoute));
             return this;
         }
-
         public Builder targetGroups(Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs>> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-
         public Builder targetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs> targetGroups) {
             this.targetGroups = Output.of(Objects.requireNonNull(targetGroups));
             return this;
         }
-
+        public Builder targetGroups(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs... targetGroups) {
+            return targetGroups(List.of(targetGroups));
+        }
         public Builder testTrafficRoute(@Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> testTrafficRoute) {
             this.testTrafficRoute = testTrafficRoute;
             return this;
         }
-
         public Builder testTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs testTrafficRoute) {
             this.testTrafficRoute = Output.ofNullable(testTrafficRoute);
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs build() {
+        }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs(prodTrafficRoute, targetGroups, testTrafficRoute);
         }
     }

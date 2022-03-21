@@ -111,42 +111,34 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
             this.floatValue = floatValue;
             return this;
         }
-
         public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = Output.ofNullable(floatValue);
             return this;
         }
-
         public Builder intValue(@Nullable Output<String> intValue) {
             this.intValue = intValue;
             return this;
         }
-
         public Builder intValue(@Nullable String intValue) {
             this.intValue = Output.ofNullable(intValue);
             return this;
         }
-
         public Builder parameter(@Nullable Output<String> parameter) {
             this.parameter = parameter;
             return this;
         }
-
         public Builder parameter(@Nullable String parameter) {
             this.parameter = Output.ofNullable(parameter);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
-        }
-        public GoogleCloudMlV1_Trial_ParameterArgs build() {
+        }        public GoogleCloudMlV1_Trial_ParameterArgs build() {
             return new GoogleCloudMlV1_Trial_ParameterArgs(floatValue, intValue, parameter, stringValue);
         }
     }

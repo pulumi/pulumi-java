@@ -117,47 +117,38 @@ public final class DeliveryStreamSplunkDestinationConfiguration {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder hECAcknowledgmentTimeoutInSeconds(@Nullable Integer hECAcknowledgmentTimeoutInSeconds) {
             this.hECAcknowledgmentTimeoutInSeconds = hECAcknowledgmentTimeoutInSeconds;
             return this;
         }
-
         public Builder hECEndpoint(String hECEndpoint) {
             this.hECEndpoint = Objects.requireNonNull(hECEndpoint);
             return this;
         }
-
         public Builder hECEndpointType(DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType) {
             this.hECEndpointType = Objects.requireNonNull(hECEndpointType);
             return this;
         }
-
         public Builder hECToken(String hECToken) {
             this.hECToken = Objects.requireNonNull(hECToken);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder retryOptions(@Nullable DeliveryStreamSplunkRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
-        }
-        public DeliveryStreamSplunkDestinationConfiguration build() {
+        }        public DeliveryStreamSplunkDestinationConfiguration build() {
             return new DeliveryStreamSplunkDestinationConfiguration(cloudWatchLoggingOptions, hECAcknowledgmentTimeoutInSeconds, hECEndpoint, hECEndpointType, hECToken, processingConfiguration, retryOptions, s3BackupMode, s3Configuration);
         }
     }

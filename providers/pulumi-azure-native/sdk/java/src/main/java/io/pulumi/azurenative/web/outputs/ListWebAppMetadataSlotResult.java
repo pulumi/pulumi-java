@@ -120,27 +120,22 @@ public final class ListWebAppMetadataSlotResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListWebAppMetadataSlotResult build() {
+        }        public ListWebAppMetadataSlotResult build() {
             return new ListWebAppMetadataSlotResult(id, kind, name, properties, type);
         }
     }

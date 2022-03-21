@@ -107,42 +107,34 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder dataCenterName(@Nullable Output<String> dataCenterName) {
             this.dataCenterName = dataCenterName;
             return this;
         }
-
         public Builder dataCenterName(@Nullable String dataCenterName) {
             this.dataCenterName = Output.ofNullable(dataCenterName);
             return this;
         }
-
         public Builder properties(@Nullable Output<DataCenterResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable DataCenterResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public CassandraDataCenterArgs build() {
+        }        public CassandraDataCenterArgs build() {
             return new CassandraDataCenterArgs(clusterName, dataCenterName, properties, resourceGroupName);
         }
     }

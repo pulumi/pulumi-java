@@ -95,32 +95,26 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder valueType(@Nullable Output<LabelDescriptorValueType> valueType) {
             this.valueType = valueType;
             return this;
         }
-
         public Builder valueType(@Nullable LabelDescriptorValueType valueType) {
             this.valueType = Output.ofNullable(valueType);
             return this;
-        }
-        public LabelDescriptorArgs build() {
+        }        public LabelDescriptorArgs build() {
             return new LabelDescriptorArgs(description, key, valueType);
         }
     }

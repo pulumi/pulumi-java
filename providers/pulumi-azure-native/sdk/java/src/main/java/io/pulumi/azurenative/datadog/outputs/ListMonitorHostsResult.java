@@ -73,12 +73,13 @@ public final class ListMonitorHostsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<DatadogHostResponse> value) {
             this.value = value;
             return this;
         }
-        public ListMonitorHostsResult build() {
+        public Builder value(DatadogHostResponse... value) {
+            return value(List.of(value));
+        }        public ListMonitorHostsResult build() {
             return new ListMonitorHostsResult(nextLink, value);
         }
     }

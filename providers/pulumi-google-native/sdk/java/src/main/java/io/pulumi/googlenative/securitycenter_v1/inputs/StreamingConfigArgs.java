@@ -61,12 +61,10 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
-        }
-        public StreamingConfigArgs build() {
+        }        public StreamingConfigArgs build() {
             return new StreamingConfigArgs(filter);
         }
     }

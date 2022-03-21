@@ -94,32 +94,26 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
-
         public Builder caCertificate(String caCertificate) {
             this.caCertificate = Output.of(Objects.requireNonNull(caCertificate));
             return this;
         }
-
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
-
         public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
-
         public Builder clientKey(@Nullable Output<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
-
         public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = Output.ofNullable(clientKey);
             return this;
-        }
-        public SslConfigArgs build() {
+        }        public SslConfigArgs build() {
             return new SslConfigArgs(caCertificate, clientCertificate, clientKey);
         }
     }

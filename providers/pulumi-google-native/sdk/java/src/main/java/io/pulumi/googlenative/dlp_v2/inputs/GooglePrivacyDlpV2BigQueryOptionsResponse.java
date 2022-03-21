@@ -156,37 +156,39 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
             this.excludedFields = Objects.requireNonNull(excludedFields);
             return this;
         }
-
+        public Builder excludedFields(GooglePrivacyDlpV2FieldIdResponse... excludedFields) {
+            return excludedFields(List.of(excludedFields));
+        }
         public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
-
+        public Builder identifyingFields(GooglePrivacyDlpV2FieldIdResponse... identifyingFields) {
+            return identifyingFields(List.of(identifyingFields));
+        }
         public Builder includedFields(List<GooglePrivacyDlpV2FieldIdResponse> includedFields) {
             this.includedFields = Objects.requireNonNull(includedFields);
             return this;
         }
-
+        public Builder includedFields(GooglePrivacyDlpV2FieldIdResponse... includedFields) {
+            return includedFields(List.of(includedFields));
+        }
         public Builder rowsLimit(String rowsLimit) {
             this.rowsLimit = Objects.requireNonNull(rowsLimit);
             return this;
         }
-
         public Builder rowsLimitPercent(Integer rowsLimitPercent) {
             this.rowsLimitPercent = Objects.requireNonNull(rowsLimitPercent);
             return this;
         }
-
         public Builder sampleMethod(String sampleMethod) {
             this.sampleMethod = Objects.requireNonNull(sampleMethod);
             return this;
         }
-
         public Builder tableReference(GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
-        }
-        public GooglePrivacyDlpV2BigQueryOptionsResponse build() {
+        }        public GooglePrivacyDlpV2BigQueryOptionsResponse build() {
             return new GooglePrivacyDlpV2BigQueryOptionsResponse(excludedFields, identifyingFields, includedFields, rowsLimit, rowsLimitPercent, sampleMethod, tableReference);
         }
     }

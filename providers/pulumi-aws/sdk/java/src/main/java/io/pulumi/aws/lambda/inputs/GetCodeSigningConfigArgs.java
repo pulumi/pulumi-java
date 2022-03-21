@@ -54,8 +54,7 @@ public final class GetCodeSigningConfigArgs extends io.pulumi.resources.InvokeAr
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetCodeSigningConfigArgs build() {
+        }        public GetCodeSigningConfigArgs build() {
             return new GetCodeSigningConfigArgs(arn);
         }
     }

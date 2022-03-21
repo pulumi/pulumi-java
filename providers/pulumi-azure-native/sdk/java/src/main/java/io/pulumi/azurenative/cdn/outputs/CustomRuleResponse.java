@@ -122,27 +122,25 @@ public final class CustomRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
-
+        public Builder matchConditions(MatchConditionResponse... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
-        }
-        public CustomRuleResponse build() {
+        }        public CustomRuleResponse build() {
             return new CustomRuleResponse(action, enabledState, matchConditions, name, priority);
         }
     }

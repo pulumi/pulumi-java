@@ -80,22 +80,21 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
             this.animations = animations;
             return this;
         }
-
         public Builder animations(@Nullable List<AnimationArgs> animations) {
             this.animations = Output.ofNullable(animations);
             return this;
         }
-
+        public Builder animations(AnimationArgs... animations) {
+            return animations(List.of(animations));
+        }
         public Builder image(@Nullable Output<ImageArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable ImageArgs image) {
             this.image = Output.ofNullable(image);
             return this;
-        }
-        public OverlayArgs build() {
+        }        public OverlayArgs build() {
             return new OverlayArgs(animations, image);
         }
     }

@@ -71,12 +71,10 @@ public final class AmiEphemeralBlockDevice {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
-        }
-        public AmiEphemeralBlockDevice build() {
+        }        public AmiEphemeralBlockDevice build() {
             return new AmiEphemeralBlockDevice(deviceName, virtualName);
         }
     }

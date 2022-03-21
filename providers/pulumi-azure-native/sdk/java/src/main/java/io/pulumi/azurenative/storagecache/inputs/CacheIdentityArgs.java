@@ -61,12 +61,10 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable CacheIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public CacheIdentityArgs build() {
+        }        public CacheIdentityArgs build() {
             return new CacheIdentityArgs(type);
         }
     }

@@ -88,17 +88,17 @@ public final class EnumValueResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-        public EnumValueResponse build() {
+        public Builder options(OptionResponse... options) {
+            return options(List.of(options));
+        }        public EnumValueResponse build() {
             return new EnumValueResponse(name, number, options);
         }
     }

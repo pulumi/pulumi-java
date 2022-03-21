@@ -71,22 +71,18 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
             this.logGroup = logGroup;
             return this;
         }
-
         public Builder logGroup(@Nullable String logGroup) {
             this.logGroup = Output.ofNullable(logGroup);
             return this;
         }
-
         public Builder s3(@Nullable Output<ProjectS3DestinationArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable ProjectS3DestinationArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
-        }
-        public ProjectDataDeliveryObjectArgs build() {
+        }        public ProjectDataDeliveryObjectArgs build() {
             return new ProjectDataDeliveryObjectArgs(logGroup, s3);
         }
     }

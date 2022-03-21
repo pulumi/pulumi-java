@@ -61,12 +61,10 @@ public final class LabPlanNetworkProfileArgs extends io.pulumi.resources.Resourc
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public LabPlanNetworkProfileArgs build() {
+        }        public LabPlanNetworkProfileArgs build() {
             return new LabPlanNetworkProfileArgs(subnetId);
         }
     }

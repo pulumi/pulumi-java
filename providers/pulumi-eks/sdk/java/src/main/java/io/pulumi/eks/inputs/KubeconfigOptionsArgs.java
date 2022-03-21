@@ -97,22 +97,18 @@ public final class KubeconfigOptionsArgs extends io.pulumi.resources.ResourceArg
             this.profileName = profileName;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = Output.ofNullable(profileName);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public KubeconfigOptionsArgs build() {
+        }        public KubeconfigOptionsArgs build() {
             return new KubeconfigOptionsArgs(profileName, roleArn);
         }
     }

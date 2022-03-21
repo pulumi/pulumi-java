@@ -188,92 +188,74 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder assetSizeBytes(@Nullable Output<Integer> assetSizeBytes) {
             this.assetSizeBytes = assetSizeBytes;
             return this;
         }
-
         public Builder assetSizeBytes(@Nullable Integer assetSizeBytes) {
             this.assetSizeBytes = Output.ofNullable(assetSizeBytes);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder repositoryCount(@Nullable Output<Integer> repositoryCount) {
             this.repositoryCount = repositoryCount;
             return this;
         }
-
         public Builder repositoryCount(@Nullable Integer repositoryCount) {
             this.repositoryCount = Output.ofNullable(repositoryCount);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DomainState build() {
+        }        public DomainState build() {
             return new DomainState(arn, assetSizeBytes, createdTime, domain, encryptionKey, owner, repositoryCount, tags, tagsAll);
         }
     }

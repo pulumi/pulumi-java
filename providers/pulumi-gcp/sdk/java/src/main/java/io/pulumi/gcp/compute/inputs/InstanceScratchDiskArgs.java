@@ -56,12 +56,10 @@ public final class InstanceScratchDiskArgs extends io.pulumi.resources.ResourceA
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
-
         public Builder $interface(String $interface) {
             this.$interface = Output.of(Objects.requireNonNull($interface));
             return this;
-        }
-        public InstanceScratchDiskArgs build() {
+        }        public InstanceScratchDiskArgs build() {
             return new InstanceScratchDiskArgs($interface);
         }
     }

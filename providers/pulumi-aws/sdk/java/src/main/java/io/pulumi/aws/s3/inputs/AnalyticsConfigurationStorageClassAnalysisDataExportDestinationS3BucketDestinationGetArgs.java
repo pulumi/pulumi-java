@@ -106,42 +106,34 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
             this.bucketAccountId = bucketAccountId;
             return this;
         }
-
         public Builder bucketAccountId(@Nullable String bucketAccountId) {
             this.bucketAccountId = Output.ofNullable(bucketAccountId);
             return this;
         }
-
         public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs build() {
+        }        public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs build() {
             return new AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs(bucketAccountId, bucketArn, format, prefix);
         }
     }

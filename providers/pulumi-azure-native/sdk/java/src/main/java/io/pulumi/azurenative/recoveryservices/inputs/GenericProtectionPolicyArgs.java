@@ -130,52 +130,45 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
-
         public Builder fabricName(@Nullable Output<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
-
         public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = Output.ofNullable(fabricName);
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
-
         public Builder subProtectionPolicy(@Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
-
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
             this.subProtectionPolicy = Output.ofNullable(subProtectionPolicy);
             return this;
         }
-
+        public Builder subProtectionPolicy(SubProtectionPolicyArgs... subProtectionPolicy) {
+            return subProtectionPolicy(List.of(subProtectionPolicy));
+        }
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public GenericProtectionPolicyArgs build() {
+        }        public GenericProtectionPolicyArgs build() {
             return new GenericProtectionPolicyArgs(backupManagementType, fabricName, protectedItemsCount, subProtectionPolicy, timeZone);
         }
     }

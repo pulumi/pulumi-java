@@ -141,32 +141,26 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
-
         public Builder nodeState(String nodeState) {
             this.nodeState = Objects.requireNonNull(nodeState);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
-
         public Builder runId(String runId) {
             this.runId = Objects.requireNonNull(runId);
             return this;
-        }
-        public AmlComputeNodeInformationResponse build() {
+        }        public AmlComputeNodeInformationResponse build() {
             return new AmlComputeNodeInformationResponse(nodeId, nodeState, port, privateIpAddress, publicIpAddress, runId);
         }
     }

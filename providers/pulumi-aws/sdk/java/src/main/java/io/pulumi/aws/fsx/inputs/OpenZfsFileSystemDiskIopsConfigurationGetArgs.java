@@ -75,22 +75,18 @@ public final class OpenZfsFileSystemDiskIopsConfigurationGetArgs extends io.pulu
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public OpenZfsFileSystemDiskIopsConfigurationGetArgs build() {
+        }        public OpenZfsFileSystemDiskIopsConfigurationGetArgs build() {
             return new OpenZfsFileSystemDiskIopsConfigurationGetArgs(iops, mode);
         }
     }

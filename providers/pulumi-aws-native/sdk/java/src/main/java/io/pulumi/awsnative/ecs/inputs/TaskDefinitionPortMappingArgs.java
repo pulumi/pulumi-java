@@ -79,32 +79,26 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
-
         public Builder hostPort(@Nullable Output<Integer> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
-
         public Builder hostPort(@Nullable Integer hostPort) {
             this.hostPort = Output.ofNullable(hostPort);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public TaskDefinitionPortMappingArgs build() {
+        }        public TaskDefinitionPortMappingArgs build() {
             return new TaskDefinitionPortMappingArgs(containerPort, hostPort, protocol);
         }
     }

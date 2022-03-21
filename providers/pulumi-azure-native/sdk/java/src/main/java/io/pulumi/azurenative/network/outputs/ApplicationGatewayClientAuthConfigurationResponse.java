@@ -53,8 +53,7 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
         public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
             this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
-        }
-        public ApplicationGatewayClientAuthConfigurationResponse build() {
+        }        public ApplicationGatewayClientAuthConfigurationResponse build() {
             return new ApplicationGatewayClientAuthConfigurationResponse(verifyClientCertIssuerDN);
         }
     }

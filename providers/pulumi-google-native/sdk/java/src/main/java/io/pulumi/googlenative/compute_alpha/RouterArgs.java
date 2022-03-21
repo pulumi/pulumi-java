@@ -229,122 +229,110 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             this.bgp = bgp;
             return this;
         }
-
         public Builder bgp(@Nullable RouterBgpArgs bgp) {
             this.bgp = Output.ofNullable(bgp);
             return this;
         }
-
         public Builder bgpPeers(@Nullable Output<List<RouterBgpPeerArgs>> bgpPeers) {
             this.bgpPeers = bgpPeers;
             return this;
         }
-
         public Builder bgpPeers(@Nullable List<RouterBgpPeerArgs> bgpPeers) {
             this.bgpPeers = Output.ofNullable(bgpPeers);
             return this;
         }
-
+        public Builder bgpPeers(RouterBgpPeerArgs... bgpPeers) {
+            return bgpPeers(List.of(bgpPeers));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
-
         public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Output.ofNullable(encryptedInterconnectRouter);
             return this;
         }
-
         public Builder interfaces(@Nullable Output<List<RouterInterfaceArgs>> interfaces) {
             this.interfaces = interfaces;
             return this;
         }
-
         public Builder interfaces(@Nullable List<RouterInterfaceArgs> interfaces) {
             this.interfaces = Output.ofNullable(interfaces);
             return this;
         }
-
+        public Builder interfaces(RouterInterfaceArgs... interfaces) {
+            return interfaces(List.of(interfaces));
+        }
         public Builder md5AuthenticationKeys(@Nullable Output<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys) {
             this.md5AuthenticationKeys = md5AuthenticationKeys;
             return this;
         }
-
         public Builder md5AuthenticationKeys(@Nullable List<RouterMd5AuthenticationKeyArgs> md5AuthenticationKeys) {
             this.md5AuthenticationKeys = Output.ofNullable(md5AuthenticationKeys);
             return this;
         }
-
+        public Builder md5AuthenticationKeys(RouterMd5AuthenticationKeyArgs... md5AuthenticationKeys) {
+            return md5AuthenticationKeys(List.of(md5AuthenticationKeys));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nats(@Nullable Output<List<RouterNatArgs>> nats) {
             this.nats = nats;
             return this;
         }
-
         public Builder nats(@Nullable List<RouterNatArgs> nats) {
             this.nats = Output.ofNullable(nats);
             return this;
         }
-
+        public Builder nats(RouterNatArgs... nats) {
+            return nats(List.of(nats));
+        }
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public RouterArgs build() {
+        }        public RouterArgs build() {
             return new RouterArgs(bgp, bgpPeers, description, encryptedInterconnectRouter, interfaces, md5AuthenticationKeys, name, nats, network, project, region, requestId);
         }
     }

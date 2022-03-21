@@ -202,52 +202,63 @@ public final class NetworkRuleResponse {
             this.description = description;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
             this.destinationFqdns = destinationFqdns;
             return this;
         }
-
+        public Builder destinationFqdns(String... destinationFqdns) {
+            return destinationFqdns(List.of(destinationFqdns));
+        }
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
-
+        public Builder destinationIpGroups(String... destinationIpGroups) {
+            return destinationIpGroups(List.of(destinationIpGroups));
+        }
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
-
+        public Builder destinationPorts(String... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
             this.ipProtocols = ipProtocols;
             return this;
         }
-
+        public Builder ipProtocols(String... ipProtocols) {
+            return ipProtocols(List.of(ipProtocols));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-        public NetworkRuleResponse build() {
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }        public NetworkRuleResponse build() {
             return new NetworkRuleResponse(description, destinationAddresses, destinationFqdns, destinationIpGroups, destinationPorts, ipProtocols, name, ruleType, sourceAddresses, sourceIpGroups);
         }
     }

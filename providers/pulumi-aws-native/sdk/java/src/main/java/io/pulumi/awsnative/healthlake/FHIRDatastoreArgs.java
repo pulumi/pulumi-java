@@ -107,52 +107,45 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
             this.datastoreName = datastoreName;
             return this;
         }
-
         public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
-
         public Builder datastoreTypeVersion(Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion) {
             this.datastoreTypeVersion = Objects.requireNonNull(datastoreTypeVersion);
             return this;
         }
-
         public Builder datastoreTypeVersion(FHIRDatastoreDatastoreTypeVersion datastoreTypeVersion) {
             this.datastoreTypeVersion = Output.of(Objects.requireNonNull(datastoreTypeVersion));
             return this;
         }
-
         public Builder preloadDataConfig(@Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig) {
             this.preloadDataConfig = preloadDataConfig;
             return this;
         }
-
         public Builder preloadDataConfig(@Nullable FHIRDatastorePreloadDataConfigArgs preloadDataConfig) {
             this.preloadDataConfig = Output.ofNullable(preloadDataConfig);
             return this;
         }
-
         public Builder sseConfiguration(@Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration) {
             this.sseConfiguration = sseConfiguration;
             return this;
         }
-
         public Builder sseConfiguration(@Nullable FHIRDatastoreSseConfigurationArgs sseConfiguration) {
             this.sseConfiguration = Output.ofNullable(sseConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FHIRDatastoreTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FHIRDatastoreTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public FHIRDatastoreArgs build() {
+        public Builder tags(FHIRDatastoreTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public FHIRDatastoreArgs build() {
             return new FHIRDatastoreArgs(datastoreName, datastoreTypeVersion, preloadDataConfig, sseConfiguration, tags);
         }
     }

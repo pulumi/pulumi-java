@@ -53,8 +53,7 @@ public final class ChannelLogConfiguration {
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
-        }
-        public ChannelLogConfiguration build() {
+        }        public ChannelLogConfiguration build() {
             return new ChannelLogConfiguration(logGroupName);
         }
     }

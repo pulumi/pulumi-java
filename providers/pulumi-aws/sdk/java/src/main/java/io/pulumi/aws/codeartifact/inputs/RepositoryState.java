@@ -206,102 +206,85 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             this.administratorAccount = administratorAccount;
             return this;
         }
-
         public Builder administratorAccount(@Nullable String administratorAccount) {
             this.administratorAccount = Output.ofNullable(administratorAccount);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
-
         public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Output.ofNullable(domainOwner);
             return this;
         }
-
         public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
-
         public Builder externalConnections(@Nullable RepositoryExternalConnectionsGetArgs externalConnections) {
             this.externalConnections = Output.ofNullable(externalConnections);
             return this;
         }
-
         public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = Output.ofNullable(repository);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder upstreams(@Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
-
         public Builder upstreams(@Nullable List<RepositoryUpstreamGetArgs> upstreams) {
             this.upstreams = Output.ofNullable(upstreams);
             return this;
         }
-        public RepositoryState build() {
+        public Builder upstreams(RepositoryUpstreamGetArgs... upstreams) {
+            return upstreams(List.of(upstreams));
+        }        public RepositoryState build() {
             return new RepositoryState(administratorAccount, arn, description, domain, domainOwner, externalConnections, repository, tags, tagsAll, upstreams);
         }
     }

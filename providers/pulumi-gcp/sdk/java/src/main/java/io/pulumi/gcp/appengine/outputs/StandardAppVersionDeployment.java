@@ -79,12 +79,13 @@ public final class StandardAppVersionDeployment {
             this.files = files;
             return this;
         }
-
+        public Builder files(StandardAppVersionDeploymentFile... files) {
+            return files(List.of(files));
+        }
         public Builder zip(@Nullable StandardAppVersionDeploymentZip zip) {
             this.zip = zip;
             return this;
-        }
-        public StandardAppVersionDeployment build() {
+        }        public StandardAppVersionDeployment build() {
             return new StandardAppVersionDeployment(files, zip);
         }
     }

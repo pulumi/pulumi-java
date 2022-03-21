@@ -71,12 +71,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder functionPayload(@Nullable String functionPayload) {
             this.functionPayload = functionPayload;
             return this;
-        }
-        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda build() {
+        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda build() {
             return new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda(functionArn, functionPayload);
         }
     }

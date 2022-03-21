@@ -57,12 +57,10 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
             this.s3Logs = s3Logs;
             return this;
         }
-
         public Builder s3Logs(@Nullable DetectorDatasourcesS3LogsArgs s3Logs) {
             this.s3Logs = Output.ofNullable(s3Logs);
             return this;
-        }
-        public DetectorDatasourcesArgs build() {
+        }        public DetectorDatasourcesArgs build() {
             return new DetectorDatasourcesArgs(s3Logs);
         }
     }

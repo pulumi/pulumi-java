@@ -72,12 +72,10 @@ public final class GetB2CTenantArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetB2CTenantArgs build() {
+        }        public GetB2CTenantArgs build() {
             return new GetB2CTenantArgs(resourceGroupName, resourceName);
         }
     }

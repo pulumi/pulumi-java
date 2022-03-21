@@ -147,62 +147,53 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
         public Builder inputs(List<NodeInputArgs> inputs) {
             this.inputs = Output.of(Objects.requireNonNull(inputs));
             return this;
         }
-
+        public Builder inputs(NodeInputArgs... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder videoCreationProperties(@Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties) {
             this.videoCreationProperties = videoCreationProperties;
             return this;
         }
-
         public Builder videoCreationProperties(@Nullable VideoCreationPropertiesArgs videoCreationProperties) {
             this.videoCreationProperties = Output.ofNullable(videoCreationProperties);
             return this;
         }
-
         public Builder videoName(Output<String> videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
-
         public Builder videoName(String videoName) {
             this.videoName = Output.of(Objects.requireNonNull(videoName));
             return this;
         }
-
         public Builder videoPublishingOptions(@Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions) {
             this.videoPublishingOptions = videoPublishingOptions;
             return this;
         }
-
         public Builder videoPublishingOptions(@Nullable VideoPublishingOptionsArgs videoPublishingOptions) {
             this.videoPublishingOptions = Output.ofNullable(videoPublishingOptions);
             return this;
-        }
-        public VideoSinkArgs build() {
+        }        public VideoSinkArgs build() {
             return new VideoSinkArgs(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);
         }
     }

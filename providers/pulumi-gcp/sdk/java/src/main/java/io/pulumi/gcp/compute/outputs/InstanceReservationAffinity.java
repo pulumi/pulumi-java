@@ -74,12 +74,10 @@ public final class InstanceReservationAffinity {
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InstanceReservationAffinity build() {
+        }        public InstanceReservationAffinity build() {
             return new InstanceReservationAffinity(specificReservation, type);
         }
     }

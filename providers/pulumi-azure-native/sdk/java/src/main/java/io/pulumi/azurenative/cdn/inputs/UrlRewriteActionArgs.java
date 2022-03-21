@@ -79,22 +79,18 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<UrlRewriteActionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(UrlRewriteActionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public UrlRewriteActionArgs build() {
+        }        public UrlRewriteActionArgs build() {
             return new UrlRewriteActionArgs(name, parameters);
         }
     }

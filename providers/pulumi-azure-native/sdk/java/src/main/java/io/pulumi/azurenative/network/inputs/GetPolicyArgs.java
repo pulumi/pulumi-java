@@ -72,12 +72,10 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPolicyArgs build() {
+        }        public GetPolicyArgs build() {
             return new GetPolicyArgs(policyName, resourceGroupName);
         }
     }

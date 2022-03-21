@@ -123,52 +123,42 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
             this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
             return this;
         }
-
         public Builder maxCapacityBreachBehavior(@Nullable String maxCapacityBreachBehavior) {
             this.maxCapacityBreachBehavior = Output.ofNullable(maxCapacityBreachBehavior);
             return this;
         }
-
         public Builder maxCapacityBuffer(@Nullable Output<String> maxCapacityBuffer) {
             this.maxCapacityBuffer = maxCapacityBuffer;
             return this;
         }
-
         public Builder maxCapacityBuffer(@Nullable String maxCapacityBuffer) {
             this.maxCapacityBuffer = Output.ofNullable(maxCapacityBuffer);
             return this;
         }
-
         public Builder metricSpecification(Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification) {
             this.metricSpecification = Objects.requireNonNull(metricSpecification);
             return this;
         }
-
         public Builder metricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationArgs metricSpecification) {
             this.metricSpecification = Output.of(Objects.requireNonNull(metricSpecification));
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder schedulingBufferTime(@Nullable Output<String> schedulingBufferTime) {
             this.schedulingBufferTime = schedulingBufferTime;
             return this;
         }
-
         public Builder schedulingBufferTime(@Nullable String schedulingBufferTime) {
             this.schedulingBufferTime = Output.ofNullable(schedulingBufferTime);
             return this;
-        }
-        public PolicyPredictiveScalingConfigurationArgs build() {
+        }        public PolicyPredictiveScalingConfigurationArgs build() {
             return new PolicyPredictiveScalingConfigurationArgs(maxCapacityBreachBehavior, maxCapacityBuffer, metricSpecification, mode, schedulingBufferTime);
         }
     }

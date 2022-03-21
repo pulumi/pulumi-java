@@ -92,32 +92,26 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder codeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs codeConfiguration) {
             this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
-
         public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
-
         public Builder sourceCodeVersion(Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }
-
         public Builder sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs sourceCodeVersion) {
             this.sourceCodeVersion = Output.of(Objects.requireNonNull(sourceCodeVersion));
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositoryGetArgs build() {
+        }        public ServiceSourceConfigurationCodeRepositoryGetArgs build() {
             return new ServiceSourceConfigurationCodeRepositoryGetArgs(codeConfiguration, repositoryUrl, sourceCodeVersion);
         }
     }

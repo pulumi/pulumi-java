@@ -80,12 +80,13 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
             this.circuitId = Objects.requireNonNull(circuitId);
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<IpAddressResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-        public NetworkProfileResponse build() {
+        public Builder networkInterfaces(IpAddressResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }        public NetworkProfileResponse build() {
             return new NetworkProfileResponse(circuitId, networkInterfaces);
         }
     }

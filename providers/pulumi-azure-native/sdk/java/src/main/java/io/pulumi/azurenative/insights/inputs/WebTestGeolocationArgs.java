@@ -61,12 +61,10 @@ public final class WebTestGeolocationArgs extends io.pulumi.resources.ResourceAr
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
-        }
-        public WebTestGeolocationArgs build() {
+        }        public WebTestGeolocationArgs build() {
             return new WebTestGeolocationArgs(location);
         }
     }

@@ -53,7 +53,9 @@ public final class MetricCounterSetResponse {
             this.counters = Objects.requireNonNull(counters);
             return this;
         }
-        public MetricCounterSetResponse build() {
+        public Builder counters(MetricCounterResponse... counters) {
+            return counters(List.of(counters));
+        }        public MetricCounterSetResponse build() {
             return new MetricCounterSetResponse(counters);
         }
     }

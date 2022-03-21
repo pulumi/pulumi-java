@@ -77,12 +77,10 @@ public final class AutoScalingResourceMetricResponse extends io.pulumi.resources
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AutoScalingResourceMetricResponse build() {
+        }        public AutoScalingResourceMetricResponse build() {
             return new AutoScalingResourceMetricResponse(kind, name);
         }
     }

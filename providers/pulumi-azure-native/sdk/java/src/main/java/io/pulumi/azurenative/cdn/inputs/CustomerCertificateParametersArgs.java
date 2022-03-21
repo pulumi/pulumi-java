@@ -146,62 +146,53 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
             this.certificateAuthority = certificateAuthority;
             return this;
         }
-
         public Builder certificateAuthority(@Nullable String certificateAuthority) {
             this.certificateAuthority = Output.ofNullable(certificateAuthority);
             return this;
         }
-
         public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
-
         public Builder secretSource(ResourceReferenceArgs secretSource) {
             this.secretSource = Output.of(Objects.requireNonNull(secretSource));
             return this;
         }
-
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
-
         public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = Output.ofNullable(secretVersion);
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
+        public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder useLatestVersion(@Nullable Output<Boolean> useLatestVersion) {
             this.useLatestVersion = useLatestVersion;
             return this;
         }
-
         public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
             this.useLatestVersion = Output.ofNullable(useLatestVersion);
             return this;
-        }
-        public CustomerCertificateParametersArgs build() {
+        }        public CustomerCertificateParametersArgs build() {
             return new CustomerCertificateParametersArgs(certificateAuthority, secretSource, secretVersion, subjectAlternativeNames, type, useLatestVersion);
         }
     }

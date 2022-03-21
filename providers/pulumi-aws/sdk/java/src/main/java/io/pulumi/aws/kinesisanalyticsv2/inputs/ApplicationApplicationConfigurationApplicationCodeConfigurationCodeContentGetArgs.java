@@ -75,22 +75,18 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             this.s3ContentLocation = s3ContentLocation;
             return this;
         }
-
         public Builder s3ContentLocation(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs s3ContentLocation) {
             this.s3ContentLocation = Output.ofNullable(s3ContentLocation);
             return this;
         }
-
         public Builder textContent(@Nullable Output<String> textContent) {
             this.textContent = textContent;
             return this;
         }
-
         public Builder textContent(@Nullable String textContent) {
             this.textContent = Output.ofNullable(textContent);
             return this;
-        }
-        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs build() {
+        }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs(s3ContentLocation, textContent);
         }
     }

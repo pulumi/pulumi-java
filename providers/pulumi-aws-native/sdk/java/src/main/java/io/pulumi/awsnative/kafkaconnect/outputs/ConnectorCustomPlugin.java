@@ -70,12 +70,10 @@ public final class ConnectorCustomPlugin {
             this.customPluginArn = Objects.requireNonNull(customPluginArn);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
-        }
-        public ConnectorCustomPlugin build() {
+        }        public ConnectorCustomPlugin build() {
             return new ConnectorCustomPlugin(customPluginArn, revision);
         }
     }

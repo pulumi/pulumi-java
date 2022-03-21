@@ -71,12 +71,16 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
             this.allowedActions = allowedActions;
             return this;
         }
-
+        public Builder allowedActions(String... allowedActions) {
+            return allowedActions(List.of(allowedActions));
+        }
         public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
             this.allowedDataActions = allowedDataActions;
             return this;
         }
-        public ApplicationPackageLockingPolicyDefinitionResponse build() {
+        public Builder allowedDataActions(String... allowedDataActions) {
+            return allowedDataActions(List.of(allowedDataActions));
+        }        public ApplicationPackageLockingPolicyDefinitionResponse build() {
             return new ApplicationPackageLockingPolicyDefinitionResponse(allowedActions, allowedDataActions);
         }
     }

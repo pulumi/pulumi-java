@@ -86,17 +86,14 @@ public final class HPAScalingPolicy {
             this.periodSeconds = Objects.requireNonNull(periodSeconds);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public HPAScalingPolicy build() {
+        }        public HPAScalingPolicy build() {
             return new HPAScalingPolicy(periodSeconds, type, value);
         }
     }

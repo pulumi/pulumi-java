@@ -66,22 +66,18 @@ public final class BotVersionLocaleSpecificationArgs extends io.pulumi.resources
             this.botVersionLocaleDetails = Objects.requireNonNull(botVersionLocaleDetails);
             return this;
         }
-
         public Builder botVersionLocaleDetails(BotVersionLocaleDetailsArgs botVersionLocaleDetails) {
             this.botVersionLocaleDetails = Output.of(Objects.requireNonNull(botVersionLocaleDetails));
             return this;
         }
-
         public Builder localeId(Output<String> localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
-
         public Builder localeId(String localeId) {
             this.localeId = Output.of(Objects.requireNonNull(localeId));
             return this;
-        }
-        public BotVersionLocaleSpecificationArgs build() {
+        }        public BotVersionLocaleSpecificationArgs build() {
             return new BotVersionLocaleSpecificationArgs(botVersionLocaleDetails, localeId);
         }
     }

@@ -61,12 +61,10 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
             this.baseEntitlement = baseEntitlement;
             return this;
         }
-
         public Builder baseEntitlement(@Nullable String baseEntitlement) {
             this.baseEntitlement = Output.ofNullable(baseEntitlement);
             return this;
-        }
-        public GoogleCloudChannelV1AssociationInfoArgs build() {
+        }        public GoogleCloudChannelV1AssociationInfoArgs build() {
             return new GoogleCloudChannelV1AssociationInfoArgs(baseEntitlement);
         }
     }

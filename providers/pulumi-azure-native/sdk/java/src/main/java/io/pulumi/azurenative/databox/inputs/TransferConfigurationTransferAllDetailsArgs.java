@@ -61,12 +61,10 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
             this.include = include;
             return this;
         }
-
         public Builder include(@Nullable TransferAllDetailsArgs include) {
             this.include = Output.ofNullable(include);
             return this;
-        }
-        public TransferConfigurationTransferAllDetailsArgs build() {
+        }        public TransferConfigurationTransferAllDetailsArgs build() {
             return new TransferConfigurationTransferAllDetailsArgs(include);
         }
     }

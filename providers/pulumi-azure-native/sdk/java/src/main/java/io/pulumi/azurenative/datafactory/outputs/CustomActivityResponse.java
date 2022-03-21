@@ -273,72 +273,64 @@ public final class CustomActivityResponse {
             this.autoUserSpecification = autoUserSpecification;
             return this;
         }
-
         public Builder command(Object command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder extendedProperties(@Nullable Map<String,Object> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder referenceObjects(@Nullable CustomActivityReferenceObjectResponse referenceObjects) {
             this.referenceObjects = referenceObjects;
             return this;
         }
-
         public Builder resourceLinkedService(@Nullable LinkedServiceReferenceResponse resourceLinkedService) {
             this.resourceLinkedService = resourceLinkedService;
             return this;
         }
-
         public Builder retentionTimeInDays(@Nullable Object retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public CustomActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public CustomActivityResponse build() {
             return new CustomActivityResponse(autoUserSpecification, command, dependsOn, description, extendedProperties, folderPath, linkedServiceName, name, policy, referenceObjects, resourceLinkedService, retentionTimeInDays, type, userProperties);
         }
     }

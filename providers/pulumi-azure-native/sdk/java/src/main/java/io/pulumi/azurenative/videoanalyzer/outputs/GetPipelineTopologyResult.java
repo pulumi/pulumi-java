@@ -224,57 +224,58 @@ public final class GetPipelineTopologyResult {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable List<ParameterDeclarationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ParameterDeclarationResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder processors(@Nullable List<EncoderProcessorResponse> processors) {
             this.processors = processors;
             return this;
         }
-
+        public Builder processors(EncoderProcessorResponse... processors) {
+            return processors(List.of(processors));
+        }
         public Builder sinks(List<VideoSinkResponse> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
-
+        public Builder sinks(VideoSinkResponse... sinks) {
+            return sinks(List.of(sinks));
+        }
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sources(List<Either<RtspSourceResponse,VideoSourceResponse>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
+        public Builder sources(Either<RtspSourceResponse,VideoSourceResponse>... sources) {
+            return sources(List.of(sources));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPipelineTopologyResult build() {
+        }        public GetPipelineTopologyResult build() {
             return new GetPipelineTopologyResult(description, id, kind, name, parameters, processors, sinks, sku, sources, systemData, type);
         }
     }

@@ -57,12 +57,13 @@ public final class CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs extends io.
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs(objectIdPaths);
         }
     }

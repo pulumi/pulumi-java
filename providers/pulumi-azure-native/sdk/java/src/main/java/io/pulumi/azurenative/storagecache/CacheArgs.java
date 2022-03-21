@@ -260,132 +260,106 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             this.cacheName = cacheName;
             return this;
         }
-
         public Builder cacheName(@Nullable String cacheName) {
             this.cacheName = Output.ofNullable(cacheName);
             return this;
         }
-
         public Builder cacheSizeGB(@Nullable Output<Integer> cacheSizeGB) {
             this.cacheSizeGB = cacheSizeGB;
             return this;
         }
-
         public Builder cacheSizeGB(@Nullable Integer cacheSizeGB) {
             this.cacheSizeGB = Output.ofNullable(cacheSizeGB);
             return this;
         }
-
         public Builder directoryServicesSettings(@Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings) {
             this.directoryServicesSettings = directoryServicesSettings;
             return this;
         }
-
         public Builder directoryServicesSettings(@Nullable CacheDirectorySettingsArgs directoryServicesSettings) {
             this.directoryServicesSettings = Output.ofNullable(directoryServicesSettings);
             return this;
         }
-
         public Builder encryptionSettings(@Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
-
         public Builder encryptionSettings(@Nullable CacheEncryptionSettingsArgs encryptionSettings) {
             this.encryptionSettings = Output.ofNullable(encryptionSettings);
             return this;
         }
-
         public Builder identity(@Nullable Output<CacheIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable CacheIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkSettings(@Nullable Output<CacheNetworkSettingsArgs> networkSettings) {
             this.networkSettings = networkSettings;
             return this;
         }
-
         public Builder networkSettings(@Nullable CacheNetworkSettingsArgs networkSettings) {
             this.networkSettings = Output.ofNullable(networkSettings);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securitySettings(@Nullable Output<CacheSecuritySettingsArgs> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
-
         public Builder securitySettings(@Nullable CacheSecuritySettingsArgs securitySettings) {
             this.securitySettings = Output.ofNullable(securitySettings);
             return this;
         }
-
         public Builder sku(@Nullable Output<CacheSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable CacheSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CacheArgs build() {
+        }        public CacheArgs build() {
             return new CacheArgs(cacheName, cacheSizeGB, directoryServicesSettings, encryptionSettings, identity, location, networkSettings, provisioningState, resourceGroupName, securitySettings, sku, subnet, tags);
         }
     }

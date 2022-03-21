@@ -73,12 +73,13 @@ public final class CanonicalProfileDefinitionResponse {
             this.canonicalProfileId = canonicalProfileId;
             return this;
         }
-
         public Builder properties(@Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
             this.properties = properties;
             return this;
         }
-        public CanonicalProfileDefinitionResponse build() {
+        public Builder properties(CanonicalProfileDefinitionResponseProperties... properties) {
+            return properties(List.of(properties));
+        }        public CanonicalProfileDefinitionResponse build() {
             return new CanonicalProfileDefinitionResponse(canonicalProfileId, properties);
         }
     }

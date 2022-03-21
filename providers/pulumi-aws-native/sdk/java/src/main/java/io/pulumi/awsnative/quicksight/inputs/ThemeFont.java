@@ -52,8 +52,7 @@ public final class ThemeFont extends io.pulumi.resources.InvokeArgs {
         public Builder fontFamily(@Nullable String fontFamily) {
             this.fontFamily = fontFamily;
             return this;
-        }
-        public ThemeFont build() {
+        }        public ThemeFont build() {
             return new ThemeFont(fontFamily);
         }
     }

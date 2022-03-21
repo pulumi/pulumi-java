@@ -54,8 +54,7 @@ public final class GetDiagnosticServiceTokenReadWriteArgs extends io.pulumi.reso
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public GetDiagnosticServiceTokenReadWriteArgs build() {
+        }        public GetDiagnosticServiceTokenReadWriteArgs build() {
             return new GetDiagnosticServiceTokenReadWriteArgs(resourceUri);
         }
     }

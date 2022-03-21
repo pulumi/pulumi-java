@@ -108,22 +108,18 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder suffix(String suffix) {
             this.suffix = Objects.requireNonNull(suffix);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DataLakeStoreAccountInformationResponse build() {
+        }        public DataLakeStoreAccountInformationResponse build() {
             return new DataLakeStoreAccountInformationResponse(id, name, suffix, type);
         }
     }

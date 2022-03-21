@@ -71,12 +71,10 @@ public final class MLTransformSchema {
             this.dataType = dataType;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public MLTransformSchema build() {
+        }        public MLTransformSchema build() {
             return new MLTransformSchema(dataType, name);
         }
     }

@@ -104,52 +104,45 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
             this.serviceDnsName = Objects.requireNonNull(serviceDnsName);
             return this;
         }
-
         public Builder serviceDnsName(String serviceDnsName) {
             this.serviceDnsName = Output.of(Objects.requireNonNull(serviceDnsName));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<VPCEConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<VPCEConfigurationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(VPCEConfigurationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpceConfigurationDescription(@Nullable Output<String> vpceConfigurationDescription) {
             this.vpceConfigurationDescription = vpceConfigurationDescription;
             return this;
         }
-
         public Builder vpceConfigurationDescription(@Nullable String vpceConfigurationDescription) {
             this.vpceConfigurationDescription = Output.ofNullable(vpceConfigurationDescription);
             return this;
         }
-
         public Builder vpceConfigurationName(Output<String> vpceConfigurationName) {
             this.vpceConfigurationName = Objects.requireNonNull(vpceConfigurationName);
             return this;
         }
-
         public Builder vpceConfigurationName(String vpceConfigurationName) {
             this.vpceConfigurationName = Output.of(Objects.requireNonNull(vpceConfigurationName));
             return this;
         }
-
         public Builder vpceServiceName(Output<String> vpceServiceName) {
             this.vpceServiceName = Objects.requireNonNull(vpceServiceName);
             return this;
         }
-
         public Builder vpceServiceName(String vpceServiceName) {
             this.vpceServiceName = Output.of(Objects.requireNonNull(vpceServiceName));
             return this;
-        }
-        public VPCEConfigurationArgs build() {
+        }        public VPCEConfigurationArgs build() {
             return new VPCEConfigurationArgs(serviceDnsName, tags, vpceConfigurationDescription, vpceConfigurationName, vpceServiceName);
         }
     }

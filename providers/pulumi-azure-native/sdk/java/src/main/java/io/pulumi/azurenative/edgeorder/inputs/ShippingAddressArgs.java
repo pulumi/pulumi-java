@@ -208,102 +208,82 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             this.addressType = addressType;
             return this;
         }
-
         public Builder addressType(@Nullable Either<String,AddressType> addressType) {
             this.addressType = Output.ofNullable(addressType);
             return this;
         }
-
         public Builder city(@Nullable Output<String> city) {
             this.city = city;
             return this;
         }
-
         public Builder city(@Nullable String city) {
             this.city = Output.ofNullable(city);
             return this;
         }
-
         public Builder companyName(@Nullable Output<String> companyName) {
             this.companyName = companyName;
             return this;
         }
-
         public Builder companyName(@Nullable String companyName) {
             this.companyName = Output.ofNullable(companyName);
             return this;
         }
-
         public Builder country(Output<String> country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
-
         public Builder country(String country) {
             this.country = Output.of(Objects.requireNonNull(country));
             return this;
         }
-
         public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
-
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
-
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = Output.ofNullable(stateOrProvince);
             return this;
         }
-
         public Builder streetAddress1(Output<String> streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
-
         public Builder streetAddress1(String streetAddress1) {
             this.streetAddress1 = Output.of(Objects.requireNonNull(streetAddress1));
             return this;
         }
-
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = Output.ofNullable(streetAddress2);
             return this;
         }
-
         public Builder streetAddress3(@Nullable Output<String> streetAddress3) {
             this.streetAddress3 = streetAddress3;
             return this;
         }
-
         public Builder streetAddress3(@Nullable String streetAddress3) {
             this.streetAddress3 = Output.ofNullable(streetAddress3);
             return this;
         }
-
         public Builder zipExtendedCode(@Nullable Output<String> zipExtendedCode) {
             this.zipExtendedCode = zipExtendedCode;
             return this;
         }
-
         public Builder zipExtendedCode(@Nullable String zipExtendedCode) {
             this.zipExtendedCode = Output.ofNullable(zipExtendedCode);
             return this;
-        }
-        public ShippingAddressArgs build() {
+        }        public ShippingAddressArgs build() {
             return new ShippingAddressArgs(addressType, city, companyName, country, postalCode, stateOrProvince, streetAddress1, streetAddress2, streetAddress3, zipExtendedCode);
         }
     }

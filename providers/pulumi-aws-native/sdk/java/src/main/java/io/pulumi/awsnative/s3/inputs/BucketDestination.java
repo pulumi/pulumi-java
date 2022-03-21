@@ -111,22 +111,18 @@ public final class BucketDestination extends io.pulumi.resources.InvokeArgs {
             this.bucketAccountId = bucketAccountId;
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder format(BucketDestinationFormat format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public BucketDestination build() {
+        }        public BucketDestination build() {
             return new BucketDestination(bucketAccountId, bucketArn, format, prefix);
         }
     }

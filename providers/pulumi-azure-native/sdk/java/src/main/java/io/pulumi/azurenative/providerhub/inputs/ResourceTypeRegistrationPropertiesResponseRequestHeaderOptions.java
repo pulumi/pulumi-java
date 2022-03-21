@@ -52,8 +52,7 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
         public Builder optInHeaders(@Nullable String optInHeaders) {
             this.optInHeaders = optInHeaders;
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions build() {
+        }        public ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions build() {
             return new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(optInHeaders);
         }
     }

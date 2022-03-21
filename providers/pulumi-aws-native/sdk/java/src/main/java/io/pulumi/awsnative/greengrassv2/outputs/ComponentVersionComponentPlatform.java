@@ -56,12 +56,10 @@ public final class ComponentVersionComponentPlatform {
             this.attributes = attributes;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ComponentVersionComponentPlatform build() {
+        }        public ComponentVersionComponentPlatform build() {
             return new ComponentVersionComponentPlatform(attributes, name);
         }
     }

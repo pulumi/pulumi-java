@@ -91,32 +91,26 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationAr
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable Output<Map<String,String>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
-
         public Builder startCommand(@Nullable Output<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
-
         public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = Output.ofNullable(startCommand);
             return this;
-        }
-        public ServiceSourceConfigurationImageRepositoryImageConfigurationArgs build() {
+        }        public ServiceSourceConfigurationImageRepositoryImageConfigurationArgs build() {
             return new ServiceSourceConfigurationImageRepositoryImageConfigurationArgs(port, runtimeEnvironmentVariables, startCommand);
         }
     }

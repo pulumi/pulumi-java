@@ -62,7 +62,9 @@ public final class SizeConfigurationPropertiesResponse extends io.pulumi.resourc
             this.environmentSizes = environmentSizes;
             return this;
         }
-        public SizeConfigurationPropertiesResponse build() {
+        public Builder environmentSizes(EnvironmentSizeResponse... environmentSizes) {
+            return environmentSizes(List.of(environmentSizes));
+        }        public SizeConfigurationPropertiesResponse build() {
             return new SizeConfigurationPropertiesResponse(environmentSizes);
         }
     }

@@ -71,22 +71,18 @@ public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.
             this.regexFilter = regexFilter;
             return this;
         }
-
         public Builder regexFilter(@Nullable BotSlotValueRegexFilterArgs regexFilter) {
             this.regexFilter = Output.ofNullable(regexFilter);
             return this;
         }
-
         public Builder resolutionStrategy(Output<BotSlotValueResolutionStrategy> resolutionStrategy) {
             this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
             return this;
         }
-
         public Builder resolutionStrategy(BotSlotValueResolutionStrategy resolutionStrategy) {
             this.resolutionStrategy = Output.of(Objects.requireNonNull(resolutionStrategy));
             return this;
-        }
-        public BotSlotValueSelectionSettingArgs build() {
+        }        public BotSlotValueSelectionSettingArgs build() {
             return new BotSlotValueSelectionSettingArgs(regexFilter, resolutionStrategy);
         }
     }

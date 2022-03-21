@@ -64,17 +64,14 @@ public final class FilterMapFilter {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public FilterMapFilter build() {
+        }        public FilterMapFilter build() {
             return new FilterMapFilter(comparison, key, value);
         }
     }

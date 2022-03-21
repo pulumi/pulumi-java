@@ -51,8 +51,7 @@ public final class RuleGroupActivatedRuleAction {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RuleGroupActivatedRuleAction build() {
+        }        public RuleGroupActivatedRuleAction build() {
             return new RuleGroupActivatedRuleAction(type);
         }
     }

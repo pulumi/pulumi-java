@@ -346,97 +346,93 @@ public final class AttachedDiskInitializeParamsResponse {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
-
+        public Builder licenseCodes(String... licenseCodes) {
+            return licenseCodes(List.of(licenseCodes));
+        }
         public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder multiWriter(Boolean multiWriter) {
             this.multiWriter = Objects.requireNonNull(multiWriter);
             return this;
         }
-
         public Builder onUpdateAction(String onUpdateAction) {
             this.onUpdateAction = Objects.requireNonNull(onUpdateAction);
             return this;
         }
-
         public Builder provisionedIops(String provisionedIops) {
             this.provisionedIops = Objects.requireNonNull(provisionedIops);
             return this;
         }
-
         public Builder replicaZones(List<String> replicaZones) {
             this.replicaZones = Objects.requireNonNull(replicaZones);
             return this;
         }
-
+        public Builder replicaZones(String... replicaZones) {
+            return replicaZones(List.of(replicaZones));
+        }
         public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceInstantSnapshot(String sourceInstantSnapshot) {
             this.sourceInstantSnapshot = Objects.requireNonNull(sourceInstantSnapshot);
             return this;
         }
-
         public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
-        }
-        public AttachedDiskInitializeParamsResponse build() {
+        }        public AttachedDiskInitializeParamsResponse build() {
             return new AttachedDiskInitializeParamsResponse(architecture, description, diskName, diskSizeGb, diskType, guestOsFeatures, labels, licenseCodes, licenses, multiWriter, onUpdateAction, provisionedIops, replicaZones, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceInstantSnapshot, sourceSnapshot, sourceSnapshotEncryptionKey);
         }
     }

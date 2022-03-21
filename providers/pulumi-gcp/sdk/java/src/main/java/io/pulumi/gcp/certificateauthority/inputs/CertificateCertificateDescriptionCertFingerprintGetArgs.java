@@ -53,12 +53,10 @@ public final class CertificateCertificateDescriptionCertFingerprintGetArgs exten
             this.sha256Hash = sha256Hash;
             return this;
         }
-
         public Builder sha256Hash(@Nullable String sha256Hash) {
             this.sha256Hash = Output.ofNullable(sha256Hash);
             return this;
-        }
-        public CertificateCertificateDescriptionCertFingerprintGetArgs build() {
+        }        public CertificateCertificateDescriptionCertFingerprintGetArgs build() {
             return new CertificateCertificateDescriptionCertFingerprintGetArgs(sha256Hash);
         }
     }

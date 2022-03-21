@@ -66,12 +66,10 @@ public final class GetRepoArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder repoId(String repoId) {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
-        }
-        public GetRepoArgs build() {
+        }        public GetRepoArgs build() {
             return new GetRepoArgs(project, repoId);
         }
     }

@@ -71,12 +71,10 @@ public final class ListSubscriptionSecretsResult {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListSubscriptionSecretsResult build() {
+        }        public ListSubscriptionSecretsResult build() {
             return new ListSubscriptionSecretsResult(primaryKey, secondaryKey);
         }
     }

@@ -103,22 +103,21 @@ public final class GetPatchScheduleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scheduleEntries(List<ScheduleEntryResponse> scheduleEntries) {
             this.scheduleEntries = Objects.requireNonNull(scheduleEntries);
             return this;
         }
-
+        public Builder scheduleEntries(ScheduleEntryResponse... scheduleEntries) {
+            return scheduleEntries(List.of(scheduleEntries));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPatchScheduleResult build() {
+        }        public GetPatchScheduleResult build() {
             return new GetPatchScheduleResult(id, name, scheduleEntries, type);
         }
     }

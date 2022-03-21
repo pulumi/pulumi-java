@@ -54,8 +54,7 @@ public final class GetInfrastructureConfigurationArgs extends io.pulumi.resource
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetInfrastructureConfigurationArgs build() {
+        }        public GetInfrastructureConfigurationArgs build() {
             return new GetInfrastructureConfigurationArgs(arn);
         }
     }

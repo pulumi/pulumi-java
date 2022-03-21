@@ -70,12 +70,10 @@ public final class VirtualRouterSpecListenerPortMapping {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public VirtualRouterSpecListenerPortMapping build() {
+        }        public VirtualRouterSpecListenerPortMapping build() {
             return new VirtualRouterSpecListenerPortMapping(port, protocol);
         }
     }

@@ -69,12 +69,10 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GoogleCloudRetailV2betaConditionTimeRangeResponse build() {
+        }        public GoogleCloudRetailV2betaConditionTimeRangeResponse build() {
             return new GoogleCloudRetailV2betaConditionTimeRangeResponse(endTime, startTime);
         }
     }

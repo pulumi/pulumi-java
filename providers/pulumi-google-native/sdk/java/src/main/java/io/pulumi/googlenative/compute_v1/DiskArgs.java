@@ -418,242 +418,209 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
             this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
             this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
             this.licenseCodes = licenseCodes;
             return this;
         }
-
         public Builder licenseCodes(@Nullable List<String> licenseCodes) {
             this.licenseCodes = Output.ofNullable(licenseCodes);
             return this;
         }
-
+        public Builder licenseCodes(String... licenseCodes) {
+            return licenseCodes(List.of(licenseCodes));
+        }
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
-
         public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Output.ofNullable(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
-
         public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<String> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable String options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder physicalBlockSizeBytes(@Nullable Output<String> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
-
         public Builder physicalBlockSizeBytes(@Nullable String physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder provisionedIops(@Nullable Output<String> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
-
         public Builder provisionedIops(@Nullable String provisionedIops) {
             this.provisionedIops = Output.ofNullable(provisionedIops);
             return this;
         }
-
         public Builder replicaZones(@Nullable Output<List<String>> replicaZones) {
             this.replicaZones = replicaZones;
             return this;
         }
-
         public Builder replicaZones(@Nullable List<String> replicaZones) {
             this.replicaZones = Output.ofNullable(replicaZones);
             return this;
         }
-
+        public Builder replicaZones(String... replicaZones) {
+            return replicaZones(List.of(replicaZones));
+        }
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
-
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
             this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder sizeGb(@Nullable Output<String> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
-
         public Builder sizeGb(@Nullable String sizeGb) {
             this.sizeGb = Output.ofNullable(sizeGb);
             return this;
         }
-
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
-
         public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
-
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
-
         public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
             this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public Builder sourceStorageObject(@Nullable Output<String> sourceStorageObject) {
             this.sourceStorageObject = sourceStorageObject;
             return this;
         }
-
         public Builder sourceStorageObject(@Nullable String sourceStorageObject) {
             this.sourceStorageObject = Output.ofNullable(sourceStorageObject);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public DiskArgs build() {
+        }        public DiskArgs build() {
             return new DiskArgs(description, diskEncryptionKey, guestOsFeatures, labels, licenseCodes, licenses, locationHint, name, options, physicalBlockSizeBytes, project, provisionedIops, replicaZones, requestId, resourcePolicies, sizeGb, sourceDisk, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey, sourceStorageObject, type, zone);
         }
     }

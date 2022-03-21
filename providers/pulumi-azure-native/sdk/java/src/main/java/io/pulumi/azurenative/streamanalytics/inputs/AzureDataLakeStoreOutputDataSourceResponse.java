@@ -191,47 +191,38 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
             this.accountName = accountName;
             return this;
         }
-
         public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
-
         public Builder filePathPrefix(@Nullable String filePathPrefix) {
             this.filePathPrefix = filePathPrefix;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
-
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
-
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureDataLakeStoreOutputDataSourceResponse build() {
+        }        public AzureDataLakeStoreOutputDataSourceResponse build() {
             return new AzureDataLakeStoreOutputDataSourceResponse(accountName, dateFormat, filePathPrefix, refreshToken, tenantId, timeFormat, tokenUserDisplayName, tokenUserPrincipalName, type);
         }
     }

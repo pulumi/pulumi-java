@@ -71,12 +71,10 @@ public final class EmptyDirVolumeSource {
             this.medium = medium;
             return this;
         }
-
         public Builder sizeLimit(@Nullable String sizeLimit) {
             this.sizeLimit = sizeLimit;
             return this;
-        }
-        public EmptyDirVolumeSource build() {
+        }        public EmptyDirVolumeSource build() {
             return new EmptyDirVolumeSource(medium, sizeLimit);
         }
     }

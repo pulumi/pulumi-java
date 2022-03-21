@@ -71,22 +71,18 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs
             this.netbiosName = netbiosName;
             return this;
         }
-
         public Builder netbiosName(@Nullable String netbiosName) {
             this.netbiosName = Output.ofNullable(netbiosName);
             return this;
         }
-
         public Builder selfManagedActiveDirectoryConfiguration(@Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs> selfManagedActiveDirectoryConfiguration) {
             this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
             return this;
         }
-
         public Builder selfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs selfManagedActiveDirectoryConfiguration) {
             this.selfManagedActiveDirectoryConfiguration = Output.ofNullable(selfManagedActiveDirectoryConfiguration);
             return this;
-        }
-        public OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs build() {
+        }        public OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs build() {
             return new OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs(netbiosName, selfManagedActiveDirectoryConfiguration);
         }
     }

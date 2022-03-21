@@ -52,8 +52,7 @@ public final class DatastoreIotSiteWiseMultiLayerStorage extends io.pulumi.resou
         public Builder customerManagedS3Storage(@Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
             this.customerManagedS3Storage = customerManagedS3Storage;
             return this;
-        }
-        public DatastoreIotSiteWiseMultiLayerStorage build() {
+        }        public DatastoreIotSiteWiseMultiLayerStorage build() {
             return new DatastoreIotSiteWiseMultiLayerStorage(customerManagedS3Storage);
         }
     }

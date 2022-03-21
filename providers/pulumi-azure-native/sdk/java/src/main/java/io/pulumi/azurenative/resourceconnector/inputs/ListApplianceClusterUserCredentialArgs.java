@@ -72,12 +72,10 @@ public final class ListApplianceClusterUserCredentialArgs extends io.pulumi.reso
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListApplianceClusterUserCredentialArgs build() {
+        }        public ListApplianceClusterUserCredentialArgs build() {
             return new ListApplianceClusterUserCredentialArgs(resourceGroupName, resourceName);
         }
     }

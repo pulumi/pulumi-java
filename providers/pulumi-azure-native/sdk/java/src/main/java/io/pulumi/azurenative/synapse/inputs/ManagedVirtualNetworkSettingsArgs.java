@@ -96,32 +96,29 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
             this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
             return this;
         }
-
         public Builder allowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
             this.allowedAadTenantIdsForLinking = Output.ofNullable(allowedAadTenantIdsForLinking);
             return this;
         }
-
+        public Builder allowedAadTenantIdsForLinking(String... allowedAadTenantIdsForLinking) {
+            return allowedAadTenantIdsForLinking(List.of(allowedAadTenantIdsForLinking));
+        }
         public Builder linkedAccessCheckOnTargetResource(@Nullable Output<Boolean> linkedAccessCheckOnTargetResource) {
             this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
             return this;
         }
-
         public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
             this.linkedAccessCheckOnTargetResource = Output.ofNullable(linkedAccessCheckOnTargetResource);
             return this;
         }
-
         public Builder preventDataExfiltration(@Nullable Output<Boolean> preventDataExfiltration) {
             this.preventDataExfiltration = preventDataExfiltration;
             return this;
         }
-
         public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
             this.preventDataExfiltration = Output.ofNullable(preventDataExfiltration);
             return this;
-        }
-        public ManagedVirtualNetworkSettingsArgs build() {
+        }        public ManagedVirtualNetworkSettingsArgs build() {
             return new ManagedVirtualNetworkSettingsArgs(allowedAadTenantIdsForLinking, linkedAccessCheckOnTargetResource, preventDataExfiltration);
         }
     }

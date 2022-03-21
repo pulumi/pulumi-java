@@ -209,102 +209,85 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends io.pu
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
             this.deleteOption = Output.ofNullable(deleteOption);
             return this;
         }
-
         public Builder dnsSettings(@Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder dnsSettings(@Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs dnsSettings) {
             this.dnsSettings = Output.ofNullable(dnsSettings);
             return this;
         }
-
         public Builder dscpConfiguration(@Nullable Output<SubResourceArgs> dscpConfiguration) {
             this.dscpConfiguration = dscpConfiguration;
             return this;
         }
-
         public Builder dscpConfiguration(@Nullable SubResourceArgs dscpConfiguration) {
             this.dscpConfiguration = Output.ofNullable(dscpConfiguration);
             return this;
         }
-
         public Builder enableAcceleratedNetworking(@Nullable Output<Boolean> enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = Output.ofNullable(enableAcceleratedNetworking);
             return this;
         }
-
         public Builder enableFpga(@Nullable Output<Boolean> enableFpga) {
             this.enableFpga = enableFpga;
             return this;
         }
-
         public Builder enableFpga(@Nullable Boolean enableFpga) {
             this.enableFpga = Output.ofNullable(enableFpga);
             return this;
         }
-
         public Builder enableIPForwarding(@Nullable Output<Boolean> enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
-
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = Output.ofNullable(enableIPForwarding);
             return this;
         }
-
         public Builder ipConfigurations(Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
         public Builder ipConfigurations(List<VirtualMachineNetworkInterfaceIPConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Output.of(Objects.requireNonNull(ipConfigurations));
             return this;
         }
-
+        public Builder ipConfigurations(VirtualMachineNetworkInterfaceIPConfigurationArgs... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable Output<SubResourceArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable SubResourceArgs networkSecurityGroup) {
             this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
             return this;
         }
-
         public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = Output.ofNullable(primary);
             return this;
-        }
-        public VirtualMachineNetworkInterfaceConfigurationArgs build() {
+        }        public VirtualMachineNetworkInterfaceConfigurationArgs build() {
             return new VirtualMachineNetworkInterfaceConfigurationArgs(deleteOption, dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableFpga, enableIPForwarding, ipConfigurations, name, networkSecurityGroup, primary);
         }
     }

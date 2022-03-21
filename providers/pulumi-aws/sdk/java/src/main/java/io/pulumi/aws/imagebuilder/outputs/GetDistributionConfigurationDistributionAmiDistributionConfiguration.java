@@ -136,32 +136,32 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
             this.amiTags = Objects.requireNonNull(amiTags);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder launchPermissions(List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions) {
             this.launchPermissions = Objects.requireNonNull(launchPermissions);
             return this;
         }
-
+        public Builder launchPermissions(GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission... launchPermissions) {
+            return launchPermissions(List.of(launchPermissions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder targetAccountIds(List<String> targetAccountIds) {
             this.targetAccountIds = Objects.requireNonNull(targetAccountIds);
             return this;
         }
-        public GetDistributionConfigurationDistributionAmiDistributionConfiguration build() {
+        public Builder targetAccountIds(String... targetAccountIds) {
+            return targetAccountIds(List.of(targetAccountIds));
+        }        public GetDistributionConfigurationDistributionAmiDistributionConfiguration build() {
             return new GetDistributionConfigurationDistributionAmiDistributionConfiguration(amiTags, description, kmsKeyId, launchPermissions, name, targetAccountIds);
         }
     }

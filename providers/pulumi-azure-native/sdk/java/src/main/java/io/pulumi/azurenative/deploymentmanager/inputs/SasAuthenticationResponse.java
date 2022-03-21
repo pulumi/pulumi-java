@@ -77,12 +77,10 @@ public final class SasAuthenticationResponse extends io.pulumi.resources.InvokeA
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SasAuthenticationResponse build() {
+        }        public SasAuthenticationResponse build() {
             return new SasAuthenticationResponse(sasUri, type);
         }
     }

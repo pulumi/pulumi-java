@@ -75,22 +75,18 @@ public final class ProjectLogsConfigArgs extends io.pulumi.resources.ResourceArg
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
-
         public Builder cloudwatchLogs(@Nullable ProjectLogsConfigCloudwatchLogsArgs cloudwatchLogs) {
             this.cloudwatchLogs = Output.ofNullable(cloudwatchLogs);
             return this;
         }
-
         public Builder s3Logs(@Nullable Output<ProjectLogsConfigS3LogsArgs> s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }
-
         public Builder s3Logs(@Nullable ProjectLogsConfigS3LogsArgs s3Logs) {
             this.s3Logs = Output.ofNullable(s3Logs);
             return this;
-        }
-        public ProjectLogsConfigArgs build() {
+        }        public ProjectLogsConfigArgs build() {
             return new ProjectLogsConfigArgs(cloudwatchLogs, s3Logs);
         }
     }

@@ -53,8 +53,7 @@ public final class AzureFirewallNatRCActionResponse {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AzureFirewallNatRCActionResponse build() {
+        }        public AzureFirewallNatRCActionResponse build() {
             return new AzureFirewallNatRCActionResponse(type);
         }
     }

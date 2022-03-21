@@ -60,8 +60,7 @@ public final class AppInsightsPropertiesResponse extends io.pulumi.resources.Inv
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public AppInsightsPropertiesResponse build() {
+        }        public AppInsightsPropertiesResponse build() {
             return new AppInsightsPropertiesResponse(resourceId);
         }
     }

@@ -57,12 +57,13 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }
-
         public Builder statusCodes(List<Integer> statusCodes) {
             this.statusCodes = Output.of(Objects.requireNonNull(statusCodes));
             return this;
         }
-        public DistributionOriginGroupFailoverCriteriaArgs build() {
+        public Builder statusCodes(Integer... statusCodes) {
+            return statusCodes(List.of(statusCodes));
+        }        public DistributionOriginGroupFailoverCriteriaArgs build() {
             return new DistributionOriginGroupFailoverCriteriaArgs(statusCodes);
         }
     }

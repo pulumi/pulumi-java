@@ -89,17 +89,14 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable ServerPrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ServerPrivateEndpointConnectionPropertiesResponse build() {
+        }        public ServerPrivateEndpointConnectionPropertiesResponse build() {
             return new ServerPrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }
     }

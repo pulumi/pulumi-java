@@ -92,32 +92,26 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
-
         public Builder addOnType(String addOnType) {
             this.addOnType = Output.of(Objects.requireNonNull(addOnType));
             return this;
         }
-
         public Builder autoSnapshotAddOnRequest(@Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
-
         public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = Output.ofNullable(autoSnapshotAddOnRequest);
             return this;
         }
-
         public Builder status(@Nullable Output<InstanceAddOnStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable InstanceAddOnStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public InstanceAddOnArgs build() {
+        }        public InstanceAddOnArgs build() {
             return new InstanceAddOnArgs(addOnType, autoSnapshotAddOnRequest, status);
         }
     }

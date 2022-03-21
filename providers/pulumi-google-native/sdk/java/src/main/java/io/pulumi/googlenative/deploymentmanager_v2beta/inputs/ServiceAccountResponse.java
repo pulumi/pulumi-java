@@ -58,8 +58,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
-        }
-        public ServiceAccountResponse build() {
+        }        public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email);
         }
     }

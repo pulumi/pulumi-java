@@ -129,27 +129,31 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder environment(@Nullable List<ContainerEnvironmentVariable> environment) {
             this.environment = environment;
             return this;
         }
-
+        public Builder environment(ContainerEnvironmentVariable... environment) {
+            return environment(List.of(environment));
+        }
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
-
         public Builder ports(@Nullable List<ContainerPortInfo> ports) {
             this.ports = ports;
             return this;
         }
-        public Container build() {
+        public Builder ports(ContainerPortInfo... ports) {
+            return ports(List.of(ports));
+        }        public Container build() {
             return new Container(command, containerName, environment, image, ports);
         }
     }

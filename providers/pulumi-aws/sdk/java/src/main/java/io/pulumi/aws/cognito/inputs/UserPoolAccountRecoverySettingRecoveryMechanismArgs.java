@@ -74,22 +74,18 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismArgs extends i
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
-        }
-        public UserPoolAccountRecoverySettingRecoveryMechanismArgs build() {
+        }        public UserPoolAccountRecoverySettingRecoveryMechanismArgs build() {
             return new UserPoolAccountRecoverySettingRecoveryMechanismArgs(name, priority);
         }
     }

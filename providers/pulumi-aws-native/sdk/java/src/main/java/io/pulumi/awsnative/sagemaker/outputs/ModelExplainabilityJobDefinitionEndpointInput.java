@@ -145,37 +145,30 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder featuresAttribute(@Nullable String featuresAttribute) {
             this.featuresAttribute = featuresAttribute;
             return this;
         }
-
         public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
-
         public Builder s3InputMode(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
-        }
-        public ModelExplainabilityJobDefinitionEndpointInput build() {
+        }        public ModelExplainabilityJobDefinitionEndpointInput build() {
             return new ModelExplainabilityJobDefinitionEndpointInput(endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, s3DataDistributionType, s3InputMode);
         }
     }

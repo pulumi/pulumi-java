@@ -57,12 +57,10 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable ReplicationConfigurationReplicationConfigurationArgs replicationConfiguration) {
             this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
             return this;
-        }
-        public ReplicationConfigurationArgs build() {
+        }        public ReplicationConfigurationArgs build() {
             return new ReplicationConfigurationArgs(replicationConfiguration);
         }
     }

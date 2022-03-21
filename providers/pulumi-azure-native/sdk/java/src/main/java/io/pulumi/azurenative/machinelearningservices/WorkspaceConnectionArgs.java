@@ -188,92 +188,74 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             this.authType = authType;
             return this;
         }
-
         public Builder authType(@Nullable String authType) {
             this.authType = Output.ofNullable(authType);
             return this;
         }
-
         public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder valueFormat(@Nullable Output<Either<String,ValueFormat>> valueFormat) {
             this.valueFormat = valueFormat;
             return this;
         }
-
         public Builder valueFormat(@Nullable Either<String,ValueFormat> valueFormat) {
             this.valueFormat = Output.ofNullable(valueFormat);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public WorkspaceConnectionArgs build() {
+        }        public WorkspaceConnectionArgs build() {
             return new WorkspaceConnectionArgs(authType, category, connectionName, name, resourceGroupName, target, value, valueFormat, workspaceName);
         }
     }

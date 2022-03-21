@@ -63,12 +63,10 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
         }
-
         public Builder sqlWorkloadType(@Nullable Either<String,SqlWorkloadType> sqlWorkloadType) {
             this.sqlWorkloadType = Output.ofNullable(sqlWorkloadType);
             return this;
-        }
-        public SqlWorkloadTypeUpdateSettingsArgs build() {
+        }        public SqlWorkloadTypeUpdateSettingsArgs build() {
             return new SqlWorkloadTypeUpdateSettingsArgs(sqlWorkloadType);
         }
     }

@@ -69,12 +69,10 @@ public final class ConditionResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
-        }
-        public ConditionResponse build() {
+        }        public ConditionResponse build() {
             return new ConditionResponse(message, timestamp);
         }
     }

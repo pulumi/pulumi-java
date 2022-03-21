@@ -57,12 +57,10 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
             this.objectOwnership = objectOwnership;
             return this;
         }
-
         public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
             this.objectOwnership = Output.ofNullable(objectOwnership);
             return this;
-        }
-        public BucketOwnershipControlsRuleArgs build() {
+        }        public BucketOwnershipControlsRuleArgs build() {
             return new BucketOwnershipControlsRuleArgs(objectOwnership);
         }
     }

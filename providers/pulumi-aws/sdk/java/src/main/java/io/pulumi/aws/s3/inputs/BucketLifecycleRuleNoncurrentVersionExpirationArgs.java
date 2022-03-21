@@ -57,12 +57,10 @@ public final class BucketLifecycleRuleNoncurrentVersionExpirationArgs extends io
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
-        }
-        public BucketLifecycleRuleNoncurrentVersionExpirationArgs build() {
+        }        public BucketLifecycleRuleNoncurrentVersionExpirationArgs build() {
             return new BucketLifecycleRuleNoncurrentVersionExpirationArgs(days);
         }
     }

@@ -76,22 +76,18 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
             this.ipAllocation = Objects.requireNonNull(ipAllocation);
             return this;
         }
-
         public Builder ipAllocation(String ipAllocation) {
             this.ipAllocation = Output.of(Objects.requireNonNull(ipAllocation));
             return this;
         }
-
         public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
-        }
-        public InstanceNetworkConfigGetArgs build() {
+        }        public InstanceNetworkConfigGetArgs build() {
             return new InstanceNetworkConfigGetArgs(ipAllocation, network);
         }
     }

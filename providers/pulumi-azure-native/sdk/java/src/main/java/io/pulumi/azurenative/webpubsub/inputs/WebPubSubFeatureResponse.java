@@ -98,17 +98,14 @@ public final class WebPubSubFeatureResponse extends io.pulumi.resources.InvokeAr
             this.flag = Objects.requireNonNull(flag);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WebPubSubFeatureResponse build() {
+        }        public WebPubSubFeatureResponse build() {
             return new WebPubSubFeatureResponse(flag, properties, value);
         }
     }

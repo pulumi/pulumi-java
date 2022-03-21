@@ -107,22 +107,21 @@ public final class GetSignalingChannelResult {
             this.arn = arn;
             return this;
         }
-
         public Builder messageTtlSeconds(@Nullable Integer messageTtlSeconds) {
             this.messageTtlSeconds = messageTtlSeconds;
             return this;
         }
-
         public Builder tags(@Nullable List<SignalingChannelTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(SignalingChannelTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable SignalingChannelType type) {
             this.type = type;
             return this;
-        }
-        public GetSignalingChannelResult build() {
+        }        public GetSignalingChannelResult build() {
             return new GetSignalingChannelResult(arn, messageTtlSeconds, tags, type);
         }
     }

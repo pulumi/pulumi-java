@@ -51,8 +51,7 @@ public final class FlowDefinitionHumanLoopRequestSource {
         public Builder awsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
             this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource);
             return this;
-        }
-        public FlowDefinitionHumanLoopRequestSource build() {
+        }        public FlowDefinitionHumanLoopRequestSource build() {
             return new FlowDefinitionHumanLoopRequestSource(awsManagedHumanLoopRequestSource);
         }
     }

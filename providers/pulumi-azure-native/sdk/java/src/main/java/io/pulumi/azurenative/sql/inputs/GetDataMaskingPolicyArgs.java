@@ -104,22 +104,18 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
             this.dataMaskingPolicyName = Objects.requireNonNull(dataMaskingPolicyName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetDataMaskingPolicyArgs build() {
+        }        public GetDataMaskingPolicyArgs build() {
             return new GetDataMaskingPolicyArgs(dataMaskingPolicyName, databaseName, resourceGroupName, serverName);
         }
     }

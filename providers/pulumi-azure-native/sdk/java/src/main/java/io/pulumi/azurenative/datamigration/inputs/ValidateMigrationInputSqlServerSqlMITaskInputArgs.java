@@ -165,72 +165,64 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
             this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
             return this;
         }
-
         public Builder backupBlobShare(BlobShareArgs backupBlobShare) {
             this.backupBlobShare = Output.of(Objects.requireNonNull(backupBlobShare));
             return this;
         }
-
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
-
         public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
             this.backupFileShare = Output.ofNullable(backupFileShare);
             return this;
         }
-
         public Builder backupMode(@Nullable Output<Either<String,BackupMode>> backupMode) {
             this.backupMode = backupMode;
             return this;
         }
-
         public Builder backupMode(@Nullable Either<String,BackupMode> backupMode) {
             this.backupMode = Output.ofNullable(backupMode);
             return this;
         }
-
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputArgs... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder selectedLogins(@Nullable Output<List<String>> selectedLogins) {
             this.selectedLogins = selectedLogins;
             return this;
         }
-
         public Builder selectedLogins(@Nullable List<String> selectedLogins) {
             this.selectedLogins = Output.ofNullable(selectedLogins);
             return this;
         }
-
+        public Builder selectedLogins(String... selectedLogins) {
+            return selectedLogins(List.of(selectedLogins));
+        }
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
-        }
-        public ValidateMigrationInputSqlServerSqlMITaskInputArgs build() {
+        }        public ValidateMigrationInputSqlServerSqlMITaskInputArgs build() {
             return new ValidateMigrationInputSqlServerSqlMITaskInputArgs(backupBlobShare, backupFileShare, backupMode, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }
     }

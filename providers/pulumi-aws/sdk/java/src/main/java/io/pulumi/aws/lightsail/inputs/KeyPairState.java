@@ -189,92 +189,74 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder encryptedFingerprint(@Nullable Output<String> encryptedFingerprint) {
             this.encryptedFingerprint = encryptedFingerprint;
             return this;
         }
-
         public Builder encryptedFingerprint(@Nullable String encryptedFingerprint) {
             this.encryptedFingerprint = Output.ofNullable(encryptedFingerprint);
             return this;
         }
-
         public Builder encryptedPrivateKey(@Nullable Output<String> encryptedPrivateKey) {
             this.encryptedPrivateKey = encryptedPrivateKey;
             return this;
         }
-
         public Builder encryptedPrivateKey(@Nullable String encryptedPrivateKey) {
             this.encryptedPrivateKey = Output.ofNullable(encryptedPrivateKey);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
-
         public Builder pgpKey(@Nullable String pgpKey) {
             this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
-        }
-        public KeyPairState build() {
+        }        public KeyPairState build() {
             return new KeyPairState(arn, encryptedFingerprint, encryptedPrivateKey, fingerprint, name, namePrefix, pgpKey, privateKey, publicKey);
         }
     }

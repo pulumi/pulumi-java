@@ -50,8 +50,7 @@ public final class ResourceTypeEndpointResponseFeaturesRule extends io.pulumi.re
         public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
-        }
-        public ResourceTypeEndpointResponseFeaturesRule build() {
+        }        public ResourceTypeEndpointResponseFeaturesRule build() {
             return new ResourceTypeEndpointResponseFeaturesRule(requiredFeaturesPolicy);
         }
     }

@@ -85,12 +85,13 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperation {
             this.methodSelectors = methodSelectors;
             return this;
         }
-
+        public Builder methodSelectors(ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelector... methodSelectors) {
+            return methodSelectors(List.of(methodSelectors));
+        }
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
-        }
-        public ServicePerimeterStatusEgressPolicyEgressToOperation build() {
+        }        public ServicePerimeterStatusEgressPolicyEgressToOperation build() {
             return new ServicePerimeterStatusEgressPolicyEgressToOperation(methodSelectors, serviceName);
         }
     }

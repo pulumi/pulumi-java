@@ -104,22 +104,18 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder poolName(String poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder volumeName(String volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
-        }
-        public GetVolumeArgs build() {
+        }        public GetVolumeArgs build() {
             return new GetVolumeArgs(accountName, poolName, resourceGroupName, volumeName);
         }
     }

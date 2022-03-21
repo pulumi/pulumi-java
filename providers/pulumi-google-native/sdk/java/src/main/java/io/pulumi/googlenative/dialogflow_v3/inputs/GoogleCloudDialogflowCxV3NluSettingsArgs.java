@@ -96,32 +96,26 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
             this.classificationThreshold = classificationThreshold;
             return this;
         }
-
         public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = Output.ofNullable(classificationThreshold);
             return this;
         }
-
         public Builder modelTrainingMode(@Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
-
         public Builder modelTrainingMode(@Nullable GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode modelTrainingMode) {
             this.modelTrainingMode = Output.ofNullable(modelTrainingMode);
             return this;
         }
-
         public Builder modelType(@Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType) {
             this.modelType = modelType;
             return this;
         }
-
         public Builder modelType(@Nullable GoogleCloudDialogflowCxV3NluSettingsModelType modelType) {
             this.modelType = Output.ofNullable(modelType);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3NluSettingsArgs build() {
+        }        public GoogleCloudDialogflowCxV3NluSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3NluSettingsArgs(classificationThreshold, modelTrainingMode, modelType);
         }
     }

@@ -119,27 +119,22 @@ public final class CollectorBodyAgentSpnPropertiesResponse {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public CollectorBodyAgentSpnPropertiesResponse build() {
+        }        public CollectorBodyAgentSpnPropertiesResponse build() {
             return new CollectorBodyAgentSpnPropertiesResponse(applicationId, audience, authority, objectId, tenantId);
         }
     }

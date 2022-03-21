@@ -103,22 +103,18 @@ public final class DatadogApiKeyResponse {
             this.created = created;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DatadogApiKeyResponse build() {
+        }        public DatadogApiKeyResponse build() {
             return new DatadogApiKeyResponse(created, createdBy, key, name);
         }
     }

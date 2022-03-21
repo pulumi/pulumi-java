@@ -78,12 +78,10 @@ public final class KeyVaultReference extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public KeyVaultReference build() {
+        }        public KeyVaultReference build() {
             return new KeyVaultReference(id, name);
         }
     }

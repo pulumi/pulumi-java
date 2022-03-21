@@ -104,22 +104,18 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder synchronizationSettingName(String synchronizationSettingName) {
             this.synchronizationSettingName = Objects.requireNonNull(synchronizationSettingName);
             return this;
-        }
-        public GetScheduledSynchronizationSettingArgs build() {
+        }        public GetScheduledSynchronizationSettingArgs build() {
             return new GetScheduledSynchronizationSettingArgs(accountName, resourceGroupName, shareName, synchronizationSettingName);
         }
     }

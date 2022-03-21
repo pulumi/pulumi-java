@@ -175,82 +175,72 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
-
         public Builder appNetworkAccessType(@Nullable DomainAppNetworkAccessType appNetworkAccessType) {
             this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
             return this;
         }
-
         public Builder authMode(Output<DomainAuthMode> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
-
         public Builder authMode(DomainAuthMode authMode) {
             this.authMode = Output.of(Objects.requireNonNull(authMode));
             return this;
         }
-
         public Builder defaultUserSettings(Output<DomainUserSettingsArgs> defaultUserSettings) {
             this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings);
             return this;
         }
-
         public Builder defaultUserSettings(DomainUserSettingsArgs defaultUserSettings) {
             this.defaultUserSettings = Output.of(Objects.requireNonNull(defaultUserSettings));
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DomainTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(appNetworkAccessType, authMode, defaultUserSettings, domainName, kmsKeyId, subnetIds, tags, vpcId);
         }
     }

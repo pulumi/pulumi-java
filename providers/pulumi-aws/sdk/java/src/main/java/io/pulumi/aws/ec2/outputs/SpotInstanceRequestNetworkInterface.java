@@ -89,17 +89,14 @@ public final class SpotInstanceRequestNetworkInterface {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
-        }
-        public SpotInstanceRequestNetworkInterface build() {
+        }        public SpotInstanceRequestNetworkInterface build() {
             return new SpotInstanceRequestNetworkInterface(deleteOnTermination, deviceIndex, networkInterfaceId);
         }
     }

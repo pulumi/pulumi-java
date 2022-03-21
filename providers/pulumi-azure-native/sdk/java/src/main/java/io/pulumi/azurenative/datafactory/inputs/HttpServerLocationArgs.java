@@ -112,42 +112,34 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable Object fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
         }
-
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
-
         public Builder relativeUrl(@Nullable Object relativeUrl) {
             this.relativeUrl = Output.ofNullable(relativeUrl);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public HttpServerLocationArgs build() {
+        }        public HttpServerLocationArgs build() {
             return new HttpServerLocationArgs(fileName, folderPath, relativeUrl, type);
         }
     }

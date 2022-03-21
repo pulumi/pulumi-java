@@ -108,42 +108,34 @@ public final class LogMetricFilterArgs extends io.pulumi.resources.ResourceArgs 
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder logGroupName(String logGroupName) {
             this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
-
         public Builder metricTransformation(Output<LogMetricFilterMetricTransformationArgs> metricTransformation) {
             this.metricTransformation = Objects.requireNonNull(metricTransformation);
             return this;
         }
-
         public Builder metricTransformation(LogMetricFilterMetricTransformationArgs metricTransformation) {
             this.metricTransformation = Output.of(Objects.requireNonNull(metricTransformation));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public Builder pattern(String pattern) {
             this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
-        }
-        public LogMetricFilterArgs build() {
+        }        public LogMetricFilterArgs build() {
             return new LogMetricFilterArgs(logGroupName, metricTransformation, name, pattern);
         }
     }

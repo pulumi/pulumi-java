@@ -78,22 +78,18 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder metric(MetricIdentifierArgs metric) {
             this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
-
         public Builder target(Output<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(MetricTargetArgs target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public ExternalMetricSourceArgs build() {
+        }        public ExternalMetricSourceArgs build() {
             return new ExternalMetricSourceArgs(metric, target);
         }
     }

@@ -389,212 +389,173 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
             this.azureASN = azureASN;
             return this;
         }
-
         public Builder azureASN(@Nullable Integer azureASN) {
             this.azureASN = Output.ofNullable(azureASN);
             return this;
         }
-
         public Builder circuitName(Output<String> circuitName) {
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
-
         public Builder circuitName(String circuitName) {
             this.circuitName = Output.of(Objects.requireNonNull(circuitName));
             return this;
         }
-
         public Builder connections(@Nullable Output<List<ExpressRouteCircuitConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
-
         public Builder connections(@Nullable List<ExpressRouteCircuitConnectionArgs> connections) {
             this.connections = Output.ofNullable(connections);
             return this;
         }
-
+        public Builder connections(ExpressRouteCircuitConnectionArgs... connections) {
+            return connections(List.of(connections));
+        }
         public Builder gatewayManagerEtag(@Nullable Output<String> gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
-
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = Output.ofNullable(gatewayManagerEtag);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipv6PeeringConfig(@Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig) {
             this.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
-
         public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigArgs ipv6PeeringConfig) {
             this.ipv6PeeringConfig = Output.ofNullable(ipv6PeeringConfig);
             return this;
         }
-
         public Builder microsoftPeeringConfig(@Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
-
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
             this.microsoftPeeringConfig = Output.ofNullable(microsoftPeeringConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder peerASN(@Nullable Output<Double> peerASN) {
             this.peerASN = peerASN;
             return this;
         }
-
         public Builder peerASN(@Nullable Double peerASN) {
             this.peerASN = Output.ofNullable(peerASN);
             return this;
         }
-
         public Builder peeringName(@Nullable Output<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
-
         public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Output.ofNullable(peeringName);
             return this;
         }
-
         public Builder peeringType(@Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType) {
             this.peeringType = peeringType;
             return this;
         }
-
         public Builder peeringType(@Nullable Either<String,ExpressRoutePeeringType> peeringType) {
             this.peeringType = Output.ofNullable(peeringType);
             return this;
         }
-
         public Builder primaryAzurePort(@Nullable Output<String> primaryAzurePort) {
             this.primaryAzurePort = primaryAzurePort;
             return this;
         }
-
         public Builder primaryAzurePort(@Nullable String primaryAzurePort) {
             this.primaryAzurePort = Output.ofNullable(primaryAzurePort);
             return this;
         }
-
         public Builder primaryPeerAddressPrefix(@Nullable Output<String> primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
-
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = Output.ofNullable(primaryPeerAddressPrefix);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routeFilter(@Nullable Output<SubResourceArgs> routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
-
         public Builder routeFilter(@Nullable SubResourceArgs routeFilter) {
             this.routeFilter = Output.ofNullable(routeFilter);
             return this;
         }
-
         public Builder secondaryAzurePort(@Nullable Output<String> secondaryAzurePort) {
             this.secondaryAzurePort = secondaryAzurePort;
             return this;
         }
-
         public Builder secondaryAzurePort(@Nullable String secondaryAzurePort) {
             this.secondaryAzurePort = Output.ofNullable(secondaryAzurePort);
             return this;
         }
-
         public Builder secondaryPeerAddressPrefix(@Nullable Output<String> secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
-
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = Output.ofNullable(secondaryPeerAddressPrefix);
             return this;
         }
-
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = Output.ofNullable(sharedKey);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,ExpressRoutePeeringState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,ExpressRoutePeeringState> state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder stats(@Nullable Output<ExpressRouteCircuitStatsArgs> stats) {
             this.stats = stats;
             return this;
         }
-
         public Builder stats(@Nullable ExpressRouteCircuitStatsArgs stats) {
             this.stats = Output.ofNullable(stats);
             return this;
         }
-
         public Builder vlanId(@Nullable Output<Integer> vlanId) {
             this.vlanId = vlanId;
             return this;
         }
-
         public Builder vlanId(@Nullable Integer vlanId) {
             this.vlanId = Output.ofNullable(vlanId);
             return this;
-        }
-        public ExpressRouteCircuitPeeringArgs build() {
+        }        public ExpressRouteCircuitPeeringArgs build() {
             return new ExpressRouteCircuitPeeringArgs(azureASN, circuitName, connections, gatewayManagerEtag, id, ipv6PeeringConfig, microsoftPeeringConfig, name, peerASN, peeringName, peeringType, primaryAzurePort, primaryPeerAddressPrefix, resourceGroupName, routeFilter, secondaryAzurePort, secondaryPeerAddressPrefix, sharedKey, state, stats, vlanId);
         }
     }

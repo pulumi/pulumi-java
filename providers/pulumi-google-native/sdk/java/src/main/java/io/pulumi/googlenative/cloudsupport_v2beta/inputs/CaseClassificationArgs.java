@@ -78,22 +78,18 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public CaseClassificationArgs build() {
+        }        public CaseClassificationArgs build() {
             return new CaseClassificationArgs(displayName, id);
         }
     }

@@ -104,22 +104,18 @@ public final class TruncationSelectionPolicyResponse {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
-
         public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public Builder truncationPercentage(@Nullable Integer truncationPercentage) {
             this.truncationPercentage = truncationPercentage;
             return this;
-        }
-        public TruncationSelectionPolicyResponse build() {
+        }        public TruncationSelectionPolicyResponse build() {
             return new TruncationSelectionPolicyResponse(delayEvaluation, evaluationInterval, policyType, truncationPercentage);
         }
     }

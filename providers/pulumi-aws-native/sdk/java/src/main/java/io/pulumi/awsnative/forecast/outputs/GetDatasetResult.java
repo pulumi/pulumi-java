@@ -125,37 +125,33 @@ public final class GetDatasetResult {
             this.arn = arn;
             return this;
         }
-
         public Builder dataFrequency(@Nullable String dataFrequency) {
             this.dataFrequency = dataFrequency;
             return this;
         }
-
         public Builder datasetType(@Nullable DatasetType datasetType) {
             this.datasetType = datasetType;
             return this;
         }
-
         public Builder domain(@Nullable DatasetDomain domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigProperties encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder schema(@Nullable SchemaProperties schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder tags(@Nullable List<TagsItemProperties> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDatasetResult build() {
+        public Builder tags(TagsItemProperties... tags) {
+            return tags(List.of(tags));
+        }        public GetDatasetResult build() {
             return new GetDatasetResult(arn, dataFrequency, datasetType, domain, encryptionConfig, schema, tags);
         }
     }

@@ -82,22 +82,18 @@ public final class Subject {
             this.group = group;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder serviceAccount(@Nullable ServiceAccountSubject serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder user(@Nullable UserSubject user) {
             this.user = user;
             return this;
-        }
-        public Subject build() {
+        }        public Subject build() {
             return new Subject(group, kind, serviceAccount, user);
         }
     }

@@ -168,42 +168,34 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder delegationEnabledDate(String delegationEnabledDate) {
             this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder joinedMethod(String joinedMethod) {
             this.joinedMethod = Objects.requireNonNull(joinedMethod);
             return this;
         }
-
         public Builder joinedTimestamp(String joinedTimestamp) {
             this.joinedTimestamp = Objects.requireNonNull(joinedTimestamp);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetDelegatedAdministratorsDelegatedAdministrator build() {
+        }        public GetDelegatedAdministratorsDelegatedAdministrator build() {
             return new GetDelegatedAdministratorsDelegatedAdministrator(arn, delegationEnabledDate, email, id, joinedMethod, joinedTimestamp, name, status);
         }
     }

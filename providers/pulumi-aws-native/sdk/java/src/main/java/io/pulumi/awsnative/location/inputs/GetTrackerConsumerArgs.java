@@ -64,12 +64,10 @@ public final class GetTrackerConsumerArgs extends io.pulumi.resources.InvokeArgs
             this.consumerArn = Objects.requireNonNull(consumerArn);
             return this;
         }
-
         public Builder trackerName(String trackerName) {
             this.trackerName = Objects.requireNonNull(trackerName);
             return this;
-        }
-        public GetTrackerConsumerArgs build() {
+        }        public GetTrackerConsumerArgs build() {
             return new GetTrackerConsumerArgs(consumerArn, trackerName);
         }
     }

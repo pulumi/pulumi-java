@@ -80,17 +80,14 @@ public final class DataSetOutputColumn {
             this.description = description;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable DataSetColumnDataType type) {
             this.type = type;
             return this;
-        }
-        public DataSetOutputColumn build() {
+        }        public DataSetOutputColumn build() {
             return new DataSetOutputColumn(description, name, type);
         }
     }

@@ -79,22 +79,18 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder algorithm(@Nullable KeyVersionSpecAlgorithm algorithm) {
             this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
-
         public Builder cloudKmsKeyVersion(@Nullable Output<String> cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
-
         public Builder cloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = Output.ofNullable(cloudKmsKeyVersion);
             return this;
-        }
-        public KeyVersionSpecArgs build() {
+        }        public KeyVersionSpecArgs build() {
             return new KeyVersionSpecArgs(algorithm, cloudKmsKeyVersion);
         }
     }

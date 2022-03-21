@@ -53,8 +53,7 @@ public final class EventTargetKinesisTarget {
         public Builder partitionKeyPath(@Nullable String partitionKeyPath) {
             this.partitionKeyPath = partitionKeyPath;
             return this;
-        }
-        public EventTargetKinesisTarget build() {
+        }        public EventTargetKinesisTarget build() {
             return new EventTargetKinesisTarget(partitionKeyPath);
         }
     }

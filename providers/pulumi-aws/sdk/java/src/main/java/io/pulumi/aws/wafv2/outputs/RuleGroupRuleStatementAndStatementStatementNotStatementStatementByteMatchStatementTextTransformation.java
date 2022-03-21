@@ -70,12 +70,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation build() {
+        }        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation build() {
             return new RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation(priority, type);
         }
     }

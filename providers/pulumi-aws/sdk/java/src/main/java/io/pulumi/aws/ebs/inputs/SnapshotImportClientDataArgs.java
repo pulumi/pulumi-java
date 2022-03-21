@@ -107,42 +107,34 @@ public final class SnapshotImportClientDataArgs extends io.pulumi.resources.Reso
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder uploadEnd(@Nullable Output<String> uploadEnd) {
             this.uploadEnd = uploadEnd;
             return this;
         }
-
         public Builder uploadEnd(@Nullable String uploadEnd) {
             this.uploadEnd = Output.ofNullable(uploadEnd);
             return this;
         }
-
         public Builder uploadSize(@Nullable Output<Double> uploadSize) {
             this.uploadSize = uploadSize;
             return this;
         }
-
         public Builder uploadSize(@Nullable Double uploadSize) {
             this.uploadSize = Output.ofNullable(uploadSize);
             return this;
         }
-
         public Builder uploadStart(@Nullable Output<String> uploadStart) {
             this.uploadStart = uploadStart;
             return this;
         }
-
         public Builder uploadStart(@Nullable String uploadStart) {
             this.uploadStart = Output.ofNullable(uploadStart);
             return this;
-        }
-        public SnapshotImportClientDataArgs build() {
+        }        public SnapshotImportClientDataArgs build() {
             return new SnapshotImportClientDataArgs(comment, uploadEnd, uploadSize, uploadStart);
         }
     }

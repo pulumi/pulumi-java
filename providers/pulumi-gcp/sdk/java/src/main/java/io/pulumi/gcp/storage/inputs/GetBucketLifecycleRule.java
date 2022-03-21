@@ -66,12 +66,16 @@ public final class GetBucketLifecycleRule extends io.pulumi.resources.InvokeArgs
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(GetBucketLifecycleRuleAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder conditions(List<GetBucketLifecycleRuleCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-        public GetBucketLifecycleRule build() {
+        public Builder conditions(GetBucketLifecycleRuleCondition... conditions) {
+            return conditions(List.of(conditions));
+        }        public GetBucketLifecycleRule build() {
             return new GetBucketLifecycleRule(actions, conditions);
         }
     }

@@ -99,32 +99,29 @@ public final class WebPubSubNetworkACLsArgs extends io.pulumi.resources.Resource
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder defaultAction(@Nullable Either<String,ACLAction> defaultAction) {
             this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
-
         public Builder privateEndpoints(@Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints) {
             this.privateEndpoints = privateEndpoints;
             return this;
         }
-
         public Builder privateEndpoints(@Nullable List<PrivateEndpointACLArgs> privateEndpoints) {
             this.privateEndpoints = Output.ofNullable(privateEndpoints);
             return this;
         }
-
+        public Builder privateEndpoints(PrivateEndpointACLArgs... privateEndpoints) {
+            return privateEndpoints(List.of(privateEndpoints));
+        }
         public Builder publicNetwork(@Nullable Output<NetworkACLArgs> publicNetwork) {
             this.publicNetwork = publicNetwork;
             return this;
         }
-
         public Builder publicNetwork(@Nullable NetworkACLArgs publicNetwork) {
             this.publicNetwork = Output.ofNullable(publicNetwork);
             return this;
-        }
-        public WebPubSubNetworkACLsArgs build() {
+        }        public WebPubSubNetworkACLsArgs build() {
             return new WebPubSubNetworkACLsArgs(defaultAction, privateEndpoints, publicNetwork);
         }
     }

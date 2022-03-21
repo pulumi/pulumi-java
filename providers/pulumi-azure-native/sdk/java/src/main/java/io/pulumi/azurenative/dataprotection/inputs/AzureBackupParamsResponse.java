@@ -77,12 +77,10 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
-        }
-        public AzureBackupParamsResponse build() {
+        }        public AzureBackupParamsResponse build() {
             return new AzureBackupParamsResponse(backupType, objectType);
         }
     }

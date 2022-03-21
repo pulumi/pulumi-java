@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.featureConfigs = Objects.requireNonNull(featureConfigs);
             return this;
         }
-
+        public Builder featureConfigs(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse... featureConfigs) {
+            return featureConfigs(List.of(featureConfigs));
+        }
         public Builder groupSuggestionResponses(Boolean groupSuggestionResponses) {
             this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse(featureConfigs, groupSuggestionResponses);
         }
     }

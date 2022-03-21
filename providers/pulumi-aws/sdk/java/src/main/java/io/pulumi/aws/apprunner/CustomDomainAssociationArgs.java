@@ -91,32 +91,26 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder enableWwwSubdomain(@Nullable Output<Boolean> enableWwwSubdomain) {
             this.enableWwwSubdomain = enableWwwSubdomain;
             return this;
         }
-
         public Builder enableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
             this.enableWwwSubdomain = Output.ofNullable(enableWwwSubdomain);
             return this;
         }
-
         public Builder serviceArn(Output<String> serviceArn) {
             this.serviceArn = Objects.requireNonNull(serviceArn);
             return this;
         }
-
         public Builder serviceArn(String serviceArn) {
             this.serviceArn = Output.of(Objects.requireNonNull(serviceArn));
             return this;
-        }
-        public CustomDomainAssociationArgs build() {
+        }        public CustomDomainAssociationArgs build() {
             return new CustomDomainAssociationArgs(domainName, enableWwwSubdomain, serviceArn);
         }
     }

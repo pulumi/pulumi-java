@@ -53,8 +53,7 @@ public final class LocationNFSMountOptions {
         public Builder version(@Nullable LocationNFSMountOptionsVersion version) {
             this.version = version;
             return this;
-        }
-        public LocationNFSMountOptions build() {
+        }        public LocationNFSMountOptions build() {
             return new LocationNFSMountOptions(version);
         }
     }

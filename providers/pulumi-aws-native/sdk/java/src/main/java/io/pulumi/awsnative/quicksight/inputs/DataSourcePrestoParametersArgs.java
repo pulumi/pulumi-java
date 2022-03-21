@@ -94,32 +94,26 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
-
         public Builder catalog(String catalog) {
             this.catalog = Output.of(Objects.requireNonNull(catalog));
             return this;
         }
-
         public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder port(Output<Double> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public DataSourcePrestoParametersArgs build() {
+        }        public DataSourcePrestoParametersArgs build() {
             return new DataSourcePrestoParametersArgs(catalog, host, port);
         }
     }

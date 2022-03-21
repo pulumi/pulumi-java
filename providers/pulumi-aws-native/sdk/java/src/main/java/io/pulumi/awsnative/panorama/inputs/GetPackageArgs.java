@@ -50,8 +50,7 @@ public final class GetPackageArgs extends io.pulumi.resources.InvokeArgs {
         public Builder packageId(String packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
-        }
-        public GetPackageArgs build() {
+        }        public GetPackageArgs build() {
             return new GetPackageArgs(packageId);
         }
     }

@@ -80,22 +80,18 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,EventSubscriptionIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
-        }
-        public EventSubscriptionIdentityArgs build() {
+        }        public EventSubscriptionIdentityArgs build() {
             return new EventSubscriptionIdentityArgs(type, userAssignedIdentity);
         }
     }

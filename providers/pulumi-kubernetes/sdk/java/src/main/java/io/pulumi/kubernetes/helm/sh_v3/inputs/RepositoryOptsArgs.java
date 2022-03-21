@@ -142,62 +142,50 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
             this.caFile = caFile;
             return this;
         }
-
         public Builder caFile(@Nullable String caFile) {
             this.caFile = Output.ofNullable(caFile);
             return this;
         }
-
         public Builder certFile(@Nullable Output<String> certFile) {
             this.certFile = certFile;
             return this;
         }
-
         public Builder certFile(@Nullable String certFile) {
             this.certFile = Output.ofNullable(certFile);
             return this;
         }
-
         public Builder keyFile(@Nullable Output<String> keyFile) {
             this.keyFile = keyFile;
             return this;
         }
-
         public Builder keyFile(@Nullable String keyFile) {
             this.keyFile = Output.ofNullable(keyFile);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = Output.ofNullable(password).asSecret();
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password).asSecret();
             return this;
         }
-
         public Builder repo(@Nullable Output<String> repo) {
             this.repo = repo;
             return this;
         }
-
         public Builder repo(@Nullable String repo) {
             this.repo = Output.ofNullable(repo);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public RepositoryOptsArgs build() {
+        }        public RepositoryOptsArgs build() {
             return new RepositoryOptsArgs(caFile, certFile, keyFile, password, repo, username);
         }
     }

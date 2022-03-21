@@ -75,22 +75,21 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
             this.clusterArn = clusterArn;
             return this;
         }
-
         public Builder clusterArn(@Nullable String clusterArn) {
             this.clusterArn = Output.ofNullable(clusterArn);
             return this;
         }
-
         public Builder secretArnLists(@Nullable Output<List<String>> secretArnLists) {
             this.secretArnLists = secretArnLists;
             return this;
         }
-
         public Builder secretArnLists(@Nullable List<String> secretArnLists) {
             this.secretArnLists = Output.ofNullable(secretArnLists);
             return this;
         }
-        public ScramSecretAssociationState build() {
+        public Builder secretArnLists(String... secretArnLists) {
+            return secretArnLists(List.of(secretArnLists));
+        }        public ScramSecretAssociationState build() {
             return new ScramSecretAssociationState(clusterArn, secretArnLists);
         }
     }

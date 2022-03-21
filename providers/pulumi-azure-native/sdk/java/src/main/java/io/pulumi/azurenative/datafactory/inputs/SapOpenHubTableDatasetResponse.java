@@ -229,57 +229,49 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder baseRequestId(@Nullable Object baseRequestId) {
             this.baseRequestId = baseRequestId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
             this.excludeLastRequest = excludeLastRequest;
             return this;
         }
-
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder openHubDestinationName(Object openHubDestinationName) {
             this.openHubDestinationName = Objects.requireNonNull(openHubDestinationName);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SapOpenHubTableDatasetResponse build() {
+        }        public SapOpenHubTableDatasetResponse build() {
             return new SapOpenHubTableDatasetResponse(annotations, baseRequestId, description, excludeLastRequest, folder, linkedServiceName, openHubDestinationName, parameters, schema, structure, type);
         }
     }

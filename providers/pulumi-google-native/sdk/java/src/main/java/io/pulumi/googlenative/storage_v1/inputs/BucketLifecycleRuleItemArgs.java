@@ -75,22 +75,18 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable BucketLifecycleRuleItemActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder condition(@Nullable Output<BucketLifecycleRuleItemConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable BucketLifecycleRuleItemConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
-        }
-        public BucketLifecycleRuleItemArgs build() {
+        }        public BucketLifecycleRuleItemArgs build() {
             return new BucketLifecycleRuleItemArgs(action, condition);
         }
     }

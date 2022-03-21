@@ -62,12 +62,13 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.paths = paths;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = Output.ofNullable(paths);
             return this;
         }
-        public UniqueKeyArgs build() {
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }        public UniqueKeyArgs build() {
             return new UniqueKeyArgs(paths);
         }
     }

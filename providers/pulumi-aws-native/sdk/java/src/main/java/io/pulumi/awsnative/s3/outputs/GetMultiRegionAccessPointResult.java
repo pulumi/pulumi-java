@@ -71,12 +71,10 @@ public final class GetMultiRegionAccessPointResult {
             this.alias = alias;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
-        }
-        public GetMultiRegionAccessPointResult build() {
+        }        public GetMultiRegionAccessPointResult build() {
             return new GetMultiRegionAccessPointResult(alias, createdAt);
         }
     }

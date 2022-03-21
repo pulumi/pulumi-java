@@ -74,22 +74,18 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder streamArn(Output<String> streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
-
         public Builder streamArn(String streamArn) {
             this.streamArn = Output.of(Objects.requireNonNull(streamArn));
             return this;
-        }
-        public StreamConsumerArgs build() {
+        }        public StreamConsumerArgs build() {
             return new StreamConsumerArgs(name, streamArn);
         }
     }

@@ -53,12 +53,10 @@ public final class FaqS3Path {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public FaqS3Path build() {
+        }        public FaqS3Path build() {
             return new FaqS3Path(bucket, key);
         }
     }

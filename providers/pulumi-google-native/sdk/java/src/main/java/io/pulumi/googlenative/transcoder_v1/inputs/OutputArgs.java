@@ -61,12 +61,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public OutputArgs build() {
+        }        public OutputArgs build() {
             return new OutputArgs(uri);
         }
     }

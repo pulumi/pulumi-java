@@ -106,22 +106,18 @@ public final class FacebookResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder graphApiVersion(@Nullable String graphApiVersion) {
             this.graphApiVersion = graphApiVersion;
             return this;
         }
-
         public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
-
         public Builder registration(@Nullable AppRegistrationResponse registration) {
             this.registration = registration;
             return this;
-        }
-        public FacebookResponse build() {
+        }        public FacebookResponse build() {
             return new FacebookResponse(enabled, graphApiVersion, login, registration);
         }
     }

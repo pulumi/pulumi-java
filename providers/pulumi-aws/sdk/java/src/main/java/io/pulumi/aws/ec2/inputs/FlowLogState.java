@@ -277,142 +277,114 @@ public final class FlowLogState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder destinationOptions(@Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions) {
             this.destinationOptions = destinationOptions;
             return this;
         }
-
         public Builder destinationOptions(@Nullable FlowLogDestinationOptionsGetArgs destinationOptions) {
             this.destinationOptions = Output.ofNullable(destinationOptions);
             return this;
         }
-
         public Builder eniId(@Nullable Output<String> eniId) {
             this.eniId = eniId;
             return this;
         }
-
         public Builder eniId(@Nullable String eniId) {
             this.eniId = Output.ofNullable(eniId);
             return this;
         }
-
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
-
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
-
         public Builder logDestination(@Nullable Output<String> logDestination) {
             this.logDestination = logDestination;
             return this;
         }
-
         public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = Output.ofNullable(logDestination);
             return this;
         }
-
         public Builder logDestinationType(@Nullable Output<String> logDestinationType) {
             this.logDestinationType = logDestinationType;
             return this;
         }
-
         public Builder logDestinationType(@Nullable String logDestinationType) {
             this.logDestinationType = Output.ofNullable(logDestinationType);
             return this;
         }
-
         public Builder logFormat(@Nullable Output<String> logFormat) {
             this.logFormat = logFormat;
             return this;
         }
-
         public Builder logFormat(@Nullable String logFormat) {
             this.logFormat = Output.ofNullable(logFormat);
             return this;
         }
-
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder maxAggregationInterval(@Nullable Output<Integer> maxAggregationInterval) {
             this.maxAggregationInterval = maxAggregationInterval;
             return this;
         }
-
         public Builder maxAggregationInterval(@Nullable Integer maxAggregationInterval) {
             this.maxAggregationInterval = Output.ofNullable(maxAggregationInterval);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder trafficType(@Nullable Output<String> trafficType) {
             this.trafficType = trafficType;
             return this;
         }
-
         public Builder trafficType(@Nullable String trafficType) {
             this.trafficType = Output.ofNullable(trafficType);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public FlowLogState build() {
+        }        public FlowLogState build() {
             return new FlowLogState(arn, destinationOptions, eniId, iamRoleArn, logDestination, logDestinationType, logFormat, logGroupName, maxAggregationInterval, subnetId, tags, tagsAll, trafficType, vpcId);
         }
     }

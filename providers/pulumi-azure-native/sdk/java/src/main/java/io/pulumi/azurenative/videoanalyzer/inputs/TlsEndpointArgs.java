@@ -147,62 +147,50 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
-
         public Builder credentials(UsernamePasswordCredentialsArgs credentials) {
             this.credentials = Output.of(Objects.requireNonNull(credentials));
             return this;
         }
-
         public Builder trustedCertificates(@Nullable Output<PemCertificateListArgs> trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
-
         public Builder trustedCertificates(@Nullable PemCertificateListArgs trustedCertificates) {
             this.trustedCertificates = Output.ofNullable(trustedCertificates);
             return this;
         }
-
         public Builder tunnel(@Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel) {
             this.tunnel = tunnel;
             return this;
         }
-
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
             this.tunnel = Output.ofNullable(tunnel);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder validationOptions(@Nullable Output<TlsValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public Builder validationOptions(@Nullable TlsValidationOptionsArgs validationOptions) {
             this.validationOptions = Output.ofNullable(validationOptions);
             return this;
-        }
-        public TlsEndpointArgs build() {
+        }        public TlsEndpointArgs build() {
             return new TlsEndpointArgs(credentials, trustedCertificates, tunnel, type, url, validationOptions);
         }
     }

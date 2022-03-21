@@ -80,22 +80,21 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = Output.ofNullable(nextLink);
             return this;
         }
-
         public Builder value(@Nullable Output<List<VirtualNetworkPropertiesArgs>> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable List<VirtualNetworkPropertiesArgs> value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-        public VirtualNetworkPropertiesListArgs build() {
+        public Builder value(VirtualNetworkPropertiesArgs... value) {
+            return value(List.of(value));
+        }        public VirtualNetworkPropertiesListArgs build() {
             return new VirtualNetworkPropertiesListArgs(nextLink, value);
         }
     }

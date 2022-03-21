@@ -111,22 +111,18 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminUsername(String adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
-
         public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
             this.enableCSIProxy = enableCSIProxy;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
-        }
-        public ManagedClusterWindowsProfileResponse build() {
+        }        public ManagedClusterWindowsProfileResponse build() {
             return new ManagedClusterWindowsProfileResponse(adminPassword, adminUsername, enableCSIProxy, licenseType);
         }
     }

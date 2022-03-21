@@ -57,12 +57,10 @@ public final class VirtualGatewaySpecLoggingAccessLogGetArgs extends io.pulumi.r
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable VirtualGatewaySpecLoggingAccessLogFileGetArgs file) {
             this.file = Output.ofNullable(file);
             return this;
-        }
-        public VirtualGatewaySpecLoggingAccessLogGetArgs build() {
+        }        public VirtualGatewaySpecLoggingAccessLogGetArgs build() {
             return new VirtualGatewaySpecLoggingAccessLogGetArgs(file);
         }
     }

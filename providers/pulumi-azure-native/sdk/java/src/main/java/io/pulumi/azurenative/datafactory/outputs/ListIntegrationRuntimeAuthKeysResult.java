@@ -71,12 +71,10 @@ public final class ListIntegrationRuntimeAuthKeysResult {
             this.authKey1 = authKey1;
             return this;
         }
-
         public Builder authKey2(@Nullable String authKey2) {
             this.authKey2 = authKey2;
             return this;
-        }
-        public ListIntegrationRuntimeAuthKeysResult build() {
+        }        public ListIntegrationRuntimeAuthKeysResult build() {
             return new ListIntegrationRuntimeAuthKeysResult(authKey1, authKey2);
         }
     }

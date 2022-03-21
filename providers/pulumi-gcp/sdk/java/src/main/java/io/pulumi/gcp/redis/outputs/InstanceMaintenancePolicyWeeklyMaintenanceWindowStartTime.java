@@ -107,22 +107,18 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
             this.hours = hours;
             return this;
         }
-
         public Builder minutes(@Nullable Integer minutes) {
             this.minutes = minutes;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(@Nullable Integer seconds) {
             this.seconds = seconds;
             return this;
-        }
-        public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
+        }        public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(hours, minutes, nanos, seconds);
         }
     }

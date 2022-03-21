@@ -62,12 +62,13 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
             this.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
-
         public Builder publicIPPrefixes(@Nullable List<ResourceReferenceArgs> publicIPPrefixes) {
             this.publicIPPrefixes = Output.ofNullable(publicIPPrefixes);
             return this;
         }
-        public ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs build() {
+        public Builder publicIPPrefixes(ResourceReferenceArgs... publicIPPrefixes) {
+            return publicIPPrefixes(List.of(publicIPPrefixes));
+        }        public ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs build() {
             return new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs(publicIPPrefixes);
         }
     }

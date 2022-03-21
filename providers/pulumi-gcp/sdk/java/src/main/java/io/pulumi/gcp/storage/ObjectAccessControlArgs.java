@@ -114,42 +114,34 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder entity(Output<String> entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder entity(String entity) {
             this.entity = Output.of(Objects.requireNonNull(entity));
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public ObjectAccessControlArgs build() {
+        }        public ObjectAccessControlArgs build() {
             return new ObjectAccessControlArgs(bucket, entity, object, role);
         }
     }

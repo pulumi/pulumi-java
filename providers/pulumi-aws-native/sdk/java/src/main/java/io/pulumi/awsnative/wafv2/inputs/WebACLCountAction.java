@@ -56,8 +56,7 @@ public final class WebACLCountAction extends io.pulumi.resources.InvokeArgs {
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public WebACLCountAction build() {
+        }        public WebACLCountAction build() {
             return new WebACLCountAction(customRequestHandling);
         }
     }

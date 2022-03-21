@@ -186,47 +186,38 @@ public final class GetDscNodeConfigurationResult {
             this.configuration = configuration;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder incrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
             this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeCount(@Nullable Double nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDscNodeConfigurationResult build() {
+        }        public GetDscNodeConfigurationResult build() {
             return new GetDscNodeConfigurationResult(configuration, creationTime, id, incrementNodeConfigurationBuild, lastModifiedTime, name, nodeCount, source, type);
         }
     }

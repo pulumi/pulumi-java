@@ -203,52 +203,42 @@ public final class GetTemplateSpecResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder versions(Map<String,TemplateSpecVersionInfoResponse> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
-        }
-        public GetTemplateSpecResult build() {
+        }        public GetTemplateSpecResult build() {
             return new GetTemplateSpecResult(description, displayName, id, location, metadata, name, systemData, tags, type, versions);
         }
     }

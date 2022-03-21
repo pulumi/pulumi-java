@@ -127,27 +127,22 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
-
         public Builder sqlDataSettings(@Nullable SQLStorageSettingsResponse sqlDataSettings) {
             this.sqlDataSettings = sqlDataSettings;
             return this;
         }
-
         public Builder sqlLogSettings(@Nullable SQLStorageSettingsResponse sqlLogSettings) {
             this.sqlLogSettings = sqlLogSettings;
             return this;
         }
-
         public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsResponse sqlTempDbSettings) {
             this.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
-
         public Builder storageWorkloadType(@Nullable String storageWorkloadType) {
             this.storageWorkloadType = storageWorkloadType;
             return this;
-        }
-        public StorageConfigurationSettingsResponse build() {
+        }        public StorageConfigurationSettingsResponse build() {
             return new StorageConfigurationSettingsResponse(diskConfigurationType, sqlDataSettings, sqlLogSettings, sqlTempDbSettings, storageWorkloadType);
         }
     }

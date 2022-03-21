@@ -72,12 +72,10 @@ public final class GetRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetRuleGroupArgs build() {
+        }        public GetRuleGroupArgs build() {
             return new GetRuleGroupArgs(name, scope);
         }
     }

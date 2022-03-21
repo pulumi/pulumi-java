@@ -325,172 +325,141 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder batchTarget(@Nullable Output<EventTargetBatchTargetArgs> batchTarget) {
             this.batchTarget = batchTarget;
             return this;
         }
-
         public Builder batchTarget(@Nullable EventTargetBatchTargetArgs batchTarget) {
             this.batchTarget = Output.ofNullable(batchTarget);
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable Output<EventTargetDeadLetterConfigArgs> deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable EventTargetDeadLetterConfigArgs deadLetterConfig) {
             this.deadLetterConfig = Output.ofNullable(deadLetterConfig);
             return this;
         }
-
         public Builder ecsTarget(@Nullable Output<EventTargetEcsTargetArgs> ecsTarget) {
             this.ecsTarget = ecsTarget;
             return this;
         }
-
         public Builder ecsTarget(@Nullable EventTargetEcsTargetArgs ecsTarget) {
             this.ecsTarget = Output.ofNullable(ecsTarget);
             return this;
         }
-
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
-
         public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Output.ofNullable(eventBusName);
             return this;
         }
-
         public Builder httpTarget(@Nullable Output<EventTargetHttpTargetArgs> httpTarget) {
             this.httpTarget = httpTarget;
             return this;
         }
-
         public Builder httpTarget(@Nullable EventTargetHttpTargetArgs httpTarget) {
             this.httpTarget = Output.ofNullable(httpTarget);
             return this;
         }
-
         public Builder input(@Nullable Output<String> input) {
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable String input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder inputPath(@Nullable Output<String> inputPath) {
             this.inputPath = inputPath;
             return this;
         }
-
         public Builder inputPath(@Nullable String inputPath) {
             this.inputPath = Output.ofNullable(inputPath);
             return this;
         }
-
         public Builder inputTransformer(@Nullable Output<EventTargetInputTransformerArgs> inputTransformer) {
             this.inputTransformer = inputTransformer;
             return this;
         }
-
         public Builder inputTransformer(@Nullable EventTargetInputTransformerArgs inputTransformer) {
             this.inputTransformer = Output.ofNullable(inputTransformer);
             return this;
         }
-
         public Builder kinesisTarget(@Nullable Output<EventTargetKinesisTargetArgs> kinesisTarget) {
             this.kinesisTarget = kinesisTarget;
             return this;
         }
-
         public Builder kinesisTarget(@Nullable EventTargetKinesisTargetArgs kinesisTarget) {
             this.kinesisTarget = Output.ofNullable(kinesisTarget);
             return this;
         }
-
         public Builder redshiftTarget(@Nullable Output<EventTargetRedshiftTargetArgs> redshiftTarget) {
             this.redshiftTarget = redshiftTarget;
             return this;
         }
-
         public Builder redshiftTarget(@Nullable EventTargetRedshiftTargetArgs redshiftTarget) {
             this.redshiftTarget = Output.ofNullable(redshiftTarget);
             return this;
         }
-
         public Builder retryPolicy(@Nullable Output<EventTargetRetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable EventTargetRetryPolicyArgs retryPolicy) {
             this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder rule(Output<String> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder rule(String rule) {
             this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
         }
-
         public Builder runCommandTargets(@Nullable Output<List<EventTargetRunCommandTargetArgs>> runCommandTargets) {
             this.runCommandTargets = runCommandTargets;
             return this;
         }
-
         public Builder runCommandTargets(@Nullable List<EventTargetRunCommandTargetArgs> runCommandTargets) {
             this.runCommandTargets = Output.ofNullable(runCommandTargets);
             return this;
         }
-
+        public Builder runCommandTargets(EventTargetRunCommandTargetArgs... runCommandTargets) {
+            return runCommandTargets(List.of(runCommandTargets));
+        }
         public Builder sqsTarget(@Nullable Output<EventTargetSqsTargetArgs> sqsTarget) {
             this.sqsTarget = sqsTarget;
             return this;
         }
-
         public Builder sqsTarget(@Nullable EventTargetSqsTargetArgs sqsTarget) {
             this.sqsTarget = Output.ofNullable(sqsTarget);
             return this;
         }
-
         public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = Output.ofNullable(targetId);
             return this;
-        }
-        public EventTargetArgs build() {
+        }        public EventTargetArgs build() {
             return new EventTargetArgs(arn, batchTarget, deadLetterConfig, ecsTarget, eventBusName, httpTarget, input, inputPath, inputTransformer, kinesisTarget, redshiftTarget, retryPolicy, roleArn, rule, runCommandTargets, sqsTarget, targetId);
         }
     }

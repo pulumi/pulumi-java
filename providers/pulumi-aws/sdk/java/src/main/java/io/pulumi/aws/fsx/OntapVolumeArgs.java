@@ -186,92 +186,74 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.junctionPath = Objects.requireNonNull(junctionPath);
             return this;
         }
-
         public Builder junctionPath(String junctionPath) {
             this.junctionPath = Output.of(Objects.requireNonNull(junctionPath));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder securityStyle(@Nullable Output<String> securityStyle) {
             this.securityStyle = securityStyle;
             return this;
         }
-
         public Builder securityStyle(@Nullable String securityStyle) {
             this.securityStyle = Output.ofNullable(securityStyle);
             return this;
         }
-
         public Builder sizeInMegabytes(Output<Integer> sizeInMegabytes) {
             this.sizeInMegabytes = Objects.requireNonNull(sizeInMegabytes);
             return this;
         }
-
         public Builder sizeInMegabytes(Integer sizeInMegabytes) {
             this.sizeInMegabytes = Output.of(Objects.requireNonNull(sizeInMegabytes));
             return this;
         }
-
         public Builder storageEfficiencyEnabled(Output<Boolean> storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = Objects.requireNonNull(storageEfficiencyEnabled);
             return this;
         }
-
         public Builder storageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = Output.of(Objects.requireNonNull(storageEfficiencyEnabled));
             return this;
         }
-
         public Builder storageVirtualMachineId(Output<String> storageVirtualMachineId) {
             this.storageVirtualMachineId = Objects.requireNonNull(storageVirtualMachineId);
             return this;
         }
-
         public Builder storageVirtualMachineId(String storageVirtualMachineId) {
             this.storageVirtualMachineId = Output.of(Objects.requireNonNull(storageVirtualMachineId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tieringPolicy(@Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy) {
             this.tieringPolicy = tieringPolicy;
             return this;
         }
-
         public Builder tieringPolicy(@Nullable OntapVolumeTieringPolicyArgs tieringPolicy) {
             this.tieringPolicy = Output.ofNullable(tieringPolicy);
             return this;
         }
-
         public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Output.ofNullable(volumeType);
             return this;
-        }
-        public OntapVolumeArgs build() {
+        }        public OntapVolumeArgs build() {
             return new OntapVolumeArgs(junctionPath, name, securityStyle, sizeInMegabytes, storageEfficiencyEnabled, storageVirtualMachineId, tags, tieringPolicy, volumeType);
         }
     }

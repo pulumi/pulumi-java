@@ -200,52 +200,42 @@ public final class GetHybridRunbookWorkerResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
-
         public Builder lastSeenDateTime(@Nullable String lastSeenDateTime) {
             this.lastSeenDateTime = lastSeenDateTime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder registeredDateTime(@Nullable String registeredDateTime) {
             this.registeredDateTime = registeredDateTime;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }
-
         public Builder workerName(@Nullable String workerName) {
             this.workerName = workerName;
             return this;
         }
-
         public Builder workerType(@Nullable String workerType) {
             this.workerType = workerType;
             return this;
-        }
-        public GetHybridRunbookWorkerResult build() {
+        }        public GetHybridRunbookWorkerResult build() {
             return new GetHybridRunbookWorkerResult(id, ip, lastSeenDateTime, name, registeredDateTime, systemData, type, vmResourceId, workerName, workerType);
         }
     }

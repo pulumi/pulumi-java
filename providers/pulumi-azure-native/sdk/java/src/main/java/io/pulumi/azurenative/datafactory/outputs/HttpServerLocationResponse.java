@@ -106,22 +106,18 @@ public final class HttpServerLocationResponse {
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder relativeUrl(@Nullable Object relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HttpServerLocationResponse build() {
+        }        public HttpServerLocationResponse build() {
             return new HttpServerLocationResponse(fileName, folderPath, relativeUrl, type);
         }
     }

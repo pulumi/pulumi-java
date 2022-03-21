@@ -75,22 +75,18 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
             this.cognitoMemberDefinition = cognitoMemberDefinition;
             return this;
         }
-
         public Builder cognitoMemberDefinition(@Nullable WorkteamMemberDefinitionCognitoMemberDefinitionArgs cognitoMemberDefinition) {
             this.cognitoMemberDefinition = Output.ofNullable(cognitoMemberDefinition);
             return this;
         }
-
         public Builder oidcMemberDefinition(@Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition) {
             this.oidcMemberDefinition = oidcMemberDefinition;
             return this;
         }
-
         public Builder oidcMemberDefinition(@Nullable WorkteamMemberDefinitionOidcMemberDefinitionArgs oidcMemberDefinition) {
             this.oidcMemberDefinition = Output.ofNullable(oidcMemberDefinition);
             return this;
-        }
-        public WorkteamMemberDefinitionArgs build() {
+        }        public WorkteamMemberDefinitionArgs build() {
             return new WorkteamMemberDefinitionArgs(cognitoMemberDefinition, oidcMemberDefinition);
         }
     }

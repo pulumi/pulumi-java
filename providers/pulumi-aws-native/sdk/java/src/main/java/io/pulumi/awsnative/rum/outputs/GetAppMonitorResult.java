@@ -91,22 +91,21 @@ public final class GetAppMonitorResult {
             this.appMonitorConfiguration = appMonitorConfiguration;
             return this;
         }
-
         public Builder cwLogEnabled(@Nullable Boolean cwLogEnabled) {
             this.cwLogEnabled = cwLogEnabled;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder tags(@Nullable List<AppMonitorTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAppMonitorResult build() {
+        public Builder tags(AppMonitorTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAppMonitorResult build() {
             return new GetAppMonitorResult(appMonitorConfiguration, cwLogEnabled, domain, tags);
         }
     }

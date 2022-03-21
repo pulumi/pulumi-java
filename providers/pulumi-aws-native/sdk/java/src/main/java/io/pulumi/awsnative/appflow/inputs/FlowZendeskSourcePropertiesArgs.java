@@ -52,12 +52,10 @@ public final class FlowZendeskSourcePropertiesArgs extends io.pulumi.resources.R
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowZendeskSourcePropertiesArgs build() {
+        }        public FlowZendeskSourcePropertiesArgs build() {
             return new FlowZendeskSourcePropertiesArgs(object);
         }
     }

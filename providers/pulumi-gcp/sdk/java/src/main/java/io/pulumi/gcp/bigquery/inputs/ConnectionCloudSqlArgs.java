@@ -108,42 +108,34 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder credential(ConnectionCloudSqlCredentialArgs credential) {
             this.credential = Output.of(Objects.requireNonNull(credential));
             return this;
         }
-
         public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ConnectionCloudSqlArgs build() {
+        }        public ConnectionCloudSqlArgs build() {
             return new ConnectionCloudSqlArgs(credential, database, instanceId, type);
         }
     }

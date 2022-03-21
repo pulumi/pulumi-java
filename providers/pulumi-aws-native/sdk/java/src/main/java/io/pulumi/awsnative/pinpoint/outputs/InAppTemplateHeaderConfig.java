@@ -64,17 +64,14 @@ public final class InAppTemplateHeaderConfig {
             this.alignment = alignment;
             return this;
         }
-
         public Builder header(@Nullable String header) {
             this.header = header;
             return this;
         }
-
         public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
-        }
-        public InAppTemplateHeaderConfig build() {
+        }        public InAppTemplateHeaderConfig build() {
             return new InAppTemplateHeaderConfig(alignment, header, textColor);
         }
     }

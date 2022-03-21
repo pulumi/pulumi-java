@@ -300,82 +300,72 @@ public final class SecurityPolicyRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
-
         public Builder headerAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder match(SecurityPolicyRuleMatcherResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder preview(Boolean preview) {
             this.preview = Objects.requireNonNull(preview);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
             this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
             return this;
         }
-
         public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
             this.redirectOptions = Objects.requireNonNull(redirectOptions);
             return this;
         }
-
         public Builder redirectTarget(String redirectTarget) {
             this.redirectTarget = Objects.requireNonNull(redirectTarget);
             return this;
         }
-
         public Builder ruleNumber(String ruleNumber) {
             this.ruleNumber = Objects.requireNonNull(ruleNumber);
             return this;
         }
-
         public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
-
         public Builder targetResources(List<String> targetResources) {
             this.targetResources = Objects.requireNonNull(targetResources);
             return this;
         }
-
+        public Builder targetResources(String... targetResources) {
+            return targetResources(List.of(targetResources));
+        }
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-        public SecurityPolicyRuleResponse build() {
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }        public SecurityPolicyRuleResponse build() {
             return new SecurityPolicyRuleResponse(action, description, direction, enableLogging, headerAction, kind, match, preview, priority, rateLimitOptions, redirectOptions, redirectTarget, ruleNumber, ruleTupleCount, targetResources, targetServiceAccounts);
         }
     }

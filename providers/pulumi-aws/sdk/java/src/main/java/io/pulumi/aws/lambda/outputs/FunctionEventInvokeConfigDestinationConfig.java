@@ -72,12 +72,10 @@ public final class FunctionEventInvokeConfigDestinationConfig {
             this.onFailure = onFailure;
             return this;
         }
-
         public Builder onSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess) {
             this.onSuccess = onSuccess;
             return this;
-        }
-        public FunctionEventInvokeConfigDestinationConfig build() {
+        }        public FunctionEventInvokeConfigDestinationConfig build() {
             return new FunctionEventInvokeConfigDestinationConfig(onFailure, onSuccess);
         }
     }

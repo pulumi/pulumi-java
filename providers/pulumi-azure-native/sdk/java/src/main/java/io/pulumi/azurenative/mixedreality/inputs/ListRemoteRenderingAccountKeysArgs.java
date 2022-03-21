@@ -72,12 +72,10 @@ public final class ListRemoteRenderingAccountKeysArgs extends io.pulumi.resource
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListRemoteRenderingAccountKeysArgs build() {
+        }        public ListRemoteRenderingAccountKeysArgs build() {
             return new ListRemoteRenderingAccountKeysArgs(accountName, resourceGroupName);
         }
     }

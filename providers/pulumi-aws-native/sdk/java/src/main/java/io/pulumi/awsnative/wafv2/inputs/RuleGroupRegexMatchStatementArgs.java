@@ -80,32 +80,29 @@ public final class RuleGroupRegexMatchStatementArgs extends io.pulumi.resources.
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder regexString(Output<String> regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
-
         public Builder regexString(String regexString) {
             this.regexString = Output.of(Objects.requireNonNull(regexString));
             return this;
         }
-
         public Builder textTransformations(Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public RuleGroupRegexMatchStatementArgs build() {
+        public Builder textTransformations(RuleGroupTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRegexMatchStatementArgs build() {
             return new RuleGroupRegexMatchStatementArgs(fieldToMatch, regexString, textTransformations);
         }
     }

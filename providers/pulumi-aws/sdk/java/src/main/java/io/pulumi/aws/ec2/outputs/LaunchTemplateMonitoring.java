@@ -53,8 +53,7 @@ public final class LaunchTemplateMonitoring {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public LaunchTemplateMonitoring build() {
+        }        public LaunchTemplateMonitoring build() {
             return new LaunchTemplateMonitoring(enabled);
         }
     }

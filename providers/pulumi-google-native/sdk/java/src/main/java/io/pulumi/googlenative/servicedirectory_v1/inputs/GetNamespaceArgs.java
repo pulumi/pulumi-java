@@ -78,17 +78,14 @@ public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetNamespaceArgs build() {
+        }        public GetNamespaceArgs build() {
             return new GetNamespaceArgs(location, namespaceId, project);
         }
     }

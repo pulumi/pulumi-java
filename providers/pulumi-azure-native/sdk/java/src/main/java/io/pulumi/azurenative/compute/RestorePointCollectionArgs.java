@@ -124,52 +124,42 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restorePointCollectionName(@Nullable Output<String> restorePointCollectionName) {
             this.restorePointCollectionName = restorePointCollectionName;
             return this;
         }
-
         public Builder restorePointCollectionName(@Nullable String restorePointCollectionName) {
             this.restorePointCollectionName = Output.ofNullable(restorePointCollectionName);
             return this;
         }
-
         public Builder source(@Nullable Output<RestorePointCollectionSourcePropertiesArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable RestorePointCollectionSourcePropertiesArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RestorePointCollectionArgs build() {
+        }        public RestorePointCollectionArgs build() {
             return new RestorePointCollectionArgs(location, resourceGroupName, restorePointCollectionName, source, tags);
         }
     }

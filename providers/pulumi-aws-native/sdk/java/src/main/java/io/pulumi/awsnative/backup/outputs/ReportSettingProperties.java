@@ -71,12 +71,13 @@ public final class ReportSettingProperties {
             this.frameworkArns = frameworkArns;
             return this;
         }
-
+        public Builder frameworkArns(String... frameworkArns) {
+            return frameworkArns(List.of(frameworkArns));
+        }
         public Builder reportTemplate(String reportTemplate) {
             this.reportTemplate = Objects.requireNonNull(reportTemplate);
             return this;
-        }
-        public ReportSettingProperties build() {
+        }        public ReportSettingProperties build() {
             return new ReportSettingProperties(frameworkArns, reportTemplate);
         }
     }

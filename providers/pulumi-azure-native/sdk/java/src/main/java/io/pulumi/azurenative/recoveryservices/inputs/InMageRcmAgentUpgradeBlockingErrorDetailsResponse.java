@@ -141,32 +141,26 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder errorMessageParameters(Map<String,String> errorMessageParameters) {
             this.errorMessageParameters = Objects.requireNonNull(errorMessageParameters);
             return this;
         }
-
         public Builder errorTags(Map<String,String> errorTags) {
             this.errorTags = Objects.requireNonNull(errorTags);
             return this;
         }
-
         public Builder possibleCauses(String possibleCauses) {
             this.possibleCauses = Objects.requireNonNull(possibleCauses);
             return this;
         }
-
         public Builder recommendedAction(String recommendedAction) {
             this.recommendedAction = Objects.requireNonNull(recommendedAction);
             return this;
-        }
-        public InMageRcmAgentUpgradeBlockingErrorDetailsResponse build() {
+        }        public InMageRcmAgentUpgradeBlockingErrorDetailsResponse build() {
             return new InMageRcmAgentUpgradeBlockingErrorDetailsResponse(errorCode, errorMessage, errorMessageParameters, errorTags, possibleCauses, recommendedAction);
         }
     }

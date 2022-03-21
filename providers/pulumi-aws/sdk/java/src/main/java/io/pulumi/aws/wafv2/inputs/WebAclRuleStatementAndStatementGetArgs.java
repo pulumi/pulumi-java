@@ -57,12 +57,13 @@ public final class WebAclRuleStatementAndStatementGetArgs extends io.pulumi.reso
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public Builder statements(List<WebAclRuleStatementAndStatementStatementGetArgs> statements) {
             this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
-        public WebAclRuleStatementAndStatementGetArgs build() {
+        public Builder statements(WebAclRuleStatementAndStatementStatementGetArgs... statements) {
+            return statements(List.of(statements));
+        }        public WebAclRuleStatementAndStatementGetArgs build() {
             return new WebAclRuleStatementAndStatementGetArgs(statements);
         }
     }

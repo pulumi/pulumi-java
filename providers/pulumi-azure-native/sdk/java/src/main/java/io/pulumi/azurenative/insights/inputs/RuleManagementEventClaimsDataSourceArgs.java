@@ -61,12 +61,10 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Output.ofNullable(emailAddress);
             return this;
-        }
-        public RuleManagementEventClaimsDataSourceArgs build() {
+        }        public RuleManagementEventClaimsDataSourceArgs build() {
             return new RuleManagementEventClaimsDataSourceArgs(emailAddress);
         }
     }

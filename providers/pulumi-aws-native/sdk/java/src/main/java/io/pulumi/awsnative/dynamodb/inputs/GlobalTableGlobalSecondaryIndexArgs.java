@@ -94,42 +94,37 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder indexName(String indexName) {
             this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
-
         public Builder keySchema(Output<List<GlobalTableKeySchemaArgs>> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
-
         public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
             this.keySchema = Output.of(Objects.requireNonNull(keySchema));
             return this;
         }
-
+        public Builder keySchema(GlobalTableKeySchemaArgs... keySchema) {
+            return keySchema(List.of(keySchema));
+        }
         public Builder projection(Output<GlobalTableProjectionArgs> projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
-
         public Builder projection(GlobalTableProjectionArgs projection) {
             this.projection = Output.of(Objects.requireNonNull(projection));
             return this;
         }
-
         public Builder writeProvisionedThroughputSettings(@Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
-
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = Output.ofNullable(writeProvisionedThroughputSettings);
             return this;
-        }
-        public GlobalTableGlobalSecondaryIndexArgs build() {
+        }        public GlobalTableGlobalSecondaryIndexArgs build() {
             return new GlobalTableGlobalSecondaryIndexArgs(indexName, keySchema, projection, writeProvisionedThroughputSettings);
         }
     }

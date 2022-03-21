@@ -320,87 +320,79 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
             this.clusterManagerApiService = Objects.requireNonNull(clusterManagerApiService);
             return this;
         }
-
         public Builder dataset(String dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder debugOptions(DebugOptionsResponse debugOptions) {
             this.debugOptions = Objects.requireNonNull(debugOptions);
             return this;
         }
-
         public Builder experiments(List<String> experiments) {
             this.experiments = Objects.requireNonNull(experiments);
             return this;
         }
-
+        public Builder experiments(String... experiments) {
+            return experiments(List.of(experiments));
+        }
         public Builder flexResourceSchedulingGoal(String flexResourceSchedulingGoal) {
             this.flexResourceSchedulingGoal = Objects.requireNonNull(flexResourceSchedulingGoal);
             return this;
         }
-
         public Builder internalExperiments(Map<String,String> internalExperiments) {
             this.internalExperiments = Objects.requireNonNull(internalExperiments);
             return this;
         }
-
         public Builder sdkPipelineOptions(Map<String,String> sdkPipelineOptions) {
             this.sdkPipelineOptions = Objects.requireNonNull(sdkPipelineOptions);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder serviceKmsKeyName(String serviceKmsKeyName) {
             this.serviceKmsKeyName = Objects.requireNonNull(serviceKmsKeyName);
             return this;
         }
-
         public Builder serviceOptions(List<String> serviceOptions) {
             this.serviceOptions = Objects.requireNonNull(serviceOptions);
             return this;
         }
-
+        public Builder serviceOptions(String... serviceOptions) {
+            return serviceOptions(List.of(serviceOptions));
+        }
         public Builder shuffleMode(String shuffleMode) {
             this.shuffleMode = Objects.requireNonNull(shuffleMode);
             return this;
         }
-
         public Builder tempStoragePrefix(String tempStoragePrefix) {
             this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
             return this;
         }
-
         public Builder userAgent(Map<String,String> userAgent) {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
         }
-
         public Builder version(Map<String,String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder workerPools(List<WorkerPoolResponse> workerPools) {
             this.workerPools = Objects.requireNonNull(workerPools);
             return this;
         }
-
+        public Builder workerPools(WorkerPoolResponse... workerPools) {
+            return workerPools(List.of(workerPools));
+        }
         public Builder workerRegion(String workerRegion) {
             this.workerRegion = Objects.requireNonNull(workerRegion);
             return this;
         }
-
         public Builder workerZone(String workerZone) {
             this.workerZone = Objects.requireNonNull(workerZone);
             return this;
-        }
-        public EnvironmentResponse build() {
+        }        public EnvironmentResponse build() {
             return new EnvironmentResponse(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, shuffleMode, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);
         }
     }

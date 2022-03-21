@@ -88,17 +88,14 @@ public final class GetHybridConnectionArgs extends io.pulumi.resources.InvokeArg
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetHybridConnectionArgs build() {
+        }        public GetHybridConnectionArgs build() {
             return new GetHybridConnectionArgs(hybridConnectionName, namespaceName, resourceGroupName);
         }
     }

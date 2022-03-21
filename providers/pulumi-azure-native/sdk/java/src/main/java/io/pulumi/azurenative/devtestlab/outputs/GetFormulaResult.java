@@ -250,67 +250,54 @@ public final class GetFormulaResult {
             this.author = Objects.requireNonNull(author);
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder formulaContent(@Nullable LabVirtualMachineCreationParameterResponse formulaContent) {
             this.formulaContent = formulaContent;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder vm(@Nullable FormulaPropertiesFromVmResponse vm) {
             this.vm = vm;
             return this;
-        }
-        public GetFormulaResult build() {
+        }        public GetFormulaResult build() {
             return new GetFormulaResult(author, creationDate, description, formulaContent, id, location, name, osType, provisioningState, tags, type, uniqueIdentifier, vm);
         }
     }

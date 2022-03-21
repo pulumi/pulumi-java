@@ -139,62 +139,50 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder secretResourceName(Output<String> secretResourceName) {
             this.secretResourceName = Objects.requireNonNull(secretResourceName);
             return this;
         }
-
         public Builder secretResourceName(String secretResourceName) {
             this.secretResourceName = Output.of(Objects.requireNonNull(secretResourceName));
             return this;
         }
-
         public Builder secretValueResourceName(@Nullable Output<String> secretValueResourceName) {
             this.secretValueResourceName = secretValueResourceName;
             return this;
         }
-
         public Builder secretValueResourceName(@Nullable String secretValueResourceName) {
             this.secretValueResourceName = Output.ofNullable(secretValueResourceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public SecretValueArgs build() {
+        }        public SecretValueArgs build() {
             return new SecretValueArgs(location, resourceGroupName, secretResourceName, secretValueResourceName, tags, value);
         }
     }

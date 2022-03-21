@@ -88,17 +88,14 @@ public final class SBSkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public SBSkuResponse build() {
+        }        public SBSkuResponse build() {
             return new SBSkuResponse(capacity, name, tier);
         }
     }

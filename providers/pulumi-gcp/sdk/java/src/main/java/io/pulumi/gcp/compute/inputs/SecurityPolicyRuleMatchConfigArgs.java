@@ -59,12 +59,13 @@ public final class SecurityPolicyRuleMatchConfigArgs extends io.pulumi.resources
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Output.of(Objects.requireNonNull(srcIpRanges));
             return this;
         }
-        public SecurityPolicyRuleMatchConfigArgs build() {
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }        public SecurityPolicyRuleMatchConfigArgs build() {
             return new SecurityPolicyRuleMatchConfigArgs(srcIpRanges);
         }
     }

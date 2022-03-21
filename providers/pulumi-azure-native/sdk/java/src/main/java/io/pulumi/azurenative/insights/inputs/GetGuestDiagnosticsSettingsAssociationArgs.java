@@ -72,12 +72,10 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
             this.associationName = Objects.requireNonNull(associationName);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public GetGuestDiagnosticsSettingsAssociationArgs build() {
+        }        public GetGuestDiagnosticsSettingsAssociationArgs build() {
             return new GetGuestDiagnosticsSettingsAssociationArgs(associationName, resourceUri);
         }
     }

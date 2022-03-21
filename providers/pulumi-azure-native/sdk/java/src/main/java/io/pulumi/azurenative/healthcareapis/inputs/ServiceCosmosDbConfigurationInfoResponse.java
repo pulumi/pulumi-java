@@ -79,12 +79,10 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
-
         public Builder offerThroughput(@Nullable Integer offerThroughput) {
             this.offerThroughput = offerThroughput;
             return this;
-        }
-        public ServiceCosmosDbConfigurationInfoResponse build() {
+        }        public ServiceCosmosDbConfigurationInfoResponse build() {
             return new ServiceCosmosDbConfigurationInfoResponse(keyVaultKeyUri, offerThroughput);
         }
     }

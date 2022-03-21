@@ -103,22 +103,18 @@ public final class GetSerialPortResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSerialPortResult build() {
+        }        public GetSerialPortResult build() {
             return new GetSerialPortResult(id, name, state, type);
         }
     }

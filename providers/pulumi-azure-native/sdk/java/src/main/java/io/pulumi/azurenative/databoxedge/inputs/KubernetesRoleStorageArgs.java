@@ -62,12 +62,13 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<MountPointMapArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-        public KubernetesRoleStorageArgs build() {
+        public Builder endpoints(MountPointMapArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }        public KubernetesRoleStorageArgs build() {
             return new KubernetesRoleStorageArgs(endpoints);
         }
     }

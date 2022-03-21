@@ -124,27 +124,22 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
             this.activeMessageCount = Objects.requireNonNull(activeMessageCount);
             return this;
         }
-
         public Builder deadLetterMessageCount(Double deadLetterMessageCount) {
             this.deadLetterMessageCount = Objects.requireNonNull(deadLetterMessageCount);
             return this;
         }
-
         public Builder scheduledMessageCount(Double scheduledMessageCount) {
             this.scheduledMessageCount = Objects.requireNonNull(scheduledMessageCount);
             return this;
         }
-
         public Builder transferDeadLetterMessageCount(Double transferDeadLetterMessageCount) {
             this.transferDeadLetterMessageCount = Objects.requireNonNull(transferDeadLetterMessageCount);
             return this;
         }
-
         public Builder transferMessageCount(Double transferMessageCount) {
             this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
             return this;
-        }
-        public MessageCountDetailsResponse build() {
+        }        public MessageCountDetailsResponse build() {
             return new MessageCountDetailsResponse(activeMessageCount, deadLetterMessageCount, scheduledMessageCount, transferDeadLetterMessageCount, transferMessageCount);
         }
     }

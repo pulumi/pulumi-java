@@ -82,22 +82,21 @@ public final class FlowZendeskDestinationProperties {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder idFieldNames(@Nullable List<String> idFieldNames) {
             this.idFieldNames = idFieldNames;
             return this;
         }
-
+        public Builder idFieldNames(String... idFieldNames) {
+            return idFieldNames(List.of(idFieldNames));
+        }
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
             this.writeOperationType = writeOperationType;
             return this;
-        }
-        public FlowZendeskDestinationProperties build() {
+        }        public FlowZendeskDestinationProperties build() {
             return new FlowZendeskDestinationProperties(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }
     }

@@ -140,32 +140,26 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.analyzeServiceAccountImpersonation = Objects.requireNonNull(analyzeServiceAccountImpersonation);
             return this;
         }
-
         public Builder expandGroups(Boolean expandGroups) {
             this.expandGroups = Objects.requireNonNull(expandGroups);
             return this;
         }
-
         public Builder expandResources(Boolean expandResources) {
             this.expandResources = Objects.requireNonNull(expandResources);
             return this;
         }
-
         public Builder expandRoles(Boolean expandRoles) {
             this.expandRoles = Objects.requireNonNull(expandRoles);
             return this;
         }
-
         public Builder outputGroupEdges(Boolean outputGroupEdges) {
             this.outputGroupEdges = Objects.requireNonNull(outputGroupEdges);
             return this;
         }
-
         public Builder outputResourceEdges(Boolean outputResourceEdges) {
             this.outputResourceEdges = Objects.requireNonNull(outputResourceEdges);
             return this;
-        }
-        public OptionsResponse build() {
+        }        public OptionsResponse build() {
             return new OptionsResponse(analyzeServiceAccountImpersonation, expandGroups, expandResources, expandRoles, outputGroupEdges, outputResourceEdges);
         }
     }

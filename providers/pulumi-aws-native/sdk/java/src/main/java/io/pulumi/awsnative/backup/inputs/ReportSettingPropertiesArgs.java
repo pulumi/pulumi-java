@@ -79,22 +79,21 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
             this.frameworkArns = frameworkArns;
             return this;
         }
-
         public Builder frameworkArns(@Nullable List<String> frameworkArns) {
             this.frameworkArns = Output.ofNullable(frameworkArns);
             return this;
         }
-
+        public Builder frameworkArns(String... frameworkArns) {
+            return frameworkArns(List.of(frameworkArns));
+        }
         public Builder reportTemplate(Output<String> reportTemplate) {
             this.reportTemplate = Objects.requireNonNull(reportTemplate);
             return this;
         }
-
         public Builder reportTemplate(String reportTemplate) {
             this.reportTemplate = Output.of(Objects.requireNonNull(reportTemplate));
             return this;
-        }
-        public ReportSettingPropertiesArgs build() {
+        }        public ReportSettingPropertiesArgs build() {
             return new ReportSettingPropertiesArgs(frameworkArns, reportTemplate);
         }
     }

@@ -188,92 +188,77 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
             this.age = age;
             return this;
         }
-
         public Builder age(@Nullable Integer age) {
             this.age = Output.ofNullable(age);
             return this;
         }
-
         public Builder createdBefore(@Nullable Output<String> createdBefore) {
             this.createdBefore = createdBefore;
             return this;
         }
-
         public Builder createdBefore(@Nullable String createdBefore) {
             this.createdBefore = Output.ofNullable(createdBefore);
             return this;
         }
-
         public Builder customTimeBefore(@Nullable Output<String> customTimeBefore) {
             this.customTimeBefore = customTimeBefore;
             return this;
         }
-
         public Builder customTimeBefore(@Nullable String customTimeBefore) {
             this.customTimeBefore = Output.ofNullable(customTimeBefore);
             return this;
         }
-
         public Builder daysSinceCustomTime(@Nullable Output<Integer> daysSinceCustomTime) {
             this.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
-
         public Builder daysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = Output.ofNullable(daysSinceCustomTime);
             return this;
         }
-
         public Builder daysSinceNoncurrentTime(@Nullable Output<Integer> daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
-
         public Builder daysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = Output.ofNullable(daysSinceNoncurrentTime);
             return this;
         }
-
         public Builder matchesStorageClasses(@Nullable Output<List<String>> matchesStorageClasses) {
             this.matchesStorageClasses = matchesStorageClasses;
             return this;
         }
-
         public Builder matchesStorageClasses(@Nullable List<String> matchesStorageClasses) {
             this.matchesStorageClasses = Output.ofNullable(matchesStorageClasses);
             return this;
         }
-
+        public Builder matchesStorageClasses(String... matchesStorageClasses) {
+            return matchesStorageClasses(List.of(matchesStorageClasses));
+        }
         public Builder noncurrentTimeBefore(@Nullable Output<String> noncurrentTimeBefore) {
             this.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
-
         public Builder noncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = Output.ofNullable(noncurrentTimeBefore);
             return this;
         }
-
         public Builder numNewerVersions(@Nullable Output<Integer> numNewerVersions) {
             this.numNewerVersions = numNewerVersions;
             return this;
         }
-
         public Builder numNewerVersions(@Nullable Integer numNewerVersions) {
             this.numNewerVersions = Output.ofNullable(numNewerVersions);
             return this;
         }
-
         public Builder withState(@Nullable Output<String> withState) {
             this.withState = withState;
             return this;
         }
-
         public Builder withState(@Nullable String withState) {
             this.withState = Output.ofNullable(withState);
             return this;
-        }
-        public BucketLifecycleRuleConditionArgs build() {
+        }        public BucketLifecycleRuleConditionArgs build() {
             return new BucketLifecycleRuleConditionArgs(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, matchesStorageClasses, noncurrentTimeBefore, numNewerVersions, withState);
         }
     }

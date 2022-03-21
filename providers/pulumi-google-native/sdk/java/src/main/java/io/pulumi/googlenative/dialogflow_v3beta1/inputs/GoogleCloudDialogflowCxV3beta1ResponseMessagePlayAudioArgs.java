@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
-
         public Builder audioUri(String audioUri) {
             this.audioUri = Output.of(Objects.requireNonNull(audioUri));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs(audioUri);
         }
     }

@@ -79,22 +79,18 @@ public final class GoogleCloudRetailV2betaConditionQueryTermArgs extends io.pulu
             this.fullMatch = fullMatch;
             return this;
         }
-
         public Builder fullMatch(@Nullable Boolean fullMatch) {
             this.fullMatch = Output.ofNullable(fullMatch);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public GoogleCloudRetailV2betaConditionQueryTermArgs build() {
+        }        public GoogleCloudRetailV2betaConditionQueryTermArgs build() {
             return new GoogleCloudRetailV2betaConditionQueryTermArgs(fullMatch, value);
         }
     }

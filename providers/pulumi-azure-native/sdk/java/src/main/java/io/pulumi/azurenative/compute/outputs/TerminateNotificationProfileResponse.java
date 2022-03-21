@@ -72,12 +72,10 @@ public final class TerminateNotificationProfileResponse {
             this.enable = enable;
             return this;
         }
-
         public Builder notBeforeTimeout(@Nullable String notBeforeTimeout) {
             this.notBeforeTimeout = notBeforeTimeout;
             return this;
-        }
-        public TerminateNotificationProfileResponse build() {
+        }        public TerminateNotificationProfileResponse build() {
             return new TerminateNotificationProfileResponse(enable, notBeforeTimeout);
         }
     }

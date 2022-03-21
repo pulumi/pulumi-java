@@ -102,22 +102,18 @@ public final class GetCassandraDataCenterResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(DataCenterResourceResponseProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCassandraDataCenterResult build() {
+        }        public GetCassandraDataCenterResult build() {
             return new GetCassandraDataCenterResult(id, name, properties, type);
         }
     }

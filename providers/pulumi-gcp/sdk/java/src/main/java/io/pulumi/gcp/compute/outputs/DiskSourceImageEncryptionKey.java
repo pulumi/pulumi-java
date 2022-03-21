@@ -119,22 +119,18 @@ public final class DiskSourceImageEncryptionKey {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
-
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
-
         public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }
-
         public Builder sha256(@Nullable String sha256) {
             this.sha256 = sha256;
             return this;
-        }
-        public DiskSourceImageEncryptionKey build() {
+        }        public DiskSourceImageEncryptionKey build() {
             return new DiskSourceImageEncryptionKey(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }
     }

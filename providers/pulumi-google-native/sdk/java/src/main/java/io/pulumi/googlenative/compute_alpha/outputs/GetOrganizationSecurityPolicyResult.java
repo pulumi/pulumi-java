@@ -343,107 +343,92 @@ public final class GetOrganizationSecurityPolicyResult {
             this.adaptiveProtectionConfig = Objects.requireNonNull(adaptiveProtectionConfig);
             return this;
         }
-
         public Builder advancedOptionsConfig(SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig) {
             this.advancedOptionsConfig = Objects.requireNonNull(advancedOptionsConfig);
             return this;
         }
-
         public Builder associations(List<SecurityPolicyAssociationResponse> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
-
+        public Builder associations(SecurityPolicyAssociationResponse... associations) {
+            return associations(List.of(associations));
+        }
         public Builder cloudArmorConfig(SecurityPolicyCloudArmorConfigResponse cloudArmorConfig) {
             this.cloudArmorConfig = Objects.requireNonNull(cloudArmorConfig);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder ddosProtectionConfig(SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig) {
             this.ddosProtectionConfig = Objects.requireNonNull(ddosProtectionConfig);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder recaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
-
         public Builder rules(List<SecurityPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(SecurityPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOrganizationSecurityPolicyResult build() {
+        }        public GetOrganizationSecurityPolicyResult build() {
             return new GetOrganizationSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, associations, cloudArmorConfig, creationTimestamp, ddosProtectionConfig, description, displayName, fingerprint, kind, labelFingerprint, labels, name, parent, recaptchaOptionsConfig, region, ruleTupleCount, rules, selfLink, selfLinkWithId, type);
         }
     }

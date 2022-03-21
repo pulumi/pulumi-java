@@ -126,52 +126,42 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
             this.bigQueryOptions = bigQueryOptions;
             return this;
         }
-
         public Builder bigQueryOptions(@Nullable GooglePrivacyDlpV2BigQueryOptionsArgs bigQueryOptions) {
             this.bigQueryOptions = Output.ofNullable(bigQueryOptions);
             return this;
         }
-
         public Builder cloudStorageOptions(@Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions) {
             this.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
-
         public Builder cloudStorageOptions(@Nullable GooglePrivacyDlpV2CloudStorageOptionsArgs cloudStorageOptions) {
             this.cloudStorageOptions = Output.ofNullable(cloudStorageOptions);
             return this;
         }
-
         public Builder datastoreOptions(@Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions) {
             this.datastoreOptions = datastoreOptions;
             return this;
         }
-
         public Builder datastoreOptions(@Nullable GooglePrivacyDlpV2DatastoreOptionsArgs datastoreOptions) {
             this.datastoreOptions = Output.ofNullable(datastoreOptions);
             return this;
         }
-
         public Builder hybridOptions(@Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions) {
             this.hybridOptions = hybridOptions;
             return this;
         }
-
         public Builder hybridOptions(@Nullable GooglePrivacyDlpV2HybridOptionsArgs hybridOptions) {
             this.hybridOptions = Output.ofNullable(hybridOptions);
             return this;
         }
-
         public Builder timespanConfig(@Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig) {
             this.timespanConfig = timespanConfig;
             return this;
         }
-
         public Builder timespanConfig(@Nullable GooglePrivacyDlpV2TimespanConfigArgs timespanConfig) {
             this.timespanConfig = Output.ofNullable(timespanConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2StorageConfigArgs build() {
+        }        public GooglePrivacyDlpV2StorageConfigArgs build() {
             return new GooglePrivacyDlpV2StorageConfigArgs(bigQueryOptions, cloudStorageOptions, datastoreOptions, hybridOptions, timespanConfig);
         }
     }

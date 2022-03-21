@@ -90,17 +90,14 @@ public final class GetIpAllocationArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder ipAllocationName(String ipAllocationName) {
             this.ipAllocationName = Objects.requireNonNull(ipAllocationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIpAllocationArgs build() {
+        }        public GetIpAllocationArgs build() {
             return new GetIpAllocationArgs(expand, ipAllocationName, resourceGroupName);
         }
     }

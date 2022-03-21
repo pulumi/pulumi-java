@@ -200,52 +200,42 @@ public final class ProjectArtifacts {
             this.artifactIdentifier = artifactIdentifier;
             return this;
         }
-
         public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespaceType(@Nullable String namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
-
         public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
             this.overrideArtifactName = overrideArtifactName;
             return this;
         }
-
         public Builder packaging(@Nullable String packaging) {
             this.packaging = packaging;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ProjectArtifacts build() {
+        }        public ProjectArtifacts build() {
             return new ProjectArtifacts(artifactIdentifier, bucketOwnerAccess, encryptionDisabled, location, name, namespaceType, overrideArtifactName, packaging, path, type);
         }
     }

@@ -88,17 +88,14 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder templateName(String templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
-        }
-        public GetEmailTemplateArgs build() {
+        }        public GetEmailTemplateArgs build() {
             return new GetEmailTemplateArgs(resourceGroupName, serviceName, templateName);
         }
     }

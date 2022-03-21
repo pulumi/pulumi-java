@@ -87,22 +87,18 @@ public final class DocumentParameter {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DocumentParameter build() {
+        }        public DocumentParameter build() {
             return new DocumentParameter(defaultValue, description, name, type);
         }
     }

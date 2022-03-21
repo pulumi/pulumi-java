@@ -52,8 +52,7 @@ public final class SensitiveTextAnnotationResponse {
         public Builder details(Map<String,String> details) {
             this.details = Objects.requireNonNull(details);
             return this;
-        }
-        public SensitiveTextAnnotationResponse build() {
+        }        public SensitiveTextAnnotationResponse build() {
             return new SensitiveTextAnnotationResponse(details);
         }
     }

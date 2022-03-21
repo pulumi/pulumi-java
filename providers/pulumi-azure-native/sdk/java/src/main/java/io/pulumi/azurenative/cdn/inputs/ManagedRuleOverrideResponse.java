@@ -94,17 +94,14 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
             this.action = action;
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
-        }
-        public ManagedRuleOverrideResponse build() {
+        }        public ManagedRuleOverrideResponse build() {
             return new ManagedRuleOverrideResponse(action, enabledState, ruleId);
         }
     }

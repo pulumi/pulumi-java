@@ -73,12 +73,13 @@ public final class OrganizationPolicyListPolicyAllow {
             this.all = all;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public OrganizationPolicyListPolicyAllow build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public OrganizationPolicyListPolicyAllow build() {
             return new OrganizationPolicyListPolicyAllow(all, values);
         }
     }

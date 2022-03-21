@@ -45,8 +45,7 @@ public final class DashboardSourceEntity {
         public Builder sourceTemplate(@Nullable DashboardSourceTemplate sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
-        }
-        public DashboardSourceEntity build() {
+        }        public DashboardSourceEntity build() {
             return new DashboardSourceEntity(sourceTemplate);
         }
     }

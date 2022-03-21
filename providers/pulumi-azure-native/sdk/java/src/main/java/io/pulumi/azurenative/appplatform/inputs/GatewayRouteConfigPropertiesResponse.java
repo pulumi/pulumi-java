@@ -96,17 +96,17 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
             this.appResourceId = appResourceId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routes(@Nullable List<GatewayApiRouteResponse> routes) {
             this.routes = routes;
             return this;
         }
-        public GatewayRouteConfigPropertiesResponse build() {
+        public Builder routes(GatewayApiRouteResponse... routes) {
+            return routes(List.of(routes));
+        }        public GatewayRouteConfigPropertiesResponse build() {
             return new GatewayRouteConfigPropertiesResponse(appResourceId, provisioningState, routes);
         }
     }

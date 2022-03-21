@@ -53,12 +53,10 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }
-
         public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimePropertyArgs immunityTimeProperty) {
             this.immunityTimeProperty = Output.ofNullable(immunityTimeProperty);
             return this;
-        }
-        public RuleGroupCaptchaConfigArgs build() {
+        }        public RuleGroupCaptchaConfigArgs build() {
             return new RuleGroupCaptchaConfigArgs(immunityTimeProperty);
         }
     }

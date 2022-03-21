@@ -88,17 +88,14 @@ public final class ClusterNodePoolNodeConfigGuestAccelerator {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ClusterNodePoolNodeConfigGuestAccelerator build() {
+        }        public ClusterNodePoolNodeConfigGuestAccelerator build() {
             return new ClusterNodePoolNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }
     }

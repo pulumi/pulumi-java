@@ -53,12 +53,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.bar = Output.ofNullable(bar).asSecret();
             return this;
         }
-
         public Builder bar(@Nullable String bar) {
             this.bar = Output.ofNullable(bar).asSecret();
             return this;
-        }
-        public ResourceArgs build() {
+        }        public ResourceArgs build() {
             return new ResourceArgs(bar);
         }
     }

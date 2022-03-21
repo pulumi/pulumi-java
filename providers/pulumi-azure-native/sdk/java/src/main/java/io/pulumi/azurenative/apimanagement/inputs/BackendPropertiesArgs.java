@@ -61,12 +61,10 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.serviceFabricCluster = serviceFabricCluster;
             return this;
         }
-
         public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesArgs serviceFabricCluster) {
             this.serviceFabricCluster = Output.ofNullable(serviceFabricCluster);
             return this;
-        }
-        public BackendPropertiesArgs build() {
+        }        public BackendPropertiesArgs build() {
             return new BackendPropertiesArgs(serviceFabricCluster);
         }
     }

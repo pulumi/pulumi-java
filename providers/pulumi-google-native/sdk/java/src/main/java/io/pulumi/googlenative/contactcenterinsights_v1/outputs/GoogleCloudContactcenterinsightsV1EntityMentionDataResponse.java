@@ -86,17 +86,14 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
             this.entityUniqueId = Objects.requireNonNull(entityUniqueId);
             return this;
         }
-
         public Builder sentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
             this.sentiment = Objects.requireNonNull(sentiment);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(entityUniqueId, sentiment, type);
         }
     }

@@ -86,17 +86,14 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder isList(Boolean isList) {
             this.isList = Objects.requireNonNull(isList);
             return this;
         }
-
         public Builder redact(Boolean redact) {
             this.redact = Objects.requireNonNull(redact);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3IntentParameterResponse build() {
+        }        public GoogleCloudDialogflowCxV3IntentParameterResponse build() {
             return new GoogleCloudDialogflowCxV3IntentParameterResponse(entityType, isList, redact);
         }
     }

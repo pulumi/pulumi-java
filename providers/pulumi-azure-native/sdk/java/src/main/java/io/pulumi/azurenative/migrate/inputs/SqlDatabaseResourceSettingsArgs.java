@@ -97,32 +97,26 @@ public final class SqlDatabaseResourceSettingsArgs extends io.pulumi.resources.R
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Output<Either<String,ZoneRedundant>> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Either<String,ZoneRedundant> zoneRedundant) {
             this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
-        }
-        public SqlDatabaseResourceSettingsArgs build() {
+        }        public SqlDatabaseResourceSettingsArgs build() {
             return new SqlDatabaseResourceSettingsArgs(resourceType, targetResourceName, zoneRedundant);
         }
     }

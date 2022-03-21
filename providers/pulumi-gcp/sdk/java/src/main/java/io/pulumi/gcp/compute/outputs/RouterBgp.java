@@ -136,22 +136,24 @@ public final class RouterBgp {
             this.advertiseMode = advertiseMode;
             return this;
         }
-
         public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
-
+        public Builder advertisedGroups(String... advertisedGroups) {
+            return advertisedGroups(List.of(advertisedGroups));
+        }
         public Builder advertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
-
+        public Builder advertisedIpRanges(RouterBgpAdvertisedIpRange... advertisedIpRanges) {
+            return advertisedIpRanges(List.of(advertisedIpRanges));
+        }
         public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
-        }
-        public RouterBgp build() {
+        }        public RouterBgp build() {
             return new RouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
         }
     }

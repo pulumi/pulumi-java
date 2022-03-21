@@ -51,8 +51,7 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OSPolicyResourcePackageResourceGooGetResponse build() {
+        }        public OSPolicyResourcePackageResourceGooGetResponse build() {
             return new OSPolicyResourcePackageResourceGooGetResponse(name);
         }
     }

@@ -78,12 +78,10 @@ public final class WebAnonymousAuthenticationResponse extends io.pulumi.resource
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public WebAnonymousAuthenticationResponse build() {
+        }        public WebAnonymousAuthenticationResponse build() {
             return new WebAnonymousAuthenticationResponse(authenticationType, url);
         }
     }

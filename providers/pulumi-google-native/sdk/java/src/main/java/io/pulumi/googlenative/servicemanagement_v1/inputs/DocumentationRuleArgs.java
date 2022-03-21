@@ -94,32 +94,26 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
             this.deprecationDescription = deprecationDescription;
             return this;
         }
-
         public Builder deprecationDescription(@Nullable String deprecationDescription) {
             this.deprecationDescription = Output.ofNullable(deprecationDescription);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public DocumentationRuleArgs build() {
+        }        public DocumentationRuleArgs build() {
             return new DocumentationRuleArgs(deprecationDescription, description, selector);
         }
     }

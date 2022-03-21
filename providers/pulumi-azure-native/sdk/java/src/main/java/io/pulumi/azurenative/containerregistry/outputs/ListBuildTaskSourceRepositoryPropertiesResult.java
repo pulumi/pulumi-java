@@ -105,22 +105,18 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
             this.isCommitTriggerEnabled = isCommitTriggerEnabled;
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder sourceControlAuthProperties(@Nullable SourceControlAuthInfoResponse sourceControlAuthProperties) {
             this.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
-
         public Builder sourceControlType(String sourceControlType) {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
-        }
-        public ListBuildTaskSourceRepositoryPropertiesResult build() {
+        }        public ListBuildTaskSourceRepositoryPropertiesResult build() {
             return new ListBuildTaskSourceRepositoryPropertiesResult(isCommitTriggerEnabled, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }
     }

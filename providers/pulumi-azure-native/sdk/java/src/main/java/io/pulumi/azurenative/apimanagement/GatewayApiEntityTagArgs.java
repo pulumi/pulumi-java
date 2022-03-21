@@ -123,52 +123,42 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder gatewayId(Output<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<ProvisioningState> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable ProvisioningState provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public GatewayApiEntityTagArgs build() {
+        }        public GatewayApiEntityTagArgs build() {
             return new GatewayApiEntityTagArgs(apiId, gatewayId, provisioningState, resourceGroupName, serviceName);
         }
     }

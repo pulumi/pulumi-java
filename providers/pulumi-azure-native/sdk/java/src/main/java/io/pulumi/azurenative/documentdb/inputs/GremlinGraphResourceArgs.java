@@ -147,62 +147,50 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
-
         public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyArgs conflictResolutionPolicy) {
             this.conflictResolutionPolicy = Output.ofNullable(conflictResolutionPolicy);
             return this;
         }
-
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder indexingPolicy(@Nullable Output<IndexingPolicyArgs> indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
         }
-
         public Builder indexingPolicy(@Nullable IndexingPolicyArgs indexingPolicy) {
             this.indexingPolicy = Output.ofNullable(indexingPolicy);
             return this;
         }
-
         public Builder partitionKey(@Nullable Output<ContainerPartitionKeyArgs> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder partitionKey(@Nullable ContainerPartitionKeyArgs partitionKey) {
             this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
-
         public Builder uniqueKeyPolicy(@Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy) {
             this.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
         }
-
         public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyArgs uniqueKeyPolicy) {
             this.uniqueKeyPolicy = Output.ofNullable(uniqueKeyPolicy);
             return this;
-        }
-        public GremlinGraphResourceArgs build() {
+        }        public GremlinGraphResourceArgs build() {
             return new GremlinGraphResourceArgs(conflictResolutionPolicy, defaultTtl, id, indexingPolicy, partitionKey, uniqueKeyPolicy);
         }
     }

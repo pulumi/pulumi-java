@@ -353,192 +353,157 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
             this.alsologtostderr = alsologtostderr;
             return this;
         }
-
         public Builder alsologtostderr(@Nullable Boolean alsologtostderr) {
             this.alsologtostderr = Output.ofNullable(alsologtostderr);
             return this;
         }
-
         public Builder baseTaskDir(@Nullable Output<String> baseTaskDir) {
             this.baseTaskDir = baseTaskDir;
             return this;
         }
-
         public Builder baseTaskDir(@Nullable String baseTaskDir) {
             this.baseTaskDir = Output.ofNullable(baseTaskDir);
             return this;
         }
-
         public Builder baseUrl(@Nullable Output<String> baseUrl) {
             this.baseUrl = baseUrl;
             return this;
         }
-
         public Builder baseUrl(@Nullable String baseUrl) {
             this.baseUrl = Output.ofNullable(baseUrl);
             return this;
         }
-
         public Builder commandlinesFileName(@Nullable Output<String> commandlinesFileName) {
             this.commandlinesFileName = commandlinesFileName;
             return this;
         }
-
         public Builder commandlinesFileName(@Nullable String commandlinesFileName) {
             this.commandlinesFileName = Output.ofNullable(commandlinesFileName);
             return this;
         }
-
         public Builder continueOnException(@Nullable Output<Boolean> continueOnException) {
             this.continueOnException = continueOnException;
             return this;
         }
-
         public Builder continueOnException(@Nullable Boolean continueOnException) {
             this.continueOnException = Output.ofNullable(continueOnException);
             return this;
         }
-
         public Builder dataflowApiVersion(@Nullable Output<String> dataflowApiVersion) {
             this.dataflowApiVersion = dataflowApiVersion;
             return this;
         }
-
         public Builder dataflowApiVersion(@Nullable String dataflowApiVersion) {
             this.dataflowApiVersion = Output.ofNullable(dataflowApiVersion);
             return this;
         }
-
         public Builder harnessCommand(@Nullable Output<String> harnessCommand) {
             this.harnessCommand = harnessCommand;
             return this;
         }
-
         public Builder harnessCommand(@Nullable String harnessCommand) {
             this.harnessCommand = Output.ofNullable(harnessCommand);
             return this;
         }
-
         public Builder languageHint(@Nullable Output<String> languageHint) {
             this.languageHint = languageHint;
             return this;
         }
-
         public Builder languageHint(@Nullable String languageHint) {
             this.languageHint = Output.ofNullable(languageHint);
             return this;
         }
-
         public Builder logDir(@Nullable Output<String> logDir) {
             this.logDir = logDir;
             return this;
         }
-
         public Builder logDir(@Nullable String logDir) {
             this.logDir = Output.ofNullable(logDir);
             return this;
         }
-
         public Builder logToSerialconsole(@Nullable Output<Boolean> logToSerialconsole) {
             this.logToSerialconsole = logToSerialconsole;
             return this;
         }
-
         public Builder logToSerialconsole(@Nullable Boolean logToSerialconsole) {
             this.logToSerialconsole = Output.ofNullable(logToSerialconsole);
             return this;
         }
-
         public Builder logUploadLocation(@Nullable Output<String> logUploadLocation) {
             this.logUploadLocation = logUploadLocation;
             return this;
         }
-
         public Builder logUploadLocation(@Nullable String logUploadLocation) {
             this.logUploadLocation = Output.ofNullable(logUploadLocation);
             return this;
         }
-
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
-
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder parallelWorkerSettings(@Nullable Output<WorkerSettingsArgs> parallelWorkerSettings) {
             this.parallelWorkerSettings = parallelWorkerSettings;
             return this;
         }
-
         public Builder parallelWorkerSettings(@Nullable WorkerSettingsArgs parallelWorkerSettings) {
             this.parallelWorkerSettings = Output.ofNullable(parallelWorkerSettings);
             return this;
         }
-
         public Builder streamingWorkerMainClass(@Nullable Output<String> streamingWorkerMainClass) {
             this.streamingWorkerMainClass = streamingWorkerMainClass;
             return this;
         }
-
         public Builder streamingWorkerMainClass(@Nullable String streamingWorkerMainClass) {
             this.streamingWorkerMainClass = Output.ofNullable(streamingWorkerMainClass);
             return this;
         }
-
         public Builder taskGroup(@Nullable Output<String> taskGroup) {
             this.taskGroup = taskGroup;
             return this;
         }
-
         public Builder taskGroup(@Nullable String taskGroup) {
             this.taskGroup = Output.ofNullable(taskGroup);
             return this;
         }
-
         public Builder taskUser(@Nullable Output<String> taskUser) {
             this.taskUser = taskUser;
             return this;
         }
-
         public Builder taskUser(@Nullable String taskUser) {
             this.taskUser = Output.ofNullable(taskUser);
             return this;
         }
-
         public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
-
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
             this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
             return this;
         }
-
         public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = Output.ofNullable(vmId);
             return this;
         }
-
         public Builder workflowFileName(@Nullable Output<String> workflowFileName) {
             this.workflowFileName = workflowFileName;
             return this;
         }
-
         public Builder workflowFileName(@Nullable String workflowFileName) {
             this.workflowFileName = Output.ofNullable(workflowFileName);
             return this;
-        }
-        public TaskRunnerSettingsArgs build() {
+        }        public TaskRunnerSettingsArgs build() {
             return new TaskRunnerSettingsArgs(alsologtostderr, baseTaskDir, baseUrl, commandlinesFileName, continueOnException, dataflowApiVersion, harnessCommand, languageHint, logDir, logToSerialconsole, logUploadLocation, oauthScopes, parallelWorkerSettings, streamingWorkerMainClass, taskGroup, taskUser, tempStoragePrefix, vmId, workflowFileName);
         }
     }

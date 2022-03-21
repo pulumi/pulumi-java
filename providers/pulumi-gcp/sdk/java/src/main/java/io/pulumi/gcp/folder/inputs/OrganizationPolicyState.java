@@ -175,82 +175,66 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             this.booleanPolicy = booleanPolicy;
             return this;
         }
-
         public Builder booleanPolicy(@Nullable OrganizationPolicyBooleanPolicyGetArgs booleanPolicy) {
             this.booleanPolicy = Output.ofNullable(booleanPolicy);
             return this;
         }
-
         public Builder constraint(@Nullable Output<String> constraint) {
             this.constraint = constraint;
             return this;
         }
-
         public Builder constraint(@Nullable String constraint) {
             this.constraint = Output.ofNullable(constraint);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable String folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder listPolicy(@Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
-
         public Builder listPolicy(@Nullable OrganizationPolicyListPolicyGetArgs listPolicy) {
             this.listPolicy = Output.ofNullable(listPolicy);
             return this;
         }
-
         public Builder restorePolicy(@Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
-
         public Builder restorePolicy(@Nullable OrganizationPolicyRestorePolicyGetArgs restorePolicy) {
             this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public OrganizationPolicyState build() {
+        }        public OrganizationPolicyState build() {
             return new OrganizationPolicyState(booleanPolicy, constraint, etag, folder, listPolicy, restorePolicy, updateTime, version);
         }
     }

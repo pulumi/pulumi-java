@@ -72,12 +72,10 @@ public final class ListOpenShiftClusterCredentialsArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListOpenShiftClusterCredentialsArgs build() {
+        }        public ListOpenShiftClusterCredentialsArgs build() {
             return new ListOpenShiftClusterCredentialsArgs(resourceGroupName, resourceName);
         }
     }

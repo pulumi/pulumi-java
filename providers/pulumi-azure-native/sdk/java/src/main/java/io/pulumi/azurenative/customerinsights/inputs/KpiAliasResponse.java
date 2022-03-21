@@ -76,12 +76,10 @@ public final class KpiAliasResponse extends io.pulumi.resources.InvokeArgs {
             this.aliasName = Objects.requireNonNull(aliasName);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
-        }
-        public KpiAliasResponse build() {
+        }        public KpiAliasResponse build() {
             return new KpiAliasResponse(aliasName, expression);
         }
     }

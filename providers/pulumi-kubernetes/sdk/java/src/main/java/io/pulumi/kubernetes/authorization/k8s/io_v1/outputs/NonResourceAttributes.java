@@ -71,12 +71,10 @@ public final class NonResourceAttributes {
             this.path = path;
             return this;
         }
-
         public Builder verb(@Nullable String verb) {
             this.verb = verb;
             return this;
-        }
-        public NonResourceAttributes build() {
+        }        public NonResourceAttributes build() {
             return new NonResourceAttributes(path, verb);
         }
     }

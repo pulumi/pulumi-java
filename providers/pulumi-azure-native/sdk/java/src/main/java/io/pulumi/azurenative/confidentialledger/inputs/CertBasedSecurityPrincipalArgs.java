@@ -80,22 +80,18 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
             this.cert = cert;
             return this;
         }
-
         public Builder cert(@Nullable String cert) {
             this.cert = Output.ofNullable(cert);
             return this;
         }
-
         public Builder ledgerRoleName(@Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
-
         public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
             this.ledgerRoleName = Output.ofNullable(ledgerRoleName);
             return this;
-        }
-        public CertBasedSecurityPrincipalArgs build() {
+        }        public CertBasedSecurityPrincipalArgs build() {
             return new CertBasedSecurityPrincipalArgs(cert, ledgerRoleName);
         }
     }

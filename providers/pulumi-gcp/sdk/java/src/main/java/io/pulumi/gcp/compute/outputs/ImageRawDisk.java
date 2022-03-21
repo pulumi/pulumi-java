@@ -103,17 +103,14 @@ public final class ImageRawDisk {
             this.containerType = containerType;
             return this;
         }
-
         public Builder sha1(@Nullable String sha1) {
             this.sha1 = sha1;
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public ImageRawDisk build() {
+        }        public ImageRawDisk build() {
             return new ImageRawDisk(containerType, sha1, source);
         }
     }

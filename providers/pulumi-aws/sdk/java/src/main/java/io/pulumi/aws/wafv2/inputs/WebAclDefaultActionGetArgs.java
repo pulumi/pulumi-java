@@ -75,22 +75,18 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable WebAclDefaultActionAllowGetArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder block(@Nullable Output<WebAclDefaultActionBlockGetArgs> block) {
             this.block = block;
             return this;
         }
-
         public Builder block(@Nullable WebAclDefaultActionBlockGetArgs block) {
             this.block = Output.ofNullable(block);
             return this;
-        }
-        public WebAclDefaultActionGetArgs build() {
+        }        public WebAclDefaultActionGetArgs build() {
             return new WebAclDefaultActionGetArgs(allow, block);
         }
     }

@@ -93,17 +93,14 @@ public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs 
             this.adminCluster = Objects.requireNonNull(adminCluster);
             return this;
         }
-
         public Builder clusterMissing(Boolean clusterMissing) {
             this.clusterMissing = Objects.requireNonNull(clusterMissing);
             return this;
         }
-
         public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
-        }
-        public OnPremClusterResponse build() {
+        }        public OnPremClusterResponse build() {
             return new OnPremClusterResponse(adminCluster, clusterMissing, resourceLink);
         }
     }

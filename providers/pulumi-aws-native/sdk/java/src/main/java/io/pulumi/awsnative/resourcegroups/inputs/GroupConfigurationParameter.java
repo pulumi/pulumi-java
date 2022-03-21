@@ -67,12 +67,13 @@ public final class GroupConfigurationParameter extends io.pulumi.resources.Invok
             this.name = name;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public GroupConfigurationParameter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GroupConfigurationParameter build() {
             return new GroupConfigurationParameter(name, values);
         }
     }

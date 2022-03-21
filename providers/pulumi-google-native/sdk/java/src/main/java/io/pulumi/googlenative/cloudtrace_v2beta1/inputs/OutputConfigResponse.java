@@ -58,8 +58,7 @@ public final class OutputConfigResponse extends io.pulumi.resources.InvokeArgs {
         public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
-        }
-        public OutputConfigResponse build() {
+        }        public OutputConfigResponse build() {
             return new OutputConfigResponse(destination);
         }
     }

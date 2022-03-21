@@ -60,7 +60,9 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.searchParameters = Objects.requireNonNull(searchParameters);
             return this;
         }
-        public SearchConfigResponse build() {
+        public Builder searchParameters(SearchParameterResponse... searchParameters) {
+            return searchParameters(List.of(searchParameters));
+        }        public SearchConfigResponse build() {
             return new SearchConfigResponse(searchParameters);
         }
     }

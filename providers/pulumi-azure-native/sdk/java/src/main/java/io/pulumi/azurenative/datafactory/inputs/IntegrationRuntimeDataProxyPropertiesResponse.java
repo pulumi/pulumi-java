@@ -95,17 +95,14 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder stagingLinkedService(@Nullable EntityReferenceResponse stagingLinkedService) {
             this.stagingLinkedService = stagingLinkedService;
             return this;
-        }
-        public IntegrationRuntimeDataProxyPropertiesResponse build() {
+        }        public IntegrationRuntimeDataProxyPropertiesResponse build() {
             return new IntegrationRuntimeDataProxyPropertiesResponse(connectVia, path, stagingLinkedService);
         }
     }

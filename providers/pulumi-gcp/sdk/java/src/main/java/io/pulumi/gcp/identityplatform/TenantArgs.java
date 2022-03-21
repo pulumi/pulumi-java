@@ -126,52 +126,42 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
             this.allowPasswordSignup = allowPasswordSignup;
             return this;
         }
-
         public Builder allowPasswordSignup(@Nullable Boolean allowPasswordSignup) {
             this.allowPasswordSignup = Output.ofNullable(allowPasswordSignup);
             return this;
         }
-
         public Builder disableAuth(@Nullable Output<Boolean> disableAuth) {
             this.disableAuth = disableAuth;
             return this;
         }
-
         public Builder disableAuth(@Nullable Boolean disableAuth) {
             this.disableAuth = Output.ofNullable(disableAuth);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enableEmailLinkSignin(@Nullable Output<Boolean> enableEmailLinkSignin) {
             this.enableEmailLinkSignin = enableEmailLinkSignin;
             return this;
         }
-
         public Builder enableEmailLinkSignin(@Nullable Boolean enableEmailLinkSignin) {
             this.enableEmailLinkSignin = Output.ofNullable(enableEmailLinkSignin);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public TenantArgs build() {
+        }        public TenantArgs build() {
             return new TenantArgs(allowPasswordSignup, disableAuth, displayName, enableEmailLinkSignin, project);
         }
     }

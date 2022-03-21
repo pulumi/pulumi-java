@@ -174,82 +174,66 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
             this.dataCollectionEndpointName = dataCollectionEndpointName;
             return this;
         }
-
         public Builder dataCollectionEndpointName(@Nullable String dataCollectionEndpointName) {
             this.dataCollectionEndpointName = Output.ofNullable(dataCollectionEndpointName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder immutableId(@Nullable Output<String> immutableId) {
             this.immutableId = immutableId;
             return this;
         }
-
         public Builder immutableId(@Nullable String immutableId) {
             this.immutableId = Output.ofNullable(immutableId);
             return this;
         }
-
         public Builder kind(@Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,KnownDataCollectionEndpointResourceKind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkAcls(@Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
-
         public Builder networkAcls(@Nullable DataCollectionEndpointNetworkAclsArgs networkAcls) {
             this.networkAcls = Output.ofNullable(networkAcls);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DataCollectionEndpointArgs build() {
+        }        public DataCollectionEndpointArgs build() {
             return new DataCollectionEndpointArgs(dataCollectionEndpointName, description, immutableId, kind, location, networkAcls, resourceGroupName, tags);
         }
     }

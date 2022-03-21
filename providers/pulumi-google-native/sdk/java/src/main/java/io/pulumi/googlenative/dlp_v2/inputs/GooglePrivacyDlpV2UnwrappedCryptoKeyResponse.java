@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse extends io.pulum
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse build() {
+        }        public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(key);
         }
     }

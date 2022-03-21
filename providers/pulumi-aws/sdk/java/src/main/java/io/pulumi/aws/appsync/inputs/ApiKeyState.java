@@ -106,42 +106,34 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expires(@Nullable Output<String> expires) {
             this.expires = expires;
             return this;
         }
-
         public Builder expires(@Nullable String expires) {
             this.expires = Output.ofNullable(expires);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public ApiKeyState build() {
+        }        public ApiKeyState build() {
             return new ApiKeyState(apiId, description, expires, key);
         }
     }

@@ -102,22 +102,18 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
             this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
-        }
-        public ContactListTopic build() {
+        }        public ContactListTopic build() {
             return new ContactListTopic(defaultSubscriptionStatus, description, displayName, topicName);
         }
     }

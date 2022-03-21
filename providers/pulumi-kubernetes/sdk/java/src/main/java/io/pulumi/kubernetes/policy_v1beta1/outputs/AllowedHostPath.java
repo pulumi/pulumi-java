@@ -76,12 +76,10 @@ public final class AllowedHostPath {
             this.pathPrefix = pathPrefix;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
-        }
-        public AllowedHostPath build() {
+        }        public AllowedHostPath build() {
             return new AllowedHostPath(pathPrefix, readOnly);
         }
     }

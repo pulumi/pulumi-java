@@ -92,32 +92,26 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends io.pulumi.r
             this.acm = acm;
             return this;
         }
-
         public Builder acm(@Nullable VirtualNodeSpecListenerTlsCertificateAcmArgs acm) {
             this.acm = Output.ofNullable(acm);
             return this;
         }
-
         public Builder file(@Nullable Output<VirtualNodeSpecListenerTlsCertificateFileArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable VirtualNodeSpecListenerTlsCertificateFileArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder sds(@Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
-
         public Builder sds(@Nullable VirtualNodeSpecListenerTlsCertificateSdsArgs sds) {
             this.sds = Output.ofNullable(sds);
             return this;
-        }
-        public VirtualNodeSpecListenerTlsCertificateArgs build() {
+        }        public VirtualNodeSpecListenerTlsCertificateArgs build() {
             return new VirtualNodeSpecListenerTlsCertificateArgs(acm, file, sds);
         }
     }

@@ -81,27 +81,28 @@ public final class ExtendedErrorInfoResponse {
             this.additionalInfo = additionalInfo;
             return this;
         }
-
+        public Builder additionalInfo(TypedErrorInfoResponse... additionalInfo) {
+            return additionalInfo(List.of(additionalInfo));
+        }
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
-
         public Builder details(@Nullable List<ExtendedErrorInfoResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(ExtendedErrorInfoResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ExtendedErrorInfoResponse build() {
+        }        public ExtendedErrorInfoResponse build() {
             return new ExtendedErrorInfoResponse(additionalInfo, code, details, message, target);
         }
     }

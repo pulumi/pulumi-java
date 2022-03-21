@@ -106,22 +106,18 @@ public final class RouterNatRuleResponse extends io.pulumi.resources.InvokeArgs 
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder match(String match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder ruleNumber(Integer ruleNumber) {
             this.ruleNumber = Objects.requireNonNull(ruleNumber);
             return this;
-        }
-        public RouterNatRuleResponse build() {
+        }        public RouterNatRuleResponse build() {
             return new RouterNatRuleResponse(action, description, match, ruleNumber);
         }
     }

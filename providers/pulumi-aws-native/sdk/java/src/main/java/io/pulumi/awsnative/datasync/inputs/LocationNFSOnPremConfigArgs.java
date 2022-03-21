@@ -61,12 +61,13 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
-
         public Builder agentArns(List<String> agentArns) {
             this.agentArns = Output.of(Objects.requireNonNull(agentArns));
             return this;
         }
-        public LocationNFSOnPremConfigArgs build() {
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }        public LocationNFSOnPremConfigArgs build() {
             return new LocationNFSOnPremConfigArgs(agentArns);
         }
     }

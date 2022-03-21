@@ -61,12 +61,10 @@ public final class CspmMonitorAwsOfferingNativeCloudConnectionArgs extends io.pu
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = Output.ofNullable(cloudRoleArn);
             return this;
-        }
-        public CspmMonitorAwsOfferingNativeCloudConnectionArgs build() {
+        }        public CspmMonitorAwsOfferingNativeCloudConnectionArgs build() {
             return new CspmMonitorAwsOfferingNativeCloudConnectionArgs(cloudRoleArn);
         }
     }

@@ -61,12 +61,10 @@ public final class KeyVaultKeyReferenceSourceVaultArgs extends io.pulumi.resourc
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public KeyVaultKeyReferenceSourceVaultArgs build() {
+        }        public KeyVaultKeyReferenceSourceVaultArgs build() {
             return new KeyVaultKeyReferenceSourceVaultArgs(id);
         }
     }

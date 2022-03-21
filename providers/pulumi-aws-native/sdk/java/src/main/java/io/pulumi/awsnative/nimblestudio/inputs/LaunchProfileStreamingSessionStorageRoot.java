@@ -79,12 +79,10 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
             this.linux = linux;
             return this;
         }
-
         public Builder windows(@Nullable String windows) {
             this.windows = windows;
             return this;
-        }
-        public LaunchProfileStreamingSessionStorageRoot build() {
+        }        public LaunchProfileStreamingSessionStorageRoot build() {
             return new LaunchProfileStreamingSessionStorageRoot(linux, windows);
         }
     }

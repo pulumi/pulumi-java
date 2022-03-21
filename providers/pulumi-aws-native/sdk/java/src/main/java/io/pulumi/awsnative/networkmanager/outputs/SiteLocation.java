@@ -87,17 +87,14 @@ public final class SiteLocation {
             this.address = address;
             return this;
         }
-
         public Builder latitude(@Nullable String latitude) {
             this.latitude = latitude;
             return this;
         }
-
         public Builder longitude(@Nullable String longitude) {
             this.longitude = longitude;
             return this;
-        }
-        public SiteLocation build() {
+        }        public SiteLocation build() {
             return new SiteLocation(address, latitude, longitude);
         }
     }

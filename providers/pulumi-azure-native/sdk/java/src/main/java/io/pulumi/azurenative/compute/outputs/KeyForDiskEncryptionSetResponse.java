@@ -72,12 +72,10 @@ public final class KeyForDiskEncryptionSetResponse {
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
-
         public Builder sourceVault(@Nullable SourceVaultResponse sourceVault) {
             this.sourceVault = sourceVault;
             return this;
-        }
-        public KeyForDiskEncryptionSetResponse build() {
+        }        public KeyForDiskEncryptionSetResponse build() {
             return new KeyForDiskEncryptionSetResponse(keyUrl, sourceVault);
         }
     }

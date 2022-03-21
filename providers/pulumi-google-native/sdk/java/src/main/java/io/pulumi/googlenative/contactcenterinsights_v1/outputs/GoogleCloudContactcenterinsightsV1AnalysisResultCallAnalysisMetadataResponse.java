@@ -138,32 +138,32 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
+        public Builder annotations(GoogleCloudContactcenterinsightsV1CallAnnotationResponse... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder entities(Map<String,String> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
-
         public Builder intents(Map<String,String> intents) {
             this.intents = Objects.requireNonNull(intents);
             return this;
         }
-
         public Builder issueModelResult(GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult) {
             this.issueModelResult = Objects.requireNonNull(issueModelResult);
             return this;
         }
-
         public Builder phraseMatchers(Map<String,String> phraseMatchers) {
             this.phraseMatchers = Objects.requireNonNull(phraseMatchers);
             return this;
         }
-
         public Builder sentiments(List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
             this.sentiments = Objects.requireNonNull(sentiments);
             return this;
         }
-        public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse build() {
+        public Builder sentiments(GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse... sentiments) {
+            return sentiments(List.of(sentiments));
+        }        public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(annotations, entities, intents, issueModelResult, phraseMatchers, sentiments);
         }
     }

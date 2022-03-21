@@ -73,12 +73,13 @@ public final class FirewallDeniedItemResponse extends io.pulumi.resources.Invoke
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
-
         public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public FirewallDeniedItemResponse build() {
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }        public FirewallDeniedItemResponse build() {
             return new FirewallDeniedItemResponse(ipProtocol, ports);
         }
     }

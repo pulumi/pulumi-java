@@ -95,32 +95,26 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.contentHash = contentHash;
             return this;
         }
-
         public Builder contentHash(@Nullable HashArgs contentHash) {
             this.contentHash = Output.ofNullable(contentHash);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ResourceArgs build() {
+        }        public ResourceArgs build() {
             return new ResourceArgs(contentHash, name, uri);
         }
     }

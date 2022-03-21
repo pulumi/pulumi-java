@@ -109,42 +109,40 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
             this.defaultRouteTableId = Objects.requireNonNull(defaultRouteTableId);
             return this;
         }
-
         public Builder defaultRouteTableId(String defaultRouteTableId) {
             this.defaultRouteTableId = Output.of(Objects.requireNonNull(defaultRouteTableId));
             return this;
         }
-
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
-
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
             this.propagatingVgws = Output.ofNullable(propagatingVgws);
             return this;
         }
-
+        public Builder propagatingVgws(String... propagatingVgws) {
+            return propagatingVgws(List.of(propagatingVgws));
+        }
         public Builder routes(@Nullable Output<List<DefaultRouteTableRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<DefaultRouteTableRouteArgs> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
+        public Builder routes(DefaultRouteTableRouteArgs... routes) {
+            return routes(List.of(routes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DefaultRouteTableArgs build() {
+        }        public DefaultRouteTableArgs build() {
             return new DefaultRouteTableArgs(defaultRouteTableId, propagatingVgws, routes, tags);
         }
     }

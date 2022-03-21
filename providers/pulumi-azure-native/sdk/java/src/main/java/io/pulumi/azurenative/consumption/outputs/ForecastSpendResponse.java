@@ -70,12 +70,10 @@ public final class ForecastSpendResponse {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
-        }
-        public ForecastSpendResponse build() {
+        }        public ForecastSpendResponse build() {
             return new ForecastSpendResponse(amount, unit);
         }
     }

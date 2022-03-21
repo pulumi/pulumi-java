@@ -73,12 +73,13 @@ public final class TemplateColumnGroupSchema {
             this.columnGroupColumnSchemaList = columnGroupColumnSchemaList;
             return this;
         }
-
+        public Builder columnGroupColumnSchemaList(TemplateColumnGroupColumnSchema... columnGroupColumnSchemaList) {
+            return columnGroupColumnSchemaList(List.of(columnGroupColumnSchemaList));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public TemplateColumnGroupSchema build() {
+        }        public TemplateColumnGroupSchema build() {
             return new TemplateColumnGroupSchema(columnGroupColumnSchemaList, name);
         }
     }

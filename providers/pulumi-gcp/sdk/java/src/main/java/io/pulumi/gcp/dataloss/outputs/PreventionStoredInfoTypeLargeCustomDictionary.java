@@ -97,17 +97,14 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
             this.bigQueryField = bigQueryField;
             return this;
         }
-
         public Builder cloudStorageFileSet(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet cloudStorageFileSet) {
             this.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
-
         public Builder outputPath(PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
-        }
-        public PreventionStoredInfoTypeLargeCustomDictionary build() {
+        }        public PreventionStoredInfoTypeLargeCustomDictionary build() {
             return new PreventionStoredInfoTypeLargeCustomDictionary(bigQueryField, cloudStorageFileSet, outputPath);
         }
     }

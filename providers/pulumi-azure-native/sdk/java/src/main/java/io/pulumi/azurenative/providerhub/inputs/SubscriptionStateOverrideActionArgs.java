@@ -68,22 +68,18 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(Either<String,SubscriptionNotificationOperation> action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder state(Output<Either<String,SubscriptionTransitioningState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(Either<String,SubscriptionTransitioningState> state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
-        }
-        public SubscriptionStateOverrideActionArgs build() {
+        }        public SubscriptionStateOverrideActionArgs build() {
             return new SubscriptionStateOverrideActionArgs(action, state);
         }
     }

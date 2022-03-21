@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs exten
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
-
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = Output.of(Objects.requireNonNull(certificateChain));
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs build() {
+        }        public VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs build() {
             return new VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs(certificateChain);
         }
     }

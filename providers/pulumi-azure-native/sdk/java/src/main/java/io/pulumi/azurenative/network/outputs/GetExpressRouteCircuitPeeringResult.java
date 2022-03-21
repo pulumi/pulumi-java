@@ -433,122 +433,104 @@ public final class GetExpressRouteCircuitPeeringResult {
             this.azureASN = azureASN;
             return this;
         }
-
         public Builder connections(@Nullable List<ExpressRouteCircuitConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
-
+        public Builder connections(ExpressRouteCircuitConnectionResponse... connections) {
+            return connections(List.of(connections));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expressRouteConnection(@Nullable ExpressRouteConnectionIdResponse expressRouteConnection) {
             this.expressRouteConnection = expressRouteConnection;
             return this;
         }
-
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig) {
             this.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
-
         public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
-
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder peerASN(@Nullable Double peerASN) {
             this.peerASN = peerASN;
             return this;
         }
-
         public Builder peeredConnections(List<PeerExpressRouteCircuitConnectionResponse> peeredConnections) {
             this.peeredConnections = Objects.requireNonNull(peeredConnections);
             return this;
         }
-
+        public Builder peeredConnections(PeerExpressRouteCircuitConnectionResponse... peeredConnections) {
+            return peeredConnections(List.of(peeredConnections));
+        }
         public Builder peeringType(@Nullable String peeringType) {
             this.peeringType = peeringType;
             return this;
         }
-
         public Builder primaryAzurePort(@Nullable String primaryAzurePort) {
             this.primaryAzurePort = primaryAzurePort;
             return this;
         }
-
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
-
         public Builder secondaryAzurePort(@Nullable String secondaryAzurePort) {
             this.secondaryAzurePort = secondaryAzurePort;
             return this;
         }
-
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder stats(@Nullable ExpressRouteCircuitStatsResponse stats) {
             this.stats = stats;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vlanId(@Nullable Integer vlanId) {
             this.vlanId = vlanId;
             return this;
-        }
-        public GetExpressRouteCircuitPeeringResult build() {
+        }        public GetExpressRouteCircuitPeeringResult build() {
             return new GetExpressRouteCircuitPeeringResult(azureASN, connections, etag, expressRouteConnection, gatewayManagerEtag, id, ipv6PeeringConfig, lastModifiedBy, microsoftPeeringConfig, name, peerASN, peeredConnections, peeringType, primaryAzurePort, primaryPeerAddressPrefix, provisioningState, routeFilter, secondaryAzurePort, secondaryPeerAddressPrefix, sharedKey, state, stats, type, vlanId);
         }
     }

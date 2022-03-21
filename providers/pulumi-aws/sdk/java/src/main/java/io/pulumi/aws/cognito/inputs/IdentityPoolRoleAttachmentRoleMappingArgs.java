@@ -108,42 +108,37 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
             this.ambiguousRoleResolution = ambiguousRoleResolution;
             return this;
         }
-
         public Builder ambiguousRoleResolution(@Nullable String ambiguousRoleResolution) {
             this.ambiguousRoleResolution = Output.ofNullable(ambiguousRoleResolution);
             return this;
         }
-
         public Builder identityProvider(Output<String> identityProvider) {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
-
         public Builder identityProvider(String identityProvider) {
             this.identityProvider = Output.of(Objects.requireNonNull(identityProvider));
             return this;
         }
-
         public Builder mappingRules(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules) {
             this.mappingRules = mappingRules;
             return this;
         }
-
         public Builder mappingRules(@Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs> mappingRules) {
             this.mappingRules = Output.ofNullable(mappingRules);
             return this;
         }
-
+        public Builder mappingRules(IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs... mappingRules) {
+            return mappingRules(List.of(mappingRules));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public IdentityPoolRoleAttachmentRoleMappingArgs build() {
+        }        public IdentityPoolRoleAttachmentRoleMappingArgs build() {
             return new IdentityPoolRoleAttachmentRoleMappingArgs(ambiguousRoleResolution, identityProvider, mappingRules, type);
         }
     }

@@ -103,22 +103,18 @@ public final class MLTransformInputRecordTable {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public MLTransformInputRecordTable build() {
+        }        public MLTransformInputRecordTable build() {
             return new MLTransformInputRecordTable(catalogId, connectionName, databaseName, tableName);
         }
     }

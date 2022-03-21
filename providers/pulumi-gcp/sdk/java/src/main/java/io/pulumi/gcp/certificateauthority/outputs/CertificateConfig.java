@@ -93,17 +93,14 @@ public final class CertificateConfig {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder subjectConfig(CertificateConfigSubjectConfig subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
-
         public Builder x509Config(CertificateConfigX509Config x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
-        }
-        public CertificateConfig build() {
+        }        public CertificateConfig build() {
             return new CertificateConfig(publicKey, subjectConfig, x509Config);
         }
     }

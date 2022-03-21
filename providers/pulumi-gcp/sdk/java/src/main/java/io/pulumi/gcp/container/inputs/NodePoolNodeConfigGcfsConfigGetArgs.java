@@ -52,12 +52,10 @@ public final class NodePoolNodeConfigGcfsConfigGetArgs extends io.pulumi.resourc
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public NodePoolNodeConfigGcfsConfigGetArgs build() {
+        }        public NodePoolNodeConfigGcfsConfigGetArgs build() {
             return new NodePoolNodeConfigGcfsConfigGetArgs(enabled);
         }
     }

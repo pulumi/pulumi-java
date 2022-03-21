@@ -72,12 +72,10 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public GetTableArgs build() {
+        }        public GetTableArgs build() {
             return new GetTableArgs(databaseName, tableName);
         }
     }

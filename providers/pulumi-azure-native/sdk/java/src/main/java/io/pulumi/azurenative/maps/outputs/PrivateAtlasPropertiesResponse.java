@@ -53,8 +53,7 @@ public final class PrivateAtlasPropertiesResponse {
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public PrivateAtlasPropertiesResponse build() {
+        }        public PrivateAtlasPropertiesResponse build() {
             return new PrivateAtlasPropertiesResponse(provisioningState);
         }
     }

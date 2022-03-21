@@ -54,7 +54,9 @@ public final class DataSourceConfluenceBlogConfiguration extends io.pulumi.resou
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }
-        public DataSourceConfluenceBlogConfiguration build() {
+        public Builder blogFieldMappings(DataSourceConfluenceBlogToIndexFieldMapping... blogFieldMappings) {
+            return blogFieldMappings(List.of(blogFieldMappings));
+        }        public DataSourceConfluenceBlogConfiguration build() {
             return new DataSourceConfluenceBlogConfiguration(blogFieldMappings);
         }
     }

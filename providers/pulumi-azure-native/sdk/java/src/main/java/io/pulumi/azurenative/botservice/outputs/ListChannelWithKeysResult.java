@@ -297,77 +297,65 @@ public final class ListChannelWithKeysResult {
             this.changedTime = changedTime;
             return this;
         }
-
         public Builder entityTag(@Nullable String entityTag) {
             this.entityTag = entityTag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder resource(@Nullable Object resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder setting(@Nullable ChannelSettingsResponse setting) {
             this.setting = setting;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public ListChannelWithKeysResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public ListChannelWithKeysResult build() {
             return new ListChannelWithKeysResult(changedTime, entityTag, etag, id, kind, location, name, properties, provisioningState, resource, setting, sku, tags, type, zones);
         }
     }

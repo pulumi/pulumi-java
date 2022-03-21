@@ -104,22 +104,18 @@ public final class GetPlacementPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder placementPolicyName(String placementPolicyName) {
             this.placementPolicyName = Objects.requireNonNull(placementPolicyName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPlacementPolicyArgs build() {
+        }        public GetPlacementPolicyArgs build() {
             return new GetPlacementPolicyArgs(clusterName, placementPolicyName, privateCloudName, resourceGroupName);
         }
     }

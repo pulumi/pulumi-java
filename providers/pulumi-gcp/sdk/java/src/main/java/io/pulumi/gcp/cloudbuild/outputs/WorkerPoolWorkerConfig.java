@@ -89,17 +89,14 @@ public final class WorkerPoolWorkerConfig {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder noExternalIp(@Nullable Boolean noExternalIp) {
             this.noExternalIp = noExternalIp;
             return this;
-        }
-        public WorkerPoolWorkerConfig build() {
+        }        public WorkerPoolWorkerConfig build() {
             return new WorkerPoolWorkerConfig(diskSizeGb, machineType, noExternalIp);
         }
     }

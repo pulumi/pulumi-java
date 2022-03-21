@@ -80,22 +80,21 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable Integer columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-
         public Builder tiles(@Nullable Output<List<TileArgs>> tiles) {
             this.tiles = tiles;
             return this;
         }
-
         public Builder tiles(@Nullable List<TileArgs> tiles) {
             this.tiles = Output.ofNullable(tiles);
             return this;
         }
-        public MosaicLayoutArgs build() {
+        public Builder tiles(TileArgs... tiles) {
+            return tiles(List.of(tiles));
+        }        public MosaicLayoutArgs build() {
             return new MosaicLayoutArgs(columns, tiles);
         }
     }

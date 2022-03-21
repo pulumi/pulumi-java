@@ -159,37 +159,30 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
             this.isCustomerInitiatedMaintenanceAllowed = isCustomerInitiatedMaintenanceAllowed;
             return this;
         }
-
         public Builder lastOperationMessage(@Nullable String lastOperationMessage) {
             this.lastOperationMessage = lastOperationMessage;
             return this;
         }
-
         public Builder lastOperationResultCode(@Nullable String lastOperationResultCode) {
             this.lastOperationResultCode = lastOperationResultCode;
             return this;
         }
-
         public Builder maintenanceWindowEndTime(@Nullable String maintenanceWindowEndTime) {
             this.maintenanceWindowEndTime = maintenanceWindowEndTime;
             return this;
         }
-
         public Builder maintenanceWindowStartTime(@Nullable String maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
-
         public Builder preMaintenanceWindowEndTime(@Nullable String preMaintenanceWindowEndTime) {
             this.preMaintenanceWindowEndTime = preMaintenanceWindowEndTime;
             return this;
         }
-
         public Builder preMaintenanceWindowStartTime(@Nullable String preMaintenanceWindowStartTime) {
             this.preMaintenanceWindowStartTime = preMaintenanceWindowStartTime;
             return this;
-        }
-        public MaintenanceRedeployStatusResponse build() {
+        }        public MaintenanceRedeployStatusResponse build() {
             return new MaintenanceRedeployStatusResponse(isCustomerInitiatedMaintenanceAllowed, lastOperationMessage, lastOperationResultCode, maintenanceWindowEndTime, maintenanceWindowStartTime, preMaintenanceWindowEndTime, preMaintenanceWindowStartTime);
         }
     }

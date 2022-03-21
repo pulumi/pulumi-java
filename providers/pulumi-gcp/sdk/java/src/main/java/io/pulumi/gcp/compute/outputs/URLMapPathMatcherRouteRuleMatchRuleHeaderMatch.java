@@ -207,42 +207,34 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
             this.exactMatch = exactMatch;
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder invertMatch(@Nullable Boolean invertMatch) {
             this.invertMatch = invertMatch;
             return this;
         }
-
         public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
-
         public Builder rangeMatch(@Nullable URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch rangeMatch) {
             this.rangeMatch = rangeMatch;
             return this;
         }
-
         public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public Builder suffixMatch(@Nullable String suffixMatch) {
             this.suffixMatch = suffixMatch;
             return this;
-        }
-        public URLMapPathMatcherRouteRuleMatchRuleHeaderMatch build() {
+        }        public URLMapPathMatcherRouteRuleMatchRuleHeaderMatch build() {
             return new URLMapPathMatcherRouteRuleMatchRuleHeaderMatch(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }
     }

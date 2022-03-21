@@ -240,122 +240,98 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             this.allowedAuthenticationType = allowedAuthenticationType;
             return this;
         }
-
         public Builder allowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
             this.allowedAuthenticationType = Output.ofNullable(allowedAuthenticationType);
             return this;
         }
-
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
-
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = Output.ofNullable(applicationConsistentSnapshotFrequencyInHours);
             return this;
         }
-
         public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder initialReplicationMethod(@Nullable Output<String> initialReplicationMethod) {
             this.initialReplicationMethod = initialReplicationMethod;
             return this;
         }
-
         public Builder initialReplicationMethod(@Nullable String initialReplicationMethod) {
             this.initialReplicationMethod = Output.ofNullable(initialReplicationMethod);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder offlineReplicationExportPath(@Nullable Output<String> offlineReplicationExportPath) {
             this.offlineReplicationExportPath = offlineReplicationExportPath;
             return this;
         }
-
         public Builder offlineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
             this.offlineReplicationExportPath = Output.ofNullable(offlineReplicationExportPath);
             return this;
         }
-
         public Builder offlineReplicationImportPath(@Nullable Output<String> offlineReplicationImportPath) {
             this.offlineReplicationImportPath = offlineReplicationImportPath;
             return this;
         }
-
         public Builder offlineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
             this.offlineReplicationImportPath = Output.ofNullable(offlineReplicationImportPath);
             return this;
         }
-
         public Builder onlineReplicationStartTime(@Nullable Output<String> onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
-
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = Output.ofNullable(onlineReplicationStartTime);
             return this;
         }
-
         public Builder recoveryPoints(@Nullable Output<Integer> recoveryPoints) {
             this.recoveryPoints = recoveryPoints;
             return this;
         }
-
         public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
             this.recoveryPoints = Output.ofNullable(recoveryPoints);
             return this;
         }
-
         public Builder replicaDeletion(@Nullable Output<String> replicaDeletion) {
             this.replicaDeletion = replicaDeletion;
             return this;
         }
-
         public Builder replicaDeletion(@Nullable String replicaDeletion) {
             this.replicaDeletion = Output.ofNullable(replicaDeletion);
             return this;
         }
-
         public Builder replicationFrequencyInSeconds(@Nullable Output<Integer> replicationFrequencyInSeconds) {
             this.replicationFrequencyInSeconds = replicationFrequencyInSeconds;
             return this;
         }
-
         public Builder replicationFrequencyInSeconds(@Nullable Integer replicationFrequencyInSeconds) {
             this.replicationFrequencyInSeconds = Output.ofNullable(replicationFrequencyInSeconds);
             return this;
         }
-
         public Builder replicationPort(@Nullable Output<Integer> replicationPort) {
             this.replicationPort = replicationPort;
             return this;
         }
-
         public Builder replicationPort(@Nullable Integer replicationPort) {
             this.replicationPort = Output.ofNullable(replicationPort);
             return this;
-        }
-        public HyperVReplicaBluePolicyInputArgs build() {
+        }        public HyperVReplicaBluePolicyInputArgs build() {
             return new HyperVReplicaBluePolicyInputArgs(allowedAuthenticationType, applicationConsistentSnapshotFrequencyInHours, compression, initialReplicationMethod, instanceType, offlineReplicationExportPath, offlineReplicationImportPath, onlineReplicationStartTime, recoveryPoints, replicaDeletion, replicationFrequencyInSeconds, replicationPort);
         }
     }

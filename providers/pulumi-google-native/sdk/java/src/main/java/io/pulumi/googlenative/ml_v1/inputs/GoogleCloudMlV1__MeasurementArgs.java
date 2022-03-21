@@ -80,22 +80,21 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<GoogleCloudMlV1_Measurement_MetricArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudMlV1_Measurement_MetricArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder stepCount(@Nullable Output<String> stepCount) {
             this.stepCount = stepCount;
             return this;
         }
-
         public Builder stepCount(@Nullable String stepCount) {
             this.stepCount = Output.ofNullable(stepCount);
             return this;
-        }
-        public GoogleCloudMlV1__MeasurementArgs build() {
+        }        public GoogleCloudMlV1__MeasurementArgs build() {
             return new GoogleCloudMlV1__MeasurementArgs(metrics, stepCount);
         }
     }

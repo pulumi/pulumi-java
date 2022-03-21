@@ -199,102 +199,82 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder instanceFilter(Output<PatchInstanceFilterArgs> instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
-
         public Builder instanceFilter(PatchInstanceFilterArgs instanceFilter) {
             this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder oneTimeSchedule(Output<OneTimeScheduleArgs> oneTimeSchedule) {
             this.oneTimeSchedule = Objects.requireNonNull(oneTimeSchedule);
             return this;
         }
-
         public Builder oneTimeSchedule(OneTimeScheduleArgs oneTimeSchedule) {
             this.oneTimeSchedule = Output.of(Objects.requireNonNull(oneTimeSchedule));
             return this;
         }
-
         public Builder patchConfig(@Nullable Output<PatchConfigArgs> patchConfig) {
             this.patchConfig = patchConfig;
             return this;
         }
-
         public Builder patchConfig(@Nullable PatchConfigArgs patchConfig) {
             this.patchConfig = Output.ofNullable(patchConfig);
             return this;
         }
-
         public Builder patchDeploymentId(Output<String> patchDeploymentId) {
             this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId);
             return this;
         }
-
         public Builder patchDeploymentId(String patchDeploymentId) {
             this.patchDeploymentId = Output.of(Objects.requireNonNull(patchDeploymentId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder recurringSchedule(Output<RecurringScheduleArgs> recurringSchedule) {
             this.recurringSchedule = Objects.requireNonNull(recurringSchedule);
             return this;
         }
-
         public Builder recurringSchedule(RecurringScheduleArgs recurringSchedule) {
             this.recurringSchedule = Output.of(Objects.requireNonNull(recurringSchedule));
             return this;
         }
-
         public Builder rollout(@Nullable Output<PatchRolloutArgs> rollout) {
             this.rollout = rollout;
             return this;
         }
-
         public Builder rollout(@Nullable PatchRolloutArgs rollout) {
             this.rollout = Output.ofNullable(rollout);
             return this;
-        }
-        public PatchDeploymentArgs build() {
+        }        public PatchDeploymentArgs build() {
             return new PatchDeploymentArgs(description, duration, instanceFilter, name, oneTimeSchedule, patchConfig, patchDeploymentId, project, recurringSchedule, rollout);
         }
     }

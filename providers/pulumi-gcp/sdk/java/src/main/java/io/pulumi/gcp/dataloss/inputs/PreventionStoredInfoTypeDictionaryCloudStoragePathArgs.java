@@ -56,12 +56,10 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePathArgs extend
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public PreventionStoredInfoTypeDictionaryCloudStoragePathArgs build() {
+        }        public PreventionStoredInfoTypeDictionaryCloudStoragePathArgs build() {
             return new PreventionStoredInfoTypeDictionaryCloudStoragePathArgs(path);
         }
     }

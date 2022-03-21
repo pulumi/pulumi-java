@@ -93,32 +93,35 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
             this.bodies = bodies;
             return this;
         }
-
         public Builder bodies(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs> bodies) {
             this.bodies = Output.ofNullable(bodies);
             return this;
         }
-
+        public Builder bodies(EventConnectionAuthParametersInvocationHttpParametersBodyArgs... bodies) {
+            return bodies(List.of(bodies));
+        }
         public Builder headers(@Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(EventConnectionAuthParametersInvocationHttpParametersHeaderArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryStrings(@Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public Builder queryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs> queryStrings) {
             this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
-        public EventConnectionAuthParametersInvocationHttpParametersArgs build() {
+        public Builder queryStrings(EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public EventConnectionAuthParametersInvocationHttpParametersArgs build() {
             return new EventConnectionAuthParametersInvocationHttpParametersArgs(bodies, headers, queryStrings);
         }
     }

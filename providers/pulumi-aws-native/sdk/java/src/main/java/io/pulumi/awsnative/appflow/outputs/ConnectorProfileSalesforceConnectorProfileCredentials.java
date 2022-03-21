@@ -104,22 +104,18 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder clientCredentialsArn(@Nullable String clientCredentialsArn) {
             this.clientCredentialsArn = clientCredentialsArn;
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
-        }
-        public ConnectorProfileSalesforceConnectorProfileCredentials build() {
+        }        public ConnectorProfileSalesforceConnectorProfileCredentials build() {
             return new ConnectorProfileSalesforceConnectorProfileCredentials(accessToken, clientCredentialsArn, connectorOAuthRequest, refreshToken);
         }
     }

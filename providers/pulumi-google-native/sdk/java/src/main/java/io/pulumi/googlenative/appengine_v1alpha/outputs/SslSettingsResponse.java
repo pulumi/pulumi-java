@@ -70,12 +70,10 @@ public final class SslSettingsResponse {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
-
         public Builder isManagedCertificate(Boolean isManagedCertificate) {
             this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
             return this;
-        }
-        public SslSettingsResponse build() {
+        }        public SslSettingsResponse build() {
             return new SslSettingsResponse(certificateId, isManagedCertificate);
         }
     }

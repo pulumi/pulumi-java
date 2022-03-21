@@ -95,32 +95,26 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
-
         public Builder notebookOutputOption(@Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption) {
             this.notebookOutputOption = Output.ofNullable(notebookOutputOption);
             return this;
         }
-
         public Builder s3KmsKeyId(@Nullable Output<String> s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
-
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = Output.ofNullable(s3KmsKeyId);
             return this;
         }
-
         public Builder s3OutputPath(@Nullable Output<String> s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
         }
-
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = Output.ofNullable(s3OutputPath);
             return this;
-        }
-        public UserProfileSharingSettingsArgs build() {
+        }        public UserProfileSharingSettingsArgs build() {
             return new UserProfileSharingSettingsArgs(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }
     }

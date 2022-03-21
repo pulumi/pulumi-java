@@ -92,32 +92,29 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder header(Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs header) {
             this.header = Output.of(Objects.requireNonNull(header));
             return this;
         }
-
         public Builder ruleOptions(Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
-
         public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs> ruleOptions) {
             this.ruleOptions = Output.of(Objects.requireNonNull(ruleOptions));
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatefulRuleArgs build() {
+        public Builder ruleOptions(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs... ruleOptions) {
+            return ruleOptions(List.of(ruleOptions));
+        }        public RuleGroupRuleGroupRulesSourceStatefulRuleArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatefulRuleArgs(action, header, ruleOptions);
         }
     }

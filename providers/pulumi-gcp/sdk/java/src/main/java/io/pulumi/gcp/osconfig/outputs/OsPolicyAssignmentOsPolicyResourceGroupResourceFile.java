@@ -122,27 +122,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
             this.content = content;
             return this;
         }
-
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file) {
             this.file = file;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceFile build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceFile build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFile(content, file, path, permissions, state);
         }
     }

@@ -490,282 +490,235 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.aclName = aclName;
             return this;
         }
-
         public Builder aclName(@Nullable String aclName) {
             this.aclName = Output.ofNullable(aclName);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
             this.clusterEndpoints = clusterEndpoints;
             return this;
         }
-
         public Builder clusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
             this.clusterEndpoints = Output.ofNullable(clusterEndpoints);
             return this;
         }
-
+        public Builder clusterEndpoints(ClusterClusterEndpointGetArgs... clusterEndpoints) {
+            return clusterEndpoints(List.of(clusterEndpoints));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enginePatchVersion(@Nullable Output<String> enginePatchVersion) {
             this.enginePatchVersion = enginePatchVersion;
             return this;
         }
-
         public Builder enginePatchVersion(@Nullable String enginePatchVersion) {
             this.enginePatchVersion = Output.ofNullable(enginePatchVersion);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder finalSnapshotName(@Nullable Output<String> finalSnapshotName) {
             this.finalSnapshotName = finalSnapshotName;
             return this;
         }
-
         public Builder finalSnapshotName(@Nullable String finalSnapshotName) {
             this.finalSnapshotName = Output.ofNullable(finalSnapshotName);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
-
         public Builder numReplicasPerShard(@Nullable Output<Integer> numReplicasPerShard) {
             this.numReplicasPerShard = numReplicasPerShard;
             return this;
         }
-
         public Builder numReplicasPerShard(@Nullable Integer numReplicasPerShard) {
             this.numReplicasPerShard = Output.ofNullable(numReplicasPerShard);
             return this;
         }
-
         public Builder numShards(@Nullable Output<Integer> numShards) {
             this.numShards = numShards;
             return this;
         }
-
         public Builder numShards(@Nullable Integer numShards) {
             this.numShards = Output.ofNullable(numShards);
             return this;
         }
-
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
-
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder shards(@Nullable Output<List<ClusterShardGetArgs>> shards) {
             this.shards = shards;
             return this;
         }
-
         public Builder shards(@Nullable List<ClusterShardGetArgs> shards) {
             this.shards = Output.ofNullable(shards);
             return this;
         }
-
+        public Builder shards(ClusterShardGetArgs... shards) {
+            return shards(List.of(shards));
+        }
         public Builder snapshotArns(@Nullable Output<String> snapshotArns) {
             this.snapshotArns = snapshotArns;
             return this;
         }
-
         public Builder snapshotArns(@Nullable String snapshotArns) {
             this.snapshotArns = Output.ofNullable(snapshotArns);
             return this;
         }
-
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
-
         public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
-
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
-
         public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = Output.ofNullable(snapshotRetentionLimit);
             return this;
         }
-
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
-
         public Builder snapshotWindow(@Nullable String snapshotWindow) {
             this.snapshotWindow = Output.ofNullable(snapshotWindow);
             return this;
         }
-
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
-
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
-
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder tlsEnabled(@Nullable Output<Boolean> tlsEnabled) {
             this.tlsEnabled = tlsEnabled;
             return this;
         }
-
         public Builder tlsEnabled(@Nullable Boolean tlsEnabled) {
             this.tlsEnabled = Output.ofNullable(tlsEnabled);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(aclName, arn, autoMinorVersionUpgrade, clusterEndpoints, description, enginePatchVersion, engineVersion, finalSnapshotName, kmsKeyArn, maintenanceWindow, name, namePrefix, nodeType, numReplicasPerShard, numShards, parameterGroupName, port, securityGroupIds, shards, snapshotArns, snapshotName, snapshotRetentionLimit, snapshotWindow, snsTopicArn, subnetGroupName, tags, tagsAll, tlsEnabled);
         }
     }

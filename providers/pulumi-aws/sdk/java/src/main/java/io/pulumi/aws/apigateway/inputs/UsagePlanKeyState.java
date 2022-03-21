@@ -122,52 +122,42 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder keyType(@Nullable Output<String> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable String keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder usagePlanId(@Nullable Output<String> usagePlanId) {
             this.usagePlanId = usagePlanId;
             return this;
         }
-
         public Builder usagePlanId(@Nullable String usagePlanId) {
             this.usagePlanId = Output.ofNullable(usagePlanId);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public UsagePlanKeyState build() {
+        }        public UsagePlanKeyState build() {
             return new UsagePlanKeyState(keyId, keyType, name, usagePlanId, value);
         }
     }

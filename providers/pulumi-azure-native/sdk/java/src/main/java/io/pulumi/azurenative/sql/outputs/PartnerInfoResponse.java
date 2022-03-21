@@ -85,17 +85,14 @@ public final class PartnerInfoResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
-        }
-        public PartnerInfoResponse build() {
+        }        public PartnerInfoResponse build() {
             return new PartnerInfoResponse(id, location, replicationRole);
         }
     }

@@ -78,17 +78,14 @@ public final class GetSnapshotSchedulePolicyArgs extends io.pulumi.resources.Inv
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
             this.snapshotSchedulePolicyId = Objects.requireNonNull(snapshotSchedulePolicyId);
             return this;
-        }
-        public GetSnapshotSchedulePolicyArgs build() {
+        }        public GetSnapshotSchedulePolicyArgs build() {
             return new GetSnapshotSchedulePolicyArgs(location, project, snapshotSchedulePolicyId);
         }
     }

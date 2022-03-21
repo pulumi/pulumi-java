@@ -163,72 +163,58 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder idpConfig(@Nullable Output<TenantInboundSamlConfigIdpConfigGetArgs> idpConfig) {
             this.idpConfig = idpConfig;
             return this;
         }
-
         public Builder idpConfig(@Nullable TenantInboundSamlConfigIdpConfigGetArgs idpConfig) {
             this.idpConfig = Output.ofNullable(idpConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder spConfig(@Nullable Output<TenantInboundSamlConfigSpConfigGetArgs> spConfig) {
             this.spConfig = spConfig;
             return this;
         }
-
         public Builder spConfig(@Nullable TenantInboundSamlConfigSpConfigGetArgs spConfig) {
             this.spConfig = Output.ofNullable(spConfig);
             return this;
         }
-
         public Builder tenant(@Nullable Output<String> tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder tenant(@Nullable String tenant) {
             this.tenant = Output.ofNullable(tenant);
             return this;
-        }
-        public TenantInboundSamlConfigState build() {
+        }        public TenantInboundSamlConfigState build() {
             return new TenantInboundSamlConfigState(displayName, enabled, idpConfig, name, project, spConfig, tenant);
         }
     }

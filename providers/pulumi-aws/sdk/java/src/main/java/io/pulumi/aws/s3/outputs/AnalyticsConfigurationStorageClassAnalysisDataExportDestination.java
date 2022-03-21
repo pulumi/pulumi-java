@@ -51,8 +51,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
         public Builder s3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
             this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination);
             return this;
-        }
-        public AnalyticsConfigurationStorageClassAnalysisDataExportDestination build() {
+        }        public AnalyticsConfigurationStorageClassAnalysisDataExportDestination build() {
             return new AnalyticsConfigurationStorageClassAnalysisDataExportDestination(s3BucketDestination);
         }
     }

@@ -104,22 +104,18 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder notificationHubName(String notificationHubName) {
             this.notificationHubName = Objects.requireNonNull(notificationHubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNotificationHubAuthorizationRuleArgs build() {
+        }        public GetNotificationHubAuthorizationRuleArgs build() {
             return new GetNotificationHubAuthorizationRuleArgs(authorizationRuleName, namespaceName, notificationHubName, resourceGroupName);
         }
     }

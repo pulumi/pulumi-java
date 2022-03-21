@@ -167,42 +167,34 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = failureReason;
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
             return this;
         }
-
         public Builder monitoringScheduleName(String monitoringScheduleName) {
             this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
             return this;
         }
-
         public Builder processingJobArn(@Nullable String processingJobArn) {
             this.processingJobArn = processingJobArn;
             return this;
         }
-
         public Builder scheduledTime(String scheduledTime) {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
-        }
-        public MonitoringScheduleMonitoringExecutionSummary build() {
+        }        public MonitoringScheduleMonitoringExecutionSummary build() {
             return new MonitoringScheduleMonitoringExecutionSummary(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
         }
     }

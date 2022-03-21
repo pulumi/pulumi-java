@@ -90,22 +90,18 @@ public final class GetGameServerDeploymentIamPolicyArgs extends io.pulumi.resour
             this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetGameServerDeploymentIamPolicyArgs build() {
+        }        public GetGameServerDeploymentIamPolicyArgs build() {
             return new GetGameServerDeploymentIamPolicyArgs(gameServerDeploymentId, location, optionsRequestedPolicyVersion, project);
         }
     }

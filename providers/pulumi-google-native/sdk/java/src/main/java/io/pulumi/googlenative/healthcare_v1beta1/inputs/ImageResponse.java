@@ -76,12 +76,10 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
-
         public Builder rawBytes(String rawBytes) {
             this.rawBytes = Objects.requireNonNull(rawBytes);
             return this;
-        }
-        public ImageResponse build() {
+        }        public ImageResponse build() {
             return new ImageResponse(gcsUri, rawBytes);
         }
     }

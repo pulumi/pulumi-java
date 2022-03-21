@@ -97,32 +97,29 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
             this.inputTrackSelection = inputTrackSelection;
             return this;
         }
-
         public Builder inputTrackSelection(@Nullable List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
             this.inputTrackSelection = Output.ofNullable(inputTrackSelection);
             return this;
         }
-
+        public Builder inputTrackSelection(LiveEventInputTrackSelectionArgs... inputTrackSelection) {
+            return inputTrackSelection(List.of(inputTrackSelection));
+        }
         public Builder language(@Nullable Output<String> language) {
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable String language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder outputTranscriptionTrack(@Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
             this.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }
-
         public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
             this.outputTranscriptionTrack = Output.ofNullable(outputTranscriptionTrack);
             return this;
-        }
-        public LiveEventTranscriptionArgs build() {
+        }        public LiveEventTranscriptionArgs build() {
             return new LiveEventTranscriptionArgs(inputTrackSelection, language, outputTranscriptionTrack);
         }
     }

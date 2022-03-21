@@ -180,82 +180,66 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable SecurityPolicyRuleHttpHeaderActionArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder match(@Nullable Output<SecurityPolicyRuleMatcherArgs> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable SecurityPolicyRuleMatcherArgs match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
         }
-
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
             this.rateLimitOptions = Output.ofNullable(rateLimitOptions);
             return this;
         }
-
         public Builder redirectOptions(@Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
             this.redirectOptions = redirectOptions;
             return this;
         }
-
         public Builder redirectOptions(@Nullable SecurityPolicyRuleRedirectOptionsArgs redirectOptions) {
             this.redirectOptions = Output.ofNullable(redirectOptions);
             return this;
-        }
-        public SecurityPolicyRuleArgs build() {
+        }        public SecurityPolicyRuleArgs build() {
             return new SecurityPolicyRuleArgs(action, description, headerAction, match, preview, priority, rateLimitOptions, redirectOptions);
         }
     }

@@ -121,27 +121,34 @@ public final class ResourcePolicyRule {
             this.apiGroups = Objects.requireNonNull(apiGroups);
             return this;
         }
-
+        public Builder apiGroups(String... apiGroups) {
+            return apiGroups(List.of(apiGroups));
+        }
         public Builder clusterScope(@Nullable Boolean clusterScope) {
             this.clusterScope = clusterScope;
             return this;
         }
-
         public Builder namespaces(@Nullable List<String> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
-
+        public Builder namespaces(String... namespaces) {
+            return namespaces(List.of(namespaces));
+        }
         public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-        public ResourcePolicyRule build() {
+        public Builder verbs(String... verbs) {
+            return verbs(List.of(verbs));
+        }        public ResourcePolicyRule build() {
             return new ResourcePolicyRule(apiGroups, clusterScope, namespaces, resources, verbs);
         }
     }

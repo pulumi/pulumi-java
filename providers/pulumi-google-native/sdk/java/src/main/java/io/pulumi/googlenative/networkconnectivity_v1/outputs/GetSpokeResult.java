@@ -217,57 +217,46 @@ public final class GetSpokeResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder hub(String hub) {
             this.hub = Objects.requireNonNull(hub);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder linkedInterconnectAttachments(LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = Objects.requireNonNull(linkedInterconnectAttachments);
             return this;
         }
-
         public Builder linkedRouterApplianceInstances(LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = Objects.requireNonNull(linkedRouterApplianceInstances);
             return this;
         }
-
         public Builder linkedVpnTunnels(LinkedVpnTunnelsResponse linkedVpnTunnels) {
             this.linkedVpnTunnels = Objects.requireNonNull(linkedVpnTunnels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetSpokeResult build() {
+        }        public GetSpokeResult build() {
             return new GetSpokeResult(createTime, description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, name, state, uniqueId, updateTime);
         }
     }

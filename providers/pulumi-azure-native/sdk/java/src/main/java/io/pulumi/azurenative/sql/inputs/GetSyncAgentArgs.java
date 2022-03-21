@@ -88,17 +88,14 @@ public final class GetSyncAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder syncAgentName(String syncAgentName) {
             this.syncAgentName = Objects.requireNonNull(syncAgentName);
             return this;
-        }
-        public GetSyncAgentArgs build() {
+        }        public GetSyncAgentArgs build() {
             return new GetSyncAgentArgs(resourceGroupName, serverName, syncAgentName);
         }
     }

@@ -367,102 +367,82 @@ public final class H264CodecSettingsResponse extends io.pulumi.resources.InvokeA
             this.allowOpenGop = Objects.requireNonNull(allowOpenGop);
             return this;
         }
-
         public Builder aqStrength(Double aqStrength) {
             this.aqStrength = Objects.requireNonNull(aqStrength);
             return this;
         }
-
         public Builder bFrameCount(Integer bFrameCount) {
             this.bFrameCount = Objects.requireNonNull(bFrameCount);
             return this;
         }
-
         public Builder bPyramid(Boolean bPyramid) {
             this.bPyramid = Objects.requireNonNull(bPyramid);
             return this;
         }
-
         public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
-
         public Builder crfLevel(Integer crfLevel) {
             this.crfLevel = Objects.requireNonNull(crfLevel);
             return this;
         }
-
         public Builder enableTwoPass(Boolean enableTwoPass) {
             this.enableTwoPass = Objects.requireNonNull(enableTwoPass);
             return this;
         }
-
         public Builder entropyCoder(String entropyCoder) {
             this.entropyCoder = Objects.requireNonNull(entropyCoder);
             return this;
         }
-
         public Builder frameRate(Double frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
-
         public Builder gopDuration(String gopDuration) {
             this.gopDuration = Objects.requireNonNull(gopDuration);
             return this;
         }
-
         public Builder gopFrameCount(Integer gopFrameCount) {
             this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
             return this;
         }
-
         public Builder heightPixels(Integer heightPixels) {
             this.heightPixels = Objects.requireNonNull(heightPixels);
             return this;
         }
-
         public Builder pixelFormat(String pixelFormat) {
             this.pixelFormat = Objects.requireNonNull(pixelFormat);
             return this;
         }
-
         public Builder preset(String preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
-
         public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
-
         public Builder rateControlMode(String rateControlMode) {
             this.rateControlMode = Objects.requireNonNull(rateControlMode);
             return this;
         }
-
         public Builder tune(String tune) {
             this.tune = Objects.requireNonNull(tune);
             return this;
         }
-
         public Builder vbvFullnessBits(Integer vbvFullnessBits) {
             this.vbvFullnessBits = Objects.requireNonNull(vbvFullnessBits);
             return this;
         }
-
         public Builder vbvSizeBits(Integer vbvSizeBits) {
             this.vbvSizeBits = Objects.requireNonNull(vbvSizeBits);
             return this;
         }
-
         public Builder widthPixels(Integer widthPixels) {
             this.widthPixels = Objects.requireNonNull(widthPixels);
             return this;
-        }
-        public H264CodecSettingsResponse build() {
+        }        public H264CodecSettingsResponse build() {
             return new H264CodecSettingsResponse(allowOpenGop, aqStrength, bFrameCount, bPyramid, bitrateBps, crfLevel, enableTwoPass, entropyCoder, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, preset, profile, rateControlMode, tune, vbvFullnessBits, vbvSizeBits, widthPixels);
         }
     }

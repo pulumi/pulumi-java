@@ -64,12 +64,10 @@ public final class GetReplicationConfigurationResult {
             this.registryId = registryId;
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable ReplicationConfiguration replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
-        }
-        public GetReplicationConfigurationResult build() {
+        }        public GetReplicationConfigurationResult build() {
             return new GetReplicationConfigurationResult(registryId, replicationConfiguration);
         }
     }

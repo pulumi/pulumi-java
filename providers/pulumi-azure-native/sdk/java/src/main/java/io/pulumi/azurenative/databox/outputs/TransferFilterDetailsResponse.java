@@ -107,22 +107,21 @@ public final class TransferFilterDetailsResponse {
             this.azureFileFilterDetails = azureFileFilterDetails;
             return this;
         }
-
         public Builder blobFilterDetails(@Nullable BlobFilterDetailsResponse blobFilterDetails) {
             this.blobFilterDetails = blobFilterDetails;
             return this;
         }
-
         public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder filterFileDetails(@Nullable List<FilterFileDetailsResponse> filterFileDetails) {
             this.filterFileDetails = filterFileDetails;
             return this;
         }
-        public TransferFilterDetailsResponse build() {
+        public Builder filterFileDetails(FilterFileDetailsResponse... filterFileDetails) {
+            return filterFileDetails(List.of(filterFileDetails));
+        }        public TransferFilterDetailsResponse build() {
             return new TransferFilterDetailsResponse(azureFileFilterDetails, blobFilterDetails, dataAccountType, filterFileDetails);
         }
     }

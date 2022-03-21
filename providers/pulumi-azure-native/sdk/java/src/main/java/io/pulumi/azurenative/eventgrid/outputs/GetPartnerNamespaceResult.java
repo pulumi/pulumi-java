@@ -249,67 +249,60 @@ public final class GetPartnerNamespaceResult {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inboundIpRules(@Nullable List<InboundIpRuleResponse> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
-
+        public Builder inboundIpRules(InboundIpRuleResponse... inboundIpRules) {
+            return inboundIpRules(List.of(inboundIpRules));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
             this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPartnerNamespaceResult build() {
+        }        public GetPartnerNamespaceResult build() {
             return new GetPartnerNamespaceResult(disableLocalAuth, endpoint, id, inboundIpRules, location, name, partnerRegistrationFullyQualifiedId, privateEndpointConnections, provisioningState, publicNetworkAccess, systemData, tags, type);
         }
     }

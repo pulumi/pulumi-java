@@ -61,12 +61,10 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
             this.cloudHealthcareSource = cloudHealthcareSource;
             return this;
         }
-
         public Builder cloudHealthcareSource(@Nullable CloudHealthcareSourceArgs cloudHealthcareSource) {
             this.cloudHealthcareSource = Output.ofNullable(cloudHealthcareSource);
             return this;
-        }
-        public AnnotationSourceArgs build() {
+        }        public AnnotationSourceArgs build() {
             return new AnnotationSourceArgs(cloudHealthcareSource);
         }
     }

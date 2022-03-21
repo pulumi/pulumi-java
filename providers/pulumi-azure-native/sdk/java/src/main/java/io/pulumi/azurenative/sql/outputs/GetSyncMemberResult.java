@@ -264,72 +264,58 @@ public final class GetSyncMemberResult {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseType(@Nullable String databaseType) {
             this.databaseType = databaseType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder sqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
             this.sqlServerDatabaseId = sqlServerDatabaseId;
             return this;
         }
-
         public Builder syncAgentId(@Nullable String syncAgentId) {
             this.syncAgentId = syncAgentId;
             return this;
         }
-
         public Builder syncDirection(@Nullable String syncDirection) {
             this.syncDirection = syncDirection;
             return this;
         }
-
         public Builder syncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
             this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
             return this;
         }
-
         public Builder syncState(String syncState) {
             this.syncState = Objects.requireNonNull(syncState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public GetSyncMemberResult build() {
+        }        public GetSyncMemberResult build() {
             return new GetSyncMemberResult(databaseName, databaseType, id, name, privateEndpointName, serverName, sqlServerDatabaseId, syncAgentId, syncDirection, syncMemberAzureDatabaseResourceId, syncState, type, usePrivateLinkConnection, userName);
         }
     }

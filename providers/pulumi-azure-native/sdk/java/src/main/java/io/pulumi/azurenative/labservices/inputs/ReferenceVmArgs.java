@@ -78,22 +78,18 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public ReferenceVmArgs build() {
+        }        public ReferenceVmArgs build() {
             return new ReferenceVmArgs(password, userName);
         }
     }

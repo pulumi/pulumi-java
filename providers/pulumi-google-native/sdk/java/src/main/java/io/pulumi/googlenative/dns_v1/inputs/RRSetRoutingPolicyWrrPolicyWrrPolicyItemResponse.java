@@ -102,22 +102,24 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
-
+        public Builder rrdatas(String... rrdatas) {
+            return rrdatas(List.of(rrdatas));
+        }
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
             this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
             return this;
         }
-
+        public Builder signatureRrdatas(String... signatureRrdatas) {
+            return signatureRrdatas(List.of(signatureRrdatas));
+        }
         public Builder weight(Double weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse build() {
+        }        public RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse build() {
             return new RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse(kind, rrdatas, signatureRrdatas, weight);
         }
     }

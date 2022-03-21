@@ -56,8 +56,7 @@ public final class GetDetectorArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetDetectorArgs build() {
+        }        public GetDetectorArgs build() {
             return new GetDetectorArgs(id);
         }
     }

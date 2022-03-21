@@ -187,92 +187,74 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cloneUrlHttp(@Nullable Output<String> cloneUrlHttp) {
             this.cloneUrlHttp = cloneUrlHttp;
             return this;
         }
-
         public Builder cloneUrlHttp(@Nullable String cloneUrlHttp) {
             this.cloneUrlHttp = Output.ofNullable(cloneUrlHttp);
             return this;
         }
-
         public Builder cloneUrlSsh(@Nullable Output<String> cloneUrlSsh) {
             this.cloneUrlSsh = cloneUrlSsh;
             return this;
         }
-
         public Builder cloneUrlSsh(@Nullable String cloneUrlSsh) {
             this.cloneUrlSsh = Output.ofNullable(cloneUrlSsh);
             return this;
         }
-
         public Builder defaultBranch(@Nullable Output<String> defaultBranch) {
             this.defaultBranch = defaultBranch;
             return this;
         }
-
         public Builder defaultBranch(@Nullable String defaultBranch) {
             this.defaultBranch = Output.ofNullable(defaultBranch);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
             this.repositoryId = repositoryId;
             return this;
         }
-
         public Builder repositoryId(@Nullable String repositoryId) {
             this.repositoryId = Output.ofNullable(repositoryId);
             return this;
         }
-
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public RepositoryState build() {
+        }        public RepositoryState build() {
             return new RepositoryState(arn, cloneUrlHttp, cloneUrlSsh, defaultBranch, description, repositoryId, repositoryName, tags, tagsAll);
         }
     }

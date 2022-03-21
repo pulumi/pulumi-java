@@ -62,12 +62,13 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable List<String> keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-        public MongoIndexKeysArgs build() {
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }        public MongoIndexKeysArgs build() {
             return new MongoIndexKeysArgs(keys);
         }
     }

@@ -164,72 +164,58 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
             this.archiveExtraction = archiveExtraction;
             return this;
         }
-
         public Builder archiveExtraction(@Nullable SoftwareRecipeStepExtractArchiveArgs archiveExtraction) {
             this.archiveExtraction = Output.ofNullable(archiveExtraction);
             return this;
         }
-
         public Builder dpkgInstallation(@Nullable Output<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation) {
             this.dpkgInstallation = dpkgInstallation;
             return this;
         }
-
         public Builder dpkgInstallation(@Nullable SoftwareRecipeStepInstallDpkgArgs dpkgInstallation) {
             this.dpkgInstallation = Output.ofNullable(dpkgInstallation);
             return this;
         }
-
         public Builder fileCopy(@Nullable Output<SoftwareRecipeStepCopyFileArgs> fileCopy) {
             this.fileCopy = fileCopy;
             return this;
         }
-
         public Builder fileCopy(@Nullable SoftwareRecipeStepCopyFileArgs fileCopy) {
             this.fileCopy = Output.ofNullable(fileCopy);
             return this;
         }
-
         public Builder fileExec(@Nullable Output<SoftwareRecipeStepExecFileArgs> fileExec) {
             this.fileExec = fileExec;
             return this;
         }
-
         public Builder fileExec(@Nullable SoftwareRecipeStepExecFileArgs fileExec) {
             this.fileExec = Output.ofNullable(fileExec);
             return this;
         }
-
         public Builder msiInstallation(@Nullable Output<SoftwareRecipeStepInstallMsiArgs> msiInstallation) {
             this.msiInstallation = msiInstallation;
             return this;
         }
-
         public Builder msiInstallation(@Nullable SoftwareRecipeStepInstallMsiArgs msiInstallation) {
             this.msiInstallation = Output.ofNullable(msiInstallation);
             return this;
         }
-
         public Builder rpmInstallation(@Nullable Output<SoftwareRecipeStepInstallRpmArgs> rpmInstallation) {
             this.rpmInstallation = rpmInstallation;
             return this;
         }
-
         public Builder rpmInstallation(@Nullable SoftwareRecipeStepInstallRpmArgs rpmInstallation) {
             this.rpmInstallation = Output.ofNullable(rpmInstallation);
             return this;
         }
-
         public Builder scriptRun(@Nullable Output<SoftwareRecipeStepRunScriptArgs> scriptRun) {
             this.scriptRun = scriptRun;
             return this;
         }
-
         public Builder scriptRun(@Nullable SoftwareRecipeStepRunScriptArgs scriptRun) {
             this.scriptRun = Output.ofNullable(scriptRun);
             return this;
-        }
-        public SoftwareRecipeStepArgs build() {
+        }        public SoftwareRecipeStepArgs build() {
             return new SoftwareRecipeStepArgs(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }
     }

@@ -66,22 +66,18 @@ public final class FirewallPolicyStatelessRuleGroupReferenceArgs extends io.pulu
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
-        }
-        public FirewallPolicyStatelessRuleGroupReferenceArgs build() {
+        }        public FirewallPolicyStatelessRuleGroupReferenceArgs build() {
             return new FirewallPolicyStatelessRuleGroupReferenceArgs(priority, resourceArn);
         }
     }

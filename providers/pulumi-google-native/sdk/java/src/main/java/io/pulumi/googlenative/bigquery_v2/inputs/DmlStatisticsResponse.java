@@ -88,17 +88,14 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
             this.deletedRowCount = Objects.requireNonNull(deletedRowCount);
             return this;
         }
-
         public Builder insertedRowCount(String insertedRowCount) {
             this.insertedRowCount = Objects.requireNonNull(insertedRowCount);
             return this;
         }
-
         public Builder updatedRowCount(String updatedRowCount) {
             this.updatedRowCount = Objects.requireNonNull(updatedRowCount);
             return this;
-        }
-        public DmlStatisticsResponse build() {
+        }        public DmlStatisticsResponse build() {
             return new DmlStatisticsResponse(deletedRowCount, insertedRowCount, updatedRowCount);
         }
     }

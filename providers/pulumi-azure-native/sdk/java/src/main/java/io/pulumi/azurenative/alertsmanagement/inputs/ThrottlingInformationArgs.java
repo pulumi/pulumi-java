@@ -61,12 +61,10 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
-        }
-        public ThrottlingInformationArgs build() {
+        }        public ThrottlingInformationArgs build() {
             return new ThrottlingInformationArgs(duration);
         }
     }

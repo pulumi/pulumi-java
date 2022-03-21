@@ -124,52 +124,45 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
             this.allowAllDomains = allowAllDomains;
             return this;
         }
-
         public Builder allowAllDomains(@Nullable Boolean allowAllDomains) {
             this.allowAllDomains = Output.ofNullable(allowAllDomains);
             return this;
         }
-
         public Builder allowAmpTraffic(@Nullable Output<Boolean> allowAmpTraffic) {
             this.allowAmpTraffic = allowAmpTraffic;
             return this;
         }
-
         public Builder allowAmpTraffic(@Nullable Boolean allowAmpTraffic) {
             this.allowAmpTraffic = Output.ofNullable(allowAmpTraffic);
             return this;
         }
-
         public Builder allowedDomains(@Nullable Output<List<String>> allowedDomains) {
             this.allowedDomains = allowedDomains;
             return this;
         }
-
         public Builder allowedDomains(@Nullable List<String> allowedDomains) {
             this.allowedDomains = Output.ofNullable(allowedDomains);
             return this;
         }
-
+        public Builder allowedDomains(String... allowedDomains) {
+            return allowedDomains(List.of(allowedDomains));
+        }
         public Builder challengeSecurityPreference(@Nullable Output<String> challengeSecurityPreference) {
             this.challengeSecurityPreference = challengeSecurityPreference;
             return this;
         }
-
         public Builder challengeSecurityPreference(@Nullable String challengeSecurityPreference) {
             this.challengeSecurityPreference = Output.ofNullable(challengeSecurityPreference);
             return this;
         }
-
         public Builder integrationType(Output<String> integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }
-
         public Builder integrationType(String integrationType) {
             this.integrationType = Output.of(Objects.requireNonNull(integrationType));
             return this;
-        }
-        public EnterpriseKeyWebSettingsArgs build() {
+        }        public EnterpriseKeyWebSettingsArgs build() {
             return new EnterpriseKeyWebSettingsArgs(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }
     }

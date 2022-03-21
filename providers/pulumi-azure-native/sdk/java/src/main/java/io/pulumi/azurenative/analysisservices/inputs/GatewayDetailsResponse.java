@@ -94,17 +94,14 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.dmtsClusterUri = Objects.requireNonNull(dmtsClusterUri);
             return this;
         }
-
         public Builder gatewayObjectId(String gatewayObjectId) {
             this.gatewayObjectId = Objects.requireNonNull(gatewayObjectId);
             return this;
         }
-
         public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
             this.gatewayResourceId = gatewayResourceId;
             return this;
-        }
-        public GatewayDetailsResponse build() {
+        }        public GatewayDetailsResponse build() {
             return new GatewayDetailsResponse(dmtsClusterUri, gatewayObjectId, gatewayResourceId);
         }
     }

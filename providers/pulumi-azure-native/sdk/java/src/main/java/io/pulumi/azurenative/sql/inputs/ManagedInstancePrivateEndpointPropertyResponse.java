@@ -56,8 +56,7 @@ public final class ManagedInstancePrivateEndpointPropertyResponse extends io.pul
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ManagedInstancePrivateEndpointPropertyResponse build() {
+        }        public ManagedInstancePrivateEndpointPropertyResponse build() {
             return new ManagedInstancePrivateEndpointPropertyResponse(id);
         }
     }

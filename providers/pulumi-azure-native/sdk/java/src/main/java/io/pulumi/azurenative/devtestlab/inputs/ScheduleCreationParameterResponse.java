@@ -227,57 +227,46 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
             this.dailyRecurrence = dailyRecurrence;
             return this;
         }
-
         public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
             this.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
-
         public Builder taskType(@Nullable String taskType) {
             this.taskType = taskType;
             return this;
         }
-
         public Builder timeZoneId(@Nullable String timeZoneId) {
             this.timeZoneId = timeZoneId;
             return this;
         }
-
         public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
-        }
-        public ScheduleCreationParameterResponse build() {
+        }        public ScheduleCreationParameterResponse build() {
             return new ScheduleCreationParameterResponse(dailyRecurrence, hourlyRecurrence, location, name, notificationSettings, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);
         }
     }

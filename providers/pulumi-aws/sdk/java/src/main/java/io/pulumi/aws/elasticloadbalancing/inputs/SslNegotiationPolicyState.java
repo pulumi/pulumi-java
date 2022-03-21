@@ -112,42 +112,37 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<SslNegotiationPolicyAttributeGetArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(SslNegotiationPolicyAttributeGetArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder lbPort(@Nullable Output<Integer> lbPort) {
             this.lbPort = lbPort;
             return this;
         }
-
         public Builder lbPort(@Nullable Integer lbPort) {
             this.lbPort = Output.ofNullable(lbPort);
             return this;
         }
-
         public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public Builder loadBalancer(@Nullable String loadBalancer) {
             this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SslNegotiationPolicyState build() {
+        }        public SslNegotiationPolicyState build() {
             return new SslNegotiationPolicyState(attributes, lbPort, loadBalancer, name);
         }
     }

@@ -71,12 +71,10 @@ public final class ListBatchEndpointKeysResult {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListBatchEndpointKeysResult build() {
+        }        public ListBatchEndpointKeysResult build() {
             return new ListBatchEndpointKeysResult(primaryKey, secondaryKey);
         }
     }

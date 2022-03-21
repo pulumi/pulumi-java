@@ -82,22 +82,18 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder durationType(@Nullable Output<Either<String,RetentionDurationType>> durationType) {
             this.durationType = durationType;
             return this;
         }
-
         public Builder durationType(@Nullable Either<String,RetentionDurationType> durationType) {
             this.durationType = Output.ofNullable(durationType);
             return this;
-        }
-        public RetentionDurationArgs build() {
+        }        public RetentionDurationArgs build() {
             return new RetentionDurationArgs(count, durationType);
         }
     }

@@ -75,22 +75,21 @@ public final class SpokeLinkedVpnTunnelsArgs extends io.pulumi.resources.Resourc
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Output.of(Objects.requireNonNull(siteToSiteDataTransfer));
             return this;
         }
-
         public Builder uris(Output<List<String>> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public Builder uris(List<String> uris) {
             this.uris = Output.of(Objects.requireNonNull(uris));
             return this;
         }
-        public SpokeLinkedVpnTunnelsArgs build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public SpokeLinkedVpnTunnelsArgs build() {
             return new SpokeLinkedVpnTunnelsArgs(siteToSiteDataTransfer, uris);
         }
     }

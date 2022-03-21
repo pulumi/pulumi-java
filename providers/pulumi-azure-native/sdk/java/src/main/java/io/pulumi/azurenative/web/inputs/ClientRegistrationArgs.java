@@ -78,22 +78,18 @@ public final class ClientRegistrationArgs extends io.pulumi.resources.ResourceAr
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = Output.ofNullable(clientSecretSettingName);
             return this;
-        }
-        public ClientRegistrationArgs build() {
+        }        public ClientRegistrationArgs build() {
             return new ClientRegistrationArgs(clientId, clientSecretSettingName);
         }
     }

@@ -186,92 +186,74 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder iamArn(@Nullable Output<String> iamArn) {
             this.iamArn = iamArn;
             return this;
         }
-
         public Builder iamArn(@Nullable String iamArn) {
             this.iamArn = Output.ofNullable(iamArn);
             return this;
         }
-
         public Builder identityType(@Nullable Output<String> identityType) {
             this.identityType = identityType;
             return this;
         }
-
         public Builder identityType(@Nullable String identityType) {
             this.identityType = Output.ofNullable(identityType);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
-
         public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = Output.ofNullable(sessionName);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
         }
-
         public Builder userRole(@Nullable Output<String> userRole) {
             this.userRole = userRole;
             return this;
         }
-
         public Builder userRole(@Nullable String userRole) {
             this.userRole = Output.ofNullable(userRole);
             return this;
-        }
-        public UserState build() {
+        }        public UserState build() {
             return new UserState(arn, awsAccountId, email, iamArn, identityType, namespace, sessionName, userName, userRole);
         }
     }

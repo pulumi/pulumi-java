@@ -61,12 +61,10 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
         }
-
         public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
             this.isRServicesEnabled = Output.ofNullable(isRServicesEnabled);
             return this;
-        }
-        public AdditionalFeaturesServerConfigurationsArgs build() {
+        }        public AdditionalFeaturesServerConfigurationsArgs build() {
             return new AdditionalFeaturesServerConfigurationsArgs(isRServicesEnabled);
         }
     }

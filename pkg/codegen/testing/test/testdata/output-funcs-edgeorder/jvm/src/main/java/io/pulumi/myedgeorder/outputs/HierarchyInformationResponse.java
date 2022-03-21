@@ -103,22 +103,18 @@ public final class HierarchyInformationResponse {
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder productFamilyName(@Nullable String productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
-
         public Builder productLineName(@Nullable String productLineName) {
             this.productLineName = productLineName;
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
-        }
-        public HierarchyInformationResponse build() {
+        }        public HierarchyInformationResponse build() {
             return new HierarchyInformationResponse(configurationName, productFamilyName, productLineName, productName);
         }
     }

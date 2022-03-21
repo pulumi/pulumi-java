@@ -90,17 +90,14 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public ClusterIdentityResponseUserAssignedIdentities build() {
+        }        public ClusterIdentityResponseUserAssignedIdentities build() {
             return new ClusterIdentityResponseUserAssignedIdentities(clientId, principalId, tenantId);
         }
     }

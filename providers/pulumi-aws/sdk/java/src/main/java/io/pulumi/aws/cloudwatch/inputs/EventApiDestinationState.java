@@ -155,72 +155,58 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
-
         public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = Output.ofNullable(connectionArn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder invocationEndpoint(@Nullable Output<String> invocationEndpoint) {
             this.invocationEndpoint = invocationEndpoint;
             return this;
         }
-
         public Builder invocationEndpoint(@Nullable String invocationEndpoint) {
             this.invocationEndpoint = Output.ofNullable(invocationEndpoint);
             return this;
         }
-
         public Builder invocationRateLimitPerSecond(@Nullable Output<Integer> invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
-
         public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = Output.ofNullable(invocationRateLimitPerSecond);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public EventApiDestinationState build() {
+        }        public EventApiDestinationState build() {
             return new EventApiDestinationState(arn, connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond, name);
         }
     }

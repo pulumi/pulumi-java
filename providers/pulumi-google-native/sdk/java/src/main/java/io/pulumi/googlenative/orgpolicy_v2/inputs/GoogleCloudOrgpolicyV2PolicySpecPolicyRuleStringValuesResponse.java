@@ -77,12 +77,16 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder deniedValues(List<String> deniedValues) {
             this.deniedValues = Objects.requireNonNull(deniedValues);
             return this;
         }
-        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse build() {
+        public Builder deniedValues(String... deniedValues) {
+            return deniedValues(List.of(deniedValues));
+        }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(allowedValues, deniedValues);
         }
     }

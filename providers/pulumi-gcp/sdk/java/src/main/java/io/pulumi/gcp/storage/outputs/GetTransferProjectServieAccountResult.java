@@ -77,17 +77,14 @@ public final class GetTransferProjectServieAccountResult {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetTransferProjectServieAccountResult build() {
+        }        public GetTransferProjectServieAccountResult build() {
             return new GetTransferProjectServieAccountResult(email, id, project);
         }
     }

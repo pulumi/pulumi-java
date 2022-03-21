@@ -53,8 +53,7 @@ public final class ListAgentPoolQueueStatusResult {
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
-        }
-        public ListAgentPoolQueueStatusResult build() {
+        }        public ListAgentPoolQueueStatusResult build() {
             return new ListAgentPoolQueueStatusResult(count);
         }
     }

@@ -64,12 +64,10 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
-        }
-        public GetOrganizationPolicyArgs build() {
+        }        public GetOrganizationPolicyArgs build() {
             return new GetOrganizationPolicyArgs(organizationId, policyId);
         }
     }

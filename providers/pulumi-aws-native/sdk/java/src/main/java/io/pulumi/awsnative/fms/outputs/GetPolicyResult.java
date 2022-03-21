@@ -149,67 +149,63 @@ public final class GetPolicyResult {
             this.arn = arn;
             return this;
         }
-
         public Builder excludeMap(@Nullable PolicyIEMap excludeMap) {
             this.excludeMap = excludeMap;
             return this;
         }
-
         public Builder excludeResourceTags(@Nullable Boolean excludeResourceTags) {
             this.excludeResourceTags = excludeResourceTags;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder includeMap(@Nullable PolicyIEMap includeMap) {
             this.includeMap = includeMap;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder remediationEnabled(@Nullable Boolean remediationEnabled) {
             this.remediationEnabled = remediationEnabled;
             return this;
         }
-
         public Builder resourceTags(@Nullable List<PolicyResourceTag> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
-
+        public Builder resourceTags(PolicyResourceTag... resourceTags) {
+            return resourceTags(List.of(resourceTags));
+        }
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceTypeList(@Nullable List<String> resourceTypeList) {
             this.resourceTypeList = resourceTypeList;
             return this;
         }
-
+        public Builder resourceTypeList(String... resourceTypeList) {
+            return resourceTypeList(List.of(resourceTypeList));
+        }
         public Builder resourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
             this.resourcesCleanUp = resourcesCleanUp;
             return this;
         }
-
         public Builder securityServicePolicyData(@Nullable SecurityServicePolicyDataProperties securityServicePolicyData) {
             this.securityServicePolicyData = securityServicePolicyData;
             return this;
         }
-
         public Builder tags(@Nullable List<PolicyTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetPolicyResult build() {
+        public Builder tags(PolicyTag... tags) {
+            return tags(List.of(tags));
+        }        public GetPolicyResult build() {
             return new GetPolicyResult(arn, excludeMap, excludeResourceTags, id, includeMap, policyName, remediationEnabled, resourceTags, resourceType, resourceTypeList, resourcesCleanUp, securityServicePolicyData, tags);
         }
     }

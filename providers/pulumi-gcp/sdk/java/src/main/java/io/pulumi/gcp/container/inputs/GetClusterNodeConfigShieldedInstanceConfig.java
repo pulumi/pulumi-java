@@ -64,12 +64,10 @@ public final class GetClusterNodeConfigShieldedInstanceConfig extends io.pulumi.
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
-        }
-        public GetClusterNodeConfigShieldedInstanceConfig build() {
+        }        public GetClusterNodeConfigShieldedInstanceConfig build() {
             return new GetClusterNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

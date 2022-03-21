@@ -54,8 +54,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
-        }
-        public GetEnvironmentArgs build() {
+        }        public GetEnvironmentArgs build() {
             return new GetEnvironmentArgs(environmentId);
         }
     }

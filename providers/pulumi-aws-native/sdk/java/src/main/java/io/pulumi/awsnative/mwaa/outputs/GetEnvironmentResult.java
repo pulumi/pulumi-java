@@ -236,102 +236,82 @@ public final class GetEnvironmentResult {
             this.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
-
         public Builder airflowVersion(@Nullable String airflowVersion) {
             this.airflowVersion = airflowVersion;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder dagS3Path(@Nullable String dagS3Path) {
             this.dagS3Path = dagS3Path;
             return this;
         }
-
         public Builder environmentClass(@Nullable String environmentClass) {
             this.environmentClass = environmentClass;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable EnvironmentLoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
-
         public Builder minWorkers(@Nullable Integer minWorkers) {
             this.minWorkers = minWorkers;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable EnvironmentNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder pluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
             this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
             return this;
         }
-
         public Builder pluginsS3Path(@Nullable String pluginsS3Path) {
             this.pluginsS3Path = pluginsS3Path;
             return this;
         }
-
         public Builder requirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
             this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
             return this;
         }
-
         public Builder requirementsS3Path(@Nullable String requirementsS3Path) {
             this.requirementsS3Path = requirementsS3Path;
             return this;
         }
-
         public Builder schedulers(@Nullable Integer schedulers) {
             this.schedulers = schedulers;
             return this;
         }
-
         public Builder sourceBucketArn(@Nullable String sourceBucketArn) {
             this.sourceBucketArn = sourceBucketArn;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder webserverAccessMode(@Nullable EnvironmentWebserverAccessMode webserverAccessMode) {
             this.webserverAccessMode = webserverAccessMode;
             return this;
         }
-
         public Builder webserverUrl(@Nullable String webserverUrl) {
             this.webserverUrl = webserverUrl;
             return this;
         }
-
         public Builder weeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
             this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
-        }
-        public GetEnvironmentResult build() {
+        }        public GetEnvironmentResult build() {
             return new GetEnvironmentResult(airflowConfigurationOptions, airflowVersion, arn, dagS3Path, environmentClass, executionRoleArn, loggingConfiguration, maxWorkers, minWorkers, networkConfiguration, pluginsS3ObjectVersion, pluginsS3Path, requirementsS3ObjectVersion, requirementsS3Path, schedulers, sourceBucketArn, tags, webserverAccessMode, webserverUrl, weeklyMaintenanceWindowStart);
         }
     }

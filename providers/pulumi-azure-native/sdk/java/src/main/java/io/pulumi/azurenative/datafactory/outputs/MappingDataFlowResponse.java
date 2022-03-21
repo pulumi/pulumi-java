@@ -191,47 +191,53 @@ public final class MappingDataFlowResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder folder(@Nullable DataFlowResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
-
         public Builder scriptLines(@Nullable List<String> scriptLines) {
             this.scriptLines = scriptLines;
             return this;
         }
-
+        public Builder scriptLines(String... scriptLines) {
+            return scriptLines(List.of(scriptLines));
+        }
         public Builder sinks(@Nullable List<DataFlowSinkResponse> sinks) {
             this.sinks = sinks;
             return this;
         }
-
+        public Builder sinks(DataFlowSinkResponse... sinks) {
+            return sinks(List.of(sinks));
+        }
         public Builder sources(@Nullable List<DataFlowSourceResponse> sources) {
             this.sources = sources;
             return this;
         }
-
+        public Builder sources(DataFlowSourceResponse... sources) {
+            return sources(List.of(sources));
+        }
         public Builder transformations(@Nullable List<TransformationResponse> transformations) {
             this.transformations = transformations;
             return this;
         }
-
+        public Builder transformations(TransformationResponse... transformations) {
+            return transformations(List.of(transformations));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public MappingDataFlowResponse build() {
+        }        public MappingDataFlowResponse build() {
             return new MappingDataFlowResponse(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
         }
     }

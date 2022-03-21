@@ -518,302 +518,254 @@ public final class RegionBackendServiceArgs extends io.pulumi.resources.Resource
             this.affinityCookieTtlSec = affinityCookieTtlSec;
             return this;
         }
-
         public Builder affinityCookieTtlSec(@Nullable Integer affinityCookieTtlSec) {
             this.affinityCookieTtlSec = Output.ofNullable(affinityCookieTtlSec);
             return this;
         }
-
         public Builder backends(@Nullable Output<List<BackendArgs>> backends) {
             this.backends = backends;
             return this;
         }
-
         public Builder backends(@Nullable List<BackendArgs> backends) {
             this.backends = Output.ofNullable(backends);
             return this;
         }
-
+        public Builder backends(BackendArgs... backends) {
+            return backends(List.of(backends));
+        }
         public Builder cdnPolicy(@Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
-
         public Builder cdnPolicy(@Nullable BackendServiceCdnPolicyArgs cdnPolicy) {
             this.cdnPolicy = Output.ofNullable(cdnPolicy);
             return this;
         }
-
         public Builder circuitBreakers(@Nullable Output<CircuitBreakersArgs> circuitBreakers) {
             this.circuitBreakers = circuitBreakers;
             return this;
         }
-
         public Builder circuitBreakers(@Nullable CircuitBreakersArgs circuitBreakers) {
             this.circuitBreakers = Output.ofNullable(circuitBreakers);
             return this;
         }
-
         public Builder connectionDraining(@Nullable Output<ConnectionDrainingArgs> connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
-
         public Builder connectionDraining(@Nullable ConnectionDrainingArgs connectionDraining) {
             this.connectionDraining = Output.ofNullable(connectionDraining);
             return this;
         }
-
         public Builder connectionTrackingPolicy(@Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy) {
             this.connectionTrackingPolicy = connectionTrackingPolicy;
             return this;
         }
-
         public Builder connectionTrackingPolicy(@Nullable BackendServiceConnectionTrackingPolicyArgs connectionTrackingPolicy) {
             this.connectionTrackingPolicy = Output.ofNullable(connectionTrackingPolicy);
             return this;
         }
-
         public Builder consistentHash(@Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash) {
             this.consistentHash = consistentHash;
             return this;
         }
-
         public Builder consistentHash(@Nullable ConsistentHashLoadBalancerSettingsArgs consistentHash) {
             this.consistentHash = Output.ofNullable(consistentHash);
             return this;
         }
-
         public Builder customRequestHeaders(@Nullable Output<List<String>> customRequestHeaders) {
             this.customRequestHeaders = customRequestHeaders;
             return this;
         }
-
         public Builder customRequestHeaders(@Nullable List<String> customRequestHeaders) {
             this.customRequestHeaders = Output.ofNullable(customRequestHeaders);
             return this;
         }
-
+        public Builder customRequestHeaders(String... customRequestHeaders) {
+            return customRequestHeaders(List.of(customRequestHeaders));
+        }
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
             this.customResponseHeaders = customResponseHeaders;
             return this;
         }
-
         public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
             this.customResponseHeaders = Output.ofNullable(customResponseHeaders);
             return this;
         }
-
+        public Builder customResponseHeaders(String... customResponseHeaders) {
+            return customResponseHeaders(List.of(customResponseHeaders));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableCDN(@Nullable Output<Boolean> enableCDN) {
             this.enableCDN = enableCDN;
             return this;
         }
-
         public Builder enableCDN(@Nullable Boolean enableCDN) {
             this.enableCDN = Output.ofNullable(enableCDN);
             return this;
         }
-
         public Builder failoverPolicy(@Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
         }
-
         public Builder failoverPolicy(@Nullable BackendServiceFailoverPolicyArgs failoverPolicy) {
             this.failoverPolicy = Output.ofNullable(failoverPolicy);
             return this;
         }
-
         public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
-
         public Builder healthChecks(@Nullable List<String> healthChecks) {
             this.healthChecks = Output.ofNullable(healthChecks);
             return this;
         }
-
+        public Builder healthChecks(String... healthChecks) {
+            return healthChecks(List.of(healthChecks));
+        }
         public Builder iap(@Nullable Output<BackendServiceIAPArgs> iap) {
             this.iap = iap;
             return this;
         }
-
         public Builder iap(@Nullable BackendServiceIAPArgs iap) {
             this.iap = Output.ofNullable(iap);
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable Output<RegionBackendServiceLoadBalancingScheme> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable RegionBackendServiceLoadBalancingScheme loadBalancingScheme) {
             this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
             return this;
         }
-
         public Builder localityLbPolicy(@Nullable Output<RegionBackendServiceLocalityLbPolicy> localityLbPolicy) {
             this.localityLbPolicy = localityLbPolicy;
             return this;
         }
-
         public Builder localityLbPolicy(@Nullable RegionBackendServiceLocalityLbPolicy localityLbPolicy) {
             this.localityLbPolicy = Output.ofNullable(localityLbPolicy);
             return this;
         }
-
         public Builder logConfig(@Nullable Output<BackendServiceLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
-
         public Builder logConfig(@Nullable BackendServiceLogConfigArgs logConfig) {
             this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
-
         public Builder maxStreamDuration(@Nullable Output<DurationArgs> maxStreamDuration) {
             this.maxStreamDuration = maxStreamDuration;
             return this;
         }
-
         public Builder maxStreamDuration(@Nullable DurationArgs maxStreamDuration) {
             this.maxStreamDuration = Output.ofNullable(maxStreamDuration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder outlierDetection(@Nullable Output<OutlierDetectionArgs> outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
-
         public Builder outlierDetection(@Nullable OutlierDetectionArgs outlierDetection) {
             this.outlierDetection = Output.ofNullable(outlierDetection);
             return this;
         }
-
         public Builder portName(@Nullable Output<String> portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = Output.ofNullable(portName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder protocol(@Nullable Output<RegionBackendServiceProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable RegionBackendServiceProtocol protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder securitySettings(@Nullable Output<SecuritySettingsArgs> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
-
         public Builder securitySettings(@Nullable SecuritySettingsArgs securitySettings) {
             this.securitySettings = Output.ofNullable(securitySettings);
             return this;
         }
-
         public Builder sessionAffinity(@Nullable Output<RegionBackendServiceSessionAffinity> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
-
         public Builder sessionAffinity(@Nullable RegionBackendServiceSessionAffinity sessionAffinity) {
             this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
         }
-
         public Builder subsetting(@Nullable Output<SubsettingArgs> subsetting) {
             this.subsetting = subsetting;
             return this;
         }
-
         public Builder subsetting(@Nullable SubsettingArgs subsetting) {
             this.subsetting = Output.ofNullable(subsetting);
             return this;
         }
-
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
-
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
-        }
-        public RegionBackendServiceArgs build() {
+        }        public RegionBackendServiceArgs build() {
             return new RegionBackendServiceArgs(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, connectionDraining, connectionTrackingPolicy, consistentHash, customRequestHeaders, customResponseHeaders, description, enableCDN, failoverPolicy, healthChecks, iap, loadBalancingScheme, localityLbPolicy, logConfig, maxStreamDuration, name, network, outlierDetection, portName, project, protocol, region, requestId, securitySettings, sessionAffinity, subsetting, timeoutSec);
         }
     }

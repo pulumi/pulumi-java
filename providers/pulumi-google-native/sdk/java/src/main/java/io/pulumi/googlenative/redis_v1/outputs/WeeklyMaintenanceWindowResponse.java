@@ -86,17 +86,14 @@ public final class WeeklyMaintenanceWindowResponse {
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder startTime(TimeOfDayResponse startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public WeeklyMaintenanceWindowResponse build() {
+        }        public WeeklyMaintenanceWindowResponse build() {
             return new WeeklyMaintenanceWindowResponse(day, duration, startTime);
         }
     }

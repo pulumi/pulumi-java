@@ -119,27 +119,22 @@ public final class ServiceActionDefinition {
             this.assumeRole = assumeRole;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ServiceActionDefinition build() {
+        }        public ServiceActionDefinition build() {
             return new ServiceActionDefinition(assumeRole, name, parameters, type, version);
         }
     }

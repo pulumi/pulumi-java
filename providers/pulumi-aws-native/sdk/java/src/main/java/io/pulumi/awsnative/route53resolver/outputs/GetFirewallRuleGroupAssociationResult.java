@@ -236,62 +236,53 @@ public final class GetFirewallRuleGroupAssociationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder managedOwnerName(@Nullable String managedOwnerName) {
             this.managedOwnerName = managedOwnerName;
             return this;
         }
-
         public Builder modificationTime(@Nullable String modificationTime) {
             this.modificationTime = modificationTime;
             return this;
         }
-
         public Builder mutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
             this.mutationProtection = mutationProtection;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder status(@Nullable FirewallRuleGroupAssociationStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallRuleGroupAssociationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFirewallRuleGroupAssociationResult build() {
+        public Builder tags(FirewallRuleGroupAssociationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFirewallRuleGroupAssociationResult build() {
             return new GetFirewallRuleGroupAssociationResult(arn, creationTime, creatorRequestId, id, managedOwnerName, modificationTime, mutationProtection, name, priority, status, statusMessage, tags);
         }
     }

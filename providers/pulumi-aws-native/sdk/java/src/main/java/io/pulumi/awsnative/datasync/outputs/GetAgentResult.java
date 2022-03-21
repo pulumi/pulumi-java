@@ -106,22 +106,21 @@ public final class GetAgentResult {
             this.agentArn = agentArn;
             return this;
         }
-
         public Builder agentName(@Nullable String agentName) {
             this.agentName = agentName;
             return this;
         }
-
         public Builder endpointType(@Nullable AgentEndpointType endpointType) {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder tags(@Nullable List<AgentTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAgentResult build() {
+        public Builder tags(AgentTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAgentResult build() {
             return new GetAgentResult(agentArn, agentName, endpointType, tags);
         }
     }

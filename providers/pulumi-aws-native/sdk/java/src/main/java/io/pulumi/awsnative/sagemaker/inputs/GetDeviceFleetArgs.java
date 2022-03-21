@@ -54,8 +54,7 @@ public final class GetDeviceFleetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder deviceFleetName(String deviceFleetName) {
             this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
             return this;
-        }
-        public GetDeviceFleetArgs build() {
+        }        public GetDeviceFleetArgs build() {
             return new GetDeviceFleetArgs(deviceFleetName);
         }
     }

@@ -277,152 +277,125 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
             this.allocatedStorage = allocatedStorage;
             return this;
         }
-
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
             this.allocatedStorage = Output.ofNullable(allocatedStorage);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
-
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
             return this;
         }
-
         public Builder dbClusterSnapshotArn(@Nullable Output<String> dbClusterSnapshotArn) {
             this.dbClusterSnapshotArn = dbClusterSnapshotArn;
             return this;
         }
-
         public Builder dbClusterSnapshotArn(@Nullable String dbClusterSnapshotArn) {
             this.dbClusterSnapshotArn = Output.ofNullable(dbClusterSnapshotArn);
             return this;
         }
-
         public Builder dbClusterSnapshotIdentifier(@Nullable Output<String> dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
             return this;
         }
-
         public Builder dbClusterSnapshotIdentifier(@Nullable String dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = Output.ofNullable(dbClusterSnapshotIdentifier);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder licenseModel(@Nullable Output<String> licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
-
         public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = Output.ofNullable(licenseModel);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder snapshotType(@Nullable Output<String> snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
-
         public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = Output.ofNullable(snapshotType);
             return this;
         }
-
         public Builder sourceDbClusterSnapshotArn(@Nullable Output<String> sourceDbClusterSnapshotArn) {
             this.sourceDbClusterSnapshotArn = sourceDbClusterSnapshotArn;
             return this;
         }
-
         public Builder sourceDbClusterSnapshotArn(@Nullable String sourceDbClusterSnapshotArn) {
             this.sourceDbClusterSnapshotArn = Output.ofNullable(sourceDbClusterSnapshotArn);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public ClusterSnapshotState build() {
+        }        public ClusterSnapshotState build() {
             return new ClusterSnapshotState(allocatedStorage, availabilityZones, dbClusterIdentifier, dbClusterSnapshotArn, dbClusterSnapshotIdentifier, engine, engineVersion, kmsKeyId, licenseModel, port, snapshotType, sourceDbClusterSnapshotArn, status, storageEncrypted, vpcId);
         }
     }

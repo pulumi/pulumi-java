@@ -69,12 +69,10 @@ public final class ImageRawDiskResponse {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public ImageRawDiskResponse build() {
+        }        public ImageRawDiskResponse build() {
             return new ImageRawDiskResponse(containerType, source);
         }
     }

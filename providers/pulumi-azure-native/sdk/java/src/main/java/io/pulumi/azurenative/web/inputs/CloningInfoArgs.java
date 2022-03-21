@@ -229,112 +229,90 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.appSettingsOverrides = appSettingsOverrides;
             return this;
         }
-
         public Builder appSettingsOverrides(@Nullable Map<String,String> appSettingsOverrides) {
             this.appSettingsOverrides = Output.ofNullable(appSettingsOverrides);
             return this;
         }
-
         public Builder cloneCustomHostNames(@Nullable Output<Boolean> cloneCustomHostNames) {
             this.cloneCustomHostNames = cloneCustomHostNames;
             return this;
         }
-
         public Builder cloneCustomHostNames(@Nullable Boolean cloneCustomHostNames) {
             this.cloneCustomHostNames = Output.ofNullable(cloneCustomHostNames);
             return this;
         }
-
         public Builder cloneSourceControl(@Nullable Output<Boolean> cloneSourceControl) {
             this.cloneSourceControl = cloneSourceControl;
             return this;
         }
-
         public Builder cloneSourceControl(@Nullable Boolean cloneSourceControl) {
             this.cloneSourceControl = Output.ofNullable(cloneSourceControl);
             return this;
         }
-
         public Builder configureLoadBalancing(@Nullable Output<Boolean> configureLoadBalancing) {
             this.configureLoadBalancing = configureLoadBalancing;
             return this;
         }
-
         public Builder configureLoadBalancing(@Nullable Boolean configureLoadBalancing) {
             this.configureLoadBalancing = Output.ofNullable(configureLoadBalancing);
             return this;
         }
-
         public Builder correlationId(@Nullable Output<String> correlationId) {
             this.correlationId = correlationId;
             return this;
         }
-
         public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = Output.ofNullable(correlationId);
             return this;
         }
-
         public Builder hostingEnvironment(@Nullable Output<String> hostingEnvironment) {
             this.hostingEnvironment = hostingEnvironment;
             return this;
         }
-
         public Builder hostingEnvironment(@Nullable String hostingEnvironment) {
             this.hostingEnvironment = Output.ofNullable(hostingEnvironment);
             return this;
         }
-
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
-
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Output.ofNullable(overwrite);
             return this;
         }
-
         public Builder sourceWebAppId(Output<String> sourceWebAppId) {
             this.sourceWebAppId = Objects.requireNonNull(sourceWebAppId);
             return this;
         }
-
         public Builder sourceWebAppId(String sourceWebAppId) {
             this.sourceWebAppId = Output.of(Objects.requireNonNull(sourceWebAppId));
             return this;
         }
-
         public Builder sourceWebAppLocation(@Nullable Output<String> sourceWebAppLocation) {
             this.sourceWebAppLocation = sourceWebAppLocation;
             return this;
         }
-
         public Builder sourceWebAppLocation(@Nullable String sourceWebAppLocation) {
             this.sourceWebAppLocation = Output.ofNullable(sourceWebAppLocation);
             return this;
         }
-
         public Builder trafficManagerProfileId(@Nullable Output<String> trafficManagerProfileId) {
             this.trafficManagerProfileId = trafficManagerProfileId;
             return this;
         }
-
         public Builder trafficManagerProfileId(@Nullable String trafficManagerProfileId) {
             this.trafficManagerProfileId = Output.ofNullable(trafficManagerProfileId);
             return this;
         }
-
         public Builder trafficManagerProfileName(@Nullable Output<String> trafficManagerProfileName) {
             this.trafficManagerProfileName = trafficManagerProfileName;
             return this;
         }
-
         public Builder trafficManagerProfileName(@Nullable String trafficManagerProfileName) {
             this.trafficManagerProfileName = Output.ofNullable(trafficManagerProfileName);
             return this;
-        }
-        public CloningInfoArgs build() {
+        }        public CloningInfoArgs build() {
             return new CloningInfoArgs(appSettingsOverrides, cloneCustomHostNames, cloneSourceControl, configureLoadBalancing, correlationId, hostingEnvironment, overwrite, sourceWebAppId, sourceWebAppLocation, trafficManagerProfileId, trafficManagerProfileName);
         }
     }

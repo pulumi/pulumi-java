@@ -105,22 +105,18 @@ public final class EventConnectionAuthParametersOauth {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder clientParameters(@Nullable EventConnectionAuthParametersOauthClientParameters clientParameters) {
             this.clientParameters = clientParameters;
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
             this.oauthHttpParameters = Objects.requireNonNull(oauthHttpParameters);
             return this;
-        }
-        public EventConnectionAuthParametersOauth build() {
+        }        public EventConnectionAuthParametersOauth build() {
             return new EventConnectionAuthParametersOauth(authorizationEndpoint, clientParameters, httpMethod, oauthHttpParameters);
         }
     }

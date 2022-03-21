@@ -77,12 +77,10 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public TlsPropertiesResponse build() {
+        }        public TlsPropertiesResponse build() {
             return new TlsPropertiesResponse(certificate, status);
         }
     }

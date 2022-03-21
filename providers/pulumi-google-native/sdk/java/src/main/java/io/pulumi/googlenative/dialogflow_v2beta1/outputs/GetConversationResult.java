@@ -150,37 +150,30 @@ public final class GetConversationResult {
             this.conversationProfile = Objects.requireNonNull(conversationProfile);
             return this;
         }
-
         public Builder conversationStage(String conversationStage) {
             this.conversationStage = Objects.requireNonNull(conversationStage);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder phoneNumber(GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GetConversationResult build() {
+        }        public GetConversationResult build() {
             return new GetConversationResult(conversationProfile, conversationStage, endTime, lifecycleState, name, phoneNumber, startTime);
         }
     }

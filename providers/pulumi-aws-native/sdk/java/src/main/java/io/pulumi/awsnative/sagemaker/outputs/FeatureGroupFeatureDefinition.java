@@ -54,12 +54,10 @@ public final class FeatureGroupFeatureDefinition {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
-
         public Builder featureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
             this.featureType = Objects.requireNonNull(featureType);
             return this;
-        }
-        public FeatureGroupFeatureDefinition build() {
+        }        public FeatureGroupFeatureDefinition build() {
             return new FeatureGroupFeatureDefinition(featureName, featureType);
         }
     }
