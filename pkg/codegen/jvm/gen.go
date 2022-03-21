@@ -60,9 +60,9 @@ func (mod *modContext) propertyName(p *schema.Property) string {
 }
 
 func getListType(ctx *classFileContext, propertyType TypeShape) string {
-	if propertyType.Type.String() == "java.util.List" {
+	if propertyType.Type.String() == names.List.String() {
 		for _, a := range propertyType.Parameters {
-			if strings.HasPrefix(a.Type.String(), "java.util.") {
+			if strings.HasPrefix(a.Type.String(), names.JavaUtil.Dot("").String()) {
 				continue
 			}
 			return a.ToCode(ctx.imports)
