@@ -109,42 +109,34 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
             this.clusterSecurityGroup = Objects.requireNonNull(clusterSecurityGroup);
             return this;
         }
-
         public Builder clusterSecurityGroup(SecurityGroup clusterSecurityGroup) {
             this.clusterSecurityGroup = Output.of(Objects.requireNonNull(clusterSecurityGroup));
             return this;
         }
-
         public Builder eksCluster(Output<Cluster> eksCluster) {
             this.eksCluster = Objects.requireNonNull(eksCluster);
             return this;
         }
-
         public Builder eksCluster(Cluster eksCluster) {
             this.eksCluster = Output.of(Objects.requireNonNull(eksCluster));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public NodeGroupSecurityGroupArgs build() {
+        }        public NodeGroupSecurityGroupArgs build() {
             return new NodeGroupSecurityGroupArgs(clusterSecurityGroup, eksCluster, tags, vpcId);
         }
     }

@@ -506,262 +506,216 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             this.amiId = amiId;
             return this;
         }
-
         public Builder amiId(@Nullable String amiId) {
             this.amiId = Output.ofNullable(amiId);
             return this;
         }
-
         public Builder autoScalingGroupTags(@Nullable Output<Map<String,String>> autoScalingGroupTags) {
             this.autoScalingGroupTags = autoScalingGroupTags;
             return this;
         }
-
         public Builder autoScalingGroupTags(@Nullable Map<String,String> autoScalingGroupTags) {
             this.autoScalingGroupTags = Output.ofNullable(autoScalingGroupTags);
             return this;
         }
-
         public Builder bootstrapExtraArgs(@Nullable Output<String> bootstrapExtraArgs) {
             this.bootstrapExtraArgs = bootstrapExtraArgs;
             return this;
         }
-
         public Builder bootstrapExtraArgs(@Nullable String bootstrapExtraArgs) {
             this.bootstrapExtraArgs = Output.ofNullable(bootstrapExtraArgs);
             return this;
         }
-
         public Builder cloudFormationTags(@Nullable Output<Map<String,String>> cloudFormationTags) {
             this.cloudFormationTags = cloudFormationTags;
             return this;
         }
-
         public Builder cloudFormationTags(@Nullable Map<String,String> cloudFormationTags) {
             this.cloudFormationTags = Output.ofNullable(cloudFormationTags);
             return this;
         }
-
         public Builder clusterIngressRule(@Nullable Output<SecurityGroupRule> clusterIngressRule) {
             this.clusterIngressRule = clusterIngressRule;
             return this;
         }
-
         public Builder clusterIngressRule(@Nullable SecurityGroupRule clusterIngressRule) {
             this.clusterIngressRule = Output.ofNullable(clusterIngressRule);
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
             this.desiredCapacity = Output.ofNullable(desiredCapacity);
             return this;
         }
-
         public Builder encryptRootBlockDevice(@Nullable Output<Boolean> encryptRootBlockDevice) {
             this.encryptRootBlockDevice = encryptRootBlockDevice;
             return this;
         }
-
         public Builder encryptRootBlockDevice(@Nullable Boolean encryptRootBlockDevice) {
             this.encryptRootBlockDevice = Output.ofNullable(encryptRootBlockDevice);
             return this;
         }
-
         public Builder extraNodeSecurityGroups(@Nullable Output<List<SecurityGroup>> extraNodeSecurityGroups) {
             this.extraNodeSecurityGroups = extraNodeSecurityGroups;
             return this;
         }
-
         public Builder extraNodeSecurityGroups(@Nullable List<SecurityGroup> extraNodeSecurityGroups) {
             this.extraNodeSecurityGroups = Output.ofNullable(extraNodeSecurityGroups);
             return this;
         }
-
+        public Builder extraNodeSecurityGroups(SecurityGroup... extraNodeSecurityGroups) {
+            return extraNodeSecurityGroups(List.of(extraNodeSecurityGroups));
+        }
         public Builder gpu(@Nullable Output<Boolean> gpu) {
             this.gpu = gpu;
             return this;
         }
-
         public Builder gpu(@Nullable Boolean gpu) {
             this.gpu = Output.ofNullable(gpu);
             return this;
         }
-
         public Builder instanceProfile(@Nullable Output<InstanceProfile> instanceProfile) {
             this.instanceProfile = instanceProfile;
             return this;
         }
-
         public Builder instanceProfile(@Nullable InstanceProfile instanceProfile) {
             this.instanceProfile = Output.ofNullable(instanceProfile);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder kubeletExtraArgs(@Nullable Output<String> kubeletExtraArgs) {
             this.kubeletExtraArgs = kubeletExtraArgs;
             return this;
         }
-
         public Builder kubeletExtraArgs(@Nullable String kubeletExtraArgs) {
             this.kubeletExtraArgs = Output.ofNullable(kubeletExtraArgs);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
-
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder nodeAssociatePublicIpAddress(@Nullable Output<Boolean> nodeAssociatePublicIpAddress) {
             this.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
             return this;
         }
-
         public Builder nodeAssociatePublicIpAddress(@Nullable Boolean nodeAssociatePublicIpAddress) {
             this.nodeAssociatePublicIpAddress = Output.ofNullable(nodeAssociatePublicIpAddress);
             return this;
         }
-
         public Builder nodePublicKey(@Nullable Output<String> nodePublicKey) {
             this.nodePublicKey = nodePublicKey;
             return this;
         }
-
         public Builder nodePublicKey(@Nullable String nodePublicKey) {
             this.nodePublicKey = Output.ofNullable(nodePublicKey);
             return this;
         }
-
         public Builder nodeRootVolumeSize(@Nullable Output<Integer> nodeRootVolumeSize) {
             this.nodeRootVolumeSize = nodeRootVolumeSize;
             return this;
         }
-
         public Builder nodeRootVolumeSize(@Nullable Integer nodeRootVolumeSize) {
             this.nodeRootVolumeSize = Output.ofNullable(nodeRootVolumeSize);
             return this;
         }
-
         public Builder nodeSecurityGroup(@Nullable Output<SecurityGroup> nodeSecurityGroup) {
             this.nodeSecurityGroup = nodeSecurityGroup;
             return this;
         }
-
         public Builder nodeSecurityGroup(@Nullable SecurityGroup nodeSecurityGroup) {
             this.nodeSecurityGroup = Output.ofNullable(nodeSecurityGroup);
             return this;
         }
-
         public Builder nodeSubnetIds(@Nullable Output<List<String>> nodeSubnetIds) {
             this.nodeSubnetIds = nodeSubnetIds;
             return this;
         }
-
         public Builder nodeSubnetIds(@Nullable List<String> nodeSubnetIds) {
             this.nodeSubnetIds = Output.ofNullable(nodeSubnetIds);
             return this;
         }
-
+        public Builder nodeSubnetIds(String... nodeSubnetIds) {
+            return nodeSubnetIds(List.of(nodeSubnetIds));
+        }
         public Builder nodeUserData(@Nullable Output<String> nodeUserData) {
             this.nodeUserData = nodeUserData;
             return this;
         }
-
         public Builder nodeUserData(@Nullable String nodeUserData) {
             this.nodeUserData = Output.ofNullable(nodeUserData);
             return this;
         }
-
         public Builder nodeUserDataOverride(@Nullable Output<String> nodeUserDataOverride) {
             this.nodeUserDataOverride = nodeUserDataOverride;
             return this;
         }
-
         public Builder nodeUserDataOverride(@Nullable String nodeUserDataOverride) {
             this.nodeUserDataOverride = Output.ofNullable(nodeUserDataOverride);
             return this;
         }
-
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
-
         public Builder taints(@Nullable Output<Map<String,TaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
-
         public Builder taints(@Nullable Map<String,TaintArgs> taints) {
             this.taints = Output.ofNullable(taints);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ClusterNodeGroupOptionsArgs build() {
+        }        public ClusterNodeGroupOptionsArgs build() {
             return new ClusterNodeGroupOptionsArgs(amiId, autoScalingGroupTags, bootstrapExtraArgs, cloudFormationTags, clusterIngressRule, desiredCapacity, encryptRootBlockDevice, extraNodeSecurityGroups, gpu, instanceProfile, instanceType, keyName, kubeletExtraArgs, labels, maxSize, minSize, nodeAssociatePublicIpAddress, nodePublicKey, nodeRootVolumeSize, nodeSecurityGroup, nodeSubnetIds, nodeUserData, nodeUserDataOverride, spotPrice, taints, version);
         }
     }
