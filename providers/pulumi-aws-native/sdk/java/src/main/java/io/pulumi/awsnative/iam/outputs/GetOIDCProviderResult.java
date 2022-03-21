@@ -81,22 +81,27 @@ public final class GetOIDCProviderResult {
             this.arn = arn;
             return this;
         }
-
         public Builder clientIdList(@Nullable List<String> clientIdList) {
             this.clientIdList = clientIdList;
             return this;
         }
-
+        public Builder clientIdList(String... clientIdList) {
+            return clientIdList(List.of(clientIdList));
+        }
         public Builder tags(@Nullable List<OIDCProviderTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(OIDCProviderTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder thumbprintList(@Nullable List<String> thumbprintList) {
             this.thumbprintList = thumbprintList;
             return this;
         }
-        public GetOIDCProviderResult build() {
+        public Builder thumbprintList(String... thumbprintList) {
+            return thumbprintList(List.of(thumbprintList));
+        }        public GetOIDCProviderResult build() {
             return new GetOIDCProviderResult(arn, clientIdList, tags, thumbprintList);
         }
     }

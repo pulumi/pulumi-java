@@ -123,27 +123,25 @@ public final class GetReportPlanResult {
             this.reportDeliveryChannel = reportDeliveryChannel;
             return this;
         }
-
         public Builder reportPlanArn(@Nullable String reportPlanArn) {
             this.reportPlanArn = reportPlanArn;
             return this;
         }
-
         public Builder reportPlanDescription(@Nullable String reportPlanDescription) {
             this.reportPlanDescription = reportPlanDescription;
             return this;
         }
-
         public Builder reportPlanTags(@Nullable List<ReportPlanTag> reportPlanTags) {
             this.reportPlanTags = reportPlanTags;
             return this;
         }
-
+        public Builder reportPlanTags(ReportPlanTag... reportPlanTags) {
+            return reportPlanTags(List.of(reportPlanTags));
+        }
         public Builder reportSetting(@Nullable ReportSettingProperties reportSetting) {
             this.reportSetting = reportSetting;
             return this;
-        }
-        public GetReportPlanResult build() {
+        }        public GetReportPlanResult build() {
             return new GetReportPlanResult(reportDeliveryChannel, reportPlanArn, reportPlanDescription, reportPlanTags, reportSetting);
         }
     }

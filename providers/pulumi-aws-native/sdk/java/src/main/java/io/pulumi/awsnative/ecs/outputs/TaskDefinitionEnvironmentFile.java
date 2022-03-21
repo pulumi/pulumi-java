@@ -55,12 +55,10 @@ public final class TaskDefinitionEnvironmentFile {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TaskDefinitionEnvironmentFile build() {
+        }        public TaskDefinitionEnvironmentFile build() {
             return new TaskDefinitionEnvironmentFile(type, value);
         }
     }

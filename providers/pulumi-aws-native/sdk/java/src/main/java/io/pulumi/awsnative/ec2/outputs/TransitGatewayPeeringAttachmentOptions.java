@@ -53,8 +53,7 @@ public final class TransitGatewayPeeringAttachmentOptions {
         public Builder dynamicRouting(@Nullable String dynamicRouting) {
             this.dynamicRouting = dynamicRouting;
             return this;
-        }
-        public TransitGatewayPeeringAttachmentOptions build() {
+        }        public TransitGatewayPeeringAttachmentOptions build() {
             return new TransitGatewayPeeringAttachmentOptions(dynamicRouting);
         }
     }

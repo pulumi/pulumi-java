@@ -117,62 +117,53 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<TopicRuleActionArgs> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(TopicRuleActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder awsIotSqlVersion(@Nullable Output<String> awsIotSqlVersion) {
             this.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
-
         public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
             this.awsIotSqlVersion = Output.ofNullable(awsIotSqlVersion);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder errorAction(@Nullable Output<TopicRuleActionArgs> errorAction) {
             this.errorAction = errorAction;
             return this;
         }
-
         public Builder errorAction(@Nullable TopicRuleActionArgs errorAction) {
             this.errorAction = Output.ofNullable(errorAction);
             return this;
         }
-
         public Builder ruleDisabled(@Nullable Output<Boolean> ruleDisabled) {
             this.ruleDisabled = ruleDisabled;
             return this;
         }
-
         public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
             this.ruleDisabled = Output.ofNullable(ruleDisabled);
             return this;
         }
-
         public Builder sql(Output<String> sql) {
             this.sql = Objects.requireNonNull(sql);
             return this;
         }
-
         public Builder sql(String sql) {
             this.sql = Output.of(Objects.requireNonNull(sql));
             return this;
-        }
-        public TopicRulePayloadArgs build() {
+        }        public TopicRulePayloadArgs build() {
             return new TopicRulePayloadArgs(actions, awsIotSqlVersion, description, errorAction, ruleDisabled, sql);
         }
     }

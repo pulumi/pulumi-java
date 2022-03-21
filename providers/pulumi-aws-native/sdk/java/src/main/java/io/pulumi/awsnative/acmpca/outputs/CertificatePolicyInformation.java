@@ -56,12 +56,13 @@ public final class CertificatePolicyInformation {
             this.certPolicyId = Objects.requireNonNull(certPolicyId);
             return this;
         }
-
         public Builder policyQualifiers(@Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
             this.policyQualifiers = policyQualifiers;
             return this;
         }
-        public CertificatePolicyInformation build() {
+        public Builder policyQualifiers(CertificatePolicyQualifierInfo... policyQualifiers) {
+            return policyQualifiers(List.of(policyQualifiers));
+        }        public CertificatePolicyInformation build() {
             return new CertificatePolicyInformation(certPolicyId, policyQualifiers);
         }
     }

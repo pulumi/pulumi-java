@@ -45,8 +45,7 @@ public final class AssociationInstanceAssociationOutputLocation {
         public Builder s3Location(@Nullable AssociationS3OutputLocation s3Location) {
             this.s3Location = s3Location;
             return this;
-        }
-        public AssociationInstanceAssociationOutputLocation build() {
+        }        public AssociationInstanceAssociationOutputLocation build() {
             return new AssociationInstanceAssociationOutputLocation(s3Location);
         }
     }

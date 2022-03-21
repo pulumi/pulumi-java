@@ -138,32 +138,29 @@ public final class GetFlowEntitlementResult {
             this.description = description;
             return this;
         }
-
         public Builder encryption(@Nullable FlowEntitlementEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder entitlementArn(@Nullable String entitlementArn) {
             this.entitlementArn = entitlementArn;
             return this;
         }
-
         public Builder entitlementStatus(@Nullable FlowEntitlementEntitlementStatus entitlementStatus) {
             this.entitlementStatus = entitlementStatus;
             return this;
         }
-
         public Builder flowArn(@Nullable String flowArn) {
             this.flowArn = flowArn;
             return this;
         }
-
         public Builder subscribers(@Nullable List<String> subscribers) {
             this.subscribers = subscribers;
             return this;
         }
-        public GetFlowEntitlementResult build() {
+        public Builder subscribers(String... subscribers) {
+            return subscribers(List.of(subscribers));
+        }        public GetFlowEntitlementResult build() {
             return new GetFlowEntitlementResult(description, encryption, entitlementArn, entitlementStatus, flowArn, subscribers);
         }
     }

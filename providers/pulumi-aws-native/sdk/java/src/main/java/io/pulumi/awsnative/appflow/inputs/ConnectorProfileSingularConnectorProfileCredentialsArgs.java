@@ -56,12 +56,10 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder apiKey(String apiKey) {
             this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
-        }
-        public ConnectorProfileSingularConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileSingularConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSingularConnectorProfileCredentialsArgs(apiKey);
         }
     }

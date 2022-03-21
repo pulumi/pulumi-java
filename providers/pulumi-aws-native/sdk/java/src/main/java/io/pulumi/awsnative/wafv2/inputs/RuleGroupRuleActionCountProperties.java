@@ -56,8 +56,7 @@ public final class RuleGroupRuleActionCountProperties extends io.pulumi.resource
         public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public RuleGroupRuleActionCountProperties build() {
+        }        public RuleGroupRuleActionCountProperties build() {
             return new RuleGroupRuleActionCountProperties(customRequestHandling);
         }
     }

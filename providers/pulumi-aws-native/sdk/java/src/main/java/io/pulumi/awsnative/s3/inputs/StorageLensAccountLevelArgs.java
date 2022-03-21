@@ -71,22 +71,18 @@ public final class StorageLensAccountLevelArgs extends io.pulumi.resources.Resou
             this.activityMetrics = activityMetrics;
             return this;
         }
-
         public Builder activityMetrics(@Nullable StorageLensActivityMetricsArgs activityMetrics) {
             this.activityMetrics = Output.ofNullable(activityMetrics);
             return this;
         }
-
         public Builder bucketLevel(Output<StorageLensBucketLevelArgs> bucketLevel) {
             this.bucketLevel = Objects.requireNonNull(bucketLevel);
             return this;
         }
-
         public Builder bucketLevel(StorageLensBucketLevelArgs bucketLevel) {
             this.bucketLevel = Output.of(Objects.requireNonNull(bucketLevel));
             return this;
-        }
-        public StorageLensAccountLevelArgs build() {
+        }        public StorageLensAccountLevelArgs build() {
             return new StorageLensAccountLevelArgs(activityMetrics, bucketLevel);
         }
     }

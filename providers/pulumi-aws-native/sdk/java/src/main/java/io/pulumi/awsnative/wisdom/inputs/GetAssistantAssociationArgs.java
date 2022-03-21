@@ -64,12 +64,10 @@ public final class GetAssistantAssociationArgs extends io.pulumi.resources.Invok
             this.assistantAssociationId = Objects.requireNonNull(assistantAssociationId);
             return this;
         }
-
         public Builder assistantId(String assistantId) {
             this.assistantId = Objects.requireNonNull(assistantId);
             return this;
-        }
-        public GetAssistantAssociationArgs build() {
+        }        public GetAssistantAssociationArgs build() {
             return new GetAssistantAssociationArgs(assistantAssociationId, assistantId);
         }
     }

@@ -55,12 +55,10 @@ public final class EC2FleetAcceleratorTotalMemoryMiBRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public EC2FleetAcceleratorTotalMemoryMiBRequest build() {
+        }        public EC2FleetAcceleratorTotalMemoryMiBRequest build() {
             return new EC2FleetAcceleratorTotalMemoryMiBRequest(max, min);
         }
     }

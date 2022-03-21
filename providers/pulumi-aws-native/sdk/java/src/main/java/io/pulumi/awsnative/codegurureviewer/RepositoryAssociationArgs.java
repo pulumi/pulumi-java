@@ -141,62 +141,53 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
-
         public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = Output.ofNullable(connectionArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RepositoryAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RepositoryAssociationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(RepositoryAssociationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(Output<RepositoryAssociationType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(RepositoryAssociationType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RepositoryAssociationArgs build() {
+        }        public RepositoryAssociationArgs build() {
             return new RepositoryAssociationArgs(bucketName, connectionArn, name, owner, tags, type);
         }
     }

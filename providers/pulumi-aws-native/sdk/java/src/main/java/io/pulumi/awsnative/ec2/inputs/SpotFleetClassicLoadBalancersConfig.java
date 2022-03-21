@@ -52,7 +52,9 @@ public final class SpotFleetClassicLoadBalancersConfig extends io.pulumi.resourc
             this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers);
             return this;
         }
-        public SpotFleetClassicLoadBalancersConfig build() {
+        public Builder classicLoadBalancers(SpotFleetClassicLoadBalancer... classicLoadBalancers) {
+            return classicLoadBalancers(List.of(classicLoadBalancers));
+        }        public SpotFleetClassicLoadBalancersConfig build() {
             return new SpotFleetClassicLoadBalancersConfig(classicLoadBalancers);
         }
     }

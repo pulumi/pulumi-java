@@ -61,12 +61,10 @@ public final class WorkflowStepDeleteStepDetailsPropertiesArgs extends io.pulumi
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public WorkflowStepDeleteStepDetailsPropertiesArgs build() {
+        }        public WorkflowStepDeleteStepDetailsPropertiesArgs build() {
             return new WorkflowStepDeleteStepDetailsPropertiesArgs(name);
         }
     }

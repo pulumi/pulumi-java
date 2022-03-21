@@ -132,72 +132,58 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             this.antennaDownlinkConfig = antennaDownlinkConfig;
             return this;
         }
-
         public Builder antennaDownlinkConfig(@Nullable ConfigAntennaDownlinkConfigArgs antennaDownlinkConfig) {
             this.antennaDownlinkConfig = Output.ofNullable(antennaDownlinkConfig);
             return this;
         }
-
         public Builder antennaDownlinkDemodDecodeConfig(@Nullable Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig) {
             this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
             return this;
         }
-
         public Builder antennaDownlinkDemodDecodeConfig(@Nullable ConfigAntennaDownlinkDemodDecodeConfigArgs antennaDownlinkDemodDecodeConfig) {
             this.antennaDownlinkDemodDecodeConfig = Output.ofNullable(antennaDownlinkDemodDecodeConfig);
             return this;
         }
-
         public Builder antennaUplinkConfig(@Nullable Output<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig) {
             this.antennaUplinkConfig = antennaUplinkConfig;
             return this;
         }
-
         public Builder antennaUplinkConfig(@Nullable ConfigAntennaUplinkConfigArgs antennaUplinkConfig) {
             this.antennaUplinkConfig = Output.ofNullable(antennaUplinkConfig);
             return this;
         }
-
         public Builder dataflowEndpointConfig(@Nullable Output<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig) {
             this.dataflowEndpointConfig = dataflowEndpointConfig;
             return this;
         }
-
         public Builder dataflowEndpointConfig(@Nullable ConfigDataflowEndpointConfigArgs dataflowEndpointConfig) {
             this.dataflowEndpointConfig = Output.ofNullable(dataflowEndpointConfig);
             return this;
         }
-
         public Builder s3RecordingConfig(@Nullable Output<ConfigS3RecordingConfigArgs> s3RecordingConfig) {
             this.s3RecordingConfig = s3RecordingConfig;
             return this;
         }
-
         public Builder s3RecordingConfig(@Nullable ConfigS3RecordingConfigArgs s3RecordingConfig) {
             this.s3RecordingConfig = Output.ofNullable(s3RecordingConfig);
             return this;
         }
-
         public Builder trackingConfig(@Nullable Output<ConfigTrackingConfigArgs> trackingConfig) {
             this.trackingConfig = trackingConfig;
             return this;
         }
-
         public Builder trackingConfig(@Nullable ConfigTrackingConfigArgs trackingConfig) {
             this.trackingConfig = Output.ofNullable(trackingConfig);
             return this;
         }
-
         public Builder uplinkEchoConfig(@Nullable Output<ConfigUplinkEchoConfigArgs> uplinkEchoConfig) {
             this.uplinkEchoConfig = uplinkEchoConfig;
             return this;
         }
-
         public Builder uplinkEchoConfig(@Nullable ConfigUplinkEchoConfigArgs uplinkEchoConfig) {
             this.uplinkEchoConfig = Output.ofNullable(uplinkEchoConfig);
             return this;
-        }
-        public ConfigDataArgs build() {
+        }        public ConfigDataArgs build() {
             return new ConfigDataArgs(antennaDownlinkConfig, antennaDownlinkDemodDecodeConfig, antennaUplinkConfig, dataflowEndpointConfig, s3RecordingConfig, trackingConfig, uplinkEchoConfig);
         }
     }

@@ -55,12 +55,10 @@ public final class EC2FleetVCpuCountRangeRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public EC2FleetVCpuCountRangeRequest build() {
+        }        public EC2FleetVCpuCountRangeRequest build() {
             return new EC2FleetVCpuCountRangeRequest(max, min);
         }
     }

@@ -221,57 +221,61 @@ public final class GetNetworkInterfaceResult {
             this.description = description;
             return this;
         }
-
         public Builder groupSet(@Nullable List<String> groupSet) {
             this.groupSet = groupSet;
             return this;
         }
-
+        public Builder groupSet(String... groupSet) {
+            return groupSet(List.of(groupSet));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
-
+        public Builder ipv6Addresses(NetworkInterfaceInstanceIpv6Address... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }
         public Builder primaryPrivateIpAddress(@Nullable String primaryPrivateIpAddress) {
             this.primaryPrivateIpAddress = primaryPrivateIpAddress;
             return this;
         }
-
         public Builder privateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
-
+        public Builder privateIpAddresses(NetworkInterfacePrivateIpAddressSpecification... privateIpAddresses) {
+            return privateIpAddresses(List.of(privateIpAddresses));
+        }
         public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
-
         public Builder secondaryPrivateIpAddresses(@Nullable List<String> secondaryPrivateIpAddresses) {
             this.secondaryPrivateIpAddresses = secondaryPrivateIpAddresses;
             return this;
         }
-
+        public Builder secondaryPrivateIpAddresses(String... secondaryPrivateIpAddresses) {
+            return secondaryPrivateIpAddresses(List.of(secondaryPrivateIpAddresses));
+        }
         public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInterfaceTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetNetworkInterfaceResult build() {
+        public Builder tags(NetworkInterfaceTag... tags) {
+            return tags(List.of(tags));
+        }        public GetNetworkInterfaceResult build() {
             return new GetNetworkInterfaceResult(description, groupSet, id, ipv6AddressCount, ipv6Addresses, primaryPrivateIpAddress, privateIpAddresses, secondaryPrivateIpAddressCount, secondaryPrivateIpAddresses, sourceDestCheck, tags);
         }
     }

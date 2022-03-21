@@ -55,12 +55,10 @@ public final class SigningProfileTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SigningProfileTag build() {
+        }        public SigningProfileTag build() {
             return new SigningProfileTag(key, value);
         }
     }

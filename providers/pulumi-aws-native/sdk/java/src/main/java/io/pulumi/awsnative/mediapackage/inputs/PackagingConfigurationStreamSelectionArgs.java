@@ -95,32 +95,26 @@ public final class PackagingConfigurationStreamSelectionArgs extends io.pulumi.r
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
-
         public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
             this.maxVideoBitsPerSecond = Output.ofNullable(maxVideoBitsPerSecond);
             return this;
         }
-
         public Builder minVideoBitsPerSecond(@Nullable Output<Integer> minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
-
         public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = Output.ofNullable(minVideoBitsPerSecond);
             return this;
         }
-
         public Builder streamOrder(@Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder) {
             this.streamOrder = streamOrder;
             return this;
         }
-
         public Builder streamOrder(@Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
             this.streamOrder = Output.ofNullable(streamOrder);
             return this;
-        }
-        public PackagingConfigurationStreamSelectionArgs build() {
+        }        public PackagingConfigurationStreamSelectionArgs build() {
             return new PackagingConfigurationStreamSelectionArgs(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
         }
     }

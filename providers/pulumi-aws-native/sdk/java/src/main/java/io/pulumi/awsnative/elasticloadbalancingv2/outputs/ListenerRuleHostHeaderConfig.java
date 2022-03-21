@@ -46,7 +46,9 @@ public final class ListenerRuleHostHeaderConfig {
             this.values = values;
             return this;
         }
-        public ListenerRuleHostHeaderConfig build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleHostHeaderConfig build() {
             return new ListenerRuleHostHeaderConfig(values);
         }
     }

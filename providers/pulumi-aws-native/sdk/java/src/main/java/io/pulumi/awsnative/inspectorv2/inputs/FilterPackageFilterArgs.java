@@ -115,62 +115,50 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             this.architecture = architecture;
             return this;
         }
-
         public Builder architecture(@Nullable FilterStringFilterArgs architecture) {
             this.architecture = Output.ofNullable(architecture);
             return this;
         }
-
         public Builder epoch(@Nullable Output<FilterNumberFilterArgs> epoch) {
             this.epoch = epoch;
             return this;
         }
-
         public Builder epoch(@Nullable FilterNumberFilterArgs epoch) {
             this.epoch = Output.ofNullable(epoch);
             return this;
         }
-
         public Builder name(@Nullable Output<FilterStringFilterArgs> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable FilterStringFilterArgs name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder release(@Nullable Output<FilterStringFilterArgs> release) {
             this.release = release;
             return this;
         }
-
         public Builder release(@Nullable FilterStringFilterArgs release) {
             this.release = Output.ofNullable(release);
             return this;
         }
-
         public Builder sourceLayerHash(@Nullable Output<FilterStringFilterArgs> sourceLayerHash) {
             this.sourceLayerHash = sourceLayerHash;
             return this;
         }
-
         public Builder sourceLayerHash(@Nullable FilterStringFilterArgs sourceLayerHash) {
             this.sourceLayerHash = Output.ofNullable(sourceLayerHash);
             return this;
         }
-
         public Builder version(@Nullable Output<FilterStringFilterArgs> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable FilterStringFilterArgs version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public FilterPackageFilterArgs build() {
+        }        public FilterPackageFilterArgs build() {
             return new FilterPackageFilterArgs(architecture, epoch, name, release, sourceLayerHash, version);
         }
     }

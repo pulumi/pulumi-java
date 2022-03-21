@@ -79,32 +79,26 @@ public final class PipelineAddAttributesArgs extends io.pulumi.resources.Resourc
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(Object attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = Output.ofNullable(next);
             return this;
-        }
-        public PipelineAddAttributesArgs build() {
+        }        public PipelineAddAttributesArgs build() {
             return new PipelineAddAttributesArgs(attributes, name, next);
         }
     }

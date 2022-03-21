@@ -70,22 +70,18 @@ public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public RecipeS3LocationArgs build() {
+        }        public RecipeS3LocationArgs build() {
             return new RecipeS3LocationArgs(bucket, key);
         }
     }

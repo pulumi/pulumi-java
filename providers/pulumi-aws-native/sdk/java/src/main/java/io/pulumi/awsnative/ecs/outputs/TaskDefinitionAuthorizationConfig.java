@@ -56,12 +56,10 @@ public final class TaskDefinitionAuthorizationConfig {
             this.accessPointId = accessPointId;
             return this;
         }
-
         public Builder iAM(@Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
             this.iAM = iAM;
             return this;
-        }
-        public TaskDefinitionAuthorizationConfig build() {
+        }        public TaskDefinitionAuthorizationConfig build() {
             return new TaskDefinitionAuthorizationConfig(accessPointId, iAM);
         }
     }

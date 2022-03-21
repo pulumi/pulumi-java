@@ -79,17 +79,14 @@ public final class InAppTemplateBodyConfig extends io.pulumi.resources.InvokeArg
             this.alignment = alignment;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
-
         public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
-        }
-        public InAppTemplateBodyConfig build() {
+        }        public InAppTemplateBodyConfig build() {
             return new InAppTemplateBodyConfig(alignment, body, textColor);
         }
     }

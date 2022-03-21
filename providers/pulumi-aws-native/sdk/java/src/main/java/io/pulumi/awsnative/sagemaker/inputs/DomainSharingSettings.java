@@ -95,17 +95,14 @@ public final class DomainSharingSettings extends io.pulumi.resources.InvokeArgs 
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
-
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
-
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
-        }
-        public DomainSharingSettings build() {
+        }        public DomainSharingSettings build() {
             return new DomainSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }
     }

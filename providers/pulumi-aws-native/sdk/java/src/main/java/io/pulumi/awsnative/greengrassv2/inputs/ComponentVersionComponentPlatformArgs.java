@@ -67,22 +67,18 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Object attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ComponentVersionComponentPlatformArgs build() {
+        }        public ComponentVersionComponentPlatformArgs build() {
             return new ComponentVersionComponentPlatformArgs(attributes, name);
         }
     }

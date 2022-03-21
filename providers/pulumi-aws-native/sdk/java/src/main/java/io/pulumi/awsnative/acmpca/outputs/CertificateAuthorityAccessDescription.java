@@ -54,12 +54,10 @@ public final class CertificateAuthorityAccessDescription {
             this.accessLocation = Objects.requireNonNull(accessLocation);
             return this;
         }
-
         public Builder accessMethod(CertificateAuthorityAccessMethod accessMethod) {
             this.accessMethod = Objects.requireNonNull(accessMethod);
             return this;
-        }
-        public CertificateAuthorityAccessDescription build() {
+        }        public CertificateAuthorityAccessDescription build() {
             return new CertificateAuthorityAccessDescription(accessLocation, accessMethod);
         }
     }

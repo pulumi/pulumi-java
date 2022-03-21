@@ -56,12 +56,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentials {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-
         public Builder oAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
             this.oAuthCredentials = oAuthCredentials;
             return this;
-        }
-        public ConnectorProfileSAPODataConnectorProfileCredentials build() {
+        }        public ConnectorProfileSAPODataConnectorProfileCredentials build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentials(basicAuthCredentials, oAuthCredentials);
         }
     }

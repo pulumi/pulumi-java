@@ -50,8 +50,7 @@ public final class GetDataflowEndpointGroupArgs extends io.pulumi.resources.Invo
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetDataflowEndpointGroupArgs build() {
+        }        public GetDataflowEndpointGroupArgs build() {
             return new GetDataflowEndpointGroupArgs(id);
         }
     }

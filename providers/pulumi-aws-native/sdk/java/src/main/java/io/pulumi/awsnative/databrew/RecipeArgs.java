@@ -101,42 +101,40 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder steps(Output<List<RecipeStepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
         public Builder steps(List<RecipeStepArgs> steps) {
             this.steps = Output.of(Objects.requireNonNull(steps));
             return this;
         }
-
+        public Builder steps(RecipeStepArgs... steps) {
+            return steps(List.of(steps));
+        }
         public Builder tags(@Nullable Output<List<RecipeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RecipeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public RecipeArgs build() {
+        public Builder tags(RecipeTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public RecipeArgs build() {
             return new RecipeArgs(description, name, steps, tags);
         }
     }

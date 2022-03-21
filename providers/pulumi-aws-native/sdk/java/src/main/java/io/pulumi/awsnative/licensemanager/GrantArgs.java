@@ -127,62 +127,56 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedOperations = allowedOperations;
             return this;
         }
-
         public Builder allowedOperations(@Nullable List<String> allowedOperations) {
             this.allowedOperations = Output.ofNullable(allowedOperations);
             return this;
         }
-
+        public Builder allowedOperations(String... allowedOperations) {
+            return allowedOperations(List.of(allowedOperations));
+        }
         public Builder grantName(@Nullable Output<String> grantName) {
             this.grantName = grantName;
             return this;
         }
-
         public Builder grantName(@Nullable String grantName) {
             this.grantName = Output.ofNullable(grantName);
             return this;
         }
-
         public Builder homeRegion(@Nullable Output<String> homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
-
         public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = Output.ofNullable(homeRegion);
             return this;
         }
-
         public Builder licenseArn(@Nullable Output<String> licenseArn) {
             this.licenseArn = licenseArn;
             return this;
         }
-
         public Builder licenseArn(@Nullable String licenseArn) {
             this.licenseArn = Output.ofNullable(licenseArn);
             return this;
         }
-
         public Builder principals(@Nullable Output<List<String>> principals) {
             this.principals = principals;
             return this;
         }
-
         public Builder principals(@Nullable List<String> principals) {
             this.principals = Output.ofNullable(principals);
             return this;
         }
-
+        public Builder principals(String... principals) {
+            return principals(List.of(principals));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public GrantArgs build() {
+        }        public GrantArgs build() {
             return new GrantArgs(allowedOperations, grantName, homeRegion, licenseArn, principals, status);
         }
     }

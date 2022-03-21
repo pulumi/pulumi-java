@@ -50,8 +50,7 @@ public final class GetCloudFormationProvisionedProductArgs extends io.pulumi.res
         public Builder provisionedProductId(String provisionedProductId) {
             this.provisionedProductId = Objects.requireNonNull(provisionedProductId);
             return this;
-        }
-        public GetCloudFormationProvisionedProductArgs build() {
+        }        public GetCloudFormationProvisionedProductArgs build() {
             return new GetCloudFormationProvisionedProductArgs(provisionedProductId);
         }
     }

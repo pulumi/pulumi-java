@@ -52,12 +52,10 @@ public final class FlowAmplitudeSourcePropertiesArgs extends io.pulumi.resources
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowAmplitudeSourcePropertiesArgs build() {
+        }        public FlowAmplitudeSourcePropertiesArgs build() {
             return new FlowAmplitudeSourcePropertiesArgs(object);
         }
     }

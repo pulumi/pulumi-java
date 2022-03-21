@@ -68,22 +68,21 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder objectTypeKeyList(@Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
             this.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
-
         public Builder objectTypeKeyList(@Nullable List<ObjectTypeKeyArgs> objectTypeKeyList) {
             this.objectTypeKeyList = Output.ofNullable(objectTypeKeyList);
             return this;
         }
-        public ObjectTypeKeyMapArgs build() {
+        public Builder objectTypeKeyList(ObjectTypeKeyArgs... objectTypeKeyList) {
+            return objectTypeKeyList(List.of(objectTypeKeyList));
+        }        public ObjectTypeKeyMapArgs build() {
             return new ObjectTypeKeyMapArgs(name, objectTypeKeyList);
         }
     }

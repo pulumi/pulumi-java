@@ -87,32 +87,26 @@ public final class DeliveryStreamSchemaConfiguration {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = roleARN;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
-        }
-        public DeliveryStreamSchemaConfiguration build() {
+        }        public DeliveryStreamSchemaConfiguration build() {
             return new DeliveryStreamSchemaConfiguration(catalogId, databaseName, region, roleARN, tableName, versionId);
         }
     }

@@ -64,12 +64,10 @@ public final class GetMissionProfileArgs extends io.pulumi.resources.InvokeArgs 
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetMissionProfileArgs build() {
+        }        public GetMissionProfileArgs build() {
             return new GetMissionProfileArgs(arn, id);
         }
     }

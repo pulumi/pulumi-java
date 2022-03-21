@@ -82,17 +82,17 @@ public final class GetHealthCheckResult {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
-
         public Builder healthCheckId(@Nullable String healthCheckId) {
             this.healthCheckId = healthCheckId;
             return this;
         }
-
         public Builder healthCheckTags(@Nullable List<HealthCheckTag> healthCheckTags) {
             this.healthCheckTags = healthCheckTags;
             return this;
         }
-        public GetHealthCheckResult build() {
+        public Builder healthCheckTags(HealthCheckTag... healthCheckTags) {
+            return healthCheckTags(List.of(healthCheckTags));
+        }        public GetHealthCheckResult build() {
             return new GetHealthCheckResult(healthCheckConfig, healthCheckId, healthCheckTags);
         }
     }

@@ -188,47 +188,47 @@ public final class GetDBProxyResult {
             this.auth = auth;
             return this;
         }
-
+        public Builder auth(DBProxyAuthFormat... auth) {
+            return auth(List.of(auth));
+        }
         public Builder dBProxyArn(@Nullable String dBProxyArn) {
             this.dBProxyArn = dBProxyArn;
             return this;
         }
-
         public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
-
         public Builder requireTLS(@Nullable Boolean requireTLS) {
             this.requireTLS = requireTLS;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<DBProxyTagFormat> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DBProxyTagFormat... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public GetDBProxyResult build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public GetDBProxyResult build() {
             return new GetDBProxyResult(auth, dBProxyArn, debugLogging, endpoint, idleClientTimeout, requireTLS, roleArn, tags, vpcSecurityGroupIds);
         }
     }

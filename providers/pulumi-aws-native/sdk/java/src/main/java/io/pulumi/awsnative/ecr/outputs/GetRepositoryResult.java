@@ -125,37 +125,33 @@ public final class GetRepositoryResult {
             this.arn = arn;
             return this;
         }
-
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfiguration imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
-
         public Builder imageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
-
         public Builder lifecyclePolicy(@Nullable RepositoryLifecyclePolicy lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
-
         public Builder repositoryPolicyText(@Nullable Object repositoryPolicyText) {
             this.repositoryPolicyText = repositoryPolicyText;
             return this;
         }
-
         public Builder repositoryUri(@Nullable String repositoryUri) {
             this.repositoryUri = repositoryUri;
             return this;
         }
-
         public Builder tags(@Nullable List<RepositoryTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRepositoryResult build() {
+        public Builder tags(RepositoryTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, imageScanningConfiguration, imageTagMutability, lifecyclePolicy, repositoryPolicyText, repositoryUri, tags);
         }
     }

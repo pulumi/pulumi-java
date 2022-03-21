@@ -56,12 +56,10 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
-
         public Builder topicArn(String topicArn) {
             this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
-        }
-        public ScheduledQuerySnsConfigurationArgs build() {
+        }        public ScheduledQuerySnsConfigurationArgs build() {
             return new ScheduledQuerySnsConfigurationArgs(topicArn);
         }
     }

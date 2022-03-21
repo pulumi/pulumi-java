@@ -53,12 +53,10 @@ public final class BucketFilterTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BucketFilterTag build() {
+        }        public BucketFilterTag build() {
             return new BucketFilterTag(key, value);
         }
     }

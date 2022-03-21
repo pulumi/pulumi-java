@@ -69,12 +69,10 @@ public final class SignalingChannelTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SignalingChannelTag build() {
+        }        public SignalingChannelTag build() {
             return new SignalingChannelTag(key, value);
         }
     }

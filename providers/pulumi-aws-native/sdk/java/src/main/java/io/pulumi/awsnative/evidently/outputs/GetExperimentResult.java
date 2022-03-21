@@ -117,42 +117,43 @@ public final class GetExperimentResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder metricGoals(@Nullable List<ExperimentMetricGoalObject> metricGoals) {
             this.metricGoals = metricGoals;
             return this;
         }
-
+        public Builder metricGoals(ExperimentMetricGoalObject... metricGoals) {
+            return metricGoals(List.of(metricGoals));
+        }
         public Builder onlineAbConfig(@Nullable ExperimentOnlineAbConfigObject onlineAbConfig) {
             this.onlineAbConfig = onlineAbConfig;
             return this;
         }
-
         public Builder randomizationSalt(@Nullable String randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
-
         public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public Builder tags(@Nullable List<ExperimentTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ExperimentTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder treatments(@Nullable List<ExperimentTreatmentObject> treatments) {
             this.treatments = treatments;
             return this;
         }
-        public GetExperimentResult build() {
+        public Builder treatments(ExperimentTreatmentObject... treatments) {
+            return treatments(List.of(treatments));
+        }        public GetExperimentResult build() {
             return new GetExperimentResult(arn, description, metricGoals, onlineAbConfig, randomizationSalt, samplingRate, tags, treatments);
         }
     }

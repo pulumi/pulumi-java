@@ -55,12 +55,10 @@ public final class CanarySchedule {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
-        }
-        public CanarySchedule build() {
+        }        public CanarySchedule build() {
             return new CanarySchedule(durationInSeconds, expression);
         }
     }

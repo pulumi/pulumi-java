@@ -54,8 +54,7 @@ public final class GetResponsePlanArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetResponsePlanArgs build() {
+        }        public GetResponsePlanArgs build() {
             return new GetResponsePlanArgs(arn);
         }
     }

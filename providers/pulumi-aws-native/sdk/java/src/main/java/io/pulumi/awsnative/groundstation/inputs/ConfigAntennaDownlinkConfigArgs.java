@@ -53,12 +53,10 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
             this.spectrumConfig = spectrumConfig;
             return this;
         }
-
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
             this.spectrumConfig = Output.ofNullable(spectrumConfig);
             return this;
-        }
-        public ConfigAntennaDownlinkConfigArgs build() {
+        }        public ConfigAntennaDownlinkConfigArgs build() {
             return new ConfigAntennaDownlinkConfigArgs(spectrumConfig);
         }
     }

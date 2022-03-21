@@ -158,57 +158,58 @@ public final class GetRuleGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder availableLabels(@Nullable List<RuleGroupLabelSummary> availableLabels) {
             this.availableLabels = availableLabels;
             return this;
         }
-
+        public Builder availableLabels(RuleGroupLabelSummary... availableLabels) {
+            return availableLabels(List.of(availableLabels));
+        }
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder consumedLabels(@Nullable List<RuleGroupLabelSummary> consumedLabels) {
             this.consumedLabels = consumedLabels;
             return this;
         }
-
+        public Builder consumedLabels(RuleGroupLabelSummary... consumedLabels) {
+            return consumedLabels(List.of(consumedLabels));
+        }
         public Builder customResponseBodies(@Nullable RuleGroupCustomResponseBodies customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder labelNamespace(@Nullable String labelNamespace) {
             this.labelNamespace = labelNamespace;
             return this;
         }
-
         public Builder rules(@Nullable List<RuleGroupRule> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(RuleGroupRule... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable List<RuleGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(RuleGroupTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder visibilityConfig(@Nullable RuleGroupVisibilityConfig visibilityConfig) {
             this.visibilityConfig = visibilityConfig;
             return this;
-        }
-        public GetRuleGroupResult build() {
+        }        public GetRuleGroupResult build() {
             return new GetRuleGroupResult(arn, availableLabels, capacity, consumedLabels, customResponseBodies, description, id, labelNamespace, rules, tags, visibilityConfig);
         }
     }

@@ -56,12 +56,10 @@ public final class GetRobotResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable RobotTags tags) {
             this.tags = tags;
             return this;
-        }
-        public GetRobotResult build() {
+        }        public GetRobotResult build() {
             return new GetRobotResult(arn, tags);
         }
     }

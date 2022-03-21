@@ -118,52 +118,45 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
             this.appMonitorConfiguration = appMonitorConfiguration;
             return this;
         }
-
         public Builder appMonitorConfiguration(@Nullable AppMonitorConfigurationArgs appMonitorConfiguration) {
             this.appMonitorConfiguration = Output.ofNullable(appMonitorConfiguration);
             return this;
         }
-
         public Builder cwLogEnabled(@Nullable Output<Boolean> cwLogEnabled) {
             this.cwLogEnabled = cwLogEnabled;
             return this;
         }
-
         public Builder cwLogEnabled(@Nullable Boolean cwLogEnabled) {
             this.cwLogEnabled = Output.ofNullable(cwLogEnabled);
             return this;
         }
-
         public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AppMonitorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AppMonitorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AppMonitorArgs build() {
+        public Builder tags(AppMonitorTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AppMonitorArgs build() {
             return new AppMonitorArgs(appMonitorConfiguration, cwLogEnabled, domain, name, tags);
         }
     }

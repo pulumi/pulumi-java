@@ -80,17 +80,14 @@ public final class ConfigSpectrumConfig extends io.pulumi.resources.InvokeArgs {
             this.bandwidth = bandwidth;
             return this;
         }
-
         public Builder centerFrequency(@Nullable ConfigFrequency centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
-
         public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = polarization;
             return this;
-        }
-        public ConfigSpectrumConfig build() {
+        }        public ConfigSpectrumConfig build() {
             return new ConfigSpectrumConfig(bandwidth, centerFrequency, polarization);
         }
     }

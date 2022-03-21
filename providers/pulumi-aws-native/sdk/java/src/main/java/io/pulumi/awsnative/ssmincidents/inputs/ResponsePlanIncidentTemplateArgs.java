@@ -129,52 +129,45 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
             this.dedupeString = dedupeString;
             return this;
         }
-
         public Builder dedupeString(@Nullable String dedupeString) {
             this.dedupeString = Output.ofNullable(dedupeString);
             return this;
         }
-
         public Builder impact(Output<Integer> impact) {
             this.impact = Objects.requireNonNull(impact);
             return this;
         }
-
         public Builder impact(Integer impact) {
             this.impact = Output.of(Objects.requireNonNull(impact));
             return this;
         }
-
         public Builder notificationTargets(@Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets) {
             this.notificationTargets = notificationTargets;
             return this;
         }
-
         public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItemArgs> notificationTargets) {
             this.notificationTargets = Output.ofNullable(notificationTargets);
             return this;
         }
-
+        public Builder notificationTargets(ResponsePlanNotificationTargetItemArgs... notificationTargets) {
+            return notificationTargets(List.of(notificationTargets));
+        }
         public Builder summary(@Nullable Output<String> summary) {
             this.summary = summary;
             return this;
         }
-
         public Builder summary(@Nullable String summary) {
             this.summary = Output.ofNullable(summary);
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public ResponsePlanIncidentTemplateArgs build() {
+        }        public ResponsePlanIncidentTemplateArgs build() {
             return new ResponsePlanIncidentTemplateArgs(dedupeString, impact, notificationTargets, summary, title);
         }
     }

@@ -117,32 +117,29 @@ public final class TopicRulePayload extends io.pulumi.resources.InvokeArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(TopicRuleAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
             this.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder errorAction(@Nullable TopicRuleAction errorAction) {
             this.errorAction = errorAction;
             return this;
         }
-
         public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
             this.ruleDisabled = ruleDisabled;
             return this;
         }
-
         public Builder sql(String sql) {
             this.sql = Objects.requireNonNull(sql);
             return this;
-        }
-        public TopicRulePayload build() {
+        }        public TopicRulePayload build() {
             return new TopicRulePayload(actions, awsIotSqlVersion, description, errorAction, ruleDisabled, sql);
         }
     }

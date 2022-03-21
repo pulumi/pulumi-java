@@ -105,22 +105,24 @@ public final class GetACLResult {
             this.arn = arn;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<ACLTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ACLTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userNames(@Nullable List<String> userNames) {
             this.userNames = userNames;
             return this;
         }
-        public GetACLResult build() {
+        public Builder userNames(String... userNames) {
+            return userNames(List.of(userNames));
+        }        public GetACLResult build() {
             return new GetACLResult(arn, status, tags, userNames);
         }
     }

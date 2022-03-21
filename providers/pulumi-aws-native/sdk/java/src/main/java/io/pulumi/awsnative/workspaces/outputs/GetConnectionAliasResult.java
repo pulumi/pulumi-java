@@ -66,17 +66,17 @@ public final class GetConnectionAliasResult {
             this.aliasId = aliasId;
             return this;
         }
-
         public Builder associations(@Nullable List<ConnectionAliasAssociation> associations) {
             this.associations = associations;
             return this;
         }
-
+        public Builder associations(ConnectionAliasAssociation... associations) {
+            return associations(List.of(associations));
+        }
         public Builder connectionAliasState(@Nullable ConnectionAliasState connectionAliasState) {
             this.connectionAliasState = connectionAliasState;
             return this;
-        }
-        public GetConnectionAliasResult build() {
+        }        public GetConnectionAliasResult build() {
             return new GetConnectionAliasResult(aliasId, associations, connectionAliasState);
         }
     }

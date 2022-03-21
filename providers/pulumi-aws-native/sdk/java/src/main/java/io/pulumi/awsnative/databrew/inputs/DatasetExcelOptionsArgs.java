@@ -81,32 +81,32 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
             this.headerRow = headerRow;
             return this;
         }
-
         public Builder headerRow(@Nullable Boolean headerRow) {
             this.headerRow = Output.ofNullable(headerRow);
             return this;
         }
-
         public Builder sheetIndexes(@Nullable Output<List<Integer>> sheetIndexes) {
             this.sheetIndexes = sheetIndexes;
             return this;
         }
-
         public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
             this.sheetIndexes = Output.ofNullable(sheetIndexes);
             return this;
         }
-
+        public Builder sheetIndexes(Integer... sheetIndexes) {
+            return sheetIndexes(List.of(sheetIndexes));
+        }
         public Builder sheetNames(@Nullable Output<List<String>> sheetNames) {
             this.sheetNames = sheetNames;
             return this;
         }
-
         public Builder sheetNames(@Nullable List<String> sheetNames) {
             this.sheetNames = Output.ofNullable(sheetNames);
             return this;
         }
-        public DatasetExcelOptionsArgs build() {
+        public Builder sheetNames(String... sheetNames) {
+            return sheetNames(List.of(sheetNames));
+        }        public DatasetExcelOptionsArgs build() {
             return new DatasetExcelOptionsArgs(headerRow, sheetIndexes, sheetNames);
         }
     }

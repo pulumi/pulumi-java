@@ -93,42 +93,40 @@ public final class DataSourceSalesforceChatterFeedConfigurationArgs extends io.p
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Output.of(Objects.requireNonNull(documentDataFieldName));
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable Output<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
             return this;
         }
-
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder includeFilterTypes(@Nullable Output<List<DataSourceSalesforceChatterFeedIncludeFilterType>> includeFilterTypes) {
             this.includeFilterTypes = includeFilterTypes;
             return this;
         }
-
         public Builder includeFilterTypes(@Nullable List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes) {
             this.includeFilterTypes = Output.ofNullable(includeFilterTypes);
             return this;
         }
-        public DataSourceSalesforceChatterFeedConfigurationArgs build() {
+        public Builder includeFilterTypes(DataSourceSalesforceChatterFeedIncludeFilterType... includeFilterTypes) {
+            return includeFilterTypes(List.of(includeFilterTypes));
+        }        public DataSourceSalesforceChatterFeedConfigurationArgs build() {
             return new DataSourceSalesforceChatterFeedConfigurationArgs(documentDataFieldName, documentTitleFieldName, fieldMappings, includeFilterTypes);
         }
     }

@@ -53,12 +53,10 @@ public final class RuleGroupTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RuleGroupTag build() {
+        }        public RuleGroupTag build() {
             return new RuleGroupTag(key, value);
         }
     }

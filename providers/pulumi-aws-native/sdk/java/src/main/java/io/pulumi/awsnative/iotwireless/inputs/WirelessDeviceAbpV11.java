@@ -65,12 +65,10 @@ public final class WirelessDeviceAbpV11 extends io.pulumi.resources.InvokeArgs {
             this.devAddr = Objects.requireNonNull(devAddr);
             return this;
         }
-
         public Builder sessionKeys(WirelessDeviceSessionKeysAbpV11 sessionKeys) {
             this.sessionKeys = Objects.requireNonNull(sessionKeys);
             return this;
-        }
-        public WirelessDeviceAbpV11 build() {
+        }        public WirelessDeviceAbpV11 build() {
             return new WirelessDeviceAbpV11(devAddr, sessionKeys);
         }
     }

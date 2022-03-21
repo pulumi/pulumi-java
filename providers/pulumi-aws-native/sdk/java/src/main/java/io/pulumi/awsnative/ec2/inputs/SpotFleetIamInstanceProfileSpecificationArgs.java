@@ -53,12 +53,10 @@ public final class SpotFleetIamInstanceProfileSpecificationArgs extends io.pulum
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
-        }
-        public SpotFleetIamInstanceProfileSpecificationArgs build() {
+        }        public SpotFleetIamInstanceProfileSpecificationArgs build() {
             return new SpotFleetIamInstanceProfileSpecificationArgs(arn);
         }
     }

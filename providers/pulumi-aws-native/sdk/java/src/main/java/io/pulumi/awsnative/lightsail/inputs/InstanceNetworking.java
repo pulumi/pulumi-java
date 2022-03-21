@@ -76,12 +76,13 @@ public final class InstanceNetworking extends io.pulumi.resources.InvokeArgs {
             this.monthlyTransfer = monthlyTransfer;
             return this;
         }
-
         public Builder ports(List<InstancePort> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public InstanceNetworking build() {
+        public Builder ports(InstancePort... ports) {
+            return ports(List.of(ports));
+        }        public InstanceNetworking build() {
             return new InstanceNetworking(monthlyTransfer, ports);
         }
     }

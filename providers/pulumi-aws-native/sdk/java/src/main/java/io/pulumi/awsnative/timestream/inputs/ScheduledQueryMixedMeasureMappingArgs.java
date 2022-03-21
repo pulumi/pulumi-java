@@ -109,52 +109,45 @@ public final class ScheduledQueryMixedMeasureMappingArgs extends io.pulumi.resou
             this.measureName = measureName;
             return this;
         }
-
         public Builder measureName(@Nullable String measureName) {
             this.measureName = Output.ofNullable(measureName);
             return this;
         }
-
         public Builder measureValueType(Output<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType) {
             this.measureValueType = Objects.requireNonNull(measureValueType);
             return this;
         }
-
         public Builder measureValueType(ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType) {
             this.measureValueType = Output.of(Objects.requireNonNull(measureValueType));
             return this;
         }
-
         public Builder multiMeasureAttributeMappings(@Nullable Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
             return this;
         }
-
         public Builder multiMeasureAttributeMappings(@Nullable List<ScheduledQueryMultiMeasureAttributeMappingArgs> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = Output.ofNullable(multiMeasureAttributeMappings);
             return this;
         }
-
+        public Builder multiMeasureAttributeMappings(ScheduledQueryMultiMeasureAttributeMappingArgs... multiMeasureAttributeMappings) {
+            return multiMeasureAttributeMappings(List.of(multiMeasureAttributeMappings));
+        }
         public Builder sourceColumn(@Nullable Output<String> sourceColumn) {
             this.sourceColumn = sourceColumn;
             return this;
         }
-
         public Builder sourceColumn(@Nullable String sourceColumn) {
             this.sourceColumn = Output.ofNullable(sourceColumn);
             return this;
         }
-
         public Builder targetMeasureName(@Nullable Output<String> targetMeasureName) {
             this.targetMeasureName = targetMeasureName;
             return this;
         }
-
         public Builder targetMeasureName(@Nullable String targetMeasureName) {
             this.targetMeasureName = Output.ofNullable(targetMeasureName);
             return this;
-        }
-        public ScheduledQueryMixedMeasureMappingArgs build() {
+        }        public ScheduledQueryMixedMeasureMappingArgs build() {
             return new ScheduledQueryMixedMeasureMappingArgs(measureName, measureValueType, multiMeasureAttributeMappings, sourceColumn, targetMeasureName);
         }
     }

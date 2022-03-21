@@ -70,22 +70,18 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
             this.application = Objects.requireNonNull(application);
             return this;
         }
-
         public Builder application(String application) {
             this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
-
         public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
-
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = Output.ofNullable(currentRevisionId);
             return this;
-        }
-        public RobotApplicationVersionArgs build() {
+        }        public RobotApplicationVersionArgs build() {
             return new RobotApplicationVersionArgs(application, currentRevisionId);
         }
     }

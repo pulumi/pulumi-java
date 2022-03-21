@@ -129,72 +129,58 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder instancePlatform(@Nullable Output<String> instancePlatform) {
             this.instancePlatform = instancePlatform;
             return this;
         }
-
         public Builder instancePlatform(@Nullable String instancePlatform) {
             this.instancePlatform = Output.ofNullable(instancePlatform);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder weight(@Nullable Output<Double> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Double weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public CapacityReservationFleetInstanceTypeSpecificationArgs build() {
+        }        public CapacityReservationFleetInstanceTypeSpecificationArgs build() {
             return new CapacityReservationFleetInstanceTypeSpecificationArgs(availabilityZone, availabilityZoneId, ebsOptimized, instancePlatform, instanceType, priority, weight);
         }
     }

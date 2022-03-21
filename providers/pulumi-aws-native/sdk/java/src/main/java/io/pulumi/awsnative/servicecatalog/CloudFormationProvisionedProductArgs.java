@@ -191,122 +191,107 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
-
         public Builder notificationArns(@Nullable List<String> notificationArns) {
             this.notificationArns = Output.ofNullable(notificationArns);
             return this;
         }
-
+        public Builder notificationArns(String... notificationArns) {
+            return notificationArns(List.of(notificationArns));
+        }
         public Builder pathId(@Nullable Output<String> pathId) {
             this.pathId = pathId;
             return this;
         }
-
         public Builder pathId(@Nullable String pathId) {
             this.pathId = Output.ofNullable(pathId);
             return this;
         }
-
         public Builder pathName(@Nullable Output<String> pathName) {
             this.pathName = pathName;
             return this;
         }
-
         public Builder pathName(@Nullable String pathName) {
             this.pathName = Output.ofNullable(pathName);
             return this;
         }
-
         public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = Output.ofNullable(productId);
             return this;
         }
-
         public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = Output.ofNullable(productName);
             return this;
         }
-
         public Builder provisionedProductName(@Nullable Output<String> provisionedProductName) {
             this.provisionedProductName = provisionedProductName;
             return this;
         }
-
         public Builder provisionedProductName(@Nullable String provisionedProductName) {
             this.provisionedProductName = Output.ofNullable(provisionedProductName);
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = Output.ofNullable(provisioningArtifactId);
             return this;
         }
-
         public Builder provisioningArtifactName(@Nullable Output<String> provisioningArtifactName) {
             this.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
-
         public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
             this.provisioningArtifactName = Output.ofNullable(provisioningArtifactName);
             return this;
         }
-
         public Builder provisioningParameters(@Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-
         public Builder provisioningParameters(@Nullable List<CloudFormationProvisionedProductProvisioningParameterArgs> provisioningParameters) {
             this.provisioningParameters = Output.ofNullable(provisioningParameters);
             return this;
         }
-
+        public Builder provisioningParameters(CloudFormationProvisionedProductProvisioningParameterArgs... provisioningParameters) {
+            return provisioningParameters(List.of(provisioningParameters));
+        }
         public Builder provisioningPreferences(@Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences) {
             this.provisioningPreferences = provisioningPreferences;
             return this;
         }
-
         public Builder provisioningPreferences(@Nullable CloudFormationProvisionedProductProvisioningPreferencesArgs provisioningPreferences) {
             this.provisioningPreferences = Output.ofNullable(provisioningPreferences);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<CloudFormationProvisionedProductTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public CloudFormationProvisionedProductArgs build() {
+        public Builder tags(CloudFormationProvisionedProductTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public CloudFormationProvisionedProductArgs build() {
             return new CloudFormationProvisionedProductArgs(acceptLanguage, notificationArns, pathId, pathName, productId, productName, provisionedProductName, provisioningArtifactId, provisioningArtifactName, provisioningParameters, provisioningPreferences, tags);
         }
     }

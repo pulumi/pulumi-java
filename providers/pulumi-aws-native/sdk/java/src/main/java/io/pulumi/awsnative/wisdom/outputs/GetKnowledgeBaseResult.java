@@ -64,17 +64,14 @@ public final class GetKnowledgeBaseResult {
             this.knowledgeBaseArn = knowledgeBaseArn;
             return this;
         }
-
         public Builder knowledgeBaseId(@Nullable String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
             return this;
         }
-
         public Builder renderingConfiguration(@Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
             this.renderingConfiguration = renderingConfiguration;
             return this;
-        }
-        public GetKnowledgeBaseResult build() {
+        }        public GetKnowledgeBaseResult build() {
             return new GetKnowledgeBaseResult(knowledgeBaseArn, knowledgeBaseId, renderingConfiguration);
         }
     }

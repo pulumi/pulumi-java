@@ -66,22 +66,18 @@ public final class PrefixListEntryArgs extends io.pulumi.resources.ResourceArgs 
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder cidr(String cidr) {
             this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
-        }
-        public PrefixListEntryArgs build() {
+        }        public PrefixListEntryArgs build() {
             return new PrefixListEntryArgs(cidr, description);
         }
     }

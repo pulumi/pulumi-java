@@ -63,12 +63,10 @@ public final class BucketLoggingConfiguration {
             this.destinationBucketName = destinationBucketName;
             return this;
         }
-
         public Builder logFilePrefix(@Nullable String logFilePrefix) {
             this.logFilePrefix = logFilePrefix;
             return this;
-        }
-        public BucketLoggingConfiguration build() {
+        }        public BucketLoggingConfiguration build() {
             return new BucketLoggingConfiguration(destinationBucketName, logFilePrefix);
         }
     }

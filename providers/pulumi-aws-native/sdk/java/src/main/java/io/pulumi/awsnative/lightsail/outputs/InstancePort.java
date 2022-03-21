@@ -177,52 +177,51 @@ public final class InstancePort {
             this.accessDirection = accessDirection;
             return this;
         }
-
         public Builder accessFrom(@Nullable String accessFrom) {
             this.accessFrom = accessFrom;
             return this;
         }
-
         public Builder accessType(@Nullable String accessType) {
             this.accessType = accessType;
             return this;
         }
-
         public Builder cidrListAliases(@Nullable List<String> cidrListAliases) {
             this.cidrListAliases = cidrListAliases;
             return this;
         }
-
+        public Builder cidrListAliases(String... cidrListAliases) {
+            return cidrListAliases(List.of(cidrListAliases));
+        }
         public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
-
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }
         public Builder commonName(@Nullable String commonName) {
             this.commonName = commonName;
             return this;
         }
-
         public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder ipv6Cidrs(@Nullable List<String> ipv6Cidrs) {
             this.ipv6Cidrs = ipv6Cidrs;
             return this;
         }
-
+        public Builder ipv6Cidrs(String... ipv6Cidrs) {
+            return ipv6Cidrs(List.of(ipv6Cidrs));
+        }
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = toPort;
             return this;
-        }
-        public InstancePort build() {
+        }        public InstancePort build() {
             return new InstancePort(accessDirection, accessFrom, accessType, cidrListAliases, cidrs, commonName, fromPort, ipv6Cidrs, protocol, toPort);
         }
     }

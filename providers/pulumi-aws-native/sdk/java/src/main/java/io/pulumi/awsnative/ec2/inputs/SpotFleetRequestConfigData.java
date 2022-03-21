@@ -318,112 +318,96 @@ public final class SpotFleetRequestConfigData extends io.pulumi.resources.Invoke
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = context;
             return this;
         }
-
         public Builder excessCapacityTerminationPolicy(@Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
-
         public Builder iamFleetRole(String iamFleetRole) {
             this.iamFleetRole = Objects.requireNonNull(iamFleetRole);
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-
         public Builder launchSpecifications(@Nullable List<SpotFleetLaunchSpecification> launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
-
+        public Builder launchSpecifications(SpotFleetLaunchSpecification... launchSpecifications) {
+            return launchSpecifications(List.of(launchSpecifications));
+        }
         public Builder launchTemplateConfigs(@Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs) {
             this.launchTemplateConfigs = launchTemplateConfigs;
             return this;
         }
-
+        public Builder launchTemplateConfigs(SpotFleetLaunchTemplateConfig... launchTemplateConfigs) {
+            return launchTemplateConfigs(List.of(launchTemplateConfigs));
+        }
         public Builder loadBalancersConfig(@Nullable SpotFleetLoadBalancersConfig loadBalancersConfig) {
             this.loadBalancersConfig = loadBalancersConfig;
             return this;
         }
-
         public Builder onDemandAllocationStrategy(@Nullable String onDemandAllocationStrategy) {
             this.onDemandAllocationStrategy = onDemandAllocationStrategy;
             return this;
         }
-
         public Builder onDemandMaxTotalPrice(@Nullable String onDemandMaxTotalPrice) {
             this.onDemandMaxTotalPrice = onDemandMaxTotalPrice;
             return this;
         }
-
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
-
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
-
         public Builder spotMaintenanceStrategies(@Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies) {
             this.spotMaintenanceStrategies = spotMaintenanceStrategies;
             return this;
         }
-
         public Builder spotMaxTotalPrice(@Nullable String spotMaxTotalPrice) {
             this.spotMaxTotalPrice = spotMaxTotalPrice;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder targetCapacity(Integer targetCapacity) {
             this.targetCapacity = Objects.requireNonNull(targetCapacity);
             return this;
         }
-
         public Builder targetCapacityUnitType(@Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType) {
             this.targetCapacityUnitType = targetCapacityUnitType;
             return this;
         }
-
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
-
         public Builder type(@Nullable SpotFleetRequestConfigDataType type) {
             this.type = type;
             return this;
         }
-
         public Builder validFrom(@Nullable String validFrom) {
             this.validFrom = validFrom;
             return this;
         }
-
         public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = validUntil;
             return this;
-        }
-        public SpotFleetRequestConfigData build() {
+        }        public SpotFleetRequestConfigData build() {
             return new SpotFleetRequestConfigData(allocationStrategy, context, excessCapacityTerminationPolicy, iamFleetRole, instanceInterruptionBehavior, instancePoolsToUseCount, launchSpecifications, launchTemplateConfigs, loadBalancersConfig, onDemandAllocationStrategy, onDemandMaxTotalPrice, onDemandTargetCapacity, replaceUnhealthyInstances, spotMaintenanceStrategies, spotMaxTotalPrice, spotPrice, targetCapacity, targetCapacityUnitType, terminateInstancesWithExpiration, type, validFrom, validUntil);
         }
     }

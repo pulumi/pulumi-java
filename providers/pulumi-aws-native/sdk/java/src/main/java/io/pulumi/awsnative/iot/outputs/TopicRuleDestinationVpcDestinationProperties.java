@@ -72,22 +72,24 @@ public final class TopicRuleDestinationVpcDestinationProperties {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public TopicRuleDestinationVpcDestinationProperties build() {
+        }        public TopicRuleDestinationVpcDestinationProperties build() {
             return new TopicRuleDestinationVpcDestinationProperties(roleArn, securityGroups, subnetIds, vpcId);
         }
     }

@@ -77,12 +77,10 @@ public final class ServiceSourceCodeVersion extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ServiceSourceCodeVersion build() {
+        }        public ServiceSourceCodeVersion build() {
             return new ServiceSourceCodeVersion(type, value);
         }
     }

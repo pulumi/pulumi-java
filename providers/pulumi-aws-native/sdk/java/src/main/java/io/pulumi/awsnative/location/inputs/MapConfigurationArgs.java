@@ -52,12 +52,10 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
             this.style = Objects.requireNonNull(style);
             return this;
         }
-
         public Builder style(String style) {
             this.style = Output.of(Objects.requireNonNull(style));
             return this;
-        }
-        public MapConfigurationArgs build() {
+        }        public MapConfigurationArgs build() {
             return new MapConfigurationArgs(style);
         }
     }

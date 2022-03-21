@@ -84,32 +84,26 @@ public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.
             this.declinationResponse = Objects.requireNonNull(declinationResponse);
             return this;
         }
-
         public Builder declinationResponse(BotResponseSpecificationArgs declinationResponse) {
             this.declinationResponse = Output.of(Objects.requireNonNull(declinationResponse));
             return this;
         }
-
         public Builder isActive(@Nullable Output<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
-
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Output.ofNullable(isActive);
             return this;
         }
-
         public Builder promptSpecification(Output<BotPromptSpecificationArgs> promptSpecification) {
             this.promptSpecification = Objects.requireNonNull(promptSpecification);
             return this;
         }
-
         public Builder promptSpecification(BotPromptSpecificationArgs promptSpecification) {
             this.promptSpecification = Output.of(Objects.requireNonNull(promptSpecification));
             return this;
-        }
-        public BotIntentConfirmationSettingArgs build() {
+        }        public BotIntentConfirmationSettingArgs build() {
             return new BotIntentConfirmationSettingArgs(declinationResponse, isActive, promptSpecification);
         }
     }

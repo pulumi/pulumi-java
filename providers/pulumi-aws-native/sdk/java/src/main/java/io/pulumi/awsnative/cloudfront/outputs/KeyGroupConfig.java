@@ -64,17 +64,17 @@ public final class KeyGroupConfig {
             this.comment = comment;
             return this;
         }
-
         public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public KeyGroupConfig build() {
+        }        public KeyGroupConfig build() {
             return new KeyGroupConfig(comment, items, name);
         }
     }

@@ -52,12 +52,10 @@ public final class ResponseHeadersPolicyContentTypeOptionsArgs extends io.pulumi
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
-        }
-        public ResponseHeadersPolicyContentTypeOptionsArgs build() {
+        }        public ResponseHeadersPolicyContentTypeOptionsArgs build() {
             return new ResponseHeadersPolicyContentTypeOptionsArgs(override);
         }
     }

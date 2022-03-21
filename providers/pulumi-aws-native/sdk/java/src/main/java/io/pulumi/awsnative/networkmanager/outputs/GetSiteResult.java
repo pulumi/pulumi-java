@@ -122,27 +122,25 @@ public final class GetSiteResult {
             this.description = description;
             return this;
         }
-
         public Builder location(@Nullable SiteLocation location) {
             this.location = location;
             return this;
         }
-
         public Builder siteArn(@Nullable String siteArn) {
             this.siteArn = siteArn;
             return this;
         }
-
         public Builder siteId(@Nullable String siteId) {
             this.siteId = siteId;
             return this;
         }
-
         public Builder tags(@Nullable List<SiteTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSiteResult build() {
+        public Builder tags(SiteTag... tags) {
+            return tags(List.of(tags));
+        }        public GetSiteResult build() {
             return new GetSiteResult(description, location, siteArn, siteId, tags);
         }
     }

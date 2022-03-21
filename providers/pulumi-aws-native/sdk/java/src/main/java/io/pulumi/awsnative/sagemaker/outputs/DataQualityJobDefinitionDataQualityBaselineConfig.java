@@ -65,17 +65,14 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfig {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
-
         public Builder constraintsResource(@Nullable DataQualityJobDefinitionConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public Builder statisticsResource(@Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
-        }
-        public DataQualityJobDefinitionDataQualityBaselineConfig build() {
+        }        public DataQualityJobDefinitionDataQualityBaselineConfig build() {
             return new DataQualityJobDefinitionDataQualityBaselineConfig(baseliningJobName, constraintsResource, statisticsResource);
         }
     }

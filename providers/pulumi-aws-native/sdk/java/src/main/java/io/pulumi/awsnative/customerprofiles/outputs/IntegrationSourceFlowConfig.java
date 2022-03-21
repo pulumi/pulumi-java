@@ -74,22 +74,18 @@ public final class IntegrationSourceFlowConfig {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
-
         public Builder connectorType(IntegrationConnectorType connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder incrementalPullConfig(@Nullable IntegrationIncrementalPullConfig incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
-
         public Builder sourceConnectorProperties(IntegrationSourceConnectorProperties sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
-        }
-        public IntegrationSourceFlowConfig build() {
+        }        public IntegrationSourceFlowConfig build() {
             return new IntegrationSourceFlowConfig(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }
     }

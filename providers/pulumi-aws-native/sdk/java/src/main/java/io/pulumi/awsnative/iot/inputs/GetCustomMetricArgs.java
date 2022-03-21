@@ -54,8 +54,7 @@ public final class GetCustomMetricArgs extends io.pulumi.resources.InvokeArgs {
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
-        }
-        public GetCustomMetricArgs build() {
+        }        public GetCustomMetricArgs build() {
             return new GetCustomMetricArgs(metricName);
         }
     }

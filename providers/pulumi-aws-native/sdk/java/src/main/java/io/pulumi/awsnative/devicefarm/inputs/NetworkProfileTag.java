@@ -64,12 +64,10 @@ public final class NetworkProfileTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public NetworkProfileTag build() {
+        }        public NetworkProfileTag build() {
             return new NetworkProfileTag(key, value);
         }
     }

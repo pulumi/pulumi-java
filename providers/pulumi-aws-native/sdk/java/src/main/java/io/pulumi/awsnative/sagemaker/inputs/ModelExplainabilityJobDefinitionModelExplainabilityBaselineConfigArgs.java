@@ -71,22 +71,18 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineCo
             this.baseliningJobName = baseliningJobName;
             return this;
         }
-
         public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = Output.ofNullable(baseliningJobName);
             return this;
         }
-
         public Builder constraintsResource(@Nullable Output<ModelExplainabilityJobDefinitionConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public Builder constraintsResource(@Nullable ModelExplainabilityJobDefinitionConstraintsResourceArgs constraintsResource) {
             this.constraintsResource = Output.ofNullable(constraintsResource);
             return this;
-        }
-        public ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs build() {
+        }        public ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs build() {
             return new ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs(baseliningJobName, constraintsResource);
         }
     }

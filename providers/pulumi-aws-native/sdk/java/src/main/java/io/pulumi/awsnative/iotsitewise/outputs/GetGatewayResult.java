@@ -106,22 +106,24 @@ public final class GetGatewayResult {
             this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
-
+        public Builder gatewayCapabilitySummaries(GatewayCapabilitySummary... gatewayCapabilitySummaries) {
+            return gatewayCapabilitySummaries(List.of(gatewayCapabilitySummaries));
+        }
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
-
         public Builder tags(@Nullable List<GatewayTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetGatewayResult build() {
+        public Builder tags(GatewayTag... tags) {
+            return tags(List.of(tags));
+        }        public GetGatewayResult build() {
             return new GetGatewayResult(gatewayCapabilitySummaries, gatewayId, gatewayName, tags);
         }
     }

@@ -113,32 +113,26 @@ public final class GetApiDestinationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder httpMethod(@Nullable ApiDestinationHttpMethod httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder invocationEndpoint(@Nullable String invocationEndpoint) {
             this.invocationEndpoint = invocationEndpoint;
             return this;
         }
-
         public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
-        }
-        public GetApiDestinationResult build() {
+        }        public GetApiDestinationResult build() {
             return new GetApiDestinationResult(arn, connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond);
         }
     }

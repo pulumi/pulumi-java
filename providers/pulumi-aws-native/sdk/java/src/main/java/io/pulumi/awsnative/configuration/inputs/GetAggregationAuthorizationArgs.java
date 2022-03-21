@@ -54,8 +54,7 @@ public final class GetAggregationAuthorizationArgs extends io.pulumi.resources.I
         public Builder aggregationAuthorizationArn(String aggregationAuthorizationArn) {
             this.aggregationAuthorizationArn = Objects.requireNonNull(aggregationAuthorizationArn);
             return this;
-        }
-        public GetAggregationAuthorizationArgs build() {
+        }        public GetAggregationAuthorizationArgs build() {
             return new GetAggregationAuthorizationArgs(aggregationAuthorizationArn);
         }
     }

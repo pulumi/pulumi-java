@@ -45,8 +45,7 @@ public final class ConfigDecodeConfig {
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
-        }
-        public ConfigDecodeConfig build() {
+        }        public ConfigDecodeConfig build() {
             return new ConfigDecodeConfig(unvalidatedJSON);
         }
     }

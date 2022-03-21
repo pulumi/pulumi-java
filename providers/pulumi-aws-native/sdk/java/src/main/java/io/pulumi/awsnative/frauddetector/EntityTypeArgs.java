@@ -92,32 +92,29 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<EntityTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<EntityTypeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public EntityTypeArgs build() {
+        public Builder tags(EntityTypeTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public EntityTypeArgs build() {
             return new EntityTypeArgs(description, name, tags);
         }
     }

@@ -88,17 +88,14 @@ public final class GlobalReplicationGroupMember {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
-
         public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
-
         public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
             this.role = role;
             return this;
-        }
-        public GlobalReplicationGroupMember build() {
+        }        public GlobalReplicationGroupMember build() {
             return new GlobalReplicationGroupMember(replicationGroupId, replicationGroupRegion, role);
         }
     }

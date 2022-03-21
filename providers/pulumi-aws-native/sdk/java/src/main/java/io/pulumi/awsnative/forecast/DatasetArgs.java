@@ -148,72 +148,61 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.dataFrequency = dataFrequency;
             return this;
         }
-
         public Builder dataFrequency(@Nullable String dataFrequency) {
             this.dataFrequency = Output.ofNullable(dataFrequency);
             return this;
         }
-
         public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
-
         public Builder datasetType(Output<DatasetType> datasetType) {
             this.datasetType = Objects.requireNonNull(datasetType);
             return this;
         }
-
         public Builder datasetType(DatasetType datasetType) {
             this.datasetType = Output.of(Objects.requireNonNull(datasetType));
             return this;
         }
-
         public Builder domain(Output<DatasetDomain> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(DatasetDomain domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigPropertiesArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder schema(Output<SchemaPropertiesArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(SchemaPropertiesArgs schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DatasetArgs build() {
+        public Builder tags(TagsItemPropertiesArgs... tags) {
+            return tags(List.of(tags));
+        }        public DatasetArgs build() {
             return new DatasetArgs(dataFrequency, datasetName, datasetType, domain, encryptionConfig, schema, tags);
         }
     }

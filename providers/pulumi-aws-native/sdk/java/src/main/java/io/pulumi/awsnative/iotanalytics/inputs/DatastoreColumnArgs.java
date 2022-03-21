@@ -65,22 +65,18 @@ public final class DatastoreColumnArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DatastoreColumnArgs build() {
+        }        public DatastoreColumnArgs build() {
             return new DatastoreColumnArgs(name, type);
         }
     }

@@ -74,22 +74,21 @@ public final class GetProjectResult {
             this.arn = arn;
             return this;
         }
-
         public Builder defaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
             this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetProjectResult build() {
+        public Builder tags(ProjectTag... tags) {
+            return tags(List.of(tags));
+        }        public GetProjectResult build() {
             return new GetProjectResult(arn, defaultJobTimeoutMinutes, name, tags);
         }
     }

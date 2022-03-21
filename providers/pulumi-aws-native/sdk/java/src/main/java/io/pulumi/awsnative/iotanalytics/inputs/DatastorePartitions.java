@@ -54,7 +54,9 @@ public final class DatastorePartitions extends io.pulumi.resources.InvokeArgs {
             this.partitions = partitions;
             return this;
         }
-        public DatastorePartitions build() {
+        public Builder partitions(DatastorePartition... partitions) {
+            return partitions(List.of(partitions));
+        }        public DatastorePartitions build() {
             return new DatastorePartitions(partitions);
         }
     }

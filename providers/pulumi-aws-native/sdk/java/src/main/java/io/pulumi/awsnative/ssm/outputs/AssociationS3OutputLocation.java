@@ -63,17 +63,14 @@ public final class AssociationS3OutputLocation {
             this.outputS3BucketName = outputS3BucketName;
             return this;
         }
-
         public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
             this.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
-
         public Builder outputS3Region(@Nullable String outputS3Region) {
             this.outputS3Region = outputS3Region;
             return this;
-        }
-        public AssociationS3OutputLocation build() {
+        }        public AssociationS3OutputLocation build() {
             return new AssociationS3OutputLocation(outputS3BucketName, outputS3KeyPrefix, outputS3Region);
         }
     }

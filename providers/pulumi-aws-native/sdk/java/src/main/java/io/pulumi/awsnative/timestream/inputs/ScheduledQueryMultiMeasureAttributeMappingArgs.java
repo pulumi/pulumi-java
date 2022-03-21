@@ -83,32 +83,26 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pul
             this.measureValueType = Objects.requireNonNull(measureValueType);
             return this;
         }
-
         public Builder measureValueType(ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType) {
             this.measureValueType = Output.of(Objects.requireNonNull(measureValueType));
             return this;
         }
-
         public Builder sourceColumn(Output<String> sourceColumn) {
             this.sourceColumn = Objects.requireNonNull(sourceColumn);
             return this;
         }
-
         public Builder sourceColumn(String sourceColumn) {
             this.sourceColumn = Output.of(Objects.requireNonNull(sourceColumn));
             return this;
         }
-
         public Builder targetMultiMeasureAttributeName(@Nullable Output<String> targetMultiMeasureAttributeName) {
             this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;
             return this;
         }
-
         public Builder targetMultiMeasureAttributeName(@Nullable String targetMultiMeasureAttributeName) {
             this.targetMultiMeasureAttributeName = Output.ofNullable(targetMultiMeasureAttributeName);
             return this;
-        }
-        public ScheduledQueryMultiMeasureAttributeMappingArgs build() {
+        }        public ScheduledQueryMultiMeasureAttributeMappingArgs build() {
             return new ScheduledQueryMultiMeasureAttributeMappingArgs(measureValueType, sourceColumn, targetMultiMeasureAttributeName);
         }
     }

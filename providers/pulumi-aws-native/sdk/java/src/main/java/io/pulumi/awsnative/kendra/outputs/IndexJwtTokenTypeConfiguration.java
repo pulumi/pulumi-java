@@ -96,37 +96,30 @@ public final class IndexJwtTokenTypeConfiguration {
             this.claimRegex = claimRegex;
             return this;
         }
-
         public Builder groupAttributeField(@Nullable String groupAttributeField) {
             this.groupAttributeField = groupAttributeField;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }
-
         public Builder keyLocation(IndexKeyLocation keyLocation) {
             this.keyLocation = Objects.requireNonNull(keyLocation);
             return this;
         }
-
         public Builder secretManagerArn(@Nullable String secretManagerArn) {
             this.secretManagerArn = secretManagerArn;
             return this;
         }
-
         public Builder uRL(@Nullable String uRL) {
             this.uRL = uRL;
             return this;
         }
-
         public Builder userNameAttributeField(@Nullable String userNameAttributeField) {
             this.userNameAttributeField = userNameAttributeField;
             return this;
-        }
-        public IndexJwtTokenTypeConfiguration build() {
+        }        public IndexJwtTokenTypeConfiguration build() {
             return new IndexJwtTokenTypeConfiguration(claimRegex, groupAttributeField, issuer, keyLocation, secretManagerArn, uRL, userNameAttributeField);
         }
     }

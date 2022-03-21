@@ -78,22 +78,24 @@ public final class ModelExplainabilityJobDefinitionVpcConfigArgs extends io.pulu
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public Builder subnets(List<String> subnets) {
             this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
-        public ModelExplainabilityJobDefinitionVpcConfigArgs build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ModelExplainabilityJobDefinitionVpcConfigArgs build() {
             return new ModelExplainabilityJobDefinitionVpcConfigArgs(securityGroupIds, subnets);
         }
     }

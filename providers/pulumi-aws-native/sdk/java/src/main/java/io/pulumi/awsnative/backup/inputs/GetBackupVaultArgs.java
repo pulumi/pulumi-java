@@ -50,8 +50,7 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
         public Builder backupVaultName(String backupVaultName) {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
-        }
-        public GetBackupVaultArgs build() {
+        }        public GetBackupVaultArgs build() {
             return new GetBackupVaultArgs(backupVaultName);
         }
     }

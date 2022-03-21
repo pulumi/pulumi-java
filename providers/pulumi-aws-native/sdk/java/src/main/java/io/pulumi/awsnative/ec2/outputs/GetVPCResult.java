@@ -198,47 +198,47 @@ public final class GetVPCResult {
             this.cidrBlockAssociations = cidrBlockAssociations;
             return this;
         }
-
+        public Builder cidrBlockAssociations(String... cidrBlockAssociations) {
+            return cidrBlockAssociations(List.of(cidrBlockAssociations));
+        }
         public Builder defaultNetworkAcl(@Nullable String defaultNetworkAcl) {
             this.defaultNetworkAcl = defaultNetworkAcl;
             return this;
         }
-
         public Builder defaultSecurityGroup(@Nullable String defaultSecurityGroup) {
             this.defaultSecurityGroup = defaultSecurityGroup;
             return this;
         }
-
         public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
             this.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
-
         public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
             this.enableDnsSupport = enableDnsSupport;
             return this;
         }
-
         public Builder instanceTenancy(@Nullable String instanceTenancy) {
             this.instanceTenancy = instanceTenancy;
             return this;
         }
-
         public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
-
+        public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
+            return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
+        }
         public Builder tags(@Nullable List<VPCTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(VPCTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public GetVPCResult build() {
+        }        public GetVPCResult build() {
             return new GetVPCResult(cidrBlockAssociations, defaultNetworkAcl, defaultSecurityGroup, enableDnsHostnames, enableDnsSupport, instanceTenancy, ipv6CidrBlocks, tags, vpcId);
         }
     }

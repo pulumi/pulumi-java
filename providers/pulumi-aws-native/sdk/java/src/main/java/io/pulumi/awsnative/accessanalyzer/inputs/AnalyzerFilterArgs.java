@@ -104,52 +104,51 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.contains = contains;
             return this;
         }
-
         public Builder contains(@Nullable List<String> contains) {
             this.contains = Output.ofNullable(contains);
             return this;
         }
-
+        public Builder contains(String... contains) {
+            return contains(List.of(contains));
+        }
         public Builder eq(@Nullable Output<List<String>> eq) {
             this.eq = eq;
             return this;
         }
-
         public Builder eq(@Nullable List<String> eq) {
             this.eq = Output.ofNullable(eq);
             return this;
         }
-
+        public Builder eq(String... eq) {
+            return eq(List.of(eq));
+        }
         public Builder exists(@Nullable Output<Boolean> exists) {
             this.exists = exists;
             return this;
         }
-
         public Builder exists(@Nullable Boolean exists) {
             this.exists = Output.ofNullable(exists);
             return this;
         }
-
         public Builder neq(@Nullable Output<List<String>> neq) {
             this.neq = neq;
             return this;
         }
-
         public Builder neq(@Nullable List<String> neq) {
             this.neq = Output.ofNullable(neq);
             return this;
         }
-
+        public Builder neq(String... neq) {
+            return neq(List.of(neq));
+        }
         public Builder property(Output<String> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public Builder property(String property) {
             this.property = Output.of(Objects.requireNonNull(property));
             return this;
-        }
-        public AnalyzerFilterArgs build() {
+        }        public AnalyzerFilterArgs build() {
             return new AnalyzerFilterArgs(contains, eq, exists, neq, property);
         }
     }

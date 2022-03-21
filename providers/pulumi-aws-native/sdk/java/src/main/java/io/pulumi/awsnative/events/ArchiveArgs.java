@@ -92,42 +92,34 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder eventPattern(@Nullable Output<Object> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
-
         public Builder eventPattern(@Nullable Object eventPattern) {
             this.eventPattern = Output.ofNullable(eventPattern);
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
-
         public Builder sourceArn(Output<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
-
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = Output.of(Objects.requireNonNull(sourceArn));
             return this;
-        }
-        public ArchiveArgs build() {
+        }        public ArchiveArgs build() {
             return new ArchiveArgs(description, eventPattern, retentionDays, sourceArn);
         }
     }

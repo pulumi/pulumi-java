@@ -69,12 +69,10 @@ public final class VirtualClusterTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public VirtualClusterTag build() {
+        }        public VirtualClusterTag build() {
             return new VirtualClusterTag(key, value);
         }
     }

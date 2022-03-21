@@ -80,32 +80,26 @@ public final class TopicRuleAssetPropertyValueArgs extends io.pulumi.resources.R
             this.quality = quality;
             return this;
         }
-
         public Builder quality(@Nullable String quality) {
             this.quality = Output.ofNullable(quality);
             return this;
         }
-
         public Builder timestamp(Output<TopicRuleAssetPropertyTimestampArgs> timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public Builder timestamp(TopicRuleAssetPropertyTimestampArgs timestamp) {
             this.timestamp = Output.of(Objects.requireNonNull(timestamp));
             return this;
         }
-
         public Builder value(Output<TopicRuleAssetPropertyVariantArgs> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(TopicRuleAssetPropertyVariantArgs value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public TopicRuleAssetPropertyValueArgs build() {
+        }        public TopicRuleAssetPropertyValueArgs build() {
             return new TopicRuleAssetPropertyValueArgs(quality, timestamp, value);
         }
     }

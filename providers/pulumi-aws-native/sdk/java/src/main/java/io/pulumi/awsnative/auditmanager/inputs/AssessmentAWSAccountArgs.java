@@ -82,32 +82,26 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AssessmentAWSAccountArgs build() {
+        }        public AssessmentAWSAccountArgs build() {
             return new AssessmentAWSAccountArgs(emailAddress, id, name);
         }
     }

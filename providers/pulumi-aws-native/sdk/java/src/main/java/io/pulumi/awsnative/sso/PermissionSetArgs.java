@@ -165,82 +165,72 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder inlinePolicy(@Nullable Output<Object> inlinePolicy) {
             this.inlinePolicy = inlinePolicy;
             return this;
         }
-
         public Builder inlinePolicy(@Nullable Object inlinePolicy) {
             this.inlinePolicy = Output.ofNullable(inlinePolicy);
             return this;
         }
-
         public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder managedPolicies(@Nullable Output<List<String>> managedPolicies) {
             this.managedPolicies = managedPolicies;
             return this;
         }
-
         public Builder managedPolicies(@Nullable List<String> managedPolicies) {
             this.managedPolicies = Output.ofNullable(managedPolicies);
             return this;
         }
-
+        public Builder managedPolicies(String... managedPolicies) {
+            return managedPolicies(List.of(managedPolicies));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder relayStateType(@Nullable Output<String> relayStateType) {
             this.relayStateType = relayStateType;
             return this;
         }
-
         public Builder relayStateType(@Nullable String relayStateType) {
             this.relayStateType = Output.ofNullable(relayStateType);
             return this;
         }
-
         public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
-
         public Builder sessionDuration(@Nullable String sessionDuration) {
             this.sessionDuration = Output.ofNullable(sessionDuration);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PermissionSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PermissionSetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PermissionSetArgs build() {
+        public Builder tags(PermissionSetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PermissionSetArgs build() {
             return new PermissionSetArgs(description, inlinePolicy, instanceArn, managedPolicies, name, relayStateType, sessionDuration, tags);
         }
     }

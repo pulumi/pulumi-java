@@ -50,8 +50,7 @@ public final class GetBranchArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetBranchArgs build() {
+        }        public GetBranchArgs build() {
             return new GetBranchArgs(arn);
         }
     }

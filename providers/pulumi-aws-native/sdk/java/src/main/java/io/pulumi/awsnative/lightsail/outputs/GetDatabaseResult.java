@@ -146,37 +146,33 @@ public final class GetDatabaseResult {
             this.backupRetention = backupRetention;
             return this;
         }
-
         public Builder caCertificateIdentifier(@Nullable String caCertificateIdentifier) {
             this.caCertificateIdentifier = caCertificateIdentifier;
             return this;
         }
-
         public Builder databaseArn(@Nullable String databaseArn) {
             this.databaseArn = databaseArn;
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder tags(@Nullable List<DatabaseTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDatabaseResult build() {
+        public Builder tags(DatabaseTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDatabaseResult build() {
             return new GetDatabaseResult(backupRetention, caCertificateIdentifier, databaseArn, preferredBackupWindow, preferredMaintenanceWindow, publiclyAccessible, tags);
         }
     }

@@ -143,62 +143,53 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyPolicy(Output<Object> keyPolicy) {
             this.keyPolicy = Objects.requireNonNull(keyPolicy);
             return this;
         }
-
         public Builder keyPolicy(Object keyPolicy) {
             this.keyPolicy = Output.of(Objects.requireNonNull(keyPolicy));
             return this;
         }
-
         public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
             this.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
-
         public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
             this.pendingWindowInDays = Output.ofNullable(pendingWindowInDays);
             return this;
         }
-
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
             this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn);
             return this;
         }
-
         public Builder primaryKeyArn(String primaryKeyArn) {
             this.primaryKeyArn = Output.of(Objects.requireNonNull(primaryKeyArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ReplicaKeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ReplicaKeyTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ReplicaKeyArgs build() {
+        public Builder tags(ReplicaKeyTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ReplicaKeyArgs build() {
             return new ReplicaKeyArgs(description, enabled, keyPolicy, pendingWindowInDays, primaryKeyArn, tags);
         }
     }

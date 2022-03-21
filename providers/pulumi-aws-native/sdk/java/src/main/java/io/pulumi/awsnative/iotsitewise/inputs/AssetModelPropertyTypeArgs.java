@@ -97,42 +97,34 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
             this.attribute = attribute;
             return this;
         }
-
         public Builder attribute(@Nullable AssetModelAttributeArgs attribute) {
             this.attribute = Output.ofNullable(attribute);
             return this;
         }
-
         public Builder metric(@Nullable Output<AssetModelMetricArgs> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable AssetModelMetricArgs metric) {
             this.metric = Output.ofNullable(metric);
             return this;
         }
-
         public Builder transform(@Nullable Output<AssetModelTransformArgs> transform) {
             this.transform = transform;
             return this;
         }
-
         public Builder transform(@Nullable AssetModelTransformArgs transform) {
             this.transform = Output.ofNullable(transform);
             return this;
         }
-
         public Builder typeName(Output<AssetModelTypeName> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder typeName(AssetModelTypeName typeName) {
             this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
-        }
-        public AssetModelPropertyTypeArgs build() {
+        }        public AssetModelPropertyTypeArgs build() {
             return new AssetModelPropertyTypeArgs(attribute, metric, transform, typeName);
         }
     }

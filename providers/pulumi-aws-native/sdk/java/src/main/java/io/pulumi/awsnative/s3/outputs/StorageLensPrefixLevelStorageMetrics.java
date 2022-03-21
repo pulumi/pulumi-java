@@ -64,12 +64,10 @@ public final class StorageLensPrefixLevelStorageMetrics {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder selectionCriteria(@Nullable StorageLensSelectionCriteria selectionCriteria) {
             this.selectionCriteria = selectionCriteria;
             return this;
-        }
-        public StorageLensPrefixLevelStorageMetrics build() {
+        }        public StorageLensPrefixLevelStorageMetrics build() {
             return new StorageLensPrefixLevelStorageMetrics(isEnabled, selectionCriteria);
         }
     }

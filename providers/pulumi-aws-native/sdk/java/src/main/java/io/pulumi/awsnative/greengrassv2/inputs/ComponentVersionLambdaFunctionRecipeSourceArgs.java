@@ -118,62 +118,53 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
             this.componentDependencies = componentDependencies;
             return this;
         }
-
         public Builder componentDependencies(@Nullable Object componentDependencies) {
             this.componentDependencies = Output.ofNullable(componentDependencies);
             return this;
         }
-
         public Builder componentLambdaParameters(@Nullable Output<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters) {
             this.componentLambdaParameters = componentLambdaParameters;
             return this;
         }
-
         public Builder componentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParametersArgs componentLambdaParameters) {
             this.componentLambdaParameters = Output.ofNullable(componentLambdaParameters);
             return this;
         }
-
         public Builder componentName(@Nullable Output<String> componentName) {
             this.componentName = componentName;
             return this;
         }
-
         public Builder componentName(@Nullable String componentName) {
             this.componentName = Output.ofNullable(componentName);
             return this;
         }
-
         public Builder componentPlatforms(@Nullable Output<List<ComponentVersionComponentPlatformArgs>> componentPlatforms) {
             this.componentPlatforms = componentPlatforms;
             return this;
         }
-
         public Builder componentPlatforms(@Nullable List<ComponentVersionComponentPlatformArgs> componentPlatforms) {
             this.componentPlatforms = Output.ofNullable(componentPlatforms);
             return this;
         }
-
+        public Builder componentPlatforms(ComponentVersionComponentPlatformArgs... componentPlatforms) {
+            return componentPlatforms(List.of(componentPlatforms));
+        }
         public Builder componentVersion(@Nullable Output<String> componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
-
         public Builder componentVersion(@Nullable String componentVersion) {
             this.componentVersion = Output.ofNullable(componentVersion);
             return this;
         }
-
         public Builder lambdaArn(@Nullable Output<String> lambdaArn) {
             this.lambdaArn = lambdaArn;
             return this;
         }
-
         public Builder lambdaArn(@Nullable String lambdaArn) {
             this.lambdaArn = Output.ofNullable(lambdaArn);
             return this;
-        }
-        public ComponentVersionLambdaFunctionRecipeSourceArgs build() {
+        }        public ComponentVersionLambdaFunctionRecipeSourceArgs build() {
             return new ComponentVersionLambdaFunctionRecipeSourceArgs(componentDependencies, componentLambdaParameters, componentName, componentPlatforms, componentVersion, lambdaArn);
         }
     }

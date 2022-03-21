@@ -53,12 +53,10 @@ public final class ScheduledQueryTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ScheduledQueryTag build() {
+        }        public ScheduledQueryTag build() {
             return new ScheduledQueryTag(key, value);
         }
     }

@@ -72,12 +72,13 @@ public final class GlobalReplicationGroupReshardingConfiguration {
             this.nodeGroupId = nodeGroupId;
             return this;
         }
-
         public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }
-        public GlobalReplicationGroupReshardingConfiguration build() {
+        public Builder preferredAvailabilityZones(String... preferredAvailabilityZones) {
+            return preferredAvailabilityZones(List.of(preferredAvailabilityZones));
+        }        public GlobalReplicationGroupReshardingConfiguration build() {
             return new GlobalReplicationGroupReshardingConfiguration(nodeGroupId, preferredAvailabilityZones);
         }
     }

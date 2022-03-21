@@ -116,32 +116,26 @@ public final class CachePolicyConfig extends io.pulumi.resources.InvokeArgs {
             this.comment = comment;
             return this;
         }
-
         public Builder defaultTTL(Double defaultTTL) {
             this.defaultTTL = Objects.requireNonNull(defaultTTL);
             return this;
         }
-
         public Builder maxTTL(Double maxTTL) {
             this.maxTTL = Objects.requireNonNull(maxTTL);
             return this;
         }
-
         public Builder minTTL(Double minTTL) {
             this.minTTL = Objects.requireNonNull(minTTL);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
             return this;
-        }
-        public CachePolicyConfig build() {
+        }        public CachePolicyConfig build() {
             return new CachePolicyConfig(comment, defaultTTL, maxTTL, minTTL, name, parametersInCacheKeyAndForwardedToOrigin);
         }
     }

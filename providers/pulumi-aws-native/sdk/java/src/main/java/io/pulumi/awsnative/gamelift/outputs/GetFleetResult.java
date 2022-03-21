@@ -234,62 +234,59 @@ public final class GetFleetResult {
             this.description = description;
             return this;
         }
-
         public Builder desiredEC2Instances(@Nullable Integer desiredEC2Instances) {
             this.desiredEC2Instances = desiredEC2Instances;
             return this;
         }
-
         public Builder eC2InboundPermissions(@Nullable List<FleetIpPermission> eC2InboundPermissions) {
             this.eC2InboundPermissions = eC2InboundPermissions;
             return this;
         }
-
+        public Builder eC2InboundPermissions(FleetIpPermission... eC2InboundPermissions) {
+            return eC2InboundPermissions(List.of(eC2InboundPermissions));
+        }
         public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = fleetId;
             return this;
         }
-
         public Builder locations(@Nullable List<FleetLocationConfiguration> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(FleetLocationConfiguration... locations) {
+            return locations(List.of(locations));
+        }
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder metricGroups(@Nullable List<String> metricGroups) {
             this.metricGroups = metricGroups;
             return this;
         }
-
+        public Builder metricGroups(String... metricGroups) {
+            return metricGroups(List.of(metricGroups));
+        }
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder newGameSessionProtectionPolicy(@Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
-
         public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
-
         public Builder runtimeConfiguration(@Nullable FleetRuntimeConfiguration runtimeConfiguration) {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
-        }
-        public GetFleetResult build() {
+        }        public GetFleetResult build() {
             return new GetFleetResult(description, desiredEC2Instances, eC2InboundPermissions, fleetId, locations, maxSize, metricGroups, minSize, name, newGameSessionProtectionPolicy, resourceCreationLimitPolicy, runtimeConfiguration);
         }
     }

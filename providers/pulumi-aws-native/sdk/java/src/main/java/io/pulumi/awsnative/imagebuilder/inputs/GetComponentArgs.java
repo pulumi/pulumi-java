@@ -54,8 +54,7 @@ public final class GetComponentArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetComponentArgs build() {
+        }        public GetComponentArgs build() {
             return new GetComponentArgs(arn);
         }
     }

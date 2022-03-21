@@ -73,12 +73,13 @@ public final class GetRouteTableResult {
             this.routeTableId = routeTableId;
             return this;
         }
-
         public Builder tags(@Nullable List<RouteTableTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRouteTableResult build() {
+        public Builder tags(RouteTableTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRouteTableResult build() {
             return new GetRouteTableResult(routeTableId, tags);
         }
     }

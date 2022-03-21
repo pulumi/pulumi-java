@@ -85,17 +85,14 @@ public final class AccessPointCreationInfo {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
-
         public Builder ownerUid(String ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
-
         public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
-        }
-        public AccessPointCreationInfo build() {
+        }        public AccessPointCreationInfo build() {
             return new AccessPointCreationInfo(ownerGid, ownerUid, permissions);
         }
     }

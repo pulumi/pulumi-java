@@ -79,17 +79,14 @@ public final class DistributionLogging extends io.pulumi.resources.InvokeArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder includeCookies(@Nullable Boolean includeCookies) {
             this.includeCookies = includeCookies;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public DistributionLogging build() {
+        }        public DistributionLogging build() {
             return new DistributionLogging(bucket, includeCookies, prefix);
         }
     }

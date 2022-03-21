@@ -128,52 +128,45 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder retries(@Nullable Output<Integer> retries) {
             this.retries = retries;
             return this;
         }
-
         public Builder retries(@Nullable Integer retries) {
             this.retries = Output.ofNullable(retries);
             return this;
         }
-
         public Builder startPeriod(@Nullable Output<Integer> startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
-
         public Builder startPeriod(@Nullable Integer startPeriod) {
             this.startPeriod = Output.ofNullable(startPeriod);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public TaskDefinitionHealthCheckArgs build() {
+        }        public TaskDefinitionHealthCheckArgs build() {
             return new TaskDefinitionHealthCheckArgs(command, interval, retries, startPeriod, timeout);
         }
     }

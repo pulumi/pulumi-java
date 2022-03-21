@@ -66,12 +66,10 @@ public final class WirelessGatewayTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public WirelessGatewayTag build() {
+        }        public WirelessGatewayTag build() {
             return new WirelessGatewayTag(key, value);
         }
     }

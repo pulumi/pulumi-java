@@ -154,37 +154,39 @@ public final class GetRepositoryResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder externalConnections(@Nullable List<String> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
-
+        public Builder externalConnections(String... externalConnections) {
+            return externalConnections(List.of(externalConnections));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
-
         public Builder tags(@Nullable List<RepositoryTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(RepositoryTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder upstreams(@Nullable List<String> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
-        public GetRepositoryResult build() {
+        public Builder upstreams(String... upstreams) {
+            return upstreams(List.of(upstreams));
+        }        public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, description, externalConnections, name, permissionsPolicyDocument, tags, upstreams);
         }
     }

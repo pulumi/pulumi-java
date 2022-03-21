@@ -67,22 +67,21 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
-
         public Builder headerBehavior(String headerBehavior) {
             this.headerBehavior = Output.of(Objects.requireNonNull(headerBehavior));
             return this;
         }
-
         public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-        public CachePolicyHeadersConfigArgs build() {
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }        public CachePolicyHeadersConfigArgs build() {
             return new CachePolicyHeadersConfigArgs(headerBehavior, headers);
         }
     }

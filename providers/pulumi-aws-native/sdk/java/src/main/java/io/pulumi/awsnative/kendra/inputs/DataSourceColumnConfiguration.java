@@ -104,27 +104,28 @@ public final class DataSourceColumnConfiguration extends io.pulumi.resources.Inv
             this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns);
             return this;
         }
-
+        public Builder changeDetectingColumns(String... changeDetectingColumns) {
+            return changeDetectingColumns(List.of(changeDetectingColumns));
+        }
         public Builder documentDataColumnName(String documentDataColumnName) {
             this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName);
             return this;
         }
-
         public Builder documentIdColumnName(String documentIdColumnName) {
             this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName);
             return this;
         }
-
         public Builder documentTitleColumnName(@Nullable String documentTitleColumnName) {
             this.documentTitleColumnName = documentTitleColumnName;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-        public DataSourceColumnConfiguration build() {
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }        public DataSourceColumnConfiguration build() {
             return new DataSourceColumnConfiguration(changeDetectingColumns, documentDataColumnName, documentIdColumnName, documentTitleColumnName, fieldMappings);
         }
     }

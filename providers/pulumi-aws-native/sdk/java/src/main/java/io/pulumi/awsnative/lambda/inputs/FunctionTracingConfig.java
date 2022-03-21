@@ -60,8 +60,7 @@ public final class FunctionTracingConfig extends io.pulumi.resources.InvokeArgs 
         public Builder mode(@Nullable FunctionTracingConfigMode mode) {
             this.mode = mode;
             return this;
-        }
-        public FunctionTracingConfig build() {
+        }        public FunctionTracingConfig build() {
             return new FunctionTracingConfig(mode);
         }
     }

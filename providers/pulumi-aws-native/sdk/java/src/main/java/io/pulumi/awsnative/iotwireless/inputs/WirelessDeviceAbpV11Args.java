@@ -66,22 +66,18 @@ public final class WirelessDeviceAbpV11Args extends io.pulumi.resources.Resource
             this.devAddr = Objects.requireNonNull(devAddr);
             return this;
         }
-
         public Builder devAddr(String devAddr) {
             this.devAddr = Output.of(Objects.requireNonNull(devAddr));
             return this;
         }
-
         public Builder sessionKeys(Output<WirelessDeviceSessionKeysAbpV11Args> sessionKeys) {
             this.sessionKeys = Objects.requireNonNull(sessionKeys);
             return this;
         }
-
         public Builder sessionKeys(WirelessDeviceSessionKeysAbpV11Args sessionKeys) {
             this.sessionKeys = Output.of(Objects.requireNonNull(sessionKeys));
             return this;
-        }
-        public WirelessDeviceAbpV11Args build() {
+        }        public WirelessDeviceAbpV11Args build() {
             return new WirelessDeviceAbpV11Args(devAddr, sessionKeys);
         }
     }

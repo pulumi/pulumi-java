@@ -56,8 +56,7 @@ public final class ResponsePlanNotificationTargetItem extends io.pulumi.resource
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
-        }
-        public ResponsePlanNotificationTargetItem build() {
+        }        public ResponsePlanNotificationTargetItem build() {
             return new ResponsePlanNotificationTargetItem(snsTopicArn);
         }
     }

@@ -92,22 +92,18 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget extends io.
             this.address = address;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder instance(@Nullable NetworkInsightsAnalysisAnalysisComponent instance) {
             this.instance = instance;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public NetworkInsightsAnalysisAnalysisLoadBalancerTarget build() {
+        }        public NetworkInsightsAnalysisAnalysisLoadBalancerTarget build() {
             return new NetworkInsightsAnalysisAnalysisLoadBalancerTarget(address, availabilityZone, instance, port);
         }
     }

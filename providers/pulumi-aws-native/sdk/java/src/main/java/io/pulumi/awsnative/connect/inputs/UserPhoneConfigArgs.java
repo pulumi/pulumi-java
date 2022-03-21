@@ -97,42 +97,34 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
             return this;
         }
-
         public Builder afterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
             this.afterContactWorkTimeLimit = Output.ofNullable(afterContactWorkTimeLimit);
             return this;
         }
-
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
-
         public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = Output.ofNullable(autoAccept);
             return this;
         }
-
         public Builder deskPhoneNumber(@Nullable Output<String> deskPhoneNumber) {
             this.deskPhoneNumber = deskPhoneNumber;
             return this;
         }
-
         public Builder deskPhoneNumber(@Nullable String deskPhoneNumber) {
             this.deskPhoneNumber = Output.ofNullable(deskPhoneNumber);
             return this;
         }
-
         public Builder phoneType(Output<UserPhoneType> phoneType) {
             this.phoneType = Objects.requireNonNull(phoneType);
             return this;
         }
-
         public Builder phoneType(UserPhoneType phoneType) {
             this.phoneType = Output.of(Objects.requireNonNull(phoneType));
             return this;
-        }
-        public UserPhoneConfigArgs build() {
+        }        public UserPhoneConfigArgs build() {
             return new UserPhoneConfigArgs(afterContactWorkTimeLimit, autoAccept, deskPhoneNumber, phoneType);
         }
     }

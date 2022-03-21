@@ -53,12 +53,13 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
             this.siteMaps = Objects.requireNonNull(siteMaps);
             return this;
         }
-
         public Builder siteMaps(List<String> siteMaps) {
             this.siteMaps = Output.of(Objects.requireNonNull(siteMaps));
             return this;
         }
-        public DataSourceWebCrawlerSiteMapsConfigurationArgs build() {
+        public Builder siteMaps(String... siteMaps) {
+            return siteMaps(List.of(siteMaps));
+        }        public DataSourceWebCrawlerSiteMapsConfigurationArgs build() {
             return new DataSourceWebCrawlerSiteMapsConfigurationArgs(siteMaps);
         }
     }

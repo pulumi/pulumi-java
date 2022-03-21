@@ -109,42 +109,37 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
-
         public Builder location(@Nullable Output<SiteLocationArgs> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable SiteLocationArgs location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<SiteTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<SiteTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public SiteArgs build() {
+        public Builder tags(SiteTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public SiteArgs build() {
             return new SiteArgs(description, globalNetworkId, location, tags);
         }
     }

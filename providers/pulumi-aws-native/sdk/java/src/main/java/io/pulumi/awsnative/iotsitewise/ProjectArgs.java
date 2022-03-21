@@ -124,52 +124,48 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.assetIds = assetIds;
             return this;
         }
-
         public Builder assetIds(@Nullable List<String> assetIds) {
             this.assetIds = Output.ofNullable(assetIds);
             return this;
         }
-
+        public Builder assetIds(String... assetIds) {
+            return assetIds(List.of(assetIds));
+        }
         public Builder portalId(Output<String> portalId) {
             this.portalId = Objects.requireNonNull(portalId);
             return this;
         }
-
         public Builder portalId(String portalId) {
             this.portalId = Output.of(Objects.requireNonNull(portalId));
             return this;
         }
-
         public Builder projectDescription(@Nullable Output<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
-
         public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = Output.ofNullable(projectDescription);
             return this;
         }
-
         public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = Output.ofNullable(projectName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ProjectArgs build() {
+        public Builder tags(ProjectTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ProjectArgs build() {
             return new ProjectArgs(assetIds, portalId, projectDescription, projectName, tags);
         }
     }

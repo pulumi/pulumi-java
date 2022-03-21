@@ -65,17 +65,14 @@ public final class DatastoreStorage {
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
-
         public Builder iotSiteWiseMultiLayerStorage(@Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage) {
             this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
             return this;
         }
-
         public Builder serviceManagedS3(@Nullable DatastoreServiceManagedS3 serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
-        }
-        public DatastoreStorage build() {
+        }        public DatastoreStorage build() {
             return new DatastoreStorage(customerManagedS3, iotSiteWiseMultiLayerStorage, serviceManagedS3);
         }
     }

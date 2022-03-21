@@ -50,8 +50,7 @@ public final class GetNetworkInsightsAccessScopeArgs extends io.pulumi.resources
         public Builder networkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
             this.networkInsightsAccessScopeId = Objects.requireNonNull(networkInsightsAccessScopeId);
             return this;
-        }
-        public GetNetworkInsightsAccessScopeArgs build() {
+        }        public GetNetworkInsightsAccessScopeArgs build() {
             return new GetNetworkInsightsAccessScopeArgs(networkInsightsAccessScopeId);
         }
     }

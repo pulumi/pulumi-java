@@ -97,42 +97,37 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.dataDelivery = dataDelivery;
             return this;
         }
-
         public Builder dataDelivery(@Nullable ProjectDataDeliveryObjectArgs dataDelivery) {
             this.dataDelivery = Output.ofNullable(dataDelivery);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ProjectArgs build() {
+        public Builder tags(ProjectTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ProjectArgs build() {
             return new ProjectArgs(dataDelivery, description, name, tags);
         }
     }

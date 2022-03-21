@@ -93,17 +93,17 @@ public final class RuleGroupCustomResponse extends io.pulumi.resources.InvokeArg
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-        public RuleGroupCustomResponse build() {
+        public Builder responseHeaders(RuleGroupCustomHTTPHeader... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public RuleGroupCustomResponse build() {
             return new RuleGroupCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

@@ -74,12 +74,10 @@ public final class TransitGatewayMulticastDomainTag extends io.pulumi.resources.
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TransitGatewayMulticastDomainTag build() {
+        }        public TransitGatewayMulticastDomainTag build() {
             return new TransitGatewayMulticastDomainTag(key, value);
         }
     }

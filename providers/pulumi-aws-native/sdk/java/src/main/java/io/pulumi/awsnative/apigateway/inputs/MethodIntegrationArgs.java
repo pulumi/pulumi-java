@@ -274,142 +274,120 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
             this.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
-
         public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
             this.cacheKeyParameters = Output.ofNullable(cacheKeyParameters);
             return this;
         }
-
+        public Builder cacheKeyParameters(String... cacheKeyParameters) {
+            return cacheKeyParameters(List.of(cacheKeyParameters));
+        }
         public Builder cacheNamespace(@Nullable Output<String> cacheNamespace) {
             this.cacheNamespace = cacheNamespace;
             return this;
         }
-
         public Builder cacheNamespace(@Nullable String cacheNamespace) {
             this.cacheNamespace = Output.ofNullable(cacheNamespace);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder connectionType(@Nullable Output<MethodIntegrationConnectionType> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
-
         public Builder connectionType(@Nullable MethodIntegrationConnectionType connectionType) {
             this.connectionType = Output.ofNullable(connectionType);
             return this;
         }
-
         public Builder contentHandling(@Nullable Output<MethodIntegrationContentHandling> contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
-
         public Builder contentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
             this.contentHandling = Output.ofNullable(contentHandling);
             return this;
         }
-
         public Builder credentials(@Nullable Output<String> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable String credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder integrationHttpMethod(@Nullable Output<String> integrationHttpMethod) {
             this.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
-
         public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
             this.integrationHttpMethod = Output.ofNullable(integrationHttpMethod);
             return this;
         }
-
         public Builder integrationResponses(@Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses) {
             this.integrationResponses = integrationResponses;
             return this;
         }
-
         public Builder integrationResponses(@Nullable List<MethodIntegrationResponseArgs> integrationResponses) {
             this.integrationResponses = Output.ofNullable(integrationResponses);
             return this;
         }
-
+        public Builder integrationResponses(MethodIntegrationResponseArgs... integrationResponses) {
+            return integrationResponses(List.of(integrationResponses));
+        }
         public Builder passthroughBehavior(@Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
-
         public Builder passthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
             this.passthroughBehavior = Output.ofNullable(passthroughBehavior);
             return this;
         }
-
         public Builder requestParameters(@Nullable Output<Object> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
-
         public Builder requestParameters(@Nullable Object requestParameters) {
             this.requestParameters = Output.ofNullable(requestParameters);
             return this;
         }
-
         public Builder requestTemplates(@Nullable Output<Object> requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
-
         public Builder requestTemplates(@Nullable Object requestTemplates) {
             this.requestTemplates = Output.ofNullable(requestTemplates);
             return this;
         }
-
         public Builder timeoutInMillis(@Nullable Output<Integer> timeoutInMillis) {
             this.timeoutInMillis = timeoutInMillis;
             return this;
         }
-
         public Builder timeoutInMillis(@Nullable Integer timeoutInMillis) {
             this.timeoutInMillis = Output.ofNullable(timeoutInMillis);
             return this;
         }
-
         public Builder type(Output<MethodIntegrationType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(MethodIntegrationType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public MethodIntegrationArgs build() {
+        }        public MethodIntegrationArgs build() {
             return new MethodIntegrationArgs(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, integrationHttpMethod, integrationResponses, passthroughBehavior, requestParameters, requestTemplates, timeoutInMillis, type, uri);
         }
     }

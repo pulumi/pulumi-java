@@ -125,52 +125,45 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder quickConnectConfig(Output<QuickConnectConfigArgs> quickConnectConfig) {
             this.quickConnectConfig = Objects.requireNonNull(quickConnectConfig);
             return this;
         }
-
         public Builder quickConnectConfig(QuickConnectConfigArgs quickConnectConfig) {
             this.quickConnectConfig = Output.of(Objects.requireNonNull(quickConnectConfig));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<QuickConnectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<QuickConnectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public QuickConnectArgs build() {
+        public Builder tags(QuickConnectTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public QuickConnectArgs build() {
             return new QuickConnectArgs(description, instanceArn, name, quickConnectConfig, tags);
         }
     }

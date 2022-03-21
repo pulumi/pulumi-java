@@ -72,22 +72,18 @@ public final class FlowSnowflakeDestinationProperties {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder intermediateBucketName(String intermediateBucketName) {
             this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowSnowflakeDestinationProperties build() {
+        }        public FlowSnowflakeDestinationProperties build() {
             return new FlowSnowflakeDestinationProperties(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
         }
     }

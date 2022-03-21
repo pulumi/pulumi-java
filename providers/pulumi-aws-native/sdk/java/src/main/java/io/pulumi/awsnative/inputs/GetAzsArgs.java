@@ -52,8 +52,7 @@ public final class GetAzsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetAzsArgs build() {
+        }        public GetAzsArgs build() {
             return new GetAzsArgs(region);
         }
     }

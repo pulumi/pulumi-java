@@ -79,17 +79,20 @@ public final class DataflowEndpointGroupSecurityDetails extends io.pulumi.resour
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-        public DataflowEndpointGroupSecurityDetails build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public DataflowEndpointGroupSecurityDetails build() {
             return new DataflowEndpointGroupSecurityDetails(roleArn, securityGroupIds, subnetIds);
         }
     }

@@ -200,52 +200,42 @@ public final class GetPortalResult {
             this.alarms = alarms;
             return this;
         }
-
         public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
-
         public Builder portalArn(@Nullable String portalArn) {
             this.portalArn = portalArn;
             return this;
         }
-
         public Builder portalClientId(@Nullable String portalClientId) {
             this.portalClientId = portalClientId;
             return this;
         }
-
         public Builder portalContactEmail(@Nullable String portalContactEmail) {
             this.portalContactEmail = portalContactEmail;
             return this;
         }
-
         public Builder portalDescription(@Nullable String portalDescription) {
             this.portalDescription = portalDescription;
             return this;
         }
-
         public Builder portalId(@Nullable String portalId) {
             this.portalId = portalId;
             return this;
         }
-
         public Builder portalName(@Nullable String portalName) {
             this.portalName = portalName;
             return this;
         }
-
         public Builder portalStartUrl(@Nullable String portalStartUrl) {
             this.portalStartUrl = portalStartUrl;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public GetPortalResult build() {
+        }        public GetPortalResult build() {
             return new GetPortalResult(alarms, notificationSenderEmail, portalArn, portalClientId, portalContactEmail, portalDescription, portalId, portalName, portalStartUrl, roleArn);
         }
     }

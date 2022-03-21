@@ -56,12 +56,10 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public EgressOnlyInternetGatewayArgs build() {
+        }        public EgressOnlyInternetGatewayArgs build() {
             return new EgressOnlyInternetGatewayArgs(vpcId);
         }
     }

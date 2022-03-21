@@ -78,22 +78,18 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
             this.offsetInNanos = offsetInNanos;
             return this;
         }
-
         public Builder offsetInNanos(@Nullable String offsetInNanos) {
             this.offsetInNanos = Output.ofNullable(offsetInNanos);
             return this;
         }
-
         public Builder timeInSeconds(Output<String> timeInSeconds) {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }
-
         public Builder timeInSeconds(String timeInSeconds) {
             this.timeInSeconds = Output.of(Objects.requireNonNull(timeInSeconds));
             return this;
-        }
-        public DetectorModelAssetPropertyTimestampArgs build() {
+        }        public DetectorModelAssetPropertyTimestampArgs build() {
             return new DetectorModelAssetPropertyTimestampArgs(offsetInNanos, timeInSeconds);
         }
     }

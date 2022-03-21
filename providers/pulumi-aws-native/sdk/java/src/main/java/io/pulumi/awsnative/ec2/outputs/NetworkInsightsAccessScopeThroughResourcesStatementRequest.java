@@ -45,8 +45,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
         public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
-        }
-        public NetworkInsightsAccessScopeThroughResourcesStatementRequest build() {
+        }        public NetworkInsightsAccessScopeThroughResourcesStatementRequest build() {
             return new NetworkInsightsAccessScopeThroughResourcesStatementRequest(resourceStatement);
         }
     }

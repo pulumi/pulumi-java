@@ -98,37 +98,36 @@ public final class CloudFormationProvisionedProductProvisioningPreferences {
             this.stackSetAccounts = stackSetAccounts;
             return this;
         }
-
+        public Builder stackSetAccounts(String... stackSetAccounts) {
+            return stackSetAccounts(List.of(stackSetAccounts));
+        }
         public Builder stackSetFailureToleranceCount(@Nullable Integer stackSetFailureToleranceCount) {
             this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
             return this;
         }
-
         public Builder stackSetFailureTolerancePercentage(@Nullable Integer stackSetFailureTolerancePercentage) {
             this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
             return this;
         }
-
         public Builder stackSetMaxConcurrencyCount(@Nullable Integer stackSetMaxConcurrencyCount) {
             this.stackSetMaxConcurrencyCount = stackSetMaxConcurrencyCount;
             return this;
         }
-
         public Builder stackSetMaxConcurrencyPercentage(@Nullable Integer stackSetMaxConcurrencyPercentage) {
             this.stackSetMaxConcurrencyPercentage = stackSetMaxConcurrencyPercentage;
             return this;
         }
-
         public Builder stackSetOperationType(@Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType) {
             this.stackSetOperationType = stackSetOperationType;
             return this;
         }
-
         public Builder stackSetRegions(@Nullable List<String> stackSetRegions) {
             this.stackSetRegions = stackSetRegions;
             return this;
         }
-        public CloudFormationProvisionedProductProvisioningPreferences build() {
+        public Builder stackSetRegions(String... stackSetRegions) {
+            return stackSetRegions(List.of(stackSetRegions));
+        }        public CloudFormationProvisionedProductProvisioningPreferences build() {
             return new CloudFormationProvisionedProductProvisioningPreferences(stackSetAccounts, stackSetFailureToleranceCount, stackSetFailureTolerancePercentage, stackSetMaxConcurrencyCount, stackSetMaxConcurrencyPercentage, stackSetOperationType, stackSetRegions);
         }
     }

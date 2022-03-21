@@ -54,12 +54,10 @@ public final class LicenseBorrowConfiguration {
             this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn);
             return this;
         }
-
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
-        }
-        public LicenseBorrowConfiguration build() {
+        }        public LicenseBorrowConfiguration build() {
             return new LicenseBorrowConfiguration(allowEarlyCheckIn, maxTimeToLiveInMinutes);
         }
     }

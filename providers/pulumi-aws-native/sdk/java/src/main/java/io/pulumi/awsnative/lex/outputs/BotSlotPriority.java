@@ -62,12 +62,10 @@ public final class BotSlotPriority {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder slotName(String slotName) {
             this.slotName = Objects.requireNonNull(slotName);
             return this;
-        }
-        public BotSlotPriority build() {
+        }        public BotSlotPriority build() {
             return new BotSlotPriority(priority, slotName);
         }
     }

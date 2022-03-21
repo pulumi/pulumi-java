@@ -89,17 +89,17 @@ public final class GetUserResult {
             this.arn = arn;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<UserTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetUserResult build() {
+        public Builder tags(UserTag... tags) {
+            return tags(List.of(tags));
+        }        public GetUserResult build() {
             return new GetUserResult(arn, status, tags);
         }
     }

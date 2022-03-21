@@ -67,22 +67,18 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
             this.centerFrequency = centerFrequency;
             return this;
         }
-
         public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
             this.centerFrequency = Output.ofNullable(centerFrequency);
             return this;
         }
-
         public Builder polarization(@Nullable Output<ConfigPolarization> polarization) {
             this.polarization = polarization;
             return this;
         }
-
         public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = Output.ofNullable(polarization);
             return this;
-        }
-        public ConfigUplinkSpectrumConfigArgs build() {
+        }        public ConfigUplinkSpectrumConfigArgs build() {
             return new ConfigUplinkSpectrumConfigArgs(centerFrequency, polarization);
         }
     }

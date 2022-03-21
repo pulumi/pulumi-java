@@ -92,32 +92,32 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.cells = cells;
             return this;
         }
-
         public Builder cells(@Nullable List<String> cells) {
             this.cells = Output.ofNullable(cells);
             return this;
         }
-
+        public Builder cells(String... cells) {
+            return cells(List.of(cells));
+        }
         public Builder recoveryGroupName(@Nullable Output<String> recoveryGroupName) {
             this.recoveryGroupName = recoveryGroupName;
             return this;
         }
-
         public Builder recoveryGroupName(@Nullable String recoveryGroupName) {
             this.recoveryGroupName = Output.ofNullable(recoveryGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RecoveryGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RecoveryGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public RecoveryGroupArgs build() {
+        public Builder tags(RecoveryGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public RecoveryGroupArgs build() {
             return new RecoveryGroupArgs(cells, recoveryGroupName, tags);
         }
     }

@@ -192,102 +192,94 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder entityTypes(@Nullable Output<List<DetectorEntityTypeArgs>> entityTypes) {
             this.entityTypes = entityTypes;
             return this;
         }
-
         public Builder entityTypes(@Nullable List<DetectorEntityTypeArgs> entityTypes) {
             this.entityTypes = Output.ofNullable(entityTypes);
             return this;
         }
-
+        public Builder entityTypes(DetectorEntityTypeArgs... entityTypes) {
+            return entityTypes(List.of(entityTypes));
+        }
         public Builder eventVariables(@Nullable Output<List<DetectorEventVariableArgs>> eventVariables) {
             this.eventVariables = eventVariables;
             return this;
         }
-
         public Builder eventVariables(@Nullable List<DetectorEventVariableArgs> eventVariables) {
             this.eventVariables = Output.ofNullable(eventVariables);
             return this;
         }
-
+        public Builder eventVariables(DetectorEventVariableArgs... eventVariables) {
+            return eventVariables(List.of(eventVariables));
+        }
         public Builder inline(@Nullable Output<Boolean> inline) {
             this.inline = inline;
             return this;
         }
-
         public Builder inline(@Nullable Boolean inline) {
             this.inline = Output.ofNullable(inline);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<DetectorLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<DetectorLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(DetectorLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DetectorEventTypeArgs build() {
+        public Builder tags(DetectorTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DetectorEventTypeArgs build() {
             return new DetectorEventTypeArgs(arn, createdTime, description, entityTypes, eventVariables, inline, labels, lastUpdatedTime, name, tags);
         }
     }

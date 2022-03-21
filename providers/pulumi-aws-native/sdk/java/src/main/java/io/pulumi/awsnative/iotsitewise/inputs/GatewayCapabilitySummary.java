@@ -70,12 +70,10 @@ public final class GatewayCapabilitySummary extends io.pulumi.resources.InvokeAr
             this.capabilityConfiguration = capabilityConfiguration;
             return this;
         }
-
         public Builder capabilityNamespace(String capabilityNamespace) {
             this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
             return this;
-        }
-        public GatewayCapabilitySummary build() {
+        }        public GatewayCapabilitySummary build() {
             return new GatewayCapabilitySummary(capabilityConfiguration, capabilityNamespace);
         }
     }

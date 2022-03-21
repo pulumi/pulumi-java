@@ -81,17 +81,20 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration extends io.
             this.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
             return this;
         }
-
+        public Builder customKnowledgeArticleTypeConfigurations(DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration... customKnowledgeArticleTypeConfigurations) {
+            return customKnowledgeArticleTypeConfigurations(List.of(customKnowledgeArticleTypeConfigurations));
+        }
         public Builder includedStates(List<DataSourceSalesforceKnowledgeArticleState> includedStates) {
             this.includedStates = Objects.requireNonNull(includedStates);
             return this;
         }
-
+        public Builder includedStates(DataSourceSalesforceKnowledgeArticleState... includedStates) {
+            return includedStates(List.of(includedStates));
+        }
         public Builder standardKnowledgeArticleTypeConfiguration(@Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
             this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
             return this;
-        }
-        public DataSourceSalesforceKnowledgeArticleConfiguration build() {
+        }        public DataSourceSalesforceKnowledgeArticleConfiguration build() {
             return new DataSourceSalesforceKnowledgeArticleConfiguration(customKnowledgeArticleTypeConfigurations, includedStates, standardKnowledgeArticleTypeConfiguration);
         }
     }

@@ -82,27 +82,22 @@ public final class OriginRequestPolicyConfig {
             this.comment = comment;
             return this;
         }
-
         public Builder cookiesConfig(OriginRequestPolicyCookiesConfig cookiesConfig) {
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
-
         public Builder headersConfig(OriginRequestPolicyHeadersConfig headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
-        }
-        public OriginRequestPolicyConfig build() {
+        }        public OriginRequestPolicyConfig build() {
             return new OriginRequestPolicyConfig(comment, cookiesConfig, headersConfig, name, queryStringsConfig);
         }
     }

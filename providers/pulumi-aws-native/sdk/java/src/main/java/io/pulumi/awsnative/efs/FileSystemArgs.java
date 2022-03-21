@@ -185,112 +185,96 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
-
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
             this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
             return this;
         }
-
         public Builder backupPolicy(@Nullable Output<FileSystemBackupPolicyArgs> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
-
         public Builder backupPolicy(@Nullable FileSystemBackupPolicyArgs backupPolicy) {
             this.backupPolicy = Output.ofNullable(backupPolicy);
             return this;
         }
-
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder fileSystemPolicy(@Nullable Output<Object> fileSystemPolicy) {
             this.fileSystemPolicy = fileSystemPolicy;
             return this;
         }
-
         public Builder fileSystemPolicy(@Nullable Object fileSystemPolicy) {
             this.fileSystemPolicy = Output.ofNullable(fileSystemPolicy);
             return this;
         }
-
         public Builder fileSystemTags(@Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags) {
             this.fileSystemTags = fileSystemTags;
             return this;
         }
-
         public Builder fileSystemTags(@Nullable List<FileSystemElasticFileSystemTagArgs> fileSystemTags) {
             this.fileSystemTags = Output.ofNullable(fileSystemTags);
             return this;
         }
-
+        public Builder fileSystemTags(FileSystemElasticFileSystemTagArgs... fileSystemTags) {
+            return fileSystemTags(List.of(fileSystemTags));
+        }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder lifecyclePolicies(@Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies) {
             this.lifecyclePolicies = lifecyclePolicies;
             return this;
         }
-
         public Builder lifecyclePolicies(@Nullable List<FileSystemLifecyclePolicyArgs> lifecyclePolicies) {
             this.lifecyclePolicies = Output.ofNullable(lifecyclePolicies);
             return this;
         }
-
+        public Builder lifecyclePolicies(FileSystemLifecyclePolicyArgs... lifecyclePolicies) {
+            return lifecyclePolicies(List.of(lifecyclePolicies));
+        }
         public Builder performanceMode(@Nullable Output<String> performanceMode) {
             this.performanceMode = performanceMode;
             return this;
         }
-
         public Builder performanceMode(@Nullable String performanceMode) {
             this.performanceMode = Output.ofNullable(performanceMode);
             return this;
         }
-
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
-
         public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Output.ofNullable(provisionedThroughputInMibps);
             return this;
         }
-
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
             this.throughputMode = throughputMode;
             return this;
         }
-
         public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = Output.ofNullable(throughputMode);
             return this;
-        }
-        public FileSystemArgs build() {
+        }        public FileSystemArgs build() {
             return new FileSystemArgs(availabilityZoneName, backupPolicy, bypassPolicyLockoutSafetyCheck, encrypted, fileSystemPolicy, fileSystemTags, kmsKeyId, lifecyclePolicies, performanceMode, provisionedThroughputInMibps, throughputMode);
         }
     }

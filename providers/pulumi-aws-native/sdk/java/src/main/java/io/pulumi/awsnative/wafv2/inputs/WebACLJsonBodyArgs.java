@@ -84,32 +84,26 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
-
         public Builder invalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = Output.ofNullable(invalidFallbackBehavior);
             return this;
         }
-
         public Builder matchPattern(Output<WebACLJsonMatchPatternArgs> matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
-
         public Builder matchPattern(WebACLJsonMatchPatternArgs matchPattern) {
             this.matchPattern = Output.of(Objects.requireNonNull(matchPattern));
             return this;
         }
-
         public Builder matchScope(Output<WebACLJsonMatchScope> matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public Builder matchScope(WebACLJsonMatchScope matchScope) {
             this.matchScope = Output.of(Objects.requireNonNull(matchScope));
             return this;
-        }
-        public WebACLJsonBodyArgs build() {
+        }        public WebACLJsonBodyArgs build() {
             return new WebACLJsonBodyArgs(invalidFallbackBehavior, matchPattern, matchScope);
         }
     }

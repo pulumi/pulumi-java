@@ -52,8 +52,7 @@ public final class DeliveryStreamOutputFormatConfiguration extends io.pulumi.res
         public Builder serializer(@Nullable DeliveryStreamSerializer serializer) {
             this.serializer = serializer;
             return this;
-        }
-        public DeliveryStreamOutputFormatConfiguration build() {
+        }        public DeliveryStreamOutputFormatConfiguration build() {
             return new DeliveryStreamOutputFormatConfiguration(serializer);
         }
     }

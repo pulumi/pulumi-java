@@ -71,12 +71,10 @@ public final class TransitGatewayConnectTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TransitGatewayConnectTag build() {
+        }        public TransitGatewayConnectTag build() {
             return new TransitGatewayConnectTag(key, value);
         }
     }

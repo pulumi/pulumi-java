@@ -81,27 +81,22 @@ public final class FeatureVariationObject {
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
-
         public Builder longValue(@Nullable Double longValue) {
             this.longValue = longValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder variationName(@Nullable String variationName) {
             this.variationName = variationName;
             return this;
-        }
-        public FeatureVariationObject build() {
+        }        public FeatureVariationObject build() {
             return new FeatureVariationObject(booleanValue, doubleValue, longValue, stringValue, variationName);
         }
     }

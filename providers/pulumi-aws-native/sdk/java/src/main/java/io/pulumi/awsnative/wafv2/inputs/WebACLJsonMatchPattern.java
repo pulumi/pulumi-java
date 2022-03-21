@@ -76,12 +76,13 @@ public final class WebACLJsonMatchPattern extends io.pulumi.resources.InvokeArgs
             this.all = all;
             return this;
         }
-
         public Builder includedPaths(@Nullable List<String> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
-        public WebACLJsonMatchPattern build() {
+        public Builder includedPaths(String... includedPaths) {
+            return includedPaths(List.of(includedPaths));
+        }        public WebACLJsonMatchPattern build() {
             return new WebACLJsonMatchPattern(all, includedPaths);
         }
     }

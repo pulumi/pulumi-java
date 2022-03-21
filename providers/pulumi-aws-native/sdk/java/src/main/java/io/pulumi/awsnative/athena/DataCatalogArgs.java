@@ -126,52 +126,45 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DataCatalogTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DataCatalogTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DataCatalogTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(Output<DataCatalogType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(DataCatalogType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DataCatalogArgs build() {
+        }        public DataCatalogArgs build() {
             return new DataCatalogArgs(description, name, parameters, tags, type);
         }
     }

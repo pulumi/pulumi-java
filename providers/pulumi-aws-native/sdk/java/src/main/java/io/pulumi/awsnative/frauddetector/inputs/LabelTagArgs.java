@@ -65,22 +65,18 @@ public final class LabelTagArgs extends io.pulumi.resources.ResourceArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public LabelTagArgs build() {
+        }        public LabelTagArgs build() {
             return new LabelTagArgs(key, value);
         }
     }

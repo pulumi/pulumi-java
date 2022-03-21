@@ -64,17 +64,14 @@ public final class DataSourceConfluencePageToIndexFieldMapping {
             this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
             this.dateFieldFormat = dateFieldFormat;
             return this;
         }
-
         public Builder indexFieldName(String indexFieldName) {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
-        }
-        public DataSourceConfluencePageToIndexFieldMapping build() {
+        }        public DataSourceConfluencePageToIndexFieldMapping build() {
             return new DataSourceConfluencePageToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }
     }

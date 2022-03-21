@@ -109,42 +109,34 @@ public final class ListenerRuleAction {
             this.authenticateCognitoConfig = authenticateCognitoConfig;
             return this;
         }
-
         public Builder authenticateOidcConfig(@Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig) {
             this.authenticateOidcConfig = authenticateOidcConfig;
             return this;
         }
-
         public Builder fixedResponseConfig(@Nullable ListenerRuleFixedResponseConfig fixedResponseConfig) {
             this.fixedResponseConfig = fixedResponseConfig;
             return this;
         }
-
         public Builder forwardConfig(@Nullable ListenerRuleForwardConfig forwardConfig) {
             this.forwardConfig = forwardConfig;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
-
         public Builder redirectConfig(@Nullable ListenerRuleRedirectConfig redirectConfig) {
             this.redirectConfig = redirectConfig;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListenerRuleAction build() {
+        }        public ListenerRuleAction build() {
             return new ListenerRuleAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }
     }

@@ -50,8 +50,7 @@ public final class GetSubnetRouteTableAssociationArgs extends io.pulumi.resource
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetSubnetRouteTableAssociationArgs build() {
+        }        public GetSubnetRouteTableAssociationArgs build() {
             return new GetSubnetRouteTableAssociationArgs(id);
         }
     }

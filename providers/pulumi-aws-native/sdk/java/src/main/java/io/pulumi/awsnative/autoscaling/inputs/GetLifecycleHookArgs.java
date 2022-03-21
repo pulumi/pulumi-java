@@ -72,12 +72,10 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
-
         public Builder lifecycleHookName(String lifecycleHookName) {
             this.lifecycleHookName = Objects.requireNonNull(lifecycleHookName);
             return this;
-        }
-        public GetLifecycleHookArgs build() {
+        }        public GetLifecycleHookArgs build() {
             return new GetLifecycleHookArgs(autoScalingGroupName, lifecycleHookName);
         }
     }

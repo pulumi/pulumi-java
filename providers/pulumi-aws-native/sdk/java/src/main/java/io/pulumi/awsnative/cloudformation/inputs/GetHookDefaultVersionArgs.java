@@ -54,8 +54,7 @@ public final class GetHookDefaultVersionArgs extends io.pulumi.resources.InvokeA
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetHookDefaultVersionArgs build() {
+        }        public GetHookDefaultVersionArgs build() {
             return new GetHookDefaultVersionArgs(arn);
         }
     }

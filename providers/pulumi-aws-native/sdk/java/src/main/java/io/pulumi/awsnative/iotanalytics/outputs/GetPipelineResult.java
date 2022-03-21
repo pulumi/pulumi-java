@@ -66,17 +66,20 @@ public final class GetPipelineResult {
             this.id = id;
             return this;
         }
-
         public Builder pipelineActivities(@Nullable List<PipelineActivity> pipelineActivities) {
             this.pipelineActivities = pipelineActivities;
             return this;
         }
-
+        public Builder pipelineActivities(PipelineActivity... pipelineActivities) {
+            return pipelineActivities(List.of(pipelineActivities));
+        }
         public Builder tags(@Nullable List<PipelineTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetPipelineResult build() {
+        public Builder tags(PipelineTag... tags) {
+            return tags(List.of(tags));
+        }        public GetPipelineResult build() {
             return new GetPipelineResult(id, pipelineActivities, tags);
         }
     }

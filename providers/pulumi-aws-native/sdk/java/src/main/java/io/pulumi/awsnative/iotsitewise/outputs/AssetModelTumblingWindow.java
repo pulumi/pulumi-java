@@ -55,12 +55,10 @@ public final class AssetModelTumblingWindow {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder offset(@Nullable String offset) {
             this.offset = offset;
             return this;
-        }
-        public AssetModelTumblingWindow build() {
+        }        public AssetModelTumblingWindow build() {
             return new AssetModelTumblingWindow(interval, offset);
         }
     }

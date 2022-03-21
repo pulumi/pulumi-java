@@ -127,52 +127,42 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder httpRedirectCode(@Nullable Output<String> httpRedirectCode) {
             this.httpRedirectCode = httpRedirectCode;
             return this;
         }
-
         public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
             this.httpRedirectCode = Output.ofNullable(httpRedirectCode);
             return this;
         }
-
         public Builder protocol(@Nullable Output<BucketRedirectRuleProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder replaceKeyPrefixWith(@Nullable Output<String> replaceKeyPrefixWith) {
             this.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
-
         public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
             this.replaceKeyPrefixWith = Output.ofNullable(replaceKeyPrefixWith);
             return this;
         }
-
         public Builder replaceKeyWith(@Nullable Output<String> replaceKeyWith) {
             this.replaceKeyWith = replaceKeyWith;
             return this;
         }
-
         public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
             this.replaceKeyWith = Output.ofNullable(replaceKeyWith);
             return this;
-        }
-        public BucketRedirectRuleArgs build() {
+        }        public BucketRedirectRuleArgs build() {
             return new BucketRedirectRuleArgs(hostName, httpRedirectCode, protocol, replaceKeyPrefixWith, replaceKeyWith);
         }
     }

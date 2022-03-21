@@ -83,32 +83,26 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder encryptionOption(@Nullable Output<ScheduledQueryEncryptionOption> encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
-
         public Builder encryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
             this.encryptionOption = Output.ofNullable(encryptionOption);
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
             return this;
-        }
-        public ScheduledQueryS3ConfigurationArgs build() {
+        }        public ScheduledQueryS3ConfigurationArgs build() {
             return new ScheduledQueryS3ConfigurationArgs(bucketName, encryptionOption, objectKeyPrefix);
         }
     }

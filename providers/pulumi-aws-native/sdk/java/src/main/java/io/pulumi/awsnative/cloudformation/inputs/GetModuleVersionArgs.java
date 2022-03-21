@@ -54,8 +54,7 @@ public final class GetModuleVersionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetModuleVersionArgs build() {
+        }        public GetModuleVersionArgs build() {
             return new GetModuleVersionArgs(arn);
         }
     }

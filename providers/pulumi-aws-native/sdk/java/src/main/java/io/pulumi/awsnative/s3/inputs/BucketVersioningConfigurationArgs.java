@@ -60,12 +60,10 @@ public final class BucketVersioningConfigurationArgs extends io.pulumi.resources
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(BucketVersioningConfigurationStatus status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public BucketVersioningConfigurationArgs build() {
+        }        public BucketVersioningConfigurationArgs build() {
             return new BucketVersioningConfigurationArgs(status);
         }
     }

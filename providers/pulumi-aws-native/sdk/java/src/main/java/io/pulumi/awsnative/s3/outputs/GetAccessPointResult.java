@@ -114,27 +114,22 @@ public final class GetAccessPointResult {
             this.alias = alias;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder networkOrigin(@Nullable AccessPointNetworkOrigin networkOrigin) {
             this.networkOrigin = networkOrigin;
             return this;
         }
-
         public Builder policy(@Nullable Object policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policyStatus(@Nullable PolicyStatusProperties policyStatus) {
             this.policyStatus = policyStatus;
             return this;
-        }
-        public GetAccessPointResult build() {
+        }        public GetAccessPointResult build() {
             return new GetAccessPointResult(alias, arn, networkOrigin, policy, policyStatus);
         }
     }

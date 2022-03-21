@@ -103,42 +103,34 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
             this.databaseTableName = databaseTableName;
             return this;
         }
-
         public Builder databaseTableName(@Nullable String databaseTableName) {
             this.databaseTableName = Output.ofNullable(databaseTableName);
             return this;
         }
-
         public Builder glueConnectionName(Output<String> glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
-
         public Builder glueConnectionName(String glueConnectionName) {
             this.glueConnectionName = Output.of(Objects.requireNonNull(glueConnectionName));
             return this;
         }
-
         public Builder queryString(@Nullable Output<String> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder tempDirectory(@Nullable Output<DatasetS3LocationArgs> tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public Builder tempDirectory(@Nullable DatasetS3LocationArgs tempDirectory) {
             this.tempDirectory = Output.ofNullable(tempDirectory);
             return this;
-        }
-        public DatasetDatabaseInputDefinitionArgs build() {
+        }        public DatasetDatabaseInputDefinitionArgs build() {
             return new DatasetDatabaseInputDefinitionArgs(databaseTableName, glueConnectionName, queryString, tempDirectory);
         }
     }

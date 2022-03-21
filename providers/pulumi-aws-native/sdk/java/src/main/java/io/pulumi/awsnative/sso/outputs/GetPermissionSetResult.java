@@ -138,37 +138,36 @@ public final class GetPermissionSetResult {
             this.description = description;
             return this;
         }
-
         public Builder inlinePolicy(@Nullable Object inlinePolicy) {
             this.inlinePolicy = inlinePolicy;
             return this;
         }
-
         public Builder managedPolicies(@Nullable List<String> managedPolicies) {
             this.managedPolicies = managedPolicies;
             return this;
         }
-
+        public Builder managedPolicies(String... managedPolicies) {
+            return managedPolicies(List.of(managedPolicies));
+        }
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
-
         public Builder relayStateType(@Nullable String relayStateType) {
             this.relayStateType = relayStateType;
             return this;
         }
-
         public Builder sessionDuration(@Nullable String sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
-
         public Builder tags(@Nullable List<PermissionSetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetPermissionSetResult build() {
+        public Builder tags(PermissionSetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetPermissionSetResult build() {
             return new GetPermissionSetResult(description, inlinePolicy, managedPolicies, permissionSetArn, relayStateType, sessionDuration, tags);
         }
     }

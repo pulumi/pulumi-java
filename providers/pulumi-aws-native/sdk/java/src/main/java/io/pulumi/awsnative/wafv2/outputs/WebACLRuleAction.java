@@ -74,22 +74,18 @@ public final class WebACLRuleAction {
             this.allow = allow;
             return this;
         }
-
         public Builder block(@Nullable WebACLBlockAction block) {
             this.block = block;
             return this;
         }
-
         public Builder captcha(@Nullable WebACLCaptchaAction captcha) {
             this.captcha = captcha;
             return this;
         }
-
         public Builder count(@Nullable WebACLCountAction count) {
             this.count = count;
             return this;
-        }
-        public WebACLRuleAction build() {
+        }        public WebACLRuleAction build() {
             return new WebACLRuleAction(allow, block, captcha, count);
         }
     }

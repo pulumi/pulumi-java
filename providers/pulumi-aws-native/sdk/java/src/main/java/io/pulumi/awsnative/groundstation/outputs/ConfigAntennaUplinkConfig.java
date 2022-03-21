@@ -65,17 +65,14 @@ public final class ConfigAntennaUplinkConfig {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
-
         public Builder targetEirp(@Nullable ConfigEirp targetEirp) {
             this.targetEirp = targetEirp;
             return this;
         }
-
         public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
             this.transmitDisabled = transmitDisabled;
             return this;
-        }
-        public ConfigAntennaUplinkConfig build() {
+        }        public ConfigAntennaUplinkConfig build() {
             return new ConfigAntennaUplinkConfig(spectrumConfig, targetEirp, transmitDisabled);
         }
     }

@@ -129,52 +129,45 @@ public final class GetDeliveryStreamResult {
             this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder deliveryStreamEncryptionConfigurationInput(@Nullable DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput) {
             this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
             return this;
         }
-
         public Builder elasticsearchDestinationConfiguration(@Nullable DeliveryStreamElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration) {
             this.elasticsearchDestinationConfiguration = elasticsearchDestinationConfiguration;
             return this;
         }
-
         public Builder extendedS3DestinationConfiguration(@Nullable DeliveryStreamExtendedS3DestinationConfiguration extendedS3DestinationConfiguration) {
             this.extendedS3DestinationConfiguration = extendedS3DestinationConfiguration;
             return this;
         }
-
         public Builder httpEndpointDestinationConfiguration(@Nullable DeliveryStreamHttpEndpointDestinationConfiguration httpEndpointDestinationConfiguration) {
             this.httpEndpointDestinationConfiguration = httpEndpointDestinationConfiguration;
             return this;
         }
-
         public Builder redshiftDestinationConfiguration(@Nullable DeliveryStreamRedshiftDestinationConfiguration redshiftDestinationConfiguration) {
             this.redshiftDestinationConfiguration = redshiftDestinationConfiguration;
             return this;
         }
-
         public Builder s3DestinationConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3DestinationConfiguration) {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
-
         public Builder splunkDestinationConfiguration(@Nullable DeliveryStreamSplunkDestinationConfiguration splunkDestinationConfiguration) {
             this.splunkDestinationConfiguration = splunkDestinationConfiguration;
             return this;
         }
-
         public Builder tags(@Nullable List<DeliveryStreamTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDeliveryStreamResult build() {
+        public Builder tags(DeliveryStreamTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDeliveryStreamResult build() {
             return new GetDeliveryStreamResult(amazonopensearchserviceDestinationConfiguration, arn, deliveryStreamEncryptionConfigurationInput, elasticsearchDestinationConfiguration, extendedS3DestinationConfiguration, httpEndpointDestinationConfiguration, redshiftDestinationConfiguration, s3DestinationConfiguration, splunkDestinationConfiguration, tags);
         }
     }

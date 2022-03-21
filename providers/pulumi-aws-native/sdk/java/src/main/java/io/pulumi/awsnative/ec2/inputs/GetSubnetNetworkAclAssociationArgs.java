@@ -50,8 +50,7 @@ public final class GetSubnetNetworkAclAssociationArgs extends io.pulumi.resource
         public Builder associationId(String associationId) {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
-        }
-        public GetSubnetNetworkAclAssociationArgs build() {
+        }        public GetSubnetNetworkAclAssociationArgs build() {
             return new GetSubnetNetworkAclAssociationArgs(associationId);
         }
     }

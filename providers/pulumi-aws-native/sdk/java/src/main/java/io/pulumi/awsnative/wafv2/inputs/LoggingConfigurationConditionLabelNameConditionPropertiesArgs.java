@@ -60,12 +60,10 @@ public final class LoggingConfigurationConditionLabelNameConditionPropertiesArgs
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelName(String labelName) {
             this.labelName = Output.of(Objects.requireNonNull(labelName));
             return this;
-        }
-        public LoggingConfigurationConditionLabelNameConditionPropertiesArgs build() {
+        }        public LoggingConfigurationConditionLabelNameConditionPropertiesArgs build() {
             return new LoggingConfigurationConditionLabelNameConditionPropertiesArgs(labelName);
         }
     }

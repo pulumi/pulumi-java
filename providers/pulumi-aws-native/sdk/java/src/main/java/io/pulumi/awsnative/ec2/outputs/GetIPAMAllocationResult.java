@@ -53,8 +53,7 @@ public final class GetIPAMAllocationResult {
         public Builder ipamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
-        }
-        public GetIPAMAllocationResult build() {
+        }        public GetIPAMAllocationResult build() {
             return new GetIPAMAllocationResult(ipamPoolAllocationId);
         }
     }

@@ -68,22 +68,21 @@ public final class WebACLGeoMatchStatementArgs extends io.pulumi.resources.Resou
             this.countryCodes = countryCodes;
             return this;
         }
-
         public Builder countryCodes(@Nullable List<String> countryCodes) {
             this.countryCodes = Output.ofNullable(countryCodes);
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder forwardedIPConfig(@Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
-        }
-        public WebACLGeoMatchStatementArgs build() {
+        }        public WebACLGeoMatchStatementArgs build() {
             return new WebACLGeoMatchStatementArgs(countryCodes, forwardedIPConfig);
         }
     }

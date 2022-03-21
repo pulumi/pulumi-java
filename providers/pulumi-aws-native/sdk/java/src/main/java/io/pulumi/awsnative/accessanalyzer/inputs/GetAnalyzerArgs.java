@@ -54,8 +54,7 @@ public final class GetAnalyzerArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetAnalyzerArgs build() {
+        }        public GetAnalyzerArgs build() {
             return new GetAnalyzerArgs(arn);
         }
     }

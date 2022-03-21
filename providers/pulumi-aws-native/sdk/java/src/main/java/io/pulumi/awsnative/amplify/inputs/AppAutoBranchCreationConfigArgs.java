@@ -167,102 +167,88 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             this.autoBranchCreationPatterns = autoBranchCreationPatterns;
             return this;
         }
-
         public Builder autoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
             this.autoBranchCreationPatterns = Output.ofNullable(autoBranchCreationPatterns);
             return this;
         }
-
+        public Builder autoBranchCreationPatterns(String... autoBranchCreationPatterns) {
+            return autoBranchCreationPatterns(List.of(autoBranchCreationPatterns));
+        }
         public Builder basicAuthConfig(@Nullable Output<AppBasicAuthConfigArgs> basicAuthConfig) {
             this.basicAuthConfig = basicAuthConfig;
             return this;
         }
-
         public Builder basicAuthConfig(@Nullable AppBasicAuthConfigArgs basicAuthConfig) {
             this.basicAuthConfig = Output.ofNullable(basicAuthConfig);
             return this;
         }
-
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
-
         public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = Output.ofNullable(buildSpec);
             return this;
         }
-
         public Builder enableAutoBranchCreation(@Nullable Output<Boolean> enableAutoBranchCreation) {
             this.enableAutoBranchCreation = enableAutoBranchCreation;
             return this;
         }
-
         public Builder enableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
             this.enableAutoBranchCreation = Output.ofNullable(enableAutoBranchCreation);
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = Output.ofNullable(enableAutoBuild);
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = Output.ofNullable(enablePerformanceMode);
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = Output.ofNullable(enablePullRequestPreview);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<AppEnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(AppEnvironmentVariableArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = Output.ofNullable(pullRequestEnvironmentName);
             return this;
         }
-
         public Builder stage(@Nullable Output<AppAutoBranchCreationConfigStage> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable AppAutoBranchCreationConfigStage stage) {
             this.stage = Output.ofNullable(stage);
             return this;
-        }
-        public AppAutoBranchCreationConfigArgs build() {
+        }        public AppAutoBranchCreationConfigArgs build() {
             return new AppAutoBranchCreationConfigArgs(autoBranchCreationPatterns, basicAuthConfig, buildSpec, enableAutoBranchCreation, enableAutoBuild, enablePerformanceMode, enablePullRequestPreview, environmentVariables, pullRequestEnvironmentName, stage);
         }
     }

@@ -54,8 +54,7 @@ public final class GetModelExplainabilityJobDefinitionArgs extends io.pulumi.res
         public Builder jobDefinitionArn(String jobDefinitionArn) {
             this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
             return this;
-        }
-        public GetModelExplainabilityJobDefinitionArgs build() {
+        }        public GetModelExplainabilityJobDefinitionArgs build() {
             return new GetModelExplainabilityJobDefinitionArgs(jobDefinitionArn);
         }
     }

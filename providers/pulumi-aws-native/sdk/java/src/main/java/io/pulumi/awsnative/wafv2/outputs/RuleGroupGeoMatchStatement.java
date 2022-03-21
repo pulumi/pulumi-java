@@ -57,12 +57,13 @@ public final class RuleGroupGeoMatchStatement {
             this.countryCodes = countryCodes;
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
-        }
-        public RuleGroupGeoMatchStatement build() {
+        }        public RuleGroupGeoMatchStatement build() {
             return new RuleGroupGeoMatchStatement(countryCodes, forwardedIPConfig);
         }
     }

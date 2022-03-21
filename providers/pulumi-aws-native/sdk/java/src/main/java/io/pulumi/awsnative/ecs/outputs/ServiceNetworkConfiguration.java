@@ -45,8 +45,7 @@ public final class ServiceNetworkConfiguration {
         public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
-        }
-        public ServiceNetworkConfiguration build() {
+        }        public ServiceNetworkConfiguration build() {
             return new ServiceNetworkConfiguration(awsvpcConfiguration);
         }
     }

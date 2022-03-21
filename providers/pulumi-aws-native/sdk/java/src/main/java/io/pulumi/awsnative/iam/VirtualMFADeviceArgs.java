@@ -92,42 +92,40 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<VirtualMFADeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<VirtualMFADeviceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(VirtualMFADeviceTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder users(Output<List<String>> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-
         public Builder users(List<String> users) {
             this.users = Output.of(Objects.requireNonNull(users));
             return this;
         }
-
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }
         public Builder virtualMfaDeviceName(@Nullable Output<String> virtualMfaDeviceName) {
             this.virtualMfaDeviceName = virtualMfaDeviceName;
             return this;
         }
-
         public Builder virtualMfaDeviceName(@Nullable String virtualMfaDeviceName) {
             this.virtualMfaDeviceName = Output.ofNullable(virtualMfaDeviceName);
             return this;
-        }
-        public VirtualMFADeviceArgs build() {
+        }        public VirtualMFADeviceArgs build() {
             return new VirtualMFADeviceArgs(path, tags, users, virtualMfaDeviceName);
         }
     }

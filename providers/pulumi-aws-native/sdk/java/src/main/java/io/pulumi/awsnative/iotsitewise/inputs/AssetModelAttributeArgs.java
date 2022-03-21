@@ -53,12 +53,10 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
-        }
-        public AssetModelAttributeArgs build() {
+        }        public AssetModelAttributeArgs build() {
             return new AssetModelAttributeArgs(defaultValue);
         }
     }

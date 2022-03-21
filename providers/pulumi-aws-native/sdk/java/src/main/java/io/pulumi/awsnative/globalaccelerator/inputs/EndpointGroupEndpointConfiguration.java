@@ -96,17 +96,14 @@ public final class EndpointGroupEndpointConfiguration extends io.pulumi.resource
             this.clientIPPreservationEnabled = clientIPPreservationEnabled;
             return this;
         }
-
         public Builder endpointId(String endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public EndpointGroupEndpointConfiguration build() {
+        }        public EndpointGroupEndpointConfiguration build() {
             return new EndpointGroupEndpointConfiguration(clientIPPreservationEnabled, endpointId, weight);
         }
     }

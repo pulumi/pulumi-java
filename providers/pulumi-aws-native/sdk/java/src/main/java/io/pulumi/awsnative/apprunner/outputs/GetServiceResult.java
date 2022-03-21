@@ -130,37 +130,30 @@ public final class GetServiceResult {
             this.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
-
         public Builder instanceConfiguration(@Nullable ServiceInstanceConfiguration instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
-
         public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
-
         public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = serviceId;
             return this;
         }
-
         public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder sourceConfiguration(@Nullable ServiceSourceConfiguration sourceConfiguration) {
             this.sourceConfiguration = sourceConfiguration;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(healthCheckConfiguration, instanceConfiguration, serviceArn, serviceId, serviceUrl, sourceConfiguration, status);
         }
     }

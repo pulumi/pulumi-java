@@ -170,42 +170,34 @@ public final class GetResolverQueryLoggingConfigResult {
             this.arn = arn;
             return this;
         }
-
         public Builder associationCount(@Nullable Integer associationCount) {
             this.associationCount = associationCount;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder shareStatus(@Nullable ResolverQueryLoggingConfigShareStatus shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
-
         public Builder status(@Nullable ResolverQueryLoggingConfigStatus status) {
             this.status = status;
             return this;
-        }
-        public GetResolverQueryLoggingConfigResult build() {
+        }        public GetResolverQueryLoggingConfigResult build() {
             return new GetResolverQueryLoggingConfigResult(arn, associationCount, creationTime, creatorRequestId, id, ownerId, shareStatus, status);
         }
     }

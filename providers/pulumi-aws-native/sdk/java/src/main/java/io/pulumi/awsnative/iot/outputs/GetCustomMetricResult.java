@@ -89,17 +89,17 @@ public final class GetCustomMetricResult {
             this.displayName = displayName;
             return this;
         }
-
         public Builder metricArn(@Nullable String metricArn) {
             this.metricArn = metricArn;
             return this;
         }
-
         public Builder tags(@Nullable List<CustomMetricTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetCustomMetricResult build() {
+        public Builder tags(CustomMetricTag... tags) {
+            return tags(List.of(tags));
+        }        public GetCustomMetricResult build() {
             return new GetCustomMetricResult(displayName, metricArn, tags);
         }
     }

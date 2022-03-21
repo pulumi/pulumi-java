@@ -93,17 +93,14 @@ public final class SimulationApplicationSourceConfig extends io.pulumi.resources
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
-
         public Builder s3Key(String s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
-        }
-        public SimulationApplicationSourceConfig build() {
+        }        public SimulationApplicationSourceConfig build() {
             return new SimulationApplicationSourceConfig(architecture, s3Bucket, s3Key);
         }
     }

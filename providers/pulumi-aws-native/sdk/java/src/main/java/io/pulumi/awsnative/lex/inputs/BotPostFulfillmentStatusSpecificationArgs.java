@@ -82,32 +82,26 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
             this.failureResponse = failureResponse;
             return this;
         }
-
         public Builder failureResponse(@Nullable BotResponseSpecificationArgs failureResponse) {
             this.failureResponse = Output.ofNullable(failureResponse);
             return this;
         }
-
         public Builder successResponse(@Nullable Output<BotResponseSpecificationArgs> successResponse) {
             this.successResponse = successResponse;
             return this;
         }
-
         public Builder successResponse(@Nullable BotResponseSpecificationArgs successResponse) {
             this.successResponse = Output.ofNullable(successResponse);
             return this;
         }
-
         public Builder timeoutResponse(@Nullable Output<BotResponseSpecificationArgs> timeoutResponse) {
             this.timeoutResponse = timeoutResponse;
             return this;
         }
-
         public Builder timeoutResponse(@Nullable BotResponseSpecificationArgs timeoutResponse) {
             this.timeoutResponse = Output.ofNullable(timeoutResponse);
             return this;
-        }
-        public BotPostFulfillmentStatusSpecificationArgs build() {
+        }        public BotPostFulfillmentStatusSpecificationArgs build() {
             return new BotPostFulfillmentStatusSpecificationArgs(failureResponse, successResponse, timeoutResponse);
         }
     }

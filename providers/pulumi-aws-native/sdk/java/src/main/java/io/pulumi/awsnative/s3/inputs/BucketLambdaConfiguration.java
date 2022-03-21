@@ -95,17 +95,14 @@ public final class BucketLambdaConfiguration extends io.pulumi.resources.InvokeA
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public Builder filter(@Nullable BucketNotificationFilter filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
-        }
-        public BucketLambdaConfiguration build() {
+        }        public BucketLambdaConfiguration build() {
             return new BucketLambdaConfiguration(event, filter, function);
         }
     }

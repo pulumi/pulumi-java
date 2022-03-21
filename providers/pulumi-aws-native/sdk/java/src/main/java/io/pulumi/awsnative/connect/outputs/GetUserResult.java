@@ -203,52 +203,48 @@ public final class GetUserResult {
             this.directoryUserId = directoryUserId;
             return this;
         }
-
         public Builder hierarchyGroupArn(@Nullable String hierarchyGroupArn) {
             this.hierarchyGroupArn = hierarchyGroupArn;
             return this;
         }
-
         public Builder identityInfo(@Nullable UserIdentityInfo identityInfo) {
             this.identityInfo = identityInfo;
             return this;
         }
-
         public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder phoneConfig(@Nullable UserPhoneConfig phoneConfig) {
             this.phoneConfig = phoneConfig;
             return this;
         }
-
         public Builder routingProfileArn(@Nullable String routingProfileArn) {
             this.routingProfileArn = routingProfileArn;
             return this;
         }
-
         public Builder securityProfileArns(@Nullable List<String> securityProfileArns) {
             this.securityProfileArns = securityProfileArns;
             return this;
         }
-
+        public Builder securityProfileArns(String... securityProfileArns) {
+            return securityProfileArns(List.of(securityProfileArns));
+        }
         public Builder tags(@Nullable List<UserTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(UserTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userArn(@Nullable String userArn) {
             this.userArn = userArn;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public GetUserResult build() {
+        }        public GetUserResult build() {
             return new GetUserResult(directoryUserId, hierarchyGroupArn, identityInfo, instanceArn, phoneConfig, routingProfileArn, securityProfileArns, tags, userArn, username);
         }
     }

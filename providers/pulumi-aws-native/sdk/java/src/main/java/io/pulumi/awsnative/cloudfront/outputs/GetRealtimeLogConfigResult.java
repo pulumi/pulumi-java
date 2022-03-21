@@ -74,22 +74,24 @@ public final class GetRealtimeLogConfigResult {
             this.arn = arn;
             return this;
         }
-
         public Builder endPoints(@Nullable List<RealtimeLogConfigEndPoint> endPoints) {
             this.endPoints = endPoints;
             return this;
         }
-
+        public Builder endPoints(RealtimeLogConfigEndPoint... endPoints) {
+            return endPoints(List.of(endPoints));
+        }
         public Builder fields(@Nullable List<String> fields) {
             this.fields = fields;
             return this;
         }
-
+        public Builder fields(String... fields) {
+            return fields(List.of(fields));
+        }
         public Builder samplingRate(@Nullable Double samplingRate) {
             this.samplingRate = samplingRate;
             return this;
-        }
-        public GetRealtimeLogConfigResult build() {
+        }        public GetRealtimeLogConfigResult build() {
             return new GetRealtimeLogConfigResult(arn, endPoints, fields, samplingRate);
         }
     }

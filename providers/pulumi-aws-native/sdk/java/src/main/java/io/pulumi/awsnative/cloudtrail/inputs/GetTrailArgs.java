@@ -50,8 +50,7 @@ public final class GetTrailArgs extends io.pulumi.resources.InvokeArgs {
         public Builder trailName(String trailName) {
             this.trailName = Objects.requireNonNull(trailName);
             return this;
-        }
-        public GetTrailArgs build() {
+        }        public GetTrailArgs build() {
             return new GetTrailArgs(trailName);
         }
     }

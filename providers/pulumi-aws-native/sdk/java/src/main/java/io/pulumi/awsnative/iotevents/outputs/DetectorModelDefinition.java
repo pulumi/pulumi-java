@@ -71,12 +71,13 @@ public final class DetectorModelDefinition {
             this.initialStateName = Objects.requireNonNull(initialStateName);
             return this;
         }
-
         public Builder states(List<DetectorModelState> states) {
             this.states = Objects.requireNonNull(states);
             return this;
         }
-        public DetectorModelDefinition build() {
+        public Builder states(DetectorModelState... states) {
+            return states(List.of(states));
+        }        public DetectorModelDefinition build() {
             return new DetectorModelDefinition(initialStateName, states);
         }
     }

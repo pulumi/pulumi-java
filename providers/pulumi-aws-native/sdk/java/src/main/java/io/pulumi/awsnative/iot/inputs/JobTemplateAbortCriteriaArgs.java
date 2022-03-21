@@ -112,42 +112,34 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(JobTemplateAction action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder failureType(Output<JobTemplateFailureType> failureType) {
             this.failureType = Objects.requireNonNull(failureType);
             return this;
         }
-
         public Builder failureType(JobTemplateFailureType failureType) {
             this.failureType = Output.of(Objects.requireNonNull(failureType));
             return this;
         }
-
         public Builder minNumberOfExecutedThings(Output<Integer> minNumberOfExecutedThings) {
             this.minNumberOfExecutedThings = Objects.requireNonNull(minNumberOfExecutedThings);
             return this;
         }
-
         public Builder minNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
             this.minNumberOfExecutedThings = Output.of(Objects.requireNonNull(minNumberOfExecutedThings));
             return this;
         }
-
         public Builder thresholdPercentage(Output<Double> thresholdPercentage) {
             this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
             return this;
         }
-
         public Builder thresholdPercentage(Double thresholdPercentage) {
             this.thresholdPercentage = Output.of(Objects.requireNonNull(thresholdPercentage));
             return this;
-        }
-        public JobTemplateAbortCriteriaArgs build() {
+        }        public JobTemplateAbortCriteriaArgs build() {
             return new JobTemplateAbortCriteriaArgs(action, failureType, minNumberOfExecutedThings, thresholdPercentage);
         }
     }

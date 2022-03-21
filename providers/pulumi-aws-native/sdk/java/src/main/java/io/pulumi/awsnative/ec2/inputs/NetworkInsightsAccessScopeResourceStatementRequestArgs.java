@@ -67,22 +67,24 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
-
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-        public NetworkInsightsAccessScopeResourceStatementRequestArgs build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public NetworkInsightsAccessScopeResourceStatementRequestArgs build() {
             return new NetworkInsightsAccessScopeResourceStatementRequestArgs(resourceTypes, resources);
         }
     }

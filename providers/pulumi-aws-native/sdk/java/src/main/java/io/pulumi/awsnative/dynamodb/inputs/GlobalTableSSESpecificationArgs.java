@@ -67,22 +67,18 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
             this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
             return this;
         }
-
         public Builder sSEEnabled(Boolean sSEEnabled) {
             this.sSEEnabled = Output.of(Objects.requireNonNull(sSEEnabled));
             return this;
         }
-
         public Builder sSEType(@Nullable Output<String> sSEType) {
             this.sSEType = sSEType;
             return this;
         }
-
         public Builder sSEType(@Nullable String sSEType) {
             this.sSEType = Output.ofNullable(sSEType);
             return this;
-        }
-        public GlobalTableSSESpecificationArgs build() {
+        }        public GlobalTableSSESpecificationArgs build() {
             return new GlobalTableSSESpecificationArgs(sSEEnabled, sSEType);
         }
     }

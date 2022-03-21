@@ -80,32 +80,29 @@ public final class WebACLRegexPatternSetReferenceStatementArgs extends io.pulumi
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebACLRegexPatternSetReferenceStatementArgs build() {
+        public Builder textTransformations(WebACLTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLRegexPatternSetReferenceStatementArgs build() {
             return new WebACLRegexPatternSetReferenceStatementArgs(arn, fieldToMatch, textTransformations);
         }
     }

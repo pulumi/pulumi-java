@@ -108,42 +108,34 @@ public final class EC2FleetSpotOptionsRequest {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable EC2FleetMaintenanceStrategies maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
-
         public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
-
         public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
-
         public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
-
         public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
-        }
-        public EC2FleetSpotOptionsRequest build() {
+        }        public EC2FleetSpotOptionsRequest build() {
             return new EC2FleetSpotOptionsRequest(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
         }
     }

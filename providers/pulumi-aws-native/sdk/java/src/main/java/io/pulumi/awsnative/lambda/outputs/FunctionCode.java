@@ -119,27 +119,22 @@ public final class FunctionCode {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder zipFile(@Nullable String zipFile) {
             this.zipFile = zipFile;
             return this;
-        }
-        public FunctionCode build() {
+        }        public FunctionCode build() {
             return new FunctionCode(imageUri, s3Bucket, s3Key, s3ObjectVersion, zipFile);
         }
     }

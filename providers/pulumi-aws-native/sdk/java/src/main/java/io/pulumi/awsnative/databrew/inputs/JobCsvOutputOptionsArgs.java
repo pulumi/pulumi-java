@@ -57,12 +57,10 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = Output.ofNullable(delimiter);
             return this;
-        }
-        public JobCsvOutputOptionsArgs build() {
+        }        public JobCsvOutputOptionsArgs build() {
             return new JobCsvOutputOptionsArgs(delimiter);
         }
     }

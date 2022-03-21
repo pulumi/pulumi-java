@@ -55,12 +55,10 @@ public final class BackupSelectionConditionParameter {
             this.conditionKey = conditionKey;
             return this;
         }
-
         public Builder conditionValue(@Nullable String conditionValue) {
             this.conditionValue = conditionValue;
             return this;
-        }
-        public BackupSelectionConditionParameter build() {
+        }        public BackupSelectionConditionParameter build() {
             return new BackupSelectionConditionParameter(conditionKey, conditionValue);
         }
     }

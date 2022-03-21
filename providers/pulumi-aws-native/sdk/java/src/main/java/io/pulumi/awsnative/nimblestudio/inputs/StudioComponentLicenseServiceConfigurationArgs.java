@@ -61,12 +61,10 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
-        }
-        public StudioComponentLicenseServiceConfigurationArgs build() {
+        }        public StudioComponentLicenseServiceConfigurationArgs build() {
             return new StudioComponentLicenseServiceConfigurationArgs(endpoint);
         }
     }

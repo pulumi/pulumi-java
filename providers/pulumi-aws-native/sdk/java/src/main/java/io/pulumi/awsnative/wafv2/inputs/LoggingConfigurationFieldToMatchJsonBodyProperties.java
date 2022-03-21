@@ -96,17 +96,14 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
-
         public Builder matchPattern(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
-
         public Builder matchScope(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
-        }
-        public LoggingConfigurationFieldToMatchJsonBodyProperties build() {
+        }        public LoggingConfigurationFieldToMatchJsonBodyProperties build() {
             return new LoggingConfigurationFieldToMatchJsonBodyProperties(invalidFallbackBehavior, matchPattern, matchScope);
         }
     }

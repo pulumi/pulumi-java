@@ -65,17 +65,14 @@ public final class FlowUpsolverS3OutputFormatConfig {
             this.aggregationConfig = aggregationConfig;
             return this;
         }
-
         public Builder fileType(@Nullable FlowFileType fileType) {
             this.fileType = fileType;
             return this;
         }
-
         public Builder prefixConfig(FlowPrefixConfig prefixConfig) {
             this.prefixConfig = Objects.requireNonNull(prefixConfig);
             return this;
-        }
-        public FlowUpsolverS3OutputFormatConfig build() {
+        }        public FlowUpsolverS3OutputFormatConfig build() {
             return new FlowUpsolverS3OutputFormatConfig(aggregationConfig, fileType, prefixConfig);
         }
     }

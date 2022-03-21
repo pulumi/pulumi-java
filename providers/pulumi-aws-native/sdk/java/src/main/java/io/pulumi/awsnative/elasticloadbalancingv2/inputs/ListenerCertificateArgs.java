@@ -53,12 +53,10 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
-        }
-        public ListenerCertificateArgs build() {
+        }        public ListenerCertificateArgs build() {
             return new ListenerCertificateArgs(certificateArn);
         }
     }

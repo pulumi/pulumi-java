@@ -56,12 +56,10 @@ public final class BotDialogCodeHookSettingArgs extends io.pulumi.resources.Reso
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public BotDialogCodeHookSettingArgs build() {
+        }        public BotDialogCodeHookSettingArgs build() {
             return new BotDialogCodeHookSettingArgs(enabled);
         }
     }

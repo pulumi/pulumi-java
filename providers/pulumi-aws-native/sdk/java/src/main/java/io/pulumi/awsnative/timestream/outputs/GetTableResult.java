@@ -115,27 +115,25 @@ public final class GetTableResult {
             this.arn = arn;
             return this;
         }
-
         public Builder magneticStoreWriteProperties(@Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties) {
             this.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder retentionProperties(@Nullable RetentionPropertiesProperties retentionProperties) {
             this.retentionProperties = retentionProperties;
             return this;
         }
-
         public Builder tags(@Nullable List<TableTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetTableResult build() {
+        public Builder tags(TableTag... tags) {
+            return tags(List.of(tags));
+        }        public GetTableResult build() {
             return new GetTableResult(arn, magneticStoreWriteProperties, name, retentionProperties, tags);
         }
     }

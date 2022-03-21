@@ -133,37 +133,30 @@ public final class WorkGroupConfigurationUpdates extends io.pulumi.resources.Inv
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
-
         public Builder enforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
             this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
             return this;
         }
-
         public Builder engineVersion(@Nullable WorkGroupEngineVersion engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder publishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
             this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
             return this;
         }
-
         public Builder removeBytesScannedCutoffPerQuery(@Nullable Boolean removeBytesScannedCutoffPerQuery) {
             this.removeBytesScannedCutoffPerQuery = removeBytesScannedCutoffPerQuery;
             return this;
         }
-
         public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
-
         public Builder resultConfigurationUpdates(@Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates) {
             this.resultConfigurationUpdates = resultConfigurationUpdates;
             return this;
-        }
-        public WorkGroupConfigurationUpdates build() {
+        }        public WorkGroupConfigurationUpdates build() {
             return new WorkGroupConfigurationUpdates(bytesScannedCutoffPerQuery, enforceWorkGroupConfiguration, engineVersion, publishCloudWatchMetricsEnabled, removeBytesScannedCutoffPerQuery, requesterPaysEnabled, resultConfigurationUpdates);
         }
     }

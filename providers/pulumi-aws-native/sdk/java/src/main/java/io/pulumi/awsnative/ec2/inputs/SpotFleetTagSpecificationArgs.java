@@ -68,22 +68,21 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable SpotFleetTagSpecificationResourceType resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<SpotFleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<SpotFleetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public SpotFleetTagSpecificationArgs build() {
+        public Builder tags(SpotFleetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public SpotFleetTagSpecificationArgs build() {
             return new SpotFleetTagSpecificationArgs(resourceType, tags);
         }
     }

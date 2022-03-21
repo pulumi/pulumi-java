@@ -96,32 +96,35 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
             this.complianceResourceIds = complianceResourceIds;
             return this;
         }
-
         public Builder complianceResourceIds(@Nullable List<String> complianceResourceIds) {
             this.complianceResourceIds = Output.ofNullable(complianceResourceIds);
             return this;
         }
-
+        public Builder complianceResourceIds(String... complianceResourceIds) {
+            return complianceResourceIds(List.of(complianceResourceIds));
+        }
         public Builder complianceResourceTypes(@Nullable Output<List<String>> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
-
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = Output.ofNullable(complianceResourceTypes);
             return this;
         }
-
+        public Builder complianceResourceTypes(String... complianceResourceTypes) {
+            return complianceResourceTypes(List.of(complianceResourceTypes));
+        }
         public Builder tags(@Nullable Output<List<FrameworkTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FrameworkTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public FrameworkControlControlScopePropertiesArgs build() {
+        public Builder tags(FrameworkTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public FrameworkControlControlScopePropertiesArgs build() {
             return new FrameworkControlControlScopePropertiesArgs(complianceResourceIds, complianceResourceTypes, tags);
         }
     }

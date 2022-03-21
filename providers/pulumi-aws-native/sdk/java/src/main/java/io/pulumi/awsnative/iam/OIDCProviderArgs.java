@@ -92,42 +92,43 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.clientIdList = clientIdList;
             return this;
         }
-
         public Builder clientIdList(@Nullable List<String> clientIdList) {
             this.clientIdList = Output.ofNullable(clientIdList);
             return this;
         }
-
+        public Builder clientIdList(String... clientIdList) {
+            return clientIdList(List.of(clientIdList));
+        }
         public Builder tags(@Nullable Output<List<OIDCProviderTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<OIDCProviderTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(OIDCProviderTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder thumbprintList(Output<List<String>> thumbprintList) {
             this.thumbprintList = Objects.requireNonNull(thumbprintList);
             return this;
         }
-
         public Builder thumbprintList(List<String> thumbprintList) {
             this.thumbprintList = Output.of(Objects.requireNonNull(thumbprintList));
             return this;
         }
-
+        public Builder thumbprintList(String... thumbprintList) {
+            return thumbprintList(List.of(thumbprintList));
+        }
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public OIDCProviderArgs build() {
+        }        public OIDCProviderArgs build() {
             return new OIDCProviderArgs(clientIdList, tags, thumbprintList, url);
         }
     }

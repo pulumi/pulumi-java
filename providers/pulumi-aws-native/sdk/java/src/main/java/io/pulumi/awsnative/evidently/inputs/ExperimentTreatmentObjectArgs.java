@@ -90,42 +90,34 @@ public final class ExperimentTreatmentObjectArgs extends io.pulumi.resources.Res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder feature(Output<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
-
         public Builder feature(String feature) {
             this.feature = Output.of(Objects.requireNonNull(feature));
             return this;
         }
-
         public Builder treatmentName(Output<String> treatmentName) {
             this.treatmentName = Objects.requireNonNull(treatmentName);
             return this;
         }
-
         public Builder treatmentName(String treatmentName) {
             this.treatmentName = Output.of(Objects.requireNonNull(treatmentName));
             return this;
         }
-
         public Builder variation(Output<String> variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
-
         public Builder variation(String variation) {
             this.variation = Output.of(Objects.requireNonNull(variation));
             return this;
-        }
-        public ExperimentTreatmentObjectArgs build() {
+        }        public ExperimentTreatmentObjectArgs build() {
             return new ExperimentTreatmentObjectArgs(description, feature, treatmentName, variation);
         }
     }

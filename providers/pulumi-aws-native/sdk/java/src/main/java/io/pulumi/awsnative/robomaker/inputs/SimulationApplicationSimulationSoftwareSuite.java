@@ -79,12 +79,10 @@ public final class SimulationApplicationSimulationSoftwareSuite extends io.pulum
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
             this.version = version;
             return this;
-        }
-        public SimulationApplicationSimulationSoftwareSuite build() {
+        }        public SimulationApplicationSimulationSoftwareSuite build() {
             return new SimulationApplicationSimulationSoftwareSuite(name, version);
         }
     }

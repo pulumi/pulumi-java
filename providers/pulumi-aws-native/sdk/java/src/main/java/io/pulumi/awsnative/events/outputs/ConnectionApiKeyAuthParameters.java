@@ -53,12 +53,10 @@ public final class ConnectionApiKeyAuthParameters {
             this.apiKeyName = Objects.requireNonNull(apiKeyName);
             return this;
         }
-
         public Builder apiKeyValue(String apiKeyValue) {
             this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
             return this;
-        }
-        public ConnectionApiKeyAuthParameters build() {
+        }        public ConnectionApiKeyAuthParameters build() {
             return new ConnectionApiKeyAuthParameters(apiKeyName, apiKeyValue);
         }
     }

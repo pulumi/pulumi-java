@@ -43,8 +43,7 @@ public final class GetPartitionResult {
         public Builder partition(String partition) {
             this.partition = Objects.requireNonNull(partition);
             return this;
-        }
-        public GetPartitionResult build() {
+        }        public GetPartitionResult build() {
             return new GetPartitionResult(partition);
         }
     }

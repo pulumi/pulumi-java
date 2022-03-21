@@ -68,22 +68,21 @@ public final class DeliveryStreamProcessingConfigurationArgs extends io.pulumi.r
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder processors(@Nullable Output<List<DeliveryStreamProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
-
         public Builder processors(@Nullable List<DeliveryStreamProcessorArgs> processors) {
             this.processors = Output.ofNullable(processors);
             return this;
         }
-        public DeliveryStreamProcessingConfigurationArgs build() {
+        public Builder processors(DeliveryStreamProcessorArgs... processors) {
+            return processors(List.of(processors));
+        }        public DeliveryStreamProcessingConfigurationArgs build() {
             return new DeliveryStreamProcessingConfigurationArgs(enabled, processors);
         }
     }

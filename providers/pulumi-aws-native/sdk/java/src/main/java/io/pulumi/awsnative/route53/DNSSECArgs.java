@@ -56,12 +56,10 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Output.of(Objects.requireNonNull(hostedZoneId));
             return this;
-        }
-        public DNSSECArgs build() {
+        }        public DNSSECArgs build() {
             return new DNSSECArgs(hostedZoneId);
         }
     }

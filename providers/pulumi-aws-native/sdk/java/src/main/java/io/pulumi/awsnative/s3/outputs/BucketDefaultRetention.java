@@ -64,17 +64,14 @@ public final class BucketDefaultRetention {
             this.days = days;
             return this;
         }
-
         public Builder mode(@Nullable BucketDefaultRetentionMode mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder years(@Nullable Integer years) {
             this.years = years;
             return this;
-        }
-        public BucketDefaultRetention build() {
+        }        public BucketDefaultRetention build() {
             return new BucketDefaultRetention(days, mode, years);
         }
     }

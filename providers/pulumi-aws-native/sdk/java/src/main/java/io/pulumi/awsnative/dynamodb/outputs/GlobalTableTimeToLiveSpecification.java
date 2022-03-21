@@ -56,12 +56,10 @@ public final class GlobalTableTimeToLiveSpecification {
             this.attributeName = attributeName;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GlobalTableTimeToLiveSpecification build() {
+        }        public GlobalTableTimeToLiveSpecification build() {
             return new GlobalTableTimeToLiveSpecification(attributeName, enabled);
         }
     }

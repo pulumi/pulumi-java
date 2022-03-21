@@ -64,12 +64,10 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
             this.instanceUrl = instanceUrl;
             return this;
         }
-
         public Builder isSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
             this.isSandboxEnvironment = isSandboxEnvironment;
             return this;
-        }
-        public ConnectorProfileSalesforceConnectorProfileProperties build() {
+        }        public ConnectorProfileSalesforceConnectorProfileProperties build() {
             return new ConnectorProfileSalesforceConnectorProfileProperties(instanceUrl, isSandboxEnvironment);
         }
     }

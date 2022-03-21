@@ -251,132 +251,115 @@ public final class IPAMPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
-
         public Builder addressFamily(String addressFamily) {
             this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
             return this;
         }
-
         public Builder allocationDefaultNetmaskLength(@Nullable Output<Integer> allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
             return this;
         }
-
         public Builder allocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = Output.ofNullable(allocationDefaultNetmaskLength);
             return this;
         }
-
         public Builder allocationMaxNetmaskLength(@Nullable Output<Integer> allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
             return this;
         }
-
         public Builder allocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = Output.ofNullable(allocationMaxNetmaskLength);
             return this;
         }
-
         public Builder allocationMinNetmaskLength(@Nullable Output<Integer> allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = allocationMinNetmaskLength;
             return this;
         }
-
         public Builder allocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = Output.ofNullable(allocationMinNetmaskLength);
             return this;
         }
-
         public Builder allocationResourceTags(@Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags) {
             this.allocationResourceTags = allocationResourceTags;
             return this;
         }
-
         public Builder allocationResourceTags(@Nullable List<IPAMPoolTagArgs> allocationResourceTags) {
             this.allocationResourceTags = Output.ofNullable(allocationResourceTags);
             return this;
         }
-
+        public Builder allocationResourceTags(IPAMPoolTagArgs... allocationResourceTags) {
+            return allocationResourceTags(List.of(allocationResourceTags));
+        }
         public Builder autoImport(@Nullable Output<Boolean> autoImport) {
             this.autoImport = autoImport;
             return this;
         }
-
         public Builder autoImport(@Nullable Boolean autoImport) {
             this.autoImport = Output.ofNullable(autoImport);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipamScopeId(Output<String> ipamScopeId) {
             this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
             return this;
         }
-
         public Builder ipamScopeId(String ipamScopeId) {
             this.ipamScopeId = Output.of(Objects.requireNonNull(ipamScopeId));
             return this;
         }
-
         public Builder locale(@Nullable Output<String> locale) {
             this.locale = locale;
             return this;
         }
-
         public Builder locale(@Nullable String locale) {
             this.locale = Output.ofNullable(locale);
             return this;
         }
-
         public Builder provisionedCidrs(@Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs) {
             this.provisionedCidrs = provisionedCidrs;
             return this;
         }
-
         public Builder provisionedCidrs(@Nullable List<IPAMPoolProvisionedCidrArgs> provisionedCidrs) {
             this.provisionedCidrs = Output.ofNullable(provisionedCidrs);
             return this;
         }
-
+        public Builder provisionedCidrs(IPAMPoolProvisionedCidrArgs... provisionedCidrs) {
+            return provisionedCidrs(List.of(provisionedCidrs));
+        }
         public Builder publiclyAdvertisable(@Nullable Output<Boolean> publiclyAdvertisable) {
             this.publiclyAdvertisable = publiclyAdvertisable;
             return this;
         }
-
         public Builder publiclyAdvertisable(@Nullable Boolean publiclyAdvertisable) {
             this.publiclyAdvertisable = Output.ofNullable(publiclyAdvertisable);
             return this;
         }
-
         public Builder sourceIpamPoolId(@Nullable Output<String> sourceIpamPoolId) {
             this.sourceIpamPoolId = sourceIpamPoolId;
             return this;
         }
-
         public Builder sourceIpamPoolId(@Nullable String sourceIpamPoolId) {
             this.sourceIpamPoolId = Output.ofNullable(sourceIpamPoolId);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<IPAMPoolTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<IPAMPoolTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public IPAMPoolArgs build() {
+        public Builder tags(IPAMPoolTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public IPAMPoolArgs build() {
             return new IPAMPoolArgs(addressFamily, allocationDefaultNetmaskLength, allocationMaxNetmaskLength, allocationMinNetmaskLength, allocationResourceTags, autoImport, description, ipamScopeId, locale, provisionedCidrs, publiclyAdvertisable, sourceIpamPoolId, tags);
         }
     }

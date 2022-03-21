@@ -79,32 +79,26 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder failOnFirstError(@Nullable Output<Boolean> failOnFirstError) {
             this.failOnFirstError = failOnFirstError;
             return this;
         }
-
         public Builder failOnFirstError(@Nullable Boolean failOnFirstError) {
             this.failOnFirstError = Output.ofNullable(failOnFirstError);
             return this;
-        }
-        public FlowErrorHandlingConfigArgs build() {
+        }        public FlowErrorHandlingConfigArgs build() {
             return new FlowErrorHandlingConfigArgs(bucketName, bucketPrefix, failOnFirstError);
         }
     }

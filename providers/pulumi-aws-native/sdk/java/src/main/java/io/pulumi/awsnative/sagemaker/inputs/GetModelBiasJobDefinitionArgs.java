@@ -54,8 +54,7 @@ public final class GetModelBiasJobDefinitionArgs extends io.pulumi.resources.Inv
         public Builder jobDefinitionArn(String jobDefinitionArn) {
             this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
             return this;
-        }
-        public GetModelBiasJobDefinitionArgs build() {
+        }        public GetModelBiasJobDefinitionArgs build() {
             return new GetModelBiasJobDefinitionArgs(jobDefinitionArn);
         }
     }

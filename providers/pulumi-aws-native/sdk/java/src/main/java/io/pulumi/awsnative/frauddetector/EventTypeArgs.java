@@ -131,62 +131,62 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder entityTypes(Output<List<EventTypeEntityTypeArgs>> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
-
         public Builder entityTypes(List<EventTypeEntityTypeArgs> entityTypes) {
             this.entityTypes = Output.of(Objects.requireNonNull(entityTypes));
             return this;
         }
-
+        public Builder entityTypes(EventTypeEntityTypeArgs... entityTypes) {
+            return entityTypes(List.of(entityTypes));
+        }
         public Builder eventVariables(Output<List<EventTypeEventVariableArgs>> eventVariables) {
             this.eventVariables = Objects.requireNonNull(eventVariables);
             return this;
         }
-
         public Builder eventVariables(List<EventTypeEventVariableArgs> eventVariables) {
             this.eventVariables = Output.of(Objects.requireNonNull(eventVariables));
             return this;
         }
-
+        public Builder eventVariables(EventTypeEventVariableArgs... eventVariables) {
+            return eventVariables(List.of(eventVariables));
+        }
         public Builder labels(Output<List<EventTypeLabelArgs>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(List<EventTypeLabelArgs> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
-
+        public Builder labels(EventTypeLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<EventTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public EventTypeArgs build() {
+        public Builder tags(EventTypeTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public EventTypeArgs build() {
             return new EventTypeArgs(description, entityTypes, eventVariables, labels, name, tags);
         }
     }

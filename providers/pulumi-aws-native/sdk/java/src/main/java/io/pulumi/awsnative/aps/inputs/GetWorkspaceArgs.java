@@ -54,8 +54,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetWorkspaceArgs build() {
+        }        public GetWorkspaceArgs build() {
             return new GetWorkspaceArgs(arn);
         }
     }

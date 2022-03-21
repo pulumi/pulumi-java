@@ -67,12 +67,10 @@ public final class SpotFleetLoadBalancersConfig extends io.pulumi.resources.Invo
             this.classicLoadBalancersConfig = classicLoadBalancersConfig;
             return this;
         }
-
         public Builder targetGroupsConfig(@Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
             this.targetGroupsConfig = targetGroupsConfig;
             return this;
-        }
-        public SpotFleetLoadBalancersConfig build() {
+        }        public SpotFleetLoadBalancersConfig build() {
             return new SpotFleetLoadBalancersConfig(classicLoadBalancersConfig, targetGroupsConfig);
         }
     }

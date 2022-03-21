@@ -52,12 +52,10 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.keyGroupConfig = Objects.requireNonNull(keyGroupConfig);
             return this;
         }
-
         public Builder keyGroupConfig(KeyGroupConfigArgs keyGroupConfig) {
             this.keyGroupConfig = Output.of(Objects.requireNonNull(keyGroupConfig));
             return this;
-        }
-        public KeyGroupArgs build() {
+        }        public KeyGroupArgs build() {
             return new KeyGroupArgs(keyGroupConfig);
         }
     }

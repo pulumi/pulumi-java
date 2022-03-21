@@ -51,8 +51,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentials {
         public Builder apiToken(String apiToken) {
             this.apiToken = Objects.requireNonNull(apiToken);
             return this;
-        }
-        public ConnectorProfileDynatraceConnectorProfileCredentials build() {
+        }        public ConnectorProfileDynatraceConnectorProfileCredentials build() {
             return new ConnectorProfileDynatraceConnectorProfileCredentials(apiToken);
         }
     }

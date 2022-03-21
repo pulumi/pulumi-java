@@ -65,22 +65,18 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder attributeName(String attributeName) {
             this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
-
         public Builder attributeValue(Output<String> attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }
-
         public Builder attributeValue(String attributeValue) {
             this.attributeValue = Output.of(Objects.requireNonNull(attributeValue));
             return this;
-        }
-        public DeliveryStreamHttpEndpointCommonAttributeArgs build() {
+        }        public DeliveryStreamHttpEndpointCommonAttributeArgs build() {
             return new DeliveryStreamHttpEndpointCommonAttributeArgs(attributeName, attributeValue);
         }
     }

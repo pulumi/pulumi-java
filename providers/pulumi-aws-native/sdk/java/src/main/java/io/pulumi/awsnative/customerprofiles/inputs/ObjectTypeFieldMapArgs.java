@@ -67,22 +67,18 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder objectTypeField(@Nullable Output<ObjectTypeFieldArgs> objectTypeField) {
             this.objectTypeField = objectTypeField;
             return this;
         }
-
         public Builder objectTypeField(@Nullable ObjectTypeFieldArgs objectTypeField) {
             this.objectTypeField = Output.ofNullable(objectTypeField);
             return this;
-        }
-        public ObjectTypeFieldMapArgs build() {
+        }        public ObjectTypeFieldMapArgs build() {
             return new ObjectTypeFieldMapArgs(name, objectTypeField);
         }
     }

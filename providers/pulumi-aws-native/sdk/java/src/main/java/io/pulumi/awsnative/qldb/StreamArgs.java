@@ -133,72 +133,61 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             this.exclusiveEndTime = exclusiveEndTime;
             return this;
         }
-
         public Builder exclusiveEndTime(@Nullable String exclusiveEndTime) {
             this.exclusiveEndTime = Output.ofNullable(exclusiveEndTime);
             return this;
         }
-
         public Builder inclusiveStartTime(Output<String> inclusiveStartTime) {
             this.inclusiveStartTime = Objects.requireNonNull(inclusiveStartTime);
             return this;
         }
-
         public Builder inclusiveStartTime(String inclusiveStartTime) {
             this.inclusiveStartTime = Output.of(Objects.requireNonNull(inclusiveStartTime));
             return this;
         }
-
         public Builder kinesisConfiguration(Output<StreamKinesisConfigurationArgs> kinesisConfiguration) {
             this.kinesisConfiguration = Objects.requireNonNull(kinesisConfiguration);
             return this;
         }
-
         public Builder kinesisConfiguration(StreamKinesisConfigurationArgs kinesisConfiguration) {
             this.kinesisConfiguration = Output.of(Objects.requireNonNull(kinesisConfiguration));
             return this;
         }
-
         public Builder ledgerName(Output<String> ledgerName) {
             this.ledgerName = Objects.requireNonNull(ledgerName);
             return this;
         }
-
         public Builder ledgerName(String ledgerName) {
             this.ledgerName = Output.of(Objects.requireNonNull(ledgerName));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder streamName(@Nullable Output<String> streamName) {
             this.streamName = streamName;
             return this;
         }
-
         public Builder streamName(@Nullable String streamName) {
             this.streamName = Output.ofNullable(streamName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public StreamArgs build() {
+        public Builder tags(StreamTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public StreamArgs build() {
             return new StreamArgs(exclusiveEndTime, inclusiveStartTime, kinesisConfiguration, ledgerName, roleArn, streamName, tags);
         }
     }

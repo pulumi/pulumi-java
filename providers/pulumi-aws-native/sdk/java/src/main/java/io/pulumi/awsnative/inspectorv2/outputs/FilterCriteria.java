@@ -292,157 +292,219 @@ public final class FilterCriteria {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
+        public Builder awsAccountId(FilterStringFilter... awsAccountId) {
+            return awsAccountId(List.of(awsAccountId));
+        }
         public Builder componentId(@Nullable List<FilterStringFilter> componentId) {
             this.componentId = componentId;
             return this;
         }
-
+        public Builder componentId(FilterStringFilter... componentId) {
+            return componentId(List.of(componentId));
+        }
         public Builder componentType(@Nullable List<FilterStringFilter> componentType) {
             this.componentType = componentType;
             return this;
         }
-
+        public Builder componentType(FilterStringFilter... componentType) {
+            return componentType(List.of(componentType));
+        }
         public Builder ec2InstanceImageId(@Nullable List<FilterStringFilter> ec2InstanceImageId) {
             this.ec2InstanceImageId = ec2InstanceImageId;
             return this;
         }
-
+        public Builder ec2InstanceImageId(FilterStringFilter... ec2InstanceImageId) {
+            return ec2InstanceImageId(List.of(ec2InstanceImageId));
+        }
         public Builder ec2InstanceSubnetId(@Nullable List<FilterStringFilter> ec2InstanceSubnetId) {
             this.ec2InstanceSubnetId = ec2InstanceSubnetId;
             return this;
         }
-
+        public Builder ec2InstanceSubnetId(FilterStringFilter... ec2InstanceSubnetId) {
+            return ec2InstanceSubnetId(List.of(ec2InstanceSubnetId));
+        }
         public Builder ec2InstanceVpcId(@Nullable List<FilterStringFilter> ec2InstanceVpcId) {
             this.ec2InstanceVpcId = ec2InstanceVpcId;
             return this;
         }
-
+        public Builder ec2InstanceVpcId(FilterStringFilter... ec2InstanceVpcId) {
+            return ec2InstanceVpcId(List.of(ec2InstanceVpcId));
+        }
         public Builder ecrImageArchitecture(@Nullable List<FilterStringFilter> ecrImageArchitecture) {
             this.ecrImageArchitecture = ecrImageArchitecture;
             return this;
         }
-
+        public Builder ecrImageArchitecture(FilterStringFilter... ecrImageArchitecture) {
+            return ecrImageArchitecture(List.of(ecrImageArchitecture));
+        }
         public Builder ecrImageHash(@Nullable List<FilterStringFilter> ecrImageHash) {
             this.ecrImageHash = ecrImageHash;
             return this;
         }
-
+        public Builder ecrImageHash(FilterStringFilter... ecrImageHash) {
+            return ecrImageHash(List.of(ecrImageHash));
+        }
         public Builder ecrImagePushedAt(@Nullable List<FilterDateFilter> ecrImagePushedAt) {
             this.ecrImagePushedAt = ecrImagePushedAt;
             return this;
         }
-
+        public Builder ecrImagePushedAt(FilterDateFilter... ecrImagePushedAt) {
+            return ecrImagePushedAt(List.of(ecrImagePushedAt));
+        }
         public Builder ecrImageRegistry(@Nullable List<FilterStringFilter> ecrImageRegistry) {
             this.ecrImageRegistry = ecrImageRegistry;
             return this;
         }
-
+        public Builder ecrImageRegistry(FilterStringFilter... ecrImageRegistry) {
+            return ecrImageRegistry(List.of(ecrImageRegistry));
+        }
         public Builder ecrImageRepositoryName(@Nullable List<FilterStringFilter> ecrImageRepositoryName) {
             this.ecrImageRepositoryName = ecrImageRepositoryName;
             return this;
         }
-
+        public Builder ecrImageRepositoryName(FilterStringFilter... ecrImageRepositoryName) {
+            return ecrImageRepositoryName(List.of(ecrImageRepositoryName));
+        }
         public Builder ecrImageTags(@Nullable List<FilterStringFilter> ecrImageTags) {
             this.ecrImageTags = ecrImageTags;
             return this;
         }
-
+        public Builder ecrImageTags(FilterStringFilter... ecrImageTags) {
+            return ecrImageTags(List.of(ecrImageTags));
+        }
         public Builder findingArn(@Nullable List<FilterStringFilter> findingArn) {
             this.findingArn = findingArn;
             return this;
         }
-
+        public Builder findingArn(FilterStringFilter... findingArn) {
+            return findingArn(List.of(findingArn));
+        }
         public Builder findingStatus(@Nullable List<FilterStringFilter> findingStatus) {
             this.findingStatus = findingStatus;
             return this;
         }
-
+        public Builder findingStatus(FilterStringFilter... findingStatus) {
+            return findingStatus(List.of(findingStatus));
+        }
         public Builder findingType(@Nullable List<FilterStringFilter> findingType) {
             this.findingType = findingType;
             return this;
         }
-
+        public Builder findingType(FilterStringFilter... findingType) {
+            return findingType(List.of(findingType));
+        }
         public Builder firstObservedAt(@Nullable List<FilterDateFilter> firstObservedAt) {
             this.firstObservedAt = firstObservedAt;
             return this;
         }
-
+        public Builder firstObservedAt(FilterDateFilter... firstObservedAt) {
+            return firstObservedAt(List.of(firstObservedAt));
+        }
         public Builder inspectorScore(@Nullable List<FilterNumberFilter> inspectorScore) {
             this.inspectorScore = inspectorScore;
             return this;
         }
-
+        public Builder inspectorScore(FilterNumberFilter... inspectorScore) {
+            return inspectorScore(List.of(inspectorScore));
+        }
         public Builder lastObservedAt(@Nullable List<FilterDateFilter> lastObservedAt) {
             this.lastObservedAt = lastObservedAt;
             return this;
         }
-
+        public Builder lastObservedAt(FilterDateFilter... lastObservedAt) {
+            return lastObservedAt(List.of(lastObservedAt));
+        }
         public Builder networkProtocol(@Nullable List<FilterStringFilter> networkProtocol) {
             this.networkProtocol = networkProtocol;
             return this;
         }
-
+        public Builder networkProtocol(FilterStringFilter... networkProtocol) {
+            return networkProtocol(List.of(networkProtocol));
+        }
         public Builder portRange(@Nullable List<FilterPortRangeFilter> portRange) {
             this.portRange = portRange;
             return this;
         }
-
+        public Builder portRange(FilterPortRangeFilter... portRange) {
+            return portRange(List.of(portRange));
+        }
         public Builder relatedVulnerabilities(@Nullable List<FilterStringFilter> relatedVulnerabilities) {
             this.relatedVulnerabilities = relatedVulnerabilities;
             return this;
         }
-
+        public Builder relatedVulnerabilities(FilterStringFilter... relatedVulnerabilities) {
+            return relatedVulnerabilities(List.of(relatedVulnerabilities));
+        }
         public Builder resourceId(@Nullable List<FilterStringFilter> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
+        public Builder resourceId(FilterStringFilter... resourceId) {
+            return resourceId(List.of(resourceId));
+        }
         public Builder resourceTags(@Nullable List<FilterMapFilter> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
-
+        public Builder resourceTags(FilterMapFilter... resourceTags) {
+            return resourceTags(List.of(resourceTags));
+        }
         public Builder resourceType(@Nullable List<FilterStringFilter> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
+        public Builder resourceType(FilterStringFilter... resourceType) {
+            return resourceType(List.of(resourceType));
+        }
         public Builder severity(@Nullable List<FilterStringFilter> severity) {
             this.severity = severity;
             return this;
         }
-
+        public Builder severity(FilterStringFilter... severity) {
+            return severity(List.of(severity));
+        }
         public Builder title(@Nullable List<FilterStringFilter> title) {
             this.title = title;
             return this;
         }
-
+        public Builder title(FilterStringFilter... title) {
+            return title(List.of(title));
+        }
         public Builder updatedAt(@Nullable List<FilterDateFilter> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
-
+        public Builder updatedAt(FilterDateFilter... updatedAt) {
+            return updatedAt(List.of(updatedAt));
+        }
         public Builder vendorSeverity(@Nullable List<FilterStringFilter> vendorSeverity) {
             this.vendorSeverity = vendorSeverity;
             return this;
         }
-
+        public Builder vendorSeverity(FilterStringFilter... vendorSeverity) {
+            return vendorSeverity(List.of(vendorSeverity));
+        }
         public Builder vulnerabilityId(@Nullable List<FilterStringFilter> vulnerabilityId) {
             this.vulnerabilityId = vulnerabilityId;
             return this;
         }
-
+        public Builder vulnerabilityId(FilterStringFilter... vulnerabilityId) {
+            return vulnerabilityId(List.of(vulnerabilityId));
+        }
         public Builder vulnerabilitySource(@Nullable List<FilterStringFilter> vulnerabilitySource) {
             this.vulnerabilitySource = vulnerabilitySource;
             return this;
         }
-
+        public Builder vulnerabilitySource(FilterStringFilter... vulnerabilitySource) {
+            return vulnerabilitySource(List.of(vulnerabilitySource));
+        }
         public Builder vulnerablePackages(@Nullable List<FilterPackageFilter> vulnerablePackages) {
             this.vulnerablePackages = vulnerablePackages;
             return this;
         }
-        public FilterCriteria build() {
+        public Builder vulnerablePackages(FilterPackageFilter... vulnerablePackages) {
+            return vulnerablePackages(List.of(vulnerablePackages));
+        }        public FilterCriteria build() {
             return new FilterCriteria(awsAccountId, componentId, componentType, ec2InstanceImageId, ec2InstanceSubnetId, ec2InstanceVpcId, ecrImageArchitecture, ecrImageHash, ecrImagePushedAt, ecrImageRegistry, ecrImageRepositoryName, ecrImageTags, findingArn, findingStatus, findingType, firstObservedAt, inspectorScore, lastObservedAt, networkProtocol, portRange, relatedVulnerabilities, resourceId, resourceTags, resourceType, severity, title, updatedAt, vendorSeverity, vulnerabilityId, vulnerabilitySource, vulnerablePackages);
         }
     }

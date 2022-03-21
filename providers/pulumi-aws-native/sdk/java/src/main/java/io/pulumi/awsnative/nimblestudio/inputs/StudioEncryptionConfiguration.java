@@ -75,12 +75,10 @@ public final class StudioEncryptionConfiguration extends io.pulumi.resources.Inv
             this.keyArn = keyArn;
             return this;
         }
-
         public Builder keyType(StudioEncryptionConfigurationKeyType keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
-        }
-        public StudioEncryptionConfiguration build() {
+        }        public StudioEncryptionConfiguration build() {
             return new StudioEncryptionConfiguration(keyArn, keyType);
         }
     }

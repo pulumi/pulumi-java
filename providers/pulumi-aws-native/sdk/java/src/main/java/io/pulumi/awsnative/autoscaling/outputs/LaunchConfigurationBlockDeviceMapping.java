@@ -105,22 +105,18 @@ public final class LaunchConfigurationBlockDeviceMapping {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder ebs(@Nullable LaunchConfigurationBlockDevice ebs) {
             this.ebs = ebs;
             return this;
         }
-
         public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
-        }
-        public LaunchConfigurationBlockDeviceMapping build() {
+        }        public LaunchConfigurationBlockDeviceMapping build() {
             return new LaunchConfigurationBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }
     }

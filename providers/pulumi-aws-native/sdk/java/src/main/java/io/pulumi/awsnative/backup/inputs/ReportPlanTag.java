@@ -78,12 +78,10 @@ public final class ReportPlanTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ReportPlanTag build() {
+        }        public ReportPlanTag build() {
             return new ReportPlanTag(key, value);
         }
     }

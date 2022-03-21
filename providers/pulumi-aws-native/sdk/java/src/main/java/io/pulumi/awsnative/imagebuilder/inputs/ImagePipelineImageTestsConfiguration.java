@@ -79,12 +79,10 @@ public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resour
             this.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
-
         public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
             this.timeoutMinutes = timeoutMinutes;
             return this;
-        }
-        public ImagePipelineImageTestsConfiguration build() {
+        }        public ImagePipelineImageTestsConfiguration build() {
             return new ImagePipelineImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
         }
     }

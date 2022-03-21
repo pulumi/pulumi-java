@@ -80,32 +80,26 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleVariables = ruleVariables;
             return this;
         }
-
         public Builder ruleVariables(@Nullable RuleGroupRuleVariablesArgs ruleVariables) {
             this.ruleVariables = Output.ofNullable(ruleVariables);
             return this;
         }
-
         public Builder rulesSource(Output<RuleGroupRulesSourceArgs> rulesSource) {
             this.rulesSource = Objects.requireNonNull(rulesSource);
             return this;
         }
-
         public Builder rulesSource(RuleGroupRulesSourceArgs rulesSource) {
             this.rulesSource = Output.of(Objects.requireNonNull(rulesSource));
             return this;
         }
-
         public Builder statefulRuleOptions(@Nullable Output<RuleGroupStatefulRuleOptionsArgs> statefulRuleOptions) {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
-
         public Builder statefulRuleOptions(@Nullable RuleGroupStatefulRuleOptionsArgs statefulRuleOptions) {
             this.statefulRuleOptions = Output.ofNullable(statefulRuleOptions);
             return this;
-        }
-        public RuleGroupArgs build() {
+        }        public RuleGroupArgs build() {
             return new RuleGroupArgs(ruleVariables, rulesSource, statefulRuleOptions);
         }
     }

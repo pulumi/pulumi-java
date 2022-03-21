@@ -65,12 +65,10 @@ public final class FirewallPolicyStatelessRuleGroupReference extends io.pulumi.r
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
-        }
-        public FirewallPolicyStatelessRuleGroupReference build() {
+        }        public FirewallPolicyStatelessRuleGroupReference build() {
             return new FirewallPolicyStatelessRuleGroupReference(priority, resourceArn);
         }
     }

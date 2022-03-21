@@ -52,8 +52,7 @@ public final class FirewallPolicyActionDefinition extends io.pulumi.resources.In
         public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
-        }
-        public FirewallPolicyActionDefinition build() {
+        }        public FirewallPolicyActionDefinition build() {
             return new FirewallPolicyActionDefinition(publishMetricAction);
         }
     }

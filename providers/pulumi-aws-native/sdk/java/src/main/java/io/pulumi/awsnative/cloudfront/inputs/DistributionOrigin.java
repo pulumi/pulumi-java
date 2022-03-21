@@ -156,47 +156,41 @@ public final class DistributionOrigin extends io.pulumi.resources.InvokeArgs {
             this.connectionAttempts = connectionAttempts;
             return this;
         }
-
         public Builder connectionTimeout(@Nullable Integer connectionTimeout) {
             this.connectionTimeout = connectionTimeout;
             return this;
         }
-
         public Builder customOriginConfig(@Nullable DistributionCustomOriginConfig customOriginConfig) {
             this.customOriginConfig = customOriginConfig;
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder originCustomHeaders(@Nullable List<DistributionOriginCustomHeader> originCustomHeaders) {
             this.originCustomHeaders = originCustomHeaders;
             return this;
         }
-
+        public Builder originCustomHeaders(DistributionOriginCustomHeader... originCustomHeaders) {
+            return originCustomHeaders(List.of(originCustomHeaders));
+        }
         public Builder originPath(@Nullable String originPath) {
             this.originPath = originPath;
             return this;
         }
-
         public Builder originShield(@Nullable DistributionOriginShield originShield) {
             this.originShield = originShield;
             return this;
         }
-
         public Builder s3OriginConfig(@Nullable DistributionS3OriginConfig s3OriginConfig) {
             this.s3OriginConfig = s3OriginConfig;
             return this;
-        }
-        public DistributionOrigin build() {
+        }        public DistributionOrigin build() {
             return new DistributionOrigin(connectionAttempts, connectionTimeout, customOriginConfig, domainName, id, originCustomHeaders, originPath, originShield, s3OriginConfig);
         }
     }

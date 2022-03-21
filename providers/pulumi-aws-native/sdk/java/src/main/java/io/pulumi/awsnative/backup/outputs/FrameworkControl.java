@@ -90,17 +90,17 @@ public final class FrameworkControl {
             this.controlInputParameters = controlInputParameters;
             return this;
         }
-
+        public Builder controlInputParameters(FrameworkControlInputParameter... controlInputParameters) {
+            return controlInputParameters(List.of(controlInputParameters));
+        }
         public Builder controlName(String controlName) {
             this.controlName = Objects.requireNonNull(controlName);
             return this;
         }
-
         public Builder controlScope(@Nullable FrameworkControlControlScopeProperties controlScope) {
             this.controlScope = controlScope;
             return this;
-        }
-        public FrameworkControl build() {
+        }        public FrameworkControl build() {
             return new FrameworkControl(controlInputParameters, controlName, controlScope);
         }
     }

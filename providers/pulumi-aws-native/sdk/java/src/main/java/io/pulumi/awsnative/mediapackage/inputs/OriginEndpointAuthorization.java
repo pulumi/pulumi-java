@@ -76,12 +76,10 @@ public final class OriginEndpointAuthorization extends io.pulumi.resources.Invok
             this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
             return this;
         }
-
         public Builder secretsRoleArn(String secretsRoleArn) {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
-        }
-        public OriginEndpointAuthorization build() {
+        }        public OriginEndpointAuthorization build() {
             return new OriginEndpointAuthorization(cdnIdentifierSecret, secretsRoleArn);
         }
     }

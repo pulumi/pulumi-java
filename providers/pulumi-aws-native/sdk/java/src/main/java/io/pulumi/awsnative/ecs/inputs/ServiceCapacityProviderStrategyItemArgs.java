@@ -79,32 +79,26 @@ public final class ServiceCapacityProviderStrategyItemArgs extends io.pulumi.res
             this.base = base;
             return this;
         }
-
         public Builder base(@Nullable Integer base) {
             this.base = Output.ofNullable(base);
             return this;
         }
-
         public Builder capacityProvider(@Nullable Output<String> capacityProvider) {
             this.capacityProvider = capacityProvider;
             return this;
         }
-
         public Builder capacityProvider(@Nullable String capacityProvider) {
             this.capacityProvider = Output.ofNullable(capacityProvider);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public ServiceCapacityProviderStrategyItemArgs build() {
+        }        public ServiceCapacityProviderStrategyItemArgs build() {
             return new ServiceCapacityProviderStrategyItemArgs(base, capacityProvider, weight);
         }
     }

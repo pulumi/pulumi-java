@@ -70,12 +70,16 @@ public final class ModelExplainabilityJobDefinitionVpcConfig {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-        public ModelExplainabilityJobDefinitionVpcConfig build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ModelExplainabilityJobDefinitionVpcConfig build() {
             return new ModelExplainabilityJobDefinitionVpcConfig(securityGroupIds, subnets);
         }
     }

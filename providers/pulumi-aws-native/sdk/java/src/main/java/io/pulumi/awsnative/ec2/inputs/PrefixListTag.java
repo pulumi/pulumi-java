@@ -66,12 +66,10 @@ public final class PrefixListTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public PrefixListTag build() {
+        }        public PrefixListTag build() {
             return new PrefixListTag(key, value);
         }
     }

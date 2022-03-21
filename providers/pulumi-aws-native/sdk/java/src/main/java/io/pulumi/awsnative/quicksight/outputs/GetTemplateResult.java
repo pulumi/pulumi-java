@@ -106,22 +106,24 @@ public final class GetTemplateResult {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder permissions(@Nullable List<TemplateResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
-
+        public Builder permissions(TemplateResourcePermission... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder tags(@Nullable List<TemplateTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetTemplateResult build() {
+        public Builder tags(TemplateTag... tags) {
+            return tags(List.of(tags));
+        }        public GetTemplateResult build() {
             return new GetTemplateResult(arn, name, permissions, tags);
         }
     }

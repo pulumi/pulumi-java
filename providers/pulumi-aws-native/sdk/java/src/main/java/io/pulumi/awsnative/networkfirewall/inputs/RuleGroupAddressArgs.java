@@ -52,12 +52,10 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
         }
-
         public Builder addressDefinition(String addressDefinition) {
             this.addressDefinition = Output.of(Objects.requireNonNull(addressDefinition));
             return this;
-        }
-        public RuleGroupAddressArgs build() {
+        }        public RuleGroupAddressArgs build() {
             return new RuleGroupAddressArgs(addressDefinition);
         }
     }

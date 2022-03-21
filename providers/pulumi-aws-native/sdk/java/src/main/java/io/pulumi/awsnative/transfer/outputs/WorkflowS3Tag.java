@@ -69,12 +69,10 @@ public final class WorkflowS3Tag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WorkflowS3Tag build() {
+        }        public WorkflowS3Tag build() {
             return new WorkflowS3Tag(key, value);
         }
     }

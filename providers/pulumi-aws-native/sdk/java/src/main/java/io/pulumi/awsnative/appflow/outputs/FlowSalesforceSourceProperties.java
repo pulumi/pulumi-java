@@ -64,17 +64,14 @@ public final class FlowSalesforceSourceProperties {
             this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
-
         public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
             this.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowSalesforceSourceProperties build() {
+        }        public FlowSalesforceSourceProperties build() {
             return new FlowSalesforceSourceProperties(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }
     }

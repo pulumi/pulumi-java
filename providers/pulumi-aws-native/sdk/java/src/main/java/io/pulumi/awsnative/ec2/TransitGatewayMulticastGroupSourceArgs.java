@@ -89,32 +89,26 @@ public final class TransitGatewayMulticastGroupSourceArgs extends io.pulumi.reso
             this.groupIpAddress = Objects.requireNonNull(groupIpAddress);
             return this;
         }
-
         public Builder groupIpAddress(String groupIpAddress) {
             this.groupIpAddress = Output.of(Objects.requireNonNull(groupIpAddress));
             return this;
         }
-
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
-
         public Builder transitGatewayMulticastDomainId(Output<String> transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }
-
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Output.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
             return this;
-        }
-        public TransitGatewayMulticastGroupSourceArgs build() {
+        }        public TransitGatewayMulticastGroupSourceArgs build() {
             return new TransitGatewayMulticastGroupSourceArgs(groupIpAddress, networkInterfaceId, transitGatewayMulticastDomainId);
         }
     }

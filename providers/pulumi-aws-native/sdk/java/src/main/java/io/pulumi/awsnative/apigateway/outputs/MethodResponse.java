@@ -88,17 +88,14 @@ public final class MethodResponse {
             this.responseModels = responseModels;
             return this;
         }
-
         public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public MethodResponse build() {
+        }        public MethodResponse build() {
             return new MethodResponse(responseModels, responseParameters, statusCode);
         }
     }

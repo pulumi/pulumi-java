@@ -71,12 +71,16 @@ public final class EnvironmentNetworkConfiguration {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-        public EnvironmentNetworkConfiguration build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public EnvironmentNetworkConfiguration build() {
             return new EnvironmentNetworkConfiguration(securityGroupIds, subnetIds);
         }
     }

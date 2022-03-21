@@ -53,12 +53,10 @@ public final class VariableTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public VariableTag build() {
+        }        public VariableTag build() {
             return new VariableTag(key, value);
         }
     }

@@ -91,32 +91,26 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable UserProfileResourceSpecInstanceType instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder sageMakerImageArn(@Nullable Output<String> sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
-
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = Output.ofNullable(sageMakerImageArn);
             return this;
         }
-
         public Builder sageMakerImageVersionArn(@Nullable Output<String> sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
-
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = Output.ofNullable(sageMakerImageVersionArn);
             return this;
-        }
-        public UserProfileResourceSpecArgs build() {
+        }        public UserProfileResourceSpecArgs build() {
             return new UserProfileResourceSpecArgs(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }
     }

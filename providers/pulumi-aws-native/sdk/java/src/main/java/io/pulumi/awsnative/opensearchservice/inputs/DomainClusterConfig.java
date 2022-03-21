@@ -165,52 +165,42 @@ public final class DomainClusterConfig extends io.pulumi.resources.InvokeArgs {
             this.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
-
         public Builder dedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
-
         public Builder dedicatedMasterType(@Nullable String dedicatedMasterType) {
             this.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder warmCount(@Nullable Integer warmCount) {
             this.warmCount = warmCount;
             return this;
         }
-
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
             this.warmEnabled = warmEnabled;
             return this;
         }
-
         public Builder warmType(@Nullable String warmType) {
             this.warmType = warmType;
             return this;
         }
-
         public Builder zoneAwarenessConfig(@Nullable DomainZoneAwarenessConfig zoneAwarenessConfig) {
             this.zoneAwarenessConfig = zoneAwarenessConfig;
             return this;
         }
-
         public Builder zoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
-        }
-        public DomainClusterConfig build() {
+        }        public DomainClusterConfig build() {
             return new DomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
         }
     }

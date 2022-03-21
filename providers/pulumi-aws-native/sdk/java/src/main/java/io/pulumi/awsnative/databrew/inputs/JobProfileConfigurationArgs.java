@@ -94,42 +94,40 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
             this.columnStatisticsConfigurations = columnStatisticsConfigurations;
             return this;
         }
-
         public Builder columnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfigurationArgs> columnStatisticsConfigurations) {
             this.columnStatisticsConfigurations = Output.ofNullable(columnStatisticsConfigurations);
             return this;
         }
-
+        public Builder columnStatisticsConfigurations(JobColumnStatisticsConfigurationArgs... columnStatisticsConfigurations) {
+            return columnStatisticsConfigurations(List.of(columnStatisticsConfigurations));
+        }
         public Builder datasetStatisticsConfiguration(@Nullable Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration) {
             this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
             return this;
         }
-
         public Builder datasetStatisticsConfiguration(@Nullable JobStatisticsConfigurationArgs datasetStatisticsConfiguration) {
             this.datasetStatisticsConfiguration = Output.ofNullable(datasetStatisticsConfiguration);
             return this;
         }
-
         public Builder entityDetectorConfiguration(@Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration) {
             this.entityDetectorConfiguration = entityDetectorConfiguration;
             return this;
         }
-
         public Builder entityDetectorConfiguration(@Nullable JobEntityDetectorConfigurationArgs entityDetectorConfiguration) {
             this.entityDetectorConfiguration = Output.ofNullable(entityDetectorConfiguration);
             return this;
         }
-
         public Builder profileColumns(@Nullable Output<List<JobColumnSelectorArgs>> profileColumns) {
             this.profileColumns = profileColumns;
             return this;
         }
-
         public Builder profileColumns(@Nullable List<JobColumnSelectorArgs> profileColumns) {
             this.profileColumns = Output.ofNullable(profileColumns);
             return this;
         }
-        public JobProfileConfigurationArgs build() {
+        public Builder profileColumns(JobColumnSelectorArgs... profileColumns) {
+            return profileColumns(List.of(profileColumns));
+        }        public JobProfileConfigurationArgs build() {
             return new JobProfileConfigurationArgs(columnStatisticsConfigurations, datasetStatisticsConfiguration, entityDetectorConfiguration, profileColumns);
         }
     }

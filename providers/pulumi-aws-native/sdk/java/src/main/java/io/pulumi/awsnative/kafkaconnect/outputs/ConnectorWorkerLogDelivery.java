@@ -65,17 +65,14 @@ public final class ConnectorWorkerLogDelivery {
             this.cloudWatchLogs = cloudWatchLogs;
             return this;
         }
-
         public Builder firehose(@Nullable ConnectorFirehoseLogDelivery firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder s3(@Nullable ConnectorS3LogDelivery s3) {
             this.s3 = s3;
             return this;
-        }
-        public ConnectorWorkerLogDelivery build() {
+        }        public ConnectorWorkerLogDelivery build() {
             return new ConnectorWorkerLogDelivery(cloudWatchLogs, firehose, s3);
         }
     }

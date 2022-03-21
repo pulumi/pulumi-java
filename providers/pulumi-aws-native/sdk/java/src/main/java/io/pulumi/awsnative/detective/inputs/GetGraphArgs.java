@@ -54,8 +54,7 @@ public final class GetGraphArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetGraphArgs build() {
+        }        public GetGraphArgs build() {
             return new GetGraphArgs(arn);
         }
     }

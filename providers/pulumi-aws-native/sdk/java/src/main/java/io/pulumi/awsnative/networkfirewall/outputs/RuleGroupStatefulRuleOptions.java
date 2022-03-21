@@ -45,8 +45,7 @@ public final class RuleGroupStatefulRuleOptions {
         public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
             this.ruleOrder = ruleOrder;
             return this;
-        }
-        public RuleGroupStatefulRuleOptions build() {
+        }        public RuleGroupStatefulRuleOptions build() {
             return new RuleGroupStatefulRuleOptions(ruleOrder);
         }
     }

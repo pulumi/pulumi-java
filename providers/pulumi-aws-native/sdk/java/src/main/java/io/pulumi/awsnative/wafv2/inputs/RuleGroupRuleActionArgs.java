@@ -113,42 +113,34 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable RuleGroupRuleActionAllowPropertiesArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder block(@Nullable Output<RuleGroupRuleActionBlockPropertiesArgs> block) {
             this.block = block;
             return this;
         }
-
         public Builder block(@Nullable RuleGroupRuleActionBlockPropertiesArgs block) {
             this.block = Output.ofNullable(block);
             return this;
         }
-
         public Builder captcha(@Nullable Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha) {
             this.captcha = captcha;
             return this;
         }
-
         public Builder captcha(@Nullable RuleGroupRuleActionCaptchaPropertiesArgs captcha) {
             this.captcha = Output.ofNullable(captcha);
             return this;
         }
-
         public Builder count(@Nullable Output<RuleGroupRuleActionCountPropertiesArgs> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable RuleGroupRuleActionCountPropertiesArgs count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public RuleGroupRuleActionArgs build() {
+        }        public RuleGroupRuleActionArgs build() {
             return new RuleGroupRuleActionArgs(allow, block, captcha, count);
         }
     }

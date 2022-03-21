@@ -143,62 +143,50 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
             this.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
-
         public Builder applicationCallBackURL(@Nullable String applicationCallBackURL) {
             this.applicationCallBackURL = Output.ofNullable(applicationCallBackURL);
             return this;
         }
-
         public Builder attributeMap(@Nullable Output<Object> attributeMap) {
             this.attributeMap = attributeMap;
             return this;
         }
-
         public Builder attributeMap(@Nullable Object attributeMap) {
             this.attributeMap = Output.ofNullable(attributeMap);
             return this;
         }
-
         public Builder federationProviderName(@Nullable Output<String> federationProviderName) {
             this.federationProviderName = federationProviderName;
             return this;
         }
-
         public Builder federationProviderName(@Nullable String federationProviderName) {
             this.federationProviderName = Output.ofNullable(federationProviderName);
             return this;
         }
-
         public Builder federationURN(@Nullable Output<String> federationURN) {
             this.federationURN = federationURN;
             return this;
         }
-
         public Builder federationURN(@Nullable String federationURN) {
             this.federationURN = Output.ofNullable(federationURN);
             return this;
         }
-
         public Builder samlMetadataDocument(@Nullable Output<String> samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
-
         public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = Output.ofNullable(samlMetadataDocument);
             return this;
         }
-
         public Builder samlMetadataURL(@Nullable Output<String> samlMetadataURL) {
             this.samlMetadataURL = samlMetadataURL;
             return this;
         }
-
         public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
             this.samlMetadataURL = Output.ofNullable(samlMetadataURL);
             return this;
-        }
-        public EnvironmentFederationParametersArgs build() {
+        }        public EnvironmentFederationParametersArgs build() {
             return new EnvironmentFederationParametersArgs(applicationCallBackURL, attributeMap, federationProviderName, federationURN, samlMetadataDocument, samlMetadataURL);
         }
     }

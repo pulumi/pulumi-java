@@ -50,8 +50,7 @@ public final class GetDHCPOptionsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder dhcpOptionsId(String dhcpOptionsId) {
             this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
             return this;
-        }
-        public GetDHCPOptionsArgs build() {
+        }        public GetDHCPOptionsArgs build() {
             return new GetDHCPOptionsArgs(dhcpOptionsId);
         }
     }

@@ -50,8 +50,7 @@ public final class RuleGroupFieldToMatchSingleHeaderProperties extends io.pulumi
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupFieldToMatchSingleHeaderProperties build() {
+        }        public RuleGroupFieldToMatchSingleHeaderProperties build() {
             return new RuleGroupFieldToMatchSingleHeaderProperties(name);
         }
     }

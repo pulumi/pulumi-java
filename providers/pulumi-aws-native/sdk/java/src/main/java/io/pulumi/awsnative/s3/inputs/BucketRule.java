@@ -247,82 +247,75 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
-
         public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder noncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
-
         public Builder noncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
             this.noncurrentVersionExpirationInDays = noncurrentVersionExpirationInDays;
             return this;
         }
-
         public Builder noncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition) {
             this.noncurrentVersionTransition = noncurrentVersionTransition;
             return this;
         }
-
         public Builder noncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
-
+        public Builder noncurrentVersionTransitions(BucketNoncurrentVersionTransition... noncurrentVersionTransitions) {
+            return noncurrentVersionTransitions(List.of(noncurrentVersionTransitions));
+        }
         public Builder objectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
             this.objectSizeGreaterThan = objectSizeGreaterThan;
             return this;
         }
-
         public Builder objectSizeLessThan(@Nullable String objectSizeLessThan) {
             this.objectSizeLessThan = objectSizeLessThan;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder status(BucketRuleStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
+        public Builder tagFilters(BucketTagFilter... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }
         public Builder transition(@Nullable BucketTransition transition) {
             this.transition = transition;
             return this;
         }
-
         public Builder transitions(@Nullable List<BucketTransition> transitions) {
             this.transitions = transitions;
             return this;
         }
-        public BucketRule build() {
+        public Builder transitions(BucketTransition... transitions) {
+            return transitions(List.of(transitions));
+        }        public BucketRule build() {
             return new BucketRule(abortIncompleteMultipartUpload, expirationDate, expirationInDays, expiredObjectDeleteMarker, id, noncurrentVersionExpiration, noncurrentVersionExpirationInDays, noncurrentVersionTransition, noncurrentVersionTransitions, objectSizeGreaterThan, objectSizeLessThan, prefix, status, tagFilters, transition, transitions);
         }
     }

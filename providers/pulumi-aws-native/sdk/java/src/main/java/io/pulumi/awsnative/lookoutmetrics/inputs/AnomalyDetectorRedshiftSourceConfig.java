@@ -138,42 +138,34 @@ public final class AnomalyDetectorRedshiftSourceConfig extends io.pulumi.resourc
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder databaseHost(String databaseHost) {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databasePort(Integer databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder secretManagerArn(String secretManagerArn) {
             this.secretManagerArn = Objects.requireNonNull(secretManagerArn);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder vpcConfiguration(AnomalyDetectorVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
-        }
-        public AnomalyDetectorRedshiftSourceConfig build() {
+        }        public AnomalyDetectorRedshiftSourceConfig build() {
             return new AnomalyDetectorRedshiftSourceConfig(clusterIdentifier, databaseHost, databaseName, databasePort, roleArn, secretManagerArn, tableName, vpcConfiguration);
         }
     }

@@ -206,132 +206,106 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             this.bufferingHints = bufferingHints;
             return this;
         }
-
         public Builder bufferingHints(@Nullable DeliveryStreamElasticsearchBufferingHintsArgs bufferingHints) {
             this.bufferingHints = Output.ofNullable(bufferingHints);
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
-
         public Builder clusterEndpoint(@Nullable Output<String> clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
-
         public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
             this.clusterEndpoint = Output.ofNullable(clusterEndpoint);
             return this;
         }
-
         public Builder domainARN(@Nullable Output<String> domainARN) {
             this.domainARN = domainARN;
             return this;
         }
-
         public Builder domainARN(@Nullable String domainARN) {
             this.domainARN = Output.ofNullable(domainARN);
             return this;
         }
-
         public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder indexName(String indexName) {
             this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
-
         public Builder indexRotationPeriod(@Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod) {
             this.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
-
         public Builder indexRotationPeriod(@Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod) {
             this.indexRotationPeriod = Output.ofNullable(indexRotationPeriod);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
-
         public Builder retryOptions(@Nullable Output<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public Builder retryOptions(@Nullable DeliveryStreamElasticsearchRetryOptionsArgs retryOptions) {
             this.retryOptions = Output.ofNullable(retryOptions);
             return this;
         }
-
         public Builder roleARN(Output<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Output.of(Objects.requireNonNull(roleARN));
             return this;
         }
-
         public Builder s3BackupMode(@Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
-
         public Builder s3Configuration(Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public Builder s3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
             this.s3Configuration = Output.of(Objects.requireNonNull(s3Configuration));
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable Output<DeliveryStreamVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable DeliveryStreamVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
-        }
-        public DeliveryStreamElasticsearchDestinationConfigurationArgs build() {
+        }        public DeliveryStreamElasticsearchDestinationConfigurationArgs build() {
             return new DeliveryStreamElasticsearchDestinationConfigurationArgs(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);
         }
     }

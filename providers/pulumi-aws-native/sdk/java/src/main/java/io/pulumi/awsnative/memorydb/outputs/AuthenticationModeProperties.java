@@ -73,12 +73,13 @@ public final class AuthenticationModeProperties {
             this.passwords = passwords;
             return this;
         }
-
+        public Builder passwords(String... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder type(@Nullable UserAuthenticationModePropertiesType type) {
             this.type = type;
             return this;
-        }
-        public AuthenticationModeProperties build() {
+        }        public AuthenticationModeProperties build() {
             return new AuthenticationModeProperties(passwords, type);
         }
     }

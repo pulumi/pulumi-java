@@ -123,52 +123,45 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.flowArn = Objects.requireNonNull(flowArn);
             return this;
         }
-
         public Builder flowArn(String flowArn) {
             this.flowArn = Output.of(Objects.requireNonNull(flowArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public FlowVpcInterfaceArgs build() {
+        }        public FlowVpcInterfaceArgs build() {
             return new FlowVpcInterfaceArgs(flowArn, name, roleArn, securityGroupIds, subnetId);
         }
     }

@@ -69,12 +69,10 @@ public final class ModelExplainabilityJobDefinitionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ModelExplainabilityJobDefinitionTag build() {
+        }        public ModelExplainabilityJobDefinitionTag build() {
             return new ModelExplainabilityJobDefinitionTag(key, value);
         }
     }

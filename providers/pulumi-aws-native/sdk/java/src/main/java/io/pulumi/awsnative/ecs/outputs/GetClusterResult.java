@@ -100,32 +100,38 @@ public final class GetClusterResult {
             this.arn = arn;
             return this;
         }
-
         public Builder capacityProviders(@Nullable List<String> capacityProviders) {
             this.capacityProviders = capacityProviders;
             return this;
         }
-
+        public Builder capacityProviders(String... capacityProviders) {
+            return capacityProviders(List.of(capacityProviders));
+        }
         public Builder clusterSettings(@Nullable List<ClusterSettings> clusterSettings) {
             this.clusterSettings = clusterSettings;
             return this;
         }
-
+        public Builder clusterSettings(ClusterSettings... clusterSettings) {
+            return clusterSettings(List.of(clusterSettings));
+        }
         public Builder configuration(@Nullable ClusterConfiguration configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder defaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
             return this;
         }
-
+        public Builder defaultCapacityProviderStrategy(ClusterCapacityProviderStrategyItem... defaultCapacityProviderStrategy) {
+            return defaultCapacityProviderStrategy(List.of(defaultCapacityProviderStrategy));
+        }
         public Builder tags(@Nullable List<ClusterTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetClusterResult build() {
+        public Builder tags(ClusterTag... tags) {
+            return tags(List.of(tags));
+        }        public GetClusterResult build() {
             return new GetClusterResult(arn, capacityProviders, clusterSettings, configuration, defaultCapacityProviderStrategy, tags);
         }
     }

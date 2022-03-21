@@ -54,8 +54,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetProjectArgs build() {
+        }        public GetProjectArgs build() {
             return new GetProjectArgs(name);
         }
     }

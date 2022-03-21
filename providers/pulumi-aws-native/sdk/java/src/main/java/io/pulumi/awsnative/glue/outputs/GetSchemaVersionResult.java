@@ -53,8 +53,7 @@ public final class GetSchemaVersionResult {
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
-        }
-        public GetSchemaVersionResult build() {
+        }        public GetSchemaVersionResult build() {
             return new GetSchemaVersionResult(versionId);
         }
     }

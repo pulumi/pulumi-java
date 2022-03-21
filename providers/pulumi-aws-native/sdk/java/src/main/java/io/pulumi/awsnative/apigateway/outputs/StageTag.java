@@ -69,12 +69,10 @@ public final class StageTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StageTag build() {
+        }        public StageTag build() {
             return new StageTag(key, value);
         }
     }

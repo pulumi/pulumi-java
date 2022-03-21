@@ -117,62 +117,59 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable BackupSelectionResourceTypeConditionsPropertiesArgs conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
         public Builder iamRoleArn(Output<String> iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
-
         public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Output.of(Objects.requireNonNull(iamRoleArn));
             return this;
         }
-
         public Builder listOfTags(@Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags) {
             this.listOfTags = listOfTags;
             return this;
         }
-
         public Builder listOfTags(@Nullable List<BackupSelectionConditionResourceTypeArgs> listOfTags) {
             this.listOfTags = Output.ofNullable(listOfTags);
             return this;
         }
-
+        public Builder listOfTags(BackupSelectionConditionResourceTypeArgs... listOfTags) {
+            return listOfTags(List.of(listOfTags));
+        }
         public Builder notResources(@Nullable Output<List<String>> notResources) {
             this.notResources = notResources;
             return this;
         }
-
         public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = Output.ofNullable(notResources);
             return this;
         }
-
+        public Builder notResources(String... notResources) {
+            return notResources(List.of(notResources));
+        }
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder selectionName(Output<String> selectionName) {
             this.selectionName = Objects.requireNonNull(selectionName);
             return this;
         }
-
         public Builder selectionName(String selectionName) {
             this.selectionName = Output.of(Objects.requireNonNull(selectionName));
             return this;
-        }
-        public BackupSelectionResourceTypeArgs build() {
+        }        public BackupSelectionResourceTypeArgs build() {
             return new BackupSelectionResourceTypeArgs(conditions, iamRoleArn, listOfTags, notResources, resources, selectionName);
         }
     }

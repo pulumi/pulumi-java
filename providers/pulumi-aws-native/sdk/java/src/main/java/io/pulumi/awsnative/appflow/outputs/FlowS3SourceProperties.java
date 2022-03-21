@@ -64,17 +64,14 @@ public final class FlowS3SourceProperties {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(String bucketPrefix) {
             this.bucketPrefix = Objects.requireNonNull(bucketPrefix);
             return this;
         }
-
         public Builder s3InputFormatConfig(@Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
             this.s3InputFormatConfig = s3InputFormatConfig;
             return this;
-        }
-        public FlowS3SourceProperties build() {
+        }        public FlowS3SourceProperties build() {
             return new FlowS3SourceProperties(bucketName, bucketPrefix, s3InputFormatConfig);
         }
     }

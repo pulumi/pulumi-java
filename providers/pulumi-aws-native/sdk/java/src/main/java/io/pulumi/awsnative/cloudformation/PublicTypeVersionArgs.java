@@ -125,52 +125,42 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder logDeliveryBucket(@Nullable Output<String> logDeliveryBucket) {
             this.logDeliveryBucket = logDeliveryBucket;
             return this;
         }
-
         public Builder logDeliveryBucket(@Nullable String logDeliveryBucket) {
             this.logDeliveryBucket = Output.ofNullable(logDeliveryBucket);
             return this;
         }
-
         public Builder publicVersionNumber(@Nullable Output<String> publicVersionNumber) {
             this.publicVersionNumber = publicVersionNumber;
             return this;
         }
-
         public Builder publicVersionNumber(@Nullable String publicVersionNumber) {
             this.publicVersionNumber = Output.ofNullable(publicVersionNumber);
             return this;
         }
-
         public Builder type(@Nullable Output<PublicTypeVersionType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable PublicTypeVersionType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
-        }
-        public PublicTypeVersionArgs build() {
+        }        public PublicTypeVersionArgs build() {
             return new PublicTypeVersionArgs(arn, logDeliveryBucket, publicVersionNumber, type, typeName);
         }
     }

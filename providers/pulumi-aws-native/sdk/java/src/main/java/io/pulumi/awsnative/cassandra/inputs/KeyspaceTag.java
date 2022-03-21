@@ -64,12 +64,10 @@ public final class KeyspaceTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public KeyspaceTag build() {
+        }        public KeyspaceTag build() {
             return new KeyspaceTag(key, value);
         }
     }

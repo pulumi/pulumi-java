@@ -80,17 +80,14 @@ public final class ModelExplainabilityJobDefinitionNetworkConfig {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
-        }
-        public ModelExplainabilityJobDefinitionNetworkConfig build() {
+        }        public ModelExplainabilityJobDefinitionNetworkConfig build() {
             return new ModelExplainabilityJobDefinitionNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }
     }

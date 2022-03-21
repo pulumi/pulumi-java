@@ -70,12 +70,10 @@ public final class ServiceCatalogProvisionedProductDetailsProperties extends io.
             this.provisionedProductId = provisionedProductId;
             return this;
         }
-
         public Builder provisionedProductStatusMessage(@Nullable String provisionedProductStatusMessage) {
             this.provisionedProductStatusMessage = provisionedProductStatusMessage;
             return this;
-        }
-        public ServiceCatalogProvisionedProductDetailsProperties build() {
+        }        public ServiceCatalogProvisionedProductDetailsProperties build() {
             return new ServiceCatalogProvisionedProductDetailsProperties(provisionedProductId, provisionedProductStatusMessage);
         }
     }

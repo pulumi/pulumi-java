@@ -53,12 +53,10 @@ public final class TaskDefinitionResourceRequirement {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TaskDefinitionResourceRequirement build() {
+        }        public TaskDefinitionResourceRequirement build() {
             return new TaskDefinitionResourceRequirement(type, value);
         }
     }

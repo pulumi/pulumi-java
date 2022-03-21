@@ -52,12 +52,10 @@ public final class FlowMarketoSourcePropertiesArgs extends io.pulumi.resources.R
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowMarketoSourcePropertiesArgs build() {
+        }        public FlowMarketoSourcePropertiesArgs build() {
             return new FlowMarketoSourcePropertiesArgs(object);
         }
     }

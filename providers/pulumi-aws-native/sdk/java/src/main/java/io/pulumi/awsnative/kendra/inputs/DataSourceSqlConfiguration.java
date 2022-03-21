@@ -52,8 +52,7 @@ public final class DataSourceSqlConfiguration extends io.pulumi.resources.Invoke
         public Builder queryIdentifiersEnclosingOption(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
             this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
             return this;
-        }
-        public DataSourceSqlConfiguration build() {
+        }        public DataSourceSqlConfiguration build() {
             return new DataSourceSqlConfiguration(queryIdentifiersEnclosingOption);
         }
     }

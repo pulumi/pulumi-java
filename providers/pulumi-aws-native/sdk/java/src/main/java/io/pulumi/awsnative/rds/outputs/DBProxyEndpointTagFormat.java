@@ -55,12 +55,10 @@ public final class DBProxyEndpointTagFormat {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DBProxyEndpointTagFormat build() {
+        }        public DBProxyEndpointTagFormat build() {
             return new DBProxyEndpointTagFormat(key, value);
         }
     }

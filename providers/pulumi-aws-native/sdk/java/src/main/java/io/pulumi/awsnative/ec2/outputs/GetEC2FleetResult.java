@@ -73,22 +73,18 @@ public final class GetEC2FleetResult {
             this.context = context;
             return this;
         }
-
         public Builder excessCapacityTerminationPolicy(@Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
-
         public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = fleetId;
             return this;
         }
-
         public Builder targetCapacitySpecification(@Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification) {
             this.targetCapacitySpecification = targetCapacitySpecification;
             return this;
-        }
-        public GetEC2FleetResult build() {
+        }        public GetEC2FleetResult build() {
             return new GetEC2FleetResult(context, excessCapacityTerminationPolicy, fleetId, targetCapacitySpecification);
         }
     }

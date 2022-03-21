@@ -121,27 +121,22 @@ public final class DBProxyAuthFormat {
             this.authScheme = authScheme;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder iAMAuth(@Nullable DBProxyAuthFormatIAMAuth iAMAuth) {
             this.iAMAuth = iAMAuth;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public DBProxyAuthFormat build() {
+        }        public DBProxyAuthFormat build() {
             return new DBProxyAuthFormat(authScheme, description, iAMAuth, secretArn, userName);
         }
     }

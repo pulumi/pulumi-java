@@ -111,22 +111,18 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
             this.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
-
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
-        }
-        public MonitoringScheduleClusterConfig build() {
+        }        public MonitoringScheduleClusterConfig build() {
             return new MonitoringScheduleClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }
     }

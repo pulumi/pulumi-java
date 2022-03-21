@@ -66,12 +66,10 @@ public final class ServiceKeyValuePair extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ServiceKeyValuePair build() {
+        }        public ServiceKeyValuePair build() {
             return new ServiceKeyValuePair(name, value);
         }
     }

@@ -72,12 +72,10 @@ public final class GetAppResult {
             this.appArn = appArn;
             return this;
         }
-
         public Builder resourceSpec(@Nullable AppResourceSpec resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
-        }
-        public GetAppResult build() {
+        }        public GetAppResult build() {
             return new GetAppResult(appArn, resourceSpec);
         }
     }

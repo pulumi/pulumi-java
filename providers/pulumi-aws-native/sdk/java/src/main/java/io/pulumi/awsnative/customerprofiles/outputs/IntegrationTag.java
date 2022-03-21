@@ -53,12 +53,10 @@ public final class IntegrationTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public IntegrationTag build() {
+        }        public IntegrationTag build() {
             return new IntegrationTag(key, value);
         }
     }

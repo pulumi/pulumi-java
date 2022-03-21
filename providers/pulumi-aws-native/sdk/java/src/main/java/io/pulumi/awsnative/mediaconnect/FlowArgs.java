@@ -108,42 +108,34 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder source(Output<FlowSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(FlowSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder sourceFailoverConfig(@Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig) {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
-
         public Builder sourceFailoverConfig(@Nullable FlowFailoverConfigArgs sourceFailoverConfig) {
             this.sourceFailoverConfig = Output.ofNullable(sourceFailoverConfig);
             return this;
-        }
-        public FlowArgs build() {
+        }        public FlowArgs build() {
             return new FlowArgs(availabilityZone, name, source, sourceFailoverConfig);
         }
     }

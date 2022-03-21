@@ -124,52 +124,48 @@ public final class GetBranchResult {
             this.arn = arn;
             return this;
         }
-
         public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<BranchEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(BranchEnvironmentVariable... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-
         public Builder stage(@Nullable BranchStage stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder tags(@Nullable List<BranchTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetBranchResult build() {
+        public Builder tags(BranchTag... tags) {
+            return tags(List.of(tags));
+        }        public GetBranchResult build() {
             return new GetBranchResult(arn, buildSpec, description, enableAutoBuild, enablePerformanceMode, enablePullRequestPreview, environmentVariables, pullRequestEnvironmentName, stage, tags);
         }
     }

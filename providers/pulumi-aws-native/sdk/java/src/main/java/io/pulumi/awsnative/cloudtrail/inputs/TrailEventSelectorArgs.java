@@ -110,42 +110,40 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
             this.dataResources = dataResources;
             return this;
         }
-
         public Builder dataResources(@Nullable List<TrailDataResourceArgs> dataResources) {
             this.dataResources = Output.ofNullable(dataResources);
             return this;
         }
-
+        public Builder dataResources(TrailDataResourceArgs... dataResources) {
+            return dataResources(List.of(dataResources));
+        }
         public Builder excludeManagementEventSources(@Nullable Output<List<String>> excludeManagementEventSources) {
             this.excludeManagementEventSources = excludeManagementEventSources;
             return this;
         }
-
         public Builder excludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
             this.excludeManagementEventSources = Output.ofNullable(excludeManagementEventSources);
             return this;
         }
-
+        public Builder excludeManagementEventSources(String... excludeManagementEventSources) {
+            return excludeManagementEventSources(List.of(excludeManagementEventSources));
+        }
         public Builder includeManagementEvents(@Nullable Output<Boolean> includeManagementEvents) {
             this.includeManagementEvents = includeManagementEvents;
             return this;
         }
-
         public Builder includeManagementEvents(@Nullable Boolean includeManagementEvents) {
             this.includeManagementEvents = Output.ofNullable(includeManagementEvents);
             return this;
         }
-
         public Builder readWriteType(@Nullable Output<TrailEventSelectorReadWriteType> readWriteType) {
             this.readWriteType = readWriteType;
             return this;
         }
-
         public Builder readWriteType(@Nullable TrailEventSelectorReadWriteType readWriteType) {
             this.readWriteType = Output.ofNullable(readWriteType);
             return this;
-        }
-        public TrailEventSelectorArgs build() {
+        }        public TrailEventSelectorArgs build() {
             return new TrailEventSelectorArgs(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);
         }
     }

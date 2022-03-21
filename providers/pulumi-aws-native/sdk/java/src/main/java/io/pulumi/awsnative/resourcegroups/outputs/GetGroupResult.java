@@ -107,32 +107,35 @@ public final class GetGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder configuration(@Nullable List<GroupConfigurationItem> configuration) {
             this.configuration = configuration;
             return this;
         }
-
+        public Builder configuration(GroupConfigurationItem... configuration) {
+            return configuration(List.of(configuration));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder resourceQuery(@Nullable GroupResourceQuery resourceQuery) {
             this.resourceQuery = resourceQuery;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder tags(@Nullable List<GroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetGroupResult build() {
+        public Builder tags(GroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetGroupResult build() {
             return new GetGroupResult(arn, configuration, description, resourceQuery, resources, tags);
         }
     }

@@ -55,12 +55,10 @@ public final class GetAppBlockResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
-        }
-        public GetAppBlockResult build() {
+        }        public GetAppBlockResult build() {
             return new GetAppBlockResult(arn, createdTime);
         }
     }

@@ -66,22 +66,18 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
             this.conditionKey = conditionKey;
             return this;
         }
-
         public Builder conditionKey(@Nullable String conditionKey) {
             this.conditionKey = Output.ofNullable(conditionKey);
             return this;
         }
-
         public Builder conditionValue(@Nullable Output<String> conditionValue) {
             this.conditionValue = conditionValue;
             return this;
         }
-
         public Builder conditionValue(@Nullable String conditionValue) {
             this.conditionValue = Output.ofNullable(conditionValue);
             return this;
-        }
-        public BackupSelectionConditionParameterArgs build() {
+        }        public BackupSelectionConditionParameterArgs build() {
             return new BackupSelectionConditionParameterArgs(conditionKey, conditionValue);
         }
     }

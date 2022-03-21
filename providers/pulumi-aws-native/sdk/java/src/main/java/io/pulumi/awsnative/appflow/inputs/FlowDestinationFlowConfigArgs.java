@@ -96,32 +96,26 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
             this.connectorProfileName = connectorProfileName;
             return this;
         }
-
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Output.ofNullable(connectorProfileName);
             return this;
         }
-
         public Builder connectorType(Output<FlowConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
-
         public Builder destinationConnectorProperties(Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }
-
         public Builder destinationConnectorProperties(FlowDestinationConnectorPropertiesArgs destinationConnectorProperties) {
             this.destinationConnectorProperties = Output.of(Objects.requireNonNull(destinationConnectorProperties));
             return this;
-        }
-        public FlowDestinationFlowConfigArgs build() {
+        }        public FlowDestinationFlowConfigArgs build() {
             return new FlowDestinationFlowConfigArgs(connectorProfileName, connectorType, destinationConnectorProperties);
         }
     }

@@ -51,8 +51,7 @@ public final class ConnectorScaleInPolicy {
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
-        }
-        public ConnectorScaleInPolicy build() {
+        }        public ConnectorScaleInPolicy build() {
             return new ConnectorScaleInPolicy(cpuUtilizationPercentage);
         }
     }

@@ -76,22 +76,21 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<GlobalNetworkTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<GlobalNetworkTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public GlobalNetworkArgs build() {
+        public Builder tags(GlobalNetworkTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public GlobalNetworkArgs build() {
             return new GlobalNetworkArgs(description, tags);
         }
     }

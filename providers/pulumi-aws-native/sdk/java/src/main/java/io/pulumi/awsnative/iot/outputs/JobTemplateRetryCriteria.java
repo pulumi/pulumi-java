@@ -56,12 +56,10 @@ public final class JobTemplateRetryCriteria {
             this.failureType = failureType;
             return this;
         }
-
         public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
             this.numberOfRetries = numberOfRetries;
             return this;
-        }
-        public JobTemplateRetryCriteria build() {
+        }        public JobTemplateRetryCriteria build() {
             return new JobTemplateRetryCriteria(failureType, numberOfRetries);
         }
     }

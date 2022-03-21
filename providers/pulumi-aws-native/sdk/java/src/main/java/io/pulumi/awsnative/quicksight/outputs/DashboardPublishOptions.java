@@ -65,17 +65,14 @@ public final class DashboardPublishOptions {
             this.adHocFilteringOption = adHocFilteringOption;
             return this;
         }
-
         public Builder exportToCSVOption(@Nullable DashboardExportToCSVOption exportToCSVOption) {
             this.exportToCSVOption = exportToCSVOption;
             return this;
         }
-
         public Builder sheetControlsOption(@Nullable DashboardSheetControlsOption sheetControlsOption) {
             this.sheetControlsOption = sheetControlsOption;
             return this;
-        }
-        public DashboardPublishOptions build() {
+        }        public DashboardPublishOptions build() {
             return new DashboardPublishOptions(adHocFilteringOption, exportToCSVOption, sheetControlsOption);
         }
     }

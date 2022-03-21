@@ -64,12 +64,10 @@ public final class AnalysisError {
             this.message = message;
             return this;
         }
-
         public Builder type(@Nullable AnalysisErrorType type) {
             this.type = type;
             return this;
-        }
-        public AnalysisError build() {
+        }        public AnalysisError build() {
             return new AnalysisError(message, type);
         }
     }

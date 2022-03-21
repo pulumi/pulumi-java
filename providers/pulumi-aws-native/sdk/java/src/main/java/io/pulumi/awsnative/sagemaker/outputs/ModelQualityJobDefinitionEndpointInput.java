@@ -170,47 +170,38 @@ public final class ModelQualityJobDefinitionEndpointInput {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
-
         public Builder probabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
             this.probabilityThresholdAttribute = probabilityThresholdAttribute;
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
-
         public Builder s3InputMode(@Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
-        }
-        public ModelQualityJobDefinitionEndpointInput build() {
+        }        public ModelQualityJobDefinitionEndpointInput build() {
             return new ModelQualityJobDefinitionEndpointInput(endTimeOffset, endpointName, inferenceAttribute, localPath, probabilityAttribute, probabilityThresholdAttribute, s3DataDistributionType, s3InputMode, startTimeOffset);
         }
     }

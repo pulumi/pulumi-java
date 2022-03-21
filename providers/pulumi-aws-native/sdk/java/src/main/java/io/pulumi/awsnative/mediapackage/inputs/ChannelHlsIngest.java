@@ -62,7 +62,9 @@ public final class ChannelHlsIngest extends io.pulumi.resources.InvokeArgs {
             this.ingestEndpoints = ingestEndpoints;
             return this;
         }
-        public ChannelHlsIngest build() {
+        public Builder ingestEndpoints(ChannelIngestEndpoint... ingestEndpoints) {
+            return ingestEndpoints(List.of(ingestEndpoints));
+        }        public ChannelHlsIngest build() {
             return new ChannelHlsIngest(ingestEndpoints);
         }
     }

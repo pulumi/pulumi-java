@@ -62,17 +62,14 @@ public final class DestinationOptionsProperties {
             this.fileFormat = Objects.requireNonNull(fileFormat);
             return this;
         }
-
         public Builder hiveCompatiblePartitions(Boolean hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = Objects.requireNonNull(hiveCompatiblePartitions);
             return this;
         }
-
         public Builder perHourPartition(Boolean perHourPartition) {
             this.perHourPartition = Objects.requireNonNull(perHourPartition);
             return this;
-        }
-        public DestinationOptionsProperties build() {
+        }        public DestinationOptionsProperties build() {
             return new DestinationOptionsProperties(fileFormat, hiveCompatiblePartitions, perHourPartition);
         }
     }

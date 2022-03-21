@@ -60,8 +60,7 @@ public final class TrailInsightSelector extends io.pulumi.resources.InvokeArgs {
         public Builder insightType(@Nullable String insightType) {
             this.insightType = insightType;
             return this;
-        }
-        public TrailInsightSelector build() {
+        }        public TrailInsightSelector build() {
             return new TrailInsightSelector(insightType);
         }
     }

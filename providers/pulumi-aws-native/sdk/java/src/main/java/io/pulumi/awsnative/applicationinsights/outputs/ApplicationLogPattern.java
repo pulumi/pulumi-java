@@ -86,17 +86,14 @@ public final class ApplicationLogPattern {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public Builder patternName(String patternName) {
             this.patternName = Objects.requireNonNull(patternName);
             return this;
         }
-
         public Builder rank(Integer rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
-        }
-        public ApplicationLogPattern build() {
+        }        public ApplicationLogPattern build() {
             return new ApplicationLogPattern(pattern, patternName, rank);
         }
     }

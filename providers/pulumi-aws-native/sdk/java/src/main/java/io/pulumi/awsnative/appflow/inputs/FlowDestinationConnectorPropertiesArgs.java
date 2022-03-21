@@ -149,82 +149,66 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             this.eventBridge = eventBridge;
             return this;
         }
-
         public Builder eventBridge(@Nullable FlowEventBridgeDestinationPropertiesArgs eventBridge) {
             this.eventBridge = Output.ofNullable(eventBridge);
             return this;
         }
-
         public Builder lookoutMetrics(@Nullable Output<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics) {
             this.lookoutMetrics = lookoutMetrics;
             return this;
         }
-
         public Builder lookoutMetrics(@Nullable FlowLookoutMetricsDestinationPropertiesArgs lookoutMetrics) {
             this.lookoutMetrics = Output.ofNullable(lookoutMetrics);
             return this;
         }
-
         public Builder redshift(@Nullable Output<FlowRedshiftDestinationPropertiesArgs> redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder redshift(@Nullable FlowRedshiftDestinationPropertiesArgs redshift) {
             this.redshift = Output.ofNullable(redshift);
             return this;
         }
-
         public Builder s3(@Nullable Output<FlowS3DestinationPropertiesArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable FlowS3DestinationPropertiesArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder salesforce(@Nullable Output<FlowSalesforceDestinationPropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder salesforce(@Nullable FlowSalesforceDestinationPropertiesArgs salesforce) {
             this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
-
         public Builder snowflake(@Nullable Output<FlowSnowflakeDestinationPropertiesArgs> snowflake) {
             this.snowflake = snowflake;
             return this;
         }
-
         public Builder snowflake(@Nullable FlowSnowflakeDestinationPropertiesArgs snowflake) {
             this.snowflake = Output.ofNullable(snowflake);
             return this;
         }
-
         public Builder upsolver(@Nullable Output<FlowUpsolverDestinationPropertiesArgs> upsolver) {
             this.upsolver = upsolver;
             return this;
         }
-
         public Builder upsolver(@Nullable FlowUpsolverDestinationPropertiesArgs upsolver) {
             this.upsolver = Output.ofNullable(upsolver);
             return this;
         }
-
         public Builder zendesk(@Nullable Output<FlowZendeskDestinationPropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
-
         public Builder zendesk(@Nullable FlowZendeskDestinationPropertiesArgs zendesk) {
             this.zendesk = Output.ofNullable(zendesk);
             return this;
-        }
-        public FlowDestinationConnectorPropertiesArgs build() {
+        }        public FlowDestinationConnectorPropertiesArgs build() {
             return new FlowDestinationConnectorPropertiesArgs(eventBridge, lookoutMetrics, redshift, s3, salesforce, snowflake, upsolver, zendesk);
         }
     }

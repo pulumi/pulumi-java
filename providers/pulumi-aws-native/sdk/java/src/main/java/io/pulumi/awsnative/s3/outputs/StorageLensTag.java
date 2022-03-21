@@ -53,12 +53,10 @@ public final class StorageLensTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StorageLensTag build() {
+        }        public StorageLensTag build() {
             return new StorageLensTag(key, value);
         }
     }

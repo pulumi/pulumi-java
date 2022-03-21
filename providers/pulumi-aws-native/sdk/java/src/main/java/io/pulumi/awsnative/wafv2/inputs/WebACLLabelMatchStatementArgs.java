@@ -66,22 +66,18 @@ public final class WebACLLabelMatchStatementArgs extends io.pulumi.resources.Res
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder scope(Output<WebACLLabelMatchScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(WebACLLabelMatchScope scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public WebACLLabelMatchStatementArgs build() {
+        }        public WebACLLabelMatchStatementArgs build() {
             return new WebACLLabelMatchStatementArgs(key, scope);
         }
     }

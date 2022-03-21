@@ -65,12 +65,10 @@ public final class BudgetsActionSubscriber extends io.pulumi.resources.InvokeArg
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder type(BudgetsActionSubscriberType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BudgetsActionSubscriber build() {
+        }        public BudgetsActionSubscriber build() {
             return new BudgetsActionSubscriber(address, type);
         }
     }

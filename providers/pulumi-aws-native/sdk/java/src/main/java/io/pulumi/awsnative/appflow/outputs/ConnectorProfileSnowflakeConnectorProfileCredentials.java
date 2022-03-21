@@ -69,12 +69,10 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentials {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ConnectorProfileSnowflakeConnectorProfileCredentials build() {
+        }        public ConnectorProfileSnowflakeConnectorProfileCredentials build() {
             return new ConnectorProfileSnowflakeConnectorProfileCredentials(password, username);
         }
     }

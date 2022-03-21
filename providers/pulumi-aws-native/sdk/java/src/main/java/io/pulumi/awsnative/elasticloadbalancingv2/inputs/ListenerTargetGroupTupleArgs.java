@@ -67,22 +67,18 @@ public final class ListenerTargetGroupTupleArgs extends io.pulumi.resources.Reso
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public ListenerTargetGroupTupleArgs build() {
+        }        public ListenerTargetGroupTupleArgs build() {
             return new ListenerTargetGroupTupleArgs(targetGroupArn, weight);
         }
     }

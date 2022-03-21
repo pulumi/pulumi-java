@@ -67,22 +67,18 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable Object options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public TaskDefinitionFirelensConfigurationArgs build() {
+        }        public TaskDefinitionFirelensConfigurationArgs build() {
             return new TaskDefinitionFirelensConfigurationArgs(options, type);
         }
     }

@@ -93,32 +93,29 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.loRaWAN = loRaWAN;
             return this;
         }
-
         public Builder loRaWAN(@Nullable DeviceProfileLoRaWANDeviceProfileArgs loRaWAN) {
             this.loRaWAN = Output.ofNullable(loRaWAN);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DeviceProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DeviceProfileTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DeviceProfileArgs build() {
+        public Builder tags(DeviceProfileTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DeviceProfileArgs build() {
             return new DeviceProfileArgs(loRaWAN, name, tags);
         }
     }

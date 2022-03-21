@@ -54,7 +54,9 @@ public final class GetDocumentResult {
             this.tags = tags;
             return this;
         }
-        public GetDocumentResult build() {
+        public Builder tags(DocumentTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDocumentResult build() {
             return new GetDocumentResult(tags);
         }
     }

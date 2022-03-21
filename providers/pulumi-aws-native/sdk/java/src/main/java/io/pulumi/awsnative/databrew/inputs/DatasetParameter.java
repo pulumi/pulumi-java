@@ -114,27 +114,22 @@ public final class DatasetParameter extends io.pulumi.resources.InvokeArgs {
             this.createColumn = createColumn;
             return this;
         }
-
         public Builder datetimeOptions(@Nullable DatasetDatetimeOptions datetimeOptions) {
             this.datetimeOptions = datetimeOptions;
             return this;
         }
-
         public Builder filter(@Nullable DatasetFilterExpression filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(DatasetParameterType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DatasetParameter build() {
+        }        public DatasetParameter build() {
             return new DatasetParameter(createColumn, datetimeOptions, filter, name, type);
         }
     }

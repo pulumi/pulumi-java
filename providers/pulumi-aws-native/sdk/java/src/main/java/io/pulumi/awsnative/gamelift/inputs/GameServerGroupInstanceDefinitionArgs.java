@@ -70,22 +70,18 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Output<String> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
-        }
-        public GameServerGroupInstanceDefinitionArgs build() {
+        }        public GameServerGroupInstanceDefinitionArgs build() {
             return new GameServerGroupInstanceDefinitionArgs(instanceType, weightedCapacity);
         }
     }

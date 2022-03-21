@@ -64,17 +64,17 @@ public final class TaskDefinitionDevice {
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = permissions;
             return this;
         }
-        public TaskDefinitionDevice build() {
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }        public TaskDefinitionDevice build() {
             return new TaskDefinitionDevice(containerPath, hostPath, permissions);
         }
     }

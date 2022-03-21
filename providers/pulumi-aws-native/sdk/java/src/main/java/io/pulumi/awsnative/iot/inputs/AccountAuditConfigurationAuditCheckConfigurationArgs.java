@@ -61,12 +61,10 @@ public final class AccountAuditConfigurationAuditCheckConfigurationArgs extends 
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public AccountAuditConfigurationAuditCheckConfigurationArgs build() {
+        }        public AccountAuditConfigurationAuditCheckConfigurationArgs build() {
             return new AccountAuditConfigurationAuditCheckConfigurationArgs(enabled);
         }
     }

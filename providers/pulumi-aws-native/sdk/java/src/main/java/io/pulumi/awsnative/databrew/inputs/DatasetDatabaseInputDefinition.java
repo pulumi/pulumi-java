@@ -103,22 +103,18 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
             this.databaseTableName = databaseTableName;
             return this;
         }
-
         public Builder glueConnectionName(String glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder tempDirectory(@Nullable DatasetS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
-        }
-        public DatasetDatabaseInputDefinition build() {
+        }        public DatasetDatabaseInputDefinition build() {
             return new DatasetDatabaseInputDefinition(databaseTableName, glueConnectionName, queryString, tempDirectory);
         }
     }

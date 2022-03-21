@@ -53,12 +53,10 @@ public final class DatastoreTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DatastoreTag build() {
+        }        public DatastoreTag build() {
             return new DatastoreTag(key, value);
         }
     }

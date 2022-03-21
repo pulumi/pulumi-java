@@ -126,52 +126,48 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.addOns = addOns;
             return this;
         }
-
         public Builder addOns(@Nullable List<DiskAddOnArgs> addOns) {
             this.addOns = Output.ofNullable(addOns);
             return this;
         }
-
+        public Builder addOns(DiskAddOnArgs... addOns) {
+            return addOns(List.of(addOns));
+        }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = Output.ofNullable(diskName);
             return this;
         }
-
         public Builder sizeInGb(Output<Integer> sizeInGb) {
             this.sizeInGb = Objects.requireNonNull(sizeInGb);
             return this;
         }
-
         public Builder sizeInGb(Integer sizeInGb) {
             this.sizeInGb = Output.of(Objects.requireNonNull(sizeInGb));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DiskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DiskTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DiskArgs build() {
+        public Builder tags(DiskTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DiskArgs build() {
             return new DiskArgs(addOns, availabilityZone, diskName, sizeInGb, tags);
         }
     }

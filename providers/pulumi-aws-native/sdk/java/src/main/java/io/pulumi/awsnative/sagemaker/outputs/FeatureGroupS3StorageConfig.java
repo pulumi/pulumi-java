@@ -55,12 +55,10 @@ public final class FeatureGroupS3StorageConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
-        }
-        public FeatureGroupS3StorageConfig build() {
+        }        public FeatureGroupS3StorageConfig build() {
             return new FeatureGroupS3StorageConfig(kmsKeyId, s3Uri);
         }
     }

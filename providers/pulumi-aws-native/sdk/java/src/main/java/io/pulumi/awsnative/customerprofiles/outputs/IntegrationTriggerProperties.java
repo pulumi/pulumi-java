@@ -45,8 +45,7 @@ public final class IntegrationTriggerProperties {
         public Builder scheduled(@Nullable IntegrationScheduledTriggerProperties scheduled) {
             this.scheduled = scheduled;
             return this;
-        }
-        public IntegrationTriggerProperties build() {
+        }        public IntegrationTriggerProperties build() {
             return new IntegrationTriggerProperties(scheduled);
         }
     }

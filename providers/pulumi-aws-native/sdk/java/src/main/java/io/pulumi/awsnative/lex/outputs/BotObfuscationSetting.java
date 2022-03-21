@@ -51,8 +51,7 @@ public final class BotObfuscationSetting {
         public Builder obfuscationSettingType(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
             this.obfuscationSettingType = Objects.requireNonNull(obfuscationSettingType);
             return this;
-        }
-        public BotObfuscationSetting build() {
+        }        public BotObfuscationSetting build() {
             return new BotObfuscationSetting(obfuscationSettingType);
         }
     }

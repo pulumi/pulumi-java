@@ -92,32 +92,26 @@ public final class MitigationActionActionParams {
             this.addThingsToThingGroupParams = addThingsToThingGroupParams;
             return this;
         }
-
         public Builder enableIoTLoggingParams(@Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams) {
             this.enableIoTLoggingParams = enableIoTLoggingParams;
             return this;
         }
-
         public Builder publishFindingToSnsParams(@Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams) {
             this.publishFindingToSnsParams = publishFindingToSnsParams;
             return this;
         }
-
         public Builder replaceDefaultPolicyVersionParams(@Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams) {
             this.replaceDefaultPolicyVersionParams = replaceDefaultPolicyVersionParams;
             return this;
         }
-
         public Builder updateCACertificateParams(@Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams) {
             this.updateCACertificateParams = updateCACertificateParams;
             return this;
         }
-
         public Builder updateDeviceCertificateParams(@Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams) {
             this.updateDeviceCertificateParams = updateDeviceCertificateParams;
             return this;
-        }
-        public MitigationActionActionParams build() {
+        }        public MitigationActionActionParams build() {
             return new MitigationActionActionParams(addThingsToThingGroupParams, enableIoTLoggingParams, publishFindingToSnsParams, replaceDefaultPolicyVersionParams, updateCACertificateParams, updateDeviceCertificateParams);
         }
     }

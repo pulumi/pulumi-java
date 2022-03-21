@@ -150,37 +150,30 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
             this.comparisonOperator = comparisonOperator;
             return this;
         }
-
         public Builder consecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
             this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
             return this;
         }
-
         public Builder consecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
             this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
             return this;
         }
-
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder mlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig) {
             this.mlDetectionConfig = mlDetectionConfig;
             return this;
         }
-
         public Builder statisticalThreshold(@Nullable SecurityProfileStatisticalThreshold statisticalThreshold) {
             this.statisticalThreshold = statisticalThreshold;
             return this;
         }
-
         public Builder value(@Nullable SecurityProfileMetricValue value) {
             this.value = value;
             return this;
-        }
-        public SecurityProfileBehaviorCriteria build() {
+        }        public SecurityProfileBehaviorCriteria build() {
             return new SecurityProfileBehaviorCriteria(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);
         }
     }

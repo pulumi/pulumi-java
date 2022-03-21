@@ -55,12 +55,10 @@ public final class FuotaTaskTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public FuotaTaskTag build() {
+        }        public FuotaTaskTag build() {
             return new FuotaTaskTag(key, value);
         }
     }

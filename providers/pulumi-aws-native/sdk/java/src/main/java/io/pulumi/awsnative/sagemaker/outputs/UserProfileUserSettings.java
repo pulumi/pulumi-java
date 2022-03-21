@@ -123,27 +123,25 @@ public final class UserProfileUserSettings {
             this.executionRole = executionRole;
             return this;
         }
-
         public Builder jupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
-
         public Builder kernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sharingSettings(@Nullable UserProfileSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
-        }
-        public UserProfileUserSettings build() {
+        }        public UserProfileUserSettings build() {
             return new UserProfileUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
         }
     }

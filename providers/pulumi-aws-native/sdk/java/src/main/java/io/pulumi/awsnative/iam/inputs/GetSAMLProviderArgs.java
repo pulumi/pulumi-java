@@ -54,8 +54,7 @@ public final class GetSAMLProviderArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetSAMLProviderArgs build() {
+        }        public GetSAMLProviderArgs build() {
             return new GetSAMLProviderArgs(arn);
         }
     }

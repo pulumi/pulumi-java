@@ -54,12 +54,10 @@ public final class DatasetPathParameter {
             this.datasetParameter = Objects.requireNonNull(datasetParameter);
             return this;
         }
-
         public Builder pathParameterName(String pathParameterName) {
             this.pathParameterName = Objects.requireNonNull(pathParameterName);
             return this;
-        }
-        public DatasetPathParameter build() {
+        }        public DatasetPathParameter build() {
             return new DatasetPathParameter(datasetParameter, pathParameterName);
         }
     }

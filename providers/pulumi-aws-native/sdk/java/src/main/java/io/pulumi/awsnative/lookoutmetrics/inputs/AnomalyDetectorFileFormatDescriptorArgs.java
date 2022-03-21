@@ -67,22 +67,18 @@ public final class AnomalyDetectorFileFormatDescriptorArgs extends io.pulumi.res
             this.csvFormatDescriptor = csvFormatDescriptor;
             return this;
         }
-
         public Builder csvFormatDescriptor(@Nullable AnomalyDetectorCsvFormatDescriptorArgs csvFormatDescriptor) {
             this.csvFormatDescriptor = Output.ofNullable(csvFormatDescriptor);
             return this;
         }
-
         public Builder jsonFormatDescriptor(@Nullable Output<AnomalyDetectorJsonFormatDescriptorArgs> jsonFormatDescriptor) {
             this.jsonFormatDescriptor = jsonFormatDescriptor;
             return this;
         }
-
         public Builder jsonFormatDescriptor(@Nullable AnomalyDetectorJsonFormatDescriptorArgs jsonFormatDescriptor) {
             this.jsonFormatDescriptor = Output.ofNullable(jsonFormatDescriptor);
             return this;
-        }
-        public AnomalyDetectorFileFormatDescriptorArgs build() {
+        }        public AnomalyDetectorFileFormatDescriptorArgs build() {
             return new AnomalyDetectorFileFormatDescriptorArgs(csvFormatDescriptor, jsonFormatDescriptor);
         }
     }

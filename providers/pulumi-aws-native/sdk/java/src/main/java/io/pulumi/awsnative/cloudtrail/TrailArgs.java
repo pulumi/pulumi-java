@@ -279,152 +279,131 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
             return this;
         }
-
         public Builder cloudWatchLogsLogGroupArn(@Nullable String cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = Output.ofNullable(cloudWatchLogsLogGroupArn);
             return this;
         }
-
         public Builder cloudWatchLogsRoleArn(@Nullable Output<String> cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
             return this;
         }
-
         public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = Output.ofNullable(cloudWatchLogsRoleArn);
             return this;
         }
-
         public Builder enableLogFileValidation(@Nullable Output<Boolean> enableLogFileValidation) {
             this.enableLogFileValidation = enableLogFileValidation;
             return this;
         }
-
         public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
             this.enableLogFileValidation = Output.ofNullable(enableLogFileValidation);
             return this;
         }
-
         public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorArgs>> eventSelectors) {
             this.eventSelectors = eventSelectors;
             return this;
         }
-
         public Builder eventSelectors(@Nullable List<TrailEventSelectorArgs> eventSelectors) {
             this.eventSelectors = Output.ofNullable(eventSelectors);
             return this;
         }
-
+        public Builder eventSelectors(TrailEventSelectorArgs... eventSelectors) {
+            return eventSelectors(List.of(eventSelectors));
+        }
         public Builder includeGlobalServiceEvents(@Nullable Output<Boolean> includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = includeGlobalServiceEvents;
             return this;
         }
-
         public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = Output.ofNullable(includeGlobalServiceEvents);
             return this;
         }
-
         public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors) {
             this.insightSelectors = insightSelectors;
             return this;
         }
-
         public Builder insightSelectors(@Nullable List<TrailInsightSelectorArgs> insightSelectors) {
             this.insightSelectors = Output.ofNullable(insightSelectors);
             return this;
         }
-
+        public Builder insightSelectors(TrailInsightSelectorArgs... insightSelectors) {
+            return insightSelectors(List.of(insightSelectors));
+        }
         public Builder isLogging(Output<Boolean> isLogging) {
             this.isLogging = Objects.requireNonNull(isLogging);
             return this;
         }
-
         public Builder isLogging(Boolean isLogging) {
             this.isLogging = Output.of(Objects.requireNonNull(isLogging));
             return this;
         }
-
         public Builder isMultiRegionTrail(@Nullable Output<Boolean> isMultiRegionTrail) {
             this.isMultiRegionTrail = isMultiRegionTrail;
             return this;
         }
-
         public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
             this.isMultiRegionTrail = Output.ofNullable(isMultiRegionTrail);
             return this;
         }
-
         public Builder isOrganizationTrail(@Nullable Output<Boolean> isOrganizationTrail) {
             this.isOrganizationTrail = isOrganizationTrail;
             return this;
         }
-
         public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
             this.isOrganizationTrail = Output.ofNullable(isOrganizationTrail);
             return this;
         }
-
         public Builder kMSKeyId(@Nullable Output<String> kMSKeyId) {
             this.kMSKeyId = kMSKeyId;
             return this;
         }
-
         public Builder kMSKeyId(@Nullable String kMSKeyId) {
             this.kMSKeyId = Output.ofNullable(kMSKeyId);
             return this;
         }
-
         public Builder s3BucketName(Output<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
-
         public Builder snsTopicName(@Nullable Output<String> snsTopicName) {
             this.snsTopicName = snsTopicName;
             return this;
         }
-
         public Builder snsTopicName(@Nullable String snsTopicName) {
             this.snsTopicName = Output.ofNullable(snsTopicName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TrailTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TrailTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TrailTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder trailName(@Nullable Output<String> trailName) {
             this.trailName = trailName;
             return this;
         }
-
         public Builder trailName(@Nullable String trailName) {
             this.trailName = Output.ofNullable(trailName);
             return this;
-        }
-        public TrailArgs build() {
+        }        public TrailArgs build() {
             return new TrailArgs(cloudWatchLogsLogGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, eventSelectors, includeGlobalServiceEvents, insightSelectors, isLogging, isMultiRegionTrail, isOrganizationTrail, kMSKeyId, s3BucketName, s3KeyPrefix, snsTopicName, tags, trailName);
         }
     }

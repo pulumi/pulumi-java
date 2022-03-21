@@ -420,312 +420,343 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable List<FilterStringFilterArgs> awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
+        public Builder awsAccountId(FilterStringFilterArgs... awsAccountId) {
+            return awsAccountId(List.of(awsAccountId));
+        }
         public Builder componentId(@Nullable Output<List<FilterStringFilterArgs>> componentId) {
             this.componentId = componentId;
             return this;
         }
-
         public Builder componentId(@Nullable List<FilterStringFilterArgs> componentId) {
             this.componentId = Output.ofNullable(componentId);
             return this;
         }
-
+        public Builder componentId(FilterStringFilterArgs... componentId) {
+            return componentId(List.of(componentId));
+        }
         public Builder componentType(@Nullable Output<List<FilterStringFilterArgs>> componentType) {
             this.componentType = componentType;
             return this;
         }
-
         public Builder componentType(@Nullable List<FilterStringFilterArgs> componentType) {
             this.componentType = Output.ofNullable(componentType);
             return this;
         }
-
+        public Builder componentType(FilterStringFilterArgs... componentType) {
+            return componentType(List.of(componentType));
+        }
         public Builder ec2InstanceImageId(@Nullable Output<List<FilterStringFilterArgs>> ec2InstanceImageId) {
             this.ec2InstanceImageId = ec2InstanceImageId;
             return this;
         }
-
         public Builder ec2InstanceImageId(@Nullable List<FilterStringFilterArgs> ec2InstanceImageId) {
             this.ec2InstanceImageId = Output.ofNullable(ec2InstanceImageId);
             return this;
         }
-
+        public Builder ec2InstanceImageId(FilterStringFilterArgs... ec2InstanceImageId) {
+            return ec2InstanceImageId(List.of(ec2InstanceImageId));
+        }
         public Builder ec2InstanceSubnetId(@Nullable Output<List<FilterStringFilterArgs>> ec2InstanceSubnetId) {
             this.ec2InstanceSubnetId = ec2InstanceSubnetId;
             return this;
         }
-
         public Builder ec2InstanceSubnetId(@Nullable List<FilterStringFilterArgs> ec2InstanceSubnetId) {
             this.ec2InstanceSubnetId = Output.ofNullable(ec2InstanceSubnetId);
             return this;
         }
-
+        public Builder ec2InstanceSubnetId(FilterStringFilterArgs... ec2InstanceSubnetId) {
+            return ec2InstanceSubnetId(List.of(ec2InstanceSubnetId));
+        }
         public Builder ec2InstanceVpcId(@Nullable Output<List<FilterStringFilterArgs>> ec2InstanceVpcId) {
             this.ec2InstanceVpcId = ec2InstanceVpcId;
             return this;
         }
-
         public Builder ec2InstanceVpcId(@Nullable List<FilterStringFilterArgs> ec2InstanceVpcId) {
             this.ec2InstanceVpcId = Output.ofNullable(ec2InstanceVpcId);
             return this;
         }
-
+        public Builder ec2InstanceVpcId(FilterStringFilterArgs... ec2InstanceVpcId) {
+            return ec2InstanceVpcId(List.of(ec2InstanceVpcId));
+        }
         public Builder ecrImageArchitecture(@Nullable Output<List<FilterStringFilterArgs>> ecrImageArchitecture) {
             this.ecrImageArchitecture = ecrImageArchitecture;
             return this;
         }
-
         public Builder ecrImageArchitecture(@Nullable List<FilterStringFilterArgs> ecrImageArchitecture) {
             this.ecrImageArchitecture = Output.ofNullable(ecrImageArchitecture);
             return this;
         }
-
+        public Builder ecrImageArchitecture(FilterStringFilterArgs... ecrImageArchitecture) {
+            return ecrImageArchitecture(List.of(ecrImageArchitecture));
+        }
         public Builder ecrImageHash(@Nullable Output<List<FilterStringFilterArgs>> ecrImageHash) {
             this.ecrImageHash = ecrImageHash;
             return this;
         }
-
         public Builder ecrImageHash(@Nullable List<FilterStringFilterArgs> ecrImageHash) {
             this.ecrImageHash = Output.ofNullable(ecrImageHash);
             return this;
         }
-
+        public Builder ecrImageHash(FilterStringFilterArgs... ecrImageHash) {
+            return ecrImageHash(List.of(ecrImageHash));
+        }
         public Builder ecrImagePushedAt(@Nullable Output<List<FilterDateFilterArgs>> ecrImagePushedAt) {
             this.ecrImagePushedAt = ecrImagePushedAt;
             return this;
         }
-
         public Builder ecrImagePushedAt(@Nullable List<FilterDateFilterArgs> ecrImagePushedAt) {
             this.ecrImagePushedAt = Output.ofNullable(ecrImagePushedAt);
             return this;
         }
-
+        public Builder ecrImagePushedAt(FilterDateFilterArgs... ecrImagePushedAt) {
+            return ecrImagePushedAt(List.of(ecrImagePushedAt));
+        }
         public Builder ecrImageRegistry(@Nullable Output<List<FilterStringFilterArgs>> ecrImageRegistry) {
             this.ecrImageRegistry = ecrImageRegistry;
             return this;
         }
-
         public Builder ecrImageRegistry(@Nullable List<FilterStringFilterArgs> ecrImageRegistry) {
             this.ecrImageRegistry = Output.ofNullable(ecrImageRegistry);
             return this;
         }
-
+        public Builder ecrImageRegistry(FilterStringFilterArgs... ecrImageRegistry) {
+            return ecrImageRegistry(List.of(ecrImageRegistry));
+        }
         public Builder ecrImageRepositoryName(@Nullable Output<List<FilterStringFilterArgs>> ecrImageRepositoryName) {
             this.ecrImageRepositoryName = ecrImageRepositoryName;
             return this;
         }
-
         public Builder ecrImageRepositoryName(@Nullable List<FilterStringFilterArgs> ecrImageRepositoryName) {
             this.ecrImageRepositoryName = Output.ofNullable(ecrImageRepositoryName);
             return this;
         }
-
+        public Builder ecrImageRepositoryName(FilterStringFilterArgs... ecrImageRepositoryName) {
+            return ecrImageRepositoryName(List.of(ecrImageRepositoryName));
+        }
         public Builder ecrImageTags(@Nullable Output<List<FilterStringFilterArgs>> ecrImageTags) {
             this.ecrImageTags = ecrImageTags;
             return this;
         }
-
         public Builder ecrImageTags(@Nullable List<FilterStringFilterArgs> ecrImageTags) {
             this.ecrImageTags = Output.ofNullable(ecrImageTags);
             return this;
         }
-
+        public Builder ecrImageTags(FilterStringFilterArgs... ecrImageTags) {
+            return ecrImageTags(List.of(ecrImageTags));
+        }
         public Builder findingArn(@Nullable Output<List<FilterStringFilterArgs>> findingArn) {
             this.findingArn = findingArn;
             return this;
         }
-
         public Builder findingArn(@Nullable List<FilterStringFilterArgs> findingArn) {
             this.findingArn = Output.ofNullable(findingArn);
             return this;
         }
-
+        public Builder findingArn(FilterStringFilterArgs... findingArn) {
+            return findingArn(List.of(findingArn));
+        }
         public Builder findingStatus(@Nullable Output<List<FilterStringFilterArgs>> findingStatus) {
             this.findingStatus = findingStatus;
             return this;
         }
-
         public Builder findingStatus(@Nullable List<FilterStringFilterArgs> findingStatus) {
             this.findingStatus = Output.ofNullable(findingStatus);
             return this;
         }
-
+        public Builder findingStatus(FilterStringFilterArgs... findingStatus) {
+            return findingStatus(List.of(findingStatus));
+        }
         public Builder findingType(@Nullable Output<List<FilterStringFilterArgs>> findingType) {
             this.findingType = findingType;
             return this;
         }
-
         public Builder findingType(@Nullable List<FilterStringFilterArgs> findingType) {
             this.findingType = Output.ofNullable(findingType);
             return this;
         }
-
+        public Builder findingType(FilterStringFilterArgs... findingType) {
+            return findingType(List.of(findingType));
+        }
         public Builder firstObservedAt(@Nullable Output<List<FilterDateFilterArgs>> firstObservedAt) {
             this.firstObservedAt = firstObservedAt;
             return this;
         }
-
         public Builder firstObservedAt(@Nullable List<FilterDateFilterArgs> firstObservedAt) {
             this.firstObservedAt = Output.ofNullable(firstObservedAt);
             return this;
         }
-
+        public Builder firstObservedAt(FilterDateFilterArgs... firstObservedAt) {
+            return firstObservedAt(List.of(firstObservedAt));
+        }
         public Builder inspectorScore(@Nullable Output<List<FilterNumberFilterArgs>> inspectorScore) {
             this.inspectorScore = inspectorScore;
             return this;
         }
-
         public Builder inspectorScore(@Nullable List<FilterNumberFilterArgs> inspectorScore) {
             this.inspectorScore = Output.ofNullable(inspectorScore);
             return this;
         }
-
+        public Builder inspectorScore(FilterNumberFilterArgs... inspectorScore) {
+            return inspectorScore(List.of(inspectorScore));
+        }
         public Builder lastObservedAt(@Nullable Output<List<FilterDateFilterArgs>> lastObservedAt) {
             this.lastObservedAt = lastObservedAt;
             return this;
         }
-
         public Builder lastObservedAt(@Nullable List<FilterDateFilterArgs> lastObservedAt) {
             this.lastObservedAt = Output.ofNullable(lastObservedAt);
             return this;
         }
-
+        public Builder lastObservedAt(FilterDateFilterArgs... lastObservedAt) {
+            return lastObservedAt(List.of(lastObservedAt));
+        }
         public Builder networkProtocol(@Nullable Output<List<FilterStringFilterArgs>> networkProtocol) {
             this.networkProtocol = networkProtocol;
             return this;
         }
-
         public Builder networkProtocol(@Nullable List<FilterStringFilterArgs> networkProtocol) {
             this.networkProtocol = Output.ofNullable(networkProtocol);
             return this;
         }
-
+        public Builder networkProtocol(FilterStringFilterArgs... networkProtocol) {
+            return networkProtocol(List.of(networkProtocol));
+        }
         public Builder portRange(@Nullable Output<List<FilterPortRangeFilterArgs>> portRange) {
             this.portRange = portRange;
             return this;
         }
-
         public Builder portRange(@Nullable List<FilterPortRangeFilterArgs> portRange) {
             this.portRange = Output.ofNullable(portRange);
             return this;
         }
-
+        public Builder portRange(FilterPortRangeFilterArgs... portRange) {
+            return portRange(List.of(portRange));
+        }
         public Builder relatedVulnerabilities(@Nullable Output<List<FilterStringFilterArgs>> relatedVulnerabilities) {
             this.relatedVulnerabilities = relatedVulnerabilities;
             return this;
         }
-
         public Builder relatedVulnerabilities(@Nullable List<FilterStringFilterArgs> relatedVulnerabilities) {
             this.relatedVulnerabilities = Output.ofNullable(relatedVulnerabilities);
             return this;
         }
-
+        public Builder relatedVulnerabilities(FilterStringFilterArgs... relatedVulnerabilities) {
+            return relatedVulnerabilities(List.of(relatedVulnerabilities));
+        }
         public Builder resourceId(@Nullable Output<List<FilterStringFilterArgs>> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable List<FilterStringFilterArgs> resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
+        public Builder resourceId(FilterStringFilterArgs... resourceId) {
+            return resourceId(List.of(resourceId));
+        }
         public Builder resourceTags(@Nullable Output<List<FilterMapFilterArgs>> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
-
         public Builder resourceTags(@Nullable List<FilterMapFilterArgs> resourceTags) {
             this.resourceTags = Output.ofNullable(resourceTags);
             return this;
         }
-
+        public Builder resourceTags(FilterMapFilterArgs... resourceTags) {
+            return resourceTags(List.of(resourceTags));
+        }
         public Builder resourceType(@Nullable Output<List<FilterStringFilterArgs>> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable List<FilterStringFilterArgs> resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
+        public Builder resourceType(FilterStringFilterArgs... resourceType) {
+            return resourceType(List.of(resourceType));
+        }
         public Builder severity(@Nullable Output<List<FilterStringFilterArgs>> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable List<FilterStringFilterArgs> severity) {
             this.severity = Output.ofNullable(severity);
             return this;
         }
-
+        public Builder severity(FilterStringFilterArgs... severity) {
+            return severity(List.of(severity));
+        }
         public Builder title(@Nullable Output<List<FilterStringFilterArgs>> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable List<FilterStringFilterArgs> title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
+        public Builder title(FilterStringFilterArgs... title) {
+            return title(List.of(title));
+        }
         public Builder updatedAt(@Nullable Output<List<FilterDateFilterArgs>> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
-
         public Builder updatedAt(@Nullable List<FilterDateFilterArgs> updatedAt) {
             this.updatedAt = Output.ofNullable(updatedAt);
             return this;
         }
-
+        public Builder updatedAt(FilterDateFilterArgs... updatedAt) {
+            return updatedAt(List.of(updatedAt));
+        }
         public Builder vendorSeverity(@Nullable Output<List<FilterStringFilterArgs>> vendorSeverity) {
             this.vendorSeverity = vendorSeverity;
             return this;
         }
-
         public Builder vendorSeverity(@Nullable List<FilterStringFilterArgs> vendorSeverity) {
             this.vendorSeverity = Output.ofNullable(vendorSeverity);
             return this;
         }
-
+        public Builder vendorSeverity(FilterStringFilterArgs... vendorSeverity) {
+            return vendorSeverity(List.of(vendorSeverity));
+        }
         public Builder vulnerabilityId(@Nullable Output<List<FilterStringFilterArgs>> vulnerabilityId) {
             this.vulnerabilityId = vulnerabilityId;
             return this;
         }
-
         public Builder vulnerabilityId(@Nullable List<FilterStringFilterArgs> vulnerabilityId) {
             this.vulnerabilityId = Output.ofNullable(vulnerabilityId);
             return this;
         }
-
+        public Builder vulnerabilityId(FilterStringFilterArgs... vulnerabilityId) {
+            return vulnerabilityId(List.of(vulnerabilityId));
+        }
         public Builder vulnerabilitySource(@Nullable Output<List<FilterStringFilterArgs>> vulnerabilitySource) {
             this.vulnerabilitySource = vulnerabilitySource;
             return this;
         }
-
         public Builder vulnerabilitySource(@Nullable List<FilterStringFilterArgs> vulnerabilitySource) {
             this.vulnerabilitySource = Output.ofNullable(vulnerabilitySource);
             return this;
         }
-
+        public Builder vulnerabilitySource(FilterStringFilterArgs... vulnerabilitySource) {
+            return vulnerabilitySource(List.of(vulnerabilitySource));
+        }
         public Builder vulnerablePackages(@Nullable Output<List<FilterPackageFilterArgs>> vulnerablePackages) {
             this.vulnerablePackages = vulnerablePackages;
             return this;
         }
-
         public Builder vulnerablePackages(@Nullable List<FilterPackageFilterArgs> vulnerablePackages) {
             this.vulnerablePackages = Output.ofNullable(vulnerablePackages);
             return this;
         }
-        public FilterCriteriaArgs build() {
+        public Builder vulnerablePackages(FilterPackageFilterArgs... vulnerablePackages) {
+            return vulnerablePackages(List.of(vulnerablePackages));
+        }        public FilterCriteriaArgs build() {
             return new FilterCriteriaArgs(awsAccountId, componentId, componentType, ec2InstanceImageId, ec2InstanceSubnetId, ec2InstanceVpcId, ecrImageArchitecture, ecrImageHash, ecrImagePushedAt, ecrImageRegistry, ecrImageRepositoryName, ecrImageTags, findingArn, findingStatus, findingType, firstObservedAt, inspectorScore, lastObservedAt, networkProtocol, portRange, relatedVulnerabilities, resourceId, resourceTags, resourceType, severity, title, updatedAt, vendorSeverity, vulnerabilityId, vulnerabilitySource, vulnerablePackages);
         }
     }

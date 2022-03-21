@@ -43,8 +43,7 @@ public final class TimeoutConfigProperties {
         public Builder inProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
             this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
             return this;
-        }
-        public TimeoutConfigProperties build() {
+        }        public TimeoutConfigProperties build() {
             return new TimeoutConfigProperties(inProgressTimeoutInMinutes);
         }
     }

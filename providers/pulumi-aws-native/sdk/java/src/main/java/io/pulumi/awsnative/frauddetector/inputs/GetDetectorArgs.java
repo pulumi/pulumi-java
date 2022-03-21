@@ -54,8 +54,7 @@ public final class GetDetectorArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetDetectorArgs build() {
+        }        public GetDetectorArgs build() {
             return new GetDetectorArgs(arn);
         }
     }

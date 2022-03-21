@@ -71,22 +71,18 @@ public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceA
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable WebACLAllowActionArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder block(@Nullable Output<WebACLBlockActionArgs> block) {
             this.block = block;
             return this;
         }
-
         public Builder block(@Nullable WebACLBlockActionArgs block) {
             this.block = Output.ofNullable(block);
             return this;
-        }
-        public WebACLDefaultActionArgs build() {
+        }        public WebACLDefaultActionArgs build() {
             return new WebACLDefaultActionArgs(allow, block);
         }
     }

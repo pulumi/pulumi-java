@@ -82,27 +82,25 @@ public final class GetFirewallPolicyResult {
             this.description = description;
             return this;
         }
-
         public Builder firewallPolicy(@Nullable FirewallPolicy firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
-
         public Builder firewallPolicyArn(@Nullable String firewallPolicyArn) {
             this.firewallPolicyArn = firewallPolicyArn;
             return this;
         }
-
         public Builder firewallPolicyId(@Nullable String firewallPolicyId) {
             this.firewallPolicyId = firewallPolicyId;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallPolicyTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFirewallPolicyResult build() {
+        public Builder tags(FirewallPolicyTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(description, firewallPolicy, firewallPolicyArn, firewallPolicyId, tags);
         }
     }

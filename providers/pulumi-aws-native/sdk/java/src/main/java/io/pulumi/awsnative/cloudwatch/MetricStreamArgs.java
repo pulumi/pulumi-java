@@ -157,72 +157,67 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.excludeFilters = excludeFilters;
             return this;
         }
-
         public Builder excludeFilters(@Nullable List<MetricStreamFilterArgs> excludeFilters) {
             this.excludeFilters = Output.ofNullable(excludeFilters);
             return this;
         }
-
+        public Builder excludeFilters(MetricStreamFilterArgs... excludeFilters) {
+            return excludeFilters(List.of(excludeFilters));
+        }
         public Builder firehoseArn(Output<String> firehoseArn) {
             this.firehoseArn = Objects.requireNonNull(firehoseArn);
             return this;
         }
-
         public Builder firehoseArn(String firehoseArn) {
             this.firehoseArn = Output.of(Objects.requireNonNull(firehoseArn));
             return this;
         }
-
         public Builder includeFilters(@Nullable Output<List<MetricStreamFilterArgs>> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
-
         public Builder includeFilters(@Nullable List<MetricStreamFilterArgs> includeFilters) {
             this.includeFilters = Output.ofNullable(includeFilters);
             return this;
         }
-
+        public Builder includeFilters(MetricStreamFilterArgs... includeFilters) {
+            return includeFilters(List.of(includeFilters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputFormat(Output<String> outputFormat) {
             this.outputFormat = Objects.requireNonNull(outputFormat);
             return this;
         }
-
         public Builder outputFormat(String outputFormat) {
             this.outputFormat = Output.of(Objects.requireNonNull(outputFormat));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<MetricStreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<MetricStreamTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public MetricStreamArgs build() {
+        public Builder tags(MetricStreamTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public MetricStreamArgs build() {
             return new MetricStreamArgs(excludeFilters, firehoseArn, includeFilters, name, outputFormat, roleArn, tags);
         }
     }

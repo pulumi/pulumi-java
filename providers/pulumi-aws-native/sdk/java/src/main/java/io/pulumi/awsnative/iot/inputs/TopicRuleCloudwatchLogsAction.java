@@ -64,12 +64,10 @@ public final class TopicRuleCloudwatchLogsAction extends io.pulumi.resources.Inv
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleCloudwatchLogsAction build() {
+        }        public TopicRuleCloudwatchLogsAction build() {
             return new TopicRuleCloudwatchLogsAction(logGroupName, roleArn);
         }
     }

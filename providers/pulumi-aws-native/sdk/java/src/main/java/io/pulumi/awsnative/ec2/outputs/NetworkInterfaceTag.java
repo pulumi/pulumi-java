@@ -53,12 +53,10 @@ public final class NetworkInterfaceTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public NetworkInterfaceTag build() {
+        }        public NetworkInterfaceTag build() {
             return new NetworkInterfaceTag(key, value);
         }
     }

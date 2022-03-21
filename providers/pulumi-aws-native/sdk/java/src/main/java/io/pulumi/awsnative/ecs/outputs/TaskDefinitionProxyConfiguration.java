@@ -65,17 +65,17 @@ public final class TaskDefinitionProxyConfiguration {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder proxyConfigurationProperties(@Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties) {
             this.proxyConfigurationProperties = proxyConfigurationProperties;
             return this;
         }
-
+        public Builder proxyConfigurationProperties(TaskDefinitionKeyValuePair... proxyConfigurationProperties) {
+            return proxyConfigurationProperties(List.of(proxyConfigurationProperties));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public TaskDefinitionProxyConfiguration build() {
+        }        public TaskDefinitionProxyConfiguration build() {
             return new TaskDefinitionProxyConfiguration(containerName, proxyConfigurationProperties, type);
         }
     }

@@ -71,12 +71,10 @@ public final class GetUserResult {
             this.arn = arn;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetUserResult build() {
+        }        public GetUserResult build() {
             return new GetUserResult(arn, status);
         }
     }

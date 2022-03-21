@@ -50,8 +50,7 @@ public final class GetImageVersionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder imageVersionArn(String imageVersionArn) {
             this.imageVersionArn = Objects.requireNonNull(imageVersionArn);
             return this;
-        }
-        public GetImageVersionArgs build() {
+        }        public GetImageVersionArgs build() {
             return new GetImageVersionArgs(imageVersionArn);
         }
     }

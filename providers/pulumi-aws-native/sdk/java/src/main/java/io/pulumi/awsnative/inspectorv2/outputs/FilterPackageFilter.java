@@ -88,32 +88,26 @@ public final class FilterPackageFilter {
             this.architecture = architecture;
             return this;
         }
-
         public Builder epoch(@Nullable FilterNumberFilter epoch) {
             this.epoch = epoch;
             return this;
         }
-
         public Builder name(@Nullable FilterStringFilter name) {
             this.name = name;
             return this;
         }
-
         public Builder release(@Nullable FilterStringFilter release) {
             this.release = release;
             return this;
         }
-
         public Builder sourceLayerHash(@Nullable FilterStringFilter sourceLayerHash) {
             this.sourceLayerHash = sourceLayerHash;
             return this;
         }
-
         public Builder version(@Nullable FilterStringFilter version) {
             this.version = version;
             return this;
-        }
-        public FilterPackageFilter build() {
+        }        public FilterPackageFilter build() {
             return new FilterPackageFilter(architecture, epoch, name, release, sourceLayerHash, version);
         }
     }

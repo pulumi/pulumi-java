@@ -68,22 +68,21 @@ public final class DataSourceConfluenceAttachmentConfigurationArgs extends io.pu
             this.attachmentFieldMappings = attachmentFieldMappings;
             return this;
         }
-
         public Builder attachmentFieldMappings(@Nullable List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs> attachmentFieldMappings) {
             this.attachmentFieldMappings = Output.ofNullable(attachmentFieldMappings);
             return this;
         }
-
+        public Builder attachmentFieldMappings(DataSourceConfluenceAttachmentToIndexFieldMappingArgs... attachmentFieldMappings) {
+            return attachmentFieldMappings(List.of(attachmentFieldMappings));
+        }
         public Builder crawlAttachments(@Nullable Output<Boolean> crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = Output.ofNullable(crawlAttachments);
             return this;
-        }
-        public DataSourceConfluenceAttachmentConfigurationArgs build() {
+        }        public DataSourceConfluenceAttachmentConfigurationArgs build() {
             return new DataSourceConfluenceAttachmentConfigurationArgs(attachmentFieldMappings, crawlAttachments);
         }
     }

@@ -50,8 +50,7 @@ public final class GetNotificationRuleArgs extends io.pulumi.resources.InvokeArg
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetNotificationRuleArgs build() {
+        }        public GetNotificationRuleArgs build() {
             return new GetNotificationRuleArgs(arn);
         }
     }

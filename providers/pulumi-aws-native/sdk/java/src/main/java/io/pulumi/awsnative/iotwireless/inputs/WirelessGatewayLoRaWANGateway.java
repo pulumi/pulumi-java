@@ -64,12 +64,10 @@ public final class WirelessGatewayLoRaWANGateway extends io.pulumi.resources.Inv
             this.gatewayEui = Objects.requireNonNull(gatewayEui);
             return this;
         }
-
         public Builder rfRegion(String rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
-        }
-        public WirelessGatewayLoRaWANGateway build() {
+        }        public WirelessGatewayLoRaWANGateway build() {
             return new WirelessGatewayLoRaWANGateway(gatewayEui, rfRegion);
         }
     }

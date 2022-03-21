@@ -89,17 +89,17 @@ public final class GetStreamKeyResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<StreamKeyTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(StreamKeyTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GetStreamKeyResult build() {
+        }        public GetStreamKeyResult build() {
             return new GetStreamKeyResult(arn, tags, value);
         }
     }

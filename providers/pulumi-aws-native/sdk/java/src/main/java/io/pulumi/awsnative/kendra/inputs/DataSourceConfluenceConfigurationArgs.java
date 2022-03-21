@@ -169,102 +169,88 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             this.attachmentConfiguration = attachmentConfiguration;
             return this;
         }
-
         public Builder attachmentConfiguration(@Nullable DataSourceConfluenceAttachmentConfigurationArgs attachmentConfiguration) {
             this.attachmentConfiguration = Output.ofNullable(attachmentConfiguration);
             return this;
         }
-
         public Builder blogConfiguration(@Nullable Output<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration) {
             this.blogConfiguration = blogConfiguration;
             return this;
         }
-
         public Builder blogConfiguration(@Nullable DataSourceConfluenceBlogConfigurationArgs blogConfiguration) {
             this.blogConfiguration = Output.ofNullable(blogConfiguration);
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder pageConfiguration(@Nullable Output<DataSourceConfluencePageConfigurationArgs> pageConfiguration) {
             this.pageConfiguration = pageConfiguration;
             return this;
         }
-
         public Builder pageConfiguration(@Nullable DataSourceConfluencePageConfigurationArgs pageConfiguration) {
             this.pageConfiguration = Output.ofNullable(pageConfiguration);
             return this;
         }
-
         public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
-
         public Builder serverUrl(Output<String> serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
-
         public Builder serverUrl(String serverUrl) {
             this.serverUrl = Output.of(Objects.requireNonNull(serverUrl));
             return this;
         }
-
         public Builder spaceConfiguration(@Nullable Output<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration) {
             this.spaceConfiguration = spaceConfiguration;
             return this;
         }
-
         public Builder spaceConfiguration(@Nullable DataSourceConfluenceSpaceConfigurationArgs spaceConfiguration) {
             this.spaceConfiguration = Output.ofNullable(spaceConfiguration);
             return this;
         }
-
         public Builder version(Output<DataSourceConfluenceVersion> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(DataSourceConfluenceVersion version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
-        }
-        public DataSourceConfluenceConfigurationArgs build() {
+        }        public DataSourceConfluenceConfigurationArgs build() {
             return new DataSourceConfluenceConfigurationArgs(attachmentConfiguration, blogConfiguration, exclusionPatterns, inclusionPatterns, pageConfiguration, secretArn, serverUrl, spaceConfiguration, version, vpcConfiguration);
         }
     }

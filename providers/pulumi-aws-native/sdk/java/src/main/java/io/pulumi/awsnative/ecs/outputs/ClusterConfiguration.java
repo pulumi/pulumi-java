@@ -45,8 +45,7 @@ public final class ClusterConfiguration {
         public Builder executeCommandConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
             this.executeCommandConfiguration = executeCommandConfiguration;
             return this;
-        }
-        public ClusterConfiguration build() {
+        }        public ClusterConfiguration build() {
             return new ClusterConfiguration(executeCommandConfiguration);
         }
     }

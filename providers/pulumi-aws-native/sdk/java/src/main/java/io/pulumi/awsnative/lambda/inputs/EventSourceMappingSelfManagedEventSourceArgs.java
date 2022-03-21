@@ -61,12 +61,10 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable EventSourceMappingEndpointsArgs endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
-        }
-        public EventSourceMappingSelfManagedEventSourceArgs build() {
+        }        public EventSourceMappingSelfManagedEventSourceArgs build() {
             return new EventSourceMappingSelfManagedEventSourceArgs(endpoints);
         }
     }

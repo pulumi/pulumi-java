@@ -52,8 +52,7 @@ public final class DeliveryStreamRetryOptions extends io.pulumi.resources.Invoke
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
-        }
-        public DeliveryStreamRetryOptions build() {
+        }        public DeliveryStreamRetryOptions build() {
             return new DeliveryStreamRetryOptions(durationInSeconds);
         }
     }

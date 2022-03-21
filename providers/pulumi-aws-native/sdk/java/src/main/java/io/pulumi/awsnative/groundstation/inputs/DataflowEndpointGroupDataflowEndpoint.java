@@ -80,17 +80,14 @@ public final class DataflowEndpointGroupDataflowEndpoint extends io.pulumi.resou
             this.address = address;
             return this;
         }
-
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DataflowEndpointGroupDataflowEndpoint build() {
+        }        public DataflowEndpointGroupDataflowEndpoint build() {
             return new DataflowEndpointGroupDataflowEndpoint(address, mtu, name);
         }
     }

@@ -93,32 +93,29 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publicAccessBlockConfiguration(@Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
-
         public Builder publicAccessBlockConfiguration(@Nullable MultiRegionAccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = Output.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
-
         public Builder regions(Output<List<MultiRegionAccessPointRegionArgs>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
         public Builder regions(List<MultiRegionAccessPointRegionArgs> regions) {
             this.regions = Output.of(Objects.requireNonNull(regions));
             return this;
         }
-        public MultiRegionAccessPointArgs build() {
+        public Builder regions(MultiRegionAccessPointRegionArgs... regions) {
+            return regions(List.of(regions));
+        }        public MultiRegionAccessPointArgs build() {
             return new MultiRegionAccessPointArgs(name, publicAccessBlockConfiguration, regions);
         }
     }

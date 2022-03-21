@@ -43,8 +43,7 @@ public final class DatasetTriggeringDataset {
         public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
-        }
-        public DatasetTriggeringDataset build() {
+        }        public DatasetTriggeringDataset build() {
             return new DatasetTriggeringDataset(datasetName);
         }
     }

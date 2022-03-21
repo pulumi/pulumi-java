@@ -68,22 +68,21 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<CapacityReservationFleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<CapacityReservationFleetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public CapacityReservationFleetTagSpecificationArgs build() {
+        public Builder tags(CapacityReservationFleetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public CapacityReservationFleetTagSpecificationArgs build() {
             return new CapacityReservationFleetTagSpecificationArgs(resourceType, tags);
         }
     }

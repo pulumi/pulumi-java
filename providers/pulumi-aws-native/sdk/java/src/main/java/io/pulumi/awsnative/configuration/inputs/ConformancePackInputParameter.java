@@ -68,12 +68,10 @@ public final class ConformancePackInputParameter extends io.pulumi.resources.Inv
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
-        }
-        public ConformancePackInputParameter build() {
+        }        public ConformancePackInputParameter build() {
             return new ConformancePackInputParameter(parameterName, parameterValue);
         }
     }

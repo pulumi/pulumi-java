@@ -52,8 +52,7 @@ public final class KnowledgeBaseRenderingConfiguration extends io.pulumi.resourc
         public Builder templateUri(@Nullable String templateUri) {
             this.templateUri = templateUri;
             return this;
-        }
-        public KnowledgeBaseRenderingConfiguration build() {
+        }        public KnowledgeBaseRenderingConfiguration build() {
             return new KnowledgeBaseRenderingConfiguration(templateUri);
         }
     }

@@ -82,32 +82,26 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder timeToLiveInSeconds(Output<Integer> timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
             return this;
         }
-
         public Builder timeToLiveInSeconds(Integer timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Output.of(Objects.requireNonNull(timeToLiveInSeconds));
             return this;
         }
-
         public Builder turnsToLive(Output<Integer> turnsToLive) {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
         }
-
         public Builder turnsToLive(Integer turnsToLive) {
             this.turnsToLive = Output.of(Objects.requireNonNull(turnsToLive));
             return this;
-        }
-        public BotOutputContextArgs build() {
+        }        public BotOutputContextArgs build() {
             return new BotOutputContextArgs(name, timeToLiveInSeconds, turnsToLive);
         }
     }

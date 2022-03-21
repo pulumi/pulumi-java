@@ -65,12 +65,13 @@ public final class ResourceSetTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ResourceSetTag build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public ResourceSetTag build() {
             return new ResourceSetTag(key, value);
         }
     }

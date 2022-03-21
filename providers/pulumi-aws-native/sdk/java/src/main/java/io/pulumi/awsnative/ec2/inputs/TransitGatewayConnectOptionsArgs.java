@@ -57,12 +57,10 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public TransitGatewayConnectOptionsArgs build() {
+        }        public TransitGatewayConnectOptionsArgs build() {
             return new TransitGatewayConnectOptionsArgs(protocol);
         }
     }

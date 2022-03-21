@@ -54,8 +54,7 @@ public final class GetRoutingControlArgs extends io.pulumi.resources.InvokeArgs 
         public Builder routingControlArn(String routingControlArn) {
             this.routingControlArn = Objects.requireNonNull(routingControlArn);
             return this;
-        }
-        public GetRoutingControlArgs build() {
+        }        public GetRoutingControlArgs build() {
             return new GetRoutingControlArgs(routingControlArn);
         }
     }

@@ -55,12 +55,10 @@ public final class TaskDefinitionKeyValuePair {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TaskDefinitionKeyValuePair build() {
+        }        public TaskDefinitionKeyValuePair build() {
             return new TaskDefinitionKeyValuePair(name, value);
         }
     }

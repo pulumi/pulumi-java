@@ -55,12 +55,10 @@ public final class NetworkInsightsAccessScopeAnalysisTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public NetworkInsightsAccessScopeAnalysisTag build() {
+        }        public NetworkInsightsAccessScopeAnalysisTag build() {
             return new NetworkInsightsAccessScopeAnalysisTag(key, value);
         }
     }

@@ -50,8 +50,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
         public Builder assessmentId(String assessmentId) {
             this.assessmentId = Objects.requireNonNull(assessmentId);
             return this;
-        }
-        public GetAssessmentArgs build() {
+        }        public GetAssessmentArgs build() {
             return new GetAssessmentArgs(assessmentId);
         }
     }

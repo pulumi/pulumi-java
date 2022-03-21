@@ -68,22 +68,21 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
             return this;
         }
-
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-        public DataSourceSalesforceStandardObjectAttachmentConfigurationArgs build() {
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }        public DataSourceSalesforceStandardObjectAttachmentConfigurationArgs build() {
             return new DataSourceSalesforceStandardObjectAttachmentConfigurationArgs(documentTitleFieldName, fieldMappings);
         }
     }

@@ -54,8 +54,7 @@ public final class GetResourceSpecificLoggingArgs extends io.pulumi.resources.In
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
-        }
-        public GetResourceSpecificLoggingArgs build() {
+        }        public GetResourceSpecificLoggingArgs build() {
             return new GetResourceSpecificLoggingArgs(targetId);
         }
     }

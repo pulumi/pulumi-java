@@ -67,22 +67,18 @@ public final class DomainEncryptionAtRestOptionsArgs extends io.pulumi.resources
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public DomainEncryptionAtRestOptionsArgs build() {
+        }        public DomainEncryptionAtRestOptionsArgs build() {
             return new DomainEncryptionAtRestOptionsArgs(enabled, kmsKeyId);
         }
     }

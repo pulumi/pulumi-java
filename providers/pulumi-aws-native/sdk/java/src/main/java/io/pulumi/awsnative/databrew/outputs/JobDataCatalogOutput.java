@@ -90,32 +90,26 @@ public final class JobDataCatalogOutput {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseOptions(@Nullable JobDatabaseTableOutputOptions databaseOptions) {
             this.databaseOptions = databaseOptions;
             return this;
         }
-
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
         }
-
         public Builder s3Options(@Nullable JobS3TableOutputOptions s3Options) {
             this.s3Options = s3Options;
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public JobDataCatalogOutput build() {
+        }        public JobDataCatalogOutput build() {
             return new JobDataCatalogOutput(catalogId, databaseName, databaseOptions, overwrite, s3Options, tableName);
         }
     }

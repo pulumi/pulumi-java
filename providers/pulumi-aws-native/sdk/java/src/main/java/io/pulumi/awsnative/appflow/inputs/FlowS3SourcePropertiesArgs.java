@@ -79,32 +79,26 @@ public final class FlowS3SourcePropertiesArgs extends io.pulumi.resources.Resour
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(Output<String> bucketPrefix) {
             this.bucketPrefix = Objects.requireNonNull(bucketPrefix);
             return this;
         }
-
         public Builder bucketPrefix(String bucketPrefix) {
             this.bucketPrefix = Output.of(Objects.requireNonNull(bucketPrefix));
             return this;
         }
-
         public Builder s3InputFormatConfig(@Nullable Output<FlowS3InputFormatConfigArgs> s3InputFormatConfig) {
             this.s3InputFormatConfig = s3InputFormatConfig;
             return this;
         }
-
         public Builder s3InputFormatConfig(@Nullable FlowS3InputFormatConfigArgs s3InputFormatConfig) {
             this.s3InputFormatConfig = Output.ofNullable(s3InputFormatConfig);
             return this;
-        }
-        public FlowS3SourcePropertiesArgs build() {
+        }        public FlowS3SourcePropertiesArgs build() {
             return new FlowS3SourcePropertiesArgs(bucketName, bucketPrefix, s3InputFormatConfig);
         }
     }

@@ -55,12 +55,10 @@ public final class ExperimentTemplateStopCondition {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ExperimentTemplateStopCondition build() {
+        }        public ExperimentTemplateStopCondition build() {
             return new ExperimentTemplateStopCondition(source, value);
         }
     }

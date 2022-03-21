@@ -109,42 +109,43 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder onExceptionSteps(@Nullable Output<List<WorkflowStepArgs>> onExceptionSteps) {
             this.onExceptionSteps = onExceptionSteps;
             return this;
         }
-
         public Builder onExceptionSteps(@Nullable List<WorkflowStepArgs> onExceptionSteps) {
             this.onExceptionSteps = Output.ofNullable(onExceptionSteps);
             return this;
         }
-
+        public Builder onExceptionSteps(WorkflowStepArgs... onExceptionSteps) {
+            return onExceptionSteps(List.of(onExceptionSteps));
+        }
         public Builder steps(Output<List<WorkflowStepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
         public Builder steps(List<WorkflowStepArgs> steps) {
             this.steps = Output.of(Objects.requireNonNull(steps));
             return this;
         }
-
+        public Builder steps(WorkflowStepArgs... steps) {
+            return steps(List.of(steps));
+        }
         public Builder tags(@Nullable Output<List<WorkflowTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkflowTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public WorkflowArgs build() {
+        public Builder tags(WorkflowTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public WorkflowArgs build() {
             return new WorkflowArgs(description, onExceptionSteps, steps, tags);
         }
     }

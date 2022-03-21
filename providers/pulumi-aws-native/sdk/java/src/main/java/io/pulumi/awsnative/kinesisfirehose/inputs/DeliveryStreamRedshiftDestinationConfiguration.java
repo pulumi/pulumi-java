@@ -180,57 +180,46 @@ public final class DeliveryStreamRedshiftDestinationConfiguration extends io.pul
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder clusterJDBCURL(String clusterJDBCURL) {
             this.clusterJDBCURL = Objects.requireNonNull(clusterJDBCURL);
             return this;
         }
-
         public Builder copyCommand(DeliveryStreamCopyCommand copyCommand) {
             this.copyCommand = Objects.requireNonNull(copyCommand);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder retryOptions(@Nullable DeliveryStreamRedshiftRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public DeliveryStreamRedshiftDestinationConfiguration build() {
+        }        public DeliveryStreamRedshiftDestinationConfiguration build() {
             return new DeliveryStreamRedshiftDestinationConfiguration(cloudWatchLoggingOptions, clusterJDBCURL, copyCommand, password, processingConfiguration, retryOptions, roleARN, s3BackupConfiguration, s3BackupMode, s3Configuration, username);
         }
     }

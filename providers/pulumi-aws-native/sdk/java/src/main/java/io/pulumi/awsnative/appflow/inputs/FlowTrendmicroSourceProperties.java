@@ -50,8 +50,7 @@ public final class FlowTrendmicroSourceProperties extends io.pulumi.resources.In
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowTrendmicroSourceProperties build() {
+        }        public FlowTrendmicroSourceProperties build() {
             return new FlowTrendmicroSourceProperties(object);
         }
     }

@@ -105,22 +105,18 @@ public final class GetFlowResult {
             this.flowArn = flowArn;
             return this;
         }
-
         public Builder flowAvailabilityZone(@Nullable String flowAvailabilityZone) {
             this.flowAvailabilityZone = flowAvailabilityZone;
             return this;
         }
-
         public Builder source(@Nullable FlowSource source) {
             this.source = source;
             return this;
         }
-
         public Builder sourceFailoverConfig(@Nullable FlowFailoverConfig sourceFailoverConfig) {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
-        }
-        public GetFlowResult build() {
+        }        public GetFlowResult build() {
             return new GetFlowResult(flowArn, flowAvailabilityZone, source, sourceFailoverConfig);
         }
     }

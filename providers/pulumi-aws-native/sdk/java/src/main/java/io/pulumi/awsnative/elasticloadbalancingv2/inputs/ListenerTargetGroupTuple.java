@@ -67,12 +67,10 @@ public final class ListenerTargetGroupTuple extends io.pulumi.resources.InvokeAr
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public ListenerTargetGroupTuple build() {
+        }        public ListenerTargetGroupTuple build() {
             return new ListenerTargetGroupTuple(targetGroupArn, weight);
         }
     }

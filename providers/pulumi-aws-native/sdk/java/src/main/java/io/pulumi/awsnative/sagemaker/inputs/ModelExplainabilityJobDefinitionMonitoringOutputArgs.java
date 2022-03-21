@@ -56,12 +56,10 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends 
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
-
         public Builder s3Output(ModelExplainabilityJobDefinitionS3OutputArgs s3Output) {
             this.s3Output = Output.of(Objects.requireNonNull(s3Output));
             return this;
-        }
-        public ModelExplainabilityJobDefinitionMonitoringOutputArgs build() {
+        }        public ModelExplainabilityJobDefinitionMonitoringOutputArgs build() {
             return new ModelExplainabilityJobDefinitionMonitoringOutputArgs(s3Output);
         }
     }

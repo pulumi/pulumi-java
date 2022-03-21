@@ -65,22 +65,18 @@ public final class DistributionOriginCustomHeaderArgs extends io.pulumi.resource
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public Builder headerValue(Output<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Output.of(Objects.requireNonNull(headerValue));
             return this;
-        }
-        public DistributionOriginCustomHeaderArgs build() {
+        }        public DistributionOriginCustomHeaderArgs build() {
             return new DistributionOriginCustomHeaderArgs(headerName, headerValue);
         }
     }

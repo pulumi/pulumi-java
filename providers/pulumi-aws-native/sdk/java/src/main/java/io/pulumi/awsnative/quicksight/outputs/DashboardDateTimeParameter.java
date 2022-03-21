@@ -70,12 +70,13 @@ public final class DashboardDateTimeParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public DashboardDateTimeParameter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public DashboardDateTimeParameter build() {
             return new DashboardDateTimeParameter(name, values);
         }
     }

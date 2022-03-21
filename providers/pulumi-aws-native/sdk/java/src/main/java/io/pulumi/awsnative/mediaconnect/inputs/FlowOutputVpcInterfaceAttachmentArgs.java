@@ -61,12 +61,10 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
-
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             this.vpcInterfaceName = Output.ofNullable(vpcInterfaceName);
             return this;
-        }
-        public FlowOutputVpcInterfaceAttachmentArgs build() {
+        }        public FlowOutputVpcInterfaceAttachmentArgs build() {
             return new FlowOutputVpcInterfaceAttachmentArgs(vpcInterfaceName);
         }
     }

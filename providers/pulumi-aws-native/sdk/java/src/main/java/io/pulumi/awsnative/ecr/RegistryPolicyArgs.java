@@ -56,12 +56,10 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.policyText = Objects.requireNonNull(policyText);
             return this;
         }
-
         public Builder policyText(Object policyText) {
             this.policyText = Output.of(Objects.requireNonNull(policyText));
             return this;
-        }
-        public RegistryPolicyArgs build() {
+        }        public RegistryPolicyArgs build() {
             return new RegistryPolicyArgs(policyText);
         }
     }

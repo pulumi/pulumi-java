@@ -72,12 +72,10 @@ public final class FunctionFileSystemConfig extends io.pulumi.resources.InvokeAr
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder localMountPath(String localMountPath) {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
-        }
-        public FunctionFileSystemConfig build() {
+        }        public FunctionFileSystemConfig build() {
             return new FunctionFileSystemConfig(arn, localMountPath);
         }
     }

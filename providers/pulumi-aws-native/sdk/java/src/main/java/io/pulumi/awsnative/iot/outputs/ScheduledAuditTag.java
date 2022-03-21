@@ -69,12 +69,10 @@ public final class ScheduledAuditTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ScheduledAuditTag build() {
+        }        public ScheduledAuditTag build() {
             return new ScheduledAuditTag(key, value);
         }
     }

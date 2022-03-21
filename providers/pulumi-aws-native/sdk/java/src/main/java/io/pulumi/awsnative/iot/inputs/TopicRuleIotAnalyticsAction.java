@@ -79,17 +79,14 @@ public final class TopicRuleIotAnalyticsAction extends io.pulumi.resources.Invok
             this.batchMode = batchMode;
             return this;
         }
-
         public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleIotAnalyticsAction build() {
+        }        public TopicRuleIotAnalyticsAction build() {
             return new TopicRuleIotAnalyticsAction(batchMode, channelName, roleArn);
         }
     }

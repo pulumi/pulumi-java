@@ -50,8 +50,7 @@ public final class CloudFrontOriginAccessIdentityConfig extends io.pulumi.resour
         public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
-        }
-        public CloudFrontOriginAccessIdentityConfig build() {
+        }        public CloudFrontOriginAccessIdentityConfig build() {
             return new CloudFrontOriginAccessIdentityConfig(comment);
         }
     }

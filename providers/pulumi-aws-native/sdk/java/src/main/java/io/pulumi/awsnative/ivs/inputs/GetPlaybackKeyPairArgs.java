@@ -54,8 +54,7 @@ public final class GetPlaybackKeyPairArgs extends io.pulumi.resources.InvokeArgs
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetPlaybackKeyPairArgs build() {
+        }        public GetPlaybackKeyPairArgs build() {
             return new GetPlaybackKeyPairArgs(arn);
         }
     }

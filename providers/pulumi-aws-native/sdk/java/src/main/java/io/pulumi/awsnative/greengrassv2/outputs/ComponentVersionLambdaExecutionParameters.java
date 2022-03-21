@@ -134,57 +134,52 @@ public final class ComponentVersionLambdaExecutionParameters {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder eventSources(@Nullable List<ComponentVersionLambdaEventSource> eventSources) {
             this.eventSources = eventSources;
             return this;
         }
-
+        public Builder eventSources(ComponentVersionLambdaEventSource... eventSources) {
+            return eventSources(List.of(eventSources));
+        }
         public Builder execArgs(@Nullable List<String> execArgs) {
             this.execArgs = execArgs;
             return this;
         }
-
+        public Builder execArgs(String... execArgs) {
+            return execArgs(List.of(execArgs));
+        }
         public Builder inputPayloadEncodingType(@Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType) {
             this.inputPayloadEncodingType = inputPayloadEncodingType;
             return this;
         }
-
         public Builder linuxProcessParams(@Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams) {
             this.linuxProcessParams = linuxProcessParams;
             return this;
         }
-
         public Builder maxIdleTimeInSeconds(@Nullable Integer maxIdleTimeInSeconds) {
             this.maxIdleTimeInSeconds = maxIdleTimeInSeconds;
             return this;
         }
-
         public Builder maxInstancesCount(@Nullable Integer maxInstancesCount) {
             this.maxInstancesCount = maxInstancesCount;
             return this;
         }
-
         public Builder maxQueueSize(@Nullable Integer maxQueueSize) {
             this.maxQueueSize = maxQueueSize;
             return this;
         }
-
         public Builder pinned(@Nullable Boolean pinned) {
             this.pinned = pinned;
             return this;
         }
-
         public Builder statusTimeoutInSeconds(@Nullable Integer statusTimeoutInSeconds) {
             this.statusTimeoutInSeconds = statusTimeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
-        }
-        public ComponentVersionLambdaExecutionParameters build() {
+        }        public ComponentVersionLambdaExecutionParameters build() {
             return new ComponentVersionLambdaExecutionParameters(environmentVariables, eventSources, execArgs, inputPayloadEncodingType, linuxProcessParams, maxIdleTimeInSeconds, maxInstancesCount, maxQueueSize, pinned, statusTimeoutInSeconds, timeoutInSeconds);
         }
     }

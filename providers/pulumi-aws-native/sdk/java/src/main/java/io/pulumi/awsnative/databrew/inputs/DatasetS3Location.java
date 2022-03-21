@@ -70,12 +70,10 @@ public final class DatasetS3Location extends io.pulumi.resources.InvokeArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public DatasetS3Location build() {
+        }        public DatasetS3Location build() {
             return new DatasetS3Location(bucket, key);
         }
     }

@@ -91,42 +91,34 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
             this.modeBlock = modeBlock;
             return this;
         }
-
         public Builder modeBlock(@Nullable Boolean modeBlock) {
             this.modeBlock = Output.ofNullable(modeBlock);
             return this;
         }
-
         public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
-
         public Builder protection(Output<Boolean> protection) {
             this.protection = Objects.requireNonNull(protection);
             return this;
         }
-
         public Builder protection(Boolean protection) {
             this.protection = Output.of(Objects.requireNonNull(protection));
             return this;
         }
-
         public Builder reportUri(@Nullable Output<String> reportUri) {
             this.reportUri = reportUri;
             return this;
         }
-
         public Builder reportUri(@Nullable String reportUri) {
             this.reportUri = Output.ofNullable(reportUri);
             return this;
-        }
-        public ResponseHeadersPolicyXSSProtectionArgs build() {
+        }        public ResponseHeadersPolicyXSSProtectionArgs build() {
             return new ResponseHeadersPolicyXSSProtectionArgs(modeBlock, override, protection, reportUri);
         }
     }

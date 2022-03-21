@@ -43,8 +43,7 @@ public final class VirtualClusterEksInfo {
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public VirtualClusterEksInfo build() {
+        }        public VirtualClusterEksInfo build() {
             return new VirtualClusterEksInfo(namespace);
         }
     }

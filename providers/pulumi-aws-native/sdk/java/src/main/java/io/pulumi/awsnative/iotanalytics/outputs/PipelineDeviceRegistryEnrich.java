@@ -79,27 +79,22 @@ public final class PipelineDeviceRegistryEnrich {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder thingName(String thingName) {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
-        }
-        public PipelineDeviceRegistryEnrich build() {
+        }        public PipelineDeviceRegistryEnrich build() {
             return new PipelineDeviceRegistryEnrich(attribute, name, next, roleArn, thingName);
         }
     }

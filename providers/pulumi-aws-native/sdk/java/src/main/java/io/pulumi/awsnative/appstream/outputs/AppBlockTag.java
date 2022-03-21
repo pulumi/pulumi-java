@@ -53,12 +53,10 @@ public final class AppBlockTag {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
-
         public Builder tagValue(String tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
-        }
-        public AppBlockTag build() {
+        }        public AppBlockTag build() {
             return new AppBlockTag(tagKey, tagValue);
         }
     }

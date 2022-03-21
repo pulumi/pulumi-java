@@ -64,17 +64,14 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
             this.loRaWAN = loRaWAN;
             return this;
         }
-
         public Builder updateDataRole(@Nullable String updateDataRole) {
             this.updateDataRole = updateDataRole;
             return this;
         }
-
         public Builder updateDataSource(@Nullable String updateDataSource) {
             this.updateDataSource = updateDataSource;
             return this;
-        }
-        public TaskDefinitionUpdateWirelessGatewayTaskCreate build() {
+        }        public TaskDefinitionUpdateWirelessGatewayTaskCreate build() {
             return new TaskDefinitionUpdateWirelessGatewayTaskCreate(loRaWAN, updateDataRole, updateDataSource);
         }
     }

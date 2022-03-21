@@ -56,12 +56,10 @@ public final class DataPrivacyPropertiesArgs extends io.pulumi.resources.Resourc
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
-
         public Builder childDirected(Boolean childDirected) {
             this.childDirected = Output.of(Objects.requireNonNull(childDirected));
             return this;
-        }
-        public DataPrivacyPropertiesArgs build() {
+        }        public DataPrivacyPropertiesArgs build() {
             return new DataPrivacyPropertiesArgs(childDirected);
         }
     }

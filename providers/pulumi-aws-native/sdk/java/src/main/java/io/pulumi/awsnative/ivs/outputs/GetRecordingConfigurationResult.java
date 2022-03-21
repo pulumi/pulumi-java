@@ -90,17 +90,17 @@ public final class GetRecordingConfigurationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder state(@Nullable RecordingConfigurationState state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable List<RecordingConfigurationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRecordingConfigurationResult build() {
+        public Builder tags(RecordingConfigurationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRecordingConfigurationResult build() {
             return new GetRecordingConfigurationResult(arn, state, tags);
         }
     }

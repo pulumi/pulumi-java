@@ -90,32 +90,29 @@ public final class AnomalyDetectorCsvFormatDescriptor {
             this.charset = charset;
             return this;
         }
-
         public Builder containsHeader(@Nullable Boolean containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
-
         public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder fileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
             this.fileCompression = fileCompression;
             return this;
         }
-
         public Builder headerList(@Nullable List<String> headerList) {
             this.headerList = headerList;
             return this;
         }
-
+        public Builder headerList(String... headerList) {
+            return headerList(List.of(headerList));
+        }
         public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
-        }
-        public AnomalyDetectorCsvFormatDescriptor build() {
+        }        public AnomalyDetectorCsvFormatDescriptor build() {
             return new AnomalyDetectorCsvFormatDescriptor(charset, containsHeader, delimiter, fileCompression, headerList, quoteSymbol);
         }
     }

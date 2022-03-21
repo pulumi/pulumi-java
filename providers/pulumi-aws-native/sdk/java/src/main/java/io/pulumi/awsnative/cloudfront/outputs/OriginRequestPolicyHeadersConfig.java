@@ -55,12 +55,13 @@ public final class OriginRequestPolicyHeadersConfig {
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
-        public OriginRequestPolicyHeadersConfig build() {
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }        public OriginRequestPolicyHeadersConfig build() {
             return new OriginRequestPolicyHeadersConfig(headerBehavior, headers);
         }
     }

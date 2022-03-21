@@ -122,62 +122,56 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
-
         public Builder addresses(List<String> addresses) {
             this.addresses = Output.of(Objects.requireNonNull(addresses));
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder iPAddressVersion(Output<IPSetIPAddressVersion> iPAddressVersion) {
             this.iPAddressVersion = Objects.requireNonNull(iPAddressVersion);
             return this;
         }
-
         public Builder iPAddressVersion(IPSetIPAddressVersion iPAddressVersion) {
             this.iPAddressVersion = Output.of(Objects.requireNonNull(iPAddressVersion));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scope(Output<IPSetScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(IPSetScope scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<IPSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<IPSetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public IPSetArgs build() {
+        public Builder tags(IPSetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public IPSetArgs build() {
             return new IPSetArgs(addresses, description, iPAddressVersion, name, scope, tags);
         }
     }

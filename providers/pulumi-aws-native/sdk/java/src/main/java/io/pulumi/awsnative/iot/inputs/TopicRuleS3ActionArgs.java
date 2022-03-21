@@ -91,42 +91,34 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder cannedAcl(@Nullable Output<TopicRuleCannedAccessControlList> cannedAcl) {
             this.cannedAcl = cannedAcl;
             return this;
         }
-
         public Builder cannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
             this.cannedAcl = Output.ofNullable(cannedAcl);
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public TopicRuleS3ActionArgs build() {
+        }        public TopicRuleS3ActionArgs build() {
             return new TopicRuleS3ActionArgs(bucketName, cannedAcl, key, roleArn);
         }
     }

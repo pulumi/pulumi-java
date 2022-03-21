@@ -189,122 +189,110 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.appBlockArn = Objects.requireNonNull(appBlockArn);
             return this;
         }
-
         public Builder appBlockArn(String appBlockArn) {
             this.appBlockArn = Output.of(Objects.requireNonNull(appBlockArn));
             return this;
         }
-
         public Builder attributesToDelete(@Nullable Output<List<String>> attributesToDelete) {
             this.attributesToDelete = attributesToDelete;
             return this;
         }
-
         public Builder attributesToDelete(@Nullable List<String> attributesToDelete) {
             this.attributesToDelete = Output.ofNullable(attributesToDelete);
             return this;
         }
-
+        public Builder attributesToDelete(String... attributesToDelete) {
+            return attributesToDelete(List.of(attributesToDelete));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder iconS3Location(Output<ApplicationS3LocationArgs> iconS3Location) {
             this.iconS3Location = Objects.requireNonNull(iconS3Location);
             return this;
         }
-
         public Builder iconS3Location(ApplicationS3LocationArgs iconS3Location) {
             this.iconS3Location = Output.of(Objects.requireNonNull(iconS3Location));
             return this;
         }
-
         public Builder instanceFamilies(Output<List<String>> instanceFamilies) {
             this.instanceFamilies = Objects.requireNonNull(instanceFamilies);
             return this;
         }
-
         public Builder instanceFamilies(List<String> instanceFamilies) {
             this.instanceFamilies = Output.of(Objects.requireNonNull(instanceFamilies));
             return this;
         }
-
+        public Builder instanceFamilies(String... instanceFamilies) {
+            return instanceFamilies(List.of(instanceFamilies));
+        }
         public Builder launchParameters(@Nullable Output<String> launchParameters) {
             this.launchParameters = launchParameters;
             return this;
         }
-
         public Builder launchParameters(@Nullable String launchParameters) {
             this.launchParameters = Output.ofNullable(launchParameters);
             return this;
         }
-
         public Builder launchPath(Output<String> launchPath) {
             this.launchPath = Objects.requireNonNull(launchPath);
             return this;
         }
-
         public Builder launchPath(String launchPath) {
             this.launchPath = Output.of(Objects.requireNonNull(launchPath));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder platforms(Output<List<String>> platforms) {
             this.platforms = Objects.requireNonNull(platforms);
             return this;
         }
-
         public Builder platforms(List<String> platforms) {
             this.platforms = Output.of(Objects.requireNonNull(platforms));
             return this;
         }
-
+        public Builder platforms(String... platforms) {
+            return platforms(List.of(platforms));
+        }
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ApplicationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(appBlockArn, attributesToDelete, description, displayName, iconS3Location, instanceFamilies, launchParameters, launchPath, name, platforms, tags, workingDirectory);
         }
     }

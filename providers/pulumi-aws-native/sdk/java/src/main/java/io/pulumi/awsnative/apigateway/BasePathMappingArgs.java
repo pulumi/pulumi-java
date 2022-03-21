@@ -106,42 +106,34 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
             this.basePath = basePath;
             return this;
         }
-
         public Builder basePath(@Nullable String basePath) {
             this.basePath = Output.ofNullable(basePath);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
-
         public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = Output.ofNullable(stage);
             return this;
-        }
-        public BasePathMappingArgs build() {
+        }        public BasePathMappingArgs build() {
             return new BasePathMappingArgs(basePath, domainName, restApiId, stage);
         }
     }

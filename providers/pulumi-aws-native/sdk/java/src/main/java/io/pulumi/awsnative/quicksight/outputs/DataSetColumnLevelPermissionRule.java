@@ -55,12 +55,16 @@ public final class DataSetColumnLevelPermissionRule {
             this.columnNames = columnNames;
             return this;
         }
-
+        public Builder columnNames(String... columnNames) {
+            return columnNames(List.of(columnNames));
+        }
         public Builder principals(@Nullable List<String> principals) {
             this.principals = principals;
             return this;
         }
-        public DataSetColumnLevelPermissionRule build() {
+        public Builder principals(String... principals) {
+            return principals(List.of(principals));
+        }        public DataSetColumnLevelPermissionRule build() {
             return new DataSetColumnLevelPermissionRule(columnNames, principals);
         }
     }

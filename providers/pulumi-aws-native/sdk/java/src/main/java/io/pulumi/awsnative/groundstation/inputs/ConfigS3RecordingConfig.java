@@ -78,17 +78,14 @@ public final class ConfigS3RecordingConfig extends io.pulumi.resources.InvokeArg
             this.bucketArn = bucketArn;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public ConfigS3RecordingConfig build() {
+        }        public ConfigS3RecordingConfig build() {
             return new ConfigS3RecordingConfig(bucketArn, prefix, roleArn);
         }
     }

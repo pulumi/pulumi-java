@@ -145,82 +145,66 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             this.directoryName = directoryName;
             return this;
         }
-
         public Builder directoryName(@Nullable CertificateAuthoritySubjectArgs directoryName) {
             this.directoryName = Output.ofNullable(directoryName);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder ediPartyName(@Nullable Output<CertificateAuthorityEdiPartyNameArgs> ediPartyName) {
             this.ediPartyName = ediPartyName;
             return this;
         }
-
         public Builder ediPartyName(@Nullable CertificateAuthorityEdiPartyNameArgs ediPartyName) {
             this.ediPartyName = Output.ofNullable(ediPartyName);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder otherName(@Nullable Output<CertificateAuthorityOtherNameArgs> otherName) {
             this.otherName = otherName;
             return this;
         }
-
         public Builder otherName(@Nullable CertificateAuthorityOtherNameArgs otherName) {
             this.otherName = Output.ofNullable(otherName);
             return this;
         }
-
         public Builder registeredId(@Nullable Output<String> registeredId) {
             this.registeredId = registeredId;
             return this;
         }
-
         public Builder registeredId(@Nullable String registeredId) {
             this.registeredId = Output.ofNullable(registeredId);
             return this;
         }
-
         public Builder rfc822Name(@Nullable Output<String> rfc822Name) {
             this.rfc822Name = rfc822Name;
             return this;
         }
-
         public Builder rfc822Name(@Nullable String rfc822Name) {
             this.rfc822Name = Output.ofNullable(rfc822Name);
             return this;
         }
-
         public Builder uniformResourceIdentifier(@Nullable Output<String> uniformResourceIdentifier) {
             this.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
         }
-
         public Builder uniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
             this.uniformResourceIdentifier = Output.ofNullable(uniformResourceIdentifier);
             return this;
-        }
-        public CertificateAuthorityGeneralNameArgs build() {
+        }        public CertificateAuthorityGeneralNameArgs build() {
             return new CertificateAuthorityGeneralNameArgs(directoryName, dnsName, ediPartyName, ipAddress, otherName, registeredId, rfc822Name, uniformResourceIdentifier);
         }
     }

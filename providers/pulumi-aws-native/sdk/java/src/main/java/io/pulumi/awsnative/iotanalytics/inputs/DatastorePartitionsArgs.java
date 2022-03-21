@@ -54,12 +54,13 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
             this.partitions = partitions;
             return this;
         }
-
         public Builder partitions(@Nullable List<DatastorePartitionArgs> partitions) {
             this.partitions = Output.ofNullable(partitions);
             return this;
         }
-        public DatastorePartitionsArgs build() {
+        public Builder partitions(DatastorePartitionArgs... partitions) {
+            return partitions(List.of(partitions));
+        }        public DatastorePartitionsArgs build() {
             return new DatastorePartitionsArgs(partitions);
         }
     }

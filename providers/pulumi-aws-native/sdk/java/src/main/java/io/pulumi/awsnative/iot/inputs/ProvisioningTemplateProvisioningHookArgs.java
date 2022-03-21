@@ -66,22 +66,18 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
             this.payloadVersion = payloadVersion;
             return this;
         }
-
         public Builder payloadVersion(@Nullable String payloadVersion) {
             this.payloadVersion = Output.ofNullable(payloadVersion);
             return this;
         }
-
         public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Output.ofNullable(targetArn);
             return this;
-        }
-        public ProvisioningTemplateProvisioningHookArgs build() {
+        }        public ProvisioningTemplateProvisioningHookArgs build() {
             return new ProvisioningTemplateProvisioningHookArgs(payloadVersion, targetArn);
         }
     }

@@ -177,82 +177,72 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = Output.ofNullable(durationSeconds);
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder policyArns(@Nullable Output<List<String>> policyArns) {
             this.policyArns = policyArns;
             return this;
         }
-
         public Builder policyArns(@Nullable List<String> policyArns) {
             this.policyArns = Output.ofNullable(policyArns);
             return this;
         }
-
+        public Builder policyArns(String... policyArns) {
+            return policyArns(List.of(policyArns));
+        }
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
-
         public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = Output.ofNullable(sessionName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transitiveTagKeys(@Nullable Output<List<String>> transitiveTagKeys) {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
-
         public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
             this.transitiveTagKeys = Output.ofNullable(transitiveTagKeys);
             return this;
         }
-        public ProviderAssumeRoleArgs build() {
+        public Builder transitiveTagKeys(String... transitiveTagKeys) {
+            return transitiveTagKeys(List.of(transitiveTagKeys));
+        }        public ProviderAssumeRoleArgs build() {
             return new ProviderAssumeRoleArgs(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }
     }

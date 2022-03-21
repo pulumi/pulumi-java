@@ -221,62 +221,56 @@ public final class GetDiskResult {
             this.addOns = addOns;
             return this;
         }
-
+        public Builder addOns(DiskAddOn... addOns) {
+            return addOns(List.of(addOns));
+        }
         public Builder attachedTo(@Nullable String attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
-
         public Builder attachmentState(@Nullable String attachmentState) {
             this.attachmentState = attachmentState;
             return this;
         }
-
         public Builder diskArn(@Nullable String diskArn) {
             this.diskArn = diskArn;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = isAttached;
             return this;
         }
-
         public Builder location(@Nullable DiskLocation location) {
             this.location = location;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder supportCode(@Nullable String supportCode) {
             this.supportCode = supportCode;
             return this;
         }
-
         public Builder tags(@Nullable List<DiskTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDiskResult build() {
+        public Builder tags(DiskTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDiskResult build() {
             return new GetDiskResult(addOns, attachedTo, attachmentState, diskArn, iops, isAttached, location, path, resourceType, state, supportCode, tags);
         }
     }

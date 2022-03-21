@@ -111,42 +111,34 @@ public final class ResourceVersionArgs extends io.pulumi.resources.ResourceArgs 
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<ResourceVersionLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable ResourceVersionLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
             return this;
         }
-
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
             this.schemaHandlerPackage = Output.of(Objects.requireNonNull(schemaHandlerPackage));
             return this;
         }
-
         public Builder typeName(Output<String> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder typeName(String typeName) {
             this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
-        }
-        public ResourceVersionArgs build() {
+        }        public ResourceVersionArgs build() {
             return new ResourceVersionArgs(executionRoleArn, loggingConfig, schemaHandlerPackage, typeName);
         }
     }

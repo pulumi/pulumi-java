@@ -66,22 +66,18 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
-        }
-        public TaskDefinitionHostEntryArgs build() {
+        }        public TaskDefinitionHostEntryArgs build() {
             return new TaskDefinitionHostEntryArgs(hostname, ipAddress);
         }
     }

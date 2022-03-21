@@ -64,12 +64,10 @@ public final class DevicePoolTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DevicePoolTag build() {
+        }        public DevicePoolTag build() {
             return new DevicePoolTag(key, value);
         }
     }

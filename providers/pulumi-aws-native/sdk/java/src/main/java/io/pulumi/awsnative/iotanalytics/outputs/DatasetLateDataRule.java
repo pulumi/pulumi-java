@@ -56,12 +56,10 @@ public final class DatasetLateDataRule {
             this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration);
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
-        }
-        public DatasetLateDataRule build() {
+        }        public DatasetLateDataRule build() {
             return new DatasetLateDataRule(ruleConfiguration, ruleName);
         }
     }

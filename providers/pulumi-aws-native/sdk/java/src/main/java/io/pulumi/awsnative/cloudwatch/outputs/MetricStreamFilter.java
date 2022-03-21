@@ -51,8 +51,7 @@ public final class MetricStreamFilter {
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public MetricStreamFilter build() {
+        }        public MetricStreamFilter build() {
             return new MetricStreamFilter(namespace);
         }
     }

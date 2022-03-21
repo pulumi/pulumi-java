@@ -67,22 +67,18 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable DataflowEndpointGroupDataflowEndpointArgs endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder securityDetails(@Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
             this.securityDetails = securityDetails;
             return this;
         }
-
         public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetailsArgs securityDetails) {
             this.securityDetails = Output.ofNullable(securityDetails);
             return this;
-        }
-        public DataflowEndpointGroupEndpointDetailsArgs build() {
+        }        public DataflowEndpointGroupEndpointDetailsArgs build() {
             return new DataflowEndpointGroupEndpointDetailsArgs(endpoint, securityDetails);
         }
     }

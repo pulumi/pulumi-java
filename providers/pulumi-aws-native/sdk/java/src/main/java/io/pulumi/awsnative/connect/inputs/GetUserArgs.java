@@ -54,8 +54,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
         public Builder userArn(String userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
-        }
-        public GetUserArgs build() {
+        }        public GetUserArgs build() {
             return new GetUserArgs(userArn);
         }
     }

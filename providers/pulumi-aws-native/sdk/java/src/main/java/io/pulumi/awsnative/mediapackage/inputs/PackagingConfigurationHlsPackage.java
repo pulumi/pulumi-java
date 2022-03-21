@@ -106,22 +106,21 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
             this.encryption = encryption;
             return this;
         }
-
         public Builder hlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
-
+        public Builder hlsManifests(PackagingConfigurationHlsManifest... hlsManifests) {
+            return hlsManifests(List.of(hlsManifests));
+        }
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
-        }
-        public PackagingConfigurationHlsPackage build() {
+        }        public PackagingConfigurationHlsPackage build() {
             return new PackagingConfigurationHlsPackage(encryption, hlsManifests, segmentDurationSeconds, useAudioRenditionGroup);
         }
     }

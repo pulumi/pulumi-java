@@ -54,8 +54,7 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetContainerArgs build() {
+        }        public GetContainerArgs build() {
             return new GetContainerArgs(serviceName);
         }
     }

@@ -51,8 +51,7 @@ public final class GatewayGreengrass {
         public Builder groupArn(String groupArn) {
             this.groupArn = Objects.requireNonNull(groupArn);
             return this;
-        }
-        public GatewayGreengrass build() {
+        }        public GatewayGreengrass build() {
             return new GatewayGreengrass(groupArn);
         }
     }

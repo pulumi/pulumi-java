@@ -130,57 +130,46 @@ public final class AssessmentDelegation {
             this.assessmentId = assessmentId;
             return this;
         }
-
         public Builder assessmentName(@Nullable String assessmentName) {
             this.assessmentName = assessmentName;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder controlSetId(@Nullable String controlSetId) {
             this.controlSetId = controlSetId;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder creationTime(@Nullable Double creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder lastUpdated(@Nullable Double lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleType(@Nullable AssessmentRoleType roleType) {
             this.roleType = roleType;
             return this;
         }
-
         public Builder status(@Nullable AssessmentDelegationStatus status) {
             this.status = status;
             return this;
-        }
-        public AssessmentDelegation build() {
+        }        public AssessmentDelegation build() {
             return new AssessmentDelegation(assessmentId, assessmentName, comment, controlSetId, createdBy, creationTime, id, lastUpdated, roleArn, roleType, status);
         }
     }

@@ -64,12 +64,10 @@ public final class AnomalyDetectorAppFlowConfig extends io.pulumi.resources.Invo
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AnomalyDetectorAppFlowConfig build() {
+        }        public AnomalyDetectorAppFlowConfig build() {
             return new AnomalyDetectorAppFlowConfig(flowName, roleArn);
         }
     }

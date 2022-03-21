@@ -69,12 +69,10 @@ public final class ACLTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ACLTag build() {
+        }        public ACLTag build() {
             return new ACLTag(key, value);
         }
     }

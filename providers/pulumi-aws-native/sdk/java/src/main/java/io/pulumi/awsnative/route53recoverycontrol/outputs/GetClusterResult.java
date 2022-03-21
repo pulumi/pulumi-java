@@ -90,17 +90,17 @@ public final class GetClusterResult {
             this.clusterArn = clusterArn;
             return this;
         }
-
         public Builder clusterEndpoints(@Nullable List<ClusterEndpoint> clusterEndpoints) {
             this.clusterEndpoints = clusterEndpoints;
             return this;
         }
-
+        public Builder clusterEndpoints(ClusterEndpoint... clusterEndpoints) {
+            return clusterEndpoints(List.of(clusterEndpoints));
+        }
         public Builder status(@Nullable ClusterStatus status) {
             this.status = status;
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(clusterArn, clusterEndpoints, status);
         }
     }

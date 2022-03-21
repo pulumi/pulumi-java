@@ -92,42 +92,40 @@ public final class AnomalyDetectorS3SourceConfigArgs extends io.pulumi.resources
             this.fileFormatDescriptor = Objects.requireNonNull(fileFormatDescriptor);
             return this;
         }
-
         public Builder fileFormatDescriptor(AnomalyDetectorFileFormatDescriptorArgs fileFormatDescriptor) {
             this.fileFormatDescriptor = Output.of(Objects.requireNonNull(fileFormatDescriptor));
             return this;
         }
-
         public Builder historicalDataPathList(@Nullable Output<List<String>> historicalDataPathList) {
             this.historicalDataPathList = historicalDataPathList;
             return this;
         }
-
         public Builder historicalDataPathList(@Nullable List<String> historicalDataPathList) {
             this.historicalDataPathList = Output.ofNullable(historicalDataPathList);
             return this;
         }
-
+        public Builder historicalDataPathList(String... historicalDataPathList) {
+            return historicalDataPathList(List.of(historicalDataPathList));
+        }
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder templatedPathList(@Nullable Output<List<String>> templatedPathList) {
             this.templatedPathList = templatedPathList;
             return this;
         }
-
         public Builder templatedPathList(@Nullable List<String> templatedPathList) {
             this.templatedPathList = Output.ofNullable(templatedPathList);
             return this;
         }
-        public AnomalyDetectorS3SourceConfigArgs build() {
+        public Builder templatedPathList(String... templatedPathList) {
+            return templatedPathList(List.of(templatedPathList));
+        }        public AnomalyDetectorS3SourceConfigArgs build() {
             return new AnomalyDetectorS3SourceConfigArgs(fileFormatDescriptor, historicalDataPathList, roleArn, templatedPathList);
         }
     }

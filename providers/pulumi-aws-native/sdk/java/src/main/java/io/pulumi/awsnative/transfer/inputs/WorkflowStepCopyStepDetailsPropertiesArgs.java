@@ -92,32 +92,26 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
             this.destinationFileLocation = destinationFileLocation;
             return this;
         }
-
         public Builder destinationFileLocation(@Nullable WorkflowInputFileLocationArgs destinationFileLocation) {
             this.destinationFileLocation = Output.ofNullable(destinationFileLocation);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder overwriteExisting(@Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
             this.overwriteExisting = overwriteExisting;
             return this;
         }
-
         public Builder overwriteExisting(@Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
             this.overwriteExisting = Output.ofNullable(overwriteExisting);
             return this;
-        }
-        public WorkflowStepCopyStepDetailsPropertiesArgs build() {
+        }        public WorkflowStepCopyStepDetailsPropertiesArgs build() {
             return new WorkflowStepCopyStepDetailsPropertiesArgs(destinationFileLocation, name, overwriteExisting);
         }
     }

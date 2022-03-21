@@ -93,22 +93,21 @@ public final class DataSourceSalesforceStandardObjectConfiguration extends io.pu
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder name(DataSourceSalesforceStandardObjectName name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DataSourceSalesforceStandardObjectConfiguration build() {
+        }        public DataSourceSalesforceStandardObjectConfiguration build() {
             return new DataSourceSalesforceStandardObjectConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }
     }

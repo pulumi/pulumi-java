@@ -102,42 +102,40 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
             this.accountAggregationSources = accountAggregationSources;
             return this;
         }
-
         public Builder accountAggregationSources(@Nullable List<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSources) {
             this.accountAggregationSources = Output.ofNullable(accountAggregationSources);
             return this;
         }
-
+        public Builder accountAggregationSources(ConfigurationAggregatorAccountAggregationSourceArgs... accountAggregationSources) {
+            return accountAggregationSources(List.of(accountAggregationSources));
+        }
         public Builder configurationAggregatorName(@Nullable Output<String> configurationAggregatorName) {
             this.configurationAggregatorName = configurationAggregatorName;
             return this;
         }
-
         public Builder configurationAggregatorName(@Nullable String configurationAggregatorName) {
             this.configurationAggregatorName = Output.ofNullable(configurationAggregatorName);
             return this;
         }
-
         public Builder organizationAggregationSource(@Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource) {
             this.organizationAggregationSource = organizationAggregationSource;
             return this;
         }
-
         public Builder organizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
             this.organizationAggregationSource = Output.ofNullable(organizationAggregationSource);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ConfigurationAggregatorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ConfigurationAggregatorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ConfigurationAggregatorArgs build() {
+        public Builder tags(ConfigurationAggregatorTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ConfigurationAggregatorArgs build() {
             return new ConfigurationAggregatorArgs(accountAggregationSources, configurationAggregatorName, organizationAggregationSource, tags);
         }
     }

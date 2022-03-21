@@ -54,12 +54,13 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<AttributesItemPropertiesArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-        public SchemaPropertiesArgs build() {
+        public Builder attributes(AttributesItemPropertiesArgs... attributes) {
+            return attributes(List.of(attributes));
+        }        public SchemaPropertiesArgs build() {
             return new SchemaPropertiesArgs(attributes);
         }
     }

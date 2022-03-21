@@ -65,12 +65,13 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
             this.accessControlAttributes = accessControlAttributes;
             return this;
         }
-
+        public Builder accessControlAttributes(InstanceAccessControlAttributeConfigurationAccessControlAttribute... accessControlAttributes) {
+            return accessControlAttributes(List.of(accessControlAttributes));
+        }
         public Builder instanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
             this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
             return this;
-        }
-        public GetInstanceAccessControlAttributeConfigurationResult build() {
+        }        public GetInstanceAccessControlAttributeConfigurationResult build() {
             return new GetInstanceAccessControlAttributeConfigurationResult(accessControlAttributes, instanceAccessControlAttributeConfiguration);
         }
     }

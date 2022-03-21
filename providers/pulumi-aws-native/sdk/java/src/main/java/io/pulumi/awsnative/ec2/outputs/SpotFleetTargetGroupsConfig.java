@@ -45,7 +45,9 @@ public final class SpotFleetTargetGroupsConfig {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-        public SpotFleetTargetGroupsConfig build() {
+        public Builder targetGroups(SpotFleetTargetGroup... targetGroups) {
+            return targetGroups(List.of(targetGroups));
+        }        public SpotFleetTargetGroupsConfig build() {
             return new SpotFleetTargetGroupsConfig(targetGroups);
         }
     }

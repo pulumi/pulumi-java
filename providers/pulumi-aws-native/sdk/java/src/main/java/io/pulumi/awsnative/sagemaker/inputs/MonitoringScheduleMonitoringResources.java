@@ -54,8 +54,7 @@ public final class MonitoringScheduleMonitoringResources extends io.pulumi.resou
         public Builder clusterConfig(MonitoringScheduleClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
-        }
-        public MonitoringScheduleMonitoringResources build() {
+        }        public MonitoringScheduleMonitoringResources build() {
             return new MonitoringScheduleMonitoringResources(clusterConfig);
         }
     }

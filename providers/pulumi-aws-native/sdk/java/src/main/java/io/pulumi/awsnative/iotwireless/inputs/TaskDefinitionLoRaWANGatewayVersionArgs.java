@@ -78,32 +78,26 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends io.pulumi.res
             this.model = model;
             return this;
         }
-
         public Builder model(@Nullable String model) {
             this.model = Output.ofNullable(model);
             return this;
         }
-
         public Builder packageVersion(@Nullable Output<String> packageVersion) {
             this.packageVersion = packageVersion;
             return this;
         }
-
         public Builder packageVersion(@Nullable String packageVersion) {
             this.packageVersion = Output.ofNullable(packageVersion);
             return this;
         }
-
         public Builder station(@Nullable Output<String> station) {
             this.station = station;
             return this;
         }
-
         public Builder station(@Nullable String station) {
             this.station = Output.ofNullable(station);
             return this;
-        }
-        public TaskDefinitionLoRaWANGatewayVersionArgs build() {
+        }        public TaskDefinitionLoRaWANGatewayVersionArgs build() {
             return new TaskDefinitionLoRaWANGatewayVersionArgs(model, packageVersion, station);
         }
     }

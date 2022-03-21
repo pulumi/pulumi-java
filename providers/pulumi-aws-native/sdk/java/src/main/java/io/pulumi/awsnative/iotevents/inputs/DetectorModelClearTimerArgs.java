@@ -56,12 +56,10 @@ public final class DetectorModelClearTimerArgs extends io.pulumi.resources.Resou
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
-
         public Builder timerName(String timerName) {
             this.timerName = Output.of(Objects.requireNonNull(timerName));
             return this;
-        }
-        public DetectorModelClearTimerArgs build() {
+        }        public DetectorModelClearTimerArgs build() {
             return new DetectorModelClearTimerArgs(timerName);
         }
     }

@@ -97,42 +97,37 @@ public final class WebACLSizeConstraintStatementArgs extends io.pulumi.resources
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder comparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
             this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
-
         public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder size(Output<Double> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(Double size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
-
         public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebACLSizeConstraintStatementArgs build() {
+        public Builder textTransformations(WebACLTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLSizeConstraintStatementArgs build() {
             return new WebACLSizeConstraintStatementArgs(comparisonOperator, fieldToMatch, size, textTransformations);
         }
     }

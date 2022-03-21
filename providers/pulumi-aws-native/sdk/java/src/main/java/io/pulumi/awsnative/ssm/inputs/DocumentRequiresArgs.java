@@ -74,22 +74,18 @@ public final class DocumentRequiresArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DocumentRequiresArgs build() {
+        }        public DocumentRequiresArgs build() {
             return new DocumentRequiresArgs(name, version);
         }
     }

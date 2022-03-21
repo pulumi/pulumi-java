@@ -238,62 +238,56 @@ public final class GetStageResult {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
-
         public Builder canarySetting(@Nullable StageCanarySetting canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
-
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
-
         public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
-
         public Builder methodSettings(@Nullable List<StageMethodSetting> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
-
+        public Builder methodSettings(StageMethodSetting... methodSettings) {
+            return methodSettings(List.of(methodSettings));
+        }
         public Builder tags(@Nullable List<StageTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(StageTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
-
         public Builder variables(@Nullable Object variables) {
             this.variables = variables;
             return this;
-        }
-        public GetStageResult build() {
+        }        public GetStageResult build() {
             return new GetStageResult(accessLogSetting, cacheClusterEnabled, cacheClusterSize, canarySetting, clientCertificateId, deploymentId, description, documentationVersion, methodSettings, tags, tracingEnabled, variables);
         }
     }

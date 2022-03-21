@@ -105,27 +105,28 @@ public final class GetRegexPatternSetResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder regularExpressionList(@Nullable List<String> regularExpressionList) {
             this.regularExpressionList = regularExpressionList;
             return this;
         }
-
+        public Builder regularExpressionList(String... regularExpressionList) {
+            return regularExpressionList(List.of(regularExpressionList));
+        }
         public Builder tags(@Nullable List<RegexPatternSetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRegexPatternSetResult build() {
+        public Builder tags(RegexPatternSetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRegexPatternSetResult build() {
             return new GetRegexPatternSetResult(arn, description, id, regularExpressionList, tags);
         }
     }

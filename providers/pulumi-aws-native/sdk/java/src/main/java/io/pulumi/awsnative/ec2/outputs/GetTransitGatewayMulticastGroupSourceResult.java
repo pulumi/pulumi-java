@@ -168,42 +168,34 @@ public final class GetTransitGatewayMulticastGroupSourceResult {
             this.groupMember = groupMember;
             return this;
         }
-
         public Builder groupSource(@Nullable Boolean groupSource) {
             this.groupSource = groupSource;
             return this;
         }
-
         public Builder memberType(@Nullable String memberType) {
             this.memberType = memberType;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
-        }
-        public GetTransitGatewayMulticastGroupSourceResult build() {
+        }        public GetTransitGatewayMulticastGroupSourceResult build() {
             return new GetTransitGatewayMulticastGroupSourceResult(groupMember, groupSource, memberType, resourceId, resourceType, sourceType, subnetId, transitGatewayAttachmentId);
         }
     }

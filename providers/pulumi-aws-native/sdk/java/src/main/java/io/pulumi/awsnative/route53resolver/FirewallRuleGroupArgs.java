@@ -93,32 +93,32 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
             this.firewallRules = firewallRules;
             return this;
         }
-
         public Builder firewallRules(@Nullable List<FirewallRuleGroupFirewallRuleArgs> firewallRules) {
             this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
-
+        public Builder firewallRules(FirewallRuleGroupFirewallRuleArgs... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FirewallRuleGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallRuleGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public FirewallRuleGroupArgs build() {
+        public Builder tags(FirewallRuleGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public FirewallRuleGroupArgs build() {
             return new FirewallRuleGroupArgs(firewallRules, name, tags);
         }
     }

@@ -137,32 +137,29 @@ public final class GetWorkspaceResult {
             this.alertManagerDefinition = alertManagerDefinition;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder prometheusEndpoint(@Nullable String prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkspaceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(WorkspaceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(alertManagerDefinition, alias, arn, prometheusEndpoint, tags, workspaceId);
         }
     }

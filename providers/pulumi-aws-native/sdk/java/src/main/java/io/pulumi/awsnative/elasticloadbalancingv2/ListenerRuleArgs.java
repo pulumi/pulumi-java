@@ -93,42 +93,40 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<ListenerRuleActionArgs> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(ListenerRuleActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder conditions(Output<List<ListenerRuleRuleConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public Builder conditions(List<ListenerRuleRuleConditionArgs> conditions) {
             this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
-
+        public Builder conditions(ListenerRuleRuleConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder listenerArn(Output<String> listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }
-
         public Builder listenerArn(String listenerArn) {
             this.listenerArn = Output.of(Objects.requireNonNull(listenerArn));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
-        }
-        public ListenerRuleArgs build() {
+        }        public ListenerRuleArgs build() {
             return new ListenerRuleArgs(actions, conditions, listenerArn, priority);
         }
     }

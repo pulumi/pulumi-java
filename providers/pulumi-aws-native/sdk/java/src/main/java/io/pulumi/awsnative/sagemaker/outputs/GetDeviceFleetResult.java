@@ -106,22 +106,21 @@ public final class GetDeviceFleetResult {
             this.description = description;
             return this;
         }
-
         public Builder outputConfig(@Nullable DeviceFleetEdgeOutputConfig outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<DeviceFleetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDeviceFleetResult build() {
+        public Builder tags(DeviceFleetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDeviceFleetResult build() {
             return new GetDeviceFleetResult(description, outputConfig, roleArn, tags);
         }
     }

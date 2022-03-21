@@ -45,7 +45,9 @@ public final class ResponseHeadersPolicyAccessControlAllowOrigins {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public ResponseHeadersPolicyAccessControlAllowOrigins build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyAccessControlAllowOrigins build() {
             return new ResponseHeadersPolicyAccessControlAllowOrigins(items);
         }
     }

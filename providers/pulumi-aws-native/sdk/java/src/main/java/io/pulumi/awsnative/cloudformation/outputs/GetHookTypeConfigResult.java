@@ -91,17 +91,14 @@ public final class GetHookTypeConfigResult {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configurationArn(@Nullable String configurationArn) {
             this.configurationArn = configurationArn;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
-        }
-        public GetHookTypeConfigResult build() {
+        }        public GetHookTypeConfigResult build() {
             return new GetHookTypeConfigResult(configuration, configurationArn, typeName);
         }
     }

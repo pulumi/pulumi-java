@@ -56,12 +56,10 @@ public final class DomainEncryptionAtRestOptions {
             this.enabled = enabled;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
-        }
-        public DomainEncryptionAtRestOptions build() {
+        }        public DomainEncryptionAtRestOptions build() {
             return new DomainEncryptionAtRestOptions(enabled, kmsKeyId);
         }
     }

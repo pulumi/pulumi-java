@@ -65,12 +65,10 @@ public final class RuleGroupLabelMatchStatement extends io.pulumi.resources.Invo
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder scope(RuleGroupLabelMatchScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public RuleGroupLabelMatchStatement build() {
+        }        public RuleGroupLabelMatchStatement build() {
             return new RuleGroupLabelMatchStatement(key, scope);
         }
     }

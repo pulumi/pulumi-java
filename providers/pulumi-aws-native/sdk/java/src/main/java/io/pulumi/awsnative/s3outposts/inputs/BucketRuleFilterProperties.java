@@ -96,17 +96,14 @@ public final class BucketRuleFilterProperties extends io.pulumi.resources.Invoke
             this.andOperator = andOperator;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tag(@Nullable BucketFilterTag tag) {
             this.tag = tag;
             return this;
-        }
-        public BucketRuleFilterProperties build() {
+        }        public BucketRuleFilterProperties build() {
             return new BucketRuleFilterProperties(andOperator, prefix, tag);
         }
     }

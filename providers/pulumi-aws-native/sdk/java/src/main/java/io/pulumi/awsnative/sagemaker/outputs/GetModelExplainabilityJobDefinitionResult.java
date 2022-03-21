@@ -71,12 +71,10 @@ public final class GetModelExplainabilityJobDefinitionResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder jobDefinitionArn(@Nullable String jobDefinitionArn) {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
-        }
-        public GetModelExplainabilityJobDefinitionResult build() {
+        }        public GetModelExplainabilityJobDefinitionResult build() {
             return new GetModelExplainabilityJobDefinitionResult(creationTime, jobDefinitionArn);
         }
     }

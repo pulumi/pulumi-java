@@ -57,12 +57,13 @@ public final class DataSourceOneDriveUsers {
             this.oneDriveUserList = oneDriveUserList;
             return this;
         }
-
+        public Builder oneDriveUserList(String... oneDriveUserList) {
+            return oneDriveUserList(List.of(oneDriveUserList));
+        }
         public Builder oneDriveUserS3Path(@Nullable DataSourceS3Path oneDriveUserS3Path) {
             this.oneDriveUserS3Path = oneDriveUserS3Path;
             return this;
-        }
-        public DataSourceOneDriveUsers build() {
+        }        public DataSourceOneDriveUsers build() {
             return new DataSourceOneDriveUsers(oneDriveUserList, oneDriveUserS3Path);
         }
     }

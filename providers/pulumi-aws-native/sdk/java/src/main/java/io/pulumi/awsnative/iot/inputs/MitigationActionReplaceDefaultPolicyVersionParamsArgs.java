@@ -56,12 +56,10 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
-
         public Builder templateName(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
             this.templateName = Output.of(Objects.requireNonNull(templateName));
             return this;
-        }
-        public MitigationActionReplaceDefaultPolicyVersionParamsArgs build() {
+        }        public MitigationActionReplaceDefaultPolicyVersionParamsArgs build() {
             return new MitigationActionReplaceDefaultPolicyVersionParamsArgs(templateName);
         }
     }

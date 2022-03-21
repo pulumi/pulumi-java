@@ -56,12 +56,10 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
-
         public Builder endpointInput(ModelExplainabilityJobDefinitionEndpointInputArgs endpointInput) {
             this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
             return this;
-        }
-        public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs build() {
+        }        public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs build() {
             return new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs(endpointInput);
         }
     }

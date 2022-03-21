@@ -50,8 +50,7 @@ public final class DatasetDeltaTimeSessionWindowConfiguration extends io.pulumi.
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
             return this;
-        }
-        public DatasetDeltaTimeSessionWindowConfiguration build() {
+        }        public DatasetDeltaTimeSessionWindowConfiguration build() {
             return new DatasetDeltaTimeSessionWindowConfiguration(timeoutInMinutes);
         }
     }

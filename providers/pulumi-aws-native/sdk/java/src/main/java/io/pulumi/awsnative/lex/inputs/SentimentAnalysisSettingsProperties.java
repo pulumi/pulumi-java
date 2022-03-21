@@ -58,8 +58,7 @@ public final class SentimentAnalysisSettingsProperties extends io.pulumi.resourc
         public Builder detectSentiment(Boolean detectSentiment) {
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
-        }
-        public SentimentAnalysisSettingsProperties build() {
+        }        public SentimentAnalysisSettingsProperties build() {
             return new SentimentAnalysisSettingsProperties(detectSentiment);
         }
     }

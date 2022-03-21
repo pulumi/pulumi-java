@@ -92,22 +92,18 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration extends i
             this.disableScaleIn = disableScaleIn;
             return this;
         }
-
         public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
             this.scaleInCooldown = scaleInCooldown;
             return this;
         }
-
         public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
             this.scaleOutCooldown = scaleOutCooldown;
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
-        }
-        public GlobalTableTargetTrackingScalingPolicyConfiguration build() {
+        }        public GlobalTableTargetTrackingScalingPolicyConfiguration build() {
             return new GlobalTableTargetTrackingScalingPolicyConfiguration(disableScaleIn, scaleInCooldown, scaleOutCooldown, targetValue);
         }
     }

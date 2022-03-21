@@ -65,12 +65,13 @@ public final class GetRecipeResult {
             this.description = description;
             return this;
         }
-
         public Builder steps(@Nullable List<RecipeStep> steps) {
             this.steps = steps;
             return this;
         }
-        public GetRecipeResult build() {
+        public Builder steps(RecipeStep... steps) {
+            return steps(List.of(steps));
+        }        public GetRecipeResult build() {
             return new GetRecipeResult(description, steps);
         }
     }

@@ -202,52 +202,45 @@ public final class GetDeviceResult {
             this.description = description;
             return this;
         }
-
         public Builder deviceArn(@Nullable String deviceArn) {
             this.deviceArn = deviceArn;
             return this;
         }
-
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
-
         public Builder location(@Nullable DeviceLocation location) {
             this.location = location;
             return this;
         }
-
         public Builder model(@Nullable String model) {
             this.model = model;
             return this;
         }
-
         public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder siteId(@Nullable String siteId) {
             this.siteId = siteId;
             return this;
         }
-
         public Builder tags(@Nullable List<DeviceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DeviceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = vendor;
             return this;
-        }
-        public GetDeviceResult build() {
+        }        public GetDeviceResult build() {
             return new GetDeviceResult(description, deviceArn, deviceId, location, model, serialNumber, siteId, tags, type, vendor);
         }
     }

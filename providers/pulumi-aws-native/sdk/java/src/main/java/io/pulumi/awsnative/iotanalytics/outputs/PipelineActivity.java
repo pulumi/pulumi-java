@@ -128,52 +128,42 @@ public final class PipelineActivity {
             this.addAttributes = addAttributes;
             return this;
         }
-
         public Builder channel(@Nullable PipelineChannel channel) {
             this.channel = channel;
             return this;
         }
-
         public Builder datastore(@Nullable PipelineDatastore datastore) {
             this.datastore = datastore;
             return this;
         }
-
         public Builder deviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich) {
             this.deviceRegistryEnrich = deviceRegistryEnrich;
             return this;
         }
-
         public Builder deviceShadowEnrich(@Nullable PipelineDeviceShadowEnrich deviceShadowEnrich) {
             this.deviceShadowEnrich = deviceShadowEnrich;
             return this;
         }
-
         public Builder filter(@Nullable PipelineFilter filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder lambda(@Nullable PipelineLambda lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder math(@Nullable PipelineMath math) {
             this.math = math;
             return this;
         }
-
         public Builder removeAttributes(@Nullable PipelineRemoveAttributes removeAttributes) {
             this.removeAttributes = removeAttributes;
             return this;
         }
-
         public Builder selectAttributes(@Nullable PipelineSelectAttributes selectAttributes) {
             this.selectAttributes = selectAttributes;
             return this;
-        }
-        public PipelineActivity build() {
+        }        public PipelineActivity build() {
             return new PipelineActivity(addAttributes, channel, datastore, deviceRegistryEnrich, deviceShadowEnrich, filter, lambda, math, removeAttributes, selectAttributes);
         }
     }

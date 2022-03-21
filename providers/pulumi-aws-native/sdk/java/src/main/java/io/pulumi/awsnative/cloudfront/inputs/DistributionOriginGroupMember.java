@@ -50,8 +50,7 @@ public final class DistributionOriginGroupMember extends io.pulumi.resources.Inv
         public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
-        }
-        public DistributionOriginGroupMember build() {
+        }        public DistributionOriginGroupMember build() {
             return new DistributionOriginGroupMember(originId);
         }
     }

@@ -137,32 +137,29 @@ public final class GetDashboardResult {
             this.dashboardArn = dashboardArn;
             return this;
         }
-
         public Builder dashboardDefinition(@Nullable String dashboardDefinition) {
             this.dashboardDefinition = dashboardDefinition;
             return this;
         }
-
         public Builder dashboardDescription(@Nullable String dashboardDescription) {
             this.dashboardDescription = dashboardDescription;
             return this;
         }
-
         public Builder dashboardId(@Nullable String dashboardId) {
             this.dashboardId = dashboardId;
             return this;
         }
-
         public Builder dashboardName(@Nullable String dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
-
         public Builder tags(@Nullable List<DashboardTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDashboardResult build() {
+        public Builder tags(DashboardTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDashboardResult build() {
             return new GetDashboardResult(dashboardArn, dashboardDefinition, dashboardDescription, dashboardId, dashboardName, tags);
         }
     }

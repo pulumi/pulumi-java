@@ -116,62 +116,50 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
             this.backgroundColor = backgroundColor;
             return this;
         }
-
         public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = Output.ofNullable(backgroundColor);
             return this;
         }
-
         public Builder borderRadius(@Nullable Output<Integer> borderRadius) {
             this.borderRadius = borderRadius;
             return this;
         }
-
         public Builder borderRadius(@Nullable Integer borderRadius) {
             this.borderRadius = Output.ofNullable(borderRadius);
             return this;
         }
-
         public Builder buttonAction(@Nullable Output<InAppTemplateButtonAction> buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
-
         public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
             this.buttonAction = Output.ofNullable(buttonAction);
             return this;
         }
-
         public Builder link(@Nullable Output<String> link) {
             this.link = link;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = Output.ofNullable(link);
             return this;
         }
-
         public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable String text) {
             this.text = Output.ofNullable(text);
             return this;
         }
-
         public Builder textColor(@Nullable Output<String> textColor) {
             this.textColor = textColor;
             return this;
         }
-
         public Builder textColor(@Nullable String textColor) {
             this.textColor = Output.ofNullable(textColor);
             return this;
-        }
-        public InAppTemplateDefaultButtonConfigurationArgs build() {
+        }        public InAppTemplateDefaultButtonConfigurationArgs build() {
             return new InAppTemplateDefaultButtonConfigurationArgs(backgroundColor, borderRadius, buttonAction, link, text, textColor);
         }
     }

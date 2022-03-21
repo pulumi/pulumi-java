@@ -50,8 +50,7 @@ public final class GetVPCEConfigurationArgs extends io.pulumi.resources.InvokeAr
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetVPCEConfigurationArgs build() {
+        }        public GetVPCEConfigurationArgs build() {
             return new GetVPCEConfigurationArgs(arn);
         }
     }

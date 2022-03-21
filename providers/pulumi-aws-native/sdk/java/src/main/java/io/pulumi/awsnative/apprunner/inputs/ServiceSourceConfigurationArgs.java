@@ -101,42 +101,34 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationArgs authenticationConfiguration) {
             this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
-
         public Builder autoDeploymentsEnabled(@Nullable Output<Boolean> autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
-
         public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = Output.ofNullable(autoDeploymentsEnabled);
             return this;
         }
-
         public Builder codeRepository(@Nullable Output<ServiceCodeRepositoryArgs> codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
-
         public Builder codeRepository(@Nullable ServiceCodeRepositoryArgs codeRepository) {
             this.codeRepository = Output.ofNullable(codeRepository);
             return this;
         }
-
         public Builder imageRepository(@Nullable Output<ServiceImageRepositoryArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
-
         public Builder imageRepository(@Nullable ServiceImageRepositoryArgs imageRepository) {
             this.imageRepository = Output.ofNullable(imageRepository);
             return this;
-        }
-        public ServiceSourceConfigurationArgs build() {
+        }        public ServiceSourceConfigurationArgs build() {
             return new ServiceSourceConfigurationArgs(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
         }
     }

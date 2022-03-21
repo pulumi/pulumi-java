@@ -67,22 +67,18 @@ public final class FlowEventBridgeDestinationPropertiesArgs extends io.pulumi.re
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
             this.errorHandlingConfig = Output.ofNullable(errorHandlingConfig);
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowEventBridgeDestinationPropertiesArgs build() {
+        }        public FlowEventBridgeDestinationPropertiesArgs build() {
             return new FlowEventBridgeDestinationPropertiesArgs(errorHandlingConfig, object);
         }
     }

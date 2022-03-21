@@ -96,17 +96,23 @@ public final class FrameworkControlControlScopeProperties extends io.pulumi.reso
             this.complianceResourceIds = complianceResourceIds;
             return this;
         }
-
+        public Builder complianceResourceIds(String... complianceResourceIds) {
+            return complianceResourceIds(List.of(complianceResourceIds));
+        }
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
-
+        public Builder complianceResourceTypes(String... complianceResourceTypes) {
+            return complianceResourceTypes(List.of(complianceResourceTypes));
+        }
         public Builder tags(@Nullable List<FrameworkTag> tags) {
             this.tags = tags;
             return this;
         }
-        public FrameworkControlControlScopeProperties build() {
+        public Builder tags(FrameworkTag... tags) {
+            return tags(List.of(tags));
+        }        public FrameworkControlControlScopeProperties build() {
             return new FrameworkControlControlScopeProperties(complianceResourceIds, complianceResourceTypes, tags);
         }
     }

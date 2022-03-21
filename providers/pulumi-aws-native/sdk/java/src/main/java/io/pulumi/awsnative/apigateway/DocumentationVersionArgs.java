@@ -90,32 +90,26 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentationVersion(Output<String> documentationVersion) {
             this.documentationVersion = Objects.requireNonNull(documentationVersion);
             return this;
         }
-
         public Builder documentationVersion(String documentationVersion) {
             this.documentationVersion = Output.of(Objects.requireNonNull(documentationVersion));
             return this;
         }
-
         public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
-
         public Builder restApiId(String restApiId) {
             this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
-        }
-        public DocumentationVersionArgs build() {
+        }        public DocumentationVersionArgs build() {
             return new DocumentationVersionArgs(description, documentationVersion, restApiId);
         }
     }

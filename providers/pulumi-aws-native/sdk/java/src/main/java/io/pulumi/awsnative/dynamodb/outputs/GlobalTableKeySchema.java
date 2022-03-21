@@ -53,12 +53,10 @@ public final class GlobalTableKeySchema {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
-        }
-        public GlobalTableKeySchema build() {
+        }        public GlobalTableKeySchema build() {
             return new GlobalTableKeySchema(attributeName, keyType);
         }
     }

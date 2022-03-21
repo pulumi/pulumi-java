@@ -77,32 +77,26 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
-
         public Builder applicationIdentifier(String applicationIdentifier) {
             this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
             return this;
         }
-
         public Builder entitlementName(Output<String> entitlementName) {
             this.entitlementName = Objects.requireNonNull(entitlementName);
             return this;
         }
-
         public Builder entitlementName(String entitlementName) {
             this.entitlementName = Output.of(Objects.requireNonNull(entitlementName));
             return this;
         }
-
         public Builder stackName(Output<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
-
         public Builder stackName(String stackName) {
             this.stackName = Output.of(Objects.requireNonNull(stackName));
             return this;
-        }
-        public ApplicationEntitlementAssociationArgs build() {
+        }        public ApplicationEntitlementAssociationArgs build() {
             return new ApplicationEntitlementAssociationArgs(applicationIdentifier, entitlementName, stackName);
         }
     }

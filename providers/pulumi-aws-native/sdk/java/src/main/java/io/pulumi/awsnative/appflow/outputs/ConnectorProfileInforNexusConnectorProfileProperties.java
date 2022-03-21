@@ -51,8 +51,7 @@ public final class ConnectorProfileInforNexusConnectorProfileProperties {
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
-        }
-        public ConnectorProfileInforNexusConnectorProfileProperties build() {
+        }        public ConnectorProfileInforNexusConnectorProfileProperties build() {
             return new ConnectorProfileInforNexusConnectorProfileProperties(instanceUrl);
         }
     }

@@ -186,47 +186,44 @@ public final class GetAssetResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder egressEndpoints(@Nullable List<AssetEgressEndpoint> egressEndpoints) {
             this.egressEndpoints = egressEndpoints;
             return this;
         }
-
+        public Builder egressEndpoints(AssetEgressEndpoint... egressEndpoints) {
+            return egressEndpoints(List.of(egressEndpoints));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder packagingGroupId(@Nullable String packagingGroupId) {
             this.packagingGroupId = packagingGroupId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
-
         public Builder sourceRoleArn(@Nullable String sourceRoleArn) {
             this.sourceRoleArn = sourceRoleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<AssetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAssetResult build() {
+        public Builder tags(AssetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAssetResult build() {
             return new GetAssetResult(arn, createdAt, egressEndpoints, id, packagingGroupId, resourceId, sourceArn, sourceRoleArn, tags);
         }
     }

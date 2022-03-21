@@ -55,12 +55,10 @@ public final class TaskDefinitionContainerDependency {
             this.condition = condition;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
-        }
-        public TaskDefinitionContainerDependency build() {
+        }        public TaskDefinitionContainerDependency build() {
             return new TaskDefinitionContainerDependency(condition, containerName);
         }
     }

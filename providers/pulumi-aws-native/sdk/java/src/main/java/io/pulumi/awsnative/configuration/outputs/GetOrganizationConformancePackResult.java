@@ -105,22 +105,24 @@ public final class GetOrganizationConformancePackResult {
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
-
+        public Builder conformancePackInputParameters(OrganizationConformancePackConformancePackInputParameter... conformancePackInputParameters) {
+            return conformancePackInputParameters(List.of(conformancePackInputParameters));
+        }
         public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
-
         public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
-
         public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
-        public GetOrganizationConformancePackResult build() {
+        public Builder excludedAccounts(String... excludedAccounts) {
+            return excludedAccounts(List.of(excludedAccounts));
+        }        public GetOrganizationConformancePackResult build() {
             return new GetOrganizationConformancePackResult(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix, excludedAccounts);
         }
     }

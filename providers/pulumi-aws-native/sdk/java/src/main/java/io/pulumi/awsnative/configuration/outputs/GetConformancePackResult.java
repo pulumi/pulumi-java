@@ -89,17 +89,17 @@ public final class GetConformancePackResult {
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
-
+        public Builder conformancePackInputParameters(ConformancePackInputParameter... conformancePackInputParameters) {
+            return conformancePackInputParameters(List.of(conformancePackInputParameters));
+        }
         public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
-
         public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
-        }
-        public GetConformancePackResult build() {
+        }        public GetConformancePackResult build() {
             return new GetConformancePackResult(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix);
         }
     }

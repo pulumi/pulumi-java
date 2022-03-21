@@ -53,12 +53,10 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
             this.aggregationType = aggregationType;
             return this;
         }
-
         public Builder aggregationType(@Nullable FlowAggregationType aggregationType) {
             this.aggregationType = Output.ofNullable(aggregationType);
             return this;
-        }
-        public FlowAggregationConfigArgs build() {
+        }        public FlowAggregationConfigArgs build() {
             return new FlowAggregationConfigArgs(aggregationType);
         }
     }

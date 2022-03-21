@@ -69,12 +69,10 @@ public final class ClusterTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ClusterTag build() {
+        }        public ClusterTag build() {
             return new ClusterTag(key, value);
         }
     }

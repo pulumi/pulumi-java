@@ -55,12 +55,10 @@ public final class MulticastGroupTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public MulticastGroupTag build() {
+        }        public MulticastGroupTag build() {
             return new MulticastGroupTag(key, value);
         }
     }

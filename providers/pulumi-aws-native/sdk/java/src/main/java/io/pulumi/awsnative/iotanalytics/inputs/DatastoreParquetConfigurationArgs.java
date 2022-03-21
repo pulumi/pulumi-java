@@ -53,12 +53,10 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
             this.schemaDefinition = schemaDefinition;
             return this;
         }
-
         public Builder schemaDefinition(@Nullable DatastoreSchemaDefinitionArgs schemaDefinition) {
             this.schemaDefinition = Output.ofNullable(schemaDefinition);
             return this;
-        }
-        public DatastoreParquetConfigurationArgs build() {
+        }        public DatastoreParquetConfigurationArgs build() {
             return new DatastoreParquetConfigurationArgs(schemaDefinition);
         }
     }

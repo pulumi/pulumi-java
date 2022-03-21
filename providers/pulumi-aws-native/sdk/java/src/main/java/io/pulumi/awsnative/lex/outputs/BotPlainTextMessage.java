@@ -51,8 +51,7 @@ public final class BotPlainTextMessage {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BotPlainTextMessage build() {
+        }        public BotPlainTextMessage build() {
             return new BotPlainTextMessage(value);
         }
     }

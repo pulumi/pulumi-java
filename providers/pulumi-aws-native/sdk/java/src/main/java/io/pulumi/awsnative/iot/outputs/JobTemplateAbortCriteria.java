@@ -104,22 +104,18 @@ public final class JobTemplateAbortCriteria {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder failureType(JobTemplateFailureType failureType) {
             this.failureType = Objects.requireNonNull(failureType);
             return this;
         }
-
         public Builder minNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
             this.minNumberOfExecutedThings = Objects.requireNonNull(minNumberOfExecutedThings);
             return this;
         }
-
         public Builder thresholdPercentage(Double thresholdPercentage) {
             this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
             return this;
-        }
-        public JobTemplateAbortCriteria build() {
+        }        public JobTemplateAbortCriteria build() {
             return new JobTemplateAbortCriteria(action, failureType, minNumberOfExecutedThings, thresholdPercentage);
         }
     }

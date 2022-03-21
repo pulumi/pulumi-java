@@ -50,8 +50,7 @@ public final class GetAttributeGroupAssociationArgs extends io.pulumi.resources.
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetAttributeGroupAssociationArgs build() {
+        }        public GetAttributeGroupAssociationArgs build() {
             return new GetAttributeGroupAssociationArgs(id);
         }
     }

@@ -53,7 +53,9 @@ public final class AgentPermissionsProperties {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-        public AgentPermissionsProperties build() {
+        public Builder principals(String... principals) {
+            return principals(List.of(principals));
+        }        public AgentPermissionsProperties build() {
             return new AgentPermissionsProperties(principals);
         }
     }

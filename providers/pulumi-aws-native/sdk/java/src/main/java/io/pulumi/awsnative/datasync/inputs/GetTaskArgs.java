@@ -54,8 +54,7 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
         public Builder taskArn(String taskArn) {
             this.taskArn = Objects.requireNonNull(taskArn);
             return this;
-        }
-        public GetTaskArgs build() {
+        }        public GetTaskArgs build() {
             return new GetTaskArgs(taskArn);
         }
     }

@@ -53,7 +53,9 @@ public final class BotSlotDefaultValueSpecification {
             this.defaultValueList = Objects.requireNonNull(defaultValueList);
             return this;
         }
-        public BotSlotDefaultValueSpecification build() {
+        public Builder defaultValueList(BotSlotDefaultValue... defaultValueList) {
+            return defaultValueList(List.of(defaultValueList));
+        }        public BotSlotDefaultValueSpecification build() {
             return new BotSlotDefaultValueSpecification(defaultValueList);
         }
     }

@@ -53,8 +53,7 @@ public final class LocationSMBMountOptions {
         public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
             this.version = version;
             return this;
-        }
-        public LocationSMBMountOptions build() {
+        }        public LocationSMBMountOptions build() {
             return new LocationSMBMountOptions(version);
         }
     }

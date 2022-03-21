@@ -105,27 +105,25 @@ public final class SuiteDefinitionConfigurationProperties extends io.pulumi.reso
             this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
             return this;
         }
-
         public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTest> devices) {
             this.devices = devices;
             return this;
         }
-
+        public Builder devices(SuiteDefinitionDeviceUnderTest... devices) {
+            return devices(List.of(devices));
+        }
         public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
             this.intendedForQualification = intendedForQualification;
             return this;
         }
-
         public Builder rootGroup(String rootGroup) {
             this.rootGroup = Objects.requireNonNull(rootGroup);
             return this;
         }
-
         public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
-        }
-        public SuiteDefinitionConfigurationProperties build() {
+        }        public SuiteDefinitionConfigurationProperties build() {
             return new SuiteDefinitionConfigurationProperties(devicePermissionRoleArn, devices, intendedForQualification, rootGroup, suiteDefinitionName);
         }
     }

@@ -45,8 +45,7 @@ public final class WebACLAllowAction {
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public WebACLAllowAction build() {
+        }        public WebACLAllowAction build() {
             return new WebACLAllowAction(customRequestHandling);
         }
     }

@@ -56,12 +56,10 @@ public final class GetTemplateResult {
             this.id = id;
             return this;
         }
-
         public Builder template(@Nullable Template template) {
             this.template = template;
             return this;
-        }
-        public GetTemplateResult build() {
+        }        public GetTemplateResult build() {
             return new GetTemplateResult(id, template);
         }
     }

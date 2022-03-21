@@ -72,12 +72,10 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
-        }
-        public StackSetParameter build() {
+        }        public StackSetParameter build() {
             return new StackSetParameter(parameterKey, parameterValue);
         }
     }

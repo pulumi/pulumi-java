@@ -78,22 +78,18 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
-
         public Builder logLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
             this.logLevel = Output.of(Objects.requireNonNull(logLevel));
             return this;
         }
-
         public Builder roleArnForLogging(Output<String> roleArnForLogging) {
             this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
             return this;
         }
-
         public Builder roleArnForLogging(String roleArnForLogging) {
             this.roleArnForLogging = Output.of(Objects.requireNonNull(roleArnForLogging));
             return this;
-        }
-        public MitigationActionEnableIoTLoggingParamsArgs build() {
+        }        public MitigationActionEnableIoTLoggingParamsArgs build() {
             return new MitigationActionEnableIoTLoggingParamsArgs(logLevel, roleArnForLogging);
         }
     }

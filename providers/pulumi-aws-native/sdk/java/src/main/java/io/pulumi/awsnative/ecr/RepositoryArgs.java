@@ -149,72 +149,61 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable RepositoryEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
-
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
             this.imageScanningConfiguration = Output.ofNullable(imageScanningConfiguration);
             return this;
         }
-
         public Builder imageTagMutability(@Nullable Output<RepositoryImageTagMutability> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
-
         public Builder imageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
             this.imageTagMutability = Output.ofNullable(imageTagMutability);
             return this;
         }
-
         public Builder lifecyclePolicy(@Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
-
         public Builder lifecyclePolicy(@Nullable RepositoryLifecyclePolicyArgs lifecyclePolicy) {
             this.lifecyclePolicy = Output.ofNullable(lifecyclePolicy);
             return this;
         }
-
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
-
         public Builder repositoryPolicyText(@Nullable Output<Object> repositoryPolicyText) {
             this.repositoryPolicyText = repositoryPolicyText;
             return this;
         }
-
         public Builder repositoryPolicyText(@Nullable Object repositoryPolicyText) {
             this.repositoryPolicyText = Output.ofNullable(repositoryPolicyText);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RepositoryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public RepositoryArgs build() {
+        public Builder tags(RepositoryTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public RepositoryArgs build() {
             return new RepositoryArgs(encryptionConfiguration, imageScanningConfiguration, imageTagMutability, lifecyclePolicy, repositoryName, repositoryPolicyText, tags);
         }
     }

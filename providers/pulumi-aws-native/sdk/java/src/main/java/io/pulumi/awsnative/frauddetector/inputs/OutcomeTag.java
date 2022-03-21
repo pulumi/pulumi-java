@@ -64,12 +64,10 @@ public final class OutcomeTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public OutcomeTag build() {
+        }        public OutcomeTag build() {
             return new OutcomeTag(key, value);
         }
     }

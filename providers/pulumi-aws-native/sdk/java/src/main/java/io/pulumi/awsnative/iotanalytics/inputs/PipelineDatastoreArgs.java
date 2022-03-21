@@ -65,22 +65,18 @@ public final class PipelineDatastoreArgs extends io.pulumi.resources.ResourceArg
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
-
         public Builder datastoreName(String datastoreName) {
             this.datastoreName = Output.of(Objects.requireNonNull(datastoreName));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PipelineDatastoreArgs build() {
+        }        public PipelineDatastoreArgs build() {
             return new PipelineDatastoreArgs(datastoreName, name);
         }
     }
