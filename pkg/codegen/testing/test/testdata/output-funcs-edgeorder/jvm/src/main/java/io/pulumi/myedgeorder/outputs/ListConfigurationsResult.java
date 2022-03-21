@@ -73,12 +73,13 @@ public final class ListConfigurationsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(List<ConfigurationResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListConfigurationsResult build() {
+        public Builder value(ConfigurationResponse... value) {
+            return value(List.of(value));
+        }        public ListConfigurationsResult build() {
             return new ListConfigurationsResult(nextLink, value);
         }
     }

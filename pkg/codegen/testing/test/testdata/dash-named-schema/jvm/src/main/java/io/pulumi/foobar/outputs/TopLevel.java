@@ -45,8 +45,7 @@ public final class TopLevel {
         public Builder buzz(@Nullable String buzz) {
             this.buzz = buzz;
             return this;
-        }
-        public TopLevel build() {
+        }        public TopLevel build() {
             return new TopLevel(buzz);
         }
     }

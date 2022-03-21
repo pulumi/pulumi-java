@@ -72,12 +72,10 @@ public final class KubeClientSettingsArgs {
             this.burst = burst;
             return this;
         }
-
         public Builder qps(@Nullable Output<Double> qps) {
             this.qps = qps;
             return this;
-        }
-        public KubeClientSettingsArgs build() {
+        }        public KubeClientSettingsArgs build() {
             return new KubeClientSettingsArgs(burst, qps);
         }
     }

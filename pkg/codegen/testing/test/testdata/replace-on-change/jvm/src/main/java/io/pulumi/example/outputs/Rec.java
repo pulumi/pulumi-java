@@ -44,8 +44,7 @@ public final class Rec {
         public Builder rec1(@Nullable Rec rec1) {
             this.rec1 = rec1;
             return this;
-        }
-        public Rec build() {
+        }        public Rec build() {
             return new Rec(rec1);
         }
     }

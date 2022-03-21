@@ -53,8 +53,7 @@ public final class GetWebAppSlotResult {
         public Builder siteConfig(@Nullable SiteConfigResponse siteConfig) {
             this.siteConfig = siteConfig;
             return this;
-        }
-        public GetWebAppSlotResult build() {
+        }        public GetWebAppSlotResult build() {
             return new GetWebAppSlotResult(siteConfig);
         }
     }

@@ -53,12 +53,10 @@ public final class FooResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.foo = foo;
             return this;
         }
-
         public Builder foo(@Nullable Resource foo) {
             this.foo = Output.ofNullable(foo);
             return this;
-        }
-        public FooResourceArgs build() {
+        }        public FooResourceArgs build() {
             return new FooResourceArgs(foo);
         }
     }

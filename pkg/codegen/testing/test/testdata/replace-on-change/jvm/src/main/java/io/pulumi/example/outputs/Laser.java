@@ -65,17 +65,14 @@ public final class Laser {
             this.animal = animal;
             return this;
         }
-
         public Builder batteries(@Nullable Boolean batteries) {
             this.batteries = batteries;
             return this;
         }
-
         public Builder light(@Nullable Double light) {
             this.light = light;
             return this;
-        }
-        public Laser build() {
+        }        public Laser build() {
             return new Laser(animal, batteries, light);
         }
     }
