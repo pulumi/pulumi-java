@@ -219,102 +219,88 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             this.buildTimeoutInMinutes = buildTimeoutInMinutes;
             return this;
         }
-
         public Builder buildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
             this.buildTimeoutInMinutes = Output.ofNullable(buildTimeoutInMinutes);
             return this;
         }
-
         public Builder customize(@Nullable Output<List<Object>> customize) {
             this.customize = customize;
             return this;
         }
-
         public Builder customize(@Nullable List<Object> customize) {
             this.customize = Output.ofNullable(customize);
             return this;
         }
-
+        public Builder customize(Object... customize) {
+            return customize(List.of(customize));
+        }
         public Builder distribute(Output<List<Object>> distribute) {
             this.distribute = Objects.requireNonNull(distribute);
             return this;
         }
-
         public Builder distribute(List<Object> distribute) {
             this.distribute = Output.of(Objects.requireNonNull(distribute));
             return this;
         }
-
+        public Builder distribute(Object... distribute) {
+            return distribute(List.of(distribute));
+        }
         public Builder identity(Output<ImageTemplateIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(ImageTemplateIdentityArgs identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public Builder imageTemplateName(@Nullable Output<String> imageTemplateName) {
             this.imageTemplateName = imageTemplateName;
             return this;
         }
-
         public Builder imageTemplateName(@Nullable String imageTemplateName) {
             this.imageTemplateName = Output.ofNullable(imageTemplateName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(Output<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(Object source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vmProfile(@Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
             this.vmProfile = vmProfile;
             return this;
         }
-
         public Builder vmProfile(@Nullable ImageTemplateVmProfileArgs vmProfile) {
             this.vmProfile = Output.ofNullable(vmProfile);
             return this;
-        }
-        public VirtualMachineImageTemplateArgs build() {
+        }        public VirtualMachineImageTemplateArgs build() {
             return new VirtualMachineImageTemplateArgs(buildTimeoutInMinutes, customize, distribute, identity, imageTemplateName, location, resourceGroupName, source, tags, vmProfile);
         }
     }

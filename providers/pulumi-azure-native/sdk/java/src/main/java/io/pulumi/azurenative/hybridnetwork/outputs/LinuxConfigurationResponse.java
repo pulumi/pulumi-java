@@ -53,8 +53,7 @@ public final class LinuxConfigurationResponse {
         public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             this.ssh = ssh;
             return this;
-        }
-        public LinuxConfigurationResponse build() {
+        }        public LinuxConfigurationResponse build() {
             return new LinuxConfigurationResponse(ssh);
         }
     }

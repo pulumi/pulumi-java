@@ -77,22 +77,18 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
             this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber);
             return this;
         }
-
         public Builder carrierAccountNumber(String carrierAccountNumber) {
             this.carrierAccountNumber = Output.of(Objects.requireNonNull(carrierAccountNumber));
             return this;
         }
-
         public Builder carrierName(Output<String> carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public Builder carrierName(String carrierName) {
             this.carrierName = Output.of(Objects.requireNonNull(carrierName));
             return this;
-        }
-        public ReturnShippingArgs build() {
+        }        public ReturnShippingArgs build() {
             return new ReturnShippingArgs(carrierAccountNumber, carrierName);
         }
     }

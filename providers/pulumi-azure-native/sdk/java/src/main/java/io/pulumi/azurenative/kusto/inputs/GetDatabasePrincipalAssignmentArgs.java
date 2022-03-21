@@ -104,22 +104,18 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder principalAssignmentName(String principalAssignmentName) {
             this.principalAssignmentName = Objects.requireNonNull(principalAssignmentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDatabasePrincipalAssignmentArgs build() {
+        }        public GetDatabasePrincipalAssignmentArgs build() {
             return new GetDatabasePrincipalAssignmentArgs(clusterName, databaseName, principalAssignmentName, resourceGroupName);
         }
     }

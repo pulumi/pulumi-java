@@ -191,92 +191,74 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder managementGroupId(Output<String> managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
-
         public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Output.of(Objects.requireNonNull(managementGroupId));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policyDefinitionName(@Nullable Output<String> policyDefinitionName) {
             this.policyDefinitionName = policyDefinitionName;
             return this;
         }
-
         public Builder policyDefinitionName(@Nullable String policyDefinitionName) {
             this.policyDefinitionName = Output.ofNullable(policyDefinitionName);
             return this;
         }
-
         public Builder policyRule(@Nullable Output<Object> policyRule) {
             this.policyRule = policyRule;
             return this;
         }
-
         public Builder policyRule(@Nullable Object policyRule) {
             this.policyRule = Output.ofNullable(policyRule);
             return this;
         }
-
         public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
-
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
             this.policyType = Output.ofNullable(policyType);
             return this;
-        }
-        public PolicyDefinitionAtManagementGroupArgs build() {
+        }        public PolicyDefinitionAtManagementGroupArgs build() {
             return new PolicyDefinitionAtManagementGroupArgs(description, displayName, managementGroupId, metadata, mode, parameters, policyDefinitionName, policyRule, policyType);
         }
     }

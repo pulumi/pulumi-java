@@ -365,192 +365,154 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
             this.assets = assets;
             return this;
         }
-
         public Builder assets(@Nullable Map<String,AssetItemArgs> assets) {
             this.assets = Output.ofNullable(assets);
             return this;
         }
-
         public Builder commitmentPlan(@Nullable Output<CommitmentPlanArgs> commitmentPlan) {
             this.commitmentPlan = commitmentPlan;
             return this;
         }
-
         public Builder commitmentPlan(@Nullable CommitmentPlanArgs commitmentPlan) {
             this.commitmentPlan = Output.ofNullable(commitmentPlan);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diagnostics(@Nullable Output<DiagnosticsConfigurationArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder diagnostics(@Nullable DiagnosticsConfigurationArgs diagnostics) {
             this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
-
         public Builder exampleRequest(@Nullable Output<ExampleRequestArgs> exampleRequest) {
             this.exampleRequest = exampleRequest;
             return this;
         }
-
         public Builder exampleRequest(@Nullable ExampleRequestArgs exampleRequest) {
             this.exampleRequest = Output.ofNullable(exampleRequest);
             return this;
         }
-
         public Builder exposeSampleData(@Nullable Output<Boolean> exposeSampleData) {
             this.exposeSampleData = exposeSampleData;
             return this;
         }
-
         public Builder exposeSampleData(@Nullable Boolean exposeSampleData) {
             this.exposeSampleData = Output.ofNullable(exposeSampleData);
             return this;
         }
-
         public Builder input(@Nullable Output<ServiceInputOutputSpecificationArgs> input) {
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ServiceInputOutputSpecificationArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder keys(@Nullable Output<WebServiceKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable WebServiceKeysArgs keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
         public Builder machineLearningWorkspace(@Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace) {
             this.machineLearningWorkspace = machineLearningWorkspace;
             return this;
         }
-
         public Builder machineLearningWorkspace(@Nullable MachineLearningWorkspaceArgs machineLearningWorkspace) {
             this.machineLearningWorkspace = Output.ofNullable(machineLearningWorkspace);
             return this;
         }
-
         public Builder output(@Nullable Output<ServiceInputOutputSpecificationArgs> output) {
             this.output = output;
             return this;
         }
-
         public Builder output(@Nullable ServiceInputOutputSpecificationArgs output) {
             this.output = Output.ofNullable(output);
             return this;
         }
-
         public Builder $package(@Nullable Output<GraphPackageArgs> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable GraphPackageArgs $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder packageType(Output<String> packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public Builder packageType(String packageType) {
             this.packageType = Output.of(Objects.requireNonNull(packageType));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder payloadsInBlobStorage(@Nullable Output<Boolean> payloadsInBlobStorage) {
             this.payloadsInBlobStorage = payloadsInBlobStorage;
             return this;
         }
-
         public Builder payloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
             this.payloadsInBlobStorage = Output.ofNullable(payloadsInBlobStorage);
             return this;
         }
-
         public Builder payloadsLocation(@Nullable Output<BlobLocationArgs> payloadsLocation) {
             this.payloadsLocation = payloadsLocation;
             return this;
         }
-
         public Builder payloadsLocation(@Nullable BlobLocationArgs payloadsLocation) {
             this.payloadsLocation = Output.ofNullable(payloadsLocation);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder realtimeConfiguration(@Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration) {
             this.realtimeConfiguration = realtimeConfiguration;
             return this;
         }
-
         public Builder realtimeConfiguration(@Nullable RealtimeConfigurationArgs realtimeConfiguration) {
             this.realtimeConfiguration = Output.ofNullable(realtimeConfiguration);
             return this;
         }
-
         public Builder storageAccount(@Nullable Output<StorageAccountArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder storageAccount(@Nullable StorageAccountArgs storageAccount) {
             this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public WebServicePropertiesForGraphArgs build() {
+        }        public WebServicePropertiesForGraphArgs build() {
             return new WebServicePropertiesForGraphArgs(assets, commitmentPlan, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, readOnly, realtimeConfiguration, storageAccount, title);
         }
     }

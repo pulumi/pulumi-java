@@ -137,32 +137,26 @@ public final class DeploymentSettingsResponse {
             this.cpu = cpu;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder jvmOptions(@Nullable String jvmOptions) {
             this.jvmOptions = jvmOptions;
             return this;
         }
-
         public Builder memoryInGB(@Nullable Integer memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
-
         public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
             this.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
-
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
-        }
-        public DeploymentSettingsResponse build() {
+        }        public DeploymentSettingsResponse build() {
             return new DeploymentSettingsResponse(cpu, environmentVariables, jvmOptions, memoryInGB, netCoreMainEntryPath, runtimeVersion);
         }
     }

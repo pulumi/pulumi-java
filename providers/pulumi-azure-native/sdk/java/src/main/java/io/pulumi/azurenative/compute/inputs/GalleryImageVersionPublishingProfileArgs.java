@@ -132,52 +132,45 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
             return this;
         }
-
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
-
         public Builder targetRegions(@Nullable Output<List<TargetRegionArgs>> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }
-
         public Builder targetRegions(@Nullable List<TargetRegionArgs> targetRegions) {
             this.targetRegions = Output.ofNullable(targetRegions);
             return this;
         }
-        public GalleryImageVersionPublishingProfileArgs build() {
+        public Builder targetRegions(TargetRegionArgs... targetRegions) {
+            return targetRegions(List.of(targetRegions));
+        }        public GalleryImageVersionPublishingProfileArgs build() {
             return new GalleryImageVersionPublishingProfileArgs(endOfLifeDate, excludeFromLatest, replicaCount, storageAccountType, targetRegions);
         }
     }

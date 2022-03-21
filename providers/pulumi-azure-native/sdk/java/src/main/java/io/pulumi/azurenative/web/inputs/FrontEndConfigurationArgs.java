@@ -53,12 +53,10 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable FrontEndServiceType kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public FrontEndConfigurationArgs build() {
+        }        public FrontEndConfigurationArgs build() {
             return new FrontEndConfigurationArgs(kind);
         }
     }

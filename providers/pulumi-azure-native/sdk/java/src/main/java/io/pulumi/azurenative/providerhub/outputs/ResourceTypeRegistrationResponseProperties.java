@@ -290,147 +290,154 @@ public final class ResourceTypeRegistrationResponseProperties {
             this.allowedUnauthorizedActions = allowedUnauthorizedActions;
             return this;
         }
-
+        public Builder allowedUnauthorizedActions(String... allowedUnauthorizedActions) {
+            return allowedUnauthorizedActions(List.of(allowedUnauthorizedActions));
+        }
         public Builder authorizationActionMappings(@Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings) {
             this.authorizationActionMappings = authorizationActionMappings;
             return this;
         }
-
+        public Builder authorizationActionMappings(AuthorizationActionMappingResponse... authorizationActionMappings) {
+            return authorizationActionMappings(List.of(authorizationActionMappings));
+        }
         public Builder checkNameAvailabilitySpecifications(@Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications) {
             this.checkNameAvailabilitySpecifications = checkNameAvailabilitySpecifications;
             return this;
         }
-
         public Builder defaultApiVersion(@Nullable String defaultApiVersion) {
             this.defaultApiVersion = defaultApiVersion;
             return this;
         }
-
         public Builder disallowedActionVerbs(@Nullable List<String> disallowedActionVerbs) {
             this.disallowedActionVerbs = disallowedActionVerbs;
             return this;
         }
-
+        public Builder disallowedActionVerbs(String... disallowedActionVerbs) {
+            return disallowedActionVerbs(List.of(disallowedActionVerbs));
+        }
         public Builder enableAsyncOperation(@Nullable Boolean enableAsyncOperation) {
             this.enableAsyncOperation = enableAsyncOperation;
             return this;
         }
-
         public Builder enableThirdPartyS2S(@Nullable Boolean enableThirdPartyS2S) {
             this.enableThirdPartyS2S = enableThirdPartyS2S;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ResourceTypeEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(ResourceTypeEndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder extendedLocations(@Nullable List<ExtendedLocationOptionsResponse> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
-
+        public Builder extendedLocations(ExtendedLocationOptionsResponse... extendedLocations) {
+            return extendedLocations(List.of(extendedLocations));
+        }
         public Builder extensionOptions(@Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions) {
             this.extensionOptions = extensionOptions;
             return this;
         }
-
         public Builder featuresRule(@Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
-
         public Builder identityManagement(@Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement) {
             this.identityManagement = identityManagement;
             return this;
         }
-
         public Builder isPureProxy(@Nullable Boolean isPureProxy) {
             this.isPureProxy = isPureProxy;
             return this;
         }
-
         public Builder linkedAccessChecks(@Nullable List<LinkedAccessCheckResponse> linkedAccessChecks) {
             this.linkedAccessChecks = linkedAccessChecks;
             return this;
         }
-
+        public Builder linkedAccessChecks(LinkedAccessCheckResponse... linkedAccessChecks) {
+            return linkedAccessChecks(List.of(linkedAccessChecks));
+        }
         public Builder loggingRules(@Nullable List<LoggingRuleResponse> loggingRules) {
             this.loggingRules = loggingRules;
             return this;
         }
-
+        public Builder loggingRules(LoggingRuleResponse... loggingRules) {
+            return loggingRules(List.of(loggingRules));
+        }
         public Builder marketplaceType(@Nullable String marketplaceType) {
             this.marketplaceType = marketplaceType;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder regionality(@Nullable String regionality) {
             this.regionality = regionality;
             return this;
         }
-
         public Builder requestHeaderOptions(@Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }
         public Builder resourceDeletionPolicy(@Nullable String resourceDeletionPolicy) {
             this.resourceDeletionPolicy = resourceDeletionPolicy;
             return this;
         }
-
         public Builder resourceMovePolicy(@Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy) {
             this.resourceMovePolicy = resourceMovePolicy;
             return this;
         }
-
         public Builder routingType(@Nullable String routingType) {
             this.routingType = routingType;
             return this;
         }
-
         public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
-
+        public Builder serviceTreeInfos(ServiceTreeInfoResponse... serviceTreeInfos) {
+            return serviceTreeInfos(List.of(serviceTreeInfos));
+        }
         public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
-
         public Builder subscriptionStateRules(@Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules) {
             this.subscriptionStateRules = subscriptionStateRules;
             return this;
         }
-
+        public Builder subscriptionStateRules(SubscriptionStateRuleResponse... subscriptionStateRules) {
+            return subscriptionStateRules(List.of(subscriptionStateRules));
+        }
         public Builder swaggerSpecifications(@Nullable List<SwaggerSpecificationResponse> swaggerSpecifications) {
             this.swaggerSpecifications = swaggerSpecifications;
             return this;
         }
-
+        public Builder swaggerSpecifications(SwaggerSpecificationResponse... swaggerSpecifications) {
+            return swaggerSpecifications(List.of(swaggerSpecifications));
+        }
         public Builder templateDeploymentOptions(@Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
-
         public Builder throttlingRules(@Nullable List<ThrottlingRuleResponse> throttlingRules) {
             this.throttlingRules = throttlingRules;
             return this;
         }
-        public ResourceTypeRegistrationResponseProperties build() {
+        public Builder throttlingRules(ThrottlingRuleResponse... throttlingRules) {
+            return throttlingRules(List.of(throttlingRules));
+        }        public ResourceTypeRegistrationResponseProperties build() {
             return new ResourceTypeRegistrationResponseProperties(allowedUnauthorizedActions, authorizationActionMappings, checkNameAvailabilitySpecifications, defaultApiVersion, disallowedActionVerbs, enableAsyncOperation, enableThirdPartyS2S, endpoints, extendedLocations, extensionOptions, featuresRule, identityManagement, isPureProxy, linkedAccessChecks, loggingRules, marketplaceType, provisioningState, regionality, requestHeaderOptions, requiredFeatures, resourceDeletionPolicy, resourceMovePolicy, routingType, serviceTreeInfos, subscriptionLifecycleNotificationSpecifications, subscriptionStateRules, swaggerSpecifications, templateDeploymentOptions, throttlingRules);
         }
     }

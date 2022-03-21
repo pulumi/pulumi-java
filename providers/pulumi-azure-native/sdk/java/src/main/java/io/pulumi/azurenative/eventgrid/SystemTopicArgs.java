@@ -156,72 +156,58 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityInfoArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder systemTopicName(@Nullable Output<String> systemTopicName) {
             this.systemTopicName = systemTopicName;
             return this;
         }
-
         public Builder systemTopicName(@Nullable String systemTopicName) {
             this.systemTopicName = Output.ofNullable(systemTopicName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder topicType(@Nullable Output<String> topicType) {
             this.topicType = topicType;
             return this;
         }
-
         public Builder topicType(@Nullable String topicType) {
             this.topicType = Output.ofNullable(topicType);
             return this;
-        }
-        public SystemTopicArgs build() {
+        }        public SystemTopicArgs build() {
             return new SystemTopicArgs(identity, location, resourceGroupName, source, systemTopicName, tags, topicType);
         }
     }

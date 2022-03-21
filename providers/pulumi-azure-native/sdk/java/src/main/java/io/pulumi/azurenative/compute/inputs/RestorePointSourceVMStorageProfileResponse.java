@@ -80,12 +80,13 @@ public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.
             this.dataDisks = dataDisks;
             return this;
         }
-
+        public Builder dataDisks(RestorePointSourceVMDataDiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder osDisk(@Nullable RestorePointSourceVMOSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
-        }
-        public RestorePointSourceVMStorageProfileResponse build() {
+        }        public RestorePointSourceVMStorageProfileResponse build() {
             return new RestorePointSourceVMStorageProfileResponse(dataDisks, osDisk);
         }
     }

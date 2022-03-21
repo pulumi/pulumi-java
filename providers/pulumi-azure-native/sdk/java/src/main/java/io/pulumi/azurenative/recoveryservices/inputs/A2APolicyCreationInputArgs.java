@@ -130,52 +130,42 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = Output.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
-
         public Builder crashConsistentFrequencyInMinutes(@Nullable Output<Integer> crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = Output.ofNullable(crashConsistentFrequencyInMinutes);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder multiVmSyncStatus(Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
             this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus);
             return this;
         }
-
         public Builder multiVmSyncStatus(Either<String,SetMultiVmSyncStatus> multiVmSyncStatus) {
             this.multiVmSyncStatus = Output.of(Objects.requireNonNull(multiVmSyncStatus));
             return this;
         }
-
         public Builder recoveryPointHistory(@Nullable Output<Integer> recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
-
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             this.recoveryPointHistory = Output.ofNullable(recoveryPointHistory);
             return this;
-        }
-        public A2APolicyCreationInputArgs build() {
+        }        public A2APolicyCreationInputArgs build() {
             return new A2APolicyCreationInputArgs(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory);
         }
     }

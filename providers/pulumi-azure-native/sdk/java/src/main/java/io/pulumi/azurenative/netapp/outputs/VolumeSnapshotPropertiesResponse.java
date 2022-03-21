@@ -53,8 +53,7 @@ public final class VolumeSnapshotPropertiesResponse {
         public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
             this.snapshotPolicyId = snapshotPolicyId;
             return this;
-        }
-        public VolumeSnapshotPropertiesResponse build() {
+        }        public VolumeSnapshotPropertiesResponse build() {
             return new VolumeSnapshotPropertiesResponse(snapshotPolicyId);
         }
     }

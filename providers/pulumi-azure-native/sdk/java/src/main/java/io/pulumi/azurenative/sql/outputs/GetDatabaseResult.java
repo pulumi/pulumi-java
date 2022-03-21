@@ -592,172 +592,138 @@ public final class GetDatabaseResult {
             this.autoPauseDelay = autoPauseDelay;
             return this;
         }
-
         public Builder catalogCollation(@Nullable String catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder currentBackupStorageRedundancy(String currentBackupStorageRedundancy) {
             this.currentBackupStorageRedundancy = Objects.requireNonNull(currentBackupStorageRedundancy);
             return this;
         }
-
         public Builder currentServiceObjectiveName(String currentServiceObjectiveName) {
             this.currentServiceObjectiveName = Objects.requireNonNull(currentServiceObjectiveName);
             return this;
         }
-
         public Builder currentSku(SkuResponse currentSku) {
             this.currentSku = Objects.requireNonNull(currentSku);
             return this;
         }
-
         public Builder databaseId(String databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder defaultSecondaryLocation(String defaultSecondaryLocation) {
             this.defaultSecondaryLocation = Objects.requireNonNull(defaultSecondaryLocation);
             return this;
         }
-
         public Builder earliestRestoreDate(String earliestRestoreDate) {
             this.earliestRestoreDate = Objects.requireNonNull(earliestRestoreDate);
             return this;
         }
-
         public Builder elasticPoolId(@Nullable String elasticPoolId) {
             this.elasticPoolId = elasticPoolId;
             return this;
         }
-
         public Builder failoverGroupId(String failoverGroupId) {
             this.failoverGroupId = Objects.requireNonNull(failoverGroupId);
             return this;
         }
-
         public Builder highAvailabilityReplicaCount(@Nullable Integer highAvailabilityReplicaCount) {
             this.highAvailabilityReplicaCount = highAvailabilityReplicaCount;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder managedBy(String managedBy) {
             this.managedBy = Objects.requireNonNull(managedBy);
             return this;
         }
-
         public Builder maxLogSizeBytes(Double maxLogSizeBytes) {
             this.maxLogSizeBytes = Objects.requireNonNull(maxLogSizeBytes);
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
-
         public Builder minCapacity(@Nullable Double minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pausedDate(String pausedDate) {
             this.pausedDate = Objects.requireNonNull(pausedDate);
             return this;
         }
-
         public Builder readScale(@Nullable String readScale) {
             this.readScale = readScale;
             return this;
         }
-
         public Builder requestedBackupStorageRedundancy(@Nullable String requestedBackupStorageRedundancy) {
             this.requestedBackupStorageRedundancy = requestedBackupStorageRedundancy;
             return this;
         }
-
         public Builder requestedServiceObjectiveName(String requestedServiceObjectiveName) {
             this.requestedServiceObjectiveName = Objects.requireNonNull(requestedServiceObjectiveName);
             return this;
         }
-
         public Builder resumedDate(String resumedDate) {
             this.resumedDate = Objects.requireNonNull(resumedDate);
             return this;
         }
-
         public Builder secondaryType(@Nullable String secondaryType) {
             this.secondaryType = secondaryType;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
-        }
-        public GetDatabaseResult build() {
+        }        public GetDatabaseResult build() {
             return new GetDatabaseResult(autoPauseDelay, catalogCollation, collation, creationDate, currentBackupStorageRedundancy, currentServiceObjectiveName, currentSku, databaseId, defaultSecondaryLocation, earliestRestoreDate, elasticPoolId, failoverGroupId, highAvailabilityReplicaCount, id, kind, licenseType, location, maintenanceConfigurationId, managedBy, maxLogSizeBytes, maxSizeBytes, minCapacity, name, pausedDate, readScale, requestedBackupStorageRedundancy, requestedServiceObjectiveName, resumedDate, secondaryType, sku, status, tags, type, zoneRedundant);
         }
     }

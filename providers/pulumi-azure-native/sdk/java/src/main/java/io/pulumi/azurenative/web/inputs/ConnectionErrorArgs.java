@@ -127,52 +127,42 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ConnectionErrorArgs build() {
+        }        public ConnectionErrorArgs build() {
             return new ConnectionErrorArgs(code, etag, location, message, tags);
         }
     }

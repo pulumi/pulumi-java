@@ -103,22 +103,18 @@ public final class AksNetworkingConfigurationResponse {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
-
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
-
         public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public AksNetworkingConfigurationResponse build() {
+        }        public AksNetworkingConfigurationResponse build() {
             return new AksNetworkingConfigurationResponse(dnsServiceIP, dockerBridgeCidr, serviceCidr, subnetId);
         }
     }

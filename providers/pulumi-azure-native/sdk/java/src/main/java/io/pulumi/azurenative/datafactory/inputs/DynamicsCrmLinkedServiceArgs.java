@@ -327,172 +327,141 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(Output<Object> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(Object authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder deploymentType(Output<Object> deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
-
         public Builder deploymentType(Object deploymentType) {
             this.deploymentType = Output.of(Objects.requireNonNull(deploymentType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder hostName(@Nullable Output<Object> hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable Object hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder organizationName(@Nullable Output<Object> organizationName) {
             this.organizationName = organizationName;
             return this;
         }
-
         public Builder organizationName(@Nullable Object organizationName) {
             this.organizationName = Output.ofNullable(organizationName);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder port(@Nullable Output<Object> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Object port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder servicePrincipalCredential(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
             this.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
-
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
             this.servicePrincipalCredential = Output.ofNullable(servicePrincipalCredential);
             return this;
         }
-
         public Builder servicePrincipalCredentialType(@Nullable Output<Object> servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
-
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = Output.ofNullable(servicePrincipalCredentialType);
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
-
         public Builder serviceUri(@Nullable Output<Object> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
-
         public Builder serviceUri(@Nullable Object serviceUri) {
             this.serviceUri = Output.ofNullable(serviceUri);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public DynamicsCrmLinkedServiceArgs build() {
+        }        public DynamicsCrmLinkedServiceArgs build() {
             return new DynamicsCrmLinkedServiceArgs(annotations, authenticationType, connectVia, deploymentType, description, encryptedCredential, hostName, organizationName, parameters, password, port, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, serviceUri, type, username);
         }
     }

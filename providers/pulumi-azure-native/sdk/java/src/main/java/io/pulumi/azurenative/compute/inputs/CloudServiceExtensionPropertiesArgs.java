@@ -193,92 +193,77 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder protectedSettings(@Nullable Output<String> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder protectedSettings(@Nullable String protectedSettings) {
             this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
-
         public Builder protectedSettingsFromKeyVault(@Nullable Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault) {
             this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
             return this;
         }
-
         public Builder protectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceArgs protectedSettingsFromKeyVault) {
             this.protectedSettingsFromKeyVault = Output.ofNullable(protectedSettingsFromKeyVault);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder rolesAppliedTo(@Nullable Output<List<String>> rolesAppliedTo) {
             this.rolesAppliedTo = rolesAppliedTo;
             return this;
         }
-
         public Builder rolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
             this.rolesAppliedTo = Output.ofNullable(rolesAppliedTo);
             return this;
         }
-
+        public Builder rolesAppliedTo(String... rolesAppliedTo) {
+            return rolesAppliedTo(List.of(rolesAppliedTo));
+        }
         public Builder settings(@Nullable Output<String> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable String settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
-        }
-        public CloudServiceExtensionPropertiesArgs build() {
+        }        public CloudServiceExtensionPropertiesArgs build() {
             return new CloudServiceExtensionPropertiesArgs(autoUpgradeMinorVersion, forceUpdateTag, protectedSettings, protectedSettingsFromKeyVault, publisher, rolesAppliedTo, settings, type, typeHandlerVersion);
         }
     }

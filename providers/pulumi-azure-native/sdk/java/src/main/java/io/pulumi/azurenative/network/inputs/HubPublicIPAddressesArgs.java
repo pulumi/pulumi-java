@@ -80,22 +80,21 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
             this.addresses = addresses;
             return this;
         }
-
         public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressArgs> addresses) {
             this.addresses = Output.ofNullable(addresses);
             return this;
         }
-
+        public Builder addresses(AzureFirewallPublicIPAddressArgs... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public HubPublicIPAddressesArgs build() {
+        }        public HubPublicIPAddressesArgs build() {
             return new HubPublicIPAddressesArgs(addresses, count);
         }
     }

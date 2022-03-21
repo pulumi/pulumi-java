@@ -78,22 +78,18 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
             this.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
-
         public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
             this.partnerManagedInstanceId = Output.ofNullable(partnerManagedInstanceId);
             return this;
         }
-
         public Builder primaryManagedInstanceId(@Nullable Output<String> primaryManagedInstanceId) {
             this.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
         }
-
         public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
             this.primaryManagedInstanceId = Output.ofNullable(primaryManagedInstanceId);
             return this;
-        }
-        public ManagedInstancePairInfoArgs build() {
+        }        public ManagedInstancePairInfoArgs build() {
             return new ManagedInstancePairInfoArgs(partnerManagedInstanceId, primaryManagedInstanceId);
         }
     }

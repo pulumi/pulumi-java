@@ -60,8 +60,7 @@ public final class DescendantParentGroupInfoResponse extends io.pulumi.resources
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public DescendantParentGroupInfoResponse build() {
+        }        public DescendantParentGroupInfoResponse build() {
             return new DescendantParentGroupInfoResponse(id);
         }
     }

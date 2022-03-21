@@ -62,12 +62,13 @@ public final class SshProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public Builder publicKeys(@Nullable List<SshPublicKeyArgs> publicKeys) {
             this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
-        public SshProfileArgs build() {
+        public Builder publicKeys(SshPublicKeyArgs... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public SshProfileArgs build() {
             return new SshProfileArgs(publicKeys);
         }
     }

@@ -78,12 +78,10 @@ public final class UrlRewriteActionResponse extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(UrlRewriteActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public UrlRewriteActionResponse build() {
+        }        public UrlRewriteActionResponse build() {
             return new UrlRewriteActionResponse(name, parameters);
         }
     }

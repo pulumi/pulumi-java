@@ -96,32 +96,26 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
             this.clientCredential = clientCredential;
             return this;
         }
-
         public Builder clientCredential(@Nullable OpenIdConnectClientCredentialArgs clientCredential) {
             this.clientCredential = Output.ofNullable(clientCredential);
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder openIdConnectConfiguration(@Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration) {
             this.openIdConnectConfiguration = openIdConnectConfiguration;
             return this;
         }
-
         public Builder openIdConnectConfiguration(@Nullable OpenIdConnectConfigArgs openIdConnectConfiguration) {
             this.openIdConnectConfiguration = Output.ofNullable(openIdConnectConfiguration);
             return this;
-        }
-        public OpenIdConnectRegistrationArgs build() {
+        }        public OpenIdConnectRegistrationArgs build() {
             return new OpenIdConnectRegistrationArgs(clientCredential, clientId, openIdConnectConfiguration);
         }
     }

@@ -115,22 +115,18 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
             this.context = context;
             return this;
         }
-
         public Builder dockerSpecificationType(String dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
-
         public Builder dockerfile(String dockerfile) {
             this.dockerfile = Objects.requireNonNull(dockerfile);
             return this;
         }
-
         public Builder platform(@Nullable DockerImagePlatformResponse platform) {
             this.platform = platform;
             return this;
-        }
-        public DockerBuildResponse build() {
+        }        public DockerBuildResponse build() {
             return new DockerBuildResponse(context, dockerSpecificationType, dockerfile, platform);
         }
     }

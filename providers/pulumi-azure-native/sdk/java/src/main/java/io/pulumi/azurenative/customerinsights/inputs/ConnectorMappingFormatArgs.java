@@ -143,62 +143,50 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder arraySeparator(@Nullable Output<String> arraySeparator) {
             this.arraySeparator = arraySeparator;
             return this;
         }
-
         public Builder arraySeparator(@Nullable String arraySeparator) {
             this.arraySeparator = Output.ofNullable(arraySeparator);
             return this;
         }
-
         public Builder columnDelimiter(@Nullable Output<String> columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
-
         public Builder columnDelimiter(@Nullable String columnDelimiter) {
             this.columnDelimiter = Output.ofNullable(columnDelimiter);
             return this;
         }
-
         public Builder formatType(Output<FormatTypes> formatType) {
             this.formatType = Objects.requireNonNull(formatType);
             return this;
         }
-
         public Builder formatType(FormatTypes formatType) {
             this.formatType = Output.of(Objects.requireNonNull(formatType));
             return this;
         }
-
         public Builder quoteCharacter(@Nullable Output<String> quoteCharacter) {
             this.quoteCharacter = quoteCharacter;
             return this;
         }
-
         public Builder quoteCharacter(@Nullable String quoteCharacter) {
             this.quoteCharacter = Output.ofNullable(quoteCharacter);
             return this;
         }
-
         public Builder quoteEscapeCharacter(@Nullable Output<String> quoteEscapeCharacter) {
             this.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }
-
         public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
             this.quoteEscapeCharacter = Output.ofNullable(quoteEscapeCharacter);
             return this;
-        }
-        public ConnectorMappingFormatArgs build() {
+        }        public ConnectorMappingFormatArgs build() {
             return new ConnectorMappingFormatArgs(acceptLanguage, arraySeparator, columnDelimiter, formatType, quoteCharacter, quoteEscapeCharacter);
         }
     }

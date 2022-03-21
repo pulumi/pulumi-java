@@ -88,17 +88,14 @@ public final class GetKpiArgs extends io.pulumi.resources.InvokeArgs {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder kpiName(String kpiName) {
             this.kpiName = Objects.requireNonNull(kpiName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetKpiArgs build() {
+        }        public GetKpiArgs build() {
             return new GetKpiArgs(hubName, kpiName, resourceGroupName);
         }
     }

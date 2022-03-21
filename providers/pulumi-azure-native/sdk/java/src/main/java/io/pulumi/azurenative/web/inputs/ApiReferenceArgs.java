@@ -171,82 +171,66 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.brandColor = brandColor;
             return this;
         }
-
         public Builder brandColor(@Nullable String brandColor) {
             this.brandColor = Output.ofNullable(brandColor);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder iconUri(@Nullable Output<String> iconUri) {
             this.iconUri = iconUri;
             return this;
         }
-
         public Builder iconUri(@Nullable String iconUri) {
             this.iconUri = Output.ofNullable(iconUri);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder swagger(@Nullable Output<Object> swagger) {
             this.swagger = swagger;
             return this;
         }
-
         public Builder swagger(@Nullable Object swagger) {
             this.swagger = Output.ofNullable(swagger);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ApiReferenceArgs build() {
+        }        public ApiReferenceArgs build() {
             return new ApiReferenceArgs(brandColor, description, displayName, iconUri, id, name, swagger, type);
         }
     }

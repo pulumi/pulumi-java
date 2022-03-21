@@ -123,27 +123,25 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(String... filters) {
+            return filters(List.of(filters));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder searchCriteria(@Nullable String searchCriteria) {
             this.searchCriteria = searchCriteria;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateLimit(@Nullable Integer updateLimit) {
             this.updateLimit = updateLimit;
             return this;
-        }
-        public ImageTemplateWindowsUpdateCustomizerResponse build() {
+        }        public ImageTemplateWindowsUpdateCustomizerResponse build() {
             return new ImageTemplateWindowsUpdateCustomizerResponse(filters, name, searchCriteria, type, updateLimit);
         }
     }

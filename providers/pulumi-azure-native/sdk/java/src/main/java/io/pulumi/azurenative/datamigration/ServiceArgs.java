@@ -172,82 +172,66 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder sku(@Nullable Output<ServiceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ServiceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualSubnetId(Output<String> virtualSubnetId) {
             this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId);
             return this;
         }
-
         public Builder virtualSubnetId(String virtualSubnetId) {
             this.virtualSubnetId = Output.of(Objects.requireNonNull(virtualSubnetId));
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(groupName, kind, location, publicKey, serviceName, sku, tags, virtualSubnetId);
         }
     }

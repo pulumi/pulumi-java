@@ -171,82 +171,66 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder continueOnErrors(@Nullable Output<Boolean> continueOnErrors) {
             this.continueOnErrors = continueOnErrors;
             return this;
         }
-
         public Builder continueOnErrors(@Nullable Boolean continueOnErrors) {
             this.continueOnErrors = Output.ofNullable(continueOnErrors);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scriptName(@Nullable Output<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
-
         public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = Output.ofNullable(scriptName);
             return this;
         }
-
         public Builder scriptUrl(Output<String> scriptUrl) {
             this.scriptUrl = Objects.requireNonNull(scriptUrl);
             return this;
         }
-
         public Builder scriptUrl(String scriptUrl) {
             this.scriptUrl = Output.of(Objects.requireNonNull(scriptUrl));
             return this;
         }
-
         public Builder scriptUrlSasToken(Output<String> scriptUrlSasToken) {
             this.scriptUrlSasToken = Objects.requireNonNull(scriptUrlSasToken);
             return this;
         }
-
         public Builder scriptUrlSasToken(String scriptUrlSasToken) {
             this.scriptUrlSasToken = Output.of(Objects.requireNonNull(scriptUrlSasToken));
             return this;
-        }
-        public ScriptArgs build() {
+        }        public ScriptArgs build() {
             return new ScriptArgs(clusterName, continueOnErrors, databaseName, forceUpdateTag, resourceGroupName, scriptName, scriptUrl, scriptUrlSasToken);
         }
     }

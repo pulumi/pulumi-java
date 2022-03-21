@@ -53,12 +53,10 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
             this.spnDetails = spnDetails;
             return this;
         }
-
         public Builder spnDetails(@Nullable CollectorBodyAgentSpnPropertiesArgs spnDetails) {
             this.spnDetails = Output.ofNullable(spnDetails);
             return this;
-        }
-        public CollectorAgentPropertiesArgs build() {
+        }        public CollectorAgentPropertiesArgs build() {
             return new CollectorAgentPropertiesArgs(spnDetails);
         }
     }

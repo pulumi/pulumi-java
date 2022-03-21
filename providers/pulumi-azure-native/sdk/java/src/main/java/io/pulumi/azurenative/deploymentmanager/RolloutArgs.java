@@ -190,92 +190,77 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactSourceId = artifactSourceId;
             return this;
         }
-
         public Builder artifactSourceId(@Nullable String artifactSourceId) {
             this.artifactSourceId = Output.ofNullable(artifactSourceId);
             return this;
         }
-
         public Builder buildVersion(Output<String> buildVersion) {
             this.buildVersion = Objects.requireNonNull(buildVersion);
             return this;
         }
-
         public Builder buildVersion(String buildVersion) {
             this.buildVersion = Output.of(Objects.requireNonNull(buildVersion));
             return this;
         }
-
         public Builder identity(Output<IdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(IdentityArgs identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rolloutName(@Nullable Output<String> rolloutName) {
             this.rolloutName = rolloutName;
             return this;
         }
-
         public Builder rolloutName(@Nullable String rolloutName) {
             this.rolloutName = Output.ofNullable(rolloutName);
             return this;
         }
-
         public Builder stepGroups(Output<List<StepGroupArgs>> stepGroups) {
             this.stepGroups = Objects.requireNonNull(stepGroups);
             return this;
         }
-
         public Builder stepGroups(List<StepGroupArgs> stepGroups) {
             this.stepGroups = Output.of(Objects.requireNonNull(stepGroups));
             return this;
         }
-
+        public Builder stepGroups(StepGroupArgs... stepGroups) {
+            return stepGroups(List.of(stepGroups));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetServiceTopologyId(Output<String> targetServiceTopologyId) {
             this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId);
             return this;
         }
-
         public Builder targetServiceTopologyId(String targetServiceTopologyId) {
             this.targetServiceTopologyId = Output.of(Objects.requireNonNull(targetServiceTopologyId));
             return this;
-        }
-        public RolloutArgs build() {
+        }        public RolloutArgs build() {
             return new RolloutArgs(artifactSourceId, buildVersion, identity, location, resourceGroupName, rolloutName, stepGroups, tags, targetServiceTopologyId);
         }
     }

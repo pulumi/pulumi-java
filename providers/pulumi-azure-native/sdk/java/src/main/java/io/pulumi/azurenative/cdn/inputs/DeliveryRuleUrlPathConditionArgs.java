@@ -79,22 +79,18 @@ public final class DeliveryRuleUrlPathConditionArgs extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<UrlPathMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(UrlPathMatchConditionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleUrlPathConditionArgs build() {
+        }        public DeliveryRuleUrlPathConditionArgs build() {
             return new DeliveryRuleUrlPathConditionArgs(name, parameters);
         }
     }

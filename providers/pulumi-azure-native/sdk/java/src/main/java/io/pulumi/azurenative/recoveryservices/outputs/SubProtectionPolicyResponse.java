@@ -94,17 +94,14 @@ public final class SubProtectionPolicyResponse {
             this.policyType = policyType;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
-        }
-        public SubProtectionPolicyResponse build() {
+        }        public SubProtectionPolicyResponse build() {
             return new SubProtectionPolicyResponse(policyType, retentionPolicy, schedulePolicy);
         }
     }

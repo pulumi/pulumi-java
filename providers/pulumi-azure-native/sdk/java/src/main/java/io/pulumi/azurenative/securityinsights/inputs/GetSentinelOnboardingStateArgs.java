@@ -104,22 +104,18 @@ public final class GetSentinelOnboardingStateArgs extends io.pulumi.resources.In
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sentinelOnboardingStateName(String sentinelOnboardingStateName) {
             this.sentinelOnboardingStateName = Objects.requireNonNull(sentinelOnboardingStateName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSentinelOnboardingStateArgs build() {
+        }        public GetSentinelOnboardingStateArgs build() {
             return new GetSentinelOnboardingStateArgs(operationalInsightsResourceProvider, resourceGroupName, sentinelOnboardingStateName, workspaceName);
         }
     }

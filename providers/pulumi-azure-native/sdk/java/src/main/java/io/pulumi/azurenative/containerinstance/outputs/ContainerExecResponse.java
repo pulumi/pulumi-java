@@ -54,7 +54,9 @@ public final class ContainerExecResponse {
             this.command = command;
             return this;
         }
-        public ContainerExecResponse build() {
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }        public ContainerExecResponse build() {
             return new ContainerExecResponse(command);
         }
     }

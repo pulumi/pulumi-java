@@ -172,82 +172,66 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
             this.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
             return this;
         }
-
         public Builder distributedAvailabilityGroupName(@Nullable String distributedAvailabilityGroupName) {
             this.distributedAvailabilityGroupName = Output.ofNullable(distributedAvailabilityGroupName);
             return this;
         }
-
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
-
         public Builder primaryAvailabilityGroupName(@Nullable Output<String> primaryAvailabilityGroupName) {
             this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
             return this;
         }
-
         public Builder primaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
             this.primaryAvailabilityGroupName = Output.ofNullable(primaryAvailabilityGroupName);
             return this;
         }
-
         public Builder replicationMode(@Nullable Output<Either<String,ReplicationMode>> replicationMode) {
             this.replicationMode = replicationMode;
             return this;
         }
-
         public Builder replicationMode(@Nullable Either<String,ReplicationMode> replicationMode) {
             this.replicationMode = Output.ofNullable(replicationMode);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder secondaryAvailabilityGroupName(@Nullable Output<String> secondaryAvailabilityGroupName) {
             this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
             return this;
         }
-
         public Builder secondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
             this.secondaryAvailabilityGroupName = Output.ofNullable(secondaryAvailabilityGroupName);
             return this;
         }
-
         public Builder sourceEndpoint(@Nullable Output<String> sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
-
         public Builder sourceEndpoint(@Nullable String sourceEndpoint) {
             this.sourceEndpoint = Output.ofNullable(sourceEndpoint);
             return this;
         }
-
         public Builder targetDatabase(@Nullable Output<String> targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
-
         public Builder targetDatabase(@Nullable String targetDatabase) {
             this.targetDatabase = Output.ofNullable(targetDatabase);
             return this;
-        }
-        public DistributedAvailabilityGroupArgs build() {
+        }        public DistributedAvailabilityGroupArgs build() {
             return new DistributedAvailabilityGroupArgs(distributedAvailabilityGroupName, managedInstanceName, primaryAvailabilityGroupName, replicationMode, resourceGroupName, secondaryAvailabilityGroupName, sourceEndpoint, targetDatabase);
         }
     }

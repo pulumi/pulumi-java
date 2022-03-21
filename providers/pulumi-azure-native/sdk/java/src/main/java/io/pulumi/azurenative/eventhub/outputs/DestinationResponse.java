@@ -103,22 +103,18 @@ public final class DestinationResponse {
             this.archiveNameFormat = archiveNameFormat;
             return this;
         }
-
         public Builder blobContainer(@Nullable String blobContainer) {
             this.blobContainer = blobContainer;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
-        }
-        public DestinationResponse build() {
+        }        public DestinationResponse build() {
             return new DestinationResponse(archiveNameFormat, blobContainer, name, storageAccountResourceId);
         }
     }

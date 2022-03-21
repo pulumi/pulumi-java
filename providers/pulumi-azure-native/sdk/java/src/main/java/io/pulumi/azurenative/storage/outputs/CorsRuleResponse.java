@@ -119,27 +119,34 @@ public final class CorsRuleResponse {
             this.allowedHeaders = Objects.requireNonNull(allowedHeaders);
             return this;
         }
-
+        public Builder allowedHeaders(String... allowedHeaders) {
+            return allowedHeaders(List.of(allowedHeaders));
+        }
         public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder exposedHeaders(List<String> exposedHeaders) {
             this.exposedHeaders = Objects.requireNonNull(exposedHeaders);
             return this;
         }
-
+        public Builder exposedHeaders(String... exposedHeaders) {
+            return exposedHeaders(List.of(exposedHeaders));
+        }
         public Builder maxAgeInSeconds(Integer maxAgeInSeconds) {
             this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
             return this;
-        }
-        public CorsRuleResponse build() {
+        }        public CorsRuleResponse build() {
             return new CorsRuleResponse(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }
     }

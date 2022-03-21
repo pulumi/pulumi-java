@@ -311,162 +311,133 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder clientId(@Nullable Output<Object> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable Object clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder language(@Nullable Output<Object> language) {
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable Object language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder logonGroup(@Nullable Output<Object> logonGroup) {
             this.logonGroup = logonGroup;
             return this;
         }
-
         public Builder logonGroup(@Nullable Object logonGroup) {
             this.logonGroup = Output.ofNullable(logonGroup);
             return this;
         }
-
         public Builder messageServer(@Nullable Output<Object> messageServer) {
             this.messageServer = messageServer;
             return this;
         }
-
         public Builder messageServer(@Nullable Object messageServer) {
             this.messageServer = Output.ofNullable(messageServer);
             return this;
         }
-
         public Builder messageServerService(@Nullable Output<Object> messageServerService) {
             this.messageServerService = messageServerService;
             return this;
         }
-
         public Builder messageServerService(@Nullable Object messageServerService) {
             this.messageServerService = Output.ofNullable(messageServerService);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder server(@Nullable Output<Object> server) {
             this.server = server;
             return this;
         }
-
         public Builder server(@Nullable Object server) {
             this.server = Output.ofNullable(server);
             return this;
         }
-
         public Builder systemId(@Nullable Output<Object> systemId) {
             this.systemId = systemId;
             return this;
         }
-
         public Builder systemId(@Nullable Object systemId) {
             this.systemId = Output.ofNullable(systemId);
             return this;
         }
-
         public Builder systemNumber(@Nullable Output<Object> systemNumber) {
             this.systemNumber = systemNumber;
             return this;
         }
-
         public Builder systemNumber(@Nullable Object systemNumber) {
             this.systemNumber = Output.ofNullable(systemNumber);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userName(@Nullable Output<Object> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public SapOpenHubLinkedServiceArgs build() {
+        }        public SapOpenHubLinkedServiceArgs build() {
             return new SapOpenHubLinkedServiceArgs(annotations, clientId, connectVia, description, encryptedCredential, language, logonGroup, messageServer, messageServerService, parameters, password, server, systemId, systemNumber, type, userName);
         }
     }

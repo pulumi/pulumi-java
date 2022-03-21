@@ -129,52 +129,42 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
             this.logType = logType;
             return this;
         }
-
         public Builder logType(@Nullable Either<String,LogAnalyticsLogType> logType) {
             this.logType = Output.ofNullable(logType);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
-
         public Builder workspaceKey(Output<String> workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
-
         public Builder workspaceKey(String workspaceKey) {
             this.workspaceKey = Output.of(Objects.requireNonNull(workspaceKey));
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Output<Map<String,String>> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
             this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
-        }
-        public LogAnalyticsArgs build() {
+        }        public LogAnalyticsArgs build() {
             return new LogAnalyticsArgs(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);
         }
     }

@@ -107,22 +107,21 @@ public final class ListActiveConnectivityConfigurationArgs extends io.pulumi.res
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListActiveConnectivityConfigurationArgs build() {
+        }        public ListActiveConnectivityConfigurationArgs build() {
             return new ListActiveConnectivityConfigurationArgs(networkManagerName, regions, resourceGroupName, skipToken);
         }
     }

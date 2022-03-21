@@ -177,42 +177,34 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
-
         public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
-
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
             this.traffic = traffic;
             return this;
-        }
-        public OnlineEndpointResponse build() {
+        }        public OnlineEndpointResponse build() {
             return new OnlineEndpointResponse(authMode, description, properties, provisioningState, scoringUri, swaggerUri, target, traffic);
         }
     }

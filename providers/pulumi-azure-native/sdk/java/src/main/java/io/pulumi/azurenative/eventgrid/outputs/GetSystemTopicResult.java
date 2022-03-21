@@ -218,57 +218,46 @@ public final class GetSystemTopicResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityInfoResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder metricResourceId(String metricResourceId) {
             this.metricResourceId = Objects.requireNonNull(metricResourceId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder topicType(@Nullable String topicType) {
             this.topicType = topicType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSystemTopicResult build() {
+        }        public GetSystemTopicResult build() {
             return new GetSystemTopicResult(id, identity, location, metricResourceId, name, provisioningState, source, systemData, tags, topicType, type);
         }
     }

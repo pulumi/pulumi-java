@@ -96,32 +96,29 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder targets(Output<List<TargetReferenceArgs>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-
         public Builder targets(List<TargetReferenceArgs> targets) {
             this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
         }
-
+        public Builder targets(TargetReferenceArgs... targets) {
+            return targets(List.of(targets));
+        }
         public Builder type(Output<SelectorType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(SelectorType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SelectorArgs build() {
+        }        public SelectorArgs build() {
             return new SelectorArgs(id, targets, type);
         }
     }

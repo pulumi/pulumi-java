@@ -222,112 +222,90 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable AsymmetricEncryptedSecretArgs accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder accountType(Output<Either<String,AccountType>> accountType) {
             this.accountType = Objects.requireNonNull(accountType);
             return this;
         }
-
         public Builder accountType(Either<String,AccountType> accountType) {
             this.accountType = Output.of(Objects.requireNonNull(accountType));
             return this;
         }
-
         public Builder alias(Output<String> alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder alias(String alias) {
             this.alias = Output.of(Objects.requireNonNull(alias));
             return this;
         }
-
         public Builder blobDomainName(@Nullable Output<String> blobDomainName) {
             this.blobDomainName = blobDomainName;
             return this;
         }
-
         public Builder blobDomainName(@Nullable String blobDomainName) {
             this.blobDomainName = Output.ofNullable(blobDomainName);
             return this;
         }
-
         public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sslStatus(Output<Either<String,SSLStatus>> sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
-
         public Builder sslStatus(Either<String,SSLStatus> sslStatus) {
             this.sslStatus = Output.of(Objects.requireNonNull(sslStatus));
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public StorageAccountCredentialArgs build() {
+        }        public StorageAccountCredentialArgs build() {
             return new StorageAccountCredentialArgs(accountKey, accountType, alias, blobDomainName, connectionString, deviceName, name, resourceGroupName, sslStatus, storageAccountId, userName);
         }
     }

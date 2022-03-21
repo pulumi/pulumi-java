@@ -384,102 +384,82 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder compute(ComputeConfigurationResponse compute) {
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder earlyTermination(@Nullable Object earlyTermination) {
             this.earlyTermination = earlyTermination;
             return this;
         }
-
         public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = experimentName;
             return this;
         }
-
         public Builder identity(@Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder interactionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
             this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints);
             return this;
         }
-
         public Builder jobType(String jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
-
         public Builder maxConcurrentTrials(@Nullable Integer maxConcurrentTrials) {
             this.maxConcurrentTrials = maxConcurrentTrials;
             return this;
         }
-
         public Builder maxTotalTrials(@Nullable Integer maxTotalTrials) {
             this.maxTotalTrials = maxTotalTrials;
             return this;
         }
-
         public Builder objective(ObjectiveResponse objective) {
             this.objective = Objects.requireNonNull(objective);
             return this;
         }
-
         public Builder output(JobOutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder searchSpace(Map<String,Object> searchSpace) {
             this.searchSpace = Objects.requireNonNull(searchSpace);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder trial(@Nullable TrialComponentResponse trial) {
             this.trial = trial;
             return this;
-        }
-        public SweepJobResponse build() {
+        }        public SweepJobResponse build() {
             return new SweepJobResponse(algorithm, compute, description, earlyTermination, experimentName, identity, interactionEndpoints, jobType, maxConcurrentTrials, maxTotalTrials, objective, output, priority, properties, provisioningState, searchSpace, status, tags, timeout, trial);
         }
     }

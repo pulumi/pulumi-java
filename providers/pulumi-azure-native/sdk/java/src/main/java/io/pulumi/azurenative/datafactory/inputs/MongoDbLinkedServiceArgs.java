@@ -296,152 +296,125 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
-
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = Output.ofNullable(allowSelfSignedServerCert);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authSource(@Nullable Output<Object> authSource) {
             this.authSource = authSource;
             return this;
         }
-
         public Builder authSource(@Nullable Object authSource) {
             this.authSource = Output.ofNullable(authSource);
             return this;
         }
-
         public Builder authenticationType(@Nullable Output<Either<String,MongoDbAuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,MongoDbAuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder databaseName(Output<Object> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(Object databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableSsl(@Nullable Output<Object> enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
-
         public Builder enableSsl(@Nullable Object enableSsl) {
             this.enableSsl = Output.ofNullable(enableSsl);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder port(@Nullable Output<Object> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Object port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder server(Output<Object> server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
-
         public Builder server(Object server) {
             this.server = Output.of(Objects.requireNonNull(server));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public MongoDbLinkedServiceArgs build() {
+        }        public MongoDbLinkedServiceArgs build() {
             return new MongoDbLinkedServiceArgs(allowSelfSignedServerCert, annotations, authSource, authenticationType, connectVia, databaseName, description, enableSsl, encryptedCredential, parameters, password, port, server, type, username);
         }
     }

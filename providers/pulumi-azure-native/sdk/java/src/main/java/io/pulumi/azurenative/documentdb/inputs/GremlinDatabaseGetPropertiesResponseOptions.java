@@ -75,12 +75,10 @@ public final class GremlinDatabaseGetPropertiesResponseOptions extends io.pulumi
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public GremlinDatabaseGetPropertiesResponseOptions build() {
+        }        public GremlinDatabaseGetPropertiesResponseOptions build() {
             return new GremlinDatabaseGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

@@ -53,8 +53,7 @@ public final class ProgressPropertiesResponse {
         public Builder percentage(@Nullable String percentage) {
             this.percentage = percentage;
             return this;
-        }
-        public ProgressPropertiesResponse build() {
+        }        public ProgressPropertiesResponse build() {
             return new ProgressPropertiesResponse(percentage);
         }
     }

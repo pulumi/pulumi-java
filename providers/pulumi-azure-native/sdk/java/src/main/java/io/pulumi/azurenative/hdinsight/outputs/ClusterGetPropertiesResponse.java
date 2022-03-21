@@ -405,112 +405,96 @@ public final class ClusterGetPropertiesResponse {
             this.clusterDefinition = Objects.requireNonNull(clusterDefinition);
             return this;
         }
-
         public Builder clusterHdpVersion(@Nullable String clusterHdpVersion) {
             this.clusterHdpVersion = clusterHdpVersion;
             return this;
         }
-
         public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder clusterState(@Nullable String clusterState) {
             this.clusterState = clusterState;
             return this;
         }
-
         public Builder clusterVersion(@Nullable String clusterVersion) {
             this.clusterVersion = clusterVersion;
             return this;
         }
-
         public Builder computeIsolationProperties(@Nullable ComputeIsolationPropertiesResponse computeIsolationProperties) {
             this.computeIsolationProperties = computeIsolationProperties;
             return this;
         }
-
         public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
-
         public Builder connectivityEndpoints(@Nullable List<ConnectivityEndpointResponse> connectivityEndpoints) {
             this.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
-
+        public Builder connectivityEndpoints(ConnectivityEndpointResponse... connectivityEndpoints) {
+            return connectivityEndpoints(List.of(connectivityEndpoints));
+        }
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder diskEncryptionProperties(@Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties) {
             this.diskEncryptionProperties = diskEncryptionProperties;
             return this;
         }
-
         public Builder encryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties) {
             this.encryptionInTransitProperties = encryptionInTransitProperties;
             return this;
         }
-
         public Builder errors(@Nullable List<ErrorsResponse> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(ErrorsResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder excludedServicesConfig(@Nullable ExcludedServicesConfigResponse excludedServicesConfig) {
             this.excludedServicesConfig = excludedServicesConfig;
             return this;
         }
-
         public Builder kafkaRestProperties(@Nullable KafkaRestPropertiesResponse kafkaRestProperties) {
             this.kafkaRestProperties = kafkaRestProperties;
             return this;
         }
-
         public Builder minSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
             this.minSupportedTlsVersion = minSupportedTlsVersion;
             return this;
         }
-
         public Builder networkProperties(@Nullable NetworkPropertiesResponse networkProperties) {
             this.networkProperties = networkProperties;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder quotaInfo(@Nullable QuotaInfoResponse quotaInfo) {
             this.quotaInfo = quotaInfo;
             return this;
         }
-
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ClusterGetPropertiesResponse build() {
+        }        public ClusterGetPropertiesResponse build() {
             return new ClusterGetPropertiesResponse(clusterDefinition, clusterHdpVersion, clusterId, clusterState, clusterVersion, computeIsolationProperties, computeProfile, connectivityEndpoints, createdDate, diskEncryptionProperties, encryptionInTransitProperties, errors, excludedServicesConfig, kafkaRestProperties, minSupportedTlsVersion, networkProperties, osType, provisioningState, quotaInfo, securityProfile, storageProfile, tier);
         }
     }

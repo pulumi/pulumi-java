@@ -78,22 +78,18 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
-        }
-        public ServicePrincipalPropertiesArgs build() {
+        }        public ServicePrincipalPropertiesArgs build() {
             return new ServicePrincipalPropertiesArgs(applicationId, secret);
         }
     }

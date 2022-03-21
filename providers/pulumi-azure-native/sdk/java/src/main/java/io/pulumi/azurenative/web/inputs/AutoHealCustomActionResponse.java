@@ -79,12 +79,10 @@ public final class AutoHealCustomActionResponse extends io.pulumi.resources.Invo
             this.exe = exe;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
-        }
-        public AutoHealCustomActionResponse build() {
+        }        public AutoHealCustomActionResponse build() {
             return new AutoHealCustomActionResponse(exe, parameters);
         }
     }

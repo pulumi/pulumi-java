@@ -106,42 +106,34 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder siteExtensionId(@Nullable Output<String> siteExtensionId) {
             this.siteExtensionId = siteExtensionId;
             return this;
         }
-
         public Builder siteExtensionId(@Nullable String siteExtensionId) {
             this.siteExtensionId = Output.ofNullable(siteExtensionId);
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
-        }
-        public WebAppSiteExtensionSlotArgs build() {
+        }        public WebAppSiteExtensionSlotArgs build() {
             return new WebAppSiteExtensionSlotArgs(name, resourceGroupName, siteExtensionId, slot);
         }
     }

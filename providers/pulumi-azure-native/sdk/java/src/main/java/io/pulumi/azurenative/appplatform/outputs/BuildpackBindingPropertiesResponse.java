@@ -88,17 +88,14 @@ public final class BuildpackBindingPropertiesResponse {
             this.bindingType = bindingType;
             return this;
         }
-
         public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesResponse launchProperties) {
             this.launchProperties = launchProperties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public BuildpackBindingPropertiesResponse build() {
+        }        public BuildpackBindingPropertiesResponse build() {
             return new BuildpackBindingPropertiesResponse(bindingType, launchProperties, provisioningState);
         }
     }

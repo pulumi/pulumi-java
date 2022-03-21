@@ -110,42 +110,34 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.errorManifestFile = errorManifestFile;
             return this;
         }
-
         public Builder errorManifestFile(@Nullable String errorManifestFile) {
             this.errorManifestFile = Output.ofNullable(errorManifestFile);
             return this;
         }
-
         public Builder inProgressRefreshJobId(@Nullable Output<String> inProgressRefreshJobId) {
             this.inProgressRefreshJobId = inProgressRefreshJobId;
             return this;
         }
-
         public Builder inProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
             this.inProgressRefreshJobId = Output.ofNullable(inProgressRefreshJobId);
             return this;
         }
-
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable Output<String> lastCompletedRefreshJobTimeInUTC) {
             this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
             return this;
         }
-
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
             this.lastCompletedRefreshJobTimeInUTC = Output.ofNullable(lastCompletedRefreshJobTimeInUTC);
             return this;
         }
-
         public Builder lastJob(@Nullable Output<String> lastJob) {
             this.lastJob = lastJob;
             return this;
         }
-
         public Builder lastJob(@Nullable String lastJob) {
             this.lastJob = Output.ofNullable(lastJob);
             return this;
-        }
-        public RefreshDetailsArgs build() {
+        }        public RefreshDetailsArgs build() {
             return new RefreshDetailsArgs(errorManifestFile, inProgressRefreshJobId, lastCompletedRefreshJobTimeInUTC, lastJob);
         }
     }

@@ -72,12 +72,10 @@ public final class ListObjectAnchorsAccountKeysArgs extends io.pulumi.resources.
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListObjectAnchorsAccountKeysArgs build() {
+        }        public ListObjectAnchorsAccountKeysArgs build() {
             return new ListObjectAnchorsAccountKeysArgs(accountName, resourceGroupName);
         }
     }

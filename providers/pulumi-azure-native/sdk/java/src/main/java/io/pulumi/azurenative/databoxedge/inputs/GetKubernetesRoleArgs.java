@@ -88,17 +88,14 @@ public final class GetKubernetesRoleArgs extends io.pulumi.resources.InvokeArgs 
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetKubernetesRoleArgs build() {
+        }        public GetKubernetesRoleArgs build() {
             return new GetKubernetesRoleArgs(deviceName, name, resourceGroupName);
         }
     }

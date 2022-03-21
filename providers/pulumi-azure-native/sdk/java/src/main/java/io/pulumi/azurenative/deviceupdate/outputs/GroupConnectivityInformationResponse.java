@@ -136,32 +136,29 @@ public final class GroupConnectivityInformationResponse {
             this.customerVisibleFqdns = customerVisibleFqdns;
             return this;
         }
-
+        public Builder customerVisibleFqdns(String... customerVisibleFqdns) {
+            return customerVisibleFqdns(List.of(customerVisibleFqdns));
+        }
         public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder internalFqdn(String internalFqdn) {
             this.internalFqdn = Objects.requireNonNull(internalFqdn);
             return this;
         }
-
         public Builder memberName(String memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
-
         public Builder privateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
             this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
             return this;
         }
-
         public Builder redirectMapId(@Nullable String redirectMapId) {
             this.redirectMapId = redirectMapId;
             return this;
-        }
-        public GroupConnectivityInformationResponse build() {
+        }        public GroupConnectivityInformationResponse build() {
             return new GroupConnectivityInformationResponse(customerVisibleFqdns, groupId, internalFqdn, memberName, privateLinkServiceArmRegion, redirectMapId);
         }
     }

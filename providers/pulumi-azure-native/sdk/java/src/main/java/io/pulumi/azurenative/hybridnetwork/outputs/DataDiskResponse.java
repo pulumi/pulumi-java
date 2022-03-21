@@ -88,17 +88,14 @@ public final class DataDiskResponse {
             this.createOption = createOption;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DataDiskResponse build() {
+        }        public DataDiskResponse build() {
             return new DataDiskResponse(createOption, diskSizeGB, name);
         }
     }

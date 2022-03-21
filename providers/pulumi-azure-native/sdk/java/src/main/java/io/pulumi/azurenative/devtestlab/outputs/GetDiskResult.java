@@ -297,82 +297,66 @@ public final class GetDiskResult {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder diskBlobName(@Nullable String diskBlobName) {
             this.diskBlobName = diskBlobName;
             return this;
         }
-
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = diskUri;
             return this;
         }
-
         public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder leasedByLabVmId(@Nullable String leasedByLabVmId) {
             this.leasedByLabVmId = leasedByLabVmId;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedDiskId(@Nullable String managedDiskId) {
             this.managedDiskId = managedDiskId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
-        }
-        public GetDiskResult build() {
+        }        public GetDiskResult build() {
             return new GetDiskResult(createdDate, diskBlobName, diskSizeGiB, diskType, diskUri, hostCaching, id, leasedByLabVmId, location, managedDiskId, name, provisioningState, storageAccountId, tags, type, uniqueIdentifier);
         }
     }

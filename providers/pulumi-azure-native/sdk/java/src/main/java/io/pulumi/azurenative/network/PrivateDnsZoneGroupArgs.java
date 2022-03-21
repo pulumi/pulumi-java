@@ -140,62 +140,53 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateDnsZoneConfigs(@Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs) {
             this.privateDnsZoneConfigs = privateDnsZoneConfigs;
             return this;
         }
-
         public Builder privateDnsZoneConfigs(@Nullable List<PrivateDnsZoneConfigArgs> privateDnsZoneConfigs) {
             this.privateDnsZoneConfigs = Output.ofNullable(privateDnsZoneConfigs);
             return this;
         }
-
+        public Builder privateDnsZoneConfigs(PrivateDnsZoneConfigArgs... privateDnsZoneConfigs) {
+            return privateDnsZoneConfigs(List.of(privateDnsZoneConfigs));
+        }
         public Builder privateDnsZoneGroupName(@Nullable Output<String> privateDnsZoneGroupName) {
             this.privateDnsZoneGroupName = privateDnsZoneGroupName;
             return this;
         }
-
         public Builder privateDnsZoneGroupName(@Nullable String privateDnsZoneGroupName) {
             this.privateDnsZoneGroupName = Output.ofNullable(privateDnsZoneGroupName);
             return this;
         }
-
         public Builder privateEndpointName(Output<String> privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
-
         public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Output.of(Objects.requireNonNull(privateEndpointName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrivateDnsZoneGroupArgs build() {
+        }        public PrivateDnsZoneGroupArgs build() {
             return new PrivateDnsZoneGroupArgs(id, name, privateDnsZoneConfigs, privateDnsZoneGroupName, privateEndpointName, resourceGroupName);
         }
     }

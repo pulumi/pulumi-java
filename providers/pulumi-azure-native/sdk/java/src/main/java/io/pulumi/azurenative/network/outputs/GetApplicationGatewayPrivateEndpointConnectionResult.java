@@ -169,42 +169,34 @@ public final class GetApplicationGatewayPrivateEndpointConnectionResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder linkIdentifier(String linkIdentifier) {
             this.linkIdentifier = Objects.requireNonNull(linkIdentifier);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApplicationGatewayPrivateEndpointConnectionResult build() {
+        }        public GetApplicationGatewayPrivateEndpointConnectionResult build() {
             return new GetApplicationGatewayPrivateEndpointConnectionResult(etag, id, linkIdentifier, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }
     }

@@ -72,12 +72,10 @@ public final class IntegrationServiceEnvironmentSkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public IntegrationServiceEnvironmentSkuResponse build() {
+        }        public IntegrationServiceEnvironmentSkuResponse build() {
             return new IntegrationServiceEnvironmentSkuResponse(capacity, name);
         }
     }

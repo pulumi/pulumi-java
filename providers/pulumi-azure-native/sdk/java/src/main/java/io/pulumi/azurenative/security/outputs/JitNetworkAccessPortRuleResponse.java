@@ -105,27 +105,25 @@ public final class JitNetworkAccessPortRuleResponse {
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
-
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
-
+        public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
+            return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
+        }
         public Builder maxRequestAccessDuration(String maxRequestAccessDuration) {
             this.maxRequestAccessDuration = Objects.requireNonNull(maxRequestAccessDuration);
             return this;
         }
-
         public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public JitNetworkAccessPortRuleResponse build() {
+        }        public JitNetworkAccessPortRuleResponse build() {
             return new JitNetworkAccessPortRuleResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, maxRequestAccessDuration, number, protocol);
         }
     }

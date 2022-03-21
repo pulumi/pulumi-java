@@ -146,32 +146,29 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
             this.defaultMetadata = Objects.requireNonNull(defaultMetadata);
             return this;
         }
-
         public Builder defaultPath(@Nullable String defaultPath) {
             this.defaultPath = defaultPath;
             return this;
         }
-
         public Builder defaultPattern(@Nullable AliasPatternResponse defaultPattern) {
             this.defaultPattern = defaultPattern;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder paths(@Nullable List<AliasPathResponse> paths) {
             this.paths = paths;
             return this;
         }
-
+        public Builder paths(AliasPathResponse... paths) {
+            return paths(List.of(paths));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AliasResponse build() {
+        }        public AliasResponse build() {
             return new AliasResponse(defaultMetadata, defaultPath, defaultPattern, name, paths, type);
         }
     }

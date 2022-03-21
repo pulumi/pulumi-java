@@ -119,27 +119,22 @@ public final class GetBuildpackBindingResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(BuildpackBindingPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBuildpackBindingResult build() {
+        }        public GetBuildpackBindingResult build() {
             return new GetBuildpackBindingResult(id, name, properties, systemData, type);
         }
     }

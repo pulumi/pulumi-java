@@ -72,12 +72,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder secretResourceName(String secretResourceName) {
             this.secretResourceName = Objects.requireNonNull(secretResourceName);
             return this;
-        }
-        public GetSecretArgs build() {
+        }        public GetSecretArgs build() {
             return new GetSecretArgs(resourceGroupName, secretResourceName);
         }
     }

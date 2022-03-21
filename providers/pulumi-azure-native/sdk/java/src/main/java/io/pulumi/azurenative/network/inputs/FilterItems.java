@@ -79,12 +79,13 @@ public final class FilterItems extends io.pulumi.resources.InvokeArgs {
             this.field = field;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public FilterItems build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public FilterItems build() {
             return new FilterItems(field, values);
         }
     }

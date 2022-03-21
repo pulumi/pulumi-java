@@ -65,12 +65,10 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
             this.loginMode = loginMode;
             return this;
         }
-
         public Builder loginMode(@Nullable Either<String,SourceRegistryLoginMode> loginMode) {
             this.loginMode = Output.ofNullable(loginMode);
             return this;
-        }
-        public SourceRegistryCredentialsArgs build() {
+        }        public SourceRegistryCredentialsArgs build() {
             return new SourceRegistryCredentialsArgs(loginMode);
         }
     }

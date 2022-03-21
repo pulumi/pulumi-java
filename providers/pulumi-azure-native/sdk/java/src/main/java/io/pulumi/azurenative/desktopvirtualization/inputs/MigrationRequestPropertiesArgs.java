@@ -80,22 +80,18 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
             this.migrationPath = migrationPath;
             return this;
         }
-
         public Builder migrationPath(@Nullable String migrationPath) {
             this.migrationPath = Output.ofNullable(migrationPath);
             return this;
         }
-
         public Builder operation(@Nullable Output<Either<String,Operation>> operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder operation(@Nullable Either<String,Operation> operation) {
             this.operation = Output.ofNullable(operation);
             return this;
-        }
-        public MigrationRequestPropertiesArgs build() {
+        }        public MigrationRequestPropertiesArgs build() {
             return new MigrationRequestPropertiesArgs(migrationPath, operation);
         }
     }

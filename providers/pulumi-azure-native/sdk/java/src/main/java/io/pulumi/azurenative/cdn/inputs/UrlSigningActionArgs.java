@@ -79,22 +79,18 @@ public final class UrlSigningActionArgs extends io.pulumi.resources.ResourceArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<UrlSigningActionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(UrlSigningActionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public UrlSigningActionArgs build() {
+        }        public UrlSigningActionArgs build() {
             return new UrlSigningActionArgs(name, parameters);
         }
     }

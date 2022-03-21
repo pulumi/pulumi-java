@@ -90,32 +90,26 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public UserAssignedIdentityArgs build() {
+        }        public UserAssignedIdentityArgs build() {
             return new UserAssignedIdentityArgs(clientId, objectId, resourceId);
         }
     }

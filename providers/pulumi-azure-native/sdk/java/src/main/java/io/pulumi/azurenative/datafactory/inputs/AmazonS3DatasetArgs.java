@@ -315,162 +315,133 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder bucketName(Output<Object> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(Object bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder compression(@Nullable Output<DatasetCompressionArgs> compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable DatasetCompressionArgs compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder format(@Nullable Output<Object> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Object format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder key(@Nullable Output<Object> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable Object key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder modifiedDatetimeEnd(@Nullable Output<Object> modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
-
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = Output.ofNullable(modifiedDatetimeEnd);
             return this;
         }
-
         public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
-
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             this.modifiedDatetimeStart = Output.ofNullable(modifiedDatetimeStart);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder prefix(@Nullable Output<Object> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable Object prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = Output.ofNullable(structure);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder version(@Nullable Output<Object> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Object version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public AmazonS3DatasetArgs build() {
+        }        public AmazonS3DatasetArgs build() {
             return new AmazonS3DatasetArgs(annotations, bucketName, compression, description, folder, format, key, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, prefix, schema, structure, type, version);
         }
     }

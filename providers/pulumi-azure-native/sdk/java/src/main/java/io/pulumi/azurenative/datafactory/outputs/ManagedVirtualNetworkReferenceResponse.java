@@ -69,12 +69,10 @@ public final class ManagedVirtualNetworkReferenceResponse {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagedVirtualNetworkReferenceResponse build() {
+        }        public ManagedVirtualNetworkReferenceResponse build() {
             return new ManagedVirtualNetworkReferenceResponse(referenceName, type);
         }
     }

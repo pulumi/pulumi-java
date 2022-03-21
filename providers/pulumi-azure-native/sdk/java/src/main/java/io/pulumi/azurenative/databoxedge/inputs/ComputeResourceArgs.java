@@ -78,22 +78,18 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
             return this;
         }
-
         public Builder processorCount(Output<Integer> processorCount) {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }
-
         public Builder processorCount(Integer processorCount) {
             this.processorCount = Output.of(Objects.requireNonNull(processorCount));
             return this;
-        }
-        public ComputeResourceArgs build() {
+        }        public ComputeResourceArgs build() {
             return new ComputeResourceArgs(memoryInGB, processorCount);
         }
     }

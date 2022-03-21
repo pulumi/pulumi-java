@@ -79,22 +79,18 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
             this.accessPermission = Objects.requireNonNull(accessPermission);
             return this;
         }
-
         public Builder accessPermission(Either<String,ClientPermissionType> accessPermission) {
             this.accessPermission = Output.of(Objects.requireNonNull(accessPermission));
             return this;
         }
-
         public Builder client(Output<String> client) {
             this.client = Objects.requireNonNull(client);
             return this;
         }
-
         public Builder client(String client) {
             this.client = Output.of(Objects.requireNonNull(client));
             return this;
-        }
-        public ClientAccessRightArgs build() {
+        }        public ClientAccessRightArgs build() {
             return new ClientAccessRightArgs(accessPermission, client);
         }
     }

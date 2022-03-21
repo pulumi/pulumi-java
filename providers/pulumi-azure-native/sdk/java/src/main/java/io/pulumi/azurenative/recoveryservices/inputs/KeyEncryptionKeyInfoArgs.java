@@ -78,22 +78,18 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
             this.keyIdentifier = keyIdentifier;
             return this;
         }
-
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = Output.ofNullable(keyIdentifier);
             return this;
         }
-
         public Builder keyVaultResourceArmId(@Nullable Output<String> keyVaultResourceArmId) {
             this.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
-
         public Builder keyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
             this.keyVaultResourceArmId = Output.ofNullable(keyVaultResourceArmId);
             return this;
-        }
-        public KeyEncryptionKeyInfoArgs build() {
+        }        public KeyEncryptionKeyInfoArgs build() {
             return new KeyEncryptionKeyInfoArgs(keyIdentifier, keyVaultResourceArmId);
         }
     }

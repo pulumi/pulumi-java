@@ -150,62 +150,59 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.automatic = automatic;
             return this;
         }
-
         public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = Output.ofNullable(automatic);
             return this;
         }
-
         public Builder compositeIndexes(@Nullable Output<List<List<CompositePathArgs>>> compositeIndexes) {
             this.compositeIndexes = compositeIndexes;
             return this;
         }
-
         public Builder compositeIndexes(@Nullable List<List<CompositePathArgs>> compositeIndexes) {
             this.compositeIndexes = Output.ofNullable(compositeIndexes);
             return this;
         }
-
         public Builder excludedPaths(@Nullable Output<List<ExcludedPathArgs>> excludedPaths) {
             this.excludedPaths = excludedPaths;
             return this;
         }
-
         public Builder excludedPaths(@Nullable List<ExcludedPathArgs> excludedPaths) {
             this.excludedPaths = Output.ofNullable(excludedPaths);
             return this;
         }
-
+        public Builder excludedPaths(ExcludedPathArgs... excludedPaths) {
+            return excludedPaths(List.of(excludedPaths));
+        }
         public Builder includedPaths(@Nullable Output<List<IncludedPathArgs>> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
-
         public Builder includedPaths(@Nullable List<IncludedPathArgs> includedPaths) {
             this.includedPaths = Output.ofNullable(includedPaths);
             return this;
         }
-
+        public Builder includedPaths(IncludedPathArgs... includedPaths) {
+            return includedPaths(List.of(includedPaths));
+        }
         public Builder indexingMode(@Nullable Output<Either<String,IndexingMode>> indexingMode) {
             this.indexingMode = indexingMode;
             return this;
         }
-
         public Builder indexingMode(@Nullable Either<String,IndexingMode> indexingMode) {
             this.indexingMode = Output.ofNullable(indexingMode);
             return this;
         }
-
         public Builder spatialIndexes(@Nullable Output<List<SpatialSpecArgs>> spatialIndexes) {
             this.spatialIndexes = spatialIndexes;
             return this;
         }
-
         public Builder spatialIndexes(@Nullable List<SpatialSpecArgs> spatialIndexes) {
             this.spatialIndexes = Output.ofNullable(spatialIndexes);
             return this;
         }
-        public IndexingPolicyArgs build() {
+        public Builder spatialIndexes(SpatialSpecArgs... spatialIndexes) {
+            return spatialIndexes(List.of(spatialIndexes));
+        }        public IndexingPolicyArgs build() {
             return new IndexingPolicyArgs(automatic, compositeIndexes, excludedPaths, includedPaths, indexingMode, spatialIndexes);
         }
     }

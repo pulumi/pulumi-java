@@ -73,12 +73,10 @@ public final class RecoveryPlanManualActionDetailsResponse {
             this.description = description;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
-        }
-        public RecoveryPlanManualActionDetailsResponse build() {
+        }        public RecoveryPlanManualActionDetailsResponse build() {
             return new RecoveryPlanManualActionDetailsResponse(description, instanceType);
         }
     }

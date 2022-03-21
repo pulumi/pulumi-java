@@ -72,12 +72,10 @@ public final class GetExpressRouteCircuitArgs extends io.pulumi.resources.Invoke
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExpressRouteCircuitArgs build() {
+        }        public GetExpressRouteCircuitArgs build() {
             return new GetExpressRouteCircuitArgs(circuitName, resourceGroupName);
         }
     }

@@ -110,22 +110,18 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
             this.assignedTo = assignedTo;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
             this.userPrincipalName = userPrincipalName;
             return this;
-        }
-        public IncidentOwnerInfoResponse build() {
+        }        public IncidentOwnerInfoResponse build() {
             return new IncidentOwnerInfoResponse(assignedTo, email, objectId, userPrincipalName);
         }
     }

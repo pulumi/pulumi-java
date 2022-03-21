@@ -71,12 +71,10 @@ public final class IdAssetReferenceResponse {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
-
         public Builder referenceType(String referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
-        }
-        public IdAssetReferenceResponse build() {
+        }        public IdAssetReferenceResponse build() {
             return new IdAssetReferenceResponse(assetId, referenceType);
         }
     }

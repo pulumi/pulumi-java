@@ -72,12 +72,10 @@ public final class GetBastionHostArgs extends io.pulumi.resources.InvokeArgs {
             this.bastionHostName = Objects.requireNonNull(bastionHostName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBastionHostArgs build() {
+        }        public GetBastionHostArgs build() {
             return new GetBastionHostArgs(bastionHostName, resourceGroupName);
         }
     }

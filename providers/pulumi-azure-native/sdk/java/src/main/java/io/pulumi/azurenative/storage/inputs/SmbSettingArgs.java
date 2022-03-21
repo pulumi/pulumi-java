@@ -127,52 +127,42 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.authenticationMethods = authenticationMethods;
             return this;
         }
-
         public Builder authenticationMethods(@Nullable String authenticationMethods) {
             this.authenticationMethods = Output.ofNullable(authenticationMethods);
             return this;
         }
-
         public Builder channelEncryption(@Nullable Output<String> channelEncryption) {
             this.channelEncryption = channelEncryption;
             return this;
         }
-
         public Builder channelEncryption(@Nullable String channelEncryption) {
             this.channelEncryption = Output.ofNullable(channelEncryption);
             return this;
         }
-
         public Builder kerberosTicketEncryption(@Nullable Output<String> kerberosTicketEncryption) {
             this.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
-
         public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
             this.kerberosTicketEncryption = Output.ofNullable(kerberosTicketEncryption);
             return this;
         }
-
         public Builder multichannel(@Nullable Output<MultichannelArgs> multichannel) {
             this.multichannel = multichannel;
             return this;
         }
-
         public Builder multichannel(@Nullable MultichannelArgs multichannel) {
             this.multichannel = Output.ofNullable(multichannel);
             return this;
         }
-
         public Builder versions(@Nullable Output<String> versions) {
             this.versions = versions;
             return this;
         }
-
         public Builder versions(@Nullable String versions) {
             this.versions = Output.ofNullable(versions);
             return this;
-        }
-        public SmbSettingArgs build() {
+        }        public SmbSettingArgs build() {
             return new SmbSettingArgs(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
         }
     }

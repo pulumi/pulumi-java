@@ -88,17 +88,17 @@ public final class LineChannelPropertiesResponse {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
-
         public Builder isValidated(Boolean isValidated) {
             this.isValidated = Objects.requireNonNull(isValidated);
             return this;
         }
-
         public Builder lineRegistrations(List<LineRegistrationResponse> lineRegistrations) {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }
-        public LineChannelPropertiesResponse build() {
+        public Builder lineRegistrations(LineRegistrationResponse... lineRegistrations) {
+            return lineRegistrations(List.of(lineRegistrations));
+        }        public LineChannelPropertiesResponse build() {
             return new LineChannelPropertiesResponse(callbackUrl, isValidated, lineRegistrations);
         }
     }

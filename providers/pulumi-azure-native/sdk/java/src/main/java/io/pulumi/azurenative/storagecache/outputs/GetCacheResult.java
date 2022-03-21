@@ -339,92 +339,77 @@ public final class GetCacheResult {
             this.cacheSizeGB = cacheSizeGB;
             return this;
         }
-
         public Builder directoryServicesSettings(@Nullable CacheDirectorySettingsResponse directoryServicesSettings) {
             this.directoryServicesSettings = directoryServicesSettings;
             return this;
         }
-
         public Builder encryptionSettings(@Nullable CacheEncryptionSettingsResponse encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
-
         public Builder health(CacheHealthResponse health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable CacheIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mountAddresses(List<String> mountAddresses) {
             this.mountAddresses = Objects.requireNonNull(mountAddresses);
             return this;
         }
-
+        public Builder mountAddresses(String... mountAddresses) {
+            return mountAddresses(List.of(mountAddresses));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkSettings(@Nullable CacheNetworkSettingsResponse networkSettings) {
             this.networkSettings = networkSettings;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder securitySettings(@Nullable CacheSecuritySettingsResponse securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
-
         public Builder sku(@Nullable CacheResponseSku sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder upgradeStatus(@Nullable CacheUpgradeStatusResponse upgradeStatus) {
             this.upgradeStatus = upgradeStatus;
             return this;
-        }
-        public GetCacheResult build() {
+        }        public GetCacheResult build() {
             return new GetCacheResult(cacheSizeGB, directoryServicesSettings, encryptionSettings, health, id, identity, location, mountAddresses, name, networkSettings, provisioningState, securitySettings, sku, subnet, systemData, tags, type, upgradeStatus);
         }
     }

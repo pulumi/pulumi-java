@@ -96,17 +96,14 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
-
         public Builder kekIdentity(@Nullable CmkKekIdentityResponse kekIdentity) {
             this.kekIdentity = kekIdentity;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
-        }
-        public VaultPropertiesResponseEncryption build() {
+        }        public VaultPropertiesResponseEncryption build() {
             return new VaultPropertiesResponseEncryption(infrastructureEncryption, kekIdentity, keyVaultProperties);
         }
     }

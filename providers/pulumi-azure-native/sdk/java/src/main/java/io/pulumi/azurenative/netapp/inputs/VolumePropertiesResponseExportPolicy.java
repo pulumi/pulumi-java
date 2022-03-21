@@ -62,7 +62,9 @@ public final class VolumePropertiesResponseExportPolicy extends io.pulumi.resour
             this.rules = rules;
             return this;
         }
-        public VolumePropertiesResponseExportPolicy build() {
+        public Builder rules(ExportPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public VolumePropertiesResponseExportPolicy build() {
             return new VolumePropertiesResponseExportPolicy(rules);
         }
     }

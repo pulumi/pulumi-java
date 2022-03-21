@@ -114,42 +114,37 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
-
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = Output.of(Objects.requireNonNull(expirationDate));
             return this;
         }
-
         public Builder frequency(Output<RecurrenceFrequency> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(RecurrenceFrequency frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
-
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder weekDays(@Nullable Output<List<WeekDay>> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
-
         public Builder weekDays(@Nullable List<WeekDay> weekDays) {
             this.weekDays = Output.ofNullable(weekDays);
             return this;
         }
-        public RecurrencePatternArgs build() {
+        public Builder weekDays(WeekDay... weekDays) {
+            return weekDays(List.of(weekDays));
+        }        public RecurrencePatternArgs build() {
             return new RecurrencePatternArgs(expirationDate, frequency, interval, weekDays);
         }
     }

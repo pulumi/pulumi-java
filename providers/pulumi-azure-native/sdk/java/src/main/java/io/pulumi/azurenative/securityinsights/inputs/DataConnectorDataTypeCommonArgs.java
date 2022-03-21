@@ -63,12 +63,10 @@ public final class DataConnectorDataTypeCommonArgs extends io.pulumi.resources.R
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,DataTypeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public DataConnectorDataTypeCommonArgs build() {
+        }        public DataConnectorDataTypeCommonArgs build() {
             return new DataConnectorDataTypeCommonArgs(state);
         }
     }

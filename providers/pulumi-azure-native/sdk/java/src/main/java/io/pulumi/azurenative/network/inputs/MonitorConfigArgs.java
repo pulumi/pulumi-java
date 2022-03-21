@@ -197,92 +197,80 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.customHeaders = customHeaders;
             return this;
         }
-
         public Builder customHeaders(@Nullable List<MonitorConfigCustomHeadersArgs> customHeaders) {
             this.customHeaders = Output.ofNullable(customHeaders);
             return this;
         }
-
+        public Builder customHeaders(MonitorConfigCustomHeadersArgs... customHeaders) {
+            return customHeaders(List.of(customHeaders));
+        }
         public Builder expectedStatusCodeRanges(@Nullable Output<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges) {
             this.expectedStatusCodeRanges = expectedStatusCodeRanges;
             return this;
         }
-
         public Builder expectedStatusCodeRanges(@Nullable List<MonitorConfigExpectedStatusCodeRangesArgs> expectedStatusCodeRanges) {
             this.expectedStatusCodeRanges = Output.ofNullable(expectedStatusCodeRanges);
             return this;
         }
-
+        public Builder expectedStatusCodeRanges(MonitorConfigExpectedStatusCodeRangesArgs... expectedStatusCodeRanges) {
+            return expectedStatusCodeRanges(List.of(expectedStatusCodeRanges));
+        }
         public Builder intervalInSeconds(@Nullable Output<Double> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Double intervalInSeconds) {
             this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(@Nullable Output<Double> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Double port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder profileMonitorStatus(@Nullable Output<Either<String,ProfileMonitorStatus>> profileMonitorStatus) {
             this.profileMonitorStatus = profileMonitorStatus;
             return this;
         }
-
         public Builder profileMonitorStatus(@Nullable Either<String,ProfileMonitorStatus> profileMonitorStatus) {
             this.profileMonitorStatus = Output.ofNullable(profileMonitorStatus);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,MonitorProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,MonitorProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
-
         public Builder toleratedNumberOfFailures(@Nullable Output<Double> toleratedNumberOfFailures) {
             this.toleratedNumberOfFailures = toleratedNumberOfFailures;
             return this;
         }
-
         public Builder toleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
             this.toleratedNumberOfFailures = Output.ofNullable(toleratedNumberOfFailures);
             return this;
-        }
-        public MonitorConfigArgs build() {
+        }        public MonitorConfigArgs build() {
             return new MonitorConfigArgs(customHeaders, expectedStatusCodeRanges, intervalInSeconds, path, port, profileMonitorStatus, protocol, timeoutInSeconds, toleratedNumberOfFailures);
         }
     }

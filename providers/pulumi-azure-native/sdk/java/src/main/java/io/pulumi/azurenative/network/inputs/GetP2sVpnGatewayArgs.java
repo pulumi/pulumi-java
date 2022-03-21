@@ -72,12 +72,10 @@ public final class GetP2sVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetP2sVpnGatewayArgs build() {
+        }        public GetP2sVpnGatewayArgs build() {
             return new GetP2sVpnGatewayArgs(gatewayName, resourceGroupName);
         }
     }

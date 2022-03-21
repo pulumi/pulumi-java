@@ -149,62 +149,50 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder operator(Output<ConditionOperator> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(ConditionOperator operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder timeAggregation(@Nullable Output<TimeAggregationOperator> timeAggregation) {
             this.timeAggregation = timeAggregation;
             return this;
         }
-
         public Builder timeAggregation(@Nullable TimeAggregationOperator timeAggregation) {
             this.timeAggregation = Output.ofNullable(timeAggregation);
             return this;
         }
-
         public Builder windowSize(@Nullable Output<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
-
         public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = Output.ofNullable(windowSize);
             return this;
-        }
-        public ThresholdRuleConditionArgs build() {
+        }        public ThresholdRuleConditionArgs build() {
             return new ThresholdRuleConditionArgs(dataSource, odataType, operator, threshold, timeAggregation, windowSize);
         }
     }

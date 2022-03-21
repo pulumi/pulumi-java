@@ -97,32 +97,29 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder encryptionSettings(@Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
-
         public Builder encryptionSettings(@Nullable List<EncryptionSettingsElementArgs> encryptionSettings) {
             this.encryptionSettings = Output.ofNullable(encryptionSettings);
             return this;
         }
-
+        public Builder encryptionSettings(EncryptionSettingsElementArgs... encryptionSettings) {
+            return encryptionSettings(List.of(encryptionSettings));
+        }
         public Builder encryptionSettingsVersion(@Nullable Output<String> encryptionSettingsVersion) {
             this.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
         }
-
         public Builder encryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
             this.encryptionSettingsVersion = Output.ofNullable(encryptionSettingsVersion);
             return this;
-        }
-        public EncryptionSettingsCollectionArgs build() {
+        }        public EncryptionSettingsCollectionArgs build() {
             return new EncryptionSettingsCollectionArgs(enabled, encryptionSettings, encryptionSettingsVersion);
         }
     }

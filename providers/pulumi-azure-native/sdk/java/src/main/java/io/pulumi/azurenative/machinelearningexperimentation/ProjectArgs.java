@@ -187,92 +187,74 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder friendlyName(Output<String> friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Output.of(Objects.requireNonNull(friendlyName));
             return this;
         }
-
         public Builder gitrepo(@Nullable Output<String> gitrepo) {
             this.gitrepo = gitrepo;
             return this;
         }
-
         public Builder gitrepo(@Nullable String gitrepo) {
             this.gitrepo = Output.ofNullable(gitrepo);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = Output.ofNullable(projectName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public ProjectArgs build() {
+        }        public ProjectArgs build() {
             return new ProjectArgs(accountName, description, friendlyName, gitrepo, location, projectName, resourceGroupName, tags, workspaceName);
         }
     }

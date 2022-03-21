@@ -257,67 +257,57 @@ public final class AzureMLLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder apiKey(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder authentication(@Nullable Object authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder mlEndpoint(Object mlEndpoint) {
             this.mlEndpoint = Objects.requireNonNull(mlEndpoint);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public Builder tenant(@Nullable Object tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateResourceEndpoint(@Nullable Object updateResourceEndpoint) {
             this.updateResourceEndpoint = updateResourceEndpoint;
             return this;
-        }
-        public AzureMLLinkedServiceResponse build() {
+        }        public AzureMLLinkedServiceResponse build() {
             return new AzureMLLinkedServiceResponse(annotations, apiKey, authentication, connectVia, description, encryptedCredential, mlEndpoint, parameters, servicePrincipalId, servicePrincipalKey, tenant, type, updateResourceEndpoint);
         }
     }

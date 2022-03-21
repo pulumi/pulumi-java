@@ -85,17 +85,14 @@ public final class ConnectedClusterIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ConnectedClusterIdentityResponse build() {
+        }        public ConnectedClusterIdentityResponse build() {
             return new ConnectedClusterIdentityResponse(principalId, tenantId, type);
         }
     }

@@ -119,27 +119,25 @@ public final class ClusterReportedPropertiesResponse {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
-
         public Builder lastUpdated(String lastUpdated) {
             this.lastUpdated = Objects.requireNonNull(lastUpdated);
             return this;
         }
-
         public Builder nodes(List<ClusterNodeResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-        public ClusterReportedPropertiesResponse build() {
+        public Builder nodes(ClusterNodeResponse... nodes) {
+            return nodes(List.of(nodes));
+        }        public ClusterReportedPropertiesResponse build() {
             return new ClusterReportedPropertiesResponse(clusterId, clusterName, clusterVersion, lastUpdated, nodes);
         }
     }

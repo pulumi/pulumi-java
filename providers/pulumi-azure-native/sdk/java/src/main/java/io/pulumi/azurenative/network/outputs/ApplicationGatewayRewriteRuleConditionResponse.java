@@ -104,22 +104,18 @@ public final class ApplicationGatewayRewriteRuleConditionResponse {
             this.ignoreCase = ignoreCase;
             return this;
         }
-
         public Builder negate(@Nullable Boolean negate) {
             this.negate = negate;
             return this;
         }
-
         public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }
-
         public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
-        }
-        public ApplicationGatewayRewriteRuleConditionResponse build() {
+        }        public ApplicationGatewayRewriteRuleConditionResponse build() {
             return new ApplicationGatewayRewriteRuleConditionResponse(ignoreCase, negate, pattern, variable);
         }
     }

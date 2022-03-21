@@ -88,17 +88,14 @@ public final class ListProductDetailsArgs extends io.pulumi.resources.InvokeArgs
             this.productName = Objects.requireNonNull(productName);
             return this;
         }
-
         public Builder registrationName(String registrationName) {
             this.registrationName = Objects.requireNonNull(registrationName);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
-        }
-        public ListProductDetailsArgs build() {
+        }        public ListProductDetailsArgs build() {
             return new ListProductDetailsArgs(productName, registrationName, resourceGroup);
         }
     }

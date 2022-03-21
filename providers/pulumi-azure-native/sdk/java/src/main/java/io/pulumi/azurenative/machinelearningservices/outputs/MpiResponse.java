@@ -74,12 +74,10 @@ public final class MpiResponse {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
-
         public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
             this.processCountPerInstance = processCountPerInstance;
             return this;
-        }
-        public MpiResponse build() {
+        }        public MpiResponse build() {
             return new MpiResponse(distributionType, processCountPerInstance);
         }
     }

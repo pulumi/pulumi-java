@@ -78,22 +78,18 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
             this.postTask = postTask;
             return this;
         }
-
         public Builder postTask(@Nullable TaskPropertiesArgs postTask) {
             this.postTask = Output.ofNullable(postTask);
             return this;
         }
-
         public Builder preTask(@Nullable Output<TaskPropertiesArgs> preTask) {
             this.preTask = preTask;
             return this;
         }
-
         public Builder preTask(@Nullable TaskPropertiesArgs preTask) {
             this.preTask = Output.ofNullable(preTask);
             return this;
-        }
-        public SoftwareUpdateConfigurationTasksArgs build() {
+        }        public SoftwareUpdateConfigurationTasksArgs build() {
             return new SoftwareUpdateConfigurationTasksArgs(postTask, preTask);
         }
     }

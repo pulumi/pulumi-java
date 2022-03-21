@@ -140,62 +140,50 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
-
         public Builder configStoreName(String configStoreName) {
             this.configStoreName = Output.of(Objects.requireNonNull(configStoreName));
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder keyValueName(@Nullable Output<String> keyValueName) {
             this.keyValueName = keyValueName;
             return this;
         }
-
         public Builder keyValueName(@Nullable String keyValueName) {
             this.keyValueName = Output.ofNullable(keyValueName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public KeyValueArgs build() {
+        }        public KeyValueArgs build() {
             return new KeyValueArgs(configStoreName, contentType, keyValueName, resourceGroupName, tags, value);
         }
     }

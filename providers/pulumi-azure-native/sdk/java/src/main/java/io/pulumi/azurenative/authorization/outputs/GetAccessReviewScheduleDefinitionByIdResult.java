@@ -540,157 +540,135 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
             this.assignmentState = Objects.requireNonNull(assignmentState);
             return this;
         }
-
         public Builder autoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
             this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
             return this;
         }
-
         public Builder backupReviewers(@Nullable List<AccessReviewReviewerResponse> backupReviewers) {
             this.backupReviewers = backupReviewers;
             return this;
         }
-
+        public Builder backupReviewers(AccessReviewReviewerResponse... backupReviewers) {
+            return backupReviewers(List.of(backupReviewers));
+        }
         public Builder defaultDecision(@Nullable String defaultDecision) {
             this.defaultDecision = defaultDecision;
             return this;
         }
-
         public Builder defaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
             this.defaultDecisionEnabled = defaultDecisionEnabled;
             return this;
         }
-
         public Builder descriptionForAdmins(@Nullable String descriptionForAdmins) {
             this.descriptionForAdmins = descriptionForAdmins;
             return this;
         }
-
         public Builder descriptionForReviewers(@Nullable String descriptionForReviewers) {
             this.descriptionForReviewers = descriptionForReviewers;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
-
         public Builder instanceDurationInDays(@Nullable Integer instanceDurationInDays) {
             this.instanceDurationInDays = instanceDurationInDays;
             return this;
         }
-
         public Builder instances(@Nullable List<AccessReviewInstanceResponse> instances) {
             this.instances = instances;
             return this;
         }
-
+        public Builder instances(AccessReviewInstanceResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder justificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
             this.justificationRequiredOnApproval = justificationRequiredOnApproval;
             return this;
         }
-
         public Builder mailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
             this.mailNotificationsEnabled = mailNotificationsEnabled;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalName(String principalName) {
             this.principalName = Objects.requireNonNull(principalName);
             return this;
         }
-
         public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public Builder recommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
             this.recommendationsEnabled = recommendationsEnabled;
             return this;
         }
-
         public Builder reminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
             this.reminderNotificationsEnabled = reminderNotificationsEnabled;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder reviewers(@Nullable List<AccessReviewReviewerResponse> reviewers) {
             this.reviewers = reviewers;
             return this;
         }
-
+        public Builder reviewers(AccessReviewReviewerResponse... reviewers) {
+            return reviewers(List.of(reviewers));
+        }
         public Builder reviewersType(String reviewersType) {
             this.reviewersType = Objects.requireNonNull(reviewersType);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userPrincipalName(String userPrincipalName) {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
-        }
-        public GetAccessReviewScheduleDefinitionByIdResult build() {
+        }        public GetAccessReviewScheduleDefinitionByIdResult build() {
             return new GetAccessReviewScheduleDefinitionByIdResult(assignmentState, autoApplyDecisionsEnabled, backupReviewers, defaultDecision, defaultDecisionEnabled, descriptionForAdmins, descriptionForReviewers, displayName, endDate, id, inactiveDuration, instanceDurationInDays, instances, interval, justificationRequiredOnApproval, mailNotificationsEnabled, name, numberOfOccurrences, principalId, principalName, principalType, recommendationsEnabled, reminderNotificationsEnabled, resourceId, reviewers, reviewersType, roleDefinitionId, startDate, status, type, userPrincipalName);
         }
     }

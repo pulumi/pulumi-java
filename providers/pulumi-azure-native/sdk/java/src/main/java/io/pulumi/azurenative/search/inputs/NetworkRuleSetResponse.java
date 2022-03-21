@@ -62,7 +62,9 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.ipRules = ipRules;
             return this;
         }
-        public NetworkRuleSetResponse build() {
+        public Builder ipRules(IpRuleResponse... ipRules) {
+            return ipRules(List.of(ipRules));
+        }        public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(ipRules);
         }
     }

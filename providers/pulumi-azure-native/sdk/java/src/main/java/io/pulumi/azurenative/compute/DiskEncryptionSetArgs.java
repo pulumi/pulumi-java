@@ -176,82 +176,66 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             this.activeKey = activeKey;
             return this;
         }
-
         public Builder activeKey(@Nullable KeyForDiskEncryptionSetArgs activeKey) {
             this.activeKey = Output.ofNullable(activeKey);
             return this;
         }
-
         public Builder diskEncryptionSetName(@Nullable Output<String> diskEncryptionSetName) {
             this.diskEncryptionSetName = diskEncryptionSetName;
             return this;
         }
-
         public Builder diskEncryptionSetName(@Nullable String diskEncryptionSetName) {
             this.diskEncryptionSetName = Output.ofNullable(diskEncryptionSetName);
             return this;
         }
-
         public Builder encryptionType(@Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
-
         public Builder encryptionType(@Nullable Either<String,DiskEncryptionSetType> encryptionType) {
             this.encryptionType = Output.ofNullable(encryptionType);
             return this;
         }
-
         public Builder identity(@Nullable Output<EncryptionSetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable EncryptionSetIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rotationToLatestKeyVersionEnabled(@Nullable Output<Boolean> rotationToLatestKeyVersionEnabled) {
             this.rotationToLatestKeyVersionEnabled = rotationToLatestKeyVersionEnabled;
             return this;
         }
-
         public Builder rotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
             this.rotationToLatestKeyVersionEnabled = Output.ofNullable(rotationToLatestKeyVersionEnabled);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DiskEncryptionSetArgs build() {
+        }        public DiskEncryptionSetArgs build() {
             return new DiskEncryptionSetArgs(activeKey, diskEncryptionSetName, encryptionType, identity, location, resourceGroupName, rotationToLatestKeyVersionEnabled, tags);
         }
     }

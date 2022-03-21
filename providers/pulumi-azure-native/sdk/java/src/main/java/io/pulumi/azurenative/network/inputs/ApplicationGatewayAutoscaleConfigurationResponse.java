@@ -78,12 +78,10 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
-        }
-        public ApplicationGatewayAutoscaleConfigurationResponse build() {
+        }        public ApplicationGatewayAutoscaleConfigurationResponse build() {
             return new ApplicationGatewayAutoscaleConfigurationResponse(maxCapacity, minCapacity);
         }
     }

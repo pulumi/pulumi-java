@@ -63,12 +63,10 @@ public final class FirewallPolicyNatRuleCollectionActionArgs extends io.pulumi.r
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,FirewallPolicyNatRuleCollectionActionType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public FirewallPolicyNatRuleCollectionActionArgs build() {
+        }        public FirewallPolicyNatRuleCollectionActionArgs build() {
             return new FirewallPolicyNatRuleCollectionActionArgs(type);
         }
     }

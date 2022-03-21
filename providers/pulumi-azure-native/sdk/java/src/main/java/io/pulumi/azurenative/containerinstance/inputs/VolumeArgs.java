@@ -130,52 +130,42 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.azureFile = azureFile;
             return this;
         }
-
         public Builder azureFile(@Nullable AzureFileVolumeArgs azureFile) {
             this.azureFile = Output.ofNullable(azureFile);
             return this;
         }
-
         public Builder emptyDir(@Nullable Output<Object> emptyDir) {
             this.emptyDir = emptyDir;
             return this;
         }
-
         public Builder emptyDir(@Nullable Object emptyDir) {
             this.emptyDir = Output.ofNullable(emptyDir);
             return this;
         }
-
         public Builder gitRepo(@Nullable Output<GitRepoVolumeArgs> gitRepo) {
             this.gitRepo = gitRepo;
             return this;
         }
-
         public Builder gitRepo(@Nullable GitRepoVolumeArgs gitRepo) {
             this.gitRepo = Output.ofNullable(gitRepo);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder secret(@Nullable Output<Map<String,String>> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable Map<String,String> secret) {
             this.secret = Output.ofNullable(secret);
             return this;
-        }
-        public VolumeArgs build() {
+        }        public VolumeArgs build() {
             return new VolumeArgs(azureFile, emptyDir, gitRepo, name, secret);
         }
     }

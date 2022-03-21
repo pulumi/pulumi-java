@@ -51,8 +51,7 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection build() {
+        }        public PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection build() {
             return new PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(id);
         }
     }

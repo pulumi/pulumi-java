@@ -168,42 +168,37 @@ public final class GetDefenderSettingResult {
             this.deviceQuota = Objects.requireNonNull(deviceQuota);
             return this;
         }
-
         public Builder evaluationEndTime(String evaluationEndTime) {
             this.evaluationEndTime = Objects.requireNonNull(evaluationEndTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder mdeIntegration(DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration) {
             this.mdeIntegration = Objects.requireNonNull(mdeIntegration);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder onboardingKind(String onboardingKind) {
             this.onboardingKind = Objects.requireNonNull(onboardingKind);
             return this;
         }
-
         public Builder sentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
             this.sentinelWorkspaceResourceIds = Objects.requireNonNull(sentinelWorkspaceResourceIds);
             return this;
         }
-
+        public Builder sentinelWorkspaceResourceIds(String... sentinelWorkspaceResourceIds) {
+            return sentinelWorkspaceResourceIds(List.of(sentinelWorkspaceResourceIds));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDefenderSettingResult build() {
+        }        public GetDefenderSettingResult build() {
             return new GetDefenderSettingResult(deviceQuota, evaluationEndTime, id, mdeIntegration, name, onboardingKind, sentinelWorkspaceResourceIds, type);
         }
     }

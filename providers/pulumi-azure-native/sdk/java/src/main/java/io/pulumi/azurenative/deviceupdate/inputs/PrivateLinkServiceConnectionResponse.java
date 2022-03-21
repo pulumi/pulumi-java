@@ -95,17 +95,17 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
             this.groupIds = groupIds;
             return this;
         }
-
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
-        }
-        public PrivateLinkServiceConnectionResponse build() {
+        }        public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(groupIds, name, requestMessage);
         }
     }

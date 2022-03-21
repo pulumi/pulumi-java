@@ -114,27 +114,22 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
             this.accountKey = Objects.requireNonNull(accountKey);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder azureFileUrl(String azureFileUrl) {
             this.azureFileUrl = Objects.requireNonNull(azureFileUrl);
             return this;
         }
-
         public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
-        }
-        public AzureFileShareConfigurationResponse build() {
+        }        public AzureFileShareConfigurationResponse build() {
             return new AzureFileShareConfigurationResponse(accountKey, accountName, azureFileUrl, mountOptions, relativeMountPath);
         }
     }

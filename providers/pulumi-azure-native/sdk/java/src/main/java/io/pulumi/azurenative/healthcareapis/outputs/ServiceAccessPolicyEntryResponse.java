@@ -51,8 +51,7 @@ public final class ServiceAccessPolicyEntryResponse {
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
-        }
-        public ServiceAccessPolicyEntryResponse build() {
+        }        public ServiceAccessPolicyEntryResponse build() {
             return new ServiceAccessPolicyEntryResponse(objectId);
         }
     }

@@ -77,12 +77,10 @@ public final class WorkspaceCustomBooleanParameterResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(Boolean value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WorkspaceCustomBooleanParameterResponse build() {
+        }        public WorkspaceCustomBooleanParameterResponse build() {
             return new WorkspaceCustomBooleanParameterResponse(type, value);
         }
     }

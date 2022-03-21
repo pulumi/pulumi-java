@@ -70,12 +70,10 @@ public final class AzureMLWebServiceFileResponse {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
-        }
-        public AzureMLWebServiceFileResponse build() {
+        }        public AzureMLWebServiceFileResponse build() {
             return new AzureMLWebServiceFileResponse(filePath, linkedServiceName);
         }
     }

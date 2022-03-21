@@ -103,22 +103,18 @@ public final class SupportInfoResponse {
             this.email = email;
             return this;
         }
-
         public Builder instructions(@Nullable String instructions) {
             this.instructions = instructions;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public SupportInfoResponse build() {
+        }        public SupportInfoResponse build() {
             return new SupportInfoResponse(email, instructions, phone, url);
         }
     }

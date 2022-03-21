@@ -79,12 +79,13 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
             this.ipAddressIds = ipAddressIds;
             return this;
         }
-
+        public Builder ipAddressIds(String... ipAddressIds) {
+            return ipAddressIds(List.of(ipAddressIds));
+        }
         public Builder provision(@Nullable String provision) {
             this.provision = provision;
             return this;
-        }
-        public PublicIPAddressConfigurationResponse build() {
+        }        public PublicIPAddressConfigurationResponse build() {
             return new PublicIPAddressConfigurationResponse(ipAddressIds, provision);
         }
     }

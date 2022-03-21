@@ -53,8 +53,7 @@ public final class DataImportDetailsResponse {
         public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
-        }
-        public DataImportDetailsResponse build() {
+        }        public DataImportDetailsResponse build() {
             return new DataImportDetailsResponse(accountDetails);
         }
     }

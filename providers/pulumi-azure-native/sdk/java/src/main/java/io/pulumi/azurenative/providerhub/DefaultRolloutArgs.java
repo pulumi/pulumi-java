@@ -91,32 +91,26 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable DefaultRolloutPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
-
         public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
-
         public Builder rolloutName(@Nullable Output<String> rolloutName) {
             this.rolloutName = rolloutName;
             return this;
         }
-
         public Builder rolloutName(@Nullable String rolloutName) {
             this.rolloutName = Output.ofNullable(rolloutName);
             return this;
-        }
-        public DefaultRolloutArgs build() {
+        }        public DefaultRolloutArgs build() {
             return new DefaultRolloutArgs(properties, providerNamespace, rolloutName);
         }
     }

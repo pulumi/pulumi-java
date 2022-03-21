@@ -97,17 +97,20 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
             this.baseImageTrigger = baseImageTrigger;
             return this;
         }
-
         public Builder sourceTriggers(@Nullable List<SourceTriggerResponse> sourceTriggers) {
             this.sourceTriggers = sourceTriggers;
             return this;
         }
-
+        public Builder sourceTriggers(SourceTriggerResponse... sourceTriggers) {
+            return sourceTriggers(List.of(sourceTriggers));
+        }
         public Builder timerTriggers(@Nullable List<TimerTriggerResponse> timerTriggers) {
             this.timerTriggers = timerTriggers;
             return this;
         }
-        public TriggerPropertiesResponse build() {
+        public Builder timerTriggers(TimerTriggerResponse... timerTriggers) {
+            return timerTriggers(List.of(timerTriggers));
+        }        public TriggerPropertiesResponse build() {
             return new TriggerPropertiesResponse(baseImageTrigger, sourceTriggers, timerTriggers);
         }
     }

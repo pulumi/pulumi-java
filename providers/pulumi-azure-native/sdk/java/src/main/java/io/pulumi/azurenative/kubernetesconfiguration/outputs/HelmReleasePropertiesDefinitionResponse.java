@@ -120,27 +120,22 @@ public final class HelmReleasePropertiesDefinitionResponse {
             this.failureCount = failureCount;
             return this;
         }
-
         public Builder helmChartRef(@Nullable ObjectReferenceDefinitionResponse helmChartRef) {
             this.helmChartRef = helmChartRef;
             return this;
         }
-
         public Builder installFailureCount(@Nullable Double installFailureCount) {
             this.installFailureCount = installFailureCount;
             return this;
         }
-
         public Builder lastRevisionApplied(@Nullable Double lastRevisionApplied) {
             this.lastRevisionApplied = lastRevisionApplied;
             return this;
         }
-
         public Builder upgradeFailureCount(@Nullable Double upgradeFailureCount) {
             this.upgradeFailureCount = upgradeFailureCount;
             return this;
-        }
-        public HelmReleasePropertiesDefinitionResponse build() {
+        }        public HelmReleasePropertiesDefinitionResponse build() {
             return new HelmReleasePropertiesDefinitionResponse(failureCount, helmChartRef, installFailureCount, lastRevisionApplied, upgradeFailureCount);
         }
     }

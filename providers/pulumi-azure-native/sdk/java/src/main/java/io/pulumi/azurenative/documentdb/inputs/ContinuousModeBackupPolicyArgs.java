@@ -61,12 +61,10 @@ public final class ContinuousModeBackupPolicyArgs extends io.pulumi.resources.Re
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ContinuousModeBackupPolicyArgs build() {
+        }        public ContinuousModeBackupPolicyArgs build() {
             return new ContinuousModeBackupPolicyArgs(type);
         }
     }

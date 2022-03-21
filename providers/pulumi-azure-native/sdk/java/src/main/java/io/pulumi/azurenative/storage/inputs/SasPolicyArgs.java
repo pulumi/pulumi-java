@@ -79,22 +79,18 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.expirationAction = Objects.requireNonNull(expirationAction);
             return this;
         }
-
         public Builder expirationAction(Either<String,ExpirationAction> expirationAction) {
             this.expirationAction = Output.of(Objects.requireNonNull(expirationAction));
             return this;
         }
-
         public Builder sasExpirationPeriod(Output<String> sasExpirationPeriod) {
             this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
             return this;
         }
-
         public Builder sasExpirationPeriod(String sasExpirationPeriod) {
             this.sasExpirationPeriod = Output.of(Objects.requireNonNull(sasExpirationPeriod));
             return this;
-        }
-        public SasPolicyArgs build() {
+        }        public SasPolicyArgs build() {
             return new SasPolicyArgs(expirationAction, sasExpirationPeriod);
         }
     }

@@ -102,22 +102,21 @@ public final class AclResponse {
             this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
             return this;
         }
-
         public Builder mappedLuns(List<String> mappedLuns) {
             this.mappedLuns = Objects.requireNonNull(mappedLuns);
             return this;
         }
-
+        public Builder mappedLuns(String... mappedLuns) {
+            return mappedLuns(List.of(mappedLuns));
+        }
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public AclResponse build() {
+        }        public AclResponse build() {
             return new AclResponse(initiatorIqn, mappedLuns, password, username);
         }
     }

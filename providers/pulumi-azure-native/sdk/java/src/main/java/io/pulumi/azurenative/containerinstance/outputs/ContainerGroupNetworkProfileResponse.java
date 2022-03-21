@@ -51,8 +51,7 @@ public final class ContainerGroupNetworkProfileResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public ContainerGroupNetworkProfileResponse build() {
+        }        public ContainerGroupNetworkProfileResponse build() {
             return new ContainerGroupNetworkProfileResponse(id);
         }
     }

@@ -119,27 +119,22 @@ public final class GetWorkflowAccessKeyResult {
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder notBefore(@Nullable String notBefore) {
             this.notBefore = notBefore;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkflowAccessKeyResult build() {
+        }        public GetWorkflowAccessKeyResult build() {
             return new GetWorkflowAccessKeyResult(id, name, notAfter, notBefore, type);
         }
     }

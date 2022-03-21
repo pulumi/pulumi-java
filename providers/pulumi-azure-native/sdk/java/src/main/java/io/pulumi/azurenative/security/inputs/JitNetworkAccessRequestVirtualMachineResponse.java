@@ -74,12 +74,13 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ports(List<JitNetworkAccessRequestPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public JitNetworkAccessRequestVirtualMachineResponse build() {
+        public Builder ports(JitNetworkAccessRequestPortResponse... ports) {
+            return ports(List.of(ports));
+        }        public JitNetworkAccessRequestVirtualMachineResponse build() {
             return new JitNetworkAccessRequestVirtualMachineResponse(id, ports);
         }
     }

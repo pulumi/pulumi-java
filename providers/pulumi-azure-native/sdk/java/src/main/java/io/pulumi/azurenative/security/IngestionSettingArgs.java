@@ -57,12 +57,10 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
             this.ingestionSettingName = ingestionSettingName;
             return this;
         }
-
         public Builder ingestionSettingName(@Nullable String ingestionSettingName) {
             this.ingestionSettingName = Output.ofNullable(ingestionSettingName);
             return this;
-        }
-        public IngestionSettingArgs build() {
+        }        public IngestionSettingArgs build() {
             return new IngestionSettingArgs(ingestionSettingName);
         }
     }

@@ -99,32 +99,26 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
             this.aggregation = aggregation;
             return this;
         }
-
         public Builder aggregation(@Nullable ManagementEventAggregationConditionArgs aggregation) {
             this.aggregation = Output.ofNullable(aggregation);
             return this;
         }
-
         public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public ManagementEventRuleConditionArgs build() {
+        }        public ManagementEventRuleConditionArgs build() {
             return new ManagementEventRuleConditionArgs(aggregation, dataSource, odataType);
         }
     }

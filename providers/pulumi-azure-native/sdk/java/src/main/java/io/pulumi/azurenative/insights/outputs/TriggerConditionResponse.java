@@ -89,17 +89,14 @@ public final class TriggerConditionResponse {
             this.metricTrigger = metricTrigger;
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder thresholdOperator(String thresholdOperator) {
             this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
             return this;
-        }
-        public TriggerConditionResponse build() {
+        }        public TriggerConditionResponse build() {
             return new TriggerConditionResponse(metricTrigger, threshold, thresholdOperator);
         }
     }

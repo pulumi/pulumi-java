@@ -90,17 +90,14 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.region = region;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder webServiceName(String webServiceName) {
             this.webServiceName = Objects.requireNonNull(webServiceName);
             return this;
-        }
-        public GetWebServiceArgs build() {
+        }        public GetWebServiceArgs build() {
             return new GetWebServiceArgs(region, resourceGroupName, webServiceName);
         }
     }

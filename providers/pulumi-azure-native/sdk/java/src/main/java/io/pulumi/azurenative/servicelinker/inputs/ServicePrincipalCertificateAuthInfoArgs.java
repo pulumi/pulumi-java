@@ -110,42 +110,34 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder authType(String authType) {
             this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
-
         public Builder certificate(Output<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
-        }
-        public ServicePrincipalCertificateAuthInfoArgs build() {
+        }        public ServicePrincipalCertificateAuthInfoArgs build() {
             return new ServicePrincipalCertificateAuthInfoArgs(authType, certificate, clientId, principalId);
         }
     }

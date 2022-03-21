@@ -94,32 +94,26 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
-
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = Output.ofNullable(policyDefinitionId);
             return this;
-        }
-        public ApplicationPolicyArgs build() {
+        }        public ApplicationPolicyArgs build() {
             return new ApplicationPolicyArgs(name, parameters, policyDefinitionId);
         }
     }

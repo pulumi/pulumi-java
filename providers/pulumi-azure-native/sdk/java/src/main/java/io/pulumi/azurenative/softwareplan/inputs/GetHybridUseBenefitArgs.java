@@ -72,12 +72,10 @@ public final class GetHybridUseBenefitArgs extends io.pulumi.resources.InvokeArg
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetHybridUseBenefitArgs build() {
+        }        public GetHybridUseBenefitArgs build() {
             return new GetHybridUseBenefitArgs(planId, scope);
         }
     }

@@ -119,27 +119,22 @@ public final class GetCustomerSubscriptionResult {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCustomerSubscriptionResult build() {
+        }        public GetCustomerSubscriptionResult build() {
             return new GetCustomerSubscriptionResult(etag, id, name, tenantId, type);
         }
     }

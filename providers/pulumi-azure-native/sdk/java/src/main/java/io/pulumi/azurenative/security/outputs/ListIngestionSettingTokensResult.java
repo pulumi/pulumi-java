@@ -51,8 +51,7 @@ public final class ListIngestionSettingTokensResult {
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
-        }
-        public ListIngestionSettingTokensResult build() {
+        }        public ListIngestionSettingTokensResult build() {
             return new ListIngestionSettingTokensResult(token);
         }
     }

@@ -62,7 +62,9 @@ public final class SshProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.publicKeys = publicKeys;
             return this;
         }
-        public SshProfileResponse build() {
+        public Builder publicKeys(SshPublicKeyResponse... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public SshProfileResponse build() {
             return new SshProfileResponse(publicKeys);
         }
     }

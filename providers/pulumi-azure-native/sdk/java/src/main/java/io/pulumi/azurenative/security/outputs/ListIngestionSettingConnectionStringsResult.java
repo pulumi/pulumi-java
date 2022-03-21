@@ -53,7 +53,9 @@ public final class ListIngestionSettingConnectionStringsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListIngestionSettingConnectionStringsResult build() {
+        public Builder value(IngestionConnectionStringResponse... value) {
+            return value(List.of(value));
+        }        public ListIngestionSettingConnectionStringsResult build() {
             return new ListIngestionSettingConnectionStringsResult(value);
         }
     }

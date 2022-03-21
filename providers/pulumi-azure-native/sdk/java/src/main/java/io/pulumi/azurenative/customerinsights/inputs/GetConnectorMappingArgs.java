@@ -104,22 +104,18 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder mappingName(String mappingName) {
             this.mappingName = Objects.requireNonNull(mappingName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConnectorMappingArgs build() {
+        }        public GetConnectorMappingArgs build() {
             return new GetConnectorMappingArgs(connectorName, hubName, mappingName, resourceGroupName);
         }
     }

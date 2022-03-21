@@ -59,8 +59,7 @@ public final class ManagedCertificateParametersResponse extends io.pulumi.resour
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagedCertificateParametersResponse build() {
+        }        public ManagedCertificateParametersResponse build() {
             return new ManagedCertificateParametersResponse(type);
         }
     }

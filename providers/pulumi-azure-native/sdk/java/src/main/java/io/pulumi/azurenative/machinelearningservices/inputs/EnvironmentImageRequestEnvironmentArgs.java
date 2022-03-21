@@ -179,82 +179,66 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
             this.docker = docker;
             return this;
         }
-
         public Builder docker(@Nullable ModelEnvironmentDefinitionDockerArgs docker) {
             this.docker = Output.ofNullable(docker);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder inferencingStackVersion(@Nullable Output<String> inferencingStackVersion) {
             this.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
-
         public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
             this.inferencingStackVersion = Output.ofNullable(inferencingStackVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder python(@Nullable Output<ModelEnvironmentDefinitionPythonArgs> python) {
             this.python = python;
             return this;
         }
-
         public Builder python(@Nullable ModelEnvironmentDefinitionPythonArgs python) {
             this.python = Output.ofNullable(python);
             return this;
         }
-
         public Builder r(@Nullable Output<ModelEnvironmentDefinitionRArgs> r) {
             this.r = r;
             return this;
         }
-
         public Builder r(@Nullable ModelEnvironmentDefinitionRArgs r) {
             this.r = Output.ofNullable(r);
             return this;
         }
-
         public Builder spark(@Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark) {
             this.spark = spark;
             return this;
         }
-
         public Builder spark(@Nullable ModelEnvironmentDefinitionSparkArgs spark) {
             this.spark = Output.ofNullable(spark);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public EnvironmentImageRequestEnvironmentArgs build() {
+        }        public EnvironmentImageRequestEnvironmentArgs build() {
             return new EnvironmentImageRequestEnvironmentArgs(docker, environmentVariables, inferencingStackVersion, name, python, r, spark, version);
         }
     }

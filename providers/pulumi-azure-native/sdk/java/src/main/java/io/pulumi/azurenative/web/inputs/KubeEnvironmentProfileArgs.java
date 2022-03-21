@@ -61,12 +61,10 @@ public final class KubeEnvironmentProfileArgs extends io.pulumi.resources.Resour
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public KubeEnvironmentProfileArgs build() {
+        }        public KubeEnvironmentProfileArgs build() {
             return new KubeEnvironmentProfileArgs(id);
         }
     }

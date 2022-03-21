@@ -95,32 +95,26 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.authenticationDetails = authenticationDetails;
             return this;
         }
-
         public Builder authenticationDetails(@Nullable Object authenticationDetails) {
             this.authenticationDetails = Output.ofNullable(authenticationDetails);
             return this;
         }
-
         public Builder connectorName(@Nullable Output<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
-
         public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = Output.ofNullable(connectorName);
             return this;
         }
-
         public Builder hybridComputeSettings(@Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
             this.hybridComputeSettings = hybridComputeSettings;
             return this;
         }
-
         public Builder hybridComputeSettings(@Nullable HybridComputeSettingsPropertiesArgs hybridComputeSettings) {
             this.hybridComputeSettings = Output.ofNullable(hybridComputeSettings);
             return this;
-        }
-        public ConnectorArgs build() {
+        }        public ConnectorArgs build() {
             return new ConnectorArgs(authenticationDetails, connectorName, hybridComputeSettings);
         }
     }

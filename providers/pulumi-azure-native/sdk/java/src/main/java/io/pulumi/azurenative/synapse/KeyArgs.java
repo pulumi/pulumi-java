@@ -123,52 +123,42 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.isActiveCMK = isActiveCMK;
             return this;
         }
-
         public Builder isActiveCMK(@Nullable Boolean isActiveCMK) {
             this.isActiveCMK = Output.ofNullable(isActiveCMK);
             return this;
         }
-
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder keyVaultUrl(@Nullable Output<String> keyVaultUrl) {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
-
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
             this.keyVaultUrl = Output.ofNullable(keyVaultUrl);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public KeyArgs build() {
+        }        public KeyArgs build() {
             return new KeyArgs(isActiveCMK, keyName, keyVaultUrl, resourceGroupName, workspaceName);
         }
     }

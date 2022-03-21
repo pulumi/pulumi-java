@@ -104,22 +104,18 @@ public final class ObjectReplicationPolicyRuleResponse {
             this.destinationContainer = Objects.requireNonNull(destinationContainer);
             return this;
         }
-
         public Builder filters(@Nullable ObjectReplicationPolicyFilterResponse filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
-
         public Builder sourceContainer(String sourceContainer) {
             this.sourceContainer = Objects.requireNonNull(sourceContainer);
             return this;
-        }
-        public ObjectReplicationPolicyRuleResponse build() {
+        }        public ObjectReplicationPolicyRuleResponse build() {
             return new ObjectReplicationPolicyRuleResponse(destinationContainer, filters, ruleId, sourceContainer);
         }
     }

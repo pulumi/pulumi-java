@@ -282,72 +282,64 @@ public final class GetVirtualMachineImageTemplateResult {
             this.buildTimeoutInMinutes = buildTimeoutInMinutes;
             return this;
         }
-
         public Builder customize(@Nullable List<Object> customize) {
             this.customize = customize;
             return this;
         }
-
+        public Builder customize(Object... customize) {
+            return customize(List.of(customize));
+        }
         public Builder distribute(List<Object> distribute) {
             this.distribute = Objects.requireNonNull(distribute);
             return this;
         }
-
+        public Builder distribute(Object... distribute) {
+            return distribute(List.of(distribute));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(ImageTemplateIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder lastRunStatus(ImageTemplateLastRunStatusResponse lastRunStatus) {
             this.lastRunStatus = Objects.requireNonNull(lastRunStatus);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningError(ProvisioningErrorResponse provisioningError) {
             this.provisioningError = Objects.requireNonNull(provisioningError);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder source(Object source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmProfile(@Nullable ImageTemplateVmProfileResponse vmProfile) {
             this.vmProfile = vmProfile;
             return this;
-        }
-        public GetVirtualMachineImageTemplateResult build() {
+        }        public GetVirtualMachineImageTemplateResult build() {
             return new GetVirtualMachineImageTemplateResult(buildTimeoutInMinutes, customize, distribute, id, identity, lastRunStatus, location, name, provisioningError, provisioningState, source, tags, type, vmProfile);
         }
     }

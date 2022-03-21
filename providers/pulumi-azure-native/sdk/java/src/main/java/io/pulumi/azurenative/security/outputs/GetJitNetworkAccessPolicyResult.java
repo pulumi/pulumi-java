@@ -162,42 +162,40 @@ public final class GetJitNetworkAccessPolicyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder requests(@Nullable List<JitNetworkAccessRequestResponse> requests) {
             this.requests = requests;
             return this;
         }
-
+        public Builder requests(JitNetworkAccessRequestResponse... requests) {
+            return requests(List.of(requests));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachines(List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-        public GetJitNetworkAccessPolicyResult build() {
+        public Builder virtualMachines(JitNetworkAccessPolicyVirtualMachineResponse... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public GetJitNetworkAccessPolicyResult build() {
             return new GetJitNetworkAccessPolicyResult(id, kind, location, name, provisioningState, requests, type, virtualMachines);
         }
     }

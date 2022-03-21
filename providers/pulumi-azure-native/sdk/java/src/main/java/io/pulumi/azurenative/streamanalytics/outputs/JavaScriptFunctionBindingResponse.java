@@ -73,12 +73,10 @@ public final class JavaScriptFunctionBindingResponse {
             this.script = script;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JavaScriptFunctionBindingResponse build() {
+        }        public JavaScriptFunctionBindingResponse build() {
             return new JavaScriptFunctionBindingResponse(script, type);
         }
     }

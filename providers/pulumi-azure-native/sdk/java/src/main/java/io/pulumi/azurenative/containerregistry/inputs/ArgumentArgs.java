@@ -95,32 +95,26 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             this.isSecret = isSecret;
             return this;
         }
-
         public Builder isSecret(@Nullable Boolean isSecret) {
             this.isSecret = Output.ofNullable(isSecret);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ArgumentArgs build() {
+        }        public ArgumentArgs build() {
             return new ArgumentArgs(isSecret, name, value);
         }
     }

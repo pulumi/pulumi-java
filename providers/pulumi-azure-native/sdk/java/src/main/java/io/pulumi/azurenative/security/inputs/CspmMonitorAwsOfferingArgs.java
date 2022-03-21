@@ -80,22 +80,18 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
             this.nativeCloudConnection = nativeCloudConnection;
             return this;
         }
-
         public Builder nativeCloudConnection(@Nullable CspmMonitorAwsOfferingNativeCloudConnectionArgs nativeCloudConnection) {
             this.nativeCloudConnection = Output.ofNullable(nativeCloudConnection);
             return this;
         }
-
         public Builder offeringType(Output<String> offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public Builder offeringType(String offeringType) {
             this.offeringType = Output.of(Objects.requireNonNull(offeringType));
             return this;
-        }
-        public CspmMonitorAwsOfferingArgs build() {
+        }        public CspmMonitorAwsOfferingArgs build() {
             return new CspmMonitorAwsOfferingArgs(nativeCloudConnection, offeringType);
         }
     }

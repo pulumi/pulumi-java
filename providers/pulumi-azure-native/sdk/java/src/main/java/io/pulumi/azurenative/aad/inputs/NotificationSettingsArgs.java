@@ -98,32 +98,29 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             this.additionalRecipients = additionalRecipients;
             return this;
         }
-
         public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
             this.additionalRecipients = Output.ofNullable(additionalRecipients);
             return this;
         }
-
+        public Builder additionalRecipients(String... additionalRecipients) {
+            return additionalRecipients(List.of(additionalRecipients));
+        }
         public Builder notifyDcAdmins(@Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins) {
             this.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
-
         public Builder notifyDcAdmins(@Nullable Either<String,NotifyDcAdmins> notifyDcAdmins) {
             this.notifyDcAdmins = Output.ofNullable(notifyDcAdmins);
             return this;
         }
-
         public Builder notifyGlobalAdmins(@Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
-
         public Builder notifyGlobalAdmins(@Nullable Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
             this.notifyGlobalAdmins = Output.ofNullable(notifyGlobalAdmins);
             return this;
-        }
-        public NotificationSettingsArgs build() {
+        }        public NotificationSettingsArgs build() {
             return new NotificationSettingsArgs(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
         }
     }

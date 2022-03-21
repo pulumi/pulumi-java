@@ -185,47 +185,38 @@ public final class GetTokenResult {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder credentials(@Nullable TokenCredentialsPropertiesResponse credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scopeMapId(@Nullable String scopeMapId) {
             this.scopeMapId = scopeMapId;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetTokenResult build() {
+        }        public GetTokenResult build() {
             return new GetTokenResult(creationDate, credentials, id, name, provisioningState, scopeMapId, status, systemData, type);
         }
     }

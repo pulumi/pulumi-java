@@ -110,42 +110,34 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder pullSecret(@Nullable Output<String> pullSecret) {
             this.pullSecret = pullSecret;
             return this;
         }
-
         public Builder pullSecret(@Nullable String pullSecret) {
             this.pullSecret = Output.ofNullable(pullSecret);
             return this;
         }
-
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
-
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = Output.ofNullable(resourceGroupId);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ClusterProfileArgs build() {
+        }        public ClusterProfileArgs build() {
             return new ClusterProfileArgs(domain, pullSecret, resourceGroupId, version);
         }
     }

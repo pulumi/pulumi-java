@@ -204,52 +204,45 @@ public final class PipelineRunResponseResponse {
             this.catalogDigest = catalogDigest;
             return this;
         }
-
         public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
-
         public Builder importedArtifacts(@Nullable List<String> importedArtifacts) {
             this.importedArtifacts = importedArtifacts;
             return this;
         }
-
+        public Builder importedArtifacts(String... importedArtifacts) {
+            return importedArtifacts(List.of(importedArtifacts));
+        }
         public Builder pipelineRunErrorMessage(@Nullable String pipelineRunErrorMessage) {
             this.pipelineRunErrorMessage = pipelineRunErrorMessage;
             return this;
         }
-
         public Builder progress(@Nullable ProgressPropertiesResponse progress) {
             this.progress = progress;
             return this;
         }
-
         public Builder source(@Nullable ImportPipelineSourcePropertiesResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder target(@Nullable ExportPipelineTargetPropertiesResponse target) {
             this.target = target;
             return this;
         }
-
         public Builder trigger(@Nullable PipelineTriggerDescriptorResponse trigger) {
             this.trigger = trigger;
             return this;
-        }
-        public PipelineRunResponseResponse build() {
+        }        public PipelineRunResponseResponse build() {
             return new PipelineRunResponseResponse(catalogDigest, finishTime, importedArtifacts, pipelineRunErrorMessage, progress, source, startTime, status, target, trigger);
         }
     }

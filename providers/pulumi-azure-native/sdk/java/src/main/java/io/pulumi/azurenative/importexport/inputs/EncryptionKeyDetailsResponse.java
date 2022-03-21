@@ -94,17 +94,14 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
             this.kekType = kekType;
             return this;
         }
-
         public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
-
         public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
-        }
-        public EncryptionKeyDetailsResponse build() {
+        }        public EncryptionKeyDetailsResponse build() {
             return new EncryptionKeyDetailsResponse(kekType, kekUrl, kekVaultResourceID);
         }
     }

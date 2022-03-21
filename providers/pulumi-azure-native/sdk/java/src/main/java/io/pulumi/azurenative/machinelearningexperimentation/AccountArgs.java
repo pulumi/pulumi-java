@@ -204,102 +204,82 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder keyVaultId(Output<String> keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
-
         public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Output.of(Objects.requireNonNull(keyVaultId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder seats(@Nullable Output<String> seats) {
             this.seats = seats;
             return this;
         }
-
         public Builder seats(@Nullable String seats) {
             this.seats = Output.ofNullable(seats);
             return this;
         }
-
         public Builder storageAccount(Output<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
             this.storageAccount = Output.of(Objects.requireNonNull(storageAccount));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vsoAccountId(Output<String> vsoAccountId) {
             this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
             return this;
         }
-
         public Builder vsoAccountId(String vsoAccountId) {
             this.vsoAccountId = Output.of(Objects.requireNonNull(vsoAccountId));
             return this;
-        }
-        public AccountArgs build() {
+        }        public AccountArgs build() {
             return new AccountArgs(accountName, description, friendlyName, keyVaultId, location, resourceGroupName, seats, storageAccount, tags, vsoAccountId);
         }
     }

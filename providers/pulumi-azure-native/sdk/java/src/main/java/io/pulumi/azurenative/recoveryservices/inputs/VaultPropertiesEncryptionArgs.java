@@ -98,32 +98,26 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
-
         public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
             this.infrastructureEncryption = Output.ofNullable(infrastructureEncryption);
             return this;
         }
-
         public Builder kekIdentity(@Nullable Output<CmkKekIdentityArgs> kekIdentity) {
             this.kekIdentity = kekIdentity;
             return this;
         }
-
         public Builder kekIdentity(@Nullable CmkKekIdentityArgs kekIdentity) {
             this.kekIdentity = Output.ofNullable(kekIdentity);
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
-        }
-        public VaultPropertiesEncryptionArgs build() {
+        }        public VaultPropertiesEncryptionArgs build() {
             return new VaultPropertiesEncryptionArgs(infrastructureEncryption, kekIdentity, keyVaultProperties);
         }
     }

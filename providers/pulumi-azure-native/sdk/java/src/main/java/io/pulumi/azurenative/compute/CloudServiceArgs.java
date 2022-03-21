@@ -124,52 +124,42 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudServiceName = cloudServiceName;
             return this;
         }
-
         public Builder cloudServiceName(@Nullable String cloudServiceName) {
             this.cloudServiceName = Output.ofNullable(cloudServiceName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<CloudServicePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable CloudServicePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CloudServiceArgs build() {
+        }        public CloudServiceArgs build() {
             return new CloudServiceArgs(cloudServiceName, location, properties, resourceGroupName, tags);
         }
     }

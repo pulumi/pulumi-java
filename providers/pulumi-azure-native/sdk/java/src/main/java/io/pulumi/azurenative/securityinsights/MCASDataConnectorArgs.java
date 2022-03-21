@@ -140,62 +140,50 @@ public final class MCASDataConnectorArgs extends io.pulumi.resources.ResourceArg
             this.dataConnectorId = dataConnectorId;
             return this;
         }
-
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Output.ofNullable(dataConnectorId);
             return this;
         }
-
         public Builder dataTypes(@Nullable Output<MCASDataConnectorDataTypesArgs> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
-
         public Builder dataTypes(@Nullable MCASDataConnectorDataTypesArgs dataTypes) {
             this.dataTypes = Output.ofNullable(dataTypes);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public MCASDataConnectorArgs build() {
+        }        public MCASDataConnectorArgs build() {
             return new MCASDataConnectorArgs(dataConnectorId, dataTypes, kind, resourceGroupName, tenantId, workspaceName);
         }
     }

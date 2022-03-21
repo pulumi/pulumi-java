@@ -53,8 +53,7 @@ public final class ApiVersionConstraintResponse {
         public Builder minApiVersion(@Nullable String minApiVersion) {
             this.minApiVersion = minApiVersion;
             return this;
-        }
-        public ApiVersionConstraintResponse build() {
+        }        public ApiVersionConstraintResponse build() {
             return new ApiVersionConstraintResponse(minApiVersion);
         }
     }

@@ -111,22 +111,18 @@ public final class BuildArgumentResponse extends io.pulumi.resources.InvokeArgs 
             this.isSecret = isSecret;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BuildArgumentResponse build() {
+        }        public BuildArgumentResponse build() {
             return new BuildArgumentResponse(isSecret, name, type, value);
         }
     }

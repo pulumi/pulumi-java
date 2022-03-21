@@ -136,32 +136,32 @@ public final class ErrorEntityResponse {
             this.code = code;
             return this;
         }
-
         public Builder extendedCode(@Nullable String extendedCode) {
             this.extendedCode = extendedCode;
             return this;
         }
-
         public Builder innerErrors(@Nullable List<ErrorEntityResponse> innerErrors) {
             this.innerErrors = innerErrors;
             return this;
         }
-
+        public Builder innerErrors(ErrorEntityResponse... innerErrors) {
+            return innerErrors(List.of(innerErrors));
+        }
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder messageTemplate(@Nullable String messageTemplate) {
             this.messageTemplate = messageTemplate;
             return this;
         }
-
         public Builder parameters(@Nullable List<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-        public ErrorEntityResponse build() {
+        public Builder parameters(String... parameters) {
+            return parameters(List.of(parameters));
+        }        public ErrorEntityResponse build() {
             return new ErrorEntityResponse(code, extendedCode, innerErrors, message, messageTemplate, parameters);
         }
     }

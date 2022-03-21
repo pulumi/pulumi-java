@@ -88,17 +88,17 @@ public final class RepoResponse {
             this.branches = branches;
             return this;
         }
-
+        public Builder branches(String... branches) {
+            return branches(List.of(branches));
+        }
         public Builder fullName(@Nullable String fullName) {
             this.fullName = fullName;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public RepoResponse build() {
+        }        public RepoResponse build() {
             return new RepoResponse(branches, fullName, url);
         }
     }

@@ -239,62 +239,53 @@ public final class GetSecurityConnectorResult {
             this.cloudName = cloudName;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder hierarchyIdentifier(@Nullable String hierarchyIdentifier) {
             this.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder offerings(@Nullable List<Object> offerings) {
             this.offerings = offerings;
             return this;
         }
-
+        public Builder offerings(Object... offerings) {
+            return offerings(List.of(offerings));
+        }
         public Builder organizationalData(@Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData) {
             this.organizationalData = organizationalData;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSecurityConnectorResult build() {
+        }        public GetSecurityConnectorResult build() {
             return new GetSecurityConnectorResult(cloudName, etag, hierarchyIdentifier, id, kind, location, name, offerings, organizationalData, systemData, tags, type);
         }
     }

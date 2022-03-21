@@ -79,12 +79,10 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
             this.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
-
         public Builder hostSku(@Nullable String hostSku) {
             this.hostSku = hostSku;
             return this;
-        }
-        public ComputeIsolationPropertiesResponse build() {
+        }        public ComputeIsolationPropertiesResponse build() {
             return new ComputeIsolationPropertiesResponse(enableComputeIsolation, hostSku);
         }
     }

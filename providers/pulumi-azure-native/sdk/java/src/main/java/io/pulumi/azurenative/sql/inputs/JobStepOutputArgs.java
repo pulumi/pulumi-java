@@ -176,82 +176,66 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder credential(String credential) {
             this.credential = Output.of(Objects.requireNonNull(credential));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
-
         public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
-
         public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,JobStepOutputType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,JobStepOutputType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public JobStepOutputArgs build() {
+        }        public JobStepOutputArgs build() {
             return new JobStepOutputArgs(credential, databaseName, resourceGroupName, schemaName, serverName, subscriptionId, tableName, type);
         }
     }

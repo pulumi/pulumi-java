@@ -79,12 +79,10 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse extend
             this.port = port;
             return this;
         }
-
         public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
-        }
-        public FirewallPolicyRuleConditionApplicationProtocolResponse build() {
+        }        public FirewallPolicyRuleConditionApplicationProtocolResponse build() {
             return new FirewallPolicyRuleConditionApplicationProtocolResponse(port, protocolType);
         }
     }

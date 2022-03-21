@@ -78,12 +78,10 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ContentHashResponse build() {
+        }        public ContentHashResponse build() {
             return new ContentHashResponse(algorithm, value);
         }
     }

@@ -71,12 +71,10 @@ public final class HelmOperatorPropertiesResponse {
             this.chartValues = chartValues;
             return this;
         }
-
         public Builder chartVersion(@Nullable String chartVersion) {
             this.chartVersion = chartVersion;
             return this;
-        }
-        public HelmOperatorPropertiesResponse build() {
+        }        public HelmOperatorPropertiesResponse build() {
             return new HelmOperatorPropertiesResponse(chartValues, chartVersion);
         }
     }

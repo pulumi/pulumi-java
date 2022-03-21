@@ -320,87 +320,79 @@ public final class GetServiceResult {
             this.correlationScheme = correlationScheme;
             return this;
         }
-
+        public Builder correlationScheme(ServiceCorrelationDescriptionResponse... correlationScheme) {
+            return correlationScheme(List.of(correlationScheme));
+        }
         public Builder defaultMoveCost(@Nullable String defaultMoveCost) {
             this.defaultMoveCost = defaultMoveCost;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partitionDescription(@Nullable Object partitionDescription) {
             this.partitionDescription = partitionDescription;
             return this;
         }
-
         public Builder placementConstraints(@Nullable String placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceDnsName(@Nullable String serviceDnsName) {
             this.serviceDnsName = serviceDnsName;
             return this;
         }
-
         public Builder serviceKind(String serviceKind) {
             this.serviceKind = Objects.requireNonNull(serviceKind);
             return this;
         }
-
         public Builder serviceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics) {
             this.serviceLoadMetrics = serviceLoadMetrics;
             return this;
         }
-
+        public Builder serviceLoadMetrics(ServiceLoadMetricDescriptionResponse... serviceLoadMetrics) {
+            return serviceLoadMetrics(List.of(serviceLoadMetrics));
+        }
         public Builder servicePackageActivationMode(@Nullable String servicePackageActivationMode) {
             this.servicePackageActivationMode = servicePackageActivationMode;
             return this;
         }
-
         public Builder servicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies) {
             this.servicePlacementPolicies = servicePlacementPolicies;
             return this;
         }
-
+        public Builder servicePlacementPolicies(ServicePlacementPolicyDescriptionResponse... servicePlacementPolicies) {
+            return servicePlacementPolicies(List.of(servicePlacementPolicies));
+        }
         public Builder serviceTypeName(@Nullable String serviceTypeName) {
             this.serviceTypeName = serviceTypeName;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(correlationScheme, defaultMoveCost, etag, id, location, name, partitionDescription, placementConstraints, provisioningState, serviceDnsName, serviceKind, serviceLoadMetrics, servicePackageActivationMode, servicePlacementPolicies, serviceTypeName, tags, type);
         }
     }

@@ -97,32 +97,29 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Output.of(Objects.requireNonNull(filenamePattern));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder outputFiles(@Nullable Output<List<OutputFileArgs>> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public Builder outputFiles(@Nullable List<OutputFileArgs> outputFiles) {
             this.outputFiles = Output.ofNullable(outputFiles);
             return this;
         }
-        public Mp4FormatArgs build() {
+        public Builder outputFiles(OutputFileArgs... outputFiles) {
+            return outputFiles(List.of(outputFiles));
+        }        public Mp4FormatArgs build() {
             return new Mp4FormatArgs(filenamePattern, odataType, outputFiles);
         }
     }

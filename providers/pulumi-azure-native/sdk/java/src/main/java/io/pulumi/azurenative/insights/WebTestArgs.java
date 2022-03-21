@@ -273,142 +273,117 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable WebTestPropertiesConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder frequency(@Nullable Output<Integer> frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder frequency(@Nullable Integer frequency) {
             this.frequency = Output.ofNullable(frequency);
             return this;
         }
-
         public Builder kind(@Nullable Output<WebTestKind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable WebTestKind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder locations(Output<List<WebTestGeolocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public Builder locations(List<WebTestGeolocationArgs> locations) {
             this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
-
+        public Builder locations(WebTestGeolocationArgs... locations) {
+            return locations(List.of(locations));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retryEnabled(@Nullable Output<Boolean> retryEnabled) {
             this.retryEnabled = retryEnabled;
             return this;
         }
-
         public Builder retryEnabled(@Nullable Boolean retryEnabled) {
             this.retryEnabled = Output.ofNullable(retryEnabled);
             return this;
         }
-
         public Builder syntheticMonitorId(Output<String> syntheticMonitorId) {
             this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId);
             return this;
         }
-
         public Builder syntheticMonitorId(String syntheticMonitorId) {
             this.syntheticMonitorId = Output.of(Objects.requireNonNull(syntheticMonitorId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder webTestKind(Output<WebTestKind> webTestKind) {
             this.webTestKind = Objects.requireNonNull(webTestKind);
             return this;
         }
-
         public Builder webTestKind(WebTestKind webTestKind) {
             this.webTestKind = Output.of(Objects.requireNonNull(webTestKind));
             return this;
         }
-
         public Builder webTestName(@Nullable Output<String> webTestName) {
             this.webTestName = webTestName;
             return this;
         }
-
         public Builder webTestName(@Nullable String webTestName) {
             this.webTestName = Output.ofNullable(webTestName);
             return this;
-        }
-        public WebTestArgs build() {
+        }        public WebTestArgs build() {
             return new WebTestArgs(configuration, description, enabled, frequency, kind, location, locations, resourceGroupName, retryEnabled, syntheticMonitorId, tags, timeout, webTestKind, webTestName);
         }
     }

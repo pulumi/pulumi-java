@@ -109,22 +109,21 @@ public final class GlobalValidationResponse {
             this.excludedPaths = excludedPaths;
             return this;
         }
-
+        public Builder excludedPaths(String... excludedPaths) {
+            return excludedPaths(List.of(excludedPaths));
+        }
         public Builder redirectToProvider(@Nullable String redirectToProvider) {
             this.redirectToProvider = redirectToProvider;
             return this;
         }
-
         public Builder requireAuthentication(@Nullable Boolean requireAuthentication) {
             this.requireAuthentication = requireAuthentication;
             return this;
         }
-
         public Builder unauthenticatedClientAction(@Nullable String unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
-        }
-        public GlobalValidationResponse build() {
+        }        public GlobalValidationResponse build() {
             return new GlobalValidationResponse(excludedPaths, redirectToProvider, requireAuthentication, unauthenticatedClientAction);
         }
     }

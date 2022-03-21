@@ -321,87 +321,85 @@ public final class PrivateLinkServiceResponse {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder autoApproval(@Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval) {
             this.autoApproval = autoApproval;
             return this;
         }
-
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
+        public Builder ipConfigurations(PrivateLinkServiceIpConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder loadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations) {
             this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
             return this;
         }
-
+        public Builder loadBalancerFrontendIpConfigurations(FrontendIPConfigurationResponse... loadBalancerFrontendIpConfigurations) {
+            return loadBalancerFrontendIpConfigurations(List.of(loadBalancerFrontendIpConfigurations));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder visibility(@Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
             this.visibility = visibility;
             return this;
-        }
-        public PrivateLinkServiceResponse build() {
+        }        public PrivateLinkServiceResponse build() {
             return new PrivateLinkServiceResponse(alias, autoApproval, enableProxyProtocol, etag, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, name, networkInterfaces, privateEndpointConnections, provisioningState, tags, type, visibility);
         }
     }

@@ -147,62 +147,50 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.agentCount = agentCount;
             return this;
         }
-
         public Builder agentCount(@Nullable Integer agentCount) {
             this.agentCount = Output.ofNullable(agentCount);
             return this;
         }
-
         public Builder agentVmSize(@Nullable Output<String> agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
-
         public Builder agentVmSize(@Nullable String agentVmSize) {
             this.agentVmSize = Output.ofNullable(agentVmSize);
             return this;
         }
-
         public Builder aksNetworkingConfiguration(@Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
-
         public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationArgs aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = Output.ofNullable(aksNetworkingConfiguration);
             return this;
         }
-
         public Builder clusterFqdn(@Nullable Output<String> clusterFqdn) {
             this.clusterFqdn = clusterFqdn;
             return this;
         }
-
         public Builder clusterFqdn(@Nullable String clusterFqdn) {
             this.clusterFqdn = Output.ofNullable(clusterFqdn);
             return this;
         }
-
         public Builder clusterPurpose(@Nullable Output<Either<String,ClusterPurpose>> clusterPurpose) {
             this.clusterPurpose = clusterPurpose;
             return this;
         }
-
         public Builder clusterPurpose(@Nullable Either<String,ClusterPurpose> clusterPurpose) {
             this.clusterPurpose = Output.ofNullable(clusterPurpose);
             return this;
         }
-
         public Builder sslConfiguration(@Nullable Output<SslConfigurationArgs> sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
-
         public Builder sslConfiguration(@Nullable SslConfigurationArgs sslConfiguration) {
             this.sslConfiguration = Output.ofNullable(sslConfiguration);
             return this;
-        }
-        public AKSPropertiesArgs build() {
+        }        public AKSPropertiesArgs build() {
             return new AKSPropertiesArgs(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration);
         }
     }

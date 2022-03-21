@@ -201,52 +201,42 @@ public final class GetProductResult {
             this.approvalRequired = approvalRequired;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
-
         public Builder subscriptionsLimit(@Nullable Integer subscriptionsLimit) {
             this.subscriptionsLimit = subscriptionsLimit;
             return this;
         }
-
         public Builder terms(@Nullable String terms) {
             this.terms = terms;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetProductResult build() {
+        }        public GetProductResult build() {
             return new GetProductResult(approvalRequired, description, displayName, id, name, state, subscriptionRequired, subscriptionsLimit, terms, type);
         }
     }

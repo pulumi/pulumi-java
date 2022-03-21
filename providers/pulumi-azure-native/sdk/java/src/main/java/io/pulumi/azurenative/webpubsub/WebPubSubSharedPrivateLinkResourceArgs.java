@@ -138,62 +138,50 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
-
         public Builder privateLinkResourceId(Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
             return this;
         }
-
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             this.privateLinkResourceId = Output.of(Objects.requireNonNull(privateLinkResourceId));
             return this;
         }
-
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder sharedPrivateLinkResourceName(@Nullable Output<String> sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
-
         public Builder sharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = Output.ofNullable(sharedPrivateLinkResourceName);
             return this;
-        }
-        public WebPubSubSharedPrivateLinkResourceArgs build() {
+        }        public WebPubSubSharedPrivateLinkResourceArgs build() {
             return new WebPubSubSharedPrivateLinkResourceArgs(groupId, privateLinkResourceId, requestMessage, resourceGroupName, resourceName, sharedPrivateLinkResourceName);
         }
     }

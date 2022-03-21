@@ -72,12 +72,10 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends io.pulumi.r
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetOrchestratorInstanceServiceDetailsArgs build() {
+        }        public GetOrchestratorInstanceServiceDetailsArgs build() {
             return new GetOrchestratorInstanceServiceDetailsArgs(resourceGroupName, resourceName);
         }
     }

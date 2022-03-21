@@ -239,62 +239,53 @@ public final class GetProjectResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder databasesInfo(@Nullable List<DatabaseInfoResponse> databasesInfo) {
             this.databasesInfo = databasesInfo;
             return this;
         }
-
+        public Builder databasesInfo(DatabaseInfoResponse... databasesInfo) {
+            return databasesInfo(List.of(databasesInfo));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
             this.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
-
         public Builder sourcePlatform(String sourcePlatform) {
             this.sourcePlatform = Objects.requireNonNull(sourcePlatform);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetConnectionInfo(@Nullable Object targetConnectionInfo) {
             this.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
-
         public Builder targetPlatform(String targetPlatform) {
             this.targetPlatform = Objects.requireNonNull(targetPlatform);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetProjectResult build() {
+        }        public GetProjectResult build() {
             return new GetProjectResult(creationTime, databasesInfo, id, location, name, provisioningState, sourceConnectionInfo, sourcePlatform, tags, targetConnectionInfo, targetPlatform, type);
         }
     }

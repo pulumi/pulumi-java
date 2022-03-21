@@ -220,57 +220,55 @@ public final class GetOrderResult {
             this.contactInformation = Objects.requireNonNull(contactInformation);
             return this;
         }
-
         public Builder currentStatus(OrderStatusResponse currentStatus) {
             this.currentStatus = Objects.requireNonNull(currentStatus);
             return this;
         }
-
         public Builder deliveryTrackingInfo(List<TrackingInfoResponse> deliveryTrackingInfo) {
             this.deliveryTrackingInfo = Objects.requireNonNull(deliveryTrackingInfo);
             return this;
         }
-
+        public Builder deliveryTrackingInfo(TrackingInfoResponse... deliveryTrackingInfo) {
+            return deliveryTrackingInfo(List.of(deliveryTrackingInfo));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder orderHistory(List<OrderStatusResponse> orderHistory) {
             this.orderHistory = Objects.requireNonNull(orderHistory);
             return this;
         }
-
+        public Builder orderHistory(OrderStatusResponse... orderHistory) {
+            return orderHistory(List.of(orderHistory));
+        }
         public Builder returnTrackingInfo(List<TrackingInfoResponse> returnTrackingInfo) {
             this.returnTrackingInfo = Objects.requireNonNull(returnTrackingInfo);
             return this;
         }
-
+        public Builder returnTrackingInfo(TrackingInfoResponse... returnTrackingInfo) {
+            return returnTrackingInfo(List.of(returnTrackingInfo));
+        }
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder shipmentType(@Nullable String shipmentType) {
             this.shipmentType = shipmentType;
             return this;
         }
-
         public Builder shippingAddress(@Nullable AddressResponse shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOrderResult build() {
+        }        public GetOrderResult build() {
             return new GetOrderResult(contactInformation, currentStatus, deliveryTrackingInfo, id, name, orderHistory, returnTrackingInfo, serialNumber, shipmentType, shippingAddress, type);
         }
     }

@@ -138,62 +138,50 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
             this.incidentId = Objects.requireNonNull(incidentId);
             return this;
         }
-
         public Builder incidentId(String incidentId) {
             this.incidentId = Output.of(Objects.requireNonNull(incidentId));
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder relatedResourceId(Output<String> relatedResourceId) {
             this.relatedResourceId = Objects.requireNonNull(relatedResourceId);
             return this;
         }
-
         public Builder relatedResourceId(String relatedResourceId) {
             this.relatedResourceId = Output.of(Objects.requireNonNull(relatedResourceId));
             return this;
         }
-
         public Builder relationName(@Nullable Output<String> relationName) {
             this.relationName = relationName;
             return this;
         }
-
         public Builder relationName(@Nullable String relationName) {
             this.relationName = Output.ofNullable(relationName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public IncidentRelationArgs build() {
+        }        public IncidentRelationArgs build() {
             return new IncidentRelationArgs(incidentId, operationalInsightsResourceProvider, relatedResourceId, relationName, resourceGroupName, workspaceName);
         }
     }

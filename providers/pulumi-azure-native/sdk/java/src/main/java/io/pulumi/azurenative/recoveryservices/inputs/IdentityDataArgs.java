@@ -82,22 +82,18 @@ public final class IdentityDataArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ResourceIdentityType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public IdentityDataArgs build() {
+        }        public IdentityDataArgs build() {
             return new IdentityDataArgs(type, userAssignedIdentities);
         }
     }

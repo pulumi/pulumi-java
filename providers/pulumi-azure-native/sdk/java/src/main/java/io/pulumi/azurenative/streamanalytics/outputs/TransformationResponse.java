@@ -136,32 +136,26 @@ public final class TransformationResponse {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
-
         public Builder streamingUnits(@Nullable Integer streamingUnits) {
             this.streamingUnits = streamingUnits;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TransformationResponse build() {
+        }        public TransformationResponse build() {
             return new TransformationResponse(etag, id, name, query, streamingUnits, type);
         }
     }

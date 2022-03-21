@@ -62,12 +62,10 @@ public final class DestinationsSpecAzureMonitorMetricsArgs extends io.pulumi.res
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DestinationsSpecAzureMonitorMetricsArgs build() {
+        }        public DestinationsSpecAzureMonitorMetricsArgs build() {
             return new DestinationsSpecAzureMonitorMetricsArgs(name);
         }
     }

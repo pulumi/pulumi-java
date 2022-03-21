@@ -79,12 +79,13 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.
             this.body = body;
             return this;
         }
-
         public Builder statusCodes(@Nullable List<String> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
-        public ApplicationGatewayProbeHealthResponseMatch build() {
+        public Builder statusCodes(String... statusCodes) {
+            return statusCodes(List.of(statusCodes));
+        }        public ApplicationGatewayProbeHealthResponseMatch build() {
             return new ApplicationGatewayProbeHealthResponseMatch(body, statusCodes);
         }
     }

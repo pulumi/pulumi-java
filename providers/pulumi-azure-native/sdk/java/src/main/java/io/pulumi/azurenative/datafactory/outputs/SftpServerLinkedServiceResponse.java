@@ -305,82 +305,69 @@ public final class SftpServerLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder host(Object host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder hostKeyFingerprint(@Nullable Object hostKeyFingerprint) {
             this.hostKeyFingerprint = hostKeyFingerprint;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder passPhrase(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase) {
             this.passPhrase = passPhrase;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder port(@Nullable Object port) {
             this.port = port;
             return this;
         }
-
         public Builder privateKeyContent(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent) {
             this.privateKeyContent = privateKeyContent;
             return this;
         }
-
         public Builder privateKeyPath(@Nullable Object privateKeyPath) {
             this.privateKeyPath = privateKeyPath;
             return this;
         }
-
         public Builder skipHostKeyValidation(@Nullable Object skipHostKeyValidation) {
             this.skipHostKeyValidation = skipHostKeyValidation;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
-        }
-        public SftpServerLinkedServiceResponse build() {
+        }        public SftpServerLinkedServiceResponse build() {
             return new SftpServerLinkedServiceResponse(annotations, authenticationType, connectVia, description, encryptedCredential, host, hostKeyFingerprint, parameters, passPhrase, password, port, privateKeyContent, privateKeyPath, skipHostKeyValidation, type, userName);
         }
     }

@@ -88,17 +88,14 @@ public final class GetSqlPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSqlPoolArgs build() {
+        }        public GetSqlPoolArgs build() {
             return new GetSqlPoolArgs(resourceGroupName, sqlPoolName, workspaceName);
         }
     }

@@ -156,37 +156,30 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder migrationId(String migrationId) {
             this.migrationId = Objects.requireNonNull(migrationId);
             return this;
         }
-
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetDatabaseName(String targetDatabaseName) {
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
-        }
-        public MigrationValidationDatabaseSummaryResultResponse build() {
+        }        public MigrationValidationDatabaseSummaryResultResponse build() {
             return new MigrationValidationDatabaseSummaryResultResponse(endedOn, id, migrationId, sourceDatabaseName, startedOn, status, targetDatabaseName);
         }
     }

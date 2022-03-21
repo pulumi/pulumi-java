@@ -130,52 +130,45 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable AzureFirewallRCActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<AzureFirewallNetworkRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public AzureFirewallNetworkRuleCollectionArgs build() {
+        public Builder rules(AzureFirewallNetworkRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public AzureFirewallNetworkRuleCollectionArgs build() {
             return new AzureFirewallNetworkRuleCollectionArgs(action, id, name, priority, rules);
         }
     }

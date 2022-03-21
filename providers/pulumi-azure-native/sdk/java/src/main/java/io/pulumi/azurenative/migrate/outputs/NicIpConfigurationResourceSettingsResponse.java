@@ -173,42 +173,40 @@ public final class NicIpConfigurationResourceSettingsResponse {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-
+        public Builder loadBalancerBackendAddressPools(LoadBalancerBackendAddressPoolReferenceResponse... loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
+        }
         public Builder loadBalancerNatRules(@Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules) {
             this.loadBalancerNatRules = loadBalancerNatRules;
             return this;
         }
-
+        public Builder loadBalancerNatRules(LoadBalancerNatRuleReferenceResponse... loadBalancerNatRules) {
+            return loadBalancerNatRules(List.of(loadBalancerNatRules));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
-
         public Builder publicIp(@Nullable PublicIpReferenceResponse publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public NicIpConfigurationResourceSettingsResponse build() {
+        }        public NicIpConfigurationResourceSettingsResponse build() {
             return new NicIpConfigurationResourceSettingsResponse(loadBalancerBackendAddressPools, loadBalancerNatRules, name, primary, privateIpAddress, privateIpAllocationMethod, publicIp, subnet);
         }
     }

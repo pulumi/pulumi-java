@@ -72,12 +72,10 @@ public final class GetPrivateZoneArgs extends io.pulumi.resources.InvokeArgs {
             this.privateZoneName = Objects.requireNonNull(privateZoneName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateZoneArgs build() {
+        }        public GetPrivateZoneArgs build() {
             return new GetPrivateZoneArgs(privateZoneName, resourceGroupName);
         }
     }

@@ -112,42 +112,34 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
             this.offset = offset;
             return this;
         }
-
         public Builder offset(@Nullable String offset) {
             this.offset = Output.ofNullable(offset);
             return this;
         }
-
         public Builder referenceTrigger(Output<TriggerReferenceArgs> referenceTrigger) {
             this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
             return this;
         }
-
         public Builder referenceTrigger(TriggerReferenceArgs referenceTrigger) {
             this.referenceTrigger = Output.of(Objects.requireNonNull(referenceTrigger));
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TumblingWindowTriggerDependencyReferenceArgs build() {
+        }        public TumblingWindowTriggerDependencyReferenceArgs build() {
             return new TumblingWindowTriggerDependencyReferenceArgs(offset, referenceTrigger, size, type);
         }
     }

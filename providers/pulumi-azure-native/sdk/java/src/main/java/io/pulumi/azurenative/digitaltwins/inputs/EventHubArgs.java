@@ -177,82 +177,66 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder connectionStringPrimaryKey(@Nullable Output<String> connectionStringPrimaryKey) {
             this.connectionStringPrimaryKey = connectionStringPrimaryKey;
             return this;
         }
-
         public Builder connectionStringPrimaryKey(@Nullable String connectionStringPrimaryKey) {
             this.connectionStringPrimaryKey = Output.ofNullable(connectionStringPrimaryKey);
             return this;
         }
-
         public Builder connectionStringSecondaryKey(@Nullable Output<String> connectionStringSecondaryKey) {
             this.connectionStringSecondaryKey = connectionStringSecondaryKey;
             return this;
         }
-
         public Builder connectionStringSecondaryKey(@Nullable String connectionStringSecondaryKey) {
             this.connectionStringSecondaryKey = Output.ofNullable(connectionStringSecondaryKey);
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = Output.ofNullable(deadLetterSecret);
             return this;
         }
-
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
-
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = Output.ofNullable(deadLetterUri);
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Output.ofNullable(endpointUri);
             return this;
         }
-
         public Builder entityPath(@Nullable Output<String> entityPath) {
             this.entityPath = entityPath;
             return this;
         }
-
         public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = Output.ofNullable(entityPath);
             return this;
-        }
-        public EventHubArgs build() {
+        }        public EventHubArgs build() {
             return new EventHubArgs(authenticationType, connectionStringPrimaryKey, connectionStringSecondaryKey, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath);
         }
     }

@@ -237,62 +237,53 @@ public final class GetVirtualNetworkTapResult {
             this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
-
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration) {
             this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterfaceTapConfigurations(List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations) {
             this.networkInterfaceTapConfigurations = Objects.requireNonNull(networkInterfaceTapConfigurations);
             return this;
         }
-
+        public Builder networkInterfaceTapConfigurations(NetworkInterfaceTapConfigurationResponse... networkInterfaceTapConfigurations) {
+            return networkInterfaceTapConfigurations(List.of(networkInterfaceTapConfigurations));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVirtualNetworkTapResult build() {
+        }        public GetVirtualNetworkTapResult build() {
             return new GetVirtualNetworkTapResult(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, etag, id, location, name, networkInterfaceTapConfigurations, provisioningState, resourceGuid, tags, type);
         }
     }

@@ -56,8 +56,7 @@ public final class ApiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
         public Builder serverVersion(@Nullable String serverVersion) {
             this.serverVersion = serverVersion;
             return this;
-        }
-        public ApiPropertiesResponse build() {
+        }        public ApiPropertiesResponse build() {
             return new ApiPropertiesResponse(serverVersion);
         }
     }

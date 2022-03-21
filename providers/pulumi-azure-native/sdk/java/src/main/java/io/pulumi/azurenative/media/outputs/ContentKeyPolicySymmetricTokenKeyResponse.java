@@ -71,12 +71,10 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public ContentKeyPolicySymmetricTokenKeyResponse build() {
+        }        public ContentKeyPolicySymmetricTokenKeyResponse build() {
             return new ContentKeyPolicySymmetricTokenKeyResponse(keyValue, odataType);
         }
     }

@@ -60,8 +60,7 @@ public final class AzureFirewallRCActionResponse extends io.pulumi.resources.Inv
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AzureFirewallRCActionResponse build() {
+        }        public AzureFirewallRCActionResponse build() {
             return new AzureFirewallRCActionResponse(type);
         }
     }

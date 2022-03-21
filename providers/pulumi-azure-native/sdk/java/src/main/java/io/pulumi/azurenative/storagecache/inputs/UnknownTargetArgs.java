@@ -62,12 +62,10 @@ public final class UnknownTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
-        }
-        public UnknownTargetArgs build() {
+        }        public UnknownTargetArgs build() {
             return new UnknownTargetArgs(attributes);
         }
     }

@@ -102,22 +102,18 @@ public final class GetIotDpsResourcePrivateEndpointConnectionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(PrivateEndpointConnectionPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIotDpsResourcePrivateEndpointConnectionResult build() {
+        }        public GetIotDpsResourcePrivateEndpointConnectionResult build() {
             return new GetIotDpsResourcePrivateEndpointConnectionResult(id, name, properties, type);
         }
     }

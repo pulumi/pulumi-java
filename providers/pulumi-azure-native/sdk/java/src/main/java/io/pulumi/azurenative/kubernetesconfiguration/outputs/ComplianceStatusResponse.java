@@ -103,22 +103,18 @@ public final class ComplianceStatusResponse {
             this.complianceState = Objects.requireNonNull(complianceState);
             return this;
         }
-
         public Builder lastConfigApplied(@Nullable String lastConfigApplied) {
             this.lastConfigApplied = lastConfigApplied;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder messageLevel(@Nullable String messageLevel) {
             this.messageLevel = messageLevel;
             return this;
-        }
-        public ComplianceStatusResponse build() {
+        }        public ComplianceStatusResponse build() {
             return new ComplianceStatusResponse(complianceState, lastConfigApplied, message, messageLevel);
         }
     }

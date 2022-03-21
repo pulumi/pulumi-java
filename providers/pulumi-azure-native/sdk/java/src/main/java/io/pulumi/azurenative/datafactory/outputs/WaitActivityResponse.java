@@ -141,32 +141,32 @@ public final class WaitActivityResponse {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder waitTimeInSeconds(Object waitTimeInSeconds) {
             this.waitTimeInSeconds = Objects.requireNonNull(waitTimeInSeconds);
             return this;
-        }
-        public WaitActivityResponse build() {
+        }        public WaitActivityResponse build() {
             return new WaitActivityResponse(dependsOn, description, name, type, userProperties, waitTimeInSeconds);
         }
     }

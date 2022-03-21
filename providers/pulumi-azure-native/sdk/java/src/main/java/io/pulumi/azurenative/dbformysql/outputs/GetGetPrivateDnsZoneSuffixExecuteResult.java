@@ -53,8 +53,7 @@ public final class GetGetPrivateDnsZoneSuffixExecuteResult {
         public Builder privateDnsZoneSuffix(@Nullable String privateDnsZoneSuffix) {
             this.privateDnsZoneSuffix = privateDnsZoneSuffix;
             return this;
-        }
-        public GetGetPrivateDnsZoneSuffixExecuteResult build() {
+        }        public GetGetPrivateDnsZoneSuffixExecuteResult build() {
             return new GetGetPrivateDnsZoneSuffixExecuteResult(privateDnsZoneSuffix);
         }
     }

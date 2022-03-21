@@ -138,32 +138,35 @@ public final class TargetPortalGroupResponse {
             this.acls = Objects.requireNonNull(acls);
             return this;
         }
-
+        public Builder acls(AclResponse... acls) {
+            return acls(List.of(acls));
+        }
         public Builder attributes(AttributesResponse attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(String... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder luns(List<IscsiLunResponse> luns) {
             this.luns = Objects.requireNonNull(luns);
             return this;
         }
-
+        public Builder luns(IscsiLunResponse... luns) {
+            return luns(List.of(luns));
+        }
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder tag(Integer tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
-        }
-        public TargetPortalGroupResponse build() {
+        }        public TargetPortalGroupResponse build() {
             return new TargetPortalGroupResponse(acls, attributes, endpoints, luns, port, tag);
         }
     }

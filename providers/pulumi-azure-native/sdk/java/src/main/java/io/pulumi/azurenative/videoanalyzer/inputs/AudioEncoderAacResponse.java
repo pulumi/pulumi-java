@@ -79,12 +79,10 @@ public final class AudioEncoderAacResponse extends io.pulumi.resources.InvokeArg
             this.bitrateKbps = bitrateKbps;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AudioEncoderAacResponse build() {
+        }        public AudioEncoderAacResponse build() {
             return new AudioEncoderAacResponse(bitrateKbps, type);
         }
     }

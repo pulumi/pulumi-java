@@ -207,52 +207,42 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
             this.alertType = Objects.requireNonNull(alertType);
             return this;
         }
-
         public Builder azureResourceId(String azureResourceId) {
             this.azureResourceId = Objects.requireNonNull(azureResourceId);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
-
         public Builder timeGenerated(String timeGenerated) {
             this.timeGenerated = Objects.requireNonNull(timeGenerated);
             return this;
-        }
-        public SecurityAlertTimelineItemResponse build() {
+        }        public SecurityAlertTimelineItemResponse build() {
             return new SecurityAlertTimelineItemResponse(alertType, azureResourceId, description, displayName, endTimeUtc, kind, productName, severity, startTimeUtc, timeGenerated);
         }
     }

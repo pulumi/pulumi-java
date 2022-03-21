@@ -72,12 +72,13 @@ public final class SharingProfileGroupResponse {
             this.ids = ids;
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public SharingProfileGroupResponse build() {
+        }        public SharingProfileGroupResponse build() {
             return new SharingProfileGroupResponse(ids, type);
         }
     }

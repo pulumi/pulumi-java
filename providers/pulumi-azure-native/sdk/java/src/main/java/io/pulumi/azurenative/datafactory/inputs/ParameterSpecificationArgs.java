@@ -81,22 +81,18 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder type(Output<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ParameterType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ParameterSpecificationArgs build() {
+        }        public ParameterSpecificationArgs build() {
             return new ParameterSpecificationArgs(defaultValue, type);
         }
     }

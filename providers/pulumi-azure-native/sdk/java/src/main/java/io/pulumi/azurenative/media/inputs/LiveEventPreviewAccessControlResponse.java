@@ -60,8 +60,7 @@ public final class LiveEventPreviewAccessControlResponse extends io.pulumi.resou
         public Builder ip(@Nullable IPAccessControlResponse ip) {
             this.ip = ip;
             return this;
-        }
-        public LiveEventPreviewAccessControlResponse build() {
+        }        public LiveEventPreviewAccessControlResponse build() {
             return new LiveEventPreviewAccessControlResponse(ip);
         }
     }

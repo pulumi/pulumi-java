@@ -72,12 +72,10 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tapName(String tapName) {
             this.tapName = Objects.requireNonNull(tapName);
             return this;
-        }
-        public GetVirtualNetworkTapArgs build() {
+        }        public GetVirtualNetworkTapArgs build() {
             return new GetVirtualNetworkTapArgs(resourceGroupName, tapName);
         }
     }

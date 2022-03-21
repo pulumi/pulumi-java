@@ -79,22 +79,18 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public CommitmentPeriodArgs build() {
+        }        public CommitmentPeriodArgs build() {
             return new CommitmentPeriodArgs(count, tier);
         }
     }

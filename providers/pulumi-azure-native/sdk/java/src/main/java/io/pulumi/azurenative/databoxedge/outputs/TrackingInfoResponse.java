@@ -103,22 +103,18 @@ public final class TrackingInfoResponse {
             this.carrierName = carrierName;
             return this;
         }
-
         public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder trackingId(@Nullable String trackingId) {
             this.trackingId = trackingId;
             return this;
         }
-
         public Builder trackingUrl(@Nullable String trackingUrl) {
             this.trackingUrl = trackingUrl;
             return this;
-        }
-        public TrackingInfoResponse build() {
+        }        public TrackingInfoResponse build() {
             return new TrackingInfoResponse(carrierName, serialNumber, trackingId, trackingUrl);
         }
     }

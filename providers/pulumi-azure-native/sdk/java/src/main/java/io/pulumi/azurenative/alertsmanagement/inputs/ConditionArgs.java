@@ -81,22 +81,21 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable Either<String,Operator> operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ConditionArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ConditionArgs build() {
             return new ConditionArgs(operator, values);
         }
     }

@@ -60,12 +60,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputArgs extends io.pulumi.
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
-        }
-        public ConnectToSourcePostgreSqlSyncTaskInputArgs build() {
+        }        public ConnectToSourcePostgreSqlSyncTaskInputArgs build() {
             return new ConnectToSourcePostgreSqlSyncTaskInputArgs(sourceConnectionInfo);
         }
     }

@@ -79,22 +79,24 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
             this.fqdns = fqdns;
             return this;
         }
-
         public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = Output.ofNullable(fqdns);
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-        public FirewallPolicyThreatIntelWhitelistArgs build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public FirewallPolicyThreatIntelWhitelistArgs build() {
             return new FirewallPolicyThreatIntelWhitelistArgs(fqdns, ipAddresses);
         }
     }

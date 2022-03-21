@@ -167,42 +167,34 @@ public final class GetContainerResult {
             this.containerStatus = Objects.requireNonNull(containerStatus);
             return this;
         }
-
         public Builder createdDateTime(String createdDateTime) {
             this.createdDateTime = Objects.requireNonNull(createdDateTime);
             return this;
         }
-
         public Builder dataFormat(String dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder refreshDetails(RefreshDetailsResponse refreshDetails) {
             this.refreshDetails = Objects.requireNonNull(refreshDetails);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetContainerResult build() {
+        }        public GetContainerResult build() {
             return new GetContainerResult(containerStatus, createdDateTime, dataFormat, id, name, refreshDetails, systemData, type);
         }
     }

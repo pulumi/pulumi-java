@@ -78,12 +78,10 @@ public final class HubResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
-        }
-        public HubResponse build() {
+        }        public HubResponse build() {
             return new HubResponse(resourceId, resourceType);
         }
     }

@@ -191,92 +191,74 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             this.globalValidation = globalValidation;
             return this;
         }
-
         public Builder globalValidation(@Nullable GlobalValidationArgs globalValidation) {
             this.globalValidation = Output.ofNullable(globalValidation);
             return this;
         }
-
         public Builder httpSettings(@Nullable Output<HttpSettingsArgs> httpSettings) {
             this.httpSettings = httpSettings;
             return this;
         }
-
         public Builder httpSettings(@Nullable HttpSettingsArgs httpSettings) {
             this.httpSettings = Output.ofNullable(httpSettings);
             return this;
         }
-
         public Builder identityProviders(@Nullable Output<IdentityProvidersArgs> identityProviders) {
             this.identityProviders = identityProviders;
             return this;
         }
-
         public Builder identityProviders(@Nullable IdentityProvidersArgs identityProviders) {
             this.identityProviders = Output.ofNullable(identityProviders);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder login(@Nullable Output<LoginArgs> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable LoginArgs login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder platform(@Nullable Output<AuthPlatformArgs> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable AuthPlatformArgs platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
-        }
-        public WebAppAuthSettingsV2SlotArgs build() {
+        }        public WebAppAuthSettingsV2SlotArgs build() {
             return new WebAppAuthSettingsV2SlotArgs(globalValidation, httpSettings, identityProviders, kind, login, name, platform, resourceGroupName, slot);
         }
     }

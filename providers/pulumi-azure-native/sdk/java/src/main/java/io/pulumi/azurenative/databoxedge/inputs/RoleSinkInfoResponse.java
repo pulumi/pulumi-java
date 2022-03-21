@@ -58,8 +58,7 @@ public final class RoleSinkInfoResponse extends io.pulumi.resources.InvokeArgs {
         public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
-        }
-        public RoleSinkInfoResponse build() {
+        }        public RoleSinkInfoResponse build() {
             return new RoleSinkInfoResponse(roleId);
         }
     }

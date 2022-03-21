@@ -114,42 +114,37 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
-
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
             this.analyticalStorageTtl = Output.ofNullable(analyticalStorageTtl);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder indexes(@Nullable Output<List<MongoIndexArgs>> indexes) {
             this.indexes = indexes;
             return this;
         }
-
         public Builder indexes(@Nullable List<MongoIndexArgs> indexes) {
             this.indexes = Output.ofNullable(indexes);
             return this;
         }
-
+        public Builder indexes(MongoIndexArgs... indexes) {
+            return indexes(List.of(indexes));
+        }
         public Builder shardKey(@Nullable Output<Map<String,String>> shardKey) {
             this.shardKey = shardKey;
             return this;
         }
-
         public Builder shardKey(@Nullable Map<String,String> shardKey) {
             this.shardKey = Output.ofNullable(shardKey);
             return this;
-        }
-        public MongoDBCollectionResourceArgs build() {
+        }        public MongoDBCollectionResourceArgs build() {
             return new MongoDBCollectionResourceArgs(analyticalStorageTtl, id, indexes, shardKey);
         }
     }

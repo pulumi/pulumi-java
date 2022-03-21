@@ -61,12 +61,10 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
-        }
-        public PrivateEndpointConnectionPropertiesArgs build() {
+        }        public PrivateEndpointConnectionPropertiesArgs build() {
             return new PrivateEndpointConnectionPropertiesArgs(privateLinkServiceConnectionState);
         }
     }

@@ -141,62 +141,53 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
             return this;
         }
-
         public Builder containerNetworkInterfaceConfigurations(@Nullable List<ContainerNetworkInterfaceConfigurationArgs> containerNetworkInterfaceConfigurations) {
             this.containerNetworkInterfaceConfigurations = Output.ofNullable(containerNetworkInterfaceConfigurations);
             return this;
         }
-
+        public Builder containerNetworkInterfaceConfigurations(ContainerNetworkInterfaceConfigurationArgs... containerNetworkInterfaceConfigurations) {
+            return containerNetworkInterfaceConfigurations(List.of(containerNetworkInterfaceConfigurations));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkProfileName(@Nullable Output<String> networkProfileName) {
             this.networkProfileName = networkProfileName;
             return this;
         }
-
         public Builder networkProfileName(@Nullable String networkProfileName) {
             this.networkProfileName = Output.ofNullable(networkProfileName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NetworkProfileArgs build() {
+        }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(containerNetworkInterfaceConfigurations, id, location, networkProfileName, resourceGroupName, tags);
         }
     }

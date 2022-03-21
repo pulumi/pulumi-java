@@ -104,22 +104,18 @@ public final class GetCodeVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetCodeVersionArgs build() {
+        }        public GetCodeVersionArgs build() {
             return new GetCodeVersionArgs(name, resourceGroupName, version, workspaceName);
         }
     }

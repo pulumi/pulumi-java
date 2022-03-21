@@ -115,42 +115,34 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
-
         public Builder azureBlobStorage(@Nullable BlobStorageTokenStoreArgs azureBlobStorage) {
             this.azureBlobStorage = Output.ofNullable(azureBlobStorage);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder fileSystem(@Nullable Output<FileSystemTokenStoreArgs> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public Builder fileSystem(@Nullable FileSystemTokenStoreArgs fileSystem) {
             this.fileSystem = Output.ofNullable(fileSystem);
             return this;
         }
-
         public Builder tokenRefreshExtensionHours(@Nullable Output<Double> tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
-
         public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = Output.ofNullable(tokenRefreshExtensionHours);
             return this;
-        }
-        public TokenStoreArgs build() {
+        }        public TokenStoreArgs build() {
             return new TokenStoreArgs(azureBlobStorage, enabled, fileSystem, tokenRefreshExtensionHours);
         }
     }

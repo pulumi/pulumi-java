@@ -60,8 +60,7 @@ public final class WindowsOsInfoResponse extends io.pulumi.resources.InvokeArgs 
         public Builder windowsOsState(@Nullable String windowsOsState) {
             this.windowsOsState = windowsOsState;
             return this;
-        }
-        public WindowsOsInfoResponse build() {
+        }        public WindowsOsInfoResponse build() {
             return new WindowsOsInfoResponse(windowsOsState);
         }
     }

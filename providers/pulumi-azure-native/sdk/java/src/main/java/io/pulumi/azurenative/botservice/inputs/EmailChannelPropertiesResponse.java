@@ -95,17 +95,14 @@ public final class EmailChannelPropertiesResponse extends io.pulumi.resources.In
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
-        }
-        public EmailChannelPropertiesResponse build() {
+        }        public EmailChannelPropertiesResponse build() {
             return new EmailChannelPropertiesResponse(emailAddress, isEnabled, password);
         }
     }

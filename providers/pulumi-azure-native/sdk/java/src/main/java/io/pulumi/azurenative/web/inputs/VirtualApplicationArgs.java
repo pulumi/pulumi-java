@@ -113,42 +113,37 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
             this.physicalPath = physicalPath;
             return this;
         }
-
         public Builder physicalPath(@Nullable String physicalPath) {
             this.physicalPath = Output.ofNullable(physicalPath);
             return this;
         }
-
         public Builder preloadEnabled(@Nullable Output<Boolean> preloadEnabled) {
             this.preloadEnabled = preloadEnabled;
             return this;
         }
-
         public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
             this.preloadEnabled = Output.ofNullable(preloadEnabled);
             return this;
         }
-
         public Builder virtualDirectories(@Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories) {
             this.virtualDirectories = virtualDirectories;
             return this;
         }
-
         public Builder virtualDirectories(@Nullable List<VirtualDirectoryArgs> virtualDirectories) {
             this.virtualDirectories = Output.ofNullable(virtualDirectories);
             return this;
         }
-
+        public Builder virtualDirectories(VirtualDirectoryArgs... virtualDirectories) {
+            return virtualDirectories(List.of(virtualDirectories));
+        }
         public Builder virtualPath(@Nullable Output<String> virtualPath) {
             this.virtualPath = virtualPath;
             return this;
         }
-
         public Builder virtualPath(@Nullable String virtualPath) {
             this.virtualPath = Output.ofNullable(virtualPath);
             return this;
-        }
-        public VirtualApplicationArgs build() {
+        }        public VirtualApplicationArgs build() {
             return new VirtualApplicationArgs(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
         }
     }

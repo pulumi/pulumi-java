@@ -97,17 +97,20 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
             this.packages = packages;
             return this;
         }
-
+        public Builder packages(SparkMavenPackageResponse... packages) {
+            return packages(List.of(packages));
+        }
         public Builder precachePackages(@Nullable Boolean precachePackages) {
             this.precachePackages = precachePackages;
             return this;
         }
-
         public Builder repositories(@Nullable List<String> repositories) {
             this.repositories = repositories;
             return this;
         }
-        public ModelEnvironmentDefinitionResponseResponseSpark build() {
+        public Builder repositories(String... repositories) {
+            return repositories(List.of(repositories));
+        }        public ModelEnvironmentDefinitionResponseResponseSpark build() {
             return new ModelEnvironmentDefinitionResponseResponseSpark(packages, precachePackages, repositories);
         }
     }

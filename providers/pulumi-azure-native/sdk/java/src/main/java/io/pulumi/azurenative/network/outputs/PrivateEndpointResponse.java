@@ -254,67 +254,66 @@ public final class PrivateEndpointResponse {
             this.customDnsConfigs = customDnsConfigs;
             return this;
         }
-
+        public Builder customDnsConfigs(CustomDnsConfigPropertiesFormatResponse... customDnsConfigs) {
+            return customDnsConfigs(List.of(customDnsConfigs));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-
+        public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
-
+        public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionResponse... privateLinkServiceConnections) {
+            return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PrivateEndpointResponse build() {
+        }        public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(customDnsConfigs, etag, extendedLocation, id, location, manualPrivateLinkServiceConnections, name, networkInterfaces, privateLinkServiceConnections, provisioningState, subnet, tags, type);
         }
     }

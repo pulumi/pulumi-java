@@ -69,12 +69,10 @@ public final class ContentHashResponse {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ContentHashResponse build() {
+        }        public ContentHashResponse build() {
             return new ContentHashResponse(algorithm, value);
         }
     }

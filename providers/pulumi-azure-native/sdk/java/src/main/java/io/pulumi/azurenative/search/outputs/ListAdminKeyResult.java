@@ -69,12 +69,10 @@ public final class ListAdminKeyResult {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListAdminKeyResult build() {
+        }        public ListAdminKeyResult build() {
             return new ListAdminKeyResult(primaryKey, secondaryKey);
         }
     }

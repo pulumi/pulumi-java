@@ -80,12 +80,10 @@ public final class TarReadSettingsResponse extends io.pulumi.resources.InvokeArg
             this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TarReadSettingsResponse build() {
+        }        public TarReadSettingsResponse build() {
             return new TarReadSettingsResponse(preserveCompressionFileNameAsFolder, type);
         }
     }

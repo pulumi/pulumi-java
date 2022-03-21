@@ -119,27 +119,22 @@ public final class ImageTemplateLastRunStatusResponse {
             this.endTime = endTime;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder runState(@Nullable String runState) {
             this.runState = runState;
             return this;
         }
-
         public Builder runSubState(@Nullable String runSubState) {
             this.runSubState = runSubState;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public ImageTemplateLastRunStatusResponse build() {
+        }        public ImageTemplateLastRunStatusResponse build() {
             return new ImageTemplateLastRunStatusResponse(endTime, message, runState, runSubState, startTime);
         }
     }

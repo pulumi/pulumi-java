@@ -61,12 +61,10 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
-        }
-        public AzureStaticWebAppsRegistrationArgs build() {
+        }        public AzureStaticWebAppsRegistrationArgs build() {
             return new AzureStaticWebAppsRegistrationArgs(clientId);
         }
     }

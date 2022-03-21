@@ -71,12 +71,10 @@ public final class EventSubscriptionIdentityResponse {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }
-        public EventSubscriptionIdentityResponse build() {
+        }        public EventSubscriptionIdentityResponse build() {
             return new EventSubscriptionIdentityResponse(type, userAssignedIdentity);
         }
     }

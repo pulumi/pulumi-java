@@ -95,32 +95,26 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationSecurityGroupArgs build() {
+        }        public ApplicationSecurityGroupArgs build() {
             return new ApplicationSecurityGroupArgs(id, location, tags);
         }
     }

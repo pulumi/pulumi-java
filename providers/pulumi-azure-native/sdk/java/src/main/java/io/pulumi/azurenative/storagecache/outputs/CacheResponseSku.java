@@ -53,8 +53,7 @@ public final class CacheResponseSku {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public CacheResponseSku build() {
+        }        public CacheResponseSku build() {
             return new CacheResponseSku(name);
         }
     }

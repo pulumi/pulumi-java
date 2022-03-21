@@ -53,8 +53,7 @@ public final class PurviewConfigurationResponse {
         public Builder purviewResourceId(@Nullable String purviewResourceId) {
             this.purviewResourceId = purviewResourceId;
             return this;
-        }
-        public PurviewConfigurationResponse build() {
+        }        public PurviewConfigurationResponse build() {
             return new PurviewConfigurationResponse(purviewResourceId);
         }
     }

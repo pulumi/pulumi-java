@@ -88,17 +88,14 @@ public final class ListWebAppFunctionSecretsArgs extends io.pulumi.resources.Inv
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppFunctionSecretsArgs build() {
+        }        public ListWebAppFunctionSecretsArgs build() {
             return new ListWebAppFunctionSecretsArgs(functionName, name, resourceGroupName);
         }
     }

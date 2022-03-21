@@ -79,22 +79,18 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder registration(@Nullable Output<TwitterRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder registration(@Nullable TwitterRegistrationArgs registration) {
             this.registration = Output.ofNullable(registration);
             return this;
-        }
-        public TwitterArgs build() {
+        }        public TwitterArgs build() {
             return new TwitterArgs(enabled, registration);
         }
     }

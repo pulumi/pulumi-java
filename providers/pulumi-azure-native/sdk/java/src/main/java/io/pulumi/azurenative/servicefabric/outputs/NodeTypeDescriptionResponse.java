@@ -227,57 +227,46 @@ public final class NodeTypeDescriptionResponse {
             this.applicationPorts = applicationPorts;
             return this;
         }
-
         public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = capacities;
             return this;
         }
-
         public Builder clientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
             this.clientConnectionEndpointPort = Objects.requireNonNull(clientConnectionEndpointPort);
             return this;
         }
-
         public Builder durabilityLevel(@Nullable String durabilityLevel) {
             this.durabilityLevel = durabilityLevel;
             return this;
         }
-
         public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
-
         public Builder httpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
             this.httpGatewayEndpointPort = Objects.requireNonNull(httpGatewayEndpointPort);
             return this;
         }
-
         public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
-
         public Builder reverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
             this.reverseProxyEndpointPort = reverseProxyEndpointPort;
             return this;
         }
-
         public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
-        }
-        public NodeTypeDescriptionResponse build() {
+        }        public NodeTypeDescriptionResponse build() {
             return new NodeTypeDescriptionResponse(applicationPorts, capacities, clientConnectionEndpointPort, durabilityLevel, ephemeralPorts, httpGatewayEndpointPort, isPrimary, name, placementProperties, reverseProxyEndpointPort, vmInstanceCount);
         }
     }

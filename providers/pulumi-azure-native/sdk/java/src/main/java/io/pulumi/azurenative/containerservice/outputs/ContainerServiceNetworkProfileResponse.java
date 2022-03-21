@@ -200,52 +200,42 @@ public final class ContainerServiceNetworkProfileResponse {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
-
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
-
         public Builder loadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile) {
             this.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
-
         public Builder loadBalancerSku(@Nullable String loadBalancerSku) {
             this.loadBalancerSku = loadBalancerSku;
             return this;
         }
-
         public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = networkMode;
             return this;
         }
-
         public Builder networkPlugin(@Nullable String networkPlugin) {
             this.networkPlugin = networkPlugin;
             return this;
         }
-
         public Builder networkPolicy(@Nullable String networkPolicy) {
             this.networkPolicy = networkPolicy;
             return this;
         }
-
         public Builder outboundType(@Nullable String outboundType) {
             this.outboundType = outboundType;
             return this;
         }
-
         public Builder podCidr(@Nullable String podCidr) {
             this.podCidr = podCidr;
             return this;
         }
-
         public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
-        }
-        public ContainerServiceNetworkProfileResponse build() {
+        }        public ContainerServiceNetworkProfileResponse build() {
             return new ContainerServiceNetworkProfileResponse(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
         }
     }

@@ -88,17 +88,14 @@ public final class ListStreamingLocatorContentKeysArgs extends io.pulumi.resourc
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder streamingLocatorName(String streamingLocatorName) {
             this.streamingLocatorName = Objects.requireNonNull(streamingLocatorName);
             return this;
-        }
-        public ListStreamingLocatorContentKeysArgs build() {
+        }        public ListStreamingLocatorContentKeysArgs build() {
             return new ListStreamingLocatorContentKeysArgs(accountName, resourceGroupName, streamingLocatorName);
         }
     }

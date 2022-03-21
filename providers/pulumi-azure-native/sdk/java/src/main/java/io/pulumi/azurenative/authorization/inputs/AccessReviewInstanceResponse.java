@@ -142,32 +142,26 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
             this.endDateTime = endDateTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startDateTime(@Nullable String startDateTime) {
             this.startDateTime = startDateTime;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AccessReviewInstanceResponse build() {
+        }        public AccessReviewInstanceResponse build() {
             return new AccessReviewInstanceResponse(endDateTime, id, name, startDateTime, status, type);
         }
     }

@@ -159,37 +159,30 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder maxThreshold(Integer maxThreshold) {
             this.maxThreshold = Objects.requireNonNull(maxThreshold);
             return this;
         }
-
         public Builder minThreshold(Integer minThreshold) {
             this.minThreshold = Objects.requireNonNull(minThreshold);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder timeWindowSize(String timeWindowSize) {
             this.timeWindowSize = Objects.requireNonNull(timeWindowSize);
             return this;
-        }
-        public TimeWindowCustomAlertRuleResponse build() {
+        }        public TimeWindowCustomAlertRuleResponse build() {
             return new TimeWindowCustomAlertRuleResponse(description, displayName, isEnabled, maxThreshold, minThreshold, ruleType, timeWindowSize);
         }
     }

@@ -137,32 +137,32 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
             this.assignableScopes = assignableScopes;
             return this;
         }
-
+        public Builder assignableScopes(String... assignableScopes) {
+            return assignableScopes(List.of(assignableScopes));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder permissions(@Nullable List<PermissionResponse> permissions) {
             this.permissions = permissions;
             return this;
         }
-
+        public Builder permissions(PermissionResponse... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSqlResourceSqlRoleDefinitionResult build() {
+        }        public GetSqlResourceSqlRoleDefinitionResult build() {
             return new GetSqlResourceSqlRoleDefinitionResult(assignableScopes, id, name, permissions, roleName, type);
         }
     }

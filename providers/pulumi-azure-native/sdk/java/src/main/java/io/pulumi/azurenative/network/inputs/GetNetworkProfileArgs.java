@@ -90,17 +90,14 @@ public final class GetNetworkProfileArgs extends io.pulumi.resources.InvokeArgs 
             this.expand = expand;
             return this;
         }
-
         public Builder networkProfileName(String networkProfileName) {
             this.networkProfileName = Objects.requireNonNull(networkProfileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNetworkProfileArgs build() {
+        }        public GetNetworkProfileArgs build() {
             return new GetNetworkProfileArgs(expand, networkProfileName, resourceGroupName);
         }
     }

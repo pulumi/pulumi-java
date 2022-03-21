@@ -78,12 +78,10 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse extends io.pulu
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(CacheKeyQueryStringActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleCacheKeyQueryStringActionResponse build() {
+        }        public DeliveryRuleCacheKeyQueryStringActionResponse build() {
             return new DeliveryRuleCacheKeyQueryStringActionResponse(name, parameters);
         }
     }

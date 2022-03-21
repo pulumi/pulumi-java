@@ -53,8 +53,7 @@ public final class IotMappingPropertiesResponse {
         public Builder content(@Nullable Object content) {
             this.content = content;
             return this;
-        }
-        public IotMappingPropertiesResponse build() {
+        }        public IotMappingPropertiesResponse build() {
             return new IotMappingPropertiesResponse(content);
         }
     }

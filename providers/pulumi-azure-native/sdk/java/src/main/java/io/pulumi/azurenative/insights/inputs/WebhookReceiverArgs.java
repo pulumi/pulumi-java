@@ -159,72 +159,58 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
             this.identifierUri = identifierUri;
             return this;
         }
-
         public Builder identifierUri(@Nullable String identifierUri) {
             this.identifierUri = Output.ofNullable(identifierUri);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder serviceUri(Output<String> serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
-
         public Builder serviceUri(String serviceUri) {
             this.serviceUri = Output.of(Objects.requireNonNull(serviceUri));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder useAadAuth(@Nullable Output<Boolean> useAadAuth) {
             this.useAadAuth = useAadAuth;
             return this;
         }
-
         public Builder useAadAuth(@Nullable Boolean useAadAuth) {
             this.useAadAuth = Output.ofNullable(useAadAuth);
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
-        }
-        public WebhookReceiverArgs build() {
+        }        public WebhookReceiverArgs build() {
             return new WebhookReceiverArgs(identifierUri, name, objectId, serviceUri, tenantId, useAadAuth, useCommonAlertSchema);
         }
     }

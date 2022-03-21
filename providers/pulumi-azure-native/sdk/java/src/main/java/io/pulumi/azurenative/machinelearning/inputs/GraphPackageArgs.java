@@ -99,32 +99,29 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
             this.edges = edges;
             return this;
         }
-
         public Builder edges(@Nullable List<GraphEdgeArgs> edges) {
             this.edges = Output.ofNullable(edges);
             return this;
         }
-
+        public Builder edges(GraphEdgeArgs... edges) {
+            return edges(List.of(edges));
+        }
         public Builder graphParameters(@Nullable Output<Map<String,GraphParameterArgs>> graphParameters) {
             this.graphParameters = graphParameters;
             return this;
         }
-
         public Builder graphParameters(@Nullable Map<String,GraphParameterArgs> graphParameters) {
             this.graphParameters = Output.ofNullable(graphParameters);
             return this;
         }
-
         public Builder nodes(@Nullable Output<Map<String,GraphNodeArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
-
         public Builder nodes(@Nullable Map<String,GraphNodeArgs> nodes) {
             this.nodes = Output.ofNullable(nodes);
             return this;
-        }
-        public GraphPackageArgs build() {
+        }        public GraphPackageArgs build() {
             return new GraphPackageArgs(edges, graphParameters, nodes);
         }
     }

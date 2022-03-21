@@ -79,22 +79,18 @@ public final class ChangeFeedArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
-        }
-        public ChangeFeedArgs build() {
+        }        public ChangeFeedArgs build() {
             return new ChangeFeedArgs(enabled, retentionInDays);
         }
     }

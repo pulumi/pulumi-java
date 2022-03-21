@@ -60,8 +60,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
         public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
-        }
-        public OsProfileResponse build() {
+        }        public OsProfileResponse build() {
             return new OsProfileResponse(linuxOperatingSystemProfile);
         }
     }

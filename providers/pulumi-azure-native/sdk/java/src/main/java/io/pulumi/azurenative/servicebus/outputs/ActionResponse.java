@@ -89,17 +89,14 @@ public final class ActionResponse {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
-
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
-
         public Builder sqlExpression(@Nullable String sqlExpression) {
             this.sqlExpression = sqlExpression;
             return this;
-        }
-        public ActionResponse build() {
+        }        public ActionResponse build() {
             return new ActionResponse(compatibilityLevel, requiresPreprocessing, sqlExpression);
         }
     }

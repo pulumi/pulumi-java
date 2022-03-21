@@ -128,27 +128,25 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
             this.condition = condition;
             return this;
         }
-
         public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
-
+        public Builder endpointNames(String... endpointNames) {
+            return endpointNames(List.of(endpointNames));
+        }
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public RoutePropertiesResponse build() {
+        }        public RoutePropertiesResponse build() {
             return new RoutePropertiesResponse(condition, endpointNames, isEnabled, name, source);
         }
     }

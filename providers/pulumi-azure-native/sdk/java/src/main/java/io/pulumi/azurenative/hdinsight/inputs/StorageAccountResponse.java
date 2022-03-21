@@ -191,47 +191,38 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.container = container;
             return this;
         }
-
         public Builder fileSystem(@Nullable String fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public Builder fileshare(@Nullable String fileshare) {
             this.fileshare = fileshare;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder saskey(@Nullable String saskey) {
             this.saskey = saskey;
             return this;
-        }
-        public StorageAccountResponse build() {
+        }        public StorageAccountResponse build() {
             return new StorageAccountResponse(container, fileSystem, fileshare, isDefault, key, msiResourceId, name, resourceId, saskey);
         }
     }

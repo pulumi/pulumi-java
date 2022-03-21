@@ -77,12 +77,10 @@ public final class GlobalParameterSpecificationResponse extends io.pulumi.resour
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GlobalParameterSpecificationResponse build() {
+        }        public GlobalParameterSpecificationResponse build() {
             return new GlobalParameterSpecificationResponse(type, value);
         }
     }

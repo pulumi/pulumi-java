@@ -96,17 +96,14 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
-
         public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
             this.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
-
         public Builder logLocationSettings(LogLocationSettingsResponse logLocationSettings) {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
-        }
-        public LogSettingsResponse build() {
+        }        public LogSettingsResponse build() {
             return new LogSettingsResponse(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
         }
     }

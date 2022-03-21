@@ -81,12 +81,10 @@ public final class SecretObjectResponse extends io.pulumi.resources.InvokeArgs {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SecretObjectResponse build() {
+        }        public SecretObjectResponse build() {
             return new SecretObjectResponse(type, value);
         }
     }

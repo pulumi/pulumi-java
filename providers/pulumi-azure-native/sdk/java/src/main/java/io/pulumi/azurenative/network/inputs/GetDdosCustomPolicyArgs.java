@@ -72,12 +72,10 @@ public final class GetDdosCustomPolicyArgs extends io.pulumi.resources.InvokeArg
             this.ddosCustomPolicyName = Objects.requireNonNull(ddosCustomPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDdosCustomPolicyArgs build() {
+        }        public GetDdosCustomPolicyArgs build() {
             return new GetDdosCustomPolicyArgs(ddosCustomPolicyName, resourceGroupName);
         }
     }

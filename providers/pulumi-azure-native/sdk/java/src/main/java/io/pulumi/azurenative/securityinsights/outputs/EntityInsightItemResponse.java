@@ -106,22 +106,21 @@ public final class EntityInsightItemResponse {
             this.chartQueryResults = chartQueryResults;
             return this;
         }
-
+        public Builder chartQueryResults(InsightsTableResultResponse... chartQueryResults) {
+            return chartQueryResults(List.of(chartQueryResults));
+        }
         public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
         }
-
         public Builder queryTimeInterval(@Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval) {
             this.queryTimeInterval = queryTimeInterval;
             return this;
         }
-
         public Builder tableQueryResults(@Nullable InsightsTableResultResponse tableQueryResults) {
             this.tableQueryResults = tableQueryResults;
             return this;
-        }
-        public EntityInsightItemResponse build() {
+        }        public EntityInsightItemResponse build() {
             return new EntityInsightItemResponse(chartQueryResults, queryId, queryTimeInterval, tableQueryResults);
         }
     }

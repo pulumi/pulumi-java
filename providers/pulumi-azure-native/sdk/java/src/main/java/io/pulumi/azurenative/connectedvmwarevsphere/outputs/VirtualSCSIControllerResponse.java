@@ -120,27 +120,22 @@ public final class VirtualSCSIControllerResponse {
             this.busNumber = busNumber;
             return this;
         }
-
         public Builder controllerKey(@Nullable Integer controllerKey) {
             this.controllerKey = controllerKey;
             return this;
         }
-
         public Builder scsiCtlrUnitNumber(@Nullable Integer scsiCtlrUnitNumber) {
             this.scsiCtlrUnitNumber = scsiCtlrUnitNumber;
             return this;
         }
-
         public Builder sharing(@Nullable String sharing) {
             this.sharing = sharing;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public VirtualSCSIControllerResponse build() {
+        }        public VirtualSCSIControllerResponse build() {
             return new VirtualSCSIControllerResponse(busNumber, controllerKey, scsiCtlrUnitNumber, sharing, type);
         }
     }

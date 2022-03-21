@@ -114,42 +114,40 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
-
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
             this.pipelines = Output.ofNullable(pipelines);
             return this;
         }
-
+        public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
+            return pipelines(List.of(pipelines));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public MultiplePipelineTriggerArgs build() {
+        }        public MultiplePipelineTriggerArgs build() {
             return new MultiplePipelineTriggerArgs(annotations, description, pipelines, type);
         }
     }

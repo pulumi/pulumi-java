@@ -88,17 +88,14 @@ public final class ApiOAuthSettingsParameterResponse {
             this.options = options;
             return this;
         }
-
         public Builder uiDefinition(@Nullable Object uiDefinition) {
             this.uiDefinition = uiDefinition;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ApiOAuthSettingsParameterResponse build() {
+        }        public ApiOAuthSettingsParameterResponse build() {
             return new ApiOAuthSettingsParameterResponse(options, uiDefinition, value);
         }
     }

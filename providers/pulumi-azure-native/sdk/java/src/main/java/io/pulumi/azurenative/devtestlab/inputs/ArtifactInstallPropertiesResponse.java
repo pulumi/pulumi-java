@@ -160,37 +160,33 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
             this.artifactId = artifactId;
             return this;
         }
-
         public Builder artifactTitle(@Nullable String artifactTitle) {
             this.artifactTitle = artifactTitle;
             return this;
         }
-
         public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
             this.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
-
         public Builder installTime(@Nullable String installTime) {
             this.installTime = installTime;
             return this;
         }
-
         public Builder parameters(@Nullable List<ArtifactParameterPropertiesResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ArtifactParameterPropertiesResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
             this.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
-        }
-        public ArtifactInstallPropertiesResponse build() {
+        }        public ArtifactInstallPropertiesResponse build() {
             return new ArtifactInstallPropertiesResponse(artifactId, artifactTitle, deploymentStatusMessage, installTime, parameters, status, vmExtensionStatusMessage);
         }
     }

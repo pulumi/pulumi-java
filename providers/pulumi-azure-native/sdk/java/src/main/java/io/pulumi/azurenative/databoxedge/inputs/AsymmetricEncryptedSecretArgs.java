@@ -96,32 +96,26 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
-
         public Builder encryptionAlgorithm(Either<String,EncryptionAlgorithm> encryptionAlgorithm) {
             this.encryptionAlgorithm = Output.of(Objects.requireNonNull(encryptionAlgorithm));
             return this;
         }
-
         public Builder encryptionCertThumbprint(@Nullable Output<String> encryptionCertThumbprint) {
             this.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
-
         public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
             this.encryptionCertThumbprint = Output.ofNullable(encryptionCertThumbprint);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public AsymmetricEncryptedSecretArgs build() {
+        }        public AsymmetricEncryptedSecretArgs build() {
             return new AsymmetricEncryptedSecretArgs(encryptionAlgorithm, encryptionCertThumbprint, value);
         }
     }

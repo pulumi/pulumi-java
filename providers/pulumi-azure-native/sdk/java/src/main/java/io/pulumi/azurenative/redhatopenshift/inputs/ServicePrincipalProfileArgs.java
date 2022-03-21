@@ -78,22 +78,18 @@ public final class ServicePrincipalProfileArgs extends io.pulumi.resources.Resou
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
-        }
-        public ServicePrincipalProfileArgs build() {
+        }        public ServicePrincipalProfileArgs build() {
             return new ServicePrincipalProfileArgs(clientId, clientSecret);
         }
     }

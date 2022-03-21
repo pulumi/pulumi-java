@@ -80,22 +80,18 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,PropertyType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,PropertyType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public TimeSeriesIdPropertyArgs build() {
+        }        public TimeSeriesIdPropertyArgs build() {
             return new TimeSeriesIdPropertyArgs(name, type);
         }
     }

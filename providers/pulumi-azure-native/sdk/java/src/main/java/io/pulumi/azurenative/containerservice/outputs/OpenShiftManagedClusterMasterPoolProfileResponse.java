@@ -120,27 +120,22 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder subnetCidr(@Nullable String subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
-
         public Builder vmSize(String vmSize) {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
-        }
-        public OpenShiftManagedClusterMasterPoolProfileResponse build() {
+        }        public OpenShiftManagedClusterMasterPoolProfileResponse build() {
             return new OpenShiftManagedClusterMasterPoolProfileResponse(count, name, osType, subnetCidr, vmSize);
         }
     }

@@ -81,22 +81,18 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder sourceField(@Nullable Output<String> sourceField) {
             this.sourceField = sourceField;
             return this;
         }
-
         public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = Output.ofNullable(sourceField);
             return this;
-        }
-        public JsonFieldWithDefaultArgs build() {
+        }        public JsonFieldWithDefaultArgs build() {
             return new JsonFieldWithDefaultArgs(defaultValue, sourceField);
         }
     }

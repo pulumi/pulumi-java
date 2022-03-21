@@ -157,37 +157,36 @@ public final class FilterActivityResponse {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder items(ExpressionResponse items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public FilterActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public FilterActivityResponse build() {
             return new FilterActivityResponse(condition, dependsOn, description, items, name, type, userProperties);
         }
     }

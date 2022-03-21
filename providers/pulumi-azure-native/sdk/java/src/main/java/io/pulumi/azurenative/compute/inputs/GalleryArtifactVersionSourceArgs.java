@@ -78,22 +78,18 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public GalleryArtifactVersionSourceArgs build() {
+        }        public GalleryArtifactVersionSourceArgs build() {
             return new GalleryArtifactVersionSourceArgs(id, uri);
         }
     }

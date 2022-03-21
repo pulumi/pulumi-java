@@ -72,12 +72,13 @@ public final class ListLocalUserKeysResult {
             this.sharedKey = Objects.requireNonNull(sharedKey);
             return this;
         }
-
         public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
-        public ListLocalUserKeysResult build() {
+        public Builder sshAuthorizedKeys(SshPublicKeyResponse... sshAuthorizedKeys) {
+            return sshAuthorizedKeys(List.of(sshAuthorizedKeys));
+        }        public ListLocalUserKeysResult build() {
             return new ListLocalUserKeysResult(sharedKey, sshAuthorizedKeys);
         }
     }

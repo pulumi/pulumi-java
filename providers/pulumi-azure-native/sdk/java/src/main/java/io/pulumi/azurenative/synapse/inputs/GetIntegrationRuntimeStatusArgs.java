@@ -88,17 +88,14 @@ public final class GetIntegrationRuntimeStatusArgs extends io.pulumi.resources.I
             this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIntegrationRuntimeStatusArgs build() {
+        }        public GetIntegrationRuntimeStatusArgs build() {
             return new GetIntegrationRuntimeStatusArgs(integrationRuntimeName, resourceGroupName, workspaceName);
         }
     }

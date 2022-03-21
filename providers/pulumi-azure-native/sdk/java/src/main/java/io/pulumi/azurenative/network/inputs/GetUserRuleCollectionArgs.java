@@ -104,22 +104,18 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleCollectionName(String ruleCollectionName) {
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
-        }
-        public GetUserRuleCollectionArgs build() {
+        }        public GetUserRuleCollectionArgs build() {
             return new GetUserRuleCollectionArgs(configurationName, networkManagerName, resourceGroupName, ruleCollectionName);
         }
     }

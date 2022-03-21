@@ -205,102 +205,82 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
             return this;
         }
-
         public Builder allowHubToRemoteVnetTransit(@Nullable Boolean allowHubToRemoteVnetTransit) {
             this.allowHubToRemoteVnetTransit = Output.ofNullable(allowHubToRemoteVnetTransit);
             return this;
         }
-
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways) {
             this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
             return this;
         }
-
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Boolean allowRemoteVnetToUseHubVnetGateways) {
             this.allowRemoteVnetToUseHubVnetGateways = Output.ofNullable(allowRemoteVnetToUseHubVnetGateways);
             return this;
         }
-
         public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
-
         public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
             this.remoteVirtualNetwork = Output.ofNullable(remoteVirtualNetwork);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
             this.routingConfiguration = Output.ofNullable(routingConfiguration);
             return this;
         }
-
         public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
-        }
-        public HubVirtualNetworkConnectionArgs build() {
+        }        public HubVirtualNetworkConnectionArgs build() {
             return new HubVirtualNetworkConnectionArgs(allowHubToRemoteVnetTransit, allowRemoteVnetToUseHubVnetGateways, connectionName, enableInternetSecurity, id, name, remoteVirtualNetwork, resourceGroupName, routingConfiguration, virtualHubName);
         }
     }

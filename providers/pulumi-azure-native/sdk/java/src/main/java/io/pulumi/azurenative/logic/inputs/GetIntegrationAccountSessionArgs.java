@@ -88,17 +88,14 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sessionName(String sessionName) {
             this.sessionName = Objects.requireNonNull(sessionName);
             return this;
-        }
-        public GetIntegrationAccountSessionArgs build() {
+        }        public GetIntegrationAccountSessionArgs build() {
             return new GetIntegrationAccountSessionArgs(integrationAccountName, resourceGroupName, sessionName);
         }
     }

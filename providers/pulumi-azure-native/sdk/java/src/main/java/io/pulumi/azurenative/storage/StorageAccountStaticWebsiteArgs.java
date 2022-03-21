@@ -106,42 +106,34 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder error404Document(@Nullable Output<String> error404Document) {
             this.error404Document = error404Document;
             return this;
         }
-
         public Builder error404Document(@Nullable String error404Document) {
             this.error404Document = Output.ofNullable(error404Document);
             return this;
         }
-
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
-
         public Builder indexDocument(@Nullable String indexDocument) {
             this.indexDocument = Output.ofNullable(indexDocument);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public StorageAccountStaticWebsiteArgs build() {
+        }        public StorageAccountStaticWebsiteArgs build() {
             return new StorageAccountStaticWebsiteArgs(accountName, error404Document, indexDocument, resourceGroupName);
         }
     }

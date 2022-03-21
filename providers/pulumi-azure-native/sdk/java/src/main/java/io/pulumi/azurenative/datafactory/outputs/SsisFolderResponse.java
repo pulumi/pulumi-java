@@ -106,22 +106,18 @@ public final class SsisFolderResponse {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SsisFolderResponse build() {
+        }        public SsisFolderResponse build() {
             return new SsisFolderResponse(description, id, name, type);
         }
     }

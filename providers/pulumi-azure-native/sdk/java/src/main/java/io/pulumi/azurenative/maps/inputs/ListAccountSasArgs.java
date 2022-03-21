@@ -174,42 +174,37 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder expiry(String expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
-
         public Builder maxRatePerSecond(Integer maxRatePerSecond) {
             this.maxRatePerSecond = Objects.requireNonNull(maxRatePerSecond);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder signingKey(Either<String,SigningKey> signingKey) {
             this.signingKey = Objects.requireNonNull(signingKey);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
-        }
-        public ListAccountSasArgs build() {
+        }        public ListAccountSasArgs build() {
             return new ListAccountSasArgs(accountName, expiry, maxRatePerSecond, principalId, regions, resourceGroupName, signingKey, start);
         }
     }

@@ -61,12 +61,10 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
             this.labVmId = labVmId;
             return this;
         }
-
         public Builder labVmId(@Nullable String labVmId) {
             this.labVmId = Output.ofNullable(labVmId);
             return this;
-        }
-        public FormulaPropertiesFromVmArgs build() {
+        }        public FormulaPropertiesFromVmArgs build() {
             return new FormulaPropertiesFromVmArgs(labVmId);
         }
     }

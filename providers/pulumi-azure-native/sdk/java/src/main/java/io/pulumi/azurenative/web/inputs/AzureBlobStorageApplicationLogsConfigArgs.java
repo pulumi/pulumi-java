@@ -98,32 +98,26 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable LogLevel level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
-
         public Builder sasUrl(@Nullable Output<String> sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }
-
         public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = Output.ofNullable(sasUrl);
             return this;
-        }
-        public AzureBlobStorageApplicationLogsConfigArgs build() {
+        }        public AzureBlobStorageApplicationLogsConfigArgs build() {
             return new AzureBlobStorageApplicationLogsConfigArgs(level, retentionInDays, sasUrl);
         }
     }

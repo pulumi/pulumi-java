@@ -275,72 +275,70 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIpAddresses(@Nullable List<SubResourceResponse> publicIpAddresses) {
             this.publicIpAddresses = publicIpAddresses;
             return this;
         }
-
+        public Builder publicIpAddresses(SubResourceResponse... publicIpAddresses) {
+            return publicIpAddresses(List.of(publicIpAddresses));
+        }
         public Builder publicIpPrefixes(@Nullable List<SubResourceResponse> publicIpPrefixes) {
             this.publicIpPrefixes = publicIpPrefixes;
             return this;
         }
-
+        public Builder publicIpPrefixes(SubResourceResponse... publicIpPrefixes) {
+            return publicIpPrefixes(List.of(publicIpPrefixes));
+        }
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder sku(@Nullable NatGatewaySkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder subnets(List<SubResourceResponse> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
+        public Builder subnets(SubResourceResponse... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public NatGatewayResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public NatGatewayResponse build() {
             return new NatGatewayResponse(etag, id, idleTimeoutInMinutes, location, name, provisioningState, publicIpAddresses, publicIpPrefixes, resourceGuid, sku, subnets, tags, type, zones);
         }
     }

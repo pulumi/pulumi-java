@@ -155,72 +155,58 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder peerAsn(@Nullable Output<Double> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder peerAsn(@Nullable Double peerAsn) {
             this.peerAsn = Output.ofNullable(peerAsn);
             return this;
         }
-
         public Builder peerIp(@Nullable Output<String> peerIp) {
             this.peerIp = peerIp;
             return this;
         }
-
         public Builder peerIp(@Nullable String peerIp) {
             this.peerIp = Output.ofNullable(peerIp);
             return this;
         }
-
         public Builder peeringName(@Nullable Output<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
-
         public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Output.ofNullable(peeringName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder virtualRouterName(Output<String> virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
-
         public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Output.of(Objects.requireNonNull(virtualRouterName));
             return this;
-        }
-        public VirtualRouterPeeringArgs build() {
+        }        public VirtualRouterPeeringArgs build() {
             return new VirtualRouterPeeringArgs(id, name, peerAsn, peerIp, peeringName, resourceGroupName, virtualRouterName);
         }
     }

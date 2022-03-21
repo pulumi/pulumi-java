@@ -79,12 +79,10 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
-
         public Builder fileSystem(@Nullable FileSystemHttpLogsConfigResponse fileSystem) {
             this.fileSystem = fileSystem;
             return this;
-        }
-        public HttpLogsConfigResponse build() {
+        }        public HttpLogsConfigResponse build() {
             return new HttpLogsConfigResponse(azureBlobStorage, fileSystem);
         }
     }

@@ -90,17 +90,14 @@ public final class ListStorageAccountKeysArgs extends io.pulumi.resources.Invoke
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListStorageAccountKeysArgs build() {
+        }        public ListStorageAccountKeysArgs build() {
             return new ListStorageAccountKeysArgs(accountName, expand, resourceGroupName);
         }
     }

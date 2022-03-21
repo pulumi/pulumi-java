@@ -54,7 +54,9 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
             this.value = value;
             return this;
         }
-        public GetVirtualNetworkGatewayVpnclientConnectionHealthResult build() {
+        public Builder value(VpnClientConnectionHealthDetailResponse... value) {
+            return value(List.of(value));
+        }        public GetVirtualNetworkGatewayVpnclientConnectionHealthResult build() {
             return new GetVirtualNetworkGatewayVpnclientConnectionHealthResult(value);
         }
     }

@@ -351,97 +351,78 @@ public final class GetSqlVirtualMachineResult {
             this.autoBackupSettings = autoBackupSettings;
             return this;
         }
-
         public Builder autoPatchingSettings(@Nullable AutoPatchingSettingsResponse autoPatchingSettings) {
             this.autoPatchingSettings = autoPatchingSettings;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder keyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings) {
             this.keyVaultCredentialSettings = keyVaultCredentialSettings;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serverConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings) {
             this.serverConfigurationsManagementSettings = serverConfigurationsManagementSettings;
             return this;
         }
-
         public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
-
         public Builder sqlImageSku(@Nullable String sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
-
         public Builder sqlManagement(@Nullable String sqlManagement) {
             this.sqlManagement = sqlManagement;
             return this;
         }
-
         public Builder sqlServerLicenseType(@Nullable String sqlServerLicenseType) {
             this.sqlServerLicenseType = sqlServerLicenseType;
             return this;
         }
-
         public Builder sqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
             this.sqlVirtualMachineGroupResourceId = sqlVirtualMachineGroupResourceId;
             return this;
         }
-
         public Builder storageConfigurationSettings(@Nullable StorageConfigurationSettingsResponse storageConfigurationSettings) {
             this.storageConfigurationSettings = storageConfigurationSettings;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachineResourceId(@Nullable String virtualMachineResourceId) {
             this.virtualMachineResourceId = virtualMachineResourceId;
             return this;
         }
-
         public Builder wsfcDomainCredentials(@Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
             this.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
-        }
-        public GetSqlVirtualMachineResult build() {
+        }        public GetSqlVirtualMachineResult build() {
             return new GetSqlVirtualMachineResult(autoBackupSettings, autoPatchingSettings, id, identity, keyVaultCredentialSettings, location, name, provisioningState, serverConfigurationsManagementSettings, sqlImageOffer, sqlImageSku, sqlManagement, sqlServerLicenseType, sqlVirtualMachineGroupResourceId, storageConfigurationSettings, tags, type, virtualMachineResourceId, wsfcDomainCredentials);
         }
     }

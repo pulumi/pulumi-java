@@ -87,17 +87,14 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
             this.privateLinkScopeId = Objects.requireNonNull(privateLinkScopeId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
-        }
-        public HybridComputePrivateLinkScopePropertiesResponse build() {
+        }        public HybridComputePrivateLinkScopePropertiesResponse build() {
             return new HybridComputePrivateLinkScopePropertiesResponse(privateLinkScopeId, provisioningState, publicNetworkAccess);
         }
     }

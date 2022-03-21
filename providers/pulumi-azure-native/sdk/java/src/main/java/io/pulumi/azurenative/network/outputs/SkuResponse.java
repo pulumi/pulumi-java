@@ -53,8 +53,7 @@ public final class SkuResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(name);
         }
     }

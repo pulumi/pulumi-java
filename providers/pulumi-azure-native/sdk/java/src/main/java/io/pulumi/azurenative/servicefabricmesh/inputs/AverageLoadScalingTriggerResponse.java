@@ -128,27 +128,22 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lowerLoadThreshold(Double lowerLoadThreshold) {
             this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold);
             return this;
         }
-
         public Builder metric(AutoScalingResourceMetricResponse metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder scaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
             this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds);
             return this;
         }
-
         public Builder upperLoadThreshold(Double upperLoadThreshold) {
             this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
             return this;
-        }
-        public AverageLoadScalingTriggerResponse build() {
+        }        public AverageLoadScalingTriggerResponse build() {
             return new AverageLoadScalingTriggerResponse(kind, lowerLoadThreshold, metric, scaleIntervalInSeconds, upperLoadThreshold);
         }
     }

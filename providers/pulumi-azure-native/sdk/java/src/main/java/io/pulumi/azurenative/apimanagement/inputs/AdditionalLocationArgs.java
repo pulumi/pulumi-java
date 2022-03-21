@@ -130,52 +130,45 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
             this.disableGateway = disableGateway;
             return this;
         }
-
         public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = Output.ofNullable(disableGateway);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder sku(Output<ApiManagementServiceSkuPropertiesArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(ApiManagementServiceSkuPropertiesArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = Output.ofNullable(virtualNetworkConfiguration);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public AdditionalLocationArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public AdditionalLocationArgs build() {
             return new AdditionalLocationArgs(disableGateway, location, sku, virtualNetworkConfiguration, zones);
         }
     }

@@ -123,52 +123,42 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
-
         public Builder locationData(@Nullable Output<ResourceLocationDataContractArgs> locationData) {
             this.locationData = locationData;
             return this;
         }
-
         public Builder locationData(@Nullable ResourceLocationDataContractArgs locationData) {
             this.locationData = Output.ofNullable(locationData);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public GatewayArgs build() {
+        }        public GatewayArgs build() {
             return new GatewayArgs(description, gatewayId, locationData, resourceGroupName, serviceName);
         }
     }

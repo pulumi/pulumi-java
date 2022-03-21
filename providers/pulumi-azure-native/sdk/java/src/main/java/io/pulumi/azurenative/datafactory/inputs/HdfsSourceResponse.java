@@ -161,37 +161,30 @@ public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder distcpSettings(@Nullable DistcpSettingsResponse distcpSettings) {
             this.distcpSettings = distcpSettings;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HdfsSourceResponse build() {
+        }        public HdfsSourceResponse build() {
             return new HdfsSourceResponse(disableMetricsCollection, distcpSettings, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
         }
     }

@@ -126,52 +126,42 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs> properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder stepName(@Nullable Output<String> stepName) {
             this.stepName = stepName;
             return this;
         }
-
         public Builder stepName(@Nullable String stepName) {
             this.stepName = Output.ofNullable(stepName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StepArgs build() {
+        }        public StepArgs build() {
             return new StepArgs(location, properties, resourceGroupName, stepName, tags);
         }
     }

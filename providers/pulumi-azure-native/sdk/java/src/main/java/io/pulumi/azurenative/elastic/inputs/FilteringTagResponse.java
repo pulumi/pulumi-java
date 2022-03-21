@@ -94,17 +94,14 @@ public final class FilteringTagResponse extends io.pulumi.resources.InvokeArgs {
             this.action = action;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public FilteringTagResponse build() {
+        }        public FilteringTagResponse build() {
             return new FilteringTagResponse(action, name, value);
         }
     }

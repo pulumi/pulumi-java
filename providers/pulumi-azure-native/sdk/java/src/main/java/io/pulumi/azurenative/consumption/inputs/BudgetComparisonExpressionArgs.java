@@ -96,32 +96,29 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder operator(Output<Either<String,BudgetOperatorType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,BudgetOperatorType> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public BudgetComparisonExpressionArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public BudgetComparisonExpressionArgs build() {
             return new BudgetComparisonExpressionArgs(name, operator, values);
         }
     }

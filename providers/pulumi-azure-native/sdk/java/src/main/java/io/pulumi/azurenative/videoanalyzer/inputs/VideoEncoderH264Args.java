@@ -112,42 +112,34 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
             this.bitrateKbps = bitrateKbps;
             return this;
         }
-
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
             this.bitrateKbps = Output.ofNullable(bitrateKbps);
             return this;
         }
-
         public Builder frameRate(@Nullable Output<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
-
         public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = Output.ofNullable(frameRate);
             return this;
         }
-
         public Builder scale(@Nullable Output<VideoScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
-
         public Builder scale(@Nullable VideoScaleArgs scale) {
             this.scale = Output.ofNullable(scale);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public VideoEncoderH264Args build() {
+        }        public VideoEncoderH264Args build() {
             return new VideoEncoderH264Args(bitrateKbps, frameRate, scale, type);
         }
     }

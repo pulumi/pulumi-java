@@ -213,102 +213,88 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder trainedModelFilePath(Output<Object> trainedModelFilePath) {
             this.trainedModelFilePath = Objects.requireNonNull(trainedModelFilePath);
             return this;
         }
-
         public Builder trainedModelFilePath(Object trainedModelFilePath) {
             this.trainedModelFilePath = Output.of(Objects.requireNonNull(trainedModelFilePath));
             return this;
         }
-
         public Builder trainedModelLinkedServiceName(Output<LinkedServiceReferenceArgs> trainedModelLinkedServiceName) {
             this.trainedModelLinkedServiceName = Objects.requireNonNull(trainedModelLinkedServiceName);
             return this;
         }
-
         public Builder trainedModelLinkedServiceName(LinkedServiceReferenceArgs trainedModelLinkedServiceName) {
             this.trainedModelLinkedServiceName = Output.of(Objects.requireNonNull(trainedModelLinkedServiceName));
             return this;
         }
-
         public Builder trainedModelName(Output<Object> trainedModelName) {
             this.trainedModelName = Objects.requireNonNull(trainedModelName);
             return this;
         }
-
         public Builder trainedModelName(Object trainedModelName) {
             this.trainedModelName = Output.of(Objects.requireNonNull(trainedModelName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public AzureMLUpdateResourceActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public AzureMLUpdateResourceActivityArgs build() {
             return new AzureMLUpdateResourceActivityArgs(dependsOn, description, linkedServiceName, name, policy, trainedModelFilePath, trainedModelLinkedServiceName, trainedModelName, type, userProperties);
         }
     }

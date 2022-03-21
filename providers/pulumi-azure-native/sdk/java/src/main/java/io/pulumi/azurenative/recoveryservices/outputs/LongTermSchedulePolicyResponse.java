@@ -53,8 +53,7 @@ public final class LongTermSchedulePolicyResponse {
         public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
-        }
-        public LongTermSchedulePolicyResponse build() {
+        }        public LongTermSchedulePolicyResponse build() {
             return new LongTermSchedulePolicyResponse(schedulePolicyType);
         }
     }

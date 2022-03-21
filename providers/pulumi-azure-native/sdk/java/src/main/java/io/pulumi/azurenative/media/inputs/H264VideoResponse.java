@@ -178,42 +178,37 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
             this.complexity = complexity;
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder layers(@Nullable List<H264LayerResponse> layers) {
             this.layers = layers;
             return this;
         }
-
+        public Builder layers(H264LayerResponse... layers) {
+            return layers(List.of(layers));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
             this.sceneChangeDetection = sceneChangeDetection;
             return this;
         }
-
         public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
-        }
-        public H264VideoResponse build() {
+        }        public H264VideoResponse build() {
             return new H264VideoResponse(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);
         }
     }

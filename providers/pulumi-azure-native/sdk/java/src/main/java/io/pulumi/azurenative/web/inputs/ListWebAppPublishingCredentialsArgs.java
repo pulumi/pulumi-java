@@ -72,12 +72,10 @@ public final class ListWebAppPublishingCredentialsArgs extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppPublishingCredentialsArgs build() {
+        }        public ListWebAppPublishingCredentialsArgs build() {
             return new ListWebAppPublishingCredentialsArgs(name, resourceGroupName);
         }
     }

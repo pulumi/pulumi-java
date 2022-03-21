@@ -72,12 +72,10 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder userSettingsName(String userSettingsName) {
             this.userSettingsName = Objects.requireNonNull(userSettingsName);
             return this;
-        }
-        public GetUserSettingsWithLocationArgs build() {
+        }        public GetUserSettingsWithLocationArgs build() {
             return new GetUserSettingsWithLocationArgs(location, userSettingsName);
         }
     }

@@ -53,8 +53,7 @@ public final class RunAsCredentialAssociationPropertyResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public RunAsCredentialAssociationPropertyResponse build() {
+        }        public RunAsCredentialAssociationPropertyResponse build() {
             return new RunAsCredentialAssociationPropertyResponse(name);
         }
     }

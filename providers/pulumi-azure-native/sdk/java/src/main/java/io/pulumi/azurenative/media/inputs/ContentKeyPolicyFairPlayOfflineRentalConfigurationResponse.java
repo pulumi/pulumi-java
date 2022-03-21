@@ -72,12 +72,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
             this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
             return this;
         }
-
         public Builder storageDurationSeconds(Double storageDurationSeconds) {
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
-        }
-        public ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse build() {
+        }        public ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse build() {
             return new ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(playbackDurationSeconds, storageDurationSeconds);
         }
     }

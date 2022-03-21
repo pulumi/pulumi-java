@@ -104,22 +104,18 @@ public final class ParameterDefinitionsValueResponseMetadata {
             this.assignPermissions = assignPermissions;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder strongType(@Nullable String strongType) {
             this.strongType = strongType;
             return this;
-        }
-        public ParameterDefinitionsValueResponseMetadata build() {
+        }        public ParameterDefinitionsValueResponseMetadata build() {
             return new ParameterDefinitionsValueResponseMetadata(assignPermissions, description, displayName, strongType);
         }
     }

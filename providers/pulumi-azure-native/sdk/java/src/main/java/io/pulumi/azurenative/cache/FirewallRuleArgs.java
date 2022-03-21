@@ -122,52 +122,42 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
-
         public Builder cacheName(String cacheName) {
             this.cacheName = Output.of(Objects.requireNonNull(cacheName));
             return this;
         }
-
         public Builder endIP(Output<String> endIP) {
             this.endIP = Objects.requireNonNull(endIP);
             return this;
         }
-
         public Builder endIP(String endIP) {
             this.endIP = Output.of(Objects.requireNonNull(endIP));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder startIP(Output<String> startIP) {
             this.startIP = Objects.requireNonNull(startIP);
             return this;
         }
-
         public Builder startIP(String startIP) {
             this.startIP = Output.of(Objects.requireNonNull(startIP));
             return this;
-        }
-        public FirewallRuleArgs build() {
+        }        public FirewallRuleArgs build() {
             return new FirewallRuleArgs(cacheName, endIP, resourceGroupName, ruleName, startIP);
         }
     }

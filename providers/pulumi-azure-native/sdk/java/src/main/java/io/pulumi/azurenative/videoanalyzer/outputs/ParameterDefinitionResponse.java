@@ -71,12 +71,10 @@ public final class ParameterDefinitionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ParameterDefinitionResponse build() {
+        }        public ParameterDefinitionResponse build() {
             return new ParameterDefinitionResponse(name, value);
         }
     }

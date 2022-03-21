@@ -60,8 +60,7 @@ public final class DatasetResponseFolder extends io.pulumi.resources.InvokeArgs 
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DatasetResponseFolder build() {
+        }        public DatasetResponseFolder build() {
             return new DatasetResponseFolder(name);
         }
     }

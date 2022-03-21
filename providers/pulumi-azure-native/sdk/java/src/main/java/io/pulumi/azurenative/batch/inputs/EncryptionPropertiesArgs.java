@@ -79,22 +79,18 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
             this.keySource = keySource;
             return this;
         }
-
         public Builder keySource(@Nullable KeySource keySource) {
             this.keySource = Output.ofNullable(keySource);
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
-        }
-        public EncryptionPropertiesArgs build() {
+        }        public EncryptionPropertiesArgs build() {
             return new EncryptionPropertiesArgs(keySource, keyVaultProperties);
         }
     }

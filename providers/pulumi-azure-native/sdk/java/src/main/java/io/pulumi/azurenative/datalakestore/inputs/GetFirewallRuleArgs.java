@@ -88,17 +88,14 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder firewallRuleName(String firewallRuleName) {
             this.firewallRuleName = Objects.requireNonNull(firewallRuleName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFirewallRuleArgs build() {
+        }        public GetFirewallRuleArgs build() {
             return new GetFirewallRuleArgs(accountName, firewallRuleName, resourceGroupName);
         }
     }

@@ -68,22 +68,21 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
             this.authAppId = authAppId;
             return this;
         }
-
         public Builder authAppId(@Nullable String authAppId) {
             this.authAppId = Output.ofNullable(authAppId);
             return this;
         }
-
         public Builder dataPartitionNames(@Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames) {
             this.dataPartitionNames = dataPartitionNames;
             return this;
         }
-
         public Builder dataPartitionNames(@Nullable List<DataPartitionNamesArgs> dataPartitionNames) {
             this.dataPartitionNames = Output.ofNullable(dataPartitionNames);
             return this;
         }
-        public EnergyServicePropertiesArgs build() {
+        public Builder dataPartitionNames(DataPartitionNamesArgs... dataPartitionNames) {
+            return dataPartitionNames(List.of(dataPartitionNames));
+        }        public EnergyServicePropertiesArgs build() {
             return new EnergyServicePropertiesArgs(authAppId, dataPartitionNames);
         }
     }

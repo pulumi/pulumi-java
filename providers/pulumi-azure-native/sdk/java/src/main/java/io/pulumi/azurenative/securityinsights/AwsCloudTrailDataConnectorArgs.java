@@ -140,62 +140,50 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
             this.awsRoleArn = awsRoleArn;
             return this;
         }
-
         public Builder awsRoleArn(@Nullable String awsRoleArn) {
             this.awsRoleArn = Output.ofNullable(awsRoleArn);
             return this;
         }
-
         public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
-
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Output.ofNullable(dataConnectorId);
             return this;
         }
-
         public Builder dataTypes(@Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
-
         public Builder dataTypes(@Nullable AwsCloudTrailDataConnectorDataTypesArgs dataTypes) {
             this.dataTypes = Output.ofNullable(dataTypes);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public AwsCloudTrailDataConnectorArgs build() {
+        }        public AwsCloudTrailDataConnectorArgs build() {
             return new AwsCloudTrailDataConnectorArgs(awsRoleArn, dataConnectorId, dataTypes, kind, resourceGroupName, workspaceName);
         }
     }

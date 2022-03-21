@@ -238,122 +238,98 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder documentName(@Nullable Output<String> documentName) {
             this.documentName = documentName;
             return this;
         }
-
         public Builder documentName(@Nullable String documentName) {
             this.documentName = Output.ofNullable(documentName);
             return this;
         }
-
         public Builder fileName(@Nullable Output<String> fileName) {
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable String fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
         }
-
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
-
         public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
-
         public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
-
         public Builder schemaType(Either<String,SchemaType> schemaType) {
             this.schemaType = Output.of(Objects.requireNonNull(schemaType));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
-        }
-        public IntegrationAccountSchemaArgs build() {
+        }        public IntegrationAccountSchemaArgs build() {
             return new IntegrationAccountSchemaArgs(content, contentType, documentName, fileName, integrationAccountName, location, metadata, resourceGroupName, schemaName, schemaType, tags, targetNamespace);
         }
     }

@@ -209,102 +209,82 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder autoStorage(@Nullable Output<AutoStorageBasePropertiesArgs> autoStorage) {
             this.autoStorage = autoStorage;
             return this;
         }
-
         public Builder autoStorage(@Nullable AutoStorageBasePropertiesArgs autoStorage) {
             this.autoStorage = Output.ofNullable(autoStorage);
             return this;
         }
-
         public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder identity(@Nullable Output<BatchAccountIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable BatchAccountIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder keyVaultReference(@Nullable Output<KeyVaultReferenceArgs> keyVaultReference) {
             this.keyVaultReference = keyVaultReference;
             return this;
         }
-
         public Builder keyVaultReference(@Nullable KeyVaultReferenceArgs keyVaultReference) {
             this.keyVaultReference = Output.ofNullable(keyVaultReference);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder poolAllocationMode(@Nullable Output<PoolAllocationMode> poolAllocationMode) {
             this.poolAllocationMode = poolAllocationMode;
             return this;
         }
-
         public Builder poolAllocationMode(@Nullable PoolAllocationMode poolAllocationMode) {
             this.poolAllocationMode = Output.ofNullable(poolAllocationMode);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccessType> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable PublicNetworkAccessType publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public BatchAccountArgs build() {
+        }        public BatchAccountArgs build() {
             return new BatchAccountArgs(accountName, autoStorage, encryption, identity, keyVaultReference, location, poolAllocationMode, publicNetworkAccess, resourceGroupName, tags);
         }
     }

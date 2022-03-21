@@ -295,77 +295,68 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
             this.agentConfiguration = agentConfiguration;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
             this.arguments = arguments;
             return this;
         }
-
+        public Builder arguments(ArgumentResponse... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder credentials(@Nullable CredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder dockerFilePath(String dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
-
         public Builder imageNames(@Nullable List<String> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
-
+        public Builder imageNames(String... imageNames) {
+            return imageNames(List.of(imageNames));
+        }
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-
         public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = noCache;
             return this;
         }
-
         public Builder platform(PlatformPropertiesResponse platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DockerBuildRequestResponse build() {
+        }        public DockerBuildRequestResponse build() {
             return new DockerBuildRequestResponse(agentConfiguration, agentPoolName, arguments, credentials, dockerFilePath, imageNames, isArchiveEnabled, isPushEnabled, logTemplate, noCache, platform, sourceLocation, target, timeout, type);
         }
     }

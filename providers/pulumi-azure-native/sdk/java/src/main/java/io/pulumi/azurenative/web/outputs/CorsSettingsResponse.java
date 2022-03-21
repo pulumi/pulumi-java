@@ -79,12 +79,13 @@ public final class CorsSettingsResponse {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder supportCredentials(@Nullable Boolean supportCredentials) {
             this.supportCredentials = supportCredentials;
             return this;
-        }
-        public CorsSettingsResponse build() {
+        }        public CorsSettingsResponse build() {
             return new CorsSettingsResponse(allowedOrigins, supportCredentials);
         }
     }

@@ -54,7 +54,9 @@ public final class UniqueKeyResponse {
             this.paths = paths;
             return this;
         }
-        public UniqueKeyResponse build() {
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }        public UniqueKeyResponse build() {
             return new UniqueKeyResponse(paths);
         }
     }

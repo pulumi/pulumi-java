@@ -102,32 +102,26 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             this.policyType = policyType;
             return this;
         }
-
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
             this.policyType = Output.ofNullable(policyType);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = Output.ofNullable(schedulePolicy);
             return this;
-        }
-        public SubProtectionPolicyArgs build() {
+        }        public SubProtectionPolicyArgs build() {
             return new SubProtectionPolicyArgs(policyType, retentionPolicy, schedulePolicy);
         }
     }

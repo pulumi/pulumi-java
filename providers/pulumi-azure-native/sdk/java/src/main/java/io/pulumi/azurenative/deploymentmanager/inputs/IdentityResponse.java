@@ -77,12 +77,13 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
             this.identityIds = Objects.requireNonNull(identityIds);
             return this;
         }
-
+        public Builder identityIds(String... identityIds) {
+            return identityIds(List.of(identityIds));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public IdentityResponse build() {
+        }        public IdentityResponse build() {
             return new IdentityResponse(identityIds, type);
         }
     }

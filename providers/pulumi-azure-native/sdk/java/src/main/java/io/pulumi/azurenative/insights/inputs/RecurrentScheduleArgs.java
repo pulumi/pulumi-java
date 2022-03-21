@@ -111,42 +111,43 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
         public Builder days(List<String> days) {
             this.days = Output.of(Objects.requireNonNull(days));
             return this;
         }
-
+        public Builder days(String... days) {
+            return days(List.of(days));
+        }
         public Builder hours(Output<List<Integer>> hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder hours(List<Integer> hours) {
             this.hours = Output.of(Objects.requireNonNull(hours));
             return this;
         }
-
+        public Builder hours(Integer... hours) {
+            return hours(List.of(hours));
+        }
         public Builder minutes(Output<List<Integer>> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder minutes(List<Integer> minutes) {
             this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
         }
-
+        public Builder minutes(Integer... minutes) {
+            return minutes(List.of(minutes));
+        }
         public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
-        }
-        public RecurrentScheduleArgs build() {
+        }        public RecurrentScheduleArgs build() {
             return new RecurrentScheduleArgs(days, hours, minutes, timeZone);
         }
     }

@@ -81,22 +81,18 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
             this.assessmentMode = assessmentMode;
             return this;
         }
-
         public Builder assessmentMode(@Nullable Either<String,LinuxPatchAssessmentMode> assessmentMode) {
             this.assessmentMode = Output.ofNullable(assessmentMode);
             return this;
         }
-
         public Builder patchMode(@Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode) {
             this.patchMode = patchMode;
             return this;
         }
-
         public Builder patchMode(@Nullable Either<String,LinuxVMGuestPatchMode> patchMode) {
             this.patchMode = Output.ofNullable(patchMode);
             return this;
-        }
-        public LinuxPatchSettingsArgs build() {
+        }        public LinuxPatchSettingsArgs build() {
             return new LinuxPatchSettingsArgs(assessmentMode, patchMode);
         }
     }

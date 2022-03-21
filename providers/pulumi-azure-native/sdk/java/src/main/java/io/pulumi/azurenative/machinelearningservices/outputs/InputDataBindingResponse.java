@@ -87,17 +87,14 @@ public final class InputDataBindingResponse {
             this.dataId = dataId;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
             this.pathOnCompute = pathOnCompute;
             return this;
-        }
-        public InputDataBindingResponse build() {
+        }        public InputDataBindingResponse build() {
             return new InputDataBindingResponse(dataId, mode, pathOnCompute);
         }
     }

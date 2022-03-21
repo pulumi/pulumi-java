@@ -69,12 +69,10 @@ public final class ListSpatialAnchorsAccountKeysResult {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListSpatialAnchorsAccountKeysResult build() {
+        }        public ListSpatialAnchorsAccountKeysResult build() {
             return new ListSpatialAnchorsAccountKeysResult(primaryKey, secondaryKey);
         }
     }

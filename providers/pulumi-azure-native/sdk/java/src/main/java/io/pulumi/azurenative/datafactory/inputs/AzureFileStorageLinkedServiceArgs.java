@@ -295,152 +295,125 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable AzureKeyVaultSecretReferenceArgs accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder connectionString(@Nullable Output<Object> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder fileShare(@Nullable Output<Object> fileShare) {
             this.fileShare = fileShare;
             return this;
         }
-
         public Builder fileShare(@Nullable Object fileShare) {
             this.fileShare = Output.ofNullable(fileShare);
             return this;
         }
-
         public Builder host(@Nullable Output<Object> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable Object host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder sasToken(@Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
-
         public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceArgs sasToken) {
             this.sasToken = Output.ofNullable(sasToken);
             return this;
         }
-
         public Builder sasUri(@Nullable Output<Object> sasUri) {
             this.sasUri = sasUri;
             return this;
         }
-
         public Builder sasUri(@Nullable Object sasUri) {
             this.sasUri = Output.ofNullable(sasUri);
             return this;
         }
-
         public Builder snapshot(@Nullable Output<Object> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder snapshot(@Nullable Object snapshot) {
             this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userId(@Nullable Output<Object> userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userId(@Nullable Object userId) {
             this.userId = Output.ofNullable(userId);
             return this;
-        }
-        public AzureFileStorageLinkedServiceArgs build() {
+        }        public AzureFileStorageLinkedServiceArgs build() {
             return new AzureFileStorageLinkedServiceArgs(accountKey, annotations, connectVia, connectionString, description, encryptedCredential, fileShare, host, parameters, password, sasToken, sasUri, snapshot, type, userId);
         }
     }

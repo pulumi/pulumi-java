@@ -90,17 +90,14 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder select(@Nullable String select) {
             this.select = select;
             return this;
-        }
-        public GetIoMAMPolicyByNameArgs build() {
+        }        public GetIoMAMPolicyByNameArgs build() {
             return new GetIoMAMPolicyByNameArgs(hostName, policyName, select);
         }
     }

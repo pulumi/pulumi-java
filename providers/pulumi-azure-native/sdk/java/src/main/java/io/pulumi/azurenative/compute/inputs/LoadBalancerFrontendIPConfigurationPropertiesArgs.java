@@ -95,32 +95,26 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable Output<SubResourceArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder publicIPAddress(@Nullable SubResourceArgs publicIPAddress) {
             this.publicIPAddress = Output.ofNullable(publicIPAddress);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public LoadBalancerFrontendIPConfigurationPropertiesArgs build() {
+        }        public LoadBalancerFrontendIPConfigurationPropertiesArgs build() {
             return new LoadBalancerFrontendIPConfigurationPropertiesArgs(privateIPAddress, publicIPAddress, subnet);
         }
     }

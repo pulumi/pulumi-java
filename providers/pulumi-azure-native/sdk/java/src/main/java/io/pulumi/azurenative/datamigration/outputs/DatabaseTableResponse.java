@@ -70,12 +70,10 @@ public final class DatabaseTableResponse {
             this.hasRows = Objects.requireNonNull(hasRows);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DatabaseTableResponse build() {
+        }        public DatabaseTableResponse build() {
             return new DatabaseTableResponse(hasRows, name);
         }
     }

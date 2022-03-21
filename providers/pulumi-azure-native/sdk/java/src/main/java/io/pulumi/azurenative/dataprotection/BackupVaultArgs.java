@@ -156,72 +156,58 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder identity(@Nullable Output<DppIdentityDetailsArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable DppIdentityDetailsArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vaultName(@Nullable Output<String> vaultName) {
             this.vaultName = vaultName;
             return this;
         }
-
         public Builder vaultName(@Nullable String vaultName) {
             this.vaultName = Output.ofNullable(vaultName);
             return this;
-        }
-        public BackupVaultArgs build() {
+        }        public BackupVaultArgs build() {
             return new BackupVaultArgs(eTag, identity, location, properties, resourceGroupName, tags, vaultName);
         }
     }

@@ -81,22 +81,18 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder pipelineReference(@Nullable Output<PipelineReferenceArgs> pipelineReference) {
             this.pipelineReference = pipelineReference;
             return this;
         }
-
         public Builder pipelineReference(@Nullable PipelineReferenceArgs pipelineReference) {
             this.pipelineReference = Output.ofNullable(pipelineReference);
             return this;
-        }
-        public TriggerPipelineReferenceArgs build() {
+        }        public TriggerPipelineReferenceArgs build() {
             return new TriggerPipelineReferenceArgs(parameters, pipelineReference);
         }
     }

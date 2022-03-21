@@ -433,122 +433,104 @@ public final class GetClusterResult {
             this.dataIngestionUri = Objects.requireNonNull(dataIngestionUri);
             return this;
         }
-
         public Builder enableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
             this.enableDiskEncryption = enableDiskEncryption;
             return this;
         }
-
         public Builder enableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
             this.enableDoubleEncryption = enableDoubleEncryption;
             return this;
         }
-
         public Builder enablePurge(@Nullable Boolean enablePurge) {
             this.enablePurge = enablePurge;
             return this;
         }
-
         public Builder enableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
             this.enableStreamingIngest = enableStreamingIngest;
             return this;
         }
-
         public Builder engineType(@Nullable String engineType) {
             this.engineType = engineType;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder languageExtensions(LanguageExtensionsListResponse languageExtensions) {
             this.languageExtensions = Objects.requireNonNull(languageExtensions);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder optimizedAutoscale(@Nullable OptimizedAutoscaleResponse optimizedAutoscale) {
             this.optimizedAutoscale = optimizedAutoscale;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(AzureSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateReason(String stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder trustedExternalTenants(@Nullable List<TrustedExternalTenantResponse> trustedExternalTenants) {
             this.trustedExternalTenants = trustedExternalTenants;
             return this;
         }
-
+        public Builder trustedExternalTenants(TrustedExternalTenantResponse... trustedExternalTenants) {
+            return trustedExternalTenants(List.of(trustedExternalTenants));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetClusterResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetClusterResult build() {
             return new GetClusterResult(dataIngestionUri, enableDiskEncryption, enableDoubleEncryption, enablePurge, enableStreamingIngest, engineType, etag, id, identity, keyVaultProperties, languageExtensions, location, name, optimizedAutoscale, provisioningState, sku, state, stateReason, tags, trustedExternalTenants, type, uri, virtualNetworkConfiguration, zones);
         }
     }

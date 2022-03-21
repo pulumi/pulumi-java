@@ -78,12 +78,10 @@ public final class AutoscaleCapacityResponse extends io.pulumi.resources.InvokeA
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
-        }
-        public AutoscaleCapacityResponse build() {
+        }        public AutoscaleCapacityResponse build() {
             return new AutoscaleCapacityResponse(maxInstanceCount, minInstanceCount);
         }
     }

@@ -690,202 +690,171 @@ public final class GetVirtualMachineResult {
             this.allowClaim = allowClaim;
             return this;
         }
-
         public Builder applicableSchedule(ApplicableScheduleResponse applicableSchedule) {
             this.applicableSchedule = Objects.requireNonNull(applicableSchedule);
             return this;
         }
-
         public Builder artifactDeploymentStatus(ArtifactDeploymentStatusPropertiesResponse artifactDeploymentStatus) {
             this.artifactDeploymentStatus = Objects.requireNonNull(artifactDeploymentStatus);
             return this;
         }
-
         public Builder artifacts(@Nullable List<ArtifactInstallPropertiesResponse> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
-
+        public Builder artifacts(ArtifactInstallPropertiesResponse... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder computeId(String computeId) {
             this.computeId = Objects.requireNonNull(computeId);
             return this;
         }
-
         public Builder computeVm(ComputeVmPropertiesResponse computeVm) {
             this.computeVm = Objects.requireNonNull(computeVm);
             return this;
         }
-
         public Builder createdByUser(String createdByUser) {
             this.createdByUser = Objects.requireNonNull(createdByUser);
             return this;
         }
-
         public Builder createdByUserId(String createdByUserId) {
             this.createdByUserId = Objects.requireNonNull(createdByUserId);
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder customImageId(@Nullable String customImageId) {
             this.customImageId = customImageId;
             return this;
         }
-
         public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesResponse> dataDiskParameters) {
             this.dataDiskParameters = dataDiskParameters;
             return this;
         }
-
+        public Builder dataDiskParameters(DataDiskPropertiesResponse... dataDiskParameters) {
+            return dataDiskParameters(List.of(dataDiskParameters));
+        }
         public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
             this.disallowPublicIpAddress = disallowPublicIpAddress;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder galleryImageReference(@Nullable GalleryImageReferenceResponse galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
             this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
             return this;
         }
-
         public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
-
         public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
             this.labVirtualNetworkId = labVirtualNetworkId;
             return this;
         }
-
         public Builder lastKnownPowerState(String lastKnownPowerState) {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterface(@Nullable NetworkInterfacePropertiesResponse networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder ownerObjectId(@Nullable String ownerObjectId) {
             this.ownerObjectId = ownerObjectId;
             return this;
         }
-
         public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
             this.ownerUserPrincipalName = ownerUserPrincipalName;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder planId(@Nullable String planId) {
             this.planId = planId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterResponse> scheduleParameters) {
             this.scheduleParameters = scheduleParameters;
             return this;
         }
-
+        public Builder scheduleParameters(ScheduleCreationParameterResponse... scheduleParameters) {
+            return scheduleParameters(List.of(scheduleParameters));
+        }
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
-
         public Builder sshKey(@Nullable String sshKey) {
             this.sshKey = sshKey;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder virtualMachineCreationSource(String virtualMachineCreationSource) {
             this.virtualMachineCreationSource = Objects.requireNonNull(virtualMachineCreationSource);
             return this;
-        }
-        public GetVirtualMachineResult build() {
+        }        public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(allowClaim, applicableSchedule, artifactDeploymentStatus, artifacts, computeId, computeVm, createdByUser, createdByUserId, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, fqdn, galleryImageReference, id, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, lastKnownPowerState, location, name, networkInterface, notes, osType, ownerObjectId, ownerUserPrincipalName, password, planId, provisioningState, scheduleParameters, size, sshKey, storageType, tags, type, uniqueIdentifier, userName, virtualMachineCreationSource);
         }
     }

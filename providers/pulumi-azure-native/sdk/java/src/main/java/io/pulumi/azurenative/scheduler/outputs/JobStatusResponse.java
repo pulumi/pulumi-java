@@ -118,27 +118,22 @@ public final class JobStatusResponse {
             this.executionCount = Objects.requireNonNull(executionCount);
             return this;
         }
-
         public Builder failureCount(Integer failureCount) {
             this.failureCount = Objects.requireNonNull(failureCount);
             return this;
         }
-
         public Builder faultedCount(Integer faultedCount) {
             this.faultedCount = Objects.requireNonNull(faultedCount);
             return this;
         }
-
         public Builder lastExecutionTime(String lastExecutionTime) {
             this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
             return this;
         }
-
         public Builder nextExecutionTime(String nextExecutionTime) {
             this.nextExecutionTime = Objects.requireNonNull(nextExecutionTime);
             return this;
-        }
-        public JobStatusResponse build() {
+        }        public JobStatusResponse build() {
             return new JobStatusResponse(executionCount, failureCount, faultedCount, lastExecutionTime, nextExecutionTime);
         }
     }

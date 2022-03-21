@@ -72,12 +72,10 @@ public final class ListUpgradableVersionDetailsArgs extends io.pulumi.resources.
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListUpgradableVersionDetailsArgs build() {
+        }        public ListUpgradableVersionDetailsArgs build() {
             return new ListUpgradableVersionDetailsArgs(monitorName, resourceGroupName);
         }
     }

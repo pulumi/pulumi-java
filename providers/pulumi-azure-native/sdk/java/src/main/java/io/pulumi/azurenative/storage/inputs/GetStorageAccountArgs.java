@@ -90,17 +90,14 @@ public final class GetStorageAccountArgs extends io.pulumi.resources.InvokeArgs 
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetStorageAccountArgs build() {
+        }        public GetStorageAccountArgs build() {
             return new GetStorageAccountArgs(accountName, expand, resourceGroupName);
         }
     }

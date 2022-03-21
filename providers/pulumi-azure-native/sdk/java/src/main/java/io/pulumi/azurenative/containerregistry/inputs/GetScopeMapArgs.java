@@ -88,17 +88,14 @@ public final class GetScopeMapArgs extends io.pulumi.resources.InvokeArgs {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder scopeMapName(String scopeMapName) {
             this.scopeMapName = Objects.requireNonNull(scopeMapName);
             return this;
-        }
-        public GetScopeMapArgs build() {
+        }        public GetScopeMapArgs build() {
             return new GetScopeMapArgs(registryName, resourceGroupName, scopeMapName);
         }
     }

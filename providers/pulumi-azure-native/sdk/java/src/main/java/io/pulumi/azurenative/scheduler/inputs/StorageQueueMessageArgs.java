@@ -106,42 +106,34 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = Output.ofNullable(queueName);
             return this;
         }
-
         public Builder sasToken(@Nullable Output<String> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
-
         public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = Output.ofNullable(sasToken);
             return this;
         }
-
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = Output.ofNullable(storageAccount);
             return this;
-        }
-        public StorageQueueMessageArgs build() {
+        }        public StorageQueueMessageArgs build() {
             return new StorageQueueMessageArgs(message, queueName, sasToken, storageAccount);
         }
     }

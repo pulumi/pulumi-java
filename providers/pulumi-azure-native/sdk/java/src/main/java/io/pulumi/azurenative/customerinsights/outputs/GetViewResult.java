@@ -200,52 +200,42 @@ public final class GetViewResult {
             this.changed = Objects.requireNonNull(changed);
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder definition(String definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder viewName(String viewName) {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
-        }
-        public GetViewResult build() {
+        }        public GetViewResult build() {
             return new GetViewResult(changed, created, definition, displayName, id, name, tenantId, type, userId, viewName);
         }
     }

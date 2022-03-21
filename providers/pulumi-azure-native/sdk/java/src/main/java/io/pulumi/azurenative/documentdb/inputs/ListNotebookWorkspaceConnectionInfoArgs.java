@@ -88,17 +88,14 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends io.pulumi.res
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder notebookWorkspaceName(String notebookWorkspaceName) {
             this.notebookWorkspaceName = Objects.requireNonNull(notebookWorkspaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListNotebookWorkspaceConnectionInfoArgs build() {
+        }        public ListNotebookWorkspaceConnectionInfoArgs build() {
             return new ListNotebookWorkspaceConnectionInfoArgs(accountName, notebookWorkspaceName, resourceGroupName);
         }
     }

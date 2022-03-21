@@ -104,22 +104,18 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
-        }
-        public ListTopicKeysArgs build() {
+        }        public ListTopicKeysArgs build() {
             return new ListTopicKeysArgs(authorizationRuleName, namespaceName, resourceGroupName, topicName);
         }
     }

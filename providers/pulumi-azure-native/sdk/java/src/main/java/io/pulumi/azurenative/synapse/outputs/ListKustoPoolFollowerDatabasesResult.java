@@ -54,7 +54,9 @@ public final class ListKustoPoolFollowerDatabasesResult {
             this.value = value;
             return this;
         }
-        public ListKustoPoolFollowerDatabasesResult build() {
+        public Builder value(FollowerDatabaseDefinitionResponse... value) {
+            return value(List.of(value));
+        }        public ListKustoPoolFollowerDatabasesResult build() {
             return new ListKustoPoolFollowerDatabasesResult(value);
         }
     }

@@ -72,12 +72,13 @@ public final class VirtualHubRouteResponse {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
-        }
-        public VirtualHubRouteResponse build() {
+        }        public VirtualHubRouteResponse build() {
             return new VirtualHubRouteResponse(addressPrefixes, nextHopIpAddress);
         }
     }

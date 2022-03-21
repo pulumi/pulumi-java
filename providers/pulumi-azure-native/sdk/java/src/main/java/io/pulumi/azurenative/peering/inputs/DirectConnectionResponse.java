@@ -209,52 +209,42 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
-
         public Builder bgpSession(@Nullable BgpSessionResponse bgpSession) {
             this.bgpSession = bgpSession;
             return this;
         }
-
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
-
         public Builder connectionState(String connectionState) {
             this.connectionState = Objects.requireNonNull(connectionState);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder microsoftTrackingId(String microsoftTrackingId) {
             this.microsoftTrackingId = Objects.requireNonNull(microsoftTrackingId);
             return this;
         }
-
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
-
         public Builder provisionedBandwidthInMbps(Integer provisionedBandwidthInMbps) {
             this.provisionedBandwidthInMbps = Objects.requireNonNull(provisionedBandwidthInMbps);
             return this;
         }
-
         public Builder sessionAddressProvider(@Nullable String sessionAddressProvider) {
             this.sessionAddressProvider = sessionAddressProvider;
             return this;
         }
-
         public Builder useForPeeringService(@Nullable Boolean useForPeeringService) {
             this.useForPeeringService = useForPeeringService;
             return this;
-        }
-        public DirectConnectionResponse build() {
+        }        public DirectConnectionResponse build() {
             return new DirectConnectionResponse(bandwidthInMbps, bgpSession, connectionIdentifier, connectionState, errorMessage, microsoftTrackingId, peeringDBFacilityId, provisionedBandwidthInMbps, sessionAddressProvider, useForPeeringService);
         }
     }

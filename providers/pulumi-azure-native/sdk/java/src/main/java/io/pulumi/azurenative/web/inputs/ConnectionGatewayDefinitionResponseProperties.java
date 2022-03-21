@@ -157,37 +157,33 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
             this.backendUri = backendUri;
             return this;
         }
-
         public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation) {
             this.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
-
         public Builder contactInformation(@Nullable List<String> contactInformation) {
             this.contactInformation = contactInformation;
             return this;
         }
-
+        public Builder contactInformation(String... contactInformation) {
+            return contactInformation(List.of(contactInformation));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder machineName(@Nullable String machineName) {
             this.machineName = machineName;
             return this;
         }
-
         public Builder status(@Nullable Object status) {
             this.status = status;
             return this;
-        }
-        public ConnectionGatewayDefinitionResponseProperties build() {
+        }        public ConnectionGatewayDefinitionResponseProperties build() {
             return new ConnectionGatewayDefinitionResponseProperties(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);
         }
     }

@@ -127,52 +127,42 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.backupParameters = backupParameters;
             return this;
         }
-
         public Builder backupParameters(@Nullable AzureBackupParamsArgs backupParameters) {
             this.backupParameters = Output.ofNullable(backupParameters);
             return this;
         }
-
         public Builder dataStore(Output<DataStoreInfoBaseArgs> dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
-
         public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
             this.dataStore = Output.of(Objects.requireNonNull(dataStore));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public Builder trigger(Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public Builder trigger(Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs> trigger) {
             this.trigger = Output.of(Objects.requireNonNull(trigger));
             return this;
-        }
-        public AzureBackupRuleArgs build() {
+        }        public AzureBackupRuleArgs build() {
             return new AzureBackupRuleArgs(backupParameters, dataStore, name, objectType, trigger);
         }
     }

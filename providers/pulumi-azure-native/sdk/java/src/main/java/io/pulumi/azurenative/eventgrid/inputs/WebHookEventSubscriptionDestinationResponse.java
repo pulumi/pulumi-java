@@ -160,37 +160,30 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
             this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
             return this;
         }
-
         public Builder azureActiveDirectoryTenantId(@Nullable String azureActiveDirectoryTenantId) {
             this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
             return this;
         }
-
         public Builder endpointBaseUrl(String endpointBaseUrl) {
             this.endpointBaseUrl = Objects.requireNonNull(endpointBaseUrl);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }
-
         public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
             this.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
-
         public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
-        }
-        public WebHookEventSubscriptionDestinationResponse build() {
+        }        public WebHookEventSubscriptionDestinationResponse build() {
             return new WebHookEventSubscriptionDestinationResponse(azureActiveDirectoryApplicationIdOrUri, azureActiveDirectoryTenantId, endpointBaseUrl, endpointType, endpointUrl, maxEventsPerBatch, preferredBatchSizeInKilobytes);
         }
     }

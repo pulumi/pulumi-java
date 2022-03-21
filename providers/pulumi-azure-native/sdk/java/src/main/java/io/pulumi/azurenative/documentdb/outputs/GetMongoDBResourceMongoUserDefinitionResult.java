@@ -185,47 +185,41 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
             this.customData = customData;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder mechanisms(@Nullable String mechanisms) {
             this.mechanisms = mechanisms;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }
-
+        public Builder roles(RoleResponse... roles) {
+            return roles(List.of(roles));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public GetMongoDBResourceMongoUserDefinitionResult build() {
+        }        public GetMongoDBResourceMongoUserDefinitionResult build() {
             return new GetMongoDBResourceMongoUserDefinitionResult(customData, databaseName, id, mechanisms, name, password, roles, type, userName);
         }
     }

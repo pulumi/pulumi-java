@@ -110,22 +110,18 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
             this.city = city;
             return this;
         }
-
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
-
         public Builder district(@Nullable String district) {
             this.district = district;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ResourceLocationDataContractResponse build() {
+        }        public ResourceLocationDataContractResponse build() {
             return new ResourceLocationDataContractResponse(city, countryOrRegion, district, name);
         }
     }

@@ -122,27 +122,25 @@ public final class ServiceUnitResponse {
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder steps(@Nullable List<RolloutStepResponse> steps) {
             this.steps = steps;
             return this;
         }
-
+        public Builder steps(RolloutStepResponse... steps) {
+            return steps(List.of(steps));
+        }
         public Builder targetResourceGroup(String targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
-        }
-        public ServiceUnitResponse build() {
+        }        public ServiceUnitResponse build() {
             return new ServiceUnitResponse(artifacts, deploymentMode, name, steps, targetResourceGroup);
         }
     }

@@ -88,17 +88,14 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder computePolicyName(String computePolicyName) {
             this.computePolicyName = Objects.requireNonNull(computePolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetComputePolicyArgs build() {
+        }        public GetComputePolicyArgs build() {
             return new GetComputePolicyArgs(accountName, computePolicyName, resourceGroupName);
         }
     }

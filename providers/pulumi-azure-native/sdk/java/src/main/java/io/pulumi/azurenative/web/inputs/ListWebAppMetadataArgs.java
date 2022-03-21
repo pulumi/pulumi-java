@@ -72,12 +72,10 @@ public final class ListWebAppMetadataArgs extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppMetadataArgs build() {
+        }        public ListWebAppMetadataArgs build() {
             return new ListWebAppMetadataArgs(name, resourceGroupName);
         }
     }

@@ -167,42 +167,34 @@ public final class GetRegisteredPrefixResult {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeringServicePrefixKey(String peeringServicePrefixKey) {
             this.peeringServicePrefixKey = Objects.requireNonNull(peeringServicePrefixKey);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefixValidationState(String prefixValidationState) {
             this.prefixValidationState = Objects.requireNonNull(prefixValidationState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRegisteredPrefixResult build() {
+        }        public GetRegisteredPrefixResult build() {
             return new GetRegisteredPrefixResult(errorMessage, id, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }
     }

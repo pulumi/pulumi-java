@@ -92,17 +92,14 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder posixCompliant(String posixCompliant) {
             this.posixCompliant = Objects.requireNonNull(posixCompliant);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public KubernetesRoleStorageClassInfoResponse build() {
+        }        public KubernetesRoleStorageClassInfoResponse build() {
             return new KubernetesRoleStorageClassInfoResponse(name, posixCompliant, type);
         }
     }

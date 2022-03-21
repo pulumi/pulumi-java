@@ -88,17 +88,14 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder targetVersion(String targetVersion) {
             this.targetVersion = Objects.requireNonNull(targetVersion);
             return this;
-        }
-        public ListListUpgradableVersionPostArgs build() {
+        }        public ListListUpgradableVersionPostArgs build() {
             return new ListListUpgradableVersionPostArgs(clusterName, resourceGroupName, targetVersion);
         }
     }

@@ -106,42 +106,34 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = Output.ofNullable(userId);
             return this;
-        }
-        public GroupUserArgs build() {
+        }        public GroupUserArgs build() {
             return new GroupUserArgs(groupId, resourceGroupName, serviceName, userId);
         }
     }

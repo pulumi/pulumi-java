@@ -296,152 +296,125 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(Output<Either<String,ServiceNowAuthenticationType>> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(Either<String,ServiceNowAuthenticationType> authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder clientId(@Nullable Output<Object> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable Object clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder endpoint(Output<Object> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(Object endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
             return this;
         }
-
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
-
         public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = Output.ofNullable(useHostVerification);
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = Output.ofNullable(usePeerVerification);
             return this;
         }
-
         public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public ServiceNowLinkedServiceArgs build() {
+        }        public ServiceNowLinkedServiceArgs build() {
             return new ServiceNowLinkedServiceArgs(annotations, authenticationType, clientId, clientSecret, connectVia, description, encryptedCredential, endpoint, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }
     }

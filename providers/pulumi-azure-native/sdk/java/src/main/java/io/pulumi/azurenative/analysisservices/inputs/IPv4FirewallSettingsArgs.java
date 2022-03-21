@@ -80,22 +80,21 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
             this.enablePowerBIService = enablePowerBIService;
             return this;
         }
-
         public Builder enablePowerBIService(@Nullable Boolean enablePowerBIService) {
             this.enablePowerBIService = Output.ofNullable(enablePowerBIService);
             return this;
         }
-
         public Builder firewallRules(@Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public Builder firewallRules(@Nullable List<IPv4FirewallRuleArgs> firewallRules) {
             this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
-        public IPv4FirewallSettingsArgs build() {
+        public Builder firewallRules(IPv4FirewallRuleArgs... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }        public IPv4FirewallSettingsArgs build() {
             return new IPv4FirewallSettingsArgs(enablePowerBIService, firewallRules);
         }
     }

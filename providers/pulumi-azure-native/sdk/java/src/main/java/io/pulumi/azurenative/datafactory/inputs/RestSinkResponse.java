@@ -240,62 +240,50 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder httpCompressionType(@Nullable Object httpCompressionType) {
             this.httpCompressionType = httpCompressionType;
             return this;
         }
-
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
             this.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder requestInterval(@Nullable Object requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
-
         public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
-        }
-        public RestSinkResponse build() {
+        }        public RestSinkResponse build() {
             return new RestSinkResponse(additionalHeaders, disableMetricsCollection, httpCompressionType, httpRequestTimeout, maxConcurrentConnections, requestInterval, requestMethod, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }
     }

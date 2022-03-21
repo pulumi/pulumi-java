@@ -254,57 +254,46 @@ public final class IpSecurityRestrictionResponse {
             this.action = action;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,List<String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }
-
         public Builder subnetTrafficTag(@Nullable Integer subnetTrafficTag) {
             this.subnetTrafficTag = subnetTrafficTag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder vnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
             this.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;
         }
-
         public Builder vnetTrafficTag(@Nullable Integer vnetTrafficTag) {
             this.vnetTrafficTag = vnetTrafficTag;
             return this;
-        }
-        public IpSecurityRestrictionResponse build() {
+        }        public IpSecurityRestrictionResponse build() {
             return new IpSecurityRestrictionResponse(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);
         }
     }

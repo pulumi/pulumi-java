@@ -72,12 +72,10 @@ public final class GetManagedClusterArgs extends io.pulumi.resources.InvokeArgs 
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedClusterArgs build() {
+        }        public GetManagedClusterArgs build() {
             return new GetManagedClusterArgs(clusterName, resourceGroupName);
         }
     }

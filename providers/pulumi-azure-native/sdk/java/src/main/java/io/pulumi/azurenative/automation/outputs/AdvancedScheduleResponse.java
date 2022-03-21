@@ -89,17 +89,23 @@ public final class AdvancedScheduleResponse {
             this.monthDays = monthDays;
             return this;
         }
-
+        public Builder monthDays(Integer... monthDays) {
+            return monthDays(List.of(monthDays));
+        }
         public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
-
+        public Builder monthlyOccurrences(AdvancedScheduleMonthlyOccurrenceResponse... monthlyOccurrences) {
+            return monthlyOccurrences(List.of(monthlyOccurrences));
+        }
         public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
-        public AdvancedScheduleResponse build() {
+        public Builder weekDays(String... weekDays) {
+            return weekDays(List.of(weekDays));
+        }        public AdvancedScheduleResponse build() {
             return new AdvancedScheduleResponse(monthDays, monthlyOccurrences, weekDays);
         }
     }

@@ -106,42 +106,34 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
             this.associationName = associationName;
             return this;
         }
-
         public Builder associationName(@Nullable String associationName) {
             this.associationName = Output.ofNullable(associationName);
             return this;
         }
-
         public Builder dataCollectionRuleId(@Nullable Output<String> dataCollectionRuleId) {
             this.dataCollectionRuleId = dataCollectionRuleId;
             return this;
         }
-
         public Builder dataCollectionRuleId(@Nullable String dataCollectionRuleId) {
             this.dataCollectionRuleId = Output.ofNullable(dataCollectionRuleId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
-        }
-        public DataCollectionRuleAssociationArgs build() {
+        }        public DataCollectionRuleAssociationArgs build() {
             return new DataCollectionRuleAssociationArgs(associationName, dataCollectionRuleId, description, resourceUri);
         }
     }

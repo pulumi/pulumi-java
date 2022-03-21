@@ -79,22 +79,18 @@ public final class EventHubEventSubscriptionDestinationArgs extends io.pulumi.re
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public EventHubEventSubscriptionDestinationArgs build() {
+        }        public EventHubEventSubscriptionDestinationArgs build() {
             return new EventHubEventSubscriptionDestinationArgs(endpointType, resourceId);
         }
     }

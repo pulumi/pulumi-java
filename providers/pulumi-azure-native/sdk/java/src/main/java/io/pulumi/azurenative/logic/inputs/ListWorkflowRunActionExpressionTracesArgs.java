@@ -104,22 +104,18 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends io.pulumi.r
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder runName(String runName) {
             this.runName = Objects.requireNonNull(runName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public ListWorkflowRunActionExpressionTracesArgs build() {
+        }        public ListWorkflowRunActionExpressionTracesArgs build() {
             return new ListWorkflowRunActionExpressionTracesArgs(actionName, resourceGroupName, runName, workflowName);
         }
     }

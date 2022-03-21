@@ -80,22 +80,18 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder markdown(@Nullable Output<String> markdown) {
             this.markdown = markdown;
             return this;
         }
-
         public Builder markdown(@Nullable String markdown) {
             this.markdown = Output.ofNullable(markdown);
             return this;
-        }
-        public LabSupportPropertiesArgs build() {
+        }        public LabSupportPropertiesArgs build() {
             return new LabSupportPropertiesArgs(enabled, markdown);
         }
     }

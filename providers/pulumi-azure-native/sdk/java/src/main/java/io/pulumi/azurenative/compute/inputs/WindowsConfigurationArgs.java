@@ -147,62 +147,53 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             this.additionalUnattendContent = additionalUnattendContent;
             return this;
         }
-
         public Builder additionalUnattendContent(@Nullable List<AdditionalUnattendContentArgs> additionalUnattendContent) {
             this.additionalUnattendContent = Output.ofNullable(additionalUnattendContent);
             return this;
         }
-
+        public Builder additionalUnattendContent(AdditionalUnattendContentArgs... additionalUnattendContent) {
+            return additionalUnattendContent(List.of(additionalUnattendContent));
+        }
         public Builder enableAutomaticUpdates(@Nullable Output<Boolean> enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
-
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = Output.ofNullable(enableAutomaticUpdates);
             return this;
         }
-
         public Builder patchSettings(@Nullable Output<PatchSettingsArgs> patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
-
         public Builder patchSettings(@Nullable PatchSettingsArgs patchSettings) {
             this.patchSettings = Output.ofNullable(patchSettings);
             return this;
         }
-
         public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
-
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = Output.ofNullable(provisionVMAgent);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
-
         public Builder winRM(@Nullable Output<WinRMConfigurationArgs> winRM) {
             this.winRM = winRM;
             return this;
         }
-
         public Builder winRM(@Nullable WinRMConfigurationArgs winRM) {
             this.winRM = Output.ofNullable(winRM);
             return this;
-        }
-        public WindowsConfigurationArgs build() {
+        }        public WindowsConfigurationArgs build() {
             return new WindowsConfigurationArgs(additionalUnattendContent, enableAutomaticUpdates, patchSettings, provisionVMAgent, timeZone, winRM);
         }
     }

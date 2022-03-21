@@ -255,67 +255,57 @@ public final class GetIoTRoleResult {
             this.computeResource = computeResource;
             return this;
         }
-
         public Builder hostPlatform(String hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
-
         public Builder hostPlatformType(String hostPlatformType) {
             this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ioTDeviceDetails(IoTDeviceInfoResponse ioTDeviceDetails) {
             this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
             return this;
         }
-
         public Builder ioTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo) {
             this.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
             return this;
         }
-
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoResponse ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder roleStatus(String roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
-
         public Builder shareMappings(@Nullable List<MountPointMapResponse> shareMappings) {
             this.shareMappings = shareMappings;
             return this;
         }
-
+        public Builder shareMappings(MountPointMapResponse... shareMappings) {
+            return shareMappings(List.of(shareMappings));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIoTRoleResult build() {
+        }        public GetIoTRoleResult build() {
             return new GetIoTRoleResult(computeResource, hostPlatform, hostPlatformType, id, ioTDeviceDetails, ioTEdgeAgentInfo, ioTEdgeDeviceDetails, kind, name, roleStatus, shareMappings, systemData, type);
         }
     }

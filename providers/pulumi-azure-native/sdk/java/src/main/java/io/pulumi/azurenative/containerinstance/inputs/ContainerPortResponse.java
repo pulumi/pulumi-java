@@ -79,12 +79,10 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public ContainerPortResponse build() {
+        }        public ContainerPortResponse build() {
             return new ContainerPortResponse(port, protocol);
         }
     }

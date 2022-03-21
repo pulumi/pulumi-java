@@ -145,62 +145,50 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder isLocal(@Nullable Output<Boolean> isLocal) {
             this.isLocal = isLocal;
             return this;
         }
-
         public Builder isLocal(@Nullable Boolean isLocal) {
             this.isLocal = Output.ofNullable(isLocal);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public ComputeConfigurationArgs build() {
+        }        public ComputeConfigurationArgs build() {
             return new ComputeConfigurationArgs(instanceCount, instanceType, isLocal, location, properties, target);
         }
     }

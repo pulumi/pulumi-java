@@ -220,57 +220,46 @@ public final class GetIotConnectorResult {
             this.deviceMapping = deviceMapping;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ServiceManagedIdentityResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder ingestionEndpointConfiguration(@Nullable IotEventHubIngestionEndpointConfigurationResponse ingestionEndpointConfiguration) {
             this.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIotConnectorResult build() {
+        }        public GetIotConnectorResult build() {
             return new GetIotConnectorResult(deviceMapping, etag, id, identity, ingestionEndpointConfiguration, location, name, provisioningState, systemData, tags, type);
         }
     }

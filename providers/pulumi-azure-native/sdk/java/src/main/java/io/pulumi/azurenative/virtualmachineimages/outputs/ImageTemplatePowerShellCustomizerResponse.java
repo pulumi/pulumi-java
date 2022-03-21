@@ -172,42 +172,40 @@ public final class ImageTemplatePowerShellCustomizerResponse {
             this.inline = inline;
             return this;
         }
-
+        public Builder inline(String... inline) {
+            return inline(List.of(inline));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder runAsSystem(@Nullable Boolean runAsSystem) {
             this.runAsSystem = runAsSystem;
             return this;
         }
-
         public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = runElevated;
             return this;
         }
-
         public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
-
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder validExitCodes(@Nullable List<Integer> validExitCodes) {
             this.validExitCodes = validExitCodes;
             return this;
         }
-        public ImageTemplatePowerShellCustomizerResponse build() {
+        public Builder validExitCodes(Integer... validExitCodes) {
+            return validExitCodes(List.of(validExitCodes));
+        }        public ImageTemplatePowerShellCustomizerResponse build() {
             return new ImageTemplatePowerShellCustomizerResponse(inline, name, runAsSystem, runElevated, scriptUri, sha256Checksum, type, validExitCodes);
         }
     }

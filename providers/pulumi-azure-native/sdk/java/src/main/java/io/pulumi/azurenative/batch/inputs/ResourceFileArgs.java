@@ -138,62 +138,50 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
             this.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
-
         public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
             this.autoStorageContainerName = Output.ofNullable(autoStorageContainerName);
             return this;
         }
-
         public Builder blobPrefix(@Nullable Output<String> blobPrefix) {
             this.blobPrefix = blobPrefix;
             return this;
         }
-
         public Builder blobPrefix(@Nullable String blobPrefix) {
             this.blobPrefix = Output.ofNullable(blobPrefix);
             return this;
         }
-
         public Builder fileMode(@Nullable Output<String> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
-
         public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = Output.ofNullable(fileMode);
             return this;
         }
-
         public Builder filePath(@Nullable Output<String> filePath) {
             this.filePath = filePath;
             return this;
         }
-
         public Builder filePath(@Nullable String filePath) {
             this.filePath = Output.ofNullable(filePath);
             return this;
         }
-
         public Builder httpUrl(@Nullable Output<String> httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
-
         public Builder httpUrl(@Nullable String httpUrl) {
             this.httpUrl = Output.ofNullable(httpUrl);
             return this;
         }
-
         public Builder storageContainerUrl(@Nullable Output<String> storageContainerUrl) {
             this.storageContainerUrl = storageContainerUrl;
             return this;
         }
-
         public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
             this.storageContainerUrl = Output.ofNullable(storageContainerUrl);
             return this;
-        }
-        public ResourceFileArgs build() {
+        }        public ResourceFileArgs build() {
             return new ResourceFileArgs(autoStorageContainerName, blobPrefix, fileMode, filePath, httpUrl, storageContainerUrl);
         }
     }

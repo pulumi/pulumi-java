@@ -119,22 +119,18 @@ public final class MabProtectionPolicyResponse extends io.pulumi.resources.Invok
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
-        }
-        public MabProtectionPolicyResponse build() {
+        }        public MabProtectionPolicyResponse build() {
             return new MabProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy);
         }
     }

@@ -79,22 +79,21 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyList(@Nullable Output<List<String>> policyList) {
             this.policyList = policyList;
             return this;
         }
-
         public Builder policyList(@Nullable List<String> policyList) {
             this.policyList = Output.ofNullable(policyList);
             return this;
         }
-        public ScheduleArgs build() {
+        public Builder policyList(String... policyList) {
+            return policyList(List.of(policyList));
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(name, policyList);
         }
     }

@@ -521,282 +521,226 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.autoPauseDelay = autoPauseDelay;
             return this;
         }
-
         public Builder autoPauseDelay(@Nullable Integer autoPauseDelay) {
             this.autoPauseDelay = Output.ofNullable(autoPauseDelay);
             return this;
         }
-
         public Builder catalogCollation(@Nullable Output<Either<String,CatalogCollationType>> catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
-
         public Builder catalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
             this.catalogCollation = Output.ofNullable(catalogCollation);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
             this.createMode = Output.ofNullable(createMode);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder elasticPoolId(@Nullable Output<String> elasticPoolId) {
             this.elasticPoolId = elasticPoolId;
             return this;
         }
-
         public Builder elasticPoolId(@Nullable String elasticPoolId) {
             this.elasticPoolId = Output.ofNullable(elasticPoolId);
             return this;
         }
-
         public Builder highAvailabilityReplicaCount(@Nullable Output<Integer> highAvailabilityReplicaCount) {
             this.highAvailabilityReplicaCount = highAvailabilityReplicaCount;
             return this;
         }
-
         public Builder highAvailabilityReplicaCount(@Nullable Integer highAvailabilityReplicaCount) {
             this.highAvailabilityReplicaCount = Output.ofNullable(highAvailabilityReplicaCount);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<Either<String,DatabaseLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable Either<String,DatabaseLicenseType> licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder longTermRetentionBackupResourceId(@Nullable Output<String> longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
-
         public Builder longTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = Output.ofNullable(longTermRetentionBackupResourceId);
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
             return this;
         }
-
         public Builder minCapacity(@Nullable Output<Double> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
-
         public Builder minCapacity(@Nullable Double minCapacity) {
             this.minCapacity = Output.ofNullable(minCapacity);
             return this;
         }
-
         public Builder readScale(@Nullable Output<Either<String,DatabaseReadScale>> readScale) {
             this.readScale = readScale;
             return this;
         }
-
         public Builder readScale(@Nullable Either<String,DatabaseReadScale> readScale) {
             this.readScale = Output.ofNullable(readScale);
             return this;
         }
-
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
-
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
             this.recoverableDatabaseId = Output.ofNullable(recoverableDatabaseId);
             return this;
         }
-
         public Builder recoveryServicesRecoveryPointId(@Nullable Output<String> recoveryServicesRecoveryPointId) {
             this.recoveryServicesRecoveryPointId = recoveryServicesRecoveryPointId;
             return this;
         }
-
         public Builder recoveryServicesRecoveryPointId(@Nullable String recoveryServicesRecoveryPointId) {
             this.recoveryServicesRecoveryPointId = Output.ofNullable(recoveryServicesRecoveryPointId);
             return this;
         }
-
         public Builder requestedBackupStorageRedundancy(@Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy) {
             this.requestedBackupStorageRedundancy = requestedBackupStorageRedundancy;
             return this;
         }
-
         public Builder requestedBackupStorageRedundancy(@Nullable Either<String,RequestedBackupStorageRedundancy> requestedBackupStorageRedundancy) {
             this.requestedBackupStorageRedundancy = Output.ofNullable(requestedBackupStorageRedundancy);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restorableDroppedDatabaseId(@Nullable Output<String> restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
-
         public Builder restorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = Output.ofNullable(restorableDroppedDatabaseId);
             return this;
         }
-
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
-
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
-
         public Builder sampleName(@Nullable Output<Either<String,SampleName>> sampleName) {
             this.sampleName = sampleName;
             return this;
         }
-
         public Builder sampleName(@Nullable Either<String,SampleName> sampleName) {
             this.sampleName = Output.ofNullable(sampleName);
             return this;
         }
-
         public Builder secondaryType(@Nullable Output<Either<String,SecondaryType>> secondaryType) {
             this.secondaryType = secondaryType;
             return this;
         }
-
         public Builder secondaryType(@Nullable Either<String,SecondaryType> secondaryType) {
             this.secondaryType = Output.ofNullable(secondaryType);
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder sourceDatabaseDeletionDate(@Nullable Output<String> sourceDatabaseDeletionDate) {
             this.sourceDatabaseDeletionDate = sourceDatabaseDeletionDate;
             return this;
         }
-
         public Builder sourceDatabaseDeletionDate(@Nullable String sourceDatabaseDeletionDate) {
             this.sourceDatabaseDeletionDate = Output.ofNullable(sourceDatabaseDeletionDate);
             return this;
         }
-
         public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
-
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
             this.sourceDatabaseId = Output.ofNullable(sourceDatabaseId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
-        }
-        public DatabaseArgs build() {
+        }        public DatabaseArgs build() {
             return new DatabaseArgs(autoPauseDelay, catalogCollation, collation, createMode, databaseName, elasticPoolId, highAvailabilityReplicaCount, licenseType, location, longTermRetentionBackupResourceId, maintenanceConfigurationId, maxSizeBytes, minCapacity, readScale, recoverableDatabaseId, recoveryServicesRecoveryPointId, requestedBackupStorageRedundancy, resourceGroupName, restorableDroppedDatabaseId, restorePointInTime, sampleName, secondaryType, serverName, sku, sourceDatabaseDeletionDate, sourceDatabaseId, tags, zoneRedundant);
         }
     }

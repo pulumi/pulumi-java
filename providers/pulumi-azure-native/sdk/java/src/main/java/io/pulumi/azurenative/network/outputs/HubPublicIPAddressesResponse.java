@@ -73,12 +73,13 @@ public final class HubPublicIPAddressesResponse {
             this.addresses = addresses;
             return this;
         }
-
+        public Builder addresses(AzureFirewallPublicIPAddressResponse... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
-        }
-        public HubPublicIPAddressesResponse build() {
+        }        public HubPublicIPAddressesResponse build() {
             return new HubPublicIPAddressesResponse(addresses, count);
         }
     }

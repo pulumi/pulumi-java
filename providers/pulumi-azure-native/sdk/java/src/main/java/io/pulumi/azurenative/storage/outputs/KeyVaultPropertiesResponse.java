@@ -119,27 +119,22 @@ public final class KeyVaultPropertiesResponse {
             this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
-        }
-        public KeyVaultPropertiesResponse build() {
+        }        public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(currentVersionedKeyIdentifier, keyName, keyVaultUri, keyVersion, lastKeyRotationTimestamp);
         }
     }

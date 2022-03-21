@@ -54,7 +54,9 @@ public final class ListDatabasePrincipalsResult {
             this.value = value;
             return this;
         }
-        public ListDatabasePrincipalsResult build() {
+        public Builder value(DatabasePrincipalResponse... value) {
+            return value(List.of(value));
+        }        public ListDatabasePrincipalsResult build() {
             return new ListDatabasePrincipalsResult(value);
         }
     }

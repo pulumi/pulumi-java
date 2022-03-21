@@ -80,12 +80,10 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
             this.copyAfter = Objects.requireNonNull(copyAfter);
             return this;
         }
-
         public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
-        }
-        public TargetCopySettingResponse build() {
+        }        public TargetCopySettingResponse build() {
             return new TargetCopySettingResponse(copyAfter, dataStore);
         }
     }

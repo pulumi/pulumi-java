@@ -88,17 +88,14 @@ public final class GetScheduledAlertRuleArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetScheduledAlertRuleArgs build() {
+        }        public GetScheduledAlertRuleArgs build() {
             return new GetScheduledAlertRuleArgs(resourceGroupName, ruleId, workspaceName);
         }
     }

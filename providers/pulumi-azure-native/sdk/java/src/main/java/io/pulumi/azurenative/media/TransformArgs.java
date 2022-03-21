@@ -124,52 +124,45 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder outputs(Output<List<TransformOutputArgs>> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
         public Builder outputs(List<TransformOutputArgs> outputs) {
             this.outputs = Output.of(Objects.requireNonNull(outputs));
             return this;
         }
-
+        public Builder outputs(TransformOutputArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder transformName(@Nullable Output<String> transformName) {
             this.transformName = transformName;
             return this;
         }
-
         public Builder transformName(@Nullable String transformName) {
             this.transformName = Output.ofNullable(transformName);
             return this;
-        }
-        public TransformArgs build() {
+        }        public TransformArgs build() {
             return new TransformArgs(accountName, description, outputs, resourceGroupName, transformName);
         }
     }

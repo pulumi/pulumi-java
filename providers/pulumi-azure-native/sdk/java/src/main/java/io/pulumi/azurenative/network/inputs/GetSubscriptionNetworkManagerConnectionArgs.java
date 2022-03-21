@@ -54,8 +54,7 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends io.pulumi
         public Builder networkManagerConnectionName(String networkManagerConnectionName) {
             this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName);
             return this;
-        }
-        public GetSubscriptionNetworkManagerConnectionArgs build() {
+        }        public GetSubscriptionNetworkManagerConnectionArgs build() {
             return new GetSubscriptionNetworkManagerConnectionArgs(networkManagerConnectionName);
         }
     }

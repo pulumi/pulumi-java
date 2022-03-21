@@ -56,12 +56,13 @@ public final class NotificationEndpointResponse {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder notificationDestination(@Nullable String notificationDestination) {
             this.notificationDestination = notificationDestination;
             return this;
-        }
-        public NotificationEndpointResponse build() {
+        }        public NotificationEndpointResponse build() {
             return new NotificationEndpointResponse(locations, notificationDestination);
         }
     }

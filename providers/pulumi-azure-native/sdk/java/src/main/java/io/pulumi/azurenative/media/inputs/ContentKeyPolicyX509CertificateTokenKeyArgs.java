@@ -78,22 +78,18 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder rawBody(Output<String> rawBody) {
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }
-
         public Builder rawBody(String rawBody) {
             this.rawBody = Output.of(Objects.requireNonNull(rawBody));
             return this;
-        }
-        public ContentKeyPolicyX509CertificateTokenKeyArgs build() {
+        }        public ContentKeyPolicyX509CertificateTokenKeyArgs build() {
             return new ContentKeyPolicyX509CertificateTokenKeyArgs(odataType, rawBody);
         }
     }

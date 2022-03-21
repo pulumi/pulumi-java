@@ -114,42 +114,34 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osType(@Nullable Output<Either<String,OperatingSystemTypes>> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable Either<String,OperatingSystemTypes> osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
             this.vhd = vhd;
             return this;
         }
-
         public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
             this.vhd = Output.ofNullable(vhd);
             return this;
-        }
-        public OsDiskArgs build() {
+        }        public OsDiskArgs build() {
             return new OsDiskArgs(diskSizeGB, name, osType, vhd);
         }
     }

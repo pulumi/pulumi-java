@@ -129,52 +129,45 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             this.backupItemType = backupItemType;
             return this;
         }
-
         public Builder backupItemType(@Nullable Either<String,BackupItemType> backupItemType) {
             this.backupItemType = Output.ofNullable(backupItemType);
             return this;
         }
-
         public Builder backupItems(@Nullable Output<List<String>> backupItems) {
             this.backupItems = backupItems;
             return this;
         }
-
         public Builder backupItems(@Nullable List<String> backupItems) {
             this.backupItems = Output.ofNullable(backupItems);
             return this;
         }
-
+        public Builder backupItems(String... backupItems) {
+            return backupItems(List.of(backupItems));
+        }
         public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
-
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = Output.ofNullable(lastBackupStatus);
             return this;
         }
-
         public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
-        }
-        public MabContainerExtendedInfoArgs build() {
+        }        public MabContainerExtendedInfoArgs build() {
             return new MabContainerExtendedInfoArgs(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);
         }
     }

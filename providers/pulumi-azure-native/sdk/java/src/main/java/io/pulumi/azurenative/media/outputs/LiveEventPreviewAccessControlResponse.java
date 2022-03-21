@@ -53,8 +53,7 @@ public final class LiveEventPreviewAccessControlResponse {
         public Builder ip(@Nullable IPAccessControlResponse ip) {
             this.ip = ip;
             return this;
-        }
-        public LiveEventPreviewAccessControlResponse build() {
+        }        public LiveEventPreviewAccessControlResponse build() {
             return new LiveEventPreviewAccessControlResponse(ip);
         }
     }

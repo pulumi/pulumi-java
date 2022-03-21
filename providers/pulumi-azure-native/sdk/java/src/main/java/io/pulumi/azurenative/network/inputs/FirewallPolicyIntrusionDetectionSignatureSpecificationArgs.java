@@ -80,22 +80,18 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public FirewallPolicyIntrusionDetectionSignatureSpecificationArgs build() {
+        }        public FirewallPolicyIntrusionDetectionSignatureSpecificationArgs build() {
             return new FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(id, mode);
         }
     }

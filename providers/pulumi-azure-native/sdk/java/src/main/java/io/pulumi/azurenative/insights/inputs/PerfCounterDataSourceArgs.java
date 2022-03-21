@@ -119,42 +119,40 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
             this.counterSpecifiers = counterSpecifiers;
             return this;
         }
-
         public Builder counterSpecifiers(@Nullable List<String> counterSpecifiers) {
             this.counterSpecifiers = Output.ofNullable(counterSpecifiers);
             return this;
         }
-
+        public Builder counterSpecifiers(String... counterSpecifiers) {
+            return counterSpecifiers(List.of(counterSpecifiers));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder samplingFrequencyInSeconds(@Nullable Output<Integer> samplingFrequencyInSeconds) {
             this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
             return this;
         }
-
         public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
             this.samplingFrequencyInSeconds = Output.ofNullable(samplingFrequencyInSeconds);
             return this;
         }
-
         public Builder streams(@Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
-
         public Builder streams(@Nullable List<Either<String,KnownPerfCounterDataSourceStreams>> streams) {
             this.streams = Output.ofNullable(streams);
             return this;
         }
-        public PerfCounterDataSourceArgs build() {
+        public Builder streams(Either<String,KnownPerfCounterDataSourceStreams>... streams) {
+            return streams(List.of(streams));
+        }        public PerfCounterDataSourceArgs build() {
             return new PerfCounterDataSourceArgs(counterSpecifiers, name, samplingFrequencyInSeconds, streams);
         }
     }

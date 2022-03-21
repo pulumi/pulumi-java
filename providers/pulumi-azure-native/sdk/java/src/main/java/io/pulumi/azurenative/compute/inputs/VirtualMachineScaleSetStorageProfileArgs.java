@@ -97,32 +97,29 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
             this.dataDisks = dataDisks;
             return this;
         }
-
         public Builder dataDisks(@Nullable List<VirtualMachineScaleSetDataDiskArgs> dataDisks) {
             this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
-
+        public Builder dataDisks(VirtualMachineScaleSetDataDiskArgs... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
             this.imageReference = imageReference;
             return this;
         }
-
         public Builder imageReference(@Nullable ImageReferenceArgs imageReference) {
             this.imageReference = Output.ofNullable(imageReference);
             return this;
         }
-
         public Builder osDisk(@Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk) {
             this.osDisk = osDisk;
             return this;
         }
-
         public Builder osDisk(@Nullable VirtualMachineScaleSetOSDiskArgs osDisk) {
             this.osDisk = Output.ofNullable(osDisk);
             return this;
-        }
-        public VirtualMachineScaleSetStorageProfileArgs build() {
+        }        public VirtualMachineScaleSetStorageProfileArgs build() {
             return new VirtualMachineScaleSetStorageProfileArgs(dataDisks, imageReference, osDisk);
         }
     }

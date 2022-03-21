@@ -96,32 +96,26 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
-
         public Builder revisionName(@Nullable Output<String> revisionName) {
             this.revisionName = revisionName;
             return this;
         }
-
         public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = Output.ofNullable(revisionName);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public TrafficWeightArgs build() {
+        }        public TrafficWeightArgs build() {
             return new TrafficWeightArgs(latestRevision, revisionName, weight);
         }
     }

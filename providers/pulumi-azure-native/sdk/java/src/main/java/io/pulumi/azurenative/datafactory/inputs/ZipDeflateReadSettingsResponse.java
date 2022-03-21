@@ -80,12 +80,10 @@ public final class ZipDeflateReadSettingsResponse extends io.pulumi.resources.In
             this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ZipDeflateReadSettingsResponse build() {
+        }        public ZipDeflateReadSettingsResponse build() {
             return new ZipDeflateReadSettingsResponse(preserveZipFileNameAsFolder, type);
         }
     }

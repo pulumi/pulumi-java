@@ -470,132 +470,109 @@ public final class AzureIaaSVMProtectedItemResponse extends io.pulumi.resources.
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
-
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
-
         public Builder extendedInfo(@Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder extendedProperties(@Nullable ExtendedPropertiesResponse extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthDetails(@Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails) {
             this.healthDetails = healthDetails;
             return this;
         }
-
+        public Builder healthDetails(AzureIaaSVMHealthDetailsResponse... healthDetails) {
+            return healthDetails(List.of(healthDetails));
+        }
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
-
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
-
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
-
         public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
             this.kpisHealths = kpisHealths;
             return this;
         }
-
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
-
         public Builder lastBackupTime(@Nullable String lastBackupTime) {
             this.lastBackupTime = lastBackupTime;
             return this;
         }
-
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder protectedItemDataId(@Nullable String protectedItemDataId) {
             this.protectedItemDataId = protectedItemDataId;
             return this;
         }
-
         public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
-
         public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
-
         public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
-
         public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
-        }
-        public AzureIaaSVMProtectedItemResponse build() {
+        }        public AzureIaaSVMProtectedItemResponse build() {
             return new AzureIaaSVMProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, extendedProperties, friendlyName, healthDetails, healthStatus, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemDataId, protectedItemType, protectionState, protectionStatus, sourceResourceId, virtualMachineId, workloadType);
         }
     }

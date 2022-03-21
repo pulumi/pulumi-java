@@ -79,22 +79,21 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder routes(Output<List<HttpRouteConfigArgs>> routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-
         public Builder routes(List<HttpRouteConfigArgs> routes) {
             this.routes = Output.of(Objects.requireNonNull(routes));
             return this;
         }
-        public HttpHostConfigArgs build() {
+        public Builder routes(HttpRouteConfigArgs... routes) {
+            return routes(List.of(routes));
+        }        public HttpHostConfigArgs build() {
             return new HttpHostConfigArgs(name, routes);
         }
     }

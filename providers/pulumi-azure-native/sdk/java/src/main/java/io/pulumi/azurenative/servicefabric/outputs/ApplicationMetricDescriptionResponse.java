@@ -124,22 +124,18 @@ public final class ApplicationMetricDescriptionResponse {
             this.maximumCapacity = maximumCapacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder reservationCapacity(@Nullable Double reservationCapacity) {
             this.reservationCapacity = reservationCapacity;
             return this;
         }
-
         public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
-        }
-        public ApplicationMetricDescriptionResponse build() {
+        }        public ApplicationMetricDescriptionResponse build() {
             return new ApplicationMetricDescriptionResponse(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
         }
     }

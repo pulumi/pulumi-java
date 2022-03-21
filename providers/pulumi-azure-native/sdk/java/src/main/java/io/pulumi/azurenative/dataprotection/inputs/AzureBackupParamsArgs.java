@@ -78,22 +78,18 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
-
         public Builder backupType(String backupType) {
             this.backupType = Output.of(Objects.requireNonNull(backupType));
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
-        }
-        public AzureBackupParamsArgs build() {
+        }        public AzureBackupParamsArgs build() {
             return new AzureBackupParamsArgs(backupType, objectType);
         }
     }

@@ -72,12 +72,10 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
             this.ledgerName = Objects.requireNonNull(ledgerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLedgerArgs build() {
+        }        public GetLedgerArgs build() {
             return new GetLedgerArgs(ledgerName, resourceGroupName);
         }
     }

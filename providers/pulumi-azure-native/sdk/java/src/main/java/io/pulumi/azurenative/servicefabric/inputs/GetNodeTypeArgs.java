@@ -88,17 +88,14 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder nodeTypeName(String nodeTypeName) {
             this.nodeTypeName = Objects.requireNonNull(nodeTypeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNodeTypeArgs build() {
+        }        public GetNodeTypeArgs build() {
             return new GetNodeTypeArgs(clusterName, nodeTypeName, resourceGroupName);
         }
     }

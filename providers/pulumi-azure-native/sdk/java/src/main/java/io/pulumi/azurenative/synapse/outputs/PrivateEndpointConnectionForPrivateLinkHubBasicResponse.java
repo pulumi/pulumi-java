@@ -105,22 +105,18 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public PrivateEndpointConnectionForPrivateLinkHubBasicResponse build() {
+        }        public PrivateEndpointConnectionForPrivateLinkHubBasicResponse build() {
             return new PrivateEndpointConnectionForPrivateLinkHubBasicResponse(id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }
     }

@@ -88,17 +88,14 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
             this.description = description;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public EnterpriseKnowledgeGraphPropertiesResponse build() {
+        }        public EnterpriseKnowledgeGraphPropertiesResponse build() {
             return new EnterpriseKnowledgeGraphPropertiesResponse(description, metadata, provisioningState);
         }
     }

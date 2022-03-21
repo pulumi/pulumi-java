@@ -77,22 +77,18 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder emailAddress(String emailAddress) {
             this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public AzureAppPushReceiverArgs build() {
+        }        public AzureAppPushReceiverArgs build() {
             return new AzureAppPushReceiverArgs(emailAddress, name);
         }
     }

@@ -123,52 +123,42 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder privateEndpointConnectionProxyId(@Nullable Output<String> privateEndpointConnectionProxyId) {
             this.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
             return this;
         }
-
         public Builder privateEndpointConnectionProxyId(@Nullable String privateEndpointConnectionProxyId) {
             this.privateEndpointConnectionProxyId = Output.ofNullable(privateEndpointConnectionProxyId);
             return this;
         }
-
         public Builder remotePrivateEndpoint(@Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint) {
             this.remotePrivateEndpoint = remotePrivateEndpoint;
             return this;
         }
-
         public Builder remotePrivateEndpoint(@Nullable RemotePrivateEndpointArgs remotePrivateEndpoint) {
             this.remotePrivateEndpoint = Output.ofNullable(remotePrivateEndpoint);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public PrivateEndpointConnectionProxyArgs build() {
+        }        public PrivateEndpointConnectionProxyArgs build() {
             return new PrivateEndpointConnectionProxyArgs(accountName, privateEndpointConnectionProxyId, remotePrivateEndpoint, resourceGroupName, status);
         }
     }

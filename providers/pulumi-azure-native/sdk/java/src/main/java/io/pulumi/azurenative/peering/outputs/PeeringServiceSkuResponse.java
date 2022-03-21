@@ -53,8 +53,7 @@ public final class PeeringServiceSkuResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public PeeringServiceSkuResponse build() {
+        }        public PeeringServiceSkuResponse build() {
             return new PeeringServiceSkuResponse(name);
         }
     }

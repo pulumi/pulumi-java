@@ -495,142 +495,126 @@ public final class RecommendedActionResponse {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder errorDetails(RecommendedActionErrorInfoResponse errorDetails) {
             this.errorDetails = Objects.requireNonNull(errorDetails);
             return this;
         }
-
         public Builder estimatedImpact(List<RecommendedActionImpactRecordResponse> estimatedImpact) {
             this.estimatedImpact = Objects.requireNonNull(estimatedImpact);
             return this;
         }
-
+        public Builder estimatedImpact(RecommendedActionImpactRecordResponse... estimatedImpact) {
+            return estimatedImpact(List.of(estimatedImpact));
+        }
         public Builder executeActionDuration(String executeActionDuration) {
             this.executeActionDuration = Objects.requireNonNull(executeActionDuration);
             return this;
         }
-
         public Builder executeActionInitiatedBy(String executeActionInitiatedBy) {
             this.executeActionInitiatedBy = Objects.requireNonNull(executeActionInitiatedBy);
             return this;
         }
-
         public Builder executeActionInitiatedTime(String executeActionInitiatedTime) {
             this.executeActionInitiatedTime = Objects.requireNonNull(executeActionInitiatedTime);
             return this;
         }
-
         public Builder executeActionStartTime(String executeActionStartTime) {
             this.executeActionStartTime = Objects.requireNonNull(executeActionStartTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder implementationDetails(RecommendedActionImplementationInfoResponse implementationDetails) {
             this.implementationDetails = Objects.requireNonNull(implementationDetails);
             return this;
         }
-
         public Builder isArchivedAction(Boolean isArchivedAction) {
             this.isArchivedAction = Objects.requireNonNull(isArchivedAction);
             return this;
         }
-
         public Builder isExecutableAction(Boolean isExecutableAction) {
             this.isExecutableAction = Objects.requireNonNull(isExecutableAction);
             return this;
         }
-
         public Builder isRevertableAction(Boolean isRevertableAction) {
             this.isRevertableAction = Objects.requireNonNull(isRevertableAction);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastRefresh(String lastRefresh) {
             this.lastRefresh = Objects.requireNonNull(lastRefresh);
             return this;
         }
-
         public Builder linkedObjects(List<String> linkedObjects) {
             this.linkedObjects = Objects.requireNonNull(linkedObjects);
             return this;
         }
-
+        public Builder linkedObjects(String... linkedObjects) {
+            return linkedObjects(List.of(linkedObjects));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder observedImpact(List<RecommendedActionImpactRecordResponse> observedImpact) {
             this.observedImpact = Objects.requireNonNull(observedImpact);
             return this;
         }
-
+        public Builder observedImpact(RecommendedActionImpactRecordResponse... observedImpact) {
+            return observedImpact(List.of(observedImpact));
+        }
         public Builder recommendationReason(String recommendationReason) {
             this.recommendationReason = Objects.requireNonNull(recommendationReason);
             return this;
         }
-
         public Builder revertActionDuration(String revertActionDuration) {
             this.revertActionDuration = Objects.requireNonNull(revertActionDuration);
             return this;
         }
-
         public Builder revertActionInitiatedBy(String revertActionInitiatedBy) {
             this.revertActionInitiatedBy = Objects.requireNonNull(revertActionInitiatedBy);
             return this;
         }
-
         public Builder revertActionInitiatedTime(String revertActionInitiatedTime) {
             this.revertActionInitiatedTime = Objects.requireNonNull(revertActionInitiatedTime);
             return this;
         }
-
         public Builder revertActionStartTime(String revertActionStartTime) {
             this.revertActionStartTime = Objects.requireNonNull(revertActionStartTime);
             return this;
         }
-
         public Builder score(Integer score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }
-
         public Builder state(RecommendedActionStateInfoResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder timeSeries(List<RecommendedActionMetricInfoResponse> timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
+        public Builder timeSeries(RecommendedActionMetricInfoResponse... timeSeries) {
+            return timeSeries(List.of(timeSeries));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder validSince(String validSince) {
             this.validSince = Objects.requireNonNull(validSince);
             return this;
-        }
-        public RecommendedActionResponse build() {
+        }        public RecommendedActionResponse build() {
             return new RecommendedActionResponse(details, errorDetails, estimatedImpact, executeActionDuration, executeActionInitiatedBy, executeActionInitiatedTime, executeActionStartTime, id, implementationDetails, isArchivedAction, isExecutableAction, isRevertableAction, kind, lastRefresh, linkedObjects, location, name, observedImpact, recommendationReason, revertActionDuration, revertActionInitiatedBy, revertActionInitiatedTime, revertActionStartTime, score, state, timeSeries, type, validSince);
         }
     }

@@ -72,12 +72,10 @@ public final class GetPartnerNamespaceArgs extends io.pulumi.resources.InvokeArg
             this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPartnerNamespaceArgs build() {
+        }        public GetPartnerNamespaceArgs build() {
             return new GetPartnerNamespaceArgs(partnerNamespaceName, resourceGroupName);
         }
     }

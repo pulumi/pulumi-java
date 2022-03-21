@@ -111,42 +111,37 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
             this.publicIPs = publicIPs;
             return this;
         }
-
         public Builder publicIPs(@Nullable List<String> publicIPs) {
             this.publicIPs = Output.ofNullable(publicIPs);
             return this;
         }
-
+        public Builder publicIPs(String... publicIPs) {
+            return publicIPs(List.of(publicIPs));
+        }
         public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder vNetId(@Nullable Output<String> vNetId) {
             this.vNetId = vNetId;
             return this;
         }
-
         public Builder vNetId(@Nullable String vNetId) {
             this.vNetId = Output.ofNullable(vNetId);
             return this;
-        }
-        public IntegrationRuntimeVNetPropertiesArgs build() {
+        }        public IntegrationRuntimeVNetPropertiesArgs build() {
             return new IntegrationRuntimeVNetPropertiesArgs(publicIPs, subnet, subnetId, vNetId);
         }
     }

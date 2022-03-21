@@ -53,8 +53,7 @@ public final class RunbookAssociationPropertyResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public RunbookAssociationPropertyResponse build() {
+        }        public RunbookAssociationPropertyResponse build() {
             return new RunbookAssociationPropertyResponse(name);
         }
     }

@@ -96,32 +96,26 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable LoginScopesArgs login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder registration(@Nullable Output<ClientRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder registration(@Nullable ClientRegistrationArgs registration) {
             this.registration = Output.ofNullable(registration);
             return this;
-        }
-        public GitHubArgs build() {
+        }        public GitHubArgs build() {
             return new GitHubArgs(enabled, login, registration);
         }
     }

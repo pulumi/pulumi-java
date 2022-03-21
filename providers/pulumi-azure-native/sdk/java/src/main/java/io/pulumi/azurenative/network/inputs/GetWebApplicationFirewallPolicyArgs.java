@@ -72,12 +72,10 @@ public final class GetWebApplicationFirewallPolicyArgs extends io.pulumi.resourc
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebApplicationFirewallPolicyArgs build() {
+        }        public GetWebApplicationFirewallPolicyArgs build() {
             return new GetWebApplicationFirewallPolicyArgs(policyName, resourceGroupName);
         }
     }

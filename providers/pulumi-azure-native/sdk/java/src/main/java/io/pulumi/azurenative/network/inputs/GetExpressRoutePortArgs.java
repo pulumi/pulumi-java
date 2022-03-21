@@ -72,12 +72,10 @@ public final class GetExpressRoutePortArgs extends io.pulumi.resources.InvokeArg
             this.expressRoutePortName = Objects.requireNonNull(expressRoutePortName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExpressRoutePortArgs build() {
+        }        public GetExpressRoutePortArgs build() {
             return new GetExpressRoutePortArgs(expressRoutePortName, resourceGroupName);
         }
     }

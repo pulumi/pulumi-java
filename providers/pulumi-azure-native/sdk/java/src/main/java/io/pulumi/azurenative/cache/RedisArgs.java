@@ -291,152 +291,125 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             this.enableNonSslPort = enableNonSslPort;
             return this;
         }
-
         public Builder enableNonSslPort(@Nullable Boolean enableNonSslPort) {
             this.enableNonSslPort = Output.ofNullable(enableNonSslPort);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable Output<Either<String,TlsVersion>> minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable Either<String,TlsVersion> minimumTlsVersion) {
             this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder redisConfiguration(@Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration) {
             this.redisConfiguration = redisConfiguration;
             return this;
         }
-
         public Builder redisConfiguration(@Nullable RedisCommonPropertiesRedisConfigurationArgs redisConfiguration) {
             this.redisConfiguration = Output.ofNullable(redisConfiguration);
             return this;
         }
-
         public Builder replicasPerMaster(@Nullable Output<Integer> replicasPerMaster) {
             this.replicasPerMaster = replicasPerMaster;
             return this;
         }
-
         public Builder replicasPerMaster(@Nullable Integer replicasPerMaster) {
             this.replicasPerMaster = Output.ofNullable(replicasPerMaster);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
-
         public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder staticIP(@Nullable Output<String> staticIP) {
             this.staticIP = staticIP;
             return this;
         }
-
         public Builder staticIP(@Nullable String staticIP) {
             this.staticIP = Output.ofNullable(staticIP);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tenantSettings(@Nullable Output<Map<String,String>> tenantSettings) {
             this.tenantSettings = tenantSettings;
             return this;
         }
-
         public Builder tenantSettings(@Nullable Map<String,String> tenantSettings) {
             this.tenantSettings = Output.ofNullable(tenantSettings);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public RedisArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public RedisArgs build() {
             return new RedisArgs(enableNonSslPort, location, minimumTlsVersion, name, publicNetworkAccess, redisConfiguration, replicasPerMaster, resourceGroupName, shardCount, sku, staticIP, subnetId, tags, tenantSettings, zones);
         }
     }

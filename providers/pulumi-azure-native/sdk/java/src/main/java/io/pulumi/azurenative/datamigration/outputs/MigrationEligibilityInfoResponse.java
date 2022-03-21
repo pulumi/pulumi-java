@@ -71,12 +71,13 @@ public final class MigrationEligibilityInfoResponse {
             this.isEligibleForMigration = Objects.requireNonNull(isEligibleForMigration);
             return this;
         }
-
         public Builder validationMessages(List<String> validationMessages) {
             this.validationMessages = Objects.requireNonNull(validationMessages);
             return this;
         }
-        public MigrationEligibilityInfoResponse build() {
+        public Builder validationMessages(String... validationMessages) {
+            return validationMessages(List.of(validationMessages));
+        }        public MigrationEligibilityInfoResponse build() {
             return new MigrationEligibilityInfoResponse(isEligibleForMigration, validationMessages);
         }
     }

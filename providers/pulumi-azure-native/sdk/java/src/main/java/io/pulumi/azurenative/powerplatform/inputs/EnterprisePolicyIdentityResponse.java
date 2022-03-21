@@ -94,17 +94,14 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
             this.systemAssignedIdentityPrincipalId = Objects.requireNonNull(systemAssignedIdentityPrincipalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public EnterprisePolicyIdentityResponse build() {
+        }        public EnterprisePolicyIdentityResponse build() {
             return new EnterprisePolicyIdentityResponse(systemAssignedIdentityPrincipalId, tenantId, type);
         }
     }

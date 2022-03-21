@@ -93,17 +93,17 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(List<ODataErrorResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
+        public Builder details(ODataErrorResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public ODataErrorResponse build() {
+        }        public ODataErrorResponse build() {
             return new ODataErrorResponse(code, details, message);
         }
     }

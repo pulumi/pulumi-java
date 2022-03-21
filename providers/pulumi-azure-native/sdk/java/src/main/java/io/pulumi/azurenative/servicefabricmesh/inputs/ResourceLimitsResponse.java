@@ -78,12 +78,10 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
             this.cpu = cpu;
             return this;
         }
-
         public Builder memoryInGB(@Nullable Double memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
-        }
-        public ResourceLimitsResponse build() {
+        }        public ResourceLimitsResponse build() {
             return new ResourceLimitsResponse(cpu, memoryInGB);
         }
     }

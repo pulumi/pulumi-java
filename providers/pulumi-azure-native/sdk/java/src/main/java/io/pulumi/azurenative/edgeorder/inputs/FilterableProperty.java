@@ -79,12 +79,13 @@ public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
             this.supportedValues = Objects.requireNonNull(supportedValues);
             return this;
         }
-
+        public Builder supportedValues(String... supportedValues) {
+            return supportedValues(List.of(supportedValues));
+        }
         public Builder type(Either<String,SupportedFilterTypes> type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FilterableProperty build() {
+        }        public FilterableProperty build() {
             return new FilterableProperty(supportedValues, type);
         }
     }

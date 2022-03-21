@@ -88,17 +88,14 @@ public final class GetWebAppFunctionArgs extends io.pulumi.resources.InvokeArgs 
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppFunctionArgs build() {
+        }        public GetWebAppFunctionArgs build() {
             return new GetWebAppFunctionArgs(functionName, name, resourceGroupName);
         }
     }

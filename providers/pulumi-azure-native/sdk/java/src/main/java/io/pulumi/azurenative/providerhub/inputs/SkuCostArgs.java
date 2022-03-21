@@ -79,32 +79,26 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
             this.extendedUnit = extendedUnit;
             return this;
         }
-
         public Builder extendedUnit(@Nullable String extendedUnit) {
             this.extendedUnit = Output.ofNullable(extendedUnit);
             return this;
         }
-
         public Builder meterId(Output<String> meterId) {
             this.meterId = Objects.requireNonNull(meterId);
             return this;
         }
-
         public Builder meterId(String meterId) {
             this.meterId = Output.of(Objects.requireNonNull(meterId));
             return this;
         }
-
         public Builder quantity(@Nullable Output<Integer> quantity) {
             this.quantity = quantity;
             return this;
         }
-
         public Builder quantity(@Nullable Integer quantity) {
             this.quantity = Output.ofNullable(quantity);
             return this;
-        }
-        public SkuCostArgs build() {
+        }        public SkuCostArgs build() {
             return new SkuCostArgs(extendedUnit, meterId, quantity);
         }
     }

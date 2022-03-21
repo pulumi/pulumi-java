@@ -97,32 +97,26 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
             this.deleteOption = Output.ofNullable(deleteOption);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = Output.ofNullable(primary);
             return this;
-        }
-        public NetworkInterfaceReferenceArgs build() {
+        }        public NetworkInterfaceReferenceArgs build() {
             return new NetworkInterfaceReferenceArgs(deleteOption, id, primary);
         }
     }

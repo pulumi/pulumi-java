@@ -60,8 +60,7 @@ public final class ErrorResponseWrapperResponse extends io.pulumi.resources.Invo
         public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
-        }
-        public ErrorResponseWrapperResponse build() {
+        }        public ErrorResponseWrapperResponse build() {
             return new ErrorResponseWrapperResponse(error);
         }
     }

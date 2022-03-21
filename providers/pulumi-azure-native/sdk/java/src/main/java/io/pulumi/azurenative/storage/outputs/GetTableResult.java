@@ -101,22 +101,18 @@ public final class GetTableResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetTableResult build() {
+        }        public GetTableResult build() {
             return new GetTableResult(id, name, tableName, type);
         }
     }

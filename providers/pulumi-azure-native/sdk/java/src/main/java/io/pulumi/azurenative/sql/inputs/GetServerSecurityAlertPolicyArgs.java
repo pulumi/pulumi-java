@@ -88,17 +88,14 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
             this.securityAlertPolicyName = Objects.requireNonNull(securityAlertPolicyName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerSecurityAlertPolicyArgs build() {
+        }        public GetServerSecurityAlertPolicyArgs build() {
             return new GetServerSecurityAlertPolicyArgs(resourceGroupName, securityAlertPolicyName, serverName);
         }
     }

@@ -85,17 +85,14 @@ public final class VaultPrivateLinkServiceConnectionStateResponse {
             this.actionsRequired = Objects.requireNonNull(actionsRequired);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public VaultPrivateLinkServiceConnectionStateResponse build() {
+        }        public VaultPrivateLinkServiceConnectionStateResponse build() {
             return new VaultPrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }
     }

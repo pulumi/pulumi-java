@@ -281,77 +281,62 @@ public final class InMageProtectedDiskDetailsResponse {
             this.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
-
         public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskResized(@Nullable String diskResized) {
             this.diskResized = diskResized;
             return this;
         }
-
         public Builder fileSystemCapacityInBytes(@Nullable Double fileSystemCapacityInBytes) {
             this.fileSystemCapacityInBytes = fileSystemCapacityInBytes;
             return this;
         }
-
         public Builder healthErrorCode(@Nullable String healthErrorCode) {
             this.healthErrorCode = healthErrorCode;
             return this;
         }
-
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
-
         public Builder protectionStage(@Nullable String protectionStage) {
             this.protectionStage = protectionStage;
             return this;
         }
-
         public Builder psDataInMB(@Nullable Double psDataInMB) {
             this.psDataInMB = psDataInMB;
             return this;
         }
-
         public Builder resyncDurationInSeconds(@Nullable Double resyncDurationInSeconds) {
             this.resyncDurationInSeconds = resyncDurationInSeconds;
             return this;
         }
-
         public Builder resyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
             this.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
-
         public Builder resyncRequired(@Nullable String resyncRequired) {
             this.resyncRequired = resyncRequired;
             return this;
         }
-
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
-
         public Builder sourceDataInMB(@Nullable Double sourceDataInMB) {
             this.sourceDataInMB = sourceDataInMB;
             return this;
         }
-
         public Builder targetDataInMB(@Nullable Double targetDataInMB) {
             this.targetDataInMB = targetDataInMB;
             return this;
-        }
-        public InMageProtectedDiskDetailsResponse build() {
+        }        public InMageProtectedDiskDetailsResponse build() {
             return new InMageProtectedDiskDetailsResponse(diskCapacityInBytes, diskId, diskName, diskResized, fileSystemCapacityInBytes, healthErrorCode, lastRpoCalculatedTime, protectionStage, psDataInMB, resyncDurationInSeconds, resyncProgressPercentage, resyncRequired, rpoInSeconds, sourceDataInMB, targetDataInMB);
         }
     }

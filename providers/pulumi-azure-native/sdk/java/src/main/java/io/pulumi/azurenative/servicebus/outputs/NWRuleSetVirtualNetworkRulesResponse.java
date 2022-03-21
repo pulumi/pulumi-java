@@ -72,12 +72,10 @@ public final class NWRuleSetVirtualNetworkRulesResponse {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public NWRuleSetVirtualNetworkRulesResponse build() {
+        }        public NWRuleSetVirtualNetworkRulesResponse build() {
             return new NWRuleSetVirtualNetworkRulesResponse(ignoreMissingVnetServiceEndpoint, subnet);
         }
     }

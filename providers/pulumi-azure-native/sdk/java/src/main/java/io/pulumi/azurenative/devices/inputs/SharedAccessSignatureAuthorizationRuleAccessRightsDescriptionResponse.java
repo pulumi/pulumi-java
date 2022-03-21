@@ -110,22 +110,18 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder rights(String rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse build() {
+        }        public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse build() {
             return new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse(keyName, primaryKey, rights, secondaryKey);
         }
     }

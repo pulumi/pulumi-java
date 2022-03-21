@@ -400,112 +400,99 @@ public final class GetVpnConnectionResult {
             this.connectionBandwidth = connectionBandwidth;
             return this;
         }
-
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
-
         public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
-
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
-
         public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-
         public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
             this.enableRateLimiting = enableRateLimiting;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
-
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
-
+        public Builder ipsecPolicies(IpsecPolicyResponse... ipsecPolicies) {
+            return ipsecPolicies(List.of(ipsecPolicies));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder remoteVpnSite(@Nullable SubResourceResponse remoteVpnSite) {
             this.remoteVpnSite = remoteVpnSite;
             return this;
         }
-
         public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
-
+        public Builder trafficSelectorPolicies(TrafficSelectorPolicyResponse... trafficSelectorPolicies) {
+            return trafficSelectorPolicies(List.of(trafficSelectorPolicies));
+        }
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
-
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
-
         public Builder vpnConnectionProtocolType(@Nullable String vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
-
         public Builder vpnLinkConnections(@Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
             this.vpnLinkConnections = vpnLinkConnections;
             return this;
         }
-        public GetVpnConnectionResult build() {
+        public Builder vpnLinkConnections(VpnSiteLinkConnectionResponse... vpnLinkConnections) {
+            return vpnLinkConnections(List.of(vpnLinkConnections));
+        }        public GetVpnConnectionResult build() {
             return new GetVpnConnectionResult(connectionBandwidth, connectionStatus, dpdTimeoutSeconds, egressBytesTransferred, enableBgp, enableInternetSecurity, enableRateLimiting, etag, id, ingressBytesTransferred, ipsecPolicies, name, provisioningState, remoteVpnSite, routingConfiguration, routingWeight, sharedKey, trafficSelectorPolicies, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, vpnConnectionProtocolType, vpnLinkConnections);
         }
     }

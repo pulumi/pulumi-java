@@ -61,12 +61,10 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
             this.diskSignature = diskSignature;
             return this;
         }
-
         public Builder diskSignature(@Nullable String diskSignature) {
             this.diskSignature = Output.ofNullable(diskSignature);
             return this;
-        }
-        public InMageDiskSignatureExclusionOptionsArgs build() {
+        }        public InMageDiskSignatureExclusionOptionsArgs build() {
             return new InMageDiskSignatureExclusionOptionsArgs(diskSignature);
         }
     }

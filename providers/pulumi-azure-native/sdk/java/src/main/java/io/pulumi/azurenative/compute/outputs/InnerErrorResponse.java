@@ -71,12 +71,10 @@ public final class InnerErrorResponse {
             this.errordetail = errordetail;
             return this;
         }
-
         public Builder exceptiontype(@Nullable String exceptiontype) {
             this.exceptiontype = exceptiontype;
             return this;
-        }
-        public InnerErrorResponse build() {
+        }        public InnerErrorResponse build() {
             return new InnerErrorResponse(errordetail, exceptiontype);
         }
     }

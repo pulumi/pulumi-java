@@ -151,37 +151,30 @@ public final class GetWorkspaceSqlAadAdminResult {
             this.administratorType = administratorType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = login;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sid(@Nullable String sid) {
             this.sid = sid;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkspaceSqlAadAdminResult build() {
+        }        public GetWorkspaceSqlAadAdminResult build() {
             return new GetWorkspaceSqlAadAdminResult(administratorType, id, login, name, sid, tenantId, type);
         }
     }

@@ -87,17 +87,14 @@ public final class DppIdentityDetailsResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DppIdentityDetailsResponse build() {
+        }        public DppIdentityDetailsResponse build() {
             return new DppIdentityDetailsResponse(principalId, tenantId, type);
         }
     }

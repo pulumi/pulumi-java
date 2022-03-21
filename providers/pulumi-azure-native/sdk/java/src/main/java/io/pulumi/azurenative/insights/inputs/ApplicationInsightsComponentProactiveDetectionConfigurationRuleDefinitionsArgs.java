@@ -175,82 +175,66 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder helpUrl(@Nullable Output<String> helpUrl) {
             this.helpUrl = helpUrl;
             return this;
         }
-
         public Builder helpUrl(@Nullable String helpUrl) {
             this.helpUrl = Output.ofNullable(helpUrl);
             return this;
         }
-
         public Builder isEnabledByDefault(@Nullable Output<Boolean> isEnabledByDefault) {
             this.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
-
         public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
             this.isEnabledByDefault = Output.ofNullable(isEnabledByDefault);
             return this;
         }
-
         public Builder isHidden(@Nullable Output<Boolean> isHidden) {
             this.isHidden = isHidden;
             return this;
         }
-
         public Builder isHidden(@Nullable Boolean isHidden) {
             this.isHidden = Output.ofNullable(isHidden);
             return this;
         }
-
         public Builder isInPreview(@Nullable Output<Boolean> isInPreview) {
             this.isInPreview = isInPreview;
             return this;
         }
-
         public Builder isInPreview(@Nullable Boolean isInPreview) {
             this.isInPreview = Output.ofNullable(isInPreview);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder supportsEmailNotifications(@Nullable Output<Boolean> supportsEmailNotifications) {
             this.supportsEmailNotifications = supportsEmailNotifications;
             return this;
         }
-
         public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
             this.supportsEmailNotifications = Output.ofNullable(supportsEmailNotifications);
             return this;
-        }
-        public ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs build() {
+        }        public ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs build() {
             return new ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs(description, displayName, helpUrl, isEnabledByDefault, isHidden, isInPreview, name, supportsEmailNotifications);
         }
     }

@@ -111,22 +111,27 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
             this.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
-
+        public Builder customBgpIpAddresses(String... customBgpIpAddresses) {
+            return customBgpIpAddresses(List.of(customBgpIpAddresses));
+        }
         public Builder defaultBgpIpAddresses(List<String> defaultBgpIpAddresses) {
             this.defaultBgpIpAddresses = Objects.requireNonNull(defaultBgpIpAddresses);
             return this;
         }
-
+        public Builder defaultBgpIpAddresses(String... defaultBgpIpAddresses) {
+            return defaultBgpIpAddresses(List.of(defaultBgpIpAddresses));
+        }
         public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
             this.ipconfigurationId = ipconfigurationId;
             return this;
         }
-
         public Builder tunnelIpAddresses(List<String> tunnelIpAddresses) {
             this.tunnelIpAddresses = Objects.requireNonNull(tunnelIpAddresses);
             return this;
         }
-        public IPConfigurationBgpPeeringAddressResponse build() {
+        public Builder tunnelIpAddresses(String... tunnelIpAddresses) {
+            return tunnelIpAddresses(List.of(tunnelIpAddresses));
+        }        public IPConfigurationBgpPeeringAddressResponse build() {
             return new IPConfigurationBgpPeeringAddressResponse(customBgpIpAddresses, defaultBgpIpAddresses, ipconfigurationId, tunnelIpAddresses);
         }
     }

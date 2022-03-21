@@ -72,12 +72,10 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
             this.communicationServiceName = Objects.requireNonNull(communicationServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListCommunicationServiceKeysArgs build() {
+        }        public ListCommunicationServiceKeysArgs build() {
             return new ListCommunicationServiceKeysArgs(communicationServiceName, resourceGroupName);
         }
     }

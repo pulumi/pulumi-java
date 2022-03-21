@@ -53,8 +53,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
         public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = functionAlias;
             return this;
-        }
-        public ApplicationInsightsComponentAnalyticsItemPropertiesResponse build() {
+        }        public ApplicationInsightsComponentAnalyticsItemPropertiesResponse build() {
             return new ApplicationInsightsComponentAnalyticsItemPropertiesResponse(functionAlias);
         }
     }

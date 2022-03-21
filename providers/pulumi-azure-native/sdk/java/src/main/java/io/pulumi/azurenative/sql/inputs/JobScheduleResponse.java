@@ -127,27 +127,22 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public JobScheduleResponse build() {
+        }        public JobScheduleResponse build() {
             return new JobScheduleResponse(enabled, endTime, interval, startTime, type);
         }
     }

@@ -71,12 +71,10 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse {
             this.name = name;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public VpnServerConfigVpnClientRevokedCertificateResponse build() {
+        }        public VpnServerConfigVpnClientRevokedCertificateResponse build() {
             return new VpnServerConfigVpnClientRevokedCertificateResponse(name, thumbprint);
         }
     }

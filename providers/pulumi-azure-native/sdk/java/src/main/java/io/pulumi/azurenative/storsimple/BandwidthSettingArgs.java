@@ -125,52 +125,45 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
             this.bandwidthSettingName = bandwidthSettingName;
             return this;
         }
-
         public Builder bandwidthSettingName(@Nullable String bandwidthSettingName) {
             this.bandwidthSettingName = Output.ofNullable(bandwidthSettingName);
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schedules(Output<List<BandwidthScheduleArgs>> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
         public Builder schedules(List<BandwidthScheduleArgs> schedules) {
             this.schedules = Output.of(Objects.requireNonNull(schedules));
             return this;
         }
-        public BandwidthSettingArgs build() {
+        public Builder schedules(BandwidthScheduleArgs... schedules) {
+            return schedules(List.of(schedules));
+        }        public BandwidthSettingArgs build() {
             return new BandwidthSettingArgs(bandwidthSettingName, kind, managerName, resourceGroupName, schedules);
         }
     }

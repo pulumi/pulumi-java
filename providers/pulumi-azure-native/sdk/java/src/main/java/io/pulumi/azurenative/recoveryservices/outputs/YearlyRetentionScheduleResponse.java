@@ -139,32 +139,32 @@ public final class YearlyRetentionScheduleResponse {
             this.monthsOfYear = monthsOfYear;
             return this;
         }
-
+        public Builder monthsOfYear(String... monthsOfYear) {
+            return monthsOfYear(List.of(monthsOfYear));
+        }
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
-
         public Builder retentionScheduleDaily(@Nullable DailyRetentionFormatResponse retentionScheduleDaily) {
             this.retentionScheduleDaily = retentionScheduleDaily;
             return this;
         }
-
         public Builder retentionScheduleFormatType(@Nullable String retentionScheduleFormatType) {
             this.retentionScheduleFormatType = retentionScheduleFormatType;
             return this;
         }
-
         public Builder retentionScheduleWeekly(@Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly) {
             this.retentionScheduleWeekly = retentionScheduleWeekly;
             return this;
         }
-
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }
-        public YearlyRetentionScheduleResponse build() {
+        public Builder retentionTimes(String... retentionTimes) {
+            return retentionTimes(List.of(retentionTimes));
+        }        public YearlyRetentionScheduleResponse build() {
             return new YearlyRetentionScheduleResponse(monthsOfYear, retentionDuration, retentionScheduleDaily, retentionScheduleFormatType, retentionScheduleWeekly, retentionTimes);
         }
     }

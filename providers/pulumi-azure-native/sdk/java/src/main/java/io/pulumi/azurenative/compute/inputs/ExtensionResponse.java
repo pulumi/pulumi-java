@@ -79,12 +79,10 @@ public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder properties(@Nullable CloudServiceExtensionPropertiesResponse properties) {
             this.properties = properties;
             return this;
-        }
-        public ExtensionResponse build() {
+        }        public ExtensionResponse build() {
             return new ExtensionResponse(name, properties);
         }
     }

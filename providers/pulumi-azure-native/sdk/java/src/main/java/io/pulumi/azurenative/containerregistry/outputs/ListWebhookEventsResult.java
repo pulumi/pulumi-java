@@ -73,12 +73,13 @@ public final class ListWebhookEventsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<EventResponse> value) {
             this.value = value;
             return this;
         }
-        public ListWebhookEventsResult build() {
+        public Builder value(EventResponse... value) {
+            return value(List.of(value));
+        }        public ListWebhookEventsResult build() {
             return new ListWebhookEventsResult(nextLink, value);
         }
     }

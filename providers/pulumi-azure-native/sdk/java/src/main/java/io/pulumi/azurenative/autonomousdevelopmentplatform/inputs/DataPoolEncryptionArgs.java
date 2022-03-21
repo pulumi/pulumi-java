@@ -110,42 +110,34 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
-
         public Builder keyVaultUri(Output<String> keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
-
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Output.ofNullable(keyVersion);
             return this;
         }
-
         public Builder userAssignedIdentity(Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Output.of(Objects.requireNonNull(userAssignedIdentity));
             return this;
-        }
-        public DataPoolEncryptionArgs build() {
+        }        public DataPoolEncryptionArgs build() {
             return new DataPoolEncryptionArgs(keyName, keyVaultUri, keyVersion, userAssignedIdentity);
         }
     }

@@ -54,7 +54,9 @@ public final class ConfigurationServiceGitPropertyResponse {
             this.repositories = repositories;
             return this;
         }
-        public ConfigurationServiceGitPropertyResponse build() {
+        public Builder repositories(ConfigurationServiceGitRepositoryResponse... repositories) {
+            return repositories(List.of(repositories));
+        }        public ConfigurationServiceGitPropertyResponse build() {
             return new ConfigurationServiceGitPropertyResponse(repositories);
         }
     }

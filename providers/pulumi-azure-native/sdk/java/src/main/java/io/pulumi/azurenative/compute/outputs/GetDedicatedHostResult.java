@@ -270,72 +270,61 @@ public final class GetDedicatedHostResult {
             this.autoReplaceOnFailure = autoReplaceOnFailure;
             return this;
         }
-
         public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceView(DedicatedHostInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder provisioningTime(String provisioningTime) {
             this.provisioningTime = Objects.requireNonNull(provisioningTime);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachines(List<SubResourceReadOnlyResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-        public GetDedicatedHostResult build() {
+        public Builder virtualMachines(SubResourceReadOnlyResponse... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public GetDedicatedHostResult build() {
             return new GetDedicatedHostResult(autoReplaceOnFailure, hostId, id, instanceView, licenseType, location, name, platformFaultDomain, provisioningState, provisioningTime, sku, tags, type, virtualMachines);
         }
     }

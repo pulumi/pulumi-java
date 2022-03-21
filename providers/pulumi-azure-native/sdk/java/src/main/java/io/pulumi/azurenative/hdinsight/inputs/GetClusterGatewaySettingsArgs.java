@@ -72,12 +72,10 @@ public final class GetClusterGatewaySettingsArgs extends io.pulumi.resources.Inv
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetClusterGatewaySettingsArgs build() {
+        }        public GetClusterGatewaySettingsArgs build() {
             return new GetClusterGatewaySettingsArgs(clusterName, resourceGroupName);
         }
     }

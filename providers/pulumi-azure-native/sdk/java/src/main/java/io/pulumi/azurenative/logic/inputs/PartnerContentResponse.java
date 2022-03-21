@@ -60,8 +60,7 @@ public final class PartnerContentResponse extends io.pulumi.resources.InvokeArgs
         public Builder b2b(@Nullable B2BPartnerContentResponse b2b) {
             this.b2b = b2b;
             return this;
-        }
-        public PartnerContentResponse build() {
+        }        public PartnerContentResponse build() {
             return new PartnerContentResponse(b2b);
         }
     }

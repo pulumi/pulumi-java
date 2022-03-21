@@ -140,62 +140,50 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
-
         public Builder appName(String appName) {
             this.appName = Output.of(Objects.requireNonNull(appName));
             return this;
         }
-
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
             this.deploymentName = deploymentName;
             return this;
         }
-
         public Builder deploymentName(@Nullable String deploymentName) {
             this.deploymentName = Output.ofNullable(deploymentName);
             return this;
         }
-
         public Builder properties(@Nullable Output<DeploymentResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable DeploymentResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(appName, deploymentName, properties, resourceGroupName, serviceName, sku);
         }
     }

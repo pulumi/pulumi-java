@@ -79,12 +79,10 @@ public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeAr
             this.encryption = encryption;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DataPoolLocationResponse build() {
+        }        public DataPoolLocationResponse build() {
             return new DataPoolLocationResponse(encryption, name);
         }
     }

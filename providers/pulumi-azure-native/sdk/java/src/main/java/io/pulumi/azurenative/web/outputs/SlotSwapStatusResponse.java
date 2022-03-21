@@ -85,17 +85,14 @@ public final class SlotSwapStatusResponse {
             this.destinationSlotName = Objects.requireNonNull(destinationSlotName);
             return this;
         }
-
         public Builder sourceSlotName(String sourceSlotName) {
             this.sourceSlotName = Objects.requireNonNull(sourceSlotName);
             return this;
         }
-
         public Builder timestampUtc(String timestampUtc) {
             this.timestampUtc = Objects.requireNonNull(timestampUtc);
             return this;
-        }
-        public SlotSwapStatusResponse build() {
+        }        public SlotSwapStatusResponse build() {
             return new SlotSwapStatusResponse(destinationSlotName, sourceSlotName, timestampUtc);
         }
     }

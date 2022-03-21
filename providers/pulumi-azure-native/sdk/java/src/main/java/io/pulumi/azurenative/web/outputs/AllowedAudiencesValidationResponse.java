@@ -54,7 +54,9 @@ public final class AllowedAudiencesValidationResponse {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-        public AllowedAudiencesValidationResponse build() {
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }        public AllowedAudiencesValidationResponse build() {
             return new AllowedAudiencesValidationResponse(allowedAudiences);
         }
     }

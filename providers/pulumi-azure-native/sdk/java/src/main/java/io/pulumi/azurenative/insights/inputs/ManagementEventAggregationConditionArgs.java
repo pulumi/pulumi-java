@@ -96,32 +96,26 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable ConditionOperator operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder threshold(@Nullable Double threshold) {
             this.threshold = Output.ofNullable(threshold);
             return this;
         }
-
         public Builder windowSize(@Nullable Output<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
-
         public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = Output.ofNullable(windowSize);
             return this;
-        }
-        public ManagementEventAggregationConditionArgs build() {
+        }        public ManagementEventAggregationConditionArgs build() {
             return new ManagementEventAggregationConditionArgs(operator, threshold, windowSize);
         }
     }

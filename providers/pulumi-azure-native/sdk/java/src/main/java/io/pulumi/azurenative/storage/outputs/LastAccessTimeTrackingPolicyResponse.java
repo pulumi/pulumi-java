@@ -106,22 +106,21 @@ public final class LastAccessTimeTrackingPolicyResponse {
             this.blobType = blobType;
             return this;
         }
-
+        public Builder blobType(String... blobType) {
+            return blobType(List.of(blobType));
+        }
         public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
-        }
-        public LastAccessTimeTrackingPolicyResponse build() {
+        }        public LastAccessTimeTrackingPolicyResponse build() {
             return new LastAccessTimeTrackingPolicyResponse(blobType, enable, name, trackingGranularityInDays);
         }
     }

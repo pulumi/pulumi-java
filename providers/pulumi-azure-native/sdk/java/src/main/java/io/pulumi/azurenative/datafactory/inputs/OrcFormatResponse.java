@@ -96,17 +96,14 @@ public final class OrcFormatResponse extends io.pulumi.resources.InvokeArgs {
             this.deserializer = deserializer;
             return this;
         }
-
         public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public OrcFormatResponse build() {
+        }        public OrcFormatResponse build() {
             return new OrcFormatResponse(deserializer, serializer, type);
         }
     }

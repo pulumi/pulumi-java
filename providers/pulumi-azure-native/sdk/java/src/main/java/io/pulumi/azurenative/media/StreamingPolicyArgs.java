@@ -174,82 +174,66 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder commonEncryptionCbcs(@Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs) {
             this.commonEncryptionCbcs = commonEncryptionCbcs;
             return this;
         }
-
         public Builder commonEncryptionCbcs(@Nullable CommonEncryptionCbcsArgs commonEncryptionCbcs) {
             this.commonEncryptionCbcs = Output.ofNullable(commonEncryptionCbcs);
             return this;
         }
-
         public Builder commonEncryptionCenc(@Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc) {
             this.commonEncryptionCenc = commonEncryptionCenc;
             return this;
         }
-
         public Builder commonEncryptionCenc(@Nullable CommonEncryptionCencArgs commonEncryptionCenc) {
             this.commonEncryptionCenc = Output.ofNullable(commonEncryptionCenc);
             return this;
         }
-
         public Builder defaultContentKeyPolicyName(@Nullable Output<String> defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
-
         public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = Output.ofNullable(defaultContentKeyPolicyName);
             return this;
         }
-
         public Builder envelopeEncryption(@Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption) {
             this.envelopeEncryption = envelopeEncryption;
             return this;
         }
-
         public Builder envelopeEncryption(@Nullable EnvelopeEncryptionArgs envelopeEncryption) {
             this.envelopeEncryption = Output.ofNullable(envelopeEncryption);
             return this;
         }
-
         public Builder noEncryption(@Nullable Output<NoEncryptionArgs> noEncryption) {
             this.noEncryption = noEncryption;
             return this;
         }
-
         public Builder noEncryption(@Nullable NoEncryptionArgs noEncryption) {
             this.noEncryption = Output.ofNullable(noEncryption);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder streamingPolicyName(@Nullable Output<String> streamingPolicyName) {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }
-
         public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
             this.streamingPolicyName = Output.ofNullable(streamingPolicyName);
             return this;
-        }
-        public StreamingPolicyArgs build() {
+        }        public StreamingPolicyArgs build() {
             return new StreamingPolicyArgs(accountName, commonEncryptionCbcs, commonEncryptionCenc, defaultContentKeyPolicyName, envelopeEncryption, noEncryption, resourceGroupName, streamingPolicyName);
         }
     }

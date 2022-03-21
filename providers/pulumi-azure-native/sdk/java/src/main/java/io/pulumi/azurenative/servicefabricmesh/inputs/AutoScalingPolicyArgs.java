@@ -95,32 +95,26 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
             this.mechanism = Objects.requireNonNull(mechanism);
             return this;
         }
-
         public Builder mechanism(AddRemoveReplicaScalingMechanismArgs mechanism) {
             this.mechanism = Output.of(Objects.requireNonNull(mechanism));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder trigger(Output<AverageLoadScalingTriggerArgs> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public Builder trigger(AverageLoadScalingTriggerArgs trigger) {
             this.trigger = Output.of(Objects.requireNonNull(trigger));
             return this;
-        }
-        public AutoScalingPolicyArgs build() {
+        }        public AutoScalingPolicyArgs build() {
             return new AutoScalingPolicyArgs(mechanism, name, trigger);
         }
     }

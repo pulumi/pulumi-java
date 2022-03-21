@@ -242,62 +242,50 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetState(@Nullable DatasetStateResponse datasetState) {
             this.datasetState = datasetState;
             return this;
         }
-
         public Builder datasetType(String datasetType) {
             this.datasetType = Objects.requireNonNull(datasetType);
             return this;
         }
-
         public Builder defaultCompute(String defaultCompute) {
             this.defaultCompute = Objects.requireNonNull(defaultCompute);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder isVisible(Boolean isVisible) {
             this.isVisible = Objects.requireNonNull(isVisible);
             return this;
         }
-
         public Builder latest(@Nullable DatasetResponseLatest latest) {
             this.latest = latest;
             return this;
         }
-
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public DatasetResponse build() {
+        }        public DatasetResponse build() {
             return new DatasetResponse(createdTime, datasetId, datasetState, datasetType, defaultCompute, description, etag, isVisible, latest, modifiedTime, name, tags);
         }
     }

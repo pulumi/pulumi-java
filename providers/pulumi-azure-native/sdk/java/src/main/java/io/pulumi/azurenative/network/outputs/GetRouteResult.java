@@ -184,47 +184,38 @@ public final class GetRouteResult {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
             this.hasBgpOverride = hasBgpOverride;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-
         public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetRouteResult build() {
+        }        public GetRouteResult build() {
             return new GetRouteResult(addressPrefix, etag, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, provisioningState, type);
         }
     }

@@ -110,22 +110,18 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
             this.$default = $default;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ParameterDeclarationResponse build() {
+        }        public ParameterDeclarationResponse build() {
             return new ParameterDeclarationResponse($default, description, name, type);
         }
     }

@@ -272,142 +272,114 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
             return this;
         }
-
         public Builder conflictLoggingRetentionInDays(@Nullable Integer conflictLoggingRetentionInDays) {
             this.conflictLoggingRetentionInDays = Output.ofNullable(conflictLoggingRetentionInDays);
             return this;
         }
-
         public Builder conflictResolutionPolicy(@Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy) {
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
-
         public Builder conflictResolutionPolicy(@Nullable Either<String,SyncConflictResolutionPolicy> conflictResolutionPolicy) {
             this.conflictResolutionPolicy = Output.ofNullable(conflictResolutionPolicy);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder enableConflictLogging(@Nullable Output<Boolean> enableConflictLogging) {
             this.enableConflictLogging = enableConflictLogging;
             return this;
         }
-
         public Builder enableConflictLogging(@Nullable Boolean enableConflictLogging) {
             this.enableConflictLogging = Output.ofNullable(enableConflictLogging);
             return this;
         }
-
         public Builder hubDatabasePassword(@Nullable Output<String> hubDatabasePassword) {
             this.hubDatabasePassword = hubDatabasePassword;
             return this;
         }
-
         public Builder hubDatabasePassword(@Nullable String hubDatabasePassword) {
             this.hubDatabasePassword = Output.ofNullable(hubDatabasePassword);
             return this;
         }
-
         public Builder hubDatabaseUserName(@Nullable Output<String> hubDatabaseUserName) {
             this.hubDatabaseUserName = hubDatabaseUserName;
             return this;
         }
-
         public Builder hubDatabaseUserName(@Nullable String hubDatabaseUserName) {
             this.hubDatabaseUserName = Output.ofNullable(hubDatabaseUserName);
             return this;
         }
-
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schema(@Nullable Output<SyncGroupSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable SyncGroupSchemaArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder syncDatabaseId(@Nullable Output<String> syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
-
         public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
             this.syncDatabaseId = Output.ofNullable(syncDatabaseId);
             return this;
         }
-
         public Builder syncGroupName(@Nullable Output<String> syncGroupName) {
             this.syncGroupName = syncGroupName;
             return this;
         }
-
         public Builder syncGroupName(@Nullable String syncGroupName) {
             this.syncGroupName = Output.ofNullable(syncGroupName);
             return this;
         }
-
         public Builder usePrivateLinkConnection(@Nullable Output<Boolean> usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
-
         public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = Output.ofNullable(usePrivateLinkConnection);
             return this;
-        }
-        public SyncGroupArgs build() {
+        }        public SyncGroupArgs build() {
             return new SyncGroupArgs(conflictLoggingRetentionInDays, conflictResolutionPolicy, databaseName, enableConflictLogging, hubDatabasePassword, hubDatabaseUserName, interval, resourceGroupName, schema, serverName, sku, syncDatabaseId, syncGroupName, usePrivateLinkConnection);
         }
     }

@@ -51,8 +51,7 @@ public final class PipelineSourceTriggerPropertiesResponse {
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public PipelineSourceTriggerPropertiesResponse build() {
+        }        public PipelineSourceTriggerPropertiesResponse build() {
             return new PipelineSourceTriggerPropertiesResponse(status);
         }
     }

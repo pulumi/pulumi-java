@@ -104,22 +104,18 @@ public final class ImageAssetResponse {
             this.id = id;
             return this;
         }
-
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
         }
-
         public Builder unpack(@Nullable Boolean unpack) {
             this.unpack = unpack;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public ImageAssetResponse build() {
+        }        public ImageAssetResponse build() {
             return new ImageAssetResponse(id, mimeType, unpack, url);
         }
     }

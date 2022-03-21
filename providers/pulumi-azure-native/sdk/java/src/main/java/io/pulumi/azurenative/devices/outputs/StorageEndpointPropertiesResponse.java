@@ -103,22 +103,18 @@ public final class StorageEndpointPropertiesResponse {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
-        }
-        public StorageEndpointPropertiesResponse build() {
+        }        public StorageEndpointPropertiesResponse build() {
             return new StorageEndpointPropertiesResponse(authenticationType, connectionString, containerName, sasTtlAsIso8601);
         }
     }

@@ -499,142 +499,120 @@ public final class GetWorkspaceResult {
             this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
             return this;
         }
-
         public Builder applicationInsights(@Nullable String applicationInsights) {
             this.applicationInsights = applicationInsights;
             return this;
         }
-
         public Builder containerRegistry(@Nullable String containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder discoveryUrl(@Nullable String discoveryUrl) {
             this.discoveryUrl = discoveryUrl;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionPropertyResponse encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder hbiWorkspace(@Nullable Boolean hbiWorkspace) {
             this.hbiWorkspace = hbiWorkspace;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder imageBuildCompute(@Nullable String imageBuildCompute) {
             this.imageBuildCompute = imageBuildCompute;
             return this;
         }
-
         public Builder keyVault(@Nullable String keyVault) {
             this.keyVault = keyVault;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notebookInfo(NotebookResourceInfoResponse notebookInfo) {
             this.notebookInfo = Objects.requireNonNull(notebookInfo);
             return this;
         }
-
         public Builder primaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
             this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder privateLinkCount(Integer privateLinkCount) {
             this.privateLinkCount = Objects.requireNonNull(privateLinkCount);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings) {
             this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
             return this;
         }
-
         public Builder serviceProvisionedResourceGroup(String serviceProvisionedResourceGroup) {
             this.serviceProvisionedResourceGroup = Objects.requireNonNull(serviceProvisionedResourceGroup);
             return this;
         }
-
         public Builder sharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = sharedPrivateLinkResources;
             return this;
         }
-
+        public Builder sharedPrivateLinkResources(SharedPrivateLinkResourceResponse... sharedPrivateLinkResources) {
+            return sharedPrivateLinkResources(List.of(sharedPrivateLinkResources));
+        }
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(allowPublicAccessWhenBehindVnet, applicationInsights, containerRegistry, description, discoveryUrl, encryption, friendlyName, hbiWorkspace, id, identity, imageBuildCompute, keyVault, location, name, notebookInfo, primaryUserAssignedIdentity, privateEndpointConnections, privateLinkCount, provisioningState, serviceManagedResourcesSettings, serviceProvisionedResourceGroup, sharedPrivateLinkResources, sku, storageAccount, systemData, tags, type, workspaceId);
         }
     }

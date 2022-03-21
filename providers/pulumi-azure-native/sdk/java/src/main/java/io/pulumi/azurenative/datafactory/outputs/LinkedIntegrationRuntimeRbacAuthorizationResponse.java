@@ -90,17 +90,14 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
+        }        public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeRbacAuthorizationResponse(authorizationType, credential, resourceId);
         }
     }

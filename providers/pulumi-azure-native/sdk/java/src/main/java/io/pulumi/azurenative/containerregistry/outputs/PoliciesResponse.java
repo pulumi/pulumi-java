@@ -89,17 +89,14 @@ public final class PoliciesResponse {
             this.quarantinePolicy = quarantinePolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder trustPolicy(@Nullable TrustPolicyResponse trustPolicy) {
             this.trustPolicy = trustPolicy;
             return this;
-        }
-        public PoliciesResponse build() {
+        }        public PoliciesResponse build() {
             return new PoliciesResponse(quarantinePolicy, retentionPolicy, trustPolicy);
         }
     }

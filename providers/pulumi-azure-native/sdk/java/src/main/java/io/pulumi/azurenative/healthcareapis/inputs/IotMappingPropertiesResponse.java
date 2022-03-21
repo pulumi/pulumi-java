@@ -60,8 +60,7 @@ public final class IotMappingPropertiesResponse extends io.pulumi.resources.Invo
         public Builder content(@Nullable Object content) {
             this.content = content;
             return this;
-        }
-        public IotMappingPropertiesResponse build() {
+        }        public IotMappingPropertiesResponse build() {
             return new IotMappingPropertiesResponse(content);
         }
     }

@@ -79,22 +79,18 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
-
         public Builder retentionTimeInDays(@Nullable Output<Double> retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-
         public Builder retentionTimeInDays(@Nullable Double retentionTimeInDays) {
             this.retentionTimeInDays = Output.ofNullable(retentionTimeInDays);
             return this;
-        }
-        public EventHubPropertiesArgs build() {
+        }        public EventHubPropertiesArgs build() {
             return new EventHubPropertiesArgs(partitionCount, retentionTimeInDays);
         }
     }

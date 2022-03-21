@@ -111,42 +111,34 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
             this.assignPermissions = assignPermissions;
             return this;
         }
-
         public Builder assignPermissions(@Nullable Boolean assignPermissions) {
             this.assignPermissions = Output.ofNullable(assignPermissions);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder strongType(@Nullable Output<String> strongType) {
             this.strongType = strongType;
             return this;
         }
-
         public Builder strongType(@Nullable String strongType) {
             this.strongType = Output.ofNullable(strongType);
             return this;
-        }
-        public ParameterDefinitionsValueMetadataArgs build() {
+        }        public ParameterDefinitionsValueMetadataArgs build() {
             return new ParameterDefinitionsValueMetadataArgs(assignPermissions, description, displayName, strongType);
         }
     }

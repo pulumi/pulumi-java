@@ -72,12 +72,10 @@ public final class ListBlockchainMemberApiKeysArgs extends io.pulumi.resources.I
             this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListBlockchainMemberApiKeysArgs build() {
+        }        public ListBlockchainMemberApiKeysArgs build() {
             return new ListBlockchainMemberApiKeysArgs(blockchainMemberName, resourceGroupName);
         }
     }

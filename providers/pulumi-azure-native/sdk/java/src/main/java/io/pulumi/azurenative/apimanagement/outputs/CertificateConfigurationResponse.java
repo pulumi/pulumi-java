@@ -104,22 +104,18 @@ public final class CertificateConfigurationResponse {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificatePassword(@Nullable String certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
-
         public Builder encodedCertificate(@Nullable String encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
-
         public Builder storeName(String storeName) {
             this.storeName = Objects.requireNonNull(storeName);
             return this;
-        }
-        public CertificateConfigurationResponse build() {
+        }        public CertificateConfigurationResponse build() {
             return new CertificateConfigurationResponse(certificate, certificatePassword, encodedCertificate, storeName);
         }
     }

@@ -60,8 +60,7 @@ public final class CapabilityResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public CapabilityResponse build() {
+        }        public CapabilityResponse build() {
             return new CapabilityResponse(name);
         }
     }

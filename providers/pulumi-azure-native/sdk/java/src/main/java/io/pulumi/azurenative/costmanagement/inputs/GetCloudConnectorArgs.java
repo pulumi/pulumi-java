@@ -74,12 +74,10 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
-        }
-        public GetCloudConnectorArgs build() {
+        }        public GetCloudConnectorArgs build() {
             return new GetCloudConnectorArgs(connectorName, expand);
         }
     }

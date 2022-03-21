@@ -80,22 +80,21 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
             this.connections = connections;
             return this;
         }
-
         public Builder connections(@Nullable List<ExchangeConnectionArgs> connections) {
             this.connections = Output.ofNullable(connections);
             return this;
         }
-
+        public Builder connections(ExchangeConnectionArgs... connections) {
+            return connections(List.of(connections));
+        }
         public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder peerAsn(@Nullable SubResourceArgs peerAsn) {
             this.peerAsn = Output.ofNullable(peerAsn);
             return this;
-        }
-        public PeeringPropertiesExchangeArgs build() {
+        }        public PeeringPropertiesExchangeArgs build() {
             return new PeeringPropertiesExchangeArgs(connections, peerAsn);
         }
     }

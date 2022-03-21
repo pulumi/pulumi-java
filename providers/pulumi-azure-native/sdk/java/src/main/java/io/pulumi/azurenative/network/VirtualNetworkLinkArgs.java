@@ -157,72 +157,58 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privateZoneName(Output<String> privateZoneName) {
             this.privateZoneName = Objects.requireNonNull(privateZoneName);
             return this;
         }
-
         public Builder privateZoneName(String privateZoneName) {
             this.privateZoneName = Output.of(Objects.requireNonNull(privateZoneName));
             return this;
         }
-
         public Builder registrationEnabled(@Nullable Output<Boolean> registrationEnabled) {
             this.registrationEnabled = registrationEnabled;
             return this;
         }
-
         public Builder registrationEnabled(@Nullable Boolean registrationEnabled) {
             this.registrationEnabled = Output.ofNullable(registrationEnabled);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualNetwork(@Nullable Output<SubResourceArgs> virtualNetwork) {
             this.virtualNetwork = virtualNetwork;
             return this;
         }
-
         public Builder virtualNetwork(@Nullable SubResourceArgs virtualNetwork) {
             this.virtualNetwork = Output.ofNullable(virtualNetwork);
             return this;
         }
-
         public Builder virtualNetworkLinkName(@Nullable Output<String> virtualNetworkLinkName) {
             this.virtualNetworkLinkName = virtualNetworkLinkName;
             return this;
         }
-
         public Builder virtualNetworkLinkName(@Nullable String virtualNetworkLinkName) {
             this.virtualNetworkLinkName = Output.ofNullable(virtualNetworkLinkName);
             return this;
-        }
-        public VirtualNetworkLinkArgs build() {
+        }        public VirtualNetworkLinkArgs build() {
             return new VirtualNetworkLinkArgs(location, privateZoneName, registrationEnabled, resourceGroupName, tags, virtualNetwork, virtualNetworkLinkName);
         }
     }

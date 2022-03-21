@@ -235,47 +235,47 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder batchCount(@Nullable Integer batchCount) {
             this.batchCount = batchCount;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder isSequential(@Nullable Boolean isSequential) {
             this.isSequential = isSequential;
             return this;
         }
-
         public Builder items(ExpressionResponse items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public ForEachActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public ForEachActivityResponse build() {
             return new ForEachActivityResponse(activities, batchCount, dependsOn, description, isSequential, items, name, type, userProperties);
         }
     }

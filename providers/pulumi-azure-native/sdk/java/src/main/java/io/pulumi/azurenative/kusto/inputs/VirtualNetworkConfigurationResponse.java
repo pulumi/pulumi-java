@@ -92,17 +92,14 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
             this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId);
             return this;
         }
-
         public Builder enginePublicIpId(String enginePublicIpId) {
             this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public VirtualNetworkConfigurationResponse build() {
+        }        public VirtualNetworkConfigurationResponse build() {
             return new VirtualNetworkConfigurationResponse(dataManagementPublicIpId, enginePublicIpId, subnetId);
         }
     }

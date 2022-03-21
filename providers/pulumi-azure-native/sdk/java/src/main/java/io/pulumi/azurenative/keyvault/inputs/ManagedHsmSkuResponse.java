@@ -76,12 +76,10 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ManagedHsmSkuResponse build() {
+        }        public ManagedHsmSkuResponse build() {
             return new ManagedHsmSkuResponse(family, name);
         }
     }

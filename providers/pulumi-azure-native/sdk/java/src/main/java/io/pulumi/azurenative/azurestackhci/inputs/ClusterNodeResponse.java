@@ -189,47 +189,38 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
-
         public Builder id(Double id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
-
         public Builder memoryInGiB(Double memoryInGiB) {
             this.memoryInGiB = Objects.requireNonNull(memoryInGiB);
             return this;
         }
-
         public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osName(String osName) {
             this.osName = Objects.requireNonNull(osName);
             return this;
         }
-
         public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
-        }
-        public ClusterNodeResponse build() {
+        }        public ClusterNodeResponse build() {
             return new ClusterNodeResponse(coreCount, id, manufacturer, memoryInGiB, model, name, osName, osVersion, serialNumber);
         }
     }

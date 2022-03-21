@@ -61,12 +61,10 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
             this.policySigningCertificates = policySigningCertificates;
             return this;
         }
-
         public Builder policySigningCertificates(@Nullable JSONWebKeySetArgs policySigningCertificates) {
             this.policySigningCertificates = Output.ofNullable(policySigningCertificates);
             return this;
-        }
-        public AttestationServiceCreationSpecificParamsArgs build() {
+        }        public AttestationServiceCreationSpecificParamsArgs build() {
             return new AttestationServiceCreationSpecificParamsArgs(policySigningCertificates);
         }
     }

@@ -103,22 +103,18 @@ public final class DataBoxDiskCopyProgressResponse {
             this.bytesCopied = Objects.requireNonNull(bytesCopied);
             return this;
         }
-
         public Builder percentComplete(Integer percentComplete) {
             this.percentComplete = Objects.requireNonNull(percentComplete);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public DataBoxDiskCopyProgressResponse build() {
+        }        public DataBoxDiskCopyProgressResponse build() {
             return new DataBoxDiskCopyProgressResponse(bytesCopied, percentComplete, serialNumber, status);
         }
     }

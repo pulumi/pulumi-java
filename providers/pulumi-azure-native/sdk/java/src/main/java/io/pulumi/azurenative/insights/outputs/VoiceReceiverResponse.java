@@ -85,17 +85,14 @@ public final class VoiceReceiverResponse {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
-        }
-        public VoiceReceiverResponse build() {
+        }        public VoiceReceiverResponse build() {
             return new VoiceReceiverResponse(countryCode, name, phoneNumber);
         }
     }

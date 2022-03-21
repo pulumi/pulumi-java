@@ -78,12 +78,10 @@ public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder orderBy(@Nullable String orderBy) {
             this.orderBy = orderBy;
             return this;
-        }
-        public ClusterKeyResponse build() {
+        }        public ClusterKeyResponse build() {
             return new ClusterKeyResponse(name, orderBy);
         }
     }

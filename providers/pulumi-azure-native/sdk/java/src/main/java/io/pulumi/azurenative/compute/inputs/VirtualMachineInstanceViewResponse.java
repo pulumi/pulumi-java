@@ -312,82 +312,75 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
             this.assignedHost = Objects.requireNonNull(assignedHost);
             return this;
         }
-
         public Builder bootDiagnostics(@Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics) {
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }
-
         public Builder computerName(@Nullable String computerName) {
             this.computerName = computerName;
             return this;
         }
-
         public Builder disks(@Nullable List<DiskInstanceViewResponse> disks) {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(DiskInstanceViewResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder extensions(@Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
-
+        public Builder extensions(VirtualMachineExtensionInstanceViewResponse... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder maintenanceRedeployStatus(@Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus) {
             this.maintenanceRedeployStatus = maintenanceRedeployStatus;
             return this;
         }
-
         public Builder osName(@Nullable String osName) {
             this.osName = osName;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder patchStatus(@Nullable VirtualMachinePatchStatusResponse patchStatus) {
             this.patchStatus = patchStatus;
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
-
         public Builder platformUpdateDomain(@Nullable Integer platformUpdateDomain) {
             this.platformUpdateDomain = platformUpdateDomain;
             return this;
         }
-
         public Builder rdpThumbPrint(@Nullable String rdpThumbPrint) {
             this.rdpThumbPrint = rdpThumbPrint;
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder vmAgent(@Nullable VirtualMachineAgentInstanceViewResponse vmAgent) {
             this.vmAgent = vmAgent;
             return this;
         }
-
         public Builder vmHealth(VirtualMachineHealthStatusResponse vmHealth) {
             this.vmHealth = Objects.requireNonNull(vmHealth);
             return this;
-        }
-        public VirtualMachineInstanceViewResponse build() {
+        }        public VirtualMachineInstanceViewResponse build() {
             return new VirtualMachineInstanceViewResponse(assignedHost, bootDiagnostics, computerName, disks, extensions, hyperVGeneration, maintenanceRedeployStatus, osName, osVersion, patchStatus, platformFaultDomain, platformUpdateDomain, rdpThumbPrint, statuses, vmAgent, vmHealth);
         }
     }

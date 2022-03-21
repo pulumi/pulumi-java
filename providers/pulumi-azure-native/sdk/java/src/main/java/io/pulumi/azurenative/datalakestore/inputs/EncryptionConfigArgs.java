@@ -79,22 +79,18 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             this.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
-
         public Builder keyVaultMetaInfo(@Nullable KeyVaultMetaInfoArgs keyVaultMetaInfo) {
             this.keyVaultMetaInfo = Output.ofNullable(keyVaultMetaInfo);
             return this;
         }
-
         public Builder type(Output<EncryptionConfigType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(EncryptionConfigType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EncryptionConfigArgs build() {
+        }        public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(keyVaultMetaInfo, type);
         }
     }

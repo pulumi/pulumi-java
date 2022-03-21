@@ -98,32 +98,26 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.monitoringStatus = monitoringStatus;
             return this;
         }
-
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Output.ofNullable(monitoringStatus);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
-
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
             this.userInfo = Output.ofNullable(userInfo);
             return this;
-        }
-        public MonitorPropertiesArgs build() {
+        }        public MonitorPropertiesArgs build() {
             return new MonitorPropertiesArgs(monitoringStatus, provisioningState, userInfo);
         }
     }

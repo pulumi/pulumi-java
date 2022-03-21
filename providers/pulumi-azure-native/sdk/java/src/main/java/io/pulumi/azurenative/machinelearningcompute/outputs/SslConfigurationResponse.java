@@ -103,22 +103,18 @@ public final class SslConfigurationResponse {
             this.cert = cert;
             return this;
         }
-
         public Builder cname(@Nullable String cname) {
             this.cname = cname;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public SslConfigurationResponse build() {
+        }        public SslConfigurationResponse build() {
             return new SslConfigurationResponse(cert, cname, key, status);
         }
     }

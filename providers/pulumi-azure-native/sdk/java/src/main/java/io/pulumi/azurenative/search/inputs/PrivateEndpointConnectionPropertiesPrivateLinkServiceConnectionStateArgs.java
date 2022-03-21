@@ -95,32 +95,26 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = Output.ofNullable(actionsRequired);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder status(@Nullable Output<PrivateLinkServiceConnectionStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable PrivateLinkServiceConnectionStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
+        }        public PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
             return new PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);
         }
     }

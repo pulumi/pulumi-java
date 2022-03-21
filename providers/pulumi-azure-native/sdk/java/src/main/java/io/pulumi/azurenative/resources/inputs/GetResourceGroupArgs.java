@@ -54,8 +54,7 @@ public final class GetResourceGroupArgs extends io.pulumi.resources.InvokeArgs {
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetResourceGroupArgs build() {
+        }        public GetResourceGroupArgs build() {
             return new GetResourceGroupArgs(resourceGroupName);
         }
     }

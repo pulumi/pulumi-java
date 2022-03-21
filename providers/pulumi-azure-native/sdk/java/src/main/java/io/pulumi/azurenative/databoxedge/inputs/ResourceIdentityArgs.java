@@ -63,12 +63,10 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,MsiIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ResourceIdentityArgs build() {
+        }        public ResourceIdentityArgs build() {
             return new ResourceIdentityArgs(type);
         }
     }

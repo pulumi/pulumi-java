@@ -80,12 +80,13 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
             this.description = description;
             return this;
         }
-
         public Builder rules(List<DeliveryRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public EndpointPropertiesUpdateParametersResponseDeliveryPolicy build() {
+        public Builder rules(DeliveryRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public EndpointPropertiesUpdateParametersResponseDeliveryPolicy build() {
             return new EndpointPropertiesUpdateParametersResponseDeliveryPolicy(description, rules);
         }
     }

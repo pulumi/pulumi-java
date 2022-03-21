@@ -111,22 +111,18 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
             this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable String retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable String schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public ConfigurationProfilePreferenceVmBackupResponse build() {
+        }        public ConfigurationProfilePreferenceVmBackupResponse build() {
             return new ConfigurationProfilePreferenceVmBackupResponse(instantRpRetentionRangeInDays, retentionPolicy, schedulePolicy, timeZone);
         }
     }

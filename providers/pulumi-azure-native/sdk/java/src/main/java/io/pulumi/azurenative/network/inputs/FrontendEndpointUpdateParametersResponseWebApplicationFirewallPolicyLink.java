@@ -60,8 +60,7 @@ public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewal
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
+        }        public FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
             return new FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink(id);
         }
     }

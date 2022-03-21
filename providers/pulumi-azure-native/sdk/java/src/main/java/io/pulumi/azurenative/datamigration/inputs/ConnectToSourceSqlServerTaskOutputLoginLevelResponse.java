@@ -159,37 +159,30 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
             this.defaultDatabase = Objects.requireNonNull(defaultDatabase);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder loginType(String loginType) {
             this.loginType = Objects.requireNonNull(loginType);
             return this;
         }
-
         public Builder migrationEligibility(MigrationEligibilityInfoResponse migrationEligibility) {
             this.migrationEligibility = Objects.requireNonNull(migrationEligibility);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
-        }
-        public ConnectToSourceSqlServerTaskOutputLoginLevelResponse build() {
+        }        public ConnectToSourceSqlServerTaskOutputLoginLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputLoginLevelResponse(defaultDatabase, id, isEnabled, loginType, migrationEligibility, name, resultType);
         }
     }

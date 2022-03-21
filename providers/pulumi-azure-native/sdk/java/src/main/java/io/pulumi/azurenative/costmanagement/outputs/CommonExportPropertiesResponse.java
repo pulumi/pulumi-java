@@ -122,27 +122,22 @@ public final class CommonExportPropertiesResponse {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder deliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder nextRunTimeEstimate(String nextRunTimeEstimate) {
             this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
             return this;
         }
-
         public Builder runHistory(@Nullable ExportExecutionListResultResponse runHistory) {
             this.runHistory = runHistory;
             return this;
-        }
-        public CommonExportPropertiesResponse build() {
+        }        public CommonExportPropertiesResponse build() {
             return new CommonExportPropertiesResponse(definition, deliveryInfo, format, nextRunTimeEstimate, runHistory);
         }
     }

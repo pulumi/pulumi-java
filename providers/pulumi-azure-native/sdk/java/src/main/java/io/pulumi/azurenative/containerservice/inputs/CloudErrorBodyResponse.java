@@ -111,22 +111,21 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
             this.code = code;
             return this;
         }
-
         public Builder details(@Nullable List<CloudErrorBodyResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(CloudErrorBodyResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public CloudErrorBodyResponse build() {
+        }        public CloudErrorBodyResponse build() {
             return new CloudErrorBodyResponse(code, details, message, target);
         }
     }

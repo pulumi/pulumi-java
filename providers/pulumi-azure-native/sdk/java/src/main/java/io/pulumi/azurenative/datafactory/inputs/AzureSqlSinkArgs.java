@@ -307,162 +307,130 @@ public final class AzureSqlSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder preCopyScript(@Nullable Output<Object> preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
-
         public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = Output.ofNullable(preCopyScript);
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
             return this;
         }
-
         public Builder sqlWriterStoredProcedureName(@Nullable Output<Object> sqlWriterStoredProcedureName) {
             this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
             return this;
         }
-
         public Builder sqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
             this.sqlWriterStoredProcedureName = Output.ofNullable(sqlWriterStoredProcedureName);
             return this;
         }
-
         public Builder sqlWriterTableType(@Nullable Output<Object> sqlWriterTableType) {
             this.sqlWriterTableType = sqlWriterTableType;
             return this;
         }
-
         public Builder sqlWriterTableType(@Nullable Object sqlWriterTableType) {
             this.sqlWriterTableType = Output.ofNullable(sqlWriterTableType);
             return this;
         }
-
         public Builder sqlWriterUseTableLock(@Nullable Output<Object> sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
-
         public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = Output.ofNullable(sqlWriterUseTableLock);
             return this;
         }
-
         public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
-
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
             this.storedProcedureParameters = Output.ofNullable(storedProcedureParameters);
             return this;
         }
-
         public Builder storedProcedureTableTypeParameterName(@Nullable Output<Object> storedProcedureTableTypeParameterName) {
             this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
             return this;
         }
-
         public Builder storedProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
             this.storedProcedureTableTypeParameterName = Output.ofNullable(storedProcedureTableTypeParameterName);
             return this;
         }
-
         public Builder tableOption(@Nullable Output<Object> tableOption) {
             this.tableOption = tableOption;
             return this;
         }
-
         public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = Output.ofNullable(tableOption);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder upsertSettings(@Nullable Output<SqlUpsertSettingsArgs> upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
-
         public Builder upsertSettings(@Nullable SqlUpsertSettingsArgs upsertSettings) {
             this.upsertSettings = Output.ofNullable(upsertSettings);
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Output.ofNullable(writeBatchSize);
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
             return this;
         }
-
         public Builder writeBehavior(@Nullable Output<Object> writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = Output.ofNullable(writeBehavior);
             return this;
-        }
-        public AzureSqlSinkArgs build() {
+        }        public AzureSqlSinkArgs build() {
             return new AzureSqlSinkArgs(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterStoredProcedureName, sqlWriterTableType, sqlWriterUseTableLock, storedProcedureParameters, storedProcedureTableTypeParameterName, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }
     }

@@ -71,12 +71,10 @@ public final class WinRMListenerResponse {
             this.certificateUrl = certificateUrl;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public WinRMListenerResponse build() {
+        }        public WinRMListenerResponse build() {
             return new WinRMListenerResponse(certificateUrl, protocol);
         }
     }

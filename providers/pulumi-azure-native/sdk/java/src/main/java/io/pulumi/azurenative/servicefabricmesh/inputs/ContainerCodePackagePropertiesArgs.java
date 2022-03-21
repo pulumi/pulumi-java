@@ -281,142 +281,138 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             this.commands = commands;
             return this;
         }
-
         public Builder commands(@Nullable List<String> commands) {
             this.commands = Output.ofNullable(commands);
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
             this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<EndpointPropertiesArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<EndpointPropertiesArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(EndpointPropertiesArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder entrypoint(@Nullable Output<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
-
         public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder imageRegistryCredential(@Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential) {
             this.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
-
         public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialArgs imageRegistryCredential) {
             this.imageRegistryCredential = Output.ofNullable(imageRegistryCredential);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<ContainerLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(ContainerLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder reliableCollectionsRefs(@Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs) {
             this.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
-
         public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefArgs> reliableCollectionsRefs) {
             this.reliableCollectionsRefs = Output.ofNullable(reliableCollectionsRefs);
             return this;
         }
-
+        public Builder reliableCollectionsRefs(ReliableCollectionsRefArgs... reliableCollectionsRefs) {
+            return reliableCollectionsRefs(List.of(reliableCollectionsRefs));
+        }
         public Builder resources(Output<ResourceRequirementsArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(ResourceRequirementsArgs resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-
         public Builder settings(@Nullable Output<List<SettingArgs>> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable List<SettingArgs> settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
+        public Builder settings(SettingArgs... settings) {
+            return settings(List.of(settings));
+        }
         public Builder volumeRefs(@Nullable Output<List<VolumeReferenceArgs>> volumeRefs) {
             this.volumeRefs = volumeRefs;
             return this;
         }
-
         public Builder volumeRefs(@Nullable List<VolumeReferenceArgs> volumeRefs) {
             this.volumeRefs = Output.ofNullable(volumeRefs);
             return this;
         }
-
+        public Builder volumeRefs(VolumeReferenceArgs... volumeRefs) {
+            return volumeRefs(List.of(volumeRefs));
+        }
         public Builder volumes(@Nullable Output<List<ApplicationScopedVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<ApplicationScopedVolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public ContainerCodePackagePropertiesArgs build() {
+        public Builder volumes(ApplicationScopedVolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public ContainerCodePackagePropertiesArgs build() {
             return new ContainerCodePackagePropertiesArgs(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
         }
     }

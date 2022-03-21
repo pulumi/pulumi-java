@@ -186,47 +186,44 @@ public final class GetMediaGraphResult {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sinks(List<MediaGraphAssetSinkResponse> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
-
+        public Builder sinks(MediaGraphAssetSinkResponse... sinks) {
+            return sinks(List.of(sinks));
+        }
         public Builder sources(List<MediaGraphRtspSourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
+        public Builder sources(MediaGraphRtspSourceResponse... sources) {
+            return sources(List.of(sources));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMediaGraphResult build() {
+        }        public GetMediaGraphResult build() {
             return new GetMediaGraphResult(created, description, id, lastModified, name, sinks, sources, state, type);
         }
     }

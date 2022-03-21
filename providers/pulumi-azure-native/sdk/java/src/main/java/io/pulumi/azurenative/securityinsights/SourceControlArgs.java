@@ -304,162 +304,133 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             this.contentTypes = Objects.requireNonNull(contentTypes);
             return this;
         }
-
         public Builder contentTypes(List<Either<String,ContentType>> contentTypes) {
             this.contentTypes = Output.of(Objects.requireNonNull(contentTypes));
             return this;
         }
-
+        public Builder contentTypes(Either<String,ContentType>... contentTypes) {
+            return contentTypes(List.of(contentTypes));
+        }
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder repoType(Output<Either<String,RepoType>> repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
-
         public Builder repoType(Either<String,RepoType> repoType) {
             this.repoType = Output.of(Objects.requireNonNull(repoType));
             return this;
         }
-
         public Builder repository(Output<RepositoryArgs> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(RepositoryArgs repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sourceControlId(@Nullable Output<String> sourceControlId) {
             this.sourceControlId = sourceControlId;
             return this;
         }
-
         public Builder sourceControlId(@Nullable String sourceControlId) {
             this.sourceControlId = Output.ofNullable(sourceControlId);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public SourceControlArgs build() {
+        }        public SourceControlArgs build() {
             return new SourceControlArgs(contentTypes, createdAt, createdBy, createdByType, description, displayName, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, operationalInsightsResourceProvider, repoType, repository, resourceGroupName, sourceControlId, workspaceName);
         }
     }

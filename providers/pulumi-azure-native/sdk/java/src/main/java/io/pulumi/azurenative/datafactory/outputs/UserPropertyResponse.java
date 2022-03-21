@@ -70,12 +70,10 @@ public final class UserPropertyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public UserPropertyResponse build() {
+        }        public UserPropertyResponse build() {
             return new UserPropertyResponse(name, value);
         }
     }

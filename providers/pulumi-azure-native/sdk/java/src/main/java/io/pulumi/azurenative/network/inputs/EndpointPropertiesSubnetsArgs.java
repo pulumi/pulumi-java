@@ -95,32 +95,26 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
             this.first = first;
             return this;
         }
-
         public Builder first(@Nullable String first) {
             this.first = Output.ofNullable(first);
             return this;
         }
-
         public Builder last(@Nullable Output<String> last) {
             this.last = last;
             return this;
         }
-
         public Builder last(@Nullable String last) {
             this.last = Output.ofNullable(last);
             return this;
         }
-
         public Builder scope(@Nullable Output<Integer> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable Integer scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public EndpointPropertiesSubnetsArgs build() {
+        }        public EndpointPropertiesSubnetsArgs build() {
             return new EndpointPropertiesSubnetsArgs(first, last, scope);
         }
     }

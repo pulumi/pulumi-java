@@ -79,12 +79,10 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.encryptedSecret = encryptedSecret;
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
-        }
-        public SecretResponse build() {
+        }        public SecretResponse build() {
             return new SecretResponse(encryptedSecret, keyVaultId);
         }
     }

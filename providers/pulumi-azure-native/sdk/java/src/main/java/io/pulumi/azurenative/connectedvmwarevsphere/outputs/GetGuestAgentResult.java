@@ -236,62 +236,53 @@ public final class GetGuestAgentResult {
             this.credentials = credentials;
             return this;
         }
-
         public Builder customResourceName(String customResourceName) {
             this.customResourceName = Objects.requireNonNull(customResourceName);
             return this;
         }
-
         public Builder httpProxyConfig(@Nullable HttpProxyConfigurationResponse httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningAction(@Nullable String provisioningAction) {
             this.provisioningAction = provisioningAction;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statuses(List<ResourceStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(ResourceStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
-        }
-        public GetGuestAgentResult build() {
+        }        public GetGuestAgentResult build() {
             return new GetGuestAgentResult(credentials, customResourceName, httpProxyConfig, id, name, provisioningAction, provisioningState, status, statuses, systemData, type, uuid);
         }
     }

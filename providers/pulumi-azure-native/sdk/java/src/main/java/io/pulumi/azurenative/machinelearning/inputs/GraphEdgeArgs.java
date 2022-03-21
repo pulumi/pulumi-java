@@ -110,42 +110,34 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceNodeId = sourceNodeId;
             return this;
         }
-
         public Builder sourceNodeId(@Nullable String sourceNodeId) {
             this.sourceNodeId = Output.ofNullable(sourceNodeId);
             return this;
         }
-
         public Builder sourcePortId(@Nullable Output<String> sourcePortId) {
             this.sourcePortId = sourcePortId;
             return this;
         }
-
         public Builder sourcePortId(@Nullable String sourcePortId) {
             this.sourcePortId = Output.ofNullable(sourcePortId);
             return this;
         }
-
         public Builder targetNodeId(@Nullable Output<String> targetNodeId) {
             this.targetNodeId = targetNodeId;
             return this;
         }
-
         public Builder targetNodeId(@Nullable String targetNodeId) {
             this.targetNodeId = Output.ofNullable(targetNodeId);
             return this;
         }
-
         public Builder targetPortId(@Nullable Output<String> targetPortId) {
             this.targetPortId = targetPortId;
             return this;
         }
-
         public Builder targetPortId(@Nullable String targetPortId) {
             this.targetPortId = Output.ofNullable(targetPortId);
             return this;
-        }
-        public GraphEdgeArgs build() {
+        }        public GraphEdgeArgs build() {
             return new GraphEdgeArgs(sourceNodeId, sourcePortId, targetNodeId, targetPortId);
         }
     }

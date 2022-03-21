@@ -88,17 +88,14 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder securityPolicyName(String securityPolicyName) {
             this.securityPolicyName = Objects.requireNonNull(securityPolicyName);
             return this;
-        }
-        public GetSecurityPolicyArgs build() {
+        }        public GetSecurityPolicyArgs build() {
             return new GetSecurityPolicyArgs(profileName, resourceGroupName, securityPolicyName);
         }
     }

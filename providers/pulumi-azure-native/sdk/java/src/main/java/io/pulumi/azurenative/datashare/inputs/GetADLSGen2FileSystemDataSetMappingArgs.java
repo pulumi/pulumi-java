@@ -104,22 +104,18 @@ public final class GetADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.res
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataSetMappingName(String dataSetMappingName) {
             this.dataSetMappingName = Objects.requireNonNull(dataSetMappingName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
-        }
-        public GetADLSGen2FileSystemDataSetMappingArgs build() {
+        }        public GetADLSGen2FileSystemDataSetMappingArgs build() {
             return new GetADLSGen2FileSystemDataSetMappingArgs(accountName, dataSetMappingName, resourceGroupName, shareSubscriptionName);
         }
     }

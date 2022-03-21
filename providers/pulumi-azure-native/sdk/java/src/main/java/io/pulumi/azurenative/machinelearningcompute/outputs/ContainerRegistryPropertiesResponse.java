@@ -53,8 +53,7 @@ public final class ContainerRegistryPropertiesResponse {
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public ContainerRegistryPropertiesResponse build() {
+        }        public ContainerRegistryPropertiesResponse build() {
             return new ContainerRegistryPropertiesResponse(resourceId);
         }
     }

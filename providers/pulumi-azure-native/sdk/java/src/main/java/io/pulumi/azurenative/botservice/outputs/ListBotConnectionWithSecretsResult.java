@@ -203,52 +203,45 @@ public final class ListBotConnectionWithSecretsResult {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(ConnectionSettingPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public ListBotConnectionWithSecretsResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public ListBotConnectionWithSecretsResult build() {
             return new ListBotConnectionWithSecretsResult(etag, id, kind, location, name, properties, sku, tags, type, zones);
         }
     }

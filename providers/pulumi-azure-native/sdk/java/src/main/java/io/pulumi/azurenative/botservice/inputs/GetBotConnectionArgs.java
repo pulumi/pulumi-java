@@ -88,17 +88,14 @@ public final class GetBotConnectionArgs extends io.pulumi.resources.InvokeArgs {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetBotConnectionArgs build() {
+        }        public GetBotConnectionArgs build() {
             return new GetBotConnectionArgs(connectionName, resourceGroupName, resourceName);
         }
     }

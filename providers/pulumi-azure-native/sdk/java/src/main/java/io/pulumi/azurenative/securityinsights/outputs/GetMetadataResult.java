@@ -318,87 +318,73 @@ public final class GetMetadataResult {
             this.author = author;
             return this;
         }
-
         public Builder categories(@Nullable MetadataCategoriesResponse categories) {
             this.categories = categories;
             return this;
         }
-
         public Builder contentId(@Nullable String contentId) {
             this.contentId = contentId;
             return this;
         }
-
         public Builder dependencies(@Nullable MetadataDependenciesResponse dependencies) {
             this.dependencies = dependencies;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder firstPublishDate(@Nullable String firstPublishDate) {
             this.firstPublishDate = firstPublishDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastPublishDate(@Nullable String lastPublishDate) {
             this.lastPublishDate = lastPublishDate;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
-
         public Builder providers(@Nullable List<String> providers) {
             this.providers = providers;
             return this;
         }
-
+        public Builder providers(String... providers) {
+            return providers(List.of(providers));
+        }
         public Builder source(@Nullable MetadataSourceResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder support(@Nullable MetadataSupportResponse support) {
             this.support = support;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetMetadataResult build() {
+        }        public GetMetadataResult build() {
             return new GetMetadataResult(author, categories, contentId, dependencies, etag, firstPublishDate, id, kind, lastPublishDate, name, parentId, providers, source, support, systemData, type, version);
         }
     }

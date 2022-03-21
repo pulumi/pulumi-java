@@ -80,22 +80,21 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
             this.galleries = galleries;
             return this;
         }
-
         public Builder galleries(@Nullable List<WorkbookTemplateGalleryArgs> galleries) {
             this.galleries = Output.ofNullable(galleries);
             return this;
         }
-
+        public Builder galleries(WorkbookTemplateGalleryArgs... galleries) {
+            return galleries(List.of(galleries));
+        }
         public Builder templateData(@Nullable Output<Object> templateData) {
             this.templateData = templateData;
             return this;
         }
-
         public Builder templateData(@Nullable Object templateData) {
             this.templateData = Output.ofNullable(templateData);
             return this;
-        }
-        public WorkbookTemplateLocalizedGalleryArgs build() {
+        }        public WorkbookTemplateLocalizedGalleryArgs build() {
             return new WorkbookTemplateLocalizedGalleryArgs(galleries, templateData);
         }
     }

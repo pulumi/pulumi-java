@@ -72,12 +72,10 @@ public final class GetDomainServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.domainServiceName = Objects.requireNonNull(domainServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDomainServiceArgs build() {
+        }        public GetDomainServiceArgs build() {
             return new GetDomainServiceArgs(domainServiceName, resourceGroupName);
         }
     }

@@ -161,37 +161,33 @@ public final class RateLimitRuleResponse extends io.pulumi.resources.InvokeArgs 
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
-
+        public Builder matchConditions(MatchConditionResponse... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder rateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes);
             return this;
         }
-
         public Builder rateLimitThreshold(Integer rateLimitThreshold) {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
-        }
-        public RateLimitRuleResponse build() {
+        }        public RateLimitRuleResponse build() {
             return new RateLimitRuleResponse(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold);
         }
     }

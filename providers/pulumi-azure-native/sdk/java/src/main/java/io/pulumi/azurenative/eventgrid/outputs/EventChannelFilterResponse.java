@@ -92,12 +92,13 @@ public final class EventChannelFilterResponse {
             this.advancedFilters = advancedFilters;
             return this;
         }
-
+        public Builder advancedFilters(Object... advancedFilters) {
+            return advancedFilters(List.of(advancedFilters));
+        }
         public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
             this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
-        }
-        public EventChannelFilterResponse build() {
+        }        public EventChannelFilterResponse build() {
             return new EventChannelFilterResponse(advancedFilters, enableAdvancedFilteringOnArrays);
         }
     }

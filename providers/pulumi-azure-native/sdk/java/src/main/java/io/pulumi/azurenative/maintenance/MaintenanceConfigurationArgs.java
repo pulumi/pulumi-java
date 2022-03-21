@@ -157,72 +157,58 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             this.extensionProperties = extensionProperties;
             return this;
         }
-
         public Builder extensionProperties(@Nullable Map<String,String> extensionProperties) {
             this.extensionProperties = Output.ofNullable(extensionProperties);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maintenanceScope(@Nullable Output<Either<String,MaintenanceScope>> maintenanceScope) {
             this.maintenanceScope = maintenanceScope;
             return this;
         }
-
         public Builder maintenanceScope(@Nullable Either<String,MaintenanceScope> maintenanceScope) {
             this.maintenanceScope = Output.ofNullable(maintenanceScope);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MaintenanceConfigurationArgs build() {
+        }        public MaintenanceConfigurationArgs build() {
             return new MaintenanceConfigurationArgs(extensionProperties, location, maintenanceScope, namespace, resourceGroupName, resourceName, tags);
         }
     }

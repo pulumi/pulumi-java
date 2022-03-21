@@ -109,22 +109,18 @@ public final class ManagedIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public ManagedIdentityResponse build() {
+        }        public ManagedIdentityResponse build() {
             return new ManagedIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

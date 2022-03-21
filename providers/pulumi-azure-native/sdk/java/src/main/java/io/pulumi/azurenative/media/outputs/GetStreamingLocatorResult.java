@@ -266,72 +266,64 @@ public final class GetStreamingLocatorResult {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
-
+        public Builder contentKeys(StreamingLocatorContentKeyResponse... contentKeys) {
+            return contentKeys(List.of(contentKeys));
+        }
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder filters(@Nullable List<String> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(String... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder streamingLocatorId(@Nullable String streamingLocatorId) {
             this.streamingLocatorId = streamingLocatorId;
             return this;
         }
-
         public Builder streamingPolicyName(String streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStreamingLocatorResult build() {
+        }        public GetStreamingLocatorResult build() {
             return new GetStreamingLocatorResult(alternativeMediaId, assetName, contentKeys, created, defaultContentKeyPolicyName, endTime, filters, id, name, startTime, streamingLocatorId, streamingPolicyName, systemData, type);
         }
     }

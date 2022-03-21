@@ -122,27 +122,22 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
             this.entityType = entityType;
             return this;
         }
-
         public Builder entityTypeName(@Nullable String entityTypeName) {
             this.entityTypeName = entityTypeName;
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetImageUploadUrlForDataArgs build() {
+        }        public GetImageUploadUrlForDataArgs build() {
             return new GetImageUploadUrlForDataArgs(entityType, entityTypeName, hubName, relativePath, resourceGroupName);
         }
     }

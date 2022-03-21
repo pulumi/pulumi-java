@@ -120,27 +120,22 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder watchlistAlias(String watchlistAlias) {
             this.watchlistAlias = Objects.requireNonNull(watchlistAlias);
             return this;
         }
-
         public Builder watchlistItemId(String watchlistItemId) {
             this.watchlistItemId = Objects.requireNonNull(watchlistItemId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetWatchlistItemArgs build() {
+        }        public GetWatchlistItemArgs build() {
             return new GetWatchlistItemArgs(operationalInsightsResourceProvider, resourceGroupName, watchlistAlias, watchlistItemId, workspaceName);
         }
     }

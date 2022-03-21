@@ -53,8 +53,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
         public Builder contentLinkDefinition(@Nullable ContentLinkResponse contentLinkDefinition) {
             this.contentLinkDefinition = contentLinkDefinition;
             return this;
-        }
-        public IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse build() {
+        }        public IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse build() {
             return new IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(contentLinkDefinition);
         }
     }

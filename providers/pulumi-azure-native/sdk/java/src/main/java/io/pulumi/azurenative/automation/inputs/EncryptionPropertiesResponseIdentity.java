@@ -60,8 +60,7 @@ public final class EncryptionPropertiesResponseIdentity extends io.pulumi.resour
         public Builder userAssignedIdentity(@Nullable Object userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }
-        public EncryptionPropertiesResponseIdentity build() {
+        }        public EncryptionPropertiesResponseIdentity build() {
             return new EncryptionPropertiesResponseIdentity(userAssignedIdentity);
         }
     }

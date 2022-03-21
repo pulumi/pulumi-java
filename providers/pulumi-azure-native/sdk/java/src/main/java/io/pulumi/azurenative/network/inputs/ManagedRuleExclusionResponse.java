@@ -92,17 +92,14 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selectorMatchOperator(String selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
-        }
-        public ManagedRuleExclusionResponse build() {
+        }        public ManagedRuleExclusionResponse build() {
             return new ManagedRuleExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }
     }

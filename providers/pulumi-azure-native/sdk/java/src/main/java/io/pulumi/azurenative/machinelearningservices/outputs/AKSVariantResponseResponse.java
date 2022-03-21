@@ -205,52 +205,42 @@ public final class AKSVariantResponseResponse {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder error(ServiceResponseBaseResponseError error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AKSVariantResponseResponse build() {
+        }        public AKSVariantResponseResponse build() {
             return new AKSVariantResponseResponse(computeType, deploymentType, description, error, isDefault, kvTags, properties, state, trafficPercentile, type);
         }
     }

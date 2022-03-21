@@ -233,62 +233,50 @@ public final class GetPoolResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder poolId(String poolId) {
             this.poolId = Objects.requireNonNull(poolId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder qosType(@Nullable String qosType) {
             this.qosType = qosType;
             return this;
         }
-
         public Builder serviceLevel(String serviceLevel) {
             this.serviceLevel = Objects.requireNonNull(serviceLevel);
             return this;
         }
-
         public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder totalThroughputMibps(Double totalThroughputMibps) {
             this.totalThroughputMibps = Objects.requireNonNull(totalThroughputMibps);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder utilizedThroughputMibps(Double utilizedThroughputMibps) {
             this.utilizedThroughputMibps = Objects.requireNonNull(utilizedThroughputMibps);
             return this;
-        }
-        public GetPoolResult build() {
+        }        public GetPoolResult build() {
             return new GetPoolResult(id, location, name, poolId, provisioningState, qosType, serviceLevel, size, tags, totalThroughputMibps, type, utilizedThroughputMibps);
         }
     }

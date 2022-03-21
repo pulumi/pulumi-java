@@ -160,37 +160,30 @@ public final class AudioOverlayResponse extends io.pulumi.resources.InvokeArgs {
             this.audioGainLevel = audioGainLevel;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
-
         public Builder fadeInDuration(@Nullable String fadeInDuration) {
             this.fadeInDuration = fadeInDuration;
             return this;
         }
-
         public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
             this.fadeOutDuration = fadeOutDuration;
             return this;
         }
-
         public Builder inputLabel(String inputLabel) {
             this.inputLabel = Objects.requireNonNull(inputLabel);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = start;
             return this;
-        }
-        public AudioOverlayResponse build() {
+        }        public AudioOverlayResponse build() {
             return new AudioOverlayResponse(audioGainLevel, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, start);
         }
     }

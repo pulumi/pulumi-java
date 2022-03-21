@@ -95,32 +95,29 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
             this.agreedAt = agreedAt;
             return this;
         }
-
         public Builder agreedAt(@Nullable String agreedAt) {
             this.agreedAt = Output.ofNullable(agreedAt);
             return this;
         }
-
         public Builder agreedBy(@Nullable Output<String> agreedBy) {
             this.agreedBy = agreedBy;
             return this;
         }
-
         public Builder agreedBy(@Nullable String agreedBy) {
             this.agreedBy = Output.ofNullable(agreedBy);
             return this;
         }
-
         public Builder agreementKeys(@Nullable Output<List<String>> agreementKeys) {
             this.agreementKeys = agreementKeys;
             return this;
         }
-
         public Builder agreementKeys(@Nullable List<String> agreementKeys) {
             this.agreementKeys = Output.ofNullable(agreementKeys);
             return this;
         }
-        public DomainPurchaseConsentArgs build() {
+        public Builder agreementKeys(String... agreementKeys) {
+            return agreementKeys(List.of(agreementKeys));
+        }        public DomainPurchaseConsentArgs build() {
             return new DomainPurchaseConsentArgs(agreedAt, agreedBy, agreementKeys);
         }
     }

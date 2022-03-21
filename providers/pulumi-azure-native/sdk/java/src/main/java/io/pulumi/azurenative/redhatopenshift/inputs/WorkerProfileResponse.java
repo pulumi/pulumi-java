@@ -127,27 +127,22 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
             this.count = count;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public WorkerProfileResponse build() {
+        }        public WorkerProfileResponse build() {
             return new WorkerProfileResponse(count, diskSizeGB, name, subnetId, vmSize);
         }
     }

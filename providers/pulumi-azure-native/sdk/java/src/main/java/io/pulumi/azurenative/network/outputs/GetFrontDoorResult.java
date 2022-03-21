@@ -336,92 +336,92 @@ public final class GetFrontDoorResult {
             this.backendPools = backendPools;
             return this;
         }
-
+        public Builder backendPools(BackendPoolResponse... backendPools) {
+            return backendPools(List.of(backendPools));
+        }
         public Builder backendPoolsSettings(@Nullable BackendPoolsSettingsResponse backendPoolsSettings) {
             this.backendPoolsSettings = backendPoolsSettings;
             return this;
         }
-
         public Builder cname(String cname) {
             this.cname = Objects.requireNonNull(cname);
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder frontdoorId(String frontdoorId) {
             this.frontdoorId = Objects.requireNonNull(frontdoorId);
             return this;
         }
-
         public Builder frontendEndpoints(@Nullable List<FrontendEndpointResponse> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
-
+        public Builder frontendEndpoints(FrontendEndpointResponse... frontendEndpoints) {
+            return frontendEndpoints(List.of(frontendEndpoints));
+        }
         public Builder healthProbeSettings(@Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
+        public Builder healthProbeSettings(HealthProbeSettingsModelResponse... healthProbeSettings) {
+            return healthProbeSettings(List.of(healthProbeSettings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-
+        public Builder loadBalancingSettings(LoadBalancingSettingsModelResponse... loadBalancingSettings) {
+            return loadBalancingSettings(List.of(loadBalancingSettings));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder routingRules(@Nullable List<RoutingRuleResponse> routingRules) {
             this.routingRules = routingRules;
             return this;
         }
-
+        public Builder routingRules(RoutingRuleResponse... routingRules) {
+            return routingRules(List.of(routingRules));
+        }
         public Builder rulesEngines(List<RulesEngineResponse> rulesEngines) {
             this.rulesEngines = Objects.requireNonNull(rulesEngines);
             return this;
         }
-
+        public Builder rulesEngines(RulesEngineResponse... rulesEngines) {
+            return rulesEngines(List.of(rulesEngines));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFrontDoorResult build() {
+        }        public GetFrontDoorResult build() {
             return new GetFrontDoorResult(backendPools, backendPoolsSettings, cname, enabledState, friendlyName, frontdoorId, frontendEndpoints, healthProbeSettings, id, loadBalancingSettings, location, name, provisioningState, resourceState, routingRules, rulesEngines, tags, type);
         }
     }

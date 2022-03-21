@@ -215,102 +215,85 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
             this.accessKeyId = accessKeyId;
             return this;
         }
-
         public Builder accessKeyId(@Nullable Object accessKeyId) {
             this.accessKeyId = Output.ofNullable(accessKeyId);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder forcePathStyle(@Nullable Output<Object> forcePathStyle) {
             this.forcePathStyle = forcePathStyle;
             return this;
         }
-
         public Builder forcePathStyle(@Nullable Object forcePathStyle) {
             this.forcePathStyle = Output.ofNullable(forcePathStyle);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder secretAccessKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
             this.secretAccessKey = secretAccessKey;
             return this;
         }
-
         public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
             this.secretAccessKey = Output.ofNullable(secretAccessKey);
             return this;
         }
-
         public Builder serviceUrl(@Nullable Output<Object> serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder serviceUrl(@Nullable Object serviceUrl) {
             this.serviceUrl = Output.ofNullable(serviceUrl);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AmazonS3CompatibleLinkedServiceArgs build() {
+        }        public AmazonS3CompatibleLinkedServiceArgs build() {
             return new AmazonS3CompatibleLinkedServiceArgs(accessKeyId, annotations, connectVia, description, encryptedCredential, forcePathStyle, parameters, secretAccessKey, serviceUrl, type);
         }
     }

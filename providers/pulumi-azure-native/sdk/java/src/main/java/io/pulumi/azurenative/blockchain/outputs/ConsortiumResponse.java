@@ -71,12 +71,10 @@ public final class ConsortiumResponse {
             this.name = name;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public ConsortiumResponse build() {
+        }        public ConsortiumResponse build() {
             return new ConsortiumResponse(name, protocol);
         }
     }

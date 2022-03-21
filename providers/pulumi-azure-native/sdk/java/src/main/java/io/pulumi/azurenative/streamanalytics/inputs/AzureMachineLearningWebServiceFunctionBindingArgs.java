@@ -147,62 +147,53 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
             this.apiKey = apiKey;
             return this;
         }
-
         public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Output.ofNullable(apiKey);
             return this;
         }
-
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Output.ofNullable(batchSize);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder inputs(@Nullable Output<AzureMachineLearningWebServiceInputsArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable AzureMachineLearningWebServiceInputsArgs inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<AzureMachineLearningWebServiceOutputColumnArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(AzureMachineLearningWebServiceOutputColumnArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureMachineLearningWebServiceFunctionBindingArgs build() {
+        }        public AzureMachineLearningWebServiceFunctionBindingArgs build() {
             return new AzureMachineLearningWebServiceFunctionBindingArgs(apiKey, batchSize, endpoint, inputs, outputs, type);
         }
     }

@@ -141,32 +141,26 @@ public final class DefenderForContainersAwsOfferingResponse {
             this.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kinesisToS3(@Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3) {
             this.kinesisToS3 = kinesisToS3;
             return this;
         }
-
         public Builder kubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader) {
             this.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
-
         public Builder kubernetesService(@Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService) {
             this.kubernetesService = kubernetesService;
             return this;
         }
-
         public Builder offeringType(String offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
-        }
-        public DefenderForContainersAwsOfferingResponse build() {
+        }        public DefenderForContainersAwsOfferingResponse build() {
             return new DefenderForContainersAwsOfferingResponse(cloudWatchToKinesis, description, kinesisToS3, kubernetesScubaReader, kubernetesService, offeringType);
         }
     }

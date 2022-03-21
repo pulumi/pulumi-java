@@ -110,42 +110,37 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
             this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
             return this;
         }
-
         public Builder initiatorIqn(String initiatorIqn) {
             this.initiatorIqn = Output.of(Objects.requireNonNull(initiatorIqn));
             return this;
         }
-
         public Builder mappedLuns(Output<List<String>> mappedLuns) {
             this.mappedLuns = Objects.requireNonNull(mappedLuns);
             return this;
         }
-
         public Builder mappedLuns(List<String> mappedLuns) {
             this.mappedLuns = Output.of(Objects.requireNonNull(mappedLuns));
             return this;
         }
-
+        public Builder mappedLuns(String... mappedLuns) {
+            return mappedLuns(List.of(mappedLuns));
+        }
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public AclArgs build() {
+        }        public AclArgs build() {
             return new AclArgs(initiatorIqn, mappedLuns, password, username);
         }
     }

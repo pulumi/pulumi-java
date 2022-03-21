@@ -239,122 +239,98 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.backendPort = backendPort;
             return this;
         }
-
         public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = Output.ofNullable(backendPort);
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Output<Boolean> enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = Output.ofNullable(enableFloatingIP);
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = Output.ofNullable(enableTcpReset);
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
             this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
             return this;
         }
-
         public Builder frontendPort(@Nullable Output<Integer> frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
-
         public Builder frontendPort(@Nullable Integer frontendPort) {
             this.frontendPort = Output.ofNullable(frontendPort);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
-
         public Builder inboundNatRuleName(@Nullable Output<String> inboundNatRuleName) {
             this.inboundNatRuleName = inboundNatRuleName;
             return this;
         }
-
         public Builder inboundNatRuleName(@Nullable String inboundNatRuleName) {
             this.inboundNatRuleName = Output.ofNullable(inboundNatRuleName);
             return this;
         }
-
         public Builder loadBalancerName(Output<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,TransportProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,TransportProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public InboundNatRuleArgs build() {
+        }        public InboundNatRuleArgs build() {
             return new InboundNatRuleArgs(backendPort, enableFloatingIP, enableTcpReset, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, inboundNatRuleName, loadBalancerName, name, protocol, resourceGroupName);
         }
     }

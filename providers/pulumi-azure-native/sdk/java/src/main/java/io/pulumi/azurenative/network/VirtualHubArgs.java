@@ -353,192 +353,160 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
-
         public Builder allowBranchToBranchTraffic(@Nullable Output<Boolean> allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
-
         public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = Output.ofNullable(allowBranchToBranchTraffic);
             return this;
         }
-
         public Builder azureFirewall(@Nullable Output<SubResourceArgs> azureFirewall) {
             this.azureFirewall = azureFirewall;
             return this;
         }
-
         public Builder azureFirewall(@Nullable SubResourceArgs azureFirewall) {
             this.azureFirewall = Output.ofNullable(azureFirewall);
             return this;
         }
-
         public Builder expressRouteGateway(@Nullable Output<SubResourceArgs> expressRouteGateway) {
             this.expressRouteGateway = expressRouteGateway;
             return this;
         }
-
         public Builder expressRouteGateway(@Nullable SubResourceArgs expressRouteGateway) {
             this.expressRouteGateway = Output.ofNullable(expressRouteGateway);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder p2SVpnGateway(@Nullable Output<SubResourceArgs> p2SVpnGateway) {
             this.p2SVpnGateway = p2SVpnGateway;
             return this;
         }
-
         public Builder p2SVpnGateway(@Nullable SubResourceArgs p2SVpnGateway) {
             this.p2SVpnGateway = Output.ofNullable(p2SVpnGateway);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routeTable(@Nullable Output<VirtualHubRouteTableArgs> routeTable) {
             this.routeTable = routeTable;
             return this;
         }
-
         public Builder routeTable(@Nullable VirtualHubRouteTableArgs routeTable) {
             this.routeTable = Output.ofNullable(routeTable);
             return this;
         }
-
         public Builder securityPartnerProvider(@Nullable Output<SubResourceArgs> securityPartnerProvider) {
             this.securityPartnerProvider = securityPartnerProvider;
             return this;
         }
-
         public Builder securityPartnerProvider(@Nullable SubResourceArgs securityPartnerProvider) {
             this.securityPartnerProvider = Output.ofNullable(securityPartnerProvider);
             return this;
         }
-
         public Builder securityProviderName(@Nullable Output<String> securityProviderName) {
             this.securityProviderName = securityProviderName;
             return this;
         }
-
         public Builder securityProviderName(@Nullable String securityProviderName) {
             this.securityProviderName = Output.ofNullable(securityProviderName);
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualHubName(@Nullable Output<String> virtualHubName) {
             this.virtualHubName = virtualHubName;
             return this;
         }
-
         public Builder virtualHubName(@Nullable String virtualHubName) {
             this.virtualHubName = Output.ofNullable(virtualHubName);
             return this;
         }
-
         public Builder virtualHubRouteTableV2s(@Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s) {
             this.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
             return this;
         }
-
         public Builder virtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Args> virtualHubRouteTableV2s) {
             this.virtualHubRouteTableV2s = Output.ofNullable(virtualHubRouteTableV2s);
             return this;
         }
-
+        public Builder virtualHubRouteTableV2s(VirtualHubRouteTableV2Args... virtualHubRouteTableV2s) {
+            return virtualHubRouteTableV2s(List.of(virtualHubRouteTableV2s));
+        }
         public Builder virtualRouterAsn(@Nullable Output<Double> virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
-
         public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
             this.virtualRouterAsn = Output.ofNullable(virtualRouterAsn);
             return this;
         }
-
         public Builder virtualRouterIps(@Nullable Output<List<String>> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
-
         public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
             this.virtualRouterIps = Output.ofNullable(virtualRouterIps);
             return this;
         }
-
+        public Builder virtualRouterIps(String... virtualRouterIps) {
+            return virtualRouterIps(List.of(virtualRouterIps));
+        }
         public Builder virtualWan(@Nullable Output<SubResourceArgs> virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
-
         public Builder virtualWan(@Nullable SubResourceArgs virtualWan) {
             this.virtualWan = Output.ofNullable(virtualWan);
             return this;
         }
-
         public Builder vpnGateway(@Nullable Output<SubResourceArgs> vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
         }
-
         public Builder vpnGateway(@Nullable SubResourceArgs vpnGateway) {
             this.vpnGateway = Output.ofNullable(vpnGateway);
             return this;
-        }
-        public VirtualHubArgs build() {
+        }        public VirtualHubArgs build() {
             return new VirtualHubArgs(addressPrefix, allowBranchToBranchTraffic, azureFirewall, expressRouteGateway, id, location, p2SVpnGateway, resourceGroupName, routeTable, securityPartnerProvider, securityProviderName, sku, tags, virtualHubName, virtualHubRouteTableV2s, virtualRouterAsn, virtualRouterIps, virtualWan, vpnGateway);
         }
     }

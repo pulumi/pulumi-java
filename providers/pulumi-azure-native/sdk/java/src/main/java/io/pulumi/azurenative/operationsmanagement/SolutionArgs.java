@@ -141,62 +141,50 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder plan(@Nullable Output<SolutionPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable SolutionPlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder properties(@Nullable Output<SolutionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable SolutionPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder solutionName(@Nullable Output<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
-
         public Builder solutionName(@Nullable String solutionName) {
             this.solutionName = Output.ofNullable(solutionName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SolutionArgs build() {
+        }        public SolutionArgs build() {
             return new SolutionArgs(location, plan, properties, resourceGroupName, solutionName, tags);
         }
     }

@@ -87,17 +87,14 @@ public final class PublicIPAddressDnsSettingsResponse {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder reverseFqdn(@Nullable String reverseFqdn) {
             this.reverseFqdn = reverseFqdn;
             return this;
-        }
-        public PublicIPAddressDnsSettingsResponse build() {
+        }        public PublicIPAddressDnsSettingsResponse build() {
             return new PublicIPAddressDnsSettingsResponse(domainNameLabel, fqdn, reverseFqdn);
         }
     }

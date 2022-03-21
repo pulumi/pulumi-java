@@ -149,37 +149,30 @@ public final class GetLinkedServerResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkedRedisCacheId(String linkedRedisCacheId) {
             this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId);
             return this;
         }
-
         public Builder linkedRedisCacheLocation(String linkedRedisCacheLocation) {
             this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serverRole(String serverRole) {
             this.serverRole = Objects.requireNonNull(serverRole);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLinkedServerResult build() {
+        }        public GetLinkedServerResult build() {
             return new GetLinkedServerResult(id, linkedRedisCacheId, linkedRedisCacheLocation, name, provisioningState, serverRole, type);
         }
     }

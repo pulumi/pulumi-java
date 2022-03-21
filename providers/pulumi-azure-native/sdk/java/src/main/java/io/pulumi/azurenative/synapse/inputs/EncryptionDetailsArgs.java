@@ -61,12 +61,10 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
             this.cmk = cmk;
             return this;
         }
-
         public Builder cmk(@Nullable CustomerManagedKeyDetailsArgs cmk) {
             this.cmk = Output.ofNullable(cmk);
             return this;
-        }
-        public EncryptionDetailsArgs build() {
+        }        public EncryptionDetailsArgs build() {
             return new EncryptionDetailsArgs(cmk);
         }
     }

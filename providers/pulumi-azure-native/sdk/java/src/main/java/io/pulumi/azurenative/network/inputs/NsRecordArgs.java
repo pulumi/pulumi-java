@@ -61,12 +61,10 @@ public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.nsdname = nsdname;
             return this;
         }
-
         public Builder nsdname(@Nullable String nsdname) {
             this.nsdname = Output.ofNullable(nsdname);
             return this;
-        }
-        public NsRecordArgs build() {
+        }        public NsRecordArgs build() {
             return new NsRecordArgs(nsdname);
         }
     }

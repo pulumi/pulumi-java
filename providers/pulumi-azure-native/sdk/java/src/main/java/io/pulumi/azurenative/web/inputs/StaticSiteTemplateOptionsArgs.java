@@ -127,52 +127,42 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isPrivate(@Nullable Output<Boolean> isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
-
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = Output.ofNullable(isPrivate);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
-
         public Builder templateRepositoryUrl(@Nullable Output<String> templateRepositoryUrl) {
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }
-
         public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
             this.templateRepositoryUrl = Output.ofNullable(templateRepositoryUrl);
             return this;
-        }
-        public StaticSiteTemplateOptionsArgs build() {
+        }        public StaticSiteTemplateOptionsArgs build() {
             return new StaticSiteTemplateOptionsArgs(description, isPrivate, owner, repositoryName, templateRepositoryUrl);
         }
     }

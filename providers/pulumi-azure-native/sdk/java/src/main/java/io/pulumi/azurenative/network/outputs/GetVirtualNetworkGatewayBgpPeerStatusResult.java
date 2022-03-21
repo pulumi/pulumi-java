@@ -54,7 +54,9 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
             this.value = value;
             return this;
         }
-        public GetVirtualNetworkGatewayBgpPeerStatusResult build() {
+        public Builder value(BgpPeerStatusResponse... value) {
+            return value(List.of(value));
+        }        public GetVirtualNetworkGatewayBgpPeerStatusResult build() {
             return new GetVirtualNetworkGatewayBgpPeerStatusResult(value);
         }
     }

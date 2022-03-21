@@ -818,212 +818,191 @@ public final class ListWebAppAuthSettingsResult {
             this.aadClaimsAuthorization = aadClaimsAuthorization;
             return this;
         }
-
         public Builder additionalLoginParams(@Nullable List<String> additionalLoginParams) {
             this.additionalLoginParams = additionalLoginParams;
             return this;
         }
-
+        public Builder additionalLoginParams(String... additionalLoginParams) {
+            return additionalLoginParams(List.of(additionalLoginParams));
+        }
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }
         public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
-
+        public Builder allowedExternalRedirectUrls(String... allowedExternalRedirectUrls) {
+            return allowedExternalRedirectUrls(List.of(allowedExternalRedirectUrls));
+        }
         public Builder authFilePath(@Nullable String authFilePath) {
             this.authFilePath = authFilePath;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
-
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-
         public Builder configVersion(@Nullable String configVersion) {
             this.configVersion = configVersion;
             return this;
         }
-
         public Builder defaultProvider(@Nullable String defaultProvider) {
             this.defaultProvider = defaultProvider;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder facebookAppId(@Nullable String facebookAppId) {
             this.facebookAppId = facebookAppId;
             return this;
         }
-
         public Builder facebookAppSecret(@Nullable String facebookAppSecret) {
             this.facebookAppSecret = facebookAppSecret;
             return this;
         }
-
         public Builder facebookAppSecretSettingName(@Nullable String facebookAppSecretSettingName) {
             this.facebookAppSecretSettingName = facebookAppSecretSettingName;
             return this;
         }
-
         public Builder facebookOAuthScopes(@Nullable List<String> facebookOAuthScopes) {
             this.facebookOAuthScopes = facebookOAuthScopes;
             return this;
         }
-
+        public Builder facebookOAuthScopes(String... facebookOAuthScopes) {
+            return facebookOAuthScopes(List.of(facebookOAuthScopes));
+        }
         public Builder gitHubClientId(@Nullable String gitHubClientId) {
             this.gitHubClientId = gitHubClientId;
             return this;
         }
-
         public Builder gitHubClientSecret(@Nullable String gitHubClientSecret) {
             this.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
-
         public Builder gitHubClientSecretSettingName(@Nullable String gitHubClientSecretSettingName) {
             this.gitHubClientSecretSettingName = gitHubClientSecretSettingName;
             return this;
         }
-
         public Builder gitHubOAuthScopes(@Nullable List<String> gitHubOAuthScopes) {
             this.gitHubOAuthScopes = gitHubOAuthScopes;
             return this;
         }
-
+        public Builder gitHubOAuthScopes(String... gitHubOAuthScopes) {
+            return gitHubOAuthScopes(List.of(gitHubOAuthScopes));
+        }
         public Builder googleClientId(@Nullable String googleClientId) {
             this.googleClientId = googleClientId;
             return this;
         }
-
         public Builder googleClientSecret(@Nullable String googleClientSecret) {
             this.googleClientSecret = googleClientSecret;
             return this;
         }
-
         public Builder googleClientSecretSettingName(@Nullable String googleClientSecretSettingName) {
             this.googleClientSecretSettingName = googleClientSecretSettingName;
             return this;
         }
-
         public Builder googleOAuthScopes(@Nullable List<String> googleOAuthScopes) {
             this.googleOAuthScopes = googleOAuthScopes;
             return this;
         }
-
+        public Builder googleOAuthScopes(String... googleOAuthScopes) {
+            return googleOAuthScopes(List.of(googleOAuthScopes));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isAuthFromFile(@Nullable String isAuthFromFile) {
             this.isAuthFromFile = isAuthFromFile;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder microsoftAccountClientId(@Nullable String microsoftAccountClientId) {
             this.microsoftAccountClientId = microsoftAccountClientId;
             return this;
         }
-
         public Builder microsoftAccountClientSecret(@Nullable String microsoftAccountClientSecret) {
             this.microsoftAccountClientSecret = microsoftAccountClientSecret;
             return this;
         }
-
         public Builder microsoftAccountClientSecretSettingName(@Nullable String microsoftAccountClientSecretSettingName) {
             this.microsoftAccountClientSecretSettingName = microsoftAccountClientSecretSettingName;
             return this;
         }
-
         public Builder microsoftAccountOAuthScopes(@Nullable List<String> microsoftAccountOAuthScopes) {
             this.microsoftAccountOAuthScopes = microsoftAccountOAuthScopes;
             return this;
         }
-
+        public Builder microsoftAccountOAuthScopes(String... microsoftAccountOAuthScopes) {
+            return microsoftAccountOAuthScopes(List.of(microsoftAccountOAuthScopes));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
-
         public Builder tokenStoreEnabled(@Nullable Boolean tokenStoreEnabled) {
             this.tokenStoreEnabled = tokenStoreEnabled;
             return this;
         }
-
         public Builder twitterConsumerKey(@Nullable String twitterConsumerKey) {
             this.twitterConsumerKey = twitterConsumerKey;
             return this;
         }
-
         public Builder twitterConsumerSecret(@Nullable String twitterConsumerSecret) {
             this.twitterConsumerSecret = twitterConsumerSecret;
             return this;
         }
-
         public Builder twitterConsumerSecretSettingName(@Nullable String twitterConsumerSecretSettingName) {
             this.twitterConsumerSecretSettingName = twitterConsumerSecretSettingName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unauthenticatedClientAction(@Nullable String unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
-
         public Builder validateIssuer(@Nullable Boolean validateIssuer) {
             this.validateIssuer = validateIssuer;
             return this;
-        }
-        public ListWebAppAuthSettingsResult build() {
+        }        public ListWebAppAuthSettingsResult build() {
             return new ListWebAppAuthSettingsResult(aadClaimsAuthorization, additionalLoginParams, allowedAudiences, allowedExternalRedirectUrls, authFilePath, clientId, clientSecret, clientSecretCertificateThumbprint, clientSecretSettingName, configVersion, defaultProvider, enabled, facebookAppId, facebookAppSecret, facebookAppSecretSettingName, facebookOAuthScopes, gitHubClientId, gitHubClientSecret, gitHubClientSecretSettingName, gitHubOAuthScopes, googleClientId, googleClientSecret, googleClientSecretSettingName, googleOAuthScopes, id, isAuthFromFile, issuer, kind, microsoftAccountClientId, microsoftAccountClientSecret, microsoftAccountClientSecretSettingName, microsoftAccountOAuthScopes, name, runtimeVersion, tokenRefreshExtensionHours, tokenStoreEnabled, twitterConsumerKey, twitterConsumerSecret, twitterConsumerSecretSettingName, type, unauthenticatedClientAction, validateIssuer);
         }
     }

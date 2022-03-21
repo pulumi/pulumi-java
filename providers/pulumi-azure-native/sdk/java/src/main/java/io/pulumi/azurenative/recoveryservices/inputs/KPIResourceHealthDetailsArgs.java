@@ -63,12 +63,10 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
         }
-
         public Builder resourceHealthStatus(@Nullable Either<String,ResourceHealthStatus> resourceHealthStatus) {
             this.resourceHealthStatus = Output.ofNullable(resourceHealthStatus);
             return this;
-        }
-        public KPIResourceHealthDetailsArgs build() {
+        }        public KPIResourceHealthDetailsArgs build() {
             return new KPIResourceHealthDetailsArgs(resourceHealthStatus);
         }
     }

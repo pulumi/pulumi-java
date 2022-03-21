@@ -72,12 +72,10 @@ public final class DeleteRetentionPolicyResponse {
             this.days = days;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public DeleteRetentionPolicyResponse build() {
+        }        public DeleteRetentionPolicyResponse build() {
             return new DeleteRetentionPolicyResponse(days, enabled);
         }
     }

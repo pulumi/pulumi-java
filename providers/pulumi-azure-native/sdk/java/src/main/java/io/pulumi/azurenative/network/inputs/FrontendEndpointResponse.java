@@ -225,57 +225,46 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
             this.customHttpsConfiguration = Objects.requireNonNull(customHttpsConfiguration);
             return this;
         }
-
         public Builder customHttpsProvisioningState(String customHttpsProvisioningState) {
             this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState);
             return this;
         }
-
         public Builder customHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
             this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate);
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder sessionAffinityEnabledState(@Nullable String sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
-
         public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
-        }
-        public FrontendEndpointResponse build() {
+        }        public FrontendEndpointResponse build() {
             return new FrontendEndpointResponse(customHttpsConfiguration, customHttpsProvisioningState, customHttpsProvisioningSubstate, hostName, id, name, resourceState, sessionAffinityEnabledState, sessionAffinityTtlSeconds, type, webApplicationFirewallPolicyLink);
         }
     }

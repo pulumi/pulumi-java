@@ -71,12 +71,13 @@ public final class ReplicationStatusResponse {
             this.aggregatedState = Objects.requireNonNull(aggregatedState);
             return this;
         }
-
         public Builder summary(List<RegionalReplicationStatusResponse> summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-        public ReplicationStatusResponse build() {
+        public Builder summary(RegionalReplicationStatusResponse... summary) {
+            return summary(List.of(summary));
+        }        public ReplicationStatusResponse build() {
             return new ReplicationStatusResponse(aggregatedState, summary);
         }
     }

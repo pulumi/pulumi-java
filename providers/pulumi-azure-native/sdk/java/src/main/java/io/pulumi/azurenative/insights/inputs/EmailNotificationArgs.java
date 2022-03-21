@@ -96,32 +96,29 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
             this.customEmails = customEmails;
             return this;
         }
-
         public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = Output.ofNullable(customEmails);
             return this;
         }
-
+        public Builder customEmails(String... customEmails) {
+            return customEmails(List.of(customEmails));
+        }
         public Builder sendToSubscriptionAdministrator(@Nullable Output<Boolean> sendToSubscriptionAdministrator) {
             this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
-
         public Builder sendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
             this.sendToSubscriptionAdministrator = Output.ofNullable(sendToSubscriptionAdministrator);
             return this;
         }
-
         public Builder sendToSubscriptionCoAdministrators(@Nullable Output<Boolean> sendToSubscriptionCoAdministrators) {
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
-
         public Builder sendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
             this.sendToSubscriptionCoAdministrators = Output.ofNullable(sendToSubscriptionCoAdministrators);
             return this;
-        }
-        public EmailNotificationArgs build() {
+        }        public EmailNotificationArgs build() {
             return new EmailNotificationArgs(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
         }
     }

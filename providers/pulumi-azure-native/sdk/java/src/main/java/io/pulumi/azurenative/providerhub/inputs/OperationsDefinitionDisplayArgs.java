@@ -93,42 +93,34 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder operation(Output<String> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder operation(String operation) {
             this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
-
         public Builder provider(Output<String> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
-
         public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
-        }
-        public OperationsDefinitionDisplayArgs build() {
+        }        public OperationsDefinitionDisplayArgs build() {
             return new OperationsDefinitionDisplayArgs(description, operation, provider, resource);
         }
     }

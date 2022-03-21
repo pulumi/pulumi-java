@@ -301,82 +301,84 @@ public final class GetDscpConfigurationResult {
             this.associatedNetworkInterfaces = Objects.requireNonNull(associatedNetworkInterfaces);
             return this;
         }
-
+        public Builder associatedNetworkInterfaces(NetworkInterfaceResponse... associatedNetworkInterfaces) {
+            return associatedNetworkInterfaces(List.of(associatedNetworkInterfaces));
+        }
         public Builder destinationIpRanges(@Nullable List<QosIpRangeResponse> destinationIpRanges) {
             this.destinationIpRanges = destinationIpRanges;
             return this;
         }
-
+        public Builder destinationIpRanges(QosIpRangeResponse... destinationIpRanges) {
+            return destinationIpRanges(List.of(destinationIpRanges));
+        }
         public Builder destinationPortRanges(@Nullable List<QosPortRangeResponse> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
-
+        public Builder destinationPortRanges(QosPortRangeResponse... destinationPortRanges) {
+            return destinationPortRanges(List.of(destinationPortRanges));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder markings(@Nullable List<Integer> markings) {
             this.markings = markings;
             return this;
         }
-
+        public Builder markings(Integer... markings) {
+            return markings(List.of(markings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder qosCollectionId(String qosCollectionId) {
             this.qosCollectionId = Objects.requireNonNull(qosCollectionId);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder sourceIpRanges(@Nullable List<QosIpRangeResponse> sourceIpRanges) {
             this.sourceIpRanges = sourceIpRanges;
             return this;
         }
-
+        public Builder sourceIpRanges(QosIpRangeResponse... sourceIpRanges) {
+            return sourceIpRanges(List.of(sourceIpRanges));
+        }
         public Builder sourcePortRanges(@Nullable List<QosPortRangeResponse> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
+        public Builder sourcePortRanges(QosPortRangeResponse... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDscpConfigurationResult build() {
+        }        public GetDscpConfigurationResult build() {
             return new GetDscpConfigurationResult(associatedNetworkInterfaces, destinationIpRanges, destinationPortRanges, etag, id, location, markings, name, protocol, provisioningState, qosCollectionId, resourceGuid, sourceIpRanges, sourcePortRanges, tags, type);
         }
     }

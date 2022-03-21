@@ -123,27 +123,28 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
             this.allowAutoApprovals = Objects.requireNonNull(allowAutoApprovals);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuardOperations(List<ResourceGuardOperationResponse> resourceGuardOperations) {
             this.resourceGuardOperations = Objects.requireNonNull(resourceGuardOperations);
             return this;
         }
-
+        public Builder resourceGuardOperations(ResourceGuardOperationResponse... resourceGuardOperations) {
+            return resourceGuardOperations(List.of(resourceGuardOperations));
+        }
         public Builder vaultCriticalOperationExclusionList(List<String> vaultCriticalOperationExclusionList) {
             this.vaultCriticalOperationExclusionList = Objects.requireNonNull(vaultCriticalOperationExclusionList);
             return this;
         }
-        public ResourceGuardResponse build() {
+        public Builder vaultCriticalOperationExclusionList(String... vaultCriticalOperationExclusionList) {
+            return vaultCriticalOperationExclusionList(List.of(vaultCriticalOperationExclusionList));
+        }        public ResourceGuardResponse build() {
             return new ResourceGuardResponse(allowAutoApprovals, description, provisioningState, resourceGuardOperations, vaultCriticalOperationExclusionList);
         }
     }

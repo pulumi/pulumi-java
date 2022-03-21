@@ -334,182 +334,146 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder critical(@Nullable Output<Boolean> critical) {
             this.critical = critical;
             return this;
         }
-
         public Builder critical(@Nullable Boolean critical) {
             this.critical = Output.ofNullable(critical);
             return this;
         }
-
         public Builder dataCenter(@Nullable Output<String> dataCenter) {
             this.dataCenter = dataCenter;
             return this;
         }
-
         public Builder dataCenter(@Nullable String dataCenter) {
             this.dataCenter = Output.ofNullable(dataCenter);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespaceName(@Nullable Output<String> namespaceName) {
             this.namespaceName = namespaceName;
             return this;
         }
-
         public Builder namespaceName(@Nullable String namespaceName) {
             this.namespaceName = Output.ofNullable(namespaceName);
             return this;
         }
-
         public Builder namespaceType(@Nullable Output<NamespaceType> namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
-
         public Builder namespaceType(@Nullable NamespaceType namespaceType) {
             this.namespaceType = Output.ofNullable(namespaceType);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scaleUnit(@Nullable Output<String> scaleUnit) {
             this.scaleUnit = scaleUnit;
             return this;
         }
-
         public Builder scaleUnit(@Nullable String scaleUnit) {
             this.scaleUnit = Output.ofNullable(scaleUnit);
             return this;
         }
-
         public Builder serviceBusEndpoint(@Nullable Output<String> serviceBusEndpoint) {
             this.serviceBusEndpoint = serviceBusEndpoint;
             return this;
         }
-
         public Builder serviceBusEndpoint(@Nullable String serviceBusEndpoint) {
             this.serviceBusEndpoint = Output.ofNullable(serviceBusEndpoint);
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
-
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = Output.ofNullable(updatedAt);
             return this;
-        }
-        public NamespaceArgs build() {
+        }        public NamespaceArgs build() {
             return new NamespaceArgs(createdAt, critical, dataCenter, enabled, location, name, namespaceName, namespaceType, provisioningState, region, resourceGroupName, scaleUnit, serviceBusEndpoint, sku, status, subscriptionId, tags, updatedAt);
         }
     }

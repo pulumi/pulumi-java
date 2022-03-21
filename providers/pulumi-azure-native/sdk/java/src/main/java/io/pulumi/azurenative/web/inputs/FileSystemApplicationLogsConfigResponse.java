@@ -60,8 +60,7 @@ public final class FileSystemApplicationLogsConfigResponse extends io.pulumi.res
         public Builder level(@Nullable String level) {
             this.level = level;
             return this;
-        }
-        public FileSystemApplicationLogsConfigResponse build() {
+        }        public FileSystemApplicationLogsConfigResponse build() {
             return new FileSystemApplicationLogsConfigResponse(level);
         }
     }

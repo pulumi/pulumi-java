@@ -60,8 +60,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
-        }
-        public EncryptionPropertiesResponse build() {
+        }        public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keyVaultProperties);
         }
     }

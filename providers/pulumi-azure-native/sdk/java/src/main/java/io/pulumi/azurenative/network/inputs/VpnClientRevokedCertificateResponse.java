@@ -126,27 +126,22 @@ public final class VpnClientRevokedCertificateResponse extends io.pulumi.resourc
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public VpnClientRevokedCertificateResponse build() {
+        }        public VpnClientRevokedCertificateResponse build() {
             return new VpnClientRevokedCertificateResponse(etag, id, name, provisioningState, thumbprint);
         }
     }

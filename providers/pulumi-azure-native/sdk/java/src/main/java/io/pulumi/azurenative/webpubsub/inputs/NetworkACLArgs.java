@@ -81,22 +81,24 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable List<Either<String,WebPubSubRequestType>> allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
+        public Builder allow(Either<String,WebPubSubRequestType>... allow) {
+            return allow(List.of(allow));
+        }
         public Builder deny(@Nullable Output<List<Either<String,WebPubSubRequestType>>> deny) {
             this.deny = deny;
             return this;
         }
-
         public Builder deny(@Nullable List<Either<String,WebPubSubRequestType>> deny) {
             this.deny = Output.ofNullable(deny);
             return this;
         }
-        public NetworkACLArgs build() {
+        public Builder deny(Either<String,WebPubSubRequestType>... deny) {
+            return deny(List.of(deny));
+        }        public NetworkACLArgs build() {
             return new NetworkACLArgs(allow, deny);
         }
     }

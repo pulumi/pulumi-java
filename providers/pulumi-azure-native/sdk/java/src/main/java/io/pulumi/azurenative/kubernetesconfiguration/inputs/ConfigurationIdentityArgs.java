@@ -61,12 +61,10 @@ public final class ConfigurationIdentityArgs extends io.pulumi.resources.Resourc
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ConfigurationIdentityArgs build() {
+        }        public ConfigurationIdentityArgs build() {
             return new ConfigurationIdentityArgs(type);
         }
     }

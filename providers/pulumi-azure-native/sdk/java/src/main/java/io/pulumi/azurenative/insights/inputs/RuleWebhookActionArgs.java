@@ -96,32 +96,26 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
-
         public Builder serviceUri(@Nullable String serviceUri) {
             this.serviceUri = Output.ofNullable(serviceUri);
             return this;
-        }
-        public RuleWebhookActionArgs build() {
+        }        public RuleWebhookActionArgs build() {
             return new RuleWebhookActionArgs(odataType, properties, serviceUri);
         }
     }

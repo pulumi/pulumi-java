@@ -66,22 +66,18 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
             this.desired = desired;
             return this;
         }
-
         public Builder desired(@Nullable String desired) {
             this.desired = Output.ofNullable(desired);
             return this;
         }
-
         public Builder original(@Nullable Output<String> original) {
             this.original = original;
             return this;
         }
-
         public Builder original(@Nullable String original) {
             this.original = Output.ofNullable(original);
             return this;
-        }
-        public AuthorizationActionMappingArgs build() {
+        }        public AuthorizationActionMappingArgs build() {
             return new AuthorizationActionMappingArgs(desired, original);
         }
     }

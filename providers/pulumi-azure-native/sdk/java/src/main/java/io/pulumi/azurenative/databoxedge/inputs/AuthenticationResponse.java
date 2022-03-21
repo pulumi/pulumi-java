@@ -60,8 +60,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
         public Builder symmetricKey(@Nullable SymmetricKeyResponse symmetricKey) {
             this.symmetricKey = symmetricKey;
             return this;
-        }
-        public AuthenticationResponse build() {
+        }        public AuthenticationResponse build() {
             return new AuthenticationResponse(symmetricKey);
         }
     }

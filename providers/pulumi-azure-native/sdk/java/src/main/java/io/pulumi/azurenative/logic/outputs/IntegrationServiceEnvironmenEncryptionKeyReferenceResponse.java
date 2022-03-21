@@ -88,17 +88,14 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyVault(@Nullable ResourceReferenceResponse keyVault) {
             this.keyVault = keyVault;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
-        }
-        public IntegrationServiceEnvironmenEncryptionKeyReferenceResponse build() {
+        }        public IntegrationServiceEnvironmenEncryptionKeyReferenceResponse build() {
             return new IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(keyName, keyVault, keyVersion);
         }
     }

@@ -290,152 +290,128 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedIdentities(@Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities) {
             this.managedIdentities = managedIdentities;
             return this;
         }
-
         public Builder managedIdentities(@Nullable List<ApplicationUserAssignedIdentityArgs> managedIdentities) {
             this.managedIdentities = Output.ofNullable(managedIdentities);
             return this;
         }
-
+        public Builder managedIdentities(ApplicationUserAssignedIdentityArgs... managedIdentities) {
+            return managedIdentities(List.of(managedIdentities));
+        }
         public Builder maximumNodes(@Nullable Output<Double> maximumNodes) {
             this.maximumNodes = maximumNodes;
             return this;
         }
-
         public Builder maximumNodes(@Nullable Double maximumNodes) {
             this.maximumNodes = Output.ofNullable(maximumNodes);
             return this;
         }
-
         public Builder metrics(@Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<ApplicationMetricDescriptionArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(ApplicationMetricDescriptionArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minimumNodes(@Nullable Output<Double> minimumNodes) {
             this.minimumNodes = minimumNodes;
             return this;
         }
-
         public Builder minimumNodes(@Nullable Double minimumNodes) {
             this.minimumNodes = Output.ofNullable(minimumNodes);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder removeApplicationCapacity(@Nullable Output<Boolean> removeApplicationCapacity) {
             this.removeApplicationCapacity = removeApplicationCapacity;
             return this;
         }
-
         public Builder removeApplicationCapacity(@Nullable Boolean removeApplicationCapacity) {
             this.removeApplicationCapacity = Output.ofNullable(removeApplicationCapacity);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
         }
-
         public Builder typeVersion(@Nullable Output<String> typeVersion) {
             this.typeVersion = typeVersion;
             return this;
         }
-
         public Builder typeVersion(@Nullable String typeVersion) {
             this.typeVersion = Output.ofNullable(typeVersion);
             return this;
         }
-
         public Builder upgradePolicy(@Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy) {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
-
         public Builder upgradePolicy(@Nullable ApplicationUpgradePolicyArgs upgradePolicy) {
             this.upgradePolicy = Output.ofNullable(upgradePolicy);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationName, clusterName, identity, location, managedIdentities, maximumNodes, metrics, minimumNodes, parameters, removeApplicationCapacity, resourceGroupName, tags, typeName, typeVersion, upgradePolicy);
         }
     }

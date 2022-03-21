@@ -60,8 +60,7 @@ public final class DiskSecurityProfileResponse extends io.pulumi.resources.Invok
         public Builder securityType(@Nullable String securityType) {
             this.securityType = securityType;
             return this;
-        }
-        public DiskSecurityProfileResponse build() {
+        }        public DiskSecurityProfileResponse build() {
             return new DiskSecurityProfileResponse(securityType);
         }
     }

@@ -112,22 +112,18 @@ public final class GitHubActionConfigurationResponse extends io.pulumi.resources
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationResponse containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
-
         public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
             this.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
-
         public Builder isLinux(@Nullable Boolean isLinux) {
             this.isLinux = isLinux;
             return this;
-        }
-        public GitHubActionConfigurationResponse build() {
+        }        public GitHubActionConfigurationResponse build() {
             return new GitHubActionConfigurationResponse(codeConfiguration, containerConfiguration, generateWorkflowFile, isLinux);
         }
     }

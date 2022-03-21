@@ -104,22 +104,18 @@ public final class KikChannelPropertiesResponse {
             this.apiKey = apiKey;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = isValidated;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public KikChannelPropertiesResponse build() {
+        }        public KikChannelPropertiesResponse build() {
             return new KikChannelPropertiesResponse(apiKey, isEnabled, isValidated, userName);
         }
     }

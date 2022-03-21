@@ -334,92 +334,77 @@ public final class GetFluxConfigurationResult {
             this.complianceState = Objects.requireNonNull(complianceState);
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder gitRepository(@Nullable GitRepositoryDefinitionResponse gitRepository) {
             this.gitRepository = gitRepository;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kustomizations(@Nullable Map<String,KustomizationDefinitionResponse> kustomizations) {
             this.kustomizations = kustomizations;
             return this;
         }
-
         public Builder lastSourceSyncedAt(String lastSourceSyncedAt) {
             this.lastSourceSyncedAt = Objects.requireNonNull(lastSourceSyncedAt);
             return this;
         }
-
         public Builder lastSourceSyncedCommitId(String lastSourceSyncedCommitId) {
             this.lastSourceSyncedCommitId = Objects.requireNonNull(lastSourceSyncedCommitId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder repositoryPublicKey(String repositoryPublicKey) {
             this.repositoryPublicKey = Objects.requireNonNull(repositoryPublicKey);
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder sourceKind(@Nullable String sourceKind) {
             this.sourceKind = sourceKind;
             return this;
         }
-
         public Builder statuses(List<ObjectStatusDefinitionResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(ObjectStatusDefinitionResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFluxConfigurationResult build() {
+        }        public GetFluxConfigurationResult build() {
             return new GetFluxConfigurationResult(complianceState, configurationProtectedSettings, errorMessage, gitRepository, id, kustomizations, lastSourceSyncedAt, lastSourceSyncedCommitId, name, namespace, provisioningState, repositoryPublicKey, scope, sourceKind, statuses, suspend, systemData, type);
         }
     }

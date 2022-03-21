@@ -61,12 +61,10 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
             this.bytes = bytes;
             return this;
         }
-
         public Builder bytes(@Nullable Integer bytes) {
             this.bytes = Output.ofNullable(bytes);
             return this;
-        }
-        public BodyDiagnosticSettingsArgs build() {
+        }        public BodyDiagnosticSettingsArgs build() {
             return new BodyDiagnosticSettingsArgs(bytes);
         }
     }

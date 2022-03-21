@@ -79,12 +79,13 @@ public final class ObjectReplicationPolicyFilterResponse extends io.pulumi.resou
             this.minCreationTime = minCreationTime;
             return this;
         }
-
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-        public ObjectReplicationPolicyFilterResponse build() {
+        public Builder prefixMatch(String... prefixMatch) {
+            return prefixMatch(List.of(prefixMatch));
+        }        public ObjectReplicationPolicyFilterResponse build() {
             return new ObjectReplicationPolicyFilterResponse(minCreationTime, prefixMatch);
         }
     }

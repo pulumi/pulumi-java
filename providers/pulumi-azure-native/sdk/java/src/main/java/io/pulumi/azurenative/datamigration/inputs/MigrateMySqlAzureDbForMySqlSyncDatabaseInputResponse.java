@@ -127,27 +127,22 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
             this.migrationSetting = migrationSetting;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
-        }
-        public MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse build() {
+        }        public MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }
     }

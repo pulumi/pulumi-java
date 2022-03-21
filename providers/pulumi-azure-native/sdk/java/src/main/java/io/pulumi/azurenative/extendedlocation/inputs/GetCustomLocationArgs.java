@@ -72,12 +72,10 @@ public final class GetCustomLocationArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetCustomLocationArgs build() {
+        }        public GetCustomLocationArgs build() {
             return new GetCustomLocationArgs(resourceGroupName, resourceName);
         }
     }

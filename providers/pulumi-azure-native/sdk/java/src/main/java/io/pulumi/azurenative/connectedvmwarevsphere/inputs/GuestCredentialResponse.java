@@ -60,8 +60,7 @@ public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArg
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public GuestCredentialResponse build() {
+        }        public GuestCredentialResponse build() {
             return new GuestCredentialResponse(username);
         }
     }

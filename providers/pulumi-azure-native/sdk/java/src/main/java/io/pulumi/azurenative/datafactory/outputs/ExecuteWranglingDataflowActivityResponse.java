@@ -293,77 +293,71 @@ public final class ExecuteWranglingDataflowActivityResponse {
             this.compute = compute;
             return this;
         }
-
         public Builder continueOnError(@Nullable Object continueOnError) {
             this.continueOnError = continueOnError;
             return this;
         }
-
         public Builder dataFlow(DataFlowReferenceResponse dataFlow) {
             this.dataFlow = Objects.requireNonNull(dataFlow);
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
             this.integrationRuntime = integrationRuntime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder queries(@Nullable List<PowerQuerySinkMappingResponse> queries) {
             this.queries = queries;
             return this;
         }
-
+        public Builder queries(PowerQuerySinkMappingResponse... queries) {
+            return queries(List.of(queries));
+        }
         public Builder runConcurrently(@Nullable Object runConcurrently) {
             this.runConcurrently = runConcurrently;
             return this;
         }
-
         public Builder sinks(@Nullable Map<String,PowerQuerySinkResponse> sinks) {
             this.sinks = sinks;
             return this;
         }
-
         public Builder staging(@Nullable DataFlowStagingInfoResponse staging) {
             this.staging = staging;
             return this;
         }
-
         public Builder traceLevel(@Nullable Object traceLevel) {
             this.traceLevel = traceLevel;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public ExecuteWranglingDataflowActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public ExecuteWranglingDataflowActivityResponse build() {
             return new ExecuteWranglingDataflowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, name, policy, queries, runConcurrently, sinks, staging, traceLevel, type, userProperties);
         }
     }

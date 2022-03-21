@@ -72,12 +72,10 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public ApplicationUserAssignedIdentityResponse build() {
+        }        public ApplicationUserAssignedIdentityResponse build() {
             return new ApplicationUserAssignedIdentityResponse(name, principalId);
         }
     }

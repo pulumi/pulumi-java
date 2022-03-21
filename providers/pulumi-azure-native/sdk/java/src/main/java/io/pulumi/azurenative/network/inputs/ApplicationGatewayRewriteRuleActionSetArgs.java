@@ -96,32 +96,32 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
             this.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
-
         public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
             this.requestHeaderConfigurations = Output.ofNullable(requestHeaderConfigurations);
             return this;
         }
-
+        public Builder requestHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... requestHeaderConfigurations) {
+            return requestHeaderConfigurations(List.of(requestHeaderConfigurations));
+        }
         public Builder responseHeaderConfigurations(@Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
-
         public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = Output.ofNullable(responseHeaderConfigurations);
             return this;
         }
-
+        public Builder responseHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... responseHeaderConfigurations) {
+            return responseHeaderConfigurations(List.of(responseHeaderConfigurations));
+        }
         public Builder urlConfiguration(@Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
             this.urlConfiguration = urlConfiguration;
             return this;
         }
-
         public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
             this.urlConfiguration = Output.ofNullable(urlConfiguration);
             return this;
-        }
-        public ApplicationGatewayRewriteRuleActionSetArgs build() {
+        }        public ApplicationGatewayRewriteRuleActionSetArgs build() {
             return new ApplicationGatewayRewriteRuleActionSetArgs(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);
         }
     }

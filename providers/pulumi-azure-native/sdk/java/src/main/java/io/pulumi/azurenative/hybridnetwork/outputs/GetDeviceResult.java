@@ -185,47 +185,41 @@ public final class GetDeviceResult {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkFunctions(List<SubResourceResponse> networkFunctions) {
             this.networkFunctions = Objects.requireNonNull(networkFunctions);
             return this;
         }
-
+        public Builder networkFunctions(SubResourceResponse... networkFunctions) {
+            return networkFunctions(List.of(networkFunctions));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDeviceResult build() {
+        }        public GetDeviceResult build() {
             return new GetDeviceResult(deviceType, id, location, name, networkFunctions, provisioningState, status, tags, type);
         }
     }

@@ -238,62 +238,50 @@ public final class GetBudgetResult {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder currentSpend(CurrentSpendResponse currentSpend) {
             this.currentSpend = Objects.requireNonNull(currentSpend);
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder filter(@Nullable BudgetFilterResponse filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder forecastSpend(ForecastSpendResponse forecastSpend) {
             this.forecastSpend = Objects.requireNonNull(forecastSpend);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notifications(@Nullable Map<String,NotificationResponse> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder timeGrain(String timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
-
         public Builder timePeriod(BudgetTimePeriodResponse timePeriod) {
             this.timePeriod = Objects.requireNonNull(timePeriod);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBudgetResult build() {
+        }        public GetBudgetResult build() {
             return new GetBudgetResult(amount, category, currentSpend, eTag, filter, forecastSpend, id, name, notifications, timeGrain, timePeriod, type);
         }
     }

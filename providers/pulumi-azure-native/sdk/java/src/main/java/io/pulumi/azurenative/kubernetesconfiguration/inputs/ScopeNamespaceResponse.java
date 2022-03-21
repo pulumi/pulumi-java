@@ -60,8 +60,7 @@ public final class ScopeNamespaceResponse extends io.pulumi.resources.InvokeArgs
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
-        }
-        public ScopeNamespaceResponse build() {
+        }        public ScopeNamespaceResponse build() {
             return new ScopeNamespaceResponse(targetNamespace);
         }
     }

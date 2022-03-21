@@ -79,12 +79,10 @@ public final class AzureFirewallApplicationRuleProtocolResponse extends io.pulum
             this.port = port;
             return this;
         }
-
         public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
-        }
-        public AzureFirewallApplicationRuleProtocolResponse build() {
+        }        public AzureFirewallApplicationRuleProtocolResponse build() {
             return new AzureFirewallApplicationRuleProtocolResponse(port, protocolType);
         }
     }

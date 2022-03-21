@@ -88,17 +88,14 @@ public final class GetServiceRunnerArgs extends io.pulumi.resources.InvokeArgs {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetServiceRunnerArgs build() {
+        }        public GetServiceRunnerArgs build() {
             return new GetServiceRunnerArgs(labName, name, resourceGroupName);
         }
     }

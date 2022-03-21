@@ -71,12 +71,10 @@ public final class DcAccessSecurityCodeResponse {
             this.forwardDCAccessCode = forwardDCAccessCode;
             return this;
         }
-
         public Builder reverseDCAccessCode(@Nullable String reverseDCAccessCode) {
             this.reverseDCAccessCode = reverseDCAccessCode;
             return this;
-        }
-        public DcAccessSecurityCodeResponse build() {
+        }        public DcAccessSecurityCodeResponse build() {
             return new DcAccessSecurityCodeResponse(forwardDCAccessCode, reverseDCAccessCode);
         }
     }

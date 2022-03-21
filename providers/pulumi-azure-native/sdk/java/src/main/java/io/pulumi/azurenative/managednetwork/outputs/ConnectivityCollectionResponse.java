@@ -71,12 +71,16 @@ public final class ConnectivityCollectionResponse {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
+        public Builder groups(ManagedNetworkGroupResponse... groups) {
+            return groups(List.of(groups));
+        }
         public Builder peerings(List<ManagedNetworkPeeringPolicyResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
-        public ConnectivityCollectionResponse build() {
+        public Builder peerings(ManagedNetworkPeeringPolicyResponse... peerings) {
+            return peerings(List.of(peerings));
+        }        public ConnectivityCollectionResponse build() {
             return new ConnectivityCollectionResponse(groups, peerings);
         }
     }

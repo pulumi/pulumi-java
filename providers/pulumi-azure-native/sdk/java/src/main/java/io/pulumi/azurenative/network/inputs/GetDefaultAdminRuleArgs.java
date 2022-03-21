@@ -120,27 +120,22 @@ public final class GetDefaultAdminRuleArgs extends io.pulumi.resources.InvokeArg
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleCollectionName(String ruleCollectionName) {
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public GetDefaultAdminRuleArgs build() {
+        }        public GetDefaultAdminRuleArgs build() {
             return new GetDefaultAdminRuleArgs(configurationName, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);
         }
     }

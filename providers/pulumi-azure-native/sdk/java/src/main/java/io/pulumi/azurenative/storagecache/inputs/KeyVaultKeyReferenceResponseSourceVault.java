@@ -60,8 +60,7 @@ public final class KeyVaultKeyReferenceResponseSourceVault extends io.pulumi.res
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public KeyVaultKeyReferenceResponseSourceVault build() {
+        }        public KeyVaultKeyReferenceResponseSourceVault build() {
             return new KeyVaultKeyReferenceResponseSourceVault(id);
         }
     }

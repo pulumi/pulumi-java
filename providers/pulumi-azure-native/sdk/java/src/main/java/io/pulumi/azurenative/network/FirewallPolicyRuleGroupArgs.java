@@ -159,72 +159,61 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
-
         public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Output.of(Objects.requireNonNull(firewallPolicyName));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleGroupName(@Nullable Output<String> ruleGroupName) {
             this.ruleGroupName = ruleGroupName;
             return this;
         }
-
         public Builder ruleGroupName(@Nullable String ruleGroupName) {
             this.ruleGroupName = Output.ofNullable(ruleGroupName);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public FirewallPolicyRuleGroupArgs build() {
+        public Builder rules(Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>... rules) {
+            return rules(List.of(rules));
+        }        public FirewallPolicyRuleGroupArgs build() {
             return new FirewallPolicyRuleGroupArgs(firewallPolicyName, id, name, priority, resourceGroupName, ruleGroupName, rules);
         }
     }

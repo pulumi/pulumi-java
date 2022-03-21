@@ -95,32 +95,26 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
-        }
-        public EnterpriseKnowledgeGraphPropertiesArgs build() {
+        }        public EnterpriseKnowledgeGraphPropertiesArgs build() {
             return new EnterpriseKnowledgeGraphPropertiesArgs(description, metadata, provisioningState);
         }
     }

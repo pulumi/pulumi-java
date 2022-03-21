@@ -123,52 +123,42 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder geoBackupPolicyName(@Nullable Output<String> geoBackupPolicyName) {
             this.geoBackupPolicyName = geoBackupPolicyName;
             return this;
         }
-
         public Builder geoBackupPolicyName(@Nullable String geoBackupPolicyName) {
             this.geoBackupPolicyName = Output.ofNullable(geoBackupPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder state(Output<GeoBackupPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(GeoBackupPolicyState state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
-        }
-        public GeoBackupPolicyArgs build() {
+        }        public GeoBackupPolicyArgs build() {
             return new GeoBackupPolicyArgs(databaseName, geoBackupPolicyName, resourceGroupName, serverName, state);
         }
     }

@@ -157,37 +157,30 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
             this.$default = Objects.requireNonNull($default);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder helpUrl(String helpUrl) {
             this.helpUrl = Objects.requireNonNull(helpUrl);
             return this;
         }
-
         public Builder metadata(ServiceProviderParameterResponseMetadata metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceProviderParameterResponse build() {
+        }        public ServiceProviderParameterResponse build() {
             return new ServiceProviderParameterResponse($default, description, displayName, helpUrl, metadata, name, type);
         }
     }

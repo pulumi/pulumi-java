@@ -249,67 +249,54 @@ public final class GetLiveOutputResult {
             this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder hls(@Nullable HlsResponse hls) {
             this.hls = hls;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputSnapTime(@Nullable Double outputSnapTime) {
             this.outputSnapTime = outputSnapTime;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLiveOutputResult build() {
+        }        public GetLiveOutputResult build() {
             return new GetLiveOutputResult(archiveWindowLength, assetName, created, description, hls, id, lastModified, manifestName, name, outputSnapTime, provisioningState, resourceState, type);
         }
     }

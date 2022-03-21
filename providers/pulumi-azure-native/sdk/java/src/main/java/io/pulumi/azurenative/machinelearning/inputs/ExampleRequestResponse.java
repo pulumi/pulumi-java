@@ -81,12 +81,10 @@ public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs
             this.globalParameters = globalParameters;
             return this;
         }
-
         public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
             this.inputs = inputs;
             return this;
-        }
-        public ExampleRequestResponse build() {
+        }        public ExampleRequestResponse build() {
             return new ExampleRequestResponse(globalParameters, inputs);
         }
     }

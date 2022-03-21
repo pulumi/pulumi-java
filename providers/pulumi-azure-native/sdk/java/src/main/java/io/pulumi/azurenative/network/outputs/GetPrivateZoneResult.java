@@ -265,72 +265,58 @@ public final class GetPrivateZoneResult {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder internalId(String internalId) {
             this.internalId = Objects.requireNonNull(internalId);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder maxNumberOfRecordSets(Double maxNumberOfRecordSets) {
             this.maxNumberOfRecordSets = Objects.requireNonNull(maxNumberOfRecordSets);
             return this;
         }
-
         public Builder maxNumberOfVirtualNetworkLinks(Double maxNumberOfVirtualNetworkLinks) {
             this.maxNumberOfVirtualNetworkLinks = Objects.requireNonNull(maxNumberOfVirtualNetworkLinks);
             return this;
         }
-
         public Builder maxNumberOfVirtualNetworkLinksWithRegistration(Double maxNumberOfVirtualNetworkLinksWithRegistration) {
             this.maxNumberOfVirtualNetworkLinksWithRegistration = Objects.requireNonNull(maxNumberOfVirtualNetworkLinksWithRegistration);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberOfRecordSets(Double numberOfRecordSets) {
             this.numberOfRecordSets = Objects.requireNonNull(numberOfRecordSets);
             return this;
         }
-
         public Builder numberOfVirtualNetworkLinks(Double numberOfVirtualNetworkLinks) {
             this.numberOfVirtualNetworkLinks = Objects.requireNonNull(numberOfVirtualNetworkLinks);
             return this;
         }
-
         public Builder numberOfVirtualNetworkLinksWithRegistration(Double numberOfVirtualNetworkLinksWithRegistration) {
             this.numberOfVirtualNetworkLinksWithRegistration = Objects.requireNonNull(numberOfVirtualNetworkLinksWithRegistration);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPrivateZoneResult build() {
+        }        public GetPrivateZoneResult build() {
             return new GetPrivateZoneResult(etag, id, internalId, location, maxNumberOfRecordSets, maxNumberOfVirtualNetworkLinks, maxNumberOfVirtualNetworkLinksWithRegistration, name, numberOfRecordSets, numberOfVirtualNetworkLinks, numberOfVirtualNetworkLinksWithRegistration, provisioningState, tags, type);
         }
     }

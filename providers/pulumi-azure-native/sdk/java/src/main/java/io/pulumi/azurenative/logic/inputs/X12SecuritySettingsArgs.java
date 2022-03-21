@@ -110,42 +110,34 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
             return this;
         }
-
         public Builder authorizationQualifier(String authorizationQualifier) {
             this.authorizationQualifier = Output.of(Objects.requireNonNull(authorizationQualifier));
             return this;
         }
-
         public Builder authorizationValue(@Nullable Output<String> authorizationValue) {
             this.authorizationValue = authorizationValue;
             return this;
         }
-
         public Builder authorizationValue(@Nullable String authorizationValue) {
             this.authorizationValue = Output.ofNullable(authorizationValue);
             return this;
         }
-
         public Builder passwordValue(@Nullable Output<String> passwordValue) {
             this.passwordValue = passwordValue;
             return this;
         }
-
         public Builder passwordValue(@Nullable String passwordValue) {
             this.passwordValue = Output.ofNullable(passwordValue);
             return this;
         }
-
         public Builder securityQualifier(Output<String> securityQualifier) {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
         }
-
         public Builder securityQualifier(String securityQualifier) {
             this.securityQualifier = Output.of(Objects.requireNonNull(securityQualifier));
             return this;
-        }
-        public X12SecuritySettingsArgs build() {
+        }        public X12SecuritySettingsArgs build() {
             return new X12SecuritySettingsArgs(authorizationQualifier, authorizationValue, passwordValue, securityQualifier);
         }
     }

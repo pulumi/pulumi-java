@@ -87,17 +87,17 @@ public final class StreamingPathResponse {
             this.encryptionScheme = Objects.requireNonNull(encryptionScheme);
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder streamingProtocol(String streamingProtocol) {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
-        }
-        public StreamingPathResponse build() {
+        }        public StreamingPathResponse build() {
             return new StreamingPathResponse(encryptionScheme, paths, streamingProtocol);
         }
     }

@@ -156,72 +156,58 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.accountResourceName = Objects.requireNonNull(accountResourceName);
             return this;
         }
-
         public Builder accountResourceName(String accountResourceName) {
             this.accountResourceName = Output.of(Objects.requireNonNull(accountResourceName));
             return this;
         }
-
         public Builder extensionResourceName(@Nullable Output<String> extensionResourceName) {
             this.extensionResourceName = extensionResourceName;
             return this;
         }
-
         public Builder extensionResourceName(@Nullable String extensionResourceName) {
             this.extensionResourceName = Output.ofNullable(extensionResourceName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder plan(@Nullable Output<ExtensionResourcePlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable ExtensionResourcePlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ExtensionArgs build() {
+        }        public ExtensionArgs build() {
             return new ExtensionArgs(accountResourceName, extensionResourceName, location, plan, properties, resourceGroupName, tags);
         }
     }

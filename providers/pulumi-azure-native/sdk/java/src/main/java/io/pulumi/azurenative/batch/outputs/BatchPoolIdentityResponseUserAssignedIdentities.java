@@ -69,12 +69,10 @@ public final class BatchPoolIdentityResponseUserAssignedIdentities {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public BatchPoolIdentityResponseUserAssignedIdentities build() {
+        }        public BatchPoolIdentityResponseUserAssignedIdentities build() {
             return new BatchPoolIdentityResponseUserAssignedIdentities(clientId, principalId);
         }
     }

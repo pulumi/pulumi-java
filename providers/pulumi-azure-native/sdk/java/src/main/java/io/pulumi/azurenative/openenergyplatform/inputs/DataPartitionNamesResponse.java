@@ -56,8 +56,7 @@ public final class DataPartitionNamesResponse extends io.pulumi.resources.Invoke
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DataPartitionNamesResponse build() {
+        }        public DataPartitionNamesResponse build() {
             return new DataPartitionNamesResponse(name);
         }
     }

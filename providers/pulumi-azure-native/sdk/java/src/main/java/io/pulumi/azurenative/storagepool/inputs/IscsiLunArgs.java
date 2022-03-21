@@ -77,22 +77,18 @@ public final class IscsiLunArgs extends io.pulumi.resources.ResourceArgs {
             this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId);
             return this;
         }
-
         public Builder managedDiskAzureResourceId(String managedDiskAzureResourceId) {
             this.managedDiskAzureResourceId = Output.of(Objects.requireNonNull(managedDiskAzureResourceId));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public IscsiLunArgs build() {
+        }        public IscsiLunArgs build() {
             return new IscsiLunArgs(managedDiskAzureResourceId, name);
         }
     }

@@ -57,12 +57,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.pem = pem;
             return this;
         }
-
         public Builder pem(@Nullable String pem) {
             this.pem = Output.ofNullable(pem);
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(pem);
         }
     }

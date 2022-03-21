@@ -78,22 +78,18 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
             this.begin = begin;
             return this;
         }
-
         public Builder begin(@Nullable Integer begin) {
             this.begin = Output.ofNullable(begin);
             return this;
         }
-
         public Builder end(@Nullable Output<Integer> end) {
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable Integer end) {
             this.end = Output.ofNullable(end);
             return this;
-        }
-        public HttpErrorRangeParametersArgs build() {
+        }        public HttpErrorRangeParametersArgs build() {
             return new HttpErrorRangeParametersArgs(begin, end);
         }
     }

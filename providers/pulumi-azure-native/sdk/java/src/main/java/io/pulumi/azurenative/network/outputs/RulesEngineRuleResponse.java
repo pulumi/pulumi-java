@@ -123,27 +123,25 @@ public final class RulesEngineRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder matchConditions(@Nullable List<RulesEngineMatchConditionResponse> matchConditions) {
             this.matchConditions = matchConditions;
             return this;
         }
-
+        public Builder matchConditions(RulesEngineMatchConditionResponse... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder matchProcessingBehavior(@Nullable String matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
-        }
-        public RulesEngineRuleResponse build() {
+        }        public RulesEngineRuleResponse build() {
             return new RulesEngineRuleResponse(action, matchConditions, matchProcessingBehavior, name, priority);
         }
     }

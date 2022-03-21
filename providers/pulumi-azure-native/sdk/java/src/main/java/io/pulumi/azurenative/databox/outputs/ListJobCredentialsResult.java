@@ -73,12 +73,13 @@ public final class ListJobCredentialsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<UnencryptedCredentialsResponse> value) {
             this.value = value;
             return this;
         }
-        public ListJobCredentialsResult build() {
+        public Builder value(UnencryptedCredentialsResponse... value) {
+            return value(List.of(value));
+        }        public ListJobCredentialsResult build() {
             return new ListJobCredentialsResult(nextLink, value);
         }
     }

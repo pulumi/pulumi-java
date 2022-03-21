@@ -78,12 +78,10 @@ public final class DeliveryRuleRequestMethodConditionResponse extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(RequestMethodMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleRequestMethodConditionResponse build() {
+        }        public DeliveryRuleRequestMethodConditionResponse build() {
             return new DeliveryRuleRequestMethodConditionResponse(name, parameters);
         }
     }

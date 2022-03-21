@@ -53,8 +53,7 @@ public final class DebugSettingResponse {
         public Builder detailLevel(@Nullable String detailLevel) {
             this.detailLevel = detailLevel;
             return this;
-        }
-        public DebugSettingResponse build() {
+        }        public DebugSettingResponse build() {
             return new DebugSettingResponse(detailLevel);
         }
     }

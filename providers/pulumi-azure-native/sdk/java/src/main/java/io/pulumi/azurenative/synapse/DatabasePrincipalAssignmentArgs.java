@@ -189,92 +189,74 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
-
         public Builder principalAssignmentName(@Nullable Output<String> principalAssignmentName) {
             this.principalAssignmentName = principalAssignmentName;
             return this;
         }
-
         public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
             this.principalAssignmentName = Output.ofNullable(principalAssignmentName);
             return this;
         }
-
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder principalType(Output<Either<String,PrincipalType>> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public Builder principalType(Either<String,PrincipalType> principalType) {
             this.principalType = Output.of(Objects.requireNonNull(principalType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder role(Output<Either<String,DatabasePrincipalRole>> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(Either<String,DatabasePrincipalRole> role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public DatabasePrincipalAssignmentArgs build() {
+        }        public DatabasePrincipalAssignmentArgs build() {
             return new DatabasePrincipalAssignmentArgs(databaseName, kustoPoolName, principalAssignmentName, principalId, principalType, resourceGroupName, role, tenantId, workspaceName);
         }
     }

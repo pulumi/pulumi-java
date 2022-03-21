@@ -78,12 +78,10 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
             this.cpu = cpu;
             return this;
         }
-
         public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
-        }
-        public GatewayResourceRequestsResponse build() {
+        }        public GatewayResourceRequestsResponse build() {
             return new GatewayResourceRequestsResponse(cpu, memory);
         }
     }

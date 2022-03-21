@@ -71,12 +71,10 @@ public final class DWCopyCommandDefaultValueResponse {
             this.columnName = columnName;
             return this;
         }
-
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
-        }
-        public DWCopyCommandDefaultValueResponse build() {
+        }        public DWCopyCommandDefaultValueResponse build() {
             return new DWCopyCommandDefaultValueResponse(columnName, defaultValue);
         }
     }

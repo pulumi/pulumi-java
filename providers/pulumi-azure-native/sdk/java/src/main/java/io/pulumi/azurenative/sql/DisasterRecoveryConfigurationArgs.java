@@ -90,32 +90,26 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
             this.disasterRecoveryConfigurationName = disasterRecoveryConfigurationName;
             return this;
         }
-
         public Builder disasterRecoveryConfigurationName(@Nullable String disasterRecoveryConfigurationName) {
             this.disasterRecoveryConfigurationName = Output.ofNullable(disasterRecoveryConfigurationName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
-        }
-        public DisasterRecoveryConfigurationArgs build() {
+        }        public DisasterRecoveryConfigurationArgs build() {
             return new DisasterRecoveryConfigurationArgs(disasterRecoveryConfigurationName, resourceGroupName, serverName);
         }
     }

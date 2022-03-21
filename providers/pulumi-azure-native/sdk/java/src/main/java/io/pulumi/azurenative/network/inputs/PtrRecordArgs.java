@@ -61,12 +61,10 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.ptrdname = ptrdname;
             return this;
         }
-
         public Builder ptrdname(@Nullable String ptrdname) {
             this.ptrdname = Output.ofNullable(ptrdname);
             return this;
-        }
-        public PtrRecordArgs build() {
+        }        public PtrRecordArgs build() {
             return new PtrRecordArgs(ptrdname);
         }
     }

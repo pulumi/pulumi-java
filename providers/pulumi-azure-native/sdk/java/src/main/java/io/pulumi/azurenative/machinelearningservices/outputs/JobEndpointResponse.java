@@ -105,22 +105,18 @@ public final class JobEndpointResponse {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder jobEndpointType(@Nullable String jobEndpointType) {
             this.jobEndpointType = jobEndpointType;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
-        }
-        public JobEndpointResponse build() {
+        }        public JobEndpointResponse build() {
             return new JobEndpointResponse(endpoint, jobEndpointType, port, properties);
         }
     }

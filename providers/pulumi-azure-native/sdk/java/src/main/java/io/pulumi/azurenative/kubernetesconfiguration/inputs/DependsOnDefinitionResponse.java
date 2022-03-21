@@ -60,8 +60,7 @@ public final class DependsOnDefinitionResponse extends io.pulumi.resources.Invok
         public Builder kustomizationName(@Nullable String kustomizationName) {
             this.kustomizationName = kustomizationName;
             return this;
-        }
-        public DependsOnDefinitionResponse build() {
+        }        public DependsOnDefinitionResponse build() {
             return new DependsOnDefinitionResponse(kustomizationName);
         }
     }

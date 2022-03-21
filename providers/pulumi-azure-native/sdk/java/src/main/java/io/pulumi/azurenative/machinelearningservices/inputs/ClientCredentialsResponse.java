@@ -219,57 +219,46 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
             this.authorityUrl = authorityUrl;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder isCertAuth(@Nullable Boolean isCertAuth) {
             this.isCertAuth = isCertAuth;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public ClientCredentialsResponse build() {
+        }        public ClientCredentialsResponse build() {
             return new ClientCredentialsResponse(authorityUrl, certificate, clientId, clientSecret, isCertAuth, resourceGroup, resourceUri, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint);
         }
     }

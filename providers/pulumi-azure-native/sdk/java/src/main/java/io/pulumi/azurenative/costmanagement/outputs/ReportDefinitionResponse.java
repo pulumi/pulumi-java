@@ -105,22 +105,18 @@ public final class ReportDefinitionResponse {
             this.dataset = dataset;
             return this;
         }
-
         public Builder timePeriod(@Nullable ReportTimePeriodResponse timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
-
         public Builder timeframe(String timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ReportDefinitionResponse build() {
+        }        public ReportDefinitionResponse build() {
             return new ReportDefinitionResponse(dataset, timePeriod, timeframe, type);
         }
     }

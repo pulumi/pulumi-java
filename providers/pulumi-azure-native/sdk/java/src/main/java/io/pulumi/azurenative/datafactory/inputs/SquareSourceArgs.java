@@ -176,82 +176,66 @@ public final class SquareSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = Output.ofNullable(additionalColumns);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder query(@Nullable Output<Object> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable Object query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = Output.ofNullable(queryTimeout);
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SquareSourceArgs build() {
+        }        public SquareSourceArgs build() {
             return new SquareSourceArgs(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }
     }

@@ -79,22 +79,18 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
             this.actionGroupId = actionGroupId;
             return this;
         }
-
         public Builder actionGroupId(@Nullable String actionGroupId) {
             this.actionGroupId = Output.ofNullable(actionGroupId);
             return this;
         }
-
         public Builder webHookProperties(@Nullable Output<Map<String,String>> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
         }
-
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = Output.ofNullable(webHookProperties);
             return this;
-        }
-        public HealthAlertActionArgs build() {
+        }        public HealthAlertActionArgs build() {
             return new HealthAlertActionArgs(actionGroupId, webHookProperties);
         }
     }

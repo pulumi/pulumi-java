@@ -350,97 +350,96 @@ public final class EffectiveSecurityAdminRuleResponse {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder configurationDescription(@Nullable String configurationDescription) {
             this.configurationDescription = configurationDescription;
             return this;
         }
-
         public Builder configurationDisplayName(@Nullable String configurationDisplayName) {
             this.configurationDisplayName = configurationDisplayName;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
-
+        public Builder destinationPortRanges(String... destinationPortRanges) {
+            return destinationPortRanges(List.of(destinationPortRanges));
+        }
         public Builder destinations(@Nullable List<AddressPrefixItemResponse> destinations) {
             this.destinations = destinations;
             return this;
         }
-
+        public Builder destinations(AddressPrefixItemResponse... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder ruleCollectionAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups) {
             this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
             return this;
         }
-
+        public Builder ruleCollectionAppliesToGroups(NetworkManagerSecurityGroupItemResponse... ruleCollectionAppliesToGroups) {
+            return ruleCollectionAppliesToGroups(List.of(ruleCollectionAppliesToGroups));
+        }
         public Builder ruleCollectionDescription(@Nullable String ruleCollectionDescription) {
             this.ruleCollectionDescription = ruleCollectionDescription;
             return this;
         }
-
         public Builder ruleCollectionDisplayName(@Nullable String ruleCollectionDisplayName) {
             this.ruleCollectionDisplayName = ruleCollectionDisplayName;
             return this;
         }
-
         public Builder ruleGroups(@Nullable List<ConfigurationGroupResponse> ruleGroups) {
             this.ruleGroups = ruleGroups;
             return this;
         }
-
+        public Builder ruleGroups(ConfigurationGroupResponse... ruleGroups) {
+            return ruleGroups(List.of(ruleGroups));
+        }
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
+        public Builder sourcePortRanges(String... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }
         public Builder sources(@Nullable List<AddressPrefixItemResponse> sources) {
             this.sources = sources;
             return this;
         }
-        public EffectiveSecurityAdminRuleResponse build() {
+        public Builder sources(AddressPrefixItemResponse... sources) {
+            return sources(List.of(sources));
+        }        public EffectiveSecurityAdminRuleResponse build() {
             return new EffectiveSecurityAdminRuleResponse(access, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, id, kind, priority, protocol, provisioningState, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }
     }

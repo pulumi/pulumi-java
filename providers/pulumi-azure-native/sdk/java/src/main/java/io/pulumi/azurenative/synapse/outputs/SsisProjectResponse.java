@@ -173,42 +173,40 @@ public final class SsisProjectResponse {
             this.description = description;
             return this;
         }
-
         public Builder environmentRefs(@Nullable List<SsisEnvironmentReferenceResponse> environmentRefs) {
             this.environmentRefs = environmentRefs;
             return this;
         }
-
+        public Builder environmentRefs(SsisEnvironmentReferenceResponse... environmentRefs) {
+            return environmentRefs(List.of(environmentRefs));
+        }
         public Builder folderId(@Nullable Double folderId) {
             this.folderId = folderId;
             return this;
         }
-
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(SsisParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
-        }
-        public SsisProjectResponse build() {
+        }        public SsisProjectResponse build() {
             return new SsisProjectResponse(description, environmentRefs, folderId, id, name, parameters, type, version);
         }
     }

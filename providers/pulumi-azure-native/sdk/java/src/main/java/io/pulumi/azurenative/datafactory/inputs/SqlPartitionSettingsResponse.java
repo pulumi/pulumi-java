@@ -94,17 +94,14 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
-        }
-        public SqlPartitionSettingsResponse build() {
+        }        public SqlPartitionSettingsResponse build() {
             return new SqlPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }
     }

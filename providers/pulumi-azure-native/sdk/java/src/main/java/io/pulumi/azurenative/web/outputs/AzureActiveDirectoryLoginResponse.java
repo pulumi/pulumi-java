@@ -75,12 +75,13 @@ public final class AzureActiveDirectoryLoginResponse {
             this.disableWWWAuthenticate = disableWWWAuthenticate;
             return this;
         }
-
         public Builder loginParameters(@Nullable List<String> loginParameters) {
             this.loginParameters = loginParameters;
             return this;
         }
-        public AzureActiveDirectoryLoginResponse build() {
+        public Builder loginParameters(String... loginParameters) {
+            return loginParameters(List.of(loginParameters));
+        }        public AzureActiveDirectoryLoginResponse build() {
             return new AzureActiveDirectoryLoginResponse(disableWWWAuthenticate, loginParameters);
         }
     }

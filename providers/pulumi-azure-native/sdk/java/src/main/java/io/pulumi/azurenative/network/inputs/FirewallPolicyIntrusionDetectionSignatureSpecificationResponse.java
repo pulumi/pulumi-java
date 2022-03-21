@@ -78,12 +78,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
             this.id = id;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse build() {
+        }        public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse build() {
             return new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(id, mode);
         }
     }

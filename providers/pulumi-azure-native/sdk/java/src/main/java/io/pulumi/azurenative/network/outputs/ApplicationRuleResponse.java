@@ -236,62 +236,74 @@ public final class ApplicationRuleResponse {
             this.description = description;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
-
+        public Builder fqdnTags(String... fqdnTags) {
+            return fqdnTags(List.of(fqdnTags));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocols(@Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(FirewallPolicyRuleApplicationProtocolResponse... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }
-
+        public Builder targetFqdns(String... targetFqdns) {
+            return targetFqdns(List.of(targetFqdns));
+        }
         public Builder targetUrls(@Nullable List<String> targetUrls) {
             this.targetUrls = targetUrls;
             return this;
         }
-
+        public Builder targetUrls(String... targetUrls) {
+            return targetUrls(List.of(targetUrls));
+        }
         public Builder terminateTLS(@Nullable Boolean terminateTLS) {
             this.terminateTLS = terminateTLS;
             return this;
         }
-
         public Builder webCategories(@Nullable List<String> webCategories) {
             this.webCategories = webCategories;
             return this;
         }
-        public ApplicationRuleResponse build() {
+        public Builder webCategories(String... webCategories) {
+            return webCategories(List.of(webCategories));
+        }        public ApplicationRuleResponse build() {
             return new ApplicationRuleResponse(description, destinationAddresses, fqdnTags, name, protocols, ruleType, sourceAddresses, sourceIpGroups, targetFqdns, targetUrls, terminateTLS, webCategories);
         }
     }

@@ -107,22 +107,18 @@ public final class GetACIServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetACIServiceArgs build() {
+        }        public GetACIServiceArgs build() {
             return new GetACIServiceArgs(expand, resourceGroupName, serviceName, workspaceName);
         }
     }

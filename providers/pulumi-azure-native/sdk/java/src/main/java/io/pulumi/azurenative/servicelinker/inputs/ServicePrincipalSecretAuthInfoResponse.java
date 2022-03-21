@@ -109,22 +109,18 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public ServicePrincipalSecretAuthInfoResponse build() {
+        }        public ServicePrincipalSecretAuthInfoResponse build() {
             return new ServicePrincipalSecretAuthInfoResponse(authType, clientId, principalId, secret);
         }
     }

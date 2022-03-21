@@ -375,202 +375,171 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
             this.applicationDefinitionName = applicationDefinitionName;
             return this;
         }
-
         public Builder applicationDefinitionName(@Nullable String applicationDefinitionName) {
             this.applicationDefinitionName = Output.ofNullable(applicationDefinitionName);
             return this;
         }
-
         public Builder artifacts(@Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder artifacts(@Nullable List<ApplicationDefinitionArtifactArgs> artifacts) {
             this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
-
+        public Builder artifacts(ApplicationDefinitionArtifactArgs... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder authorizations(@Nullable Output<List<ApplicationAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
-
         public Builder authorizations(@Nullable List<ApplicationAuthorizationArgs> authorizations) {
             this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
-
+        public Builder authorizations(ApplicationAuthorizationArgs... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder createUiDefinition(@Nullable Output<Object> createUiDefinition) {
             this.createUiDefinition = createUiDefinition;
             return this;
         }
-
         public Builder createUiDefinition(@Nullable Object createUiDefinition) {
             this.createUiDefinition = Output.ofNullable(createUiDefinition);
             return this;
         }
-
         public Builder deploymentPolicy(@Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy) {
             this.deploymentPolicy = deploymentPolicy;
             return this;
         }
-
         public Builder deploymentPolicy(@Nullable ApplicationDeploymentPolicyArgs deploymentPolicy) {
             this.deploymentPolicy = Output.ofNullable(deploymentPolicy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder lockLevel(Output<ApplicationLockLevel> lockLevel) {
             this.lockLevel = Objects.requireNonNull(lockLevel);
             return this;
         }
-
         public Builder lockLevel(ApplicationLockLevel lockLevel) {
             this.lockLevel = Output.of(Objects.requireNonNull(lockLevel));
             return this;
         }
-
         public Builder lockingPolicy(@Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy) {
             this.lockingPolicy = lockingPolicy;
             return this;
         }
-
         public Builder lockingPolicy(@Nullable ApplicationPackageLockingPolicyDefinitionArgs lockingPolicy) {
             this.lockingPolicy = Output.ofNullable(lockingPolicy);
             return this;
         }
-
         public Builder mainTemplate(@Nullable Output<Object> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
-
         public Builder mainTemplate(@Nullable Object mainTemplate) {
             this.mainTemplate = Output.ofNullable(mainTemplate);
             return this;
         }
-
         public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
-
         public Builder managementPolicy(@Nullable Output<ApplicationManagementPolicyArgs> managementPolicy) {
             this.managementPolicy = managementPolicy;
             return this;
         }
-
         public Builder managementPolicy(@Nullable ApplicationManagementPolicyArgs managementPolicy) {
             this.managementPolicy = Output.ofNullable(managementPolicy);
             return this;
         }
-
         public Builder notificationPolicy(@Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
-
         public Builder notificationPolicy(@Nullable ApplicationNotificationPolicyArgs notificationPolicy) {
             this.notificationPolicy = Output.ofNullable(notificationPolicy);
             return this;
         }
-
         public Builder packageFileUri(@Nullable Output<String> packageFileUri) {
             this.packageFileUri = packageFileUri;
             return this;
         }
-
         public Builder packageFileUri(@Nullable String packageFileUri) {
             this.packageFileUri = Output.ofNullable(packageFileUri);
             return this;
         }
-
         public Builder policies(@Nullable Output<List<ApplicationPolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder policies(@Nullable List<ApplicationPolicyArgs> policies) {
             this.policies = Output.ofNullable(policies);
             return this;
         }
-
+        public Builder policies(ApplicationPolicyArgs... policies) {
+            return policies(List.of(policies));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationDefinitionArgs build() {
+        }        public ApplicationDefinitionArgs build() {
             return new ApplicationDefinitionArgs(applicationDefinitionName, artifacts, authorizations, createUiDefinition, deploymentPolicy, description, displayName, isEnabled, location, lockLevel, lockingPolicy, mainTemplate, managedBy, managementPolicy, notificationPolicy, packageFileUri, policies, resourceGroupName, sku, tags);
         }
     }

@@ -88,17 +88,14 @@ public final class ListLocalUserKeysArgs extends io.pulumi.resources.InvokeArgs 
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ListLocalUserKeysArgs build() {
+        }        public ListLocalUserKeysArgs build() {
             return new ListLocalUserKeysArgs(accountName, resourceGroupName, username);
         }
     }

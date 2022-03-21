@@ -54,7 +54,9 @@ public final class ComputeProfileResponse {
             this.roles = roles;
             return this;
         }
-        public ComputeProfileResponse build() {
+        public Builder roles(RoleResponse... roles) {
+            return roles(List.of(roles));
+        }        public ComputeProfileResponse build() {
             return new ComputeProfileResponse(roles);
         }
     }

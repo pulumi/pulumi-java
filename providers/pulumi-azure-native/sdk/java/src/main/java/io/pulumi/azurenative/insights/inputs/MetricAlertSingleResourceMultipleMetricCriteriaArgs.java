@@ -81,22 +81,21 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends i
             this.allOf = allOf;
             return this;
         }
-
         public Builder allOf(@Nullable List<MetricCriteriaArgs> allOf) {
             this.allOf = Output.ofNullable(allOf);
             return this;
         }
-
+        public Builder allOf(MetricCriteriaArgs... allOf) {
+            return allOf(List.of(allOf));
+        }
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public MetricAlertSingleResourceMultipleMetricCriteriaArgs build() {
+        }        public MetricAlertSingleResourceMultipleMetricCriteriaArgs build() {
             return new MetricAlertSingleResourceMultipleMetricCriteriaArgs(allOf, odataType);
         }
     }

@@ -96,32 +96,26 @@ public final class LinkedServiceReferenceArgs extends io.pulumi.resources.Resour
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder referenceName(Output<String> referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public LinkedServiceReferenceArgs build() {
+        }        public LinkedServiceReferenceArgs build() {
             return new LinkedServiceReferenceArgs(parameters, referenceName, type);
         }
     }

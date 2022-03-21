@@ -80,12 +80,10 @@ public final class VideoAnalyzerIdentityResponse extends io.pulumi.resources.Inv
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public VideoAnalyzerIdentityResponse build() {
+        }        public VideoAnalyzerIdentityResponse build() {
             return new VideoAnalyzerIdentityResponse(type, userAssignedIdentities);
         }
     }

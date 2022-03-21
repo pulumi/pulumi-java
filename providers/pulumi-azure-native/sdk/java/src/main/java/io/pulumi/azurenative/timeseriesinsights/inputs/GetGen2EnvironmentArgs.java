@@ -90,17 +90,14 @@ public final class GetGen2EnvironmentArgs extends io.pulumi.resources.InvokeArgs
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGen2EnvironmentArgs build() {
+        }        public GetGen2EnvironmentArgs build() {
             return new GetGen2EnvironmentArgs(environmentName, expand, resourceGroupName);
         }
     }

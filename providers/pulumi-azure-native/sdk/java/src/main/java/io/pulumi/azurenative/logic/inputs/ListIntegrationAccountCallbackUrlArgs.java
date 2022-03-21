@@ -108,22 +108,18 @@ public final class ListIntegrationAccountCallbackUrlArgs extends io.pulumi.resou
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListIntegrationAccountCallbackUrlArgs build() {
+        }        public ListIntegrationAccountCallbackUrlArgs build() {
             return new ListIntegrationAccountCallbackUrlArgs(integrationAccountName, keyType, notAfter, resourceGroupName);
         }
     }

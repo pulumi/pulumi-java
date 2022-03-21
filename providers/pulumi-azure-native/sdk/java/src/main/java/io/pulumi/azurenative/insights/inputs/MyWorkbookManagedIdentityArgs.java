@@ -61,12 +61,10 @@ public final class MyWorkbookManagedIdentityArgs extends io.pulumi.resources.Res
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public MyWorkbookManagedIdentityArgs build() {
+        }        public MyWorkbookManagedIdentityArgs build() {
             return new MyWorkbookManagedIdentityArgs(type);
         }
     }

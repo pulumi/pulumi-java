@@ -135,32 +135,26 @@ public final class GetAddonResult {
             this.addonType = addonType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder licenseKey(@Nullable String licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAddonResult build() {
+        }        public GetAddonResult build() {
             return new GetAddonResult(addonType, id, licenseKey, name, provisioningState, type);
         }
     }

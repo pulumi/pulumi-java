@@ -79,12 +79,16 @@ public final class ConnectionMonitorEndpointScopeResponse extends io.pulumi.reso
             this.exclude = exclude;
             return this;
         }
-
+        public Builder exclude(ConnectionMonitorEndpointScopeItemResponse... exclude) {
+            return exclude(List.of(exclude));
+        }
         public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
             this.include = include;
             return this;
         }
-        public ConnectionMonitorEndpointScopeResponse build() {
+        public Builder include(ConnectionMonitorEndpointScopeItemResponse... include) {
+            return include(List.of(include));
+        }        public ConnectionMonitorEndpointScopeResponse build() {
             return new ConnectionMonitorEndpointScopeResponse(exclude, include);
         }
     }

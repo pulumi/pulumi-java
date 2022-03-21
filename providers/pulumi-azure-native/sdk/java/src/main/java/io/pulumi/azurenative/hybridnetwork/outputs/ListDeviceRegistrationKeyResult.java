@@ -51,8 +51,7 @@ public final class ListDeviceRegistrationKeyResult {
         public Builder registrationKey(String registrationKey) {
             this.registrationKey = Objects.requireNonNull(registrationKey);
             return this;
-        }
-        public ListDeviceRegistrationKeyResult build() {
+        }        public ListDeviceRegistrationKeyResult build() {
             return new ListDeviceRegistrationKeyResult(registrationKey);
         }
     }

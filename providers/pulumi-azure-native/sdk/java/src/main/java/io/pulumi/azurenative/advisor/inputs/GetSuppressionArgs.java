@@ -88,17 +88,14 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder recommendationId(String recommendationId) {
             this.recommendationId = Objects.requireNonNull(recommendationId);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public GetSuppressionArgs build() {
+        }        public GetSuppressionArgs build() {
             return new GetSuppressionArgs(name, recommendationId, resourceUri);
         }
     }

@@ -103,22 +103,18 @@ public final class PrincipalResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PrincipalResponse build() {
+        }        public PrincipalResponse build() {
             return new PrincipalResponse(displayName, email, id, type);
         }
     }

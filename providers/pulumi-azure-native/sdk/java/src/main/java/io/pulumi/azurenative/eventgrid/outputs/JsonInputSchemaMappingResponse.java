@@ -155,37 +155,30 @@ public final class JsonInputSchemaMappingResponse {
             this.dataVersion = dataVersion;
             return this;
         }
-
         public Builder eventTime(@Nullable JsonFieldResponse eventTime) {
             this.eventTime = eventTime;
             return this;
         }
-
         public Builder eventType(@Nullable JsonFieldWithDefaultResponse eventType) {
             this.eventType = eventType;
             return this;
         }
-
         public Builder id(@Nullable JsonFieldResponse id) {
             this.id = id;
             return this;
         }
-
         public Builder inputSchemaMappingType(String inputSchemaMappingType) {
             this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType);
             return this;
         }
-
         public Builder subject(@Nullable JsonFieldWithDefaultResponse subject) {
             this.subject = subject;
             return this;
         }
-
         public Builder topic(@Nullable JsonFieldResponse topic) {
             this.topic = topic;
             return this;
-        }
-        public JsonInputSchemaMappingResponse build() {
+        }        public JsonInputSchemaMappingResponse build() {
             return new JsonInputSchemaMappingResponse(dataVersion, eventTime, eventType, id, inputSchemaMappingType, subject, topic);
         }
     }

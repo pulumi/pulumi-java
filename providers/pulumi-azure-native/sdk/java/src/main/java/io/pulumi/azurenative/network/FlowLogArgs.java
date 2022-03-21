@@ -239,122 +239,98 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder flowAnalyticsConfiguration(@Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration) {
             this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
             return this;
         }
-
         public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesArgs flowAnalyticsConfiguration) {
             this.flowAnalyticsConfiguration = Output.ofNullable(flowAnalyticsConfiguration);
             return this;
         }
-
         public Builder flowLogName(@Nullable Output<String> flowLogName) {
             this.flowLogName = flowLogName;
             return this;
         }
-
         public Builder flowLogName(@Nullable String flowLogName) {
             this.flowLogName = Output.ofNullable(flowLogName);
             return this;
         }
-
         public Builder format(@Nullable Output<FlowLogFormatParametersArgs> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable FlowLogFormatParametersArgs format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkWatcherName(Output<String> networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
-
         public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Output.of(Objects.requireNonNull(networkWatcherName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyParametersArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable RetentionPolicyParametersArgs retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder storageId(Output<String> storageId) {
             this.storageId = Objects.requireNonNull(storageId);
             return this;
         }
-
         public Builder storageId(String storageId) {
             this.storageId = Output.of(Objects.requireNonNull(storageId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetResourceId(Output<String> targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
-
         public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Output.of(Objects.requireNonNull(targetResourceId));
             return this;
-        }
-        public FlowLogArgs build() {
+        }        public FlowLogArgs build() {
             return new FlowLogArgs(enabled, flowAnalyticsConfiguration, flowLogName, format, id, location, networkWatcherName, resourceGroupName, retentionPolicy, storageId, tags, targetResourceId);
         }
     }

@@ -310,162 +310,133 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
             return this;
         }
-
         public Builder authorizedAzureSubscriptionIds(@Nullable List<String> authorizedAzureSubscriptionIds) {
             this.authorizedAzureSubscriptionIds = Output.ofNullable(authorizedAzureSubscriptionIds);
             return this;
         }
-
+        public Builder authorizedAzureSubscriptionIds(String... authorizedAzureSubscriptionIds) {
+            return authorizedAzureSubscriptionIds(List.of(authorizedAzureSubscriptionIds));
+        }
         public Builder customerServiceUri(@Nullable Output<String> customerServiceUri) {
             this.customerServiceUri = customerServiceUri;
             return this;
         }
-
         public Builder customerServiceUri(@Nullable String customerServiceUri) {
             this.customerServiceUri = Output.ofNullable(customerServiceUri);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logoUri(@Nullable Output<String> logoUri) {
             this.logoUri = logoUri;
             return this;
         }
-
         public Builder logoUri(@Nullable String logoUri) {
             this.logoUri = Output.ofNullable(logoUri);
             return this;
         }
-
         public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
-
         public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
-
         public Builder partnerCustomerServiceExtension(@Nullable Output<String> partnerCustomerServiceExtension) {
             this.partnerCustomerServiceExtension = partnerCustomerServiceExtension;
             return this;
         }
-
         public Builder partnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
             this.partnerCustomerServiceExtension = Output.ofNullable(partnerCustomerServiceExtension);
             return this;
         }
-
         public Builder partnerCustomerServiceNumber(@Nullable Output<String> partnerCustomerServiceNumber) {
             this.partnerCustomerServiceNumber = partnerCustomerServiceNumber;
             return this;
         }
-
         public Builder partnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
             this.partnerCustomerServiceNumber = Output.ofNullable(partnerCustomerServiceNumber);
             return this;
         }
-
         public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
-
         public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
-
         public Builder partnerRegistrationName(@Nullable Output<String> partnerRegistrationName) {
             this.partnerRegistrationName = partnerRegistrationName;
             return this;
         }
-
         public Builder partnerRegistrationName(@Nullable String partnerRegistrationName) {
             this.partnerRegistrationName = Output.ofNullable(partnerRegistrationName);
             return this;
         }
-
         public Builder partnerResourceTypeDescription(@Nullable Output<String> partnerResourceTypeDescription) {
             this.partnerResourceTypeDescription = partnerResourceTypeDescription;
             return this;
         }
-
         public Builder partnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
             this.partnerResourceTypeDescription = Output.ofNullable(partnerResourceTypeDescription);
             return this;
         }
-
         public Builder partnerResourceTypeDisplayName(@Nullable Output<String> partnerResourceTypeDisplayName) {
             this.partnerResourceTypeDisplayName = partnerResourceTypeDisplayName;
             return this;
         }
-
         public Builder partnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
             this.partnerResourceTypeDisplayName = Output.ofNullable(partnerResourceTypeDisplayName);
             return this;
         }
-
         public Builder partnerResourceTypeName(@Nullable Output<String> partnerResourceTypeName) {
             this.partnerResourceTypeName = partnerResourceTypeName;
             return this;
         }
-
         public Builder partnerResourceTypeName(@Nullable String partnerResourceTypeName) {
             this.partnerResourceTypeName = Output.ofNullable(partnerResourceTypeName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder setupUri(@Nullable Output<String> setupUri) {
             this.setupUri = setupUri;
             return this;
         }
-
         public Builder setupUri(@Nullable String setupUri) {
             this.setupUri = Output.ofNullable(setupUri);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder visibilityState(@Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
             this.visibilityState = visibilityState;
             return this;
         }
-
         public Builder visibilityState(@Nullable Either<String,PartnerRegistrationVisibilityState> visibilityState) {
             this.visibilityState = Output.ofNullable(visibilityState);
             return this;
-        }
-        public PartnerRegistrationArgs build() {
+        }        public PartnerRegistrationArgs build() {
             return new PartnerRegistrationArgs(authorizedAzureSubscriptionIds, customerServiceUri, location, logoUri, longDescription, partnerCustomerServiceExtension, partnerCustomerServiceNumber, partnerName, partnerRegistrationName, partnerResourceTypeDescription, partnerResourceTypeDisplayName, partnerResourceTypeName, resourceGroupName, setupUri, tags, visibilityState);
         }
     }

@@ -72,12 +72,10 @@ public final class PrivateEndpointConnectionPropertiesResponse {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
-        }
-        public PrivateEndpointConnectionPropertiesResponse build() {
+        }        public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState);
         }
     }

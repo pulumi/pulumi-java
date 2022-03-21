@@ -69,12 +69,10 @@ public final class AssignmentReportResourceComplianceReasonResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder phrase(String phrase) {
             this.phrase = Objects.requireNonNull(phrase);
             return this;
-        }
-        public AssignmentReportResourceComplianceReasonResponse build() {
+        }        public AssignmentReportResourceComplianceReasonResponse build() {
             return new AssignmentReportResourceComplianceReasonResponse(code, phrase);
         }
     }

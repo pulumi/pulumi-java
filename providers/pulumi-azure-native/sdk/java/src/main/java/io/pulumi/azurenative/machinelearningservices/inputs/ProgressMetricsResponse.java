@@ -109,22 +109,18 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
             this.completedDatapointCount = Objects.requireNonNull(completedDatapointCount);
             return this;
         }
-
         public Builder incrementalDatasetLastRefreshTime(String incrementalDatasetLastRefreshTime) {
             this.incrementalDatasetLastRefreshTime = Objects.requireNonNull(incrementalDatasetLastRefreshTime);
             return this;
         }
-
         public Builder skippedDatapointCount(Double skippedDatapointCount) {
             this.skippedDatapointCount = Objects.requireNonNull(skippedDatapointCount);
             return this;
         }
-
         public Builder totalDatapointCount(Double totalDatapointCount) {
             this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount);
             return this;
-        }
-        public ProgressMetricsResponse build() {
+        }        public ProgressMetricsResponse build() {
             return new ProgressMetricsResponse(completedDatapointCount, incrementalDatasetLastRefreshTime, skippedDatapointCount, totalDatapointCount);
         }
     }

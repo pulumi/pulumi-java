@@ -111,22 +111,18 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
             this.rejectSampleValue = rejectSampleValue;
             return this;
         }
-
         public Builder rejectType(@Nullable String rejectType) {
             this.rejectType = rejectType;
             return this;
         }
-
         public Builder rejectValue(@Nullable Object rejectValue) {
             this.rejectValue = rejectValue;
             return this;
         }
-
         public Builder useTypeDefault(@Nullable Object useTypeDefault) {
             this.useTypeDefault = useTypeDefault;
             return this;
-        }
-        public PolybaseSettingsResponse build() {
+        }        public PolybaseSettingsResponse build() {
             return new PolybaseSettingsResponse(rejectSampleValue, rejectType, rejectValue, useTypeDefault);
         }
     }

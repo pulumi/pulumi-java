@@ -434,122 +434,107 @@ public final class GetNetworkInterfaceResult {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder dscpConfiguration(SubResourceResponse dscpConfiguration) {
             this.dscpConfiguration = Objects.requireNonNull(dscpConfiguration);
             return this;
         }
-
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder hostedWorkloads(List<String> hostedWorkloads) {
             this.hostedWorkloads = Objects.requireNonNull(hostedWorkloads);
             return this;
         }
-
+        public Builder hostedWorkloads(String... hostedWorkloads) {
+            return hostedWorkloads(List.of(hostedWorkloads));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
+        public Builder ipConfigurations(NetworkInterfaceIPConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
-
         public Builder migrationPhase(@Nullable String migrationPhase) {
             this.migrationPhase = migrationPhase;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public Builder nicType(@Nullable String nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder primary(Boolean primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
-
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
-
         public Builder privateLinkService(@Nullable PrivateLinkServiceResponse privateLinkService) {
             this.privateLinkService = privateLinkService;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tapConfigurations(List<NetworkInterfaceTapConfigurationResponse> tapConfigurations) {
             this.tapConfigurations = Objects.requireNonNull(tapConfigurations);
             return this;
         }
-
+        public Builder tapConfigurations(NetworkInterfaceTapConfigurationResponse... tapConfigurations) {
+            return tapConfigurations(List.of(tapConfigurations));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachine(SubResourceResponse virtualMachine) {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
-        }
-        public GetNetworkInterfaceResult build() {
+        }        public GetNetworkInterfaceResult build() {
             return new GetNetworkInterfaceResult(dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableIPForwarding, etag, extendedLocation, hostedWorkloads, id, ipConfigurations, location, macAddress, migrationPhase, name, networkSecurityGroup, nicType, primary, privateEndpoint, privateLinkService, provisioningState, resourceGuid, tags, tapConfigurations, type, virtualMachine);
         }
     }

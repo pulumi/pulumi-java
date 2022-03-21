@@ -92,17 +92,14 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
-
         public Builder systemServiceType(String systemServiceType) {
             this.systemServiceType = Objects.requireNonNull(systemServiceType);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public SystemServiceResponse build() {
+        }        public SystemServiceResponse build() {
             return new SystemServiceResponse(publicIpAddress, systemServiceType, version);
         }
     }

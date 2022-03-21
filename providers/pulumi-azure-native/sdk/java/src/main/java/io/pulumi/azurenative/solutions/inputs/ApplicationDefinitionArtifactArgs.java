@@ -96,32 +96,26 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,ApplicationDefinitionArtifactName> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<ApplicationArtifactType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ApplicationArtifactType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public ApplicationDefinitionArtifactArgs build() {
+        }        public ApplicationDefinitionArtifactArgs build() {
             return new ApplicationDefinitionArtifactArgs(name, type, uri);
         }
     }

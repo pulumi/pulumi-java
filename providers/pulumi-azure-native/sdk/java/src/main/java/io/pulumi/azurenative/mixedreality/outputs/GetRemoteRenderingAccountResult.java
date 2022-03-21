@@ -251,67 +251,54 @@ public final class GetRemoteRenderingAccountResult {
             this.accountDomain = Objects.requireNonNull(accountDomain);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(@Nullable SkuResponse kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder plan(@Nullable IdentityResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRemoteRenderingAccountResult build() {
+        }        public GetRemoteRenderingAccountResult build() {
             return new GetRemoteRenderingAccountResult(accountDomain, accountId, id, identity, kind, location, name, plan, sku, storageAccountName, systemData, tags, type);
         }
     }

@@ -119,27 +119,22 @@ public final class GalleryImageReferenceResponse {
             this.offer = offer;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GalleryImageReferenceResponse build() {
+        }        public GalleryImageReferenceResponse build() {
             return new GalleryImageReferenceResponse(offer, osType, publisher, sku, version);
         }
     }

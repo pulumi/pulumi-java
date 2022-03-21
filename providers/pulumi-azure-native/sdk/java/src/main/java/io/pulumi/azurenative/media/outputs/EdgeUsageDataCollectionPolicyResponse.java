@@ -104,22 +104,18 @@ public final class EdgeUsageDataCollectionPolicyResponse {
             this.dataCollectionFrequency = dataCollectionFrequency;
             return this;
         }
-
         public Builder dataReportingFrequency(@Nullable String dataReportingFrequency) {
             this.dataReportingFrequency = dataReportingFrequency;
             return this;
         }
-
         public Builder eventHubDetails(@Nullable EdgeUsageDataEventHubResponse eventHubDetails) {
             this.eventHubDetails = eventHubDetails;
             return this;
         }
-
         public Builder maxAllowedUnreportedUsageDuration(@Nullable String maxAllowedUnreportedUsageDuration) {
             this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;
-        }
-        public EdgeUsageDataCollectionPolicyResponse build() {
+        }        public EdgeUsageDataCollectionPolicyResponse build() {
             return new EdgeUsageDataCollectionPolicyResponse(dataCollectionFrequency, dataReportingFrequency, eventHubDetails, maxAllowedUnreportedUsageDuration);
         }
     }

@@ -293,67 +293,60 @@ public final class GetPipelineResult {
             this.activities = activities;
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder concurrency(@Nullable Integer concurrency) {
             this.concurrency = concurrency;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder folder(@Nullable PipelineResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder policy(@Nullable PipelinePolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder runDimensions(@Nullable Map<String,Object> runDimensions) {
             this.runDimensions = runDimensions;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder variables(@Nullable Map<String,VariableSpecificationResponse> variables) {
             this.variables = variables;
             return this;
-        }
-        public GetPipelineResult build() {
+        }        public GetPipelineResult build() {
             return new GetPipelineResult(activities, annotations, concurrency, description, etag, folder, id, name, parameters, policy, runDimensions, type, variables);
         }
     }

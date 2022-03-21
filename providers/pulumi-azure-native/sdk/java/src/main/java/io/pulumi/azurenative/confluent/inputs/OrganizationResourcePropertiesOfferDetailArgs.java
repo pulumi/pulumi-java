@@ -126,52 +126,42 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder planId(@Nullable Output<String> planId) {
             this.planId = planId;
             return this;
         }
-
         public Builder planId(@Nullable String planId) {
             this.planId = Output.ofNullable(planId);
             return this;
         }
-
         public Builder planName(@Nullable Output<String> planName) {
             this.planName = planName;
             return this;
         }
-
         public Builder planName(@Nullable String planName) {
             this.planName = Output.ofNullable(planName);
             return this;
         }
-
         public Builder publisherId(@Nullable Output<String> publisherId) {
             this.publisherId = publisherId;
             return this;
         }
-
         public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = Output.ofNullable(publisherId);
             return this;
         }
-
         public Builder termUnit(@Nullable Output<String> termUnit) {
             this.termUnit = termUnit;
             return this;
         }
-
         public Builder termUnit(@Nullable String termUnit) {
             this.termUnit = Output.ofNullable(termUnit);
             return this;
-        }
-        public OrganizationResourcePropertiesOfferDetailArgs build() {
+        }        public OrganizationResourcePropertiesOfferDetailArgs build() {
             return new OrganizationResourcePropertiesOfferDetailArgs(id, planId, planName, publisherId, termUnit);
         }
     }

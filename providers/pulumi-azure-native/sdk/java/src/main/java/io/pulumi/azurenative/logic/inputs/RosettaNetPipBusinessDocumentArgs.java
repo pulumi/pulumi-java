@@ -94,32 +94,26 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public RosettaNetPipBusinessDocumentArgs build() {
+        }        public RosettaNetPipBusinessDocumentArgs build() {
             return new RosettaNetPipBusinessDocumentArgs(description, name, version);
         }
     }

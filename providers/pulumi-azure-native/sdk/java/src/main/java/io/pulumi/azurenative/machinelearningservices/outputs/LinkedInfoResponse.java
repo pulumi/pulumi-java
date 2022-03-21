@@ -87,17 +87,14 @@ public final class LinkedInfoResponse {
             this.linkedId = linkedId;
             return this;
         }
-
         public Builder linkedResourceName(@Nullable String linkedResourceName) {
             this.linkedResourceName = linkedResourceName;
             return this;
         }
-
         public Builder origin(@Nullable String origin) {
             this.origin = origin;
             return this;
-        }
-        public LinkedInfoResponse build() {
+        }        public LinkedInfoResponse build() {
             return new LinkedInfoResponse(linkedId, linkedResourceName, origin);
         }
     }

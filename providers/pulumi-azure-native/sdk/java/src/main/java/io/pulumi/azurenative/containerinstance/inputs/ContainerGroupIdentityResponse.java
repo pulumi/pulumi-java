@@ -112,22 +112,18 @@ public final class ContainerGroupIdentityResponse extends io.pulumi.resources.In
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,ContainerGroupIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public ContainerGroupIdentityResponse build() {
+        }        public ContainerGroupIdentityResponse build() {
             return new ContainerGroupIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

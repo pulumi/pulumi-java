@@ -257,132 +257,109 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.appType = appType;
             return this;
         }
-
         public Builder appType(@Nullable Either<String,AppType> appType) {
             this.appType = Output.ofNullable(appType);
             return this;
         }
-
         public Builder confirmation(@Nullable Output<Either<String,Confirmation>> confirmation) {
             this.confirmation = confirmation;
             return this;
         }
-
         public Builder confirmation(@Nullable Either<String,Confirmation> confirmation) {
             this.confirmation = Output.ofNullable(confirmation);
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder firstName(Output<String> firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
-
         public Builder firstName(String firstName) {
             this.firstName = Output.of(Objects.requireNonNull(firstName));
             return this;
         }
-
         public Builder identities(@Nullable Output<List<UserIdentityContractArgs>> identities) {
             this.identities = identities;
             return this;
         }
-
         public Builder identities(@Nullable List<UserIdentityContractArgs> identities) {
             this.identities = Output.ofNullable(identities);
             return this;
         }
-
+        public Builder identities(UserIdentityContractArgs... identities) {
+            return identities(List.of(identities));
+        }
         public Builder lastName(Output<String> lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
-
         public Builder lastName(String lastName) {
             this.lastName = Output.of(Objects.requireNonNull(lastName));
             return this;
         }
-
         public Builder note(@Nullable Output<String> note) {
             this.note = note;
             return this;
         }
-
         public Builder note(@Nullable String note) {
             this.note = Output.ofNullable(note);
             return this;
         }
-
         public Builder notify(@Nullable Output<Boolean> notify) {
             this.notify = notify;
             return this;
         }
-
         public Builder notify(@Nullable Boolean notify) {
             this.notify = Output.ofNullable(notify);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,UserState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,UserState> state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = Output.ofNullable(userId);
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(appType, confirmation, email, firstName, identities, lastName, note, notify, password, resourceGroupName, serviceName, state, userId);
         }
     }

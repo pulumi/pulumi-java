@@ -96,32 +96,26 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(Object domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder userName(Output<Object> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(Object userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public SSISAccessCredentialArgs build() {
+        }        public SSISAccessCredentialArgs build() {
             return new SSISAccessCredentialArgs(domain, password, userName);
         }
     }

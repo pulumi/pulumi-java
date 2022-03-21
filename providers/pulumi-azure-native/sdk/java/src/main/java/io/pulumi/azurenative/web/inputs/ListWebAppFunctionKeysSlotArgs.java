@@ -104,22 +104,18 @@ public final class ListWebAppFunctionKeysSlotArgs extends io.pulumi.resources.In
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppFunctionKeysSlotArgs build() {
+        }        public ListWebAppFunctionKeysSlotArgs build() {
             return new ListWebAppFunctionKeysSlotArgs(functionName, name, resourceGroupName, slot);
         }
     }

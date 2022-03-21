@@ -71,12 +71,10 @@ public final class BuildpackBindingLaunchPropertiesResponse {
             this.properties = properties;
             return this;
         }
-
         public Builder secrets(@Nullable Map<String,String> secrets) {
             this.secrets = secrets;
             return this;
-        }
-        public BuildpackBindingLaunchPropertiesResponse build() {
+        }        public BuildpackBindingLaunchPropertiesResponse build() {
             return new BuildpackBindingLaunchPropertiesResponse(properties, secrets);
         }
     }

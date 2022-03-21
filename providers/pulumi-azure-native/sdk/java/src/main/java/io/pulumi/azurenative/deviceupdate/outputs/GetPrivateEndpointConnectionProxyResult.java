@@ -169,42 +169,34 @@ public final class GetPrivateEndpointConnectionProxyResult {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder remotePrivateEndpoint(@Nullable RemotePrivateEndpointResponse remotePrivateEndpoint) {
             this.remotePrivateEndpoint = remotePrivateEndpoint;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPrivateEndpointConnectionProxyResult build() {
+        }        public GetPrivateEndpointConnectionProxyResult build() {
             return new GetPrivateEndpointConnectionProxyResult(eTag, id, name, provisioningState, remotePrivateEndpoint, status, systemData, type);
         }
     }

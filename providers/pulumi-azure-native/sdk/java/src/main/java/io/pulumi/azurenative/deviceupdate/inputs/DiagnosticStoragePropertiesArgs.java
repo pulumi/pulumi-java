@@ -96,32 +96,26 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public DiagnosticStoragePropertiesArgs build() {
+        }        public DiagnosticStoragePropertiesArgs build() {
             return new DiagnosticStoragePropertiesArgs(authenticationType, connectionString, resourceId);
         }
     }

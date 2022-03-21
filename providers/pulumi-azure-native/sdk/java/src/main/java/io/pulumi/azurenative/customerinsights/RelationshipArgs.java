@@ -223,112 +223,96 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             this.cardinality = cardinality;
             return this;
         }
-
         public Builder cardinality(@Nullable CardinalityTypes cardinality) {
             this.cardinality = Output.ofNullable(cardinality);
             return this;
         }
-
         public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder expiryDateTimeUtc(@Nullable Output<String> expiryDateTimeUtc) {
             this.expiryDateTimeUtc = expiryDateTimeUtc;
             return this;
         }
-
         public Builder expiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
             this.expiryDateTimeUtc = Output.ofNullable(expiryDateTimeUtc);
             return this;
         }
-
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(PropertyDefinitionArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder lookupMappings(@Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings) {
             this.lookupMappings = lookupMappings;
             return this;
         }
-
         public Builder lookupMappings(@Nullable List<RelationshipTypeMappingArgs> lookupMappings) {
             this.lookupMappings = Output.ofNullable(lookupMappings);
             return this;
         }
-
+        public Builder lookupMappings(RelationshipTypeMappingArgs... lookupMappings) {
+            return lookupMappings(List.of(lookupMappings));
+        }
         public Builder profileType(Output<String> profileType) {
             this.profileType = Objects.requireNonNull(profileType);
             return this;
         }
-
         public Builder profileType(String profileType) {
             this.profileType = Output.of(Objects.requireNonNull(profileType));
             return this;
         }
-
         public Builder relatedProfileType(Output<String> relatedProfileType) {
             this.relatedProfileType = Objects.requireNonNull(relatedProfileType);
             return this;
         }
-
         public Builder relatedProfileType(String relatedProfileType) {
             this.relatedProfileType = Output.of(Objects.requireNonNull(relatedProfileType));
             return this;
         }
-
         public Builder relationshipName(@Nullable Output<String> relationshipName) {
             this.relationshipName = relationshipName;
             return this;
         }
-
         public Builder relationshipName(@Nullable String relationshipName) {
             this.relationshipName = Output.ofNullable(relationshipName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public RelationshipArgs build() {
+        }        public RelationshipArgs build() {
             return new RelationshipArgs(cardinality, description, displayName, expiryDateTimeUtc, fields, hubName, lookupMappings, profileType, relatedProfileType, relationshipName, resourceGroupName);
         }
     }

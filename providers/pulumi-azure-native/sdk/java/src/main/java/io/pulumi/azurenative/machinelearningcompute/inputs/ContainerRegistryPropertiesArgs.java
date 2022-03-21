@@ -61,12 +61,10 @@ public final class ContainerRegistryPropertiesArgs extends io.pulumi.resources.R
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public ContainerRegistryPropertiesArgs build() {
+        }        public ContainerRegistryPropertiesArgs build() {
             return new ContainerRegistryPropertiesArgs(resourceId);
         }
     }

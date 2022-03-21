@@ -156,72 +156,58 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
             this.addonName = addonName;
             return this;
         }
-
         public Builder addonName(@Nullable String addonName) {
             this.addonName = Output.ofNullable(addonName);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
             this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
             return this;
         }
-
         public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
             this.ioTDeviceDetails = Output.of(Objects.requireNonNull(ioTDeviceDetails));
             return this;
         }
-
         public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
             return this;
         }
-
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Output.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
-        }
-        public IoTAddonArgs build() {
+        }        public IoTAddonArgs build() {
             return new IoTAddonArgs(addonName, deviceName, ioTDeviceDetails, ioTEdgeDeviceDetails, kind, resourceGroupName, roleName);
         }
     }

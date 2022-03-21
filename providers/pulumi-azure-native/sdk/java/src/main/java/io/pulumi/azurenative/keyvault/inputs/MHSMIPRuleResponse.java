@@ -58,8 +58,7 @@ public final class MHSMIPRuleResponse extends io.pulumi.resources.InvokeArgs {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public MHSMIPRuleResponse build() {
+        }        public MHSMIPRuleResponse build() {
             return new MHSMIPRuleResponse(value);
         }
     }

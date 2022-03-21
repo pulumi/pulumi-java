@@ -249,67 +249,60 @@ public final class GetVolumeResult {
             this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds);
             return this;
         }
-
+        public Builder accessControlRecordIds(String... accessControlRecordIds) {
+            return accessControlRecordIds(List.of(accessControlRecordIds));
+        }
         public Builder backupPolicyIds(List<String> backupPolicyIds) {
             this.backupPolicyIds = Objects.requireNonNull(backupPolicyIds);
             return this;
         }
-
+        public Builder backupPolicyIds(String... backupPolicyIds) {
+            return backupPolicyIds(List.of(backupPolicyIds));
+        }
         public Builder backupStatus(String backupStatus) {
             this.backupStatus = Objects.requireNonNull(backupStatus);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder monitoringStatus(String monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationStatus(String operationStatus) {
             this.operationStatus = Objects.requireNonNull(operationStatus);
             return this;
         }
-
         public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumeContainerId(String volumeContainerId) {
             this.volumeContainerId = Objects.requireNonNull(volumeContainerId);
             return this;
         }
-
         public Builder volumeStatus(String volumeStatus) {
             this.volumeStatus = Objects.requireNonNull(volumeStatus);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public GetVolumeResult build() {
+        }        public GetVolumeResult build() {
             return new GetVolumeResult(accessControlRecordIds, backupPolicyIds, backupStatus, id, kind, monitoringStatus, name, operationStatus, sizeInBytes, type, volumeContainerId, volumeStatus, volumeType);
         }
     }

@@ -87,17 +87,14 @@ public final class KubernetesRoleComputeResponse {
             this.memoryInBytes = Objects.requireNonNull(memoryInBytes);
             return this;
         }
-
         public Builder processorCount(Integer processorCount) {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }
-
         public Builder vmProfile(String vmProfile) {
             this.vmProfile = Objects.requireNonNull(vmProfile);
             return this;
-        }
-        public KubernetesRoleComputeResponse build() {
+        }        public KubernetesRoleComputeResponse build() {
             return new KubernetesRoleComputeResponse(memoryInBytes, processorCount, vmProfile);
         }
     }

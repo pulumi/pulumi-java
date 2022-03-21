@@ -222,112 +222,90 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logProgress(@Nullable Output<Boolean> logProgress) {
             this.logProgress = logProgress;
             return this;
         }
-
         public Builder logProgress(@Nullable Boolean logProgress) {
             this.logProgress = Output.ofNullable(logProgress);
             return this;
         }
-
         public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
-
         public Builder logVerbose(@Nullable Boolean logVerbose) {
             this.logVerbose = Output.ofNullable(logVerbose);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,DscConfigurationParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(Output<ContentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(ContentSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DscConfigurationArgs build() {
+        }        public DscConfigurationArgs build() {
             return new DscConfigurationArgs(automationAccountName, configurationName, description, location, logProgress, logVerbose, name, parameters, resourceGroupName, source, tags);
         }
     }

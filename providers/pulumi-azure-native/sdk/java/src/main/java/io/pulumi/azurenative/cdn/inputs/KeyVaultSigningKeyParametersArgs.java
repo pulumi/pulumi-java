@@ -137,62 +137,50 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
-
         public Builder secretVersion(Output<String> secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
-
         public Builder secretVersion(String secretVersion) {
             this.secretVersion = Output.of(Objects.requireNonNull(secretVersion));
             return this;
         }
-
         public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
-
         public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
-        }
-        public KeyVaultSigningKeyParametersArgs build() {
+        }        public KeyVaultSigningKeyParametersArgs build() {
             return new KeyVaultSigningKeyParametersArgs(odataType, resourceGroupName, secretName, secretVersion, subscriptionId, vaultName);
         }
     }

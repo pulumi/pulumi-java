@@ -140,32 +140,26 @@ public final class ListOperationalizationClusterKeysResult {
             this.appInsights = appInsights;
             return this;
         }
-
         public Builder containerRegistry(@Nullable ContainerRegistryCredentialsResponse containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
-
         public Builder containerService(@Nullable ContainerServiceCredentialsResponse containerService) {
             this.containerService = containerService;
             return this;
         }
-
         public Builder serviceAuthConfiguration(@Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration) {
             this.serviceAuthConfiguration = serviceAuthConfiguration;
             return this;
         }
-
         public Builder sslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
-
         public Builder storageAccount(@Nullable StorageAccountCredentialsResponse storageAccount) {
             this.storageAccount = storageAccount;
             return this;
-        }
-        public ListOperationalizationClusterKeysResult build() {
+        }        public ListOperationalizationClusterKeysResult build() {
             return new ListOperationalizationClusterKeysResult(appInsights, containerRegistry, containerService, serviceAuthConfiguration, sslConfiguration, storageAccount);
         }
     }

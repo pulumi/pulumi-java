@@ -97,32 +97,29 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
         public Builder licenses(List<ContentKeyPolicyPlayReadyLicenseArgs> licenses) {
             this.licenses = Output.of(Objects.requireNonNull(licenses));
             return this;
         }
-
+        public Builder licenses(ContentKeyPolicyPlayReadyLicenseArgs... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder responseCustomData(@Nullable Output<String> responseCustomData) {
             this.responseCustomData = responseCustomData;
             return this;
         }
-
         public Builder responseCustomData(@Nullable String responseCustomData) {
             this.responseCustomData = Output.ofNullable(responseCustomData);
             return this;
-        }
-        public ContentKeyPolicyPlayReadyConfigurationArgs build() {
+        }        public ContentKeyPolicyPlayReadyConfigurationArgs build() {
             return new ContentKeyPolicyPlayReadyConfigurationArgs(licenses, odataType, responseCustomData);
         }
     }

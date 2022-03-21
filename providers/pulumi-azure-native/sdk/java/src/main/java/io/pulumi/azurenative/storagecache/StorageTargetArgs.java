@@ -211,102 +211,85 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.blobNfs = blobNfs;
             return this;
         }
-
         public Builder blobNfs(@Nullable BlobNfsTargetArgs blobNfs) {
             this.blobNfs = Output.ofNullable(blobNfs);
             return this;
         }
-
         public Builder cacheName(Output<String> cacheName) {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
-
         public Builder cacheName(String cacheName) {
             this.cacheName = Output.of(Objects.requireNonNull(cacheName));
             return this;
         }
-
         public Builder clfs(@Nullable Output<ClfsTargetArgs> clfs) {
             this.clfs = clfs;
             return this;
         }
-
         public Builder clfs(@Nullable ClfsTargetArgs clfs) {
             this.clfs = Output.ofNullable(clfs);
             return this;
         }
-
         public Builder junctions(@Nullable Output<List<NamespaceJunctionArgs>> junctions) {
             this.junctions = junctions;
             return this;
         }
-
         public Builder junctions(@Nullable List<NamespaceJunctionArgs> junctions) {
             this.junctions = Output.ofNullable(junctions);
             return this;
         }
-
+        public Builder junctions(NamespaceJunctionArgs... junctions) {
+            return junctions(List.of(junctions));
+        }
         public Builder nfs3(@Nullable Output<Nfs3TargetArgs> nfs3) {
             this.nfs3 = nfs3;
             return this;
         }
-
         public Builder nfs3(@Nullable Nfs3TargetArgs nfs3) {
             this.nfs3 = Output.ofNullable(nfs3);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageTargetName(@Nullable Output<String> storageTargetName) {
             this.storageTargetName = storageTargetName;
             return this;
         }
-
         public Builder storageTargetName(@Nullable String storageTargetName) {
             this.storageTargetName = Output.ofNullable(storageTargetName);
             return this;
         }
-
         public Builder targetType(Output<Either<String,StorageTargetType>> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder targetType(Either<String,StorageTargetType> targetType) {
             this.targetType = Output.of(Objects.requireNonNull(targetType));
             return this;
         }
-
         public Builder unknown(@Nullable Output<UnknownTargetArgs> unknown) {
             this.unknown = unknown;
             return this;
         }
-
         public Builder unknown(@Nullable UnknownTargetArgs unknown) {
             this.unknown = Output.ofNullable(unknown);
             return this;
-        }
-        public StorageTargetArgs build() {
+        }        public StorageTargetArgs build() {
             return new StorageTargetArgs(blobNfs, cacheName, clfs, junctions, nfs3, provisioningState, resourceGroupName, storageTargetName, targetType, unknown);
         }
     }

@@ -200,52 +200,42 @@ public final class GetControllerDetailsResult {
             this.dncAppId = Objects.requireNonNull(dncAppId);
             return this;
         }
-
         public Builder dncEndpoint(String dncEndpoint) {
             this.dncEndpoint = Objects.requireNonNull(dncEndpoint);
             return this;
         }
-
         public Builder dncTenantId(String dncTenantId) {
             this.dncTenantId = Objects.requireNonNull(dncTenantId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetControllerDetailsResult build() {
+        }        public GetControllerDetailsResult build() {
             return new GetControllerDetailsResult(dncAppId, dncEndpoint, dncTenantId, id, location, name, provisioningState, resourceGuid, tags, type);
         }
     }

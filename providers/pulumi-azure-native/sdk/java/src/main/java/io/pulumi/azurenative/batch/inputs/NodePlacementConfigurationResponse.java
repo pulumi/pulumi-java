@@ -60,8 +60,7 @@ public final class NodePlacementConfigurationResponse extends io.pulumi.resource
         public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
-        }
-        public NodePlacementConfigurationResponse build() {
+        }        public NodePlacementConfigurationResponse build() {
             return new NodePlacementConfigurationResponse(policy);
         }
     }

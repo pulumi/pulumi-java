@@ -250,67 +250,54 @@ public final class InboundNatPoolResponse {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
-
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InboundNatPoolResponse build() {
+        }        public InboundNatPoolResponse build() {
             return new InboundNatPoolResponse(backendPort, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPortRangeEnd, frontendPortRangeStart, id, idleTimeoutInMinutes, name, protocol, provisioningState, type);
         }
     }

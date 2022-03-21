@@ -95,32 +95,26 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
-
         public Builder dataFormat(Either<String,AzureContainerDataFormat> dataFormat) {
             this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
             return this;
         }
-
         public Builder storageAccountCredentialId(Output<String> storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
-
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Output.of(Objects.requireNonNull(storageAccountCredentialId));
             return this;
-        }
-        public AzureContainerInfoArgs build() {
+        }        public AzureContainerInfoArgs build() {
             return new AzureContainerInfoArgs(containerName, dataFormat, storageAccountCredentialId);
         }
     }

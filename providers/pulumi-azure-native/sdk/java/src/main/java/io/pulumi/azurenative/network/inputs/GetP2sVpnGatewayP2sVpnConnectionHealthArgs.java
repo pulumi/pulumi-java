@@ -72,12 +72,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends io.pulumi.
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetP2sVpnGatewayP2sVpnConnectionHealthArgs build() {
+        }        public GetP2sVpnGatewayP2sVpnConnectionHealthArgs build() {
             return new GetP2sVpnGatewayP2sVpnConnectionHealthArgs(gatewayName, resourceGroupName);
         }
     }

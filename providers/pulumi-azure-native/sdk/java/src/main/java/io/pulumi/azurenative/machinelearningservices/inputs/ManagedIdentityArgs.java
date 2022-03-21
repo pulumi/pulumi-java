@@ -111,42 +111,34 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder identityType(Output<String> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public Builder identityType(String identityType) {
             this.identityType = Output.of(Objects.requireNonNull(identityType));
             return this;
         }
-
         public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public ManagedIdentityArgs build() {
+        }        public ManagedIdentityArgs build() {
             return new ManagedIdentityArgs(clientId, identityType, objectId, resourceId);
         }
     }

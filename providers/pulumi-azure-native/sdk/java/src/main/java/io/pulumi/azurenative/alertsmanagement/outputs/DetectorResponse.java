@@ -138,32 +138,32 @@ public final class DetectorResponse {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imagePaths(@Nullable List<String> imagePaths) {
             this.imagePaths = imagePaths;
             return this;
         }
-
+        public Builder imagePaths(String... imagePaths) {
+            return imagePaths(List.of(imagePaths));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
-        public DetectorResponse build() {
+        public Builder supportedResourceTypes(String... supportedResourceTypes) {
+            return supportedResourceTypes(List.of(supportedResourceTypes));
+        }        public DetectorResponse build() {
             return new DetectorResponse(description, id, imagePaths, name, parameters, supportedResourceTypes);
         }
     }

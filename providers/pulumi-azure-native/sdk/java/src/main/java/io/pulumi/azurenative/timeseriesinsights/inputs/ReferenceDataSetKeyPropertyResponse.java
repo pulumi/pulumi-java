@@ -78,12 +78,10 @@ public final class ReferenceDataSetKeyPropertyResponse extends io.pulumi.resourc
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ReferenceDataSetKeyPropertyResponse build() {
+        }        public ReferenceDataSetKeyPropertyResponse build() {
             return new ReferenceDataSetKeyPropertyResponse(name, type);
         }
     }

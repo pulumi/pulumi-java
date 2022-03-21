@@ -142,32 +142,26 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
             this.cachedSizeBytes = Objects.requireNonNull(cachedSizeBytes);
             return this;
         }
-
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public Builder spaceSavingsBytes(Double spaceSavingsBytes) {
             this.spaceSavingsBytes = Objects.requireNonNull(spaceSavingsBytes);
             return this;
         }
-
         public Builder spaceSavingsPercent(Integer spaceSavingsPercent) {
             this.spaceSavingsPercent = Objects.requireNonNull(spaceSavingsPercent);
             return this;
         }
-
         public Builder totalSizeCloudBytes(Double totalSizeCloudBytes) {
             this.totalSizeCloudBytes = Objects.requireNonNull(totalSizeCloudBytes);
             return this;
         }
-
         public Builder volumeSizeBytes(Double volumeSizeBytes) {
             this.volumeSizeBytes = Objects.requireNonNull(volumeSizeBytes);
             return this;
-        }
-        public CloudTieringSpaceSavingsResponse build() {
+        }        public CloudTieringSpaceSavingsResponse build() {
             return new CloudTieringSpaceSavingsResponse(cachedSizeBytes, lastUpdatedTimestamp, spaceSavingsBytes, spaceSavingsPercent, totalSizeCloudBytes, volumeSizeBytes);
         }
     }

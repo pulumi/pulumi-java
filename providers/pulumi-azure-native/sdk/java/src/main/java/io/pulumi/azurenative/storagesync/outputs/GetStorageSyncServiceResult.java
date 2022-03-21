@@ -235,62 +235,53 @@ public final class GetStorageSyncServiceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder incomingTrafficPolicy(@Nullable String incomingTrafficPolicy) {
             this.incomingTrafficPolicy = incomingTrafficPolicy;
             return this;
         }
-
         public Builder lastOperationName(String lastOperationName) {
             this.lastOperationName = Objects.requireNonNull(lastOperationName);
             return this;
         }
-
         public Builder lastWorkflowId(String lastWorkflowId) {
             this.lastWorkflowId = Objects.requireNonNull(lastWorkflowId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder storageSyncServiceStatus(Integer storageSyncServiceStatus) {
             this.storageSyncServiceStatus = Objects.requireNonNull(storageSyncServiceStatus);
             return this;
         }
-
         public Builder storageSyncServiceUid(String storageSyncServiceUid) {
             this.storageSyncServiceUid = Objects.requireNonNull(storageSyncServiceUid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStorageSyncServiceResult build() {
+        }        public GetStorageSyncServiceResult build() {
             return new GetStorageSyncServiceResult(id, incomingTrafficPolicy, lastOperationName, lastWorkflowId, location, name, privateEndpointConnections, provisioningState, storageSyncServiceStatus, storageSyncServiceUid, tags, type);
         }
     }

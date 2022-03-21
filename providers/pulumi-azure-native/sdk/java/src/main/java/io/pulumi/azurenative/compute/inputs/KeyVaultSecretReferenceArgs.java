@@ -78,22 +78,18 @@ public final class KeyVaultSecretReferenceArgs extends io.pulumi.resources.Resou
             this.secretUrl = Objects.requireNonNull(secretUrl);
             return this;
         }
-
         public Builder secretUrl(String secretUrl) {
             this.secretUrl = Output.of(Objects.requireNonNull(secretUrl));
             return this;
         }
-
         public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
-
         public Builder sourceVault(SubResourceArgs sourceVault) {
             this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
             return this;
-        }
-        public KeyVaultSecretReferenceArgs build() {
+        }        public KeyVaultSecretReferenceArgs build() {
             return new KeyVaultSecretReferenceArgs(secretUrl, sourceVault);
         }
     }

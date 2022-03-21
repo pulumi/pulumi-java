@@ -64,12 +64,10 @@ public final class SubscriptionStateOverrideActionResponse extends io.pulumi.res
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public SubscriptionStateOverrideActionResponse build() {
+        }        public SubscriptionStateOverrideActionResponse build() {
             return new SubscriptionStateOverrideActionResponse(action, state);
         }
     }

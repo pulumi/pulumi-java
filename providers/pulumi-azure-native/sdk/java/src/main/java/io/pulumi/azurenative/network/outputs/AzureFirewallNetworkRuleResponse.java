@@ -184,47 +184,59 @@ public final class AzureFirewallNetworkRuleResponse {
             this.description = description;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
             this.destinationFqdns = destinationFqdns;
             return this;
         }
-
+        public Builder destinationFqdns(String... destinationFqdns) {
+            return destinationFqdns(List.of(destinationFqdns));
+        }
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
-
+        public Builder destinationIpGroups(String... destinationIpGroups) {
+            return destinationIpGroups(List.of(destinationIpGroups));
+        }
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
-
+        public Builder destinationPorts(String... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(String... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-        public AzureFirewallNetworkRuleResponse build() {
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }        public AzureFirewallNetworkRuleResponse build() {
             return new AzureFirewallNetworkRuleResponse(description, destinationAddresses, destinationFqdns, destinationIpGroups, destinationPorts, name, protocols, sourceAddresses, sourceIpGroups);
         }
     }

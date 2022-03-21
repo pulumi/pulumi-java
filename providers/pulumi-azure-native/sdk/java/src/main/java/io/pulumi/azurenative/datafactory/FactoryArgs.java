@@ -194,92 +194,74 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionConfigurationArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder factoryName(@Nullable Output<String> factoryName) {
             this.factoryName = factoryName;
             return this;
         }
-
         public Builder factoryName(@Nullable String factoryName) {
             this.factoryName = Output.ofNullable(factoryName);
             return this;
         }
-
         public Builder globalParameters(@Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
-
         public Builder globalParameters(@Nullable Map<String,GlobalParameterSpecificationArgs> globalParameters) {
             this.globalParameters = Output.ofNullable(globalParameters);
             return this;
         }
-
         public Builder identity(@Nullable Output<FactoryIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable FactoryIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder repoConfiguration(@Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
             this.repoConfiguration = repoConfiguration;
             return this;
         }
-
         public Builder repoConfiguration(@Nullable Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
             this.repoConfiguration = Output.ofNullable(repoConfiguration);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FactoryArgs build() {
+        }        public FactoryArgs build() {
             return new FactoryArgs(encryption, factoryName, globalParameters, identity, location, publicNetworkAccess, repoConfiguration, resourceGroupName, tags);
         }
     }

@@ -108,22 +108,21 @@ public final class EncoderProcessorResponse {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
+        public Builder inputs(NodeInputResponse... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder preset(Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EncoderProcessorResponse build() {
+        }        public EncoderProcessorResponse build() {
             return new EncoderProcessorResponse(inputs, name, preset, type);
         }
     }

@@ -147,62 +147,50 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
             this.actionAfterReboot = actionAfterReboot;
             return this;
         }
-
         public Builder actionAfterReboot(@Nullable Either<String,ActionAfterReboot> actionAfterReboot) {
             this.actionAfterReboot = Output.ofNullable(actionAfterReboot);
             return this;
         }
-
         public Builder allowModuleOverwrite(@Nullable Output<Boolean> allowModuleOverwrite) {
             this.allowModuleOverwrite = allowModuleOverwrite;
             return this;
         }
-
         public Builder allowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
             this.allowModuleOverwrite = Output.ofNullable(allowModuleOverwrite);
             return this;
         }
-
         public Builder configurationMode(@Nullable Output<Either<String,ConfigurationMode>> configurationMode) {
             this.configurationMode = configurationMode;
             return this;
         }
-
         public Builder configurationMode(@Nullable Either<String,ConfigurationMode> configurationMode) {
             this.configurationMode = Output.ofNullable(configurationMode);
             return this;
         }
-
         public Builder configurationModeFrequencyMins(@Nullable Output<Double> configurationModeFrequencyMins) {
             this.configurationModeFrequencyMins = configurationModeFrequencyMins;
             return this;
         }
-
         public Builder configurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
             this.configurationModeFrequencyMins = Output.ofNullable(configurationModeFrequencyMins);
             return this;
         }
-
         public Builder rebootIfNeeded(@Nullable Output<Boolean> rebootIfNeeded) {
             this.rebootIfNeeded = rebootIfNeeded;
             return this;
         }
-
         public Builder rebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
             this.rebootIfNeeded = Output.ofNullable(rebootIfNeeded);
             return this;
         }
-
         public Builder refreshFrequencyMins(@Nullable Output<Double> refreshFrequencyMins) {
             this.refreshFrequencyMins = refreshFrequencyMins;
             return this;
         }
-
         public Builder refreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
             this.refreshFrequencyMins = Output.ofNullable(refreshFrequencyMins);
             return this;
-        }
-        public ConfigurationSettingArgs build() {
+        }        public ConfigurationSettingArgs build() {
             return new ConfigurationSettingArgs(actionAfterReboot, allowModuleOverwrite, configurationMode, configurationModeFrequencyMins, rebootIfNeeded, refreshFrequencyMins);
         }
     }

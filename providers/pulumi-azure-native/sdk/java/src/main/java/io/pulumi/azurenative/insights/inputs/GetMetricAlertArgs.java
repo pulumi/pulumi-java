@@ -72,12 +72,10 @@ public final class GetMetricAlertArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public GetMetricAlertArgs build() {
+        }        public GetMetricAlertArgs build() {
             return new GetMetricAlertArgs(resourceGroupName, ruleName);
         }
     }

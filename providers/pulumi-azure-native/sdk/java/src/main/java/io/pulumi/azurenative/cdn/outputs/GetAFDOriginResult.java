@@ -275,77 +275,62 @@ public final class GetAFDOriginResult {
             this.azureOrigin = azureOrigin;
             return this;
         }
-
         public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-
         public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource) {
             this.sharedPrivateLinkResource = sharedPrivateLinkResource;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public GetAFDOriginResult build() {
+        }        public GetAFDOriginResult build() {
             return new GetAFDOriginResult(azureOrigin, deploymentStatus, enabledState, hostName, httpPort, httpsPort, id, name, originHostHeader, priority, provisioningState, sharedPrivateLinkResource, systemData, type, weight);
         }
     }

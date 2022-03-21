@@ -125,27 +125,34 @@ public final class JwtAuthenticationResponse {
             this.audiences = audiences;
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder claims(@Nullable List<TokenClaimResponse> claims) {
             this.claims = claims;
             return this;
         }
-
+        public Builder claims(TokenClaimResponse... claims) {
+            return claims(List.of(claims));
+        }
         public Builder issuers(@Nullable List<String> issuers) {
             this.issuers = issuers;
             return this;
         }
-
+        public Builder issuers(String... issuers) {
+            return issuers(List.of(issuers));
+        }
         public Builder keys(@Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys) {
             this.keys = keys;
             return this;
         }
-
+        public Builder keys(Either<EccTokenKeyResponse,RsaTokenKeyResponse>... keys) {
+            return keys(List.of(keys));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JwtAuthenticationResponse build() {
+        }        public JwtAuthenticationResponse build() {
             return new JwtAuthenticationResponse(audiences, claims, issuers, keys, type);
         }
     }

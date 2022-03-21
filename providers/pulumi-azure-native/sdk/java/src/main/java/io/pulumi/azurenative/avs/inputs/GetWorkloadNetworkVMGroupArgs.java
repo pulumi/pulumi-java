@@ -88,17 +88,14 @@ public final class GetWorkloadNetworkVMGroupArgs extends io.pulumi.resources.Inv
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vmGroupId(String vmGroupId) {
             this.vmGroupId = Objects.requireNonNull(vmGroupId);
             return this;
-        }
-        public GetWorkloadNetworkVMGroupArgs build() {
+        }        public GetWorkloadNetworkVMGroupArgs build() {
             return new GetWorkloadNetworkVMGroupArgs(privateCloudName, resourceGroupName, vmGroupId);
         }
     }

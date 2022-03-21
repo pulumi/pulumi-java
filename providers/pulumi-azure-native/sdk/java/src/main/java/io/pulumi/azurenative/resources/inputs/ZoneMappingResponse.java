@@ -71,12 +71,13 @@ public final class ZoneMappingResponse extends io.pulumi.resources.InvokeArgs {
             this.location = location;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public ZoneMappingResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public ZoneMappingResponse build() {
             return new ZoneMappingResponse(location, zones);
         }
     }

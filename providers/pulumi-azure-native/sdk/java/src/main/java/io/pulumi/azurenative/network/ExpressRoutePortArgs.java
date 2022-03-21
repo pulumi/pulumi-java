@@ -209,102 +209,85 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
-
         public Builder bandwidthInGbps(@Nullable Integer bandwidthInGbps) {
             this.bandwidthInGbps = Output.ofNullable(bandwidthInGbps);
             return this;
         }
-
         public Builder encapsulation(@Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation) {
             this.encapsulation = encapsulation;
             return this;
         }
-
         public Builder encapsulation(@Nullable Either<String,ExpressRoutePortsEncapsulation> encapsulation) {
             this.encapsulation = Output.ofNullable(encapsulation);
             return this;
         }
-
         public Builder expressRoutePortName(@Nullable Output<String> expressRoutePortName) {
             this.expressRoutePortName = expressRoutePortName;
             return this;
         }
-
         public Builder expressRoutePortName(@Nullable String expressRoutePortName) {
             this.expressRoutePortName = Output.ofNullable(expressRoutePortName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder links(@Nullable Output<List<ExpressRouteLinkArgs>> links) {
             this.links = links;
             return this;
         }
-
         public Builder links(@Nullable List<ExpressRouteLinkArgs> links) {
             this.links = Output.ofNullable(links);
             return this;
         }
-
+        public Builder links(ExpressRouteLinkArgs... links) {
+            return links(List.of(links));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
-
         public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = Output.ofNullable(peeringLocation);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ExpressRoutePortArgs build() {
+        }        public ExpressRoutePortArgs build() {
             return new ExpressRoutePortArgs(bandwidthInGbps, encapsulation, expressRoutePortName, id, identity, links, location, peeringLocation, resourceGroupName, tags);
         }
     }

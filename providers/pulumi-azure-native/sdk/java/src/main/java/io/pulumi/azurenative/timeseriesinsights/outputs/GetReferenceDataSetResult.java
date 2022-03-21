@@ -186,47 +186,41 @@ public final class GetReferenceDataSetResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder dataStringComparisonBehavior(@Nullable String dataStringComparisonBehavior) {
             this.dataStringComparisonBehavior = dataStringComparisonBehavior;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyProperties(List<ReferenceDataSetKeyPropertyResponse> keyProperties) {
             this.keyProperties = Objects.requireNonNull(keyProperties);
             return this;
         }
-
+        public Builder keyProperties(ReferenceDataSetKeyPropertyResponse... keyProperties) {
+            return keyProperties(List.of(keyProperties));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetReferenceDataSetResult build() {
+        }        public GetReferenceDataSetResult build() {
             return new GetReferenceDataSetResult(creationTime, dataStringComparisonBehavior, id, keyProperties, location, name, provisioningState, tags, type);
         }
     }

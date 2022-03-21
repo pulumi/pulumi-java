@@ -77,22 +77,18 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
             this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
             return this;
         }
-
         public Builder interactionPropertyName(String interactionPropertyName) {
             this.interactionPropertyName = Output.of(Objects.requireNonNull(interactionPropertyName));
             return this;
         }
-
         public Builder profilePropertyName(Output<String> profilePropertyName) {
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
         }
-
         public Builder profilePropertyName(String profilePropertyName) {
             this.profilePropertyName = Output.of(Objects.requireNonNull(profilePropertyName));
             return this;
-        }
-        public ParticipantProfilePropertyReferenceArgs build() {
+        }        public ParticipantProfilePropertyReferenceArgs build() {
             return new ParticipantProfilePropertyReferenceArgs(interactionPropertyName, profilePropertyName);
         }
     }

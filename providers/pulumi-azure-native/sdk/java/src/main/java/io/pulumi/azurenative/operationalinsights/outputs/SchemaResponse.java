@@ -251,67 +251,69 @@ public final class SchemaResponse {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder columns(@Nullable List<ColumnResponse> columns) {
             this.columns = columns;
             return this;
         }
-
+        public Builder columns(ColumnResponse... columns) {
+            return columns(List.of(columns));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder labels(List<String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder restoredLogs(RestoredLogsResponse restoredLogs) {
             this.restoredLogs = Objects.requireNonNull(restoredLogs);
             return this;
         }
-
         public Builder searchResults(SearchResultsResponse searchResults) {
             this.searchResults = Objects.requireNonNull(searchResults);
             return this;
         }
-
         public Builder solutions(List<String> solutions) {
             this.solutions = Objects.requireNonNull(solutions);
             return this;
         }
-
+        public Builder solutions(String... solutions) {
+            return solutions(List.of(solutions));
+        }
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder standardColumns(List<ColumnResponse> standardColumns) {
             this.standardColumns = Objects.requireNonNull(standardColumns);
             return this;
         }
-
+        public Builder standardColumns(ColumnResponse... standardColumns) {
+            return standardColumns(List.of(standardColumns));
+        }
         public Builder tableSubType(String tableSubType) {
             this.tableSubType = Objects.requireNonNull(tableSubType);
             return this;
         }
-
         public Builder tableType(String tableType) {
             this.tableType = Objects.requireNonNull(tableType);
             return this;
-        }
-        public SchemaResponse build() {
+        }        public SchemaResponse build() {
             return new SchemaResponse(categories, columns, description, displayName, labels, name, restoredLogs, searchResults, solutions, source, standardColumns, tableSubType, tableType);
         }
     }

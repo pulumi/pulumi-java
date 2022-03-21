@@ -61,12 +61,10 @@ public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public Builder identityType(String identityType) {
             this.identityType = Output.of(Objects.requireNonNull(identityType));
             return this;
-        }
-        public AmlTokenArgs build() {
+        }        public AmlTokenArgs build() {
             return new AmlTokenArgs(identityType);
         }
     }

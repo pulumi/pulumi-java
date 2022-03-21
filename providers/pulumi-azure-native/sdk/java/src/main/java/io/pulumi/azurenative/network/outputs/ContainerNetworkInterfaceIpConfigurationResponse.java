@@ -103,22 +103,18 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ContainerNetworkInterfaceIpConfigurationResponse build() {
+        }        public ContainerNetworkInterfaceIpConfigurationResponse build() {
             return new ContainerNetworkInterfaceIpConfigurationResponse(etag, name, provisioningState, type);
         }
     }

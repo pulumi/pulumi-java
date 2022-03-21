@@ -704,412 +704,330 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             this.applicationReferenceId = applicationReferenceId;
             return this;
         }
-
         public Builder applicationReferenceId(@Nullable String applicationReferenceId) {
             this.applicationReferenceId = Output.ofNullable(applicationReferenceId);
             return this;
         }
-
         public Builder applyDelimiterStringAdvice(Output<Boolean> applyDelimiterStringAdvice) {
             this.applyDelimiterStringAdvice = Objects.requireNonNull(applyDelimiterStringAdvice);
             return this;
         }
-
         public Builder applyDelimiterStringAdvice(Boolean applyDelimiterStringAdvice) {
             this.applyDelimiterStringAdvice = Output.of(Objects.requireNonNull(applyDelimiterStringAdvice));
             return this;
         }
-
         public Builder communicationAgreementId(@Nullable Output<String> communicationAgreementId) {
             this.communicationAgreementId = communicationAgreementId;
             return this;
         }
-
         public Builder communicationAgreementId(@Nullable String communicationAgreementId) {
             this.communicationAgreementId = Output.ofNullable(communicationAgreementId);
             return this;
         }
-
         public Builder createGroupingSegments(Output<Boolean> createGroupingSegments) {
             this.createGroupingSegments = Objects.requireNonNull(createGroupingSegments);
             return this;
         }
-
         public Builder createGroupingSegments(Boolean createGroupingSegments) {
             this.createGroupingSegments = Output.of(Objects.requireNonNull(createGroupingSegments));
             return this;
         }
-
         public Builder enableDefaultGroupHeaders(Output<Boolean> enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
             return this;
         }
-
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Output.of(Objects.requireNonNull(enableDefaultGroupHeaders));
             return this;
         }
-
         public Builder functionalGroupId(@Nullable Output<String> functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
-
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = Output.ofNullable(functionalGroupId);
             return this;
         }
-
         public Builder groupApplicationPassword(@Nullable Output<String> groupApplicationPassword) {
             this.groupApplicationPassword = groupApplicationPassword;
             return this;
         }
-
         public Builder groupApplicationPassword(@Nullable String groupApplicationPassword) {
             this.groupApplicationPassword = Output.ofNullable(groupApplicationPassword);
             return this;
         }
-
         public Builder groupApplicationReceiverId(@Nullable Output<String> groupApplicationReceiverId) {
             this.groupApplicationReceiverId = groupApplicationReceiverId;
             return this;
         }
-
         public Builder groupApplicationReceiverId(@Nullable String groupApplicationReceiverId) {
             this.groupApplicationReceiverId = Output.ofNullable(groupApplicationReceiverId);
             return this;
         }
-
         public Builder groupApplicationReceiverQualifier(@Nullable Output<String> groupApplicationReceiverQualifier) {
             this.groupApplicationReceiverQualifier = groupApplicationReceiverQualifier;
             return this;
         }
-
         public Builder groupApplicationReceiverQualifier(@Nullable String groupApplicationReceiverQualifier) {
             this.groupApplicationReceiverQualifier = Output.ofNullable(groupApplicationReceiverQualifier);
             return this;
         }
-
         public Builder groupApplicationSenderId(@Nullable Output<String> groupApplicationSenderId) {
             this.groupApplicationSenderId = groupApplicationSenderId;
             return this;
         }
-
         public Builder groupApplicationSenderId(@Nullable String groupApplicationSenderId) {
             this.groupApplicationSenderId = Output.ofNullable(groupApplicationSenderId);
             return this;
         }
-
         public Builder groupApplicationSenderQualifier(@Nullable Output<String> groupApplicationSenderQualifier) {
             this.groupApplicationSenderQualifier = groupApplicationSenderQualifier;
             return this;
         }
-
         public Builder groupApplicationSenderQualifier(@Nullable String groupApplicationSenderQualifier) {
             this.groupApplicationSenderQualifier = Output.ofNullable(groupApplicationSenderQualifier);
             return this;
         }
-
         public Builder groupAssociationAssignedCode(@Nullable Output<String> groupAssociationAssignedCode) {
             this.groupAssociationAssignedCode = groupAssociationAssignedCode;
             return this;
         }
-
         public Builder groupAssociationAssignedCode(@Nullable String groupAssociationAssignedCode) {
             this.groupAssociationAssignedCode = Output.ofNullable(groupAssociationAssignedCode);
             return this;
         }
-
         public Builder groupControlNumberLowerBound(Output<Double> groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
             return this;
         }
-
         public Builder groupControlNumberLowerBound(Double groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Output.of(Objects.requireNonNull(groupControlNumberLowerBound));
             return this;
         }
-
         public Builder groupControlNumberPrefix(@Nullable Output<String> groupControlNumberPrefix) {
             this.groupControlNumberPrefix = groupControlNumberPrefix;
             return this;
         }
-
         public Builder groupControlNumberPrefix(@Nullable String groupControlNumberPrefix) {
             this.groupControlNumberPrefix = Output.ofNullable(groupControlNumberPrefix);
             return this;
         }
-
         public Builder groupControlNumberSuffix(@Nullable Output<String> groupControlNumberSuffix) {
             this.groupControlNumberSuffix = groupControlNumberSuffix;
             return this;
         }
-
         public Builder groupControlNumberSuffix(@Nullable String groupControlNumberSuffix) {
             this.groupControlNumberSuffix = Output.ofNullable(groupControlNumberSuffix);
             return this;
         }
-
         public Builder groupControlNumberUpperBound(Output<Double> groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
             return this;
         }
-
         public Builder groupControlNumberUpperBound(Double groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Output.of(Objects.requireNonNull(groupControlNumberUpperBound));
             return this;
         }
-
         public Builder groupControllingAgencyCode(@Nullable Output<String> groupControllingAgencyCode) {
             this.groupControllingAgencyCode = groupControllingAgencyCode;
             return this;
         }
-
         public Builder groupControllingAgencyCode(@Nullable String groupControllingAgencyCode) {
             this.groupControllingAgencyCode = Output.ofNullable(groupControllingAgencyCode);
             return this;
         }
-
         public Builder groupMessageRelease(@Nullable Output<String> groupMessageRelease) {
             this.groupMessageRelease = groupMessageRelease;
             return this;
         }
-
         public Builder groupMessageRelease(@Nullable String groupMessageRelease) {
             this.groupMessageRelease = Output.ofNullable(groupMessageRelease);
             return this;
         }
-
         public Builder groupMessageVersion(@Nullable Output<String> groupMessageVersion) {
             this.groupMessageVersion = groupMessageVersion;
             return this;
         }
-
         public Builder groupMessageVersion(@Nullable String groupMessageVersion) {
             this.groupMessageVersion = Output.ofNullable(groupMessageVersion);
             return this;
         }
-
         public Builder interchangeControlNumberLowerBound(Output<Double> interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
             return this;
         }
-
         public Builder interchangeControlNumberLowerBound(Double interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Output.of(Objects.requireNonNull(interchangeControlNumberLowerBound));
             return this;
         }
-
         public Builder interchangeControlNumberPrefix(@Nullable Output<String> interchangeControlNumberPrefix) {
             this.interchangeControlNumberPrefix = interchangeControlNumberPrefix;
             return this;
         }
-
         public Builder interchangeControlNumberPrefix(@Nullable String interchangeControlNumberPrefix) {
             this.interchangeControlNumberPrefix = Output.ofNullable(interchangeControlNumberPrefix);
             return this;
         }
-
         public Builder interchangeControlNumberSuffix(@Nullable Output<String> interchangeControlNumberSuffix) {
             this.interchangeControlNumberSuffix = interchangeControlNumberSuffix;
             return this;
         }
-
         public Builder interchangeControlNumberSuffix(@Nullable String interchangeControlNumberSuffix) {
             this.interchangeControlNumberSuffix = Output.ofNullable(interchangeControlNumberSuffix);
             return this;
         }
-
         public Builder interchangeControlNumberUpperBound(Output<Double> interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
             return this;
         }
-
         public Builder interchangeControlNumberUpperBound(Double interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Output.of(Objects.requireNonNull(interchangeControlNumberUpperBound));
             return this;
         }
-
         public Builder isTestInterchange(Output<Boolean> isTestInterchange) {
             this.isTestInterchange = Objects.requireNonNull(isTestInterchange);
             return this;
         }
-
         public Builder isTestInterchange(Boolean isTestInterchange) {
             this.isTestInterchange = Output.of(Objects.requireNonNull(isTestInterchange));
             return this;
         }
-
         public Builder overwriteExistingTransactionSetControlNumber(Output<Boolean> overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
             return this;
         }
-
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Output.of(Objects.requireNonNull(overwriteExistingTransactionSetControlNumber));
             return this;
         }
-
         public Builder processingPriorityCode(@Nullable Output<String> processingPriorityCode) {
             this.processingPriorityCode = processingPriorityCode;
             return this;
         }
-
         public Builder processingPriorityCode(@Nullable String processingPriorityCode) {
             this.processingPriorityCode = Output.ofNullable(processingPriorityCode);
             return this;
         }
-
         public Builder receiverInternalIdentification(@Nullable Output<String> receiverInternalIdentification) {
             this.receiverInternalIdentification = receiverInternalIdentification;
             return this;
         }
-
         public Builder receiverInternalIdentification(@Nullable String receiverInternalIdentification) {
             this.receiverInternalIdentification = Output.ofNullable(receiverInternalIdentification);
             return this;
         }
-
         public Builder receiverInternalSubIdentification(@Nullable Output<String> receiverInternalSubIdentification) {
             this.receiverInternalSubIdentification = receiverInternalSubIdentification;
             return this;
         }
-
         public Builder receiverInternalSubIdentification(@Nullable String receiverInternalSubIdentification) {
             this.receiverInternalSubIdentification = Output.ofNullable(receiverInternalSubIdentification);
             return this;
         }
-
         public Builder receiverReverseRoutingAddress(@Nullable Output<String> receiverReverseRoutingAddress) {
             this.receiverReverseRoutingAddress = receiverReverseRoutingAddress;
             return this;
         }
-
         public Builder receiverReverseRoutingAddress(@Nullable String receiverReverseRoutingAddress) {
             this.receiverReverseRoutingAddress = Output.ofNullable(receiverReverseRoutingAddress);
             return this;
         }
-
         public Builder recipientReferencePasswordQualifier(@Nullable Output<String> recipientReferencePasswordQualifier) {
             this.recipientReferencePasswordQualifier = recipientReferencePasswordQualifier;
             return this;
         }
-
         public Builder recipientReferencePasswordQualifier(@Nullable String recipientReferencePasswordQualifier) {
             this.recipientReferencePasswordQualifier = Output.ofNullable(recipientReferencePasswordQualifier);
             return this;
         }
-
         public Builder recipientReferencePasswordValue(@Nullable Output<String> recipientReferencePasswordValue) {
             this.recipientReferencePasswordValue = recipientReferencePasswordValue;
             return this;
         }
-
         public Builder recipientReferencePasswordValue(@Nullable String recipientReferencePasswordValue) {
             this.recipientReferencePasswordValue = Output.ofNullable(recipientReferencePasswordValue);
             return this;
         }
-
         public Builder rolloverGroupControlNumber(Output<Boolean> rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
             return this;
         }
-
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Output.of(Objects.requireNonNull(rolloverGroupControlNumber));
             return this;
         }
-
         public Builder rolloverInterchangeControlNumber(Output<Boolean> rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
             return this;
         }
-
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Output.of(Objects.requireNonNull(rolloverInterchangeControlNumber));
             return this;
         }
-
         public Builder rolloverTransactionSetControlNumber(Output<Boolean> rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
             return this;
         }
-
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Output.of(Objects.requireNonNull(rolloverTransactionSetControlNumber));
             return this;
         }
-
         public Builder senderInternalIdentification(@Nullable Output<String> senderInternalIdentification) {
             this.senderInternalIdentification = senderInternalIdentification;
             return this;
         }
-
         public Builder senderInternalIdentification(@Nullable String senderInternalIdentification) {
             this.senderInternalIdentification = Output.ofNullable(senderInternalIdentification);
             return this;
         }
-
         public Builder senderInternalSubIdentification(@Nullable Output<String> senderInternalSubIdentification) {
             this.senderInternalSubIdentification = senderInternalSubIdentification;
             return this;
         }
-
         public Builder senderInternalSubIdentification(@Nullable String senderInternalSubIdentification) {
             this.senderInternalSubIdentification = Output.ofNullable(senderInternalSubIdentification);
             return this;
         }
-
         public Builder senderReverseRoutingAddress(@Nullable Output<String> senderReverseRoutingAddress) {
             this.senderReverseRoutingAddress = senderReverseRoutingAddress;
             return this;
         }
-
         public Builder senderReverseRoutingAddress(@Nullable String senderReverseRoutingAddress) {
             this.senderReverseRoutingAddress = Output.ofNullable(senderReverseRoutingAddress);
             return this;
         }
-
         public Builder transactionSetControlNumberLowerBound(Output<Double> transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
             return this;
         }
-
         public Builder transactionSetControlNumberLowerBound(Double transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Output.of(Objects.requireNonNull(transactionSetControlNumberLowerBound));
             return this;
         }
-
         public Builder transactionSetControlNumberPrefix(@Nullable Output<String> transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
-
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = Output.ofNullable(transactionSetControlNumberPrefix);
             return this;
         }
-
         public Builder transactionSetControlNumberSuffix(@Nullable Output<String> transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
-
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = Output.ofNullable(transactionSetControlNumberSuffix);
             return this;
         }
-
         public Builder transactionSetControlNumberUpperBound(Output<Double> transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
             return this;
         }
-
         public Builder transactionSetControlNumberUpperBound(Double transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Output.of(Objects.requireNonNull(transactionSetControlNumberUpperBound));
             return this;
-        }
-        public EdifactEnvelopeSettingsArgs build() {
+        }        public EdifactEnvelopeSettingsArgs build() {
             return new EdifactEnvelopeSettingsArgs(applicationReferenceId, applyDelimiterStringAdvice, communicationAgreementId, createGroupingSegments, enableDefaultGroupHeaders, functionalGroupId, groupApplicationPassword, groupApplicationReceiverId, groupApplicationReceiverQualifier, groupApplicationSenderId, groupApplicationSenderQualifier, groupAssociationAssignedCode, groupControlNumberLowerBound, groupControlNumberPrefix, groupControlNumberSuffix, groupControlNumberUpperBound, groupControllingAgencyCode, groupMessageRelease, groupMessageVersion, interchangeControlNumberLowerBound, interchangeControlNumberPrefix, interchangeControlNumberSuffix, interchangeControlNumberUpperBound, isTestInterchange, overwriteExistingTransactionSetControlNumber, processingPriorityCode, receiverInternalIdentification, receiverInternalSubIdentification, receiverReverseRoutingAddress, recipientReferencePasswordQualifier, recipientReferencePasswordValue, rolloverGroupControlNumber, rolloverInterchangeControlNumber, rolloverTransactionSetControlNumber, senderInternalIdentification, senderInternalSubIdentification, senderReverseRoutingAddress, transactionSetControlNumberLowerBound, transactionSetControlNumberPrefix, transactionSetControlNumberSuffix, transactionSetControlNumberUpperBound);
         }
     }

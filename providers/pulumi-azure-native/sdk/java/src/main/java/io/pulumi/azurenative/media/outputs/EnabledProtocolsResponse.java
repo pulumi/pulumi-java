@@ -101,22 +101,18 @@ public final class EnabledProtocolsResponse {
             this.dash = Objects.requireNonNull(dash);
             return this;
         }
-
         public Builder download(Boolean download) {
             this.download = Objects.requireNonNull(download);
             return this;
         }
-
         public Builder hls(Boolean hls) {
             this.hls = Objects.requireNonNull(hls);
             return this;
         }
-
         public Builder smoothStreaming(Boolean smoothStreaming) {
             this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
             return this;
-        }
-        public EnabledProtocolsResponse build() {
+        }        public EnabledProtocolsResponse build() {
             return new EnabledProtocolsResponse(dash, download, hls, smoothStreaming);
         }
     }

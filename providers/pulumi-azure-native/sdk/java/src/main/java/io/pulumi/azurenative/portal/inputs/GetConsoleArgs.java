@@ -54,8 +54,7 @@ public final class GetConsoleArgs extends io.pulumi.resources.InvokeArgs {
         public Builder consoleName(String consoleName) {
             this.consoleName = Objects.requireNonNull(consoleName);
             return this;
-        }
-        public GetConsoleArgs build() {
+        }        public GetConsoleArgs build() {
             return new GetConsoleArgs(consoleName);
         }
     }

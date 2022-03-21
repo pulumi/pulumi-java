@@ -80,12 +80,13 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
             this.columns = columns;
             return this;
         }
-
+        public Builder columns(InsightsTableResultResponseColumns... columns) {
+            return columns(List.of(columns));
+        }
         public Builder rows(@Nullable List<List<String>> rows) {
             this.rows = rows;
             return this;
-        }
-        public InsightsTableResultResponse build() {
+        }        public InsightsTableResultResponse build() {
             return new InsightsTableResultResponse(columns, rows);
         }
     }

@@ -88,17 +88,14 @@ public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
             this.migrateProjectName = Objects.requireNonNull(migrateProjectName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder solutionName(String solutionName) {
             this.solutionName = Objects.requireNonNull(solutionName);
             return this;
-        }
-        public GetSolutionArgs build() {
+        }        public GetSolutionArgs build() {
             return new GetSolutionArgs(migrateProjectName, resourceGroupName, solutionName);
         }
     }

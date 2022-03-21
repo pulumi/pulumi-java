@@ -91,32 +91,26 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder settingName(@Nullable Output<String> settingName) {
             this.settingName = settingName;
             return this;
         }
-
         public Builder settingName(@Nullable String settingName) {
             this.settingName = Output.ofNullable(settingName);
             return this;
-        }
-        public AdvancedThreatProtectionArgs build() {
+        }        public AdvancedThreatProtectionArgs build() {
             return new AdvancedThreatProtectionArgs(isEnabled, resourceId, settingName);
         }
     }

@@ -94,22 +94,18 @@ public final class GetSkusNestedResourceTypeThirdResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(SkuResourceResponseProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSkusNestedResourceTypeThirdResult build() {
+        }        public GetSkusNestedResourceTypeThirdResult build() {
             return new GetSkusNestedResourceTypeThirdResult(id, name, properties, type);
         }
     }

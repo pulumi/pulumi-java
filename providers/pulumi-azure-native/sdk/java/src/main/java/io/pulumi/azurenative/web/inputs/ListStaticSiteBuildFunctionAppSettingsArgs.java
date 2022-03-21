@@ -88,17 +88,14 @@ public final class ListStaticSiteBuildFunctionAppSettingsArgs extends io.pulumi.
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListStaticSiteBuildFunctionAppSettingsArgs build() {
+        }        public ListStaticSiteBuildFunctionAppSettingsArgs build() {
             return new ListStaticSiteBuildFunctionAppSettingsArgs(environmentName, name, resourceGroupName);
         }
     }

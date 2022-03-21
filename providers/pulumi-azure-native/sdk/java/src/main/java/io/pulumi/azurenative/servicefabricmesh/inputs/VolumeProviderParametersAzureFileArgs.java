@@ -94,32 +94,26 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
-        }
-        public VolumeProviderParametersAzureFileArgs build() {
+        }        public VolumeProviderParametersAzureFileArgs build() {
             return new VolumeProviderParametersAzureFileArgs(accountKey, accountName, shareName);
         }
     }

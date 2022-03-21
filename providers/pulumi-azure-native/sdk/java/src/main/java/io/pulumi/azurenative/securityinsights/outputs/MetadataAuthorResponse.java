@@ -87,17 +87,14 @@ public final class MetadataAuthorResponse {
             this.email = email;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public MetadataAuthorResponse build() {
+        }        public MetadataAuthorResponse build() {
             return new MetadataAuthorResponse(email, link, name);
         }
     }

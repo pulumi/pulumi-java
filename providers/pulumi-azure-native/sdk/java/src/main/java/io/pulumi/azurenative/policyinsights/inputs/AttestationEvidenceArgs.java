@@ -78,22 +78,18 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
-
         public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = Output.ofNullable(sourceUri);
             return this;
-        }
-        public AttestationEvidenceArgs build() {
+        }        public AttestationEvidenceArgs build() {
             return new AttestationEvidenceArgs(description, sourceUri);
         }
     }

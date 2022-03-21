@@ -71,12 +71,10 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public ExpressRouteGatewayPropertiesResponseBounds build() {
+        }        public ExpressRouteGatewayPropertiesResponseBounds build() {
             return new ExpressRouteGatewayPropertiesResponseBounds(max, min);
         }
     }

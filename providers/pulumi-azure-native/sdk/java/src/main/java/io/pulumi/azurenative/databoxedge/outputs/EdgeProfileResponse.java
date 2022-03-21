@@ -53,8 +53,7 @@ public final class EdgeProfileResponse {
         public Builder subscription(@Nullable EdgeProfileSubscriptionResponse subscription) {
             this.subscription = subscription;
             return this;
-        }
-        public EdgeProfileResponse build() {
+        }        public EdgeProfileResponse build() {
             return new EdgeProfileResponse(subscription);
         }
     }

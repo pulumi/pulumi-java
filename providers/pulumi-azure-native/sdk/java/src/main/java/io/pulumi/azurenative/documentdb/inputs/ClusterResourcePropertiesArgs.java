@@ -262,132 +262,115 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             this.authenticationMethod = authenticationMethod;
             return this;
         }
-
         public Builder authenticationMethod(@Nullable Either<String,AuthenticationMethod> authenticationMethod) {
             this.authenticationMethod = Output.ofNullable(authenticationMethod);
             return this;
         }
-
         public Builder cassandraVersion(@Nullable Output<String> cassandraVersion) {
             this.cassandraVersion = cassandraVersion;
             return this;
         }
-
         public Builder cassandraVersion(@Nullable String cassandraVersion) {
             this.cassandraVersion = Output.ofNullable(cassandraVersion);
             return this;
         }
-
         public Builder clientCertificates(@Nullable Output<List<CertificateArgs>> clientCertificates) {
             this.clientCertificates = clientCertificates;
             return this;
         }
-
         public Builder clientCertificates(@Nullable List<CertificateArgs> clientCertificates) {
             this.clientCertificates = Output.ofNullable(clientCertificates);
             return this;
         }
-
+        public Builder clientCertificates(CertificateArgs... clientCertificates) {
+            return clientCertificates(List.of(clientCertificates));
+        }
         public Builder clusterNameOverride(@Nullable Output<String> clusterNameOverride) {
             this.clusterNameOverride = clusterNameOverride;
             return this;
         }
-
         public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
             this.clusterNameOverride = Output.ofNullable(clusterNameOverride);
             return this;
         }
-
         public Builder delegatedManagementSubnetId(@Nullable Output<String> delegatedManagementSubnetId) {
             this.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
-
         public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
             this.delegatedManagementSubnetId = Output.ofNullable(delegatedManagementSubnetId);
             return this;
         }
-
         public Builder externalGossipCertificates(@Nullable Output<List<CertificateArgs>> externalGossipCertificates) {
             this.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
-
         public Builder externalGossipCertificates(@Nullable List<CertificateArgs> externalGossipCertificates) {
             this.externalGossipCertificates = Output.ofNullable(externalGossipCertificates);
             return this;
         }
-
+        public Builder externalGossipCertificates(CertificateArgs... externalGossipCertificates) {
+            return externalGossipCertificates(List.of(externalGossipCertificates));
+        }
         public Builder externalSeedNodes(@Nullable Output<List<SeedNodeArgs>> externalSeedNodes) {
             this.externalSeedNodes = externalSeedNodes;
             return this;
         }
-
         public Builder externalSeedNodes(@Nullable List<SeedNodeArgs> externalSeedNodes) {
             this.externalSeedNodes = Output.ofNullable(externalSeedNodes);
             return this;
         }
-
+        public Builder externalSeedNodes(SeedNodeArgs... externalSeedNodes) {
+            return externalSeedNodes(List.of(externalSeedNodes));
+        }
         public Builder hoursBetweenBackups(@Nullable Output<Integer> hoursBetweenBackups) {
             this.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
-
         public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
             this.hoursBetweenBackups = Output.ofNullable(hoursBetweenBackups);
             return this;
         }
-
         public Builder initialCassandraAdminPassword(@Nullable Output<String> initialCassandraAdminPassword) {
             this.initialCassandraAdminPassword = initialCassandraAdminPassword;
             return this;
         }
-
         public Builder initialCassandraAdminPassword(@Nullable String initialCassandraAdminPassword) {
             this.initialCassandraAdminPassword = Output.ofNullable(initialCassandraAdminPassword);
             return this;
         }
-
         public Builder prometheusEndpoint(@Nullable Output<SeedNodeArgs> prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
-
         public Builder prometheusEndpoint(@Nullable SeedNodeArgs prometheusEndpoint) {
             this.prometheusEndpoint = Output.ofNullable(prometheusEndpoint);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder repairEnabled(@Nullable Output<Boolean> repairEnabled) {
             this.repairEnabled = repairEnabled;
             return this;
         }
-
         public Builder repairEnabled(@Nullable Boolean repairEnabled) {
             this.repairEnabled = Output.ofNullable(repairEnabled);
             return this;
         }
-
         public Builder restoreFromBackupId(@Nullable Output<String> restoreFromBackupId) {
             this.restoreFromBackupId = restoreFromBackupId;
             return this;
         }
-
         public Builder restoreFromBackupId(@Nullable String restoreFromBackupId) {
             this.restoreFromBackupId = Output.ofNullable(restoreFromBackupId);
             return this;
-        }
-        public ClusterResourcePropertiesArgs build() {
+        }        public ClusterResourcePropertiesArgs build() {
             return new ClusterResourcePropertiesArgs(authenticationMethod, cassandraVersion, clientCertificates, clusterNameOverride, delegatedManagementSubnetId, externalGossipCertificates, externalSeedNodes, hoursBetweenBackups, initialCassandraAdminPassword, prometheusEndpoint, provisioningState, repairEnabled, restoreFromBackupId);
         }
     }

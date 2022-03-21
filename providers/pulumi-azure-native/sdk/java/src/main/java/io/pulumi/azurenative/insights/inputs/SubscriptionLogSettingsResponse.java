@@ -79,12 +79,10 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
             this.category = category;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public SubscriptionLogSettingsResponse build() {
+        }        public SubscriptionLogSettingsResponse build() {
             return new SubscriptionLogSettingsResponse(category, enabled);
         }
     }

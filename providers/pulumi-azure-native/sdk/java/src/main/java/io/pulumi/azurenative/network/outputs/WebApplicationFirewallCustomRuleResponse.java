@@ -138,32 +138,29 @@ public final class WebApplicationFirewallCustomRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
-
+        public Builder matchConditions(MatchConditionResponse... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
-        }
-        public WebApplicationFirewallCustomRuleResponse build() {
+        }        public WebApplicationFirewallCustomRuleResponse build() {
             return new WebApplicationFirewallCustomRuleResponse(action, etag, matchConditions, name, priority, ruleType);
         }
     }

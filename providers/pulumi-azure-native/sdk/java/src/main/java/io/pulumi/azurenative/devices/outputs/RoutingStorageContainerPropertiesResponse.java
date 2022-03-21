@@ -232,62 +232,50 @@ public final class RoutingStorageContainerPropertiesResponse {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder batchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
             this.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder fileNameFormat(@Nullable String fileNameFormat) {
             this.fileNameFormat = fileNameFormat;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder maxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
             this.maxChunkSizeInBytes = maxChunkSizeInBytes;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
-        }
-        public RoutingStorageContainerPropertiesResponse build() {
+        }        public RoutingStorageContainerPropertiesResponse build() {
             return new RoutingStorageContainerPropertiesResponse(authenticationType, batchFrequencyInSeconds, connectionString, containerName, encoding, endpointUri, fileNameFormat, id, maxChunkSizeInBytes, name, resourceGroup, subscriptionId);
         }
     }

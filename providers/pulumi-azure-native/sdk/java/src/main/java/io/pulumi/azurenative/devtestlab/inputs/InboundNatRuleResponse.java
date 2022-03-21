@@ -95,17 +95,14 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
             this.backendPort = backendPort;
             return this;
         }
-
         public Builder frontendPort(@Nullable Integer frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
-
         public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
-        }
-        public InboundNatRuleResponse build() {
+        }        public InboundNatRuleResponse build() {
             return new InboundNatRuleResponse(backendPort, frontendPort, transportProtocol);
         }
     }

@@ -80,22 +80,21 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
             this.columnNames = columnNames;
             return this;
         }
-
         public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnArgs> columnNames) {
             this.columnNames = Output.ofNullable(columnNames);
             return this;
         }
-
+        public Builder columnNames(AzureMachineLearningWebServiceInputColumnArgs... columnNames) {
+            return columnNames(List.of(columnNames));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AzureMachineLearningWebServiceInputsArgs build() {
+        }        public AzureMachineLearningWebServiceInputsArgs build() {
             return new AzureMachineLearningWebServiceInputsArgs(columnNames, name);
         }
     }

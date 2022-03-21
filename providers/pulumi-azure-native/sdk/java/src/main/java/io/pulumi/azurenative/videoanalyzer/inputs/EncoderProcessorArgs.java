@@ -115,42 +115,37 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
         public Builder inputs(List<NodeInputArgs> inputs) {
             this.inputs = Output.of(Objects.requireNonNull(inputs));
             return this;
         }
-
+        public Builder inputs(NodeInputArgs... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder preset(Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
-
         public Builder preset(Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs> preset) {
             this.preset = Output.of(Objects.requireNonNull(preset));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EncoderProcessorArgs build() {
+        }        public EncoderProcessorArgs build() {
             return new EncoderProcessorArgs(inputs, name, preset, type);
         }
     }

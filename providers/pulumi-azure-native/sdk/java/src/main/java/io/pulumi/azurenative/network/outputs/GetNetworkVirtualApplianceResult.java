@@ -334,92 +334,89 @@ public final class GetNetworkVirtualApplianceResult {
             this.addressPrefix = Objects.requireNonNull(addressPrefix);
             return this;
         }
-
         public Builder bootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
             this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
             return this;
         }
-
+        public Builder bootStrapConfigurationBlobs(String... bootStrapConfigurationBlobs) {
+            return bootStrapConfigurationBlobs(List.of(bootStrapConfigurationBlobs));
+        }
         public Builder cloudInitConfiguration(@Nullable String cloudInitConfiguration) {
             this.cloudInitConfiguration = cloudInitConfiguration;
             return this;
         }
-
         public Builder cloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
             this.cloudInitConfigurationBlobs = cloudInitConfigurationBlobs;
             return this;
         }
-
+        public Builder cloudInitConfigurationBlobs(String... cloudInitConfigurationBlobs) {
+            return cloudInitConfigurationBlobs(List.of(cloudInitConfigurationBlobs));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder inboundSecurityRules(List<SubResourceResponse> inboundSecurityRules) {
             this.inboundSecurityRules = Objects.requireNonNull(inboundSecurityRules);
             return this;
         }
-
+        public Builder inboundSecurityRules(SubResourceResponse... inboundSecurityRules) {
+            return inboundSecurityRules(List.of(inboundSecurityRules));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nvaSku(@Nullable VirtualApplianceSkuPropertiesResponse nvaSku) {
             this.nvaSku = nvaSku;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
             this.virtualApplianceAsn = virtualApplianceAsn;
             return this;
         }
-
         public Builder virtualApplianceNics(List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics) {
             this.virtualApplianceNics = Objects.requireNonNull(virtualApplianceNics);
             return this;
         }
-
+        public Builder virtualApplianceNics(VirtualApplianceNicPropertiesResponse... virtualApplianceNics) {
+            return virtualApplianceNics(List.of(virtualApplianceNics));
+        }
         public Builder virtualApplianceSites(List<SubResourceResponse> virtualApplianceSites) {
             this.virtualApplianceSites = Objects.requireNonNull(virtualApplianceSites);
             return this;
         }
-
+        public Builder virtualApplianceSites(SubResourceResponse... virtualApplianceSites) {
+            return virtualApplianceSites(List.of(virtualApplianceSites));
+        }
         public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
-        }
-        public GetNetworkVirtualApplianceResult build() {
+        }        public GetNetworkVirtualApplianceResult build() {
             return new GetNetworkVirtualApplianceResult(addressPrefix, bootStrapConfigurationBlobs, cloudInitConfiguration, cloudInitConfigurationBlobs, etag, id, identity, inboundSecurityRules, location, name, nvaSku, provisioningState, tags, type, virtualApplianceAsn, virtualApplianceNics, virtualApplianceSites, virtualHub);
         }
     }

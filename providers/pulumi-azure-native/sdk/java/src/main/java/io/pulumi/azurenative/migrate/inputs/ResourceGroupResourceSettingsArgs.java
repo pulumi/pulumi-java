@@ -78,22 +78,18 @@ public final class ResourceGroupResourceSettingsArgs extends io.pulumi.resources
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
-        }
-        public ResourceGroupResourceSettingsArgs build() {
+        }        public ResourceGroupResourceSettingsArgs build() {
             return new ResourceGroupResourceSettingsArgs(resourceType, targetResourceName);
         }
     }

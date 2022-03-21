@@ -344,97 +344,78 @@ public final class GetShareSubscriptionResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder invitationId(String invitationId) {
             this.invitationId = Objects.requireNonNull(invitationId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder providerEmail(String providerEmail) {
             this.providerEmail = Objects.requireNonNull(providerEmail);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder providerTenantName(String providerTenantName) {
             this.providerTenantName = Objects.requireNonNull(providerTenantName);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder shareDescription(String shareDescription) {
             this.shareDescription = Objects.requireNonNull(shareDescription);
             return this;
         }
-
         public Builder shareKind(String shareKind) {
             this.shareKind = Objects.requireNonNull(shareKind);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareSubscriptionStatus(String shareSubscriptionStatus) {
             this.shareSubscriptionStatus = Objects.requireNonNull(shareSubscriptionStatus);
             return this;
         }
-
         public Builder shareTerms(String shareTerms) {
             this.shareTerms = Objects.requireNonNull(shareTerms);
             return this;
         }
-
         public Builder sourceShareLocation(String sourceShareLocation) {
             this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetShareSubscriptionResult build() {
+        }        public GetShareSubscriptionResult build() {
             return new GetShareSubscriptionResult(createdAt, expirationDate, id, invitationId, name, providerEmail, providerName, providerTenantName, provisioningState, shareDescription, shareKind, shareName, shareSubscriptionStatus, shareTerms, sourceShareLocation, systemData, type, userEmail, userName);
         }
     }

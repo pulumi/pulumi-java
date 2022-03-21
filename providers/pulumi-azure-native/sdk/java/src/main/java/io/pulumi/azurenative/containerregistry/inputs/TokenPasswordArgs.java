@@ -96,32 +96,26 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder expiry(@Nullable Output<String> expiry) {
             this.expiry = expiry;
             return this;
         }
-
         public Builder expiry(@Nullable String expiry) {
             this.expiry = Output.ofNullable(expiry);
             return this;
         }
-
         public Builder name(@Nullable Output<Either<String,TokenPasswordName>> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,TokenPasswordName> name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public TokenPasswordArgs build() {
+        }        public TokenPasswordArgs build() {
             return new TokenPasswordArgs(creationTime, expiry, name);
         }
     }

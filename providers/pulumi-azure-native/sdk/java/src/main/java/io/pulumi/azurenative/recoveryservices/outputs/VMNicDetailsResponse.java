@@ -474,137 +474,116 @@ public final class VMNicDetailsResponse {
             this.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
             return this;
         }
-
         public Builder enableAcceleratedNetworkingOnTfo(@Nullable Boolean enableAcceleratedNetworkingOnTfo) {
             this.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
             return this;
         }
-
         public Builder ipAddressType(@Nullable String ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
-
         public Builder nicId(@Nullable String nicId) {
             this.nicId = nicId;
             return this;
         }
-
         public Builder primaryNicStaticIPAddress(@Nullable String primaryNicStaticIPAddress) {
             this.primaryNicStaticIPAddress = primaryNicStaticIPAddress;
             return this;
         }
-
         public Builder recoveryLBBackendAddressPoolIds(@Nullable List<String> recoveryLBBackendAddressPoolIds) {
             this.recoveryLBBackendAddressPoolIds = recoveryLBBackendAddressPoolIds;
             return this;
         }
-
+        public Builder recoveryLBBackendAddressPoolIds(String... recoveryLBBackendAddressPoolIds) {
+            return recoveryLBBackendAddressPoolIds(List.of(recoveryLBBackendAddressPoolIds));
+        }
         public Builder recoveryNetworkSecurityGroupId(@Nullable String recoveryNetworkSecurityGroupId) {
             this.recoveryNetworkSecurityGroupId = recoveryNetworkSecurityGroupId;
             return this;
         }
-
         public Builder recoveryNicIpAddressType(@Nullable String recoveryNicIpAddressType) {
             this.recoveryNicIpAddressType = recoveryNicIpAddressType;
             return this;
         }
-
         public Builder recoveryNicName(@Nullable String recoveryNicName) {
             this.recoveryNicName = recoveryNicName;
             return this;
         }
-
         public Builder recoveryNicResourceGroupName(@Nullable String recoveryNicResourceGroupName) {
             this.recoveryNicResourceGroupName = recoveryNicResourceGroupName;
             return this;
         }
-
         public Builder recoveryPublicIpAddressId(@Nullable String recoveryPublicIpAddressId) {
             this.recoveryPublicIpAddressId = recoveryPublicIpAddressId;
             return this;
         }
-
         public Builder recoveryVMNetworkId(@Nullable String recoveryVMNetworkId) {
             this.recoveryVMNetworkId = recoveryVMNetworkId;
             return this;
         }
-
         public Builder recoveryVMSubnetName(@Nullable String recoveryVMSubnetName) {
             this.recoveryVMSubnetName = recoveryVMSubnetName;
             return this;
         }
-
         public Builder replicaNicId(@Nullable String replicaNicId) {
             this.replicaNicId = replicaNicId;
             return this;
         }
-
         public Builder replicaNicStaticIPAddress(@Nullable String replicaNicStaticIPAddress) {
             this.replicaNicStaticIPAddress = replicaNicStaticIPAddress;
             return this;
         }
-
         public Builder reuseExistingNic(@Nullable Boolean reuseExistingNic) {
             this.reuseExistingNic = reuseExistingNic;
             return this;
         }
-
         public Builder selectionType(@Nullable String selectionType) {
             this.selectionType = selectionType;
             return this;
         }
-
         public Builder sourceNicArmId(@Nullable String sourceNicArmId) {
             this.sourceNicArmId = sourceNicArmId;
             return this;
         }
-
         public Builder tfoIPConfigs(@Nullable List<IPConfigResponse> tfoIPConfigs) {
             this.tfoIPConfigs = tfoIPConfigs;
             return this;
         }
-
+        public Builder tfoIPConfigs(IPConfigResponse... tfoIPConfigs) {
+            return tfoIPConfigs(List.of(tfoIPConfigs));
+        }
         public Builder tfoNetworkSecurityGroupId(@Nullable String tfoNetworkSecurityGroupId) {
             this.tfoNetworkSecurityGroupId = tfoNetworkSecurityGroupId;
             return this;
         }
-
         public Builder tfoRecoveryNicName(@Nullable String tfoRecoveryNicName) {
             this.tfoRecoveryNicName = tfoRecoveryNicName;
             return this;
         }
-
         public Builder tfoRecoveryNicResourceGroupName(@Nullable String tfoRecoveryNicResourceGroupName) {
             this.tfoRecoveryNicResourceGroupName = tfoRecoveryNicResourceGroupName;
             return this;
         }
-
         public Builder tfoReuseExistingNic(@Nullable Boolean tfoReuseExistingNic) {
             this.tfoReuseExistingNic = tfoReuseExistingNic;
             return this;
         }
-
         public Builder tfoVMNetworkId(@Nullable String tfoVMNetworkId) {
             this.tfoVMNetworkId = tfoVMNetworkId;
             return this;
         }
-
         public Builder tfoVMSubnetName(@Nullable String tfoVMSubnetName) {
             this.tfoVMSubnetName = tfoVMSubnetName;
             return this;
         }
-
         public Builder vMNetworkName(@Nullable String vMNetworkName) {
             this.vMNetworkName = vMNetworkName;
             return this;
         }
-
         public Builder vMSubnetName(@Nullable String vMSubnetName) {
             this.vMSubnetName = vMSubnetName;
             return this;
-        }
-        public VMNicDetailsResponse build() {
+        }        public VMNicDetailsResponse build() {
             return new VMNicDetailsResponse(enableAcceleratedNetworkingOnRecovery, enableAcceleratedNetworkingOnTfo, ipAddressType, nicId, primaryNicStaticIPAddress, recoveryLBBackendAddressPoolIds, recoveryNetworkSecurityGroupId, recoveryNicIpAddressType, recoveryNicName, recoveryNicResourceGroupName, recoveryPublicIpAddressId, recoveryVMNetworkId, recoveryVMSubnetName, replicaNicId, replicaNicStaticIPAddress, reuseExistingNic, selectionType, sourceNicArmId, tfoIPConfigs, tfoNetworkSecurityGroupId, tfoRecoveryNicName, tfoRecoveryNicResourceGroupName, tfoReuseExistingNic, tfoVMNetworkId, tfoVMSubnetName, vMNetworkName, vMSubnetName);
         }
     }

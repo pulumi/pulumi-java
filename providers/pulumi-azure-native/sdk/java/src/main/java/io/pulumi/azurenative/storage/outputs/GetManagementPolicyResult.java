@@ -118,27 +118,22 @@ public final class GetManagementPolicyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(ManagementPolicySchemaResponse policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagementPolicyResult build() {
+        }        public GetManagementPolicyResult build() {
             return new GetManagementPolicyResult(id, lastModifiedTime, name, policy, type);
         }
     }

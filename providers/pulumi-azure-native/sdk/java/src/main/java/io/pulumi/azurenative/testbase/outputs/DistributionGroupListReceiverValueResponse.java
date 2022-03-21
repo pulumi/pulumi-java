@@ -54,7 +54,9 @@ public final class DistributionGroupListReceiverValueResponse {
             this.distributionGroups = distributionGroups;
             return this;
         }
-        public DistributionGroupListReceiverValueResponse build() {
+        public Builder distributionGroups(String... distributionGroups) {
+            return distributionGroups(List.of(distributionGroups));
+        }        public DistributionGroupListReceiverValueResponse build() {
             return new DistributionGroupListReceiverValueResponse(distributionGroups);
         }
     }

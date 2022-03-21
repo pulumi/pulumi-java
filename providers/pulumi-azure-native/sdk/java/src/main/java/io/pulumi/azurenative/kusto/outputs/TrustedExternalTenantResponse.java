@@ -53,8 +53,7 @@ public final class TrustedExternalTenantResponse {
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TrustedExternalTenantResponse build() {
+        }        public TrustedExternalTenantResponse build() {
             return new TrustedExternalTenantResponse(value);
         }
     }

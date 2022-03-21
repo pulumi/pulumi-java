@@ -72,12 +72,10 @@ public final class GetStorageSyncServiceArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
-        }
-        public GetStorageSyncServiceArgs build() {
+        }        public GetStorageSyncServiceArgs build() {
             return new GetStorageSyncServiceArgs(resourceGroupName, storageSyncServiceName);
         }
     }

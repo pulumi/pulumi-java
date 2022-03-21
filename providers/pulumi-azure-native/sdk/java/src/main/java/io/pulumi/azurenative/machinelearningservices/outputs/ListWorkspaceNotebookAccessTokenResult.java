@@ -102,42 +102,34 @@ public final class ListWorkspaceNotebookAccessTokenResult {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
-
         public Builder expiresIn(Integer expiresIn) {
             this.expiresIn = Objects.requireNonNull(expiresIn);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder notebookResourceId(String notebookResourceId) {
             this.notebookResourceId = Objects.requireNonNull(notebookResourceId);
             return this;
         }
-
         public Builder publicDns(String publicDns) {
             this.publicDns = Objects.requireNonNull(publicDns);
             return this;
         }
-
         public Builder refreshToken(String refreshToken) {
             this.refreshToken = Objects.requireNonNull(refreshToken);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder tokenType(String tokenType) {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
-        }
-        public ListWorkspaceNotebookAccessTokenResult build() {
+        }        public ListWorkspaceNotebookAccessTokenResult build() {
             return new ListWorkspaceNotebookAccessTokenResult(accessToken, expiresIn, hostName, notebookResourceId, publicDns, refreshToken, scope, tokenType);
         }
     }

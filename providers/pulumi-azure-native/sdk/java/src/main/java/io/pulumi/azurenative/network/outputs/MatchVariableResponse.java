@@ -71,12 +71,10 @@ public final class MatchVariableResponse {
             this.selector = selector;
             return this;
         }
-
         public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
-        }
-        public MatchVariableResponse build() {
+        }        public MatchVariableResponse build() {
             return new MatchVariableResponse(selector, variableName);
         }
     }

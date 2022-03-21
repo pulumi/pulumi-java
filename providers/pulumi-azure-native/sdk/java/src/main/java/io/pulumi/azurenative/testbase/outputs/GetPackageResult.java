@@ -349,97 +349,90 @@ public final class GetPackageResult {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder blobPath(String blobPath) {
             this.blobPath = Objects.requireNonNull(blobPath);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder flightingRing(String flightingRing) {
             this.flightingRing = Objects.requireNonNull(flightingRing);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageStatus(String packageStatus) {
             this.packageStatus = Objects.requireNonNull(packageStatus);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetOSList(List<TargetOSInfoResponse> targetOSList) {
             this.targetOSList = Objects.requireNonNull(targetOSList);
             return this;
         }
-
+        public Builder targetOSList(TargetOSInfoResponse... targetOSList) {
+            return targetOSList(List.of(targetOSList));
+        }
         public Builder testTypes(List<String> testTypes) {
             this.testTypes = Objects.requireNonNull(testTypes);
             return this;
         }
-
+        public Builder testTypes(String... testTypes) {
+            return testTypes(List.of(testTypes));
+        }
         public Builder tests(List<TestResponse> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
-
+        public Builder tests(TestResponse... tests) {
+            return tests(List.of(tests));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder validationResults(List<PackageValidationResultResponse> validationResults) {
             this.validationResults = Objects.requireNonNull(validationResults);
             return this;
         }
-
+        public Builder validationResults(PackageValidationResultResponse... validationResults) {
+            return validationResults(List.of(validationResults));
+        }
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetPackageResult build() {
+        }        public GetPackageResult build() {
             return new GetPackageResult(applicationName, blobPath, etag, flightingRing, id, isEnabled, lastModifiedTime, location, name, packageStatus, provisioningState, systemData, tags, targetOSList, testTypes, tests, type, validationResults, version);
         }
     }

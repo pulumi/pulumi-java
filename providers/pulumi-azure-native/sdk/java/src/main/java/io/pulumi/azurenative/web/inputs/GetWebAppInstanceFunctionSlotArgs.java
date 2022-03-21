@@ -104,22 +104,18 @@ public final class GetWebAppInstanceFunctionSlotArgs extends io.pulumi.resources
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppInstanceFunctionSlotArgs build() {
+        }        public GetWebAppInstanceFunctionSlotArgs build() {
             return new GetWebAppInstanceFunctionSlotArgs(functionName, name, resourceGroupName, slot);
         }
     }

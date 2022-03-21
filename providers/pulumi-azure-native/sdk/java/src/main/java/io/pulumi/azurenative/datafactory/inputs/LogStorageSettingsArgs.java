@@ -111,42 +111,34 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             this.enableReliableLogging = enableReliableLogging;
             return this;
         }
-
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
             this.enableReliableLogging = Output.ofNullable(enableReliableLogging);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder logLevel(@Nullable Output<Object> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable Object logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder path(@Nullable Output<Object> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable Object path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public LogStorageSettingsArgs build() {
+        }        public LogStorageSettingsArgs build() {
             return new LogStorageSettingsArgs(enableReliableLogging, linkedServiceName, logLevel, path);
         }
     }

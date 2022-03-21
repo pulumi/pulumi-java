@@ -72,12 +72,10 @@ public final class OriginGroupOverrideActionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(OriginGroupOverrideActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public OriginGroupOverrideActionResponse build() {
+        }        public OriginGroupOverrideActionResponse build() {
             return new OriginGroupOverrideActionResponse(name, parameters);
         }
     }

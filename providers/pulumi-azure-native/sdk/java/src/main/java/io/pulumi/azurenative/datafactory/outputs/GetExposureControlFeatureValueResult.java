@@ -69,12 +69,10 @@ public final class GetExposureControlFeatureValueResult {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetExposureControlFeatureValueResult build() {
+        }        public GetExposureControlFeatureValueResult build() {
             return new GetExposureControlFeatureValueResult(featureName, value);
         }
     }

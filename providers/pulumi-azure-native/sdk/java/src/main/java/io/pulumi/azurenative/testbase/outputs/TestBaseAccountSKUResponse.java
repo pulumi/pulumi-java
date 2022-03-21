@@ -121,27 +121,28 @@ public final class TestBaseAccountSKUResponse {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
-
+        public Builder capabilities(TestBaseAccountSKUCapabilityResponse... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public TestBaseAccountSKUResponse build() {
+        }        public TestBaseAccountSKUResponse build() {
             return new TestBaseAccountSKUResponse(capabilities, locations, name, resourceType, tier);
         }
     }

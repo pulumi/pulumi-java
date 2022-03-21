@@ -104,22 +104,18 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder premierAddOnName(String premierAddOnName) {
             this.premierAddOnName = Objects.requireNonNull(premierAddOnName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppPremierAddOnSlotArgs build() {
+        }        public GetWebAppPremierAddOnSlotArgs build() {
             return new GetWebAppPremierAddOnSlotArgs(name, premierAddOnName, resourceGroupName, slot);
         }
     }

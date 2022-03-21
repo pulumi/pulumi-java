@@ -72,12 +72,10 @@ public final class DeploymentScaleSettingsResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = scaleType;
             return this;
-        }
-        public DeploymentScaleSettingsResponse build() {
+        }        public DeploymentScaleSettingsResponse build() {
             return new DeploymentScaleSettingsResponse(capacity, scaleType);
         }
     }

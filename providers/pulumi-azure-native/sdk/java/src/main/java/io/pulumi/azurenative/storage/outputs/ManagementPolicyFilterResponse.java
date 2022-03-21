@@ -88,17 +88,23 @@ public final class ManagementPolicyFilterResponse {
             this.blobIndexMatch = blobIndexMatch;
             return this;
         }
-
+        public Builder blobIndexMatch(TagFilterResponse... blobIndexMatch) {
+            return blobIndexMatch(List.of(blobIndexMatch));
+        }
         public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
-
+        public Builder blobTypes(String... blobTypes) {
+            return blobTypes(List.of(blobTypes));
+        }
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-        public ManagementPolicyFilterResponse build() {
+        public Builder prefixMatch(String... prefixMatch) {
+            return prefixMatch(List.of(prefixMatch));
+        }        public ManagementPolicyFilterResponse build() {
             return new ManagementPolicyFilterResponse(blobIndexMatch, blobTypes, prefixMatch);
         }
     }

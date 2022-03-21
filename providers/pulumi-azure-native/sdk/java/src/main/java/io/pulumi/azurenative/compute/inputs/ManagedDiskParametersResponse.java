@@ -95,17 +95,14 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
-        }
-        public ManagedDiskParametersResponse build() {
+        }        public ManagedDiskParametersResponse build() {
             return new ManagedDiskParametersResponse(diskEncryptionSet, id, storageAccountType);
         }
     }

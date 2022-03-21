@@ -120,27 +120,22 @@ public final class ListEndpointCredentialsResult {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
-
         public Builder expiresOn(@Nullable Double expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
-
         public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceNameSuffix(String namespaceNameSuffix) {
             this.namespaceNameSuffix = Objects.requireNonNull(namespaceNameSuffix);
             return this;
-        }
-        public ListEndpointCredentialsResult build() {
+        }        public ListEndpointCredentialsResult build() {
             return new ListEndpointCredentialsResult(accessKey, expiresOn, hybridConnectionName, namespaceName, namespaceNameSuffix);
         }
     }

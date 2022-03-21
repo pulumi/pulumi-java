@@ -127,27 +127,22 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
             this.authenticationMethods = authenticationMethods;
             return this;
         }
-
         public Builder channelEncryption(@Nullable String channelEncryption) {
             this.channelEncryption = channelEncryption;
             return this;
         }
-
         public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
             this.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
-
         public Builder multichannel(@Nullable MultichannelResponse multichannel) {
             this.multichannel = multichannel;
             return this;
         }
-
         public Builder versions(@Nullable String versions) {
             this.versions = versions;
             return this;
-        }
-        public SmbSettingResponse build() {
+        }        public SmbSettingResponse build() {
             return new SmbSettingResponse(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
         }
     }

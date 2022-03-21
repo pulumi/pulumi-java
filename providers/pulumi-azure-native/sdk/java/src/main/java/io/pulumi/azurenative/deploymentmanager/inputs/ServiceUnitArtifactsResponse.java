@@ -110,22 +110,18 @@ public final class ServiceUnitArtifactsResponse extends io.pulumi.resources.Invo
             this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
             return this;
         }
-
         public Builder parametersUri(@Nullable String parametersUri) {
             this.parametersUri = parametersUri;
             return this;
         }
-
         public Builder templateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
             this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
             return this;
         }
-
         public Builder templateUri(@Nullable String templateUri) {
             this.templateUri = templateUri;
             return this;
-        }
-        public ServiceUnitArtifactsResponse build() {
+        }        public ServiceUnitArtifactsResponse build() {
             return new ServiceUnitArtifactsResponse(parametersArtifactSourceRelativePath, parametersUri, templateArtifactSourceRelativePath, templateUri);
         }
     }

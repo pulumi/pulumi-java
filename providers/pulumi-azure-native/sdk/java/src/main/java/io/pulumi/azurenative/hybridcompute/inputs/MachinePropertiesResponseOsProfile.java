@@ -58,8 +58,7 @@ public final class MachinePropertiesResponseOsProfile extends io.pulumi.resource
         public Builder computerName(String computerName) {
             this.computerName = Objects.requireNonNull(computerName);
             return this;
-        }
-        public MachinePropertiesResponseOsProfile build() {
+        }        public MachinePropertiesResponseOsProfile build() {
             return new MachinePropertiesResponseOsProfile(computerName);
         }
     }

@@ -102,22 +102,21 @@ public final class ContactDetailsResponse {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
-
         public Builder contactPerson(String contactPerson) {
             this.contactPerson = Objects.requireNonNull(contactPerson);
             return this;
         }
-
         public Builder emailList(List<String> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
-
+        public Builder emailList(String... emailList) {
+            return emailList(List.of(emailList));
+        }
         public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
-        }
-        public ContactDetailsResponse build() {
+        }        public ContactDetailsResponse build() {
             return new ContactDetailsResponse(companyName, contactPerson, emailList, phone);
         }
     }

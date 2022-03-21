@@ -273,72 +273,58 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
             this.diskStorageUsedInBytes = diskStorageUsedInBytes;
             return this;
         }
-
         public Builder isCollocated(@Nullable Boolean isCollocated) {
             this.isCollocated = isCollocated;
             return this;
         }
-
         public Builder isPresentOnCloud(@Nullable Boolean isPresentOnCloud) {
             this.isPresentOnCloud = isPresentOnCloud;
             return this;
         }
-
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
-
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder onPremiseLatestRecoveryPoint(@Nullable String onPremiseLatestRecoveryPoint) {
             this.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
             return this;
         }
-
         public Builder onPremiseOldestRecoveryPoint(@Nullable String onPremiseOldestRecoveryPoint) {
             this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
             return this;
         }
-
         public Builder onPremiseRecoveryPointCount(@Nullable Integer onPremiseRecoveryPointCount) {
             this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
             return this;
         }
-
         public Builder protectableObjectLoadPath(@Nullable Map<String,String> protectableObjectLoadPath) {
             this.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
-
         public Builder $protected(@Nullable Boolean $protected) {
             this.$protected = $protected;
             return this;
         }
-
         public Builder protectionGroupName(@Nullable String protectionGroupName) {
             this.protectionGroupName = protectionGroupName;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public Builder totalDiskStorageSizeInBytes(@Nullable String totalDiskStorageSizeInBytes) {
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
-        }
-        public DPMProtectedItemExtendedInfoResponse build() {
+        }        public DPMProtectedItemExtendedInfoResponse build() {
             return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, $protected, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
         }
     }

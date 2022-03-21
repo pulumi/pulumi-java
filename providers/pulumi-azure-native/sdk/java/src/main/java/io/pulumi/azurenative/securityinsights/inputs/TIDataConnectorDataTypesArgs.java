@@ -61,12 +61,10 @@ public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.Reso
             this.indicators = indicators;
             return this;
         }
-
         public Builder indicators(@Nullable TIDataConnectorDataTypesIndicatorsArgs indicators) {
             this.indicators = Output.ofNullable(indicators);
             return this;
-        }
-        public TIDataConnectorDataTypesArgs build() {
+        }        public TIDataConnectorDataTypesArgs build() {
             return new TIDataConnectorDataTypesArgs(indicators);
         }
     }

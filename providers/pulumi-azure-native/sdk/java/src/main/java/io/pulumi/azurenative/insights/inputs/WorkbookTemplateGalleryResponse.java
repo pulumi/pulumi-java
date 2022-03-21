@@ -127,27 +127,22 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
             this.category = category;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public WorkbookTemplateGalleryResponse build() {
+        }        public WorkbookTemplateGalleryResponse build() {
             return new WorkbookTemplateGalleryResponse(category, name, order, resourceType, type);
         }
     }

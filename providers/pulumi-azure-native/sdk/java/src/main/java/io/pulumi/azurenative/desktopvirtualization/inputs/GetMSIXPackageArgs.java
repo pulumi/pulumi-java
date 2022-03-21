@@ -88,17 +88,14 @@ public final class GetMSIXPackageArgs extends io.pulumi.resources.InvokeArgs {
             this.hostPoolName = Objects.requireNonNull(hostPoolName);
             return this;
         }
-
         public Builder msixPackageFullName(String msixPackageFullName) {
             this.msixPackageFullName = Objects.requireNonNull(msixPackageFullName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMSIXPackageArgs build() {
+        }        public GetMSIXPackageArgs build() {
             return new GetMSIXPackageArgs(hostPoolName, msixPackageFullName, resourceGroupName);
         }
     }

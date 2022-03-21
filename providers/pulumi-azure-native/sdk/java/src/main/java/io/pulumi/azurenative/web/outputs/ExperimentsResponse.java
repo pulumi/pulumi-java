@@ -54,7 +54,9 @@ public final class ExperimentsResponse {
             this.rampUpRules = rampUpRules;
             return this;
         }
-        public ExperimentsResponse build() {
+        public Builder rampUpRules(RampUpRuleResponse... rampUpRules) {
+            return rampUpRules(List.of(rampUpRules));
+        }        public ExperimentsResponse build() {
             return new ExperimentsResponse(rampUpRules);
         }
     }

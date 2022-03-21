@@ -71,12 +71,10 @@ public final class PngFormatResponse {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public PngFormatResponse build() {
+        }        public PngFormatResponse build() {
             return new PngFormatResponse(filenamePattern, odataType);
         }
     }

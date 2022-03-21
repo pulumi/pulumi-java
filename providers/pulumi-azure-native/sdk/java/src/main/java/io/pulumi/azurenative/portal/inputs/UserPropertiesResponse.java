@@ -126,27 +126,22 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
             this.preferredLocation = Objects.requireNonNull(preferredLocation);
             return this;
         }
-
         public Builder preferredOsType(String preferredOsType) {
             this.preferredOsType = Objects.requireNonNull(preferredOsType);
             return this;
         }
-
         public Builder preferredShellType(String preferredShellType) {
             this.preferredShellType = Objects.requireNonNull(preferredShellType);
             return this;
         }
-
         public Builder storageProfile(StorageProfileResponse storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
-
         public Builder terminalSettings(TerminalSettingsResponse terminalSettings) {
             this.terminalSettings = Objects.requireNonNull(terminalSettings);
             return this;
-        }
-        public UserPropertiesResponse build() {
+        }        public UserPropertiesResponse build() {
             return new UserPropertiesResponse(preferredLocation, preferredOsType, preferredShellType, storageProfile, terminalSettings);
         }
     }

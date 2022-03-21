@@ -101,22 +101,18 @@ public final class GetClientConfigResult {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public GetClientConfigResult build() {
+        }        public GetClientConfigResult build() {
             return new GetClientConfigResult(clientId, objectId, subscriptionId, tenantId);
         }
     }

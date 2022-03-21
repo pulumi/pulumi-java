@@ -185,47 +185,44 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder externalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
             this.externalMappings = externalMappings;
             return this;
         }
-
+        public Builder externalMappings(VpnNatRuleMappingResponse... externalMappings) {
+            return externalMappings(List.of(externalMappings));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder internalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
             this.internalMappings = internalMappings;
             return this;
         }
-
+        public Builder internalMappings(VpnNatRuleMappingResponse... internalMappings) {
+            return internalMappings(List.of(internalMappings));
+        }
         public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
             this.ipConfigurationId = ipConfigurationId;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVirtualNetworkGatewayNatRuleResult build() {
+        }        public GetVirtualNetworkGatewayNatRuleResult build() {
             return new GetVirtualNetworkGatewayNatRuleResult(etag, externalMappings, id, internalMappings, ipConfigurationId, mode, name, provisioningState, type);
         }
     }

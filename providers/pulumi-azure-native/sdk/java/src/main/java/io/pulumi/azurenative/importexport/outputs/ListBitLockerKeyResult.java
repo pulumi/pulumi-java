@@ -54,7 +54,9 @@ public final class ListBitLockerKeyResult {
             this.value = value;
             return this;
         }
-        public ListBitLockerKeyResult build() {
+        public Builder value(DriveBitLockerKeyResponse... value) {
+            return value(List.of(value));
+        }        public ListBitLockerKeyResult build() {
             return new ListBitLockerKeyResult(value);
         }
     }

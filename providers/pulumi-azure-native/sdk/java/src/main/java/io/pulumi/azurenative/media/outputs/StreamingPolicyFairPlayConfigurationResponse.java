@@ -72,12 +72,10 @@ public final class StreamingPolicyFairPlayConfigurationResponse {
             this.allowPersistentLicense = Objects.requireNonNull(allowPersistentLicense);
             return this;
         }
-
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
-        }
-        public StreamingPolicyFairPlayConfigurationResponse build() {
+        }        public StreamingPolicyFairPlayConfigurationResponse build() {
             return new StreamingPolicyFairPlayConfigurationResponse(allowPersistentLicense, customLicenseAcquisitionUrlTemplate);
         }
     }

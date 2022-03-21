@@ -217,57 +217,52 @@ public final class ConfigurationServiceGitRepositoryResponse {
             this.hostKey = hostKey;
             return this;
         }
-
         public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
             this.hostKeyAlgorithm = hostKeyAlgorithm;
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder patterns(List<String> patterns) {
             this.patterns = Objects.requireNonNull(patterns);
             return this;
         }
-
+        public Builder patterns(String... patterns) {
+            return patterns(List.of(patterns));
+        }
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder searchPaths(@Nullable List<String> searchPaths) {
             this.searchPaths = searchPaths;
             return this;
         }
-
+        public Builder searchPaths(String... searchPaths) {
+            return searchPaths(List.of(searchPaths));
+        }
         public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
             this.strictHostKeyChecking = strictHostKeyChecking;
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ConfigurationServiceGitRepositoryResponse build() {
+        }        public ConfigurationServiceGitRepositoryResponse build() {
             return new ConfigurationServiceGitRepositoryResponse(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);
         }
     }

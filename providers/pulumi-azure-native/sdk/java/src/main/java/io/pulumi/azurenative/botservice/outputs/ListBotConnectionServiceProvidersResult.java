@@ -73,12 +73,13 @@ public final class ListBotConnectionServiceProvidersResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(List<ServiceProviderResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListBotConnectionServiceProvidersResult build() {
+        public Builder value(ServiceProviderResponse... value) {
+            return value(List.of(value));
+        }        public ListBotConnectionServiceProvidersResult build() {
             return new ListBotConnectionServiceProvidersResult(nextLink, value);
         }
     }

@@ -72,12 +72,10 @@ public final class ConnectionParameterResponse {
             this.oAuthSettings = oAuthSettings;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ConnectionParameterResponse build() {
+        }        public ConnectionParameterResponse build() {
             return new ConnectionParameterResponse(oAuthSettings, type);
         }
     }

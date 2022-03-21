@@ -224,112 +224,90 @@ public final class EdifactAcknowledgementSettingsArgs extends io.pulumi.resource
             this.acknowledgementControlNumberLowerBound = Objects.requireNonNull(acknowledgementControlNumberLowerBound);
             return this;
         }
-
         public Builder acknowledgementControlNumberLowerBound(Integer acknowledgementControlNumberLowerBound) {
             this.acknowledgementControlNumberLowerBound = Output.of(Objects.requireNonNull(acknowledgementControlNumberLowerBound));
             return this;
         }
-
         public Builder acknowledgementControlNumberPrefix(@Nullable Output<String> acknowledgementControlNumberPrefix) {
             this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
             return this;
         }
-
         public Builder acknowledgementControlNumberPrefix(@Nullable String acknowledgementControlNumberPrefix) {
             this.acknowledgementControlNumberPrefix = Output.ofNullable(acknowledgementControlNumberPrefix);
             return this;
         }
-
         public Builder acknowledgementControlNumberSuffix(@Nullable Output<String> acknowledgementControlNumberSuffix) {
             this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;
             return this;
         }
-
         public Builder acknowledgementControlNumberSuffix(@Nullable String acknowledgementControlNumberSuffix) {
             this.acknowledgementControlNumberSuffix = Output.ofNullable(acknowledgementControlNumberSuffix);
             return this;
         }
-
         public Builder acknowledgementControlNumberUpperBound(Output<Integer> acknowledgementControlNumberUpperBound) {
             this.acknowledgementControlNumberUpperBound = Objects.requireNonNull(acknowledgementControlNumberUpperBound);
             return this;
         }
-
         public Builder acknowledgementControlNumberUpperBound(Integer acknowledgementControlNumberUpperBound) {
             this.acknowledgementControlNumberUpperBound = Output.of(Objects.requireNonNull(acknowledgementControlNumberUpperBound));
             return this;
         }
-
         public Builder batchFunctionalAcknowledgements(Output<Boolean> batchFunctionalAcknowledgements) {
             this.batchFunctionalAcknowledgements = Objects.requireNonNull(batchFunctionalAcknowledgements);
             return this;
         }
-
         public Builder batchFunctionalAcknowledgements(Boolean batchFunctionalAcknowledgements) {
             this.batchFunctionalAcknowledgements = Output.of(Objects.requireNonNull(batchFunctionalAcknowledgements));
             return this;
         }
-
         public Builder batchTechnicalAcknowledgements(Output<Boolean> batchTechnicalAcknowledgements) {
             this.batchTechnicalAcknowledgements = Objects.requireNonNull(batchTechnicalAcknowledgements);
             return this;
         }
-
         public Builder batchTechnicalAcknowledgements(Boolean batchTechnicalAcknowledgements) {
             this.batchTechnicalAcknowledgements = Output.of(Objects.requireNonNull(batchTechnicalAcknowledgements));
             return this;
         }
-
         public Builder needFunctionalAcknowledgement(Output<Boolean> needFunctionalAcknowledgement) {
             this.needFunctionalAcknowledgement = Objects.requireNonNull(needFunctionalAcknowledgement);
             return this;
         }
-
         public Builder needFunctionalAcknowledgement(Boolean needFunctionalAcknowledgement) {
             this.needFunctionalAcknowledgement = Output.of(Objects.requireNonNull(needFunctionalAcknowledgement));
             return this;
         }
-
         public Builder needLoopForValidMessages(Output<Boolean> needLoopForValidMessages) {
             this.needLoopForValidMessages = Objects.requireNonNull(needLoopForValidMessages);
             return this;
         }
-
         public Builder needLoopForValidMessages(Boolean needLoopForValidMessages) {
             this.needLoopForValidMessages = Output.of(Objects.requireNonNull(needLoopForValidMessages));
             return this;
         }
-
         public Builder needTechnicalAcknowledgement(Output<Boolean> needTechnicalAcknowledgement) {
             this.needTechnicalAcknowledgement = Objects.requireNonNull(needTechnicalAcknowledgement);
             return this;
         }
-
         public Builder needTechnicalAcknowledgement(Boolean needTechnicalAcknowledgement) {
             this.needTechnicalAcknowledgement = Output.of(Objects.requireNonNull(needTechnicalAcknowledgement));
             return this;
         }
-
         public Builder rolloverAcknowledgementControlNumber(Output<Boolean> rolloverAcknowledgementControlNumber) {
             this.rolloverAcknowledgementControlNumber = Objects.requireNonNull(rolloverAcknowledgementControlNumber);
             return this;
         }
-
         public Builder rolloverAcknowledgementControlNumber(Boolean rolloverAcknowledgementControlNumber) {
             this.rolloverAcknowledgementControlNumber = Output.of(Objects.requireNonNull(rolloverAcknowledgementControlNumber));
             return this;
         }
-
         public Builder sendSynchronousAcknowledgement(Output<Boolean> sendSynchronousAcknowledgement) {
             this.sendSynchronousAcknowledgement = Objects.requireNonNull(sendSynchronousAcknowledgement);
             return this;
         }
-
         public Builder sendSynchronousAcknowledgement(Boolean sendSynchronousAcknowledgement) {
             this.sendSynchronousAcknowledgement = Output.of(Objects.requireNonNull(sendSynchronousAcknowledgement));
             return this;
-        }
-        public EdifactAcknowledgementSettingsArgs build() {
+        }        public EdifactAcknowledgementSettingsArgs build() {
             return new EdifactAcknowledgementSettingsArgs(acknowledgementControlNumberLowerBound, acknowledgementControlNumberPrefix, acknowledgementControlNumberSuffix, acknowledgementControlNumberUpperBound, batchFunctionalAcknowledgements, batchTechnicalAcknowledgements, needFunctionalAcknowledgement, needLoopForValidMessages, needTechnicalAcknowledgement, rolloverAcknowledgementControlNumber, sendSynchronousAcknowledgement);
         }
     }

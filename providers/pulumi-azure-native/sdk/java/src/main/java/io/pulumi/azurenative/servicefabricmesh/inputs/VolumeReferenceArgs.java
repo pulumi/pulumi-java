@@ -95,32 +95,26 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
-
         public Builder destinationPath(String destinationPath) {
             this.destinationPath = Output.of(Objects.requireNonNull(destinationPath));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
-        }
-        public VolumeReferenceArgs build() {
+        }        public VolumeReferenceArgs build() {
             return new VolumeReferenceArgs(destinationPath, name, readOnly);
         }
     }

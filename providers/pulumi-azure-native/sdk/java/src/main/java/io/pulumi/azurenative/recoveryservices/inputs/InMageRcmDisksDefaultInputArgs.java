@@ -96,32 +96,26 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
             return this;
         }
-
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
             this.logStorageAccountId = logStorageAccountId;
             return this;
         }
-
         public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
             this.logStorageAccountId = Output.ofNullable(logStorageAccountId);
             return this;
-        }
-        public InMageRcmDisksDefaultInputArgs build() {
+        }        public InMageRcmDisksDefaultInputArgs build() {
             return new InMageRcmDisksDefaultInputArgs(diskEncryptionSetId, diskType, logStorageAccountId);
         }
     }

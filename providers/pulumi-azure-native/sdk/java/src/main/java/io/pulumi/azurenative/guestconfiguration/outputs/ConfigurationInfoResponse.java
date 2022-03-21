@@ -69,12 +69,10 @@ public final class ConfigurationInfoResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ConfigurationInfoResponse build() {
+        }        public ConfigurationInfoResponse build() {
             return new ConfigurationInfoResponse(name, version);
         }
     }

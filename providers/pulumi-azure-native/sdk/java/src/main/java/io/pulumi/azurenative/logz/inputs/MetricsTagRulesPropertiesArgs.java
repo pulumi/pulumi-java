@@ -76,22 +76,21 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
             this.metricRules = metricRules;
             return this;
         }
-
         public Builder metricRules(@Nullable List<MetricRulesArgs> metricRules) {
             this.metricRules = Output.ofNullable(metricRules);
             return this;
         }
-
+        public Builder metricRules(MetricRulesArgs... metricRules) {
+            return metricRules(List.of(metricRules));
+        }
         public Builder sendMetrics(@Nullable Output<Boolean> sendMetrics) {
             this.sendMetrics = sendMetrics;
             return this;
         }
-
         public Builder sendMetrics(@Nullable Boolean sendMetrics) {
             this.sendMetrics = Output.ofNullable(sendMetrics);
             return this;
-        }
-        public MetricsTagRulesPropertiesArgs build() {
+        }        public MetricsTagRulesPropertiesArgs build() {
             return new MetricsTagRulesPropertiesArgs(metricRules, sendMetrics);
         }
     }

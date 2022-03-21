@@ -130,27 +130,22 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
             this.credentials = credentials;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder trustedCertificates(@Nullable MediaGraphPemCertificateListResponse trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder validationOptions(@Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
             this.validationOptions = validationOptions;
             return this;
-        }
-        public MediaGraphTlsEndpointResponse build() {
+        }        public MediaGraphTlsEndpointResponse build() {
             return new MediaGraphTlsEndpointResponse(credentials, odataType, trustedCertificates, url, validationOptions);
         }
     }

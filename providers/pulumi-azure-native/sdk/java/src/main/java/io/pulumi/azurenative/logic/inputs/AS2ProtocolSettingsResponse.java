@@ -162,37 +162,30 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
             this.acknowledgementConnectionSettings = Objects.requireNonNull(acknowledgementConnectionSettings);
             return this;
         }
-
         public Builder envelopeSettings(AS2EnvelopeSettingsResponse envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
-
         public Builder errorSettings(AS2ErrorSettingsResponse errorSettings) {
             this.errorSettings = Objects.requireNonNull(errorSettings);
             return this;
         }
-
         public Builder mdnSettings(AS2MdnSettingsResponse mdnSettings) {
             this.mdnSettings = Objects.requireNonNull(mdnSettings);
             return this;
         }
-
         public Builder messageConnectionSettings(AS2MessageConnectionSettingsResponse messageConnectionSettings) {
             this.messageConnectionSettings = Objects.requireNonNull(messageConnectionSettings);
             return this;
         }
-
         public Builder securitySettings(AS2SecuritySettingsResponse securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
-
         public Builder validationSettings(AS2ValidationSettingsResponse validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
-        }
-        public AS2ProtocolSettingsResponse build() {
+        }        public AS2ProtocolSettingsResponse build() {
             return new AS2ProtocolSettingsResponse(acknowledgementConnectionSettings, envelopeSettings, errorSettings, mdnSettings, messageConnectionSettings, securitySettings, validationSettings);
         }
     }

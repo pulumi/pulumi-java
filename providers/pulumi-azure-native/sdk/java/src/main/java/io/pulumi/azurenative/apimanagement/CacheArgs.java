@@ -154,72 +154,58 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             this.cacheId = cacheId;
             return this;
         }
-
         public Builder cacheId(@Nullable String cacheId) {
             this.cacheId = Output.ofNullable(cacheId);
             return this;
         }
-
         public Builder connectionString(Output<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder connectionString(String connectionString) {
             this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder useFromLocation(Output<String> useFromLocation) {
             this.useFromLocation = Objects.requireNonNull(useFromLocation);
             return this;
         }
-
         public Builder useFromLocation(String useFromLocation) {
             this.useFromLocation = Output.of(Objects.requireNonNull(useFromLocation));
             return this;
-        }
-        public CacheArgs build() {
+        }        public CacheArgs build() {
             return new CacheArgs(cacheId, connectionString, description, resourceGroupName, resourceId, serviceName, useFromLocation);
         }
     }

@@ -51,8 +51,7 @@ public final class DiskResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public DiskResponse build() {
+        }        public DiskResponse build() {
             return new DiskResponse(id);
         }
     }

@@ -189,92 +189,74 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
             this.bandWidthRateInMbps = bandWidthRateInMbps;
             return this;
         }
-
         public Builder bandWidthRateInMbps(@Nullable Integer bandWidthRateInMbps) {
             this.bandWidthRateInMbps = Output.ofNullable(bandWidthRateInMbps);
             return this;
         }
-
         public Builder bandwidthSettingId(@Nullable Output<String> bandwidthSettingId) {
             this.bandwidthSettingId = bandwidthSettingId;
             return this;
         }
-
         public Builder bandwidthSettingId(@Nullable String bandwidthSettingId) {
             this.bandwidthSettingId = Output.ofNullable(bandwidthSettingId);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder encryptionKey(@Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable AsymmetricEncryptedSecretArgs encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountCredentialId(Output<String> storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
-
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Output.of(Objects.requireNonNull(storageAccountCredentialId));
             return this;
         }
-
         public Builder volumeContainerName(@Nullable Output<String> volumeContainerName) {
             this.volumeContainerName = volumeContainerName;
             return this;
         }
-
         public Builder volumeContainerName(@Nullable String volumeContainerName) {
             this.volumeContainerName = Output.ofNullable(volumeContainerName);
             return this;
-        }
-        public VolumeContainerArgs build() {
+        }        public VolumeContainerArgs build() {
             return new VolumeContainerArgs(bandWidthRateInMbps, bandwidthSettingId, deviceName, encryptionKey, kind, managerName, resourceGroupName, storageAccountCredentialId, volumeContainerName);
         }
     }

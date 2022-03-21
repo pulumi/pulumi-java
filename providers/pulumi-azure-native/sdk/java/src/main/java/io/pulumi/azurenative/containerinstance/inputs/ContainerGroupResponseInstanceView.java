@@ -78,12 +78,13 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(EventResponse... events) {
+            return events(List.of(events));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public ContainerGroupResponseInstanceView build() {
+        }        public ContainerGroupResponseInstanceView build() {
             return new ContainerGroupResponseInstanceView(events, state);
         }
     }

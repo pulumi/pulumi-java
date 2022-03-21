@@ -71,12 +71,10 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public AutomationRuleRunPlaybookActionResponseActionConfiguration build() {
+        }        public AutomationRuleRunPlaybookActionResponseActionConfiguration build() {
             return new AutomationRuleRunPlaybookActionResponseActionConfiguration(logicAppResourceId, tenantId);
         }
     }

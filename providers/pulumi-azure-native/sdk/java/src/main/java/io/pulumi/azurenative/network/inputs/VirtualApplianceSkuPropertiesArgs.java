@@ -94,32 +94,26 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
             this.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
-
         public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
             this.bundledScaleUnit = Output.ofNullable(bundledScaleUnit);
             return this;
         }
-
         public Builder marketPlaceVersion(@Nullable Output<String> marketPlaceVersion) {
             this.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
-
         public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
             this.marketPlaceVersion = Output.ofNullable(marketPlaceVersion);
             return this;
         }
-
         public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = Output.ofNullable(vendor);
             return this;
-        }
-        public VirtualApplianceSkuPropertiesArgs build() {
+        }        public VirtualApplianceSkuPropertiesArgs build() {
             return new VirtualApplianceSkuPropertiesArgs(bundledScaleUnit, marketPlaceVersion, vendor);
         }
     }

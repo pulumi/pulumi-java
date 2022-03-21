@@ -144,32 +144,29 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
             this.allowedValues = allowedValues;
             return this;
         }
-
+        public Builder allowedValues(Object... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder strongType(@Nullable String strongType) {
             this.strongType = strongType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ParameterDefinitionResponse build() {
+        }        public ParameterDefinitionResponse build() {
             return new ParameterDefinitionResponse(allowedValues, defaultValue, description, displayName, strongType, type);
         }
     }

@@ -174,82 +174,66 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
             this.capacityLimit = capacityLimit;
             return this;
         }
-
         public Builder capacityLimit(@Nullable Integer capacityLimit) {
             this.capacityLimit = Output.ofNullable(capacityLimit);
             return this;
         }
-
         public Builder capacityObjectId(@Nullable Output<String> capacityObjectId) {
             this.capacityObjectId = capacityObjectId;
             return this;
         }
-
         public Builder capacityObjectId(@Nullable String capacityObjectId) {
             this.capacityObjectId = Output.ofNullable(capacityObjectId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<AutoScaleVCoreSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(AutoScaleVCoreSkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder systemData(@Nullable Output<SystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
-
         public Builder systemData(@Nullable SystemDataArgs systemData) {
             this.systemData = Output.ofNullable(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vcoreName(@Nullable Output<String> vcoreName) {
             this.vcoreName = vcoreName;
             return this;
         }
-
         public Builder vcoreName(@Nullable String vcoreName) {
             this.vcoreName = Output.ofNullable(vcoreName);
             return this;
-        }
-        public AutoScaleVCoreArgs build() {
+        }        public AutoScaleVCoreArgs build() {
             return new AutoScaleVCoreArgs(capacityLimit, capacityObjectId, location, resourceGroupName, sku, systemData, tags, vcoreName);
         }
     }

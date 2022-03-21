@@ -120,27 +120,22 @@ public final class ListStaticSiteFunctionAppSettingsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListStaticSiteFunctionAppSettingsResult build() {
+        }        public ListStaticSiteFunctionAppSettingsResult build() {
             return new ListStaticSiteFunctionAppSettingsResult(id, kind, name, properties, type);
         }
     }

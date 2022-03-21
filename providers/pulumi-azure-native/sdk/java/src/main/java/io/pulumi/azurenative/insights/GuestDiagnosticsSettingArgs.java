@@ -153,72 +153,61 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
             this.dataSources = dataSources;
             return this;
         }
-
         public Builder dataSources(@Nullable List<DataSourceArgs> dataSources) {
             this.dataSources = Output.ofNullable(dataSources);
             return this;
         }
-
+        public Builder dataSources(DataSourceArgs... dataSources) {
+            return dataSources(List.of(dataSources));
+        }
         public Builder diagnosticSettingsName(@Nullable Output<String> diagnosticSettingsName) {
             this.diagnosticSettingsName = diagnosticSettingsName;
             return this;
         }
-
         public Builder diagnosticSettingsName(@Nullable String diagnosticSettingsName) {
             this.diagnosticSettingsName = Output.ofNullable(diagnosticSettingsName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder osType(@Nullable Output<String> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder proxySetting(@Nullable Output<String> proxySetting) {
             this.proxySetting = proxySetting;
             return this;
         }
-
         public Builder proxySetting(@Nullable String proxySetting) {
             this.proxySetting = Output.ofNullable(proxySetting);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GuestDiagnosticsSettingArgs build() {
+        }        public GuestDiagnosticsSettingArgs build() {
             return new GuestDiagnosticsSettingArgs(dataSources, diagnosticSettingsName, location, osType, proxySetting, resourceGroupName, tags);
         }
     }

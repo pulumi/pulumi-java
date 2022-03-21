@@ -97,32 +97,26 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,KpiTypeType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,KpiTypeType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public KpiPropertiesArgs build() {
+        }        public KpiPropertiesArgs build() {
             return new KpiPropertiesArgs(enabled, id, type);
         }
     }

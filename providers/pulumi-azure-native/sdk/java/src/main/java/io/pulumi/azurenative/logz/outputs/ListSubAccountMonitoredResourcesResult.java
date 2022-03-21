@@ -73,12 +73,13 @@ public final class ListSubAccountMonitoredResourcesResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<MonitoredResourceResponse> value) {
             this.value = value;
             return this;
         }
-        public ListSubAccountMonitoredResourcesResult build() {
+        public Builder value(MonitoredResourceResponse... value) {
+            return value(List.of(value));
+        }        public ListSubAccountMonitoredResourcesResult build() {
             return new ListSubAccountMonitoredResourcesResult(nextLink, value);
         }
     }

@@ -93,42 +93,34 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
             this.$default = $default;
             return this;
         }
-
         public Builder $default(@Nullable Integer $default) {
             this.$default = Output.ofNullable($default);
             return this;
         }
-
         public Builder maximum(@Nullable Output<Integer> maximum) {
             this.maximum = maximum;
             return this;
         }
-
         public Builder maximum(@Nullable Integer maximum) {
             this.maximum = Output.ofNullable(maximum);
             return this;
         }
-
         public Builder minimum(Output<Integer> minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public Builder minimum(Integer minimum) {
             this.minimum = Output.of(Objects.requireNonNull(minimum));
             return this;
         }
-
         public Builder scaleType(@Nullable Output<Either<String,SkuScaleType>> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
-
         public Builder scaleType(@Nullable Either<String,SkuScaleType> scaleType) {
             this.scaleType = Output.ofNullable(scaleType);
             return this;
-        }
-        public SkuSettingCapacityArgs build() {
+        }        public SkuSettingCapacityArgs build() {
             return new SkuSettingCapacityArgs($default, maximum, minimum, scaleType);
         }
     }

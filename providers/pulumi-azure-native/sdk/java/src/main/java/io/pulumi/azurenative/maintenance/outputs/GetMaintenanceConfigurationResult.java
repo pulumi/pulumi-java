@@ -168,42 +168,34 @@ public final class GetMaintenanceConfigurationResult {
             this.extensionProperties = extensionProperties;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder maintenanceScope(@Nullable String maintenanceScope) {
             this.maintenanceScope = maintenanceScope;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMaintenanceConfigurationResult build() {
+        }        public GetMaintenanceConfigurationResult build() {
             return new GetMaintenanceConfigurationResult(extensionProperties, id, location, maintenanceScope, name, namespace, tags, type);
         }
     }

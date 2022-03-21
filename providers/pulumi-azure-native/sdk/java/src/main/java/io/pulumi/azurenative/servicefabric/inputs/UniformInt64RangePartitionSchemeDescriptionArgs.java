@@ -113,42 +113,34 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder highKey(Output<String> highKey) {
             this.highKey = Objects.requireNonNull(highKey);
             return this;
         }
-
         public Builder highKey(String highKey) {
             this.highKey = Output.of(Objects.requireNonNull(highKey));
             return this;
         }
-
         public Builder lowKey(Output<String> lowKey) {
             this.lowKey = Objects.requireNonNull(lowKey);
             return this;
         }
-
         public Builder lowKey(String lowKey) {
             this.lowKey = Output.of(Objects.requireNonNull(lowKey));
             return this;
         }
-
         public Builder partitionScheme(Output<String> partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
             return this;
-        }
-        public UniformInt64RangePartitionSchemeDescriptionArgs build() {
+        }        public UniformInt64RangePartitionSchemeDescriptionArgs build() {
             return new UniformInt64RangePartitionSchemeDescriptionArgs(count, highKey, lowKey, partitionScheme);
         }
     }

@@ -78,22 +78,18 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
-        }
-        public NonComplianceMessageArgs build() {
+        }        public NonComplianceMessageArgs build() {
             return new NonComplianceMessageArgs(message, policyDefinitionReferenceId);
         }
     }

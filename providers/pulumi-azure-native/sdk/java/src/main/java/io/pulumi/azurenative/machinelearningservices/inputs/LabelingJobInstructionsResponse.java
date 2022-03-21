@@ -60,8 +60,7 @@ public final class LabelingJobInstructionsResponse extends io.pulumi.resources.I
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public LabelingJobInstructionsResponse build() {
+        }        public LabelingJobInstructionsResponse build() {
             return new LabelingJobInstructionsResponse(uri);
         }
     }

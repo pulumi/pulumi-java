@@ -271,77 +271,62 @@ public final class SqlServerInstancePropertiesResponse {
             this.collation = collation;
             return this;
         }
-
         public Builder containerResourceId(String containerResourceId) {
             this.containerResourceId = Objects.requireNonNull(containerResourceId);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder patchLevel(@Nullable String patchLevel) {
             this.patchLevel = patchLevel;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
             this.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
-
         public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
             this.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
-
         public Builder vCore(@Nullable String vCore) {
             this.vCore = vCore;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public SqlServerInstancePropertiesResponse build() {
+        }        public SqlServerInstancePropertiesResponse build() {
             return new SqlServerInstancePropertiesResponse(collation, containerResourceId, createTime, currentVersion, edition, instanceName, licenseType, patchLevel, productId, provisioningState, status, tcpDynamicPorts, tcpStaticPorts, vCore, version);
         }
     }

@@ -53,8 +53,7 @@ public final class EventResponse {
         public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
-        }
-        public EventResponse build() {
+        }        public EventResponse build() {
             return new EventResponse(eventName);
         }
     }

@@ -94,32 +94,26 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
             this.consumerGroup = consumerGroup;
             return this;
         }
-
         public Builder consumerGroup(@Nullable String consumerGroup) {
             this.consumerGroup = Output.ofNullable(consumerGroup);
             return this;
         }
-
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
-
         public Builder fullyQualifiedEventHubNamespace(@Nullable Output<String> fullyQualifiedEventHubNamespace) {
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }
-
         public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
             this.fullyQualifiedEventHubNamespace = Output.ofNullable(fullyQualifiedEventHubNamespace);
             return this;
-        }
-        public IotEventHubIngestionEndpointConfigurationArgs build() {
+        }        public IotEventHubIngestionEndpointConfigurationArgs build() {
             return new IotEventHubIngestionEndpointConfigurationArgs(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
         }
     }

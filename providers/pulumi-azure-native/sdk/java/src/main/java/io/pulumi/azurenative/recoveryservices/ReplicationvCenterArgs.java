@@ -123,52 +123,42 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
-
         public Builder properties(@Nullable Output<AddVCenterRequestPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable AddVCenterRequestPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder vCenterName(@Nullable Output<String> vCenterName) {
             this.vCenterName = vCenterName;
             return this;
         }
-
         public Builder vCenterName(@Nullable String vCenterName) {
             this.vCenterName = Output.ofNullable(vCenterName);
             return this;
-        }
-        public ReplicationvCenterArgs build() {
+        }        public ReplicationvCenterArgs build() {
             return new ReplicationvCenterArgs(fabricName, properties, resourceGroupName, resourceName, vCenterName);
         }
     }

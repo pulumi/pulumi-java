@@ -60,8 +60,7 @@ public final class TrafficAnalyticsPropertiesResponse extends io.pulumi.resource
         public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
             this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
-        }
-        public TrafficAnalyticsPropertiesResponse build() {
+        }        public TrafficAnalyticsPropertiesResponse build() {
             return new TrafficAnalyticsPropertiesResponse(networkWatcherFlowAnalyticsConfiguration);
         }
     }

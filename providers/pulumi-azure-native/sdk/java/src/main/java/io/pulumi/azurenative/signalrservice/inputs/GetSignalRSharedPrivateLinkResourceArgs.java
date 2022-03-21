@@ -88,17 +88,14 @@ public final class GetSignalRSharedPrivateLinkResourceArgs extends io.pulumi.res
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName);
             return this;
-        }
-        public GetSignalRSharedPrivateLinkResourceArgs build() {
+        }        public GetSignalRSharedPrivateLinkResourceArgs build() {
             return new GetSignalRSharedPrivateLinkResourceArgs(resourceGroupName, resourceName, sharedPrivateLinkResourceName);
         }
     }

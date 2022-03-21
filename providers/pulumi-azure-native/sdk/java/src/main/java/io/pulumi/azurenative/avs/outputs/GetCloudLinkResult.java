@@ -119,27 +119,22 @@ public final class GetCloudLinkResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkedCloud(@Nullable String linkedCloud) {
             this.linkedCloud = linkedCloud;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCloudLinkResult build() {
+        }        public GetCloudLinkResult build() {
             return new GetCloudLinkResult(id, linkedCloud, name, status, type);
         }
     }

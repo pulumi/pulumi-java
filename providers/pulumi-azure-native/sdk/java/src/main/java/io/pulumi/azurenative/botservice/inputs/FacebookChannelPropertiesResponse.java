@@ -145,32 +145,29 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appSecret(@Nullable String appSecret) {
             this.appSecret = appSecret;
             return this;
         }
-
         public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder pages(@Nullable List<FacebookPageResponse> pages) {
             this.pages = pages;
             return this;
         }
-
+        public Builder pages(FacebookPageResponse... pages) {
+            return pages(List.of(pages));
+        }
         public Builder verifyToken(String verifyToken) {
             this.verifyToken = Objects.requireNonNull(verifyToken);
             return this;
-        }
-        public FacebookChannelPropertiesResponse build() {
+        }        public FacebookChannelPropertiesResponse build() {
             return new FacebookChannelPropertiesResponse(appId, appSecret, callbackUrl, isEnabled, pages, verifyToken);
         }
     }

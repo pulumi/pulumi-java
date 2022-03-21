@@ -60,8 +60,7 @@ public final class MapsAccountPropertiesResponse extends io.pulumi.resources.Inv
         public Builder xMsClientId(@Nullable String xMsClientId) {
             this.xMsClientId = xMsClientId;
             return this;
-        }
-        public MapsAccountPropertiesResponse build() {
+        }        public MapsAccountPropertiesResponse build() {
             return new MapsAccountPropertiesResponse(xMsClientId);
         }
     }

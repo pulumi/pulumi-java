@@ -87,17 +87,14 @@ public final class MigrationValidationOptionsResponse {
             this.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
-
         public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
-
         public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
-        }
-        public MigrationValidationOptionsResponse build() {
+        }        public MigrationValidationOptionsResponse build() {
             return new MigrationValidationOptionsResponse(enableDataIntegrityValidation, enableQueryAnalysisValidation, enableSchemaValidation);
         }
     }

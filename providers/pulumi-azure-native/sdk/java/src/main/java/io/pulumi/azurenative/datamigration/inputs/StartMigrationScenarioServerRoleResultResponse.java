@@ -94,17 +94,17 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
-
+        public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
+            return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public StartMigrationScenarioServerRoleResultResponse build() {
+        }        public StartMigrationScenarioServerRoleResultResponse build() {
             return new StartMigrationScenarioServerRoleResultResponse(exceptionsAndWarnings, name, state);
         }
     }

@@ -69,12 +69,10 @@ public final class BlueprintStatusResponse {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
-        }
-        public BlueprintStatusResponse build() {
+        }        public BlueprintStatusResponse build() {
             return new BlueprintStatusResponse(lastModified, timeCreated);
         }
     }

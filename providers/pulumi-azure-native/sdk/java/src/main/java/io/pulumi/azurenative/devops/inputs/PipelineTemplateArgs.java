@@ -79,22 +79,18 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
-        }
-        public PipelineTemplateArgs build() {
+        }        public PipelineTemplateArgs build() {
             return new PipelineTemplateArgs(id, parameters);
         }
     }

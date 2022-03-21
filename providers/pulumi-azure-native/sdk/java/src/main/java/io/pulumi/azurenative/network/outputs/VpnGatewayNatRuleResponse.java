@@ -218,57 +218,58 @@ public final class VpnGatewayNatRuleResponse {
             this.egressVpnSiteLinkConnections = Objects.requireNonNull(egressVpnSiteLinkConnections);
             return this;
         }
-
+        public Builder egressVpnSiteLinkConnections(SubResourceResponse... egressVpnSiteLinkConnections) {
+            return egressVpnSiteLinkConnections(List.of(egressVpnSiteLinkConnections));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder externalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
             this.externalMappings = externalMappings;
             return this;
         }
-
+        public Builder externalMappings(VpnNatRuleMappingResponse... externalMappings) {
+            return externalMappings(List.of(externalMappings));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ingressVpnSiteLinkConnections(List<SubResourceResponse> ingressVpnSiteLinkConnections) {
             this.ingressVpnSiteLinkConnections = Objects.requireNonNull(ingressVpnSiteLinkConnections);
             return this;
         }
-
+        public Builder ingressVpnSiteLinkConnections(SubResourceResponse... ingressVpnSiteLinkConnections) {
+            return ingressVpnSiteLinkConnections(List.of(ingressVpnSiteLinkConnections));
+        }
         public Builder internalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
             this.internalMappings = internalMappings;
             return this;
         }
-
+        public Builder internalMappings(VpnNatRuleMappingResponse... internalMappings) {
+            return internalMappings(List.of(internalMappings));
+        }
         public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
             this.ipConfigurationId = ipConfigurationId;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VpnGatewayNatRuleResponse build() {
+        }        public VpnGatewayNatRuleResponse build() {
             return new VpnGatewayNatRuleResponse(egressVpnSiteLinkConnections, etag, externalMappings, id, ingressVpnSiteLinkConnections, internalMappings, ipConfigurationId, mode, name, provisioningState, type);
         }
     }

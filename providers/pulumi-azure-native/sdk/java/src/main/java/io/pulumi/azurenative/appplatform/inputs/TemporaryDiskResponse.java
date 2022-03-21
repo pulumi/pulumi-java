@@ -79,12 +79,10 @@ public final class TemporaryDiskResponse extends io.pulumi.resources.InvokeArgs 
             this.mountPath = mountPath;
             return this;
         }
-
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
             this.sizeInGB = sizeInGB;
             return this;
-        }
-        public TemporaryDiskResponse build() {
+        }        public TemporaryDiskResponse build() {
             return new TemporaryDiskResponse(mountPath, sizeInGB);
         }
     }

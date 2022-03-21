@@ -404,112 +404,93 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
             this.billingPartNumber = billingPartNumber;
             return this;
         }
-
         public Builder compatibility(@Nullable CompatibilityResponse compatibility) {
             this.compatibility = compatibility;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder galleryItemIdentity(@Nullable String galleryItemIdentity) {
             this.galleryItemIdentity = galleryItemIdentity;
             return this;
         }
-
         public Builder iconUris(@Nullable IconUrisResponse iconUris) {
             this.iconUris = iconUris;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder legalTerms(@Nullable String legalTerms) {
             this.legalTerms = legalTerms;
             return this;
         }
-
         public Builder links(@Nullable List<ProductLinkResponse> links) {
             this.links = links;
             return this;
         }
-
+        public Builder links(ProductLinkResponse... links) {
+            return links(List.of(links));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
-
         public Builder offerVersion(@Nullable String offerVersion) {
             this.offerVersion = offerVersion;
             return this;
         }
-
         public Builder payloadLength(@Nullable Double payloadLength) {
             this.payloadLength = payloadLength;
             return this;
         }
-
         public Builder privacyPolicy(@Nullable String privacyPolicy) {
             this.privacyPolicy = privacyPolicy;
             return this;
         }
-
         public Builder productKind(@Nullable String productKind) {
             this.productKind = productKind;
             return this;
         }
-
         public Builder productProperties(@Nullable ProductPropertiesResponse productProperties) {
             this.productProperties = productProperties;
             return this;
         }
-
         public Builder publisherDisplayName(@Nullable String publisherDisplayName) {
             this.publisherDisplayName = publisherDisplayName;
             return this;
         }
-
         public Builder publisherIdentifier(@Nullable String publisherIdentifier) {
             this.publisherIdentifier = publisherIdentifier;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmExtensionType(@Nullable String vmExtensionType) {
             this.vmExtensionType = vmExtensionType;
             return this;
-        }
-        public ProductResponse build() {
+        }        public ProductResponse build() {
             return new ProductResponse(billingPartNumber, compatibility, description, displayName, etag, galleryItemIdentity, iconUris, id, legalTerms, links, name, offer, offerVersion, payloadLength, privacyPolicy, productKind, productProperties, publisherDisplayName, publisherIdentifier, sku, type, vmExtensionType);
         }
     }

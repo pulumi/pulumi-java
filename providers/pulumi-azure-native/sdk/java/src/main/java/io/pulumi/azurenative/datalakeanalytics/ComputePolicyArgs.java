@@ -157,72 +157,58 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder computePolicyName(@Nullable Output<String> computePolicyName) {
             this.computePolicyName = computePolicyName;
             return this;
         }
-
         public Builder computePolicyName(@Nullable String computePolicyName) {
             this.computePolicyName = Output.ofNullable(computePolicyName);
             return this;
         }
-
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
-
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
-
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
-
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
             this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
             return this;
         }
-
         public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder objectType(Output<Either<String,AADObjectType>> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(Either<String,AADObjectType> objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ComputePolicyArgs build() {
+        }        public ComputePolicyArgs build() {
             return new ComputePolicyArgs(accountName, computePolicyName, maxDegreeOfParallelismPerJob, minPriorityPerJob, objectId, objectType, resourceGroupName);
         }
     }

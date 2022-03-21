@@ -94,17 +94,14 @@ public final class DigitalTwinsIdentityResponse extends io.pulumi.resources.Invo
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DigitalTwinsIdentityResponse build() {
+        }        public DigitalTwinsIdentityResponse build() {
             return new DigitalTwinsIdentityResponse(principalId, tenantId, type);
         }
     }

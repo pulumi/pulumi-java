@@ -106,22 +106,18 @@ public final class ScaleRuleResponse {
             this.azureQueue = azureQueue;
             return this;
         }
-
         public Builder custom(@Nullable CustomScaleRuleResponse custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder http(@Nullable HttpScaleRuleResponse http) {
             this.http = http;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ScaleRuleResponse build() {
+        }        public ScaleRuleResponse build() {
             return new ScaleRuleResponse(azureQueue, custom, http, name);
         }
     }

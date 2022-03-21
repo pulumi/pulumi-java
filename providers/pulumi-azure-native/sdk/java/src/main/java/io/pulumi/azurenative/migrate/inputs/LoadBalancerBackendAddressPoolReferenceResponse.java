@@ -78,12 +78,10 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse extends io.pu
             this.name = name;
             return this;
         }
-
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
-        }
-        public LoadBalancerBackendAddressPoolReferenceResponse build() {
+        }        public LoadBalancerBackendAddressPoolReferenceResponse build() {
             return new LoadBalancerBackendAddressPoolReferenceResponse(name, sourceArmResourceId);
         }
     }

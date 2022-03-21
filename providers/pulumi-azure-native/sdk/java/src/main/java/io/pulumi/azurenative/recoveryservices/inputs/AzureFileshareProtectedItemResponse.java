@@ -387,107 +387,86 @@ public final class AzureFileshareProtectedItemResponse extends io.pulumi.resourc
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
-
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
-
         public Builder extendedInfo(@Nullable AzureFileshareProtectedItemExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
-
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
-
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
-
         public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
             this.kpisHealths = kpisHealths;
             return this;
         }
-
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
-
         public Builder lastBackupTime(@Nullable String lastBackupTime) {
             this.lastBackupTime = lastBackupTime;
             return this;
         }
-
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
-
         public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
-
         public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
-        }
-        public AzureFileshareProtectedItemResponse build() {
+        }        public AzureFileshareProtectedItemResponse build() {
             return new AzureFileshareProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemType, protectionState, protectionStatus, sourceResourceId, workloadType);
         }
     }

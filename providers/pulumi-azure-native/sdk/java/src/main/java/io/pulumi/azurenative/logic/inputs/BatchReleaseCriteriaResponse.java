@@ -95,17 +95,14 @@ public final class BatchReleaseCriteriaResponse extends io.pulumi.resources.Invo
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder messageCount(@Nullable Integer messageCount) {
             this.messageCount = messageCount;
             return this;
         }
-
         public Builder recurrence(@Nullable WorkflowTriggerRecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
-        }
-        public BatchReleaseCriteriaResponse build() {
+        }        public BatchReleaseCriteriaResponse build() {
             return new BatchReleaseCriteriaResponse(batchSize, messageCount, recurrence);
         }
     }

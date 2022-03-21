@@ -277,142 +277,135 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
-
         public Builder backendAddressPools(@Nullable List<BackendAddressPoolArgs> backendAddressPools) {
             this.backendAddressPools = Output.ofNullable(backendAddressPools);
             return this;
         }
-
+        public Builder backendAddressPools(BackendAddressPoolArgs... backendAddressPools) {
+            return backendAddressPools(List.of(backendAddressPools));
+        }
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder frontendIPConfigurations(@Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
-
         public Builder frontendIPConfigurations(@Nullable List<FrontendIPConfigurationArgs> frontendIPConfigurations) {
             this.frontendIPConfigurations = Output.ofNullable(frontendIPConfigurations);
             return this;
         }
-
+        public Builder frontendIPConfigurations(FrontendIPConfigurationArgs... frontendIPConfigurations) {
+            return frontendIPConfigurations(List.of(frontendIPConfigurations));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder inboundNatPools(@Nullable Output<List<InboundNatPoolArgs>> inboundNatPools) {
             this.inboundNatPools = inboundNatPools;
             return this;
         }
-
         public Builder inboundNatPools(@Nullable List<InboundNatPoolArgs> inboundNatPools) {
             this.inboundNatPools = Output.ofNullable(inboundNatPools);
             return this;
         }
-
+        public Builder inboundNatPools(InboundNatPoolArgs... inboundNatPools) {
+            return inboundNatPools(List.of(inboundNatPools));
+        }
         public Builder inboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
-
         public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
             this.inboundNatRules = Output.ofNullable(inboundNatRules);
             return this;
         }
-
+        public Builder inboundNatRules(InboundNatRuleArgs... inboundNatRules) {
+            return inboundNatRules(List.of(inboundNatRules));
+        }
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
-
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
-
         public Builder loadBalancingRules(@Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
-
         public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
             this.loadBalancingRules = Output.ofNullable(loadBalancingRules);
             return this;
         }
-
+        public Builder loadBalancingRules(LoadBalancingRuleArgs... loadBalancingRules) {
+            return loadBalancingRules(List.of(loadBalancingRules));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder outboundRules(@Nullable Output<List<OutboundRuleArgs>> outboundRules) {
             this.outboundRules = outboundRules;
             return this;
         }
-
         public Builder outboundRules(@Nullable List<OutboundRuleArgs> outboundRules) {
             this.outboundRules = Output.ofNullable(outboundRules);
             return this;
         }
-
+        public Builder outboundRules(OutboundRuleArgs... outboundRules) {
+            return outboundRules(List.of(outboundRules));
+        }
         public Builder probes(@Nullable Output<List<ProbeArgs>> probes) {
             this.probes = probes;
             return this;
         }
-
         public Builder probes(@Nullable List<ProbeArgs> probes) {
             this.probes = Output.ofNullable(probes);
             return this;
         }
-
+        public Builder probes(ProbeArgs... probes) {
+            return probes(List.of(probes));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<LoadBalancerSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable LoadBalancerSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LoadBalancerArgs build() {
+        }        public LoadBalancerArgs build() {
             return new LoadBalancerArgs(backendAddressPools, extendedLocation, frontendIPConfigurations, id, inboundNatPools, inboundNatRules, loadBalancerName, loadBalancingRules, location, outboundRules, probes, resourceGroupName, sku, tags);
         }
     }

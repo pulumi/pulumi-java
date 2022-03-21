@@ -72,12 +72,10 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
             this.imageTemplateName = Objects.requireNonNull(imageTemplateName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetVirtualMachineImageTemplateArgs build() {
+        }        public GetVirtualMachineImageTemplateArgs build() {
             return new GetVirtualMachineImageTemplateArgs(imageTemplateName, resourceGroupName);
         }
     }

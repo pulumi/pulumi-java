@@ -77,22 +77,18 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder authentication(Boolean authentication) {
             this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
-
         public Builder prodModeWriteProtect(Output<Boolean> prodModeWriteProtect) {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }
-
         public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
             this.prodModeWriteProtect = Output.of(Objects.requireNonNull(prodModeWriteProtect));
             return this;
-        }
-        public AttributesArgs build() {
+        }        public AttributesArgs build() {
             return new AttributesArgs(authentication, prodModeWriteProtect);
         }
     }

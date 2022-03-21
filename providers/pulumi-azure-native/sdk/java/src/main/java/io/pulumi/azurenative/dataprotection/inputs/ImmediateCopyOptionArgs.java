@@ -61,12 +61,10 @@ public final class ImmediateCopyOptionArgs extends io.pulumi.resources.ResourceA
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
-        }
-        public ImmediateCopyOptionArgs build() {
+        }        public ImmediateCopyOptionArgs build() {
             return new ImmediateCopyOptionArgs(objectType);
         }
     }

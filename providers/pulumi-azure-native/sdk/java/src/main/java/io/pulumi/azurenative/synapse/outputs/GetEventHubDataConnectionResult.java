@@ -267,72 +267,61 @@ public final class GetEventHubDataConnectionResult {
             this.compression = compression;
             return this;
         }
-
         public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
-
         public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder eventHubResourceId(String eventHubResourceId) {
             this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
             return this;
         }
-
         public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
             this.eventSystemProperties = eventSystemProperties;
             return this;
         }
-
+        public Builder eventSystemProperties(String... eventSystemProperties) {
+            return eventSystemProperties(List.of(eventSystemProperties));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEventHubDataConnectionResult build() {
+        }        public GetEventHubDataConnectionResult build() {
             return new GetEventHubDataConnectionResult(compression, consumerGroup, dataFormat, eventHubResourceId, eventSystemProperties, id, kind, location, mappingRuleName, name, provisioningState, systemData, tableName, type);
         }
     }

@@ -72,12 +72,10 @@ public final class ScalingHostPoolReferenceResponse {
             this.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
-
         public Builder scalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
             this.scalingPlanEnabled = scalingPlanEnabled;
             return this;
-        }
-        public ScalingHostPoolReferenceResponse build() {
+        }        public ScalingHostPoolReferenceResponse build() {
             return new ScalingHostPoolReferenceResponse(hostPoolArmPath, scalingPlanEnabled);
         }
     }

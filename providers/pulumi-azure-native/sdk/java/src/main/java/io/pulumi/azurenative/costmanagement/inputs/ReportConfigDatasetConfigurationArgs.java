@@ -62,12 +62,13 @@ public final class ReportConfigDatasetConfigurationArgs extends io.pulumi.resour
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<String> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-        public ReportConfigDatasetConfigurationArgs build() {
+        public Builder columns(String... columns) {
+            return columns(List.of(columns));
+        }        public ReportConfigDatasetConfigurationArgs build() {
             return new ReportConfigDatasetConfigurationArgs(columns);
         }
     }

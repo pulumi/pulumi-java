@@ -88,17 +88,14 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
             this.virtualNetworkRuleName = Objects.requireNonNull(virtualNetworkRuleName);
             return this;
-        }
-        public GetVirtualNetworkRuleArgs build() {
+        }        public GetVirtualNetworkRuleArgs build() {
             return new GetVirtualNetworkRuleArgs(resourceGroupName, serverName, virtualNetworkRuleName);
         }
     }

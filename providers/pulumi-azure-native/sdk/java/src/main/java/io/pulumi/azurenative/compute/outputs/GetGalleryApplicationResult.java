@@ -216,57 +216,46 @@ public final class GetGalleryApplicationResult {
             this.description = description;
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder eula(@Nullable String eula) {
             this.eula = eula;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
-
         public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
-
         public Builder supportedOSType(String supportedOSType) {
             this.supportedOSType = Objects.requireNonNull(supportedOSType);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGalleryApplicationResult build() {
+        }        public GetGalleryApplicationResult build() {
             return new GetGalleryApplicationResult(description, endOfLifeDate, eula, id, location, name, privacyStatementUri, releaseNoteUri, supportedOSType, tags, type);
         }
     }

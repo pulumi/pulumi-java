@@ -113,42 +113,40 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
-
         public Builder excludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
             this.excludedKbNumbers = Output.ofNullable(excludedKbNumbers);
             return this;
         }
-
+        public Builder excludedKbNumbers(String... excludedKbNumbers) {
+            return excludedKbNumbers(List.of(excludedKbNumbers));
+        }
         public Builder includedKbNumbers(@Nullable Output<List<String>> includedKbNumbers) {
             this.includedKbNumbers = includedKbNumbers;
             return this;
         }
-
         public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
             this.includedKbNumbers = Output.ofNullable(includedKbNumbers);
             return this;
         }
-
+        public Builder includedKbNumbers(String... includedKbNumbers) {
+            return includedKbNumbers(List.of(includedKbNumbers));
+        }
         public Builder includedUpdateClassifications(@Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications) {
             this.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
-
         public Builder includedUpdateClassifications(@Nullable Either<String,WindowsUpdateClasses> includedUpdateClassifications) {
             this.includedUpdateClassifications = Output.ofNullable(includedUpdateClassifications);
             return this;
         }
-
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
         }
-
         public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = Output.ofNullable(rebootSetting);
             return this;
-        }
-        public WindowsPropertiesArgs build() {
+        }        public WindowsPropertiesArgs build() {
             return new WindowsPropertiesArgs(excludedKbNumbers, includedKbNumbers, includedUpdateClassifications, rebootSetting);
         }
     }

@@ -60,12 +60,10 @@ public final class MountPointMapArgs extends io.pulumi.resources.ResourceArgs {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public Builder shareId(String shareId) {
             this.shareId = Output.of(Objects.requireNonNull(shareId));
             return this;
-        }
-        public MountPointMapArgs build() {
+        }        public MountPointMapArgs build() {
             return new MountPointMapArgs(shareId);
         }
     }

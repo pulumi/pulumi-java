@@ -71,12 +71,10 @@ public final class ManagementGroupPathElementResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ManagementGroupPathElementResponse build() {
+        }        public ManagementGroupPathElementResponse build() {
             return new ManagementGroupPathElementResponse(displayName, name);
         }
     }

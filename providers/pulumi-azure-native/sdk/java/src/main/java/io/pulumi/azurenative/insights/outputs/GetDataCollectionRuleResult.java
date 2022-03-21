@@ -254,67 +254,57 @@ public final class GetDataCollectionRuleResult {
             this.dataFlows = dataFlows;
             return this;
         }
-
+        public Builder dataFlows(DataFlowResponse... dataFlows) {
+            return dataFlows(List.of(dataFlows));
+        }
         public Builder dataSources(@Nullable DataCollectionRuleResponseDataSources dataSources) {
             this.dataSources = dataSources;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder destinations(@Nullable DataCollectionRuleResponseDestinations destinations) {
             this.destinations = destinations;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder immutableId(String immutableId) {
             this.immutableId = Objects.requireNonNull(immutableId);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataCollectionRuleResult build() {
+        }        public GetDataCollectionRuleResult build() {
             return new GetDataCollectionRuleResult(dataFlows, dataSources, description, destinations, etag, id, immutableId, kind, location, name, provisioningState, tags, type);
         }
     }

@@ -96,32 +96,26 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             this.failoverPriority = failoverPriority;
             return this;
         }
-
         public Builder failoverPriority(@Nullable Integer failoverPriority) {
             this.failoverPriority = Output.ofNullable(failoverPriority);
             return this;
         }
-
         public Builder isZoneRedundant(@Nullable Output<Boolean> isZoneRedundant) {
             this.isZoneRedundant = isZoneRedundant;
             return this;
         }
-
         public Builder isZoneRedundant(@Nullable Boolean isZoneRedundant) {
             this.isZoneRedundant = Output.ofNullable(isZoneRedundant);
             return this;
         }
-
         public Builder locationName(@Nullable Output<String> locationName) {
             this.locationName = locationName;
             return this;
         }
-
         public Builder locationName(@Nullable String locationName) {
             this.locationName = Output.ofNullable(locationName);
             return this;
-        }
-        public LocationArgs build() {
+        }        public LocationArgs build() {
             return new LocationArgs(failoverPriority, isZoneRedundant, locationName);
         }
     }

@@ -88,17 +88,17 @@ public final class ManagedIntegrationRuntimeNodeResponse {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(ManagedIntegrationRuntimeErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ManagedIntegrationRuntimeNodeResponse build() {
+        }        public ManagedIntegrationRuntimeNodeResponse build() {
             return new ManagedIntegrationRuntimeNodeResponse(errors, nodeId, status);
         }
     }

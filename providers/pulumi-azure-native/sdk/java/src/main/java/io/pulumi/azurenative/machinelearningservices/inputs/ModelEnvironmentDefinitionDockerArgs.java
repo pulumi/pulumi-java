@@ -95,32 +95,26 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
             this.baseDockerfile = baseDockerfile;
             return this;
         }
-
         public Builder baseDockerfile(@Nullable String baseDockerfile) {
             this.baseDockerfile = Output.ofNullable(baseDockerfile);
             return this;
         }
-
         public Builder baseImage(@Nullable Output<String> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
-
         public Builder baseImage(@Nullable String baseImage) {
             this.baseImage = Output.ofNullable(baseImage);
             return this;
         }
-
         public Builder baseImageRegistry(@Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry) {
             this.baseImageRegistry = baseImageRegistry;
             return this;
         }
-
         public Builder baseImageRegistry(@Nullable ModelDockerSectionBaseImageRegistryArgs baseImageRegistry) {
             this.baseImageRegistry = Output.ofNullable(baseImageRegistry);
             return this;
-        }
-        public ModelEnvironmentDefinitionDockerArgs build() {
+        }        public ModelEnvironmentDefinitionDockerArgs build() {
             return new ModelEnvironmentDefinitionDockerArgs(baseDockerfile, baseImage, baseImageRegistry);
         }
     }

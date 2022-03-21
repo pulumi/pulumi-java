@@ -113,42 +113,34 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
-
         public Builder adminUsername(Output<String> adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
-
         public Builder adminUsername(String adminUsername) {
             this.adminUsername = Output.of(Objects.requireNonNull(adminUsername));
             return this;
         }
-
         public Builder enableCSIProxy(@Nullable Output<Boolean> enableCSIProxy) {
             this.enableCSIProxy = enableCSIProxy;
             return this;
         }
-
         public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
             this.enableCSIProxy = Output.ofNullable(enableCSIProxy);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
-        }
-        public ManagedClusterWindowsProfileArgs build() {
+        }        public ManagedClusterWindowsProfileArgs build() {
             return new ManagedClusterWindowsProfileArgs(adminPassword, adminUsername, enableCSIProxy, licenseType);
         }
     }

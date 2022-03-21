@@ -70,12 +70,10 @@ public final class PackageStoreResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageStoreLinkedService(EntityReferenceResponse packageStoreLinkedService) {
             this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
             return this;
-        }
-        public PackageStoreResponse build() {
+        }        public PackageStoreResponse build() {
             return new PackageStoreResponse(name, packageStoreLinkedService);
         }
     }

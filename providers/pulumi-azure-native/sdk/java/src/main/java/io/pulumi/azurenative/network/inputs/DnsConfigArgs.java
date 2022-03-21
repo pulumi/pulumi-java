@@ -79,22 +79,18 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.relativeName = relativeName;
             return this;
         }
-
         public Builder relativeName(@Nullable String relativeName) {
             this.relativeName = Output.ofNullable(relativeName);
             return this;
         }
-
         public Builder ttl(@Nullable Output<Double> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Double ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public DnsConfigArgs build() {
+        }        public DnsConfigArgs build() {
             return new DnsConfigArgs(relativeName, ttl);
         }
     }

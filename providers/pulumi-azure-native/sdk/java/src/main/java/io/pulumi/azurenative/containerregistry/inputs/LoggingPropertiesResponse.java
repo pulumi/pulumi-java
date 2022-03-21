@@ -78,12 +78,10 @@ public final class LoggingPropertiesResponse extends io.pulumi.resources.InvokeA
             this.auditLogStatus = auditLogStatus;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
-        }
-        public LoggingPropertiesResponse build() {
+        }        public LoggingPropertiesResponse build() {
             return new LoggingPropertiesResponse(auditLogStatus, logLevel);
         }
     }

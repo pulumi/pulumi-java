@@ -61,12 +61,13 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             this.storageSettings = Objects.requireNonNull(storageSettings);
             return this;
         }
-
         public Builder storageSettings(List<StorageSettingArgs> storageSettings) {
             this.storageSettings = Output.of(Objects.requireNonNull(storageSettings));
             return this;
         }
-        public BackupVaultArgs build() {
+        public Builder storageSettings(StorageSettingArgs... storageSettings) {
+            return storageSettings(List.of(storageSettings));
+        }        public BackupVaultArgs build() {
             return new BackupVaultArgs(storageSettings);
         }
     }

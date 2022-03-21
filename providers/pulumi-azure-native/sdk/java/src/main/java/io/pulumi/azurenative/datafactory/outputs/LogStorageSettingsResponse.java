@@ -104,22 +104,18 @@ public final class LogStorageSettingsResponse {
             this.enableReliableLogging = enableReliableLogging;
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder logLevel(@Nullable Object logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
-        }
-        public LogStorageSettingsResponse build() {
+        }        public LogStorageSettingsResponse build() {
             return new LogStorageSettingsResponse(enableReliableLogging, linkedServiceName, logLevel, path);
         }
     }

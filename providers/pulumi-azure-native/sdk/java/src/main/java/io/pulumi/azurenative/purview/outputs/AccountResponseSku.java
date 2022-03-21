@@ -72,12 +72,10 @@ public final class AccountResponseSku {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public AccountResponseSku build() {
+        }        public AccountResponseSku build() {
             return new AccountResponseSku(capacity, name);
         }
     }

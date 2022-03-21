@@ -226,57 +226,49 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder clusterId(@Nullable Object clusterId) {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder domain(Object domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
-        }
-        public AzureDatabricksDeltaLakeLinkedServiceResponse build() {
+        }        public AzureDatabricksDeltaLakeLinkedServiceResponse build() {
             return new AzureDatabricksDeltaLakeLinkedServiceResponse(accessToken, annotations, clusterId, connectVia, credential, description, domain, encryptedCredential, parameters, type, workspaceResourceId);
         }
     }

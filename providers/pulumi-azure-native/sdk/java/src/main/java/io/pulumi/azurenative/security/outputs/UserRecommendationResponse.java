@@ -71,12 +71,10 @@ public final class UserRecommendationResponse {
             this.recommendationAction = recommendationAction;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public UserRecommendationResponse build() {
+        }        public UserRecommendationResponse build() {
             return new UserRecommendationResponse(recommendationAction, username);
         }
     }

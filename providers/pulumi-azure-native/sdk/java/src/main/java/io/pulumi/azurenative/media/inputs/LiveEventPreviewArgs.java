@@ -129,52 +129,45 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
             this.accessControl = accessControl;
             return this;
         }
-
         public Builder accessControl(@Nullable LiveEventPreviewAccessControlArgs accessControl) {
             this.accessControl = Output.ofNullable(accessControl);
             return this;
         }
-
         public Builder alternativeMediaId(@Nullable Output<String> alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
-
         public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
             this.alternativeMediaId = Output.ofNullable(alternativeMediaId);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<LiveEventEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(LiveEventEndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder previewLocator(@Nullable Output<String> previewLocator) {
             this.previewLocator = previewLocator;
             return this;
         }
-
         public Builder previewLocator(@Nullable String previewLocator) {
             this.previewLocator = Output.ofNullable(previewLocator);
             return this;
         }
-
         public Builder streamingPolicyName(@Nullable Output<String> streamingPolicyName) {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }
-
         public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
             this.streamingPolicyName = Output.ofNullable(streamingPolicyName);
             return this;
-        }
-        public LiveEventPreviewArgs build() {
+        }        public LiveEventPreviewArgs build() {
             return new LiveEventPreviewArgs(accessControl, alternativeMediaId, endpoints, previewLocator, streamingPolicyName);
         }
     }

@@ -88,17 +88,14 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public GetKeyArgs build() {
+        }        public GetKeyArgs build() {
             return new GetKeyArgs(keyName, resourceGroupName, vaultName);
         }
     }

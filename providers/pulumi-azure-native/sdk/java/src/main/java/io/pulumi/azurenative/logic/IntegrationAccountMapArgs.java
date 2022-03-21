@@ -207,102 +207,82 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mapName(@Nullable Output<String> mapName) {
             this.mapName = mapName;
             return this;
         }
-
         public Builder mapName(@Nullable String mapName) {
             this.mapName = Output.ofNullable(mapName);
             return this;
         }
-
         public Builder mapType(Output<Either<String,MapType>> mapType) {
             this.mapType = Objects.requireNonNull(mapType);
             return this;
         }
-
         public Builder mapType(Either<String,MapType> mapType) {
             this.mapType = Output.of(Objects.requireNonNull(mapType));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder parametersSchema(@Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema) {
             this.parametersSchema = parametersSchema;
             return this;
         }
-
         public Builder parametersSchema(@Nullable IntegrationAccountMapPropertiesParametersSchemaArgs parametersSchema) {
             this.parametersSchema = Output.ofNullable(parametersSchema);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationAccountMapArgs build() {
+        }        public IntegrationAccountMapArgs build() {
             return new IntegrationAccountMapArgs(content, contentType, integrationAccountName, location, mapName, mapType, metadata, parametersSchema, resourceGroupName, tags);
         }
     }

@@ -60,8 +60,7 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends i
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = cloudRoleArn;
             return this;
-        }
-        public DefenderForContainersAwsOfferingResponseKinesisToS3 build() {
+        }        public DefenderForContainersAwsOfferingResponseKinesisToS3 build() {
             return new DefenderForContainersAwsOfferingResponseKinesisToS3(cloudRoleArn);
         }
     }

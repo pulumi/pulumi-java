@@ -139,62 +139,50 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
-
         public Builder migrationItemName(@Nullable Output<String> migrationItemName) {
             this.migrationItemName = migrationItemName;
             return this;
         }
-
         public Builder migrationItemName(@Nullable String migrationItemName) {
             this.migrationItemName = Output.ofNullable(migrationItemName);
             return this;
         }
-
         public Builder properties(Output<EnableMigrationInputPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(EnableMigrationInputPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder protectionContainerName(Output<String> protectionContainerName) {
             this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
             return this;
         }
-
         public Builder protectionContainerName(String protectionContainerName) {
             this.protectionContainerName = Output.of(Objects.requireNonNull(protectionContainerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public ReplicationMigrationItemArgs build() {
+        }        public ReplicationMigrationItemArgs build() {
             return new ReplicationMigrationItemArgs(fabricName, migrationItemName, properties, protectionContainerName, resourceGroupName, resourceName);
         }
     }

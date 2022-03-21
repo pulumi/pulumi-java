@@ -88,17 +88,14 @@ public final class DnsConfigResponse {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder relativeName(@Nullable String relativeName) {
             this.relativeName = relativeName;
             return this;
         }
-
         public Builder ttl(@Nullable Double ttl) {
             this.ttl = ttl;
             return this;
-        }
-        public DnsConfigResponse build() {
+        }        public DnsConfigResponse build() {
             return new DnsConfigResponse(fqdn, relativeName, ttl);
         }
     }

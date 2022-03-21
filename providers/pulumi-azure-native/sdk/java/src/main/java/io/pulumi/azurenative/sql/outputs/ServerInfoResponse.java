@@ -51,8 +51,7 @@ public final class ServerInfoResponse {
         public Builder serverId(String serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
-        }
-        public ServerInfoResponse build() {
+        }        public ServerInfoResponse build() {
             return new ServerInfoResponse(serverId);
         }
     }

@@ -102,22 +102,18 @@ public final class GetLinkedWorkspaceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(LinkedWorkspacePropsResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLinkedWorkspaceResult build() {
+        }        public GetLinkedWorkspaceResult build() {
             return new GetLinkedWorkspaceResult(id, name, properties, type);
         }
     }

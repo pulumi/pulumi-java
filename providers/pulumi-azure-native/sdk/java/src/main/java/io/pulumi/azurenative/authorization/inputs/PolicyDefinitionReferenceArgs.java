@@ -113,42 +113,37 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
             this.groupNames = groupNames;
             return this;
         }
-
         public Builder groupNames(@Nullable List<String> groupNames) {
             this.groupNames = Output.ofNullable(groupNames);
             return this;
         }
-
+        public Builder groupNames(String... groupNames) {
+            return groupNames(List.of(groupNames));
+        }
         public Builder parameters(@Nullable Output<Map<String,ParameterValuesValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policyDefinitionId(Output<String> policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
-
         public Builder policyDefinitionId(String policyDefinitionId) {
             this.policyDefinitionId = Output.of(Objects.requireNonNull(policyDefinitionId));
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
-        }
-        public PolicyDefinitionReferenceArgs build() {
+        }        public PolicyDefinitionReferenceArgs build() {
             return new PolicyDefinitionReferenceArgs(groupNames, parameters, policyDefinitionId, policyDefinitionReferenceId);
         }
     }

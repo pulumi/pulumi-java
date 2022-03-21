@@ -166,72 +166,58 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
             this.kerberosArmoring = kerberosArmoring;
             return this;
         }
-
         public Builder kerberosArmoring(@Nullable Either<String,KerberosArmoring> kerberosArmoring) {
             this.kerberosArmoring = Output.ofNullable(kerberosArmoring);
             return this;
         }
-
         public Builder kerberosRc4Encryption(@Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
             this.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
-
         public Builder kerberosRc4Encryption(@Nullable Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
             this.kerberosRc4Encryption = Output.ofNullable(kerberosRc4Encryption);
             return this;
         }
-
         public Builder ntlmV1(@Nullable Output<Either<String,NtlmV1>> ntlmV1) {
             this.ntlmV1 = ntlmV1;
             return this;
         }
-
         public Builder ntlmV1(@Nullable Either<String,NtlmV1> ntlmV1) {
             this.ntlmV1 = Output.ofNullable(ntlmV1);
             return this;
         }
-
         public Builder syncKerberosPasswords(@Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
             this.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
-
         public Builder syncKerberosPasswords(@Nullable Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
             this.syncKerberosPasswords = Output.ofNullable(syncKerberosPasswords);
             return this;
         }
-
         public Builder syncNtlmPasswords(@Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
             this.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
-
         public Builder syncNtlmPasswords(@Nullable Either<String,SyncNtlmPasswords> syncNtlmPasswords) {
             this.syncNtlmPasswords = Output.ofNullable(syncNtlmPasswords);
             return this;
         }
-
         public Builder syncOnPremPasswords(@Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
             this.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
-
         public Builder syncOnPremPasswords(@Nullable Either<String,SyncOnPremPasswords> syncOnPremPasswords) {
             this.syncOnPremPasswords = Output.ofNullable(syncOnPremPasswords);
             return this;
         }
-
         public Builder tlsV1(@Nullable Output<Either<String,TlsV1>> tlsV1) {
             this.tlsV1 = tlsV1;
             return this;
         }
-
         public Builder tlsV1(@Nullable Either<String,TlsV1> tlsV1) {
             this.tlsV1 = Output.ofNullable(tlsV1);
             return this;
-        }
-        public DomainSecuritySettingsArgs build() {
+        }        public DomainSecuritySettingsArgs build() {
             return new DomainSecuritySettingsArgs(kerberosArmoring, kerberosRc4Encryption, ntlmV1, syncKerberosPasswords, syncNtlmPasswords, syncOnPremPasswords, tlsV1);
         }
     }

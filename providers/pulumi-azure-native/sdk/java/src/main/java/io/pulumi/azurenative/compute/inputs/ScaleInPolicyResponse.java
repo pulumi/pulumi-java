@@ -62,7 +62,9 @@ public final class ScaleInPolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.rules = rules;
             return this;
         }
-        public ScaleInPolicyResponse build() {
+        public Builder rules(String... rules) {
+            return rules(List.of(rules));
+        }        public ScaleInPolicyResponse build() {
             return new ScaleInPolicyResponse(rules);
         }
     }

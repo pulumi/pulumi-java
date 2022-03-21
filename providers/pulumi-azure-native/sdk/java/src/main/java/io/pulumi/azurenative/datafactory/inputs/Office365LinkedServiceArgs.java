@@ -215,102 +215,85 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder office365TenantId(Output<Object> office365TenantId) {
             this.office365TenantId = Objects.requireNonNull(office365TenantId);
             return this;
         }
-
         public Builder office365TenantId(Object office365TenantId) {
             this.office365TenantId = Output.of(Objects.requireNonNull(office365TenantId));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder servicePrincipalId(Output<Object> servicePrincipalId) {
             this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
             return this;
         }
-
         public Builder servicePrincipalId(Object servicePrincipalId) {
             this.servicePrincipalId = Output.of(Objects.requireNonNull(servicePrincipalId));
             return this;
         }
-
         public Builder servicePrincipalKey(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
             return this;
         }
-
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Output.of(Objects.requireNonNull(servicePrincipalKey));
             return this;
         }
-
         public Builder servicePrincipalTenantId(Output<Object> servicePrincipalTenantId) {
             this.servicePrincipalTenantId = Objects.requireNonNull(servicePrincipalTenantId);
             return this;
         }
-
         public Builder servicePrincipalTenantId(Object servicePrincipalTenantId) {
             this.servicePrincipalTenantId = Output.of(Objects.requireNonNull(servicePrincipalTenantId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public Office365LinkedServiceArgs build() {
+        }        public Office365LinkedServiceArgs build() {
             return new Office365LinkedServiceArgs(annotations, connectVia, description, encryptedCredential, office365TenantId, parameters, servicePrincipalId, servicePrincipalKey, servicePrincipalTenantId, type);
         }
     }

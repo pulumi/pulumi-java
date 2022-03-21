@@ -226,57 +226,52 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder serviceEndpointPolicyDefinitions(@Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions) {
             this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
             return this;
         }
-
+        public Builder serviceEndpointPolicyDefinitions(ServiceEndpointPolicyDefinitionResponse... serviceEndpointPolicyDefinitions) {
+            return serviceEndpointPolicyDefinitions(List.of(serviceEndpointPolicyDefinitions));
+        }
         public Builder subnets(List<SubnetResponse> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
+        public Builder subnets(SubnetResponse... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceEndpointPolicyResponse build() {
+        }        public ServiceEndpointPolicyResponse build() {
             return new ServiceEndpointPolicyResponse(etag, id, kind, location, name, provisioningState, resourceGuid, serviceEndpointPolicyDefinitions, subnets, tags, type);
         }
     }

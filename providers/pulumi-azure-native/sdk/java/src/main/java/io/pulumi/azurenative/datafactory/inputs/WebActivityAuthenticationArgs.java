@@ -163,72 +163,58 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder pfx(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             this.pfx = pfx;
             return this;
         }
-
         public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
             this.pfx = Output.ofNullable(pfx);
             return this;
         }
-
         public Builder resource(@Nullable Output<Object> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable Object resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userTenant(@Nullable Output<Object> userTenant) {
             this.userTenant = userTenant;
             return this;
         }
-
         public Builder userTenant(@Nullable Object userTenant) {
             this.userTenant = Output.ofNullable(userTenant);
             return this;
         }
-
         public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public WebActivityAuthenticationArgs build() {
+        }        public WebActivityAuthenticationArgs build() {
             return new WebActivityAuthenticationArgs(credential, password, pfx, resource, type, userTenant, username);
         }
     }

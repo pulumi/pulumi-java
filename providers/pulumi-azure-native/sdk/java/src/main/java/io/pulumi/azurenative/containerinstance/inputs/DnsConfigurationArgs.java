@@ -95,32 +95,29 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Output.of(Objects.requireNonNull(nameServers));
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder options(@Nullable Output<String> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable String options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder searchDomains(@Nullable Output<String> searchDomains) {
             this.searchDomains = searchDomains;
             return this;
         }
-
         public Builder searchDomains(@Nullable String searchDomains) {
             this.searchDomains = Output.ofNullable(searchDomains);
             return this;
-        }
-        public DnsConfigurationArgs build() {
+        }        public DnsConfigurationArgs build() {
             return new DnsConfigurationArgs(nameServers, options, searchDomains);
         }
     }

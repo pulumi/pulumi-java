@@ -89,17 +89,14 @@ public final class NetworkConfigurationResponse {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
-
         public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public NetworkConfigurationResponse build() {
+        }        public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(endpointConfiguration, publicIPAddressConfiguration, subnetId);
         }
     }

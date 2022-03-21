@@ -120,27 +120,22 @@ public final class ListServiceTestKeysResult {
             this.enabled = enabled;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder primaryTestEndpoint(@Nullable String primaryTestEndpoint) {
             this.primaryTestEndpoint = primaryTestEndpoint;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public Builder secondaryTestEndpoint(@Nullable String secondaryTestEndpoint) {
             this.secondaryTestEndpoint = secondaryTestEndpoint;
             return this;
-        }
-        public ListServiceTestKeysResult build() {
+        }        public ListServiceTestKeysResult build() {
             return new ListServiceTestKeysResult(enabled, primaryKey, primaryTestEndpoint, secondaryKey, secondaryTestEndpoint);
         }
     }

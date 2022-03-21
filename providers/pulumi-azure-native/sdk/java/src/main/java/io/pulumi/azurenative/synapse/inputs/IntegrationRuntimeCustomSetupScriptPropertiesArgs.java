@@ -79,22 +79,18 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
             this.blobContainerUri = blobContainerUri;
             return this;
         }
-
         public Builder blobContainerUri(@Nullable String blobContainerUri) {
             this.blobContainerUri = Output.ofNullable(blobContainerUri);
             return this;
         }
-
         public Builder sasToken(@Nullable Output<SecureStringArgs> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
-
         public Builder sasToken(@Nullable SecureStringArgs sasToken) {
             this.sasToken = Output.ofNullable(sasToken);
             return this;
-        }
-        public IntegrationRuntimeCustomSetupScriptPropertiesArgs build() {
+        }        public IntegrationRuntimeCustomSetupScriptPropertiesArgs build() {
             return new IntegrationRuntimeCustomSetupScriptPropertiesArgs(blobContainerUri, sasToken);
         }
     }

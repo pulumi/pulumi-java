@@ -198,92 +198,74 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
             this.createMode = Objects.requireNonNull(createMode);
             return this;
         }
-
         public Builder createMode(String createMode) {
             this.createMode = Output.of(Objects.requireNonNull(createMode));
             return this;
         }
-
         public Builder infrastructureEncryption(@Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption) {
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
-
         public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryption> infrastructureEncryption) {
             this.infrastructureEncryption = Output.ofNullable(infrastructureEncryption);
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
             this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder restorePointInTime(Output<String> restorePointInTime) {
             this.restorePointInTime = Objects.requireNonNull(restorePointInTime);
             return this;
         }
-
         public Builder restorePointInTime(String restorePointInTime) {
             this.restorePointInTime = Output.of(Objects.requireNonNull(restorePointInTime));
             return this;
         }
-
         public Builder sourceServerId(Output<String> sourceServerId) {
             this.sourceServerId = Objects.requireNonNull(sourceServerId);
             return this;
         }
-
         public Builder sourceServerId(String sourceServerId) {
             this.sourceServerId = Output.of(Objects.requireNonNull(sourceServerId));
             return this;
         }
-
         public Builder sslEnforcement(@Nullable Output<SslEnforcementEnum> sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
-
         public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
             this.sslEnforcement = Output.ofNullable(sslEnforcement);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder version(@Nullable Output<Either<String,ServerVersion>> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Either<String,ServerVersion> version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ServerPropertiesForRestoreArgs build() {
+        }        public ServerPropertiesForRestoreArgs build() {
             return new ServerPropertiesForRestoreArgs(createMode, infrastructureEncryption, minimalTlsVersion, publicNetworkAccess, restorePointInTime, sourceServerId, sslEnforcement, storageProfile, version);
         }
     }

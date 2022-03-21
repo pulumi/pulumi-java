@@ -87,17 +87,14 @@ public final class ModuleResponse {
             this.args = args;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ModuleResponse build() {
+        }        public ModuleResponse build() {
             return new ModuleResponse(args, name, version);
         }
     }

@@ -284,152 +284,122 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
-
         public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-
         public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = Output.ofNullable(httpPort);
             return this;
         }
-
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-
         public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = Output.ofNullable(httpsPort);
             return this;
         }
-
         public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
-
         public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = Output.ofNullable(originHostHeader);
             return this;
         }
-
         public Builder originName(@Nullable Output<String> originName) {
             this.originName = originName;
             return this;
         }
-
         public Builder originName(@Nullable String originName) {
             this.originName = Output.ofNullable(originName);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
-
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = Output.ofNullable(privateLinkAlias);
             return this;
         }
-
         public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
-
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = Output.ofNullable(privateLinkApprovalMessage);
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public OriginArgs build() {
+        }        public OriginArgs build() {
             return new OriginArgs(enabled, endpointName, hostName, httpPort, httpsPort, originHostHeader, originName, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, profileName, resourceGroupName, weight);
         }
     }

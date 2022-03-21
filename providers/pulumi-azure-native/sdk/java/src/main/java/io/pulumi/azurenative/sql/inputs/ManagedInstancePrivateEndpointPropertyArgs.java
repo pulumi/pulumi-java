@@ -57,12 +57,10 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends io.pulumi.
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public ManagedInstancePrivateEndpointPropertyArgs build() {
+        }        public ManagedInstancePrivateEndpointPropertyArgs build() {
             return new ManagedInstancePrivateEndpointPropertyArgs(id);
         }
     }

@@ -60,8 +60,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ContainerResponse build() {
+        }        public ContainerResponse build() {
             return new ContainerResponse(id);
         }
     }

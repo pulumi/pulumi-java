@@ -350,97 +350,84 @@ public final class GetNodeTypeResult {
             this.applicationPorts = applicationPorts;
             return this;
         }
-
         public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = capacities;
             return this;
         }
-
         public Builder dataDiskSizeGB(Integer dataDiskSizeGB) {
             this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
             return this;
         }
-
         public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmExtensions(@Nullable List<VMSSExtensionResponse> vmExtensions) {
             this.vmExtensions = vmExtensions;
             return this;
         }
-
+        public Builder vmExtensions(VMSSExtensionResponse... vmExtensions) {
+            return vmExtensions(List.of(vmExtensions));
+        }
         public Builder vmImageOffer(@Nullable String vmImageOffer) {
             this.vmImageOffer = vmImageOffer;
             return this;
         }
-
         public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
             this.vmImagePublisher = vmImagePublisher;
             return this;
         }
-
         public Builder vmImageSku(@Nullable String vmImageSku) {
             this.vmImageSku = vmImageSku;
             return this;
         }
-
         public Builder vmImageVersion(@Nullable String vmImageVersion) {
             this.vmImageVersion = vmImageVersion;
             return this;
         }
-
         public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
-
         public Builder vmSecrets(@Nullable List<VaultSecretGroupResponse> vmSecrets) {
             this.vmSecrets = vmSecrets;
             return this;
         }
-
+        public Builder vmSecrets(VaultSecretGroupResponse... vmSecrets) {
+            return vmSecrets(List.of(vmSecrets));
+        }
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public GetNodeTypeResult build() {
+        }        public GetNodeTypeResult build() {
             return new GetNodeTypeResult(applicationPorts, capacities, dataDiskSizeGB, ephemeralPorts, id, isPrimary, name, placementProperties, provisioningState, tags, type, vmExtensions, vmImageOffer, vmImagePublisher, vmImageSku, vmImageVersion, vmInstanceCount, vmSecrets, vmSize);
         }
     }

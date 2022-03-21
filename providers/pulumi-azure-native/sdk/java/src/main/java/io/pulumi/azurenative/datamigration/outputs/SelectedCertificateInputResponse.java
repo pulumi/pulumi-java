@@ -69,12 +69,10 @@ public final class SelectedCertificateInputResponse {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
-        }
-        public SelectedCertificateInputResponse build() {
+        }        public SelectedCertificateInputResponse build() {
             return new SelectedCertificateInputResponse(certificateName, password);
         }
     }

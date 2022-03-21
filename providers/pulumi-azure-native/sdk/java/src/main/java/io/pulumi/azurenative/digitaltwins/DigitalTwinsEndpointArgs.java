@@ -110,42 +110,34 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
-
         public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public DigitalTwinsEndpointArgs build() {
+        }        public DigitalTwinsEndpointArgs build() {
             return new DigitalTwinsEndpointArgs(endpointName, properties, resourceGroupName, resourceName);
         }
     }

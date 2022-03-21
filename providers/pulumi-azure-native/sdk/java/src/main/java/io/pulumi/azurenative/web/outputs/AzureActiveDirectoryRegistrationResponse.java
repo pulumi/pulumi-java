@@ -153,32 +153,26 @@ public final class AzureActiveDirectoryRegistrationResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecretCertificateIssuer(@Nullable String clientSecretCertificateIssuer) {
             this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
             return this;
         }
-
         public Builder clientSecretCertificateSubjectAlternativeName(@Nullable String clientSecretCertificateSubjectAlternativeName) {
             this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;
             return this;
         }
-
         public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
-
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-
         public Builder openIdIssuer(@Nullable String openIdIssuer) {
             this.openIdIssuer = openIdIssuer;
             return this;
-        }
-        public AzureActiveDirectoryRegistrationResponse build() {
+        }        public AzureActiveDirectoryRegistrationResponse build() {
             return new AzureActiveDirectoryRegistrationResponse(clientId, clientSecretCertificateIssuer, clientSecretCertificateSubjectAlternativeName, clientSecretCertificateThumbprint, clientSecretSettingName, openIdIssuer);
         }
     }

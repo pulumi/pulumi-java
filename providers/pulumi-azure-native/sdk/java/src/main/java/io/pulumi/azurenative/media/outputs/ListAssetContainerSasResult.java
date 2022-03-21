@@ -54,7 +54,9 @@ public final class ListAssetContainerSasResult {
             this.assetContainerSasUrls = assetContainerSasUrls;
             return this;
         }
-        public ListAssetContainerSasResult build() {
+        public Builder assetContainerSasUrls(String... assetContainerSasUrls) {
+            return assetContainerSasUrls(List.of(assetContainerSasUrls));
+        }        public ListAssetContainerSasResult build() {
             return new ListAssetContainerSasResult(assetContainerSasUrls);
         }
     }

@@ -73,12 +73,13 @@ public final class NetworkRefResponse {
             this.endpointRefs = endpointRefs;
             return this;
         }
-
+        public Builder endpointRefs(EndpointRefResponse... endpointRefs) {
+            return endpointRefs(List.of(endpointRefs));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public NetworkRefResponse build() {
+        }        public NetworkRefResponse build() {
             return new NetworkRefResponse(endpointRefs, name);
         }
     }

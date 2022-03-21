@@ -60,8 +60,7 @@ public final class FirewallPolicyNatRuleCollectionActionResponse extends io.pulu
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public FirewallPolicyNatRuleCollectionActionResponse build() {
+        }        public FirewallPolicyNatRuleCollectionActionResponse build() {
             return new FirewallPolicyNatRuleCollectionActionResponse(type);
         }
     }

@@ -78,12 +78,13 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(GatewayInstanceResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder resourceRequests(GatewayOperatorResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
-        }
-        public GatewayOperatorPropertiesResponse build() {
+        }        public GatewayOperatorPropertiesResponse build() {
             return new GatewayOperatorPropertiesResponse(instances, resourceRequests);
         }
     }

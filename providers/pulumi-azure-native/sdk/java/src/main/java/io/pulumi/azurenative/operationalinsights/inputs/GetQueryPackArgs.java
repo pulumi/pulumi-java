@@ -72,12 +72,10 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
             this.queryPackName = Objects.requireNonNull(queryPackName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetQueryPackArgs build() {
+        }        public GetQueryPackArgs build() {
             return new GetQueryPackArgs(queryPackName, resourceGroupName);
         }
     }

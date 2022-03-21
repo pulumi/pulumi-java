@@ -53,8 +53,7 @@ public final class MarkdownPartMetadataResponseSettings {
         public Builder content(@Nullable MarkdownPartMetadataResponseContent content) {
             this.content = content;
             return this;
-        }
-        public MarkdownPartMetadataResponseSettings build() {
+        }        public MarkdownPartMetadataResponseSettings build() {
             return new MarkdownPartMetadataResponseSettings(content);
         }
     }

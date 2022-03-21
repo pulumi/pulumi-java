@@ -95,17 +95,14 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder userName(Object userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public SSISAccessCredentialResponse build() {
+        }        public SSISAccessCredentialResponse build() {
             return new SSISAccessCredentialResponse(domain, password, userName);
         }
     }

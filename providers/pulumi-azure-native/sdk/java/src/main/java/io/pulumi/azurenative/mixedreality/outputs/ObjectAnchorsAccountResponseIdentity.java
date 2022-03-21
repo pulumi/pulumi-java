@@ -87,17 +87,14 @@ public final class ObjectAnchorsAccountResponseIdentity {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ObjectAnchorsAccountResponseIdentity build() {
+        }        public ObjectAnchorsAccountResponseIdentity build() {
             return new ObjectAnchorsAccountResponseIdentity(principalId, tenantId, type);
         }
     }

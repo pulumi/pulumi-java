@@ -142,62 +142,53 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder filterName(@Nullable Output<String> filterName) {
             this.filterName = filterName;
             return this;
         }
-
         public Builder filterName(@Nullable String filterName) {
             this.filterName = Output.ofNullable(filterName);
             return this;
         }
-
         public Builder firstQuality(@Nullable Output<FirstQualityArgs> firstQuality) {
             this.firstQuality = firstQuality;
             return this;
         }
-
         public Builder firstQuality(@Nullable FirstQualityArgs firstQuality) {
             this.firstQuality = Output.ofNullable(firstQuality);
             return this;
         }
-
         public Builder presentationTimeRange(@Nullable Output<PresentationTimeRangeArgs> presentationTimeRange) {
             this.presentationTimeRange = presentationTimeRange;
             return this;
         }
-
         public Builder presentationTimeRange(@Nullable PresentationTimeRangeArgs presentationTimeRange) {
             this.presentationTimeRange = Output.ofNullable(presentationTimeRange);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tracks(@Nullable Output<List<FilterTrackSelectionArgs>> tracks) {
             this.tracks = tracks;
             return this;
         }
-
         public Builder tracks(@Nullable List<FilterTrackSelectionArgs> tracks) {
             this.tracks = Output.ofNullable(tracks);
             return this;
         }
-        public AccountFilterArgs build() {
+        public Builder tracks(FilterTrackSelectionArgs... tracks) {
+            return tracks(List.of(tracks));
+        }        public AccountFilterArgs build() {
             return new AccountFilterArgs(accountName, filterName, firstQuality, presentationTimeRange, resourceGroupName, tracks);
         }
     }

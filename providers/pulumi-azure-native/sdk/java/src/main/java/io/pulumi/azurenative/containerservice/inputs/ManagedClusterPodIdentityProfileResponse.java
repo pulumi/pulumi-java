@@ -109,22 +109,24 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
             this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
+        public Builder userAssignedIdentities(ManagedClusterPodIdentityResponse... userAssignedIdentities) {
+            return userAssignedIdentities(List.of(userAssignedIdentities));
+        }
         public Builder userAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
             this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }
-        public ManagedClusterPodIdentityProfileResponse build() {
+        public Builder userAssignedIdentityExceptions(ManagedClusterPodIdentityExceptionResponse... userAssignedIdentityExceptions) {
+            return userAssignedIdentityExceptions(List.of(userAssignedIdentityExceptions));
+        }        public ManagedClusterPodIdentityProfileResponse build() {
             return new ManagedClusterPodIdentityProfileResponse(allowNetworkPluginKubenet, enabled, userAssignedIdentities, userAssignedIdentityExceptions);
         }
     }

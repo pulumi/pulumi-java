@@ -129,52 +129,48 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.allocationMethod = allocationMethod;
             return this;
         }
-
         public Builder allocationMethod(@Nullable Either<String,IPAddressAllocationMethod> allocationMethod) {
             this.allocationMethod = Output.ofNullable(allocationMethod);
             return this;
         }
-
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder gateway(@Nullable Output<List<String>> gateway) {
             this.gateway = gateway;
             return this;
         }
-
         public Builder gateway(@Nullable List<String> gateway) {
             this.gateway = Output.ofNullable(gateway);
             return this;
         }
-
+        public Builder gateway(String... gateway) {
+            return gateway(List.of(gateway));
+        }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }
-
         public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = Output.ofNullable(subnetMask);
             return this;
-        }
-        public NicIPSettingsArgs build() {
+        }        public NicIPSettingsArgs build() {
             return new NicIPSettingsArgs(allocationMethod, dnsServers, gateway, ipAddress, subnetMask);
         }
     }

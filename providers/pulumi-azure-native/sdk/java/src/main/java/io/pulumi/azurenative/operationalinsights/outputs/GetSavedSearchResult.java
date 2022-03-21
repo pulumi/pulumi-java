@@ -218,57 +218,49 @@ public final class GetSavedSearchResult {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
-
         public Builder functionParameters(@Nullable String functionParameters) {
             this.functionParameters = functionParameters;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder tags(@Nullable List<TagResponse> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TagResponse... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
-        }
-        public GetSavedSearchResult build() {
+        }        public GetSavedSearchResult build() {
             return new GetSavedSearchResult(category, displayName, etag, functionAlias, functionParameters, id, name, query, tags, type, version);
         }
     }

@@ -60,8 +60,7 @@ public final class PropertiesResponseNetworkInjection extends io.pulumi.resource
         public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
-        }
-        public PropertiesResponseNetworkInjection build() {
+        }        public PropertiesResponseNetworkInjection build() {
             return new PropertiesResponseNetworkInjection(virtualNetworks);
         }
     }

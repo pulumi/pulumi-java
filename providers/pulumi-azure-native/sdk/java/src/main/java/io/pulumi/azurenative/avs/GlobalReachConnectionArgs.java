@@ -122,52 +122,42 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
             this.authorizationKey = authorizationKey;
             return this;
         }
-
         public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Output.ofNullable(authorizationKey);
             return this;
         }
-
         public Builder globalReachConnectionName(@Nullable Output<String> globalReachConnectionName) {
             this.globalReachConnectionName = globalReachConnectionName;
             return this;
         }
-
         public Builder globalReachConnectionName(@Nullable String globalReachConnectionName) {
             this.globalReachConnectionName = Output.ofNullable(globalReachConnectionName);
             return this;
         }
-
         public Builder peerExpressRouteCircuit(@Nullable Output<String> peerExpressRouteCircuit) {
             this.peerExpressRouteCircuit = peerExpressRouteCircuit;
             return this;
         }
-
         public Builder peerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
             this.peerExpressRouteCircuit = Output.ofNullable(peerExpressRouteCircuit);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public GlobalReachConnectionArgs build() {
+        }        public GlobalReachConnectionArgs build() {
             return new GlobalReachConnectionArgs(authorizationKey, globalReachConnectionName, peerExpressRouteCircuit, privateCloudName, resourceGroupName);
         }
     }

@@ -79,22 +79,21 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
-
         public Builder certificates(List<String> certificates) {
             this.certificates = Output.of(Objects.requireNonNull(certificates));
             return this;
         }
-
+        public Builder certificates(String... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public PemCertificateListArgs build() {
+        }        public PemCertificateListArgs build() {
             return new PemCertificateListArgs(certificates, type);
         }
     }

@@ -300,82 +300,72 @@ public final class GetLinkResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkName(String linkName) {
             this.linkName = Objects.requireNonNull(linkName);
             return this;
         }
-
         public Builder mappings(@Nullable List<TypePropertiesMappingResponse> mappings) {
             this.mappings = mappings;
             return this;
         }
-
+        public Builder mappings(TypePropertiesMappingResponse... mappings) {
+            return mappings(List.of(mappings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationType(@Nullable String operationType) {
             this.operationType = operationType;
             return this;
         }
-
         public Builder participantPropertyReferences(List<ParticipantPropertyReferenceResponse> participantPropertyReferences) {
             this.participantPropertyReferences = Objects.requireNonNull(participantPropertyReferences);
             return this;
         }
-
+        public Builder participantPropertyReferences(ParticipantPropertyReferenceResponse... participantPropertyReferences) {
+            return participantPropertyReferences(List.of(participantPropertyReferences));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder referenceOnly(@Nullable Boolean referenceOnly) {
             this.referenceOnly = referenceOnly;
             return this;
         }
-
         public Builder sourceEntityType(String sourceEntityType) {
             this.sourceEntityType = Objects.requireNonNull(sourceEntityType);
             return this;
         }
-
         public Builder sourceEntityTypeName(String sourceEntityTypeName) {
             this.sourceEntityTypeName = Objects.requireNonNull(sourceEntityTypeName);
             return this;
         }
-
         public Builder targetEntityType(String targetEntityType) {
             this.targetEntityType = Objects.requireNonNull(targetEntityType);
             return this;
         }
-
         public Builder targetEntityTypeName(String targetEntityTypeName) {
             this.targetEntityTypeName = Objects.requireNonNull(targetEntityTypeName);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLinkResult build() {
+        }        public GetLinkResult build() {
             return new GetLinkResult(description, displayName, id, linkName, mappings, name, operationType, participantPropertyReferences, provisioningState, referenceOnly, sourceEntityType, sourceEntityTypeName, targetEntityType, targetEntityTypeName, tenantId, type);
         }
     }

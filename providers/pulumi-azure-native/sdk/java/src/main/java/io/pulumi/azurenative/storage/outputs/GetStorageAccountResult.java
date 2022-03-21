@@ -665,192 +665,157 @@ public final class GetStorageAccountResult {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
-
         public Builder allowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
             this.allowBlobPublicAccess = allowBlobPublicAccess;
             return this;
         }
-
         public Builder allowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
             this.allowSharedKeyAccess = allowSharedKeyAccess;
             return this;
         }
-
         public Builder azureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationResponse azureFilesIdentityBasedAuthentication) {
             this.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
             return this;
         }
-
         public Builder blobRestoreStatus(BlobRestoreStatusResponse blobRestoreStatus) {
             this.blobRestoreStatus = Objects.requireNonNull(blobRestoreStatus);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder customDomain(CustomDomainResponse customDomain) {
             this.customDomain = Objects.requireNonNull(customDomain);
             return this;
         }
-
         public Builder enableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
             this.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
             return this;
         }
-
         public Builder enableNfsV3(@Nullable Boolean enableNfsV3) {
             this.enableNfsV3 = enableNfsV3;
             return this;
         }
-
         public Builder encryption(EncryptionResponse encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder failoverInProgress(Boolean failoverInProgress) {
             this.failoverInProgress = Objects.requireNonNull(failoverInProgress);
             return this;
         }
-
         public Builder geoReplicationStats(GeoReplicationStatsResponse geoReplicationStats) {
             this.geoReplicationStats = Objects.requireNonNull(geoReplicationStats);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder isHnsEnabled(@Nullable Boolean isHnsEnabled) {
             this.isHnsEnabled = isHnsEnabled;
             return this;
         }
-
         public Builder keyCreationTime(KeyCreationTimeResponse keyCreationTime) {
             this.keyCreationTime = Objects.requireNonNull(keyCreationTime);
             return this;
         }
-
         public Builder keyPolicy(KeyPolicyResponse keyPolicy) {
             this.keyPolicy = Objects.requireNonNull(keyPolicy);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder largeFileSharesState(@Nullable String largeFileSharesState) {
             this.largeFileSharesState = largeFileSharesState;
             return this;
         }
-
         public Builder lastGeoFailoverTime(String lastGeoFailoverTime) {
             this.lastGeoFailoverTime = Objects.requireNonNull(lastGeoFailoverTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkRuleSet(NetworkRuleSetResponse networkRuleSet) {
             this.networkRuleSet = Objects.requireNonNull(networkRuleSet);
             return this;
         }
-
         public Builder primaryEndpoints(EndpointsResponse primaryEndpoints) {
             this.primaryEndpoints = Objects.requireNonNull(primaryEndpoints);
             return this;
         }
-
         public Builder primaryLocation(String primaryLocation) {
             this.primaryLocation = Objects.requireNonNull(primaryLocation);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routingPreference(@Nullable RoutingPreferenceResponse routingPreference) {
             this.routingPreference = routingPreference;
             return this;
         }
-
         public Builder sasPolicy(SasPolicyResponse sasPolicy) {
             this.sasPolicy = Objects.requireNonNull(sasPolicy);
             return this;
         }
-
         public Builder secondaryEndpoints(EndpointsResponse secondaryEndpoints) {
             this.secondaryEndpoints = Objects.requireNonNull(secondaryEndpoints);
             return this;
         }
-
         public Builder secondaryLocation(String secondaryLocation) {
             this.secondaryLocation = Objects.requireNonNull(secondaryLocation);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder statusOfPrimary(String statusOfPrimary) {
             this.statusOfPrimary = Objects.requireNonNull(statusOfPrimary);
             return this;
         }
-
         public Builder statusOfSecondary(String statusOfSecondary) {
             this.statusOfSecondary = Objects.requireNonNull(statusOfSecondary);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStorageAccountResult build() {
+        }        public GetStorageAccountResult build() {
             return new GetStorageAccountResult(accessTier, allowBlobPublicAccess, allowSharedKeyAccess, azureFilesIdentityBasedAuthentication, blobRestoreStatus, creationTime, customDomain, enableHttpsTrafficOnly, enableNfsV3, encryption, extendedLocation, failoverInProgress, geoReplicationStats, id, identity, isHnsEnabled, keyCreationTime, keyPolicy, kind, largeFileSharesState, lastGeoFailoverTime, location, minimumTlsVersion, name, networkRuleSet, primaryEndpoints, primaryLocation, privateEndpointConnections, provisioningState, routingPreference, sasPolicy, secondaryEndpoints, secondaryLocation, sku, statusOfPrimary, statusOfSecondary, tags, type);
         }
     }

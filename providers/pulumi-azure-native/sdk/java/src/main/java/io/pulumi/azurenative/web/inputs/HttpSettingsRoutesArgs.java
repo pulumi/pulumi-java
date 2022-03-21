@@ -61,12 +61,10 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
             this.apiPrefix = apiPrefix;
             return this;
         }
-
         public Builder apiPrefix(@Nullable String apiPrefix) {
             this.apiPrefix = Output.ofNullable(apiPrefix);
             return this;
-        }
-        public HttpSettingsRoutesArgs build() {
+        }        public HttpSettingsRoutesArgs build() {
             return new HttpSettingsRoutesArgs(apiPrefix);
         }
     }

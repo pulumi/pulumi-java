@@ -51,8 +51,7 @@ public final class MHSMPrivateEndpointResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public MHSMPrivateEndpointResponse build() {
+        }        public MHSMPrivateEndpointResponse build() {
             return new MHSMPrivateEndpointResponse(id);
         }
     }

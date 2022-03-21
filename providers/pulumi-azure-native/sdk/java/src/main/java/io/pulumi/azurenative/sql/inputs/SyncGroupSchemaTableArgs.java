@@ -80,22 +80,21 @@ public final class SyncGroupSchemaTableArgs extends io.pulumi.resources.Resource
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<SyncGroupSchemaTableColumnArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-
+        public Builder columns(SyncGroupSchemaTableColumnArgs... columns) {
+            return columns(List.of(columns));
+        }
         public Builder quotedName(@Nullable Output<String> quotedName) {
             this.quotedName = quotedName;
             return this;
         }
-
         public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = Output.ofNullable(quotedName);
             return this;
-        }
-        public SyncGroupSchemaTableArgs build() {
+        }        public SyncGroupSchemaTableArgs build() {
             return new SyncGroupSchemaTableArgs(columns, quotedName);
         }
     }

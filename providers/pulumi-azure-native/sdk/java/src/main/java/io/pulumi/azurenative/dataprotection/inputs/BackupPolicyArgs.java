@@ -97,32 +97,32 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
             return this;
         }
-
         public Builder datasourceTypes(List<String> datasourceTypes) {
             this.datasourceTypes = Output.of(Objects.requireNonNull(datasourceTypes));
             return this;
         }
-
+        public Builder datasourceTypes(String... datasourceTypes) {
+            return datasourceTypes(List.of(datasourceTypes));
+        }
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public Builder policyRules(Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
             this.policyRules = Objects.requireNonNull(policyRules);
             return this;
         }
-
         public Builder policyRules(List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>> policyRules) {
             this.policyRules = Output.of(Objects.requireNonNull(policyRules));
             return this;
         }
-        public BackupPolicyArgs build() {
+        public Builder policyRules(Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>... policyRules) {
+            return policyRules(List.of(policyRules));
+        }        public BackupPolicyArgs build() {
             return new BackupPolicyArgs(datasourceTypes, objectType, policyRules);
         }
     }

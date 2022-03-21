@@ -130,52 +130,42 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
             this.stretchMode = Output.ofNullable(stretchMode);
             return this;
         }
-
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
             this.syncMode = syncMode;
             return this;
         }
-
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
             this.syncMode = Output.ofNullable(syncMode);
             return this;
-        }
-        public VideoArgs build() {
+        }        public VideoArgs build() {
             return new VideoArgs(keyFrameInterval, label, odataType, stretchMode, syncMode);
         }
     }

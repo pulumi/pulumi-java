@@ -59,12 +59,10 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.serverVersion = serverVersion;
             return this;
         }
-
         public Builder serverVersion(@Nullable Either<String,ServerVersion> serverVersion) {
             this.serverVersion = Output.ofNullable(serverVersion);
             return this;
-        }
-        public ApiPropertiesArgs build() {
+        }        public ApiPropertiesArgs build() {
             return new ApiPropertiesArgs(serverVersion);
         }
     }

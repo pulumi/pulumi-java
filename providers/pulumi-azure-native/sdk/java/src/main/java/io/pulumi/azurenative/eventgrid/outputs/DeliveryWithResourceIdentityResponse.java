@@ -81,12 +81,10 @@ public final class DeliveryWithResourceIdentityResponse {
             this.destination = destination;
             return this;
         }
-
         public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             this.identity = identity;
             return this;
-        }
-        public DeliveryWithResourceIdentityResponse build() {
+        }        public DeliveryWithResourceIdentityResponse build() {
             return new DeliveryWithResourceIdentityResponse(destination, identity);
         }
     }

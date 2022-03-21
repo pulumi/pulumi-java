@@ -202,52 +202,48 @@ public final class GetServerSecurityAlertPolicyResult {
             this.disabledAlerts = disabledAlerts;
             return this;
         }
-
+        public Builder disabledAlerts(String... disabledAlerts) {
+            return disabledAlerts(List.of(disabledAlerts));
+        }
         public Builder emailAccountAdmins(@Nullable Boolean emailAccountAdmins) {
             this.emailAccountAdmins = emailAccountAdmins;
             return this;
         }
-
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
-
+        public Builder emailAddresses(String... emailAddresses) {
+            return emailAddresses(List.of(emailAddresses));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
             this.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
-
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerSecurityAlertPolicyResult build() {
+        }        public GetServerSecurityAlertPolicyResult build() {
             return new GetServerSecurityAlertPolicyResult(disabledAlerts, emailAccountAdmins, emailAddresses, id, name, retentionDays, state, storageAccountAccessKey, storageEndpoint, type);
         }
     }

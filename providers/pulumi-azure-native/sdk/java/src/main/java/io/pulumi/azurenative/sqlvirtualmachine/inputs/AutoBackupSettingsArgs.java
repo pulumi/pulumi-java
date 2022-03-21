@@ -243,122 +243,98 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
             this.backupScheduleType = backupScheduleType;
             return this;
         }
-
         public Builder backupScheduleType(@Nullable Either<String,BackupScheduleType> backupScheduleType) {
             this.backupScheduleType = Output.ofNullable(backupScheduleType);
             return this;
         }
-
         public Builder backupSystemDbs(@Nullable Output<Boolean> backupSystemDbs) {
             this.backupSystemDbs = backupSystemDbs;
             return this;
         }
-
         public Builder backupSystemDbs(@Nullable Boolean backupSystemDbs) {
             this.backupSystemDbs = Output.ofNullable(backupSystemDbs);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder enableEncryption(@Nullable Output<Boolean> enableEncryption) {
             this.enableEncryption = enableEncryption;
             return this;
         }
-
         public Builder enableEncryption(@Nullable Boolean enableEncryption) {
             this.enableEncryption = Output.ofNullable(enableEncryption);
             return this;
         }
-
         public Builder fullBackupFrequency(@Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency) {
             this.fullBackupFrequency = fullBackupFrequency;
             return this;
         }
-
         public Builder fullBackupFrequency(@Nullable Either<String,FullBackupFrequencyType> fullBackupFrequency) {
             this.fullBackupFrequency = Output.ofNullable(fullBackupFrequency);
             return this;
         }
-
         public Builder fullBackupStartTime(@Nullable Output<Integer> fullBackupStartTime) {
             this.fullBackupStartTime = fullBackupStartTime;
             return this;
         }
-
         public Builder fullBackupStartTime(@Nullable Integer fullBackupStartTime) {
             this.fullBackupStartTime = Output.ofNullable(fullBackupStartTime);
             return this;
         }
-
         public Builder fullBackupWindowHours(@Nullable Output<Integer> fullBackupWindowHours) {
             this.fullBackupWindowHours = fullBackupWindowHours;
             return this;
         }
-
         public Builder fullBackupWindowHours(@Nullable Integer fullBackupWindowHours) {
             this.fullBackupWindowHours = Output.ofNullable(fullBackupWindowHours);
             return this;
         }
-
         public Builder logBackupFrequency(@Nullable Output<Integer> logBackupFrequency) {
             this.logBackupFrequency = logBackupFrequency;
             return this;
         }
-
         public Builder logBackupFrequency(@Nullable Integer logBackupFrequency) {
             this.logBackupFrequency = Output.ofNullable(logBackupFrequency);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
-
         public Builder storageAccessKey(@Nullable Output<String> storageAccessKey) {
             this.storageAccessKey = storageAccessKey;
             return this;
         }
-
         public Builder storageAccessKey(@Nullable String storageAccessKey) {
             this.storageAccessKey = Output.ofNullable(storageAccessKey);
             return this;
         }
-
         public Builder storageAccountUrl(@Nullable Output<String> storageAccountUrl) {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }
-
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             this.storageAccountUrl = Output.ofNullable(storageAccountUrl);
             return this;
-        }
-        public AutoBackupSettingsArgs build() {
+        }        public AutoBackupSettingsArgs build() {
             return new AutoBackupSettingsArgs(backupScheduleType, backupSystemDbs, enable, enableEncryption, fullBackupFrequency, fullBackupStartTime, fullBackupWindowHours, logBackupFrequency, password, retentionPeriod, storageAccessKey, storageAccountUrl);
         }
     }

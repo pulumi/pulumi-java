@@ -54,7 +54,9 @@ public final class UniqueKeyPolicyResponse {
             this.uniqueKeys = uniqueKeys;
             return this;
         }
-        public UniqueKeyPolicyResponse build() {
+        public Builder uniqueKeys(UniqueKeyResponse... uniqueKeys) {
+            return uniqueKeys(List.of(uniqueKeys));
+        }        public UniqueKeyPolicyResponse build() {
             return new UniqueKeyPolicyResponse(uniqueKeys);
         }
     }

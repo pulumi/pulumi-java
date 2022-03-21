@@ -589,342 +589,274 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder adlsResourceGroup(@Nullable Output<String> adlsResourceGroup) {
             this.adlsResourceGroup = adlsResourceGroup;
             return this;
         }
-
         public Builder adlsResourceGroup(@Nullable String adlsResourceGroup) {
             this.adlsResourceGroup = Output.ofNullable(adlsResourceGroup);
             return this;
         }
-
         public Builder adlsSubscriptionId(@Nullable Output<String> adlsSubscriptionId) {
             this.adlsSubscriptionId = adlsSubscriptionId;
             return this;
         }
-
         public Builder adlsSubscriptionId(@Nullable String adlsSubscriptionId) {
             this.adlsSubscriptionId = Output.ofNullable(adlsSubscriptionId);
             return this;
         }
-
         public Builder authorityUrl(@Nullable Output<String> authorityUrl) {
             this.authorityUrl = authorityUrl;
             return this;
         }
-
         public Builder authorityUrl(@Nullable String authorityUrl) {
             this.authorityUrl = Output.ofNullable(authorityUrl);
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder dataStoreType(Output<Either<String,DatastoreTypeArm>> dataStoreType) {
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
-
         public Builder dataStoreType(Either<String,DatastoreTypeArm> dataStoreType) {
             this.dataStoreType = Output.of(Objects.requireNonNull(dataStoreType));
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
-
         public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder enforceSSL(@Nullable Output<Boolean> enforceSSL) {
             this.enforceSSL = enforceSSL;
             return this;
         }
-
         public Builder enforceSSL(@Nullable Boolean enforceSSL) {
             this.enforceSSL = Output.ofNullable(enforceSSL);
             return this;
         }
-
         public Builder fileSystem(@Nullable Output<String> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public Builder fileSystem(@Nullable String fileSystem) {
             this.fileSystem = Output.ofNullable(fileSystem);
             return this;
         }
-
         public Builder includeSecret(@Nullable Output<Boolean> includeSecret) {
             this.includeSecret = includeSecret;
             return this;
         }
-
         public Builder includeSecret(@Nullable Boolean includeSecret) {
             this.includeSecret = Output.ofNullable(includeSecret);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceUrl(@Nullable Output<String> resourceUrl) {
             this.resourceUrl = resourceUrl;
             return this;
         }
-
         public Builder resourceUrl(@Nullable String resourceUrl) {
             this.resourceUrl = Output.ofNullable(resourceUrl);
             return this;
         }
-
         public Builder sasToken(@Nullable Output<String> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
-
         public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = Output.ofNullable(sasToken);
             return this;
         }
-
         public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = Output.ofNullable(serverName);
             return this;
         }
-
         public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = Output.ofNullable(shareName);
             return this;
         }
-
         public Builder skipValidation(@Nullable Output<Boolean> skipValidation) {
             this.skipValidation = skipValidation;
             return this;
         }
-
         public Builder skipValidation(@Nullable Boolean skipValidation) {
             this.skipValidation = Output.ofNullable(skipValidation);
             return this;
         }
-
         public Builder storageAccountResourceGroup(@Nullable Output<String> storageAccountResourceGroup) {
             this.storageAccountResourceGroup = storageAccountResourceGroup;
             return this;
         }
-
         public Builder storageAccountResourceGroup(@Nullable String storageAccountResourceGroup) {
             this.storageAccountResourceGroup = Output.ofNullable(storageAccountResourceGroup);
             return this;
         }
-
         public Builder storageAccountSubscriptionId(@Nullable Output<String> storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
-
         public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = Output.ofNullable(storageAccountSubscriptionId);
             return this;
         }
-
         public Builder storeName(@Nullable Output<String> storeName) {
             this.storeName = storeName;
             return this;
         }
-
         public Builder storeName(@Nullable String storeName) {
             this.storeName = Output.ofNullable(storeName);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = Output.ofNullable(userId);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public Builder workspaceSystemAssignedIdentity(@Nullable Output<Boolean> workspaceSystemAssignedIdentity) {
             this.workspaceSystemAssignedIdentity = workspaceSystemAssignedIdentity;
             return this;
         }
-
         public Builder workspaceSystemAssignedIdentity(@Nullable Boolean workspaceSystemAssignedIdentity) {
             this.workspaceSystemAssignedIdentity = Output.ofNullable(workspaceSystemAssignedIdentity);
             return this;
-        }
-        public MachineLearningDatastoreArgs build() {
+        }        public MachineLearningDatastoreArgs build() {
             return new MachineLearningDatastoreArgs(accountKey, accountName, adlsResourceGroup, adlsSubscriptionId, authorityUrl, clientId, clientSecret, containerName, dataStoreType, databaseName, datastoreName, description, endpoint, enforceSSL, fileSystem, includeSecret, name, password, port, protocol, resourceGroupName, resourceUrl, sasToken, serverName, shareName, skipValidation, storageAccountResourceGroup, storageAccountSubscriptionId, storeName, tenantId, userId, userName, workspaceName, workspaceSystemAssignedIdentity);
         }
     }

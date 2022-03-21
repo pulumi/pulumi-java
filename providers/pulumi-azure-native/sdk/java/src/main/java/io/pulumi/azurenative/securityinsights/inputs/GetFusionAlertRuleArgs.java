@@ -88,17 +88,14 @@ public final class GetFusionAlertRuleArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetFusionAlertRuleArgs build() {
+        }        public GetFusionAlertRuleArgs build() {
             return new GetFusionAlertRuleArgs(resourceGroupName, ruleId, workspaceName);
         }
     }

@@ -114,22 +114,27 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
             this.facilityNames = facilityNames;
             return this;
         }
-
+        public Builder facilityNames(String... facilityNames) {
+            return facilityNames(List.of(facilityNames));
+        }
         public Builder logLevels(@Nullable List<String> logLevels) {
             this.logLevels = logLevels;
             return this;
         }
-
+        public Builder logLevels(String... logLevels) {
+            return logLevels(List.of(logLevels));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }
-        public SyslogDataSourceResponse build() {
+        public Builder streams(String... streams) {
+            return streams(List.of(streams));
+        }        public SyslogDataSourceResponse build() {
             return new SyslogDataSourceResponse(facilityNames, logLevels, name, streams);
         }
     }

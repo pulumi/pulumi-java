@@ -122,52 +122,42 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.configName = configName;
             return this;
         }
-
         public Builder configName(@Nullable String configName) {
             this.configName = Output.ofNullable(configName);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder postMigrationName(Output<String> postMigrationName) {
             this.postMigrationName = Objects.requireNonNull(postMigrationName);
             return this;
         }
-
         public Builder postMigrationName(String postMigrationName) {
             this.postMigrationName = Output.of(Objects.requireNonNull(postMigrationName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder targetNamespace(Output<String> targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
-
         public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Output.of(Objects.requireNonNull(targetNamespace));
             return this;
-        }
-        public MigrationConfigArgs build() {
+        }        public MigrationConfigArgs build() {
             return new MigrationConfigArgs(configName, namespaceName, postMigrationName, resourceGroupName, targetNamespace);
         }
     }

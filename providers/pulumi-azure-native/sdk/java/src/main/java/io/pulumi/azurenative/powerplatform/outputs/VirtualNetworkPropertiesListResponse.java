@@ -73,12 +73,13 @@ public final class VirtualNetworkPropertiesListResponse {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<VirtualNetworkPropertiesResponse> value) {
             this.value = value;
             return this;
         }
-        public VirtualNetworkPropertiesListResponse build() {
+        public Builder value(VirtualNetworkPropertiesResponse... value) {
+            return value(List.of(value));
+        }        public VirtualNetworkPropertiesListResponse build() {
             return new VirtualNetworkPropertiesListResponse(nextLink, value);
         }
     }

@@ -79,22 +79,18 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
             this.antiMalware = antiMalware;
             return this;
         }
-
         public Builder antiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareArgs antiMalware) {
             this.antiMalware = Output.ofNullable(antiMalware);
             return this;
         }
-
         public Builder vmBackup(@Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup) {
             this.vmBackup = vmBackup;
             return this;
         }
-
         public Builder vmBackup(@Nullable ConfigurationProfilePreferenceVmBackupArgs vmBackup) {
             this.vmBackup = Output.ofNullable(vmBackup);
             return this;
-        }
-        public ConfigurationProfilePreferencePropertiesArgs build() {
+        }        public ConfigurationProfilePreferencePropertiesArgs build() {
             return new ConfigurationProfilePreferencePropertiesArgs(antiMalware, vmBackup);
         }
     }

@@ -61,12 +61,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable VaultPropertiesEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
-        }
-        public VaultPropertiesArgs build() {
+        }        public VaultPropertiesArgs build() {
             return new VaultPropertiesArgs(encryption);
         }
     }

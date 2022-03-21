@@ -115,22 +115,21 @@ public final class EventHandlerResponse {
             this.auth = auth;
             return this;
         }
-
         public Builder systemEvents(@Nullable List<String> systemEvents) {
             this.systemEvents = systemEvents;
             return this;
         }
-
+        public Builder systemEvents(String... systemEvents) {
+            return systemEvents(List.of(systemEvents));
+        }
         public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public Builder userEventPattern(@Nullable String userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
-        }
-        public EventHandlerResponse build() {
+        }        public EventHandlerResponse build() {
             return new EventHandlerResponse(auth, systemEvents, urlTemplate, userEventPattern);
         }
     }

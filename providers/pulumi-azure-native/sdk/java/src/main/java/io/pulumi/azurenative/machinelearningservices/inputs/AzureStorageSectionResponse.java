@@ -281,77 +281,62 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
-
         public Builder areWorkspaceManagedIdentitiesAllowed(@Nullable Boolean areWorkspaceManagedIdentitiesAllowed) {
             this.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;
             return this;
         }
-
         public Builder blobCacheTimeout(@Nullable Integer blobCacheTimeout) {
             this.blobCacheTimeout = blobCacheTimeout;
             return this;
         }
-
         public Builder clientCredentials(@Nullable ClientCredentialsResponse clientCredentials) {
             this.clientCredentials = clientCredentials;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder credential(@Nullable String credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credentialType(@Nullable String credentialType) {
             this.credentialType = credentialType;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder isSas(@Nullable Boolean isSas) {
             this.isSas = isSas;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = sasToken;
             return this;
         }
-
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
-        }
-        public AzureStorageSectionResponse build() {
+        }        public AzureStorageSectionResponse build() {
             return new AzureStorageSectionResponse(accountKey, accountName, areWorkspaceManagedIdentitiesAllowed, blobCacheTimeout, clientCredentials, containerName, credential, credentialType, endpoint, isSas, protocol, resourceGroup, sasToken, serviceDataAccessAuthIdentity, subscriptionId);
         }
     }

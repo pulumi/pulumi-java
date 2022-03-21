@@ -73,12 +73,13 @@ public final class GetActiveSessionsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<BastionActiveSessionResponse> value) {
             this.value = value;
             return this;
         }
-        public GetActiveSessionsResult build() {
+        public Builder value(BastionActiveSessionResponse... value) {
+            return value(List.of(value));
+        }        public GetActiveSessionsResult build() {
             return new GetActiveSessionsResult(nextLink, value);
         }
     }

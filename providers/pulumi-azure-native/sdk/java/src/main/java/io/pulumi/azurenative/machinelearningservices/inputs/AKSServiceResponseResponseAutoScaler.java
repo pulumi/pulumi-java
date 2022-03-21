@@ -127,27 +127,22 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
             this.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
-
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
-
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
-
         public Builder targetUtilization(@Nullable Integer targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
-        }
-        public AKSServiceResponseResponseAutoScaler build() {
+        }        public AKSServiceResponseResponseAutoScaler build() {
             return new AKSServiceResponseResponseAutoScaler(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);
         }
     }

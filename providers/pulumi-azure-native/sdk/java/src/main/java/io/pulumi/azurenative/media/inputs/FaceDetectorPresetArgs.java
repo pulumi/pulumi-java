@@ -132,52 +132,42 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
             this.blurType = blurType;
             return this;
         }
-
         public Builder blurType(@Nullable Either<String,BlurType> blurType) {
             this.blurType = Output.ofNullable(blurType);
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = Output.ofNullable(experimentalOptions);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,FaceRedactorMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,FaceRedactorMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder resolution(@Nullable Output<Either<String,AnalysisResolution>> resolution) {
             this.resolution = resolution;
             return this;
         }
-
         public Builder resolution(@Nullable Either<String,AnalysisResolution> resolution) {
             this.resolution = Output.ofNullable(resolution);
             return this;
-        }
-        public FaceDetectorPresetArgs build() {
+        }        public FaceDetectorPresetArgs build() {
             return new FaceDetectorPresetArgs(blurType, experimentalOptions, mode, odataType, resolution);
         }
     }

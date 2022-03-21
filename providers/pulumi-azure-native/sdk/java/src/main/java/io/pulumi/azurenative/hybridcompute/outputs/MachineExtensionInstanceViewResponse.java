@@ -104,22 +104,18 @@ public final class MachineExtensionInstanceViewResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(@Nullable MachineExtensionInstanceViewResponseStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
-        }
-        public MachineExtensionInstanceViewResponse build() {
+        }        public MachineExtensionInstanceViewResponse build() {
             return new MachineExtensionInstanceViewResponse(name, status, type, typeHandlerVersion);
         }
     }

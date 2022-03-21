@@ -509,282 +509,244 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder apiProperties(@Nullable Output<ApiPropertiesArgs> apiProperties) {
             this.apiProperties = apiProperties;
             return this;
         }
-
         public Builder apiProperties(@Nullable ApiPropertiesArgs apiProperties) {
             this.apiProperties = Output.ofNullable(apiProperties);
             return this;
         }
-
         public Builder backupPolicy(@Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
-
         public Builder backupPolicy(@Nullable Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs> backupPolicy) {
             this.backupPolicy = Output.ofNullable(backupPolicy);
             return this;
         }
-
         public Builder capabilities(@Nullable Output<List<CapabilityArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(CapabilityArgs... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder connectorOffer(@Nullable Output<Either<String,ConnectorOffer>> connectorOffer) {
             this.connectorOffer = connectorOffer;
             return this;
         }
-
         public Builder connectorOffer(@Nullable Either<String,ConnectorOffer> connectorOffer) {
             this.connectorOffer = Output.ofNullable(connectorOffer);
             return this;
         }
-
         public Builder consistencyPolicy(@Nullable Output<ConsistencyPolicyArgs> consistencyPolicy) {
             this.consistencyPolicy = consistencyPolicy;
             return this;
         }
-
         public Builder consistencyPolicy(@Nullable ConsistencyPolicyArgs consistencyPolicy) {
             this.consistencyPolicy = Output.ofNullable(consistencyPolicy);
             return this;
         }
-
         public Builder cors(@Nullable Output<List<CorsPolicyArgs>> cors) {
             this.cors = cors;
             return this;
         }
-
         public Builder cors(@Nullable List<CorsPolicyArgs> cors) {
             this.cors = Output.ofNullable(cors);
             return this;
         }
-
+        public Builder cors(CorsPolicyArgs... cors) {
+            return cors(List.of(cors));
+        }
         public Builder databaseAccountOfferType(Output<DatabaseAccountOfferType> databaseAccountOfferType) {
             this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType);
             return this;
         }
-
         public Builder databaseAccountOfferType(DatabaseAccountOfferType databaseAccountOfferType) {
             this.databaseAccountOfferType = Output.of(Objects.requireNonNull(databaseAccountOfferType));
             return this;
         }
-
         public Builder defaultIdentity(@Nullable Output<String> defaultIdentity) {
             this.defaultIdentity = defaultIdentity;
             return this;
         }
-
         public Builder defaultIdentity(@Nullable String defaultIdentity) {
             this.defaultIdentity = Output.ofNullable(defaultIdentity);
             return this;
         }
-
         public Builder disableKeyBasedMetadataWriteAccess(@Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess) {
             this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
             return this;
         }
-
         public Builder disableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
             this.disableKeyBasedMetadataWriteAccess = Output.ofNullable(disableKeyBasedMetadataWriteAccess);
             return this;
         }
-
         public Builder enableAnalyticalStorage(@Nullable Output<Boolean> enableAnalyticalStorage) {
             this.enableAnalyticalStorage = enableAnalyticalStorage;
             return this;
         }
-
         public Builder enableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
             this.enableAnalyticalStorage = Output.ofNullable(enableAnalyticalStorage);
             return this;
         }
-
         public Builder enableAutomaticFailover(@Nullable Output<Boolean> enableAutomaticFailover) {
             this.enableAutomaticFailover = enableAutomaticFailover;
             return this;
         }
-
         public Builder enableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
             this.enableAutomaticFailover = Output.ofNullable(enableAutomaticFailover);
             return this;
         }
-
         public Builder enableCassandraConnector(@Nullable Output<Boolean> enableCassandraConnector) {
             this.enableCassandraConnector = enableCassandraConnector;
             return this;
         }
-
         public Builder enableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
             this.enableCassandraConnector = Output.ofNullable(enableCassandraConnector);
             return this;
         }
-
         public Builder enableFreeTier(@Nullable Output<Boolean> enableFreeTier) {
             this.enableFreeTier = enableFreeTier;
             return this;
         }
-
         public Builder enableFreeTier(@Nullable Boolean enableFreeTier) {
             this.enableFreeTier = Output.ofNullable(enableFreeTier);
             return this;
         }
-
         public Builder enableMultipleWriteLocations(@Nullable Output<Boolean> enableMultipleWriteLocations) {
             this.enableMultipleWriteLocations = enableMultipleWriteLocations;
             return this;
         }
-
         public Builder enableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
             this.enableMultipleWriteLocations = Output.ofNullable(enableMultipleWriteLocations);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder ipRules(@Nullable Output<List<IpAddressOrRangeArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
-
         public Builder ipRules(@Nullable List<IpAddressOrRangeArgs> ipRules) {
             this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
-
+        public Builder ipRules(IpAddressOrRangeArgs... ipRules) {
+            return ipRules(List.of(ipRules));
+        }
         public Builder isVirtualNetworkFilterEnabled(@Nullable Output<Boolean> isVirtualNetworkFilterEnabled) {
             this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
             return this;
         }
-
         public Builder isVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
             this.isVirtualNetworkFilterEnabled = Output.ofNullable(isVirtualNetworkFilterEnabled);
             return this;
         }
-
         public Builder keyVaultKeyUri(@Nullable Output<String> keyVaultKeyUri) {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
-
         public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
             this.keyVaultKeyUri = Output.ofNullable(keyVaultKeyUri);
             return this;
         }
-
         public Builder kind(@Nullable Output<Either<String,DatabaseAccountKind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,DatabaseAccountKind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder locations(Output<List<LocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public Builder locations(List<LocationArgs> locations) {
             this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
-
+        public Builder locations(LocationArgs... locations) {
+            return locations(List.of(locations));
+        }
         public Builder networkAclBypass(@Nullable Output<NetworkAclBypass> networkAclBypass) {
             this.networkAclBypass = networkAclBypass;
             return this;
         }
-
         public Builder networkAclBypass(@Nullable NetworkAclBypass networkAclBypass) {
             this.networkAclBypass = Output.ofNullable(networkAclBypass);
             return this;
         }
-
         public Builder networkAclBypassResourceIds(@Nullable Output<List<String>> networkAclBypassResourceIds) {
             this.networkAclBypassResourceIds = networkAclBypassResourceIds;
             return this;
         }
-
         public Builder networkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
             this.networkAclBypassResourceIds = Output.ofNullable(networkAclBypassResourceIds);
             return this;
         }
-
+        public Builder networkAclBypassResourceIds(String... networkAclBypassResourceIds) {
+            return networkAclBypassResourceIds(List.of(networkAclBypassResourceIds));
+        }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
-        public DatabaseAccountArgs build() {
+        public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public DatabaseAccountArgs build() {
             return new DatabaseAccountArgs(accountName, apiProperties, backupPolicy, capabilities, connectorOffer, consistencyPolicy, cors, databaseAccountOfferType, defaultIdentity, disableKeyBasedMetadataWriteAccess, enableAnalyticalStorage, enableAutomaticFailover, enableCassandraConnector, enableFreeTier, enableMultipleWriteLocations, identity, ipRules, isVirtualNetworkFilterEnabled, keyVaultKeyUri, kind, location, locations, networkAclBypass, networkAclBypassResourceIds, publicNetworkAccess, resourceGroupName, tags, virtualNetworkRules);
         }
     }

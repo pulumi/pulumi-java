@@ -129,27 +129,25 @@ public final class RestHealthCheckStepAttributesResponse extends io.pulumi.resou
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
-
+        public Builder healthChecks(RestHealthCheckResponse... healthChecks) {
+            return healthChecks(List.of(healthChecks));
+        }
         public Builder healthyStateDuration(String healthyStateDuration) {
             this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
             return this;
         }
-
         public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
             this.maxElasticDuration = maxElasticDuration;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = waitDuration;
             return this;
-        }
-        public RestHealthCheckStepAttributesResponse build() {
+        }        public RestHealthCheckStepAttributesResponse build() {
             return new RestHealthCheckStepAttributesResponse(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);
         }
     }

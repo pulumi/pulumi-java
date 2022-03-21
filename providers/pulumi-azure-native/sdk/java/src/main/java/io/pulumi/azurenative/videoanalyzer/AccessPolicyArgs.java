@@ -125,52 +125,42 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicyName = accessPolicyName;
             return this;
         }
-
         public Builder accessPolicyName(@Nullable String accessPolicyName) {
             this.accessPolicyName = Output.ofNullable(accessPolicyName);
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder authentication(@Nullable Output<JwtAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable JwtAuthenticationArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder role(@Nullable Output<Either<String,AccessPolicyRole>> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable Either<String,AccessPolicyRole> role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public AccessPolicyArgs build() {
+        }        public AccessPolicyArgs build() {
             return new AccessPolicyArgs(accessPolicyName, accountName, authentication, resourceGroupName, role);
         }
     }

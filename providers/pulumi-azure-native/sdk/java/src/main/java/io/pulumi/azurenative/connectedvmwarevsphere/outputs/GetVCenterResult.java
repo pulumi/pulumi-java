@@ -334,92 +334,77 @@ public final class GetVCenterResult {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
-
         public Builder credentials(@Nullable VICredentialResponse credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder customResourceName(String customResourceName) {
             this.customResourceName = Objects.requireNonNull(customResourceName);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceUuid(String instanceUuid) {
             this.instanceUuid = Objects.requireNonNull(instanceUuid);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder statuses(List<ResourceStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(ResourceStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetVCenterResult build() {
+        }        public GetVCenterResult build() {
             return new GetVCenterResult(connectionStatus, credentials, customResourceName, extendedLocation, fqdn, id, instanceUuid, kind, location, name, port, provisioningState, statuses, systemData, tags, type, uuid, version);
         }
     }

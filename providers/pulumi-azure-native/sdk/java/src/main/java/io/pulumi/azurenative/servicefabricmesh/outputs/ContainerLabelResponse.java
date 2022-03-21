@@ -69,12 +69,10 @@ public final class ContainerLabelResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ContainerLabelResponse build() {
+        }        public ContainerLabelResponse build() {
             return new ContainerLabelResponse(name, value);
         }
     }

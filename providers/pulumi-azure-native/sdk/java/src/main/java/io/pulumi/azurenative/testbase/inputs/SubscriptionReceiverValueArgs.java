@@ -94,32 +94,26 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder subscriptionName(@Nullable Output<String> subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
         }
-
         public Builder subscriptionName(@Nullable String subscriptionName) {
             this.subscriptionName = Output.ofNullable(subscriptionName);
             return this;
-        }
-        public SubscriptionReceiverValueArgs build() {
+        }        public SubscriptionReceiverValueArgs build() {
             return new SubscriptionReceiverValueArgs(role, subscriptionId, subscriptionName);
         }
     }

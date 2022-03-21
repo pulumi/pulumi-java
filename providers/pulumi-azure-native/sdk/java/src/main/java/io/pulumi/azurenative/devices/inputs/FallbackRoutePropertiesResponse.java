@@ -128,27 +128,25 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
             this.condition = condition;
             return this;
         }
-
         public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
-
+        public Builder endpointNames(String... endpointNames) {
+            return endpointNames(List.of(endpointNames));
+        }
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public FallbackRoutePropertiesResponse build() {
+        }        public FallbackRoutePropertiesResponse build() {
             return new FallbackRoutePropertiesResponse(condition, endpointNames, isEnabled, name, source);
         }
     }

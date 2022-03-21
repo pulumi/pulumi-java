@@ -69,12 +69,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse build() {
+        }        public ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
         }
     }

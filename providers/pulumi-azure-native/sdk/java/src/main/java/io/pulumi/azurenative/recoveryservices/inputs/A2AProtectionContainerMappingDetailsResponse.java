@@ -127,27 +127,22 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
             this.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
-
         public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
             this.automationAccountArmId = automationAccountArmId;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder jobScheduleName(@Nullable String jobScheduleName) {
             this.jobScheduleName = jobScheduleName;
             return this;
         }
-
         public Builder scheduleName(@Nullable String scheduleName) {
             this.scheduleName = scheduleName;
             return this;
-        }
-        public A2AProtectionContainerMappingDetailsResponse build() {
+        }        public A2AProtectionContainerMappingDetailsResponse build() {
             return new A2AProtectionContainerMappingDetailsResponse(agentAutoUpdateStatus, automationAccountArmId, instanceType, jobScheduleName, scheduleName);
         }
     }

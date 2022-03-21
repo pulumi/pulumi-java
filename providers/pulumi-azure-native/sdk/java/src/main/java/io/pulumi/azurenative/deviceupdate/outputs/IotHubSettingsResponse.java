@@ -87,17 +87,14 @@ public final class IotHubSettingsResponse {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
-
         public Builder ioTHubConnectionString(@Nullable String ioTHubConnectionString) {
             this.ioTHubConnectionString = ioTHubConnectionString;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public IotHubSettingsResponse build() {
+        }        public IotHubSettingsResponse build() {
             return new IotHubSettingsResponse(eventHubConnectionString, ioTHubConnectionString, resourceId);
         }
     }

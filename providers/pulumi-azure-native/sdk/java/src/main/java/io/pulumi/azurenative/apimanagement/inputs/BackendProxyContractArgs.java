@@ -94,32 +94,26 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public BackendProxyContractArgs build() {
+        }        public BackendProxyContractArgs build() {
             return new BackendProxyContractArgs(password, url, username);
         }
     }

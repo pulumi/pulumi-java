@@ -88,17 +88,14 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFunctionArgs build() {
+        }        public GetFunctionArgs build() {
             return new GetFunctionArgs(functionName, jobName, resourceGroupName);
         }
     }

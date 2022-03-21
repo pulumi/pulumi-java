@@ -200,52 +200,42 @@ public final class GetNotebookProxyResult {
             this.hostname = hostname;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicDns(@Nullable String publicDns) {
             this.publicDns = publicDns;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder secondaryAppId(@Nullable String secondaryAppId) {
             this.secondaryAppId = secondaryAppId;
             return this;
         }
-
         public Builder systemData(@Nullable NotebookResourceSystemDataResponse systemData) {
             this.systemData = systemData;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetNotebookProxyResult build() {
+        }        public GetNotebookProxyResult build() {
             return new GetNotebookProxyResult(hostname, id, name, publicDns, publicNetworkAccess, region, resourceId, secondaryAppId, systemData, type);
         }
     }

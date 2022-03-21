@@ -78,12 +78,10 @@ public final class GcmCredentialResponse extends io.pulumi.resources.InvokeArgs 
             this.gcmEndpoint = gcmEndpoint;
             return this;
         }
-
         public Builder googleApiKey(@Nullable String googleApiKey) {
             this.googleApiKey = googleApiKey;
             return this;
-        }
-        public GcmCredentialResponse build() {
+        }        public GcmCredentialResponse build() {
             return new GcmCredentialResponse(gcmEndpoint, googleApiKey);
         }
     }

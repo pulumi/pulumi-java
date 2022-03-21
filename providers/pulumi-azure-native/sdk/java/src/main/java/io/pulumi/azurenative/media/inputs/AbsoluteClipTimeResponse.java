@@ -77,12 +77,10 @@ public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeAr
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public AbsoluteClipTimeResponse build() {
+        }        public AbsoluteClipTimeResponse build() {
             return new AbsoluteClipTimeResponse(odataType, time);
         }
     }

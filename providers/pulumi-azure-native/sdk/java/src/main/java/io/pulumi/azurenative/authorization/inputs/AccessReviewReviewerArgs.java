@@ -61,12 +61,10 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
-        }
-        public AccessReviewReviewerArgs build() {
+        }        public AccessReviewReviewerArgs build() {
             return new AccessReviewReviewerArgs(principalId);
         }
     }

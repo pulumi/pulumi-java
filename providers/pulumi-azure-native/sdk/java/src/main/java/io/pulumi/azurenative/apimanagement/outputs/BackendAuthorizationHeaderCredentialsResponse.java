@@ -69,12 +69,10 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
-
         public Builder scheme(String scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
-        }
-        public BackendAuthorizationHeaderCredentialsResponse build() {
+        }        public BackendAuthorizationHeaderCredentialsResponse build() {
             return new BackendAuthorizationHeaderCredentialsResponse(parameter, scheme);
         }
     }

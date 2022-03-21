@@ -53,8 +53,7 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
         public Builder kubeconfig(@Nullable String kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
-        }
-        public ListOpenShiftClusterAdminCredentialsResult build() {
+        }        public ListOpenShiftClusterAdminCredentialsResult build() {
             return new ListOpenShiftClusterAdminCredentialsResult(kubeconfig);
         }
     }

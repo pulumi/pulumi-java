@@ -62,12 +62,13 @@ public final class ConfigurationServiceGitPropertyArgs extends io.pulumi.resourc
             this.repositories = repositories;
             return this;
         }
-
         public Builder repositories(@Nullable List<ConfigurationServiceGitRepositoryArgs> repositories) {
             this.repositories = Output.ofNullable(repositories);
             return this;
         }
-        public ConfigurationServiceGitPropertyArgs build() {
+        public Builder repositories(ConfigurationServiceGitRepositoryArgs... repositories) {
+            return repositories(List.of(repositories));
+        }        public ConfigurationServiceGitPropertyArgs build() {
             return new ConfigurationServiceGitPropertyArgs(repositories);
         }
     }

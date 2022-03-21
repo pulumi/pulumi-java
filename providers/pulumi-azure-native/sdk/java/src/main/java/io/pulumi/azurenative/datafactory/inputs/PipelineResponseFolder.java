@@ -60,8 +60,7 @@ public final class PipelineResponseFolder extends io.pulumi.resources.InvokeArgs
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public PipelineResponseFolder build() {
+        }        public PipelineResponseFolder build() {
             return new PipelineResponseFolder(name);
         }
     }

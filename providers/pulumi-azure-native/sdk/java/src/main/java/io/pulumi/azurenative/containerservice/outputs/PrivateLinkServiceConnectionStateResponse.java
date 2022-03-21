@@ -71,12 +71,10 @@ public final class PrivateLinkServiceConnectionStateResponse {
             this.description = description;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public PrivateLinkServiceConnectionStateResponse build() {
+        }        public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(description, status);
         }
     }

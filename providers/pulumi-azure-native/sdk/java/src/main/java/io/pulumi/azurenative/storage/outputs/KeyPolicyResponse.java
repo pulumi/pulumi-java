@@ -51,8 +51,7 @@ public final class KeyPolicyResponse {
         public Builder keyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
             this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
             return this;
-        }
-        public KeyPolicyResponse build() {
+        }        public KeyPolicyResponse build() {
             return new KeyPolicyResponse(keyExpirationPeriodInDays);
         }
     }

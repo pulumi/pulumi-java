@@ -106,22 +106,18 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
             this.expand = expand;
             return this;
         }
-
         public Builder peConnectionName(String peConnectionName) {
             this.peConnectionName = Objects.requireNonNull(peConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetPrivateLinkServicePrivateEndpointConnectionArgs build() {
+        }        public GetPrivateLinkServicePrivateEndpointConnectionArgs build() {
             return new GetPrivateLinkServicePrivateEndpointConnectionArgs(expand, peConnectionName, resourceGroupName, serviceName);
         }
     }

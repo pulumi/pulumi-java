@@ -78,12 +78,10 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
             this.displayName = displayName;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ManagementGroupPathElementResponse build() {
+        }        public ManagementGroupPathElementResponse build() {
             return new ManagementGroupPathElementResponse(displayName, name);
         }
     }

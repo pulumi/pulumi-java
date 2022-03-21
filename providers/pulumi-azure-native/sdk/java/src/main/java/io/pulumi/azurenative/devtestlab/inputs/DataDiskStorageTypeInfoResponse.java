@@ -78,12 +78,10 @@ public final class DataDiskStorageTypeInfoResponse extends io.pulumi.resources.I
             this.lun = lun;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
-        }
-        public DataDiskStorageTypeInfoResponse build() {
+        }        public DataDiskStorageTypeInfoResponse build() {
             return new DataDiskStorageTypeInfoResponse(lun, storageType);
         }
     }

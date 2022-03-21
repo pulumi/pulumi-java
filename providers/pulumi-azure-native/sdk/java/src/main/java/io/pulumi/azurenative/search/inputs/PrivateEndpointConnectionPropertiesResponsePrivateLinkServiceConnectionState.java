@@ -94,17 +94,14 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState build() {
+        }        public PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState build() {
             return new PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState(actionsRequired, description, status);
         }
     }

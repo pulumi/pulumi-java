@@ -229,112 +229,93 @@ public final class SapOpenHubTableDatasetArgs extends io.pulumi.resources.Resour
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder baseRequestId(@Nullable Output<Object> baseRequestId) {
             this.baseRequestId = baseRequestId;
             return this;
         }
-
         public Builder baseRequestId(@Nullable Object baseRequestId) {
             this.baseRequestId = Output.ofNullable(baseRequestId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder excludeLastRequest(@Nullable Output<Object> excludeLastRequest) {
             this.excludeLastRequest = excludeLastRequest;
             return this;
         }
-
         public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
             this.excludeLastRequest = Output.ofNullable(excludeLastRequest);
             return this;
         }
-
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder openHubDestinationName(Output<Object> openHubDestinationName) {
             this.openHubDestinationName = Objects.requireNonNull(openHubDestinationName);
             return this;
         }
-
         public Builder openHubDestinationName(Object openHubDestinationName) {
             this.openHubDestinationName = Output.of(Objects.requireNonNull(openHubDestinationName));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = Output.ofNullable(structure);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SapOpenHubTableDatasetArgs build() {
+        }        public SapOpenHubTableDatasetArgs build() {
             return new SapOpenHubTableDatasetArgs(annotations, baseRequestId, description, excludeLastRequest, folder, linkedServiceName, openHubDestinationName, parameters, schema, structure, type);
         }
     }

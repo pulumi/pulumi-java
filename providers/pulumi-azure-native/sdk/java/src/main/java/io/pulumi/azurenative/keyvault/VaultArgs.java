@@ -124,52 +124,42 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<VaultPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(VaultPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vaultName(@Nullable Output<String> vaultName) {
             this.vaultName = vaultName;
             return this;
         }
-
         public Builder vaultName(@Nullable String vaultName) {
             this.vaultName = Output.ofNullable(vaultName);
             return this;
-        }
-        public VaultArgs build() {
+        }        public VaultArgs build() {
             return new VaultArgs(location, properties, resourceGroupName, tags, vaultName);
         }
     }

@@ -158,37 +158,33 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(FilterItems... filters) {
+            return filters(List.of(filters));
+        }
         public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
-
         public Builder orderBy(@Nullable OrderBy orderBy) {
             this.orderBy = orderBy;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resultsPerPage(@Nullable Integer resultsPerPage) {
             this.resultsPerPage = resultsPerPage;
             return this;
         }
-
         public Builder search(@Nullable String search) {
             this.search = search;
             return this;
         }
-
         public Builder skip(@Nullable Integer skip) {
             this.skip = skip;
             return this;
-        }
-        public ListFirewallPolicyIdpsSignatureArgs build() {
+        }        public ListFirewallPolicyIdpsSignatureArgs build() {
             return new ListFirewallPolicyIdpsSignatureArgs(filters, firewallPolicyName, orderBy, resourceGroupName, resultsPerPage, search, skip);
         }
     }

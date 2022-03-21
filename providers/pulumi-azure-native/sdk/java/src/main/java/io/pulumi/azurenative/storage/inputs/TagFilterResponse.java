@@ -92,17 +92,14 @@ public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder op(String op) {
             this.op = Objects.requireNonNull(op);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TagFilterResponse build() {
+        }        public TagFilterResponse build() {
             return new TagFilterResponse(name, op, value);
         }
     }

@@ -124,52 +124,42 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.commitmentPlanName = commitmentPlanName;
             return this;
         }
-
         public Builder commitmentPlanName(@Nullable String commitmentPlanName) {
             this.commitmentPlanName = Output.ofNullable(commitmentPlanName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ResourceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CommitmentPlanArgs build() {
+        }        public CommitmentPlanArgs build() {
             return new CommitmentPlanArgs(commitmentPlanName, location, resourceGroupName, sku, tags);
         }
     }

@@ -78,12 +78,10 @@ public final class DiskSkuResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public DiskSkuResponse build() {
+        }        public DiskSkuResponse build() {
             return new DiskSkuResponse(name, tier);
         }
     }

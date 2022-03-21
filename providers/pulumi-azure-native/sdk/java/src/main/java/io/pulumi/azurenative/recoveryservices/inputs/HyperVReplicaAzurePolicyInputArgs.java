@@ -145,62 +145,53 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
-
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = Output.ofNullable(applicationConsistentSnapshotFrequencyInHours);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder onlineReplicationStartTime(@Nullable Output<String> onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
-
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = Output.ofNullable(onlineReplicationStartTime);
             return this;
         }
-
         public Builder recoveryPointHistoryDuration(@Nullable Output<Integer> recoveryPointHistoryDuration) {
             this.recoveryPointHistoryDuration = recoveryPointHistoryDuration;
             return this;
         }
-
         public Builder recoveryPointHistoryDuration(@Nullable Integer recoveryPointHistoryDuration) {
             this.recoveryPointHistoryDuration = Output.ofNullable(recoveryPointHistoryDuration);
             return this;
         }
-
         public Builder replicationInterval(@Nullable Output<Integer> replicationInterval) {
             this.replicationInterval = replicationInterval;
             return this;
         }
-
         public Builder replicationInterval(@Nullable Integer replicationInterval) {
             this.replicationInterval = Output.ofNullable(replicationInterval);
             return this;
         }
-
         public Builder storageAccounts(@Nullable Output<List<String>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
-
         public Builder storageAccounts(@Nullable List<String> storageAccounts) {
             this.storageAccounts = Output.ofNullable(storageAccounts);
             return this;
         }
-        public HyperVReplicaAzurePolicyInputArgs build() {
+        public Builder storageAccounts(String... storageAccounts) {
+            return storageAccounts(List.of(storageAccounts));
+        }        public HyperVReplicaAzurePolicyInputArgs build() {
             return new HyperVReplicaAzurePolicyInputArgs(applicationConsistentSnapshotFrequencyInHours, instanceType, onlineReplicationStartTime, recoveryPointHistoryDuration, replicationInterval, storageAccounts);
         }
     }

@@ -192,92 +192,77 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.author = author;
             return this;
         }
-
         public Builder author(@Nullable String author) {
             this.author = Output.ofNullable(author);
             return this;
         }
-
         public Builder galleries(Output<List<WorkbookTemplateGalleryArgs>> galleries) {
             this.galleries = Objects.requireNonNull(galleries);
             return this;
         }
-
         public Builder galleries(List<WorkbookTemplateGalleryArgs> galleries) {
             this.galleries = Output.of(Objects.requireNonNull(galleries));
             return this;
         }
-
+        public Builder galleries(WorkbookTemplateGalleryArgs... galleries) {
+            return galleries(List.of(galleries));
+        }
         public Builder localized(@Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized) {
             this.localized = localized;
             return this;
         }
-
         public Builder localized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryArgs>> localized) {
             this.localized = Output.ofNullable(localized);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder templateData(Output<Object> templateData) {
             this.templateData = Objects.requireNonNull(templateData);
             return this;
         }
-
         public Builder templateData(Object templateData) {
             this.templateData = Output.of(Objects.requireNonNull(templateData));
             return this;
-        }
-        public WorkbookTemplateArgs build() {
+        }        public WorkbookTemplateArgs build() {
             return new WorkbookTemplateArgs(author, galleries, localized, location, priority, resourceGroupName, resourceName, tags, templateData);
         }
     }

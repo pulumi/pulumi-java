@@ -50,8 +50,7 @@ public final class ResourceTypeRegistrationPropertiesResponseFeaturesRule extend
         public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesResponseFeaturesRule build() {
+        }        public ResourceTypeRegistrationPropertiesResponseFeaturesRule build() {
             return new ResourceTypeRegistrationPropertiesResponseFeaturesRule(requiredFeaturesPolicy);
         }
     }

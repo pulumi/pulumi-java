@@ -140,32 +140,26 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
             this.keyType = keyType;
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public ListWorkflowVersionTriggerCallbackUrlArgs build() {
+        }        public ListWorkflowVersionTriggerCallbackUrlArgs build() {
             return new ListWorkflowVersionTriggerCallbackUrlArgs(keyType, notAfter, resourceGroupName, triggerName, versionId, workflowName);
         }
     }

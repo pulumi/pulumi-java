@@ -79,22 +79,21 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = Output.ofNullable(addressPrefixes);
             return this;
         }
-
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = Output.ofNullable(nextHopIpAddress);
             return this;
-        }
-        public VirtualHubRouteArgs build() {
+        }        public VirtualHubRouteArgs build() {
             return new VirtualHubRouteArgs(addressPrefixes, nextHopIpAddress);
         }
     }

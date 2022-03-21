@@ -71,12 +71,10 @@ public final class X509CertificateNameResponse {
             this.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public X509CertificateNameResponse build() {
+        }        public X509CertificateNameResponse build() {
             return new X509CertificateNameResponse(issuerCertificateThumbprint, name);
         }
     }

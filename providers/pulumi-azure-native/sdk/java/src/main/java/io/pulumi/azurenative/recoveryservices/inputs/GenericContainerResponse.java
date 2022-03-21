@@ -163,37 +163,30 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder extendedInformation(@Nullable GenericContainerExtendedInfoResponse extendedInformation) {
             this.extendedInformation = extendedInformation;
             return this;
         }
-
         public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = fabricName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
-        }
-        public GenericContainerResponse build() {
+        }        public GenericContainerResponse build() {
             return new GenericContainerResponse(backupManagementType, containerType, extendedInformation, fabricName, friendlyName, healthStatus, registrationStatus);
         }
     }

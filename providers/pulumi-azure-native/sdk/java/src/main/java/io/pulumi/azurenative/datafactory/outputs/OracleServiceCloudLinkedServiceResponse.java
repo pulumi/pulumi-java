@@ -241,62 +241,53 @@ public final class OracleServiceCloudLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder host(Object host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public Builder username(Object username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public OracleServiceCloudLinkedServiceResponse build() {
+        }        public OracleServiceCloudLinkedServiceResponse build() {
             return new OracleServiceCloudLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, host, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }
     }

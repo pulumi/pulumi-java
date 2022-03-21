@@ -62,12 +62,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,SkuName> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public SkuArgs build() {
+        }        public SkuArgs build() {
             return new SkuArgs(name);
         }
     }

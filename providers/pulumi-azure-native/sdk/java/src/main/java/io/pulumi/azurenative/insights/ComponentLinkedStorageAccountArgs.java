@@ -106,42 +106,34 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
             this.linkedStorageAccount = linkedStorageAccount;
             return this;
         }
-
         public Builder linkedStorageAccount(@Nullable String linkedStorageAccount) {
             this.linkedStorageAccount = Output.ofNullable(linkedStorageAccount);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
-        }
-        public ComponentLinkedStorageAccountArgs build() {
+        }        public ComponentLinkedStorageAccountArgs build() {
             return new ComponentLinkedStorageAccountArgs(linkedStorageAccount, resourceGroupName, resourceName, storageType);
         }
     }

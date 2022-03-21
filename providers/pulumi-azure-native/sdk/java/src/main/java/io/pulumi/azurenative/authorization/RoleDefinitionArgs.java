@@ -156,72 +156,64 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.assignableScopes = assignableScopes;
             return this;
         }
-
         public Builder assignableScopes(@Nullable List<String> assignableScopes) {
             this.assignableScopes = Output.ofNullable(assignableScopes);
             return this;
         }
-
+        public Builder assignableScopes(String... assignableScopes) {
+            return assignableScopes(List.of(assignableScopes));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<PermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(PermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder roleType(@Nullable Output<String> roleType) {
             this.roleType = roleType;
             return this;
         }
-
         public Builder roleType(@Nullable String roleType) {
             this.roleType = Output.ofNullable(roleType);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public RoleDefinitionArgs build() {
+        }        public RoleDefinitionArgs build() {
             return new RoleDefinitionArgs(assignableScopes, description, permissions, roleDefinitionId, roleName, roleType, scope);
         }
     }

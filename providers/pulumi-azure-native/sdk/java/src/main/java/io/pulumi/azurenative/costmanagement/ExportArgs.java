@@ -159,72 +159,58 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(ExportDefinitionArgs definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder deliveryInfo(Output<ExportDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
-
         public Builder deliveryInfo(ExportDeliveryInfoArgs deliveryInfo) {
             this.deliveryInfo = Output.of(Objects.requireNonNull(deliveryInfo));
             return this;
         }
-
         public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder exportName(@Nullable Output<String> exportName) {
             this.exportName = exportName;
             return this;
         }
-
         public Builder exportName(@Nullable String exportName) {
             this.exportName = Output.ofNullable(exportName);
             return this;
         }
-
         public Builder format(@Nullable Output<Either<String,FormatType>> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,FormatType> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder schedule(@Nullable Output<ExportScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable ExportScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public ExportArgs build() {
+        }        public ExportArgs build() {
             return new ExportArgs(definition, deliveryInfo, eTag, exportName, format, schedule, scope);
         }
     }

@@ -112,42 +112,34 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder configurationProfile(@Nullable Output<Either<String,ConfigurationProfile>> configurationProfile) {
             this.configurationProfile = configurationProfile;
             return this;
         }
-
         public Builder configurationProfile(@Nullable Either<String,ConfigurationProfile> configurationProfile) {
             this.configurationProfile = Output.ofNullable(configurationProfile);
             return this;
         }
-
         public Builder configurationProfilePreferenceId(@Nullable Output<String> configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
-
         public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = Output.ofNullable(configurationProfilePreferenceId);
             return this;
         }
-
         public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = Output.ofNullable(targetId);
             return this;
-        }
-        public ConfigurationProfileAssignmentPropertiesArgs build() {
+        }        public ConfigurationProfileAssignmentPropertiesArgs build() {
             return new ConfigurationProfileAssignmentPropertiesArgs(accountId, configurationProfile, configurationProfilePreferenceId, targetId);
         }
     }

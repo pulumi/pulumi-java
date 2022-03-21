@@ -61,12 +61,10 @@ public final class ContentKeyPolicyOpenRestrictionArgs extends io.pulumi.resourc
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public ContentKeyPolicyOpenRestrictionArgs build() {
+        }        public ContentKeyPolicyOpenRestrictionArgs build() {
             return new ContentKeyPolicyOpenRestrictionArgs(odataType);
         }
     }

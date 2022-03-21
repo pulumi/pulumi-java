@@ -87,17 +87,14 @@ public final class IngressProfileResponse {
             this.ip = ip;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder visibility(@Nullable String visibility) {
             this.visibility = visibility;
             return this;
-        }
-        public IngressProfileResponse build() {
+        }        public IngressProfileResponse build() {
             return new IngressProfileResponse(ip, name, visibility);
         }
     }

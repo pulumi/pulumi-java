@@ -69,12 +69,10 @@ public final class OperationBatchStatusResponseItemResponse {
             this.operationUrl = Objects.requireNonNull(operationUrl);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public OperationBatchStatusResponseItemResponse build() {
+        }        public OperationBatchStatusResponseItemResponse build() {
             return new OperationBatchStatusResponseItemResponse(operationUrl, status);
         }
     }

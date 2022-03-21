@@ -101,32 +101,26 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder protectableItemId(@Nullable Output<String> protectableItemId) {
             this.protectableItemId = protectableItemId;
             return this;
         }
-
         public Builder protectableItemId(@Nullable String protectableItemId) {
             this.protectableItemId = Output.ofNullable(protectableItemId);
             return this;
         }
-
         public Builder providerSpecificDetails(@Nullable Output<Object> providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
-
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             this.providerSpecificDetails = Output.ofNullable(providerSpecificDetails);
             return this;
-        }
-        public EnableProtectionInputPropertiesArgs build() {
+        }        public EnableProtectionInputPropertiesArgs build() {
             return new EnableProtectionInputPropertiesArgs(policyId, protectableItemId, providerSpecificDetails);
         }
     }

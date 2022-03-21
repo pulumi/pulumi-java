@@ -271,67 +271,57 @@ public final class BatchDeploymentResponse {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder compute(@Nullable ComputeConfigurationResponse compute) {
             this.compute = compute;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder errorThreshold(@Nullable Integer errorThreshold) {
             this.errorThreshold = errorThreshold;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder miniBatchSize(@Nullable Double miniBatchSize) {
             this.miniBatchSize = miniBatchSize;
             return this;
         }
-
         public Builder model(@Nullable Object model) {
             this.model = model;
             return this;
         }
-
         public Builder outputConfiguration(@Nullable BatchOutputConfigurationResponse outputConfiguration) {
             this.outputConfiguration = outputConfiguration;
             return this;
         }
-
         public Builder partitionKeys(@Nullable List<String> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
-
+        public Builder partitionKeys(String... partitionKeys) {
+            return partitionKeys(List.of(partitionKeys));
+        }
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder retrySettings(@Nullable BatchRetrySettingsResponse retrySettings) {
             this.retrySettings = retrySettings;
             return this;
-        }
-        public BatchDeploymentResponse build() {
+        }        public BatchDeploymentResponse build() {
             return new BatchDeploymentResponse(codeConfiguration, compute, description, environmentId, environmentVariables, errorThreshold, loggingLevel, miniBatchSize, model, outputConfiguration, partitionKeys, properties, retrySettings);
         }
     }

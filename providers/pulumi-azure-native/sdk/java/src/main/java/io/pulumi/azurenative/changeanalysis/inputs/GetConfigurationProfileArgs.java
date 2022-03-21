@@ -54,8 +54,7 @@ public final class GetConfigurationProfileArgs extends io.pulumi.resources.Invok
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
-        }
-        public GetConfigurationProfileArgs build() {
+        }        public GetConfigurationProfileArgs build() {
             return new GetConfigurationProfileArgs(profileName);
         }
     }

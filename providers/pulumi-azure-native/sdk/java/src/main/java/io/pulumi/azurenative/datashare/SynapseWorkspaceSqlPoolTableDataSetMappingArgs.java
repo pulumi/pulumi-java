@@ -155,72 +155,58 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dataSetId(Output<String> dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder dataSetId(String dataSetId) {
             this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
             this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
-
         public Builder synapseWorkspaceSqlPoolTableResourceId(Output<String> synapseWorkspaceSqlPoolTableResourceId) {
             this.synapseWorkspaceSqlPoolTableResourceId = Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId);
             return this;
         }
-
         public Builder synapseWorkspaceSqlPoolTableResourceId(String synapseWorkspaceSqlPoolTableResourceId) {
             this.synapseWorkspaceSqlPoolTableResourceId = Output.of(Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId));
             return this;
-        }
-        public SynapseWorkspaceSqlPoolTableDataSetMappingArgs build() {
+        }        public SynapseWorkspaceSqlPoolTableDataSetMappingArgs build() {
             return new SynapseWorkspaceSqlPoolTableDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, kind, resourceGroupName, shareSubscriptionName, synapseWorkspaceSqlPoolTableResourceId);
         }
     }

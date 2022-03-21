@@ -637,182 +637,152 @@ public final class GetManagedClusterResult {
             this.aadProfile = aadProfile;
             return this;
         }
-
         public Builder addonProfiles(@Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles) {
             this.addonProfiles = addonProfiles;
             return this;
         }
-
         public Builder agentPoolProfiles(@Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
-
+        public Builder agentPoolProfiles(ManagedClusterAgentPoolProfileResponse... agentPoolProfiles) {
+            return agentPoolProfiles(List.of(agentPoolProfiles));
+        }
         public Builder apiServerAccessProfile(@Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile) {
             this.apiServerAccessProfile = apiServerAccessProfile;
             return this;
         }
-
         public Builder autoScalerProfile(@Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile) {
             this.autoScalerProfile = autoScalerProfile;
             return this;
         }
-
         public Builder autoUpgradeProfile(@Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile) {
             this.autoUpgradeProfile = autoUpgradeProfile;
             return this;
         }
-
         public Builder azurePortalFQDN(String azurePortalFQDN) {
             this.azurePortalFQDN = Objects.requireNonNull(azurePortalFQDN);
             return this;
         }
-
         public Builder disableLocalAccounts(@Nullable Boolean disableLocalAccounts) {
             this.disableLocalAccounts = disableLocalAccounts;
             return this;
         }
-
         public Builder diskEncryptionSetID(@Nullable String diskEncryptionSetID) {
             this.diskEncryptionSetID = diskEncryptionSetID;
             return this;
         }
-
         public Builder dnsPrefix(@Nullable String dnsPrefix) {
             this.dnsPrefix = dnsPrefix;
             return this;
         }
-
         public Builder enablePodSecurityPolicy(@Nullable Boolean enablePodSecurityPolicy) {
             this.enablePodSecurityPolicy = enablePodSecurityPolicy;
             return this;
         }
-
         public Builder enableRBAC(@Nullable Boolean enableRBAC) {
             this.enableRBAC = enableRBAC;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder fqdnSubdomain(@Nullable String fqdnSubdomain) {
             this.fqdnSubdomain = fqdnSubdomain;
             return this;
         }
-
         public Builder httpProxyConfig(@Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ManagedClusterIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identityProfile(@Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile) {
             this.identityProfile = identityProfile;
             return this;
         }
-
         public Builder kubernetesVersion(@Nullable String kubernetesVersion) {
             this.kubernetesVersion = kubernetesVersion;
             return this;
         }
-
         public Builder linuxProfile(@Nullable ContainerServiceLinuxProfileResponse linuxProfile) {
             this.linuxProfile = linuxProfile;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maxAgentPools(Integer maxAgentPools) {
             this.maxAgentPools = Objects.requireNonNull(maxAgentPools);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable ContainerServiceNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder nodeResourceGroup(@Nullable String nodeResourceGroup) {
             this.nodeResourceGroup = nodeResourceGroup;
             return this;
         }
-
         public Builder podIdentityProfile(@Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile) {
             this.podIdentityProfile = podIdentityProfile;
             return this;
         }
-
         public Builder powerState(PowerStateResponse powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
-
         public Builder privateFQDN(String privateFQDN) {
             this.privateFQDN = Objects.requireNonNull(privateFQDN);
             return this;
         }
-
         public Builder privateLinkResources(@Nullable List<PrivateLinkResourceResponse> privateLinkResources) {
             this.privateLinkResources = privateLinkResources;
             return this;
         }
-
+        public Builder privateLinkResources(PrivateLinkResourceResponse... privateLinkResources) {
+            return privateLinkResources(List.of(privateLinkResources));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder servicePrincipalProfile(@Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
-
         public Builder sku(@Nullable ManagedClusterSKUResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder windowsProfile(@Nullable ManagedClusterWindowsProfileResponse windowsProfile) {
             this.windowsProfile = windowsProfile;
             return this;
-        }
-        public GetManagedClusterResult build() {
+        }        public GetManagedClusterResult build() {
             return new GetManagedClusterResult(aadProfile, addonProfiles, agentPoolProfiles, apiServerAccessProfile, autoScalerProfile, autoUpgradeProfile, azurePortalFQDN, disableLocalAccounts, diskEncryptionSetID, dnsPrefix, enablePodSecurityPolicy, enableRBAC, extendedLocation, fqdn, fqdnSubdomain, httpProxyConfig, id, identity, identityProfile, kubernetesVersion, linuxProfile, location, maxAgentPools, name, networkProfile, nodeResourceGroup, podIdentityProfile, powerState, privateFQDN, privateLinkResources, provisioningState, servicePrincipalProfile, sku, tags, type, windowsProfile);
         }
     }

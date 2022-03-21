@@ -138,32 +138,38 @@ public final class GatewayCorsPropertiesResponse {
             this.allowCredentials = allowCredentials;
             return this;
         }
-
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
-
+        public Builder allowedHeaders(String... allowedHeaders) {
+            return allowedHeaders(List.of(allowedHeaders));
+        }
         public Builder allowedMethods(@Nullable List<String> allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
-
+        public Builder exposedHeaders(String... exposedHeaders) {
+            return exposedHeaders(List.of(exposedHeaders));
+        }
         public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = maxAge;
             return this;
-        }
-        public GatewayCorsPropertiesResponse build() {
+        }        public GatewayCorsPropertiesResponse build() {
             return new GatewayCorsPropertiesResponse(allowCredentials, allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAge);
         }
     }

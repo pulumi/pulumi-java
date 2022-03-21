@@ -60,12 +60,10 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(ManagerSkuType name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ManagerSkuArgs build() {
+        }        public ManagerSkuArgs build() {
             return new ManagerSkuArgs(name);
         }
     }

@@ -54,8 +54,7 @@ public final class ArmIdWrapperResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public ArmIdWrapperResponse build() {
+        }        public ArmIdWrapperResponse build() {
             return new ArmIdWrapperResponse(id);
         }
     }

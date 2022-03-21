@@ -199,92 +199,80 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
-
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
             this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
             return this;
         }
-
         public Builder dataExportDetails(@Nullable Output<List<DataExportDetailsArgs>> dataExportDetails) {
             this.dataExportDetails = dataExportDetails;
             return this;
         }
-
         public Builder dataExportDetails(@Nullable List<DataExportDetailsArgs> dataExportDetails) {
             this.dataExportDetails = Output.ofNullable(dataExportDetails);
             return this;
         }
-
+        public Builder dataExportDetails(DataExportDetailsArgs... dataExportDetails) {
+            return dataExportDetails(List.of(dataExportDetails));
+        }
         public Builder dataImportDetails(@Nullable Output<List<DataImportDetailsArgs>> dataImportDetails) {
             this.dataImportDetails = dataImportDetails;
             return this;
         }
-
         public Builder dataImportDetails(@Nullable List<DataImportDetailsArgs> dataImportDetails) {
             this.dataImportDetails = Output.ofNullable(dataImportDetails);
             return this;
         }
-
+        public Builder dataImportDetails(DataImportDetailsArgs... dataImportDetails) {
+            return dataImportDetails(List.of(dataImportDetails));
+        }
         public Builder devicePassword(@Nullable Output<String> devicePassword) {
             this.devicePassword = devicePassword;
             return this;
         }
-
         public Builder devicePassword(@Nullable String devicePassword) {
             this.devicePassword = Output.ofNullable(devicePassword);
             return this;
         }
-
         public Builder expectedDataSizeInTeraBytes(@Nullable Output<Integer> expectedDataSizeInTeraBytes) {
             this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
-
         public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
             this.expectedDataSizeInTeraBytes = Output.ofNullable(expectedDataSizeInTeraBytes);
             return this;
         }
-
         public Builder jobDetailsType(Output<String> jobDetailsType) {
             this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
             return this;
         }
-
         public Builder jobDetailsType(String jobDetailsType) {
             this.jobDetailsType = Output.of(Objects.requireNonNull(jobDetailsType));
             return this;
         }
-
         public Builder keyEncryptionKey(@Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyArgs keyEncryptionKey) {
             this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
             return this;
         }
-
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
-
         public Builder preferences(@Nullable PreferencesArgs preferences) {
             this.preferences = Output.ofNullable(preferences);
             return this;
         }
-
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
             this.shippingAddress = Output.ofNullable(shippingAddress);
             return this;
-        }
-        public DataBoxHeavyJobDetailsArgs build() {
+        }        public DataBoxHeavyJobDetailsArgs build() {
             return new DataBoxHeavyJobDetailsArgs(contactDetails, dataExportDetails, dataImportDetails, devicePassword, expectedDataSizeInTeraBytes, jobDetailsType, keyEncryptionKey, preferences, shippingAddress);
         }
     }

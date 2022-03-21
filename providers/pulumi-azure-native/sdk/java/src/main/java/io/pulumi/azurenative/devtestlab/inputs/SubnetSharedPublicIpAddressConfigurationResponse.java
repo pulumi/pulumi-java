@@ -62,7 +62,9 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.p
             this.allowedPorts = allowedPorts;
             return this;
         }
-        public SubnetSharedPublicIpAddressConfigurationResponse build() {
+        public Builder allowedPorts(PortResponse... allowedPorts) {
+            return allowedPorts(List.of(allowedPorts));
+        }        public SubnetSharedPublicIpAddressConfigurationResponse build() {
             return new SubnetSharedPublicIpAddressConfigurationResponse(allowedPorts);
         }
     }

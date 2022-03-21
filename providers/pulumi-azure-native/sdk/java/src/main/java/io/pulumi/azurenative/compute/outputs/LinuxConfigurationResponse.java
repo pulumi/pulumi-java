@@ -105,22 +105,18 @@ public final class LinuxConfigurationResponse {
             this.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
-
         public Builder patchSettings(@Nullable LinuxPatchSettingsResponse patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
-
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
-
         public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             this.ssh = ssh;
             return this;
-        }
-        public LinuxConfigurationResponse build() {
+        }        public LinuxConfigurationResponse build() {
             return new LinuxConfigurationResponse(disablePasswordAuthentication, patchSettings, provisionVMAgent, ssh);
         }
     }

@@ -54,8 +54,7 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends io.pulumi.re
         public Builder lockName(String lockName) {
             this.lockName = Objects.requireNonNull(lockName);
             return this;
-        }
-        public GetManagementLockAtSubscriptionLevelArgs build() {
+        }        public GetManagementLockAtSubscriptionLevelArgs build() {
             return new GetManagementLockAtSubscriptionLevelArgs(lockName);
         }
     }

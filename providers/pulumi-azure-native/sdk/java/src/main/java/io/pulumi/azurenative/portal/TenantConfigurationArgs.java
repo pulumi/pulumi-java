@@ -75,22 +75,18 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
-
         public Builder enforcePrivateMarkdownStorage(@Nullable Output<Boolean> enforcePrivateMarkdownStorage) {
             this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
             return this;
         }
-
         public Builder enforcePrivateMarkdownStorage(@Nullable Boolean enforcePrivateMarkdownStorage) {
             this.enforcePrivateMarkdownStorage = Output.ofNullable(enforcePrivateMarkdownStorage);
             return this;
-        }
-        public TenantConfigurationArgs build() {
+        }        public TenantConfigurationArgs build() {
             return new TenantConfigurationArgs(configurationName, enforcePrivateMarkdownStorage);
         }
     }

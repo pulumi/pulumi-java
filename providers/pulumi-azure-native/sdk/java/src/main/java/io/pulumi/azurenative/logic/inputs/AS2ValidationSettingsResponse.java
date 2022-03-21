@@ -208,52 +208,42 @@ public final class AS2ValidationSettingsResponse extends io.pulumi.resources.Inv
             this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive);
             return this;
         }
-
         public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
             this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend);
             return this;
         }
-
         public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
             this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage);
             return this;
         }
-
         public Builder compressMessage(Boolean compressMessage) {
             this.compressMessage = Objects.requireNonNull(compressMessage);
             return this;
         }
-
         public Builder encryptMessage(Boolean encryptMessage) {
             this.encryptMessage = Objects.requireNonNull(encryptMessage);
             return this;
         }
-
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
-
         public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
             this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays);
             return this;
         }
-
         public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
             this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties);
             return this;
         }
-
         public Builder signMessage(Boolean signMessage) {
             this.signMessage = Objects.requireNonNull(signMessage);
             return this;
         }
-
         public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
-        }
-        public AS2ValidationSettingsResponse build() {
+        }        public AS2ValidationSettingsResponse build() {
             return new AS2ValidationSettingsResponse(checkCertificateRevocationListOnReceive, checkCertificateRevocationListOnSend, checkDuplicateMessage, compressMessage, encryptMessage, encryptionAlgorithm, interchangeDuplicatesValidityDays, overrideMessageProperties, signMessage, signingAlgorithm);
         }
     }

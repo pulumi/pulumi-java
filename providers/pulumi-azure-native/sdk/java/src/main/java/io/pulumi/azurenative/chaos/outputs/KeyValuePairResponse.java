@@ -69,12 +69,10 @@ public final class KeyValuePairResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public KeyValuePairResponse build() {
+        }        public KeyValuePairResponse build() {
             return new KeyValuePairResponse(key, value);
         }
     }

@@ -124,27 +124,22 @@ public final class AlertingActionResponse {
             this.aznsAction = aznsAction;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
             this.throttlingInMin = throttlingInMin;
             return this;
         }
-
         public Builder trigger(TriggerConditionResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
-        }
-        public AlertingActionResponse build() {
+        }        public AlertingActionResponse build() {
             return new AlertingActionResponse(aznsAction, odataType, severity, throttlingInMin, trigger);
         }
     }

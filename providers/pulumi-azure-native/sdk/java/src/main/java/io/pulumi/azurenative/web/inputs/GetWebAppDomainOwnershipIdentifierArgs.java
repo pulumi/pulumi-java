@@ -88,17 +88,14 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
             this.domainOwnershipIdentifierName = Objects.requireNonNull(domainOwnershipIdentifierName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppDomainOwnershipIdentifierArgs build() {
+        }        public GetWebAppDomainOwnershipIdentifierArgs build() {
             return new GetWebAppDomainOwnershipIdentifierArgs(domainOwnershipIdentifierName, name, resourceGroupName);
         }
     }

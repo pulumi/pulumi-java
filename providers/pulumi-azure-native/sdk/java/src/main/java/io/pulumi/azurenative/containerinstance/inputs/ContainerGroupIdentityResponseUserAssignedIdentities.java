@@ -72,12 +72,10 @@ public final class ContainerGroupIdentityResponseUserAssignedIdentities extends 
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public ContainerGroupIdentityResponseUserAssignedIdentities build() {
+        }        public ContainerGroupIdentityResponseUserAssignedIdentities build() {
             return new ContainerGroupIdentityResponseUserAssignedIdentities(clientId, principalId);
         }
     }

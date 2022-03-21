@@ -260,132 +260,112 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             this.apiserverProfile = apiserverProfile;
             return this;
         }
-
         public Builder apiserverProfile(@Nullable APIServerProfileArgs apiserverProfile) {
             this.apiserverProfile = Output.ofNullable(apiserverProfile);
             return this;
         }
-
         public Builder clusterProfile(@Nullable Output<ClusterProfileArgs> clusterProfile) {
             this.clusterProfile = clusterProfile;
             return this;
         }
-
         public Builder clusterProfile(@Nullable ClusterProfileArgs clusterProfile) {
             this.clusterProfile = Output.ofNullable(clusterProfile);
             return this;
         }
-
         public Builder consoleProfile(@Nullable Output<ConsoleProfileArgs> consoleProfile) {
             this.consoleProfile = consoleProfile;
             return this;
         }
-
         public Builder consoleProfile(@Nullable ConsoleProfileArgs consoleProfile) {
             this.consoleProfile = Output.ofNullable(consoleProfile);
             return this;
         }
-
         public Builder ingressProfiles(@Nullable Output<List<IngressProfileArgs>> ingressProfiles) {
             this.ingressProfiles = ingressProfiles;
             return this;
         }
-
         public Builder ingressProfiles(@Nullable List<IngressProfileArgs> ingressProfiles) {
             this.ingressProfiles = Output.ofNullable(ingressProfiles);
             return this;
         }
-
+        public Builder ingressProfiles(IngressProfileArgs... ingressProfiles) {
+            return ingressProfiles(List.of(ingressProfiles));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder masterProfile(@Nullable Output<MasterProfileArgs> masterProfile) {
             this.masterProfile = masterProfile;
             return this;
         }
-
         public Builder masterProfile(@Nullable MasterProfileArgs masterProfile) {
             this.masterProfile = Output.ofNullable(masterProfile);
             return this;
         }
-
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder servicePrincipalProfile(@Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
-
         public Builder servicePrincipalProfile(@Nullable ServicePrincipalProfileArgs servicePrincipalProfile) {
             this.servicePrincipalProfile = Output.ofNullable(servicePrincipalProfile);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workerProfiles(@Nullable Output<List<WorkerProfileArgs>> workerProfiles) {
             this.workerProfiles = workerProfiles;
             return this;
         }
-
         public Builder workerProfiles(@Nullable List<WorkerProfileArgs> workerProfiles) {
             this.workerProfiles = Output.ofNullable(workerProfiles);
             return this;
         }
-        public OpenShiftClusterArgs build() {
+        public Builder workerProfiles(WorkerProfileArgs... workerProfiles) {
+            return workerProfiles(List.of(workerProfiles));
+        }        public OpenShiftClusterArgs build() {
             return new OpenShiftClusterArgs(apiserverProfile, clusterProfile, consoleProfile, ingressProfiles, location, masterProfile, networkProfile, provisioningState, resourceGroupName, resourceName, servicePrincipalProfile, tags, workerProfiles);
         }
     }

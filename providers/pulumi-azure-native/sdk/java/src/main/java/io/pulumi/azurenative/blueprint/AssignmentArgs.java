@@ -223,112 +223,90 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.assignmentName = assignmentName;
             return this;
         }
-
         public Builder assignmentName(@Nullable String assignmentName) {
             this.assignmentName = Output.ofNullable(assignmentName);
             return this;
         }
-
         public Builder blueprintId(@Nullable Output<String> blueprintId) {
             this.blueprintId = blueprintId;
             return this;
         }
-
         public Builder blueprintId(@Nullable String blueprintId) {
             this.blueprintId = Output.ofNullable(blueprintId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder identity(Output<ManagedServiceIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(ManagedServiceIdentityArgs identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder locks(@Nullable Output<AssignmentLockSettingsArgs> locks) {
             this.locks = locks;
             return this;
         }
-
         public Builder locks(@Nullable AssignmentLockSettingsArgs locks) {
             this.locks = Output.ofNullable(locks);
             return this;
         }
-
         public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public Builder resourceGroups(Output<Map<String,ResourceGroupValueArgs>> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public Builder resourceGroups(Map<String,ResourceGroupValueArgs> resourceGroups) {
             this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
-
         public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public AssignmentArgs build() {
+        }        public AssignmentArgs build() {
             return new AssignmentArgs(assignmentName, blueprintId, description, displayName, identity, location, locks, parameters, resourceGroups, resourceScope, scope);
         }
     }

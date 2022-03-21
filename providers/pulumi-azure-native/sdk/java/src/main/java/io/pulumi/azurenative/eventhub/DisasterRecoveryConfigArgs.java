@@ -122,52 +122,42 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder alternateName(@Nullable Output<String> alternateName) {
             this.alternateName = alternateName;
             return this;
         }
-
         public Builder alternateName(@Nullable String alternateName) {
             this.alternateName = Output.ofNullable(alternateName);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder partnerNamespace(@Nullable Output<String> partnerNamespace) {
             this.partnerNamespace = partnerNamespace;
             return this;
         }
-
         public Builder partnerNamespace(@Nullable String partnerNamespace) {
             this.partnerNamespace = Output.ofNullable(partnerNamespace);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DisasterRecoveryConfigArgs build() {
+        }        public DisasterRecoveryConfigArgs build() {
             return new DisasterRecoveryConfigArgs(alias, alternateName, namespaceName, partnerNamespace, resourceGroupName);
         }
     }

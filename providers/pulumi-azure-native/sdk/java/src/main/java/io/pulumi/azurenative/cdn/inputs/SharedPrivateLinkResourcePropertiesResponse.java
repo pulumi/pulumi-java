@@ -127,27 +127,22 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
             this.groupId = groupId;
             return this;
         }
-
         public Builder privateLink(@Nullable ResourceReferenceResponse privateLink) {
             this.privateLink = privateLink;
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public SharedPrivateLinkResourcePropertiesResponse build() {
+        }        public SharedPrivateLinkResourcePropertiesResponse build() {
             return new SharedPrivateLinkResourcePropertiesResponse(groupId, privateLink, privateLinkLocation, requestMessage, status);
         }
     }

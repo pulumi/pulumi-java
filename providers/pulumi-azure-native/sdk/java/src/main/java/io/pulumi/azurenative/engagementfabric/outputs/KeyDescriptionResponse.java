@@ -85,17 +85,14 @@ public final class KeyDescriptionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rank(String rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public KeyDescriptionResponse build() {
+        }        public KeyDescriptionResponse build() {
             return new KeyDescriptionResponse(name, rank, value);
         }
     }

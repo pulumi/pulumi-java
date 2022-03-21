@@ -79,22 +79,18 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<ScalarFunctionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ScalarFunctionPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public FunctionArgs build() {
+        }        public FunctionArgs build() {
             return new FunctionArgs(name, properties);
         }
     }

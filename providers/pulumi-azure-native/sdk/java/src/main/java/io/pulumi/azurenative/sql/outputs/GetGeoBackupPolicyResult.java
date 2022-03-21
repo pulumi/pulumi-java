@@ -149,37 +149,30 @@ public final class GetGeoBackupPolicyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageType(String storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGeoBackupPolicyResult build() {
+        }        public GetGeoBackupPolicyResult build() {
             return new GetGeoBackupPolicyResult(id, kind, location, name, state, storageType, type);
         }
     }

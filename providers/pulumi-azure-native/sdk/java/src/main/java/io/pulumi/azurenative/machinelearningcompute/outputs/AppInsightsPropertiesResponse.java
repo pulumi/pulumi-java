@@ -53,8 +53,7 @@ public final class AppInsightsPropertiesResponse {
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public AppInsightsPropertiesResponse build() {
+        }        public AppInsightsPropertiesResponse build() {
             return new AppInsightsPropertiesResponse(resourceId);
         }
     }

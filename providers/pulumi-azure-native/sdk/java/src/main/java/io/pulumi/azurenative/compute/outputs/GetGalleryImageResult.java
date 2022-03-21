@@ -350,97 +350,81 @@ public final class GetGalleryImageResult {
             this.description = description;
             return this;
         }
-
         public Builder disallowed(@Nullable DisallowedResponse disallowed) {
             this.disallowed = disallowed;
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder eula(@Nullable String eula) {
             this.eula = eula;
             return this;
         }
-
         public Builder features(@Nullable List<GalleryImageFeatureResponse> features) {
             this.features = features;
             return this;
         }
-
+        public Builder features(GalleryImageFeatureResponse... features) {
+            return features(List.of(features));
+        }
         public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identifier(GalleryImageIdentifierResponse identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osState(String osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder purchasePlan(@Nullable ImagePurchasePlanResponse purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
-
         public Builder recommended(@Nullable RecommendedMachineConfigurationResponse recommended) {
             this.recommended = recommended;
             return this;
         }
-
         public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGalleryImageResult build() {
+        }        public GetGalleryImageResult build() {
             return new GetGalleryImageResult(description, disallowed, endOfLifeDate, eula, features, hyperVGeneration, id, identifier, location, name, osState, osType, privacyStatementUri, provisioningState, purchasePlan, recommended, releaseNoteUri, tags, type);
         }
     }

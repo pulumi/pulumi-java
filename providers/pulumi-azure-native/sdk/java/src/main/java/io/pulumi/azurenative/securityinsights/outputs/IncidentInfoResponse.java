@@ -103,22 +103,18 @@ public final class IncidentInfoResponse {
             this.incidentId = incidentId;
             return this;
         }
-
         public Builder relationName(@Nullable String relationName) {
             this.relationName = relationName;
             return this;
         }
-
         public Builder severity(@Nullable String severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public IncidentInfoResponse build() {
+        }        public IncidentInfoResponse build() {
             return new IncidentInfoResponse(incidentId, relationName, severity, title);
         }
     }

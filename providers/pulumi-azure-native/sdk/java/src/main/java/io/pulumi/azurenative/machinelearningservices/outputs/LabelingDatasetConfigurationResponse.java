@@ -88,17 +88,14 @@ public final class LabelingDatasetConfigurationResponse {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder datasetVersion(String datasetVersion) {
             this.datasetVersion = Objects.requireNonNull(datasetVersion);
             return this;
         }
-
         public Builder enableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
             this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
             return this;
-        }
-        public LabelingDatasetConfigurationResponse build() {
+        }        public LabelingDatasetConfigurationResponse build() {
             return new LabelingDatasetConfigurationResponse(assetName, datasetVersion, enableIncrementalDatasetRefresh);
         }
     }

@@ -72,12 +72,10 @@ public final class ListWebPubSubKeysArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListWebPubSubKeysArgs build() {
+        }        public ListWebPubSubKeysArgs build() {
             return new ListWebPubSubKeysArgs(resourceGroupName, resourceName);
         }
     }

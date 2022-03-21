@@ -214,102 +214,91 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             this.autoApproval = autoApproval;
             return this;
         }
-
         public Builder autoApproval(@Nullable PrivateLinkServicePropertiesAutoApprovalArgs autoApproval) {
             this.autoApproval = Output.ofNullable(autoApproval);
             return this;
         }
-
         public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
-
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Output.ofNullable(enableProxyProtocol);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder fqdns(@Nullable Output<List<String>> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
-
         public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = Output.ofNullable(fqdns);
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipConfigurations(@Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(PrivateLinkServiceIpConfigurationArgs... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder loadBalancerFrontendIpConfigurations(@Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations) {
             this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
             return this;
         }
-
         public Builder loadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationArgs> loadBalancerFrontendIpConfigurations) {
             this.loadBalancerFrontendIpConfigurations = Output.ofNullable(loadBalancerFrontendIpConfigurations);
             return this;
         }
-
+        public Builder loadBalancerFrontendIpConfigurations(FrontendIPConfigurationArgs... loadBalancerFrontendIpConfigurations) {
+            return loadBalancerFrontendIpConfigurations(List.of(loadBalancerFrontendIpConfigurations));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder visibility(@Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
             this.visibility = visibility;
             return this;
         }
-
         public Builder visibility(@Nullable PrivateLinkServicePropertiesVisibilityArgs visibility) {
             this.visibility = Output.ofNullable(visibility);
             return this;
-        }
-        public PrivateLinkServiceArgs build() {
+        }        public PrivateLinkServiceArgs build() {
             return new PrivateLinkServiceArgs(autoApproval, enableProxyProtocol, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, tags, visibility);
         }
     }

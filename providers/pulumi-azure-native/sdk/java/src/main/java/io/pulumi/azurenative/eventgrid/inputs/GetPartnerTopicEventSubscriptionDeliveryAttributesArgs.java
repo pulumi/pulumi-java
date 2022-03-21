@@ -88,17 +88,14 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
-
         public Builder partnerTopicName(String partnerTopicName) {
             this.partnerTopicName = Objects.requireNonNull(partnerTopicName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPartnerTopicEventSubscriptionDeliveryAttributesArgs build() {
+        }        public GetPartnerTopicEventSubscriptionDeliveryAttributesArgs build() {
             return new GetPartnerTopicEventSubscriptionDeliveryAttributesArgs(eventSubscriptionName, partnerTopicName, resourceGroupName);
         }
     }

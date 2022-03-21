@@ -217,57 +217,46 @@ public final class AvailableContactsResponse {
             this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees);
             return this;
         }
-
         public Builder endElevationDegrees(Double endElevationDegrees) {
             this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees);
             return this;
         }
-
         public Builder groundStationName(String groundStationName) {
             this.groundStationName = Objects.requireNonNull(groundStationName);
             return this;
         }
-
         public Builder maximumElevationDegrees(Double maximumElevationDegrees) {
             this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees);
             return this;
         }
-
         public Builder rxEndTime(String rxEndTime) {
             this.rxEndTime = Objects.requireNonNull(rxEndTime);
             return this;
         }
-
         public Builder rxStartTime(String rxStartTime) {
             this.rxStartTime = Objects.requireNonNull(rxStartTime);
             return this;
         }
-
         public Builder spacecraft(@Nullable ResourceReferenceResponse spacecraft) {
             this.spacecraft = spacecraft;
             return this;
         }
-
         public Builder startAzimuthDegrees(Double startAzimuthDegrees) {
             this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees);
             return this;
         }
-
         public Builder startElevationDegrees(Double startElevationDegrees) {
             this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees);
             return this;
         }
-
         public Builder txEndTime(String txEndTime) {
             this.txEndTime = Objects.requireNonNull(txEndTime);
             return this;
         }
-
         public Builder txStartTime(String txStartTime) {
             this.txStartTime = Objects.requireNonNull(txStartTime);
             return this;
-        }
-        public AvailableContactsResponse build() {
+        }        public AvailableContactsResponse build() {
             return new AvailableContactsResponse(endAzimuthDegrees, endElevationDegrees, groundStationName, maximumElevationDegrees, rxEndTime, rxStartTime, spacecraft, startAzimuthDegrees, startElevationDegrees, txEndTime, txStartTime);
         }
     }

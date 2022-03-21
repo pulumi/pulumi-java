@@ -120,27 +120,22 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder workloadClassifierName(String workloadClassifierName) {
             this.workloadClassifierName = Objects.requireNonNull(workloadClassifierName);
             return this;
         }
-
         public Builder workloadGroupName(String workloadGroupName) {
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
-        }
-        public GetWorkloadClassifierArgs build() {
+        }        public GetWorkloadClassifierArgs build() {
             return new GetWorkloadClassifierArgs(databaseName, resourceGroupName, serverName, workloadClassifierName, workloadGroupName);
         }
     }

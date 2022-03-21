@@ -78,22 +78,18 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder scopePath(@Nullable Output<String> scopePath) {
             this.scopePath = scopePath;
             return this;
         }
-
         public Builder scopePath(@Nullable String scopePath) {
             this.scopePath = Output.ofNullable(scopePath);
             return this;
-        }
-        public AutomationScopeArgs build() {
+        }        public AutomationScopeArgs build() {
             return new AutomationScopeArgs(description, scopePath);
         }
     }

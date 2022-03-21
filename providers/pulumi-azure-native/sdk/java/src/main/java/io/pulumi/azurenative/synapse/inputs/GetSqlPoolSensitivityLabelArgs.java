@@ -152,37 +152,30 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
             this.sensitivityLabelSource = Objects.requireNonNull(sensitivityLabelSource);
             return this;
         }
-
         public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSqlPoolSensitivityLabelArgs build() {
+        }        public GetSqlPoolSensitivityLabelArgs build() {
             return new GetSqlPoolSensitivityLabelArgs(columnName, resourceGroupName, schemaName, sensitivityLabelSource, sqlPoolName, tableName, workspaceName);
         }
     }

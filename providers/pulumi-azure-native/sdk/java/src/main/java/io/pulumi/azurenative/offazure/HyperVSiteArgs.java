@@ -152,72 +152,58 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<SitePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable SitePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder siteName(@Nullable Output<String> siteName) {
             this.siteName = siteName;
             return this;
         }
-
         public Builder siteName(@Nullable String siteName) {
             this.siteName = Output.ofNullable(siteName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public HyperVSiteArgs build() {
+        }        public HyperVSiteArgs build() {
             return new HyperVSiteArgs(eTag, location, name, properties, resourceGroupName, siteName, tags);
         }
     }

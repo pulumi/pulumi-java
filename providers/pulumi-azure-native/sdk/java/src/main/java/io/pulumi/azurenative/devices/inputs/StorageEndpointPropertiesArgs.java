@@ -112,42 +112,34 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder connectionString(Output<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder connectionString(String connectionString) {
             this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
-
         public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder sasTtlAsIso8601(@Nullable Output<String> sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
         }
-
         public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = Output.ofNullable(sasTtlAsIso8601);
             return this;
-        }
-        public StorageEndpointPropertiesArgs build() {
+        }        public StorageEndpointPropertiesArgs build() {
             return new StorageEndpointPropertiesArgs(authenticationType, connectionString, containerName, sasTtlAsIso8601);
         }
     }

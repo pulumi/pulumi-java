@@ -93,17 +93,17 @@ public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArg
             this.deleteAfter = Objects.requireNonNull(deleteAfter);
             return this;
         }
-
         public Builder sourceDataStore(DataStoreInfoBaseResponse sourceDataStore) {
             this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
             return this;
         }
-
         public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
-        public SourceLifeCycleResponse build() {
+        public Builder targetDataStoreCopySettings(TargetCopySettingResponse... targetDataStoreCopySettings) {
+            return targetDataStoreCopySettings(List.of(targetDataStoreCopySettings));
+        }        public SourceLifeCycleResponse build() {
             return new SourceLifeCycleResponse(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
         }
     }

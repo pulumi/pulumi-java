@@ -88,17 +88,14 @@ public final class GetServerTrustCertificateArgs extends io.pulumi.resources.Inv
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetServerTrustCertificateArgs build() {
+        }        public GetServerTrustCertificateArgs build() {
             return new GetServerTrustCertificateArgs(certificateName, managedInstanceName, resourceGroupName);
         }
     }

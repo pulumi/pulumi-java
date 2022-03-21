@@ -80,22 +80,18 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
             this.periodicModeProperties = periodicModeProperties;
             return this;
         }
-
         public Builder periodicModeProperties(@Nullable PeriodicModePropertiesArgs periodicModeProperties) {
             this.periodicModeProperties = Output.ofNullable(periodicModeProperties);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public PeriodicModeBackupPolicyArgs build() {
+        }        public PeriodicModeBackupPolicyArgs build() {
             return new PeriodicModeBackupPolicyArgs(periodicModeProperties, type);
         }
     }

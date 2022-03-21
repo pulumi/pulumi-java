@@ -78,22 +78,18 @@ public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder usageModel(@Nullable Output<String> usageModel) {
             this.usageModel = usageModel;
             return this;
         }
-
         public Builder usageModel(@Nullable String usageModel) {
             this.usageModel = Output.ofNullable(usageModel);
             return this;
-        }
-        public Nfs3TargetArgs build() {
+        }        public Nfs3TargetArgs build() {
             return new Nfs3TargetArgs(target, usageModel);
         }
     }

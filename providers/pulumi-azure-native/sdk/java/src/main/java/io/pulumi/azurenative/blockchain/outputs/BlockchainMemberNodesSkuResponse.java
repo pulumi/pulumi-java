@@ -53,8 +53,7 @@ public final class BlockchainMemberNodesSkuResponse {
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
-        }
-        public BlockchainMemberNodesSkuResponse build() {
+        }        public BlockchainMemberNodesSkuResponse build() {
             return new BlockchainMemberNodesSkuResponse(capacity);
         }
     }

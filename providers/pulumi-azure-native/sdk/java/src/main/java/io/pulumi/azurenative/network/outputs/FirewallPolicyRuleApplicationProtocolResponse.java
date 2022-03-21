@@ -72,12 +72,10 @@ public final class FirewallPolicyRuleApplicationProtocolResponse {
             this.port = port;
             return this;
         }
-
         public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
-        }
-        public FirewallPolicyRuleApplicationProtocolResponse build() {
+        }        public FirewallPolicyRuleApplicationProtocolResponse build() {
             return new FirewallPolicyRuleApplicationProtocolResponse(port, protocolType);
         }
     }

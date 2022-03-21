@@ -249,67 +249,54 @@ public final class GetWebAppDeploymentSlotResult {
             this.active = active;
             return this;
         }
-
         public Builder author(@Nullable String author) {
             this.author = author;
             return this;
         }
-
         public Builder authorEmail(@Nullable String authorEmail) {
             this.authorEmail = authorEmail;
             return this;
         }
-
         public Builder deployer(@Nullable String deployer) {
             this.deployer = deployer;
             return this;
         }
-
         public Builder details(@Nullable String details) {
             this.details = details;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder status(@Nullable Integer status) {
             this.status = status;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppDeploymentSlotResult build() {
+        }        public GetWebAppDeploymentSlotResult build() {
             return new GetWebAppDeploymentSlotResult(active, author, authorEmail, deployer, details, endTime, id, kind, message, name, startTime, status, type);
         }
     }

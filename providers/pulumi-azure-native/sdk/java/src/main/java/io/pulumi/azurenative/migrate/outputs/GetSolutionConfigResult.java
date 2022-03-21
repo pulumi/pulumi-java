@@ -53,8 +53,7 @@ public final class GetSolutionConfigResult {
         public Builder publisherSasUri(@Nullable String publisherSasUri) {
             this.publisherSasUri = publisherSasUri;
             return this;
-        }
-        public GetSolutionConfigResult build() {
+        }        public GetSolutionConfigResult build() {
             return new GetSolutionConfigResult(publisherSasUri);
         }
     }

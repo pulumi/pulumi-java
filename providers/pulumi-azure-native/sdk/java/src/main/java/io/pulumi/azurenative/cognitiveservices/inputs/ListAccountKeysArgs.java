@@ -72,12 +72,10 @@ public final class ListAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListAccountKeysArgs build() {
+        }        public ListAccountKeysArgs build() {
             return new ListAccountKeysArgs(accountName, resourceGroupName);
         }
     }

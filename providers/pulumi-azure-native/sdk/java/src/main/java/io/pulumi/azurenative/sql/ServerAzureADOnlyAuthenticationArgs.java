@@ -107,42 +107,34 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
             this.authenticationName = authenticationName;
             return this;
         }
-
         public Builder authenticationName(@Nullable String authenticationName) {
             this.authenticationName = Output.ofNullable(authenticationName);
             return this;
         }
-
         public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
             return this;
         }
-
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Output.of(Objects.requireNonNull(azureADOnlyAuthentication));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
-        }
-        public ServerAzureADOnlyAuthenticationArgs build() {
+        }        public ServerAzureADOnlyAuthenticationArgs build() {
             return new ServerAzureADOnlyAuthenticationArgs(authenticationName, azureADOnlyAuthentication, resourceGroupName, serverName);
         }
     }

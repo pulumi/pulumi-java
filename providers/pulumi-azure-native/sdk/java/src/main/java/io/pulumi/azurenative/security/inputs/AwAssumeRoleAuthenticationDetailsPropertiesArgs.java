@@ -94,32 +94,26 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder awsAssumeRoleArn(Output<String> awsAssumeRoleArn) {
             this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn);
             return this;
         }
-
         public Builder awsAssumeRoleArn(String awsAssumeRoleArn) {
             this.awsAssumeRoleArn = Output.of(Objects.requireNonNull(awsAssumeRoleArn));
             return this;
         }
-
         public Builder awsExternalId(Output<String> awsExternalId) {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }
-
         public Builder awsExternalId(String awsExternalId) {
             this.awsExternalId = Output.of(Objects.requireNonNull(awsExternalId));
             return this;
-        }
-        public AwAssumeRoleAuthenticationDetailsPropertiesArgs build() {
+        }        public AwAssumeRoleAuthenticationDetailsPropertiesArgs build() {
             return new AwAssumeRoleAuthenticationDetailsPropertiesArgs(authenticationType, awsAssumeRoleArn, awsExternalId);
         }
     }

@@ -103,22 +103,18 @@ public final class PlacementProfileResponse {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
-        }
-        public PlacementProfileResponse build() {
+        }        public PlacementProfileResponse build() {
             return new PlacementProfileResponse(clusterId, datastoreId, hostId, resourcePoolId);
         }
     }

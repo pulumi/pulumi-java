@@ -69,12 +69,10 @@ public final class RunCommandInputParameterResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RunCommandInputParameterResponse build() {
+        }        public RunCommandInputParameterResponse build() {
             return new RunCommandInputParameterResponse(name, value);
         }
     }

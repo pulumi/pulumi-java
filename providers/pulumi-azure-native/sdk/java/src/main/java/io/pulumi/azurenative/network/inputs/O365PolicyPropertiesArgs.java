@@ -61,12 +61,10 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
             this.breakOutCategories = breakOutCategories;
             return this;
         }
-
         public Builder breakOutCategories(@Nullable O365BreakOutCategoryPoliciesArgs breakOutCategories) {
             this.breakOutCategories = Output.ofNullable(breakOutCategories);
             return this;
-        }
-        public O365PolicyPropertiesArgs build() {
+        }        public O365PolicyPropertiesArgs build() {
             return new O365PolicyPropertiesArgs(breakOutCategories);
         }
     }

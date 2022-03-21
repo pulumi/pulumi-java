@@ -72,12 +72,10 @@ public final class DeliveryRuleRequestHeaderActionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(HeaderActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleRequestHeaderActionResponse build() {
+        }        public DeliveryRuleRequestHeaderActionResponse build() {
             return new DeliveryRuleRequestHeaderActionResponse(name, parameters);
         }
     }

@@ -111,22 +111,21 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(List<KeyValuePairResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(KeyValuePairResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder selectorId(String selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DiscreteActionResponse build() {
+        }        public DiscreteActionResponse build() {
             return new DiscreteActionResponse(name, parameters, selectorId, type);
         }
     }

@@ -58,8 +58,7 @@ public final class FhirServiceAccessPolicyEntryResponse extends io.pulumi.resour
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
-        }
-        public FhirServiceAccessPolicyEntryResponse build() {
+        }        public FhirServiceAccessPolicyEntryResponse build() {
             return new FhirServiceAccessPolicyEntryResponse(objectId);
         }
     }

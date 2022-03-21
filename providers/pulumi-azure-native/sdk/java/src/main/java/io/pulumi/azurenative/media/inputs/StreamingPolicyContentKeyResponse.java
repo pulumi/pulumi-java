@@ -96,17 +96,17 @@ public final class StreamingPolicyContentKeyResponse extends io.pulumi.resources
             this.label = label;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder tracks(@Nullable List<TrackSelectionResponse> tracks) {
             this.tracks = tracks;
             return this;
         }
-        public StreamingPolicyContentKeyResponse build() {
+        public Builder tracks(TrackSelectionResponse... tracks) {
+            return tracks(List.of(tracks));
+        }        public StreamingPolicyContentKeyResponse build() {
             return new StreamingPolicyContentKeyResponse(label, policyName, tracks);
         }
     }

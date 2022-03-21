@@ -96,32 +96,26 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
             this.hostCaching = hostCaching;
             return this;
         }
-
         public Builder hostCaching(@Nullable HostCaching hostCaching) {
             this.hostCaching = Output.ofNullable(hostCaching);
             return this;
         }
-
         public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
-
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public GalleryDataDiskImageArgs build() {
+        }        public GalleryDataDiskImageArgs build() {
             return new GalleryDataDiskImageArgs(hostCaching, lun, source);
         }
     }

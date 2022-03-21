@@ -173,82 +173,66 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
-
         public Builder key(@Nullable Output<KeyVaultKeyReferenceArgs> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable KeyVaultKeyReferenceArgs key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder publicCertificate(@Nullable Output<String> publicCertificate) {
             this.publicCertificate = publicCertificate;
             return this;
         }
-
         public Builder publicCertificate(@Nullable String publicCertificate) {
             this.publicCertificate = Output.ofNullable(publicCertificate);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationAccountCertificateArgs build() {
+        }        public IntegrationAccountCertificateArgs build() {
             return new IntegrationAccountCertificateArgs(certificateName, integrationAccountName, key, location, metadata, publicCertificate, resourceGroupName, tags);
         }
     }

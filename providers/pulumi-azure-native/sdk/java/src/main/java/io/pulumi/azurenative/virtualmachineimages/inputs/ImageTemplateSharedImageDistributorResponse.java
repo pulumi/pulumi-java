@@ -162,37 +162,33 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
             this.artifactTags = artifactTags;
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
-
         public Builder galleryImageId(String galleryImageId) {
             this.galleryImageId = Objects.requireNonNull(galleryImageId);
             return this;
         }
-
         public Builder replicationRegions(List<String> replicationRegions) {
             this.replicationRegions = Objects.requireNonNull(replicationRegions);
             return this;
         }
-
+        public Builder replicationRegions(String... replicationRegions) {
+            return replicationRegions(List.of(replicationRegions));
+        }
         public Builder runOutputName(String runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageTemplateSharedImageDistributorResponse build() {
+        }        public ImageTemplateSharedImageDistributorResponse build() {
             return new ImageTemplateSharedImageDistributorResponse(artifactTags, excludeFromLatest, galleryImageId, replicationRegions, runOutputName, storageAccountType, type);
         }
     }

@@ -80,12 +80,13 @@ public final class DiagnosticsRefResponse extends io.pulumi.resources.InvokeArgs
             this.enabled = enabled;
             return this;
         }
-
         public Builder sinkRefs(@Nullable List<String> sinkRefs) {
             this.sinkRefs = sinkRefs;
             return this;
         }
-        public DiagnosticsRefResponse build() {
+        public Builder sinkRefs(String... sinkRefs) {
+            return sinkRefs(List.of(sinkRefs));
+        }        public DiagnosticsRefResponse build() {
             return new DiagnosticsRefResponse(enabled, sinkRefs);
         }
     }

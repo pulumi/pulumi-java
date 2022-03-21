@@ -207,52 +207,45 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
             this.activateDate = Objects.requireNonNull(activateDate);
             return this;
         }
-
         public Builder certVersion(@Nullable String certVersion) {
             this.certVersion = certVersion;
             return this;
         }
-
         public Builder dnsNames(List<String> dnsNames) {
             this.dnsNames = Objects.requireNonNull(dnsNames);
             return this;
         }
-
+        public Builder dnsNames(String... dnsNames) {
+            return dnsNames(List.of(dnsNames));
+        }
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
-
         public Builder issuedDate(String issuedDate) {
             this.issuedDate = Objects.requireNonNull(issuedDate);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder keyVaultCertName(String keyVaultCertName) {
             this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName);
             return this;
         }
-
         public Builder subjectName(String subjectName) {
             this.subjectName = Objects.requireNonNull(subjectName);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder vaultUri(String vaultUri) {
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
-        }
-        public CertificatePropertiesResponse build() {
+        }        public CertificatePropertiesResponse build() {
             return new CertificatePropertiesResponse(activateDate, certVersion, dnsNames, expirationDate, issuedDate, issuer, keyVaultCertName, subjectName, thumbprint, vaultUri);
         }
     }

@@ -462,132 +462,109 @@ public final class GetAppServiceCertificateOrderResult {
             this.appServiceCertificateNotRenewableReasons = Objects.requireNonNull(appServiceCertificateNotRenewableReasons);
             return this;
         }
-
+        public Builder appServiceCertificateNotRenewableReasons(String... appServiceCertificateNotRenewableReasons) {
+            return appServiceCertificateNotRenewableReasons(List.of(appServiceCertificateNotRenewableReasons));
+        }
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder certificates(@Nullable Map<String,AppServiceCertificateResponse> certificates) {
             this.certificates = certificates;
             return this;
         }
-
         public Builder csr(@Nullable String csr) {
             this.csr = csr;
             return this;
         }
-
         public Builder distinguishedName(@Nullable String distinguishedName) {
             this.distinguishedName = distinguishedName;
             return this;
         }
-
         public Builder domainVerificationToken(String domainVerificationToken) {
             this.domainVerificationToken = Objects.requireNonNull(domainVerificationToken);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder intermediate(CertificateDetailsResponse intermediate) {
             this.intermediate = Objects.requireNonNull(intermediate);
             return this;
         }
-
         public Builder isPrivateKeyExternal(Boolean isPrivateKeyExternal) {
             this.isPrivateKeyExternal = Objects.requireNonNull(isPrivateKeyExternal);
             return this;
         }
-
         public Builder keySize(@Nullable Integer keySize) {
             this.keySize = keySize;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder lastCertificateIssuanceTime(String lastCertificateIssuanceTime) {
             this.lastCertificateIssuanceTime = Objects.requireNonNull(lastCertificateIssuanceTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nextAutoRenewalTimeStamp(String nextAutoRenewalTimeStamp) {
             this.nextAutoRenewalTimeStamp = Objects.requireNonNull(nextAutoRenewalTimeStamp);
             return this;
         }
-
         public Builder productType(String productType) {
             this.productType = Objects.requireNonNull(productType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder root(CertificateDetailsResponse root) {
             this.root = Objects.requireNonNull(root);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder signedCertificate(CertificateDetailsResponse signedCertificate) {
             this.signedCertificate = Objects.requireNonNull(signedCertificate);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder validityInYears(@Nullable Integer validityInYears) {
             this.validityInYears = validityInYears;
             return this;
-        }
-        public GetAppServiceCertificateOrderResult build() {
+        }        public GetAppServiceCertificateOrderResult build() {
             return new GetAppServiceCertificateOrderResult(appServiceCertificateNotRenewableReasons, autoRenew, certificates, csr, distinguishedName, domainVerificationToken, expirationTime, id, intermediate, isPrivateKeyExternal, keySize, kind, lastCertificateIssuanceTime, location, name, nextAutoRenewalTimeStamp, productType, provisioningState, root, serialNumber, signedCertificate, status, systemData, tags, type, validityInYears);
         }
     }

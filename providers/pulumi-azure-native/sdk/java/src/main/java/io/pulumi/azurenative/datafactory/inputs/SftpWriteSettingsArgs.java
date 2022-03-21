@@ -144,62 +144,50 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             this.copyBehavior = copyBehavior;
             return this;
         }
-
         public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = Output.ofNullable(copyBehavior);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder operationTimeout(@Nullable Output<Object> operationTimeout) {
             this.operationTimeout = operationTimeout;
             return this;
         }
-
         public Builder operationTimeout(@Nullable Object operationTimeout) {
             this.operationTimeout = Output.ofNullable(operationTimeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder useTempFileRename(@Nullable Output<Object> useTempFileRename) {
             this.useTempFileRename = useTempFileRename;
             return this;
         }
-
         public Builder useTempFileRename(@Nullable Object useTempFileRename) {
             this.useTempFileRename = Output.ofNullable(useTempFileRename);
             return this;
-        }
-        public SftpWriteSettingsArgs build() {
+        }        public SftpWriteSettingsArgs build() {
             return new SftpWriteSettingsArgs(copyBehavior, disableMetricsCollection, maxConcurrentConnections, operationTimeout, type, useTempFileRename);
         }
     }

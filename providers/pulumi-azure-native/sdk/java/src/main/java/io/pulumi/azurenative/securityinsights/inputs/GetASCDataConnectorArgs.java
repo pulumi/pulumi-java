@@ -88,17 +88,14 @@ public final class GetASCDataConnectorArgs extends io.pulumi.resources.InvokeArg
             this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetASCDataConnectorArgs build() {
+        }        public GetASCDataConnectorArgs build() {
             return new GetASCDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
         }
     }

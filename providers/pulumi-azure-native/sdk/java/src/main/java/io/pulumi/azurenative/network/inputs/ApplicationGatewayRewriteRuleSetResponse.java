@@ -128,27 +128,25 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder rewriteRules(@Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
             this.rewriteRules = rewriteRules;
             return this;
         }
-        public ApplicationGatewayRewriteRuleSetResponse build() {
+        public Builder rewriteRules(ApplicationGatewayRewriteRuleResponse... rewriteRules) {
+            return rewriteRules(List.of(rewriteRules));
+        }        public ApplicationGatewayRewriteRuleSetResponse build() {
             return new ApplicationGatewayRewriteRuleSetResponse(etag, id, name, provisioningState, rewriteRules);
         }
     }

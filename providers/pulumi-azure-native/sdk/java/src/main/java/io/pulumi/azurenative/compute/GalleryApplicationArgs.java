@@ -220,112 +220,90 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
             return this;
         }
-
         public Builder eula(@Nullable Output<String> eula) {
             this.eula = eula;
             return this;
         }
-
         public Builder eula(@Nullable String eula) {
             this.eula = Output.ofNullable(eula);
             return this;
         }
-
         public Builder galleryApplicationName(@Nullable Output<String> galleryApplicationName) {
             this.galleryApplicationName = galleryApplicationName;
             return this;
         }
-
         public Builder galleryApplicationName(@Nullable String galleryApplicationName) {
             this.galleryApplicationName = Output.ofNullable(galleryApplicationName);
             return this;
         }
-
         public Builder galleryName(Output<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
-
         public Builder galleryName(String galleryName) {
             this.galleryName = Output.of(Objects.requireNonNull(galleryName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privacyStatementUri(@Nullable Output<String> privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
-
         public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
             this.privacyStatementUri = Output.ofNullable(privacyStatementUri);
             return this;
         }
-
         public Builder releaseNoteUri(@Nullable Output<String> releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
-
         public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
             this.releaseNoteUri = Output.ofNullable(releaseNoteUri);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder supportedOSType(Output<OperatingSystemTypes> supportedOSType) {
             this.supportedOSType = Objects.requireNonNull(supportedOSType);
             return this;
         }
-
         public Builder supportedOSType(OperatingSystemTypes supportedOSType) {
             this.supportedOSType = Output.of(Objects.requireNonNull(supportedOSType));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GalleryApplicationArgs build() {
+        }        public GalleryApplicationArgs build() {
             return new GalleryApplicationArgs(description, endOfLifeDate, eula, galleryApplicationName, galleryName, location, privacyStatementUri, releaseNoteUri, resourceGroupName, supportedOSType, tags);
         }
     }

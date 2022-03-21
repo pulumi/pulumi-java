@@ -168,42 +168,37 @@ public final class GetObjectReplicationPolicyResult {
             this.destinationAccount = Objects.requireNonNull(destinationAccount);
             return this;
         }
-
         public Builder enabledTime(String enabledTime) {
             this.enabledTime = Objects.requireNonNull(enabledTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder rules(@Nullable List<ObjectReplicationPolicyRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(ObjectReplicationPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder sourceAccount(String sourceAccount) {
             this.sourceAccount = Objects.requireNonNull(sourceAccount);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetObjectReplicationPolicyResult build() {
+        }        public GetObjectReplicationPolicyResult build() {
             return new GetObjectReplicationPolicyResult(destinationAccount, enabledTime, id, name, policyId, rules, sourceAccount, type);
         }
     }

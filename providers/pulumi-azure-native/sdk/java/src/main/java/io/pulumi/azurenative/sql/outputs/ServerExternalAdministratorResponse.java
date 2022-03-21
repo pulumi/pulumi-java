@@ -136,32 +136,26 @@ public final class ServerExternalAdministratorResponse {
             this.administratorType = administratorType;
             return this;
         }
-
         public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = login;
             return this;
         }
-
         public Builder principalType(@Nullable String principalType) {
             this.principalType = principalType;
             return this;
         }
-
         public Builder sid(@Nullable String sid) {
             this.sid = sid;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public ServerExternalAdministratorResponse build() {
+        }        public ServerExternalAdministratorResponse build() {
             return new ServerExternalAdministratorResponse(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }
     }

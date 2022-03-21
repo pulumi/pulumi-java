@@ -71,12 +71,10 @@ public final class ServicePrincipalPropertiesResponse {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
-        }
-        public ServicePrincipalPropertiesResponse build() {
+        }        public ServicePrincipalPropertiesResponse build() {
             return new ServicePrincipalPropertiesResponse(applicationId, secret);
         }
     }

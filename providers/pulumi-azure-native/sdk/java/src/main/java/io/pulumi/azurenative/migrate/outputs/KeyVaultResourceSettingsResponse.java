@@ -71,12 +71,10 @@ public final class KeyVaultResourceSettingsResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
-        }
-        public KeyVaultResourceSettingsResponse build() {
+        }        public KeyVaultResourceSettingsResponse build() {
             return new KeyVaultResourceSettingsResponse(resourceType, targetResourceName);
         }
     }

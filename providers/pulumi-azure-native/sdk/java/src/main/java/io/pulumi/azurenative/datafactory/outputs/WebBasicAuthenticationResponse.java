@@ -107,22 +107,18 @@ public final class WebBasicAuthenticationResponse {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder username(Object username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public WebBasicAuthenticationResponse build() {
+        }        public WebBasicAuthenticationResponse build() {
             return new WebBasicAuthenticationResponse(authenticationType, password, url, username);
         }
     }

@@ -61,12 +61,10 @@ public final class VirtualHubIdArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public VirtualHubIdArgs build() {
+        }        public VirtualHubIdArgs build() {
             return new VirtualHubIdArgs(id);
         }
     }

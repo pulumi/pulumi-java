@@ -58,12 +58,10 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable Map<String,String> data) {
             this.data = Output.ofNullable(data);
             return this;
-        }
-        public FlavorDataArgs build() {
+        }        public FlavorDataArgs build() {
             return new FlavorDataArgs(data);
         }
     }

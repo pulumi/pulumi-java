@@ -125,27 +125,25 @@ public final class ReportDatasetResponse {
             this.aggregation = aggregation;
             return this;
         }
-
         public Builder configuration(@Nullable ReportDatasetConfigurationResponse configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder filter(@Nullable ReportFilterResponse filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder granularity(@Nullable String granularity) {
             this.granularity = granularity;
             return this;
         }
-
         public Builder grouping(@Nullable List<ReportGroupingResponse> grouping) {
             this.grouping = grouping;
             return this;
         }
-        public ReportDatasetResponse build() {
+        public Builder grouping(ReportGroupingResponse... grouping) {
+            return grouping(List.of(grouping));
+        }        public ReportDatasetResponse build() {
             return new ReportDatasetResponse(aggregation, configuration, filter, granularity, grouping);
         }
     }

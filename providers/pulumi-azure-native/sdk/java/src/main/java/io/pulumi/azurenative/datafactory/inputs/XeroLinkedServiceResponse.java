@@ -264,67 +264,57 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectionProperties(@Nullable Object connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
-
         public Builder consumerKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder host(@Nullable Object host) {
             this.host = host;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder privateKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
-        }
-        public XeroLinkedServiceResponse build() {
+        }        public XeroLinkedServiceResponse build() {
             return new XeroLinkedServiceResponse(annotations, connectVia, connectionProperties, consumerKey, description, encryptedCredential, host, parameters, privateKey, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }
     }

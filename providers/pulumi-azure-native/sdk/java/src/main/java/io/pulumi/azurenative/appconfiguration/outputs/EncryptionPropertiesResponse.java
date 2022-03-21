@@ -53,8 +53,7 @@ public final class EncryptionPropertiesResponse {
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
-        }
-        public EncryptionPropertiesResponse build() {
+        }        public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keyVaultProperties);
         }
     }

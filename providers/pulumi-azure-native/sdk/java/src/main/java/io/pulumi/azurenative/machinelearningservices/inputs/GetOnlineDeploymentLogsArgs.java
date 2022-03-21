@@ -141,32 +141,26 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
             this.containerType = containerType;
             return this;
         }
-
         public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tail(@Nullable Integer tail) {
             this.tail = tail;
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetOnlineDeploymentLogsArgs build() {
+        }        public GetOnlineDeploymentLogsArgs build() {
             return new GetOnlineDeploymentLogsArgs(containerType, deploymentName, endpointName, resourceGroupName, tail, workspaceName);
         }
     }

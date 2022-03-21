@@ -54,8 +54,7 @@ public final class GetTagAtScopeArgs extends io.pulumi.resources.InvokeArgs {
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetTagAtScopeArgs build() {
+        }        public GetTagAtScopeArgs build() {
             return new GetTagAtScopeArgs(scope);
         }
     }

@@ -188,92 +188,74 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
             this.certBlob = certBlob;
             return this;
         }
-
         public Builder certBlob(@Nullable String certBlob) {
             this.certBlob = Output.ofNullable(certBlob);
             return this;
         }
-
         public Builder dnsServers(@Nullable Output<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable String dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
         public Builder isSwift(@Nullable Output<Boolean> isSwift) {
             this.isSwift = isSwift;
             return this;
         }
-
         public Builder isSwift(@Nullable Boolean isSwift) {
             this.isSwift = Output.ofNullable(isSwift);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public Builder vnetName(@Nullable Output<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
-
         public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = Output.ofNullable(vnetName);
             return this;
         }
-
         public Builder vnetResourceId(@Nullable Output<String> vnetResourceId) {
             this.vnetResourceId = vnetResourceId;
             return this;
         }
-
         public Builder vnetResourceId(@Nullable String vnetResourceId) {
             this.vnetResourceId = Output.ofNullable(vnetResourceId);
             return this;
-        }
-        public WebAppVnetConnectionSlotArgs build() {
+        }        public WebAppVnetConnectionSlotArgs build() {
             return new WebAppVnetConnectionSlotArgs(certBlob, dnsServers, isSwift, kind, name, resourceGroupName, slot, vnetName, vnetResourceId);
         }
     }

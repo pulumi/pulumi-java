@@ -68,22 +68,18 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,IdentityManagementTypes>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,IdentityManagementTypes> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ResourceTypeRegistrationPropertiesIdentityManagementArgs build() {
+        }        public ResourceTypeRegistrationPropertiesIdentityManagementArgs build() {
             return new ResourceTypeRegistrationPropertiesIdentityManagementArgs(applicationId, type);
         }
     }

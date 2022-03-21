@@ -96,32 +96,26 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder logAnalyticsResources(@Nullable Output<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources) {
             this.logAnalyticsResources = logAnalyticsResources;
             return this;
         }
-
         public Builder logAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesArgs logAnalyticsResources) {
             this.logAnalyticsResources = Output.ofNullable(logAnalyticsResources);
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
-        }
-        public FirewallPolicyInsightsArgs build() {
+        }        public FirewallPolicyInsightsArgs build() {
             return new FirewallPolicyInsightsArgs(isEnabled, logAnalyticsResources, retentionDays);
         }
     }

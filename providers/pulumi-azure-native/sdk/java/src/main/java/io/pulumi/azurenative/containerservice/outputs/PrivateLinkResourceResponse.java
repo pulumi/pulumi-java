@@ -136,32 +136,29 @@ public final class PrivateLinkResourceResponse {
             this.groupId = groupId;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder privateLinkServiceID(String privateLinkServiceID) {
             this.privateLinkServiceID = Objects.requireNonNull(privateLinkServiceID);
             return this;
         }
-
         public Builder requiredMembers(@Nullable List<String> requiredMembers) {
             this.requiredMembers = requiredMembers;
             return this;
         }
-
+        public Builder requiredMembers(String... requiredMembers) {
+            return requiredMembers(List.of(requiredMembers));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PrivateLinkResourceResponse build() {
+        }        public PrivateLinkResourceResponse build() {
             return new PrivateLinkResourceResponse(groupId, id, name, privateLinkServiceID, requiredMembers, type);
         }
     }

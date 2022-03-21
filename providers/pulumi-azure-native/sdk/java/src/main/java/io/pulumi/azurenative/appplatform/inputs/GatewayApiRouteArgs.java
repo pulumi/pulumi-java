@@ -193,92 +193,83 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder filters(@Nullable Output<List<String>> filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable List<String> filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
+        public Builder filters(String... filters) {
+            return filters(List.of(filters));
+        }
         public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder predicates(@Nullable Output<List<String>> predicates) {
             this.predicates = predicates;
             return this;
         }
-
         public Builder predicates(@Nullable List<String> predicates) {
             this.predicates = Output.ofNullable(predicates);
             return this;
         }
-
+        public Builder predicates(String... predicates) {
+            return predicates(List.of(predicates));
+        }
         public Builder ssoEnabled(@Nullable Output<Boolean> ssoEnabled) {
             this.ssoEnabled = ssoEnabled;
             return this;
         }
-
         public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
             this.ssoEnabled = Output.ofNullable(ssoEnabled);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder tokenRelay(@Nullable Output<Boolean> tokenRelay) {
             this.tokenRelay = tokenRelay;
             return this;
         }
-
         public Builder tokenRelay(@Nullable Boolean tokenRelay) {
             this.tokenRelay = Output.ofNullable(tokenRelay);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public GatewayApiRouteArgs build() {
+        }        public GatewayApiRouteArgs build() {
             return new GatewayApiRouteArgs(description, filters, order, predicates, ssoEnabled, tags, title, tokenRelay, uri);
         }
     }

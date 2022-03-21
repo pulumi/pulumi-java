@@ -90,17 +90,14 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterResponse {
             this.key = key;
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
-        }
-        public NumberGreaterThanOrEqualsAdvancedFilterResponse build() {
+        }        public NumberGreaterThanOrEqualsAdvancedFilterResponse build() {
             return new NumberGreaterThanOrEqualsAdvancedFilterResponse(key, operatorType, value);
         }
     }

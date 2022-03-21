@@ -53,8 +53,7 @@ public final class GetSystemTopicEventSubscriptionFullUrlResult {
         public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
-        }
-        public GetSystemTopicEventSubscriptionFullUrlResult build() {
+        }        public GetSystemTopicEventSubscriptionFullUrlResult build() {
             return new GetSystemTopicEventSubscriptionFullUrlResult(endpointUrl);
         }
     }

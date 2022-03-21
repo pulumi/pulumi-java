@@ -176,82 +176,66 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
             this.deploymentMode = deploymentMode;
             return this;
         }
-
         public Builder deploymentMode(@Nullable Either<String,SkuDeploymentMode> deploymentMode) {
             this.deploymentMode = Output.ofNullable(deploymentMode);
             return this;
         }
-
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
-
         public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
             this.managedApplicationParameters = Output.ofNullable(managedApplicationParameters);
             return this;
         }
-
         public Builder managedApplicationTemplate(@Nullable Output<Object> managedApplicationTemplate) {
             this.managedApplicationTemplate = managedApplicationTemplate;
             return this;
         }
-
         public Builder managedApplicationTemplate(@Nullable Object managedApplicationTemplate) {
             this.managedApplicationTemplate = Output.ofNullable(managedApplicationTemplate);
             return this;
         }
-
         public Builder networkFunctionTemplate(@Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate) {
             this.networkFunctionTemplate = networkFunctionTemplate;
             return this;
         }
-
         public Builder networkFunctionTemplate(@Nullable NetworkFunctionTemplateArgs networkFunctionTemplate) {
             this.networkFunctionTemplate = Output.ofNullable(networkFunctionTemplate);
             return this;
         }
-
         public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder skuName(@Nullable Output<String> skuName) {
             this.skuName = skuName;
             return this;
         }
-
         public Builder skuName(@Nullable String skuName) {
             this.skuName = Output.ofNullable(skuName);
             return this;
         }
-
         public Builder skuType(@Nullable Output<Either<String,SkuType>> skuType) {
             this.skuType = skuType;
             return this;
         }
-
         public Builder skuType(@Nullable Either<String,SkuType> skuType) {
             this.skuType = Output.ofNullable(skuType);
             return this;
         }
-
         public Builder vendorName(Output<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
-
         public Builder vendorName(String vendorName) {
             this.vendorName = Output.of(Objects.requireNonNull(vendorName));
             return this;
-        }
-        public VendorSkusArgs build() {
+        }        public VendorSkusArgs build() {
             return new VendorSkusArgs(deploymentMode, managedApplicationParameters, managedApplicationTemplate, networkFunctionTemplate, preview, skuName, skuType, vendorName);
         }
     }

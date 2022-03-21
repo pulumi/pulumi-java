@@ -53,8 +53,7 @@ public final class OfficeDataConnectorDataTypesResponseExchange {
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public OfficeDataConnectorDataTypesResponseExchange build() {
+        }        public OfficeDataConnectorDataTypesResponseExchange build() {
             return new OfficeDataConnectorDataTypesResponseExchange(state);
         }
     }

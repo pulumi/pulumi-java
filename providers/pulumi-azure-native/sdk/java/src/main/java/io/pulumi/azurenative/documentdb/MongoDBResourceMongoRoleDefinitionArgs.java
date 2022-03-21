@@ -174,82 +174,72 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder mongoRoleDefinitionId(@Nullable Output<String> mongoRoleDefinitionId) {
             this.mongoRoleDefinitionId = mongoRoleDefinitionId;
             return this;
         }
-
         public Builder mongoRoleDefinitionId(@Nullable String mongoRoleDefinitionId) {
             this.mongoRoleDefinitionId = Output.ofNullable(mongoRoleDefinitionId);
             return this;
         }
-
         public Builder privileges(@Nullable Output<List<PrivilegeArgs>> privileges) {
             this.privileges = privileges;
             return this;
         }
-
         public Builder privileges(@Nullable List<PrivilegeArgs> privileges) {
             this.privileges = Output.ofNullable(privileges);
             return this;
         }
-
+        public Builder privileges(PrivilegeArgs... privileges) {
+            return privileges(List.of(privileges));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<RoleArgs> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-
+        public Builder roles(RoleArgs... roles) {
+            return roles(List.of(roles));
+        }
         public Builder type(@Nullable Output<MongoRoleDefinitionType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable MongoRoleDefinitionType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public MongoDBResourceMongoRoleDefinitionArgs build() {
+        }        public MongoDBResourceMongoRoleDefinitionArgs build() {
             return new MongoDBResourceMongoRoleDefinitionArgs(accountName, databaseName, mongoRoleDefinitionId, privileges, resourceGroupName, roleName, roles, type);
         }
     }

@@ -215,57 +215,49 @@ public final class GetServerAdvisorResult {
             this.advisorStatus = Objects.requireNonNull(advisorStatus);
             return this;
         }
-
         public Builder autoExecuteStatus(String autoExecuteStatus) {
             this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus);
             return this;
         }
-
         public Builder autoExecuteStatusInheritedFrom(String autoExecuteStatusInheritedFrom) {
             this.autoExecuteStatusInheritedFrom = Objects.requireNonNull(autoExecuteStatusInheritedFrom);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastChecked(String lastChecked) {
             this.lastChecked = Objects.requireNonNull(lastChecked);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder recommendationsStatus(String recommendationsStatus) {
             this.recommendationsStatus = Objects.requireNonNull(recommendationsStatus);
             return this;
         }
-
         public Builder recommendedActions(List<RecommendedActionResponse> recommendedActions) {
             this.recommendedActions = Objects.requireNonNull(recommendedActions);
             return this;
         }
-
+        public Builder recommendedActions(RecommendedActionResponse... recommendedActions) {
+            return recommendedActions(List.of(recommendedActions));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerAdvisorResult build() {
+        }        public GetServerAdvisorResult build() {
             return new GetServerAdvisorResult(advisorStatus, autoExecuteStatus, autoExecuteStatusInheritedFrom, id, kind, lastChecked, location, name, recommendationsStatus, recommendedActions, type);
         }
     }

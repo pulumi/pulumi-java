@@ -69,12 +69,10 @@ public final class ServerCertificateCommonNameResponse {
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
-
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
-        }
-        public ServerCertificateCommonNameResponse build() {
+        }        public ServerCertificateCommonNameResponse build() {
             return new ServerCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint);
         }
     }

@@ -88,17 +88,14 @@ public final class GetManagementPolicyArgs extends io.pulumi.resources.InvokeArg
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder managementPolicyName(String managementPolicyName) {
             this.managementPolicyName = Objects.requireNonNull(managementPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagementPolicyArgs build() {
+        }        public GetManagementPolicyArgs build() {
             return new GetManagementPolicyArgs(accountName, managementPolicyName, resourceGroupName);
         }
     }

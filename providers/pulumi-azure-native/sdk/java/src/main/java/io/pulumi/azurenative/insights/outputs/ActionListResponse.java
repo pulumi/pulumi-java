@@ -54,7 +54,9 @@ public final class ActionListResponse {
             this.actionGroups = actionGroups;
             return this;
         }
-        public ActionListResponse build() {
+        public Builder actionGroups(ActionGroupResponse... actionGroups) {
+            return actionGroups(List.of(actionGroups));
+        }        public ActionListResponse build() {
             return new ActionListResponse(actionGroups);
         }
     }

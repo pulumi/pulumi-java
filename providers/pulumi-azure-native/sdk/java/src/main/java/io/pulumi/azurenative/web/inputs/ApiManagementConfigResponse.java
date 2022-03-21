@@ -60,8 +60,7 @@ public final class ApiManagementConfigResponse extends io.pulumi.resources.Invok
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ApiManagementConfigResponse build() {
+        }        public ApiManagementConfigResponse build() {
             return new ApiManagementConfigResponse(id);
         }
     }

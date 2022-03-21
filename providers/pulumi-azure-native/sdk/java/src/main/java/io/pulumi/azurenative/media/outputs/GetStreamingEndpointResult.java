@@ -399,112 +399,93 @@ public final class GetStreamingEndpointResult {
             this.accessControl = accessControl;
             return this;
         }
-
         public Builder availabilitySetName(@Nullable String availabilitySetName) {
             this.availabilitySetName = availabilitySetName;
             return this;
         }
-
         public Builder cdnEnabled(@Nullable Boolean cdnEnabled) {
             this.cdnEnabled = cdnEnabled;
             return this;
         }
-
         public Builder cdnProfile(@Nullable String cdnProfile) {
             this.cdnProfile = cdnProfile;
             return this;
         }
-
         public Builder cdnProvider(@Nullable String cdnProvider) {
             this.cdnProvider = cdnProvider;
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
-
         public Builder customHostNames(@Nullable List<String> customHostNames) {
             this.customHostNames = customHostNames;
             return this;
         }
-
+        public Builder customHostNames(String... customHostNames) {
+            return customHostNames(List.of(customHostNames));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder freeTrialEndTime(String freeTrialEndTime) {
             this.freeTrialEndTime = Objects.requireNonNull(freeTrialEndTime);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maxCacheAge(@Nullable Double maxCacheAge) {
             this.maxCacheAge = maxCacheAge;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder scaleUnits(Integer scaleUnits) {
             this.scaleUnits = Objects.requireNonNull(scaleUnits);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStreamingEndpointResult build() {
+        }        public GetStreamingEndpointResult build() {
             return new GetStreamingEndpointResult(accessControl, availabilitySetName, cdnEnabled, cdnProfile, cdnProvider, created, crossSiteAccessPolicies, customHostNames, description, freeTrialEndTime, hostName, id, lastModified, location, maxCacheAge, name, provisioningState, resourceState, scaleUnits, systemData, tags, type);
         }
     }

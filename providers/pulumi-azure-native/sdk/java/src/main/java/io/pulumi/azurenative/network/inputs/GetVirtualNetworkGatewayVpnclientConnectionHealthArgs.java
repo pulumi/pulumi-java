@@ -72,12 +72,10 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
-        }
-        public GetVirtualNetworkGatewayVpnclientConnectionHealthArgs build() {
+        }        public GetVirtualNetworkGatewayVpnclientConnectionHealthArgs build() {
             return new GetVirtualNetworkGatewayVpnclientConnectionHealthArgs(resourceGroupName, virtualNetworkGatewayName);
         }
     }

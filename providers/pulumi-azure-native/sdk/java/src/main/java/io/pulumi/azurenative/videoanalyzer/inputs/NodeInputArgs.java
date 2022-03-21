@@ -60,12 +60,10 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
-
         public Builder nodeName(String nodeName) {
             this.nodeName = Output.of(Objects.requireNonNull(nodeName));
             return this;
-        }
-        public NodeInputArgs build() {
+        }        public NodeInputArgs build() {
             return new NodeInputArgs(nodeName);
         }
     }

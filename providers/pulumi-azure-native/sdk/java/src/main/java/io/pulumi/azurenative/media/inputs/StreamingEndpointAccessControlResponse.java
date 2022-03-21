@@ -79,12 +79,10 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
             this.akamai = akamai;
             return this;
         }
-
         public Builder ip(@Nullable IPAccessControlResponse ip) {
             this.ip = ip;
             return this;
-        }
-        public StreamingEndpointAccessControlResponse build() {
+        }        public StreamingEndpointAccessControlResponse build() {
             return new StreamingEndpointAccessControlResponse(akamai, ip);
         }
     }

@@ -206,52 +206,42 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
             this.alias = alias;
             return this;
         }
-
         public Builder baseGroupDN(@Nullable String baseGroupDN) {
             this.baseGroupDN = baseGroupDN;
             return this;
         }
-
         public Builder baseUserDN(@Nullable String baseUserDN) {
             this.baseUserDN = baseUserDN;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder primaryServer(@Nullable String primaryServer) {
             this.primaryServer = primaryServer;
             return this;
         }
-
         public Builder secondaryServer(@Nullable String secondaryServer) {
             this.secondaryServer = secondaryServer;
             return this;
         }
-
         public Builder ssl(@Nullable String ssl) {
             this.ssl = ssl;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public IdentitySourceResponse build() {
+        }        public IdentitySourceResponse build() {
             return new IdentitySourceResponse(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);
         }
     }

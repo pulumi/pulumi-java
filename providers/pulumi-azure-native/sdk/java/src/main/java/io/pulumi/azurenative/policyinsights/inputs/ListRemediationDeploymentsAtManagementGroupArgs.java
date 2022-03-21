@@ -107,22 +107,18 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
-
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
             this.managementGroupsNamespace = Objects.requireNonNull(managementGroupsNamespace);
             return this;
         }
-
         public Builder remediationName(String remediationName) {
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
-
         public Builder top(@Nullable Integer top) {
             this.top = top;
             return this;
-        }
-        public ListRemediationDeploymentsAtManagementGroupArgs build() {
+        }        public ListRemediationDeploymentsAtManagementGroupArgs build() {
             return new ListRemediationDeploymentsAtManagementGroupArgs(managementGroupId, managementGroupsNamespace, remediationName, top);
         }
     }

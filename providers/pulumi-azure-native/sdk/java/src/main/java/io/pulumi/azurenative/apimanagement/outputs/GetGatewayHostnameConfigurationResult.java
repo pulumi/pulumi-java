@@ -184,47 +184,38 @@ public final class GetGatewayHostnameConfigurationResult {
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder http2Enabled(@Nullable Boolean http2Enabled) {
             this.http2Enabled = http2Enabled;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
-
         public Builder tls10Enabled(@Nullable Boolean tls10Enabled) {
             this.tls10Enabled = tls10Enabled;
             return this;
         }
-
         public Builder tls11Enabled(@Nullable Boolean tls11Enabled) {
             this.tls11Enabled = tls11Enabled;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGatewayHostnameConfigurationResult build() {
+        }        public GetGatewayHostnameConfigurationResult build() {
             return new GetGatewayHostnameConfigurationResult(certificateId, hostname, http2Enabled, id, name, negotiateClientCertificate, tls10Enabled, tls11Enabled, type);
         }
     }

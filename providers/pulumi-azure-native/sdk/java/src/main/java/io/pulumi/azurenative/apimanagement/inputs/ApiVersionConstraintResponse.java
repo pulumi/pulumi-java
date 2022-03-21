@@ -60,8 +60,7 @@ public final class ApiVersionConstraintResponse extends io.pulumi.resources.Invo
         public Builder minApiVersion(@Nullable String minApiVersion) {
             this.minApiVersion = minApiVersion;
             return this;
-        }
-        public ApiVersionConstraintResponse build() {
+        }        public ApiVersionConstraintResponse build() {
             return new ApiVersionConstraintResponse(minApiVersion);
         }
     }

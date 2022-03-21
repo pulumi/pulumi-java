@@ -152,37 +152,30 @@ public final class CacheActiveDirectorySettingsResponse {
             this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName);
             return this;
         }
-
         public Builder credentials(@Nullable CacheActiveDirectorySettingsResponseCredentials credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder domainJoined(String domainJoined) {
             this.domainJoined = Objects.requireNonNull(domainJoined);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainNetBiosName(String domainNetBiosName) {
             this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName);
             return this;
         }
-
         public Builder primaryDnsIpAddress(String primaryDnsIpAddress) {
             this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress);
             return this;
         }
-
         public Builder secondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
-        }
-        public CacheActiveDirectorySettingsResponse build() {
+        }        public CacheActiveDirectorySettingsResponse build() {
             return new CacheActiveDirectorySettingsResponse(cacheNetBiosName, credentials, domainJoined, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
         }
     }

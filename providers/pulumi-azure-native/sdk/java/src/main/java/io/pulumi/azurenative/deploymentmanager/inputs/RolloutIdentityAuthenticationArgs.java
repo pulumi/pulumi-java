@@ -61,12 +61,10 @@ public final class RolloutIdentityAuthenticationArgs extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RolloutIdentityAuthenticationArgs build() {
+        }        public RolloutIdentityAuthenticationArgs build() {
             return new RolloutIdentityAuthenticationArgs(type);
         }
     }

@@ -53,8 +53,7 @@ public final class ConsoleProfileResponse {
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public ConsoleProfileResponse build() {
+        }        public ConsoleProfileResponse build() {
             return new ConsoleProfileResponse(url);
         }
     }

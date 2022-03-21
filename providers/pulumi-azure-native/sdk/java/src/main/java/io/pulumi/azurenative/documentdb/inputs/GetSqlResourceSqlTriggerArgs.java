@@ -120,27 +120,22 @@ public final class GetSqlResourceSqlTriggerArgs extends io.pulumi.resources.Invo
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
-        }
-        public GetSqlResourceSqlTriggerArgs build() {
+        }        public GetSqlResourceSqlTriggerArgs build() {
             return new GetSqlResourceSqlTriggerArgs(accountName, containerName, databaseName, resourceGroupName, triggerName);
         }
     }

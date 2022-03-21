@@ -160,37 +160,30 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
             this.groupId = groupId;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpoint(@Nullable PrivateEndpointPropertyResponse privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PrivateEndpointConnectionResponse build() {
+        }        public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(groupId, id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }
     }

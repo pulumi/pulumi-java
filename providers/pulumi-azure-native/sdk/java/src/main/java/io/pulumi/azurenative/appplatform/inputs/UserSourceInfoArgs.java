@@ -113,42 +113,34 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactSelector = artifactSelector;
             return this;
         }
-
         public Builder artifactSelector(@Nullable String artifactSelector) {
             this.artifactSelector = Output.ofNullable(artifactSelector);
             return this;
         }
-
         public Builder relativePath(@Nullable Output<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = Output.ofNullable(relativePath);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,UserSourceType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,UserSourceType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public UserSourceInfoArgs build() {
+        }        public UserSourceInfoArgs build() {
             return new UserSourceInfoArgs(artifactSelector, relativePath, type, version);
         }
     }

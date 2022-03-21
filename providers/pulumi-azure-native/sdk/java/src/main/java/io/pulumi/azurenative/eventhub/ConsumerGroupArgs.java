@@ -122,52 +122,42 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.consumerGroupName = consumerGroupName;
             return this;
         }
-
         public Builder consumerGroupName(@Nullable String consumerGroupName) {
             this.consumerGroupName = Output.ofNullable(consumerGroupName);
             return this;
         }
-
         public Builder eventHubName(Output<String> eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
-
         public Builder eventHubName(String eventHubName) {
             this.eventHubName = Output.of(Objects.requireNonNull(eventHubName));
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }
-
         public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = Output.ofNullable(userMetadata);
             return this;
-        }
-        public ConsumerGroupArgs build() {
+        }        public ConsumerGroupArgs build() {
             return new ConsumerGroupArgs(consumerGroupName, eventHubName, namespaceName, resourceGroupName, userMetadata);
         }
     }

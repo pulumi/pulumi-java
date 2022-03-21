@@ -106,42 +106,34 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
-
         public Builder roleManagementPolicyAssignmentName(@Nullable Output<String> roleManagementPolicyAssignmentName) {
             this.roleManagementPolicyAssignmentName = roleManagementPolicyAssignmentName;
             return this;
         }
-
         public Builder roleManagementPolicyAssignmentName(@Nullable String roleManagementPolicyAssignmentName) {
             this.roleManagementPolicyAssignmentName = Output.ofNullable(roleManagementPolicyAssignmentName);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public RoleManagementPolicyAssignmentArgs build() {
+        }        public RoleManagementPolicyAssignmentArgs build() {
             return new RoleManagementPolicyAssignmentArgs(policyId, roleDefinitionId, roleManagementPolicyAssignmentName, scope);
         }
     }

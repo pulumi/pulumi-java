@@ -72,12 +72,10 @@ public final class GetHubArgs extends io.pulumi.resources.InvokeArgs {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetHubArgs build() {
+        }        public GetHubArgs build() {
             return new GetHubArgs(hubName, resourceGroupName);
         }
     }

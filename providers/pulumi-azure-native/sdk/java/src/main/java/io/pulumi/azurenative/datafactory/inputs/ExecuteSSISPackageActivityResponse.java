@@ -364,97 +364,84 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
             this.connectVia = Objects.requireNonNull(connectVia);
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder environmentPath(@Nullable Object environmentPath) {
             this.environmentPath = environmentPath;
             return this;
         }
-
         public Builder executionCredential(@Nullable SSISExecutionCredentialResponse executionCredential) {
             this.executionCredential = executionCredential;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder logLocation(@Nullable SSISLogLocationResponse logLocation) {
             this.logLocation = logLocation;
             return this;
         }
-
         public Builder loggingLevel(@Nullable Object loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers) {
             this.packageConnectionManagers = packageConnectionManagers;
             return this;
         }
-
         public Builder packageLocation(SSISPackageLocationResponse packageLocation) {
             this.packageLocation = Objects.requireNonNull(packageLocation);
             return this;
         }
-
         public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterResponse> packageParameters) {
             this.packageParameters = packageParameters;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers) {
             this.projectConnectionManagers = projectConnectionManagers;
             return this;
         }
-
         public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterResponse> projectParameters) {
             this.projectParameters = projectParameters;
             return this;
         }
-
         public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides) {
             this.propertyOverrides = propertyOverrides;
             return this;
         }
-
         public Builder runtime(@Nullable Object runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public ExecuteSSISPackageActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public ExecuteSSISPackageActivityResponse build() {
             return new ExecuteSSISPackageActivityResponse(connectVia, dependsOn, description, environmentPath, executionCredential, linkedServiceName, logLocation, loggingLevel, name, packageConnectionManagers, packageLocation, packageParameters, policy, projectConnectionManagers, projectParameters, propertyOverrides, runtime, type, userProperties);
         }
     }

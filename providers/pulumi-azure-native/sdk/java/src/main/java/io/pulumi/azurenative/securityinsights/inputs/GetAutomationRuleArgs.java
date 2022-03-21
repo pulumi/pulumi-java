@@ -104,22 +104,18 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
             this.automationRuleId = Objects.requireNonNull(automationRuleId);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetAutomationRuleArgs build() {
+        }        public GetAutomationRuleArgs build() {
             return new GetAutomationRuleArgs(automationRuleId, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }
     }

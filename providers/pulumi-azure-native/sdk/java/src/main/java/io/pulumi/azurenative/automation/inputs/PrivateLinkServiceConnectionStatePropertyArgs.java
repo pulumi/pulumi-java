@@ -78,22 +78,18 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public PrivateLinkServiceConnectionStatePropertyArgs build() {
+        }        public PrivateLinkServiceConnectionStatePropertyArgs build() {
             return new PrivateLinkServiceConnectionStatePropertyArgs(description, status);
         }
     }

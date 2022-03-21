@@ -79,22 +79,18 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
             this.errorLimit = errorLimit;
             return this;
         }
-
         public Builder errorLimit(@Nullable Integer errorLimit) {
             this.errorLimit = Output.ofNullable(errorLimit);
             return this;
         }
-
         public Builder errorManagementType(Output<ErrorManagementTypes> errorManagementType) {
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
         }
-
         public Builder errorManagementType(ErrorManagementTypes errorManagementType) {
             this.errorManagementType = Output.of(Objects.requireNonNull(errorManagementType));
             return this;
-        }
-        public ConnectorMappingErrorManagementArgs build() {
+        }        public ConnectorMappingErrorManagementArgs build() {
             return new ConnectorMappingErrorManagementArgs(errorLimit, errorManagementType);
         }
     }

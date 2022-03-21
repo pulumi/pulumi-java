@@ -90,17 +90,14 @@ public final class GetManagedInstanceArgs extends io.pulumi.resources.InvokeArgs
             this.expand = expand;
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedInstanceArgs build() {
+        }        public GetManagedInstanceArgs build() {
             return new GetManagedInstanceArgs(expand, managedInstanceName, resourceGroupName);
         }
     }

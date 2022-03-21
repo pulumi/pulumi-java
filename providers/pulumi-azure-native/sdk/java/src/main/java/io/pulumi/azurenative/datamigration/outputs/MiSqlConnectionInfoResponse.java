@@ -105,22 +105,18 @@ public final class MiSqlConnectionInfoResponse {
             this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public MiSqlConnectionInfoResponse build() {
+        }        public MiSqlConnectionInfoResponse build() {
             return new MiSqlConnectionInfoResponse(managedInstanceResourceId, password, type, userName);
         }
     }

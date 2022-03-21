@@ -218,57 +218,46 @@ public final class SapOpenHubSourceResponse {
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder baseRequestId(@Nullable Object baseRequestId) {
             this.baseRequestId = baseRequestId;
             return this;
         }
-
         public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
             this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
             this.excludeLastRequest = excludeLastRequest;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
             this.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SapOpenHubSourceResponse build() {
+        }        public SapOpenHubSourceResponse build() {
             return new SapOpenHubSourceResponse(additionalColumns, baseRequestId, customRfcReadTableFunctionModule, disableMetricsCollection, excludeLastRequest, maxConcurrentConnections, queryTimeout, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
         }
     }

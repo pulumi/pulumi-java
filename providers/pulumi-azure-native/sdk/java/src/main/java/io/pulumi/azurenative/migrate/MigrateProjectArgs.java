@@ -140,62 +140,50 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder migrateProjectName(@Nullable Output<String> migrateProjectName) {
             this.migrateProjectName = migrateProjectName;
             return this;
         }
-
         public Builder migrateProjectName(@Nullable String migrateProjectName) {
             this.migrateProjectName = Output.ofNullable(migrateProjectName);
             return this;
         }
-
         public Builder properties(@Nullable Output<MigrateProjectPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable MigrateProjectPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<MigrateProjectTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable MigrateProjectTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MigrateProjectArgs build() {
+        }        public MigrateProjectArgs build() {
             return new MigrateProjectArgs(eTag, location, migrateProjectName, properties, resourceGroupName, tags);
         }
     }

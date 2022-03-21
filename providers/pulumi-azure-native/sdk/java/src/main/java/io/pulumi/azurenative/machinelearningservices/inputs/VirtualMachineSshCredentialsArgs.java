@@ -110,42 +110,34 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder privateKeyData(@Nullable Output<String> privateKeyData) {
             this.privateKeyData = privateKeyData;
             return this;
         }
-
         public Builder privateKeyData(@Nullable String privateKeyData) {
             this.privateKeyData = Output.ofNullable(privateKeyData);
             return this;
         }
-
         public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
-
         public Builder publicKeyData(@Nullable String publicKeyData) {
             this.publicKeyData = Output.ofNullable(publicKeyData);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public VirtualMachineSshCredentialsArgs build() {
+        }        public VirtualMachineSshCredentialsArgs build() {
             return new VirtualMachineSshCredentialsArgs(password, privateKeyData, publicKeyData, username);
         }
     }

@@ -107,42 +107,34 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable SharedPrivateLinkResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder searchServiceName(Output<String> searchServiceName) {
             this.searchServiceName = Objects.requireNonNull(searchServiceName);
             return this;
         }
-
         public Builder searchServiceName(String searchServiceName) {
             this.searchServiceName = Output.of(Objects.requireNonNull(searchServiceName));
             return this;
         }
-
         public Builder sharedPrivateLinkResourceName(@Nullable Output<String> sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
-
         public Builder sharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = Output.ofNullable(sharedPrivateLinkResourceName);
             return this;
-        }
-        public SharedPrivateLinkResourceArgs build() {
+        }        public SharedPrivateLinkResourceArgs build() {
             return new SharedPrivateLinkResourceArgs(properties, resourceGroupName, searchServiceName, sharedPrivateLinkResourceName);
         }
     }

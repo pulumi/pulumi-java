@@ -111,42 +111,37 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
-
         public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = Output.ofNullable(issuerUri);
             return this;
         }
-
         public Builder scope(@Nullable Output<List<String>> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable List<String> scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-        public SsoPropertiesArgs build() {
+        public Builder scope(String... scope) {
+            return scope(List.of(scope));
+        }        public SsoPropertiesArgs build() {
             return new SsoPropertiesArgs(clientId, clientSecret, issuerUri, scope);
         }
     }

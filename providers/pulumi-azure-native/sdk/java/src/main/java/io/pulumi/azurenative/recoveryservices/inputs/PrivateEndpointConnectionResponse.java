@@ -96,17 +96,14 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public PrivateEndpointConnectionResponse build() {
+        }        public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }
     }

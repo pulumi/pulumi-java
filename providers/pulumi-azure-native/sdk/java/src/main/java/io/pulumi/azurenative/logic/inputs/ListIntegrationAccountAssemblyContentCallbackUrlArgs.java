@@ -88,17 +88,14 @@ public final class ListIntegrationAccountAssemblyContentCallbackUrlArgs extends 
             this.assemblyArtifactName = Objects.requireNonNull(assemblyArtifactName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListIntegrationAccountAssemblyContentCallbackUrlArgs build() {
+        }        public ListIntegrationAccountAssemblyContentCallbackUrlArgs build() {
             return new ListIntegrationAccountAssemblyContentCallbackUrlArgs(assemblyArtifactName, integrationAccountName, resourceGroupName);
         }
     }

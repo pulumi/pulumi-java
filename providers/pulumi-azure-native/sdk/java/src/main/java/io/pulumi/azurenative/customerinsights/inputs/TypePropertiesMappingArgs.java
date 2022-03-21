@@ -95,32 +95,26 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
             this.linkType = linkType;
             return this;
         }
-
         public Builder linkType(@Nullable LinkTypes linkType) {
             this.linkType = Output.ofNullable(linkType);
             return this;
         }
-
         public Builder sourcePropertyName(Output<String> sourcePropertyName) {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
-
         public Builder sourcePropertyName(String sourcePropertyName) {
             this.sourcePropertyName = Output.of(Objects.requireNonNull(sourcePropertyName));
             return this;
         }
-
         public Builder targetPropertyName(Output<String> targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
-
         public Builder targetPropertyName(String targetPropertyName) {
             this.targetPropertyName = Output.of(Objects.requireNonNull(targetPropertyName));
             return this;
-        }
-        public TypePropertiesMappingArgs build() {
+        }        public TypePropertiesMappingArgs build() {
             return new TypePropertiesMappingArgs(linkType, sourcePropertyName, targetPropertyName);
         }
     }

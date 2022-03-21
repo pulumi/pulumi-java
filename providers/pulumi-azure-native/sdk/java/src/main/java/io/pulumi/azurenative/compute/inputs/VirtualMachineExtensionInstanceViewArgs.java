@@ -128,52 +128,48 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder statuses(@Nullable Output<List<InstanceViewStatusArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusArgs> statuses) {
             this.statuses = Output.ofNullable(statuses);
             return this;
         }
-
+        public Builder statuses(InstanceViewStatusArgs... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder substatuses(@Nullable Output<List<InstanceViewStatusArgs>> substatuses) {
             this.substatuses = substatuses;
             return this;
         }
-
         public Builder substatuses(@Nullable List<InstanceViewStatusArgs> substatuses) {
             this.substatuses = Output.ofNullable(substatuses);
             return this;
         }
-
+        public Builder substatuses(InstanceViewStatusArgs... substatuses) {
+            return substatuses(List.of(substatuses));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
-        }
-        public VirtualMachineExtensionInstanceViewArgs build() {
+        }        public VirtualMachineExtensionInstanceViewArgs build() {
             return new VirtualMachineExtensionInstanceViewArgs(name, statuses, substatuses, type, typeHandlerVersion);
         }
     }

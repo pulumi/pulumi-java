@@ -180,82 +180,69 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
-
         public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
             this.allocatedOutboundPorts = Output.ofNullable(allocatedOutboundPorts);
             return this;
         }
-
         public Builder backendAddressPool(Output<SubResourceArgs> backendAddressPool) {
             this.backendAddressPool = Objects.requireNonNull(backendAddressPool);
             return this;
         }
-
         public Builder backendAddressPool(SubResourceArgs backendAddressPool) {
             this.backendAddressPool = Output.of(Objects.requireNonNull(backendAddressPool));
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = Output.ofNullable(enableTcpReset);
             return this;
         }
-
         public Builder frontendIPConfigurations(Output<List<SubResourceArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
-
         public Builder frontendIPConfigurations(List<SubResourceArgs> frontendIPConfigurations) {
             this.frontendIPConfigurations = Output.of(Objects.requireNonNull(frontendIPConfigurations));
             return this;
         }
-
+        public Builder frontendIPConfigurations(SubResourceArgs... frontendIPConfigurations) {
+            return frontendIPConfigurations(List.of(frontendIPConfigurations));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,LoadBalancerOutboundRuleProtocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public OutboundRuleArgs build() {
+        }        public OutboundRuleArgs build() {
             return new OutboundRuleArgs(allocatedOutboundPorts, backendAddressPool, enableTcpReset, frontendIPConfigurations, id, idleTimeoutInMinutes, name, protocol);
         }
     }

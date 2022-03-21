@@ -144,62 +144,50 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
             this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
             return this;
         }
-
         public Builder enableCrossZoneUpgrade(@Nullable Boolean enableCrossZoneUpgrade) {
             this.enableCrossZoneUpgrade = Output.ofNullable(enableCrossZoneUpgrade);
             return this;
         }
-
         public Builder maxBatchInstancePercent(@Nullable Output<Integer> maxBatchInstancePercent) {
             this.maxBatchInstancePercent = maxBatchInstancePercent;
             return this;
         }
-
         public Builder maxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
             this.maxBatchInstancePercent = Output.ofNullable(maxBatchInstancePercent);
             return this;
         }
-
         public Builder maxUnhealthyInstancePercent(@Nullable Output<Integer> maxUnhealthyInstancePercent) {
             this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
             return this;
         }
-
         public Builder maxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
             this.maxUnhealthyInstancePercent = Output.ofNullable(maxUnhealthyInstancePercent);
             return this;
         }
-
         public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent) {
             this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
             return this;
         }
-
         public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
             this.maxUnhealthyUpgradedInstancePercent = Output.ofNullable(maxUnhealthyUpgradedInstancePercent);
             return this;
         }
-
         public Builder pauseTimeBetweenBatches(@Nullable Output<String> pauseTimeBetweenBatches) {
             this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
             return this;
         }
-
         public Builder pauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
             this.pauseTimeBetweenBatches = Output.ofNullable(pauseTimeBetweenBatches);
             return this;
         }
-
         public Builder prioritizeUnhealthyInstances(@Nullable Output<Boolean> prioritizeUnhealthyInstances) {
             this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;
         }
-
         public Builder prioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
             this.prioritizeUnhealthyInstances = Output.ofNullable(prioritizeUnhealthyInstances);
             return this;
-        }
-        public RollingUpgradePolicyArgs build() {
+        }        public RollingUpgradePolicyArgs build() {
             return new RollingUpgradePolicyArgs(enableCrossZoneUpgrade, maxBatchInstancePercent, maxUnhealthyInstancePercent, maxUnhealthyUpgradedInstancePercent, pauseTimeBetweenBatches, prioritizeUnhealthyInstances);
         }
     }

@@ -88,17 +88,14 @@ public final class ContentLinkResponse {
             this.contentHash = contentHash;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ContentLinkResponse build() {
+        }        public ContentLinkResponse build() {
             return new ContentLinkResponse(contentHash, uri, version);
         }
     }

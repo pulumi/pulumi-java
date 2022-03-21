@@ -110,42 +110,34 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
-
         public Builder secretName(@Nullable String secretName) {
             this.secretName = Output.ofNullable(secretName);
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(parameters, profileName, resourceGroupName, secretName);
         }
     }

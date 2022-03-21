@@ -232,112 +232,93 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authentication(@Nullable Output<Object> authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable Object authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder functionAppUrl(Output<Object> functionAppUrl) {
             this.functionAppUrl = Objects.requireNonNull(functionAppUrl);
             return this;
         }
-
         public Builder functionAppUrl(Object functionAppUrl) {
             this.functionAppUrl = Output.of(Objects.requireNonNull(functionAppUrl));
             return this;
         }
-
         public Builder functionKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey) {
             this.functionKey = functionKey;
             return this;
         }
-
         public Builder functionKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> functionKey) {
             this.functionKey = Output.ofNullable(functionKey);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<Object> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable Object resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureFunctionLinkedServiceArgs build() {
+        }        public AzureFunctionLinkedServiceArgs build() {
             return new AzureFunctionLinkedServiceArgs(annotations, authentication, connectVia, credential, description, encryptedCredential, functionAppUrl, functionKey, parameters, resourceId, type);
         }
     }

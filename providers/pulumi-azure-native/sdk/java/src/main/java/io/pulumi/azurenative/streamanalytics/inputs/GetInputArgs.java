@@ -88,17 +88,14 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetInputArgs build() {
+        }        public GetInputArgs build() {
             return new GetInputArgs(inputName, jobName, resourceGroupName);
         }
     }

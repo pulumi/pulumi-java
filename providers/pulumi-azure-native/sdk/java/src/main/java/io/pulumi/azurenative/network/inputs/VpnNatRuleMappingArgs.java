@@ -61,12 +61,10 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
             this.addressSpace = addressSpace;
             return this;
         }
-
         public Builder addressSpace(@Nullable String addressSpace) {
             this.addressSpace = Output.ofNullable(addressSpace);
             return this;
-        }
-        public VpnNatRuleMappingArgs build() {
+        }        public VpnNatRuleMappingArgs build() {
             return new VpnNatRuleMappingArgs(addressSpace);
         }
     }

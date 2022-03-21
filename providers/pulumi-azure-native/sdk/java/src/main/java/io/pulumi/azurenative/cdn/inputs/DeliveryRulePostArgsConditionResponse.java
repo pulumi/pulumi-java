@@ -78,12 +78,10 @@ public final class DeliveryRulePostArgsConditionResponse extends io.pulumi.resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(PostArgsMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRulePostArgsConditionResponse build() {
+        }        public DeliveryRulePostArgsConditionResponse build() {
             return new DeliveryRulePostArgsConditionResponse(name, parameters);
         }
     }

@@ -99,32 +99,29 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder order(Output<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Output.of(Objects.requireNonNull(order));
             return this;
         }
-
         public Builder parts(Output<List<DashboardPartsArgs>> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
         public Builder parts(List<DashboardPartsArgs> parts) {
             this.parts = Output.of(Objects.requireNonNull(parts));
             return this;
         }
-        public DashboardLensArgs build() {
+        public Builder parts(DashboardPartsArgs... parts) {
+            return parts(List.of(parts));
+        }        public DashboardLensArgs build() {
             return new DashboardLensArgs(metadata, order, parts);
         }
     }

@@ -88,17 +88,14 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetEndpointArgs build() {
+        }        public GetEndpointArgs build() {
             return new GetEndpointArgs(endpointName, profileName, resourceGroupName);
         }
     }

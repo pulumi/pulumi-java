@@ -172,82 +172,66 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder sku(Output<AppSkuInfoArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(AppSkuInfoArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder subdomain(@Nullable Output<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
-
         public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = Output.ofNullable(subdomain);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder template(@Nullable Output<String> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable String template) {
             this.template = Output.ofNullable(template);
             return this;
-        }
-        public AppArgs build() {
+        }        public AppArgs build() {
             return new AppArgs(displayName, location, resourceGroupName, resourceName, sku, subdomain, tags, template);
         }
     }

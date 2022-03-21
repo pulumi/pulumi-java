@@ -334,92 +334,80 @@ public final class GetExpressRoutePortResult {
             this.allocationDate = Objects.requireNonNull(allocationDate);
             return this;
         }
-
         public Builder bandwidthInGbps(@Nullable Integer bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
-
         public Builder circuits(List<SubResourceResponse> circuits) {
             this.circuits = Objects.requireNonNull(circuits);
             return this;
         }
-
+        public Builder circuits(SubResourceResponse... circuits) {
+            return circuits(List.of(circuits));
+        }
         public Builder encapsulation(@Nullable String encapsulation) {
             this.encapsulation = encapsulation;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder etherType(String etherType) {
             this.etherType = Objects.requireNonNull(etherType);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder links(@Nullable List<ExpressRouteLinkResponse> links) {
             this.links = links;
             return this;
         }
-
+        public Builder links(ExpressRouteLinkResponse... links) {
+            return links(List.of(links));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mtu(String mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
-
         public Builder provisionedBandwidthInGbps(Double provisionedBandwidthInGbps) {
             this.provisionedBandwidthInGbps = Objects.requireNonNull(provisionedBandwidthInGbps);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetExpressRoutePortResult build() {
+        }        public GetExpressRoutePortResult build() {
             return new GetExpressRoutePortResult(allocationDate, bandwidthInGbps, circuits, encapsulation, etag, etherType, id, identity, links, location, mtu, name, peeringLocation, provisionedBandwidthInGbps, provisioningState, resourceGuid, tags, type);
         }
     }

@@ -70,12 +70,10 @@ public final class CapacityReservationPropertiesResponse {
             this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
             return this;
         }
-
         public Builder minCapacity(Double minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
-        }
-        public CapacityReservationPropertiesResponse build() {
+        }        public CapacityReservationPropertiesResponse build() {
             return new CapacityReservationPropertiesResponse(lastSkuUpdate, minCapacity);
         }
     }

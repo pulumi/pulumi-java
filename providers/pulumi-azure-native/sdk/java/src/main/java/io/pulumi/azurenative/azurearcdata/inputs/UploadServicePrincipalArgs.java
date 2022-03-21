@@ -110,42 +110,34 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
             this.authority = authority;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = Output.ofNullable(authority);
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public UploadServicePrincipalArgs build() {
+        }        public UploadServicePrincipalArgs build() {
             return new UploadServicePrincipalArgs(authority, clientId, clientSecret, tenantId);
         }
     }

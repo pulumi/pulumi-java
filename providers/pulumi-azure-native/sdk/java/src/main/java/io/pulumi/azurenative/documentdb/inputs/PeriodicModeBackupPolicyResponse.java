@@ -80,12 +80,10 @@ public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.
             this.periodicModeProperties = periodicModeProperties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PeriodicModeBackupPolicyResponse build() {
+        }        public PeriodicModeBackupPolicyResponse build() {
             return new PeriodicModeBackupPolicyResponse(periodicModeProperties, type);
         }
     }

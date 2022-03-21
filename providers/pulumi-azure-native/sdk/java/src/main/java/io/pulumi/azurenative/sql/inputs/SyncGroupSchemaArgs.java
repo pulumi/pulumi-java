@@ -80,22 +80,21 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
             this.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
-
         public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
             this.masterSyncMemberName = Output.ofNullable(masterSyncMemberName);
             return this;
         }
-
         public Builder tables(@Nullable Output<List<SyncGroupSchemaTableArgs>> tables) {
             this.tables = tables;
             return this;
         }
-
         public Builder tables(@Nullable List<SyncGroupSchemaTableArgs> tables) {
             this.tables = Output.ofNullable(tables);
             return this;
         }
-        public SyncGroupSchemaArgs build() {
+        public Builder tables(SyncGroupSchemaTableArgs... tables) {
+            return tables(List.of(tables));
+        }        public SyncGroupSchemaArgs build() {
             return new SyncGroupSchemaArgs(masterSyncMemberName, tables);
         }
     }

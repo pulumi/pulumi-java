@@ -108,22 +108,18 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
             this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch);
             return this;
         }
-
         public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
             this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive);
             return this;
         }
-
         public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
             this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue);
             return this;
         }
-
         public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
             this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
             return this;
-        }
-        public AS2AcknowledgementConnectionSettingsResponse build() {
+        }        public AS2AcknowledgementConnectionSettingsResponse build() {
             return new AS2AcknowledgementConnectionSettingsResponse(ignoreCertificateNameMismatch, keepHttpConnectionAlive, supportHttpStatusCodeContinue, unfoldHttpHeaders);
         }
     }

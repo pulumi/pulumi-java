@@ -141,62 +141,53 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.ddosCustomPolicyName = ddosCustomPolicyName;
             return this;
         }
-
         public Builder ddosCustomPolicyName(@Nullable String ddosCustomPolicyName) {
             this.ddosCustomPolicyName = Output.ofNullable(ddosCustomPolicyName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder protocolCustomSettings(@Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings) {
             this.protocolCustomSettings = protocolCustomSettings;
             return this;
         }
-
         public Builder protocolCustomSettings(@Nullable List<ProtocolCustomSettingsFormatArgs> protocolCustomSettings) {
             this.protocolCustomSettings = Output.ofNullable(protocolCustomSettings);
             return this;
         }
-
+        public Builder protocolCustomSettings(ProtocolCustomSettingsFormatArgs... protocolCustomSettings) {
+            return protocolCustomSettings(List.of(protocolCustomSettings));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DdosCustomPolicyArgs build() {
+        }        public DdosCustomPolicyArgs build() {
             return new DdosCustomPolicyArgs(ddosCustomPolicyName, id, location, protocolCustomSettings, resourceGroupName, tags);
         }
     }

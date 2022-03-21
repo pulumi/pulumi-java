@@ -240,62 +240,53 @@ public final class LabelingJobPropertiesResponse {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
-
         public Builder datasetConfiguration(LabelingDatasetConfigurationResponse datasetConfiguration) {
             this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
             return this;
         }
-
         public Builder jobInstructions(LabelingJobInstructionsResponse jobInstructions) {
             this.jobInstructions = Objects.requireNonNull(jobInstructions);
             return this;
         }
-
         public Builder labelCategories(Map<String,LabelCategoryResponse> labelCategories) {
             this.labelCategories = Objects.requireNonNull(labelCategories);
             return this;
         }
-
         public Builder labelingJobMediaProperties(LabelingJobImagePropertiesResponse labelingJobMediaProperties) {
             this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
             return this;
         }
-
         public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationResponse mlAssistConfiguration) {
             this.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
-
         public Builder progressMetrics(ProgressMetricsResponse progressMetrics) {
             this.progressMetrics = Objects.requireNonNull(progressMetrics);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusMessages(List<StatusMessageResponse> statusMessages) {
             this.statusMessages = Objects.requireNonNull(statusMessages);
             return this;
         }
-
+        public Builder statusMessages(StatusMessageResponse... statusMessages) {
+            return statusMessages(List.of(statusMessages));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public LabelingJobPropertiesResponse build() {
+        }        public LabelingJobPropertiesResponse build() {
             return new LabelingJobPropertiesResponse(createdTimeUtc, datasetConfiguration, jobInstructions, labelCategories, labelingJobMediaProperties, mlAssistConfiguration, progressMetrics, projectId, properties, status, statusMessages, tags);
         }
     }

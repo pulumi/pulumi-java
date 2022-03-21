@@ -124,52 +124,42 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder contentLink(Output<ContentLinkArgs> contentLink) {
             this.contentLink = Objects.requireNonNull(contentLink);
             return this;
         }
-
         public Builder contentLink(ContentLinkArgs contentLink) {
             this.contentLink = Output.of(Objects.requireNonNull(contentLink));
             return this;
         }
-
         public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public Python2PackageArgs build() {
+        }        public Python2PackageArgs build() {
             return new Python2PackageArgs(automationAccountName, contentLink, packageName, resourceGroupName, tags);
         }
     }

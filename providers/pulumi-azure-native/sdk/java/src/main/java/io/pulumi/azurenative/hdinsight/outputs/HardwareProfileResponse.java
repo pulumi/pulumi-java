@@ -53,8 +53,7 @@ public final class HardwareProfileResponse {
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public HardwareProfileResponse build() {
+        }        public HardwareProfileResponse build() {
             return new HardwareProfileResponse(vmSize);
         }
     }

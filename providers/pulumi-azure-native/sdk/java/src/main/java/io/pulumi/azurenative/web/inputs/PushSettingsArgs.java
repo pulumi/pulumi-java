@@ -130,52 +130,42 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
-
         public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
             this.dynamicTagsJson = Output.ofNullable(dynamicTagsJson);
             return this;
         }
-
         public Builder isPushEnabled(Output<Boolean> isPushEnabled) {
             this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
             return this;
         }
-
         public Builder isPushEnabled(Boolean isPushEnabled) {
             this.isPushEnabled = Output.of(Objects.requireNonNull(isPushEnabled));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder tagWhitelistJson(@Nullable Output<String> tagWhitelistJson) {
             this.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
-
         public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
             this.tagWhitelistJson = Output.ofNullable(tagWhitelistJson);
             return this;
         }
-
         public Builder tagsRequiringAuth(@Nullable Output<String> tagsRequiringAuth) {
             this.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
-
         public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
             this.tagsRequiringAuth = Output.ofNullable(tagsRequiringAuth);
             return this;
-        }
-        public PushSettingsArgs build() {
+        }        public PushSettingsArgs build() {
             return new PushSettingsArgs(dynamicTagsJson, isPushEnabled, kind, tagWhitelistJson, tagsRequiringAuth);
         }
     }

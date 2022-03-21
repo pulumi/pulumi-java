@@ -72,12 +72,10 @@ public final class ListDatabaseAccountConnectionStringsArgs extends io.pulumi.re
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListDatabaseAccountConnectionStringsArgs build() {
+        }        public ListDatabaseAccountConnectionStringsArgs build() {
             return new ListDatabaseAccountConnectionStringsArgs(accountName, resourceGroupName);
         }
     }

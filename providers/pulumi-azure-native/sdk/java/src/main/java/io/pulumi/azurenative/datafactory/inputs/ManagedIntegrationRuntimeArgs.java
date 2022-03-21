@@ -147,62 +147,50 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             this.computeProperties = computeProperties;
             return this;
         }
-
         public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesArgs computeProperties) {
             this.computeProperties = Output.ofNullable(computeProperties);
             return this;
         }
-
         public Builder customerVirtualNetwork(@Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork) {
             this.customerVirtualNetwork = customerVirtualNetwork;
             return this;
         }
-
         public Builder customerVirtualNetwork(@Nullable IntegrationRuntimeCustomerVirtualNetworkArgs customerVirtualNetwork) {
             this.customerVirtualNetwork = Output.ofNullable(customerVirtualNetwork);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder managedVirtualNetwork(@Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
-
         public Builder managedVirtualNetwork(@Nullable ManagedVirtualNetworkReferenceArgs managedVirtualNetwork) {
             this.managedVirtualNetwork = Output.ofNullable(managedVirtualNetwork);
             return this;
         }
-
         public Builder ssisProperties(@Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
             this.ssisProperties = ssisProperties;
             return this;
         }
-
         public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
             this.ssisProperties = Output.ofNullable(ssisProperties);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ManagedIntegrationRuntimeArgs build() {
+        }        public ManagedIntegrationRuntimeArgs build() {
             return new ManagedIntegrationRuntimeArgs(computeProperties, customerVirtualNetwork, description, managedVirtualNetwork, ssisProperties, type);
         }
     }

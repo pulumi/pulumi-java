@@ -98,17 +98,14 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
             this.description = description;
             return this;
         }
-
         public Builder linkedInfo(@Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo) {
             this.linkedInfo = linkedInfo;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SelfHostedIntegrationRuntimeResponse build() {
+        }        public SelfHostedIntegrationRuntimeResponse build() {
             return new SelfHostedIntegrationRuntimeResponse(description, linkedInfo, type);
         }
     }

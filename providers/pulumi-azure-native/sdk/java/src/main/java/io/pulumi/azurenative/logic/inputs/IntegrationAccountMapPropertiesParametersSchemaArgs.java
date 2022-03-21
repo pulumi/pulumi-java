@@ -61,12 +61,10 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
             this.ref = ref;
             return this;
         }
-
         public Builder ref(@Nullable String ref) {
             this.ref = Output.ofNullable(ref);
             return this;
-        }
-        public IntegrationAccountMapPropertiesParametersSchemaArgs build() {
+        }        public IntegrationAccountMapPropertiesParametersSchemaArgs build() {
             return new IntegrationAccountMapPropertiesParametersSchemaArgs(ref);
         }
     }

@@ -79,12 +79,10 @@ public final class WebhookNotificationResponse extends io.pulumi.resources.Invok
             this.properties = properties;
             return this;
         }
-
         public Builder serviceUri(@Nullable String serviceUri) {
             this.serviceUri = serviceUri;
             return this;
-        }
-        public WebhookNotificationResponse build() {
+        }        public WebhookNotificationResponse build() {
             return new WebhookNotificationResponse(properties, serviceUri);
         }
     }

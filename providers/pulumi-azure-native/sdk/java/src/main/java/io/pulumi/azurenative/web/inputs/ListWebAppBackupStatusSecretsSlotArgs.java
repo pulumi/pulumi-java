@@ -206,52 +206,45 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder backupName(@Nullable String backupName) {
             this.backupName = backupName;
             return this;
         }
-
         public Builder backupSchedule(@Nullable BackupSchedule backupSchedule) {
             this.backupSchedule = backupSchedule;
             return this;
         }
-
         public Builder databases(@Nullable List<DatabaseBackupSetting> databases) {
             this.databases = databases;
             return this;
         }
-
+        public Builder databases(DatabaseBackupSetting... databases) {
+            return databases(List.of(databases));
+        }
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder storageAccountUrl(String storageAccountUrl) {
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
-        }
-        public ListWebAppBackupStatusSecretsSlotArgs build() {
+        }        public ListWebAppBackupStatusSecretsSlotArgs build() {
             return new ListWebAppBackupStatusSecretsSlotArgs(backupId, backupName, backupSchedule, databases, enabled, kind, name, resourceGroupName, slot, storageAccountUrl);
         }
     }

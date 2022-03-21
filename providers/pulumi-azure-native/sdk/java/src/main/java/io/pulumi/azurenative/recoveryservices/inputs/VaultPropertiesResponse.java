@@ -146,32 +146,29 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
             this.encryption = encryption;
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionVaultPropertiesResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder privateEndpointStateForBackup(String privateEndpointStateForBackup) {
             this.privateEndpointStateForBackup = Objects.requireNonNull(privateEndpointStateForBackup);
             return this;
         }
-
         public Builder privateEndpointStateForSiteRecovery(String privateEndpointStateForSiteRecovery) {
             this.privateEndpointStateForSiteRecovery = Objects.requireNonNull(privateEndpointStateForSiteRecovery);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder upgradeDetails(@Nullable UpgradeDetailsResponse upgradeDetails) {
             this.upgradeDetails = upgradeDetails;
             return this;
-        }
-        public VaultPropertiesResponse build() {
+        }        public VaultPropertiesResponse build() {
             return new VaultPropertiesResponse(encryption, privateEndpointConnections, privateEndpointStateForBackup, privateEndpointStateForSiteRecovery, provisioningState, upgradeDetails);
         }
     }

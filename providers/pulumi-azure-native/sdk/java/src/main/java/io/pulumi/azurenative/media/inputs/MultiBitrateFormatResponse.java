@@ -97,17 +97,17 @@ public final class MultiBitrateFormatResponse extends io.pulumi.resources.Invoke
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder outputFiles(@Nullable List<OutputFileResponse> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
-        public MultiBitrateFormatResponse build() {
+        public Builder outputFiles(OutputFileResponse... outputFiles) {
+            return outputFiles(List.of(outputFiles));
+        }        public MultiBitrateFormatResponse build() {
             return new MultiBitrateFormatResponse(filenamePattern, odataType, outputFiles);
         }
     }

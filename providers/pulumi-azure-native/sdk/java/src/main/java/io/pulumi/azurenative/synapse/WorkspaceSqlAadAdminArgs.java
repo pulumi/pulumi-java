@@ -138,62 +138,50 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
             this.administratorType = administratorType;
             return this;
         }
-
         public Builder administratorType(@Nullable String administratorType) {
             this.administratorType = Output.ofNullable(administratorType);
             return this;
         }
-
         public Builder login(@Nullable Output<String> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sid(@Nullable Output<String> sid) {
             this.sid = sid;
             return this;
         }
-
         public Builder sid(@Nullable String sid) {
             this.sid = Output.ofNullable(sid);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public WorkspaceSqlAadAdminArgs build() {
+        }        public WorkspaceSqlAadAdminArgs build() {
             return new WorkspaceSqlAadAdminArgs(administratorType, login, resourceGroupName, sid, tenantId, workspaceName);
         }
     }

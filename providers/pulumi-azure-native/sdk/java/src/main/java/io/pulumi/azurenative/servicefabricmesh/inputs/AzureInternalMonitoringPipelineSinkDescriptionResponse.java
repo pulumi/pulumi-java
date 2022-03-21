@@ -176,42 +176,34 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
             this.accountName = accountName;
             return this;
         }
-
         public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
             this.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
             this.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder maConfigUrl(@Nullable String maConfigUrl) {
             this.maConfigUrl = maConfigUrl;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
-        }
-        public AzureInternalMonitoringPipelineSinkDescriptionResponse build() {
+        }        public AzureInternalMonitoringPipelineSinkDescriptionResponse build() {
             return new AzureInternalMonitoringPipelineSinkDescriptionResponse(accountName, autoKeyConfigUrl, description, fluentdConfigUrl, kind, maConfigUrl, name, namespace);
         }
     }

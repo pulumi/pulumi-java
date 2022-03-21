@@ -94,32 +94,26 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder authType(String authType) {
             this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
-        }
-        public UserAssignedIdentityAuthInfoArgs build() {
+        }        public UserAssignedIdentityAuthInfoArgs build() {
             return new UserAssignedIdentityAuthInfoArgs(authType, clientId, subscriptionId);
         }
     }

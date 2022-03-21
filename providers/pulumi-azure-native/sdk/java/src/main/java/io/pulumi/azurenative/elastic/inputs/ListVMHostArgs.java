@@ -72,12 +72,10 @@ public final class ListVMHostArgs extends io.pulumi.resources.InvokeArgs {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListVMHostArgs build() {
+        }        public ListVMHostArgs build() {
             return new ListVMHostArgs(monitorName, resourceGroupName);
         }
     }

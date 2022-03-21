@@ -104,22 +104,18 @@ public final class GetOriginGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder originGroupName(String originGroupName) {
             this.originGroupName = Objects.requireNonNull(originGroupName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetOriginGroupArgs build() {
+        }        public GetOriginGroupArgs build() {
             return new GetOriginGroupArgs(endpointName, originGroupName, profileName, resourceGroupName);
         }
     }

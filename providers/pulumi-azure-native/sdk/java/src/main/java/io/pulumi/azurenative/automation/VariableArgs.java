@@ -155,72 +155,58 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
-
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = Output.ofNullable(isEncrypted);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder variableName(@Nullable Output<String> variableName) {
             this.variableName = variableName;
             return this;
         }
-
         public Builder variableName(@Nullable String variableName) {
             this.variableName = Output.ofNullable(variableName);
             return this;
-        }
-        public VariableArgs build() {
+        }        public VariableArgs build() {
             return new VariableArgs(automationAccountName, description, isEncrypted, name, resourceGroupName, value, variableName);
         }
     }

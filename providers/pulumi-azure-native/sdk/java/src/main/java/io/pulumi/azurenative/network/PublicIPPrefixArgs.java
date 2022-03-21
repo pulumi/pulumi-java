@@ -260,132 +260,112 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
             this.customIPPrefix = customIPPrefix;
             return this;
         }
-
         public Builder customIPPrefix(@Nullable SubResourceArgs customIPPrefix) {
             this.customIPPrefix = Output.ofNullable(customIPPrefix);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipTags(@Nullable Output<List<IpTagArgs>> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
-
         public Builder ipTags(@Nullable List<IpTagArgs> ipTags) {
             this.ipTags = Output.ofNullable(ipTags);
             return this;
         }
-
+        public Builder ipTags(IpTagArgs... ipTags) {
+            return ipTags(List.of(ipTags));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder natGateway(@Nullable Output<NatGatewayArgs> natGateway) {
             this.natGateway = natGateway;
             return this;
         }
-
         public Builder natGateway(@Nullable NatGatewayArgs natGateway) {
             this.natGateway = Output.ofNullable(natGateway);
             return this;
         }
-
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
-
         public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = Output.ofNullable(prefixLength);
             return this;
         }
-
         public Builder publicIPAddressVersion(@Nullable Output<Either<String,IPVersion>> publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
-
         public Builder publicIPAddressVersion(@Nullable Either<String,IPVersion> publicIPAddressVersion) {
             this.publicIPAddressVersion = Output.ofNullable(publicIPAddressVersion);
             return this;
         }
-
         public Builder publicIpPrefixName(@Nullable Output<String> publicIpPrefixName) {
             this.publicIpPrefixName = publicIpPrefixName;
             return this;
         }
-
         public Builder publicIpPrefixName(@Nullable String publicIpPrefixName) {
             this.publicIpPrefixName = Output.ofNullable(publicIpPrefixName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<PublicIPPrefixSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable PublicIPPrefixSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public PublicIPPrefixArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public PublicIPPrefixArgs build() {
             return new PublicIPPrefixArgs(customIPPrefix, extendedLocation, id, ipTags, location, natGateway, prefixLength, publicIPAddressVersion, publicIpPrefixName, resourceGroupName, sku, tags, zones);
         }
     }

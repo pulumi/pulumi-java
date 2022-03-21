@@ -313,87 +313,70 @@ public final class GetApplicationResult {
             this.applicationType = applicationType;
             return this;
         }
-
         public Builder commandLineArguments(@Nullable String commandLineArguments) {
             this.commandLineArguments = commandLineArguments;
             return this;
         }
-
         public Builder commandLineSetting(String commandLineSetting) {
             this.commandLineSetting = Objects.requireNonNull(commandLineSetting);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder iconContent(String iconContent) {
             this.iconContent = Objects.requireNonNull(iconContent);
             return this;
         }
-
         public Builder iconHash(String iconHash) {
             this.iconHash = Objects.requireNonNull(iconHash);
             return this;
         }
-
         public Builder iconIndex(@Nullable Integer iconIndex) {
             this.iconIndex = iconIndex;
             return this;
         }
-
         public Builder iconPath(@Nullable String iconPath) {
             this.iconPath = iconPath;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder msixPackageApplicationId(@Nullable String msixPackageApplicationId) {
             this.msixPackageApplicationId = msixPackageApplicationId;
             return this;
         }
-
         public Builder msixPackageFamilyName(@Nullable String msixPackageFamilyName) {
             this.msixPackageFamilyName = msixPackageFamilyName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder showInPortal(@Nullable Boolean showInPortal) {
             this.showInPortal = showInPortal;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(applicationType, commandLineArguments, commandLineSetting, description, filePath, friendlyName, iconContent, iconHash, iconIndex, iconPath, id, msixPackageApplicationId, msixPackageFamilyName, name, objectId, showInPortal, type);
         }
     }

@@ -136,32 +136,29 @@ public final class NetworkInterfaceIPConfigurationResponse {
             this.dnsServers = dnsServers;
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder gateway(@Nullable String gateway) {
             this.gateway = gateway;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAllocationMethod(@Nullable String ipAllocationMethod) {
             this.ipAllocationMethod = ipAllocationMethod;
             return this;
         }
-
         public Builder ipVersion(@Nullable String ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public NetworkInterfaceIPConfigurationResponse build() {
+        }        public NetworkInterfaceIPConfigurationResponse build() {
             return new NetworkInterfaceIPConfigurationResponse(dnsServers, gateway, ipAddress, ipAllocationMethod, ipVersion, subnet);
         }
     }

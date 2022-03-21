@@ -72,12 +72,10 @@ public final class GetMediaServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMediaServiceArgs build() {
+        }        public GetMediaServiceArgs build() {
             return new GetMediaServiceArgs(accountName, resourceGroupName);
         }
     }

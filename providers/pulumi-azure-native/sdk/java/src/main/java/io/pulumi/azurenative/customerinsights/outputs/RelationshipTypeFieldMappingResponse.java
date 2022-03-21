@@ -69,12 +69,10 @@ public final class RelationshipTypeFieldMappingResponse {
             this.profileFieldName = Objects.requireNonNull(profileFieldName);
             return this;
         }
-
         public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
             this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
             return this;
-        }
-        public RelationshipTypeFieldMappingResponse build() {
+        }        public RelationshipTypeFieldMappingResponse build() {
             return new RelationshipTypeFieldMappingResponse(profileFieldName, relatedProfileKeyProperty);
         }
     }

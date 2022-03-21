@@ -106,22 +106,18 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder localeCode(@Nullable String localeCode) {
             this.localeCode = localeCode;
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetProfileArgs build() {
+        }        public GetProfileArgs build() {
             return new GetProfileArgs(hubName, localeCode, profileName, resourceGroupName);
         }
     }

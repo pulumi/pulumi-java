@@ -108,22 +108,18 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StorageAccountKeyResponse build() {
+        }        public StorageAccountKeyResponse build() {
             return new StorageAccountKeyResponse(creationTime, keyName, permissions, value);
         }
     }

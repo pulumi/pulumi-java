@@ -145,62 +145,50 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder dev(@Nullable Output<Boolean> dev) {
             this.dev = dev;
             return this;
         }
-
         public Builder dev(@Nullable Boolean dev) {
             this.dev = Output.ofNullable(dev);
             return this;
         }
-
         public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder tier(@Nullable Output<SqlManagedInstanceSkuTier> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable SqlManagedInstanceSkuTier tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public SqlManagedInstanceSkuArgs build() {
+        }        public SqlManagedInstanceSkuArgs build() {
             return new SqlManagedInstanceSkuArgs(capacity, dev, family, name, size, tier);
         }
     }

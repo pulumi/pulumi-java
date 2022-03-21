@@ -129,27 +129,28 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
             this.exclusions = exclusions;
             return this;
         }
-
+        public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder ruleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
-
+        public Builder ruleGroupOverrides(FrontDoorManagedRuleGroupOverrideResponse... ruleGroupOverrides) {
+            return ruleGroupOverrides(List.of(ruleGroupOverrides));
+        }
         public Builder ruleSetAction(@Nullable String ruleSetAction) {
             this.ruleSetAction = ruleSetAction;
             return this;
         }
-
         public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
-
         public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
-        }
-        public FrontDoorManagedRuleSetResponse build() {
+        }        public FrontDoorManagedRuleSetResponse build() {
             return new FrontDoorManagedRuleSetResponse(exclusions, ruleGroupOverrides, ruleSetAction, ruleSetType, ruleSetVersion);
         }
     }

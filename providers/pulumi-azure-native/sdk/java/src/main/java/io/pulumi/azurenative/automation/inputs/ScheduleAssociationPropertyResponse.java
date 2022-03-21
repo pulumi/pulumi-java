@@ -60,8 +60,7 @@ public final class ScheduleAssociationPropertyResponse extends io.pulumi.resourc
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ScheduleAssociationPropertyResponse build() {
+        }        public ScheduleAssociationPropertyResponse build() {
             return new ScheduleAssociationPropertyResponse(name);
         }
     }

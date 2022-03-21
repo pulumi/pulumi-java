@@ -122,27 +122,22 @@ public final class FaceDetectorPresetResponse {
             this.blurType = blurType;
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
-        }
-        public FaceDetectorPresetResponse build() {
+        }        public FaceDetectorPresetResponse build() {
             return new FaceDetectorPresetResponse(blurType, experimentalOptions, mode, odataType, resolution);
         }
     }

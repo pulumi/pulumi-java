@@ -158,72 +158,58 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder appUserModelID(@Nullable Output<String> appUserModelID) {
             this.appUserModelID = appUserModelID;
             return this;
         }
-
         public Builder appUserModelID(@Nullable String appUserModelID) {
             this.appUserModelID = Output.ofNullable(appUserModelID);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder iconImageName(@Nullable Output<String> iconImageName) {
             this.iconImageName = iconImageName;
             return this;
         }
-
         public Builder iconImageName(@Nullable String iconImageName) {
             this.iconImageName = Output.ofNullable(iconImageName);
             return this;
         }
-
         public Builder rawIcon(@Nullable Output<String> rawIcon) {
             this.rawIcon = rawIcon;
             return this;
         }
-
         public Builder rawIcon(@Nullable String rawIcon) {
             this.rawIcon = Output.ofNullable(rawIcon);
             return this;
         }
-
         public Builder rawPng(@Nullable Output<String> rawPng) {
             this.rawPng = rawPng;
             return this;
         }
-
         public Builder rawPng(@Nullable String rawPng) {
             this.rawPng = Output.ofNullable(rawPng);
             return this;
-        }
-        public MsixPackageApplicationsArgs build() {
+        }        public MsixPackageApplicationsArgs build() {
             return new MsixPackageApplicationsArgs(appId, appUserModelID, description, friendlyName, iconImageName, rawIcon, rawPng);
         }
     }

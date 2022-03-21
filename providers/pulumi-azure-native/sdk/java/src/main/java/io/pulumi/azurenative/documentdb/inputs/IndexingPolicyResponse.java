@@ -148,32 +148,35 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
             this.automatic = automatic;
             return this;
         }
-
         public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
             this.compositeIndexes = compositeIndexes;
             return this;
         }
-
         public Builder excludedPaths(@Nullable List<ExcludedPathResponse> excludedPaths) {
             this.excludedPaths = excludedPaths;
             return this;
         }
-
+        public Builder excludedPaths(ExcludedPathResponse... excludedPaths) {
+            return excludedPaths(List.of(excludedPaths));
+        }
         public Builder includedPaths(@Nullable List<IncludedPathResponse> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
-
+        public Builder includedPaths(IncludedPathResponse... includedPaths) {
+            return includedPaths(List.of(includedPaths));
+        }
         public Builder indexingMode(@Nullable String indexingMode) {
             this.indexingMode = indexingMode;
             return this;
         }
-
         public Builder spatialIndexes(@Nullable List<SpatialSpecResponse> spatialIndexes) {
             this.spatialIndexes = spatialIndexes;
             return this;
         }
-        public IndexingPolicyResponse build() {
+        public Builder spatialIndexes(SpatialSpecResponse... spatialIndexes) {
+            return spatialIndexes(List.of(spatialIndexes));
+        }        public IndexingPolicyResponse build() {
             return new IndexingPolicyResponse(automatic, compositeIndexes, excludedPaths, includedPaths, indexingMode, spatialIndexes);
         }
     }

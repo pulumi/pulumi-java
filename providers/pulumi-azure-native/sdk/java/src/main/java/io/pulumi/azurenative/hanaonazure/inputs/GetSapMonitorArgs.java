@@ -72,12 +72,10 @@ public final class GetSapMonitorArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sapMonitorName(String sapMonitorName) {
             this.sapMonitorName = Objects.requireNonNull(sapMonitorName);
             return this;
-        }
-        public GetSapMonitorArgs build() {
+        }        public GetSapMonitorArgs build() {
             return new GetSapMonitorArgs(resourceGroupName, sapMonitorName);
         }
     }

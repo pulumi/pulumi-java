@@ -88,17 +88,14 @@ public final class ListKustoPoolFollowerDatabasesArgs extends io.pulumi.resource
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListKustoPoolFollowerDatabasesArgs build() {
+        }        public ListKustoPoolFollowerDatabasesArgs build() {
             return new ListKustoPoolFollowerDatabasesArgs(kustoPoolName, resourceGroupName, workspaceName);
         }
     }

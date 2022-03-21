@@ -122,27 +122,22 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.format = format;
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetProductPolicyArgs build() {
+        }        public GetProductPolicyArgs build() {
             return new GetProductPolicyArgs(format, policyId, productId, resourceGroupName, serviceName);
         }
     }

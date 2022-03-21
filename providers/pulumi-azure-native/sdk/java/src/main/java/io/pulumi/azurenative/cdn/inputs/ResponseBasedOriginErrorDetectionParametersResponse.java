@@ -97,17 +97,17 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
             this.httpErrorRanges = httpErrorRanges;
             return this;
         }
-
+        public Builder httpErrorRanges(HttpErrorRangeParametersResponse... httpErrorRanges) {
+            return httpErrorRanges(List.of(httpErrorRanges));
+        }
         public Builder responseBasedDetectedErrorTypes(@Nullable String responseBasedDetectedErrorTypes) {
             this.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
             return this;
         }
-
         public Builder responseBasedFailoverThresholdPercentage(@Nullable Integer responseBasedFailoverThresholdPercentage) {
             this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
             return this;
-        }
-        public ResponseBasedOriginErrorDetectionParametersResponse build() {
+        }        public ResponseBasedOriginErrorDetectionParametersResponse build() {
             return new ResponseBasedOriginErrorDetectionParametersResponse(httpErrorRanges, responseBasedDetectedErrorTypes, responseBasedFailoverThresholdPercentage);
         }
     }

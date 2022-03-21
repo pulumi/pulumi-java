@@ -128,27 +128,22 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
             this.content = content;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
-
         public Builder requestUri(@Nullable String requestUri) {
             this.requestUri = requestUri;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public EventRequestMessageResponse build() {
+        }        public EventRequestMessageResponse build() {
             return new EventRequestMessageResponse(content, headers, method, requestUri, version);
         }
     }

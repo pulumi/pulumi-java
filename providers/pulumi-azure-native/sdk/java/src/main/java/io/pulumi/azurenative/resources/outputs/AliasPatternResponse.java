@@ -87,17 +87,14 @@ public final class AliasPatternResponse {
             this.phrase = phrase;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
-        }
-        public AliasPatternResponse build() {
+        }        public AliasPatternResponse build() {
             return new AliasPatternResponse(phrase, type, variable);
         }
     }

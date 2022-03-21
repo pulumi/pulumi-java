@@ -70,12 +70,10 @@ public final class ClientCertificateThumbprintResponse {
             this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
             return this;
         }
-
         public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
-        }
-        public ClientCertificateThumbprintResponse build() {
+        }        public ClientCertificateThumbprintResponse build() {
             return new ClientCertificateThumbprintResponse(certificateThumbprint, isAdmin);
         }
     }

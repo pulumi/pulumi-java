@@ -128,27 +128,22 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
             this.daysOfMonth = daysOfMonth;
             return this;
         }
-
         public Builder hour(@Nullable Integer hour) {
             this.hour = hour;
             return this;
         }
-
         public Builder minute(@Nullable Integer minute) {
             this.minute = minute;
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-
         public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = usedBytes;
             return this;
-        }
-        public MonthlyScheduleResponse build() {
+        }        public MonthlyScheduleResponse build() {
             return new MonthlyScheduleResponse(daysOfMonth, hour, minute, snapshotsToKeep, usedBytes);
         }
     }

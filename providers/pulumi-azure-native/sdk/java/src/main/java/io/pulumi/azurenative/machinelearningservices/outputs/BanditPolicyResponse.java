@@ -121,27 +121,22 @@ public final class BanditPolicyResponse {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
-
         public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public Builder slackAmount(@Nullable Double slackAmount) {
             this.slackAmount = slackAmount;
             return this;
         }
-
         public Builder slackFactor(@Nullable Double slackFactor) {
             this.slackFactor = slackFactor;
             return this;
-        }
-        public BanditPolicyResponse build() {
+        }        public BanditPolicyResponse build() {
             return new BanditPolicyResponse(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);
         }
     }

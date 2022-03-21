@@ -87,17 +87,14 @@ public final class BasicDependencyResponse {
             this.id = id;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
-        }
-        public BasicDependencyResponse build() {
+        }        public BasicDependencyResponse build() {
             return new BasicDependencyResponse(id, resourceName, resourceType);
         }
     }

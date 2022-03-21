@@ -61,12 +61,10 @@ public final class UserOwnedStorageArgs extends io.pulumi.resources.ResourceArgs
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public UserOwnedStorageArgs build() {
+        }        public UserOwnedStorageArgs build() {
             return new UserOwnedStorageArgs(resourceId);
         }
     }

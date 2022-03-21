@@ -142,62 +142,50 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable GuestCredentialArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder httpProxyConfig(@Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
-
         public Builder httpProxyConfig(@Nullable HttpProxyConfigurationArgs httpProxyConfig) {
             this.httpProxyConfig = Output.ofNullable(httpProxyConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder provisioningAction(@Nullable Output<Either<String,ProvisioningAction>> provisioningAction) {
             this.provisioningAction = provisioningAction;
             return this;
         }
-
         public Builder provisioningAction(@Nullable Either<String,ProvisioningAction> provisioningAction) {
             this.provisioningAction = Output.ofNullable(provisioningAction);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder virtualMachineName(Output<String> virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }
-
         public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Output.of(Objects.requireNonNull(virtualMachineName));
             return this;
-        }
-        public GuestAgentArgs build() {
+        }        public GuestAgentArgs build() {
             return new GuestAgentArgs(credentials, httpProxyConfig, name, provisioningAction, resourceGroupName, virtualMachineName);
         }
     }

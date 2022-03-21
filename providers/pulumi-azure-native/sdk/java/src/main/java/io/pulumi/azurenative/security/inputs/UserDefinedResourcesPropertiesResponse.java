@@ -77,12 +77,13 @@ public final class UserDefinedResourcesPropertiesResponse extends io.pulumi.reso
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder querySubscriptions(List<String> querySubscriptions) {
             this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
             return this;
         }
-        public UserDefinedResourcesPropertiesResponse build() {
+        public Builder querySubscriptions(String... querySubscriptions) {
+            return querySubscriptions(List.of(querySubscriptions));
+        }        public UserDefinedResourcesPropertiesResponse build() {
             return new UserDefinedResourcesPropertiesResponse(query, querySubscriptions);
         }
     }
