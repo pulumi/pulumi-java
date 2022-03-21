@@ -167,37 +167,33 @@ public final class TableGlobalSecondaryIndex {
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-
+        public Builder nonKeyAttributes(String... nonKeyAttributes) {
+            return nonKeyAttributes(List.of(nonKeyAttributes));
+        }
         public Builder projectionType(String projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
-
         public Builder rangeKey(@Nullable String rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
-
         public Builder readCapacity(@Nullable Integer readCapacity) {
             this.readCapacity = readCapacity;
             return this;
         }
-
         public Builder writeCapacity(@Nullable Integer writeCapacity) {
             this.writeCapacity = writeCapacity;
             return this;
-        }
-        public TableGlobalSecondaryIndex build() {
+        }        public TableGlobalSecondaryIndex build() {
             return new TableGlobalSecondaryIndex(hashKey, name, nonKeyAttributes, projectionType, rangeKey, readCapacity, writeCapacity);
         }
     }

@@ -170,82 +170,66 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder iamArn(@Nullable Output<String> iamArn) {
             this.iamArn = iamArn;
             return this;
         }
-
         public Builder iamArn(@Nullable String iamArn) {
             this.iamArn = Output.ofNullable(iamArn);
             return this;
         }
-
         public Builder identityType(Output<String> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public Builder identityType(String identityType) {
             this.identityType = Output.of(Objects.requireNonNull(identityType));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
-
         public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = Output.ofNullable(sessionName);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
         }
-
         public Builder userRole(Output<String> userRole) {
             this.userRole = Objects.requireNonNull(userRole);
             return this;
         }
-
         public Builder userRole(String userRole) {
             this.userRole = Output.of(Objects.requireNonNull(userRole));
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(awsAccountId, email, iamArn, identityType, namespace, sessionName, userName, userRole);
         }
     }

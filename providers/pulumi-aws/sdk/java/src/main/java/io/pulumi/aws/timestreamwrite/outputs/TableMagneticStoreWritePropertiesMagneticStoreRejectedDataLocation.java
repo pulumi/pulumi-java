@@ -53,8 +53,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
         public Builder s3Configuration(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
-        }
-        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation build() {
+        }        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation build() {
             return new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation(s3Configuration);
         }
     }

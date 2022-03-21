@@ -90,32 +90,26 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder serverId(@Nullable Output<String> serverId) {
             this.serverId = serverId;
             return this;
         }
-
         public Builder serverId(@Nullable String serverId) {
             this.serverId = Output.ofNullable(serverId);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public SshKeyState build() {
+        }        public SshKeyState build() {
             return new SshKeyState(body, serverId, userName);
         }
     }

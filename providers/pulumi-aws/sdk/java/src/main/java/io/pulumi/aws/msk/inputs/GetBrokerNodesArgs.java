@@ -54,8 +54,7 @@ public final class GetBrokerNodesArgs extends io.pulumi.resources.InvokeArgs {
         public Builder clusterArn(String clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
-        }
-        public GetBrokerNodesArgs build() {
+        }        public GetBrokerNodesArgs build() {
             return new GetBrokerNodesArgs(clusterArn);
         }
     }

@@ -74,22 +74,21 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder tables(Output<List<String>> tables) {
             this.tables = Objects.requireNonNull(tables);
             return this;
         }
-
         public Builder tables(List<String> tables) {
             this.tables = Output.of(Objects.requireNonNull(tables));
             return this;
         }
-        public CrawlerCatalogTargetGetArgs build() {
+        public Builder tables(String... tables) {
+            return tables(List.of(tables));
+        }        public CrawlerCatalogTargetGetArgs build() {
             return new CrawlerCatalogTargetGetArgs(databaseName, tables);
         }
     }

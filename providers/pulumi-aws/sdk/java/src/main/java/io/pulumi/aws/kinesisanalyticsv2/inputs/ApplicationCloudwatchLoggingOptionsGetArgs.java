@@ -70,22 +70,18 @@ public final class ApplicationCloudwatchLoggingOptionsGetArgs extends io.pulumi.
             this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
             return this;
         }
-
         public Builder cloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
             this.cloudwatchLoggingOptionId = Output.ofNullable(cloudwatchLoggingOptionId);
             return this;
         }
-
         public Builder logStreamArn(Output<String> logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }
-
         public Builder logStreamArn(String logStreamArn) {
             this.logStreamArn = Output.of(Objects.requireNonNull(logStreamArn));
             return this;
-        }
-        public ApplicationCloudwatchLoggingOptionsGetArgs build() {
+        }        public ApplicationCloudwatchLoggingOptionsGetArgs build() {
             return new ApplicationCloudwatchLoggingOptionsGetArgs(cloudwatchLoggingOptionId, logStreamArn);
         }
     }

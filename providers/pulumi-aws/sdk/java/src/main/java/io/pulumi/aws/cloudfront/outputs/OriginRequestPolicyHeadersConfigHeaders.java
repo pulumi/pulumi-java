@@ -46,7 +46,9 @@ public final class OriginRequestPolicyHeadersConfigHeaders {
             this.items = items;
             return this;
         }
-        public OriginRequestPolicyHeadersConfigHeaders build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public OriginRequestPolicyHeadersConfigHeaders build() {
             return new OriginRequestPolicyHeadersConfigHeaders(items);
         }
     }

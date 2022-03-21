@@ -184,82 +184,66 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
             this.application = application;
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
-
         public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ApplicationVersionState build() {
+        }        public ApplicationVersionState build() {
             return new ApplicationVersionState(application, arn, bucket, description, forceDelete, key, name, tags, tagsAll);
         }
     }

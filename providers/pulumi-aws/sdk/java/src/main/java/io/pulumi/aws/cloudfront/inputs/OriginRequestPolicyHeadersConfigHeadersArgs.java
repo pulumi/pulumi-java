@@ -54,12 +54,13 @@ public final class OriginRequestPolicyHeadersConfigHeadersArgs extends io.pulumi
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<String> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public OriginRequestPolicyHeadersConfigHeadersArgs build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public OriginRequestPolicyHeadersConfigHeadersArgs build() {
             return new OriginRequestPolicyHeadersConfigHeadersArgs(items);
         }
     }

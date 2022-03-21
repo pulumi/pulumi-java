@@ -57,12 +57,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Output.of(Objects.requireNonNull(tags));
             return this;
-        }
-        public ResourceGroupArgs build() {
+        }        public ResourceGroupArgs build() {
             return new ResourceGroupArgs(tags);
         }
     }

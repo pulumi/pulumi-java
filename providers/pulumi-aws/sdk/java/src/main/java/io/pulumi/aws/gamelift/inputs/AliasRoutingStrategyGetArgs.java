@@ -90,32 +90,26 @@ public final class AliasRoutingStrategyGetArgs extends io.pulumi.resources.Resou
             this.fleetId = fleetId;
             return this;
         }
-
         public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = Output.ofNullable(fleetId);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AliasRoutingStrategyGetArgs build() {
+        }        public AliasRoutingStrategyGetArgs build() {
             return new AliasRoutingStrategyGetArgs(fleetId, message, type);
         }
     }

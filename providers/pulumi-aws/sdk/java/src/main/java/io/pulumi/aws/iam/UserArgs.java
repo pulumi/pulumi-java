@@ -126,52 +126,42 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(forceDestroy, name, path, permissionsBoundary, tags);
         }
     }

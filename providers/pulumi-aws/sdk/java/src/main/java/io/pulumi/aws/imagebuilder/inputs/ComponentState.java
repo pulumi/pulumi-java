@@ -301,162 +301,133 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder changeDescription(@Nullable Output<String> changeDescription) {
             this.changeDescription = changeDescription;
             return this;
         }
-
         public Builder changeDescription(@Nullable String changeDescription) {
             this.changeDescription = Output.ofNullable(changeDescription);
             return this;
         }
-
         public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
-
         public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Output.ofNullable(dateCreated);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder supportedOsVersions(@Nullable Output<List<String>> supportedOsVersions) {
             this.supportedOsVersions = supportedOsVersions;
             return this;
         }
-
         public Builder supportedOsVersions(@Nullable List<String> supportedOsVersions) {
             this.supportedOsVersions = Output.ofNullable(supportedOsVersions);
             return this;
         }
-
+        public Builder supportedOsVersions(String... supportedOsVersions) {
+            return supportedOsVersions(List.of(supportedOsVersions));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ComponentState build() {
+        }        public ComponentState build() {
             return new ComponentState(arn, changeDescription, data, dateCreated, description, encrypted, kmsKeyId, name, owner, platform, supportedOsVersions, tags, tagsAll, type, uri, version);
         }
     }

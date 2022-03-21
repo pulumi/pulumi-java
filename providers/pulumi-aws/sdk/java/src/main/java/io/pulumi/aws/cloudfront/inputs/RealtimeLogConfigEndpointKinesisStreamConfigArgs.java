@@ -74,22 +74,18 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigArgs extends io.p
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder streamArn(Output<String> streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
-
         public Builder streamArn(String streamArn) {
             this.streamArn = Output.of(Objects.requireNonNull(streamArn));
             return this;
-        }
-        public RealtimeLogConfigEndpointKinesisStreamConfigArgs build() {
+        }        public RealtimeLogConfigEndpointKinesisStreamConfigArgs build() {
             return new RealtimeLogConfigEndpointKinesisStreamConfigArgs(roleArn, streamArn);
         }
     }

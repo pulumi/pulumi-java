@@ -189,92 +189,77 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             this.configs = configs;
             return this;
         }
-
         public Builder configs(@Nullable List<HoursOfOperationConfigGetArgs> configs) {
             this.configs = Output.ofNullable(configs);
             return this;
         }
-
+        public Builder configs(HoursOfOperationConfigGetArgs... configs) {
+            return configs(List.of(configs));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hoursOfOperationArn(@Nullable Output<String> hoursOfOperationArn) {
             this.hoursOfOperationArn = hoursOfOperationArn;
             return this;
         }
-
         public Builder hoursOfOperationArn(@Nullable String hoursOfOperationArn) {
             this.hoursOfOperationArn = Output.ofNullable(hoursOfOperationArn);
             return this;
         }
-
         public Builder hoursOfOperationId(@Nullable Output<String> hoursOfOperationId) {
             this.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
-
         public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
             this.hoursOfOperationId = Output.ofNullable(hoursOfOperationId);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public HoursOfOperationState build() {
+        }        public HoursOfOperationState build() {
             return new HoursOfOperationState(configs, description, hoursOfOperationArn, hoursOfOperationId, instanceId, name, tags, tagsAll, timeZone);
         }
     }

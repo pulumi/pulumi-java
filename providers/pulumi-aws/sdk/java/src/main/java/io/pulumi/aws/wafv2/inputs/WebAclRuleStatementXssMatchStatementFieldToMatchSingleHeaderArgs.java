@@ -56,12 +56,10 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchSingleHeaderA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs build() {
+        }        public WebAclRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs build() {
             return new WebAclRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs(name);
         }
     }

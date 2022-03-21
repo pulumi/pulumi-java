@@ -61,17 +61,14 @@ public final class GetSigningJobRevocationRecord {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder revokedAt(String revokedAt) {
             this.revokedAt = Objects.requireNonNull(revokedAt);
             return this;
         }
-
         public Builder revokedBy(String revokedBy) {
             this.revokedBy = Objects.requireNonNull(revokedBy);
             return this;
-        }
-        public GetSigningJobRevocationRecord build() {
+        }        public GetSigningJobRevocationRecord build() {
             return new GetSigningJobRevocationRecord(reason, revokedAt, revokedBy);
         }
     }

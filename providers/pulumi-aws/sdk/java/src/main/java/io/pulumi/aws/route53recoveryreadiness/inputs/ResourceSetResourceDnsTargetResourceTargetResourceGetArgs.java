@@ -75,22 +75,18 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
             this.nlbResource = nlbResource;
             return this;
         }
-
         public Builder nlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs nlbResource) {
             this.nlbResource = Output.ofNullable(nlbResource);
             return this;
         }
-
         public Builder r53Resource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource) {
             this.r53Resource = r53Resource;
             return this;
         }
-
         public Builder r53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs r53Resource) {
             this.r53Resource = Output.ofNullable(r53Resource);
             return this;
-        }
-        public ResourceSetResourceDnsTargetResourceTargetResourceGetArgs build() {
+        }        public ResourceSetResourceDnsTargetResourceTargetResourceGetArgs build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceGetArgs(nlbResource, r53Resource);
         }
     }

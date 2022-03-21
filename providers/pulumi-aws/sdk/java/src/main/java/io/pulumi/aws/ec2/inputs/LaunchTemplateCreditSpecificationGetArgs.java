@@ -57,12 +57,10 @@ public final class LaunchTemplateCreditSpecificationGetArgs extends io.pulumi.re
             this.cpuCredits = cpuCredits;
             return this;
         }
-
         public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = Output.ofNullable(cpuCredits);
             return this;
-        }
-        public LaunchTemplateCreditSpecificationGetArgs build() {
+        }        public LaunchTemplateCreditSpecificationGetArgs build() {
             return new LaunchTemplateCreditSpecificationGetArgs(cpuCredits);
         }
     }

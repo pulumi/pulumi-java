@@ -108,42 +108,34 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder autoDeployed(@Nullable Output<Boolean> autoDeployed) {
             this.autoDeployed = autoDeployed;
             return this;
         }
-
         public Builder autoDeployed(@Nullable Boolean autoDeployed) {
             this.autoDeployed = Output.ofNullable(autoDeployed);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
-        }
-        public DeploymentState build() {
+        }        public DeploymentState build() {
             return new DeploymentState(apiId, autoDeployed, description, triggers);
         }
     }

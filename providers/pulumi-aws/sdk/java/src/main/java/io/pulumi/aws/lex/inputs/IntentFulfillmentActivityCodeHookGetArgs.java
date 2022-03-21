@@ -75,22 +75,18 @@ public final class IntentFulfillmentActivityCodeHookGetArgs extends io.pulumi.re
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
-
         public Builder messageVersion(String messageVersion) {
             this.messageVersion = Output.of(Objects.requireNonNull(messageVersion));
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public IntentFulfillmentActivityCodeHookGetArgs build() {
+        }        public IntentFulfillmentActivityCodeHookGetArgs build() {
             return new IntentFulfillmentActivityCodeHookGetArgs(messageVersion, uri);
         }
     }

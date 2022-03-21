@@ -107,42 +107,34 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder functionArn(String functionArn) {
             this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
         }
-
         public Builder invocationType(@Nullable Output<String> invocationType) {
             this.invocationType = invocationType;
             return this;
         }
-
         public Builder invocationType(@Nullable String invocationType) {
             this.invocationType = Output.ofNullable(invocationType);
             return this;
         }
-
         public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
-
         public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public ReceiptRuleLambdaActionArgs build() {
+        }        public ReceiptRuleLambdaActionArgs build() {
             return new ReceiptRuleLambdaActionArgs(functionArn, invocationType, position, topicArn);
         }
     }

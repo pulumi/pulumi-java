@@ -53,7 +53,9 @@ public final class OpenZfsVolumeNfsExports {
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }
-        public OpenZfsVolumeNfsExports build() {
+        public Builder clientConfigurations(OpenZfsVolumeNfsExportsClientConfiguration... clientConfigurations) {
+            return clientConfigurations(List.of(clientConfigurations));
+        }        public OpenZfsVolumeNfsExports build() {
             return new OpenZfsVolumeNfsExports(clientConfigurations);
         }
     }

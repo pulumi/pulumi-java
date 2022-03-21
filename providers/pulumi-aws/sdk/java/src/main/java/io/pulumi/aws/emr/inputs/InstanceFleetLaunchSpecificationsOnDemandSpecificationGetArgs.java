@@ -56,12 +56,10 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
-
         public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Output.of(Objects.requireNonNull(allocationStrategy));
             return this;
-        }
-        public InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs build() {
+        }        public InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs build() {
             return new InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs(allocationStrategy);
         }
     }

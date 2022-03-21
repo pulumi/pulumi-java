@@ -75,22 +75,18 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigArgs extends i
             this.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown);
             return this;
         }
-
         public Builder forwardWhenQueryArgProfileIsUnknown(Boolean forwardWhenQueryArgProfileIsUnknown) {
             this.forwardWhenQueryArgProfileIsUnknown = Output.of(Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown));
             return this;
         }
-
         public Builder queryArgProfiles(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs> queryArgProfiles) {
             this.queryArgProfiles = queryArgProfiles;
             return this;
         }
-
         public Builder queryArgProfiles(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs queryArgProfiles) {
             this.queryArgProfiles = Output.ofNullable(queryArgProfiles);
             return this;
-        }
-        public FieldLevelEncryptionConfigQueryArgProfileConfigArgs build() {
+        }        public FieldLevelEncryptionConfigQueryArgProfileConfigArgs build() {
             return new FieldLevelEncryptionConfigQueryArgProfileConfigArgs(forwardWhenQueryArgProfileIsUnknown, queryArgProfiles);
         }
     }

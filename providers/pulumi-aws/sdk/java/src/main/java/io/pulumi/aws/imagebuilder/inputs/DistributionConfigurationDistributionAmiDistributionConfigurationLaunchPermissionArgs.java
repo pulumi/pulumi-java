@@ -75,22 +75,24 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.userGroups = userGroups;
             return this;
         }
-
         public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = Output.ofNullable(userGroups);
             return this;
         }
-
+        public Builder userGroups(String... userGroups) {
+            return userGroups(List.of(userGroups));
+        }
         public Builder userIds(@Nullable Output<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
-
         public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = Output.ofNullable(userIds);
             return this;
         }
-        public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs build() {
+        public Builder userIds(String... userIds) {
+            return userIds(List.of(userIds));
+        }        public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs(userGroups, userIds);
         }
     }

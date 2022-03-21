@@ -75,12 +75,10 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetDomainArgs build() {
+        }        public GetDomainArgs build() {
             return new GetDomainArgs(domainName, tags);
         }
     }

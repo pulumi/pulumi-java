@@ -252,132 +252,106 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder compatibility(@Nullable Output<String> compatibility) {
             this.compatibility = compatibility;
             return this;
         }
-
         public Builder compatibility(@Nullable String compatibility) {
             this.compatibility = Output.ofNullable(compatibility);
             return this;
         }
-
         public Builder dataFormat(@Nullable Output<String> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder latestSchemaVersion(@Nullable Output<Integer> latestSchemaVersion) {
             this.latestSchemaVersion = latestSchemaVersion;
             return this;
         }
-
         public Builder latestSchemaVersion(@Nullable Integer latestSchemaVersion) {
             this.latestSchemaVersion = Output.ofNullable(latestSchemaVersion);
             return this;
         }
-
         public Builder nextSchemaVersion(@Nullable Output<Integer> nextSchemaVersion) {
             this.nextSchemaVersion = nextSchemaVersion;
             return this;
         }
-
         public Builder nextSchemaVersion(@Nullable Integer nextSchemaVersion) {
             this.nextSchemaVersion = Output.ofNullable(nextSchemaVersion);
             return this;
         }
-
         public Builder registryArn(@Nullable Output<String> registryArn) {
             this.registryArn = registryArn;
             return this;
         }
-
         public Builder registryArn(@Nullable String registryArn) {
             this.registryArn = Output.ofNullable(registryArn);
             return this;
         }
-
         public Builder registryName(@Nullable Output<String> registryName) {
             this.registryName = registryName;
             return this;
         }
-
         public Builder registryName(@Nullable String registryName) {
             this.registryName = Output.ofNullable(registryName);
             return this;
         }
-
         public Builder schemaCheckpoint(@Nullable Output<Integer> schemaCheckpoint) {
             this.schemaCheckpoint = schemaCheckpoint;
             return this;
         }
-
         public Builder schemaCheckpoint(@Nullable Integer schemaCheckpoint) {
             this.schemaCheckpoint = Output.ofNullable(schemaCheckpoint);
             return this;
         }
-
         public Builder schemaDefinition(@Nullable Output<String> schemaDefinition) {
             this.schemaDefinition = schemaDefinition;
             return this;
         }
-
         public Builder schemaDefinition(@Nullable String schemaDefinition) {
             this.schemaDefinition = Output.ofNullable(schemaDefinition);
             return this;
         }
-
         public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
-
         public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public SchemaState build() {
+        }        public SchemaState build() {
             return new SchemaState(arn, compatibility, dataFormat, description, latestSchemaVersion, nextSchemaVersion, registryArn, registryName, schemaCheckpoint, schemaDefinition, schemaName, tags, tagsAll);
         }
     }

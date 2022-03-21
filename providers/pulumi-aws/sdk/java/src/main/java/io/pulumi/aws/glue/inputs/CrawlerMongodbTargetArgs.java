@@ -91,32 +91,26 @@ public final class CrawlerMongodbTargetArgs extends io.pulumi.resources.Resource
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder connectionName(String connectionName) {
             this.connectionName = Output.of(Objects.requireNonNull(connectionName));
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder scanAll(@Nullable Output<Boolean> scanAll) {
             this.scanAll = scanAll;
             return this;
         }
-
         public Builder scanAll(@Nullable Boolean scanAll) {
             this.scanAll = Output.ofNullable(scanAll);
             return this;
-        }
-        public CrawlerMongodbTargetArgs build() {
+        }        public CrawlerMongodbTargetArgs build() {
             return new CrawlerMongodbTargetArgs(connectionName, path, scanAll);
         }
     }

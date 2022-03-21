@@ -218,112 +218,90 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
             this.includeCredit = includeCredit;
             return this;
         }
-
         public Builder includeCredit(@Nullable Boolean includeCredit) {
             this.includeCredit = Output.ofNullable(includeCredit);
             return this;
         }
-
         public Builder includeDiscount(@Nullable Output<Boolean> includeDiscount) {
             this.includeDiscount = includeDiscount;
             return this;
         }
-
         public Builder includeDiscount(@Nullable Boolean includeDiscount) {
             this.includeDiscount = Output.ofNullable(includeDiscount);
             return this;
         }
-
         public Builder includeOtherSubscription(@Nullable Output<Boolean> includeOtherSubscription) {
             this.includeOtherSubscription = includeOtherSubscription;
             return this;
         }
-
         public Builder includeOtherSubscription(@Nullable Boolean includeOtherSubscription) {
             this.includeOtherSubscription = Output.ofNullable(includeOtherSubscription);
             return this;
         }
-
         public Builder includeRecurring(@Nullable Output<Boolean> includeRecurring) {
             this.includeRecurring = includeRecurring;
             return this;
         }
-
         public Builder includeRecurring(@Nullable Boolean includeRecurring) {
             this.includeRecurring = Output.ofNullable(includeRecurring);
             return this;
         }
-
         public Builder includeRefund(@Nullable Output<Boolean> includeRefund) {
             this.includeRefund = includeRefund;
             return this;
         }
-
         public Builder includeRefund(@Nullable Boolean includeRefund) {
             this.includeRefund = Output.ofNullable(includeRefund);
             return this;
         }
-
         public Builder includeSubscription(@Nullable Output<Boolean> includeSubscription) {
             this.includeSubscription = includeSubscription;
             return this;
         }
-
         public Builder includeSubscription(@Nullable Boolean includeSubscription) {
             this.includeSubscription = Output.ofNullable(includeSubscription);
             return this;
         }
-
         public Builder includeSupport(@Nullable Output<Boolean> includeSupport) {
             this.includeSupport = includeSupport;
             return this;
         }
-
         public Builder includeSupport(@Nullable Boolean includeSupport) {
             this.includeSupport = Output.ofNullable(includeSupport);
             return this;
         }
-
         public Builder includeTax(@Nullable Output<Boolean> includeTax) {
             this.includeTax = includeTax;
             return this;
         }
-
         public Builder includeTax(@Nullable Boolean includeTax) {
             this.includeTax = Output.ofNullable(includeTax);
             return this;
         }
-
         public Builder includeUpfront(@Nullable Output<Boolean> includeUpfront) {
             this.includeUpfront = includeUpfront;
             return this;
         }
-
         public Builder includeUpfront(@Nullable Boolean includeUpfront) {
             this.includeUpfront = Output.ofNullable(includeUpfront);
             return this;
         }
-
         public Builder useAmortized(@Nullable Output<Boolean> useAmortized) {
             this.useAmortized = useAmortized;
             return this;
         }
-
         public Builder useAmortized(@Nullable Boolean useAmortized) {
             this.useAmortized = Output.ofNullable(useAmortized);
             return this;
         }
-
         public Builder useBlended(@Nullable Output<Boolean> useBlended) {
             this.useBlended = useBlended;
             return this;
         }
-
         public Builder useBlended(@Nullable Boolean useBlended) {
             this.useBlended = Output.ofNullable(useBlended);
             return this;
-        }
-        public BudgetCostTypesGetArgs build() {
+        }        public BudgetCostTypesGetArgs build() {
             return new BudgetCostTypesGetArgs(includeCredit, includeDiscount, includeOtherSubscription, includeRecurring, includeRefund, includeSubscription, includeSupport, includeTax, includeUpfront, useAmortized, useBlended);
         }
     }

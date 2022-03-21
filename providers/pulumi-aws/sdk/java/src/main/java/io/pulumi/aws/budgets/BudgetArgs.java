@@ -238,122 +238,101 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder budgetType(Output<String> budgetType) {
             this.budgetType = Objects.requireNonNull(budgetType);
             return this;
         }
-
         public Builder budgetType(String budgetType) {
             this.budgetType = Output.of(Objects.requireNonNull(budgetType));
             return this;
         }
-
         public Builder costFilters(@Nullable Output<Map<String,String>> costFilters) {
             this.costFilters = costFilters;
             return this;
         }
-
         public Builder costFilters(@Nullable Map<String,String> costFilters) {
             this.costFilters = Output.ofNullable(costFilters);
             return this;
         }
-
         public Builder costTypes(@Nullable Output<BudgetCostTypesArgs> costTypes) {
             this.costTypes = costTypes;
             return this;
         }
-
         public Builder costTypes(@Nullable BudgetCostTypesArgs costTypes) {
             this.costTypes = Output.ofNullable(costTypes);
             return this;
         }
-
         public Builder limitAmount(Output<String> limitAmount) {
             this.limitAmount = Objects.requireNonNull(limitAmount);
             return this;
         }
-
         public Builder limitAmount(String limitAmount) {
             this.limitAmount = Output.of(Objects.requireNonNull(limitAmount));
             return this;
         }
-
         public Builder limitUnit(Output<String> limitUnit) {
             this.limitUnit = Objects.requireNonNull(limitUnit);
             return this;
         }
-
         public Builder limitUnit(String limitUnit) {
             this.limitUnit = Output.of(Objects.requireNonNull(limitUnit));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder notifications(@Nullable Output<List<BudgetNotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable List<BudgetNotificationArgs> notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
         }
-
+        public Builder notifications(BudgetNotificationArgs... notifications) {
+            return notifications(List.of(notifications));
+        }
         public Builder timePeriodEnd(@Nullable Output<String> timePeriodEnd) {
             this.timePeriodEnd = timePeriodEnd;
             return this;
         }
-
         public Builder timePeriodEnd(@Nullable String timePeriodEnd) {
             this.timePeriodEnd = Output.ofNullable(timePeriodEnd);
             return this;
         }
-
         public Builder timePeriodStart(@Nullable Output<String> timePeriodStart) {
             this.timePeriodStart = timePeriodStart;
             return this;
         }
-
         public Builder timePeriodStart(@Nullable String timePeriodStart) {
             this.timePeriodStart = Output.ofNullable(timePeriodStart);
             return this;
         }
-
         public Builder timeUnit(Output<String> timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
-
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = Output.of(Objects.requireNonNull(timeUnit));
             return this;
-        }
-        public BudgetArgs build() {
+        }        public BudgetArgs build() {
             return new BudgetArgs(accountId, budgetType, costFilters, costTypes, limitAmount, limitUnit, name, namePrefix, notifications, timePeriodEnd, timePeriodStart, timeUnit);
         }
     }

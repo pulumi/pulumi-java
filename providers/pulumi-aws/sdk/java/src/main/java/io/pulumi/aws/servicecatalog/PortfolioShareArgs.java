@@ -139,62 +139,50 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder portfolioId(Output<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
-
         public Builder portfolioId(String portfolioId) {
             this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
             return this;
         }
-
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder shareTagOptions(@Nullable Output<Boolean> shareTagOptions) {
             this.shareTagOptions = shareTagOptions;
             return this;
         }
-
         public Builder shareTagOptions(@Nullable Boolean shareTagOptions) {
             this.shareTagOptions = Output.ofNullable(shareTagOptions);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder waitForAcceptance(@Nullable Output<Boolean> waitForAcceptance) {
             this.waitForAcceptance = waitForAcceptance;
             return this;
         }
-
         public Builder waitForAcceptance(@Nullable Boolean waitForAcceptance) {
             this.waitForAcceptance = Output.ofNullable(waitForAcceptance);
             return this;
-        }
-        public PortfolioShareArgs build() {
+        }        public PortfolioShareArgs build() {
             return new PortfolioShareArgs(acceptLanguage, portfolioId, principalId, shareTagOptions, type, waitForAcceptance);
         }
     }

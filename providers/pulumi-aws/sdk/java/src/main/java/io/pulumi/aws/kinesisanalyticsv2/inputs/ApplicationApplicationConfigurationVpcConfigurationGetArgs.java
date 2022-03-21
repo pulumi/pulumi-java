@@ -99,42 +99,40 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcConfigurationId(@Nullable Output<String> vpcConfigurationId) {
             this.vpcConfigurationId = vpcConfigurationId;
             return this;
         }
-
         public Builder vpcConfigurationId(@Nullable String vpcConfigurationId) {
             this.vpcConfigurationId = Output.ofNullable(vpcConfigurationId);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public ApplicationApplicationConfigurationVpcConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationVpcConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationVpcConfigurationGetArgs(securityGroupIds, subnetIds, vpcConfigurationId, vpcId);
         }
     }

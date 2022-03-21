@@ -141,32 +141,29 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
             this.copyTags = copyTags;
             return this;
         }
-
         public Builder createRule(LifecyclePolicyPolicyDetailsScheduleCreateRule createRule) {
             this.createRule = Objects.requireNonNull(createRule);
             return this;
         }
-
         public Builder crossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules) {
             this.crossRegionCopyRules = crossRegionCopyRules;
             return this;
         }
-
+        public Builder crossRegionCopyRules(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule... crossRegionCopyRules) {
+            return crossRegionCopyRules(List.of(crossRegionCopyRules));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule) {
             this.retainRule = Objects.requireNonNull(retainRule);
             return this;
         }
-
         public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
             this.tagsToAdd = tagsToAdd;
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsSchedule build() {
+        }        public LifecyclePolicyPolicyDetailsSchedule build() {
             return new LifecyclePolicyPolicyDetailsSchedule(copyTags, createRule, crossRegionCopyRules, name, retainRule, tagsToAdd);
         }
     }

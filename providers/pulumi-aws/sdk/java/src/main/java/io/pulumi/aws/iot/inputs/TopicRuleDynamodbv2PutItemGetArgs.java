@@ -56,12 +56,10 @@ public final class TopicRuleDynamodbv2PutItemGetArgs extends io.pulumi.resources
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public TopicRuleDynamodbv2PutItemGetArgs build() {
+        }        public TopicRuleDynamodbv2PutItemGetArgs build() {
             return new TopicRuleDynamodbv2PutItemGetArgs(tableName);
         }
     }

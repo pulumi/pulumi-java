@@ -91,32 +91,29 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder connectionName(String connectionName) {
             this.connectionName = Output.of(Objects.requireNonNull(connectionName));
             return this;
         }
-
         public Builder deltaTables(Output<List<String>> deltaTables) {
             this.deltaTables = Objects.requireNonNull(deltaTables);
             return this;
         }
-
         public Builder deltaTables(List<String> deltaTables) {
             this.deltaTables = Output.of(Objects.requireNonNull(deltaTables));
             return this;
         }
-
+        public Builder deltaTables(String... deltaTables) {
+            return deltaTables(List.of(deltaTables));
+        }
         public Builder writeManifest(Output<Boolean> writeManifest) {
             this.writeManifest = Objects.requireNonNull(writeManifest);
             return this;
         }
-
         public Builder writeManifest(Boolean writeManifest) {
             this.writeManifest = Output.of(Objects.requireNonNull(writeManifest));
             return this;
-        }
-        public CrawlerDeltaTargetGetArgs build() {
+        }        public CrawlerDeltaTargetGetArgs build() {
             return new CrawlerDeltaTargetGetArgs(connectionName, deltaTables, writeManifest);
         }
     }

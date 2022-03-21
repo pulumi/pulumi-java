@@ -51,8 +51,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         public Builder recordRowPath(String recordRowPath) {
             this.recordRowPath = Objects.requireNonNull(recordRowPath);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters(recordRowPath);
         }
     }

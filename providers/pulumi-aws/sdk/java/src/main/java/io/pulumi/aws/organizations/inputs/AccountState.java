@@ -207,112 +207,90 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder iamUserAccessToBilling(@Nullable Output<String> iamUserAccessToBilling) {
             this.iamUserAccessToBilling = iamUserAccessToBilling;
             return this;
         }
-
         public Builder iamUserAccessToBilling(@Nullable String iamUserAccessToBilling) {
             this.iamUserAccessToBilling = Output.ofNullable(iamUserAccessToBilling);
             return this;
         }
-
         public Builder joinedMethod(@Nullable Output<String> joinedMethod) {
             this.joinedMethod = joinedMethod;
             return this;
         }
-
         public Builder joinedMethod(@Nullable String joinedMethod) {
             this.joinedMethod = Output.ofNullable(joinedMethod);
             return this;
         }
-
         public Builder joinedTimestamp(@Nullable Output<String> joinedTimestamp) {
             this.joinedTimestamp = joinedTimestamp;
             return this;
         }
-
         public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
             this.joinedTimestamp = Output.ofNullable(joinedTimestamp);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
-
         public Builder parentId(@Nullable String parentId) {
             this.parentId = Output.ofNullable(parentId);
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public AccountState build() {
+        }        public AccountState build() {
             return new AccountState(arn, email, iamUserAccessToBilling, joinedMethod, joinedTimestamp, name, parentId, roleName, status, tags, tagsAll);
         }
     }

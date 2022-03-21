@@ -73,12 +73,13 @@ public final class TrailAdvancedEventSelector {
             this.fieldSelectors = Objects.requireNonNull(fieldSelectors);
             return this;
         }
-
+        public Builder fieldSelectors(TrailAdvancedEventSelectorFieldSelector... fieldSelectors) {
+            return fieldSelectors(List.of(fieldSelectors));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public TrailAdvancedEventSelector build() {
+        }        public TrailAdvancedEventSelector build() {
             return new TrailAdvancedEventSelector(fieldSelectors, name);
         }
     }

@@ -70,12 +70,10 @@ public final class InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange build() {
+        }        public InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange build() {
             return new InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange(unit, value);
         }
     }

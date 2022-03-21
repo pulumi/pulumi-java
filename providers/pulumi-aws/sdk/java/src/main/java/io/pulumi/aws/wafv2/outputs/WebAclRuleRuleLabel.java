@@ -51,8 +51,7 @@ public final class WebAclRuleRuleLabel {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleRuleLabel build() {
+        }        public WebAclRuleRuleLabel build() {
             return new WebAclRuleRuleLabel(name);
         }
     }

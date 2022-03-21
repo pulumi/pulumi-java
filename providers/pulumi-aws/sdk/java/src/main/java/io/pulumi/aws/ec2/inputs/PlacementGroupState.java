@@ -160,72 +160,58 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
-
         public Builder placementGroupId(@Nullable Output<String> placementGroupId) {
             this.placementGroupId = placementGroupId;
             return this;
         }
-
         public Builder placementGroupId(@Nullable String placementGroupId) {
             this.placementGroupId = Output.ofNullable(placementGroupId);
             return this;
         }
-
         public Builder strategy(@Nullable Output<Either<String,PlacementStrategy>> strategy) {
             this.strategy = strategy;
             return this;
         }
-
         public Builder strategy(@Nullable Either<String,PlacementStrategy> strategy) {
             this.strategy = Output.ofNullable(strategy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public PlacementGroupState build() {
+        }        public PlacementGroupState build() {
             return new PlacementGroupState(arn, name, partitionCount, placementGroupId, strategy, tags, tagsAll);
         }
     }

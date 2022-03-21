@@ -441,242 +441,194 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
             this.applyImmediately = applyImmediately;
             return this;
         }
-
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
             this.caCertIdentifier = caCertIdentifier;
             return this;
         }
-
         public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
             this.caCertIdentifier = Output.ofNullable(caCertIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
-
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
-
         public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
             this.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
-
         public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
             this.dbSubnetGroupName = Output.ofNullable(dbSubnetGroupName);
             return this;
         }
-
         public Builder dbiResourceId(@Nullable Output<String> dbiResourceId) {
             this.dbiResourceId = dbiResourceId;
             return this;
         }
-
         public Builder dbiResourceId(@Nullable String dbiResourceId) {
             this.dbiResourceId = Output.ofNullable(dbiResourceId);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = Output.ofNullable(identifier);
             return this;
         }
-
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
-
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
             this.identifierPrefix = Output.ofNullable(identifierPrefix);
             return this;
         }
-
         public Builder instanceClass(@Nullable Output<String> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
-
         public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = Output.ofNullable(instanceClass);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
             this.promotionTier = promotionTier;
             return this;
         }
-
         public Builder promotionTier(@Nullable Integer promotionTier) {
             this.promotionTier = Output.ofNullable(promotionTier);
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder writer(@Nullable Output<Boolean> writer) {
             this.writer = writer;
             return this;
         }
-
         public Builder writer(@Nullable Boolean writer) {
             this.writer = Output.ofNullable(writer);
             return this;
-        }
-        public ClusterInstanceState build() {
+        }        public ClusterInstanceState build() {
             return new ClusterInstanceState(applyImmediately, arn, autoMinorVersionUpgrade, availabilityZone, caCertIdentifier, clusterIdentifier, dbSubnetGroupName, dbiResourceId, endpoint, engine, engineVersion, identifier, identifierPrefix, instanceClass, kmsKeyId, port, preferredBackupWindow, preferredMaintenanceWindow, promotionTier, publiclyAccessible, storageEncrypted, tags, tagsAll, writer);
         }
     }

@@ -56,12 +56,10 @@ public final class DomainNameEndpointConfigurationGetArgs extends io.pulumi.reso
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
         public Builder types(String types) {
             this.types = Output.of(Objects.requireNonNull(types));
             return this;
-        }
-        public DomainNameEndpointConfigurationGetArgs build() {
+        }        public DomainNameEndpointConfigurationGetArgs build() {
             return new DomainNameEndpointConfigurationGetArgs(types);
         }
     }

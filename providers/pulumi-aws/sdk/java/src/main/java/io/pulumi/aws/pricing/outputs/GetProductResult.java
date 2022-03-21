@@ -87,22 +87,21 @@ public final class GetProductResult {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
+        public Builder filters(GetProductFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
-        }
-        public GetProductResult build() {
+        }        public GetProductResult build() {
             return new GetProductResult(filters, id, result, serviceCode);
         }
     }

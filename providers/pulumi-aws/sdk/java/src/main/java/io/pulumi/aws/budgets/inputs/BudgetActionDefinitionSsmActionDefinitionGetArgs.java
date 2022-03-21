@@ -90,32 +90,29 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
             this.actionSubType = Objects.requireNonNull(actionSubType);
             return this;
         }
-
         public Builder actionSubType(String actionSubType) {
             this.actionSubType = Output.of(Objects.requireNonNull(actionSubType));
             return this;
         }
-
         public Builder instanceIds(Output<List<String>> instanceIds) {
             this.instanceIds = Objects.requireNonNull(instanceIds);
             return this;
         }
-
         public Builder instanceIds(List<String> instanceIds) {
             this.instanceIds = Output.of(Objects.requireNonNull(instanceIds));
             return this;
         }
-
+        public Builder instanceIds(String... instanceIds) {
+            return instanceIds(List.of(instanceIds));
+        }
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
-        }
-        public BudgetActionDefinitionSsmActionDefinitionGetArgs build() {
+        }        public BudgetActionDefinitionSsmActionDefinitionGetArgs build() {
             return new BudgetActionDefinitionSsmActionDefinitionGetArgs(actionSubType, instanceIds, region);
         }
     }

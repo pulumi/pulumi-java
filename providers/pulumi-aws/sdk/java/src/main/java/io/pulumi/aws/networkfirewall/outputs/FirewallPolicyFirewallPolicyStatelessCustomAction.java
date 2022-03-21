@@ -70,12 +70,10 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomAction {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
-
         public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatelessCustomAction build() {
+        }        public FirewallPolicyFirewallPolicyStatelessCustomAction build() {
             return new FirewallPolicyFirewallPolicyStatelessCustomAction(actionDefinition, actionName);
         }
     }

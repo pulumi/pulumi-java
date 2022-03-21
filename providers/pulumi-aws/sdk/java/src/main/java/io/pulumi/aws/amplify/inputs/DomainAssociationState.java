@@ -141,62 +141,53 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificateVerificationDnsRecord(@Nullable Output<String> certificateVerificationDnsRecord) {
             this.certificateVerificationDnsRecord = certificateVerificationDnsRecord;
             return this;
         }
-
         public Builder certificateVerificationDnsRecord(@Nullable String certificateVerificationDnsRecord) {
             this.certificateVerificationDnsRecord = Output.ofNullable(certificateVerificationDnsRecord);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder subDomains(@Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains) {
             this.subDomains = subDomains;
             return this;
         }
-
         public Builder subDomains(@Nullable List<DomainAssociationSubDomainGetArgs> subDomains) {
             this.subDomains = Output.ofNullable(subDomains);
             return this;
         }
-
+        public Builder subDomains(DomainAssociationSubDomainGetArgs... subDomains) {
+            return subDomains(List.of(subDomains));
+        }
         public Builder waitForVerification(@Nullable Output<Boolean> waitForVerification) {
             this.waitForVerification = waitForVerification;
             return this;
         }
-
         public Builder waitForVerification(@Nullable Boolean waitForVerification) {
             this.waitForVerification = Output.ofNullable(waitForVerification);
             return this;
-        }
-        public DomainAssociationState build() {
+        }        public DomainAssociationState build() {
             return new DomainAssociationState(appId, arn, certificateVerificationDnsRecord, domainName, subDomains, waitForVerification);
         }
     }

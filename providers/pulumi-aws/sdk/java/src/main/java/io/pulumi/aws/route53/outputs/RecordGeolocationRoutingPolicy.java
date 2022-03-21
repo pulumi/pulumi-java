@@ -87,17 +87,14 @@ public final class RecordGeolocationRoutingPolicy {
             this.continent = continent;
             return this;
         }
-
         public Builder country(@Nullable String country) {
             this.country = country;
             return this;
         }
-
         public Builder subdivision(@Nullable String subdivision) {
             this.subdivision = subdivision;
             return this;
-        }
-        public RecordGeolocationRoutingPolicy build() {
+        }        public RecordGeolocationRoutingPolicy build() {
             return new RecordGeolocationRoutingPolicy(continent, country, subdivision);
         }
     }

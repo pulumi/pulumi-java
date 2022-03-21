@@ -51,8 +51,7 @@ public final class RecordFailoverRoutingPolicy {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RecordFailoverRoutingPolicy build() {
+        }        public RecordFailoverRoutingPolicy build() {
             return new RecordFailoverRoutingPolicy(type);
         }
     }

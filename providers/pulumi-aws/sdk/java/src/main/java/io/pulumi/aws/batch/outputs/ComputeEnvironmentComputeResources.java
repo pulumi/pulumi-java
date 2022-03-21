@@ -300,82 +300,75 @@ public final class ComputeEnvironmentComputeResources {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder bidPercentage(@Nullable Integer bidPercentage) {
             this.bidPercentage = bidPercentage;
             return this;
         }
-
         public Builder desiredVcpus(@Nullable Integer desiredVcpus) {
             this.desiredVcpus = desiredVcpus;
             return this;
         }
-
         public Builder ec2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration) {
             this.ec2Configuration = ec2Configuration;
             return this;
         }
-
         public Builder ec2KeyPair(@Nullable String ec2KeyPair) {
             this.ec2KeyPair = ec2KeyPair;
             return this;
         }
-
         public Builder imageId(@Nullable String imageId) {
             this.imageId = imageId;
             return this;
         }
-
         public Builder instanceRole(@Nullable String instanceRole) {
             this.instanceRole = instanceRole;
             return this;
         }
-
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
-
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }
         public Builder launchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
-
         public Builder maxVcpus(Integer maxVcpus) {
             this.maxVcpus = Objects.requireNonNull(maxVcpus);
             return this;
         }
-
         public Builder minVcpus(@Nullable Integer minVcpus) {
             this.minVcpus = minVcpus;
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder spotIamFleetRole(@Nullable String spotIamFleetRole) {
             this.spotIamFleetRole = spotIamFleetRole;
             return this;
         }
-
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ComputeEnvironmentComputeResources build() {
+        }        public ComputeEnvironmentComputeResources build() {
             return new ComputeEnvironmentComputeResources(allocationStrategy, bidPercentage, desiredVcpus, ec2Configuration, ec2KeyPair, imageId, instanceRole, instanceTypes, launchTemplate, maxVcpus, minVcpus, securityGroupIds, spotIamFleetRole, subnets, tags, type);
         }
     }

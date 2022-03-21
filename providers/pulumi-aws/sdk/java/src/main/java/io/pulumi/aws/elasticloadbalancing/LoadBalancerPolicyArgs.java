@@ -108,42 +108,37 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
-
         public Builder policyAttributes(@Nullable Output<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes) {
             this.policyAttributes = policyAttributes;
             return this;
         }
-
         public Builder policyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeArgs> policyAttributes) {
             this.policyAttributes = Output.ofNullable(policyAttributes);
             return this;
         }
-
+        public Builder policyAttributes(LoadBalancerPolicyPolicyAttributeArgs... policyAttributes) {
+            return policyAttributes(List.of(policyAttributes));
+        }
         public Builder policyName(Output<String> policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Output.of(Objects.requireNonNull(policyName));
             return this;
         }
-
         public Builder policyTypeName(Output<String> policyTypeName) {
             this.policyTypeName = Objects.requireNonNull(policyTypeName);
             return this;
         }
-
         public Builder policyTypeName(String policyTypeName) {
             this.policyTypeName = Output.of(Objects.requireNonNull(policyTypeName));
             return this;
-        }
-        public LoadBalancerPolicyArgs build() {
+        }        public LoadBalancerPolicyArgs build() {
             return new LoadBalancerPolicyArgs(loadBalancerName, policyAttributes, policyName, policyTypeName);
         }
     }

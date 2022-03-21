@@ -85,17 +85,14 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementO
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder position(String position) {
             this.position = Objects.requireNonNull(position);
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig build() {
+        }        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig build() {
             return new WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig(fallbackBehavior, headerName, position);
         }
     }

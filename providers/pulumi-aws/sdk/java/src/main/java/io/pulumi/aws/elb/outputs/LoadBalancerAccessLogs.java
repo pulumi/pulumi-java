@@ -105,22 +105,18 @@ public final class LoadBalancerAccessLogs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
-        }
-        public LoadBalancerAccessLogs build() {
+        }        public LoadBalancerAccessLogs build() {
             return new LoadBalancerAccessLogs(bucket, bucketPrefix, enabled, interval);
         }
     }

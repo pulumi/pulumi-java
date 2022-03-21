@@ -74,22 +74,18 @@ public final class XssMatchSetXssMatchTupleArgs extends io.pulumi.resources.Reso
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(XssMatchSetXssMatchTupleFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder textTransformation(Output<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
             return this;
-        }
-        public XssMatchSetXssMatchTupleArgs build() {
+        }        public XssMatchSetXssMatchTupleArgs build() {
             return new XssMatchSetXssMatchTupleArgs(fieldToMatch, textTransformation);
         }
     }

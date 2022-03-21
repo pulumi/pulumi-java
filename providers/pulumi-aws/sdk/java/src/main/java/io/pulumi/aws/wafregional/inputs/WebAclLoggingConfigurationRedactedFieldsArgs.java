@@ -57,12 +57,13 @@ public final class WebAclLoggingConfigurationRedactedFieldsArgs extends io.pulum
             this.fieldToMatches = Objects.requireNonNull(fieldToMatches);
             return this;
         }
-
         public Builder fieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs> fieldToMatches) {
             this.fieldToMatches = Output.of(Objects.requireNonNull(fieldToMatches));
             return this;
         }
-        public WebAclLoggingConfigurationRedactedFieldsArgs build() {
+        public Builder fieldToMatches(WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs... fieldToMatches) {
+            return fieldToMatches(List.of(fieldToMatches));
+        }        public WebAclLoggingConfigurationRedactedFieldsArgs build() {
             return new WebAclLoggingConfigurationRedactedFieldsArgs(fieldToMatches);
         }
     }

@@ -106,22 +106,18 @@ public final class RouteSpecHttp2Route {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder match(RouteSpecHttp2RouteMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder retryPolicy(@Nullable RouteSpecHttp2RouteRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder timeout(@Nullable RouteSpecHttp2RouteTimeout timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public RouteSpecHttp2Route build() {
+        }        public RouteSpecHttp2Route build() {
             return new RouteSpecHttp2Route(action, match, retryPolicy, timeout);
         }
     }

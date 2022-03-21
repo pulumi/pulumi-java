@@ -105,22 +105,18 @@ public final class ApplicationAppversionLifecycle {
             this.deleteSourceFromS3 = deleteSourceFromS3;
             return this;
         }
-
         public Builder maxAgeInDays(@Nullable Integer maxAgeInDays) {
             this.maxAgeInDays = maxAgeInDays;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
-        }
-        public ApplicationAppversionLifecycle build() {
+        }        public ApplicationAppversionLifecycle build() {
             return new ApplicationAppversionLifecycle(deleteSourceFromS3, maxAgeInDays, maxCount, serviceRole);
         }
     }

@@ -56,12 +56,10 @@ public final class OrganizationConfigurationDatasourcesS3LogsArgs extends io.pul
             this.autoEnable = Objects.requireNonNull(autoEnable);
             return this;
         }
-
         public Builder autoEnable(Boolean autoEnable) {
             this.autoEnable = Output.of(Objects.requireNonNull(autoEnable));
             return this;
-        }
-        public OrganizationConfigurationDatasourcesS3LogsArgs build() {
+        }        public OrganizationConfigurationDatasourcesS3LogsArgs build() {
             return new OrganizationConfigurationDatasourcesS3LogsArgs(autoEnable);
         }
     }

@@ -72,12 +72,13 @@ public final class AcceleratorIpSet {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder ipFamily(@Nullable String ipFamily) {
             this.ipFamily = ipFamily;
             return this;
-        }
-        public AcceleratorIpSet build() {
+        }        public AcceleratorIpSet build() {
             return new AcceleratorIpSet(ipAddresses, ipFamily);
         }
     }

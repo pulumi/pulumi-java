@@ -92,32 +92,26 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             this.acm = acm;
             return this;
         }
-
         public Builder acm(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs acm) {
             this.acm = Output.ofNullable(acm);
             return this;
         }
-
         public Builder file(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder sds(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
-
         public Builder sds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs sds) {
             this.sds = Output.ofNullable(sds);
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs(acm, file, sds);
         }
     }

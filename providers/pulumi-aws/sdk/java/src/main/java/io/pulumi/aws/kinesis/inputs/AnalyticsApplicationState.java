@@ -293,152 +293,125 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
-
         public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder createTimestamp(@Nullable Output<String> createTimestamp) {
             this.createTimestamp = createTimestamp;
             return this;
         }
-
         public Builder createTimestamp(@Nullable String createTimestamp) {
             this.createTimestamp = Output.ofNullable(createTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder inputs(@Nullable Output<AnalyticsApplicationInputsGetArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable AnalyticsApplicationInputsGetArgs inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
         public Builder lastUpdateTimestamp(@Nullable Output<String> lastUpdateTimestamp) {
             this.lastUpdateTimestamp = lastUpdateTimestamp;
             return this;
         }
-
         public Builder lastUpdateTimestamp(@Nullable String lastUpdateTimestamp) {
             this.lastUpdateTimestamp = Output.ofNullable(lastUpdateTimestamp);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<AnalyticsApplicationOutputGetArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(AnalyticsApplicationOutputGetArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder referenceDataSources(@Nullable Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources) {
             this.referenceDataSources = referenceDataSources;
             return this;
         }
-
         public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesGetArgs referenceDataSources) {
             this.referenceDataSources = Output.ofNullable(referenceDataSources);
             return this;
         }
-
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
-
         public Builder startApplication(@Nullable Boolean startApplication) {
             this.startApplication = Output.ofNullable(startApplication);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public AnalyticsApplicationState build() {
+        }        public AnalyticsApplicationState build() {
             return new AnalyticsApplicationState(arn, cloudwatchLoggingOptions, code, createTimestamp, description, inputs, lastUpdateTimestamp, name, outputs, referenceDataSources, startApplication, status, tags, tagsAll, version);
         }
     }

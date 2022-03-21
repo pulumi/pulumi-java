@@ -205,102 +205,85 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
             this.configurationProfileId = configurationProfileId;
             return this;
         }
-
         public Builder configurationProfileId(@Nullable String configurationProfileId) {
             this.configurationProfileId = Output.ofNullable(configurationProfileId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder locationUri(@Nullable Output<String> locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = Output.ofNullable(locationUri);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retrievalRoleArn(@Nullable Output<String> retrievalRoleArn) {
             this.retrievalRoleArn = retrievalRoleArn;
             return this;
         }
-
         public Builder retrievalRoleArn(@Nullable String retrievalRoleArn) {
             this.retrievalRoleArn = Output.ofNullable(retrievalRoleArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators) {
             this.validators = validators;
             return this;
         }
-
         public Builder validators(@Nullable List<ConfigurationProfileValidatorGetArgs> validators) {
             this.validators = Output.ofNullable(validators);
             return this;
         }
-        public ConfigurationProfileState build() {
+        public Builder validators(ConfigurationProfileValidatorGetArgs... validators) {
+            return validators(List.of(validators));
+        }        public ConfigurationProfileState build() {
             return new ConfigurationProfileState(applicationId, arn, configurationProfileId, description, locationUri, name, retrievalRoleArn, tags, tagsAll, validators);
         }
     }

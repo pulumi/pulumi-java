@@ -51,8 +51,7 @@ public final class GatewayRouteSpecHttp2RouteMatch {
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
-        }
-        public GatewayRouteSpecHttp2RouteMatch build() {
+        }        public GatewayRouteSpecHttp2RouteMatch build() {
             return new GatewayRouteSpecHttp2RouteMatch(prefix);
         }
     }

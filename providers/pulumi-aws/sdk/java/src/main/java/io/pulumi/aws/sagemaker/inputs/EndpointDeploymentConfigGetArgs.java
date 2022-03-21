@@ -75,22 +75,18 @@ public final class EndpointDeploymentConfigGetArgs extends io.pulumi.resources.R
             this.autoRollbackConfiguration = autoRollbackConfiguration;
             return this;
         }
-
         public Builder autoRollbackConfiguration(@Nullable EndpointDeploymentConfigAutoRollbackConfigurationGetArgs autoRollbackConfiguration) {
             this.autoRollbackConfiguration = Output.ofNullable(autoRollbackConfiguration);
             return this;
         }
-
         public Builder blueGreenUpdatePolicy(Output<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy) {
             this.blueGreenUpdatePolicy = Objects.requireNonNull(blueGreenUpdatePolicy);
             return this;
         }
-
         public Builder blueGreenUpdatePolicy(EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs blueGreenUpdatePolicy) {
             this.blueGreenUpdatePolicy = Output.of(Objects.requireNonNull(blueGreenUpdatePolicy));
             return this;
-        }
-        public EndpointDeploymentConfigGetArgs build() {
+        }        public EndpointDeploymentConfigGetArgs build() {
             return new EndpointDeploymentConfigGetArgs(autoRollbackConfiguration, blueGreenUpdatePolicy);
         }
     }

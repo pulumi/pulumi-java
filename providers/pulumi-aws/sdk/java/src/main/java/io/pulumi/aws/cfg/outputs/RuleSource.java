@@ -88,17 +88,17 @@ public final class RuleSource {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder sourceDetails(@Nullable List<RuleSourceSourceDetail> sourceDetails) {
             this.sourceDetails = sourceDetails;
             return this;
         }
-
+        public Builder sourceDetails(RuleSourceSourceDetail... sourceDetails) {
+            return sourceDetails(List.of(sourceDetails));
+        }
         public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
-        }
-        public RuleSource build() {
+        }        public RuleSource build() {
             return new RuleSource(owner, sourceDetails, sourceIdentifier);
         }
     }

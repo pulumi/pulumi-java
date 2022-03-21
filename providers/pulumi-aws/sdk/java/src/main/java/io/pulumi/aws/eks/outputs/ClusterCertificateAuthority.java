@@ -53,8 +53,7 @@ public final class ClusterCertificateAuthority {
         public Builder data(@Nullable String data) {
             this.data = data;
             return this;
-        }
-        public ClusterCertificateAuthority build() {
+        }        public ClusterCertificateAuthority build() {
             return new ClusterCertificateAuthority(data);
         }
     }

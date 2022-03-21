@@ -51,8 +51,7 @@ public final class RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHea
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader build() {
+        }        public RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader build() {
             return new RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader(name);
         }
     }

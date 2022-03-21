@@ -109,42 +109,34 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable ServiceSourceConfigurationAuthenticationConfigurationGetArgs authenticationConfiguration) {
             this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
-
         public Builder autoDeploymentsEnabled(@Nullable Output<Boolean> autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
-
         public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = Output.ofNullable(autoDeploymentsEnabled);
             return this;
         }
-
         public Builder codeRepository(@Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
-
         public Builder codeRepository(@Nullable ServiceSourceConfigurationCodeRepositoryGetArgs codeRepository) {
             this.codeRepository = Output.ofNullable(codeRepository);
             return this;
         }
-
         public Builder imageRepository(@Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
-
         public Builder imageRepository(@Nullable ServiceSourceConfigurationImageRepositoryGetArgs imageRepository) {
             this.imageRepository = Output.ofNullable(imageRepository);
             return this;
-        }
-        public ServiceSourceConfigurationGetArgs build() {
+        }        public ServiceSourceConfigurationGetArgs build() {
             return new ServiceSourceConfigurationGetArgs(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
         }
     }

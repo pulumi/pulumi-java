@@ -69,12 +69,10 @@ public final class InsightFiltersResourceAwsEc2InstanceSubnetId {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceSubnetId build() {
+        }        public InsightFiltersResourceAwsEc2InstanceSubnetId build() {
             return new InsightFiltersResourceAwsEc2InstanceSubnetId(comparison, value);
         }
     }

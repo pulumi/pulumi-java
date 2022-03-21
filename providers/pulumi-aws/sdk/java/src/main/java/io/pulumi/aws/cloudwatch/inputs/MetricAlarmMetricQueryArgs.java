@@ -140,62 +140,50 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = Output.ofNullable(expression);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder metric(@Nullable Output<MetricAlarmMetricQueryMetricArgs> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable MetricAlarmMetricQueryMetricArgs metric) {
             this.metric = Output.ofNullable(metric);
             return this;
         }
-
         public Builder returnData(@Nullable Output<Boolean> returnData) {
             this.returnData = returnData;
             return this;
         }
-
         public Builder returnData(@Nullable Boolean returnData) {
             this.returnData = Output.ofNullable(returnData);
             return this;
-        }
-        public MetricAlarmMetricQueryArgs build() {
+        }        public MetricAlarmMetricQueryArgs build() {
             return new MetricAlarmMetricQueryArgs(accountId, expression, id, label, metric, returnData);
         }
     }

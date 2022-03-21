@@ -72,12 +72,10 @@ public final class PlanRuleCopyAction {
             this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn);
             return this;
         }
-
         public Builder lifecycle(@Nullable PlanRuleCopyActionLifecycle lifecycle) {
             this.lifecycle = lifecycle;
             return this;
-        }
-        public PlanRuleCopyAction build() {
+        }        public PlanRuleCopyAction build() {
             return new PlanRuleCopyAction(destinationVaultArn, lifecycle);
         }
     }

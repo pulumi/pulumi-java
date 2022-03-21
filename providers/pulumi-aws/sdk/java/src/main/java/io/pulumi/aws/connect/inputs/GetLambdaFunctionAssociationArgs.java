@@ -72,12 +72,10 @@ public final class GetLambdaFunctionAssociationArgs extends io.pulumi.resources.
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
-        }
-        public GetLambdaFunctionAssociationArgs build() {
+        }        public GetLambdaFunctionAssociationArgs build() {
             return new GetLambdaFunctionAssociationArgs(functionArn, instanceId);
         }
     }

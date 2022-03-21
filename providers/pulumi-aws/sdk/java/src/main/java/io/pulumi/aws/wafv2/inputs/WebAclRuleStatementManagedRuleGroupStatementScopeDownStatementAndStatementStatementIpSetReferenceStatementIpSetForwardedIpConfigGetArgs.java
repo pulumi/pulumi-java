@@ -89,32 +89,26 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder fallbackBehavior(String fallbackBehavior) {
             this.fallbackBehavior = Output.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
-
         public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public Builder position(Output<String> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder position(String position) {
             this.position = Output.of(Objects.requireNonNull(position));
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs(fallbackBehavior, headerName, position);
         }
     }

@@ -88,17 +88,14 @@ public final class InsightFiltersResourceAwsEc2InstanceLaunchedAt {
             this.dateRange = dateRange;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = start;
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceLaunchedAt build() {
+        }        public InsightFiltersResourceAwsEc2InstanceLaunchedAt build() {
             return new InsightFiltersResourceAwsEc2InstanceLaunchedAt(dateRange, end, start);
         }
     }

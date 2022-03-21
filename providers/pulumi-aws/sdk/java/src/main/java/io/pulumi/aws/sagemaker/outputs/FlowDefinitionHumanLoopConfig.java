@@ -186,47 +186,41 @@ public final class FlowDefinitionHumanLoopConfig {
             this.humanTaskUiArn = Objects.requireNonNull(humanTaskUiArn);
             return this;
         }
-
         public Builder publicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice publicWorkforceTaskPrice) {
             this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
             return this;
         }
-
         public Builder taskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
             this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
             return this;
         }
-
         public Builder taskCount(Integer taskCount) {
             this.taskCount = Objects.requireNonNull(taskCount);
             return this;
         }
-
         public Builder taskDescription(String taskDescription) {
             this.taskDescription = Objects.requireNonNull(taskDescription);
             return this;
         }
-
         public Builder taskKeywords(@Nullable List<String> taskKeywords) {
             this.taskKeywords = taskKeywords;
             return this;
         }
-
+        public Builder taskKeywords(String... taskKeywords) {
+            return taskKeywords(List.of(taskKeywords));
+        }
         public Builder taskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
             this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
             return this;
         }
-
         public Builder taskTitle(String taskTitle) {
             this.taskTitle = Objects.requireNonNull(taskTitle);
             return this;
         }
-
         public Builder workteamArn(String workteamArn) {
             this.workteamArn = Objects.requireNonNull(workteamArn);
             return this;
-        }
-        public FlowDefinitionHumanLoopConfig build() {
+        }        public FlowDefinitionHumanLoopConfig build() {
             return new FlowDefinitionHumanLoopConfig(humanTaskUiArn, publicWorkforceTaskPrice, taskAvailabilityLifetimeInSeconds, taskCount, taskDescription, taskKeywords, taskTimeLimitInSeconds, taskTitle, workteamArn);
         }
     }

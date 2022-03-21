@@ -126,52 +126,42 @@ public final class ClassifierState extends io.pulumi.resources.ResourceArgs {
             this.csvClassifier = csvClassifier;
             return this;
         }
-
         public Builder csvClassifier(@Nullable ClassifierCsvClassifierGetArgs csvClassifier) {
             this.csvClassifier = Output.ofNullable(csvClassifier);
             return this;
         }
-
         public Builder grokClassifier(@Nullable Output<ClassifierGrokClassifierGetArgs> grokClassifier) {
             this.grokClassifier = grokClassifier;
             return this;
         }
-
         public Builder grokClassifier(@Nullable ClassifierGrokClassifierGetArgs grokClassifier) {
             this.grokClassifier = Output.ofNullable(grokClassifier);
             return this;
         }
-
         public Builder jsonClassifier(@Nullable Output<ClassifierJsonClassifierGetArgs> jsonClassifier) {
             this.jsonClassifier = jsonClassifier;
             return this;
         }
-
         public Builder jsonClassifier(@Nullable ClassifierJsonClassifierGetArgs jsonClassifier) {
             this.jsonClassifier = Output.ofNullable(jsonClassifier);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder xmlClassifier(@Nullable Output<ClassifierXmlClassifierGetArgs> xmlClassifier) {
             this.xmlClassifier = xmlClassifier;
             return this;
         }
-
         public Builder xmlClassifier(@Nullable ClassifierXmlClassifierGetArgs xmlClassifier) {
             this.xmlClassifier = Output.ofNullable(xmlClassifier);
             return this;
-        }
-        public ClassifierState build() {
+        }        public ClassifierState build() {
             return new ClassifierState(csvClassifier, grokClassifier, jsonClassifier, name, xmlClassifier);
         }
     }

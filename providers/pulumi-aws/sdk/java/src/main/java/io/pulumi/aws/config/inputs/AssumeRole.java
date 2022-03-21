@@ -141,42 +141,40 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policyArns(@Nullable List<String> policyArns) {
             this.policyArns = policyArns;
             return this;
         }
-
+        public Builder policyArns(String... policyArns) {
+            return policyArns(List.of(policyArns));
+        }
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = sessionName;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
-        public AssumeRole build() {
+        public Builder transitiveTagKeys(String... transitiveTagKeys) {
+            return transitiveTagKeys(List.of(transitiveTagKeys));
+        }        public AssumeRole build() {
             return new AssumeRole(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }
     }

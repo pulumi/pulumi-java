@@ -175,82 +175,66 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsConfig(@Nullable Output<ServiceDnsConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder dnsConfig(@Nullable ServiceDnsConfigArgs dnsConfig) {
             this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder healthCheckConfig(@Nullable Output<ServiceHealthCheckConfigArgs> healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
-
         public Builder healthCheckConfig(@Nullable ServiceHealthCheckConfigArgs healthCheckConfig) {
             this.healthCheckConfig = Output.ofNullable(healthCheckConfig);
             return this;
         }
-
         public Builder healthCheckCustomConfig(@Nullable Output<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig) {
             this.healthCheckCustomConfig = healthCheckCustomConfig;
             return this;
         }
-
         public Builder healthCheckCustomConfig(@Nullable ServiceHealthCheckCustomConfigArgs healthCheckCustomConfig) {
             this.healthCheckCustomConfig = Output.ofNullable(healthCheckCustomConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
-
         public Builder namespaceId(@Nullable String namespaceId) {
             this.namespaceId = Output.ofNullable(namespaceId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(description, dnsConfig, forceDestroy, healthCheckConfig, healthCheckCustomConfig, name, namespaceId, tags);
         }
     }

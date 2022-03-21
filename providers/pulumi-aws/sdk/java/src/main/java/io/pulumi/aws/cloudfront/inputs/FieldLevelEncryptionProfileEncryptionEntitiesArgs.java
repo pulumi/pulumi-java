@@ -54,12 +54,13 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesArgs extends io.
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public FieldLevelEncryptionProfileEncryptionEntitiesArgs build() {
+        public Builder items(FieldLevelEncryptionProfileEncryptionEntitiesItemArgs... items) {
+            return items(List.of(items));
+        }        public FieldLevelEncryptionProfileEncryptionEntitiesArgs build() {
             return new FieldLevelEncryptionProfileEncryptionEntitiesArgs(items);
         }
     }

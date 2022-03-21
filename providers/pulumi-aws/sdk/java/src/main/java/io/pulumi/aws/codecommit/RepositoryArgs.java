@@ -107,42 +107,34 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultBranch = defaultBranch;
             return this;
         }
-
         public Builder defaultBranch(@Nullable String defaultBranch) {
             this.defaultBranch = Output.ofNullable(defaultBranch);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RepositoryArgs build() {
+        }        public RepositoryArgs build() {
             return new RepositoryArgs(defaultBranch, description, repositoryName, tags);
         }
     }

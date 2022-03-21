@@ -139,62 +139,53 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryArgs extends io.pu
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
-
         public Builder dnsIps(List<String> dnsIps) {
             this.dnsIps = Output.of(Objects.requireNonNull(dnsIps));
             return this;
         }
-
+        public Builder dnsIps(String... dnsIps) {
+            return dnsIps(List.of(dnsIps));
+        }
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder fileSystemAdministratorsGroup(@Nullable Output<String> fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
-
         public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = Output.ofNullable(fileSystemAdministratorsGroup);
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public WindowsFileSystemSelfManagedActiveDirectoryArgs build() {
+        }        public WindowsFileSystemSelfManagedActiveDirectoryArgs build() {
             return new WindowsFileSystemSelfManagedActiveDirectoryArgs(dnsIps, domainName, fileSystemAdministratorsGroup, organizationalUnitDistinguishedName, password, username);
         }
     }

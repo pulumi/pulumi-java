@@ -90,32 +90,26 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder identifier(Output<String> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
-
         public Builder identifier(String identifier) {
             this.identifier = Output.of(Objects.requireNonNull(identifier));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ActionTargetArgs build() {
+        }        public ActionTargetArgs build() {
             return new ActionTargetArgs(description, identifier, name);
         }
     }

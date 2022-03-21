@@ -74,12 +74,13 @@ public final class GetCoipPoolFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetCoipPoolFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetCoipPoolFilter build() {
             return new GetCoipPoolFilter(name, values);
         }
     }

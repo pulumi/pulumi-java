@@ -74,22 +74,18 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
             this.accessPointId = accessPointId;
             return this;
         }
-
         public Builder accessPointId(@Nullable String accessPointId) {
             this.accessPointId = Output.ofNullable(accessPointId);
             return this;
         }
-
         public Builder iam(@Nullable Output<String> iam) {
             this.iam = iam;
             return this;
         }
-
         public Builder iam(@Nullable String iam) {
             this.iam = Output.ofNullable(iam);
             return this;
-        }
-        public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs build() {
+        }        public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs build() {
             return new TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(accessPointId, iam);
         }
     }

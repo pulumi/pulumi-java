@@ -201,52 +201,42 @@ public final class AppAutoBranchCreationConfig {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-
         public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
-
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder framework(@Nullable String framework) {
             this.framework = framework;
             return this;
         }
-
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
-        }
-        public AppAutoBranchCreationConfig build() {
+        }        public AppAutoBranchCreationConfig build() {
             return new AppAutoBranchCreationConfig(basicAuthCredentials, buildSpec, enableAutoBuild, enableBasicAuth, enablePerformanceMode, enablePullRequestPreview, environmentVariables, framework, pullRequestEnvironmentName, stage);
         }
     }

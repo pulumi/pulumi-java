@@ -75,22 +75,21 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends io.p
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
-
         public Builder principal(@Nullable String principal) {
             this.principal = Output.ofNullable(principal);
             return this;
-        }
-        public DataLakeSettingsCreateTableDefaultPermissionArgs build() {
+        }        public DataLakeSettingsCreateTableDefaultPermissionArgs build() {
             return new DataLakeSettingsCreateTableDefaultPermissionArgs(permissions, principal);
         }
     }

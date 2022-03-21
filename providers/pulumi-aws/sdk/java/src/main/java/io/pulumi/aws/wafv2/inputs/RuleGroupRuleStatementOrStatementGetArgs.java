@@ -57,12 +57,13 @@ public final class RuleGroupRuleStatementOrStatementGetArgs extends io.pulumi.re
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public Builder statements(List<RuleGroupRuleStatementOrStatementStatementGetArgs> statements) {
             this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
-        public RuleGroupRuleStatementOrStatementGetArgs build() {
+        public Builder statements(RuleGroupRuleStatementOrStatementStatementGetArgs... statements) {
+            return statements(List.of(statements));
+        }        public RuleGroupRuleStatementOrStatementGetArgs build() {
             return new RuleGroupRuleStatementOrStatementGetArgs(statements);
         }
     }

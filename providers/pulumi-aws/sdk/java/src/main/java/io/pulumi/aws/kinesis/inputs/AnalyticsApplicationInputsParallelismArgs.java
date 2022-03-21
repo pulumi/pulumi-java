@@ -57,12 +57,10 @@ public final class AnalyticsApplicationInputsParallelismArgs extends io.pulumi.r
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public AnalyticsApplicationInputsParallelismArgs build() {
+        }        public AnalyticsApplicationInputsParallelismArgs build() {
             return new AnalyticsApplicationInputsParallelismArgs(count);
         }
     }

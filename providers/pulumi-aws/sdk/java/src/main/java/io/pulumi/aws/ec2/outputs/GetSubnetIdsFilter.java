@@ -76,12 +76,13 @@ public final class GetSubnetIdsFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetSubnetIdsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetSubnetIdsFilter build() {
             return new GetSubnetIdsFilter(name, values);
         }
     }

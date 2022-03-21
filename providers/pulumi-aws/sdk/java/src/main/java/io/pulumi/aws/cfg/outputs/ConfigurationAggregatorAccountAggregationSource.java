@@ -89,17 +89,20 @@ public final class ConfigurationAggregatorAccountAggregationSource {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
-
+        public Builder accountIds(String... accountIds) {
+            return accountIds(List.of(accountIds));
+        }
         public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = allRegions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-        public ConfigurationAggregatorAccountAggregationSource build() {
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }        public ConfigurationAggregatorAccountAggregationSource build() {
             return new ConfigurationAggregatorAccountAggregationSource(accountIds, allRegions, regions);
         }
     }

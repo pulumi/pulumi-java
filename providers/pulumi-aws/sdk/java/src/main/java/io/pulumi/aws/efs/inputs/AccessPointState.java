@@ -165,82 +165,66 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
             this.fileSystemArn = fileSystemArn;
             return this;
         }
-
         public Builder fileSystemArn(@Nullable String fileSystemArn) {
             this.fileSystemArn = Output.ofNullable(fileSystemArn);
             return this;
         }
-
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder posixUser(@Nullable Output<AccessPointPosixUserGetArgs> posixUser) {
             this.posixUser = posixUser;
             return this;
         }
-
         public Builder posixUser(@Nullable AccessPointPosixUserGetArgs posixUser) {
             this.posixUser = Output.ofNullable(posixUser);
             return this;
         }
-
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
-
         public Builder rootDirectory(@Nullable AccessPointRootDirectoryGetArgs rootDirectory) {
             this.rootDirectory = Output.ofNullable(rootDirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public AccessPointState build() {
+        }        public AccessPointState build() {
             return new AccessPointState(arn, fileSystemArn, fileSystemId, ownerId, posixUser, rootDirectory, tags, tagsAll);
         }
     }

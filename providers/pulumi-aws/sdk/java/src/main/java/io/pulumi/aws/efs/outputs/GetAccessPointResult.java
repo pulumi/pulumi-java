@@ -162,47 +162,44 @@ public final class GetAccessPointResult {
             this.accessPointId = Objects.requireNonNull(accessPointId);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder fileSystemArn(String fileSystemArn) {
             this.fileSystemArn = Objects.requireNonNull(fileSystemArn);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder posixUsers(List<GetAccessPointPosixUser> posixUsers) {
             this.posixUsers = Objects.requireNonNull(posixUsers);
             return this;
         }
-
+        public Builder posixUsers(GetAccessPointPosixUser... posixUsers) {
+            return posixUsers(List.of(posixUsers));
+        }
         public Builder rootDirectories(List<GetAccessPointRootDirectory> rootDirectories) {
             this.rootDirectories = Objects.requireNonNull(rootDirectories);
             return this;
         }
-
+        public Builder rootDirectories(GetAccessPointRootDirectory... rootDirectories) {
+            return rootDirectories(List.of(rootDirectories));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetAccessPointResult build() {
+        }        public GetAccessPointResult build() {
             return new GetAccessPointResult(accessPointId, arn, fileSystemArn, fileSystemId, id, ownerId, posixUsers, rootDirectories, tags);
         }
     }

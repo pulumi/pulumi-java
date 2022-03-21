@@ -246,122 +246,98 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
-
         public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Output.ofNullable(certificateBody);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder certificatePrivateKey(@Nullable Output<String> certificatePrivateKey) {
             this.certificatePrivateKey = certificatePrivateKey;
             return this;
         }
-
         public Builder certificatePrivateKey(@Nullable String certificatePrivateKey) {
             this.certificatePrivateKey = Output.ofNullable(certificatePrivateKey);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable DomainNameEndpointConfigurationArgs endpointConfiguration) {
             this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
             return this;
         }
-
         public Builder regionalCertificateArn(@Nullable Output<String> regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
-
         public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = Output.ofNullable(regionalCertificateArn);
             return this;
         }
-
         public Builder regionalCertificateName(@Nullable Output<String> regionalCertificateName) {
             this.regionalCertificateName = regionalCertificateName;
             return this;
         }
-
         public Builder regionalCertificateName(@Nullable String regionalCertificateName) {
             this.regionalCertificateName = Output.ofNullable(regionalCertificateName);
             return this;
         }
-
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
-
         public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = Output.ofNullable(securityPolicy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DomainNameArgs build() {
+        }        public DomainNameArgs build() {
             return new DomainNameArgs(certificateArn, certificateBody, certificateChain, certificateName, certificatePrivateKey, domainName, endpointConfiguration, mutualTlsAuthentication, regionalCertificateArn, regionalCertificateName, securityPolicy, tags);
         }
     }

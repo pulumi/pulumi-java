@@ -172,82 +172,66 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder iamRole(@Nullable Output<String> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
-
         public Builder iamRole(@Nullable String iamRole) {
             this.iamRole = Output.ofNullable(iamRole);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder targetAction(@Nullable Output<ScheduledActionTargetActionGetArgs> targetAction) {
             this.targetAction = targetAction;
             return this;
         }
-
         public Builder targetAction(@Nullable ScheduledActionTargetActionGetArgs targetAction) {
             this.targetAction = Output.ofNullable(targetAction);
             return this;
-        }
-        public ScheduledActionState build() {
+        }        public ScheduledActionState build() {
             return new ScheduledActionState(description, enable, endTime, iamRole, name, schedule, startTime, targetAction);
         }
     }

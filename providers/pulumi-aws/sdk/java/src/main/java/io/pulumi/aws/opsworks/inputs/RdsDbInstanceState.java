@@ -106,42 +106,34 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
             this.dbPassword = dbPassword;
             return this;
         }
-
         public Builder dbPassword(@Nullable String dbPassword) {
             this.dbPassword = Output.ofNullable(dbPassword);
             return this;
         }
-
         public Builder dbUser(@Nullable Output<String> dbUser) {
             this.dbUser = dbUser;
             return this;
         }
-
         public Builder dbUser(@Nullable String dbUser) {
             this.dbUser = Output.ofNullable(dbUser);
             return this;
         }
-
         public Builder rdsDbInstanceArn(@Nullable Output<String> rdsDbInstanceArn) {
             this.rdsDbInstanceArn = rdsDbInstanceArn;
             return this;
         }
-
         public Builder rdsDbInstanceArn(@Nullable String rdsDbInstanceArn) {
             this.rdsDbInstanceArn = Output.ofNullable(rdsDbInstanceArn);
             return this;
         }
-
         public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
-
         public Builder stackId(@Nullable String stackId) {
             this.stackId = Output.ofNullable(stackId);
             return this;
-        }
-        public RdsDbInstanceState build() {
+        }        public RdsDbInstanceState build() {
             return new RdsDbInstanceState(dbPassword, dbUser, rdsDbInstanceArn, stackId);
         }
     }

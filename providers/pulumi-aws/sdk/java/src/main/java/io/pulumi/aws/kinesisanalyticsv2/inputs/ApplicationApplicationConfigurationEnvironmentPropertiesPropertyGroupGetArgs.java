@@ -74,22 +74,18 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
             this.propertyGroupId = Objects.requireNonNull(propertyGroupId);
             return this;
         }
-
         public Builder propertyGroupId(String propertyGroupId) {
             this.propertyGroupId = Output.of(Objects.requireNonNull(propertyGroupId));
             return this;
         }
-
         public Builder propertyMap(Output<Map<String,String>> propertyMap) {
             this.propertyMap = Objects.requireNonNull(propertyMap);
             return this;
         }
-
         public Builder propertyMap(Map<String,String> propertyMap) {
             this.propertyMap = Output.of(Objects.requireNonNull(propertyMap));
             return this;
-        }
-        public ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs build() {
+        }        public ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs build() {
             return new ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs(propertyGroupId, propertyMap);
         }
     }

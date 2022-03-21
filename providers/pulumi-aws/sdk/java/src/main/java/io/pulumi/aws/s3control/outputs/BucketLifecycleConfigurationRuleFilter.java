@@ -72,12 +72,10 @@ public final class BucketLifecycleConfigurationRuleFilter {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public BucketLifecycleConfigurationRuleFilter build() {
+        }        public BucketLifecycleConfigurationRuleFilter build() {
             return new BucketLifecycleConfigurationRuleFilter(prefix, tags);
         }
     }

@@ -107,42 +107,34 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder positionalConstraint(Output<String> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
-
         public Builder targetString(@Nullable Output<String> targetString) {
             this.targetString = targetString;
             return this;
         }
-
         public Builder targetString(@Nullable String targetString) {
             this.targetString = Output.ofNullable(targetString);
             return this;
         }
-
         public Builder textTransformation(Output<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
             return this;
-        }
-        public ByteMatchSetByteMatchTupleArgs build() {
+        }        public ByteMatchSetByteMatchTupleArgs build() {
             return new ByteMatchSetByteMatchTupleArgs(fieldToMatch, positionalConstraint, targetString, textTransformation);
         }
     }

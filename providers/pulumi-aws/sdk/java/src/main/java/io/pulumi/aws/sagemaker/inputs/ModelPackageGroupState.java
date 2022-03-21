@@ -123,52 +123,42 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder modelPackageGroupDescription(@Nullable Output<String> modelPackageGroupDescription) {
             this.modelPackageGroupDescription = modelPackageGroupDescription;
             return this;
         }
-
         public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
             this.modelPackageGroupDescription = Output.ofNullable(modelPackageGroupDescription);
             return this;
         }
-
         public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
             this.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
-
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
             this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ModelPackageGroupState build() {
+        }        public ModelPackageGroupState build() {
             return new ModelPackageGroupState(arn, modelPackageGroupDescription, modelPackageGroupName, tags, tagsAll);
         }
     }

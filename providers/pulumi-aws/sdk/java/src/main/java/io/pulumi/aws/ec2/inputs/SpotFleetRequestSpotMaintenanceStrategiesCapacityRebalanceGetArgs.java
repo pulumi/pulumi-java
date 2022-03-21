@@ -57,12 +57,10 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGet
             this.replacementStrategy = replacementStrategy;
             return this;
         }
-
         public Builder replacementStrategy(@Nullable String replacementStrategy) {
             this.replacementStrategy = Output.ofNullable(replacementStrategy);
             return this;
-        }
-        public SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs build() {
+        }        public SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs build() {
             return new SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs(replacementStrategy);
         }
     }

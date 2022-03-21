@@ -75,22 +75,18 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseGetArgs extends io.pulumi
             this.deliveryStream = deliveryStream;
             return this;
         }
-
         public Builder deliveryStream(@Nullable String deliveryStream) {
             this.deliveryStream = Output.ofNullable(deliveryStream);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogsFirehoseGetArgs build() {
+        }        public ClusterLoggingInfoBrokerLogsFirehoseGetArgs build() {
             return new ClusterLoggingInfoBrokerLogsFirehoseGetArgs(deliveryStream, enabled);
         }
     }

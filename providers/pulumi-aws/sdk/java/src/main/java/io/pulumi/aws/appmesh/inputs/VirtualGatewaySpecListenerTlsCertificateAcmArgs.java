@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcmArgs extends io.pu
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsCertificateAcmArgs build() {
+        }        public VirtualGatewaySpecListenerTlsCertificateAcmArgs build() {
             return new VirtualGatewaySpecListenerTlsCertificateAcmArgs(certificateArn);
         }
     }

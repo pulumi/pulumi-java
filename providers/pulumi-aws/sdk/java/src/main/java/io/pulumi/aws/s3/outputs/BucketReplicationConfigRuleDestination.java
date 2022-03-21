@@ -155,37 +155,30 @@ public final class BucketReplicationConfigRuleDestination {
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
-
         public Builder account(@Nullable String account) {
             this.account = account;
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder metrics(@Nullable BucketReplicationConfigRuleDestinationMetrics metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder replicationTime(@Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
-        }
-        public BucketReplicationConfigRuleDestination build() {
+        }        public BucketReplicationConfigRuleDestination build() {
             return new BucketReplicationConfigRuleDestination(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
         }
     }

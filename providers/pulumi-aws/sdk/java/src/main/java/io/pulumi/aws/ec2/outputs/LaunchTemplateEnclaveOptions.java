@@ -53,8 +53,7 @@ public final class LaunchTemplateEnclaveOptions {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public LaunchTemplateEnclaveOptions build() {
+        }        public LaunchTemplateEnclaveOptions build() {
             return new LaunchTemplateEnclaveOptions(enabled);
         }
     }

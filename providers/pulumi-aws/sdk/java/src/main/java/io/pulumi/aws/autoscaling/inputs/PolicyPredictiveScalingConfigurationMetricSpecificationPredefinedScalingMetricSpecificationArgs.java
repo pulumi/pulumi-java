@@ -73,22 +73,18 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
-
         public Builder predefinedMetricType(String predefinedMetricType) {
             this.predefinedMetricType = Output.of(Objects.requireNonNull(predefinedMetricType));
             return this;
         }
-
         public Builder resourceLabel(Output<String> resourceLabel) {
             this.resourceLabel = Objects.requireNonNull(resourceLabel);
             return this;
         }
-
         public Builder resourceLabel(String resourceLabel) {
             this.resourceLabel = Output.of(Objects.requireNonNull(resourceLabel));
             return this;
-        }
-        public PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs build() {
+        }        public PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs build() {
             return new PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs(predefinedMetricType, resourceLabel);
         }
     }

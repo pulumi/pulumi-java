@@ -87,17 +87,14 @@ public final class NotificationRuleTarget {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public NotificationRuleTarget build() {
+        }        public NotificationRuleTarget build() {
             return new NotificationRuleTarget(address, status, type);
         }
     }

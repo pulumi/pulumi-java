@@ -211,67 +211,57 @@ public final class GetZoneResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder callerReference(String callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
-
         public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkedServiceDescription(String linkedServiceDescription) {
             this.linkedServiceDescription = Objects.requireNonNull(linkedServiceDescription);
             return this;
         }
-
         public Builder linkedServicePrincipal(String linkedServicePrincipal) {
             this.linkedServicePrincipal = Objects.requireNonNull(linkedServicePrincipal);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder privateZone(@Nullable Boolean privateZone) {
             this.privateZone = privateZone;
             return this;
         }
-
         public Builder resourceRecordSetCount(Integer resourceRecordSetCount) {
             this.resourceRecordSetCount = Objects.requireNonNull(resourceRecordSetCount);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
-        }
-        public GetZoneResult build() {
+        }        public GetZoneResult build() {
             return new GetZoneResult(arn, callerReference, comment, id, linkedServiceDescription, linkedServicePrincipal, name, nameServers, privateZone, resourceRecordSetCount, tags, vpcId, zoneId);
         }
     }

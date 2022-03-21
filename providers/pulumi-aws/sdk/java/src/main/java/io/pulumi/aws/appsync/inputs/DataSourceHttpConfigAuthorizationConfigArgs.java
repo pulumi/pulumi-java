@@ -75,22 +75,18 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends io.pulumi
             this.authorizationType = authorizationType;
             return this;
         }
-
         public Builder authorizationType(@Nullable String authorizationType) {
             this.authorizationType = Output.ofNullable(authorizationType);
             return this;
         }
-
         public Builder awsIamConfig(@Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig) {
             this.awsIamConfig = awsIamConfig;
             return this;
         }
-
         public Builder awsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs awsIamConfig) {
             this.awsIamConfig = Output.ofNullable(awsIamConfig);
             return this;
-        }
-        public DataSourceHttpConfigAuthorizationConfigArgs build() {
+        }        public DataSourceHttpConfigAuthorizationConfigArgs build() {
             return new DataSourceHttpConfigAuthorizationConfigArgs(authorizationType, awsIamConfig);
         }
     }

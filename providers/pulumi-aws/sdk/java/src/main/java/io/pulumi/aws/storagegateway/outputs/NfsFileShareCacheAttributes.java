@@ -57,8 +57,7 @@ public final class NfsFileShareCacheAttributes {
         public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
             this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
-        }
-        public NfsFileShareCacheAttributes build() {
+        }        public NfsFileShareCacheAttributes build() {
             return new NfsFileShareCacheAttributes(cacheStaleTimeoutInSeconds);
         }
     }

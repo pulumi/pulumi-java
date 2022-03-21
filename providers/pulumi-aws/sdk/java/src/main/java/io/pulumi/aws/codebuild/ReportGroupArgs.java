@@ -125,52 +125,42 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.deleteReports = deleteReports;
             return this;
         }
-
         public Builder deleteReports(@Nullable Boolean deleteReports) {
             this.deleteReports = Output.ofNullable(deleteReports);
             return this;
         }
-
         public Builder exportConfig(Output<ReportGroupExportConfigArgs> exportConfig) {
             this.exportConfig = Objects.requireNonNull(exportConfig);
             return this;
         }
-
         public Builder exportConfig(ReportGroupExportConfigArgs exportConfig) {
             this.exportConfig = Output.of(Objects.requireNonNull(exportConfig));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ReportGroupArgs build() {
+        }        public ReportGroupArgs build() {
             return new ReportGroupArgs(deleteReports, exportConfig, name, tags, type);
         }
     }

@@ -108,42 +108,37 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
             this.loadBalancerName = loadBalancerName;
             return this;
         }
-
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
-
         public Builder policyAttributes(@Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
             this.policyAttributes = policyAttributes;
             return this;
         }
-
         public Builder policyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
             this.policyAttributes = Output.ofNullable(policyAttributes);
             return this;
         }
-
+        public Builder policyAttributes(LoadBalancerPolicyPolicyAttributeGetArgs... policyAttributes) {
+            return policyAttributes(List.of(policyAttributes));
+        }
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder policyTypeName(@Nullable Output<String> policyTypeName) {
             this.policyTypeName = policyTypeName;
             return this;
         }
-
         public Builder policyTypeName(@Nullable String policyTypeName) {
             this.policyTypeName = Output.ofNullable(policyTypeName);
             return this;
-        }
-        public LoadBalancerPolicyState build() {
+        }        public LoadBalancerPolicyState build() {
             return new LoadBalancerPolicyState(loadBalancerName, policyAttributes, policyName, policyTypeName);
         }
     }

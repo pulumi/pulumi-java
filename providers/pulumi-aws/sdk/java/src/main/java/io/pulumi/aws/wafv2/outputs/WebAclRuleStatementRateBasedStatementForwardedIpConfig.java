@@ -69,12 +69,10 @@ public final class WebAclRuleStatementRateBasedStatementForwardedIpConfig {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementForwardedIpConfig build() {
+        }        public WebAclRuleStatementRateBasedStatementForwardedIpConfig build() {
             return new WebAclRuleStatementRateBasedStatementForwardedIpConfig(fallbackBehavior, headerName);
         }
     }

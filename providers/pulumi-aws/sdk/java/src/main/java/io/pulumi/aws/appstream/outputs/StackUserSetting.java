@@ -69,12 +69,10 @@ public final class StackUserSetting {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder permission(String permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
-        }
-        public StackUserSetting build() {
+        }        public StackUserSetting build() {
             return new StackUserSetting(action, permission);
         }
     }

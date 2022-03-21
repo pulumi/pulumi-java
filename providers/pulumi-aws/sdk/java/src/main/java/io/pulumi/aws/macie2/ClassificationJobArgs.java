@@ -220,112 +220,93 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
             this.customDataIdentifierIds = customDataIdentifierIds;
             return this;
         }
-
         public Builder customDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
             this.customDataIdentifierIds = Output.ofNullable(customDataIdentifierIds);
             return this;
         }
-
+        public Builder customDataIdentifierIds(String... customDataIdentifierIds) {
+            return customDataIdentifierIds(List.of(customDataIdentifierIds));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder initialRun(@Nullable Output<Boolean> initialRun) {
             this.initialRun = initialRun;
             return this;
         }
-
         public Builder initialRun(@Nullable Boolean initialRun) {
             this.initialRun = Output.ofNullable(initialRun);
             return this;
         }
-
         public Builder jobStatus(@Nullable Output<String> jobStatus) {
             this.jobStatus = jobStatus;
             return this;
         }
-
         public Builder jobStatus(@Nullable String jobStatus) {
             this.jobStatus = Output.ofNullable(jobStatus);
             return this;
         }
-
         public Builder jobType(Output<String> jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
-
         public Builder jobType(String jobType) {
             this.jobType = Output.of(Objects.requireNonNull(jobType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder s3JobDefinition(Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition) {
             this.s3JobDefinition = Objects.requireNonNull(s3JobDefinition);
             return this;
         }
-
         public Builder s3JobDefinition(ClassificationJobS3JobDefinitionArgs s3JobDefinition) {
             this.s3JobDefinition = Output.of(Objects.requireNonNull(s3JobDefinition));
             return this;
         }
-
         public Builder samplingPercentage(@Nullable Output<Integer> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
-
         public Builder samplingPercentage(@Nullable Integer samplingPercentage) {
             this.samplingPercentage = Output.ofNullable(samplingPercentage);
             return this;
         }
-
         public Builder scheduleFrequency(@Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency) {
             this.scheduleFrequency = scheduleFrequency;
             return this;
         }
-
         public Builder scheduleFrequency(@Nullable ClassificationJobScheduleFrequencyArgs scheduleFrequency) {
             this.scheduleFrequency = Output.ofNullable(scheduleFrequency);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ClassificationJobArgs build() {
+        }        public ClassificationJobArgs build() {
             return new ClassificationJobArgs(customDataIdentifierIds, description, initialRun, jobStatus, jobType, name, namePrefix, s3JobDefinition, samplingPercentage, scheduleFrequency, tags);
         }
     }

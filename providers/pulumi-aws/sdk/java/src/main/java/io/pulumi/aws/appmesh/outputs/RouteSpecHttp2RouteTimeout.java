@@ -72,12 +72,10 @@ public final class RouteSpecHttp2RouteTimeout {
             this.idle = idle;
             return this;
         }
-
         public Builder perRequest(@Nullable RouteSpecHttp2RouteTimeoutPerRequest perRequest) {
             this.perRequest = perRequest;
             return this;
-        }
-        public RouteSpecHttp2RouteTimeout build() {
+        }        public RouteSpecHttp2RouteTimeout build() {
             return new RouteSpecHttp2RouteTimeout(idle, perRequest);
         }
     }

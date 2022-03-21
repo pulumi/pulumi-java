@@ -88,17 +88,17 @@ public final class EventTargetHttpTarget {
             this.headerParameters = headerParameters;
             return this;
         }
-
         public Builder pathParameterValues(@Nullable List<String> pathParameterValues) {
             this.pathParameterValues = pathParameterValues;
             return this;
         }
-
+        public Builder pathParameterValues(String... pathParameterValues) {
+            return pathParameterValues(List.of(pathParameterValues));
+        }
         public Builder queryStringParameters(@Nullable Map<String,String> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
-        }
-        public EventTargetHttpTarget build() {
+        }        public EventTargetHttpTarget build() {
             return new EventTargetHttpTarget(headerParameters, pathParameterValues, queryStringParameters);
         }
     }

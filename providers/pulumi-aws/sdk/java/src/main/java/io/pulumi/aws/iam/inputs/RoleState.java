@@ -287,147 +287,124 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder assumeRolePolicy(@Nullable Output<String> assumeRolePolicy) {
             this.assumeRolePolicy = assumeRolePolicy;
             return this;
         }
-
         public Builder createDate(@Nullable Output<String> createDate) {
             this.createDate = createDate;
             return this;
         }
-
         public Builder createDate(@Nullable String createDate) {
             this.createDate = Output.ofNullable(createDate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder forceDetachPolicies(@Nullable Output<Boolean> forceDetachPolicies) {
             this.forceDetachPolicies = forceDetachPolicies;
             return this;
         }
-
         public Builder forceDetachPolicies(@Nullable Boolean forceDetachPolicies) {
             this.forceDetachPolicies = Output.ofNullable(forceDetachPolicies);
             return this;
         }
-
         public Builder inlinePolicies(@Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies) {
             this.inlinePolicies = inlinePolicies;
             return this;
         }
-
         public Builder inlinePolicies(@Nullable List<RoleInlinePolicyGetArgs> inlinePolicies) {
             this.inlinePolicies = Output.ofNullable(inlinePolicies);
             return this;
         }
-
+        public Builder inlinePolicies(RoleInlinePolicyGetArgs... inlinePolicies) {
+            return inlinePolicies(List.of(inlinePolicies));
+        }
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
-
         public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
             this.managedPolicyArns = Output.ofNullable(managedPolicyArns);
             return this;
         }
-
+        public Builder managedPolicyArns(String... managedPolicyArns) {
+            return managedPolicyArns(List.of(managedPolicyArns));
+        }
         public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
-
         public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
             this.maxSessionDuration = Output.ofNullable(maxSessionDuration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
-
         public Builder uniqueId(@Nullable String uniqueId) {
             this.uniqueId = Output.ofNullable(uniqueId);
             return this;
-        }
-        public RoleState build() {
+        }        public RoleState build() {
             return new RoleState(arn, assumeRolePolicy, createDate, description, forceDetachPolicies, inlinePolicies, managedPolicyArns, maxSessionDuration, name, namePrefix, path, permissionsBoundary, tags, tagsAll, uniqueId);
         }
     }

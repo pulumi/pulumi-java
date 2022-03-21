@@ -156,72 +156,58 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
-
         public Builder invitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = Output.ofNullable(invitationDisableEmailNotification);
             return this;
         }
-
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
-
         public Builder invitationMessage(@Nullable String invitationMessage) {
             this.invitationMessage = Output.ofNullable(invitationMessage);
             return this;
         }
-
         public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
-
         public Builder invite(@Nullable Boolean invite) {
             this.invite = Output.ofNullable(invite);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MemberArgs build() {
+        }        public MemberArgs build() {
             return new MemberArgs(accountId, email, invitationDisableEmailNotification, invitationMessage, invite, status, tags);
         }
     }

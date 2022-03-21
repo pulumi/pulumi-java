@@ -74,22 +74,18 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
-
         public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = Output.ofNullable(kmsMasterKeyId);
             return this;
         }
-
         public Builder sseAlgorithm(Output<String> sseAlgorithm) {
             this.sseAlgorithm = Objects.requireNonNull(sseAlgorithm);
             return this;
         }
-
         public Builder sseAlgorithm(String sseAlgorithm) {
             this.sseAlgorithm = Output.of(Objects.requireNonNull(sseAlgorithm));
             return this;
-        }
-        public BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs build() {
+        }        public BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs build() {
             return new BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs(kmsMasterKeyId, sseAlgorithm);
         }
     }

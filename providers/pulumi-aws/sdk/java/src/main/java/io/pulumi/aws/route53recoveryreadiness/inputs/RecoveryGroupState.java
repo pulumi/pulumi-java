@@ -124,52 +124,45 @@ public final class RecoveryGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cells(@Nullable Output<List<String>> cells) {
             this.cells = cells;
             return this;
         }
-
         public Builder cells(@Nullable List<String> cells) {
             this.cells = Output.ofNullable(cells);
             return this;
         }
-
+        public Builder cells(String... cells) {
+            return cells(List.of(cells));
+        }
         public Builder recoveryGroupName(@Nullable Output<String> recoveryGroupName) {
             this.recoveryGroupName = recoveryGroupName;
             return this;
         }
-
         public Builder recoveryGroupName(@Nullable String recoveryGroupName) {
             this.recoveryGroupName = Output.ofNullable(recoveryGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public RecoveryGroupState build() {
+        }        public RecoveryGroupState build() {
             return new RecoveryGroupState(arn, cells, recoveryGroupName, tags, tagsAll);
         }
     }

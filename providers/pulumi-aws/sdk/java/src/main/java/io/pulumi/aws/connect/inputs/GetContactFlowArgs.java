@@ -123,27 +123,22 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
             this.contactFlowId = contactFlowId;
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetContactFlowArgs build() {
+        }        public GetContactFlowArgs build() {
             return new GetContactFlowArgs(contactFlowId, instanceId, name, tags, type);
         }
     }

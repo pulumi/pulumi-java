@@ -102,22 +102,18 @@ public final class GetDomainCognitoOption {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder identityPoolId(String identityPoolId) {
             this.identityPoolId = Objects.requireNonNull(identityPoolId);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
-        }
-        public GetDomainCognitoOption build() {
+        }        public GetDomainCognitoOption build() {
             return new GetDomainCognitoOption(enabled, identityPoolId, roleArn, userPoolId);
         }
     }

@@ -71,22 +71,18 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
             this.coolingPeriod = coolingPeriod;
             return this;
         }
-
         public Builder coolingPeriod(@Nullable Integer coolingPeriod) {
             this.coolingPeriod = Output.ofNullable(coolingPeriod);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public OntapVolumeTieringPolicyGetArgs build() {
+        }        public OntapVolumeTieringPolicyGetArgs build() {
             return new OntapVolumeTieringPolicyGetArgs(coolingPeriod, name);
         }
     }

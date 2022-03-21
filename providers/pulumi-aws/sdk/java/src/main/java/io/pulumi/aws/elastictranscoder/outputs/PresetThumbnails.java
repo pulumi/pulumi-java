@@ -167,42 +167,34 @@ public final class PresetThumbnails {
             this.aspectRatio = aspectRatio;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
-
         public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
-
         public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
-
         public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
         }
-
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
-        }
-        public PresetThumbnails build() {
+        }        public PresetThumbnails build() {
             return new PresetThumbnails(aspectRatio, format, interval, maxHeight, maxWidth, paddingPolicy, resolution, sizingPolicy);
         }
     }

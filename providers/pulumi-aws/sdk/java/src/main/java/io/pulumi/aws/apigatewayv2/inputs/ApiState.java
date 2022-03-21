@@ -342,182 +342,146 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             this.apiEndpoint = apiEndpoint;
             return this;
         }
-
         public Builder apiEndpoint(@Nullable String apiEndpoint) {
             this.apiEndpoint = Output.ofNullable(apiEndpoint);
             return this;
         }
-
         public Builder apiKeySelectionExpression(@Nullable Output<String> apiKeySelectionExpression) {
             this.apiKeySelectionExpression = apiKeySelectionExpression;
             return this;
         }
-
         public Builder apiKeySelectionExpression(@Nullable String apiKeySelectionExpression) {
             this.apiKeySelectionExpression = Output.ofNullable(apiKeySelectionExpression);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder corsConfiguration(@Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
-
         public Builder corsConfiguration(@Nullable ApiCorsConfigurationGetArgs corsConfiguration) {
             this.corsConfiguration = Output.ofNullable(corsConfiguration);
             return this;
         }
-
         public Builder credentialsArn(@Nullable Output<String> credentialsArn) {
             this.credentialsArn = credentialsArn;
             return this;
         }
-
         public Builder credentialsArn(@Nullable String credentialsArn) {
             this.credentialsArn = Output.ofNullable(credentialsArn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disableExecuteApiEndpoint(@Nullable Output<Boolean> disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
             return this;
         }
-
         public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = Output.ofNullable(disableExecuteApiEndpoint);
             return this;
         }
-
         public Builder executionArn(@Nullable Output<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
-
         public Builder executionArn(@Nullable String executionArn) {
             this.executionArn = Output.ofNullable(executionArn);
             return this;
         }
-
         public Builder failOnWarnings(@Nullable Output<Boolean> failOnWarnings) {
             this.failOnWarnings = failOnWarnings;
             return this;
         }
-
         public Builder failOnWarnings(@Nullable Boolean failOnWarnings) {
             this.failOnWarnings = Output.ofNullable(failOnWarnings);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocolType(@Nullable Output<String> protocolType) {
             this.protocolType = protocolType;
             return this;
         }
-
         public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = Output.ofNullable(protocolType);
             return this;
         }
-
         public Builder routeKey(@Nullable Output<String> routeKey) {
             this.routeKey = routeKey;
             return this;
         }
-
         public Builder routeKey(@Nullable String routeKey) {
             this.routeKey = Output.ofNullable(routeKey);
             return this;
         }
-
         public Builder routeSelectionExpression(@Nullable Output<String> routeSelectionExpression) {
             this.routeSelectionExpression = routeSelectionExpression;
             return this;
         }
-
         public Builder routeSelectionExpression(@Nullable String routeSelectionExpression) {
             this.routeSelectionExpression = Output.ofNullable(routeSelectionExpression);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ApiState build() {
+        }        public ApiState build() {
             return new ApiState(apiEndpoint, apiKeySelectionExpression, arn, body, corsConfiguration, credentialsArn, description, disableExecuteApiEndpoint, executionArn, failOnWarnings, name, protocolType, routeKey, routeSelectionExpression, tags, tagsAll, target, version);
         }
     }

@@ -88,17 +88,17 @@ public final class PipelineDefinitionPipelineObject {
             this.fields = fields;
             return this;
         }
-
+        public Builder fields(PipelineDefinitionPipelineObjectField... fields) {
+            return fields(List.of(fields));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PipelineDefinitionPipelineObject build() {
+        }        public PipelineDefinitionPipelineObject build() {
             return new PipelineDefinitionPipelineObject(fields, id, name);
         }
     }

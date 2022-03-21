@@ -106,42 +106,34 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
             this.branchName = branchName;
             return this;
         }
-
         public Builder branchName(@Nullable String branchName) {
             this.branchName = Output.ofNullable(branchName);
             return this;
         }
-
         public Builder lastDeployTime(@Nullable Output<String> lastDeployTime) {
             this.lastDeployTime = lastDeployTime;
             return this;
         }
-
         public Builder lastDeployTime(@Nullable String lastDeployTime) {
             this.lastDeployTime = Output.ofNullable(lastDeployTime);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder thumbnailUrl(@Nullable Output<String> thumbnailUrl) {
             this.thumbnailUrl = thumbnailUrl;
             return this;
         }
-
         public Builder thumbnailUrl(@Nullable String thumbnailUrl) {
             this.thumbnailUrl = Output.ofNullable(thumbnailUrl);
             return this;
-        }
-        public AppProductionBranchGetArgs build() {
+        }        public AppProductionBranchGetArgs build() {
             return new AppProductionBranchGetArgs(branchName, lastDeployTime, status, thumbnailUrl);
         }
     }

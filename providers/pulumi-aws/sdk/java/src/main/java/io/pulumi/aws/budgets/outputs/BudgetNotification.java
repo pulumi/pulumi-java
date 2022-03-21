@@ -136,32 +136,32 @@ public final class BudgetNotification {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder notificationType(String notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
-
         public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
-
+        public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
+            return subscriberEmailAddresses(List.of(subscriberEmailAddresses));
+        }
         public Builder subscriberSnsTopicArns(@Nullable List<String> subscriberSnsTopicArns) {
             this.subscriberSnsTopicArns = subscriberSnsTopicArns;
             return this;
         }
-
+        public Builder subscriberSnsTopicArns(String... subscriberSnsTopicArns) {
+            return subscriberSnsTopicArns(List.of(subscriberSnsTopicArns));
+        }
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder thresholdType(String thresholdType) {
             this.thresholdType = Objects.requireNonNull(thresholdType);
             return this;
-        }
-        public BudgetNotification build() {
+        }        public BudgetNotification build() {
             return new BudgetNotification(comparisonOperator, notificationType, subscriberEmailAddresses, subscriberSnsTopicArns, threshold, thresholdType);
         }
     }

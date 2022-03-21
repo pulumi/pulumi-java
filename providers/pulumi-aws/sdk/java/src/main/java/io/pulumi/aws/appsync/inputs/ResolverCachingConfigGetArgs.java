@@ -76,22 +76,21 @@ public final class ResolverCachingConfigGetArgs extends io.pulumi.resources.Reso
             this.cachingKeys = cachingKeys;
             return this;
         }
-
         public Builder cachingKeys(@Nullable List<String> cachingKeys) {
             this.cachingKeys = Output.ofNullable(cachingKeys);
             return this;
         }
-
+        public Builder cachingKeys(String... cachingKeys) {
+            return cachingKeys(List.of(cachingKeys));
+        }
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public ResolverCachingConfigGetArgs build() {
+        }        public ResolverCachingConfigGetArgs build() {
             return new ResolverCachingConfigGetArgs(cachingKeys, ttl);
         }
     }

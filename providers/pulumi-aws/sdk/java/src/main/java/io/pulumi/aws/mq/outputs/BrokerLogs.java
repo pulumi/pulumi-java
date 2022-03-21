@@ -71,12 +71,10 @@ public final class BrokerLogs {
             this.audit = audit;
             return this;
         }
-
         public Builder general(@Nullable Boolean general) {
             this.general = general;
             return this;
-        }
-        public BrokerLogs build() {
+        }        public BrokerLogs build() {
             return new BrokerLogs(audit, general);
         }
     }

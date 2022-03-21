@@ -142,32 +142,26 @@ public final class StageRouteSetting {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder detailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
             this.detailedMetricsEnabled = detailedMetricsEnabled;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder routeKey(String routeKey) {
             this.routeKey = Objects.requireNonNull(routeKey);
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
-        }
-        public StageRouteSetting build() {
+        }        public StageRouteSetting build() {
             return new StageRouteSetting(dataTraceEnabled, detailedMetricsEnabled, loggingLevel, routeKey, throttlingBurstLimit, throttlingRateLimit);
         }
     }

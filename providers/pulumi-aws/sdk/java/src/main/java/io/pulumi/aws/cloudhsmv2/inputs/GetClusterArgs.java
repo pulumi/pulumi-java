@@ -74,12 +74,10 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterState(@Nullable String clusterState) {
             this.clusterState = clusterState;
             return this;
-        }
-        public GetClusterArgs build() {
+        }        public GetClusterArgs build() {
             return new GetClusterArgs(clusterId, clusterState);
         }
     }

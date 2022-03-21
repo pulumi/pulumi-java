@@ -107,42 +107,37 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder permissions(Output<List<String>> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder permissions(List<String> permissions) {
             this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public BucketGrantGetArgs build() {
+        }        public BucketGrantGetArgs build() {
             return new BucketGrantGetArgs(id, permissions, type, uri);
         }
     }

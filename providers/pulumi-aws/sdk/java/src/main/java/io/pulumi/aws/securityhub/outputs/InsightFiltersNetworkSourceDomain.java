@@ -69,12 +69,10 @@ public final class InsightFiltersNetworkSourceDomain {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersNetworkSourceDomain build() {
+        }        public InsightFiltersNetworkSourceDomain build() {
             return new InsightFiltersNetworkSourceDomain(comparison, value);
         }
     }

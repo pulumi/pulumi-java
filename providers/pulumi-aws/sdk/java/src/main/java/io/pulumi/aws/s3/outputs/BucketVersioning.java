@@ -71,12 +71,10 @@ public final class BucketVersioning {
             this.enabled = enabled;
             return this;
         }
-
         public Builder mfaDelete(@Nullable Boolean mfaDelete) {
             this.mfaDelete = mfaDelete;
             return this;
-        }
-        public BucketVersioning build() {
+        }        public BucketVersioning build() {
             return new BucketVersioning(enabled, mfaDelete);
         }
     }

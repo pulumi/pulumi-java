@@ -73,22 +73,18 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public TopicPolicyArgs build() {
+        }        public TopicPolicyArgs build() {
             return new TopicPolicyArgs(arn, policy);
         }
     }

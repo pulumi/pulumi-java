@@ -72,12 +72,10 @@ public final class TaskSetScale {
             this.unit = unit;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
-        }
-        public TaskSetScale build() {
+        }        public TaskSetScale build() {
             return new TaskSetScale(unit, value);
         }
     }

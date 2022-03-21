@@ -1534,442 +1534,618 @@ public final class InsightFilters {
             this.awsAccountIds = awsAccountIds;
             return this;
         }
-
+        public Builder awsAccountIds(InsightFiltersAwsAccountId... awsAccountIds) {
+            return awsAccountIds(List.of(awsAccountIds));
+        }
         public Builder companyNames(@Nullable List<InsightFiltersCompanyName> companyNames) {
             this.companyNames = companyNames;
             return this;
         }
-
+        public Builder companyNames(InsightFiltersCompanyName... companyNames) {
+            return companyNames(List.of(companyNames));
+        }
         public Builder complianceStatuses(@Nullable List<InsightFiltersComplianceStatus> complianceStatuses) {
             this.complianceStatuses = complianceStatuses;
             return this;
         }
-
+        public Builder complianceStatuses(InsightFiltersComplianceStatus... complianceStatuses) {
+            return complianceStatuses(List.of(complianceStatuses));
+        }
         public Builder confidences(@Nullable List<InsightFiltersConfidence> confidences) {
             this.confidences = confidences;
             return this;
         }
-
+        public Builder confidences(InsightFiltersConfidence... confidences) {
+            return confidences(List.of(confidences));
+        }
         public Builder createdAts(@Nullable List<InsightFiltersCreatedAt> createdAts) {
             this.createdAts = createdAts;
             return this;
         }
-
+        public Builder createdAts(InsightFiltersCreatedAt... createdAts) {
+            return createdAts(List.of(createdAts));
+        }
         public Builder criticalities(@Nullable List<InsightFiltersCriticality> criticalities) {
             this.criticalities = criticalities;
             return this;
         }
-
+        public Builder criticalities(InsightFiltersCriticality... criticalities) {
+            return criticalities(List.of(criticalities));
+        }
         public Builder descriptions(@Nullable List<InsightFiltersDescription> descriptions) {
             this.descriptions = descriptions;
             return this;
         }
-
+        public Builder descriptions(InsightFiltersDescription... descriptions) {
+            return descriptions(List.of(descriptions));
+        }
         public Builder findingProviderFieldsConfidences(@Nullable List<InsightFiltersFindingProviderFieldsConfidence> findingProviderFieldsConfidences) {
             this.findingProviderFieldsConfidences = findingProviderFieldsConfidences;
             return this;
         }
-
+        public Builder findingProviderFieldsConfidences(InsightFiltersFindingProviderFieldsConfidence... findingProviderFieldsConfidences) {
+            return findingProviderFieldsConfidences(List.of(findingProviderFieldsConfidences));
+        }
         public Builder findingProviderFieldsCriticalities(@Nullable List<InsightFiltersFindingProviderFieldsCriticality> findingProviderFieldsCriticalities) {
             this.findingProviderFieldsCriticalities = findingProviderFieldsCriticalities;
             return this;
         }
-
+        public Builder findingProviderFieldsCriticalities(InsightFiltersFindingProviderFieldsCriticality... findingProviderFieldsCriticalities) {
+            return findingProviderFieldsCriticalities(List.of(findingProviderFieldsCriticalities));
+        }
         public Builder findingProviderFieldsRelatedFindingsIds(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsId> findingProviderFieldsRelatedFindingsIds) {
             this.findingProviderFieldsRelatedFindingsIds = findingProviderFieldsRelatedFindingsIds;
             return this;
         }
-
+        public Builder findingProviderFieldsRelatedFindingsIds(InsightFiltersFindingProviderFieldsRelatedFindingsId... findingProviderFieldsRelatedFindingsIds) {
+            return findingProviderFieldsRelatedFindingsIds(List.of(findingProviderFieldsRelatedFindingsIds));
+        }
         public Builder findingProviderFieldsRelatedFindingsProductArns(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArn> findingProviderFieldsRelatedFindingsProductArns) {
             this.findingProviderFieldsRelatedFindingsProductArns = findingProviderFieldsRelatedFindingsProductArns;
             return this;
         }
-
+        public Builder findingProviderFieldsRelatedFindingsProductArns(InsightFiltersFindingProviderFieldsRelatedFindingsProductArn... findingProviderFieldsRelatedFindingsProductArns) {
+            return findingProviderFieldsRelatedFindingsProductArns(List.of(findingProviderFieldsRelatedFindingsProductArns));
+        }
         public Builder findingProviderFieldsSeverityLabels(@Nullable List<InsightFiltersFindingProviderFieldsSeverityLabel> findingProviderFieldsSeverityLabels) {
             this.findingProviderFieldsSeverityLabels = findingProviderFieldsSeverityLabels;
             return this;
         }
-
+        public Builder findingProviderFieldsSeverityLabels(InsightFiltersFindingProviderFieldsSeverityLabel... findingProviderFieldsSeverityLabels) {
+            return findingProviderFieldsSeverityLabels(List.of(findingProviderFieldsSeverityLabels));
+        }
         public Builder findingProviderFieldsSeverityOriginals(@Nullable List<InsightFiltersFindingProviderFieldsSeverityOriginal> findingProviderFieldsSeverityOriginals) {
             this.findingProviderFieldsSeverityOriginals = findingProviderFieldsSeverityOriginals;
             return this;
         }
-
+        public Builder findingProviderFieldsSeverityOriginals(InsightFiltersFindingProviderFieldsSeverityOriginal... findingProviderFieldsSeverityOriginals) {
+            return findingProviderFieldsSeverityOriginals(List.of(findingProviderFieldsSeverityOriginals));
+        }
         public Builder findingProviderFieldsTypes(@Nullable List<InsightFiltersFindingProviderFieldsType> findingProviderFieldsTypes) {
             this.findingProviderFieldsTypes = findingProviderFieldsTypes;
             return this;
         }
-
+        public Builder findingProviderFieldsTypes(InsightFiltersFindingProviderFieldsType... findingProviderFieldsTypes) {
+            return findingProviderFieldsTypes(List.of(findingProviderFieldsTypes));
+        }
         public Builder firstObservedAts(@Nullable List<InsightFiltersFirstObservedAt> firstObservedAts) {
             this.firstObservedAts = firstObservedAts;
             return this;
         }
-
+        public Builder firstObservedAts(InsightFiltersFirstObservedAt... firstObservedAts) {
+            return firstObservedAts(List.of(firstObservedAts));
+        }
         public Builder generatorIds(@Nullable List<InsightFiltersGeneratorId> generatorIds) {
             this.generatorIds = generatorIds;
             return this;
         }
-
+        public Builder generatorIds(InsightFiltersGeneratorId... generatorIds) {
+            return generatorIds(List.of(generatorIds));
+        }
         public Builder ids(@Nullable List<InsightFiltersId> ids) {
             this.ids = ids;
             return this;
         }
-
+        public Builder ids(InsightFiltersId... ids) {
+            return ids(List.of(ids));
+        }
         public Builder keywords(@Nullable List<InsightFiltersKeyword> keywords) {
             this.keywords = keywords;
             return this;
         }
-
+        public Builder keywords(InsightFiltersKeyword... keywords) {
+            return keywords(List.of(keywords));
+        }
         public Builder lastObservedAts(@Nullable List<InsightFiltersLastObservedAt> lastObservedAts) {
             this.lastObservedAts = lastObservedAts;
             return this;
         }
-
+        public Builder lastObservedAts(InsightFiltersLastObservedAt... lastObservedAts) {
+            return lastObservedAts(List.of(lastObservedAts));
+        }
         public Builder malwareNames(@Nullable List<InsightFiltersMalwareName> malwareNames) {
             this.malwareNames = malwareNames;
             return this;
         }
-
+        public Builder malwareNames(InsightFiltersMalwareName... malwareNames) {
+            return malwareNames(List.of(malwareNames));
+        }
         public Builder malwarePaths(@Nullable List<InsightFiltersMalwarePath> malwarePaths) {
             this.malwarePaths = malwarePaths;
             return this;
         }
-
+        public Builder malwarePaths(InsightFiltersMalwarePath... malwarePaths) {
+            return malwarePaths(List.of(malwarePaths));
+        }
         public Builder malwareStates(@Nullable List<InsightFiltersMalwareState> malwareStates) {
             this.malwareStates = malwareStates;
             return this;
         }
-
+        public Builder malwareStates(InsightFiltersMalwareState... malwareStates) {
+            return malwareStates(List.of(malwareStates));
+        }
         public Builder malwareTypes(@Nullable List<InsightFiltersMalwareType> malwareTypes) {
             this.malwareTypes = malwareTypes;
             return this;
         }
-
+        public Builder malwareTypes(InsightFiltersMalwareType... malwareTypes) {
+            return malwareTypes(List.of(malwareTypes));
+        }
         public Builder networkDestinationDomains(@Nullable List<InsightFiltersNetworkDestinationDomain> networkDestinationDomains) {
             this.networkDestinationDomains = networkDestinationDomains;
             return this;
         }
-
+        public Builder networkDestinationDomains(InsightFiltersNetworkDestinationDomain... networkDestinationDomains) {
+            return networkDestinationDomains(List.of(networkDestinationDomains));
+        }
         public Builder networkDestinationIpv4s(@Nullable List<InsightFiltersNetworkDestinationIpv4> networkDestinationIpv4s) {
             this.networkDestinationIpv4s = networkDestinationIpv4s;
             return this;
         }
-
+        public Builder networkDestinationIpv4s(InsightFiltersNetworkDestinationIpv4... networkDestinationIpv4s) {
+            return networkDestinationIpv4s(List.of(networkDestinationIpv4s));
+        }
         public Builder networkDestinationIpv6s(@Nullable List<InsightFiltersNetworkDestinationIpv6> networkDestinationIpv6s) {
             this.networkDestinationIpv6s = networkDestinationIpv6s;
             return this;
         }
-
+        public Builder networkDestinationIpv6s(InsightFiltersNetworkDestinationIpv6... networkDestinationIpv6s) {
+            return networkDestinationIpv6s(List.of(networkDestinationIpv6s));
+        }
         public Builder networkDestinationPorts(@Nullable List<InsightFiltersNetworkDestinationPort> networkDestinationPorts) {
             this.networkDestinationPorts = networkDestinationPorts;
             return this;
         }
-
+        public Builder networkDestinationPorts(InsightFiltersNetworkDestinationPort... networkDestinationPorts) {
+            return networkDestinationPorts(List.of(networkDestinationPorts));
+        }
         public Builder networkDirections(@Nullable List<InsightFiltersNetworkDirection> networkDirections) {
             this.networkDirections = networkDirections;
             return this;
         }
-
+        public Builder networkDirections(InsightFiltersNetworkDirection... networkDirections) {
+            return networkDirections(List.of(networkDirections));
+        }
         public Builder networkProtocols(@Nullable List<InsightFiltersNetworkProtocol> networkProtocols) {
             this.networkProtocols = networkProtocols;
             return this;
         }
-
+        public Builder networkProtocols(InsightFiltersNetworkProtocol... networkProtocols) {
+            return networkProtocols(List.of(networkProtocols));
+        }
         public Builder networkSourceDomains(@Nullable List<InsightFiltersNetworkSourceDomain> networkSourceDomains) {
             this.networkSourceDomains = networkSourceDomains;
             return this;
         }
-
+        public Builder networkSourceDomains(InsightFiltersNetworkSourceDomain... networkSourceDomains) {
+            return networkSourceDomains(List.of(networkSourceDomains));
+        }
         public Builder networkSourceIpv4s(@Nullable List<InsightFiltersNetworkSourceIpv4> networkSourceIpv4s) {
             this.networkSourceIpv4s = networkSourceIpv4s;
             return this;
         }
-
+        public Builder networkSourceIpv4s(InsightFiltersNetworkSourceIpv4... networkSourceIpv4s) {
+            return networkSourceIpv4s(List.of(networkSourceIpv4s));
+        }
         public Builder networkSourceIpv6s(@Nullable List<InsightFiltersNetworkSourceIpv6> networkSourceIpv6s) {
             this.networkSourceIpv6s = networkSourceIpv6s;
             return this;
         }
-
+        public Builder networkSourceIpv6s(InsightFiltersNetworkSourceIpv6... networkSourceIpv6s) {
+            return networkSourceIpv6s(List.of(networkSourceIpv6s));
+        }
         public Builder networkSourceMacs(@Nullable List<InsightFiltersNetworkSourceMac> networkSourceMacs) {
             this.networkSourceMacs = networkSourceMacs;
             return this;
         }
-
+        public Builder networkSourceMacs(InsightFiltersNetworkSourceMac... networkSourceMacs) {
+            return networkSourceMacs(List.of(networkSourceMacs));
+        }
         public Builder networkSourcePorts(@Nullable List<InsightFiltersNetworkSourcePort> networkSourcePorts) {
             this.networkSourcePorts = networkSourcePorts;
             return this;
         }
-
+        public Builder networkSourcePorts(InsightFiltersNetworkSourcePort... networkSourcePorts) {
+            return networkSourcePorts(List.of(networkSourcePorts));
+        }
         public Builder noteTexts(@Nullable List<InsightFiltersNoteText> noteTexts) {
             this.noteTexts = noteTexts;
             return this;
         }
-
+        public Builder noteTexts(InsightFiltersNoteText... noteTexts) {
+            return noteTexts(List.of(noteTexts));
+        }
         public Builder noteUpdatedAts(@Nullable List<InsightFiltersNoteUpdatedAt> noteUpdatedAts) {
             this.noteUpdatedAts = noteUpdatedAts;
             return this;
         }
-
+        public Builder noteUpdatedAts(InsightFiltersNoteUpdatedAt... noteUpdatedAts) {
+            return noteUpdatedAts(List.of(noteUpdatedAts));
+        }
         public Builder noteUpdatedBies(@Nullable List<InsightFiltersNoteUpdatedBy> noteUpdatedBies) {
             this.noteUpdatedBies = noteUpdatedBies;
             return this;
         }
-
+        public Builder noteUpdatedBies(InsightFiltersNoteUpdatedBy... noteUpdatedBies) {
+            return noteUpdatedBies(List.of(noteUpdatedBies));
+        }
         public Builder processLaunchedAts(@Nullable List<InsightFiltersProcessLaunchedAt> processLaunchedAts) {
             this.processLaunchedAts = processLaunchedAts;
             return this;
         }
-
+        public Builder processLaunchedAts(InsightFiltersProcessLaunchedAt... processLaunchedAts) {
+            return processLaunchedAts(List.of(processLaunchedAts));
+        }
         public Builder processNames(@Nullable List<InsightFiltersProcessName> processNames) {
             this.processNames = processNames;
             return this;
         }
-
+        public Builder processNames(InsightFiltersProcessName... processNames) {
+            return processNames(List.of(processNames));
+        }
         public Builder processParentPids(@Nullable List<InsightFiltersProcessParentPid> processParentPids) {
             this.processParentPids = processParentPids;
             return this;
         }
-
+        public Builder processParentPids(InsightFiltersProcessParentPid... processParentPids) {
+            return processParentPids(List.of(processParentPids));
+        }
         public Builder processPaths(@Nullable List<InsightFiltersProcessPath> processPaths) {
             this.processPaths = processPaths;
             return this;
         }
-
+        public Builder processPaths(InsightFiltersProcessPath... processPaths) {
+            return processPaths(List.of(processPaths));
+        }
         public Builder processPids(@Nullable List<InsightFiltersProcessPid> processPids) {
             this.processPids = processPids;
             return this;
         }
-
+        public Builder processPids(InsightFiltersProcessPid... processPids) {
+            return processPids(List.of(processPids));
+        }
         public Builder processTerminatedAts(@Nullable List<InsightFiltersProcessTerminatedAt> processTerminatedAts) {
             this.processTerminatedAts = processTerminatedAts;
             return this;
         }
-
+        public Builder processTerminatedAts(InsightFiltersProcessTerminatedAt... processTerminatedAts) {
+            return processTerminatedAts(List.of(processTerminatedAts));
+        }
         public Builder productArns(@Nullable List<InsightFiltersProductArn> productArns) {
             this.productArns = productArns;
             return this;
         }
-
+        public Builder productArns(InsightFiltersProductArn... productArns) {
+            return productArns(List.of(productArns));
+        }
         public Builder productFields(@Nullable List<InsightFiltersProductField> productFields) {
             this.productFields = productFields;
             return this;
         }
-
+        public Builder productFields(InsightFiltersProductField... productFields) {
+            return productFields(List.of(productFields));
+        }
         public Builder productNames(@Nullable List<InsightFiltersProductName> productNames) {
             this.productNames = productNames;
             return this;
         }
-
+        public Builder productNames(InsightFiltersProductName... productNames) {
+            return productNames(List.of(productNames));
+        }
         public Builder recommendationTexts(@Nullable List<InsightFiltersRecommendationText> recommendationTexts) {
             this.recommendationTexts = recommendationTexts;
             return this;
         }
-
+        public Builder recommendationTexts(InsightFiltersRecommendationText... recommendationTexts) {
+            return recommendationTexts(List.of(recommendationTexts));
+        }
         public Builder recordStates(@Nullable List<InsightFiltersRecordState> recordStates) {
             this.recordStates = recordStates;
             return this;
         }
-
+        public Builder recordStates(InsightFiltersRecordState... recordStates) {
+            return recordStates(List.of(recordStates));
+        }
         public Builder relatedFindingsIds(@Nullable List<InsightFiltersRelatedFindingsId> relatedFindingsIds) {
             this.relatedFindingsIds = relatedFindingsIds;
             return this;
         }
-
+        public Builder relatedFindingsIds(InsightFiltersRelatedFindingsId... relatedFindingsIds) {
+            return relatedFindingsIds(List.of(relatedFindingsIds));
+        }
         public Builder relatedFindingsProductArns(@Nullable List<InsightFiltersRelatedFindingsProductArn> relatedFindingsProductArns) {
             this.relatedFindingsProductArns = relatedFindingsProductArns;
             return this;
         }
-
+        public Builder relatedFindingsProductArns(InsightFiltersRelatedFindingsProductArn... relatedFindingsProductArns) {
+            return relatedFindingsProductArns(List.of(relatedFindingsProductArns));
+        }
         public Builder resourceAwsEc2InstanceIamInstanceProfileArns(@Nullable List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArn> resourceAwsEc2InstanceIamInstanceProfileArns) {
             this.resourceAwsEc2InstanceIamInstanceProfileArns = resourceAwsEc2InstanceIamInstanceProfileArns;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceIamInstanceProfileArns(InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArn... resourceAwsEc2InstanceIamInstanceProfileArns) {
+            return resourceAwsEc2InstanceIamInstanceProfileArns(List.of(resourceAwsEc2InstanceIamInstanceProfileArns));
+        }
         public Builder resourceAwsEc2InstanceImageIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceImageId> resourceAwsEc2InstanceImageIds) {
             this.resourceAwsEc2InstanceImageIds = resourceAwsEc2InstanceImageIds;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceImageIds(InsightFiltersResourceAwsEc2InstanceImageId... resourceAwsEc2InstanceImageIds) {
+            return resourceAwsEc2InstanceImageIds(List.of(resourceAwsEc2InstanceImageIds));
+        }
         public Builder resourceAwsEc2InstanceIpv4Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv4Address> resourceAwsEc2InstanceIpv4Addresses) {
             this.resourceAwsEc2InstanceIpv4Addresses = resourceAwsEc2InstanceIpv4Addresses;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceIpv4Addresses(InsightFiltersResourceAwsEc2InstanceIpv4Address... resourceAwsEc2InstanceIpv4Addresses) {
+            return resourceAwsEc2InstanceIpv4Addresses(List.of(resourceAwsEc2InstanceIpv4Addresses));
+        }
         public Builder resourceAwsEc2InstanceIpv6Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv6Address> resourceAwsEc2InstanceIpv6Addresses) {
             this.resourceAwsEc2InstanceIpv6Addresses = resourceAwsEc2InstanceIpv6Addresses;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceIpv6Addresses(InsightFiltersResourceAwsEc2InstanceIpv6Address... resourceAwsEc2InstanceIpv6Addresses) {
+            return resourceAwsEc2InstanceIpv6Addresses(List.of(resourceAwsEc2InstanceIpv6Addresses));
+        }
         public Builder resourceAwsEc2InstanceKeyNames(@Nullable List<InsightFiltersResourceAwsEc2InstanceKeyName> resourceAwsEc2InstanceKeyNames) {
             this.resourceAwsEc2InstanceKeyNames = resourceAwsEc2InstanceKeyNames;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceKeyNames(InsightFiltersResourceAwsEc2InstanceKeyName... resourceAwsEc2InstanceKeyNames) {
+            return resourceAwsEc2InstanceKeyNames(List.of(resourceAwsEc2InstanceKeyNames));
+        }
         public Builder resourceAwsEc2InstanceLaunchedAts(@Nullable List<InsightFiltersResourceAwsEc2InstanceLaunchedAt> resourceAwsEc2InstanceLaunchedAts) {
             this.resourceAwsEc2InstanceLaunchedAts = resourceAwsEc2InstanceLaunchedAts;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceLaunchedAts(InsightFiltersResourceAwsEc2InstanceLaunchedAt... resourceAwsEc2InstanceLaunchedAts) {
+            return resourceAwsEc2InstanceLaunchedAts(List.of(resourceAwsEc2InstanceLaunchedAts));
+        }
         public Builder resourceAwsEc2InstanceSubnetIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceSubnetId> resourceAwsEc2InstanceSubnetIds) {
             this.resourceAwsEc2InstanceSubnetIds = resourceAwsEc2InstanceSubnetIds;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceSubnetIds(InsightFiltersResourceAwsEc2InstanceSubnetId... resourceAwsEc2InstanceSubnetIds) {
+            return resourceAwsEc2InstanceSubnetIds(List.of(resourceAwsEc2InstanceSubnetIds));
+        }
         public Builder resourceAwsEc2InstanceTypes(@Nullable List<InsightFiltersResourceAwsEc2InstanceType> resourceAwsEc2InstanceTypes) {
             this.resourceAwsEc2InstanceTypes = resourceAwsEc2InstanceTypes;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceTypes(InsightFiltersResourceAwsEc2InstanceType... resourceAwsEc2InstanceTypes) {
+            return resourceAwsEc2InstanceTypes(List.of(resourceAwsEc2InstanceTypes));
+        }
         public Builder resourceAwsEc2InstanceVpcIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceVpcId> resourceAwsEc2InstanceVpcIds) {
             this.resourceAwsEc2InstanceVpcIds = resourceAwsEc2InstanceVpcIds;
             return this;
         }
-
+        public Builder resourceAwsEc2InstanceVpcIds(InsightFiltersResourceAwsEc2InstanceVpcId... resourceAwsEc2InstanceVpcIds) {
+            return resourceAwsEc2InstanceVpcIds(List.of(resourceAwsEc2InstanceVpcIds));
+        }
         public Builder resourceAwsIamAccessKeyCreatedAts(@Nullable List<InsightFiltersResourceAwsIamAccessKeyCreatedAt> resourceAwsIamAccessKeyCreatedAts) {
             this.resourceAwsIamAccessKeyCreatedAts = resourceAwsIamAccessKeyCreatedAts;
             return this;
         }
-
+        public Builder resourceAwsIamAccessKeyCreatedAts(InsightFiltersResourceAwsIamAccessKeyCreatedAt... resourceAwsIamAccessKeyCreatedAts) {
+            return resourceAwsIamAccessKeyCreatedAts(List.of(resourceAwsIamAccessKeyCreatedAts));
+        }
         public Builder resourceAwsIamAccessKeyStatuses(@Nullable List<InsightFiltersResourceAwsIamAccessKeyStatus> resourceAwsIamAccessKeyStatuses) {
             this.resourceAwsIamAccessKeyStatuses = resourceAwsIamAccessKeyStatuses;
             return this;
         }
-
+        public Builder resourceAwsIamAccessKeyStatuses(InsightFiltersResourceAwsIamAccessKeyStatus... resourceAwsIamAccessKeyStatuses) {
+            return resourceAwsIamAccessKeyStatuses(List.of(resourceAwsIamAccessKeyStatuses));
+        }
         public Builder resourceAwsIamAccessKeyUserNames(@Nullable List<InsightFiltersResourceAwsIamAccessKeyUserName> resourceAwsIamAccessKeyUserNames) {
             this.resourceAwsIamAccessKeyUserNames = resourceAwsIamAccessKeyUserNames;
             return this;
         }
-
+        public Builder resourceAwsIamAccessKeyUserNames(InsightFiltersResourceAwsIamAccessKeyUserName... resourceAwsIamAccessKeyUserNames) {
+            return resourceAwsIamAccessKeyUserNames(List.of(resourceAwsIamAccessKeyUserNames));
+        }
         public Builder resourceAwsS3BucketOwnerIds(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerId> resourceAwsS3BucketOwnerIds) {
             this.resourceAwsS3BucketOwnerIds = resourceAwsS3BucketOwnerIds;
             return this;
         }
-
+        public Builder resourceAwsS3BucketOwnerIds(InsightFiltersResourceAwsS3BucketOwnerId... resourceAwsS3BucketOwnerIds) {
+            return resourceAwsS3BucketOwnerIds(List.of(resourceAwsS3BucketOwnerIds));
+        }
         public Builder resourceAwsS3BucketOwnerNames(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerName> resourceAwsS3BucketOwnerNames) {
             this.resourceAwsS3BucketOwnerNames = resourceAwsS3BucketOwnerNames;
             return this;
         }
-
+        public Builder resourceAwsS3BucketOwnerNames(InsightFiltersResourceAwsS3BucketOwnerName... resourceAwsS3BucketOwnerNames) {
+            return resourceAwsS3BucketOwnerNames(List.of(resourceAwsS3BucketOwnerNames));
+        }
         public Builder resourceContainerImageIds(@Nullable List<InsightFiltersResourceContainerImageId> resourceContainerImageIds) {
             this.resourceContainerImageIds = resourceContainerImageIds;
             return this;
         }
-
+        public Builder resourceContainerImageIds(InsightFiltersResourceContainerImageId... resourceContainerImageIds) {
+            return resourceContainerImageIds(List.of(resourceContainerImageIds));
+        }
         public Builder resourceContainerImageNames(@Nullable List<InsightFiltersResourceContainerImageName> resourceContainerImageNames) {
             this.resourceContainerImageNames = resourceContainerImageNames;
             return this;
         }
-
+        public Builder resourceContainerImageNames(InsightFiltersResourceContainerImageName... resourceContainerImageNames) {
+            return resourceContainerImageNames(List.of(resourceContainerImageNames));
+        }
         public Builder resourceContainerLaunchedAts(@Nullable List<InsightFiltersResourceContainerLaunchedAt> resourceContainerLaunchedAts) {
             this.resourceContainerLaunchedAts = resourceContainerLaunchedAts;
             return this;
         }
-
+        public Builder resourceContainerLaunchedAts(InsightFiltersResourceContainerLaunchedAt... resourceContainerLaunchedAts) {
+            return resourceContainerLaunchedAts(List.of(resourceContainerLaunchedAts));
+        }
         public Builder resourceContainerNames(@Nullable List<InsightFiltersResourceContainerName> resourceContainerNames) {
             this.resourceContainerNames = resourceContainerNames;
             return this;
         }
-
+        public Builder resourceContainerNames(InsightFiltersResourceContainerName... resourceContainerNames) {
+            return resourceContainerNames(List.of(resourceContainerNames));
+        }
         public Builder resourceDetailsOthers(@Nullable List<InsightFiltersResourceDetailsOther> resourceDetailsOthers) {
             this.resourceDetailsOthers = resourceDetailsOthers;
             return this;
         }
-
+        public Builder resourceDetailsOthers(InsightFiltersResourceDetailsOther... resourceDetailsOthers) {
+            return resourceDetailsOthers(List.of(resourceDetailsOthers));
+        }
         public Builder resourceIds(@Nullable List<InsightFiltersResourceId> resourceIds) {
             this.resourceIds = resourceIds;
             return this;
         }
-
+        public Builder resourceIds(InsightFiltersResourceId... resourceIds) {
+            return resourceIds(List.of(resourceIds));
+        }
         public Builder resourcePartitions(@Nullable List<InsightFiltersResourcePartition> resourcePartitions) {
             this.resourcePartitions = resourcePartitions;
             return this;
         }
-
+        public Builder resourcePartitions(InsightFiltersResourcePartition... resourcePartitions) {
+            return resourcePartitions(List.of(resourcePartitions));
+        }
         public Builder resourceRegions(@Nullable List<InsightFiltersResourceRegion> resourceRegions) {
             this.resourceRegions = resourceRegions;
             return this;
         }
-
+        public Builder resourceRegions(InsightFiltersResourceRegion... resourceRegions) {
+            return resourceRegions(List.of(resourceRegions));
+        }
         public Builder resourceTags(@Nullable List<InsightFiltersResourceTag> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
-
+        public Builder resourceTags(InsightFiltersResourceTag... resourceTags) {
+            return resourceTags(List.of(resourceTags));
+        }
         public Builder resourceTypes(@Nullable List<InsightFiltersResourceType> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
+        public Builder resourceTypes(InsightFiltersResourceType... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }
         public Builder severityLabels(@Nullable List<InsightFiltersSeverityLabel> severityLabels) {
             this.severityLabels = severityLabels;
             return this;
         }
-
+        public Builder severityLabels(InsightFiltersSeverityLabel... severityLabels) {
+            return severityLabels(List.of(severityLabels));
+        }
         public Builder sourceUrls(@Nullable List<InsightFiltersSourceUrl> sourceUrls) {
             this.sourceUrls = sourceUrls;
             return this;
         }
-
+        public Builder sourceUrls(InsightFiltersSourceUrl... sourceUrls) {
+            return sourceUrls(List.of(sourceUrls));
+        }
         public Builder threatIntelIndicatorCategories(@Nullable List<InsightFiltersThreatIntelIndicatorCategory> threatIntelIndicatorCategories) {
             this.threatIntelIndicatorCategories = threatIntelIndicatorCategories;
             return this;
         }
-
+        public Builder threatIntelIndicatorCategories(InsightFiltersThreatIntelIndicatorCategory... threatIntelIndicatorCategories) {
+            return threatIntelIndicatorCategories(List.of(threatIntelIndicatorCategories));
+        }
         public Builder threatIntelIndicatorLastObservedAts(@Nullable List<InsightFiltersThreatIntelIndicatorLastObservedAt> threatIntelIndicatorLastObservedAts) {
             this.threatIntelIndicatorLastObservedAts = threatIntelIndicatorLastObservedAts;
             return this;
         }
-
+        public Builder threatIntelIndicatorLastObservedAts(InsightFiltersThreatIntelIndicatorLastObservedAt... threatIntelIndicatorLastObservedAts) {
+            return threatIntelIndicatorLastObservedAts(List.of(threatIntelIndicatorLastObservedAts));
+        }
         public Builder threatIntelIndicatorSourceUrls(@Nullable List<InsightFiltersThreatIntelIndicatorSourceUrl> threatIntelIndicatorSourceUrls) {
             this.threatIntelIndicatorSourceUrls = threatIntelIndicatorSourceUrls;
             return this;
         }
-
+        public Builder threatIntelIndicatorSourceUrls(InsightFiltersThreatIntelIndicatorSourceUrl... threatIntelIndicatorSourceUrls) {
+            return threatIntelIndicatorSourceUrls(List.of(threatIntelIndicatorSourceUrls));
+        }
         public Builder threatIntelIndicatorSources(@Nullable List<InsightFiltersThreatIntelIndicatorSource> threatIntelIndicatorSources) {
             this.threatIntelIndicatorSources = threatIntelIndicatorSources;
             return this;
         }
-
+        public Builder threatIntelIndicatorSources(InsightFiltersThreatIntelIndicatorSource... threatIntelIndicatorSources) {
+            return threatIntelIndicatorSources(List.of(threatIntelIndicatorSources));
+        }
         public Builder threatIntelIndicatorTypes(@Nullable List<InsightFiltersThreatIntelIndicatorType> threatIntelIndicatorTypes) {
             this.threatIntelIndicatorTypes = threatIntelIndicatorTypes;
             return this;
         }
-
+        public Builder threatIntelIndicatorTypes(InsightFiltersThreatIntelIndicatorType... threatIntelIndicatorTypes) {
+            return threatIntelIndicatorTypes(List.of(threatIntelIndicatorTypes));
+        }
         public Builder threatIntelIndicatorValues(@Nullable List<InsightFiltersThreatIntelIndicatorValue> threatIntelIndicatorValues) {
             this.threatIntelIndicatorValues = threatIntelIndicatorValues;
             return this;
         }
-
+        public Builder threatIntelIndicatorValues(InsightFiltersThreatIntelIndicatorValue... threatIntelIndicatorValues) {
+            return threatIntelIndicatorValues(List.of(threatIntelIndicatorValues));
+        }
         public Builder titles(@Nullable List<InsightFiltersTitle> titles) {
             this.titles = titles;
             return this;
         }
-
+        public Builder titles(InsightFiltersTitle... titles) {
+            return titles(List.of(titles));
+        }
         public Builder types(@Nullable List<InsightFiltersType> types) {
             this.types = types;
             return this;
         }
-
+        public Builder types(InsightFiltersType... types) {
+            return types(List.of(types));
+        }
         public Builder updatedAts(@Nullable List<InsightFiltersUpdatedAt> updatedAts) {
             this.updatedAts = updatedAts;
             return this;
         }
-
+        public Builder updatedAts(InsightFiltersUpdatedAt... updatedAts) {
+            return updatedAts(List.of(updatedAts));
+        }
         public Builder userDefinedValues(@Nullable List<InsightFiltersUserDefinedValue> userDefinedValues) {
             this.userDefinedValues = userDefinedValues;
             return this;
         }
-
+        public Builder userDefinedValues(InsightFiltersUserDefinedValue... userDefinedValues) {
+            return userDefinedValues(List.of(userDefinedValues));
+        }
         public Builder verificationStates(@Nullable List<InsightFiltersVerificationState> verificationStates) {
             this.verificationStates = verificationStates;
             return this;
         }
-
+        public Builder verificationStates(InsightFiltersVerificationState... verificationStates) {
+            return verificationStates(List.of(verificationStates));
+        }
         public Builder workflowStatuses(@Nullable List<InsightFiltersWorkflowStatus> workflowStatuses) {
             this.workflowStatuses = workflowStatuses;
             return this;
         }
-        public InsightFilters build() {
+        public Builder workflowStatuses(InsightFiltersWorkflowStatus... workflowStatuses) {
+            return workflowStatuses(List.of(workflowStatuses));
+        }        public InsightFilters build() {
             return new InsightFilters(awsAccountIds, companyNames, complianceStatuses, confidences, createdAts, criticalities, descriptions, findingProviderFieldsConfidences, findingProviderFieldsCriticalities, findingProviderFieldsRelatedFindingsIds, findingProviderFieldsRelatedFindingsProductArns, findingProviderFieldsSeverityLabels, findingProviderFieldsSeverityOriginals, findingProviderFieldsTypes, firstObservedAts, generatorIds, ids, keywords, lastObservedAts, malwareNames, malwarePaths, malwareStates, malwareTypes, networkDestinationDomains, networkDestinationIpv4s, networkDestinationIpv6s, networkDestinationPorts, networkDirections, networkProtocols, networkSourceDomains, networkSourceIpv4s, networkSourceIpv6s, networkSourceMacs, networkSourcePorts, noteTexts, noteUpdatedAts, noteUpdatedBies, processLaunchedAts, processNames, processParentPids, processPaths, processPids, processTerminatedAts, productArns, productFields, productNames, recommendationTexts, recordStates, relatedFindingsIds, relatedFindingsProductArns, resourceAwsEc2InstanceIamInstanceProfileArns, resourceAwsEc2InstanceImageIds, resourceAwsEc2InstanceIpv4Addresses, resourceAwsEc2InstanceIpv6Addresses, resourceAwsEc2InstanceKeyNames, resourceAwsEc2InstanceLaunchedAts, resourceAwsEc2InstanceSubnetIds, resourceAwsEc2InstanceTypes, resourceAwsEc2InstanceVpcIds, resourceAwsIamAccessKeyCreatedAts, resourceAwsIamAccessKeyStatuses, resourceAwsIamAccessKeyUserNames, resourceAwsS3BucketOwnerIds, resourceAwsS3BucketOwnerNames, resourceContainerImageIds, resourceContainerImageNames, resourceContainerLaunchedAts, resourceContainerNames, resourceDetailsOthers, resourceIds, resourcePartitions, resourceRegions, resourceTags, resourceTypes, severityLabels, sourceUrls, threatIntelIndicatorCategories, threatIntelIndicatorLastObservedAts, threatIntelIndicatorSourceUrls, threatIntelIndicatorSources, threatIntelIndicatorTypes, threatIntelIndicatorValues, titles, types, updatedAts, userDefinedValues, verificationStates, workflowStatuses);
         }
     }

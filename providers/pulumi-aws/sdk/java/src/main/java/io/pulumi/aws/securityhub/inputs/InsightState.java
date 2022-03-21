@@ -107,42 +107,34 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder filters(@Nullable Output<InsightFiltersGetArgs> filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable InsightFiltersGetArgs filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
         public Builder groupByAttribute(@Nullable Output<String> groupByAttribute) {
             this.groupByAttribute = groupByAttribute;
             return this;
         }
-
         public Builder groupByAttribute(@Nullable String groupByAttribute) {
             this.groupByAttribute = Output.ofNullable(groupByAttribute);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public InsightState build() {
+        }        public InsightState build() {
             return new InsightState(arn, filters, groupByAttribute, name);
         }
     }

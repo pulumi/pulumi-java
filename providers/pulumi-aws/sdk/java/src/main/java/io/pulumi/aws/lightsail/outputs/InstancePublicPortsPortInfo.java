@@ -104,22 +104,21 @@ public final class InstancePublicPortsPortInfo {
             this.cidrs = cidrs;
             return this;
         }
-
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
-        }
-        public InstancePublicPortsPortInfo build() {
+        }        public InstancePublicPortsPortInfo build() {
             return new InstancePublicPortsPortInfo(cidrs, fromPort, protocol, toPort);
         }
     }

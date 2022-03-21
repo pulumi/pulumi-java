@@ -236,122 +236,98 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder computeEnvironmentName(@Nullable Output<String> computeEnvironmentName) {
             this.computeEnvironmentName = computeEnvironmentName;
             return this;
         }
-
         public Builder computeEnvironmentName(@Nullable String computeEnvironmentName) {
             this.computeEnvironmentName = Output.ofNullable(computeEnvironmentName);
             return this;
         }
-
         public Builder computeEnvironmentNamePrefix(@Nullable Output<String> computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
             return this;
         }
-
         public Builder computeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = Output.ofNullable(computeEnvironmentNamePrefix);
             return this;
         }
-
         public Builder computeResources(@Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources) {
             this.computeResources = computeResources;
             return this;
         }
-
         public Builder computeResources(@Nullable ComputeEnvironmentComputeResourcesGetArgs computeResources) {
             this.computeResources = Output.ofNullable(computeResources);
             return this;
         }
-
         public Builder ecsClusterArn(@Nullable Output<String> ecsClusterArn) {
             this.ecsClusterArn = ecsClusterArn;
             return this;
         }
-
         public Builder ecsClusterArn(@Nullable String ecsClusterArn) {
             this.ecsClusterArn = Output.ofNullable(ecsClusterArn);
             return this;
         }
-
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
-
         public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Output.ofNullable(serviceRole);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder statusReason(@Nullable Output<String> statusReason) {
             this.statusReason = statusReason;
             return this;
         }
-
         public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = Output.ofNullable(statusReason);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ComputeEnvironmentState build() {
+        }        public ComputeEnvironmentState build() {
             return new ComputeEnvironmentState(arn, computeEnvironmentName, computeEnvironmentNamePrefix, computeResources, ecsClusterArn, serviceRole, state, status, statusReason, tags, tagsAll, type);
         }
     }

@@ -269,127 +269,105 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.application = Objects.requireNonNull(application);
             return this;
         }
-
         public Builder cnamePrefix(@Nullable Output<String> cnamePrefix) {
             this.cnamePrefix = cnamePrefix;
             return this;
         }
-
         public Builder cnamePrefix(@Nullable String cnamePrefix) {
             this.cnamePrefix = Output.ofNullable(cnamePrefix);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder platformArn(@Nullable Output<String> platformArn) {
             this.platformArn = platformArn;
             return this;
         }
-
         public Builder platformArn(@Nullable String platformArn) {
             this.platformArn = Output.ofNullable(platformArn);
             return this;
         }
-
         public Builder pollInterval(@Nullable Output<String> pollInterval) {
             this.pollInterval = pollInterval;
             return this;
         }
-
         public Builder pollInterval(@Nullable String pollInterval) {
             this.pollInterval = Output.ofNullable(pollInterval);
             return this;
         }
-
         public Builder settings(@Nullable Output<List<EnvironmentSettingArgs>> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable List<EnvironmentSettingArgs> settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
+        public Builder settings(EnvironmentSettingArgs... settings) {
+            return settings(List.of(settings));
+        }
         public Builder solutionStackName(@Nullable Output<String> solutionStackName) {
             this.solutionStackName = solutionStackName;
             return this;
         }
-
         public Builder solutionStackName(@Nullable String solutionStackName) {
             this.solutionStackName = Output.ofNullable(solutionStackName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder templateName(@Nullable Output<String> templateName) {
             this.templateName = templateName;
             return this;
         }
-
         public Builder templateName(@Nullable String templateName) {
             this.templateName = Output.ofNullable(templateName);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder waitForReadyTimeout(@Nullable Output<String> waitForReadyTimeout) {
             this.waitForReadyTimeout = waitForReadyTimeout;
             return this;
         }
-
         public Builder waitForReadyTimeout(@Nullable String waitForReadyTimeout) {
             this.waitForReadyTimeout = Output.ofNullable(waitForReadyTimeout);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(application, cnamePrefix, description, name, platformArn, pollInterval, settings, solutionStackName, tags, templateName, tier, version, waitForReadyTimeout);
         }
     }

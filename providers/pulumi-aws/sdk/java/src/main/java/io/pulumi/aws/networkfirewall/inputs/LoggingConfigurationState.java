@@ -75,22 +75,18 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
             this.firewallArn = firewallArn;
             return this;
         }
-
         public Builder firewallArn(@Nullable String firewallArn) {
             this.firewallArn = Output.ofNullable(firewallArn);
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable LoggingConfigurationLoggingConfigurationGetArgs loggingConfiguration) {
             this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
-        }
-        public LoggingConfigurationState build() {
+        }        public LoggingConfigurationState build() {
             return new LoggingConfigurationState(firewallArn, loggingConfiguration);
         }
     }

@@ -88,17 +88,14 @@ public final class FleetRuntimeConfigurationServerProcess {
             this.concurrentExecutions = Objects.requireNonNull(concurrentExecutions);
             return this;
         }
-
         public Builder launchPath(String launchPath) {
             this.launchPath = Objects.requireNonNull(launchPath);
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
-        }
-        public FleetRuntimeConfigurationServerProcess build() {
+        }        public FleetRuntimeConfigurationServerProcess build() {
             return new FleetRuntimeConfigurationServerProcess(concurrentExecutions, launchPath, parameters);
         }
     }

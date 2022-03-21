@@ -120,37 +120,30 @@ public final class GetPatchBaselineResult {
             this.defaultBaseline = defaultBaseline;
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder operatingSystem(@Nullable String operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
-        }
-        public GetPatchBaselineResult build() {
+        }        public GetPatchBaselineResult build() {
             return new GetPatchBaselineResult(defaultBaseline, description, id, name, namePrefix, operatingSystem, owner);
         }
     }

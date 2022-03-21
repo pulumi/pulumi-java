@@ -53,8 +53,7 @@ public final class MeshSpec {
         public Builder egressFilter(@Nullable MeshSpecEgressFilter egressFilter) {
             this.egressFilter = egressFilter;
             return this;
-        }
-        public MeshSpec build() {
+        }        public MeshSpec build() {
             return new MeshSpec(egressFilter);
         }
     }

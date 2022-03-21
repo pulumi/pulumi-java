@@ -104,22 +104,18 @@ public final class ServiceServiceRegistries {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder registryArn(String registryArn) {
             this.registryArn = Objects.requireNonNull(registryArn);
             return this;
-        }
-        public ServiceServiceRegistries build() {
+        }        public ServiceServiceRegistries build() {
             return new ServiceServiceRegistries(containerName, containerPort, port, registryArn);
         }
     }

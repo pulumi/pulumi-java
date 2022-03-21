@@ -171,42 +171,37 @@ public final class ProjectEnvironment {
             this.certificate = certificate;
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(ProjectEnvironmentEnvironmentVariable... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder imagePullCredentialsType(@Nullable String imagePullCredentialsType) {
             this.imagePullCredentialsType = imagePullCredentialsType;
             return this;
         }
-
         public Builder privilegedMode(@Nullable Boolean privilegedMode) {
             this.privilegedMode = privilegedMode;
             return this;
         }
-
         public Builder registryCredential(@Nullable ProjectEnvironmentRegistryCredential registryCredential) {
             this.registryCredential = registryCredential;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ProjectEnvironment build() {
+        }        public ProjectEnvironment build() {
             return new ProjectEnvironment(certificate, computeType, environmentVariables, image, imagePullCredentialsType, privilegedMode, registryCredential, type);
         }
     }

@@ -91,17 +91,14 @@ public final class GetInfrastructureConfigurationArgs extends io.pulumi.resource
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetInfrastructureConfigurationArgs build() {
+        }        public GetInfrastructureConfigurationArgs build() {
             return new GetInfrastructureConfigurationArgs(arn, resourceTags, tags);
         }
     }

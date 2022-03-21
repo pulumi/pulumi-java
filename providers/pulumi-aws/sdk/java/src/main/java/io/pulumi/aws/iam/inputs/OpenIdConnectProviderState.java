@@ -140,62 +140,56 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clientIdLists(@Nullable Output<List<String>> clientIdLists) {
             this.clientIdLists = clientIdLists;
             return this;
         }
-
         public Builder clientIdLists(@Nullable List<String> clientIdLists) {
             this.clientIdLists = Output.ofNullable(clientIdLists);
             return this;
         }
-
+        public Builder clientIdLists(String... clientIdLists) {
+            return clientIdLists(List.of(clientIdLists));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder thumbprintLists(@Nullable Output<List<String>> thumbprintLists) {
             this.thumbprintLists = thumbprintLists;
             return this;
         }
-
         public Builder thumbprintLists(@Nullable List<String> thumbprintLists) {
             this.thumbprintLists = Output.ofNullable(thumbprintLists);
             return this;
         }
-
+        public Builder thumbprintLists(String... thumbprintLists) {
+            return thumbprintLists(List.of(thumbprintLists));
+        }
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public OpenIdConnectProviderState build() {
+        }        public OpenIdConnectProviderState build() {
             return new OpenIdConnectProviderState(arn, clientIdLists, tags, tagsAll, thumbprintLists, url);
         }
     }

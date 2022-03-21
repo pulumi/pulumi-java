@@ -119,27 +119,22 @@ public final class EndpointAuthenticationOption {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
-
         public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
             this.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
-
         public Builder samlProviderArn(@Nullable String samlProviderArn) {
             this.samlProviderArn = samlProviderArn;
             return this;
         }
-
         public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EndpointAuthenticationOption build() {
+        }        public EndpointAuthenticationOption build() {
             return new EndpointAuthenticationOption(activeDirectoryId, rootCertificateChainArn, samlProviderArn, selfServiceSamlProviderArn, type);
         }
     }

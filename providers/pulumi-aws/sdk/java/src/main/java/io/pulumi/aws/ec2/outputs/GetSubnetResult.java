@@ -347,122 +347,101 @@ public final class GetSubnetResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder assignIpv6AddressOnCreation(Boolean assignIpv6AddressOnCreation) {
             this.assignIpv6AddressOnCreation = Objects.requireNonNull(assignIpv6AddressOnCreation);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
-
         public Builder availableIpAddressCount(Integer availableIpAddressCount) {
             this.availableIpAddressCount = Objects.requireNonNull(availableIpAddressCount);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
             return this;
         }
-
         public Builder defaultForAz(Boolean defaultForAz) {
             this.defaultForAz = Objects.requireNonNull(defaultForAz);
             return this;
         }
-
         public Builder enableDns64(Boolean enableDns64) {
             this.enableDns64 = Objects.requireNonNull(enableDns64);
             return this;
         }
-
         public Builder enableResourceNameDnsARecordOnLaunch(Boolean enableResourceNameDnsARecordOnLaunch) {
             this.enableResourceNameDnsARecordOnLaunch = Objects.requireNonNull(enableResourceNameDnsARecordOnLaunch);
             return this;
         }
-
         public Builder enableResourceNameDnsAaaaRecordOnLaunch(Boolean enableResourceNameDnsAaaaRecordOnLaunch) {
             this.enableResourceNameDnsAaaaRecordOnLaunch = Objects.requireNonNull(enableResourceNameDnsAaaaRecordOnLaunch);
             return this;
         }
-
         public Builder filters(@Nullable List<GetSubnetFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSubnetFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.ipv6CidrBlock = Objects.requireNonNull(ipv6CidrBlock);
             return this;
         }
-
         public Builder ipv6CidrBlockAssociationId(String ipv6CidrBlockAssociationId) {
             this.ipv6CidrBlockAssociationId = Objects.requireNonNull(ipv6CidrBlockAssociationId);
             return this;
         }
-
         public Builder ipv6Native(Boolean ipv6Native) {
             this.ipv6Native = Objects.requireNonNull(ipv6Native);
             return this;
         }
-
         public Builder mapCustomerOwnedIpOnLaunch(Boolean mapCustomerOwnedIpOnLaunch) {
             this.mapCustomerOwnedIpOnLaunch = Objects.requireNonNull(mapCustomerOwnedIpOnLaunch);
             return this;
         }
-
         public Builder mapPublicIpOnLaunch(Boolean mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = Objects.requireNonNull(mapPublicIpOnLaunch);
             return this;
         }
-
         public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder privateDnsHostnameTypeOnLaunch(String privateDnsHostnameTypeOnLaunch) {
             this.privateDnsHostnameTypeOnLaunch = Objects.requireNonNull(privateDnsHostnameTypeOnLaunch);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetSubnetResult build() {
+        }        public GetSubnetResult build() {
             return new GetSubnetResult(arn, assignIpv6AddressOnCreation, availabilityZone, availabilityZoneId, availableIpAddressCount, cidrBlock, customerOwnedIpv4Pool, defaultForAz, enableDns64, enableResourceNameDnsARecordOnLaunch, enableResourceNameDnsAaaaRecordOnLaunch, filters, id, ipv6CidrBlock, ipv6CidrBlockAssociationId, ipv6Native, mapCustomerOwnedIpOnLaunch, mapPublicIpOnLaunch, outpostArn, ownerId, privateDnsHostnameTypeOnLaunch, state, tags, vpcId);
         }
     }

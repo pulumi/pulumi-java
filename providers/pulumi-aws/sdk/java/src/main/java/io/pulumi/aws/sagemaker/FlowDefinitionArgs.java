@@ -159,72 +159,58 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.flowDefinitionName = Objects.requireNonNull(flowDefinitionName);
             return this;
         }
-
         public Builder flowDefinitionName(String flowDefinitionName) {
             this.flowDefinitionName = Output.of(Objects.requireNonNull(flowDefinitionName));
             return this;
         }
-
         public Builder humanLoopActivationConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig) {
             this.humanLoopActivationConfig = humanLoopActivationConfig;
             return this;
         }
-
         public Builder humanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigArgs humanLoopActivationConfig) {
             this.humanLoopActivationConfig = Output.ofNullable(humanLoopActivationConfig);
             return this;
         }
-
         public Builder humanLoopConfig(Output<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig) {
             this.humanLoopConfig = Objects.requireNonNull(humanLoopConfig);
             return this;
         }
-
         public Builder humanLoopConfig(FlowDefinitionHumanLoopConfigArgs humanLoopConfig) {
             this.humanLoopConfig = Output.of(Objects.requireNonNull(humanLoopConfig));
             return this;
         }
-
         public Builder humanLoopRequestSource(@Nullable Output<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource) {
             this.humanLoopRequestSource = humanLoopRequestSource;
             return this;
         }
-
         public Builder humanLoopRequestSource(@Nullable FlowDefinitionHumanLoopRequestSourceArgs humanLoopRequestSource) {
             this.humanLoopRequestSource = Output.ofNullable(humanLoopRequestSource);
             return this;
         }
-
         public Builder outputConfig(Output<FlowDefinitionOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public Builder outputConfig(FlowDefinitionOutputConfigArgs outputConfig) {
             this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FlowDefinitionArgs build() {
+        }        public FlowDefinitionArgs build() {
             return new FlowDefinitionArgs(flowDefinitionName, humanLoopActivationConfig, humanLoopConfig, humanLoopRequestSource, outputConfig, roleArn, tags);
         }
     }

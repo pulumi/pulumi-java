@@ -51,8 +51,7 @@ public final class BackupPolicyBackupPolicy {
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BackupPolicyBackupPolicy build() {
+        }        public BackupPolicyBackupPolicy build() {
             return new BackupPolicyBackupPolicy(status);
         }
     }

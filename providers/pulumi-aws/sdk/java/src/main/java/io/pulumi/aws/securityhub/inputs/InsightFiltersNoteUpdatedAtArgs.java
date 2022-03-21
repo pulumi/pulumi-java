@@ -91,32 +91,26 @@ public final class InsightFiltersNoteUpdatedAtArgs extends io.pulumi.resources.R
             this.dateRange = dateRange;
             return this;
         }
-
         public Builder dateRange(@Nullable InsightFiltersNoteUpdatedAtDateRangeArgs dateRange) {
             this.dateRange = Output.ofNullable(dateRange);
             return this;
         }
-
         public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public InsightFiltersNoteUpdatedAtArgs build() {
+        }        public InsightFiltersNoteUpdatedAtArgs build() {
             return new InsightFiltersNoteUpdatedAtArgs(dateRange, end, start);
         }
     }

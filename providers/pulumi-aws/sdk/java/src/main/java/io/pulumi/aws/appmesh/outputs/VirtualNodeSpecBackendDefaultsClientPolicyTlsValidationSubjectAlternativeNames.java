@@ -51,8 +51,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
         public Builder match(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
-        }
-        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames build() {
+        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames build() {
             return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames(match);
         }
     }

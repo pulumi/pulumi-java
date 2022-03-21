@@ -95,27 +95,25 @@ public final class GetUserResult {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
+        public Builder filters(GetUserFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identityStoreId(String identityStoreId) {
             this.identityStoreId = Objects.requireNonNull(identityStoreId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetUserResult build() {
+        }        public GetUserResult build() {
             return new GetUserResult(filters, id, identityStoreId, userId, userName);
         }
     }

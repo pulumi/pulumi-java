@@ -91,32 +91,29 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
-
         public Builder behavior(String behavior) {
             this.behavior = Output.of(Objects.requireNonNull(behavior));
             return this;
         }
-
         public Builder conditions(Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public Builder conditions(List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs> conditions) {
             this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
-
+        public Builder conditions(WebAclLoggingConfigurationLoggingFilterFilterConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder requirement(Output<String> requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
-
         public Builder requirement(String requirement) {
             this.requirement = Output.of(Objects.requireNonNull(requirement));
             return this;
-        }
-        public WebAclLoggingConfigurationLoggingFilterFilterArgs build() {
+        }        public WebAclLoggingConfigurationLoggingFilterFilterArgs build() {
             return new WebAclLoggingConfigurationLoggingFilterFilterArgs(behavior, conditions, requirement);
         }
     }

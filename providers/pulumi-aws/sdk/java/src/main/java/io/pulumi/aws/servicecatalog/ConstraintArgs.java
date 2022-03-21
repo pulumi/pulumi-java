@@ -138,62 +138,50 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder parameters(Output<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(String parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public Builder portfolioId(Output<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
-
         public Builder portfolioId(String portfolioId) {
             this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ConstraintArgs build() {
+        }        public ConstraintArgs build() {
             return new ConstraintArgs(acceptLanguage, description, parameters, portfolioId, productId, type);
         }
     }

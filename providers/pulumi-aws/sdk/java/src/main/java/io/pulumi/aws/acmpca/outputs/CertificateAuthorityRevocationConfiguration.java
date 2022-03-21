@@ -53,8 +53,7 @@ public final class CertificateAuthorityRevocationConfiguration {
         public Builder crlConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration) {
             this.crlConfiguration = crlConfiguration;
             return this;
-        }
-        public CertificateAuthorityRevocationConfiguration build() {
+        }        public CertificateAuthorityRevocationConfiguration build() {
             return new CertificateAuthorityRevocationConfiguration(crlConfiguration);
         }
     }

@@ -173,82 +173,69 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
-
         public Builder agentArns(List<String> agentArns) {
             this.agentArns = Output.of(Objects.requireNonNull(agentArns));
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<LocationSmbMountOptionsArgs> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable LocationSmbMountOptionsArgs mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder serverHostname(Output<String> serverHostname) {
             this.serverHostname = Objects.requireNonNull(serverHostname);
             return this;
         }
-
         public Builder serverHostname(String serverHostname) {
             this.serverHostname = Output.of(Objects.requireNonNull(serverHostname));
             return this;
         }
-
         public Builder subdirectory(Output<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
-
         public Builder subdirectory(String subdirectory) {
             this.subdirectory = Output.of(Objects.requireNonNull(subdirectory));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Output.of(Objects.requireNonNull(user));
             return this;
-        }
-        public LocationSmbArgs build() {
+        }        public LocationSmbArgs build() {
             return new LocationSmbArgs(agentArns, domain, mountOptions, password, serverHostname, subdirectory, tags, user);
         }
     }

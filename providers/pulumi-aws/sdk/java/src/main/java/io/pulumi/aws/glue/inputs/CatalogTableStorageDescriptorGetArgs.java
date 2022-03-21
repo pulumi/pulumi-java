@@ -259,132 +259,115 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             this.bucketColumns = bucketColumns;
             return this;
         }
-
         public Builder bucketColumns(@Nullable List<String> bucketColumns) {
             this.bucketColumns = Output.ofNullable(bucketColumns);
             return this;
         }
-
+        public Builder bucketColumns(String... bucketColumns) {
+            return bucketColumns(List.of(bucketColumns));
+        }
         public Builder columns(@Nullable Output<List<CatalogTableStorageDescriptorColumnGetArgs>> columns) {
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<CatalogTableStorageDescriptorColumnGetArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-
+        public Builder columns(CatalogTableStorageDescriptorColumnGetArgs... columns) {
+            return columns(List.of(columns));
+        }
         public Builder compressed(@Nullable Output<Boolean> compressed) {
             this.compressed = compressed;
             return this;
         }
-
         public Builder compressed(@Nullable Boolean compressed) {
             this.compressed = Output.ofNullable(compressed);
             return this;
         }
-
         public Builder inputFormat(@Nullable Output<String> inputFormat) {
             this.inputFormat = inputFormat;
             return this;
         }
-
         public Builder inputFormat(@Nullable String inputFormat) {
             this.inputFormat = Output.ofNullable(inputFormat);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder numberOfBuckets(@Nullable Output<Integer> numberOfBuckets) {
             this.numberOfBuckets = numberOfBuckets;
             return this;
         }
-
         public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
             this.numberOfBuckets = Output.ofNullable(numberOfBuckets);
             return this;
         }
-
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder schemaReference(@Nullable Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference) {
             this.schemaReference = schemaReference;
             return this;
         }
-
         public Builder schemaReference(@Nullable CatalogTableStorageDescriptorSchemaReferenceGetArgs schemaReference) {
             this.schemaReference = Output.ofNullable(schemaReference);
             return this;
         }
-
         public Builder serDeInfo(@Nullable Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo) {
             this.serDeInfo = serDeInfo;
             return this;
         }
-
         public Builder serDeInfo(@Nullable CatalogTableStorageDescriptorSerDeInfoGetArgs serDeInfo) {
             this.serDeInfo = Output.ofNullable(serDeInfo);
             return this;
         }
-
         public Builder skewedInfo(@Nullable Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo) {
             this.skewedInfo = skewedInfo;
             return this;
         }
-
         public Builder skewedInfo(@Nullable CatalogTableStorageDescriptorSkewedInfoGetArgs skewedInfo) {
             this.skewedInfo = Output.ofNullable(skewedInfo);
             return this;
         }
-
         public Builder sortColumns(@Nullable Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns) {
             this.sortColumns = sortColumns;
             return this;
         }
-
         public Builder sortColumns(@Nullable List<CatalogTableStorageDescriptorSortColumnGetArgs> sortColumns) {
             this.sortColumns = Output.ofNullable(sortColumns);
             return this;
         }
-
+        public Builder sortColumns(CatalogTableStorageDescriptorSortColumnGetArgs... sortColumns) {
+            return sortColumns(List.of(sortColumns));
+        }
         public Builder storedAsSubDirectories(@Nullable Output<Boolean> storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }
-
         public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
             this.storedAsSubDirectories = Output.ofNullable(storedAsSubDirectories);
             return this;
-        }
-        public CatalogTableStorageDescriptorGetArgs build() {
+        }        public CatalogTableStorageDescriptorGetArgs build() {
             return new CatalogTableStorageDescriptorGetArgs(bucketColumns, columns, compressed, inputFormat, location, numberOfBuckets, outputFormat, parameters, schemaReference, serDeInfo, skewedInfo, sortColumns, storedAsSubDirectories);
         }
     }

@@ -69,12 +69,10 @@ public final class RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader build() {
+        }        public RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader build() {
             return new RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader(name, value);
         }
     }

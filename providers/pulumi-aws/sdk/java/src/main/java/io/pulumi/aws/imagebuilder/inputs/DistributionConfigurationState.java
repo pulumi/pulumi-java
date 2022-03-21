@@ -173,82 +173,69 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
-
         public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Output.ofNullable(dateCreated);
             return this;
         }
-
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
             this.dateUpdated = dateUpdated;
             return this;
         }
-
         public Builder dateUpdated(@Nullable String dateUpdated) {
             this.dateUpdated = Output.ofNullable(dateUpdated);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder distributions(@Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions) {
             this.distributions = distributions;
             return this;
         }
-
         public Builder distributions(@Nullable List<DistributionConfigurationDistributionGetArgs> distributions) {
             this.distributions = Output.ofNullable(distributions);
             return this;
         }
-
+        public Builder distributions(DistributionConfigurationDistributionGetArgs... distributions) {
+            return distributions(List.of(distributions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DistributionConfigurationState build() {
+        }        public DistributionConfigurationState build() {
             return new DistributionConfigurationState(arn, dateCreated, dateUpdated, description, distributions, name, tags, tagsAll);
         }
     }

@@ -124,52 +124,42 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
             return this;
         }
-
         public Builder encryptionKey(Output<String> encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
-
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Output.of(Objects.requireNonNull(encryptionKey));
             return this;
         }
-
         public Builder packaging(@Nullable Output<String> packaging) {
             this.packaging = packaging;
             return this;
         }
-
         public Builder packaging(@Nullable String packaging) {
             this.packaging = Output.ofNullable(packaging);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public ReportGroupExportConfigS3DestinationArgs build() {
+        }        public ReportGroupExportConfigS3DestinationArgs build() {
             return new ReportGroupExportConfigS3DestinationArgs(bucket, encryptionDisabled, encryptionKey, packaging, path);
         }
     }

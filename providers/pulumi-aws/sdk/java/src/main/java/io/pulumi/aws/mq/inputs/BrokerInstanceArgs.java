@@ -79,32 +79,29 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.consoleUrl = consoleUrl;
             return this;
         }
-
         public Builder consoleUrl(@Nullable String consoleUrl) {
             this.consoleUrl = Output.ofNullable(consoleUrl);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<String>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<String> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(String... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
-        }
-        public BrokerInstanceArgs build() {
+        }        public BrokerInstanceArgs build() {
             return new BrokerInstanceArgs(consoleUrl, endpoints, ipAddress);
         }
     }

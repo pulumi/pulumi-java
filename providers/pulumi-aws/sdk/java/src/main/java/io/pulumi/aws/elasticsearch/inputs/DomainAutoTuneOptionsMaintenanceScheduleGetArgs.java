@@ -90,32 +90,26 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends io.pu
             this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
             return this;
         }
-
         public Builder cronExpressionForRecurrence(String cronExpressionForRecurrence) {
             this.cronExpressionForRecurrence = Output.of(Objects.requireNonNull(cronExpressionForRecurrence));
             return this;
         }
-
         public Builder duration(Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder startAt(Output<String> startAt) {
             this.startAt = Objects.requireNonNull(startAt);
             return this;
         }
-
         public Builder startAt(String startAt) {
             this.startAt = Output.of(Objects.requireNonNull(startAt));
             return this;
-        }
-        public DomainAutoTuneOptionsMaintenanceScheduleGetArgs build() {
+        }        public DomainAutoTuneOptionsMaintenanceScheduleGetArgs build() {
             return new DomainAutoTuneOptionsMaintenanceScheduleGetArgs(cronExpressionForRecurrence, duration, startAt);
         }
     }

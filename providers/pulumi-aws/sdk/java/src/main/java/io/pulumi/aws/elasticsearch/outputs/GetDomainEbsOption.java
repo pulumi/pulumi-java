@@ -103,22 +103,18 @@ public final class GetDomainEbsOption {
             this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
             return this;
         }
-
         public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
-
         public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public GetDomainEbsOption build() {
+        }        public GetDomainEbsOption build() {
             return new GetDomainEbsOption(ebsEnabled, iops, volumeSize, volumeType);
         }
     }

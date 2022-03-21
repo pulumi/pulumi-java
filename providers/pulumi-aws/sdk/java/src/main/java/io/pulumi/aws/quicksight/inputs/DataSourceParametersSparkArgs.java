@@ -74,22 +74,18 @@ public final class DataSourceParametersSparkArgs extends io.pulumi.resources.Res
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public DataSourceParametersSparkArgs build() {
+        }        public DataSourceParametersSparkArgs build() {
             return new DataSourceParametersSparkArgs(host, port);
         }
     }

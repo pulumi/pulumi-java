@@ -62,17 +62,14 @@ public final class GetInstanceTypeInstanceDisk {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInstanceTypeInstanceDisk build() {
+        }        public GetInstanceTypeInstanceDisk build() {
             return new GetInstanceTypeInstanceDisk(count, size, type);
         }
     }

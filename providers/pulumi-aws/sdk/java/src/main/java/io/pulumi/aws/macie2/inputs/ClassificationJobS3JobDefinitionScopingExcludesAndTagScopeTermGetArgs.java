@@ -108,42 +108,37 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
             this.comparator = comparator;
             return this;
         }
-
         public Builder comparator(@Nullable String comparator) {
             this.comparator = Output.ofNullable(comparator);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder tagValues(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueGetArgs>> tagValues) {
             this.tagValues = tagValues;
             return this;
         }
-
         public Builder tagValues(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueGetArgs> tagValues) {
             this.tagValues = Output.ofNullable(tagValues);
             return this;
         }
-
+        public Builder tagValues(ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueGetArgs... tagValues) {
+            return tagValues(List.of(tagValues));
+        }
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs build() {
+        }        public ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs build() {
             return new ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs(comparator, key, tagValues, target);
         }
     }

@@ -174,82 +174,69 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder computeType(Output<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariableGetArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(ProjectEnvironmentEnvironmentVariableGetArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder imagePullCredentialsType(@Nullable Output<String> imagePullCredentialsType) {
             this.imagePullCredentialsType = imagePullCredentialsType;
             return this;
         }
-
         public Builder imagePullCredentialsType(@Nullable String imagePullCredentialsType) {
             this.imagePullCredentialsType = Output.ofNullable(imagePullCredentialsType);
             return this;
         }
-
         public Builder privilegedMode(@Nullable Output<Boolean> privilegedMode) {
             this.privilegedMode = privilegedMode;
             return this;
         }
-
         public Builder privilegedMode(@Nullable Boolean privilegedMode) {
             this.privilegedMode = Output.ofNullable(privilegedMode);
             return this;
         }
-
         public Builder registryCredential(@Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential) {
             this.registryCredential = registryCredential;
             return this;
         }
-
         public Builder registryCredential(@Nullable ProjectEnvironmentRegistryCredentialGetArgs registryCredential) {
             this.registryCredential = Output.ofNullable(registryCredential);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ProjectEnvironmentGetArgs build() {
+        }        public ProjectEnvironmentGetArgs build() {
             return new ProjectEnvironmentGetArgs(certificate, computeType, environmentVariables, image, imagePullCredentialsType, privilegedMode, registryCredential, type);
         }
     }

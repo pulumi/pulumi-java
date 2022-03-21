@@ -133,32 +133,26 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destinationPort(String destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder sourcePort(String sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatefulRuleHeader build() {
+        }        public RuleGroupRuleGroupRulesSourceStatefulRuleHeader build() {
             return new RuleGroupRuleGroupRulesSourceStatefulRuleHeader(destination, destinationPort, direction, protocol, source, sourcePort);
         }
     }

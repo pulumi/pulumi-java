@@ -217,112 +217,96 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder dbProxyEndpointName(@Nullable Output<String> dbProxyEndpointName) {
             this.dbProxyEndpointName = dbProxyEndpointName;
             return this;
         }
-
         public Builder dbProxyEndpointName(@Nullable String dbProxyEndpointName) {
             this.dbProxyEndpointName = Output.ofNullable(dbProxyEndpointName);
             return this;
         }
-
         public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
             this.dbProxyName = dbProxyName;
             return this;
         }
-
         public Builder dbProxyName(@Nullable String dbProxyName) {
             this.dbProxyName = Output.ofNullable(dbProxyName);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder targetRole(@Nullable Output<String> targetRole) {
             this.targetRole = targetRole;
             return this;
         }
-
         public Builder targetRole(@Nullable String targetRole) {
             this.targetRole = Output.ofNullable(targetRole);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder vpcSubnetIds(@Nullable Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = vpcSubnetIds;
             return this;
         }
-
         public Builder vpcSubnetIds(@Nullable List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Output.ofNullable(vpcSubnetIds);
             return this;
         }
-        public ProxyEndpointState build() {
+        public Builder vpcSubnetIds(String... vpcSubnetIds) {
+            return vpcSubnetIds(List.of(vpcSubnetIds));
+        }        public ProxyEndpointState build() {
             return new ProxyEndpointState(arn, dbProxyEndpointName, dbProxyName, endpoint, isDefault, tags, tagsAll, targetRole, vpcId, vpcSecurityGroupIds, vpcSubnetIds);
         }
     }

@@ -89,32 +89,26 @@ public final class SelectionSelectionTagArgs extends io.pulumi.resources.Resourc
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SelectionSelectionTagArgs build() {
+        }        public SelectionSelectionTagArgs build() {
             return new SelectionSelectionTagArgs(key, type, value);
         }
     }

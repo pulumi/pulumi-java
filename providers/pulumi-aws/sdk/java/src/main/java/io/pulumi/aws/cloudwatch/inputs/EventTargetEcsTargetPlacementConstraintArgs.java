@@ -74,22 +74,18 @@ public final class EventTargetEcsTargetPlacementConstraintArgs extends io.pulumi
             this.expression = expression;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = Output.ofNullable(expression);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EventTargetEcsTargetPlacementConstraintArgs build() {
+        }        public EventTargetEcsTargetPlacementConstraintArgs build() {
             return new EventTargetEcsTargetPlacementConstraintArgs(expression, type);
         }
     }

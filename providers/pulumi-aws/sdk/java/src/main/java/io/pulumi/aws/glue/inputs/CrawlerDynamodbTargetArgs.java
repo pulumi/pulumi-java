@@ -92,32 +92,26 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder scanAll(@Nullable Output<Boolean> scanAll) {
             this.scanAll = scanAll;
             return this;
         }
-
         public Builder scanAll(@Nullable Boolean scanAll) {
             this.scanAll = Output.ofNullable(scanAll);
             return this;
         }
-
         public Builder scanRate(@Nullable Output<Double> scanRate) {
             this.scanRate = scanRate;
             return this;
         }
-
         public Builder scanRate(@Nullable Double scanRate) {
             this.scanRate = Output.ofNullable(scanRate);
             return this;
-        }
-        public CrawlerDynamodbTargetArgs build() {
+        }        public CrawlerDynamodbTargetArgs build() {
             return new CrawlerDynamodbTargetArgs(path, scanAll, scanRate);
         }
     }

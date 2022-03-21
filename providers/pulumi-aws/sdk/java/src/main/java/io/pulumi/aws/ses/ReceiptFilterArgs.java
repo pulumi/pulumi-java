@@ -90,32 +90,26 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder cidr(String cidr) {
             this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public ReceiptFilterArgs build() {
+        }        public ReceiptFilterArgs build() {
             return new ReceiptFilterArgs(cidr, name, policy);
         }
     }

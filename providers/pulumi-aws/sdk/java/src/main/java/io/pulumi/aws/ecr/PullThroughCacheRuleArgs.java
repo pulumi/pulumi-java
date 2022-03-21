@@ -73,22 +73,18 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
             this.ecrRepositoryPrefix = Objects.requireNonNull(ecrRepositoryPrefix);
             return this;
         }
-
         public Builder ecrRepositoryPrefix(String ecrRepositoryPrefix) {
             this.ecrRepositoryPrefix = Output.of(Objects.requireNonNull(ecrRepositoryPrefix));
             return this;
         }
-
         public Builder upstreamRegistryUrl(Output<String> upstreamRegistryUrl) {
             this.upstreamRegistryUrl = Objects.requireNonNull(upstreamRegistryUrl);
             return this;
         }
-
         public Builder upstreamRegistryUrl(String upstreamRegistryUrl) {
             this.upstreamRegistryUrl = Output.of(Objects.requireNonNull(upstreamRegistryUrl));
             return this;
-        }
-        public PullThroughCacheRuleArgs build() {
+        }        public PullThroughCacheRuleArgs build() {
             return new PullThroughCacheRuleArgs(ecrRepositoryPrefix, upstreamRegistryUrl);
         }
     }

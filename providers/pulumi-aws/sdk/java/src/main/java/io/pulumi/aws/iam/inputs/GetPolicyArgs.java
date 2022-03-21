@@ -107,22 +107,18 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetPolicyArgs build() {
+        }        public GetPolicyArgs build() {
             return new GetPolicyArgs(arn, name, pathPrefix, tags);
         }
     }

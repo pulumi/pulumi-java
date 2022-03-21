@@ -56,12 +56,10 @@ public final class DataSourceParametersAmazonElasticsearchGetArgs extends io.pul
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
-        }
-        public DataSourceParametersAmazonElasticsearchGetArgs build() {
+        }        public DataSourceParametersAmazonElasticsearchGetArgs build() {
             return new DataSourceParametersAmazonElasticsearchGetArgs(domain);
         }
     }

@@ -69,12 +69,10 @@ public final class InsightFiltersResourceAwsEc2InstanceVpcId {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceVpcId build() {
+        }        public InsightFiltersResourceAwsEc2InstanceVpcId build() {
             return new InsightFiltersResourceAwsEc2InstanceVpcId(comparison, value);
         }
     }

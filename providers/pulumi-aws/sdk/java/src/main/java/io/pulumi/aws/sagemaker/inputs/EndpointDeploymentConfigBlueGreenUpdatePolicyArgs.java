@@ -91,32 +91,26 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
             this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
             return this;
         }
-
         public Builder maximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
             this.maximumExecutionTimeoutInSeconds = Output.ofNullable(maximumExecutionTimeoutInSeconds);
             return this;
         }
-
         public Builder terminationWaitInSeconds(@Nullable Output<Integer> terminationWaitInSeconds) {
             this.terminationWaitInSeconds = terminationWaitInSeconds;
             return this;
         }
-
         public Builder terminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
             this.terminationWaitInSeconds = Output.ofNullable(terminationWaitInSeconds);
             return this;
         }
-
         public Builder trafficRoutingConfiguration(Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration);
             return this;
         }
-
         public Builder trafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Output.of(Objects.requireNonNull(trafficRoutingConfiguration));
             return this;
-        }
-        public EndpointDeploymentConfigBlueGreenUpdatePolicyArgs build() {
+        }        public EndpointDeploymentConfigBlueGreenUpdatePolicyArgs build() {
             return new EndpointDeploymentConfigBlueGreenUpdatePolicyArgs(maximumExecutionTimeoutInSeconds, terminationWaitInSeconds, trafficRoutingConfiguration);
         }
     }

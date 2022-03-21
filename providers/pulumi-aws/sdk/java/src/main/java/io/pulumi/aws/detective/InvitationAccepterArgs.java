@@ -56,12 +56,10 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
-
         public Builder graphArn(String graphArn) {
             this.graphArn = Output.of(Objects.requireNonNull(graphArn));
             return this;
-        }
-        public InvitationAccepterArgs build() {
+        }        public InvitationAccepterArgs build() {
             return new InvitationAccepterArgs(graphArn);
         }
     }

@@ -56,12 +56,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs extends io
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs build() {
             return new LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(count);
         }
     }

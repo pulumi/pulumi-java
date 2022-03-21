@@ -168,42 +168,34 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
             this.deviceTypeAndroid = Objects.requireNonNull(deviceTypeAndroid);
             return this;
         }
-
         public Builder deviceTypeChromeos(String deviceTypeChromeos) {
             this.deviceTypeChromeos = Objects.requireNonNull(deviceTypeChromeos);
             return this;
         }
-
         public Builder deviceTypeIos(String deviceTypeIos) {
             this.deviceTypeIos = Objects.requireNonNull(deviceTypeIos);
             return this;
         }
-
         public Builder deviceTypeLinux(String deviceTypeLinux) {
             this.deviceTypeLinux = Objects.requireNonNull(deviceTypeLinux);
             return this;
         }
-
         public Builder deviceTypeOsx(String deviceTypeOsx) {
             this.deviceTypeOsx = Objects.requireNonNull(deviceTypeOsx);
             return this;
         }
-
         public Builder deviceTypeWeb(String deviceTypeWeb) {
             this.deviceTypeWeb = Objects.requireNonNull(deviceTypeWeb);
             return this;
         }
-
         public Builder deviceTypeWindows(String deviceTypeWindows) {
             this.deviceTypeWindows = Objects.requireNonNull(deviceTypeWindows);
             return this;
         }
-
         public Builder deviceTypeZeroclient(String deviceTypeZeroclient) {
             this.deviceTypeZeroclient = Objects.requireNonNull(deviceTypeZeroclient);
             return this;
-        }
-        public GetDirectoryWorkspaceAccessProperty build() {
+        }        public GetDirectoryWorkspaceAccessProperty build() {
             return new GetDirectoryWorkspaceAccessProperty(deviceTypeAndroid, deviceTypeChromeos, deviceTypeIos, deviceTypeLinux, deviceTypeOsx, deviceTypeWeb, deviceTypeWindows, deviceTypeZeroclient);
         }
     }

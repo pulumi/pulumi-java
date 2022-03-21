@@ -108,42 +108,34 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
             this.deleteSourceFromS3 = deleteSourceFromS3;
             return this;
         }
-
         public Builder deleteSourceFromS3(@Nullable Boolean deleteSourceFromS3) {
             this.deleteSourceFromS3 = Output.ofNullable(deleteSourceFromS3);
             return this;
         }
-
         public Builder maxAgeInDays(@Nullable Output<Integer> maxAgeInDays) {
             this.maxAgeInDays = maxAgeInDays;
             return this;
         }
-
         public Builder maxAgeInDays(@Nullable Integer maxAgeInDays) {
             this.maxAgeInDays = Output.ofNullable(maxAgeInDays);
             return this;
         }
-
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
-
         public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
-        }
-        public ApplicationAppversionLifecycleGetArgs build() {
+        }        public ApplicationAppversionLifecycleGetArgs build() {
             return new ApplicationAppversionLifecycleGetArgs(deleteSourceFromS3, maxAgeInDays, maxCount, serviceRole);
         }
     }

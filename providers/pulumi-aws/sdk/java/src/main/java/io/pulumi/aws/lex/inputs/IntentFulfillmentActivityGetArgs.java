@@ -77,22 +77,18 @@ public final class IntentFulfillmentActivityGetArgs extends io.pulumi.resources.
             this.codeHook = codeHook;
             return this;
         }
-
         public Builder codeHook(@Nullable IntentFulfillmentActivityCodeHookGetArgs codeHook) {
             this.codeHook = Output.ofNullable(codeHook);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public IntentFulfillmentActivityGetArgs build() {
+        }        public IntentFulfillmentActivityGetArgs build() {
             return new IntentFulfillmentActivityGetArgs(codeHook, type);
         }
     }

@@ -154,72 +154,61 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
             this.activeDirectoryStatus = activeDirectoryStatus;
             return this;
         }
-
         public Builder activeDirectoryStatus(@Nullable String activeDirectoryStatus) {
             this.activeDirectoryStatus = Output.ofNullable(activeDirectoryStatus);
             return this;
         }
-
         public Builder domainControllers(@Nullable Output<List<String>> domainControllers) {
             this.domainControllers = domainControllers;
             return this;
         }
-
         public Builder domainControllers(@Nullable List<String> domainControllers) {
             this.domainControllers = Output.ofNullable(domainControllers);
             return this;
         }
-
+        public Builder domainControllers(String... domainControllers) {
+            return domainControllers(List.of(domainControllers));
+        }
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public GatewaySmbActiveDirectorySettingsArgs build() {
+        }        public GatewaySmbActiveDirectorySettingsArgs build() {
             return new GatewaySmbActiveDirectorySettingsArgs(activeDirectoryStatus, domainControllers, domainName, organizationalUnit, password, timeoutInSeconds, username);
         }
     }

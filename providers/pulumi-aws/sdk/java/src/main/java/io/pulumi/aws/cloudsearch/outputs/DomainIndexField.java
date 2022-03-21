@@ -184,47 +184,38 @@ public final class DomainIndexField {
             this.analysisScheme = analysisScheme;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder facet(@Nullable Boolean facet) {
             this.facet = facet;
             return this;
         }
-
         public Builder highlight(@Nullable Boolean highlight) {
             this.highlight = highlight;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder $return(@Nullable Boolean $return) {
             this.$return = $return;
             return this;
         }
-
         public Builder search(@Nullable Boolean search) {
             this.search = search;
             return this;
         }
-
         public Builder sort(@Nullable Boolean sort) {
             this.sort = sort;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DomainIndexField build() {
+        }        public DomainIndexField build() {
             return new DomainIndexField(analysisScheme, defaultValue, facet, highlight, name, $return, search, sort, type);
         }
     }

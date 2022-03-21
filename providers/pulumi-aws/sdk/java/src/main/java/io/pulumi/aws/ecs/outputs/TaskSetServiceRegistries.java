@@ -104,22 +104,18 @@ public final class TaskSetServiceRegistries {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder registryArn(String registryArn) {
             this.registryArn = Objects.requireNonNull(registryArn);
             return this;
-        }
-        public TaskSetServiceRegistries build() {
+        }        public TaskSetServiceRegistries build() {
             return new TaskSetServiceRegistries(containerName, containerPort, port, registryArn);
         }
     }

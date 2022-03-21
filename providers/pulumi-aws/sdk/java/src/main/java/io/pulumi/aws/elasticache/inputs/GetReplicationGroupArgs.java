@@ -54,8 +54,7 @@ public final class GetReplicationGroupArgs extends io.pulumi.resources.InvokeArg
         public Builder replicationGroupId(String replicationGroupId) {
             this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
             return this;
-        }
-        public GetReplicationGroupArgs build() {
+        }        public GetReplicationGroupArgs build() {
             return new GetReplicationGroupArgs(replicationGroupId);
         }
     }

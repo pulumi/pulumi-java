@@ -109,42 +109,34 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
             this.accountAggregationSource = accountAggregationSource;
             return this;
         }
-
         public Builder accountAggregationSource(@Nullable ConfigurationAggregatorAccountAggregationSourceArgs accountAggregationSource) {
             this.accountAggregationSource = Output.ofNullable(accountAggregationSource);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationAggregationSource(@Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource) {
             this.organizationAggregationSource = organizationAggregationSource;
             return this;
         }
-
         public Builder organizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
             this.organizationAggregationSource = Output.ofNullable(organizationAggregationSource);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ConfigurationAggregatorArgs build() {
+        }        public ConfigurationAggregatorArgs build() {
             return new ConfigurationAggregatorArgs(accountAggregationSource, name, organizationAggregationSource, tags);
         }
     }

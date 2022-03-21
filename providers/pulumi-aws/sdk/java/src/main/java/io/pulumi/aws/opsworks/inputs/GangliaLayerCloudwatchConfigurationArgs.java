@@ -68,22 +68,21 @@ public final class GangliaLayerCloudwatchConfigurationArgs extends io.pulumi.res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<GangliaLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<GangliaLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public GangliaLayerCloudwatchConfigurationArgs build() {
+        public Builder logStreams(GangliaLayerCloudwatchConfigurationLogStreamArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public GangliaLayerCloudwatchConfigurationArgs build() {
             return new GangliaLayerCloudwatchConfigurationArgs(enabled, logStreams);
         }
     }

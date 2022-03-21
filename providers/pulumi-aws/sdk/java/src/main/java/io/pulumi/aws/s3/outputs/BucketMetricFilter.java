@@ -72,12 +72,10 @@ public final class BucketMetricFilter {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public BucketMetricFilter build() {
+        }        public BucketMetricFilter build() {
             return new BucketMetricFilter(prefix, tags);
         }
     }

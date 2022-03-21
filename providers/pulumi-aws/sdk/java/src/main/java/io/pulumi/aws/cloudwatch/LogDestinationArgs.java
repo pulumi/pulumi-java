@@ -90,32 +90,26 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder targetArn(Output<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
-
         public Builder targetArn(String targetArn) {
             this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
-        }
-        public LogDestinationArgs build() {
+        }        public LogDestinationArgs build() {
             return new LogDestinationArgs(name, roleArn, targetArn);
         }
     }

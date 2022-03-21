@@ -103,42 +103,34 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder wildcard(@Nullable Output<Boolean> wildcard) {
             this.wildcard = wildcard;
             return this;
         }
-
         public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = Output.ofNullable(wildcard);
             return this;
-        }
-        public PermissionsTableArgs build() {
+        }        public PermissionsTableArgs build() {
             return new PermissionsTableArgs(catalogId, databaseName, name, wildcard);
         }
     }

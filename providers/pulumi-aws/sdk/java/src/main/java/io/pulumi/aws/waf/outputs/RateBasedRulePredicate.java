@@ -92,17 +92,14 @@ public final class RateBasedRulePredicate {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
-
         public Builder negated(Boolean negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RateBasedRulePredicate build() {
+        }        public RateBasedRulePredicate build() {
             return new RateBasedRulePredicate(dataId, negated, type);
         }
     }

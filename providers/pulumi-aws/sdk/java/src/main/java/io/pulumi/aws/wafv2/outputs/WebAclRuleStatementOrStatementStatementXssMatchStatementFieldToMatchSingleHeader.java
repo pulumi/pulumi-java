@@ -51,8 +51,7 @@ public final class WebAclRuleStatementOrStatementStatementXssMatchStatementField
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader build() {
+        }        public WebAclRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader build() {
             return new WebAclRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader(name);
         }
     }

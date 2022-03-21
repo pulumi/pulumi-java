@@ -88,17 +88,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggin
             this.enabled = enabled;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions(enabled, logGroupName, logStreamName);
         }
     }

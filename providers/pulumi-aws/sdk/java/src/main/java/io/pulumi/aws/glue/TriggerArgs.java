@@ -207,102 +207,85 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<TriggerActionArgs> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(TriggerActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder predicate(@Nullable Output<TriggerPredicateArgs> predicate) {
             this.predicate = predicate;
             return this;
         }
-
         public Builder predicate(@Nullable TriggerPredicateArgs predicate) {
             this.predicate = Output.ofNullable(predicate);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
-
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             this.startOnCreation = Output.ofNullable(startOnCreation);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder workflowName(@Nullable Output<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
-
         public Builder workflowName(@Nullable String workflowName) {
             this.workflowName = Output.ofNullable(workflowName);
             return this;
-        }
-        public TriggerArgs build() {
+        }        public TriggerArgs build() {
             return new TriggerArgs(actions, description, enabled, name, predicate, schedule, startOnCreation, tags, type, workflowName);
         }
     }

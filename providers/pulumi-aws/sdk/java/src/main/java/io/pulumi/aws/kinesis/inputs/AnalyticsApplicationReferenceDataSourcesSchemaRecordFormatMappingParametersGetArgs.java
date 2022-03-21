@@ -77,22 +77,18 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
             this.csv = csv;
             return this;
         }
-
         public Builder csv(@Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs csv) {
             this.csv = Output.ofNullable(csv);
             return this;
         }
-
         public Builder json(@Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json) {
             this.json = json;
             return this;
         }
-
         public Builder json(@Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs json) {
             this.json = Output.ofNullable(json);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs build() {
+        }        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs build() {
             return new AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs(csv, json);
         }
     }

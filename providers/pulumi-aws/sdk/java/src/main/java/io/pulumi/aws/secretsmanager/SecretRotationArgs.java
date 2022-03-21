@@ -104,42 +104,34 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
             this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
             return this;
         }
-
         public Builder rotationLambdaArn(String rotationLambdaArn) {
             this.rotationLambdaArn = Output.of(Objects.requireNonNull(rotationLambdaArn));
             return this;
         }
-
         public Builder rotationRules(Output<SecretRotationRotationRulesArgs> rotationRules) {
             this.rotationRules = Objects.requireNonNull(rotationRules);
             return this;
         }
-
         public Builder rotationRules(SecretRotationRotationRulesArgs rotationRules) {
             this.rotationRules = Output.of(Objects.requireNonNull(rotationRules));
             return this;
         }
-
         public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SecretRotationArgs build() {
+        }        public SecretRotationArgs build() {
             return new SecretRotationArgs(rotationLambdaArn, rotationRules, secretId, tags);
         }
     }

@@ -110,42 +110,43 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
             this.parameterObjects = parameterObjects;
             return this;
         }
-
         public Builder parameterObjects(@Nullable List<PipelineDefinitionParameterObjectGetArgs> parameterObjects) {
             this.parameterObjects = Output.ofNullable(parameterObjects);
             return this;
         }
-
+        public Builder parameterObjects(PipelineDefinitionParameterObjectGetArgs... parameterObjects) {
+            return parameterObjects(List.of(parameterObjects));
+        }
         public Builder parameterValues(@Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
-
         public Builder parameterValues(@Nullable List<PipelineDefinitionParameterValueGetArgs> parameterValues) {
             this.parameterValues = Output.ofNullable(parameterValues);
             return this;
         }
-
+        public Builder parameterValues(PipelineDefinitionParameterValueGetArgs... parameterValues) {
+            return parameterValues(List.of(parameterValues));
+        }
         public Builder pipelineId(@Nullable Output<String> pipelineId) {
             this.pipelineId = pipelineId;
             return this;
         }
-
         public Builder pipelineId(@Nullable String pipelineId) {
             this.pipelineId = Output.ofNullable(pipelineId);
             return this;
         }
-
         public Builder pipelineObjects(@Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects) {
             this.pipelineObjects = pipelineObjects;
             return this;
         }
-
         public Builder pipelineObjects(@Nullable List<PipelineDefinitionPipelineObjectGetArgs> pipelineObjects) {
             this.pipelineObjects = Output.ofNullable(pipelineObjects);
             return this;
         }
-        public PipelineDefinitionState build() {
+        public Builder pipelineObjects(PipelineDefinitionPipelineObjectGetArgs... pipelineObjects) {
+            return pipelineObjects(List.of(pipelineObjects));
+        }        public PipelineDefinitionState build() {
             return new PipelineDefinitionState(parameterObjects, parameterValues, pipelineId, pipelineObjects);
         }
     }

@@ -104,22 +104,18 @@ public final class FleetTargetCapacitySpecification {
             this.defaultTargetCapacityType = Objects.requireNonNull(defaultTargetCapacityType);
             return this;
         }
-
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
-
         public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
             this.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
-
         public Builder totalTargetCapacity(Integer totalTargetCapacity) {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
-        }
-        public FleetTargetCapacitySpecification build() {
+        }        public FleetTargetCapacitySpecification build() {
             return new FleetTargetCapacitySpecification(defaultTargetCapacityType, onDemandTargetCapacity, spotTargetCapacity, totalTargetCapacity);
         }
     }

@@ -92,32 +92,32 @@ public final class PartitionStorageDescriptorSkewedInfoArgs extends io.pulumi.re
             this.skewedColumnNames = skewedColumnNames;
             return this;
         }
-
         public Builder skewedColumnNames(@Nullable List<String> skewedColumnNames) {
             this.skewedColumnNames = Output.ofNullable(skewedColumnNames);
             return this;
         }
-
+        public Builder skewedColumnNames(String... skewedColumnNames) {
+            return skewedColumnNames(List.of(skewedColumnNames));
+        }
         public Builder skewedColumnValueLocationMaps(@Nullable Output<Map<String,String>> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
             return this;
         }
-
         public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = Output.ofNullable(skewedColumnValueLocationMaps);
             return this;
         }
-
         public Builder skewedColumnValues(@Nullable Output<List<String>> skewedColumnValues) {
             this.skewedColumnValues = skewedColumnValues;
             return this;
         }
-
         public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
             this.skewedColumnValues = Output.ofNullable(skewedColumnValues);
             return this;
         }
-        public PartitionStorageDescriptorSkewedInfoArgs build() {
+        public Builder skewedColumnValues(String... skewedColumnValues) {
+            return skewedColumnValues(List.of(skewedColumnValues));
+        }        public PartitionStorageDescriptorSkewedInfoArgs build() {
             return new PartitionStorageDescriptorSkewedInfoArgs(skewedColumnNames, skewedColumnValueLocationMaps, skewedColumnValues);
         }
     }

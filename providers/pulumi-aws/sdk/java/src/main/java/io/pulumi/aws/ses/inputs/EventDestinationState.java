@@ -175,82 +175,72 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cloudwatchDestinations(@Nullable Output<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations) {
             this.cloudwatchDestinations = cloudwatchDestinations;
             return this;
         }
-
         public Builder cloudwatchDestinations(@Nullable List<EventDestinationCloudwatchDestinationGetArgs> cloudwatchDestinations) {
             this.cloudwatchDestinations = Output.ofNullable(cloudwatchDestinations);
             return this;
         }
-
+        public Builder cloudwatchDestinations(EventDestinationCloudwatchDestinationGetArgs... cloudwatchDestinations) {
+            return cloudwatchDestinations(List.of(cloudwatchDestinations));
+        }
         public Builder configurationSetName(@Nullable Output<String> configurationSetName) {
             this.configurationSetName = configurationSetName;
             return this;
         }
-
         public Builder configurationSetName(@Nullable String configurationSetName) {
             this.configurationSetName = Output.ofNullable(configurationSetName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder kinesisDestination(@Nullable Output<EventDestinationKinesisDestinationGetArgs> kinesisDestination) {
             this.kinesisDestination = kinesisDestination;
             return this;
         }
-
         public Builder kinesisDestination(@Nullable EventDestinationKinesisDestinationGetArgs kinesisDestination) {
             this.kinesisDestination = Output.ofNullable(kinesisDestination);
             return this;
         }
-
         public Builder matchingTypes(@Nullable Output<List<String>> matchingTypes) {
             this.matchingTypes = matchingTypes;
             return this;
         }
-
         public Builder matchingTypes(@Nullable List<String> matchingTypes) {
             this.matchingTypes = Output.ofNullable(matchingTypes);
             return this;
         }
-
+        public Builder matchingTypes(String... matchingTypes) {
+            return matchingTypes(List.of(matchingTypes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder snsDestination(@Nullable Output<EventDestinationSnsDestinationGetArgs> snsDestination) {
             this.snsDestination = snsDestination;
             return this;
         }
-
         public Builder snsDestination(@Nullable EventDestinationSnsDestinationGetArgs snsDestination) {
             this.snsDestination = Output.ofNullable(snsDestination);
             return this;
-        }
-        public EventDestinationState build() {
+        }        public EventDestinationState build() {
             return new EventDestinationState(arn, cloudwatchDestinations, configurationSetName, enabled, kinesisDestination, matchingTypes, name, snsDestination);
         }
     }

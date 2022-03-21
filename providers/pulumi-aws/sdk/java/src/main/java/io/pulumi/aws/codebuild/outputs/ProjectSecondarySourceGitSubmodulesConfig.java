@@ -51,8 +51,7 @@ public final class ProjectSecondarySourceGitSubmodulesConfig {
         public Builder fetchSubmodules(Boolean fetchSubmodules) {
             this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
             return this;
-        }
-        public ProjectSecondarySourceGitSubmodulesConfig build() {
+        }        public ProjectSecondarySourceGitSubmodulesConfig build() {
             return new ProjectSecondarySourceGitSubmodulesConfig(fetchSubmodules);
         }
     }

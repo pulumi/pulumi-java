@@ -63,12 +63,10 @@ public final class GetLogDeliveryCanonicalUserIdResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetLogDeliveryCanonicalUserIdResult build() {
+        }        public GetLogDeliveryCanonicalUserIdResult build() {
             return new GetLogDeliveryCanonicalUserIdResult(id, region);
         }
     }

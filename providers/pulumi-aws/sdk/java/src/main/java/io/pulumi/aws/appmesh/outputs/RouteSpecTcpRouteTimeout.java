@@ -53,8 +53,7 @@ public final class RouteSpecTcpRouteTimeout {
         public Builder idle(@Nullable RouteSpecTcpRouteTimeoutIdle idle) {
             this.idle = idle;
             return this;
-        }
-        public RouteSpecTcpRouteTimeout build() {
+        }        public RouteSpecTcpRouteTimeout build() {
             return new RouteSpecTcpRouteTimeout(idle);
         }
     }

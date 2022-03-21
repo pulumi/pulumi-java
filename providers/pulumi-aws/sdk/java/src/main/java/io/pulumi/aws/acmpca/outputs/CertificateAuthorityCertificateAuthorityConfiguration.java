@@ -86,17 +86,14 @@ public final class CertificateAuthorityCertificateAuthorityConfiguration {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
-
         public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
-
         public Builder subject(CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
-        }
-        public CertificateAuthorityCertificateAuthorityConfiguration build() {
+        }        public CertificateAuthorityCertificateAuthorityConfiguration build() {
             return new CertificateAuthorityCertificateAuthorityConfiguration(keyAlgorithm, signingAlgorithm, subject);
         }
     }

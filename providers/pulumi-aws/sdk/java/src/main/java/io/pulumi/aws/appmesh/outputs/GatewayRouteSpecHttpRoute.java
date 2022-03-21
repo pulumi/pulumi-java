@@ -70,12 +70,10 @@ public final class GatewayRouteSpecHttpRoute {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder match(GatewayRouteSpecHttpRouteMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
-        }
-        public GatewayRouteSpecHttpRoute build() {
+        }        public GatewayRouteSpecHttpRoute build() {
             return new GatewayRouteSpecHttpRoute(action, match);
         }
     }

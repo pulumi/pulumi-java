@@ -121,47 +121,44 @@ public final class GetResolverEndpointResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder filters(@Nullable List<GetResolverEndpointFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetResolverEndpointFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetResolverEndpointResult build() {
+        }        public GetResolverEndpointResult build() {
             return new GetResolverEndpointResult(arn, direction, filters, id, ipAddresses, name, resolverEndpointId, status, vpcId);
         }
     }

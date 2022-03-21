@@ -74,12 +74,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetSecretArgs build() {
+        }        public GetSecretArgs build() {
             return new GetSecretArgs(arn, name);
         }
     }

@@ -71,12 +71,10 @@ public final class ImageBuilderAccessEndpoint {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = vpceId;
             return this;
-        }
-        public ImageBuilderAccessEndpoint build() {
+        }        public ImageBuilderAccessEndpoint build() {
             return new ImageBuilderAccessEndpoint(endpointType, vpceId);
         }
     }

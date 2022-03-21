@@ -103,22 +103,18 @@ public final class ProxyAuth {
             this.authScheme = authScheme;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder iamAuth(@Nullable String iamAuth) {
             this.iamAuth = iamAuth;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
-        }
-        public ProxyAuth build() {
+        }        public ProxyAuth build() {
             return new ProxyAuth(authScheme, description, iamAuth, secretArn);
         }
     }

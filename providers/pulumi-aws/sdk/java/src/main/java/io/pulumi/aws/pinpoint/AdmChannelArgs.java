@@ -107,42 +107,34 @@ public final class AdmChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public AdmChannelArgs build() {
+        }        public AdmChannelArgs build() {
             return new AdmChannelArgs(applicationId, clientId, clientSecret, enabled);
         }
     }

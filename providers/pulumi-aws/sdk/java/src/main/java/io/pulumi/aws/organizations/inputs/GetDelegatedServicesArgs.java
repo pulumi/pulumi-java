@@ -54,8 +54,7 @@ public final class GetDelegatedServicesArgs extends io.pulumi.resources.InvokeAr
         public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
-        }
-        public GetDelegatedServicesArgs build() {
+        }        public GetDelegatedServicesArgs build() {
             return new GetDelegatedServicesArgs(accountId);
         }
     }

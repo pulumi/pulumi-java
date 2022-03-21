@@ -260,142 +260,126 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             this.accessEndpoints = accessEndpoints;
             return this;
         }
-
         public Builder accessEndpoints(@Nullable List<StackAccessEndpointGetArgs> accessEndpoints) {
             this.accessEndpoints = Output.ofNullable(accessEndpoints);
             return this;
         }
-
+        public Builder accessEndpoints(StackAccessEndpointGetArgs... accessEndpoints) {
+            return accessEndpoints(List.of(accessEndpoints));
+        }
         public Builder applicationSettings(@Nullable Output<StackApplicationSettingsGetArgs> applicationSettings) {
             this.applicationSettings = applicationSettings;
             return this;
         }
-
         public Builder applicationSettings(@Nullable StackApplicationSettingsGetArgs applicationSettings) {
             this.applicationSettings = Output.ofNullable(applicationSettings);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder embedHostDomains(@Nullable Output<List<String>> embedHostDomains) {
             this.embedHostDomains = embedHostDomains;
             return this;
         }
-
         public Builder embedHostDomains(@Nullable List<String> embedHostDomains) {
             this.embedHostDomains = Output.ofNullable(embedHostDomains);
             return this;
         }
-
+        public Builder embedHostDomains(String... embedHostDomains) {
+            return embedHostDomains(List.of(embedHostDomains));
+        }
         public Builder feedbackUrl(@Nullable Output<String> feedbackUrl) {
             this.feedbackUrl = feedbackUrl;
             return this;
         }
-
         public Builder feedbackUrl(@Nullable String feedbackUrl) {
             this.feedbackUrl = Output.ofNullable(feedbackUrl);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
-
         public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = Output.ofNullable(redirectUrl);
             return this;
         }
-
         public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorGetArgs>> storageConnectors) {
             this.storageConnectors = storageConnectors;
             return this;
         }
-
         public Builder storageConnectors(@Nullable List<StackStorageConnectorGetArgs> storageConnectors) {
             this.storageConnectors = Output.ofNullable(storageConnectors);
             return this;
         }
-
+        public Builder storageConnectors(StackStorageConnectorGetArgs... storageConnectors) {
+            return storageConnectors(List.of(storageConnectors));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userSettings(@Nullable Output<List<StackUserSettingGetArgs>> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
-
         public Builder userSettings(@Nullable List<StackUserSettingGetArgs> userSettings) {
             this.userSettings = Output.ofNullable(userSettings);
             return this;
         }
-        public StackState build() {
+        public Builder userSettings(StackUserSettingGetArgs... userSettings) {
+            return userSettings(List.of(userSettings));
+        }        public StackState build() {
             return new StackState(accessEndpoints, applicationSettings, arn, createdTime, description, displayName, embedHostDomains, feedbackUrl, name, redirectUrl, storageConnectors, tags, tagsAll, userSettings);
         }
     }

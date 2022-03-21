@@ -181,42 +181,34 @@ public final class AmiCopyEbsBlockDevice {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
-        }
-        public AmiCopyEbsBlockDevice build() {
+        }        public AmiCopyEbsBlockDevice build() {
             return new AmiCopyEbsBlockDevice(deleteOnTermination, deviceName, encrypted, iops, snapshotId, throughput, volumeSize, volumeType);
         }
     }

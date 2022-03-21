@@ -91,32 +91,29 @@ public final class ClusterBootstrapActionArgs extends io.pulumi.resources.Resour
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public ClusterBootstrapActionArgs build() {
+        }        public ClusterBootstrapActionArgs build() {
             return new ClusterBootstrapActionArgs(args, name, path);
         }
     }

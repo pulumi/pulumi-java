@@ -87,17 +87,14 @@ public final class InsightFiltersFindingProviderFieldsConfidence {
             this.eq = eq;
             return this;
         }
-
         public Builder gte(@Nullable String gte) {
             this.gte = gte;
             return this;
         }
-
         public Builder lte(@Nullable String lte) {
             this.lte = lte;
             return this;
-        }
-        public InsightFiltersFindingProviderFieldsConfidence build() {
+        }        public InsightFiltersFindingProviderFieldsConfidence build() {
             return new InsightFiltersFindingProviderFieldsConfidence(eq, gte, lte);
         }
     }

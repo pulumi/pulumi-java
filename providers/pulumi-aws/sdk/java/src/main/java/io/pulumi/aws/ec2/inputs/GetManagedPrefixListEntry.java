@@ -64,12 +64,10 @@ public final class GetManagedPrefixListEntry extends io.pulumi.resources.InvokeA
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
-        }
-        public GetManagedPrefixListEntry build() {
+        }        public GetManagedPrefixListEntry build() {
             return new GetManagedPrefixListEntry(cidr, description);
         }
     }

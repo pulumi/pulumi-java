@@ -73,12 +73,13 @@ public final class GetManagedPrefixListFilter extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetManagedPrefixListFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetManagedPrefixListFilter build() {
             return new GetManagedPrefixListFilter(name, values);
         }
     }

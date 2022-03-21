@@ -91,32 +91,26 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
             this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
             return this;
         }
-
         public Builder dxGatewayId(String dxGatewayId) {
             this.dxGatewayId = Output.of(Objects.requireNonNull(dxGatewayId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId);
             return this;
         }
-
         public Builder virtualInterfaceId(String virtualInterfaceId) {
             this.virtualInterfaceId = Output.of(Objects.requireNonNull(virtualInterfaceId));
             return this;
-        }
-        public HostedTransitVirtualInterfaceAcceptorArgs build() {
+        }        public HostedTransitVirtualInterfaceAcceptorArgs build() {
             return new HostedTransitVirtualInterfaceAcceptorArgs(dxGatewayId, tags, virtualInterfaceId);
         }
     }

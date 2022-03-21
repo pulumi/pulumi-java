@@ -73,22 +73,18 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
-        }
-        public EventConnectionAuthParametersOauthClientParametersGetArgs build() {
+        }        public EventConnectionAuthParametersOauthClientParametersGetArgs build() {
             return new EventConnectionAuthParametersOauthClientParametersGetArgs(clientId, clientSecret);
         }
     }

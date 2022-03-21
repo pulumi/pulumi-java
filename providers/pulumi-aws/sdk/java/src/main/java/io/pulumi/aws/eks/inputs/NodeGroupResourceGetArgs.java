@@ -76,22 +76,21 @@ public final class NodeGroupResourceGetArgs extends io.pulumi.resources.Resource
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
-
         public Builder autoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroupGetArgs> autoscalingGroups) {
             this.autoscalingGroups = Output.ofNullable(autoscalingGroups);
             return this;
         }
-
+        public Builder autoscalingGroups(NodeGroupResourceAutoscalingGroupGetArgs... autoscalingGroups) {
+            return autoscalingGroups(List.of(autoscalingGroups));
+        }
         public Builder remoteAccessSecurityGroupId(@Nullable Output<String> remoteAccessSecurityGroupId) {
             this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
             return this;
         }
-
         public Builder remoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
             this.remoteAccessSecurityGroupId = Output.ofNullable(remoteAccessSecurityGroupId);
             return this;
-        }
-        public NodeGroupResourceGetArgs build() {
+        }        public NodeGroupResourceGetArgs build() {
             return new NodeGroupResourceGetArgs(autoscalingGroups, remoteAccessSecurityGroupId);
         }
     }

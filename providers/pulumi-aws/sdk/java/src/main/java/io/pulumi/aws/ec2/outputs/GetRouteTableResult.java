@@ -195,57 +195,55 @@ public final class GetRouteTableResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder associations(List<GetRouteTableAssociation> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
-
+        public Builder associations(GetRouteTableAssociation... associations) {
+            return associations(List.of(associations));
+        }
         public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetRouteTableFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder routes(List<GetRouteTableRoute> routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-
+        public Builder routes(GetRouteTableRoute... routes) {
+            return routes(List.of(routes));
+        }
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetRouteTableResult build() {
+        }        public GetRouteTableResult build() {
             return new GetRouteTableResult(arn, associations, filters, gatewayId, id, ownerId, routeTableId, routes, subnetId, tags, vpcId);
         }
     }

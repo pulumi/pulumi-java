@@ -189,92 +189,74 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
             this.addressFamily = addressFamily;
             return this;
         }
-
         public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Output.ofNullable(addressFamily);
             return this;
         }
-
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
-
         public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Output.ofNullable(amazonAddress);
             return this;
         }
-
         public Builder awsDevice(@Nullable Output<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
-
         public Builder awsDevice(@Nullable String awsDevice) {
             this.awsDevice = Output.ofNullable(awsDevice);
             return this;
         }
-
         public Builder bgpAsn(@Nullable Output<Integer> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
-
         public Builder bgpAsn(@Nullable Integer bgpAsn) {
             this.bgpAsn = Output.ofNullable(bgpAsn);
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
             return this;
         }
-
         public Builder bgpPeerId(@Nullable Output<String> bgpPeerId) {
             this.bgpPeerId = bgpPeerId;
             return this;
         }
-
         public Builder bgpPeerId(@Nullable String bgpPeerId) {
             this.bgpPeerId = Output.ofNullable(bgpPeerId);
             return this;
         }
-
         public Builder bgpStatus(@Nullable Output<String> bgpStatus) {
             this.bgpStatus = bgpStatus;
             return this;
         }
-
         public Builder bgpStatus(@Nullable String bgpStatus) {
             this.bgpStatus = Output.ofNullable(bgpStatus);
             return this;
         }
-
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
-
         public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Output.ofNullable(customerAddress);
             return this;
         }
-
         public Builder virtualInterfaceId(@Nullable Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
-
         public Builder virtualInterfaceId(@Nullable String virtualInterfaceId) {
             this.virtualInterfaceId = Output.ofNullable(virtualInterfaceId);
             return this;
-        }
-        public BgpPeerState build() {
+        }        public BgpPeerState build() {
             return new BgpPeerState(addressFamily, amazonAddress, awsDevice, bgpAsn, bgpAuthKey, bgpPeerId, bgpStatus, customerAddress, virtualInterfaceId);
         }
     }

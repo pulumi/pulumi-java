@@ -123,52 +123,42 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
             this.peerAccountId = peerAccountId;
             return this;
         }
-
         public Builder peerAccountId(@Nullable String peerAccountId) {
             this.peerAccountId = Output.ofNullable(peerAccountId);
             return this;
         }
-
         public Builder peerRegion(Output<String> peerRegion) {
             this.peerRegion = Objects.requireNonNull(peerRegion);
             return this;
         }
-
         public Builder peerRegion(String peerRegion) {
             this.peerRegion = Output.of(Objects.requireNonNull(peerRegion));
             return this;
         }
-
         public Builder peerTransitGatewayId(Output<String> peerTransitGatewayId) {
             this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
             return this;
         }
-
         public Builder peerTransitGatewayId(String peerTransitGatewayId) {
             this.peerTransitGatewayId = Output.of(Objects.requireNonNull(peerTransitGatewayId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transitGatewayId(Output<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
-
         public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
             return this;
-        }
-        public PeeringAttachmentArgs build() {
+        }        public PeeringAttachmentArgs build() {
             return new PeeringAttachmentArgs(peerAccountId, peerRegion, peerTransitGatewayId, tags, transitGatewayId);
         }
     }

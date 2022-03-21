@@ -92,32 +92,26 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.checkpointConfiguration = checkpointConfiguration;
             return this;
         }
-
         public Builder checkpointConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs checkpointConfiguration) {
             this.checkpointConfiguration = Output.ofNullable(checkpointConfiguration);
             return this;
         }
-
         public Builder monitoringConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration) {
             this.monitoringConfiguration = monitoringConfiguration;
             return this;
         }
-
         public Builder monitoringConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs monitoringConfiguration) {
             this.monitoringConfiguration = Output.ofNullable(monitoringConfiguration);
             return this;
         }
-
         public Builder parallelismConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration) {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
-
         public Builder parallelismConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs parallelismConfiguration) {
             this.parallelismConfiguration = Output.ofNullable(parallelismConfiguration);
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs(checkpointConfiguration, monitoringConfiguration, parallelismConfiguration);
         }
     }

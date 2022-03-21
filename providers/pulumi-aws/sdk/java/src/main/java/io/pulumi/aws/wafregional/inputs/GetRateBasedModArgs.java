@@ -54,8 +54,7 @@ public final class GetRateBasedModArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRateBasedModArgs build() {
+        }        public GetRateBasedModArgs build() {
             return new GetRateBasedModArgs(name);
         }
     }

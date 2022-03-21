@@ -206,52 +206,45 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
             this.dedicatedMasterCount = Objects.requireNonNull(dedicatedMasterCount);
             return this;
         }
-
         public Builder dedicatedMasterEnabled(Boolean dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = Objects.requireNonNull(dedicatedMasterEnabled);
             return this;
         }
-
         public Builder dedicatedMasterType(String dedicatedMasterType) {
             this.dedicatedMasterType = Objects.requireNonNull(dedicatedMasterType);
             return this;
         }
-
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder warmCount(Integer warmCount) {
             this.warmCount = Objects.requireNonNull(warmCount);
             return this;
         }
-
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
             this.warmEnabled = warmEnabled;
             return this;
         }
-
         public Builder warmType(String warmType) {
             this.warmType = Objects.requireNonNull(warmType);
             return this;
         }
-
         public Builder zoneAwarenessConfigs(List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs) {
             this.zoneAwarenessConfigs = Objects.requireNonNull(zoneAwarenessConfigs);
             return this;
         }
-
+        public Builder zoneAwarenessConfigs(GetDomainClusterConfigZoneAwarenessConfig... zoneAwarenessConfigs) {
+            return zoneAwarenessConfigs(List.of(zoneAwarenessConfigs));
+        }
         public Builder zoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = Objects.requireNonNull(zoneAwarenessEnabled);
             return this;
-        }
-        public GetDomainClusterConfig build() {
+        }        public GetDomainClusterConfig build() {
             return new GetDomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfigs, zoneAwarenessEnabled);
         }
     }

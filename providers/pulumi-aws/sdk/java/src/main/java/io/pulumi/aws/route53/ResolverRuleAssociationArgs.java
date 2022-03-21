@@ -90,32 +90,26 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resolverRuleId(Output<String> resolverRuleId) {
             this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
             return this;
         }
-
         public Builder resolverRuleId(String resolverRuleId) {
             this.resolverRuleId = Output.of(Objects.requireNonNull(resolverRuleId));
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public ResolverRuleAssociationArgs build() {
+        }        public ResolverRuleAssociationArgs build() {
             return new ResolverRuleAssociationArgs(name, resolverRuleId, vpcId);
         }
     }

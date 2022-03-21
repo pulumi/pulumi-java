@@ -56,12 +56,10 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQuer
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
+        }        public RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
             return new RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs(name);
         }
     }

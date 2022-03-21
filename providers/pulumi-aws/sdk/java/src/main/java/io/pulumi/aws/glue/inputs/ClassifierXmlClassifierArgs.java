@@ -73,22 +73,18 @@ public final class ClassifierXmlClassifierArgs extends io.pulumi.resources.Resou
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
-
         public Builder classification(String classification) {
             this.classification = Output.of(Objects.requireNonNull(classification));
             return this;
         }
-
         public Builder rowTag(Output<String> rowTag) {
             this.rowTag = Objects.requireNonNull(rowTag);
             return this;
         }
-
         public Builder rowTag(String rowTag) {
             this.rowTag = Output.of(Objects.requireNonNull(rowTag));
             return this;
-        }
-        public ClassifierXmlClassifierArgs build() {
+        }        public ClassifierXmlClassifierArgs build() {
             return new ClassifierXmlClassifierArgs(classification, rowTag);
         }
     }

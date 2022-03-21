@@ -159,72 +159,64 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
             this.cloudwatchDestinations = cloudwatchDestinations;
             return this;
         }
-
         public Builder cloudwatchDestinations(@Nullable List<EventDestinationCloudwatchDestinationArgs> cloudwatchDestinations) {
             this.cloudwatchDestinations = Output.ofNullable(cloudwatchDestinations);
             return this;
         }
-
+        public Builder cloudwatchDestinations(EventDestinationCloudwatchDestinationArgs... cloudwatchDestinations) {
+            return cloudwatchDestinations(List.of(cloudwatchDestinations));
+        }
         public Builder configurationSetName(Output<String> configurationSetName) {
             this.configurationSetName = Objects.requireNonNull(configurationSetName);
             return this;
         }
-
         public Builder configurationSetName(String configurationSetName) {
             this.configurationSetName = Output.of(Objects.requireNonNull(configurationSetName));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder kinesisDestination(@Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination) {
             this.kinesisDestination = kinesisDestination;
             return this;
         }
-
         public Builder kinesisDestination(@Nullable EventDestinationKinesisDestinationArgs kinesisDestination) {
             this.kinesisDestination = Output.ofNullable(kinesisDestination);
             return this;
         }
-
         public Builder matchingTypes(Output<List<String>> matchingTypes) {
             this.matchingTypes = Objects.requireNonNull(matchingTypes);
             return this;
         }
-
         public Builder matchingTypes(List<String> matchingTypes) {
             this.matchingTypes = Output.of(Objects.requireNonNull(matchingTypes));
             return this;
         }
-
+        public Builder matchingTypes(String... matchingTypes) {
+            return matchingTypes(List.of(matchingTypes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder snsDestination(@Nullable Output<EventDestinationSnsDestinationArgs> snsDestination) {
             this.snsDestination = snsDestination;
             return this;
         }
-
         public Builder snsDestination(@Nullable EventDestinationSnsDestinationArgs snsDestination) {
             this.snsDestination = Output.ofNullable(snsDestination);
             return this;
-        }
-        public EventDestinationArgs build() {
+        }        public EventDestinationArgs build() {
             return new EventDestinationArgs(cloudwatchDestinations, configurationSetName, enabled, kinesisDestination, matchingTypes, name, snsDestination);
         }
     }

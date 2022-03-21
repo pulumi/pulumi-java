@@ -69,12 +69,10 @@ public final class WorkforceCognitoConfig {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder userPool(String userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
-        }
-        public WorkforceCognitoConfig build() {
+        }        public WorkforceCognitoConfig build() {
             return new WorkforceCognitoConfig(clientId, userPool);
         }
     }

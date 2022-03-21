@@ -141,62 +141,50 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable Map<String,String> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
         public Builder crawlerName(@Nullable Output<String> crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
-
         public Builder crawlerName(@Nullable String crawlerName) {
             this.crawlerName = Output.ofNullable(crawlerName);
             return this;
         }
-
         public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
-
         public Builder jobName(@Nullable String jobName) {
             this.jobName = Output.ofNullable(jobName);
             return this;
         }
-
         public Builder notificationProperty(@Nullable Output<TriggerActionNotificationPropertyArgs> notificationProperty) {
             this.notificationProperty = notificationProperty;
             return this;
         }
-
         public Builder notificationProperty(@Nullable TriggerActionNotificationPropertyArgs notificationProperty) {
             this.notificationProperty = Output.ofNullable(notificationProperty);
             return this;
         }
-
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
-
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public TriggerActionArgs build() {
+        }        public TriggerActionArgs build() {
             return new TriggerActionArgs(arguments, crawlerName, jobName, notificationProperty, securityConfiguration, timeout);
         }
     }

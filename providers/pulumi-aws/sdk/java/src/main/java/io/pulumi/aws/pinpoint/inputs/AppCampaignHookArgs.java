@@ -90,32 +90,26 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
             this.lambdaFunctionName = lambdaFunctionName;
             return this;
         }
-
         public Builder lambdaFunctionName(@Nullable String lambdaFunctionName) {
             this.lambdaFunctionName = Output.ofNullable(lambdaFunctionName);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder webUrl(@Nullable Output<String> webUrl) {
             this.webUrl = webUrl;
             return this;
         }
-
         public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = Output.ofNullable(webUrl);
             return this;
-        }
-        public AppCampaignHookArgs build() {
+        }        public AppCampaignHookArgs build() {
             return new AppCampaignHookArgs(lambdaFunctionName, mode, webUrl);
         }
     }

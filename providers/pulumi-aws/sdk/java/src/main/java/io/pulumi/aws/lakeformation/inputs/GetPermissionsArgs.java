@@ -159,37 +159,30 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogResource(@Nullable Boolean catalogResource) {
             this.catalogResource = catalogResource;
             return this;
         }
-
         public Builder dataLocation(@Nullable GetPermissionsDataLocation dataLocation) {
             this.dataLocation = dataLocation;
             return this;
         }
-
         public Builder database(@Nullable GetPermissionsDatabase database) {
             this.database = database;
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder table(@Nullable GetPermissionsTable table) {
             this.table = table;
             return this;
         }
-
         public Builder tableWithColumns(@Nullable GetPermissionsTableWithColumns tableWithColumns) {
             this.tableWithColumns = tableWithColumns;
             return this;
-        }
-        public GetPermissionsArgs build() {
+        }        public GetPermissionsArgs build() {
             return new GetPermissionsArgs(catalogId, catalogResource, dataLocation, database, principal, table, tableWithColumns);
         }
     }

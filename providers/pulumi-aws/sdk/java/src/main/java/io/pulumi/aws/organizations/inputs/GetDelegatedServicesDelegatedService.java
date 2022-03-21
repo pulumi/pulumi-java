@@ -72,12 +72,10 @@ public final class GetDelegatedServicesDelegatedService extends io.pulumi.resour
             this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
             return this;
         }
-
         public Builder servicePrincipal(String servicePrincipal) {
             this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
             return this;
-        }
-        public GetDelegatedServicesDelegatedService build() {
+        }        public GetDelegatedServicesDelegatedService build() {
             return new GetDelegatedServicesDelegatedService(delegationEnabledDate, servicePrincipal);
         }
     }

@@ -204,102 +204,82 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder automaticStopTimeMinutes(@Nullable Output<Integer> automaticStopTimeMinutes) {
             this.automaticStopTimeMinutes = automaticStopTimeMinutes;
             return this;
         }
-
         public Builder automaticStopTimeMinutes(@Nullable Integer automaticStopTimeMinutes) {
             this.automaticStopTimeMinutes = Output.ofNullable(automaticStopTimeMinutes);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerArn(@Nullable Output<String> ownerArn) {
             this.ownerArn = ownerArn;
             return this;
         }
-
         public Builder ownerArn(@Nullable String ownerArn) {
             this.ownerArn = Output.ofNullable(ownerArn);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public EnvironmentEC2State build() {
+        }        public EnvironmentEC2State build() {
             return new EnvironmentEC2State(arn, automaticStopTimeMinutes, description, instanceType, name, ownerArn, subnetId, tags, tagsAll, type);
         }
     }

@@ -126,52 +126,45 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
-
         public Builder encryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationArgs> encryptionConfigurations) {
             this.encryptionConfigurations = Output.ofNullable(encryptionConfigurations);
             return this;
         }
-
+        public Builder encryptionConfigurations(RepositoryEncryptionConfigurationArgs... encryptionConfigurations) {
+            return encryptionConfigurations(List.of(encryptionConfigurations));
+        }
         public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
-
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
             this.imageScanningConfiguration = Output.ofNullable(imageScanningConfiguration);
             return this;
         }
-
         public Builder imageTagMutability(@Nullable Output<String> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
-
         public Builder imageTagMutability(@Nullable String imageTagMutability) {
             this.imageTagMutability = Output.ofNullable(imageTagMutability);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RepositoryArgs build() {
+        }        public RepositoryArgs build() {
             return new RepositoryArgs(encryptionConfigurations, imageScanningConfiguration, imageTagMutability, name, tags);
         }
     }

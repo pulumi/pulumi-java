@@ -157,72 +157,58 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
-
         public Builder blueprintId(Output<String> blueprintId) {
             this.blueprintId = Objects.requireNonNull(blueprintId);
             return this;
         }
-
         public Builder blueprintId(String blueprintId) {
             this.blueprintId = Output.of(Objects.requireNonNull(blueprintId));
             return this;
         }
-
         public Builder bundleId(Output<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder bundleId(String bundleId) {
             this.bundleId = Output.of(Objects.requireNonNull(bundleId));
             return this;
         }
-
         public Builder keyPairName(@Nullable Output<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
-
         public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = Output.ofNullable(keyPairName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(availabilityZone, blueprintId, bundleId, keyPairName, name, tags, userData);
         }
     }

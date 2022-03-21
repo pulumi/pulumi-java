@@ -232,122 +232,98 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder connectionsBandwidth(@Nullable Output<String> connectionsBandwidth) {
             this.connectionsBandwidth = connectionsBandwidth;
             return this;
         }
-
         public Builder connectionsBandwidth(@Nullable String connectionsBandwidth) {
             this.connectionsBandwidth = Output.ofNullable(connectionsBandwidth);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
             this.hasLogicalRedundancy = hasLogicalRedundancy;
             return this;
         }
-
         public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
             this.hasLogicalRedundancy = Output.ofNullable(hasLogicalRedundancy);
             return this;
         }
-
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
-
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
             this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
-
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = Output.ofNullable(ownerAccountId);
             return this;
         }
-
         public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
-
         public Builder providerName(@Nullable String providerName) {
             this.providerName = Output.ofNullable(providerName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public LinkAggregationGroupState build() {
+        }        public LinkAggregationGroupState build() {
             return new LinkAggregationGroupState(arn, connectionId, connectionsBandwidth, forceDestroy, hasLogicalRedundancy, jumboFrameCapable, location, name, ownerAccountId, providerName, tags, tagsAll);
         }
     }

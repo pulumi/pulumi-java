@@ -70,12 +70,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder referrerPolicy(String referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy build() {
             return new ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy(override, referrerPolicy);
         }
     }

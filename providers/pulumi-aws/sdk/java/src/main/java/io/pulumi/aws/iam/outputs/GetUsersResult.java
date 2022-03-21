@@ -104,27 +104,28 @@ public final class GetUsersResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder nameRegex(@Nullable String nameRegex) {
             this.nameRegex = nameRegex;
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
-        }
-        public GetUsersResult build() {
+        }        public GetUsersResult build() {
             return new GetUsersResult(arns, id, nameRegex, names, pathPrefix);
         }
     }

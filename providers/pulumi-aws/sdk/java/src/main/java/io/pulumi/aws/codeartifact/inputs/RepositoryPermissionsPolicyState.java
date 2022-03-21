@@ -138,62 +138,50 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
-
         public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Output.ofNullable(domainOwner);
             return this;
         }
-
         public Builder policyDocument(@Nullable Output<String> policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public Builder policyDocument(@Nullable String policyDocument) {
             this.policyDocument = Output.ofNullable(policyDocument);
             return this;
         }
-
         public Builder policyRevision(@Nullable Output<String> policyRevision) {
             this.policyRevision = policyRevision;
             return this;
         }
-
         public Builder policyRevision(@Nullable String policyRevision) {
             this.policyRevision = Output.ofNullable(policyRevision);
             return this;
         }
-
         public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = Output.ofNullable(repository);
             return this;
         }
-
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
-        }
-        public RepositoryPermissionsPolicyState build() {
+        }        public RepositoryPermissionsPolicyState build() {
             return new RepositoryPermissionsPolicyState(domain, domainOwner, policyDocument, policyRevision, repository, resourceArn);
         }
     }

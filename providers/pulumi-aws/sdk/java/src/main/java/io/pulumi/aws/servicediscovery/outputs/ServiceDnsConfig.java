@@ -89,17 +89,17 @@ public final class ServiceDnsConfig {
             this.dnsRecords = Objects.requireNonNull(dnsRecords);
             return this;
         }
-
+        public Builder dnsRecords(ServiceDnsConfigDnsRecord... dnsRecords) {
+            return dnsRecords(List.of(dnsRecords));
+        }
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
-
         public Builder routingPolicy(@Nullable String routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
-        }
-        public ServiceDnsConfig build() {
+        }        public ServiceDnsConfig build() {
             return new ServiceDnsConfig(dnsRecords, namespaceId, routingPolicy);
         }
     }

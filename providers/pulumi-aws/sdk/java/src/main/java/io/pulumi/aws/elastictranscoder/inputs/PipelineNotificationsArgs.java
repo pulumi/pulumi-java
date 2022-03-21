@@ -106,42 +106,34 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
             this.completed = completed;
             return this;
         }
-
         public Builder completed(@Nullable String completed) {
             this.completed = Output.ofNullable(completed);
             return this;
         }
-
         public Builder error(@Nullable Output<String> error) {
             this.error = error;
             return this;
         }
-
         public Builder error(@Nullable String error) {
             this.error = Output.ofNullable(error);
             return this;
         }
-
         public Builder progressing(@Nullable Output<String> progressing) {
             this.progressing = progressing;
             return this;
         }
-
         public Builder progressing(@Nullable String progressing) {
             this.progressing = Output.ofNullable(progressing);
             return this;
         }
-
         public Builder warning(@Nullable Output<String> warning) {
             this.warning = warning;
             return this;
         }
-
         public Builder warning(@Nullable String warning) {
             this.warning = Output.ofNullable(warning);
             return this;
-        }
-        public PipelineNotificationsArgs build() {
+        }        public PipelineNotificationsArgs build() {
             return new PipelineNotificationsArgs(completed, error, progressing, warning);
         }
     }

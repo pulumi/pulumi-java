@@ -248,67 +248,54 @@ public final class TaskOptions {
             this.atime = atime;
             return this;
         }
-
         public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
             this.bytesPerSecond = bytesPerSecond;
             return this;
         }
-
         public Builder gid(@Nullable String gid) {
             this.gid = gid;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder mtime(@Nullable String mtime) {
             this.mtime = mtime;
             return this;
         }
-
         public Builder overwriteMode(@Nullable String overwriteMode) {
             this.overwriteMode = overwriteMode;
             return this;
         }
-
         public Builder posixPermissions(@Nullable String posixPermissions) {
             this.posixPermissions = posixPermissions;
             return this;
         }
-
         public Builder preserveDeletedFiles(@Nullable String preserveDeletedFiles) {
             this.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
-
         public Builder preserveDevices(@Nullable String preserveDevices) {
             this.preserveDevices = preserveDevices;
             return this;
         }
-
         public Builder taskQueueing(@Nullable String taskQueueing) {
             this.taskQueueing = taskQueueing;
             return this;
         }
-
         public Builder transferMode(@Nullable String transferMode) {
             this.transferMode = transferMode;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder verifyMode(@Nullable String verifyMode) {
             this.verifyMode = verifyMode;
             return this;
-        }
-        public TaskOptions build() {
+        }        public TaskOptions build() {
             return new TaskOptions(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, taskQueueing, transferMode, uid, verifyMode);
         }
     }

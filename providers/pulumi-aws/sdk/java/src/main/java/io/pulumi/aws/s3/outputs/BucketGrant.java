@@ -104,22 +104,21 @@ public final class BucketGrant {
             this.id = id;
             return this;
         }
-
         public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public BucketGrant build() {
+        }        public BucketGrant build() {
             return new BucketGrant(id, permissions, type, uri);
         }
     }

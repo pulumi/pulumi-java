@@ -152,72 +152,61 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             this.replicationSubnetGroupArn = replicationSubnetGroupArn;
             return this;
         }
-
         public Builder replicationSubnetGroupArn(@Nullable String replicationSubnetGroupArn) {
             this.replicationSubnetGroupArn = Output.ofNullable(replicationSubnetGroupArn);
             return this;
         }
-
         public Builder replicationSubnetGroupDescription(@Nullable Output<String> replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
             return this;
         }
-
         public Builder replicationSubnetGroupDescription(@Nullable String replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = Output.ofNullable(replicationSubnetGroupDescription);
             return this;
         }
-
         public Builder replicationSubnetGroupId(@Nullable Output<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = replicationSubnetGroupId;
             return this;
         }
-
         public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Output.ofNullable(replicationSubnetGroupId);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public ReplicationSubnetGroupState build() {
+        }        public ReplicationSubnetGroupState build() {
             return new ReplicationSubnetGroupState(replicationSubnetGroupArn, replicationSubnetGroupDescription, replicationSubnetGroupId, subnetIds, tags, tagsAll, vpcId);
         }
     }

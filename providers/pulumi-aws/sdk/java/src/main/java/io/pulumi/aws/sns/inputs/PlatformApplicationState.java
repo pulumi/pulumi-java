@@ -234,122 +234,98 @@ public final class PlatformApplicationState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder eventDeliveryFailureTopicArn(@Nullable Output<String> eventDeliveryFailureTopicArn) {
             this.eventDeliveryFailureTopicArn = eventDeliveryFailureTopicArn;
             return this;
         }
-
         public Builder eventDeliveryFailureTopicArn(@Nullable String eventDeliveryFailureTopicArn) {
             this.eventDeliveryFailureTopicArn = Output.ofNullable(eventDeliveryFailureTopicArn);
             return this;
         }
-
         public Builder eventEndpointCreatedTopicArn(@Nullable Output<String> eventEndpointCreatedTopicArn) {
             this.eventEndpointCreatedTopicArn = eventEndpointCreatedTopicArn;
             return this;
         }
-
         public Builder eventEndpointCreatedTopicArn(@Nullable String eventEndpointCreatedTopicArn) {
             this.eventEndpointCreatedTopicArn = Output.ofNullable(eventEndpointCreatedTopicArn);
             return this;
         }
-
         public Builder eventEndpointDeletedTopicArn(@Nullable Output<String> eventEndpointDeletedTopicArn) {
             this.eventEndpointDeletedTopicArn = eventEndpointDeletedTopicArn;
             return this;
         }
-
         public Builder eventEndpointDeletedTopicArn(@Nullable String eventEndpointDeletedTopicArn) {
             this.eventEndpointDeletedTopicArn = Output.ofNullable(eventEndpointDeletedTopicArn);
             return this;
         }
-
         public Builder eventEndpointUpdatedTopicArn(@Nullable Output<String> eventEndpointUpdatedTopicArn) {
             this.eventEndpointUpdatedTopicArn = eventEndpointUpdatedTopicArn;
             return this;
         }
-
         public Builder eventEndpointUpdatedTopicArn(@Nullable String eventEndpointUpdatedTopicArn) {
             this.eventEndpointUpdatedTopicArn = Output.ofNullable(eventEndpointUpdatedTopicArn);
             return this;
         }
-
         public Builder failureFeedbackRoleArn(@Nullable Output<String> failureFeedbackRoleArn) {
             this.failureFeedbackRoleArn = failureFeedbackRoleArn;
             return this;
         }
-
         public Builder failureFeedbackRoleArn(@Nullable String failureFeedbackRoleArn) {
             this.failureFeedbackRoleArn = Output.ofNullable(failureFeedbackRoleArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder platformCredential(@Nullable Output<String> platformCredential) {
             this.platformCredential = platformCredential;
             return this;
         }
-
         public Builder platformCredential(@Nullable String platformCredential) {
             this.platformCredential = Output.ofNullable(platformCredential);
             return this;
         }
-
         public Builder platformPrincipal(@Nullable Output<String> platformPrincipal) {
             this.platformPrincipal = platformPrincipal;
             return this;
         }
-
         public Builder platformPrincipal(@Nullable String platformPrincipal) {
             this.platformPrincipal = Output.ofNullable(platformPrincipal);
             return this;
         }
-
         public Builder successFeedbackRoleArn(@Nullable Output<String> successFeedbackRoleArn) {
             this.successFeedbackRoleArn = successFeedbackRoleArn;
             return this;
         }
-
         public Builder successFeedbackRoleArn(@Nullable String successFeedbackRoleArn) {
             this.successFeedbackRoleArn = Output.ofNullable(successFeedbackRoleArn);
             return this;
         }
-
         public Builder successFeedbackSampleRate(@Nullable Output<String> successFeedbackSampleRate) {
             this.successFeedbackSampleRate = successFeedbackSampleRate;
             return this;
         }
-
         public Builder successFeedbackSampleRate(@Nullable String successFeedbackSampleRate) {
             this.successFeedbackSampleRate = Output.ofNullable(successFeedbackSampleRate);
             return this;
-        }
-        public PlatformApplicationState build() {
+        }        public PlatformApplicationState build() {
             return new PlatformApplicationState(arn, eventDeliveryFailureTopicArn, eventEndpointCreatedTopicArn, eventEndpointDeletedTopicArn, eventEndpointUpdatedTopicArn, failureFeedbackRoleArn, name, platform, platformCredential, platformPrincipal, successFeedbackRoleArn, successFeedbackSampleRate);
         }
     }

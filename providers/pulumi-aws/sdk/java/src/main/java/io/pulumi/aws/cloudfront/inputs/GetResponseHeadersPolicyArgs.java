@@ -74,12 +74,10 @@ public final class GetResponseHeadersPolicyArgs extends io.pulumi.resources.Invo
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetResponseHeadersPolicyArgs build() {
+        }        public GetResponseHeadersPolicyArgs build() {
             return new GetResponseHeadersPolicyArgs(id, name);
         }
     }

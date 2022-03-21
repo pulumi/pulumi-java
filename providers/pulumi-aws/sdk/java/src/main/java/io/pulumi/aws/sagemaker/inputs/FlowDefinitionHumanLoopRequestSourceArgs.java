@@ -56,12 +56,10 @@ public final class FlowDefinitionHumanLoopRequestSourceArgs extends io.pulumi.re
             this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource);
             return this;
         }
-
         public Builder awsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
             this.awsManagedHumanLoopRequestSource = Output.of(Objects.requireNonNull(awsManagedHumanLoopRequestSource));
             return this;
-        }
-        public FlowDefinitionHumanLoopRequestSourceArgs build() {
+        }        public FlowDefinitionHumanLoopRequestSourceArgs build() {
             return new FlowDefinitionHumanLoopRequestSourceArgs(awsManagedHumanLoopRequestSource);
         }
     }

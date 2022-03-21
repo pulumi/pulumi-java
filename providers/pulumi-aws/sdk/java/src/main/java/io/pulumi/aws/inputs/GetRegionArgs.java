@@ -74,12 +74,10 @@ public final class GetRegionArgs extends io.pulumi.resources.InvokeArgs {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetRegionArgs build() {
+        }        public GetRegionArgs build() {
             return new GetRegionArgs(endpoint, name);
         }
     }

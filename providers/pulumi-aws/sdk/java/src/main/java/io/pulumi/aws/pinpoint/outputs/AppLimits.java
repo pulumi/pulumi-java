@@ -103,22 +103,18 @@ public final class AppLimits {
             this.daily = daily;
             return this;
         }
-
         public Builder maximumDuration(@Nullable Integer maximumDuration) {
             this.maximumDuration = maximumDuration;
             return this;
         }
-
         public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
             this.messagesPerSecond = messagesPerSecond;
             return this;
         }
-
         public Builder total(@Nullable Integer total) {
             this.total = total;
             return this;
-        }
-        public AppLimits build() {
+        }        public AppLimits build() {
             return new AppLimits(daily, maximumDuration, messagesPerSecond, total);
         }
     }

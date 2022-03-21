@@ -336,182 +336,152 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
             this.completedAt = completedAt;
             return this;
         }
-
         public Builder completedAt(@Nullable String completedAt) {
             this.completedAt = Output.ofNullable(completedAt);
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder destination(@Nullable Output<SigningJobDestinationGetArgs> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable SigningJobDestinationGetArgs destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder ignoreSigningJobFailure(@Nullable Output<Boolean> ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
-
         public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = Output.ofNullable(ignoreSigningJobFailure);
             return this;
         }
-
         public Builder jobId(@Nullable Output<String> jobId) {
             this.jobId = jobId;
             return this;
         }
-
         public Builder jobId(@Nullable String jobId) {
             this.jobId = Output.ofNullable(jobId);
             return this;
         }
-
         public Builder jobInvoker(@Nullable Output<String> jobInvoker) {
             this.jobInvoker = jobInvoker;
             return this;
         }
-
         public Builder jobInvoker(@Nullable String jobInvoker) {
             this.jobInvoker = Output.ofNullable(jobInvoker);
             return this;
         }
-
         public Builder jobOwner(@Nullable Output<String> jobOwner) {
             this.jobOwner = jobOwner;
             return this;
         }
-
         public Builder jobOwner(@Nullable String jobOwner) {
             this.jobOwner = Output.ofNullable(jobOwner);
             return this;
         }
-
         public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
             this.platformDisplayName = platformDisplayName;
             return this;
         }
-
         public Builder platformDisplayName(@Nullable String platformDisplayName) {
             this.platformDisplayName = Output.ofNullable(platformDisplayName);
             return this;
         }
-
         public Builder platformId(@Nullable Output<String> platformId) {
             this.platformId = platformId;
             return this;
         }
-
         public Builder platformId(@Nullable String platformId) {
             this.platformId = Output.ofNullable(platformId);
             return this;
         }
-
         public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = Output.ofNullable(profileName);
             return this;
         }
-
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
-
         public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = Output.ofNullable(profileVersion);
             return this;
         }
-
         public Builder requestedBy(@Nullable Output<String> requestedBy) {
             this.requestedBy = requestedBy;
             return this;
         }
-
         public Builder requestedBy(@Nullable String requestedBy) {
             this.requestedBy = Output.ofNullable(requestedBy);
             return this;
         }
-
         public Builder revocationRecords(@Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords) {
             this.revocationRecords = revocationRecords;
             return this;
         }
-
         public Builder revocationRecords(@Nullable List<SigningJobRevocationRecordGetArgs> revocationRecords) {
             this.revocationRecords = Output.ofNullable(revocationRecords);
             return this;
         }
-
+        public Builder revocationRecords(SigningJobRevocationRecordGetArgs... revocationRecords) {
+            return revocationRecords(List.of(revocationRecords));
+        }
         public Builder signatureExpiresAt(@Nullable Output<String> signatureExpiresAt) {
             this.signatureExpiresAt = signatureExpiresAt;
             return this;
         }
-
         public Builder signatureExpiresAt(@Nullable String signatureExpiresAt) {
             this.signatureExpiresAt = Output.ofNullable(signatureExpiresAt);
             return this;
         }
-
         public Builder signedObjects(@Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects) {
             this.signedObjects = signedObjects;
             return this;
         }
-
         public Builder signedObjects(@Nullable List<SigningJobSignedObjectGetArgs> signedObjects) {
             this.signedObjects = Output.ofNullable(signedObjects);
             return this;
         }
-
+        public Builder signedObjects(SigningJobSignedObjectGetArgs... signedObjects) {
+            return signedObjects(List.of(signedObjects));
+        }
         public Builder source(@Nullable Output<SigningJobSourceGetArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable SigningJobSourceGetArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder statusReason(@Nullable Output<String> statusReason) {
             this.statusReason = statusReason;
             return this;
         }
-
         public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = Output.ofNullable(statusReason);
             return this;
-        }
-        public SigningJobState build() {
+        }        public SigningJobState build() {
             return new SigningJobState(completedAt, createdAt, destination, ignoreSigningJobFailure, jobId, jobInvoker, jobOwner, platformDisplayName, platformId, profileName, profileVersion, requestedBy, revocationRecords, signatureExpiresAt, signedObjects, source, status, statusReason);
         }
     }

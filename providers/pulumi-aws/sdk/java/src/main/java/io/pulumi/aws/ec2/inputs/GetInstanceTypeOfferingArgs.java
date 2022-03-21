@@ -92,17 +92,20 @@ public final class GetInstanceTypeOfferingArgs extends io.pulumi.resources.Invok
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetInstanceTypeOfferingFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder locationType(@Nullable String locationType) {
             this.locationType = locationType;
             return this;
         }
-
         public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
             this.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
-        public GetInstanceTypeOfferingArgs build() {
+        public Builder preferredInstanceTypes(String... preferredInstanceTypes) {
+            return preferredInstanceTypes(List.of(preferredInstanceTypes));
+        }        public GetInstanceTypeOfferingArgs build() {
             return new GetInstanceTypeOfferingArgs(filters, locationType, preferredInstanceTypes);
         }
     }

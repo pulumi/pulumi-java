@@ -69,12 +69,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension build() {
+        }        public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension build() {
             return new PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension(name, value);
         }
     }

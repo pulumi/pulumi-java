@@ -78,32 +78,26 @@ public final class SigningProfileRevocationRecordGetArgs extends io.pulumi.resou
             this.revocationEffectiveFrom = revocationEffectiveFrom;
             return this;
         }
-
         public Builder revocationEffectiveFrom(@Nullable String revocationEffectiveFrom) {
             this.revocationEffectiveFrom = Output.ofNullable(revocationEffectiveFrom);
             return this;
         }
-
         public Builder revokedAt(@Nullable Output<String> revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
-
         public Builder revokedAt(@Nullable String revokedAt) {
             this.revokedAt = Output.ofNullable(revokedAt);
             return this;
         }
-
         public Builder revokedBy(@Nullable Output<String> revokedBy) {
             this.revokedBy = revokedBy;
             return this;
         }
-
         public Builder revokedBy(@Nullable String revokedBy) {
             this.revokedBy = Output.ofNullable(revokedBy);
             return this;
-        }
-        public SigningProfileRevocationRecordGetArgs build() {
+        }        public SigningProfileRevocationRecordGetArgs build() {
             return new SigningProfileRevocationRecordGetArgs(revocationEffectiveFrom, revokedAt, revokedBy);
         }
     }

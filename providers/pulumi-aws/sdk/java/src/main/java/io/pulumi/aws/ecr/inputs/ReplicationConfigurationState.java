@@ -75,22 +75,18 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
             this.registryId = registryId;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = Output.ofNullable(registryId);
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable ReplicationConfigurationReplicationConfigurationGetArgs replicationConfiguration) {
             this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
             return this;
-        }
-        public ReplicationConfigurationState build() {
+        }        public ReplicationConfigurationState build() {
             return new ReplicationConfigurationState(registryId, replicationConfiguration);
         }
     }

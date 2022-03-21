@@ -90,17 +90,20 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettings {
             this.customImages = customImages;
             return this;
         }
-
+        public Builder customImages(DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage... customImages) {
+            return customImages(List.of(customImages));
+        }
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-        public DomainDefaultUserSettingsKernelGatewayAppSettings build() {
+        public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
+            return lifecycleConfigArns(List.of(lifecycleConfigArns));
+        }        public DomainDefaultUserSettingsKernelGatewayAppSettings build() {
             return new DomainDefaultUserSettingsKernelGatewayAppSettings(customImages, defaultResourceSpec, lifecycleConfigArns);
         }
     }

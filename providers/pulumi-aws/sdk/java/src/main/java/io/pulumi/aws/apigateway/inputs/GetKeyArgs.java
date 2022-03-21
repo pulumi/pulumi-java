@@ -75,12 +75,10 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetKeyArgs build() {
+        }        public GetKeyArgs build() {
             return new GetKeyArgs(id, tags);
         }
     }

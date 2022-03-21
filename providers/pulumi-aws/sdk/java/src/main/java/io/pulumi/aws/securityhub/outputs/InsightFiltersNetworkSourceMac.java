@@ -69,12 +69,10 @@ public final class InsightFiltersNetworkSourceMac {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersNetworkSourceMac build() {
+        }        public InsightFiltersNetworkSourceMac build() {
             return new InsightFiltersNetworkSourceMac(comparison, value);
         }
     }

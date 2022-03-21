@@ -150,37 +150,30 @@ public final class GetUserResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder permissionsBoundary(String permissionsBoundary) {
             this.permissionsBoundary = Objects.requireNonNull(permissionsBoundary);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetUserResult build() {
+        }        public GetUserResult build() {
             return new GetUserResult(arn, id, path, permissionsBoundary, tags, userId, userName);
         }
     }

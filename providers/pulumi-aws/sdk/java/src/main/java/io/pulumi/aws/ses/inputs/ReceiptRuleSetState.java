@@ -74,22 +74,18 @@ public final class ReceiptRuleSetState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
-
         public Builder ruleSetName(@Nullable String ruleSetName) {
             this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
-        }
-        public ReceiptRuleSetState build() {
+        }        public ReceiptRuleSetState build() {
             return new ReceiptRuleSetState(arn, ruleSetName);
         }
     }

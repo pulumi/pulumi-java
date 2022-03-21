@@ -73,12 +73,13 @@ public final class WebAclRuleStatementXssMatchStatement {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementXssMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebAclRuleStatementXssMatchStatement build() {
+        public Builder textTransformations(WebAclRuleStatementXssMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementXssMatchStatement build() {
             return new WebAclRuleStatementXssMatchStatement(fieldToMatch, textTransformations);
         }
     }

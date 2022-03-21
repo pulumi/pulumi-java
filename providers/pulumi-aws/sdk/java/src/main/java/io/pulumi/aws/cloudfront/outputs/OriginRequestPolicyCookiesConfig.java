@@ -56,12 +56,10 @@ public final class OriginRequestPolicyCookiesConfig {
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
-
         public Builder cookies(@Nullable OriginRequestPolicyCookiesConfigCookies cookies) {
             this.cookies = cookies;
             return this;
-        }
-        public OriginRequestPolicyCookiesConfig build() {
+        }        public OriginRequestPolicyCookiesConfig build() {
             return new OriginRequestPolicyCookiesConfig(cookieBehavior, cookies);
         }
     }

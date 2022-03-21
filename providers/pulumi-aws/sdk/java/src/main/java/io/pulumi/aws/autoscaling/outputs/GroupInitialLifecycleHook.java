@@ -104,37 +104,30 @@ public final class GroupInitialLifecycleHook {
             this.defaultResult = defaultResult;
             return this;
         }
-
         public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
-
         public Builder lifecycleTransition(String lifecycleTransition) {
             this.lifecycleTransition = Objects.requireNonNull(lifecycleTransition);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
-
         public Builder notificationTargetArn(@Nullable String notificationTargetArn) {
             this.notificationTargetArn = notificationTargetArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public GroupInitialLifecycleHook build() {
+        }        public GroupInitialLifecycleHook build() {
             return new GroupInitialLifecycleHook(defaultResult, heartbeatTimeout, lifecycleTransition, name, notificationMetadata, notificationTargetArn, roleArn);
         }
     }

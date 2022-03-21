@@ -74,22 +74,18 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttpGetArgs extends i
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
-
         public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Output.of(Objects.requireNonNull(maxConnections));
             return this;
         }
-
         public Builder maxPendingRequests(@Nullable Output<Integer> maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }
-
         public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = Output.ofNullable(maxPendingRequests);
             return this;
-        }
-        public VirtualGatewaySpecListenerConnectionPoolHttpGetArgs build() {
+        }        public VirtualGatewaySpecListenerConnectionPoolHttpGetArgs build() {
             return new VirtualGatewaySpecListenerConnectionPoolHttpGetArgs(maxConnections, maxPendingRequests);
         }
     }

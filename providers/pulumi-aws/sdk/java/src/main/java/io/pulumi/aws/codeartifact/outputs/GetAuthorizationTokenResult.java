@@ -112,32 +112,26 @@ public final class GetAuthorizationTokenResult {
             this.authorizationToken = Objects.requireNonNull(authorizationToken);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domainOwner(String domainOwner) {
             this.domainOwner = Objects.requireNonNull(domainOwner);
             return this;
         }
-
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder expiration(String expiration) {
             this.expiration = Objects.requireNonNull(expiration);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetAuthorizationTokenResult build() {
+        }        public GetAuthorizationTokenResult build() {
             return new GetAuthorizationTokenResult(authorizationToken, domain, domainOwner, durationSeconds, expiration, id);
         }
     }

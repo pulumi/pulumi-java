@@ -73,22 +73,18 @@ public final class ResourceServerScopeArgs extends io.pulumi.resources.ResourceA
             this.scopeDescription = Objects.requireNonNull(scopeDescription);
             return this;
         }
-
         public Builder scopeDescription(String scopeDescription) {
             this.scopeDescription = Output.of(Objects.requireNonNull(scopeDescription));
             return this;
         }
-
         public Builder scopeName(Output<String> scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
-
         public Builder scopeName(String scopeName) {
             this.scopeName = Output.of(Objects.requireNonNull(scopeName));
             return this;
-        }
-        public ResourceServerScopeArgs build() {
+        }        public ResourceServerScopeArgs build() {
             return new ResourceServerScopeArgs(scopeDescription, scopeName);
         }
     }

@@ -109,42 +109,40 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
             this.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
-
         public Builder logDestinationConfigs(@Nullable List<String> logDestinationConfigs) {
             this.logDestinationConfigs = Output.ofNullable(logDestinationConfigs);
             return this;
         }
-
+        public Builder logDestinationConfigs(String... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }
         public Builder loggingFilter(@Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter) {
             this.loggingFilter = loggingFilter;
             return this;
         }
-
         public Builder loggingFilter(@Nullable WebAclLoggingConfigurationLoggingFilterGetArgs loggingFilter) {
             this.loggingFilter = Output.ofNullable(loggingFilter);
             return this;
         }
-
         public Builder redactedFields(@Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
-
         public Builder redactedFields(@Nullable List<WebAclLoggingConfigurationRedactedFieldGetArgs> redactedFields) {
             this.redactedFields = Output.ofNullable(redactedFields);
             return this;
         }
-
+        public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldGetArgs... redactedFields) {
+            return redactedFields(List.of(redactedFields));
+        }
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
-        }
-        public WebAclLoggingConfigurationState build() {
+        }        public WebAclLoggingConfigurationState build() {
             return new WebAclLoggingConfigurationState(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);
         }
     }

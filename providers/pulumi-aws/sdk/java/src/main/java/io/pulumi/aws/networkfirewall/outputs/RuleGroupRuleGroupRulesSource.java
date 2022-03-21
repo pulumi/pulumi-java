@@ -107,22 +107,21 @@ public final class RuleGroupRuleGroupRulesSource {
             this.rulesSourceList = rulesSourceList;
             return this;
         }
-
         public Builder rulesString(@Nullable String rulesString) {
             this.rulesString = rulesString;
             return this;
         }
-
         public Builder statefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
-
+        public Builder statefulRules(RuleGroupRuleGroupRulesSourceStatefulRule... statefulRules) {
+            return statefulRules(List.of(statefulRules));
+        }
         public Builder statelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
-        }
-        public RuleGroupRuleGroupRulesSource build() {
+        }        public RuleGroupRuleGroupRulesSource build() {
             return new RuleGroupRuleGroupRulesSource(rulesSourceList, rulesString, statefulRules, statelessRulesAndCustomActions);
         }
     }

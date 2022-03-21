@@ -144,37 +144,36 @@ public final class GetCodeSigningConfigResult {
             this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
             return this;
         }
-
+        public Builder allowedPublishers(GetCodeSigningConfigAllowedPublisher... allowedPublishers) {
+            return allowedPublishers(List.of(allowedPublishers));
+        }
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder policies(List<GetCodeSigningConfigPolicy> policies) {
             this.policies = Objects.requireNonNull(policies);
             return this;
         }
-        public GetCodeSigningConfigResult build() {
+        public Builder policies(GetCodeSigningConfigPolicy... policies) {
+            return policies(List.of(policies));
+        }        public GetCodeSigningConfigResult build() {
             return new GetCodeSigningConfigResult(allowedPublishers, arn, configId, description, id, lastModified, policies);
         }
     }

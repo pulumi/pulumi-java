@@ -57,8 +57,7 @@ public final class FileSystemAssociationCacheAttributes {
         public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
             this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
-        }
-        public FileSystemAssociationCacheAttributes build() {
+        }        public FileSystemAssociationCacheAttributes build() {
             return new FileSystemAssociationCacheAttributes(cacheStaleTimeoutInSeconds);
         }
     }

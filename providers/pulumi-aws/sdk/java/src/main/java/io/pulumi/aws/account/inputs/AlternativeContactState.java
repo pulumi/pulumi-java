@@ -138,62 +138,50 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder alternateContactType(@Nullable Output<String> alternateContactType) {
             this.alternateContactType = alternateContactType;
             return this;
         }
-
         public Builder alternateContactType(@Nullable String alternateContactType) {
             this.alternateContactType = Output.ofNullable(alternateContactType);
             return this;
         }
-
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
-
         public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = Output.ofNullable(phoneNumber);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public AlternativeContactState build() {
+        }        public AlternativeContactState build() {
             return new AlternativeContactState(accountId, alternateContactType, emailAddress, name, phoneNumber, title);
         }
     }

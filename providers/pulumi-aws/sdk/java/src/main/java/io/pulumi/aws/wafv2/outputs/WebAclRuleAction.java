@@ -89,17 +89,14 @@ public final class WebAclRuleAction {
             this.allow = allow;
             return this;
         }
-
         public Builder block(@Nullable WebAclRuleActionBlock block) {
             this.block = block;
             return this;
         }
-
         public Builder count(@Nullable WebAclRuleActionCount count) {
             this.count = count;
             return this;
-        }
-        public WebAclRuleAction build() {
+        }        public WebAclRuleAction build() {
             return new WebAclRuleAction(allow, block, count);
         }
     }

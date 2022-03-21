@@ -74,22 +74,18 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
             this.accessPolicy = accessPolicy;
             return this;
         }
-
         public Builder accessPolicy(@Nullable String accessPolicy) {
             this.accessPolicy = Output.ofNullable(accessPolicy);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
-        }
-        public DomainServiceAccessPolicyState build() {
+        }        public DomainServiceAccessPolicyState build() {
             return new DomainServiceAccessPolicyState(accessPolicy, domainName);
         }
     }

@@ -51,8 +51,7 @@ public final class AnalyticsApplicationInputsProcessingConfiguration {
         public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
             this.lambda = Objects.requireNonNull(lambda);
             return this;
-        }
-        public AnalyticsApplicationInputsProcessingConfiguration build() {
+        }        public AnalyticsApplicationInputsProcessingConfiguration build() {
             return new AnalyticsApplicationInputsProcessingConfiguration(lambda);
         }
     }

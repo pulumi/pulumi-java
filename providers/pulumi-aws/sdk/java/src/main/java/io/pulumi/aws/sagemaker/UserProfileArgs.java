@@ -140,62 +140,50 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder domainId(String domainId) {
             this.domainId = Output.of(Objects.requireNonNull(domainId));
             return this;
         }
-
         public Builder singleSignOnUserIdentifier(@Nullable Output<String> singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
-
         public Builder singleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = Output.ofNullable(singleSignOnUserIdentifier);
             return this;
         }
-
         public Builder singleSignOnUserValue(@Nullable Output<String> singleSignOnUserValue) {
             this.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
-
         public Builder singleSignOnUserValue(@Nullable String singleSignOnUserValue) {
             this.singleSignOnUserValue = Output.ofNullable(singleSignOnUserValue);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userProfileName(Output<String> userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
         }
-
         public Builder userProfileName(String userProfileName) {
             this.userProfileName = Output.of(Objects.requireNonNull(userProfileName));
             return this;
         }
-
         public Builder userSettings(@Nullable Output<UserProfileUserSettingsArgs> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
-
         public Builder userSettings(@Nullable UserProfileUserSettingsArgs userSettings) {
             this.userSettings = Output.ofNullable(userSettings);
             return this;
-        }
-        public UserProfileArgs build() {
+        }        public UserProfileArgs build() {
             return new UserProfileArgs(domainId, singleSignOnUserIdentifier, singleSignOnUserValue, tags, userProfileName, userSettings);
         }
     }

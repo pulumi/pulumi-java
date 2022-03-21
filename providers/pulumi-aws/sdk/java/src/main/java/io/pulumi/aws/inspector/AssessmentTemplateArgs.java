@@ -125,52 +125,45 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(Integer duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rulesPackageArns(Output<List<String>> rulesPackageArns) {
             this.rulesPackageArns = Objects.requireNonNull(rulesPackageArns);
             return this;
         }
-
         public Builder rulesPackageArns(List<String> rulesPackageArns) {
             this.rulesPackageArns = Output.of(Objects.requireNonNull(rulesPackageArns));
             return this;
         }
-
+        public Builder rulesPackageArns(String... rulesPackageArns) {
+            return rulesPackageArns(List.of(rulesPackageArns));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetArn(Output<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
-
         public Builder targetArn(String targetArn) {
             this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
-        }
-        public AssessmentTemplateArgs build() {
+        }        public AssessmentTemplateArgs build() {
             return new AssessmentTemplateArgs(duration, name, rulesPackageArns, tags, targetArn);
         }
     }

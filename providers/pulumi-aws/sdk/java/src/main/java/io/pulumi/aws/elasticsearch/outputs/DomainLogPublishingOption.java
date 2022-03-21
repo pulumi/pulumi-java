@@ -88,17 +88,14 @@ public final class DomainLogPublishingOption {
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public DomainLogPublishingOption build() {
+        }        public DomainLogPublishingOption build() {
             return new DomainLogPublishingOption(cloudwatchLogGroupArn, enabled, logType);
         }
     }

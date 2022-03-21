@@ -168,47 +168,41 @@ public final class GetMeshResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
-
         public Builder meshOwner(String meshOwner) {
             this.meshOwner = Objects.requireNonNull(meshOwner);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceOwner(String resourceOwner) {
             this.resourceOwner = Objects.requireNonNull(resourceOwner);
             return this;
         }
-
         public Builder specs(List<GetMeshSpec> specs) {
             this.specs = Objects.requireNonNull(specs);
             return this;
         }
-
+        public Builder specs(GetMeshSpec... specs) {
+            return specs(List.of(specs));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetMeshResult build() {
+        }        public GetMeshResult build() {
             return new GetMeshResult(arn, createdDate, id, lastUpdatedDate, meshOwner, name, resourceOwner, specs, tags);
         }
     }

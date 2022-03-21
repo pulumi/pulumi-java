@@ -76,22 +76,24 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
             this.customActions = customActions;
             return this;
         }
-
         public Builder customActions(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs> customActions) {
             this.customActions = Output.ofNullable(customActions);
             return this;
         }
-
+        public Builder customActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs... customActions) {
+            return customActions(List.of(customActions));
+        }
         public Builder statelessRules(Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
-
         public Builder statelessRules(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs> statelessRules) {
             this.statelessRules = Output.of(Objects.requireNonNull(statelessRules));
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs build() {
+        public Builder statelessRules(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs... statelessRules) {
+            return statelessRules(List.of(statelessRules));
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs(customActions, statelessRules);
         }
     }

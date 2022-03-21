@@ -319,172 +319,150 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             this.appSources = appSources;
             return this;
         }
-
         public Builder appSources(@Nullable List<ApplicationAppSourceGetArgs> appSources) {
             this.appSources = Output.ofNullable(appSources);
             return this;
         }
-
+        public Builder appSources(ApplicationAppSourceGetArgs... appSources) {
+            return appSources(List.of(appSources));
+        }
         public Builder autoBundleOnDeploy(@Nullable Output<String> autoBundleOnDeploy) {
             this.autoBundleOnDeploy = autoBundleOnDeploy;
             return this;
         }
-
         public Builder autoBundleOnDeploy(@Nullable String autoBundleOnDeploy) {
             this.autoBundleOnDeploy = Output.ofNullable(autoBundleOnDeploy);
             return this;
         }
-
         public Builder awsFlowRubySettings(@Nullable Output<String> awsFlowRubySettings) {
             this.awsFlowRubySettings = awsFlowRubySettings;
             return this;
         }
-
         public Builder awsFlowRubySettings(@Nullable String awsFlowRubySettings) {
             this.awsFlowRubySettings = Output.ofNullable(awsFlowRubySettings);
             return this;
         }
-
         public Builder dataSourceArn(@Nullable Output<String> dataSourceArn) {
             this.dataSourceArn = dataSourceArn;
             return this;
         }
-
         public Builder dataSourceArn(@Nullable String dataSourceArn) {
             this.dataSourceArn = Output.ofNullable(dataSourceArn);
             return this;
         }
-
         public Builder dataSourceDatabaseName(@Nullable Output<String> dataSourceDatabaseName) {
             this.dataSourceDatabaseName = dataSourceDatabaseName;
             return this;
         }
-
         public Builder dataSourceDatabaseName(@Nullable String dataSourceDatabaseName) {
             this.dataSourceDatabaseName = Output.ofNullable(dataSourceDatabaseName);
             return this;
         }
-
         public Builder dataSourceType(@Nullable Output<String> dataSourceType) {
             this.dataSourceType = dataSourceType;
             return this;
         }
-
         public Builder dataSourceType(@Nullable String dataSourceType) {
             this.dataSourceType = Output.ofNullable(dataSourceType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentRoot(@Nullable Output<String> documentRoot) {
             this.documentRoot = documentRoot;
             return this;
         }
-
         public Builder documentRoot(@Nullable String documentRoot) {
             this.documentRoot = Output.ofNullable(documentRoot);
             return this;
         }
-
         public Builder domains(@Nullable Output<List<String>> domains) {
             this.domains = domains;
             return this;
         }
-
         public Builder domains(@Nullable List<String> domains) {
             this.domains = Output.ofNullable(domains);
             return this;
         }
-
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }
         public Builder enableSsl(@Nullable Output<Boolean> enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
-
         public Builder enableSsl(@Nullable Boolean enableSsl) {
             this.enableSsl = Output.ofNullable(enableSsl);
             return this;
         }
-
         public Builder environments(@Nullable Output<List<ApplicationEnvironmentGetArgs>> environments) {
             this.environments = environments;
             return this;
         }
-
         public Builder environments(@Nullable List<ApplicationEnvironmentGetArgs> environments) {
             this.environments = Output.ofNullable(environments);
             return this;
         }
-
+        public Builder environments(ApplicationEnvironmentGetArgs... environments) {
+            return environments(List.of(environments));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder railsEnv(@Nullable Output<String> railsEnv) {
             this.railsEnv = railsEnv;
             return this;
         }
-
         public Builder railsEnv(@Nullable String railsEnv) {
             this.railsEnv = Output.ofNullable(railsEnv);
             return this;
         }
-
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
         }
-
         public Builder sslConfigurations(@Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations) {
             this.sslConfigurations = sslConfigurations;
             return this;
         }
-
         public Builder sslConfigurations(@Nullable List<ApplicationSslConfigurationGetArgs> sslConfigurations) {
             this.sslConfigurations = Output.ofNullable(sslConfigurations);
             return this;
         }
-
+        public Builder sslConfigurations(ApplicationSslConfigurationGetArgs... sslConfigurations) {
+            return sslConfigurations(List.of(sslConfigurations));
+        }
         public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
-
         public Builder stackId(@Nullable String stackId) {
             this.stackId = Output.ofNullable(stackId);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ApplicationState build() {
+        }        public ApplicationState build() {
             return new ApplicationState(appSources, autoBundleOnDeploy, awsFlowRubySettings, dataSourceArn, dataSourceDatabaseName, dataSourceType, description, documentRoot, domains, enableSsl, environments, name, railsEnv, shortName, sslConfigurations, stackId, type);
         }
     }

@@ -72,12 +72,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
             this.awsKmsKeyId = awsKmsKeyId;
             return this;
         }
-
         public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
             this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
             return this;
-        }
-        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption build() {
+        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption build() {
             return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption(awsKmsKeyId, returnConnectionPasswordEncrypted);
         }
     }

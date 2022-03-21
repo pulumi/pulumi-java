@@ -86,17 +86,14 @@ public final class DataSourceParametersMariaDb {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersMariaDb build() {
+        }        public DataSourceParametersMariaDb build() {
             return new DataSourceParametersMariaDb(database, host, port);
         }
     }

@@ -90,17 +90,20 @@ public final class DeploymentGroupLoadBalancerInfo {
             this.elbInfos = elbInfos;
             return this;
         }
-
+        public Builder elbInfos(DeploymentGroupLoadBalancerInfoElbInfo... elbInfos) {
+            return elbInfos(List.of(elbInfos));
+        }
         public Builder targetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos) {
             this.targetGroupInfos = targetGroupInfos;
             return this;
         }
-
+        public Builder targetGroupInfos(DeploymentGroupLoadBalancerInfoTargetGroupInfo... targetGroupInfos) {
+            return targetGroupInfos(List.of(targetGroupInfos));
+        }
         public Builder targetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
             this.targetGroupPairInfo = targetGroupPairInfo;
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfo build() {
+        }        public DeploymentGroupLoadBalancerInfo build() {
             return new DeploymentGroupLoadBalancerInfo(elbInfos, targetGroupInfos, targetGroupPairInfo);
         }
     }

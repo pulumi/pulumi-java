@@ -69,12 +69,10 @@ public final class InsightFiltersResourceRegion {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceRegion build() {
+        }        public InsightFiltersResourceRegion build() {
             return new InsightFiltersResourceRegion(comparison, value);
         }
     }

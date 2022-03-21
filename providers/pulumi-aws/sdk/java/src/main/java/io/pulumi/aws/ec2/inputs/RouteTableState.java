@@ -157,72 +157,64 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
-
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
             this.propagatingVgws = Output.ofNullable(propagatingVgws);
             return this;
         }
-
+        public Builder propagatingVgws(String... propagatingVgws) {
+            return propagatingVgws(List.of(propagatingVgws));
+        }
         public Builder routes(@Nullable Output<List<RouteTableRouteGetArgs>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<RouteTableRouteGetArgs> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
+        public Builder routes(RouteTableRouteGetArgs... routes) {
+            return routes(List.of(routes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public RouteTableState build() {
+        }        public RouteTableState build() {
             return new RouteTableState(arn, ownerId, propagatingVgws, routes, tags, tagsAll, vpcId);
         }
     }

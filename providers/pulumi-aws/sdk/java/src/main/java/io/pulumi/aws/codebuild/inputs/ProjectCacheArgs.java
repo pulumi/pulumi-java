@@ -91,32 +91,29 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder modes(@Nullable Output<List<String>> modes) {
             this.modes = modes;
             return this;
         }
-
         public Builder modes(@Nullable List<String> modes) {
             this.modes = Output.ofNullable(modes);
             return this;
         }
-
+        public Builder modes(String... modes) {
+            return modes(List.of(modes));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ProjectCacheArgs build() {
+        }        public ProjectCacheArgs build() {
             return new ProjectCacheArgs(location, modes, type);
         }
     }

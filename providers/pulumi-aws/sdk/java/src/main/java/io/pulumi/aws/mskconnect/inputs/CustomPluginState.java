@@ -156,72 +156,58 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder latestRevision(@Nullable Integer latestRevision) {
             this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
-
         public Builder location(@Nullable Output<CustomPluginLocationGetArgs> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable CustomPluginLocationGetArgs location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public CustomPluginState build() {
+        }        public CustomPluginState build() {
             return new CustomPluginState(arn, contentType, description, latestRevision, location, name, state);
         }
     }

@@ -72,12 +72,10 @@ public final class SchedulingPolicyFairSharePolicyShareDistribution {
             this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
             return this;
         }
-
         public Builder weightFactor(@Nullable Double weightFactor) {
             this.weightFactor = weightFactor;
             return this;
-        }
-        public SchedulingPolicyFairSharePolicyShareDistribution build() {
+        }        public SchedulingPolicyFairSharePolicyShareDistribution build() {
             return new SchedulingPolicyFairSharePolicyShareDistribution(shareIdentifier, weightFactor);
         }
     }

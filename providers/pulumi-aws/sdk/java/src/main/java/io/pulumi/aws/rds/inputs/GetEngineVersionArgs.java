@@ -107,22 +107,21 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder parameterGroupFamily(@Nullable String parameterGroupFamily) {
             this.parameterGroupFamily = parameterGroupFamily;
             return this;
         }
-
         public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             this.preferredVersions = preferredVersions;
             return this;
         }
-
+        public Builder preferredVersions(String... preferredVersions) {
+            return preferredVersions(List.of(preferredVersions));
+        }
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetEngineVersionArgs build() {
+        }        public GetEngineVersionArgs build() {
             return new GetEngineVersionArgs(engine, parameterGroupFamily, preferredVersions, version);
         }
     }

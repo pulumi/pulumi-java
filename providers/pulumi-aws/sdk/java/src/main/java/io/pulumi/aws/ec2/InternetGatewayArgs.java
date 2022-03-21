@@ -75,22 +75,18 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public InternetGatewayArgs build() {
+        }        public InternetGatewayArgs build() {
             return new InternetGatewayArgs(tags, vpcId);
         }
     }

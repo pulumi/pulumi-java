@@ -109,42 +109,34 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
             this.apiKey = apiKey;
             return this;
         }
-
         public Builder apiKey(@Nullable EventConnectionAuthParametersApiKeyArgs apiKey) {
             this.apiKey = Output.ofNullable(apiKey);
             return this;
         }
-
         public Builder basic(@Nullable Output<EventConnectionAuthParametersBasicArgs> basic) {
             this.basic = basic;
             return this;
         }
-
         public Builder basic(@Nullable EventConnectionAuthParametersBasicArgs basic) {
             this.basic = Output.ofNullable(basic);
             return this;
         }
-
         public Builder invocationHttpParameters(@Nullable Output<EventConnectionAuthParametersInvocationHttpParametersArgs> invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
-
         public Builder invocationHttpParameters(@Nullable EventConnectionAuthParametersInvocationHttpParametersArgs invocationHttpParameters) {
             this.invocationHttpParameters = Output.ofNullable(invocationHttpParameters);
             return this;
         }
-
         public Builder oauth(@Nullable Output<EventConnectionAuthParametersOauthArgs> oauth) {
             this.oauth = oauth;
             return this;
         }
-
         public Builder oauth(@Nullable EventConnectionAuthParametersOauthArgs oauth) {
             this.oauth = Output.ofNullable(oauth);
             return this;
-        }
-        public EventConnectionAuthParametersArgs build() {
+        }        public EventConnectionAuthParametersArgs build() {
             return new EventConnectionAuthParametersArgs(apiKey, basic, invocationHttpParameters, oauth);
         }
     }

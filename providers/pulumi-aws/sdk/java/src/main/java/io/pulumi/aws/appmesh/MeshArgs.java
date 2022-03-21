@@ -92,32 +92,26 @@ public final class MeshArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder spec(@Nullable Output<MeshSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable MeshSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MeshArgs build() {
+        }        public MeshArgs build() {
             return new MeshArgs(name, spec, tags);
         }
     }

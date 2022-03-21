@@ -90,17 +90,14 @@ public final class GetConstraintArgs extends io.pulumi.resources.InvokeArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetConstraintArgs build() {
+        }        public GetConstraintArgs build() {
             return new GetConstraintArgs(acceptLanguage, description, id);
         }
     }

@@ -91,17 +91,17 @@ public final class GetOutpostInstanceTypeArgs extends io.pulumi.resources.Invoke
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
             this.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
-        public GetOutpostInstanceTypeArgs build() {
+        public Builder preferredInstanceTypes(String... preferredInstanceTypes) {
+            return preferredInstanceTypes(List.of(preferredInstanceTypes));
+        }        public GetOutpostInstanceTypeArgs build() {
             return new GetOutpostInstanceTypeArgs(arn, instanceType, preferredInstanceTypes);
         }
     }

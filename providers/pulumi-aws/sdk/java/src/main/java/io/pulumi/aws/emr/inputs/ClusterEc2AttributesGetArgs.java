@@ -187,92 +187,77 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
             this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
             return this;
         }
-
         public Builder additionalMasterSecurityGroups(@Nullable String additionalMasterSecurityGroups) {
             this.additionalMasterSecurityGroups = Output.ofNullable(additionalMasterSecurityGroups);
             return this;
         }
-
         public Builder additionalSlaveSecurityGroups(@Nullable Output<String> additionalSlaveSecurityGroups) {
             this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
             return this;
         }
-
         public Builder additionalSlaveSecurityGroups(@Nullable String additionalSlaveSecurityGroups) {
             this.additionalSlaveSecurityGroups = Output.ofNullable(additionalSlaveSecurityGroups);
             return this;
         }
-
         public Builder emrManagedMasterSecurityGroup(@Nullable Output<String> emrManagedMasterSecurityGroup) {
             this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
             return this;
         }
-
         public Builder emrManagedMasterSecurityGroup(@Nullable String emrManagedMasterSecurityGroup) {
             this.emrManagedMasterSecurityGroup = Output.ofNullable(emrManagedMasterSecurityGroup);
             return this;
         }
-
         public Builder emrManagedSlaveSecurityGroup(@Nullable Output<String> emrManagedSlaveSecurityGroup) {
             this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
             return this;
         }
-
         public Builder emrManagedSlaveSecurityGroup(@Nullable String emrManagedSlaveSecurityGroup) {
             this.emrManagedSlaveSecurityGroup = Output.ofNullable(emrManagedSlaveSecurityGroup);
             return this;
         }
-
         public Builder instanceProfile(Output<String> instanceProfile) {
             this.instanceProfile = Objects.requireNonNull(instanceProfile);
             return this;
         }
-
         public Builder instanceProfile(String instanceProfile) {
             this.instanceProfile = Output.of(Objects.requireNonNull(instanceProfile));
             return this;
         }
-
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder serviceAccessSecurityGroup(@Nullable Output<String> serviceAccessSecurityGroup) {
             this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
             return this;
         }
-
         public Builder serviceAccessSecurityGroup(@Nullable String serviceAccessSecurityGroup) {
             this.serviceAccessSecurityGroup = Output.ofNullable(serviceAccessSecurityGroup);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-        public ClusterEc2AttributesGetArgs build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public ClusterEc2AttributesGetArgs build() {
             return new ClusterEc2AttributesGetArgs(additionalMasterSecurityGroups, additionalSlaveSecurityGroups, emrManagedMasterSecurityGroup, emrManagedSlaveSecurityGroup, instanceProfile, keyName, serviceAccessSecurityGroup, subnetId, subnetIds);
         }
     }

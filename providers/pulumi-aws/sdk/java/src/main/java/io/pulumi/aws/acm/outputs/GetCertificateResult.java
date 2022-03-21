@@ -146,47 +146,47 @@ public final class GetCertificateResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyTypes(@Nullable List<String> keyTypes) {
             this.keyTypes = keyTypes;
             return this;
         }
-
+        public Builder keyTypes(String... keyTypes) {
+            return keyTypes(List.of(keyTypes));
+        }
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statuses(@Nullable List<String> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(String... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder types(@Nullable List<String> types) {
             this.types = types;
             return this;
         }
-        public GetCertificateResult build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(arn, domain, id, keyTypes, mostRecent, status, statuses, tags, types);
         }
     }

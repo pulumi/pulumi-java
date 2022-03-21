@@ -51,8 +51,7 @@ public final class DetectorDatasourcesS3Logs {
         public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
-        }
-        public DetectorDatasourcesS3Logs build() {
+        }        public DetectorDatasourcesS3Logs build() {
             return new DetectorDatasourcesS3Logs(enable);
         }
     }

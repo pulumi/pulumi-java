@@ -75,22 +75,18 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsArgs exte
             this.minutes = minutes;
             return this;
         }
-
         public Builder minutes(@Nullable Integer minutes) {
             this.minutes = Output.ofNullable(minutes);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public BucketReplicationConfigurationRuleDestinationMetricsArgs build() {
+        }        public BucketReplicationConfigurationRuleDestinationMetricsArgs build() {
             return new BucketReplicationConfigurationRuleDestinationMetricsArgs(minutes, status);
         }
     }

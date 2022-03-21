@@ -89,17 +89,14 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetVpcCidrBlockAssociation build() {
+        }        public GetVpcCidrBlockAssociation build() {
             return new GetVpcCidrBlockAssociation(associationId, cidrBlock, state);
         }
     }

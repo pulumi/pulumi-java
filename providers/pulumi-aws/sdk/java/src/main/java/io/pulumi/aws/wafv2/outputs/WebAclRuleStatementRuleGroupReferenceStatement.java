@@ -72,12 +72,13 @@ public final class WebAclRuleStatementRuleGroupReferenceStatement {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder excludedRules(@Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
-        public WebAclRuleStatementRuleGroupReferenceStatement build() {
+        public Builder excludedRules(WebAclRuleStatementRuleGroupReferenceStatementExcludedRule... excludedRules) {
+            return excludedRules(List.of(excludedRules));
+        }        public WebAclRuleStatementRuleGroupReferenceStatement build() {
             return new WebAclRuleStatementRuleGroupReferenceStatement(arn, excludedRules);
         }
     }

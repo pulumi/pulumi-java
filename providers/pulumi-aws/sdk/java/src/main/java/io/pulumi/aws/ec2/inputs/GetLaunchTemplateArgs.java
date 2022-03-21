@@ -109,22 +109,21 @@ public final class GetLaunchTemplateArgs extends io.pulumi.resources.InvokeArgs 
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLaunchTemplateFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetLaunchTemplateArgs build() {
+        }        public GetLaunchTemplateArgs build() {
             return new GetLaunchTemplateArgs(filters, id, name, tags);
         }
     }

@@ -107,42 +107,34 @@ public final class ProjectLogsConfigS3LogsGetArgs extends io.pulumi.resources.Re
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
-
         public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = Output.ofNullable(bucketOwnerAccess);
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ProjectLogsConfigS3LogsGetArgs build() {
+        }        public ProjectLogsConfigS3LogsGetArgs build() {
             return new ProjectLogsConfigS3LogsGetArgs(bucketOwnerAccess, encryptionDisabled, location, status);
         }
     }

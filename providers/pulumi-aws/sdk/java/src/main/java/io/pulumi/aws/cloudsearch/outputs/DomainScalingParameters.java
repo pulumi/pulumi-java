@@ -88,17 +88,14 @@ public final class DomainScalingParameters {
             this.desiredInstanceType = desiredInstanceType;
             return this;
         }
-
         public Builder desiredPartitionCount(@Nullable Integer desiredPartitionCount) {
             this.desiredPartitionCount = desiredPartitionCount;
             return this;
         }
-
         public Builder desiredReplicationCount(@Nullable Integer desiredReplicationCount) {
             this.desiredReplicationCount = desiredReplicationCount;
             return this;
-        }
-        public DomainScalingParameters build() {
+        }        public DomainScalingParameters build() {
             return new DomainScalingParameters(desiredInstanceType, desiredPartitionCount, desiredReplicationCount);
         }
     }

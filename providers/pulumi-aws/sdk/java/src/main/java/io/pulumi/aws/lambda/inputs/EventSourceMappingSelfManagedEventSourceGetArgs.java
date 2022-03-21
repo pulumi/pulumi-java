@@ -57,12 +57,10 @@ public final class EventSourceMappingSelfManagedEventSourceGetArgs extends io.pu
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Output.of(Objects.requireNonNull(endpoints));
             return this;
-        }
-        public EventSourceMappingSelfManagedEventSourceGetArgs build() {
+        }        public EventSourceMappingSelfManagedEventSourceGetArgs build() {
             return new EventSourceMappingSelfManagedEventSourceGetArgs(endpoints);
         }
     }

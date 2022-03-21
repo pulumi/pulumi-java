@@ -120,27 +120,22 @@ public final class DirectoryWorkspaceCreationProperties {
             this.customSecurityGroupId = customSecurityGroupId;
             return this;
         }
-
         public Builder defaultOu(@Nullable String defaultOu) {
             this.defaultOu = defaultOu;
             return this;
         }
-
         public Builder enableInternetAccess(@Nullable Boolean enableInternetAccess) {
             this.enableInternetAccess = enableInternetAccess;
             return this;
         }
-
         public Builder enableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
             this.enableMaintenanceMode = enableMaintenanceMode;
             return this;
         }
-
         public Builder userEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
             return this;
-        }
-        public DirectoryWorkspaceCreationProperties build() {
+        }        public DirectoryWorkspaceCreationProperties build() {
             return new DirectoryWorkspaceCreationProperties(customSecurityGroupId, defaultOu, enableInternetAccess, enableMaintenanceMode, userEnabledAsLocalAdministrator);
         }
     }

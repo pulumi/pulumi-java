@@ -87,17 +87,14 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplate
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification build() {
+        }        public GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification build() {
             return new GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification(launchTemplateId, launchTemplateName, version);
         }
     }

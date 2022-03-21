@@ -107,42 +107,34 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
-
         public Builder hashKey(String hashKey) {
             this.hashKey = Output.of(Objects.requireNonNull(hashKey));
             return this;
         }
-
         public Builder item(Output<String> item) {
             this.item = Objects.requireNonNull(item);
             return this;
         }
-
         public Builder item(String item) {
             this.item = Output.of(Objects.requireNonNull(item));
             return this;
         }
-
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
-
         public Builder rangeKey(@Nullable String rangeKey) {
             this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public TableItemArgs build() {
+        }        public TableItemArgs build() {
             return new TableItemArgs(hashKey, item, rangeKey, tableName);
         }
     }

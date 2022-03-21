@@ -74,22 +74,18 @@ public final class RouteSpecHttp2RouteActionWeightedTargetArgs extends io.pulumi
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
-
         public Builder virtualNode(String virtualNode) {
             this.virtualNode = Output.of(Objects.requireNonNull(virtualNode));
             return this;
         }
-
         public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
-        }
-        public RouteSpecHttp2RouteActionWeightedTargetArgs build() {
+        }        public RouteSpecHttp2RouteActionWeightedTargetArgs build() {
             return new RouteSpecHttp2RouteActionWeightedTargetArgs(virtualNode, weight);
         }
     }

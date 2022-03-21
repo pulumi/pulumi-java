@@ -86,32 +86,26 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = Output.ofNullable(registryId);
             return this;
         }
-
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Output.ofNullable(repositoryName);
             return this;
-        }
-        public RepositoryPolicyState build() {
+        }        public RepositoryPolicyState build() {
             return new RepositoryPolicyState(policy, registryId, repositoryName);
         }
     }

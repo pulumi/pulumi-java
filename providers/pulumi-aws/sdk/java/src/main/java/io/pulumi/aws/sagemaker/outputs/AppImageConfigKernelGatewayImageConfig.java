@@ -72,12 +72,10 @@ public final class AppImageConfigKernelGatewayImageConfig {
             this.fileSystemConfig = fileSystemConfig;
             return this;
         }
-
         public Builder kernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
             this.kernelSpec = Objects.requireNonNull(kernelSpec);
             return this;
-        }
-        public AppImageConfigKernelGatewayImageConfig build() {
+        }        public AppImageConfigKernelGatewayImageConfig build() {
             return new AppImageConfigKernelGatewayImageConfig(fileSystemConfig, kernelSpec);
         }
     }

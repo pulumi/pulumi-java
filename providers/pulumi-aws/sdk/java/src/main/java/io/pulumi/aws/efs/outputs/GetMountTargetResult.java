@@ -240,72 +240,61 @@ public final class GetMountTargetResult {
             this.accessPointId = accessPointId;
             return this;
         }
-
         public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
-
         public Builder availabilityZoneName(String availabilityZoneName) {
             this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder fileSystemArn(String fileSystemArn) {
             this.fileSystemArn = Objects.requireNonNull(fileSystemArn);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder mountTargetDnsName(String mountTargetDnsName) {
             this.mountTargetDnsName = Objects.requireNonNull(mountTargetDnsName);
             return this;
         }
-
         public Builder mountTargetId(String mountTargetId) {
             this.mountTargetId = Objects.requireNonNull(mountTargetId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public GetMountTargetResult build() {
+        }        public GetMountTargetResult build() {
             return new GetMountTargetResult(accessPointId, availabilityZoneId, availabilityZoneName, dnsName, fileSystemArn, fileSystemId, id, ipAddress, mountTargetDnsName, mountTargetId, networkInterfaceId, ownerId, securityGroups, subnetId);
         }
     }

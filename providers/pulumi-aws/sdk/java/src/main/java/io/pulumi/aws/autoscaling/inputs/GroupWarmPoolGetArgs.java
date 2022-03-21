@@ -91,32 +91,26 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
             this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
-
         public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = Output.ofNullable(maxGroupPreparedCapacity);
             return this;
         }
-
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder poolState(@Nullable Output<String> poolState) {
             this.poolState = poolState;
             return this;
         }
-
         public Builder poolState(@Nullable String poolState) {
             this.poolState = Output.ofNullable(poolState);
             return this;
-        }
-        public GroupWarmPoolGetArgs build() {
+        }        public GroupWarmPoolGetArgs build() {
             return new GroupWarmPoolGetArgs(maxGroupPreparedCapacity, minSize, poolState);
         }
     }

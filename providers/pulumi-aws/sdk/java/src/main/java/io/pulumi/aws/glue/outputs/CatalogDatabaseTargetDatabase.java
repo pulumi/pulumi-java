@@ -69,12 +69,10 @@ public final class CatalogDatabaseTargetDatabase {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
-        }
-        public CatalogDatabaseTargetDatabase build() {
+        }        public CatalogDatabaseTargetDatabase build() {
             return new CatalogDatabaseTargetDatabase(catalogId, databaseName);
         }
     }

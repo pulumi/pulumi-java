@@ -56,12 +56,10 @@ public final class RecordLatencyRoutingPolicyArgs extends io.pulumi.resources.Re
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
-        }
-        public RecordLatencyRoutingPolicyArgs build() {
+        }        public RecordLatencyRoutingPolicyArgs build() {
             return new RecordLatencyRoutingPolicyArgs(region);
         }
     }

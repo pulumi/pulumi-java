@@ -75,22 +75,18 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transitGatewayId(Output<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
-
         public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
             return this;
-        }
-        public RouteTableArgs build() {
+        }        public RouteTableArgs build() {
             return new RouteTableArgs(tags, transitGatewayId);
         }
     }

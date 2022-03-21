@@ -70,12 +70,13 @@ public final class GetPolicyDocumentStatementPrincipal {
             this.identifiers = Objects.requireNonNull(identifiers);
             return this;
         }
-
+        public Builder identifiers(String... identifiers) {
+            return identifiers(List.of(identifiers));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPolicyDocumentStatementPrincipal build() {
+        }        public GetPolicyDocumentStatementPrincipal build() {
             return new GetPolicyDocumentStatementPrincipal(identifiers, type);
         }
     }

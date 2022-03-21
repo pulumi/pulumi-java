@@ -143,32 +143,26 @@ public final class AnalyticsApplicationOutput {
             this.id = id;
             return this;
         }
-
         public Builder kinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
-
         public Builder kinesisStream(@Nullable AnalyticsApplicationOutputKinesisStream kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
-
         public Builder lambda(@Nullable AnalyticsApplicationOutputLambda lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schema(AnalyticsApplicationOutputSchema schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
-        }
-        public AnalyticsApplicationOutput build() {
+        }        public AnalyticsApplicationOutput build() {
             return new AnalyticsApplicationOutput(id, kinesisFirehose, kinesisStream, lambda, name, schema);
         }
     }

@@ -107,22 +107,18 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
             this.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetHoursOfOperationArgs build() {
+        }        public GetHoursOfOperationArgs build() {
             return new GetHoursOfOperationArgs(hoursOfOperationId, instanceId, name, tags);
         }
     }

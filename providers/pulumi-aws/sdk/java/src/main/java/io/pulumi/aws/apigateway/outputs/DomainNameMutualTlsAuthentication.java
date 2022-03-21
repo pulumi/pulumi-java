@@ -73,12 +73,10 @@ public final class DomainNameMutualTlsAuthentication {
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }
-
         public Builder truststoreVersion(@Nullable String truststoreVersion) {
             this.truststoreVersion = truststoreVersion;
             return this;
-        }
-        public DomainNameMutualTlsAuthentication build() {
+        }        public DomainNameMutualTlsAuthentication build() {
             return new DomainNameMutualTlsAuthentication(truststoreUri, truststoreVersion);
         }
     }

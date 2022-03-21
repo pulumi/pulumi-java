@@ -72,12 +72,10 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
             this.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
-
         public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
             this.flinkRunConfiguration = flinkRunConfiguration;
             return this;
-        }
-        public ApplicationApplicationConfigurationRunConfiguration build() {
+        }        public ApplicationApplicationConfigurationRunConfiguration build() {
             return new ApplicationApplicationConfigurationRunConfiguration(applicationRestoreConfiguration, flinkRunConfiguration);
         }
     }

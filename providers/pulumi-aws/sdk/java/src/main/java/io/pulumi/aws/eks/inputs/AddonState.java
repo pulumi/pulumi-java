@@ -212,102 +212,82 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             this.addonName = addonName;
             return this;
         }
-
         public Builder addonName(@Nullable String addonName) {
             this.addonName = Output.ofNullable(addonName);
             return this;
         }
-
         public Builder addonVersion(@Nullable Output<String> addonVersion) {
             this.addonVersion = addonVersion;
             return this;
         }
-
         public Builder addonVersion(@Nullable String addonVersion) {
             this.addonVersion = Output.ofNullable(addonVersion);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
-
         public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = Output.ofNullable(modifiedAt);
             return this;
         }
-
         public Builder resolveConflicts(@Nullable Output<String> resolveConflicts) {
             this.resolveConflicts = resolveConflicts;
             return this;
         }
-
         public Builder resolveConflicts(@Nullable String resolveConflicts) {
             this.resolveConflicts = Output.ofNullable(resolveConflicts);
             return this;
         }
-
         public Builder serviceAccountRoleArn(@Nullable Output<String> serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
-
         public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = Output.ofNullable(serviceAccountRoleArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public AddonState build() {
+        }        public AddonState build() {
             return new AddonState(addonName, addonVersion, arn, clusterName, createdAt, modifiedAt, resolveConflicts, serviceAccountRoleArn, tags, tagsAll);
         }
     }

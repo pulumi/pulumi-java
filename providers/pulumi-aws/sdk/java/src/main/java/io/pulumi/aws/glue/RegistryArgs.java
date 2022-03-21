@@ -91,32 +91,26 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RegistryArgs build() {
+        }        public RegistryArgs build() {
             return new RegistryArgs(description, registryName, tags);
         }
     }

@@ -236,62 +236,53 @@ public final class GetCertificateAuthorityResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
-
         public Builder certificateSigningRequest(String certificateSigningRequest) {
             this.certificateSigningRequest = Objects.requireNonNull(certificateSigningRequest);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder notAfter(String notAfter) {
             this.notAfter = Objects.requireNonNull(notAfter);
             return this;
         }
-
         public Builder notBefore(String notBefore) {
             this.notBefore = Objects.requireNonNull(notBefore);
             return this;
         }
-
         public Builder revocationConfigurations(List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations) {
             this.revocationConfigurations = Objects.requireNonNull(revocationConfigurations);
             return this;
         }
-
+        public Builder revocationConfigurations(GetCertificateAuthorityRevocationConfiguration... revocationConfigurations) {
+            return revocationConfigurations(List.of(revocationConfigurations));
+        }
         public Builder serial(String serial) {
             this.serial = Objects.requireNonNull(serial);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCertificateAuthorityResult build() {
+        }        public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(arn, certificate, certificateChain, certificateSigningRequest, id, notAfter, notBefore, revocationConfigurations, serial, status, tags, type);
         }
     }

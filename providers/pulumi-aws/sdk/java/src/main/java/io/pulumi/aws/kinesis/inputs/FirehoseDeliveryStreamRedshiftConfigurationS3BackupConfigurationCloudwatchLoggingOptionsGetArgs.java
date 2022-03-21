@@ -91,32 +91,26 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder logStreamName(@Nullable Output<String> logStreamName) {
             this.logStreamName = logStreamName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = Output.ofNullable(logStreamName);
             return this;
-        }
-        public FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs build() {
+        }        public FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs build() {
             return new FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs(enabled, logGroupName, logStreamName);
         }
     }

@@ -163,72 +163,61 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
-
         public Builder hashKey(String hashKey) {
             this.hashKey = Output.of(Objects.requireNonNull(hashKey));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
             return this;
         }
-
+        public Builder nonKeyAttributes(String... nonKeyAttributes) {
+            return nonKeyAttributes(List.of(nonKeyAttributes));
+        }
         public Builder projectionType(Output<String> projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
-
         public Builder projectionType(String projectionType) {
             this.projectionType = Output.of(Objects.requireNonNull(projectionType));
             return this;
         }
-
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
-
         public Builder rangeKey(@Nullable String rangeKey) {
             this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
-
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
             this.readCapacity = readCapacity;
             return this;
         }
-
         public Builder readCapacity(@Nullable Integer readCapacity) {
             this.readCapacity = Output.ofNullable(readCapacity);
             return this;
         }
-
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
             this.writeCapacity = writeCapacity;
             return this;
         }
-
         public Builder writeCapacity(@Nullable Integer writeCapacity) {
             this.writeCapacity = Output.ofNullable(writeCapacity);
             return this;
-        }
-        public TableGlobalSecondaryIndexGetArgs build() {
+        }        public TableGlobalSecondaryIndexGetArgs build() {
             return new TableGlobalSecondaryIndexGetArgs(hashKey, name, nonKeyAttributes, projectionType, rangeKey, readCapacity, writeCapacity);
         }
     }

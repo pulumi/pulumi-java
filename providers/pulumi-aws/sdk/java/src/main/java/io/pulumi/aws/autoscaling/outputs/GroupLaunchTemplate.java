@@ -87,17 +87,14 @@ public final class GroupLaunchTemplate {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GroupLaunchTemplate build() {
+        }        public GroupLaunchTemplate build() {
             return new GroupLaunchTemplate(id, name, version);
         }
     }

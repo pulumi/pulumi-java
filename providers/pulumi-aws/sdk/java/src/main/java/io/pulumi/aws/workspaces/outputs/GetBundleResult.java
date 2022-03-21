@@ -171,42 +171,43 @@ public final class GetBundleResult {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder computeTypes(List<GetBundleComputeType> computeTypes) {
             this.computeTypes = Objects.requireNonNull(computeTypes);
             return this;
         }
-
+        public Builder computeTypes(GetBundleComputeType... computeTypes) {
+            return computeTypes(List.of(computeTypes));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder rootStorages(List<GetBundleRootStorage> rootStorages) {
             this.rootStorages = Objects.requireNonNull(rootStorages);
             return this;
         }
-
+        public Builder rootStorages(GetBundleRootStorage... rootStorages) {
+            return rootStorages(List.of(rootStorages));
+        }
         public Builder userStorages(List<GetBundleUserStorage> userStorages) {
             this.userStorages = Objects.requireNonNull(userStorages);
             return this;
         }
-        public GetBundleResult build() {
+        public Builder userStorages(GetBundleUserStorage... userStorages) {
+            return userStorages(List.of(userStorages));
+        }        public GetBundleResult build() {
             return new GetBundleResult(bundleId, computeTypes, description, id, name, owner, rootStorages, userStorages);
         }
     }

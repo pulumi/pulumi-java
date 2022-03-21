@@ -159,72 +159,64 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
-
         public Builder directoryId(String directoryId) {
             this.directoryId = Output.of(Objects.requireNonNull(directoryId));
             return this;
         }
-
         public Builder ipGroupIds(@Nullable Output<List<String>> ipGroupIds) {
             this.ipGroupIds = ipGroupIds;
             return this;
         }
-
         public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
             this.ipGroupIds = Output.ofNullable(ipGroupIds);
             return this;
         }
-
+        public Builder ipGroupIds(String... ipGroupIds) {
+            return ipGroupIds(List.of(ipGroupIds));
+        }
         public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions) {
             this.selfServicePermissions = selfServicePermissions;
             return this;
         }
-
         public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsArgs selfServicePermissions) {
             this.selfServicePermissions = Output.ofNullable(selfServicePermissions);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties) {
             this.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
-
         public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesArgs workspaceAccessProperties) {
             this.workspaceAccessProperties = Output.ofNullable(workspaceAccessProperties);
             return this;
         }
-
         public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
             this.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
-
         public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesArgs workspaceCreationProperties) {
             this.workspaceCreationProperties = Output.ofNullable(workspaceCreationProperties);
             return this;
-        }
-        public DirectoryArgs build() {
+        }        public DirectoryArgs build() {
             return new DirectoryArgs(directoryId, ipGroupIds, selfServicePermissions, subnetIds, tags, workspaceAccessProperties, workspaceCreationProperties);
         }
     }

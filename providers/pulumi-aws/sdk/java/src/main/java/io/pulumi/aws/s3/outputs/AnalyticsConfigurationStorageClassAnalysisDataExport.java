@@ -72,12 +72,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder outputSchemaVersion(@Nullable String outputSchemaVersion) {
             this.outputSchemaVersion = outputSchemaVersion;
             return this;
-        }
-        public AnalyticsConfigurationStorageClassAnalysisDataExport build() {
+        }        public AnalyticsConfigurationStorageClassAnalysisDataExport build() {
             return new AnalyticsConfigurationStorageClassAnalysisDataExport(destination, outputSchemaVersion);
         }
     }

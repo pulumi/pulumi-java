@@ -88,17 +88,14 @@ public final class InsightFiltersProcessLaunchedAt {
             this.dateRange = dateRange;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = start;
             return this;
-        }
-        public InsightFiltersProcessLaunchedAt build() {
+        }        public InsightFiltersProcessLaunchedAt build() {
             return new InsightFiltersProcessLaunchedAt(dateRange, end, start);
         }
     }

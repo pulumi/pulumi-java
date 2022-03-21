@@ -88,17 +88,14 @@ public final class ReceiptRuleSnsAction {
             this.encoding = encoding;
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
-        }
-        public ReceiptRuleSnsAction build() {
+        }        public ReceiptRuleSnsAction build() {
             return new ReceiptRuleSnsAction(encoding, position, topicArn);
         }
     }

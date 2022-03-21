@@ -53,7 +53,9 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
             this.listenerArns = Objects.requireNonNull(listenerArns);
             return this;
         }
-        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute build() {
+        public Builder listenerArns(String... listenerArns) {
+            return listenerArns(List.of(listenerArns));
+        }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute(listenerArns);
         }
     }

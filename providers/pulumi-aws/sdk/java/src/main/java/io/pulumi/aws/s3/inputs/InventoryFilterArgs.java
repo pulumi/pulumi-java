@@ -57,12 +57,10 @@ public final class InventoryFilterArgs extends io.pulumi.resources.ResourceArgs 
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public InventoryFilterArgs build() {
+        }        public InventoryFilterArgs build() {
             return new InventoryFilterArgs(prefix);
         }
     }

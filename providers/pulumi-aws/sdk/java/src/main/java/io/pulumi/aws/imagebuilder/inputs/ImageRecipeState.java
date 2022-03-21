@@ -270,142 +270,120 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-
         public Builder blockDeviceMappings(@Nullable List<ImageRecipeBlockDeviceMappingGetArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
-
+        public Builder blockDeviceMappings(ImageRecipeBlockDeviceMappingGetArgs... blockDeviceMappings) {
+            return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
         public Builder components(@Nullable Output<List<ImageRecipeComponentGetArgs>> components) {
             this.components = components;
             return this;
         }
-
         public Builder components(@Nullable List<ImageRecipeComponentGetArgs> components) {
             this.components = Output.ofNullable(components);
             return this;
         }
-
+        public Builder components(ImageRecipeComponentGetArgs... components) {
+            return components(List.of(components));
+        }
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
-
         public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Output.ofNullable(dateCreated);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder parentImage(@Nullable Output<String> parentImage) {
             this.parentImage = parentImage;
             return this;
         }
-
         public Builder parentImage(@Nullable String parentImage) {
             this.parentImage = Output.ofNullable(parentImage);
             return this;
         }
-
         public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
             this.userDataBase64 = userDataBase64;
             return this;
         }
-
         public Builder userDataBase64(@Nullable String userDataBase64) {
             this.userDataBase64 = Output.ofNullable(userDataBase64);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
-        }
-        public ImageRecipeState build() {
+        }        public ImageRecipeState build() {
             return new ImageRecipeState(arn, blockDeviceMappings, components, dateCreated, description, name, owner, parentImage, platform, tags, tagsAll, userDataBase64, version, workingDirectory);
         }
     }

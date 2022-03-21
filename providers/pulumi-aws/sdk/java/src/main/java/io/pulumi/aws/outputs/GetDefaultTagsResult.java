@@ -70,12 +70,10 @@ public final class GetDefaultTagsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetDefaultTagsResult build() {
+        }        public GetDefaultTagsResult build() {
             return new GetDefaultTagsResult(id, tags);
         }
     }

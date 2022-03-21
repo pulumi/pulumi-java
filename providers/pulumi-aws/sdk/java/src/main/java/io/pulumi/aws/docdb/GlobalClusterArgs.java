@@ -144,72 +144,58 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder globalClusterIdentifier(Output<String> globalClusterIdentifier) {
             this.globalClusterIdentifier = Objects.requireNonNull(globalClusterIdentifier);
             return this;
         }
-
         public Builder globalClusterIdentifier(String globalClusterIdentifier) {
             this.globalClusterIdentifier = Output.of(Objects.requireNonNull(globalClusterIdentifier));
             return this;
         }
-
         public Builder sourceDbClusterIdentifier(@Nullable Output<String> sourceDbClusterIdentifier) {
             this.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
             return this;
         }
-
         public Builder sourceDbClusterIdentifier(@Nullable String sourceDbClusterIdentifier) {
             this.sourceDbClusterIdentifier = Output.ofNullable(sourceDbClusterIdentifier);
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
-        }
-        public GlobalClusterArgs build() {
+        }        public GlobalClusterArgs build() {
             return new GlobalClusterArgs(databaseName, deletionProtection, engine, engineVersion, globalClusterIdentifier, sourceDbClusterIdentifier, storageEncrypted);
         }
     }

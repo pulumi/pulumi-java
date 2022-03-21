@@ -121,42 +121,40 @@ public final class GetOrderableDbInstanceResult {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder engine(@Nullable String engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceClass(String instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
-
         public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
-
         public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
             this.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
-
+        public Builder preferredInstanceClasses(String... preferredInstanceClasses) {
+            return preferredInstanceClasses(List.of(preferredInstanceClasses));
+        }
         public Builder vpc(Boolean vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
-        }
-        public GetOrderableDbInstanceResult build() {
+        }        public GetOrderableDbInstanceResult build() {
             return new GetOrderableDbInstanceResult(availabilityZones, engine, engineVersion, id, instanceClass, licenseModel, preferredInstanceClasses, vpc);
         }
     }

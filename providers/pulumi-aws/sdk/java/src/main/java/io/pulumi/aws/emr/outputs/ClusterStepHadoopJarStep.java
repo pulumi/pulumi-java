@@ -105,22 +105,21 @@ public final class ClusterStepHadoopJarStep {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder jar(String jar) {
             this.jar = Objects.requireNonNull(jar);
             return this;
         }
-
         public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = mainClass;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
-        }
-        public ClusterStepHadoopJarStep build() {
+        }        public ClusterStepHadoopJarStep build() {
             return new ClusterStepHadoopJarStep(args, jar, mainClass, properties);
         }
     }

@@ -57,12 +57,13 @@ public final class WorkforceSourceIpConfigGetArgs extends io.pulumi.resources.Re
             this.cidrs = Objects.requireNonNull(cidrs);
             return this;
         }
-
         public Builder cidrs(List<String> cidrs) {
             this.cidrs = Output.of(Objects.requireNonNull(cidrs));
             return this;
         }
-        public WorkforceSourceIpConfigGetArgs build() {
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }        public WorkforceSourceIpConfigGetArgs build() {
             return new WorkforceSourceIpConfigGetArgs(cidrs);
         }
     }

@@ -87,17 +87,14 @@ public final class FileSystemSizeInByte {
             this.value = value;
             return this;
         }
-
         public Builder valueInIa(@Nullable Integer valueInIa) {
             this.valueInIa = valueInIa;
             return this;
         }
-
         public Builder valueInStandard(@Nullable Integer valueInStandard) {
             this.valueInStandard = valueInStandard;
             return this;
-        }
-        public FileSystemSizeInByte build() {
+        }        public FileSystemSizeInByte build() {
             return new FileSystemSizeInByte(value, valueInIa, valueInStandard);
         }
     }

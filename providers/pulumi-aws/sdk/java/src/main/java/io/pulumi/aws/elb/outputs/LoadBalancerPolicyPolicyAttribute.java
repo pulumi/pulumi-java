@@ -55,12 +55,10 @@ public final class LoadBalancerPolicyPolicyAttribute {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public LoadBalancerPolicyPolicyAttribute build() {
+        }        public LoadBalancerPolicyPolicyAttribute build() {
             return new LoadBalancerPolicyPolicyAttribute(name, value);
         }
     }

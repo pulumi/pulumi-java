@@ -74,22 +74,18 @@ public final class DistributionDefaultCacheBehaviorFunctionAssociationArgs exten
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder eventType(String eventType) {
             this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
-
         public Builder functionArn(Output<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder functionArn(String functionArn) {
             this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
-        }
-        public DistributionDefaultCacheBehaviorFunctionAssociationArgs build() {
+        }        public DistributionDefaultCacheBehaviorFunctionAssociationArgs build() {
             return new DistributionDefaultCacheBehaviorFunctionAssociationArgs(eventType, functionArn);
         }
     }

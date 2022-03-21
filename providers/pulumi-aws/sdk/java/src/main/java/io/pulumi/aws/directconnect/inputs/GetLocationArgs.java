@@ -54,8 +54,7 @@ public final class GetLocationArgs extends io.pulumi.resources.InvokeArgs {
         public Builder locationCode(String locationCode) {
             this.locationCode = Objects.requireNonNull(locationCode);
             return this;
-        }
-        public GetLocationArgs build() {
+        }        public GetLocationArgs build() {
             return new GetLocationArgs(locationCode);
         }
     }

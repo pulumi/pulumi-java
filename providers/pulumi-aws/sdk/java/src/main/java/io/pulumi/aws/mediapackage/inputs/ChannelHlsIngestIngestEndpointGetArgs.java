@@ -90,32 +90,26 @@ public final class ChannelHlsIngestIngestEndpointGetArgs extends io.pulumi.resou
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public ChannelHlsIngestIngestEndpointGetArgs build() {
+        }        public ChannelHlsIngestIngestEndpointGetArgs build() {
             return new ChannelHlsIngestIngestEndpointGetArgs(password, url, username);
         }
     }

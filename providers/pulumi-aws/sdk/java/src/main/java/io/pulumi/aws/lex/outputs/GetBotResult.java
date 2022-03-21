@@ -314,87 +314,70 @@ public final class GetBotResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
-
         public Builder childDirected(Boolean childDirected) {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder detectSentiment(Boolean detectSentiment) {
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
         }
-
         public Builder enableModelImprovements(Boolean enableModelImprovements) {
             this.enableModelImprovements = Objects.requireNonNull(enableModelImprovements);
             return this;
         }
-
         public Builder failureReason(String failureReason) {
             this.failureReason = Objects.requireNonNull(failureReason);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder idleSessionTtlInSeconds(Integer idleSessionTtlInSeconds) {
             this.idleSessionTtlInSeconds = Objects.requireNonNull(idleSessionTtlInSeconds);
             return this;
         }
-
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
-
         public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
             this.nluIntentConfidenceThreshold = Objects.requireNonNull(nluIntentConfidenceThreshold);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
-
         public Builder voiceId(String voiceId) {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
-        }
-        public GetBotResult build() {
+        }        public GetBotResult build() {
             return new GetBotResult(arn, checksum, childDirected, createdDate, description, detectSentiment, enableModelImprovements, failureReason, id, idleSessionTtlInSeconds, lastUpdatedDate, locale, name, nluIntentConfidenceThreshold, status, version, voiceId);
         }
     }

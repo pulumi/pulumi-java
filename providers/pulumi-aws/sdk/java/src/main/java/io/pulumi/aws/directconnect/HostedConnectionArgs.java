@@ -123,52 +123,42 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
-
         public Builder bandwidth(String bandwidth) {
             this.bandwidth = Output.of(Objects.requireNonNull(bandwidth));
             return this;
         }
-
         public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder connectionId(String connectionId) {
             this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerAccountId(Output<String> ownerAccountId) {
             this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
             return this;
         }
-
         public Builder ownerAccountId(String ownerAccountId) {
             this.ownerAccountId = Output.of(Objects.requireNonNull(ownerAccountId));
             return this;
         }
-
         public Builder vlan(Output<Integer> vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }
-
         public Builder vlan(Integer vlan) {
             this.vlan = Output.of(Objects.requireNonNull(vlan));
             return this;
-        }
-        public HostedConnectionArgs build() {
+        }        public HostedConnectionArgs build() {
             return new HostedConnectionArgs(bandwidth, connectionId, name, ownerAccountId, vlan);
         }
     }

@@ -90,17 +90,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.input = input;
             return this;
         }
-
         public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs) {
             this.outputs = outputs;
             return this;
         }
-
+        public Builder outputs(ApplicationApplicationConfigurationSqlApplicationConfigurationOutput... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
             this.referenceDataSource = referenceDataSource;
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfiguration build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfiguration build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfiguration(input, outputs, referenceDataSource);
         }
     }

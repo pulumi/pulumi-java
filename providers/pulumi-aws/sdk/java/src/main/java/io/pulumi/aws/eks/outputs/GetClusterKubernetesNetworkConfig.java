@@ -61,12 +61,10 @@ public final class GetClusterKubernetesNetworkConfig {
             this.ipFamily = Objects.requireNonNull(ipFamily);
             return this;
         }
-
         public Builder serviceIpv4Cidr(String serviceIpv4Cidr) {
             this.serviceIpv4Cidr = Objects.requireNonNull(serviceIpv4Cidr);
             return this;
-        }
-        public GetClusterKubernetesNetworkConfig build() {
+        }        public GetClusterKubernetesNetworkConfig build() {
             return new GetClusterKubernetesNetworkConfig(ipFamily, serviceIpv4Cidr);
         }
     }

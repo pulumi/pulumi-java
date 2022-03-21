@@ -56,12 +56,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }
-
         public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs(recordFormatType);
         }
     }

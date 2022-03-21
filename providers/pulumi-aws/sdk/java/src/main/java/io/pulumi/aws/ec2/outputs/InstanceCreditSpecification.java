@@ -53,8 +53,7 @@ public final class InstanceCreditSpecification {
         public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = cpuCredits;
             return this;
-        }
-        public InstanceCreditSpecification build() {
+        }        public InstanceCreditSpecification build() {
             return new InstanceCreditSpecification(cpuCredits);
         }
     }

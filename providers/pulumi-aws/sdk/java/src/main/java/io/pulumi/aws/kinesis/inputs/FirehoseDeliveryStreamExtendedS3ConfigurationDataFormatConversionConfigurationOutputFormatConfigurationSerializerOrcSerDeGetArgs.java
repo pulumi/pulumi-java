@@ -206,102 +206,85 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
-
         public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
             this.blockSizeBytes = Output.ofNullable(blockSizeBytes);
             return this;
         }
-
         public Builder bloomFilterColumns(@Nullable Output<List<String>> bloomFilterColumns) {
             this.bloomFilterColumns = bloomFilterColumns;
             return this;
         }
-
         public Builder bloomFilterColumns(@Nullable List<String> bloomFilterColumns) {
             this.bloomFilterColumns = Output.ofNullable(bloomFilterColumns);
             return this;
         }
-
+        public Builder bloomFilterColumns(String... bloomFilterColumns) {
+            return bloomFilterColumns(List.of(bloomFilterColumns));
+        }
         public Builder bloomFilterFalsePositiveProbability(@Nullable Output<Double> bloomFilterFalsePositiveProbability) {
             this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
             return this;
         }
-
         public Builder bloomFilterFalsePositiveProbability(@Nullable Double bloomFilterFalsePositiveProbability) {
             this.bloomFilterFalsePositiveProbability = Output.ofNullable(bloomFilterFalsePositiveProbability);
             return this;
         }
-
         public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder dictionaryKeyThreshold(@Nullable Output<Double> dictionaryKeyThreshold) {
             this.dictionaryKeyThreshold = dictionaryKeyThreshold;
             return this;
         }
-
         public Builder dictionaryKeyThreshold(@Nullable Double dictionaryKeyThreshold) {
             this.dictionaryKeyThreshold = Output.ofNullable(dictionaryKeyThreshold);
             return this;
         }
-
         public Builder enablePadding(@Nullable Output<Boolean> enablePadding) {
             this.enablePadding = enablePadding;
             return this;
         }
-
         public Builder enablePadding(@Nullable Boolean enablePadding) {
             this.enablePadding = Output.ofNullable(enablePadding);
             return this;
         }
-
         public Builder formatVersion(@Nullable Output<String> formatVersion) {
             this.formatVersion = formatVersion;
             return this;
         }
-
         public Builder formatVersion(@Nullable String formatVersion) {
             this.formatVersion = Output.ofNullable(formatVersion);
             return this;
         }
-
         public Builder paddingTolerance(@Nullable Output<Double> paddingTolerance) {
             this.paddingTolerance = paddingTolerance;
             return this;
         }
-
         public Builder paddingTolerance(@Nullable Double paddingTolerance) {
             this.paddingTolerance = Output.ofNullable(paddingTolerance);
             return this;
         }
-
         public Builder rowIndexStride(@Nullable Output<Integer> rowIndexStride) {
             this.rowIndexStride = rowIndexStride;
             return this;
         }
-
         public Builder rowIndexStride(@Nullable Integer rowIndexStride) {
             this.rowIndexStride = Output.ofNullable(rowIndexStride);
             return this;
         }
-
         public Builder stripeSizeBytes(@Nullable Output<Integer> stripeSizeBytes) {
             this.stripeSizeBytes = stripeSizeBytes;
             return this;
         }
-
         public Builder stripeSizeBytes(@Nullable Integer stripeSizeBytes) {
             this.stripeSizeBytes = Output.ofNullable(stripeSizeBytes);
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeGetArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeGetArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeGetArgs(blockSizeBytes, bloomFilterColumns, bloomFilterFalsePositiveProbability, compression, dictionaryKeyThreshold, enablePadding, formatVersion, paddingTolerance, rowIndexStride, stripeSizeBytes);
         }
     }

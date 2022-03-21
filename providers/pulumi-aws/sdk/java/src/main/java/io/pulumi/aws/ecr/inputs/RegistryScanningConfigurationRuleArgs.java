@@ -75,22 +75,21 @@ public final class RegistryScanningConfigurationRuleArgs extends io.pulumi.resou
             this.repositoryFilters = Objects.requireNonNull(repositoryFilters);
             return this;
         }
-
         public Builder repositoryFilters(List<RegistryScanningConfigurationRuleRepositoryFilterArgs> repositoryFilters) {
             this.repositoryFilters = Output.of(Objects.requireNonNull(repositoryFilters));
             return this;
         }
-
+        public Builder repositoryFilters(RegistryScanningConfigurationRuleRepositoryFilterArgs... repositoryFilters) {
+            return repositoryFilters(List.of(repositoryFilters));
+        }
         public Builder scanFrequency(Output<String> scanFrequency) {
             this.scanFrequency = Objects.requireNonNull(scanFrequency);
             return this;
         }
-
         public Builder scanFrequency(String scanFrequency) {
             this.scanFrequency = Output.of(Objects.requireNonNull(scanFrequency));
             return this;
-        }
-        public RegistryScanningConfigurationRuleArgs build() {
+        }        public RegistryScanningConfigurationRuleArgs build() {
             return new RegistryScanningConfigurationRuleArgs(repositoryFilters, scanFrequency);
         }
     }

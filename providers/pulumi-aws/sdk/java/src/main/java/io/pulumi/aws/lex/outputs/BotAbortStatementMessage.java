@@ -90,17 +90,14 @@ public final class BotAbortStatementMessage {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = groupNumber;
             return this;
-        }
-        public BotAbortStatementMessage build() {
+        }        public BotAbortStatementMessage build() {
             return new BotAbortStatementMessage(content, contentType, groupNumber);
         }
     }

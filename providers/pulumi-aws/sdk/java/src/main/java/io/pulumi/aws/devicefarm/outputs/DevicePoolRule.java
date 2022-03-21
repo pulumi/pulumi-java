@@ -87,17 +87,14 @@ public final class DevicePoolRule {
             this.attribute = attribute;
             return this;
         }
-
         public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DevicePoolRule build() {
+        }        public DevicePoolRule build() {
             return new DevicePoolRule(attribute, operator, value);
         }
     }

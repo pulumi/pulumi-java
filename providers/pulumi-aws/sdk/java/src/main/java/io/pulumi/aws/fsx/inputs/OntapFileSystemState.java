@@ -411,232 +411,201 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
-
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
             return this;
         }
-
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
-
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
-
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = Output.ofNullable(deploymentType);
             return this;
         }
-
         public Builder diskIopsConfiguration(@Nullable Output<OntapFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration) {
             this.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
-
         public Builder diskIopsConfiguration(@Nullable OntapFileSystemDiskIopsConfigurationGetArgs diskIopsConfiguration) {
             this.diskIopsConfiguration = Output.ofNullable(diskIopsConfiguration);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder endpointIpAddressRange(@Nullable Output<String> endpointIpAddressRange) {
             this.endpointIpAddressRange = endpointIpAddressRange;
             return this;
         }
-
         public Builder endpointIpAddressRange(@Nullable String endpointIpAddressRange) {
             this.endpointIpAddressRange = Output.ofNullable(endpointIpAddressRange);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<OntapFileSystemEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<OntapFileSystemEndpointGetArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(OntapFileSystemEndpointGetArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder fsxAdminPassword(@Nullable Output<String> fsxAdminPassword) {
             this.fsxAdminPassword = fsxAdminPassword;
             return this;
         }
-
         public Builder fsxAdminPassword(@Nullable String fsxAdminPassword) {
             this.fsxAdminPassword = Output.ofNullable(fsxAdminPassword);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder networkInterfaceIds(@Nullable Output<List<String>> networkInterfaceIds) {
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
-
         public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
             this.networkInterfaceIds = Output.ofNullable(networkInterfaceIds);
             return this;
         }
-
+        public Builder networkInterfaceIds(String... networkInterfaceIds) {
+            return networkInterfaceIds(List.of(networkInterfaceIds));
+        }
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder preferredSubnetId(@Nullable Output<String> preferredSubnetId) {
             this.preferredSubnetId = preferredSubnetId;
             return this;
         }
-
         public Builder preferredSubnetId(@Nullable String preferredSubnetId) {
             this.preferredSubnetId = Output.ofNullable(preferredSubnetId);
             return this;
         }
-
         public Builder routeTableIds(@Nullable Output<List<String>> routeTableIds) {
             this.routeTableIds = routeTableIds;
             return this;
         }
-
         public Builder routeTableIds(@Nullable List<String> routeTableIds) {
             this.routeTableIds = Output.ofNullable(routeTableIds);
             return this;
         }
-
+        public Builder routeTableIds(String... routeTableIds) {
+            return routeTableIds(List.of(routeTableIds));
+        }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
-
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
             this.storageCapacity = Output.ofNullable(storageCapacity);
             return this;
         }
-
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder throughputCapacity(@Nullable Output<Integer> throughputCapacity) {
             this.throughputCapacity = throughputCapacity;
             return this;
         }
-
         public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
             this.throughputCapacity = Output.ofNullable(throughputCapacity);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
-
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
-
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
             return this;
-        }
-        public OntapFileSystemState build() {
+        }        public OntapFileSystemState build() {
             return new OntapFileSystemState(arn, automaticBackupRetentionDays, dailyAutomaticBackupStartTime, deploymentType, diskIopsConfiguration, dnsName, endpointIpAddressRange, endpoints, fsxAdminPassword, kmsKeyId, networkInterfaceIds, ownerId, preferredSubnetId, routeTableIds, securityGroupIds, storageCapacity, storageType, subnetIds, tags, tagsAll, throughputCapacity, vpcId, weeklyMaintenanceStartTime);
         }
     }

@@ -196,92 +196,77 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
-
         public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder inputs(@Nullable Output<AnalyticsApplicationInputsArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable AnalyticsApplicationInputsArgs inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<AnalyticsApplicationOutputArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(AnalyticsApplicationOutputArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder referenceDataSources(@Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources) {
             this.referenceDataSources = referenceDataSources;
             return this;
         }
-
         public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
             this.referenceDataSources = Output.ofNullable(referenceDataSources);
             return this;
         }
-
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
-
         public Builder startApplication(@Nullable Boolean startApplication) {
             this.startApplication = Output.ofNullable(startApplication);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AnalyticsApplicationArgs build() {
+        }        public AnalyticsApplicationArgs build() {
             return new AnalyticsApplicationArgs(cloudwatchLoggingOptions, code, description, inputs, name, outputs, referenceDataSources, startApplication, tags);
         }
     }

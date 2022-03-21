@@ -89,22 +89,24 @@ public final class GetCoipPoolsResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetCoipPoolsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder poolIds(List<String> poolIds) {
             this.poolIds = Objects.requireNonNull(poolIds);
             return this;
         }
-
+        public Builder poolIds(String... poolIds) {
+            return poolIds(List.of(poolIds));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetCoipPoolsResult build() {
+        }        public GetCoipPoolsResult build() {
             return new GetCoipPoolsResult(filters, id, poolIds, tags);
         }
     }

@@ -87,17 +87,14 @@ public final class AssociationOutputLocation {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3Region(@Nullable String s3Region) {
             this.s3Region = s3Region;
             return this;
-        }
-        public AssociationOutputLocation build() {
+        }        public AssociationOutputLocation build() {
             return new AssociationOutputLocation(s3BucketName, s3KeyPrefix, s3Region);
         }
     }

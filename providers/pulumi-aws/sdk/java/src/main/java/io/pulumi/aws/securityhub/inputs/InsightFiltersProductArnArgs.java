@@ -73,22 +73,18 @@ public final class InsightFiltersProductArnArgs extends io.pulumi.resources.Reso
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder comparison(String comparison) {
             this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public InsightFiltersProductArnArgs build() {
+        }        public InsightFiltersProductArnArgs build() {
             return new InsightFiltersProductArnArgs(comparison, value);
         }
     }

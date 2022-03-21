@@ -350,192 +350,163 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             this.allocatedStorage = allocatedStorage;
             return this;
         }
-
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
             this.allocatedStorage = Output.ofNullable(allocatedStorage);
             return this;
         }
-
         public Builder allowMajorVersionUpgrade(@Nullable Output<Boolean> allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
             return this;
         }
-
         public Builder allowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = Output.ofNullable(allowMajorVersionUpgrade);
             return this;
         }
-
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
-
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
-
         public Builder multiAz(@Nullable Boolean multiAz) {
             this.multiAz = Output.ofNullable(multiAz);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
-
         public Builder replicationInstanceArn(@Nullable Output<String> replicationInstanceArn) {
             this.replicationInstanceArn = replicationInstanceArn;
             return this;
         }
-
         public Builder replicationInstanceArn(@Nullable String replicationInstanceArn) {
             this.replicationInstanceArn = Output.ofNullable(replicationInstanceArn);
             return this;
         }
-
         public Builder replicationInstanceClass(@Nullable Output<String> replicationInstanceClass) {
             this.replicationInstanceClass = replicationInstanceClass;
             return this;
         }
-
         public Builder replicationInstanceClass(@Nullable String replicationInstanceClass) {
             this.replicationInstanceClass = Output.ofNullable(replicationInstanceClass);
             return this;
         }
-
         public Builder replicationInstanceId(@Nullable Output<String> replicationInstanceId) {
             this.replicationInstanceId = replicationInstanceId;
             return this;
         }
-
         public Builder replicationInstanceId(@Nullable String replicationInstanceId) {
             this.replicationInstanceId = Output.ofNullable(replicationInstanceId);
             return this;
         }
-
         public Builder replicationInstancePrivateIps(@Nullable Output<List<String>> replicationInstancePrivateIps) {
             this.replicationInstancePrivateIps = replicationInstancePrivateIps;
             return this;
         }
-
         public Builder replicationInstancePrivateIps(@Nullable List<String> replicationInstancePrivateIps) {
             this.replicationInstancePrivateIps = Output.ofNullable(replicationInstancePrivateIps);
             return this;
         }
-
+        public Builder replicationInstancePrivateIps(String... replicationInstancePrivateIps) {
+            return replicationInstancePrivateIps(List.of(replicationInstancePrivateIps));
+        }
         public Builder replicationInstancePublicIps(@Nullable Output<List<String>> replicationInstancePublicIps) {
             this.replicationInstancePublicIps = replicationInstancePublicIps;
             return this;
         }
-
         public Builder replicationInstancePublicIps(@Nullable List<String> replicationInstancePublicIps) {
             this.replicationInstancePublicIps = Output.ofNullable(replicationInstancePublicIps);
             return this;
         }
-
+        public Builder replicationInstancePublicIps(String... replicationInstancePublicIps) {
+            return replicationInstancePublicIps(List.of(replicationInstancePublicIps));
+        }
         public Builder replicationSubnetGroupId(@Nullable Output<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = replicationSubnetGroupId;
             return this;
         }
-
         public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Output.ofNullable(replicationSubnetGroupId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-        public ReplicationInstanceState build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public ReplicationInstanceState build() {
             return new ReplicationInstanceState(allocatedStorage, allowMajorVersionUpgrade, applyImmediately, autoMinorVersionUpgrade, availabilityZone, engineVersion, kmsKeyArn, multiAz, preferredMaintenanceWindow, publiclyAccessible, replicationInstanceArn, replicationInstanceClass, replicationInstanceId, replicationInstancePrivateIps, replicationInstancePublicIps, replicationSubnetGroupId, tags, tagsAll, vpcSecurityGroupIds);
         }
     }

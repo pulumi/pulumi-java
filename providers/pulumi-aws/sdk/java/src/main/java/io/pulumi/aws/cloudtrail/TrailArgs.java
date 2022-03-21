@@ -304,162 +304,139 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
             this.advancedEventSelectors = advancedEventSelectors;
             return this;
         }
-
         public Builder advancedEventSelectors(@Nullable List<TrailAdvancedEventSelectorArgs> advancedEventSelectors) {
             this.advancedEventSelectors = Output.ofNullable(advancedEventSelectors);
             return this;
         }
-
+        public Builder advancedEventSelectors(TrailAdvancedEventSelectorArgs... advancedEventSelectors) {
+            return advancedEventSelectors(List.of(advancedEventSelectors));
+        }
         public Builder cloudWatchLogsGroupArn(@Nullable Output<String> cloudWatchLogsGroupArn) {
             this.cloudWatchLogsGroupArn = cloudWatchLogsGroupArn;
             return this;
         }
-
         public Builder cloudWatchLogsGroupArn(@Nullable String cloudWatchLogsGroupArn) {
             this.cloudWatchLogsGroupArn = Output.ofNullable(cloudWatchLogsGroupArn);
             return this;
         }
-
         public Builder cloudWatchLogsRoleArn(@Nullable Output<String> cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
             return this;
         }
-
         public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = Output.ofNullable(cloudWatchLogsRoleArn);
             return this;
         }
-
         public Builder enableLogFileValidation(@Nullable Output<Boolean> enableLogFileValidation) {
             this.enableLogFileValidation = enableLogFileValidation;
             return this;
         }
-
         public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
             this.enableLogFileValidation = Output.ofNullable(enableLogFileValidation);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorArgs>> eventSelectors) {
             this.eventSelectors = eventSelectors;
             return this;
         }
-
         public Builder eventSelectors(@Nullable List<TrailEventSelectorArgs> eventSelectors) {
             this.eventSelectors = Output.ofNullable(eventSelectors);
             return this;
         }
-
+        public Builder eventSelectors(TrailEventSelectorArgs... eventSelectors) {
+            return eventSelectors(List.of(eventSelectors));
+        }
         public Builder includeGlobalServiceEvents(@Nullable Output<Boolean> includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = includeGlobalServiceEvents;
             return this;
         }
-
         public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = Output.ofNullable(includeGlobalServiceEvents);
             return this;
         }
-
         public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors) {
             this.insightSelectors = insightSelectors;
             return this;
         }
-
         public Builder insightSelectors(@Nullable List<TrailInsightSelectorArgs> insightSelectors) {
             this.insightSelectors = Output.ofNullable(insightSelectors);
             return this;
         }
-
+        public Builder insightSelectors(TrailInsightSelectorArgs... insightSelectors) {
+            return insightSelectors(List.of(insightSelectors));
+        }
         public Builder isMultiRegionTrail(@Nullable Output<Boolean> isMultiRegionTrail) {
             this.isMultiRegionTrail = isMultiRegionTrail;
             return this;
         }
-
         public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
             this.isMultiRegionTrail = Output.ofNullable(isMultiRegionTrail);
             return this;
         }
-
         public Builder isOrganizationTrail(@Nullable Output<Boolean> isOrganizationTrail) {
             this.isOrganizationTrail = isOrganizationTrail;
             return this;
         }
-
         public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
             this.isOrganizationTrail = Output.ofNullable(isOrganizationTrail);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder s3BucketName(Output<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
-
         public Builder snsTopicName(@Nullable Output<String> snsTopicName) {
             this.snsTopicName = snsTopicName;
             return this;
         }
-
         public Builder snsTopicName(@Nullable String snsTopicName) {
             this.snsTopicName = Output.ofNullable(snsTopicName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public TrailArgs build() {
+        }        public TrailArgs build() {
             return new TrailArgs(advancedEventSelectors, cloudWatchLogsGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, enableLogging, eventSelectors, includeGlobalServiceEvents, insightSelectors, isMultiRegionTrail, isOrganizationTrail, kmsKeyId, name, s3BucketName, s3KeyPrefix, snsTopicName, tags);
         }
     }

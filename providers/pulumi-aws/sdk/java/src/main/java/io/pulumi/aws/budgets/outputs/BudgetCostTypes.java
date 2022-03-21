@@ -215,57 +215,46 @@ public final class BudgetCostTypes {
             this.includeCredit = includeCredit;
             return this;
         }
-
         public Builder includeDiscount(@Nullable Boolean includeDiscount) {
             this.includeDiscount = includeDiscount;
             return this;
         }
-
         public Builder includeOtherSubscription(@Nullable Boolean includeOtherSubscription) {
             this.includeOtherSubscription = includeOtherSubscription;
             return this;
         }
-
         public Builder includeRecurring(@Nullable Boolean includeRecurring) {
             this.includeRecurring = includeRecurring;
             return this;
         }
-
         public Builder includeRefund(@Nullable Boolean includeRefund) {
             this.includeRefund = includeRefund;
             return this;
         }
-
         public Builder includeSubscription(@Nullable Boolean includeSubscription) {
             this.includeSubscription = includeSubscription;
             return this;
         }
-
         public Builder includeSupport(@Nullable Boolean includeSupport) {
             this.includeSupport = includeSupport;
             return this;
         }
-
         public Builder includeTax(@Nullable Boolean includeTax) {
             this.includeTax = includeTax;
             return this;
         }
-
         public Builder includeUpfront(@Nullable Boolean includeUpfront) {
             this.includeUpfront = includeUpfront;
             return this;
         }
-
         public Builder useAmortized(@Nullable Boolean useAmortized) {
             this.useAmortized = useAmortized;
             return this;
         }
-
         public Builder useBlended(@Nullable Boolean useBlended) {
             this.useBlended = useBlended;
             return this;
-        }
-        public BudgetCostTypes build() {
+        }        public BudgetCostTypes build() {
             return new BudgetCostTypes(includeCredit, includeDiscount, includeOtherSubscription, includeRecurring, includeRefund, includeSubscription, includeSupport, includeTax, includeUpfront, useAmortized, useBlended);
         }
     }

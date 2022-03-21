@@ -90,32 +90,26 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable String cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
-
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = Output.ofNullable(instanceRoleArn);
             return this;
         }
-
         public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memory(@Nullable String memory) {
             this.memory = Output.ofNullable(memory);
             return this;
-        }
-        public ServiceInstanceConfigurationGetArgs build() {
+        }        public ServiceInstanceConfigurationGetArgs build() {
             return new ServiceInstanceConfigurationGetArgs(cpu, instanceRoleArn, memory);
         }
     }

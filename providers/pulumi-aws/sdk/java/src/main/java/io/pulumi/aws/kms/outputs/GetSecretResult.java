@@ -63,12 +63,13 @@ public final class GetSecretResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder secrets(List<GetSecretSecret> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
-        public GetSecretResult build() {
+        public Builder secrets(GetSecretSecret... secrets) {
+            return secrets(List.of(secrets));
+        }        public GetSecretResult build() {
             return new GetSecretResult(id, secrets);
         }
     }

@@ -122,52 +122,42 @@ public final class ClusterKerberosAttributesArgs extends io.pulumi.resources.Res
             this.adDomainJoinPassword = adDomainJoinPassword;
             return this;
         }
-
         public Builder adDomainJoinPassword(@Nullable String adDomainJoinPassword) {
             this.adDomainJoinPassword = Output.ofNullable(adDomainJoinPassword);
             return this;
         }
-
         public Builder adDomainJoinUser(@Nullable Output<String> adDomainJoinUser) {
             this.adDomainJoinUser = adDomainJoinUser;
             return this;
         }
-
         public Builder adDomainJoinUser(@Nullable String adDomainJoinUser) {
             this.adDomainJoinUser = Output.ofNullable(adDomainJoinUser);
             return this;
         }
-
         public Builder crossRealmTrustPrincipalPassword(@Nullable Output<String> crossRealmTrustPrincipalPassword) {
             this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
             return this;
         }
-
         public Builder crossRealmTrustPrincipalPassword(@Nullable String crossRealmTrustPrincipalPassword) {
             this.crossRealmTrustPrincipalPassword = Output.ofNullable(crossRealmTrustPrincipalPassword);
             return this;
         }
-
         public Builder kdcAdminPassword(Output<String> kdcAdminPassword) {
             this.kdcAdminPassword = Objects.requireNonNull(kdcAdminPassword);
             return this;
         }
-
         public Builder kdcAdminPassword(String kdcAdminPassword) {
             this.kdcAdminPassword = Output.of(Objects.requireNonNull(kdcAdminPassword));
             return this;
         }
-
         public Builder realm(Output<String> realm) {
             this.realm = Objects.requireNonNull(realm);
             return this;
         }
-
         public Builder realm(String realm) {
             this.realm = Output.of(Objects.requireNonNull(realm));
             return this;
-        }
-        public ClusterKerberosAttributesArgs build() {
+        }        public ClusterKerberosAttributesArgs build() {
             return new ClusterKerberosAttributesArgs(adDomainJoinPassword, adDomainJoinUser, crossRealmTrustPrincipalPassword, kdcAdminPassword, realm);
         }
     }

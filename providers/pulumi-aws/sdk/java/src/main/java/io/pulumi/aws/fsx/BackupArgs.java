@@ -91,32 +91,26 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder volumeId(@Nullable Output<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
-
         public Builder volumeId(@Nullable String volumeId) {
             this.volumeId = Output.ofNullable(volumeId);
             return this;
-        }
-        public BackupArgs build() {
+        }        public BackupArgs build() {
             return new BackupArgs(fileSystemId, tags, volumeId);
         }
     }

@@ -56,12 +56,10 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
-        }
-        public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs build() {
+        }        public WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs build() {
             return new WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs(action);
         }
     }

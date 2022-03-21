@@ -112,42 +112,34 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
-
         public Builder strategy(Output<Either<String,PlacementStrategy>> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
-
         public Builder strategy(Either<String,PlacementStrategy> strategy) {
             this.strategy = Output.of(Objects.requireNonNull(strategy));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PlacementGroupArgs build() {
+        }        public PlacementGroupArgs build() {
             return new PlacementGroupArgs(name, partitionCount, strategy, tags);
         }
     }

@@ -70,12 +70,10 @@ public final class WebAclRuleStatementAndStatementStatementRegexPatternSetRefere
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation build() {
+        }        public WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation build() {
             return new WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation(priority, type);
         }
     }

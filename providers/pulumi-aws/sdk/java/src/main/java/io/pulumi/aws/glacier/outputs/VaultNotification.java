@@ -70,12 +70,13 @@ public final class VaultNotification {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder snsTopic(String snsTopic) {
             this.snsTopic = Objects.requireNonNull(snsTopic);
             return this;
-        }
-        public VaultNotification build() {
+        }        public VaultNotification build() {
             return new VaultNotification(events, snsTopic);
         }
     }

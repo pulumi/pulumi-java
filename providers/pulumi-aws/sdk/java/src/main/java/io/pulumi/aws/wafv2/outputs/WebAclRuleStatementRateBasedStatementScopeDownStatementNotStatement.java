@@ -53,7 +53,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatement build() {
+        public Builder statements(WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatement... statements) {
+            return statements(List.of(statements));
+        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatement build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatement(statements);
         }
     }

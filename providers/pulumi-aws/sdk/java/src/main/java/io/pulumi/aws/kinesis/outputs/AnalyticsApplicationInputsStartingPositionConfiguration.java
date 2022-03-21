@@ -53,8 +53,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfiguration {
         public Builder startingPosition(@Nullable String startingPosition) {
             this.startingPosition = startingPosition;
             return this;
-        }
-        public AnalyticsApplicationInputsStartingPositionConfiguration build() {
+        }        public AnalyticsApplicationInputsStartingPositionConfiguration build() {
             return new AnalyticsApplicationInputsStartingPositionConfiguration(startingPosition);
         }
     }

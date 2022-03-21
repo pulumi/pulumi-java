@@ -88,17 +88,14 @@ public final class FirehoseDeliveryStreamServerSideEncryption {
             this.enabled = enabled;
             return this;
         }
-
         public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
         }
-
         public Builder keyType(@Nullable String keyType) {
             this.keyType = keyType;
             return this;
-        }
-        public FirehoseDeliveryStreamServerSideEncryption build() {
+        }        public FirehoseDeliveryStreamServerSideEncryption build() {
             return new FirehoseDeliveryStreamServerSideEncryption(enabled, keyArn, keyType);
         }
     }

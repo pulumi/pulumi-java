@@ -56,12 +56,10 @@ public final class ProjectSecondarySourceGitSubmodulesConfigGetArgs extends io.p
             this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
             return this;
         }
-
         public Builder fetchSubmodules(Boolean fetchSubmodules) {
             this.fetchSubmodules = Output.of(Objects.requireNonNull(fetchSubmodules));
             return this;
-        }
-        public ProjectSecondarySourceGitSubmodulesConfigGetArgs build() {
+        }        public ProjectSecondarySourceGitSubmodulesConfigGetArgs build() {
             return new ProjectSecondarySourceGitSubmodulesConfigGetArgs(fetchSubmodules);
         }
     }

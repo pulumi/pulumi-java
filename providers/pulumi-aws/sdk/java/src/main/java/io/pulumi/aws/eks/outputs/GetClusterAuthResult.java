@@ -77,17 +77,14 @@ public final class GetClusterAuthResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
-        }
-        public GetClusterAuthResult build() {
+        }        public GetClusterAuthResult build() {
             return new GetClusterAuthResult(id, name, token);
         }
     }

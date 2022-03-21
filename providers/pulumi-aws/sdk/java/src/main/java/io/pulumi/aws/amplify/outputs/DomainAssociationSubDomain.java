@@ -104,22 +104,18 @@ public final class DomainAssociationSubDomain {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
-
         public Builder dnsRecord(@Nullable String dnsRecord) {
             this.dnsRecord = dnsRecord;
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder verified(@Nullable Boolean verified) {
             this.verified = verified;
             return this;
-        }
-        public DomainAssociationSubDomain build() {
+        }        public DomainAssociationSubDomain build() {
             return new DomainAssociationSubDomain(branchName, dnsRecord, prefix, verified);
         }
     }

@@ -175,82 +175,72 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder egress(@Nullable Output<List<SecurityGroupEgressArgs>> egress) {
             this.egress = egress;
             return this;
         }
-
         public Builder egress(@Nullable List<SecurityGroupEgressArgs> egress) {
             this.egress = Output.ofNullable(egress);
             return this;
         }
-
+        public Builder egress(SecurityGroupEgressArgs... egress) {
+            return egress(List.of(egress));
+        }
         public Builder ingress(@Nullable Output<List<SecurityGroupIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable List<SecurityGroupIngressArgs> ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
+        public Builder ingress(SecurityGroupIngressArgs... ingress) {
+            return ingress(List.of(ingress));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder revokeRulesOnDelete(@Nullable Output<Boolean> revokeRulesOnDelete) {
             this.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
-
         public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
             this.revokeRulesOnDelete = Output.ofNullable(revokeRulesOnDelete);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public SecurityGroupArgs build() {
+        }        public SecurityGroupArgs build() {
             return new SecurityGroupArgs(description, egress, ingress, name, namePrefix, revokeRulesOnDelete, tags, vpcId);
         }
     }

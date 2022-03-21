@@ -104,22 +104,18 @@ public final class GraphQLApiOpenidConnectConfig {
             this.authTtl = authTtl;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder iatTtl(@Nullable Integer iatTtl) {
             this.iatTtl = iatTtl;
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
-        }
-        public GraphQLApiOpenidConnectConfig build() {
+        }        public GraphQLApiOpenidConnectConfig build() {
             return new GraphQLApiOpenidConnectConfig(authTtl, clientId, iatTtl, issuer);
         }
     }

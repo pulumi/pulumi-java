@@ -54,12 +54,10 @@ public final class GetListenerDefaultActionForwardStickiness {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetListenerDefaultActionForwardStickiness build() {
+        }        public GetListenerDefaultActionForwardStickiness build() {
             return new GetListenerDefaultActionForwardStickiness(duration, enabled);
         }
     }

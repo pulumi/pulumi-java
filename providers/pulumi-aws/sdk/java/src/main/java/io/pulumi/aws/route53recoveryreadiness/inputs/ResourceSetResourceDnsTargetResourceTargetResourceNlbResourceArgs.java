@@ -57,12 +57,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
-        }
-        public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs build() {
+        }        public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(arn);
         }
     }

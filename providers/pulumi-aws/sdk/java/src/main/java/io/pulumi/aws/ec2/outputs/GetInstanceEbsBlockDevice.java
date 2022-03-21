@@ -200,57 +200,46 @@ public final class GetInstanceEbsBlockDevice {
             this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder throughput(Integer throughput) {
             this.throughput = Objects.requireNonNull(throughput);
             return this;
         }
-
         public Builder volumeId(String volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
-
         public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public GetInstanceEbsBlockDevice build() {
+        }        public GetInstanceEbsBlockDevice build() {
             return new GetInstanceEbsBlockDevice(deleteOnTermination, deviceName, encrypted, iops, kmsKeyId, snapshotId, tags, throughput, volumeId, volumeSize, volumeType);
         }
     }

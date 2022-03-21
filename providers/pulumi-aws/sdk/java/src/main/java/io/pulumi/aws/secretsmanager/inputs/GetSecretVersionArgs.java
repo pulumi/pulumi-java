@@ -90,17 +90,14 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionStage(@Nullable String versionStage) {
             this.versionStage = versionStage;
             return this;
-        }
-        public GetSecretVersionArgs build() {
+        }        public GetSecretVersionArgs build() {
             return new GetSecretVersionArgs(secretId, versionId, versionStage);
         }
     }

@@ -56,12 +56,10 @@ public final class BucketReplicationConfigRuleDestinationMetricsEventThresholdAr
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs build() {
+        }        public BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs build() {
             return new BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs(minutes);
         }
     }

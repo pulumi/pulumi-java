@@ -57,12 +57,10 @@ public final class CrawlerRecrawlPolicyGetArgs extends io.pulumi.resources.Resou
             this.recrawlBehavior = recrawlBehavior;
             return this;
         }
-
         public Builder recrawlBehavior(@Nullable String recrawlBehavior) {
             this.recrawlBehavior = Output.ofNullable(recrawlBehavior);
             return this;
-        }
-        public CrawlerRecrawlPolicyGetArgs build() {
+        }        public CrawlerRecrawlPolicyGetArgs build() {
             return new CrawlerRecrawlPolicyGetArgs(recrawlBehavior);
         }
     }

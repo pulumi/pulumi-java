@@ -189,47 +189,38 @@ public final class FirehoseDeliveryStreamS3Configuration {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder bufferInterval(@Nullable Integer bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
-
         public Builder bufferSize(@Nullable Integer bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder compressionFormat(@Nullable String compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
-
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public FirehoseDeliveryStreamS3Configuration build() {
+        }        public FirehoseDeliveryStreamS3Configuration build() {
             return new FirehoseDeliveryStreamS3Configuration(bucketArn, bufferInterval, bufferSize, cloudwatchLoggingOptions, compressionFormat, errorOutputPrefix, kmsKeyArn, prefix, roleArn);
         }
     }

@@ -56,8 +56,7 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
-        }
-        public GetEventSourceArgs build() {
+        }        public GetEventSourceArgs build() {
             return new GetEventSourceArgs(namePrefix);
         }
     }

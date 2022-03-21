@@ -93,32 +93,29 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends io.pulumi.
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
             return this;
         }
-
         public Builder responseCode(Output<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Output.of(Objects.requireNonNull(responseCode));
             return this;
         }
-
         public Builder responseHeaders(@Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs> responseHeaders) {
             this.responseHeaders = Output.ofNullable(responseHeaders);
             return this;
         }
-        public RuleGroupRuleActionBlockCustomResponseArgs build() {
+        public Builder responseHeaders(RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public RuleGroupRuleActionBlockCustomResponseArgs build() {
             return new RuleGroupRuleActionBlockCustomResponseArgs(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

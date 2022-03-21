@@ -51,8 +51,7 @@ public final class WebAclDefaultAction {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclDefaultAction build() {
+        }        public WebAclDefaultAction build() {
             return new WebAclDefaultAction(type);
         }
     }

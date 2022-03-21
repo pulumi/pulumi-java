@@ -73,12 +73,13 @@ public final class ProjectBuildBatchConfigRestrictions {
             this.computeTypesAlloweds = computeTypesAlloweds;
             return this;
         }
-
+        public Builder computeTypesAlloweds(String... computeTypesAlloweds) {
+            return computeTypesAlloweds(List.of(computeTypesAlloweds));
+        }
         public Builder maximumBuildsAllowed(@Nullable Integer maximumBuildsAllowed) {
             this.maximumBuildsAllowed = maximumBuildsAllowed;
             return this;
-        }
-        public ProjectBuildBatchConfigRestrictions build() {
+        }        public ProjectBuildBatchConfigRestrictions build() {
             return new ProjectBuildBatchConfigRestrictions(computeTypesAlloweds, maximumBuildsAllowed);
         }
     }

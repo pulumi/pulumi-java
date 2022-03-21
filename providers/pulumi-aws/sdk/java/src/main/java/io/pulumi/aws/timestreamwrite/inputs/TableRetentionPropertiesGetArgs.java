@@ -73,22 +73,18 @@ public final class TableRetentionPropertiesGetArgs extends io.pulumi.resources.R
             this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays);
             return this;
         }
-
         public Builder magneticStoreRetentionPeriodInDays(Integer magneticStoreRetentionPeriodInDays) {
             this.magneticStoreRetentionPeriodInDays = Output.of(Objects.requireNonNull(magneticStoreRetentionPeriodInDays));
             return this;
         }
-
         public Builder memoryStoreRetentionPeriodInHours(Output<Integer> memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours);
             return this;
         }
-
         public Builder memoryStoreRetentionPeriodInHours(Integer memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = Output.of(Objects.requireNonNull(memoryStoreRetentionPeriodInHours));
             return this;
-        }
-        public TableRetentionPropertiesGetArgs build() {
+        }        public TableRetentionPropertiesGetArgs build() {
             return new TableRetentionPropertiesGetArgs(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);
         }
     }

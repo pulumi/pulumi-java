@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
-
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = Output.of(Objects.requireNonNull(certificateChain));
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs(certificateChain);
         }
     }

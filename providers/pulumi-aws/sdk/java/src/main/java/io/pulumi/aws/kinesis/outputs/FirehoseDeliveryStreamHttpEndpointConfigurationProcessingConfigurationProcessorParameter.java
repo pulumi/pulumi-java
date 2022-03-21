@@ -69,12 +69,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter(parameterName, parameterValue);
         }
     }

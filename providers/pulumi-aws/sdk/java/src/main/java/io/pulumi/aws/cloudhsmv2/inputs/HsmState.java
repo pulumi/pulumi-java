@@ -154,72 +154,58 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
-
         public Builder hsmEniId(@Nullable Output<String> hsmEniId) {
             this.hsmEniId = hsmEniId;
             return this;
         }
-
         public Builder hsmEniId(@Nullable String hsmEniId) {
             this.hsmEniId = Output.ofNullable(hsmEniId);
             return this;
         }
-
         public Builder hsmId(@Nullable Output<String> hsmId) {
             this.hsmId = hsmId;
             return this;
         }
-
         public Builder hsmId(@Nullable String hsmId) {
             this.hsmId = Output.ofNullable(hsmId);
             return this;
         }
-
         public Builder hsmState(@Nullable Output<String> hsmState) {
             this.hsmState = hsmState;
             return this;
         }
-
         public Builder hsmState(@Nullable String hsmState) {
             this.hsmState = Output.ofNullable(hsmState);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public HsmState build() {
+        }        public HsmState build() {
             return new HsmState(availabilityZone, clusterId, hsmEniId, hsmId, hsmState, ipAddress, subnetId);
         }
     }

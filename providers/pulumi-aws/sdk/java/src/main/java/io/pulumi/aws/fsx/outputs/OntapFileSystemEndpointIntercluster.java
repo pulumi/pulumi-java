@@ -72,12 +72,13 @@ public final class OntapFileSystemEndpointIntercluster {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-        public OntapFileSystemEndpointIntercluster build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public OntapFileSystemEndpointIntercluster build() {
             return new OntapFileSystemEndpointIntercluster(dnsName, ipAddresses);
         }
     }

@@ -87,17 +87,14 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
             this.cents = cents;
             return this;
         }
-
         public Builder dollars(@Nullable Integer dollars) {
             this.dollars = dollars;
             return this;
         }
-
         public Builder tenthFractionsOfACent(@Nullable Integer tenthFractionsOfACent) {
             this.tenthFractionsOfACent = tenthFractionsOfACent;
             return this;
-        }
-        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd build() {
+        }        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd build() {
             return new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd(cents, dollars, tenthFractionsOfACent);
         }
     }

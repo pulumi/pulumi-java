@@ -122,52 +122,42 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder syncFormat(@Nullable Output<String> syncFormat) {
             this.syncFormat = syncFormat;
             return this;
         }
-
         public Builder syncFormat(@Nullable String syncFormat) {
             this.syncFormat = Output.ofNullable(syncFormat);
             return this;
-        }
-        public ResourceDataSyncS3DestinationArgs build() {
+        }        public ResourceDataSyncS3DestinationArgs build() {
             return new ResourceDataSyncS3DestinationArgs(bucketName, kmsKeyArn, prefix, region, syncFormat);
         }
     }

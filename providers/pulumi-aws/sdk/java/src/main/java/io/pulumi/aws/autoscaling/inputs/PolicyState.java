@@ -258,132 +258,109 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             this.adjustmentType = adjustmentType;
             return this;
         }
-
         public Builder adjustmentType(@Nullable String adjustmentType) {
             this.adjustmentType = Output.ofNullable(adjustmentType);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
             this.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
-
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
             this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
             return this;
         }
-
         public Builder cooldown(@Nullable Output<Integer> cooldown) {
             this.cooldown = cooldown;
             return this;
         }
-
         public Builder cooldown(@Nullable Integer cooldown) {
             this.cooldown = Output.ofNullable(cooldown);
             return this;
         }
-
         public Builder estimatedInstanceWarmup(@Nullable Output<Integer> estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
-
         public Builder estimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = Output.ofNullable(estimatedInstanceWarmup);
             return this;
         }
-
         public Builder metricAggregationType(@Nullable Output<String> metricAggregationType) {
             this.metricAggregationType = metricAggregationType;
             return this;
         }
-
         public Builder metricAggregationType(@Nullable String metricAggregationType) {
             this.metricAggregationType = Output.ofNullable(metricAggregationType);
             return this;
         }
-
         public Builder minAdjustmentMagnitude(@Nullable Output<Integer> minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
-
         public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = Output.ofNullable(minAdjustmentMagnitude);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyType(@Nullable Output<String> policyType) {
             this.policyType = policyType;
             return this;
         }
-
         public Builder policyType(@Nullable String policyType) {
             this.policyType = Output.ofNullable(policyType);
             return this;
         }
-
         public Builder predictiveScalingConfiguration(@Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration) {
             this.predictiveScalingConfiguration = predictiveScalingConfiguration;
             return this;
         }
-
         public Builder predictiveScalingConfiguration(@Nullable PolicyPredictiveScalingConfigurationGetArgs predictiveScalingConfiguration) {
             this.predictiveScalingConfiguration = Output.ofNullable(predictiveScalingConfiguration);
             return this;
         }
-
         public Builder scalingAdjustment(@Nullable Output<Integer> scalingAdjustment) {
             this.scalingAdjustment = scalingAdjustment;
             return this;
         }
-
         public Builder scalingAdjustment(@Nullable Integer scalingAdjustment) {
             this.scalingAdjustment = Output.ofNullable(scalingAdjustment);
             return this;
         }
-
         public Builder stepAdjustments(@Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments) {
             this.stepAdjustments = stepAdjustments;
             return this;
         }
-
         public Builder stepAdjustments(@Nullable List<PolicyStepAdjustmentGetArgs> stepAdjustments) {
             this.stepAdjustments = Output.ofNullable(stepAdjustments);
             return this;
         }
-
+        public Builder stepAdjustments(PolicyStepAdjustmentGetArgs... stepAdjustments) {
+            return stepAdjustments(List.of(stepAdjustments));
+        }
         public Builder targetTrackingConfiguration(@Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
             this.targetTrackingConfiguration = targetTrackingConfiguration;
             return this;
         }
-
         public Builder targetTrackingConfiguration(@Nullable PolicyTargetTrackingConfigurationGetArgs targetTrackingConfiguration) {
             this.targetTrackingConfiguration = Output.ofNullable(targetTrackingConfiguration);
             return this;
-        }
-        public PolicyState build() {
+        }        public PolicyState build() {
             return new PolicyState(adjustmentType, arn, autoscalingGroupName, cooldown, estimatedInstanceWarmup, metricAggregationType, minAdjustmentMagnitude, name, policyType, predictiveScalingConfiguration, scalingAdjustment, stepAdjustments, targetTrackingConfiguration);
         }
     }

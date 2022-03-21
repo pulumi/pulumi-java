@@ -69,12 +69,10 @@ public final class InsightFiltersAwsAccountId {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersAwsAccountId build() {
+        }        public InsightFiltersAwsAccountId build() {
             return new InsightFiltersAwsAccountId(comparison, value);
         }
     }

@@ -72,12 +72,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.csvMappingParameters = csvMappingParameters;
             return this;
         }
-
         public Builder jsonMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters jsonMappingParameters) {
             this.jsonMappingParameters = jsonMappingParameters;
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters(csvMappingParameters, jsonMappingParameters);
         }
     }

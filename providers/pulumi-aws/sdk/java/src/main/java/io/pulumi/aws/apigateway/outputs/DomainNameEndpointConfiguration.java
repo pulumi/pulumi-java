@@ -51,8 +51,7 @@ public final class DomainNameEndpointConfiguration {
         public Builder types(String types) {
             this.types = Objects.requireNonNull(types);
             return this;
-        }
-        public DomainNameEndpointConfiguration build() {
+        }        public DomainNameEndpointConfiguration build() {
             return new DomainNameEndpointConfiguration(types);
         }
     }

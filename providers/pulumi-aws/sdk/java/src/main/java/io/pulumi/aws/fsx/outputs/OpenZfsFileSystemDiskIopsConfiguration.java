@@ -72,12 +72,10 @@ public final class OpenZfsFileSystemDiskIopsConfiguration {
             this.iops = iops;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public OpenZfsFileSystemDiskIopsConfiguration build() {
+        }        public OpenZfsFileSystemDiskIopsConfiguration build() {
             return new OpenZfsFileSystemDiskIopsConfiguration(iops, mode);
         }
     }

@@ -109,42 +109,40 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends io.pulumi.re
             this.allowedFeatures = allowedFeatures;
             return this;
         }
-
         public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
             this.allowedFeatures = Output.ofNullable(allowedFeatures);
             return this;
         }
-
+        public Builder allowedFeatures(String... allowedFeatures) {
+            return allowedFeatures(List.of(allowedFeatures));
+        }
         public Builder cloudWatchMetricsEnabled(@Nullable Output<Boolean> cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
-
         public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = Output.ofNullable(cloudWatchMetricsEnabled);
             return this;
         }
-
         public Builder supportingAccessPoint(Output<String> supportingAccessPoint) {
             this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
             return this;
         }
-
         public Builder supportingAccessPoint(String supportingAccessPoint) {
             this.supportingAccessPoint = Output.of(Objects.requireNonNull(supportingAccessPoint));
             return this;
         }
-
         public Builder transformationConfigurations(Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs>> transformationConfigurations) {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
-
         public Builder transformationConfigurations(List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs> transformationConfigurations) {
             this.transformationConfigurations = Output.of(Objects.requireNonNull(transformationConfigurations));
             return this;
         }
-        public ObjectLambdaAccessPointConfigurationArgs build() {
+        public Builder transformationConfigurations(ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs... transformationConfigurations) {
+            return transformationConfigurations(List.of(transformationConfigurations));
+        }        public ObjectLambdaAccessPointConfigurationArgs build() {
             return new ObjectLambdaAccessPointConfigurationArgs(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
         }
     }

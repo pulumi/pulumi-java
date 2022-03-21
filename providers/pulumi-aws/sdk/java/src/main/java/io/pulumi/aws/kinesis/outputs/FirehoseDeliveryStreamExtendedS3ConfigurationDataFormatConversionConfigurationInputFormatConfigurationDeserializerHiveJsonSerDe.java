@@ -54,7 +54,9 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.timestampFormats = timestampFormats;
             return this;
         }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe build() {
+        public Builder timestampFormats(String... timestampFormats) {
+            return timestampFormats(List.of(timestampFormats));
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe(timestampFormats);
         }
     }

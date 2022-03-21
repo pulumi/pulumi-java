@@ -145,37 +145,30 @@ public final class GetArnResult {
             this.account = Objects.requireNonNull(account);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder partition(String partition) {
             this.partition = Objects.requireNonNull(partition);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GetArnResult build() {
+        }        public GetArnResult build() {
             return new GetArnResult(account, arn, id, partition, region, resource, service);
         }
     }

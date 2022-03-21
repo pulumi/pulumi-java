@@ -92,32 +92,29 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Output.of(Objects.requireNonNull(owner));
             return this;
         }
-
         public Builder sourceDetails(@Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails) {
             this.sourceDetails = sourceDetails;
             return this;
         }
-
         public Builder sourceDetails(@Nullable List<RuleSourceSourceDetailArgs> sourceDetails) {
             this.sourceDetails = Output.ofNullable(sourceDetails);
             return this;
         }
-
+        public Builder sourceDetails(RuleSourceSourceDetailArgs... sourceDetails) {
+            return sourceDetails(List.of(sourceDetails));
+        }
         public Builder sourceIdentifier(Output<String> sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
-
         public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
             return this;
-        }
-        public RuleSourceArgs build() {
+        }        public RuleSourceArgs build() {
             return new RuleSourceArgs(owner, sourceDetails, sourceIdentifier);
         }
     }

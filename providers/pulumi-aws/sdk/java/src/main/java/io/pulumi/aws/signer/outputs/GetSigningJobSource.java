@@ -45,7 +45,9 @@ public final class GetSigningJobSource {
             this.s3s = Objects.requireNonNull(s3s);
             return this;
         }
-        public GetSigningJobSource build() {
+        public Builder s3s(GetSigningJobSourceS3... s3s) {
+            return s3s(List.of(s3s));
+        }        public GetSigningJobSource build() {
             return new GetSigningJobSource(s3s);
         }
     }

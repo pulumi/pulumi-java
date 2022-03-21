@@ -123,52 +123,51 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
             this.groups = groups;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = Output.ofNullable(groups);
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyArn(@Nullable Output<String> policyArn) {
             this.policyArn = policyArn;
             return this;
         }
-
         public Builder policyArn(@Nullable String policyArn) {
             this.policyArn = Output.ofNullable(policyArn);
             return this;
         }
-
         public Builder roles(@Nullable Output<List<String>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<String> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }
         public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
-
         public Builder users(@Nullable List<String> users) {
             this.users = Output.ofNullable(users);
             return this;
         }
-        public PolicyAttachmentState build() {
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }        public PolicyAttachmentState build() {
             return new PolicyAttachmentState(groups, name, policyArn, roles, users);
         }
     }

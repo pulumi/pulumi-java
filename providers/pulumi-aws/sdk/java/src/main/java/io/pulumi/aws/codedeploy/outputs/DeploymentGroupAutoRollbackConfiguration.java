@@ -73,12 +73,13 @@ public final class DeploymentGroupAutoRollbackConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder events(@Nullable List<String> events) {
             this.events = events;
             return this;
         }
-        public DeploymentGroupAutoRollbackConfiguration build() {
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }        public DeploymentGroupAutoRollbackConfiguration build() {
             return new DeploymentGroupAutoRollbackConfiguration(enabled, events);
         }
     }

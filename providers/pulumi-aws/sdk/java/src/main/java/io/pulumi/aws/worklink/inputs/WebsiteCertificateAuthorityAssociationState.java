@@ -106,42 +106,34 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder fleetArn(@Nullable Output<String> fleetArn) {
             this.fleetArn = fleetArn;
             return this;
         }
-
         public Builder fleetArn(@Nullable String fleetArn) {
             this.fleetArn = Output.ofNullable(fleetArn);
             return this;
         }
-
         public Builder websiteCaId(@Nullable Output<String> websiteCaId) {
             this.websiteCaId = websiteCaId;
             return this;
         }
-
         public Builder websiteCaId(@Nullable String websiteCaId) {
             this.websiteCaId = Output.ofNullable(websiteCaId);
             return this;
-        }
-        public WebsiteCertificateAuthorityAssociationState build() {
+        }        public WebsiteCertificateAuthorityAssociationState build() {
             return new WebsiteCertificateAuthorityAssociationState(certificate, displayName, fleetArn, websiteCaId);
         }
     }

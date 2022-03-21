@@ -74,22 +74,18 @@ public final class CatalogTableStorageDescriptorSortColumnArgs extends io.pulumi
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder column(String column) {
             this.column = Output.of(Objects.requireNonNull(column));
             return this;
         }
-
         public Builder sortOrder(Output<Integer> sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
-
         public Builder sortOrder(Integer sortOrder) {
             this.sortOrder = Output.of(Objects.requireNonNull(sortOrder));
             return this;
-        }
-        public CatalogTableStorageDescriptorSortColumnArgs build() {
+        }        public CatalogTableStorageDescriptorSortColumnArgs build() {
             return new CatalogTableStorageDescriptorSortColumnArgs(column, sortOrder);
         }
     }

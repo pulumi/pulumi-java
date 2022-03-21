@@ -93,32 +93,29 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder operatingRegions(Output<List<VpcIpamOperatingRegionArgs>> operatingRegions) {
             this.operatingRegions = Objects.requireNonNull(operatingRegions);
             return this;
         }
-
         public Builder operatingRegions(List<VpcIpamOperatingRegionArgs> operatingRegions) {
             this.operatingRegions = Output.of(Objects.requireNonNull(operatingRegions));
             return this;
         }
-
+        public Builder operatingRegions(VpcIpamOperatingRegionArgs... operatingRegions) {
+            return operatingRegions(List.of(operatingRegions));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VpcIpamArgs build() {
+        }        public VpcIpamArgs build() {
             return new VpcIpamArgs(description, operatingRegions, tags);
         }
     }

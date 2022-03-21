@@ -75,12 +75,10 @@ public final class GetComponentArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetComponentArgs build() {
+        }        public GetComponentArgs build() {
             return new GetComponentArgs(arn, tags);
         }
     }

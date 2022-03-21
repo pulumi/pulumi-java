@@ -127,32 +127,29 @@ public final class GetGroupResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder users(List<GetGroupUser> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-        public GetGroupResult build() {
+        public Builder users(GetGroupUser... users) {
+            return users(List.of(users));
+        }        public GetGroupResult build() {
             return new GetGroupResult(arn, groupId, groupName, id, path, users);
         }
     }

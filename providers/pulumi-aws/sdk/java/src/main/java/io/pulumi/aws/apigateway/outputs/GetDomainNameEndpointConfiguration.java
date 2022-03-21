@@ -53,7 +53,9 @@ public final class GetDomainNameEndpointConfiguration {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-        public GetDomainNameEndpointConfiguration build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public GetDomainNameEndpointConfiguration build() {
             return new GetDomainNameEndpointConfiguration(types);
         }
     }

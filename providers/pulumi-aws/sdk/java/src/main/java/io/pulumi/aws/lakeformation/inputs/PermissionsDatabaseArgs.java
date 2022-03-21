@@ -74,22 +74,18 @@ public final class PermissionsDatabaseArgs extends io.pulumi.resources.ResourceA
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PermissionsDatabaseArgs build() {
+        }        public PermissionsDatabaseArgs build() {
             return new PermissionsDatabaseArgs(catalogId, name);
         }
     }

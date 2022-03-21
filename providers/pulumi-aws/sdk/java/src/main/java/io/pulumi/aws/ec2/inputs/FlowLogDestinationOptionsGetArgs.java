@@ -91,32 +91,26 @@ public final class FlowLogDestinationOptionsGetArgs extends io.pulumi.resources.
             this.fileFormat = fileFormat;
             return this;
         }
-
         public Builder fileFormat(@Nullable String fileFormat) {
             this.fileFormat = Output.ofNullable(fileFormat);
             return this;
         }
-
         public Builder hiveCompatiblePartitions(@Nullable Output<Boolean> hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = hiveCompatiblePartitions;
             return this;
         }
-
         public Builder hiveCompatiblePartitions(@Nullable Boolean hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = Output.ofNullable(hiveCompatiblePartitions);
             return this;
         }
-
         public Builder perHourPartition(@Nullable Output<Boolean> perHourPartition) {
             this.perHourPartition = perHourPartition;
             return this;
         }
-
         public Builder perHourPartition(@Nullable Boolean perHourPartition) {
             this.perHourPartition = Output.ofNullable(perHourPartition);
             return this;
-        }
-        public FlowLogDestinationOptionsGetArgs build() {
+        }        public FlowLogDestinationOptionsGetArgs build() {
             return new FlowLogDestinationOptionsGetArgs(fileFormat, hiveCompatiblePartitions, perHourPartition);
         }
     }

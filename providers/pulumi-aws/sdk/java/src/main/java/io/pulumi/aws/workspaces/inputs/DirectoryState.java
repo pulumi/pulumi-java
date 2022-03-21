@@ -303,162 +303,139 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder customerUserName(@Nullable Output<String> customerUserName) {
             this.customerUserName = customerUserName;
             return this;
         }
-
         public Builder customerUserName(@Nullable String customerUserName) {
             this.customerUserName = Output.ofNullable(customerUserName);
             return this;
         }
-
         public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
-
         public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
-
         public Builder directoryName(@Nullable Output<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
-
         public Builder directoryName(@Nullable String directoryName) {
             this.directoryName = Output.ofNullable(directoryName);
             return this;
         }
-
         public Builder directoryType(@Nullable Output<String> directoryType) {
             this.directoryType = directoryType;
             return this;
         }
-
         public Builder directoryType(@Nullable String directoryType) {
             this.directoryType = Output.ofNullable(directoryType);
             return this;
         }
-
         public Builder dnsIpAddresses(@Nullable Output<List<String>> dnsIpAddresses) {
             this.dnsIpAddresses = dnsIpAddresses;
             return this;
         }
-
         public Builder dnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Output.ofNullable(dnsIpAddresses);
             return this;
         }
-
+        public Builder dnsIpAddresses(String... dnsIpAddresses) {
+            return dnsIpAddresses(List.of(dnsIpAddresses));
+        }
         public Builder iamRoleId(@Nullable Output<String> iamRoleId) {
             this.iamRoleId = iamRoleId;
             return this;
         }
-
         public Builder iamRoleId(@Nullable String iamRoleId) {
             this.iamRoleId = Output.ofNullable(iamRoleId);
             return this;
         }
-
         public Builder ipGroupIds(@Nullable Output<List<String>> ipGroupIds) {
             this.ipGroupIds = ipGroupIds;
             return this;
         }
-
         public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
             this.ipGroupIds = Output.ofNullable(ipGroupIds);
             return this;
         }
-
+        public Builder ipGroupIds(String... ipGroupIds) {
+            return ipGroupIds(List.of(ipGroupIds));
+        }
         public Builder registrationCode(@Nullable Output<String> registrationCode) {
             this.registrationCode = registrationCode;
             return this;
         }
-
         public Builder registrationCode(@Nullable String registrationCode) {
             this.registrationCode = Output.ofNullable(registrationCode);
             return this;
         }
-
         public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
             this.selfServicePermissions = selfServicePermissions;
             return this;
         }
-
         public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsGetArgs selfServicePermissions) {
             this.selfServicePermissions = Output.ofNullable(selfServicePermissions);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
             this.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
-
         public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesGetArgs workspaceAccessProperties) {
             this.workspaceAccessProperties = Output.ofNullable(workspaceAccessProperties);
             return this;
         }
-
         public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
             this.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
-
         public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesGetArgs workspaceCreationProperties) {
             this.workspaceCreationProperties = Output.ofNullable(workspaceCreationProperties);
             return this;
         }
-
         public Builder workspaceSecurityGroupId(@Nullable Output<String> workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = workspaceSecurityGroupId;
             return this;
         }
-
         public Builder workspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Output.ofNullable(workspaceSecurityGroupId);
             return this;
-        }
-        public DirectoryState build() {
+        }        public DirectoryState build() {
             return new DirectoryState(alias, customerUserName, directoryId, directoryName, directoryType, dnsIpAddresses, iamRoleId, ipGroupIds, registrationCode, selfServicePermissions, subnetIds, tags, tagsAll, workspaceAccessProperties, workspaceCreationProperties, workspaceSecurityGroupId);
         }
     }

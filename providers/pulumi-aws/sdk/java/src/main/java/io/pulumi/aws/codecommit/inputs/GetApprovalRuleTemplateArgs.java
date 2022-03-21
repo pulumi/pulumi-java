@@ -54,8 +54,7 @@ public final class GetApprovalRuleTemplateArgs extends io.pulumi.resources.Invok
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetApprovalRuleTemplateArgs build() {
+        }        public GetApprovalRuleTemplateArgs build() {
             return new GetApprovalRuleTemplateArgs(name);
         }
     }

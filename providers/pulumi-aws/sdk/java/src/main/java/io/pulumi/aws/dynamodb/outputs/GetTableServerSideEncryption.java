@@ -54,12 +54,10 @@ public final class GetTableServerSideEncryption {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
-        }
-        public GetTableServerSideEncryption build() {
+        }        public GetTableServerSideEncryption build() {
             return new GetTableServerSideEncryption(enabled, kmsKeyArn);
         }
     }

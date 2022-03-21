@@ -123,52 +123,48 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
             this.egress = egress;
             return this;
         }
-
         public Builder egress(@Nullable List<DefaultSecurityGroupEgressArgs> egress) {
             this.egress = Output.ofNullable(egress);
             return this;
         }
-
+        public Builder egress(DefaultSecurityGroupEgressArgs... egress) {
+            return egress(List.of(egress));
+        }
         public Builder ingress(@Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable List<DefaultSecurityGroupIngressArgs> ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
+        public Builder ingress(DefaultSecurityGroupIngressArgs... ingress) {
+            return ingress(List.of(ingress));
+        }
         public Builder revokeRulesOnDelete(@Nullable Output<Boolean> revokeRulesOnDelete) {
             this.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
-
         public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
             this.revokeRulesOnDelete = Output.ofNullable(revokeRulesOnDelete);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public DefaultSecurityGroupArgs build() {
+        }        public DefaultSecurityGroupArgs build() {
             return new DefaultSecurityGroupArgs(egress, ingress, revokeRulesOnDelete, tags, vpcId);
         }
     }

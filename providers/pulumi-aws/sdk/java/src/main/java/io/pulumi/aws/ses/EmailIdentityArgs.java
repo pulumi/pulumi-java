@@ -56,12 +56,10 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
-        }
-        public EmailIdentityArgs build() {
+        }        public EmailIdentityArgs build() {
             return new EmailIdentityArgs(email);
         }
     }

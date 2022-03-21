@@ -72,12 +72,13 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor(parameters, type);
         }
     }

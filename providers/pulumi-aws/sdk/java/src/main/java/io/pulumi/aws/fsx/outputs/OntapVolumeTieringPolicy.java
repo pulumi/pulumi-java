@@ -64,12 +64,10 @@ public final class OntapVolumeTieringPolicy {
             this.coolingPeriod = coolingPeriod;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public OntapVolumeTieringPolicy build() {
+        }        public OntapVolumeTieringPolicy build() {
             return new OntapVolumeTieringPolicy(coolingPeriod, name);
         }
     }

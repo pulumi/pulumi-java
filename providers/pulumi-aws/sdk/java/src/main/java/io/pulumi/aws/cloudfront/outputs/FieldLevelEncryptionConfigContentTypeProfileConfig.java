@@ -70,12 +70,10 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
             this.contentTypeProfiles = Objects.requireNonNull(contentTypeProfiles);
             return this;
         }
-
         public Builder forwardWhenContentTypeIsUnknown(Boolean forwardWhenContentTypeIsUnknown) {
             this.forwardWhenContentTypeIsUnknown = Objects.requireNonNull(forwardWhenContentTypeIsUnknown);
             return this;
-        }
-        public FieldLevelEncryptionConfigContentTypeProfileConfig build() {
+        }        public FieldLevelEncryptionConfigContentTypeProfileConfig build() {
             return new FieldLevelEncryptionConfigContentTypeProfileConfig(contentTypeProfiles, forwardWhenContentTypeIsUnknown);
         }
     }

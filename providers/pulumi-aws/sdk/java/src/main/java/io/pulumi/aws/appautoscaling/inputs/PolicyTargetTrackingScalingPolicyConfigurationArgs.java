@@ -142,62 +142,50 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationArgs extends io
             this.customizedMetricSpecification = customizedMetricSpecification;
             return this;
         }
-
         public Builder customizedMetricSpecification(@Nullable PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs customizedMetricSpecification) {
             this.customizedMetricSpecification = Output.ofNullable(customizedMetricSpecification);
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Output<Boolean> disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = Output.ofNullable(disableScaleIn);
             return this;
         }
-
         public Builder predefinedMetricSpecification(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification) {
             this.predefinedMetricSpecification = predefinedMetricSpecification;
             return this;
         }
-
         public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs predefinedMetricSpecification) {
             this.predefinedMetricSpecification = Output.ofNullable(predefinedMetricSpecification);
             return this;
         }
-
         public Builder scaleInCooldown(@Nullable Output<Integer> scaleInCooldown) {
             this.scaleInCooldown = scaleInCooldown;
             return this;
         }
-
         public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
             this.scaleInCooldown = Output.ofNullable(scaleInCooldown);
             return this;
         }
-
         public Builder scaleOutCooldown(@Nullable Output<Integer> scaleOutCooldown) {
             this.scaleOutCooldown = scaleOutCooldown;
             return this;
         }
-
         public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
             this.scaleOutCooldown = Output.ofNullable(scaleOutCooldown);
             return this;
         }
-
         public Builder targetValue(Output<Double> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
-        }
-        public PolicyTargetTrackingScalingPolicyConfigurationArgs build() {
+        }        public PolicyTargetTrackingScalingPolicyConfigurationArgs build() {
             return new PolicyTargetTrackingScalingPolicyConfigurationArgs(customizedMetricSpecification, disableScaleIn, predefinedMetricSpecification, scaleInCooldown, scaleOutCooldown, targetValue);
         }
     }

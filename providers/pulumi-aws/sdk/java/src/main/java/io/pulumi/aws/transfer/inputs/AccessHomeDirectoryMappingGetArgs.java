@@ -73,22 +73,18 @@ public final class AccessHomeDirectoryMappingGetArgs extends io.pulumi.resources
             this.entry = Objects.requireNonNull(entry);
             return this;
         }
-
         public Builder entry(String entry) {
             this.entry = Output.of(Objects.requireNonNull(entry));
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public AccessHomeDirectoryMappingGetArgs build() {
+        }        public AccessHomeDirectoryMappingGetArgs build() {
             return new AccessHomeDirectoryMappingGetArgs(entry, target);
         }
     }

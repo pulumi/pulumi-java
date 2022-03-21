@@ -164,72 +164,64 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<AmiFromInstanceEbsBlockDeviceArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(AmiFromInstanceEbsBlockDeviceArgs... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<AmiFromInstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(AmiFromInstanceEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder snapshotWithoutReboot(@Nullable Output<Boolean> snapshotWithoutReboot) {
             this.snapshotWithoutReboot = snapshotWithoutReboot;
             return this;
         }
-
         public Builder snapshotWithoutReboot(@Nullable Boolean snapshotWithoutReboot) {
             this.snapshotWithoutReboot = Output.ofNullable(snapshotWithoutReboot);
             return this;
         }
-
         public Builder sourceInstanceId(Output<String> sourceInstanceId) {
             this.sourceInstanceId = Objects.requireNonNull(sourceInstanceId);
             return this;
         }
-
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.sourceInstanceId = Output.of(Objects.requireNonNull(sourceInstanceId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AmiFromInstanceArgs build() {
+        }        public AmiFromInstanceArgs build() {
             return new AmiFromInstanceArgs(description, ebsBlockDevices, ephemeralBlockDevices, name, snapshotWithoutReboot, sourceInstanceId, tags);
         }
     }

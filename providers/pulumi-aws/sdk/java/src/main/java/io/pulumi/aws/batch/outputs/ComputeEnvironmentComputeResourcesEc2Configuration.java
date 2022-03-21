@@ -71,12 +71,10 @@ public final class ComputeEnvironmentComputeResourcesEc2Configuration {
             this.imageIdOverride = imageIdOverride;
             return this;
         }
-
         public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
-        }
-        public ComputeEnvironmentComputeResourcesEc2Configuration build() {
+        }        public ComputeEnvironmentComputeResourcesEc2Configuration build() {
             return new ComputeEnvironmentComputeResourcesEc2Configuration(imageIdOverride, imageType);
         }
     }

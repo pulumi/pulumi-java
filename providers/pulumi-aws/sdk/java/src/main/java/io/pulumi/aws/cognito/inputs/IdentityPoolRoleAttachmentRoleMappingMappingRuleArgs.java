@@ -105,42 +105,34 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
             this.claim = Objects.requireNonNull(claim);
             return this;
         }
-
         public Builder claim(String claim) {
             this.claim = Output.of(Objects.requireNonNull(claim));
             return this;
         }
-
         public Builder matchType(Output<String> matchType) {
             this.matchType = Objects.requireNonNull(matchType);
             return this;
         }
-
         public Builder matchType(String matchType) {
             this.matchType = Output.of(Objects.requireNonNull(matchType));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs build() {
+        }        public IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs build() {
             return new IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs(claim, matchType, roleArn, value);
         }
     }

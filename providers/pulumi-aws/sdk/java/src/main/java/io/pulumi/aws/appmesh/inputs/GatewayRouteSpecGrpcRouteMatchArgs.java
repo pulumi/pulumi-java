@@ -56,12 +56,10 @@ public final class GatewayRouteSpecGrpcRouteMatchArgs extends io.pulumi.resource
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public GatewayRouteSpecGrpcRouteMatchArgs build() {
+        }        public GatewayRouteSpecGrpcRouteMatchArgs build() {
             return new GatewayRouteSpecGrpcRouteMatchArgs(serviceName);
         }
     }

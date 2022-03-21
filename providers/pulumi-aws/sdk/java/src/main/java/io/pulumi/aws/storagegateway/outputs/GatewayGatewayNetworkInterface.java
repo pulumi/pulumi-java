@@ -53,8 +53,7 @@ public final class GatewayGatewayNetworkInterface {
         public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
-        }
-        public GatewayGatewayNetworkInterface build() {
+        }        public GatewayGatewayNetworkInterface build() {
             return new GatewayGatewayNetworkInterface(ipv4Address);
         }
     }

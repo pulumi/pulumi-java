@@ -128,52 +128,51 @@ public final class RouteSpecGrpcRouteRetryPolicyArgs extends io.pulumi.resources
             this.grpcRetryEvents = grpcRetryEvents;
             return this;
         }
-
         public Builder grpcRetryEvents(@Nullable List<String> grpcRetryEvents) {
             this.grpcRetryEvents = Output.ofNullable(grpcRetryEvents);
             return this;
         }
-
+        public Builder grpcRetryEvents(String... grpcRetryEvents) {
+            return grpcRetryEvents(List.of(grpcRetryEvents));
+        }
         public Builder httpRetryEvents(@Nullable Output<List<String>> httpRetryEvents) {
             this.httpRetryEvents = httpRetryEvents;
             return this;
         }
-
         public Builder httpRetryEvents(@Nullable List<String> httpRetryEvents) {
             this.httpRetryEvents = Output.ofNullable(httpRetryEvents);
             return this;
         }
-
+        public Builder httpRetryEvents(String... httpRetryEvents) {
+            return httpRetryEvents(List.of(httpRetryEvents));
+        }
         public Builder maxRetries(Output<Integer> maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Output.of(Objects.requireNonNull(maxRetries));
             return this;
         }
-
         public Builder perRetryTimeout(Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutArgs> perRetryTimeout) {
             this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
             return this;
         }
-
         public Builder perRetryTimeout(RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutArgs perRetryTimeout) {
             this.perRetryTimeout = Output.of(Objects.requireNonNull(perRetryTimeout));
             return this;
         }
-
         public Builder tcpRetryEvents(@Nullable Output<List<String>> tcpRetryEvents) {
             this.tcpRetryEvents = tcpRetryEvents;
             return this;
         }
-
         public Builder tcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
             this.tcpRetryEvents = Output.ofNullable(tcpRetryEvents);
             return this;
         }
-        public RouteSpecGrpcRouteRetryPolicyArgs build() {
+        public Builder tcpRetryEvents(String... tcpRetryEvents) {
+            return tcpRetryEvents(List.of(tcpRetryEvents));
+        }        public RouteSpecGrpcRouteRetryPolicyArgs build() {
             return new RouteSpecGrpcRouteRetryPolicyArgs(grpcRetryEvents, httpRetryEvents, maxRetries, perRetryTimeout, tcpRetryEvents);
         }
     }

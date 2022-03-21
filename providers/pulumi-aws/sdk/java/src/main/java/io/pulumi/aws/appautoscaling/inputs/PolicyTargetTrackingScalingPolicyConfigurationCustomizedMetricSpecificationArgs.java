@@ -124,52 +124,45 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
+        public Builder dimensions(PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public Builder statistic(Output<String> statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
-
         public Builder statistic(String statistic) {
             this.statistic = Output.of(Objects.requireNonNull(statistic));
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
-        }
-        public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs build() {
+        }        public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs build() {
             return new PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs(dimensions, metricName, namespace, statistic, unit);
         }
     }

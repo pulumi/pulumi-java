@@ -305,162 +305,136 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificateAuthority(@Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
-
         public Builder certificateAuthority(@Nullable ClusterCertificateAuthorityGetArgs certificateAuthority) {
             this.certificateAuthority = Output.ofNullable(certificateAuthority);
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder enabledClusterLogTypes(@Nullable Output<List<String>> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
-
         public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = Output.ofNullable(enabledClusterLogTypes);
             return this;
         }
-
+        public Builder enabledClusterLogTypes(String... enabledClusterLogTypes) {
+            return enabledClusterLogTypes(List.of(enabledClusterLogTypes));
+        }
         public Builder encryptionConfig(@Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable ClusterEncryptionConfigGetArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder identities(@Nullable Output<List<ClusterIdentityGetArgs>> identities) {
             this.identities = identities;
             return this;
         }
-
         public Builder identities(@Nullable List<ClusterIdentityGetArgs> identities) {
             this.identities = Output.ofNullable(identities);
             return this;
         }
-
+        public Builder identities(ClusterIdentityGetArgs... identities) {
+            return identities(List.of(identities));
+        }
         public Builder kubernetesNetworkConfig(@Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
-
         public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigGetArgs kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = Output.ofNullable(kubernetesNetworkConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
-
         public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<ClusterVpcConfigGetArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ClusterVpcConfigGetArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(arn, certificateAuthority, createdAt, enabledClusterLogTypes, encryptionConfig, endpoint, identities, kubernetesNetworkConfig, name, platformVersion, roleArn, status, tags, tagsAll, version, vpcConfig);
         }
     }

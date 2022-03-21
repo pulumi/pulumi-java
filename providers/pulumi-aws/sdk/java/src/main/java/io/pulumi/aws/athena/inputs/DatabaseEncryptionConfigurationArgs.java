@@ -74,22 +74,18 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
-
         public Builder encryptionOption(String encryptionOption) {
             this.encryptionOption = Output.of(Objects.requireNonNull(encryptionOption));
             return this;
         }
-
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
-        }
-        public DatabaseEncryptionConfigurationArgs build() {
+        }        public DatabaseEncryptionConfigurationArgs build() {
             return new DatabaseEncryptionConfigurationArgs(encryptionOption, kmsKey);
         }
     }

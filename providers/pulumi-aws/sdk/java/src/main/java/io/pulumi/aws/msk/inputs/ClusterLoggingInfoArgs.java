@@ -56,12 +56,10 @@ public final class ClusterLoggingInfoArgs extends io.pulumi.resources.ResourceAr
             this.brokerLogs = Objects.requireNonNull(brokerLogs);
             return this;
         }
-
         public Builder brokerLogs(ClusterLoggingInfoBrokerLogsArgs brokerLogs) {
             this.brokerLogs = Output.of(Objects.requireNonNull(brokerLogs));
             return this;
-        }
-        public ClusterLoggingInfoArgs build() {
+        }        public ClusterLoggingInfoArgs build() {
             return new ClusterLoggingInfoArgs(brokerLogs);
         }
     }

@@ -61,12 +61,10 @@ public final class GetRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRuleResult build() {
+        }        public GetRuleResult build() {
             return new GetRuleResult(id, name);
         }
     }

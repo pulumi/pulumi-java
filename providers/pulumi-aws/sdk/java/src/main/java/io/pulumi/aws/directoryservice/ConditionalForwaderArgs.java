@@ -90,32 +90,29 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
-
         public Builder directoryId(String directoryId) {
             this.directoryId = Output.of(Objects.requireNonNull(directoryId));
             return this;
         }
-
         public Builder dnsIps(Output<List<String>> dnsIps) {
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
-
         public Builder dnsIps(List<String> dnsIps) {
             this.dnsIps = Output.of(Objects.requireNonNull(dnsIps));
             return this;
         }
-
+        public Builder dnsIps(String... dnsIps) {
+            return dnsIps(List.of(dnsIps));
+        }
         public Builder remoteDomainName(Output<String> remoteDomainName) {
             this.remoteDomainName = Objects.requireNonNull(remoteDomainName);
             return this;
         }
-
         public Builder remoteDomainName(String remoteDomainName) {
             this.remoteDomainName = Output.of(Objects.requireNonNull(remoteDomainName));
             return this;
-        }
-        public ConditionalForwaderArgs build() {
+        }        public ConditionalForwaderArgs build() {
             return new ConditionalForwaderArgs(directoryId, dnsIps, remoteDomainName);
         }
     }

@@ -69,12 +69,10 @@ public final class EventConnectionAuthParametersOauthClientParameters {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
-        }
-        public EventConnectionAuthParametersOauthClientParameters build() {
+        }        public EventConnectionAuthParametersOauthClientParameters build() {
             return new EventConnectionAuthParametersOauthClientParameters(clientId, clientSecret);
         }
     }

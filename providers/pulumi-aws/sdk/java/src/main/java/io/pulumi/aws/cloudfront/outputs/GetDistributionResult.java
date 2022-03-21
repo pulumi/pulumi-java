@@ -216,57 +216,49 @@ public final class GetDistributionResult {
             this.aliases = Objects.requireNonNull(aliases);
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inProgressValidationBatches(Integer inProgressValidationBatches) {
             this.inProgressValidationBatches = Objects.requireNonNull(inProgressValidationBatches);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetDistributionResult build() {
+        }        public GetDistributionResult build() {
             return new GetDistributionResult(aliases, arn, domainName, enabled, etag, hostedZoneId, id, inProgressValidationBatches, lastModifiedTime, status, tags);
         }
     }

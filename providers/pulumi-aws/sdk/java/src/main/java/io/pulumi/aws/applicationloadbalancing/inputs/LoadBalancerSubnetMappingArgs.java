@@ -118,52 +118,42 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
             this.allocationId = allocationId;
             return this;
         }
-
         public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
-
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
-
         public Builder outpostId(@Nullable Output<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
-
         public Builder outpostId(@Nullable String outpostId) {
             this.outpostId = Output.ofNullable(outpostId);
             return this;
         }
-
         public Builder privateIpv4Address(@Nullable Output<String> privateIpv4Address) {
             this.privateIpv4Address = privateIpv4Address;
             return this;
         }
-
         public Builder privateIpv4Address(@Nullable String privateIpv4Address) {
             this.privateIpv4Address = Output.ofNullable(privateIpv4Address);
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public LoadBalancerSubnetMappingArgs build() {
+        }        public LoadBalancerSubnetMappingArgs build() {
             return new LoadBalancerSubnetMappingArgs(allocationId, ipv6Address, outpostId, privateIpv4Address, subnetId);
         }
     }

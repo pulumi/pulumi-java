@@ -58,7 +58,9 @@ public final class GetAutoscalingGroupsArgs extends io.pulumi.resources.InvokeAr
             this.filters = filters;
             return this;
         }
-        public GetAutoscalingGroupsArgs build() {
+        public Builder filters(GetAutoscalingGroupsFilter... filters) {
+            return filters(List.of(filters));
+        }        public GetAutoscalingGroupsArgs build() {
             return new GetAutoscalingGroupsArgs(filters);
         }
     }

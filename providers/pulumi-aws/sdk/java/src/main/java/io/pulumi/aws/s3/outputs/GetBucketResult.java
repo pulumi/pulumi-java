@@ -173,47 +173,38 @@ public final class GetBucketResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucketDomainName(String bucketDomainName) {
             this.bucketDomainName = Objects.requireNonNull(bucketDomainName);
             return this;
         }
-
         public Builder bucketRegionalDomainName(String bucketRegionalDomainName) {
             this.bucketRegionalDomainName = Objects.requireNonNull(bucketRegionalDomainName);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder websiteDomain(String websiteDomain) {
             this.websiteDomain = Objects.requireNonNull(websiteDomain);
             return this;
         }
-
         public Builder websiteEndpoint(String websiteEndpoint) {
             this.websiteEndpoint = Objects.requireNonNull(websiteEndpoint);
             return this;
-        }
-        public GetBucketResult build() {
+        }        public GetBucketResult build() {
             return new GetBucketResult(arn, bucket, bucketDomainName, bucketRegionalDomainName, hostedZoneId, id, region, websiteDomain, websiteEndpoint);
         }
     }

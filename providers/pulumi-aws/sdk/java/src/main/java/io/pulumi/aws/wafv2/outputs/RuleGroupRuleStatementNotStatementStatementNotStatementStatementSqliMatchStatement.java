@@ -73,12 +73,13 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatement build() {
+        public Builder textTransformations(RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatement build() {
             return new RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatement(fieldToMatch, textTransformations);
         }
     }

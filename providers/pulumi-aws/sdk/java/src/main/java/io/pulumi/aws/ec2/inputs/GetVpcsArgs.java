@@ -78,12 +78,13 @@ public final class GetVpcsArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVpcsArgs build() {
+        }        public GetVpcsArgs build() {
             return new GetVpcsArgs(filters, tags);
         }
     }

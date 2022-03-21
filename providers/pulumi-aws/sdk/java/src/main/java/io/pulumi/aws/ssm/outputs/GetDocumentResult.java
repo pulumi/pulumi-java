@@ -127,37 +127,30 @@ public final class GetDocumentResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder documentFormat(@Nullable String documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
-
         public Builder documentType(String documentType) {
             this.documentType = Objects.requireNonNull(documentType);
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetDocumentResult build() {
+        }        public GetDocumentResult build() {
             return new GetDocumentResult(arn, content, documentFormat, documentType, documentVersion, id, name);
         }
     }

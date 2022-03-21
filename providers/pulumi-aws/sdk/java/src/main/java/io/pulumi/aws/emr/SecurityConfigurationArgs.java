@@ -91,32 +91,26 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder configuration(String configuration) {
             this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
-        }
-        public SecurityConfigurationArgs build() {
+        }        public SecurityConfigurationArgs build() {
             return new SecurityConfigurationArgs(configuration, name, namePrefix);
         }
     }

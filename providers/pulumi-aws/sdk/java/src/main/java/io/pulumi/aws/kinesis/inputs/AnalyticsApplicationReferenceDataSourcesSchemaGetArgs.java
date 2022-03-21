@@ -95,32 +95,29 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
         public Builder recordColumns(List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs> recordColumns) {
             this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
             return this;
         }
-
+        public Builder recordColumns(AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = Output.ofNullable(recordEncoding);
             return this;
         }
-
         public Builder recordFormat(Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
-
         public Builder recordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs recordFormat) {
             this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesSchemaGetArgs build() {
+        }        public AnalyticsApplicationReferenceDataSourcesSchemaGetArgs build() {
             return new AnalyticsApplicationReferenceDataSourcesSchemaGetArgs(recordColumns, recordEncoding, recordFormat);
         }
     }

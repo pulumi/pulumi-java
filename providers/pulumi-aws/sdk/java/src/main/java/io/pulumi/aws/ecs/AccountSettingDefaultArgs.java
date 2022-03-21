@@ -74,22 +74,18 @@ public final class AccountSettingDefaultArgs extends io.pulumi.resources.Resourc
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public AccountSettingDefaultArgs build() {
+        }        public AccountSettingDefaultArgs build() {
             return new AccountSettingDefaultArgs(name, value);
         }
     }

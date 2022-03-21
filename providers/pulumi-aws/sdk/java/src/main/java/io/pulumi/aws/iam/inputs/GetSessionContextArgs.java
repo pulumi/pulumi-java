@@ -54,8 +54,7 @@ public final class GetSessionContextArgs extends io.pulumi.resources.InvokeArgs 
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetSessionContextArgs build() {
+        }        public GetSessionContextArgs build() {
             return new GetSessionContextArgs(arn);
         }
     }

@@ -141,32 +141,29 @@ public final class ListenerRuleCondition {
             this.hostHeader = hostHeader;
             return this;
         }
-
         public Builder httpHeader(@Nullable ListenerRuleConditionHttpHeader httpHeader) {
             this.httpHeader = httpHeader;
             return this;
         }
-
         public Builder httpRequestMethod(@Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod) {
             this.httpRequestMethod = httpRequestMethod;
             return this;
         }
-
         public Builder pathPattern(@Nullable ListenerRuleConditionPathPattern pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
-
         public Builder queryStrings(@Nullable List<ListenerRuleConditionQueryString> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-
+        public Builder queryStrings(ListenerRuleConditionQueryString... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }
         public Builder sourceIp(@Nullable ListenerRuleConditionSourceIp sourceIp) {
             this.sourceIp = sourceIp;
             return this;
-        }
-        public ListenerRuleCondition build() {
+        }        public ListenerRuleCondition build() {
             return new ListenerRuleCondition(hostHeader, httpHeader, httpRequestMethod, pathPattern, queryStrings, sourceIp);
         }
     }

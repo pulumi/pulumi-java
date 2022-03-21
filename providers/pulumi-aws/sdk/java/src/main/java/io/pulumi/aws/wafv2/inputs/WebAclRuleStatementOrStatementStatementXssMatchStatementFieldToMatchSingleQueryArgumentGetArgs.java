@@ -56,12 +56,10 @@ public final class WebAclRuleStatementOrStatementStatementXssMatchStatementField
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
+        }        public WebAclRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
             return new WebAclRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs(name);
         }
     }

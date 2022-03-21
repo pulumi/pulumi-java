@@ -90,17 +90,14 @@ public final class IntentSlotValueElicitationPromptMessage {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = groupNumber;
             return this;
-        }
-        public IntentSlotValueElicitationPromptMessage build() {
+        }        public IntentSlotValueElicitationPromptMessage build() {
             return new IntentSlotValueElicitationPromptMessage(content, contentType, groupNumber);
         }
     }

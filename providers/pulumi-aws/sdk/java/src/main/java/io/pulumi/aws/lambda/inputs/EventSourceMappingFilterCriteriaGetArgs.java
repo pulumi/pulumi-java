@@ -58,12 +58,13 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends io.pulumi.res
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable List<EventSourceMappingFilterCriteriaFilterGetArgs> filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-        public EventSourceMappingFilterCriteriaGetArgs build() {
+        public Builder filters(EventSourceMappingFilterCriteriaFilterGetArgs... filters) {
+            return filters(List.of(filters));
+        }        public EventSourceMappingFilterCriteriaGetArgs build() {
             return new EventSourceMappingFilterCriteriaGetArgs(filters);
         }
     }

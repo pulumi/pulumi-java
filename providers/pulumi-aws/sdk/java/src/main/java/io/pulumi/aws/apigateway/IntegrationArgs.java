@@ -326,167 +326,137 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             this.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
-
         public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
             this.cacheKeyParameters = Output.ofNullable(cacheKeyParameters);
             return this;
         }
-
+        public Builder cacheKeyParameters(String... cacheKeyParameters) {
+            return cacheKeyParameters(List.of(cacheKeyParameters));
+        }
         public Builder cacheNamespace(@Nullable Output<String> cacheNamespace) {
             this.cacheNamespace = cacheNamespace;
             return this;
         }
-
         public Builder cacheNamespace(@Nullable String cacheNamespace) {
             this.cacheNamespace = Output.ofNullable(cacheNamespace);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder connectionType(@Nullable Output<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
-
         public Builder connectionType(@Nullable String connectionType) {
             this.connectionType = Output.ofNullable(connectionType);
             return this;
         }
-
         public Builder contentHandling(@Nullable Output<String> contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
-
         public Builder contentHandling(@Nullable String contentHandling) {
             this.contentHandling = Output.ofNullable(contentHandling);
             return this;
         }
-
         public Builder credentials(@Nullable Output<String> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable String credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
-
         public Builder integrationHttpMethod(@Nullable Output<String> integrationHttpMethod) {
             this.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
-
         public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
             this.integrationHttpMethod = Output.ofNullable(integrationHttpMethod);
             return this;
         }
-
         public Builder passthroughBehavior(@Nullable Output<String> passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
-
         public Builder passthroughBehavior(@Nullable String passthroughBehavior) {
             this.passthroughBehavior = Output.ofNullable(passthroughBehavior);
             return this;
         }
-
         public Builder requestParameters(@Nullable Output<Map<String,String>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
-
         public Builder requestParameters(@Nullable Map<String,String> requestParameters) {
             this.requestParameters = Output.ofNullable(requestParameters);
             return this;
         }
-
         public Builder requestTemplates(@Nullable Output<Map<String,String>> requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
-
         public Builder requestTemplates(@Nullable Map<String,String> requestTemplates) {
             this.requestTemplates = Output.ofNullable(requestTemplates);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
-
         public Builder timeoutMilliseconds(@Nullable Output<Integer> timeoutMilliseconds) {
             this.timeoutMilliseconds = timeoutMilliseconds;
             return this;
         }
-
         public Builder timeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
             this.timeoutMilliseconds = Output.ofNullable(timeoutMilliseconds);
             return this;
         }
-
         public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigArgs> tlsConfig) {
             this.tlsConfig = tlsConfig;
             return this;
         }
-
         public Builder tlsConfig(@Nullable IntegrationTlsConfigArgs tlsConfig) {
             this.tlsConfig = Output.ofNullable(tlsConfig);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public IntegrationArgs build() {
+        }        public IntegrationArgs build() {
             return new IntegrationArgs(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, httpMethod, integrationHttpMethod, passthroughBehavior, requestParameters, requestTemplates, resourceId, restApi, timeoutMilliseconds, tlsConfig, type, uri);
         }
     }

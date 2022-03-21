@@ -69,12 +69,10 @@ public final class InsightFiltersResourceContainerImageId {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceContainerImageId build() {
+        }        public InsightFiltersResourceContainerImageId build() {
             return new InsightFiltersResourceContainerImageId(comparison, value);
         }
     }

@@ -157,72 +157,61 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
             this.configs = Objects.requireNonNull(configs);
             return this;
         }
-
         public Builder configs(List<HoursOfOperationConfigArgs> configs) {
             this.configs = Output.of(Objects.requireNonNull(configs));
             return this;
         }
-
+        public Builder configs(HoursOfOperationConfigArgs... configs) {
+            return configs(List.of(configs));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
-        }
-        public HoursOfOperationArgs build() {
+        }        public HoursOfOperationArgs build() {
             return new HoursOfOperationArgs(configs, description, instanceId, name, tags, tagsAll, timeZone);
         }
     }

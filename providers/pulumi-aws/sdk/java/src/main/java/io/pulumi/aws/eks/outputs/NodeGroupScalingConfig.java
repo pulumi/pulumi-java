@@ -85,17 +85,14 @@ public final class NodeGroupScalingConfig {
             this.desiredSize = Objects.requireNonNull(desiredSize);
             return this;
         }
-
         public Builder maxSize(Integer maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
-
         public Builder minSize(Integer minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
-        }
-        public NodeGroupScalingConfig build() {
+        }        public NodeGroupScalingConfig build() {
             return new NodeGroupScalingConfig(desiredSize, maxSize, minSize);
         }
     }

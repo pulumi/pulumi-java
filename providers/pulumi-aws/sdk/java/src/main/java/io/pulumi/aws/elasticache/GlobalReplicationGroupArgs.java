@@ -90,32 +90,26 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
             this.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
-
         public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = Output.ofNullable(globalReplicationGroupDescription);
             return this;
         }
-
         public Builder globalReplicationGroupIdSuffix(Output<String> globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = Objects.requireNonNull(globalReplicationGroupIdSuffix);
             return this;
         }
-
         public Builder globalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = Output.of(Objects.requireNonNull(globalReplicationGroupIdSuffix));
             return this;
         }
-
         public Builder primaryReplicationGroupId(Output<String> primaryReplicationGroupId) {
             this.primaryReplicationGroupId = Objects.requireNonNull(primaryReplicationGroupId);
             return this;
         }
-
         public Builder primaryReplicationGroupId(String primaryReplicationGroupId) {
             this.primaryReplicationGroupId = Output.of(Objects.requireNonNull(primaryReplicationGroupId));
             return this;
-        }
-        public GlobalReplicationGroupArgs build() {
+        }        public GlobalReplicationGroupArgs build() {
             return new GlobalReplicationGroupArgs(globalReplicationGroupDescription, globalReplicationGroupIdSuffix, primaryReplicationGroupId);
         }
     }

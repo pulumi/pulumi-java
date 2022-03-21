@@ -78,12 +78,13 @@ public final class GetVpcPeeringConnectionsArgs extends io.pulumi.resources.Invo
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcPeeringConnectionsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVpcPeeringConnectionsArgs build() {
+        }        public GetVpcPeeringConnectionsArgs build() {
             return new GetVpcPeeringConnectionsArgs(filters, tags);
         }
     }

@@ -71,12 +71,13 @@ public final class RegistryScanningConfigurationRule {
             this.repositoryFilters = Objects.requireNonNull(repositoryFilters);
             return this;
         }
-
+        public Builder repositoryFilters(RegistryScanningConfigurationRuleRepositoryFilter... repositoryFilters) {
+            return repositoryFilters(List.of(repositoryFilters));
+        }
         public Builder scanFrequency(String scanFrequency) {
             this.scanFrequency = Objects.requireNonNull(scanFrequency);
             return this;
-        }
-        public RegistryScanningConfigurationRule build() {
+        }        public RegistryScanningConfigurationRule build() {
             return new RegistryScanningConfigurationRule(repositoryFilters, scanFrequency);
         }
     }

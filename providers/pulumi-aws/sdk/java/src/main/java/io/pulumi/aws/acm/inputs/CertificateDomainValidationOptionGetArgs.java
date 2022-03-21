@@ -106,42 +106,34 @@ public final class CertificateDomainValidationOptionGetArgs extends io.pulumi.re
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder resourceRecordName(@Nullable Output<String> resourceRecordName) {
             this.resourceRecordName = resourceRecordName;
             return this;
         }
-
         public Builder resourceRecordName(@Nullable String resourceRecordName) {
             this.resourceRecordName = Output.ofNullable(resourceRecordName);
             return this;
         }
-
         public Builder resourceRecordType(@Nullable Output<String> resourceRecordType) {
             this.resourceRecordType = resourceRecordType;
             return this;
         }
-
         public Builder resourceRecordType(@Nullable String resourceRecordType) {
             this.resourceRecordType = Output.ofNullable(resourceRecordType);
             return this;
         }
-
         public Builder resourceRecordValue(@Nullable Output<String> resourceRecordValue) {
             this.resourceRecordValue = resourceRecordValue;
             return this;
         }
-
         public Builder resourceRecordValue(@Nullable String resourceRecordValue) {
             this.resourceRecordValue = Output.ofNullable(resourceRecordValue);
             return this;
-        }
-        public CertificateDomainValidationOptionGetArgs build() {
+        }        public CertificateDomainValidationOptionGetArgs build() {
             return new CertificateDomainValidationOptionGetArgs(domainName, resourceRecordName, resourceRecordType, resourceRecordValue);
         }
     }

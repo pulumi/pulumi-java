@@ -74,22 +74,18 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
             this.principal = principal;
             return this;
         }
-
         public Builder principal(@Nullable String principal) {
             this.principal = Output.ofNullable(principal);
             return this;
         }
-
         public Builder thing(@Nullable Output<String> thing) {
             this.thing = thing;
             return this;
         }
-
         public Builder thing(@Nullable String thing) {
             this.thing = Output.ofNullable(thing);
             return this;
-        }
-        public ThingPrincipalAttachmentState build() {
+        }        public ThingPrincipalAttachmentState build() {
             return new ThingPrincipalAttachmentState(principal, thing);
         }
     }

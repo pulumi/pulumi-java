@@ -79,27 +79,22 @@ public final class ClusterClusterCertificate {
             this.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
-
         public Builder clusterCertificate(@Nullable String clusterCertificate) {
             this.clusterCertificate = clusterCertificate;
             return this;
         }
-
         public Builder clusterCsr(@Nullable String clusterCsr) {
             this.clusterCsr = clusterCsr;
             return this;
         }
-
         public Builder hsmCertificate(@Nullable String hsmCertificate) {
             this.hsmCertificate = hsmCertificate;
             return this;
         }
-
         public Builder manufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
-        }
-        public ClusterClusterCertificate build() {
+        }        public ClusterClusterCertificate build() {
             return new ClusterClusterCertificate(awsHardwareCertificate, clusterCertificate, clusterCsr, hsmCertificate, manufacturerHardwareCertificate);
         }
     }

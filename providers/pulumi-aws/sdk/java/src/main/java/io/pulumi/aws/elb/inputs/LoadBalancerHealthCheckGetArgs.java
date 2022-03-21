@@ -125,52 +125,42 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
-
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Output.of(Objects.requireNonNull(healthyThreshold));
             return this;
         }
-
         public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
-
         public Builder timeout(Output<Integer> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder timeout(Integer timeout) {
             this.timeout = Output.of(Objects.requireNonNull(timeout));
             return this;
         }
-
         public Builder unhealthyThreshold(Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Output.of(Objects.requireNonNull(unhealthyThreshold));
             return this;
-        }
-        public LoadBalancerHealthCheckGetArgs build() {
+        }        public LoadBalancerHealthCheckGetArgs build() {
             return new LoadBalancerHealthCheckGetArgs(healthyThreshold, interval, target, timeout, unhealthyThreshold);
         }
     }

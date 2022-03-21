@@ -73,12 +73,10 @@ public final class InstanceFleetInstanceTypeConfigConfiguration {
             this.classification = classification;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = properties;
             return this;
-        }
-        public InstanceFleetInstanceTypeConfigConfiguration build() {
+        }        public InstanceFleetInstanceTypeConfigConfiguration build() {
             return new InstanceFleetInstanceTypeConfigConfiguration(classification, properties);
         }
     }

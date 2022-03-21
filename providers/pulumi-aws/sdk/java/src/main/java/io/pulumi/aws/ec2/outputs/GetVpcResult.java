@@ -253,82 +253,72 @@ public final class GetVpcResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder cidrBlockAssociations(List<GetVpcCidrBlockAssociation> cidrBlockAssociations) {
             this.cidrBlockAssociations = Objects.requireNonNull(cidrBlockAssociations);
             return this;
         }
-
+        public Builder cidrBlockAssociations(GetVpcCidrBlockAssociation... cidrBlockAssociations) {
+            return cidrBlockAssociations(List.of(cidrBlockAssociations));
+        }
         public Builder $default(Boolean $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
-
         public Builder dhcpOptionsId(String dhcpOptionsId) {
             this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
             return this;
         }
-
         public Builder enableDnsHostnames(Boolean enableDnsHostnames) {
             this.enableDnsHostnames = Objects.requireNonNull(enableDnsHostnames);
             return this;
         }
-
         public Builder enableDnsSupport(Boolean enableDnsSupport) {
             this.enableDnsSupport = Objects.requireNonNull(enableDnsSupport);
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpcFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceTenancy(String instanceTenancy) {
             this.instanceTenancy = Objects.requireNonNull(instanceTenancy);
             return this;
         }
-
         public Builder ipv6AssociationId(String ipv6AssociationId) {
             this.ipv6AssociationId = Objects.requireNonNull(ipv6AssociationId);
             return this;
         }
-
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.ipv6CidrBlock = Objects.requireNonNull(ipv6CidrBlock);
             return this;
         }
-
         public Builder mainRouteTableId(String mainRouteTableId) {
             this.mainRouteTableId = Objects.requireNonNull(mainRouteTableId);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetVpcResult build() {
+        }        public GetVpcResult build() {
             return new GetVpcResult(arn, cidrBlock, cidrBlockAssociations, $default, dhcpOptionsId, enableDnsHostnames, enableDnsSupport, filters, id, instanceTenancy, ipv6AssociationId, ipv6CidrBlock, mainRouteTableId, ownerId, state, tags);
         }
     }

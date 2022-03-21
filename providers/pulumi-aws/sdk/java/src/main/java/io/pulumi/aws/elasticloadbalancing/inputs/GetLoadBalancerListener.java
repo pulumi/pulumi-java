@@ -101,27 +101,22 @@ public final class GetLoadBalancerListener extends io.pulumi.resources.InvokeArg
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
-
         public Builder instanceProtocol(String instanceProtocol) {
             this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
             return this;
         }
-
         public Builder lbPort(Integer lbPort) {
             this.lbPort = Objects.requireNonNull(lbPort);
             return this;
         }
-
         public Builder lbProtocol(String lbProtocol) {
             this.lbProtocol = Objects.requireNonNull(lbProtocol);
             return this;
         }
-
         public Builder sslCertificateId(String sslCertificateId) {
             this.sslCertificateId = Objects.requireNonNull(sslCertificateId);
             return this;
-        }
-        public GetLoadBalancerListener build() {
+        }        public GetLoadBalancerListener build() {
             return new GetLoadBalancerListener(instancePort, instanceProtocol, lbPort, lbProtocol, sslCertificateId);
         }
     }

@@ -57,12 +57,13 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public Builder dimensions(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionGetArgs> dimensions) {
             this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs build() {
+        public Builder dimensions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionGetArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs(dimensions);
         }
     }

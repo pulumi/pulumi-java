@@ -86,17 +86,17 @@ public final class PatchBaselineSource {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder products(List<String> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-        public PatchBaselineSource build() {
+        public Builder products(String... products) {
+            return products(List.of(products));
+        }        public PatchBaselineSource build() {
             return new PatchBaselineSource(configuration, name, products);
         }
     }

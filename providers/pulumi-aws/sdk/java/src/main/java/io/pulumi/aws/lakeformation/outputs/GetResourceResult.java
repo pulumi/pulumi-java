@@ -93,22 +93,18 @@ public final class GetResourceResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public GetResourceResult build() {
+        }        public GetResourceResult build() {
             return new GetResourceResult(arn, id, lastModified, roleArn);
         }
     }

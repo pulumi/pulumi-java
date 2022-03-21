@@ -142,62 +142,53 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder delegationSetId(@Nullable Output<String> delegationSetId) {
             this.delegationSetId = delegationSetId;
             return this;
         }
-
         public Builder delegationSetId(@Nullable String delegationSetId) {
             this.delegationSetId = Output.ofNullable(delegationSetId);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcs(@Nullable Output<List<ZoneVpcArgs>> vpcs) {
             this.vpcs = vpcs;
             return this;
         }
-
         public Builder vpcs(@Nullable List<ZoneVpcArgs> vpcs) {
             this.vpcs = Output.ofNullable(vpcs);
             return this;
         }
-        public ZoneArgs build() {
+        public Builder vpcs(ZoneVpcArgs... vpcs) {
+            return vpcs(List.of(vpcs));
+        }        public ZoneArgs build() {
             return new ZoneArgs(comment, delegationSetId, forceDestroy, name, tags, vpcs);
         }
     }

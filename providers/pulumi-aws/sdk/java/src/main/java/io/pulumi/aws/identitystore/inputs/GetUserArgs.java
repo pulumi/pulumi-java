@@ -92,17 +92,17 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
+        public Builder filters(GetUserFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder identityStoreId(String identityStoreId) {
             this.identityStoreId = Objects.requireNonNull(identityStoreId);
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
-        }
-        public GetUserArgs build() {
+        }        public GetUserArgs build() {
             return new GetUserArgs(filters, identityStoreId, userId);
         }
     }

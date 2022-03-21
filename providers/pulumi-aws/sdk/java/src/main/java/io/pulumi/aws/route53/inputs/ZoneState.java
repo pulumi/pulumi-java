@@ -207,102 +207,88 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder delegationSetId(@Nullable Output<String> delegationSetId) {
             this.delegationSetId = delegationSetId;
             return this;
         }
-
         public Builder delegationSetId(@Nullable String delegationSetId) {
             this.delegationSetId = Output.ofNullable(delegationSetId);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nameServers(@Nullable Output<List<String>> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
-
         public Builder nameServers(@Nullable List<String> nameServers) {
             this.nameServers = Output.ofNullable(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcs(@Nullable Output<List<ZoneVpcGetArgs>> vpcs) {
             this.vpcs = vpcs;
             return this;
         }
-
         public Builder vpcs(@Nullable List<ZoneVpcGetArgs> vpcs) {
             this.vpcs = Output.ofNullable(vpcs);
             return this;
         }
-
+        public Builder vpcs(ZoneVpcGetArgs... vpcs) {
+            return vpcs(List.of(vpcs));
+        }
         public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
-
         public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Output.ofNullable(zoneId);
             return this;
-        }
-        public ZoneState build() {
+        }        public ZoneState build() {
             return new ZoneState(arn, comment, delegationSetId, forceDestroy, name, nameServers, tags, tagsAll, vpcs, zoneId);
         }
     }

@@ -90,32 +90,26 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder messageBody(@Nullable Output<String> messageBody) {
             this.messageBody = messageBody;
             return this;
         }
-
         public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = Output.ofNullable(messageBody);
             return this;
         }
-
         public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Output.ofNullable(statusCode);
             return this;
-        }
-        public ListenerDefaultActionFixedResponseGetArgs build() {
+        }        public ListenerDefaultActionFixedResponseGetArgs build() {
             return new ListenerDefaultActionFixedResponseGetArgs(contentType, messageBody, statusCode);
         }
     }

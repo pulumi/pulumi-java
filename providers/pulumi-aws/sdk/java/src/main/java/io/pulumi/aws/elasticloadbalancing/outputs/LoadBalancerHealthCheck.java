@@ -124,27 +124,22 @@ public final class LoadBalancerHealthCheck {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder timeout(Integer timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
-        }
-        public LoadBalancerHealthCheck build() {
+        }        public LoadBalancerHealthCheck build() {
             return new LoadBalancerHealthCheck(healthyThreshold, interval, target, timeout, unhealthyThreshold);
         }
     }

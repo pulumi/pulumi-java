@@ -150,47 +150,38 @@ public final class GetPermissionSetResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder relayState(String relayState) {
             this.relayState = Objects.requireNonNull(relayState);
             return this;
         }
-
         public Builder sessionDuration(String sessionDuration) {
             this.sessionDuration = Objects.requireNonNull(sessionDuration);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetPermissionSetResult build() {
+        }        public GetPermissionSetResult build() {
             return new GetPermissionSetResult(arn, createdDate, description, id, instanceArn, name, relayState, sessionDuration, tags);
         }
     }

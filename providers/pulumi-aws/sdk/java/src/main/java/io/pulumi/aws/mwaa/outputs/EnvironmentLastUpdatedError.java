@@ -55,12 +55,10 @@ public final class EnvironmentLastUpdatedError {
             this.errorCode = errorCode;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
-        }
-        public EnvironmentLastUpdatedError build() {
+        }        public EnvironmentLastUpdatedError build() {
             return new EnvironmentLastUpdatedError(errorCode, errorMessage);
         }
     }

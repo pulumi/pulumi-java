@@ -253,132 +253,106 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
             this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder keyRotationEnabled(@Nullable Output<Boolean> keyRotationEnabled) {
             this.keyRotationEnabled = keyRotationEnabled;
             return this;
         }
-
         public Builder keyRotationEnabled(@Nullable Boolean keyRotationEnabled) {
             this.keyRotationEnabled = Output.ofNullable(keyRotationEnabled);
             return this;
         }
-
         public Builder keySpec(@Nullable Output<String> keySpec) {
             this.keySpec = keySpec;
             return this;
         }
-
         public Builder keySpec(@Nullable String keySpec) {
             this.keySpec = Output.ofNullable(keySpec);
             return this;
         }
-
         public Builder keyUsage(@Nullable Output<String> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder keyUsage(@Nullable String keyUsage) {
             this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder primaryKeyArn(@Nullable Output<String> primaryKeyArn) {
             this.primaryKeyArn = primaryKeyArn;
             return this;
         }
-
         public Builder primaryKeyArn(@Nullable String primaryKeyArn) {
             this.primaryKeyArn = Output.ofNullable(primaryKeyArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ReplicaKeyState build() {
+        }        public ReplicaKeyState build() {
             return new ReplicaKeyState(arn, bypassPolicyLockoutSafetyCheck, deletionWindowInDays, description, enabled, keyId, keyRotationEnabled, keySpec, keyUsage, policy, primaryKeyArn, tags, tagsAll);
         }
     }

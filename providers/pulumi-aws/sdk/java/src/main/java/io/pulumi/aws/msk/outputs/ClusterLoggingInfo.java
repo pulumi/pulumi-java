@@ -51,8 +51,7 @@ public final class ClusterLoggingInfo {
         public Builder brokerLogs(ClusterLoggingInfoBrokerLogs brokerLogs) {
             this.brokerLogs = Objects.requireNonNull(brokerLogs);
             return this;
-        }
-        public ClusterLoggingInfo build() {
+        }        public ClusterLoggingInfo build() {
             return new ClusterLoggingInfo(brokerLogs);
         }
     }

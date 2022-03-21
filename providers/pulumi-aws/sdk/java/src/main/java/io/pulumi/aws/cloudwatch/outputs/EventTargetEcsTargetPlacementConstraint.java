@@ -71,12 +71,10 @@ public final class EventTargetEcsTargetPlacementConstraint {
             this.expression = expression;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EventTargetEcsTargetPlacementConstraint build() {
+        }        public EventTargetEcsTargetPlacementConstraint build() {
             return new EventTargetEcsTargetPlacementConstraint(expression, type);
         }
     }

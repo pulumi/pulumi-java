@@ -158,72 +158,61 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder licenseCount(@Nullable Output<Integer> licenseCount) {
             this.licenseCount = licenseCount;
             return this;
         }
-
         public Builder licenseCount(@Nullable Integer licenseCount) {
             this.licenseCount = Output.ofNullable(licenseCount);
             return this;
         }
-
         public Builder licenseCountHardLimit(@Nullable Output<Boolean> licenseCountHardLimit) {
             this.licenseCountHardLimit = licenseCountHardLimit;
             return this;
         }
-
         public Builder licenseCountHardLimit(@Nullable Boolean licenseCountHardLimit) {
             this.licenseCountHardLimit = Output.ofNullable(licenseCountHardLimit);
             return this;
         }
-
         public Builder licenseCountingType(Output<String> licenseCountingType) {
             this.licenseCountingType = Objects.requireNonNull(licenseCountingType);
             return this;
         }
-
         public Builder licenseCountingType(String licenseCountingType) {
             this.licenseCountingType = Output.of(Objects.requireNonNull(licenseCountingType));
             return this;
         }
-
         public Builder licenseRules(@Nullable Output<List<String>> licenseRules) {
             this.licenseRules = licenseRules;
             return this;
         }
-
         public Builder licenseRules(@Nullable List<String> licenseRules) {
             this.licenseRules = Output.ofNullable(licenseRules);
             return this;
         }
-
+        public Builder licenseRules(String... licenseRules) {
+            return licenseRules(List.of(licenseRules));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LicenseConfigurationArgs build() {
+        }        public LicenseConfigurationArgs build() {
             return new LicenseConfigurationArgs(description, licenseCount, licenseCountHardLimit, licenseCountingType, licenseRules, name, tags);
         }
     }

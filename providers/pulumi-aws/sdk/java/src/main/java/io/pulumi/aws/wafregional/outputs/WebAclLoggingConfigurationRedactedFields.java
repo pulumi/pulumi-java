@@ -53,7 +53,9 @@ public final class WebAclLoggingConfigurationRedactedFields {
             this.fieldToMatches = Objects.requireNonNull(fieldToMatches);
             return this;
         }
-        public WebAclLoggingConfigurationRedactedFields build() {
+        public Builder fieldToMatches(WebAclLoggingConfigurationRedactedFieldsFieldToMatch... fieldToMatches) {
+            return fieldToMatches(List.of(fieldToMatches));
+        }        public WebAclLoggingConfigurationRedactedFields build() {
             return new WebAclLoggingConfigurationRedactedFields(fieldToMatches);
         }
     }

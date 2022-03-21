@@ -70,12 +70,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
-
         public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction build() {
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction(actionDefinition, actionName);
         }
     }

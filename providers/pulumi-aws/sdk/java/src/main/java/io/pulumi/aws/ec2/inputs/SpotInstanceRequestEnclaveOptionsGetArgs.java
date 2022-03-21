@@ -57,12 +57,10 @@ public final class SpotInstanceRequestEnclaveOptionsGetArgs extends io.pulumi.re
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public SpotInstanceRequestEnclaveOptionsGetArgs build() {
+        }        public SpotInstanceRequestEnclaveOptionsGetArgs build() {
             return new SpotInstanceRequestEnclaveOptionsGetArgs(enabled);
         }
     }

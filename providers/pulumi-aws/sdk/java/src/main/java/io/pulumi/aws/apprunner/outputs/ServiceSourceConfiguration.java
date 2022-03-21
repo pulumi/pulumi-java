@@ -106,22 +106,18 @@ public final class ServiceSourceConfiguration {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-
         public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
-
         public Builder codeRepository(@Nullable ServiceSourceConfigurationCodeRepository codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
-
         public Builder imageRepository(@Nullable ServiceSourceConfigurationImageRepository imageRepository) {
             this.imageRepository = imageRepository;
             return this;
-        }
-        public ServiceSourceConfiguration build() {
+        }        public ServiceSourceConfiguration build() {
             return new ServiceSourceConfiguration(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
         }
     }

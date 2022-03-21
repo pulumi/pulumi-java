@@ -74,22 +74,18 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
             this.healthCheckArn = healthCheckArn;
             return this;
         }
-
         public Builder healthCheckArn(@Nullable String healthCheckArn) {
             this.healthCheckArn = Output.ofNullable(healthCheckArn);
             return this;
         }
-
         public Builder shieldProtectionId(@Nullable Output<String> shieldProtectionId) {
             this.shieldProtectionId = shieldProtectionId;
             return this;
         }
-
         public Builder shieldProtectionId(@Nullable String shieldProtectionId) {
             this.shieldProtectionId = Output.ofNullable(shieldProtectionId);
             return this;
-        }
-        public ProtectionHealthCheckAssociationState build() {
+        }        public ProtectionHealthCheckAssociationState build() {
             return new ProtectionHealthCheckAssociationState(healthCheckArn, shieldProtectionId);
         }
     }

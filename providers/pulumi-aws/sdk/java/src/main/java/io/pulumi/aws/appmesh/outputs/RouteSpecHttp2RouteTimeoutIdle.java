@@ -70,12 +70,10 @@ public final class RouteSpecHttp2RouteTimeoutIdle {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RouteSpecHttp2RouteTimeoutIdle build() {
+        }        public RouteSpecHttp2RouteTimeoutIdle build() {
             return new RouteSpecHttp2RouteTimeoutIdle(unit, value);
         }
     }

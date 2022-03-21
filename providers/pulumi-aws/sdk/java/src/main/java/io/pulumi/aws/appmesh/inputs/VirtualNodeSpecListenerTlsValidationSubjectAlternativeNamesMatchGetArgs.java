@@ -57,12 +57,13 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMa
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
-
         public Builder exacts(List<String> exacts) {
             this.exacts = Output.of(Objects.requireNonNull(exacts));
             return this;
         }
-        public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs build() {
+        public Builder exacts(String... exacts) {
+            return exacts(List.of(exacts));
+        }        public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs build() {
             return new VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs(exacts);
         }
     }

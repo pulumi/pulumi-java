@@ -73,22 +73,18 @@ public final class ProjectSecondarySourceVersionGetArgs extends io.pulumi.resour
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
-
         public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
             return this;
         }
-
         public Builder sourceVersion(Output<String> sourceVersion) {
             this.sourceVersion = Objects.requireNonNull(sourceVersion);
             return this;
         }
-
         public Builder sourceVersion(String sourceVersion) {
             this.sourceVersion = Output.of(Objects.requireNonNull(sourceVersion));
             return this;
-        }
-        public ProjectSecondarySourceVersionGetArgs build() {
+        }        public ProjectSecondarySourceVersionGetArgs build() {
             return new ProjectSecondarySourceVersionGetArgs(sourceIdentifier, sourceVersion);
         }
     }

@@ -51,8 +51,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustSds {
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsValidationTrustSds build() {
+        }        public VirtualGatewaySpecListenerTlsValidationTrustSds build() {
             return new VirtualGatewaySpecListenerTlsValidationTrustSds(secretName);
         }
     }

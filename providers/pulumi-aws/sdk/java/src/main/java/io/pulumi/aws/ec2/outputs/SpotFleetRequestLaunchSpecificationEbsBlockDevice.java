@@ -113,47 +113,38 @@ public final class SpotFleetRequestLaunchSpecificationEbsBlockDevice {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
-        }
-        public SpotFleetRequestLaunchSpecificationEbsBlockDevice build() {
+        }        public SpotFleetRequestLaunchSpecificationEbsBlockDevice build() {
             return new SpotFleetRequestLaunchSpecificationEbsBlockDevice(deleteOnTermination, deviceName, encrypted, iops, kmsKeyId, snapshotId, throughput, volumeSize, volumeType);
         }
     }

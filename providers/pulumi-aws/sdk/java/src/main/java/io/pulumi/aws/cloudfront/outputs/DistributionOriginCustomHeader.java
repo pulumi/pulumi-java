@@ -53,12 +53,10 @@ public final class DistributionOriginCustomHeader {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DistributionOriginCustomHeader build() {
+        }        public DistributionOriginCustomHeader build() {
             return new DistributionOriginCustomHeader(name, value);
         }
     }

@@ -69,12 +69,10 @@ public final class GetBillingServiceAccountResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetBillingServiceAccountResult build() {
+        }        public GetBillingServiceAccountResult build() {
             return new GetBillingServiceAccountResult(arn, id);
         }
     }

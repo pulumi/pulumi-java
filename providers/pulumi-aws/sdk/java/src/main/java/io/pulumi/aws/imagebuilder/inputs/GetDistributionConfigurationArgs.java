@@ -75,12 +75,10 @@ public final class GetDistributionConfigurationArgs extends io.pulumi.resources.
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetDistributionConfigurationArgs build() {
+        }        public GetDistributionConfigurationArgs build() {
             return new GetDistributionConfigurationArgs(arn, tags);
         }
     }

@@ -106,42 +106,34 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
             this.owningAccount = owningAccount;
             return this;
         }
-
         public Builder owningAccount(@Nullable String owningAccount) {
             this.owningAccount = Output.ofNullable(owningAccount);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
-
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
-
         public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = Output.ofNullable(vpcRegion);
             return this;
         }
-
         public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
-
         public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Output.ofNullable(zoneId);
             return this;
-        }
-        public ZoneAssociationState build() {
+        }        public ZoneAssociationState build() {
             return new ZoneAssociationState(owningAccount, vpcId, vpcRegion, zoneId);
         }
     }

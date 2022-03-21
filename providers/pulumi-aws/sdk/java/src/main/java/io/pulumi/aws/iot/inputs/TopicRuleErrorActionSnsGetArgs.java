@@ -90,32 +90,26 @@ public final class TopicRuleErrorActionSnsGetArgs extends io.pulumi.resources.Re
             this.messageFormat = messageFormat;
             return this;
         }
-
         public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = Output.ofNullable(messageFormat);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder targetArn(Output<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
-
         public Builder targetArn(String targetArn) {
             this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
-        }
-        public TopicRuleErrorActionSnsGetArgs build() {
+        }        public TopicRuleErrorActionSnsGetArgs build() {
             return new TopicRuleErrorActionSnsGetArgs(messageFormat, roleArn, targetArn);
         }
     }

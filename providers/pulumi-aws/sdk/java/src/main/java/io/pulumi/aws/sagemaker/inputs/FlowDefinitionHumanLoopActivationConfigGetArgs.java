@@ -57,12 +57,10 @@ public final class FlowDefinitionHumanLoopActivationConfigGetArgs extends io.pul
             this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }
-
         public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = Output.ofNullable(humanLoopActivationConditionsConfig);
             return this;
-        }
-        public FlowDefinitionHumanLoopActivationConfigGetArgs build() {
+        }        public FlowDefinitionHumanLoopActivationConfigGetArgs build() {
             return new FlowDefinitionHumanLoopActivationConfigGetArgs(humanLoopActivationConditionsConfig);
         }
     }

@@ -76,22 +76,18 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
             this.continuous = continuous;
             return this;
         }
-
         public Builder continuous(@Nullable String continuous) {
             this.continuous = Output.ofNullable(continuous);
             return this;
         }
-
         public Builder oneTime(@Nullable Output<String> oneTime) {
             this.oneTime = oneTime;
             return this;
         }
-
         public Builder oneTime(@Nullable String oneTime) {
             this.oneTime = Output.ofNullable(oneTime);
             return this;
-        }
-        public S3BucketAssociationClassificationTypeArgs build() {
+        }        public S3BucketAssociationClassificationTypeArgs build() {
             return new S3BucketAssociationClassificationTypeArgs(continuous, oneTime);
         }
     }

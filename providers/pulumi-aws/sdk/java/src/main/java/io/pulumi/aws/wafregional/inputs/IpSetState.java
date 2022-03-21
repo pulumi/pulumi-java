@@ -92,32 +92,29 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder ipSetDescriptors(@Nullable Output<List<IpSetIpSetDescriptorGetArgs>> ipSetDescriptors) {
             this.ipSetDescriptors = ipSetDescriptors;
             return this;
         }
-
         public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorGetArgs> ipSetDescriptors) {
             this.ipSetDescriptors = Output.ofNullable(ipSetDescriptors);
             return this;
         }
-
+        public Builder ipSetDescriptors(IpSetIpSetDescriptorGetArgs... ipSetDescriptors) {
+            return ipSetDescriptors(List.of(ipSetDescriptors));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public IpSetState build() {
+        }        public IpSetState build() {
             return new IpSetState(arn, ipSetDescriptors, name);
         }
     }

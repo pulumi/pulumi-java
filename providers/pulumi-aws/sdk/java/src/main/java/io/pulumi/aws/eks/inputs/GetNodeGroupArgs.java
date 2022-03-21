@@ -91,17 +91,14 @@ public final class GetNodeGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = Objects.requireNonNull(nodeGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetNodeGroupArgs build() {
+        }        public GetNodeGroupArgs build() {
             return new GetNodeGroupArgs(clusterName, nodeGroupName, tags);
         }
     }

@@ -57,12 +57,10 @@ public final class TriggerActionNotificationPropertyArgs extends io.pulumi.resou
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
         }
-
         public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = Output.ofNullable(notifyDelayAfter);
             return this;
-        }
-        public TriggerActionNotificationPropertyArgs build() {
+        }        public TriggerActionNotificationPropertyArgs build() {
             return new TriggerActionNotificationPropertyArgs(notifyDelayAfter);
         }
     }

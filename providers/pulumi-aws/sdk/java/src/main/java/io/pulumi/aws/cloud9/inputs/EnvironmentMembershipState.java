@@ -106,42 +106,34 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
         public Builder userArn(@Nullable Output<String> userArn) {
             this.userArn = userArn;
             return this;
         }
-
         public Builder userArn(@Nullable String userArn) {
             this.userArn = Output.ofNullable(userArn);
             return this;
         }
-
         public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = Output.ofNullable(userId);
             return this;
-        }
-        public EnvironmentMembershipState build() {
+        }        public EnvironmentMembershipState build() {
             return new EnvironmentMembershipState(environmentId, permissions, userArn, userId);
         }
     }

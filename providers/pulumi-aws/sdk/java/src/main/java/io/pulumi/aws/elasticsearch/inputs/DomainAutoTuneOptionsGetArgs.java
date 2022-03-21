@@ -92,32 +92,29 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder desiredState(String desiredState) {
             this.desiredState = Output.of(Objects.requireNonNull(desiredState));
             return this;
         }
-
         public Builder maintenanceSchedules(@Nullable Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> maintenanceSchedules) {
             this.maintenanceSchedules = maintenanceSchedules;
             return this;
         }
-
         public Builder maintenanceSchedules(@Nullable List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs> maintenanceSchedules) {
             this.maintenanceSchedules = Output.ofNullable(maintenanceSchedules);
             return this;
         }
-
+        public Builder maintenanceSchedules(DomainAutoTuneOptionsMaintenanceScheduleGetArgs... maintenanceSchedules) {
+            return maintenanceSchedules(List.of(maintenanceSchedules));
+        }
         public Builder rollbackOnDisable(@Nullable Output<String> rollbackOnDisable) {
             this.rollbackOnDisable = rollbackOnDisable;
             return this;
         }
-
         public Builder rollbackOnDisable(@Nullable String rollbackOnDisable) {
             this.rollbackOnDisable = Output.ofNullable(rollbackOnDisable);
             return this;
-        }
-        public DomainAutoTuneOptionsGetArgs build() {
+        }        public DomainAutoTuneOptionsGetArgs build() {
             return new DomainAutoTuneOptionsGetArgs(desiredState, maintenanceSchedules, rollbackOnDisable);
         }
     }

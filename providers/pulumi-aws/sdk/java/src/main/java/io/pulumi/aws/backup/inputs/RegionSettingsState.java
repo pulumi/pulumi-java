@@ -76,22 +76,18 @@ public final class RegionSettingsState extends io.pulumi.resources.ResourceArgs 
             this.resourceTypeManagementPreference = resourceTypeManagementPreference;
             return this;
         }
-
         public Builder resourceTypeManagementPreference(@Nullable Map<String,Boolean> resourceTypeManagementPreference) {
             this.resourceTypeManagementPreference = Output.ofNullable(resourceTypeManagementPreference);
             return this;
         }
-
         public Builder resourceTypeOptInPreference(@Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference) {
             this.resourceTypeOptInPreference = resourceTypeOptInPreference;
             return this;
         }
-
         public Builder resourceTypeOptInPreference(@Nullable Map<String,Boolean> resourceTypeOptInPreference) {
             this.resourceTypeOptInPreference = Output.ofNullable(resourceTypeOptInPreference);
             return this;
-        }
-        public RegionSettingsState build() {
+        }        public RegionSettingsState build() {
             return new RegionSettingsState(resourceTypeManagementPreference, resourceTypeOptInPreference);
         }
     }

@@ -348,192 +348,154 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder allocationId(@Nullable Output<String> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
-
         public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
-
         public Builder associateWithPrivateIp(@Nullable Output<String> associateWithPrivateIp) {
             this.associateWithPrivateIp = associateWithPrivateIp;
             return this;
         }
-
         public Builder associateWithPrivateIp(@Nullable String associateWithPrivateIp) {
             this.associateWithPrivateIp = Output.ofNullable(associateWithPrivateIp);
             return this;
         }
-
         public Builder associationId(@Nullable Output<String> associationId) {
             this.associationId = associationId;
             return this;
         }
-
         public Builder associationId(@Nullable String associationId) {
             this.associationId = Output.ofNullable(associationId);
             return this;
         }
-
         public Builder carrierIp(@Nullable Output<String> carrierIp) {
             this.carrierIp = carrierIp;
             return this;
         }
-
         public Builder carrierIp(@Nullable String carrierIp) {
             this.carrierIp = Output.ofNullable(carrierIp);
             return this;
         }
-
         public Builder customerOwnedIp(@Nullable Output<String> customerOwnedIp) {
             this.customerOwnedIp = customerOwnedIp;
             return this;
         }
-
         public Builder customerOwnedIp(@Nullable String customerOwnedIp) {
             this.customerOwnedIp = Output.ofNullable(customerOwnedIp);
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder networkBorderGroup(@Nullable Output<String> networkBorderGroup) {
             this.networkBorderGroup = networkBorderGroup;
             return this;
         }
-
         public Builder networkBorderGroup(@Nullable String networkBorderGroup) {
             this.networkBorderGroup = Output.ofNullable(networkBorderGroup);
             return this;
         }
-
         public Builder networkInterface(@Nullable Output<String> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
-
         public Builder networkInterface(@Nullable String networkInterface) {
             this.networkInterface = Output.ofNullable(networkInterface);
             return this;
         }
-
         public Builder privateDns(@Nullable Output<String> privateDns) {
             this.privateDns = privateDns;
             return this;
         }
-
         public Builder privateDns(@Nullable String privateDns) {
             this.privateDns = Output.ofNullable(privateDns);
             return this;
         }
-
         public Builder privateIp(@Nullable Output<String> privateIp) {
             this.privateIp = privateIp;
             return this;
         }
-
         public Builder privateIp(@Nullable String privateIp) {
             this.privateIp = Output.ofNullable(privateIp);
             return this;
         }
-
         public Builder publicDns(@Nullable Output<String> publicDns) {
             this.publicDns = publicDns;
             return this;
         }
-
         public Builder publicDns(@Nullable String publicDns) {
             this.publicDns = Output.ofNullable(publicDns);
             return this;
         }
-
         public Builder publicIp(@Nullable Output<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = Output.ofNullable(publicIp);
             return this;
         }
-
         public Builder publicIpv4Pool(@Nullable Output<String> publicIpv4Pool) {
             this.publicIpv4Pool = publicIpv4Pool;
             return this;
         }
-
         public Builder publicIpv4Pool(@Nullable String publicIpv4Pool) {
             this.publicIpv4Pool = Output.ofNullable(publicIpv4Pool);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpc(@Nullable Output<Boolean> vpc) {
             this.vpc = vpc;
             return this;
         }
-
         public Builder vpc(@Nullable Boolean vpc) {
             this.vpc = Output.ofNullable(vpc);
             return this;
-        }
-        public EipState build() {
+        }        public EipState build() {
             return new EipState(address, allocationId, associateWithPrivateIp, associationId, carrierIp, customerOwnedIp, customerOwnedIpv4Pool, domain, instance, networkBorderGroup, networkInterface, privateDns, privateIp, publicDns, publicIp, publicIpv4Pool, tags, tagsAll, vpc);
         }
     }

@@ -342,182 +342,155 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             this.accessLogs = accessLogs;
             return this;
         }
-
         public Builder accessLogs(@Nullable LoadBalancerAccessLogsArgs accessLogs) {
             this.accessLogs = Output.ofNullable(accessLogs);
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
-
         public Builder desyncMitigationMode(@Nullable Output<String> desyncMitigationMode) {
             this.desyncMitigationMode = desyncMitigationMode;
             return this;
         }
-
         public Builder desyncMitigationMode(@Nullable String desyncMitigationMode) {
             this.desyncMitigationMode = Output.ofNullable(desyncMitigationMode);
             return this;
         }
-
         public Builder dropInvalidHeaderFields(@Nullable Output<Boolean> dropInvalidHeaderFields) {
             this.dropInvalidHeaderFields = dropInvalidHeaderFields;
             return this;
         }
-
         public Builder dropInvalidHeaderFields(@Nullable Boolean dropInvalidHeaderFields) {
             this.dropInvalidHeaderFields = Output.ofNullable(dropInvalidHeaderFields);
             return this;
         }
-
         public Builder enableCrossZoneLoadBalancing(@Nullable Output<Boolean> enableCrossZoneLoadBalancing) {
             this.enableCrossZoneLoadBalancing = enableCrossZoneLoadBalancing;
             return this;
         }
-
         public Builder enableCrossZoneLoadBalancing(@Nullable Boolean enableCrossZoneLoadBalancing) {
             this.enableCrossZoneLoadBalancing = Output.ofNullable(enableCrossZoneLoadBalancing);
             return this;
         }
-
         public Builder enableDeletionProtection(@Nullable Output<Boolean> enableDeletionProtection) {
             this.enableDeletionProtection = enableDeletionProtection;
             return this;
         }
-
         public Builder enableDeletionProtection(@Nullable Boolean enableDeletionProtection) {
             this.enableDeletionProtection = Output.ofNullable(enableDeletionProtection);
             return this;
         }
-
         public Builder enableHttp2(@Nullable Output<Boolean> enableHttp2) {
             this.enableHttp2 = enableHttp2;
             return this;
         }
-
         public Builder enableHttp2(@Nullable Boolean enableHttp2) {
             this.enableHttp2 = Output.ofNullable(enableHttp2);
             return this;
         }
-
         public Builder enableWafFailOpen(@Nullable Output<Boolean> enableWafFailOpen) {
             this.enableWafFailOpen = enableWafFailOpen;
             return this;
         }
-
         public Builder enableWafFailOpen(@Nullable Boolean enableWafFailOpen) {
             this.enableWafFailOpen = Output.ofNullable(enableWafFailOpen);
             return this;
         }
-
         public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
-
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
             this.idleTimeout = Output.ofNullable(idleTimeout);
             return this;
         }
-
         public Builder internal(@Nullable Output<Boolean> internal) {
             this.internal = internal;
             return this;
         }
-
         public Builder internal(@Nullable Boolean internal) {
             this.internal = Output.ofNullable(internal);
             return this;
         }
-
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
-
         public Builder ipAddressType(@Nullable String ipAddressType) {
             this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
-
         public Builder loadBalancerType(@Nullable Output<String> loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
-
         public Builder loadBalancerType(@Nullable String loadBalancerType) {
             this.loadBalancerType = Output.ofNullable(loadBalancerType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetMappings(@Nullable Output<List<LoadBalancerSubnetMappingArgs>> subnetMappings) {
             this.subnetMappings = subnetMappings;
             return this;
         }
-
         public Builder subnetMappings(@Nullable List<LoadBalancerSubnetMappingArgs> subnetMappings) {
             this.subnetMappings = Output.ofNullable(subnetMappings);
             return this;
         }
-
+        public Builder subnetMappings(LoadBalancerSubnetMappingArgs... subnetMappings) {
+            return subnetMappings(List.of(subnetMappings));
+        }
         public Builder subnets(@Nullable Output<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LoadBalancerArgs build() {
+        }        public LoadBalancerArgs build() {
             return new LoadBalancerArgs(accessLogs, customerOwnedIpv4Pool, desyncMitigationMode, dropInvalidHeaderFields, enableCrossZoneLoadBalancing, enableDeletionProtection, enableHttp2, enableWafFailOpen, idleTimeout, internal, ipAddressType, loadBalancerType, name, namePrefix, securityGroups, subnetMappings, subnets, tags);
         }
     }

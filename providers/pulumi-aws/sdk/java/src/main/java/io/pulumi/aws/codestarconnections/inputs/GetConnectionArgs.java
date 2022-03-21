@@ -75,12 +75,10 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetConnectionArgs build() {
+        }        public GetConnectionArgs build() {
             return new GetConnectionArgs(arn, tags);
         }
     }

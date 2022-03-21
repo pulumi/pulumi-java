@@ -77,22 +77,21 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
             this.instancePorts = instancePorts;
             return this;
         }
-
         public Builder instancePorts(@Nullable List<String> instancePorts) {
             this.instancePorts = Output.ofNullable(instancePorts);
             return this;
         }
-
+        public Builder instancePorts(String... instancePorts) {
+            return instancePorts(List.of(instancePorts));
+        }
         public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public Builder loadBalancer(@Nullable String loadBalancer) {
             this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
-        }
-        public ProxyProtocolPolicyState build() {
+        }        public ProxyProtocolPolicyState build() {
             return new ProxyProtocolPolicyState(instancePorts, loadBalancer);
         }
     }

@@ -57,12 +57,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DomainState build() {
+        }        public DomainState build() {
             return new DomainState(name);
         }
     }

@@ -139,62 +139,50 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authParameters(@Nullable Output<EventConnectionAuthParametersGetArgs> authParameters) {
             this.authParameters = authParameters;
             return this;
         }
-
         public Builder authParameters(@Nullable EventConnectionAuthParametersGetArgs authParameters) {
             this.authParameters = Output.ofNullable(authParameters);
             return this;
         }
-
         public Builder authorizationType(@Nullable Output<String> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
-
         public Builder authorizationType(@Nullable String authorizationType) {
             this.authorizationType = Output.ofNullable(authorizationType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Output.ofNullable(secretArn);
             return this;
-        }
-        public EventConnectionState build() {
+        }        public EventConnectionState build() {
             return new EventConnectionState(arn, authParameters, authorizationType, description, name, secretArn);
         }
     }

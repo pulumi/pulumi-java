@@ -90,32 +90,26 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
             this.albTargetGroupArn = albTargetGroupArn;
             return this;
         }
-
         public Builder albTargetGroupArn(@Nullable String albTargetGroupArn) {
             this.albTargetGroupArn = Output.ofNullable(albTargetGroupArn);
             return this;
         }
-
         public Builder autoscalingGroupName(Output<String> autoscalingGroupName) {
             this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName);
             return this;
         }
-
         public Builder autoscalingGroupName(String autoscalingGroupName) {
             this.autoscalingGroupName = Output.of(Objects.requireNonNull(autoscalingGroupName));
             return this;
         }
-
         public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
-
         public Builder elb(@Nullable String elb) {
             this.elb = Output.ofNullable(elb);
             return this;
-        }
-        public AttachmentArgs build() {
+        }        public AttachmentArgs build() {
             return new AttachmentArgs(albTargetGroupArn, autoscalingGroupName, elb);
         }
     }

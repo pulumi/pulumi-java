@@ -57,12 +57,13 @@ public final class HaproxyLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<HaproxyLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public HaproxyLayerCloudwatchConfiguration build() {
+        public Builder logStreams(HaproxyLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public HaproxyLayerCloudwatchConfiguration build() {
             return new HaproxyLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

@@ -57,12 +57,10 @@ public final class ResolverSyncConfigLambdaConflictHandlerConfigGetArgs extends 
             this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
             return this;
         }
-
         public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = Output.ofNullable(lambdaConflictHandlerArn);
             return this;
-        }
-        public ResolverSyncConfigLambdaConflictHandlerConfigGetArgs build() {
+        }        public ResolverSyncConfigLambdaConflictHandlerConfigGetArgs build() {
             return new ResolverSyncConfigLambdaConflictHandlerConfigGetArgs(lambdaConflictHandlerArn);
         }
     }

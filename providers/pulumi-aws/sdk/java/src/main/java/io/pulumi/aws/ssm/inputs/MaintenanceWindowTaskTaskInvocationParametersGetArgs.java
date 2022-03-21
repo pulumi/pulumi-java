@@ -109,42 +109,34 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
             this.automationParameters = automationParameters;
             return this;
         }
-
         public Builder automationParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs automationParameters) {
             this.automationParameters = Output.ofNullable(automationParameters);
             return this;
         }
-
         public Builder lambdaParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters) {
             this.lambdaParameters = lambdaParameters;
             return this;
         }
-
         public Builder lambdaParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs lambdaParameters) {
             this.lambdaParameters = Output.ofNullable(lambdaParameters);
             return this;
         }
-
         public Builder runCommandParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters) {
             this.runCommandParameters = runCommandParameters;
             return this;
         }
-
         public Builder runCommandParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs runCommandParameters) {
             this.runCommandParameters = Output.ofNullable(runCommandParameters);
             return this;
         }
-
         public Builder stepFunctionsParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters) {
             this.stepFunctionsParameters = stepFunctionsParameters;
             return this;
         }
-
         public Builder stepFunctionsParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs stepFunctionsParameters) {
             this.stepFunctionsParameters = Output.ofNullable(stepFunctionsParameters);
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParametersGetArgs build() {
+        }        public MaintenanceWindowTaskTaskInvocationParametersGetArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersGetArgs(automationParameters, lambdaParameters, runCommandParameters, stepFunctionsParameters);
         }
     }

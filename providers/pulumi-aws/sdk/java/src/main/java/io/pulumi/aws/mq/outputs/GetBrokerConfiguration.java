@@ -54,12 +54,10 @@ public final class GetBrokerConfiguration {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
-        }
-        public GetBrokerConfiguration build() {
+        }        public GetBrokerConfiguration build() {
             return new GetBrokerConfiguration(id, revision);
         }
     }

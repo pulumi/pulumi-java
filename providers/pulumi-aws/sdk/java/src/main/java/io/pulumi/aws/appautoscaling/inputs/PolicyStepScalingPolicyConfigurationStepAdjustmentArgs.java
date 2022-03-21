@@ -91,32 +91,26 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
             this.metricIntervalLowerBound = metricIntervalLowerBound;
             return this;
         }
-
         public Builder metricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
             this.metricIntervalLowerBound = Output.ofNullable(metricIntervalLowerBound);
             return this;
         }
-
         public Builder metricIntervalUpperBound(@Nullable Output<String> metricIntervalUpperBound) {
             this.metricIntervalUpperBound = metricIntervalUpperBound;
             return this;
         }
-
         public Builder metricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
             this.metricIntervalUpperBound = Output.ofNullable(metricIntervalUpperBound);
             return this;
         }
-
         public Builder scalingAdjustment(Output<Integer> scalingAdjustment) {
             this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment);
             return this;
         }
-
         public Builder scalingAdjustment(Integer scalingAdjustment) {
             this.scalingAdjustment = Output.of(Objects.requireNonNull(scalingAdjustment));
             return this;
-        }
-        public PolicyStepScalingPolicyConfigurationStepAdjustmentArgs build() {
+        }        public PolicyStepScalingPolicyConfigurationStepAdjustmentArgs build() {
             return new PolicyStepScalingPolicyConfigurationStepAdjustmentArgs(metricIntervalLowerBound, metricIntervalUpperBound, scalingAdjustment);
         }
     }

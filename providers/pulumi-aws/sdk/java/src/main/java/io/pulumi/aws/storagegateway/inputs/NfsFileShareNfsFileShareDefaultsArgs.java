@@ -106,42 +106,34 @@ public final class NfsFileShareNfsFileShareDefaultsArgs extends io.pulumi.resour
             this.directoryMode = directoryMode;
             return this;
         }
-
         public Builder directoryMode(@Nullable String directoryMode) {
             this.directoryMode = Output.ofNullable(directoryMode);
             return this;
         }
-
         public Builder fileMode(@Nullable Output<String> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
-
         public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = Output.ofNullable(fileMode);
             return this;
         }
-
         public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
-        }
-        public NfsFileShareNfsFileShareDefaultsArgs build() {
+        }        public NfsFileShareNfsFileShareDefaultsArgs build() {
             return new NfsFileShareNfsFileShareDefaultsArgs(directoryMode, fileMode, groupId, ownerId);
         }
     }

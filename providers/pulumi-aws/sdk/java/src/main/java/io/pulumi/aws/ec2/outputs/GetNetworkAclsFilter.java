@@ -74,12 +74,13 @@ public final class GetNetworkAclsFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetNetworkAclsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetNetworkAclsFilter build() {
             return new GetNetworkAclsFilter(name, values);
         }
     }

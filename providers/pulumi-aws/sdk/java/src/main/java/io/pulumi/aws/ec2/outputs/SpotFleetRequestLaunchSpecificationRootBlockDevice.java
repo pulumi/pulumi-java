@@ -97,37 +97,30 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDevice {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
-        }
-        public SpotFleetRequestLaunchSpecificationRootBlockDevice build() {
+        }        public SpotFleetRequestLaunchSpecificationRootBlockDevice build() {
             return new SpotFleetRequestLaunchSpecificationRootBlockDevice(deleteOnTermination, encrypted, iops, kmsKeyId, throughput, volumeSize, volumeType);
         }
     }

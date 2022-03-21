@@ -108,37 +108,30 @@ public final class GroupPolicyState extends io.pulumi.resources.ResourceArgs {
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
-        }
-        public GroupPolicyState build() {
+        }        public GroupPolicyState build() {
             return new GroupPolicyState(group, name, namePrefix, policy);
         }
     }

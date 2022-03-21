@@ -61,12 +61,10 @@ public final class GetRateBasedModResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRateBasedModResult build() {
+        }        public GetRateBasedModResult build() {
             return new GetRateBasedModResult(id, name);
         }
     }

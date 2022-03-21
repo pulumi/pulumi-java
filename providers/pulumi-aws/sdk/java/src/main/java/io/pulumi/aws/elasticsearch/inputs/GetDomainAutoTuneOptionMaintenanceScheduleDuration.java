@@ -73,12 +73,10 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends io
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetDomainAutoTuneOptionMaintenanceScheduleDuration build() {
+        }        public GetDomainAutoTuneOptionMaintenanceScheduleDuration build() {
             return new GetDomainAutoTuneOptionMaintenanceScheduleDuration(unit, value);
         }
     }

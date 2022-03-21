@@ -284,152 +284,131 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
             this.associateCarrierIpAddress = associateCarrierIpAddress;
             return this;
         }
-
         public Builder associateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
             this.associateCarrierIpAddress = Output.ofNullable(associateCarrierIpAddress);
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Output<String> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable String associatePublicIpAddress) {
             this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
-
         public Builder deleteOnTermination(@Nullable Output<String> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
             this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
-
         public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = Output.ofNullable(deviceIndex);
             return this;
         }
-
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
-
         public Builder interfaceType(@Nullable String interfaceType) {
             this.interfaceType = Output.ofNullable(interfaceType);
             return this;
         }
-
         public Builder ipv4AddressCount(@Nullable Output<Integer> ipv4AddressCount) {
             this.ipv4AddressCount = ipv4AddressCount;
             return this;
         }
-
         public Builder ipv4AddressCount(@Nullable Integer ipv4AddressCount) {
             this.ipv4AddressCount = Output.ofNullable(ipv4AddressCount);
             return this;
         }
-
         public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
             this.ipv4Addresses = ipv4Addresses;
             return this;
         }
-
         public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
             this.ipv4Addresses = Output.ofNullable(ipv4Addresses);
             return this;
         }
-
+        public Builder ipv4Addresses(String... ipv4Addresses) {
+            return ipv4Addresses(List.of(ipv4Addresses));
+        }
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
-
+        public Builder ipv6Addresses(String... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }
         public Builder networkCardIndex(@Nullable Output<Integer> networkCardIndex) {
             this.networkCardIndex = networkCardIndex;
             return this;
         }
-
         public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
             this.networkCardIndex = Output.ofNullable(networkCardIndex);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public LaunchTemplateNetworkInterfaceGetArgs build() {
+        }        public LaunchTemplateNetworkInterfaceGetArgs build() {
             return new LaunchTemplateNetworkInterfaceGetArgs(associateCarrierIpAddress, associatePublicIpAddress, deleteOnTermination, description, deviceIndex, interfaceType, ipv4AddressCount, ipv4Addresses, ipv6AddressCount, ipv6Addresses, networkCardIndex, networkInterfaceId, privateIpAddress, securityGroups, subnetId);
         }
     }

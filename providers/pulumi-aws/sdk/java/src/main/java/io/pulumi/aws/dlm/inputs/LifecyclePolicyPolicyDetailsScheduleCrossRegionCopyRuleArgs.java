@@ -141,62 +141,50 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
             this.cmkArn = cmkArn;
             return this;
         }
-
         public Builder cmkArn(@Nullable String cmkArn) {
             this.cmkArn = Output.ofNullable(cmkArn);
             return this;
         }
-
         public Builder copyTags(@Nullable Output<Boolean> copyTags) {
             this.copyTags = copyTags;
             return this;
         }
-
         public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = Output.ofNullable(copyTags);
             return this;
         }
-
         public Builder deprecateRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule) {
             this.deprecateRule = deprecateRule;
             return this;
         }
-
         public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs deprecateRule) {
             this.deprecateRule = Output.ofNullable(deprecateRule);
             return this;
         }
-
         public Builder encrypted(Output<Boolean> encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Output.of(Objects.requireNonNull(encrypted));
             return this;
         }
-
         public Builder retainRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule) {
             this.retainRule = retainRule;
             return this;
         }
-
         public Builder retainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs retainRule) {
             this.retainRule = Output.ofNullable(retainRule);
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs build() {
             return new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs(cmkArn, copyTags, deprecateRule, encrypted, retainRule, target);
         }
     }

@@ -104,42 +104,37 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
             this.componentId = componentId;
             return this;
         }
-
         public Builder componentId(@Nullable String componentId) {
             this.componentId = Output.ofNullable(componentId);
             return this;
         }
-
         public Builder dnsTargetResource(@Nullable Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource) {
             this.dnsTargetResource = dnsTargetResource;
             return this;
         }
-
         public Builder dnsTargetResource(@Nullable ResourceSetResourceDnsTargetResourceGetArgs dnsTargetResource) {
             this.dnsTargetResource = Output.ofNullable(dnsTargetResource);
             return this;
         }
-
         public Builder readinessScopes(@Nullable Output<List<String>> readinessScopes) {
             this.readinessScopes = readinessScopes;
             return this;
         }
-
         public Builder readinessScopes(@Nullable List<String> readinessScopes) {
             this.readinessScopes = Output.ofNullable(readinessScopes);
             return this;
         }
-
+        public Builder readinessScopes(String... readinessScopes) {
+            return readinessScopes(List.of(readinessScopes));
+        }
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
-        }
-        public ResourceSetResourceGetArgs build() {
+        }        public ResourceSetResourceGetArgs build() {
             return new ResourceSetResourceGetArgs(componentId, dnsTargetResource, readinessScopes, resourceArn);
         }
     }

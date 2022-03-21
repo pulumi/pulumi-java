@@ -56,12 +56,10 @@ public final class GatewayRouteSpecHttpRouteActionArgs extends io.pulumi.resourc
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(GatewayRouteSpecHttpRouteActionTargetArgs target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public GatewayRouteSpecHttpRouteActionArgs build() {
+        }        public GatewayRouteSpecHttpRouteActionArgs build() {
             return new GatewayRouteSpecHttpRouteActionArgs(target);
         }
     }

@@ -53,8 +53,7 @@ public final class FlowDefinitionHumanLoopActivationConfig {
         public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
-        }
-        public FlowDefinitionHumanLoopActivationConfig build() {
+        }        public FlowDefinitionHumanLoopActivationConfig build() {
             return new FlowDefinitionHumanLoopActivationConfig(humanLoopActivationConditionsConfig);
         }
     }

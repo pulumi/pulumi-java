@@ -70,12 +70,10 @@ public final class RouteSpecTcpRouteActionWeightedTarget {
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public RouteSpecTcpRouteActionWeightedTarget build() {
+        }        public RouteSpecTcpRouteActionWeightedTarget build() {
             return new RouteSpecTcpRouteActionWeightedTarget(virtualNode, weight);
         }
     }

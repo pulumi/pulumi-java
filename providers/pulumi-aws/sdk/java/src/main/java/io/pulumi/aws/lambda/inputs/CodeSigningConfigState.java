@@ -140,62 +140,50 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
             this.allowedPublishers = allowedPublishers;
             return this;
         }
-
         public Builder allowedPublishers(@Nullable CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
             this.allowedPublishers = Output.ofNullable(allowedPublishers);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder configId(@Nullable Output<String> configId) {
             this.configId = configId;
             return this;
         }
-
         public Builder configId(@Nullable String configId) {
             this.configId = Output.ofNullable(configId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lastModified(@Nullable Output<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
-
         public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = Output.ofNullable(lastModified);
             return this;
         }
-
         public Builder policies(@Nullable Output<CodeSigningConfigPoliciesGetArgs> policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder policies(@Nullable CodeSigningConfigPoliciesGetArgs policies) {
             this.policies = Output.ofNullable(policies);
             return this;
-        }
-        public CodeSigningConfigState build() {
+        }        public CodeSigningConfigState build() {
             return new CodeSigningConfigState(allowedPublishers, arn, configId, description, lastModified, policies);
         }
     }

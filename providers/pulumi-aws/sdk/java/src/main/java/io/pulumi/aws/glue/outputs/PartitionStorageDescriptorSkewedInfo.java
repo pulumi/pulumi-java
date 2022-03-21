@@ -88,17 +88,20 @@ public final class PartitionStorageDescriptorSkewedInfo {
             this.skewedColumnNames = skewedColumnNames;
             return this;
         }
-
+        public Builder skewedColumnNames(String... skewedColumnNames) {
+            return skewedColumnNames(List.of(skewedColumnNames));
+        }
         public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
             return this;
         }
-
         public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
             this.skewedColumnValues = skewedColumnValues;
             return this;
         }
-        public PartitionStorageDescriptorSkewedInfo build() {
+        public Builder skewedColumnValues(String... skewedColumnValues) {
+            return skewedColumnValues(List.of(skewedColumnValues));
+        }        public PartitionStorageDescriptorSkewedInfo build() {
             return new PartitionStorageDescriptorSkewedInfo(skewedColumnNames, skewedColumnValueLocationMaps, skewedColumnValues);
         }
     }

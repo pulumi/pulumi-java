@@ -185,92 +185,74 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
-
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
             this.deviceFleetName = Output.ofNullable(deviceFleetName);
             return this;
         }
-
         public Builder enableIotRoleAlias(@Nullable Output<Boolean> enableIotRoleAlias) {
             this.enableIotRoleAlias = enableIotRoleAlias;
             return this;
         }
-
         public Builder enableIotRoleAlias(@Nullable Boolean enableIotRoleAlias) {
             this.enableIotRoleAlias = Output.ofNullable(enableIotRoleAlias);
             return this;
         }
-
         public Builder iotRoleAlias(@Nullable Output<String> iotRoleAlias) {
             this.iotRoleAlias = iotRoleAlias;
             return this;
         }
-
         public Builder iotRoleAlias(@Nullable String iotRoleAlias) {
             this.iotRoleAlias = Output.ofNullable(iotRoleAlias);
             return this;
         }
-
         public Builder outputConfig(@Nullable Output<DeviceFleetOutputConfigGetArgs> outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
-
         public Builder outputConfig(@Nullable DeviceFleetOutputConfigGetArgs outputConfig) {
             this.outputConfig = Output.ofNullable(outputConfig);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DeviceFleetState build() {
+        }        public DeviceFleetState build() {
             return new DeviceFleetState(arn, description, deviceFleetName, enableIotRoleAlias, iotRoleAlias, outputConfig, roleArn, tags, tagsAll);
         }
     }

@@ -56,12 +56,10 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHead
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs build() {
+        }        public RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs build() {
             return new RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs(name);
         }
     }

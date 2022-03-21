@@ -79,27 +79,22 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
             this.customCname = Objects.requireNonNull(customCname);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder expirationInDays(Integer expirationInDays) {
             this.expirationInDays = Objects.requireNonNull(expirationInDays);
             return this;
         }
-
         public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3ObjectAcl(String s3ObjectAcl) {
             this.s3ObjectAcl = Objects.requireNonNull(s3ObjectAcl);
             return this;
-        }
-        public GetCertificateAuthorityRevocationConfigurationCrlConfiguration build() {
+        }        public GetCertificateAuthorityRevocationConfigurationCrlConfiguration build() {
             return new GetCertificateAuthorityRevocationConfigurationCrlConfiguration(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }
     }

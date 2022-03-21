@@ -270,142 +270,117 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
-
         public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
             this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authMode(@Nullable Output<String> authMode) {
             this.authMode = authMode;
             return this;
         }
-
         public Builder authMode(@Nullable String authMode) {
             this.authMode = Output.ofNullable(authMode);
             return this;
         }
-
         public Builder defaultUserSettings(@Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings) {
             this.defaultUserSettings = defaultUserSettings;
             return this;
         }
-
         public Builder defaultUserSettings(@Nullable DomainDefaultUserSettingsGetArgs defaultUserSettings) {
             this.defaultUserSettings = Output.ofNullable(defaultUserSettings);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder homeEfsFileSystemId(@Nullable Output<String> homeEfsFileSystemId) {
             this.homeEfsFileSystemId = homeEfsFileSystemId;
             return this;
         }
-
         public Builder homeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
             this.homeEfsFileSystemId = Output.ofNullable(homeEfsFileSystemId);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable DomainRetentionPolicyGetArgs retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder singleSignOnManagedApplicationInstanceId(@Nullable Output<String> singleSignOnManagedApplicationInstanceId) {
             this.singleSignOnManagedApplicationInstanceId = singleSignOnManagedApplicationInstanceId;
             return this;
         }
-
         public Builder singleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
             this.singleSignOnManagedApplicationInstanceId = Output.ofNullable(singleSignOnManagedApplicationInstanceId);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public DomainState build() {
+        }        public DomainState build() {
             return new DomainState(appNetworkAccessType, arn, authMode, defaultUserSettings, domainName, homeEfsFileSystemId, kmsKeyId, retentionPolicy, singleSignOnManagedApplicationInstanceId, subnetIds, tags, tagsAll, url, vpcId);
         }
     }

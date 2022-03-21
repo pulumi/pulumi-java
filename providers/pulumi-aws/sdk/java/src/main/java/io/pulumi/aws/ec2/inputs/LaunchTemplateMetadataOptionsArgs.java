@@ -123,52 +123,42 @@ public final class LaunchTemplateMetadataOptionsArgs extends io.pulumi.resources
             this.httpEndpoint = httpEndpoint;
             return this;
         }
-
         public Builder httpEndpoint(@Nullable String httpEndpoint) {
             this.httpEndpoint = Output.ofNullable(httpEndpoint);
             return this;
         }
-
         public Builder httpProtocolIpv6(@Nullable Output<String> httpProtocolIpv6) {
             this.httpProtocolIpv6 = httpProtocolIpv6;
             return this;
         }
-
         public Builder httpProtocolIpv6(@Nullable String httpProtocolIpv6) {
             this.httpProtocolIpv6 = Output.ofNullable(httpProtocolIpv6);
             return this;
         }
-
         public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Output.ofNullable(httpPutResponseHopLimit);
             return this;
         }
-
         public Builder httpTokens(@Nullable Output<String> httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
-
         public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = Output.ofNullable(httpTokens);
             return this;
         }
-
         public Builder instanceMetadataTags(@Nullable Output<String> instanceMetadataTags) {
             this.instanceMetadataTags = instanceMetadataTags;
             return this;
         }
-
         public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
             this.instanceMetadataTags = Output.ofNullable(instanceMetadataTags);
             return this;
-        }
-        public LaunchTemplateMetadataOptionsArgs build() {
+        }        public LaunchTemplateMetadataOptionsArgs build() {
             return new LaunchTemplateMetadataOptionsArgs(httpEndpoint, httpProtocolIpv6, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
         }
     }

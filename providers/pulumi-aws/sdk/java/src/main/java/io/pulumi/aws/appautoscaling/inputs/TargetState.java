@@ -139,62 +139,50 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
-
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
-
         public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = Output.ofNullable(minCapacity);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
             this.scalableDimension = scalableDimension;
             return this;
         }
-
         public Builder scalableDimension(@Nullable String scalableDimension) {
             this.scalableDimension = Output.ofNullable(scalableDimension);
             return this;
         }
-
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
-
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
-        }
-        public TargetState build() {
+        }        public TargetState build() {
             return new TargetState(maxCapacity, minCapacity, resourceId, roleArn, scalableDimension, serviceNamespace);
         }
     }

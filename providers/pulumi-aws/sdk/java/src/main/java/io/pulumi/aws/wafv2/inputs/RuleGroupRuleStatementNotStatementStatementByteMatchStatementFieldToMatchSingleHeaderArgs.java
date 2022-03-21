@@ -56,12 +56,10 @@ public final class RuleGroupRuleStatementNotStatementStatementByteMatchStatement
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs build() {
+        }        public RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs build() {
             return new RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs(name);
         }
     }

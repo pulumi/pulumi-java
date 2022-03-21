@@ -89,17 +89,14 @@ public final class RuleGroupRuleAction {
             this.allow = allow;
             return this;
         }
-
         public Builder block(@Nullable RuleGroupRuleActionBlock block) {
             this.block = block;
             return this;
         }
-
         public Builder count(@Nullable RuleGroupRuleActionCount count) {
             this.count = count;
             return this;
-        }
-        public RuleGroupRuleAction build() {
+        }        public RuleGroupRuleAction build() {
             return new RuleGroupRuleAction(allow, block, count);
         }
     }

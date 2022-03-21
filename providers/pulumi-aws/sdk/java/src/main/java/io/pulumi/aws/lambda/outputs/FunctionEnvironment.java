@@ -53,8 +53,7 @@ public final class FunctionEnvironment {
         public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = variables;
             return this;
-        }
-        public FunctionEnvironment build() {
+        }        public FunctionEnvironment build() {
             return new FunctionEnvironment(variables);
         }
     }

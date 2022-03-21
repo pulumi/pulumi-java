@@ -74,22 +74,21 @@ public final class ScramSecretAssociationArgs extends io.pulumi.resources.Resour
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
-
         public Builder clusterArn(String clusterArn) {
             this.clusterArn = Output.of(Objects.requireNonNull(clusterArn));
             return this;
         }
-
         public Builder secretArnLists(Output<List<String>> secretArnLists) {
             this.secretArnLists = Objects.requireNonNull(secretArnLists);
             return this;
         }
-
         public Builder secretArnLists(List<String> secretArnLists) {
             this.secretArnLists = Output.of(Objects.requireNonNull(secretArnLists));
             return this;
         }
-        public ScramSecretAssociationArgs build() {
+        public Builder secretArnLists(String... secretArnLists) {
+            return secretArnLists(List.of(secretArnLists));
+        }        public ScramSecretAssociationArgs build() {
             return new ScramSecretAssociationArgs(clusterArn, secretArnLists);
         }
     }

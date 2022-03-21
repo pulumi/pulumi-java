@@ -107,42 +107,34 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
-
         public Builder ipv6IpamPoolId(Output<String> ipv6IpamPoolId) {
             this.ipv6IpamPoolId = Objects.requireNonNull(ipv6IpamPoolId);
             return this;
         }
-
         public Builder ipv6IpamPoolId(String ipv6IpamPoolId) {
             this.ipv6IpamPoolId = Output.of(Objects.requireNonNull(ipv6IpamPoolId));
             return this;
         }
-
         public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
             this.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
-
         public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
             this.ipv6NetmaskLength = Output.ofNullable(ipv6NetmaskLength);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public VpcIpv6CidrBlockAssociationArgs build() {
+        }        public VpcIpv6CidrBlockAssociationArgs build() {
             return new VpcIpv6CidrBlockAssociationArgs(ipv6CidrBlock, ipv6IpamPoolId, ipv6NetmaskLength, vpcId);
         }
     }

@@ -56,12 +56,10 @@ public final class FirewallSubnetMappingGetArgs extends io.pulumi.resources.Reso
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public FirewallSubnetMappingGetArgs build() {
+        }        public FirewallSubnetMappingGetArgs build() {
             return new FirewallSubnetMappingGetArgs(subnetId);
         }
     }

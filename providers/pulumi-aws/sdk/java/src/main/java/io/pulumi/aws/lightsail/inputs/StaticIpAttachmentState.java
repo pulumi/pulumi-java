@@ -90,32 +90,26 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder staticIpName(@Nullable Output<String> staticIpName) {
             this.staticIpName = staticIpName;
             return this;
         }
-
         public Builder staticIpName(@Nullable String staticIpName) {
             this.staticIpName = Output.ofNullable(staticIpName);
             return this;
-        }
-        public StaticIpAttachmentState build() {
+        }        public StaticIpAttachmentState build() {
             return new StaticIpAttachmentState(instanceName, ipAddress, staticIpName);
         }
     }

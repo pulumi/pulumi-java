@@ -56,12 +56,10 @@ public final class ServiceEncryptionConfigurationGetArgs extends io.pulumi.resou
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public Builder kmsKey(String kmsKey) {
             this.kmsKey = Output.of(Objects.requireNonNull(kmsKey));
             return this;
-        }
-        public ServiceEncryptionConfigurationGetArgs build() {
+        }        public ServiceEncryptionConfigurationGetArgs build() {
             return new ServiceEncryptionConfigurationGetArgs(kmsKey);
         }
     }

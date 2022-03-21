@@ -120,27 +120,22 @@ public final class LaunchTemplateMetadataOptions {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
-
         public Builder httpProtocolIpv6(@Nullable String httpProtocolIpv6) {
             this.httpProtocolIpv6 = httpProtocolIpv6;
             return this;
         }
-
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-
         public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
-
         public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
             this.instanceMetadataTags = instanceMetadataTags;
             return this;
-        }
-        public LaunchTemplateMetadataOptions build() {
+        }        public LaunchTemplateMetadataOptions build() {
             return new LaunchTemplateMetadataOptions(httpEndpoint, httpProtocolIpv6, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
         }
     }

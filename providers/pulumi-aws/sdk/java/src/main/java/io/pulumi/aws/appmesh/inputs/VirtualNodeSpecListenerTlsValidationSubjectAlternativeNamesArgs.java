@@ -56,12 +56,10 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesAr
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
-        }
-        public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs build() {
+        }        public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs build() {
             return new VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs(match);
         }
     }

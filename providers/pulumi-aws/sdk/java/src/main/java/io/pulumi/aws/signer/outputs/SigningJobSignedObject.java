@@ -54,7 +54,9 @@ public final class SigningJobSignedObject {
             this.s3s = s3s;
             return this;
         }
-        public SigningJobSignedObject build() {
+        public Builder s3s(SigningJobSignedObjectS3... s3s) {
+            return s3s(List.of(s3s));
+        }        public SigningJobSignedObject build() {
             return new SigningJobSignedObject(s3s);
         }
     }

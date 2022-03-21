@@ -91,32 +91,26 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs extends 
             this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
             return this;
         }
-
         public Builder maximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
             this.maximumExecutionTimeoutInSeconds = Output.ofNullable(maximumExecutionTimeoutInSeconds);
             return this;
         }
-
         public Builder terminationWaitInSeconds(@Nullable Output<Integer> terminationWaitInSeconds) {
             this.terminationWaitInSeconds = terminationWaitInSeconds;
             return this;
         }
-
         public Builder terminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
             this.terminationWaitInSeconds = Output.ofNullable(terminationWaitInSeconds);
             return this;
         }
-
         public Builder trafficRoutingConfiguration(Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration);
             return this;
         }
-
         public Builder trafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Output.of(Objects.requireNonNull(trafficRoutingConfiguration));
             return this;
-        }
-        public EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs build() {
+        }        public EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs build() {
             return new EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs(maximumExecutionTimeoutInSeconds, terminationWaitInSeconds, trafficRoutingConfiguration);
         }
     }

@@ -75,22 +75,18 @@ public final class WebAclRuleStatementIpSetReferenceStatementGetArgs extends io.
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder ipSetForwardedIpConfig(@Nullable Output<WebAclRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs> ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
             return this;
         }
-
         public Builder ipSetForwardedIpConfig(@Nullable WebAclRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = Output.ofNullable(ipSetForwardedIpConfig);
             return this;
-        }
-        public WebAclRuleStatementIpSetReferenceStatementGetArgs build() {
+        }        public WebAclRuleStatementIpSetReferenceStatementGetArgs build() {
             return new WebAclRuleStatementIpSetReferenceStatementGetArgs(arn, ipSetForwardedIpConfig);
         }
     }

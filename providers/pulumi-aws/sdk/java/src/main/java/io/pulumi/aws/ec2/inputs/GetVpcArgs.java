@@ -161,37 +161,33 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder $default(@Nullable Boolean $default) {
             this.$default = $default;
             return this;
         }
-
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpcFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVpcArgs build() {
+        }        public GetVpcArgs build() {
             return new GetVpcArgs(cidrBlock, $default, dhcpOptionsId, filters, id, state, tags);
         }
     }

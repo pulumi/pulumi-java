@@ -157,72 +157,61 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder excludeAppPackagesFromCleanups(@Nullable Output<List<String>> excludeAppPackagesFromCleanups) {
             this.excludeAppPackagesFromCleanups = excludeAppPackagesFromCleanups;
             return this;
         }
-
         public Builder excludeAppPackagesFromCleanups(@Nullable List<String> excludeAppPackagesFromCleanups) {
             this.excludeAppPackagesFromCleanups = Output.ofNullable(excludeAppPackagesFromCleanups);
             return this;
         }
-
+        public Builder excludeAppPackagesFromCleanups(String... excludeAppPackagesFromCleanups) {
+            return excludeAppPackagesFromCleanups(List.of(excludeAppPackagesFromCleanups));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageCleanup(@Nullable Output<Boolean> packageCleanup) {
             this.packageCleanup = packageCleanup;
             return this;
         }
-
         public Builder packageCleanup(@Nullable Boolean packageCleanup) {
             this.packageCleanup = Output.ofNullable(packageCleanup);
             return this;
         }
-
         public Builder rebootAfterUse(@Nullable Output<Boolean> rebootAfterUse) {
             this.rebootAfterUse = rebootAfterUse;
             return this;
         }
-
         public Builder rebootAfterUse(@Nullable Boolean rebootAfterUse) {
             this.rebootAfterUse = Output.ofNullable(rebootAfterUse);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public InstanceProfileArgs build() {
+        }        public InstanceProfileArgs build() {
             return new InstanceProfileArgs(description, excludeAppPackagesFromCleanups, name, packageCleanup, rebootAfterUse, tags, tagsAll);
         }
     }

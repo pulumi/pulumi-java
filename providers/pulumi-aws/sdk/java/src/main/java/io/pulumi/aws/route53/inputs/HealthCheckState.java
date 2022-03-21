@@ -418,232 +418,192 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder childHealthThreshold(@Nullable Output<Integer> childHealthThreshold) {
             this.childHealthThreshold = childHealthThreshold;
             return this;
         }
-
         public Builder childHealthThreshold(@Nullable Integer childHealthThreshold) {
             this.childHealthThreshold = Output.ofNullable(childHealthThreshold);
             return this;
         }
-
         public Builder childHealthchecks(@Nullable Output<List<String>> childHealthchecks) {
             this.childHealthchecks = childHealthchecks;
             return this;
         }
-
         public Builder childHealthchecks(@Nullable List<String> childHealthchecks) {
             this.childHealthchecks = Output.ofNullable(childHealthchecks);
             return this;
         }
-
+        public Builder childHealthchecks(String... childHealthchecks) {
+            return childHealthchecks(List.of(childHealthchecks));
+        }
         public Builder cloudwatchAlarmName(@Nullable Output<String> cloudwatchAlarmName) {
             this.cloudwatchAlarmName = cloudwatchAlarmName;
             return this;
         }
-
         public Builder cloudwatchAlarmName(@Nullable String cloudwatchAlarmName) {
             this.cloudwatchAlarmName = Output.ofNullable(cloudwatchAlarmName);
             return this;
         }
-
         public Builder cloudwatchAlarmRegion(@Nullable Output<String> cloudwatchAlarmRegion) {
             this.cloudwatchAlarmRegion = cloudwatchAlarmRegion;
             return this;
         }
-
         public Builder cloudwatchAlarmRegion(@Nullable String cloudwatchAlarmRegion) {
             this.cloudwatchAlarmRegion = Output.ofNullable(cloudwatchAlarmRegion);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder enableSni(@Nullable Output<Boolean> enableSni) {
             this.enableSni = enableSni;
             return this;
         }
-
         public Builder enableSni(@Nullable Boolean enableSni) {
             this.enableSni = Output.ofNullable(enableSni);
             return this;
         }
-
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
-
         public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder insufficientDataHealthStatus(@Nullable Output<String> insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
-
         public Builder insufficientDataHealthStatus(@Nullable String insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = Output.ofNullable(insufficientDataHealthStatus);
             return this;
         }
-
         public Builder invertHealthcheck(@Nullable Output<Boolean> invertHealthcheck) {
             this.invertHealthcheck = invertHealthcheck;
             return this;
         }
-
         public Builder invertHealthcheck(@Nullable Boolean invertHealthcheck) {
             this.invertHealthcheck = Output.ofNullable(invertHealthcheck);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder measureLatency(@Nullable Output<Boolean> measureLatency) {
             this.measureLatency = measureLatency;
             return this;
         }
-
         public Builder measureLatency(@Nullable Boolean measureLatency) {
             this.measureLatency = Output.ofNullable(measureLatency);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder referenceName(@Nullable Output<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
-
         public Builder referenceName(@Nullable String referenceName) {
             this.referenceName = Output.ofNullable(referenceName);
             return this;
         }
-
         public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = Output.ofNullable(regions);
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder requestInterval(@Nullable Output<Integer> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
-
         public Builder requestInterval(@Nullable Integer requestInterval) {
             this.requestInterval = Output.ofNullable(requestInterval);
             return this;
         }
-
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
-
         public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = Output.ofNullable(resourcePath);
             return this;
         }
-
         public Builder routingControlArn(@Nullable Output<String> routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
-
         public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = Output.ofNullable(routingControlArn);
             return this;
         }
-
         public Builder searchString(@Nullable Output<String> searchString) {
             this.searchString = searchString;
             return this;
         }
-
         public Builder searchString(@Nullable String searchString) {
             this.searchString = Output.ofNullable(searchString);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public HealthCheckState build() {
+        }        public HealthCheckState build() {
             return new HealthCheckState(arn, childHealthThreshold, childHealthchecks, cloudwatchAlarmName, cloudwatchAlarmRegion, disabled, enableSni, failureThreshold, fqdn, insufficientDataHealthStatus, invertHealthcheck, ipAddress, measureLatency, port, referenceName, regions, requestInterval, resourcePath, routingControlArn, searchString, tags, tagsAll, type);
         }
     }

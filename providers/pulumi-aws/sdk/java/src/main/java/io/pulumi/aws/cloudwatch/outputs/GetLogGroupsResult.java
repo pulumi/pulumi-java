@@ -94,22 +94,24 @@ public final class GetLogGroupsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder logGroupNamePrefix(String logGroupNamePrefix) {
             this.logGroupNamePrefix = Objects.requireNonNull(logGroupNamePrefix);
             return this;
         }
-
         public Builder logGroupNames(List<String> logGroupNames) {
             this.logGroupNames = Objects.requireNonNull(logGroupNames);
             return this;
         }
-        public GetLogGroupsResult build() {
+        public Builder logGroupNames(String... logGroupNames) {
+            return logGroupNames(List.of(logGroupNames));
+        }        public GetLogGroupsResult build() {
             return new GetLogGroupsResult(arns, id, logGroupNamePrefix, logGroupNames);
         }
     }

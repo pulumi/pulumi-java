@@ -75,22 +75,18 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends io.pul
             this.excludes = excludes;
             return this;
         }
-
         public Builder excludes(@Nullable ClassificationJobS3JobDefinitionScopingExcludesGetArgs excludes) {
             this.excludes = Output.ofNullable(excludes);
             return this;
         }
-
         public Builder includes(@Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> includes) {
             this.includes = includes;
             return this;
         }
-
         public Builder includes(@Nullable ClassificationJobS3JobDefinitionScopingIncludesGetArgs includes) {
             this.includes = Output.ofNullable(includes);
             return this;
-        }
-        public ClassificationJobS3JobDefinitionScopingGetArgs build() {
+        }        public ClassificationJobS3JobDefinitionScopingGetArgs build() {
             return new ClassificationJobS3JobDefinitionScopingGetArgs(excludes, includes);
         }
     }

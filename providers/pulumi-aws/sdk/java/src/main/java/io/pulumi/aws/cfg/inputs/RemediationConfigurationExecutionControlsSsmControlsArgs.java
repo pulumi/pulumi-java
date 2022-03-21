@@ -74,22 +74,18 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
             this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
             return this;
         }
-
         public Builder concurrentExecutionRatePercentage(@Nullable Integer concurrentExecutionRatePercentage) {
             this.concurrentExecutionRatePercentage = Output.ofNullable(concurrentExecutionRatePercentage);
             return this;
         }
-
         public Builder errorPercentage(@Nullable Output<Integer> errorPercentage) {
             this.errorPercentage = errorPercentage;
             return this;
         }
-
         public Builder errorPercentage(@Nullable Integer errorPercentage) {
             this.errorPercentage = Output.ofNullable(errorPercentage);
             return this;
-        }
-        public RemediationConfigurationExecutionControlsSsmControlsArgs build() {
+        }        public RemediationConfigurationExecutionControlsSsmControlsArgs build() {
             return new RemediationConfigurationExecutionControlsSsmControlsArgs(concurrentExecutionRatePercentage, errorPercentage);
         }
     }

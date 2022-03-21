@@ -120,27 +120,28 @@ public final class TriggerTrigger {
             this.branches = branches;
             return this;
         }
-
+        public Builder branches(String... branches) {
+            return branches(List.of(branches));
+        }
         public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder destinationArn(String destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
-
         public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public TriggerTrigger build() {
+        }        public TriggerTrigger build() {
             return new TriggerTrigger(branches, customData, destinationArn, events, name);
         }
     }

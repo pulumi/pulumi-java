@@ -87,22 +87,21 @@ public final class GetKafkaVersionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             this.preferredVersions = preferredVersions;
             return this;
         }
-
+        public Builder preferredVersions(String... preferredVersions) {
+            return preferredVersions(List.of(preferredVersions));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetKafkaVersionResult build() {
+        }        public GetKafkaVersionResult build() {
             return new GetKafkaVersionResult(id, preferredVersions, status, version);
         }
     }

@@ -56,12 +56,10 @@ public final class ClusterOpenMonitoringPrometheusJmxExporterGetArgs extends io.
             this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
             return this;
         }
-
         public Builder enabledInBroker(Boolean enabledInBroker) {
             this.enabledInBroker = Output.of(Objects.requireNonNull(enabledInBroker));
             return this;
-        }
-        public ClusterOpenMonitoringPrometheusJmxExporterGetArgs build() {
+        }        public ClusterOpenMonitoringPrometheusJmxExporterGetArgs build() {
             return new ClusterOpenMonitoringPrometheusJmxExporterGetArgs(enabledInBroker);
         }
     }

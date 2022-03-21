@@ -114,27 +114,31 @@ public final class GetPipelineDefinitionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parameterObjects(List<GetPipelineDefinitionParameterObject> parameterObjects) {
             this.parameterObjects = Objects.requireNonNull(parameterObjects);
             return this;
         }
-
+        public Builder parameterObjects(GetPipelineDefinitionParameterObject... parameterObjects) {
+            return parameterObjects(List.of(parameterObjects));
+        }
         public Builder parameterValues(@Nullable List<GetPipelineDefinitionParameterValue> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
-
+        public Builder parameterValues(GetPipelineDefinitionParameterValue... parameterValues) {
+            return parameterValues(List.of(parameterValues));
+        }
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
-
         public Builder pipelineObjects(List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
             this.pipelineObjects = Objects.requireNonNull(pipelineObjects);
             return this;
         }
-        public GetPipelineDefinitionResult build() {
+        public Builder pipelineObjects(GetPipelineDefinitionPipelineObject... pipelineObjects) {
+            return pipelineObjects(List.of(pipelineObjects));
+        }        public GetPipelineDefinitionResult build() {
             return new GetPipelineDefinitionResult(id, parameterObjects, parameterValues, pipelineId, pipelineObjects);
         }
     }

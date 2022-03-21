@@ -68,22 +68,21 @@ public final class NodejsAppLayerCloudwatchConfigurationGetArgs extends io.pulum
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public NodejsAppLayerCloudwatchConfigurationGetArgs build() {
+        public Builder logStreams(NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public NodejsAppLayerCloudwatchConfigurationGetArgs build() {
             return new NodejsAppLayerCloudwatchConfigurationGetArgs(enabled, logStreams);
         }
     }

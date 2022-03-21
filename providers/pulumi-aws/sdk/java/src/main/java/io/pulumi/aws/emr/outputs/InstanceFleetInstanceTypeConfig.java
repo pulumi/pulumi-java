@@ -140,32 +140,32 @@ public final class InstanceFleetInstanceTypeConfig {
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
-
         public Builder configurations(@Nullable List<InstanceFleetInstanceTypeConfigConfiguration> configurations) {
             this.configurations = configurations;
             return this;
         }
-
+        public Builder configurations(InstanceFleetInstanceTypeConfigConfiguration... configurations) {
+            return configurations(List.of(configurations));
+        }
         public Builder ebsConfigs(@Nullable List<InstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
+        public Builder ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfig... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public InstanceFleetInstanceTypeConfig build() {
+        }        public InstanceFleetInstanceTypeConfig build() {
             return new InstanceFleetInstanceTypeConfig(bidPrice, bidPriceAsPercentageOfOnDemandPrice, configurations, ebsConfigs, instanceType, weightedCapacity);
         }
     }

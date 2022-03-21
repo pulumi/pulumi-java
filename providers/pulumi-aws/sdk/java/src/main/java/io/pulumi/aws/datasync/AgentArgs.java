@@ -172,82 +172,72 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             this.activationKey = activationKey;
             return this;
         }
-
         public Builder activationKey(@Nullable String activationKey) {
             this.activationKey = Output.ofNullable(activationKey);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateLinkEndpoint(@Nullable Output<String> privateLinkEndpoint) {
             this.privateLinkEndpoint = privateLinkEndpoint;
             return this;
         }
-
         public Builder privateLinkEndpoint(@Nullable String privateLinkEndpoint) {
             this.privateLinkEndpoint = Output.ofNullable(privateLinkEndpoint);
             return this;
         }
-
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
-
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
             this.securityGroupArns = Output.ofNullable(securityGroupArns);
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subnetArns(@Nullable Output<List<String>> subnetArns) {
             this.subnetArns = subnetArns;
             return this;
         }
-
         public Builder subnetArns(@Nullable List<String> subnetArns) {
             this.subnetArns = Output.ofNullable(subnetArns);
             return this;
         }
-
+        public Builder subnetArns(String... subnetArns) {
+            return subnetArns(List.of(subnetArns));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
-        }
-        public AgentArgs build() {
+        }        public AgentArgs build() {
             return new AgentArgs(activationKey, ipAddress, name, privateLinkEndpoint, securityGroupArns, subnetArns, tags, vpcEndpointId);
         }
     }

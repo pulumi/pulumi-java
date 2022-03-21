@@ -85,22 +85,18 @@ public final class GetActivityResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetActivityResult build() {
+        }        public GetActivityResult build() {
             return new GetActivityResult(arn, creationDate, id, name);
         }
     }

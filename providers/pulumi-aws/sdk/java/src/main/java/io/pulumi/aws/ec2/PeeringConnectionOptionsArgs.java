@@ -96,32 +96,26 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
             this.accepter = accepter;
             return this;
         }
-
         public Builder accepter(@Nullable PeeringConnectionOptionsAccepterArgs accepter) {
             this.accepter = Output.ofNullable(accepter);
             return this;
         }
-
         public Builder requester(@Nullable Output<PeeringConnectionOptionsRequesterArgs> requester) {
             this.requester = requester;
             return this;
         }
-
         public Builder requester(@Nullable PeeringConnectionOptionsRequesterArgs requester) {
             this.requester = Output.ofNullable(requester);
             return this;
         }
-
         public Builder vpcPeeringConnectionId(Output<String> vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
             return this;
         }
-
         public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Output.of(Objects.requireNonNull(vpcPeeringConnectionId));
             return this;
-        }
-        public PeeringConnectionOptionsArgs build() {
+        }        public PeeringConnectionOptionsArgs build() {
             return new PeeringConnectionOptionsArgs(accepter, requester, vpcPeeringConnectionId);
         }
     }

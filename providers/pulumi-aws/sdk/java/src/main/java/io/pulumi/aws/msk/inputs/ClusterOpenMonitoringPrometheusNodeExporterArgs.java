@@ -56,12 +56,10 @@ public final class ClusterOpenMonitoringPrometheusNodeExporterArgs extends io.pu
             this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
             return this;
         }
-
         public Builder enabledInBroker(Boolean enabledInBroker) {
             this.enabledInBroker = Output.of(Objects.requireNonNull(enabledInBroker));
             return this;
-        }
-        public ClusterOpenMonitoringPrometheusNodeExporterArgs build() {
+        }        public ClusterOpenMonitoringPrometheusNodeExporterArgs build() {
             return new ClusterOpenMonitoringPrometheusNodeExporterArgs(enabledInBroker);
         }
     }

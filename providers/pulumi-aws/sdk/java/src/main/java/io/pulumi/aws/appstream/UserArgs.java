@@ -139,62 +139,50 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = Output.ofNullable(firstName);
             return this;
         }
-
         public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
-
         public Builder lastName(@Nullable String lastName) {
             this.lastName = Output.ofNullable(lastName);
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
             this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(authenticationType, enabled, firstName, lastName, sendEmailNotification, userName);
         }
     }

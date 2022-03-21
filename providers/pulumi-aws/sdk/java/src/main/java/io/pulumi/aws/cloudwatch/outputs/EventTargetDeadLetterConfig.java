@@ -53,8 +53,7 @@ public final class EventTargetDeadLetterConfig {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public EventTargetDeadLetterConfig build() {
+        }        public EventTargetDeadLetterConfig build() {
             return new EventTargetDeadLetterConfig(arn);
         }
     }

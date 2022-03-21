@@ -170,42 +170,34 @@ public final class FirehoseDeliveryStreamSplunkConfiguration {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder hecAcknowledgmentTimeout(@Nullable Integer hecAcknowledgmentTimeout) {
             this.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
             return this;
         }
-
         public Builder hecEndpoint(String hecEndpoint) {
             this.hecEndpoint = Objects.requireNonNull(hecEndpoint);
             return this;
         }
-
         public Builder hecEndpointType(@Nullable String hecEndpointType) {
             this.hecEndpointType = hecEndpointType;
             return this;
         }
-
         public Builder hecToken(String hecToken) {
             this.hecToken = Objects.requireNonNull(hecToken);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
-        }
-        public FirehoseDeliveryStreamSplunkConfiguration build() {
+        }        public FirehoseDeliveryStreamSplunkConfiguration build() {
             return new FirehoseDeliveryStreamSplunkConfiguration(cloudwatchLoggingOptions, hecAcknowledgmentTimeout, hecEndpoint, hecEndpointType, hecToken, processingConfiguration, retryDuration, s3BackupMode);
         }
     }

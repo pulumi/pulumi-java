@@ -66,22 +66,18 @@ public final class LoadBalancerPolicyPolicyAttributeArgs extends io.pulumi.resou
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public LoadBalancerPolicyPolicyAttributeArgs build() {
+        }        public LoadBalancerPolicyPolicyAttributeArgs build() {
             return new LoadBalancerPolicyPolicyAttributeArgs(name, value);
         }
     }

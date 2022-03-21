@@ -89,22 +89,21 @@ public final class GetLaunchPathsResult {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder summaries(List<GetLaunchPathsSummary> summaries) {
             this.summaries = Objects.requireNonNull(summaries);
             return this;
         }
-        public GetLaunchPathsResult build() {
+        public Builder summaries(GetLaunchPathsSummary... summaries) {
+            return summaries(List.of(summaries));
+        }        public GetLaunchPathsResult build() {
             return new GetLaunchPathsResult(acceptLanguage, id, productId, summaries);
         }
     }

@@ -56,12 +56,10 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
-
         public Builder jsonPath(String jsonPath) {
             this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
             return this;
-        }
-        public ClassifierJsonClassifierGetArgs build() {
+        }        public ClassifierJsonClassifierGetArgs build() {
             return new ClassifierJsonClassifierGetArgs(jsonPath);
         }
     }

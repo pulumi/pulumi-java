@@ -75,22 +75,18 @@ public final class FargateProfileSelectorGetArgs extends io.pulumi.resources.Res
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
-        }
-        public FargateProfileSelectorGetArgs build() {
+        }        public FargateProfileSelectorGetArgs build() {
             return new FargateProfileSelectorGetArgs(labels, namespace);
         }
     }

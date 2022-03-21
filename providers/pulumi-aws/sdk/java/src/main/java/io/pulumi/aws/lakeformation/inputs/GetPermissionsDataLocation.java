@@ -72,12 +72,10 @@ public final class GetPermissionsDataLocation extends io.pulumi.resources.Invoke
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
-        }
-        public GetPermissionsDataLocation build() {
+        }        public GetPermissionsDataLocation build() {
             return new GetPermissionsDataLocation(arn, catalogId);
         }
     }
