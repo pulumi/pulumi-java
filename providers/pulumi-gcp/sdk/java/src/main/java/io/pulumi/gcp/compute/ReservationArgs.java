@@ -168,72 +168,58 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder shareSettings(@Nullable Output<ReservationShareSettingsArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
-
         public Builder shareSettings(@Nullable ReservationShareSettingsArgs shareSettings) {
             this.shareSettings = Output.ofNullable(shareSettings);
             return this;
         }
-
         public Builder specificReservation(Output<ReservationSpecificReservationArgs> specificReservation) {
             this.specificReservation = Objects.requireNonNull(specificReservation);
             return this;
         }
-
         public Builder specificReservation(ReservationSpecificReservationArgs specificReservation) {
             this.specificReservation = Output.of(Objects.requireNonNull(specificReservation));
             return this;
         }
-
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
             this.specificReservationRequired = specificReservationRequired;
             return this;
         }
-
         public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
             this.specificReservationRequired = Output.ofNullable(specificReservationRequired);
             return this;
         }
-
         public Builder zone(Output<String> zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Output.of(Objects.requireNonNull(zone));
             return this;
-        }
-        public ReservationArgs build() {
+        }        public ReservationArgs build() {
             return new ReservationArgs(description, name, project, shareSettings, specificReservation, specificReservationRequired, zone);
         }
     }

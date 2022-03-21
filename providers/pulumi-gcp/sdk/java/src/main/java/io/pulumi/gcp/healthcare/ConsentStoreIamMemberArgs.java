@@ -119,52 +119,42 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ConsentStoreIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
-
         public Builder dataset(Output<String> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dataset(String dataset) {
             this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public ConsentStoreIamMemberArgs build() {
+        }        public ConsentStoreIamMemberArgs build() {
             return new ConsentStoreIamMemberArgs(condition, consentStoreId, dataset, member, role);
         }
     }

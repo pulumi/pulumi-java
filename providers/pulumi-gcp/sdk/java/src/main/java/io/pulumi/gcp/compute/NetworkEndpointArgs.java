@@ -144,62 +144,50 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder ipAddress(Output<String> ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Output.of(Objects.requireNonNull(ipAddress));
             return this;
         }
-
         public Builder networkEndpointGroup(Output<String> networkEndpointGroup) {
             this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup);
             return this;
         }
-
         public Builder networkEndpointGroup(String networkEndpointGroup) {
             this.networkEndpointGroup = Output.of(Objects.requireNonNull(networkEndpointGroup));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public NetworkEndpointArgs build() {
+        }        public NetworkEndpointArgs build() {
             return new NetworkEndpointArgs(instance, ipAddress, networkEndpointGroup, port, project, zone);
         }
     }

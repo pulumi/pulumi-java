@@ -96,32 +96,26 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
-
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Output.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
             return this;
         }
-
         public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
-
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Output.of(Objects.requireNonNull(allowSubjectPassthrough));
             return this;
         }
-
         public Builder celExpression(@Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression) {
             this.celExpression = celExpression;
             return this;
         }
-
         public Builder celExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs celExpression) {
             this.celExpression = Output.ofNullable(celExpression);
             return this;
-        }
-        public CaPoolIssuancePolicyIdentityConstraintsGetArgs build() {
+        }        public CaPoolIssuancePolicyIdentityConstraintsGetArgs build() {
             return new CaPoolIssuancePolicyIdentityConstraintsGetArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }
     }

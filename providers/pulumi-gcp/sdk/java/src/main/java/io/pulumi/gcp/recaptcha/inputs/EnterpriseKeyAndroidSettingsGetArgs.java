@@ -76,22 +76,21 @@ public final class EnterpriseKeyAndroidSettingsGetArgs extends io.pulumi.resourc
             this.allowAllPackageNames = allowAllPackageNames;
             return this;
         }
-
         public Builder allowAllPackageNames(@Nullable Boolean allowAllPackageNames) {
             this.allowAllPackageNames = Output.ofNullable(allowAllPackageNames);
             return this;
         }
-
         public Builder allowedPackageNames(@Nullable Output<List<String>> allowedPackageNames) {
             this.allowedPackageNames = allowedPackageNames;
             return this;
         }
-
         public Builder allowedPackageNames(@Nullable List<String> allowedPackageNames) {
             this.allowedPackageNames = Output.ofNullable(allowedPackageNames);
             return this;
         }
-        public EnterpriseKeyAndroidSettingsGetArgs build() {
+        public Builder allowedPackageNames(String... allowedPackageNames) {
+            return allowedPackageNames(List.of(allowedPackageNames));
+        }        public EnterpriseKeyAndroidSettingsGetArgs build() {
             return new EnterpriseKeyAndroidSettingsGetArgs(allowAllPackageNames, allowedPackageNames);
         }
     }

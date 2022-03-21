@@ -79,12 +79,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewrite {
             this.hostRewrite = hostRewrite;
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
-        }
-        public URLMapPathMatcherRouteRuleRouteActionUrlRewrite build() {
+        }        public URLMapPathMatcherRouteRuleRouteActionUrlRewrite build() {
             return new URLMapPathMatcherRouteRuleRouteActionUrlRewrite(hostRewrite, pathPrefixRewrite);
         }
     }

@@ -177,82 +177,69 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selectiveAuthentication(@Nullable Output<Boolean> selectiveAuthentication) {
             this.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
-
         public Builder selectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
             this.selectiveAuthentication = Output.ofNullable(selectiveAuthentication);
             return this;
         }
-
         public Builder targetDnsIpAddresses(@Nullable Output<List<String>> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = targetDnsIpAddresses;
             return this;
         }
-
         public Builder targetDnsIpAddresses(@Nullable List<String> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Output.ofNullable(targetDnsIpAddresses);
             return this;
         }
-
+        public Builder targetDnsIpAddresses(String... targetDnsIpAddresses) {
+            return targetDnsIpAddresses(List.of(targetDnsIpAddresses));
+        }
         public Builder targetDomainName(@Nullable Output<String> targetDomainName) {
             this.targetDomainName = targetDomainName;
             return this;
         }
-
         public Builder targetDomainName(@Nullable String targetDomainName) {
             this.targetDomainName = Output.ofNullable(targetDomainName);
             return this;
         }
-
         public Builder trustDirection(@Nullable Output<String> trustDirection) {
             this.trustDirection = trustDirection;
             return this;
         }
-
         public Builder trustDirection(@Nullable String trustDirection) {
             this.trustDirection = Output.ofNullable(trustDirection);
             return this;
         }
-
         public Builder trustHandshakeSecret(@Nullable Output<String> trustHandshakeSecret) {
             this.trustHandshakeSecret = trustHandshakeSecret;
             return this;
         }
-
         public Builder trustHandshakeSecret(@Nullable String trustHandshakeSecret) {
             this.trustHandshakeSecret = Output.ofNullable(trustHandshakeSecret);
             return this;
         }
-
         public Builder trustType(@Nullable Output<String> trustType) {
             this.trustType = trustType;
             return this;
         }
-
         public Builder trustType(@Nullable String trustType) {
             this.trustType = Output.ofNullable(trustType);
             return this;
-        }
-        public DomainTrustState build() {
+        }        public DomainTrustState build() {
             return new DomainTrustState(domain, project, selectiveAuthentication, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType);
         }
     }

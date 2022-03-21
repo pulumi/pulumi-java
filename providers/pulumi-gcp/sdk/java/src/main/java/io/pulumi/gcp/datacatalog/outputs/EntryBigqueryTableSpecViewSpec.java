@@ -45,8 +45,7 @@ public final class EntryBigqueryTableSpecViewSpec {
         public Builder viewQuery(@Nullable String viewQuery) {
             this.viewQuery = viewQuery;
             return this;
-        }
-        public EntryBigqueryTableSpecViewSpec build() {
+        }        public EntryBigqueryTableSpecViewSpec build() {
             return new EntryBigqueryTableSpecViewSpec(viewQuery);
         }
     }

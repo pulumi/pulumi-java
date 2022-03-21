@@ -56,12 +56,10 @@ public final class TransferJobTransferSpecHttpDataSourceArgs extends io.pulumi.r
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
-
         public Builder listUrl(String listUrl) {
             this.listUrl = Output.of(Objects.requireNonNull(listUrl));
             return this;
-        }
-        public TransferJobTransferSpecHttpDataSourceArgs build() {
+        }        public TransferJobTransferSpecHttpDataSourceArgs build() {
             return new TransferJobTransferSpecHttpDataSourceArgs(listUrl);
         }
     }

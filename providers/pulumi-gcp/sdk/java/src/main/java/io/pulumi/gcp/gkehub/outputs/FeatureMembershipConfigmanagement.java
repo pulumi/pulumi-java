@@ -123,27 +123,22 @@ public final class FeatureMembershipConfigmanagement {
             this.binauthz = binauthz;
             return this;
         }
-
         public Builder configSync(@Nullable FeatureMembershipConfigmanagementConfigSync configSync) {
             this.configSync = configSync;
             return this;
         }
-
         public Builder hierarchyController(@Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController) {
             this.hierarchyController = hierarchyController;
             return this;
         }
-
         public Builder policyController(@Nullable FeatureMembershipConfigmanagementPolicyController policyController) {
             this.policyController = policyController;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public FeatureMembershipConfigmanagement build() {
+        }        public FeatureMembershipConfigmanagement build() {
             return new FeatureMembershipConfigmanagement(binauthz, configSync, hierarchyController, policyController, version);
         }
     }

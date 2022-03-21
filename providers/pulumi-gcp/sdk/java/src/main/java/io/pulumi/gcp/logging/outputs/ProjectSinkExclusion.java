@@ -106,22 +106,18 @@ public final class ProjectSinkExclusion {
             this.description = description;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ProjectSinkExclusion build() {
+        }        public ProjectSinkExclusion build() {
             return new ProjectSinkExclusion(description, disabled, filter, name);
         }
     }

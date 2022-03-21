@@ -254,122 +254,107 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder defaultResponsePlatforms(@Nullable Output<List<String>> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = defaultResponsePlatforms;
             return this;
         }
-
         public Builder defaultResponsePlatforms(@Nullable List<String> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = Output.ofNullable(defaultResponsePlatforms);
             return this;
         }
-
+        public Builder defaultResponsePlatforms(String... defaultResponsePlatforms) {
+            return defaultResponsePlatforms(List.of(defaultResponsePlatforms));
+        }
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder events(@Nullable Output<List<String>> events) {
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable List<String> events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder inputContextNames(@Nullable Output<List<String>> inputContextNames) {
             this.inputContextNames = inputContextNames;
             return this;
         }
-
         public Builder inputContextNames(@Nullable List<String> inputContextNames) {
             this.inputContextNames = Output.ofNullable(inputContextNames);
             return this;
         }
-
+        public Builder inputContextNames(String... inputContextNames) {
+            return inputContextNames(List.of(inputContextNames));
+        }
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
-
         public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Output.ofNullable(isFallback);
             return this;
         }
-
         public Builder mlDisabled(@Nullable Output<Boolean> mlDisabled) {
             this.mlDisabled = mlDisabled;
             return this;
         }
-
         public Builder mlDisabled(@Nullable Boolean mlDisabled) {
             this.mlDisabled = Output.ofNullable(mlDisabled);
             return this;
         }
-
         public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
-
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
             this.parentFollowupIntentName = Output.ofNullable(parentFollowupIntentName);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resetContexts(@Nullable Output<Boolean> resetContexts) {
             this.resetContexts = resetContexts;
             return this;
         }
-
         public Builder resetContexts(@Nullable Boolean resetContexts) {
             this.resetContexts = Output.ofNullable(resetContexts);
             return this;
         }
-
         public Builder webhookState(@Nullable Output<String> webhookState) {
             this.webhookState = webhookState;
             return this;
         }
-
         public Builder webhookState(@Nullable String webhookState) {
             this.webhookState = Output.ofNullable(webhookState);
             return this;
-        }
-        public IntentArgs build() {
+        }        public IntentArgs build() {
             return new IntentArgs(action, defaultResponsePlatforms, displayName, events, inputContextNames, isFallback, mlDisabled, parentFollowupIntentName, priority, project, resetContexts, webhookState);
         }
     }

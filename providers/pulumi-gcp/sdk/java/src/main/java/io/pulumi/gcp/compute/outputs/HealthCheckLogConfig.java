@@ -55,8 +55,7 @@ public final class HealthCheckLogConfig {
         public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
-        }
-        public HealthCheckLogConfig build() {
+        }        public HealthCheckLogConfig build() {
             return new HealthCheckLogConfig(enable);
         }
     }

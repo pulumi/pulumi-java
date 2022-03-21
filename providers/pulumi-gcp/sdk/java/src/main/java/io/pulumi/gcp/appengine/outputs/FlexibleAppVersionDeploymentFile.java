@@ -87,17 +87,14 @@ public final class FlexibleAppVersionDeploymentFile {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sha1Sum(@Nullable String sha1Sum) {
             this.sha1Sum = sha1Sum;
             return this;
         }
-
         public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
-        }
-        public FlexibleAppVersionDeploymentFile build() {
+        }        public FlexibleAppVersionDeploymentFile build() {
             return new FlexibleAppVersionDeploymentFile(name, sha1Sum, sourceUrl);
         }
     }

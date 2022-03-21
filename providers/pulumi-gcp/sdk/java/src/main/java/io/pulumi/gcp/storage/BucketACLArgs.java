@@ -107,42 +107,37 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder defaultAcl(@Nullable Output<String> defaultAcl) {
             this.defaultAcl = defaultAcl;
             return this;
         }
-
         public Builder defaultAcl(@Nullable String defaultAcl) {
             this.defaultAcl = Output.ofNullable(defaultAcl);
             return this;
         }
-
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
-
         public Builder predefinedAcl(@Nullable String predefinedAcl) {
             this.predefinedAcl = Output.ofNullable(predefinedAcl);
             return this;
         }
-
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
-
         public Builder roleEntities(@Nullable List<String> roleEntities) {
             this.roleEntities = Output.ofNullable(roleEntities);
             return this;
         }
-        public BucketACLArgs build() {
+        public Builder roleEntities(String... roleEntities) {
+            return roleEntities(List.of(roleEntities));
+        }        public BucketACLArgs build() {
             return new BucketACLArgs(bucket, defaultAcl, predefinedAcl, roleEntities);
         }
     }

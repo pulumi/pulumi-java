@@ -77,12 +77,10 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
             this.minimumVersion = minimumVersion;
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
-        }
-        public AccessLevelConditionDevicePolicyOsConstraint build() {
+        }        public AccessLevelConditionDevicePolicyOsConstraint build() {
             return new AccessLevelConditionDevicePolicyOsConstraint(minimumVersion, osType);
         }
     }

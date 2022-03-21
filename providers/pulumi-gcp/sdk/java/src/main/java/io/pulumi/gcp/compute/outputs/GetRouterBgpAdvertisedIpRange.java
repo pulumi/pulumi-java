@@ -53,12 +53,10 @@ public final class GetRouterBgpAdvertisedIpRange {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder range(String range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public GetRouterBgpAdvertisedIpRange build() {
+        }        public GetRouterBgpAdvertisedIpRange build() {
             return new GetRouterBgpAdvertisedIpRange(description, range);
         }
     }

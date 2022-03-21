@@ -73,22 +73,18 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
             this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
             return this;
         }
-
         public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = Output.of(Objects.requireNonNull(allowConfigBasedIssuance));
             return this;
         }
-
         public Builder allowCsrBasedIssuance(Output<Boolean> allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }
-
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Output.of(Objects.requireNonNull(allowCsrBasedIssuance));
             return this;
-        }
-        public CaPoolIssuancePolicyAllowedIssuanceModesArgs build() {
+        }        public CaPoolIssuancePolicyAllowedIssuanceModesArgs build() {
             return new CaPoolIssuancePolicyAllowedIssuanceModesArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }
     }

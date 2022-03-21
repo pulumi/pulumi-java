@@ -82,32 +82,26 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
-
         public Builder orgId(@Nullable String orgId) {
             this.orgId = Output.ofNullable(orgId);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public IAMPolicyState build() {
+        }        public IAMPolicyState build() {
             return new IAMPolicyState(etag, orgId, policyData);
         }
     }

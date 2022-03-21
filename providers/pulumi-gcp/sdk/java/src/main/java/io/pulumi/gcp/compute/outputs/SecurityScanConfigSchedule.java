@@ -76,12 +76,10 @@ public final class SecurityScanConfigSchedule {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
-
         public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
-        }
-        public SecurityScanConfigSchedule build() {
+        }        public SecurityScanConfigSchedule build() {
             return new SecurityScanConfigSchedule(intervalDurationDays, scheduleTime);
         }
     }

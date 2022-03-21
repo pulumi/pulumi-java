@@ -55,12 +55,10 @@ public final class ServiceEndpoint {
             this.address = address;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ServiceEndpoint build() {
+        }        public ServiceEndpoint build() {
             return new ServiceEndpoint(address, name);
         }
     }

@@ -203,92 +203,77 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fileShares(Output<InstanceFileSharesArgs> fileShares) {
             this.fileShares = Objects.requireNonNull(fileShares);
             return this;
         }
-
         public Builder fileShares(InstanceFileSharesArgs fileShares) {
             this.fileShares = Output.of(Objects.requireNonNull(fileShares));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networks(Output<List<InstanceNetworkArgs>> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public Builder networks(List<InstanceNetworkArgs> networks) {
             this.networks = Output.of(Objects.requireNonNull(networks));
             return this;
         }
-
+        public Builder networks(InstanceNetworkArgs... networks) {
+            return networks(List.of(networks));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tier(Output<String> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(description, fileShares, labels, location, name, networks, project, tier, zone);
         }
     }

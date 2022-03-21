@@ -75,22 +75,18 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
-
         public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Output.of(Objects.requireNonNull(clusterLabels));
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public WorkflowTemplatePlacementClusterSelectorGetArgs build() {
+        }        public WorkflowTemplatePlacementClusterSelectorGetArgs build() {
             return new WorkflowTemplatePlacementClusterSelectorGetArgs(clusterLabels, zone);
         }
     }

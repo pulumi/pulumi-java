@@ -136,52 +136,45 @@ public final class InstanceFileSharesNfsExportOptionArgs extends io.pulumi.resou
             this.accessMode = accessMode;
             return this;
         }
-
         public Builder accessMode(@Nullable String accessMode) {
             this.accessMode = Output.ofNullable(accessMode);
             return this;
         }
-
         public Builder anonGid(@Nullable Output<Integer> anonGid) {
             this.anonGid = anonGid;
             return this;
         }
-
         public Builder anonGid(@Nullable Integer anonGid) {
             this.anonGid = Output.ofNullable(anonGid);
             return this;
         }
-
         public Builder anonUid(@Nullable Output<Integer> anonUid) {
             this.anonUid = anonUid;
             return this;
         }
-
         public Builder anonUid(@Nullable Integer anonUid) {
             this.anonUid = Output.ofNullable(anonUid);
             return this;
         }
-
         public Builder ipRanges(@Nullable Output<List<String>> ipRanges) {
             this.ipRanges = ipRanges;
             return this;
         }
-
         public Builder ipRanges(@Nullable List<String> ipRanges) {
             this.ipRanges = Output.ofNullable(ipRanges);
             return this;
         }
-
+        public Builder ipRanges(String... ipRanges) {
+            return ipRanges(List.of(ipRanges));
+        }
         public Builder squashMode(@Nullable Output<String> squashMode) {
             this.squashMode = squashMode;
             return this;
         }
-
         public Builder squashMode(@Nullable String squashMode) {
             this.squashMode = Output.ofNullable(squashMode);
             return this;
-        }
-        public InstanceFileSharesNfsExportOptionArgs build() {
+        }        public InstanceFileSharesNfsExportOptionArgs build() {
             return new InstanceFileSharesNfsExportOptionArgs(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }
     }

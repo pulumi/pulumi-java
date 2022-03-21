@@ -78,22 +78,18 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs ex
             this.egressFrom = egressFrom;
             return this;
         }
-
         public Builder egressFrom(@Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromGetArgs egressFrom) {
             this.egressFrom = Output.ofNullable(egressFrom);
             return this;
         }
-
         public Builder egressTo(@Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs> egressTo) {
             this.egressTo = egressTo;
             return this;
         }
-
         public Builder egressTo(@Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs egressTo) {
             this.egressTo = Output.ofNullable(egressTo);
             return this;
-        }
-        public ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs build() {
+        }        public ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs build() {
             return new ServicePerimetersServicePerimeterStatusEgressPolicyGetArgs(egressFrom, egressTo);
         }
     }

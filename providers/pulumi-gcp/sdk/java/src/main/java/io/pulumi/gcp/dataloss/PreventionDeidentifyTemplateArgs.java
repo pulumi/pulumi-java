@@ -112,42 +112,34 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
             this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig);
             return this;
         }
-
         public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigArgs deidentifyConfig) {
             this.deidentifyConfig = Output.of(Objects.requireNonNull(deidentifyConfig));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
-        }
-        public PreventionDeidentifyTemplateArgs build() {
+        }        public PreventionDeidentifyTemplateArgs build() {
             return new PreventionDeidentifyTemplateArgs(deidentifyConfig, description, displayName, parent);
         }
     }

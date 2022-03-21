@@ -53,8 +53,7 @@ public final class ApiConfigOpenapiDocument {
         public Builder document(ApiConfigOpenapiDocumentDocument document) {
             this.document = Objects.requireNonNull(document);
             return this;
-        }
-        public ApiConfigOpenapiDocument build() {
+        }        public ApiConfigOpenapiDocument build() {
             return new ApiConfigOpenapiDocument(document);
         }
     }

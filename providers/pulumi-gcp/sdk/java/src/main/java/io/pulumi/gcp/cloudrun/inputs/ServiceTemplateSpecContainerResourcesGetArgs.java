@@ -81,22 +81,18 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable Map<String,String> limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
         public Builder requests(@Nullable Output<Map<String,String>> requests) {
             this.requests = requests;
             return this;
         }
-
         public Builder requests(@Nullable Map<String,String> requests) {
             this.requests = Output.ofNullable(requests);
             return this;
-        }
-        public ServiceTemplateSpecContainerResourcesGetArgs build() {
+        }        public ServiceTemplateSpecContainerResourcesGetArgs build() {
             return new ServiceTemplateSpecContainerResourcesGetArgs(limits, requests);
         }
     }

@@ -53,8 +53,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoType {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetInfoType build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetInfoType build() {
             return new PreventionInspectTemplateInspectConfigRuleSetInfoType(name);
         }
     }

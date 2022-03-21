@@ -57,12 +57,10 @@ public final class ClusterNodeConfigGcfsConfigGetArgs extends io.pulumi.resource
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterNodeConfigGcfsConfigGetArgs build() {
+        }        public ClusterNodeConfigGcfsConfigGetArgs build() {
             return new ClusterNodeConfigGcfsConfigGetArgs(enabled);
         }
     }

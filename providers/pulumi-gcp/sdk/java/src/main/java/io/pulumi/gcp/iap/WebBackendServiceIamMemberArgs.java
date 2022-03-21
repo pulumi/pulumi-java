@@ -123,52 +123,42 @@ public final class WebBackendServiceIamMemberArgs extends io.pulumi.resources.Re
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable WebBackendServiceIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder webBackendService(Output<String> webBackendService) {
             this.webBackendService = Objects.requireNonNull(webBackendService);
             return this;
         }
-
         public Builder webBackendService(String webBackendService) {
             this.webBackendService = Output.of(Objects.requireNonNull(webBackendService));
             return this;
-        }
-        public WebBackendServiceIamMemberArgs build() {
+        }        public WebBackendServiceIamMemberArgs build() {
             return new WebBackendServiceIamMemberArgs(condition, member, project, role, webBackendService);
         }
     }

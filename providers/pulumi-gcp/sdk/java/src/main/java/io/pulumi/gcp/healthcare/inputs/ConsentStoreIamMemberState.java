@@ -135,62 +135,50 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ConsentStoreIamMemberConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
             this.consentStoreId = consentStoreId;
             return this;
         }
-
         public Builder consentStoreId(@Nullable String consentStoreId) {
             this.consentStoreId = Output.ofNullable(consentStoreId);
             return this;
         }
-
         public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
-
         public Builder member(@Nullable String member) {
             this.member = Output.ofNullable(member);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public ConsentStoreIamMemberState build() {
+        }        public ConsentStoreIamMemberState build() {
             return new ConsentStoreIamMemberState(condition, consentStoreId, dataset, etag, member, role);
         }
     }

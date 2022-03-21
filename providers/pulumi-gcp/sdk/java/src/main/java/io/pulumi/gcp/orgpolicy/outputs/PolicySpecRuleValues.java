@@ -71,12 +71,16 @@ public final class PolicySpecRuleValues {
             this.allowedValues = allowedValues;
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder deniedValues(@Nullable List<String> deniedValues) {
             this.deniedValues = deniedValues;
             return this;
         }
-        public PolicySpecRuleValues build() {
+        public Builder deniedValues(String... deniedValues) {
+            return deniedValues(List.of(deniedValues));
+        }        public PolicySpecRuleValues build() {
             return new PolicySpecRuleValues(allowedValues, deniedValues);
         }
     }

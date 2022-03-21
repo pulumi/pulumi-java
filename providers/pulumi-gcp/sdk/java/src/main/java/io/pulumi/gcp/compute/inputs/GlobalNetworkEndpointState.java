@@ -125,52 +125,42 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder globalNetworkEndpointGroup(@Nullable Output<String> globalNetworkEndpointGroup) {
             this.globalNetworkEndpointGroup = globalNetworkEndpointGroup;
             return this;
         }
-
         public Builder globalNetworkEndpointGroup(@Nullable String globalNetworkEndpointGroup) {
             this.globalNetworkEndpointGroup = Output.ofNullable(globalNetworkEndpointGroup);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GlobalNetworkEndpointState build() {
+        }        public GlobalNetworkEndpointState build() {
             return new GlobalNetworkEndpointState(fqdn, globalNetworkEndpointGroup, ipAddress, port, project);
         }
     }

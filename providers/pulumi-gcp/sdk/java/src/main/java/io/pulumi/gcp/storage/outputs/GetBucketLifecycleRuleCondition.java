@@ -111,47 +111,41 @@ public final class GetBucketLifecycleRuleCondition {
             this.age = Objects.requireNonNull(age);
             return this;
         }
-
         public Builder createdBefore(String createdBefore) {
             this.createdBefore = Objects.requireNonNull(createdBefore);
             return this;
         }
-
         public Builder customTimeBefore(String customTimeBefore) {
             this.customTimeBefore = Objects.requireNonNull(customTimeBefore);
             return this;
         }
-
         public Builder daysSinceCustomTime(Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime);
             return this;
         }
-
         public Builder daysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime);
             return this;
         }
-
         public Builder matchesStorageClasses(List<String> matchesStorageClasses) {
             this.matchesStorageClasses = Objects.requireNonNull(matchesStorageClasses);
             return this;
         }
-
+        public Builder matchesStorageClasses(String... matchesStorageClasses) {
+            return matchesStorageClasses(List.of(matchesStorageClasses));
+        }
         public Builder noncurrentTimeBefore(String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore);
             return this;
         }
-
         public Builder numNewerVersions(Integer numNewerVersions) {
             this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
             return this;
         }
-
         public Builder withState(String withState) {
             this.withState = Objects.requireNonNull(withState);
             return this;
-        }
-        public GetBucketLifecycleRuleCondition build() {
+        }        public GetBucketLifecycleRuleCondition build() {
             return new GetBucketLifecycleRuleCondition(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, matchesStorageClasses, noncurrentTimeBefore, numNewerVersions, withState);
         }
     }

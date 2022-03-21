@@ -58,12 +58,10 @@ public final class ManagedZonePrivateVisibilityConfigNetworkGetArgs extends io.p
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Output.of(Objects.requireNonNull(networkUrl));
             return this;
-        }
-        public ManagedZonePrivateVisibilityConfigNetworkGetArgs build() {
+        }        public ManagedZonePrivateVisibilityConfigNetworkGetArgs build() {
             return new ManagedZonePrivateVisibilityConfigNetworkGetArgs(networkUrl);
         }
     }

@@ -109,42 +109,37 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
-
         public Builder auditLogConfigs(@Nullable List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
             this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(IAMAuditConfigAuditLogConfigGetArgs... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public IAMAuditConfigState build() {
+        }        public IAMAuditConfigState build() {
             return new IAMAuditConfigState(auditLogConfigs, etag, project, service);
         }
     }

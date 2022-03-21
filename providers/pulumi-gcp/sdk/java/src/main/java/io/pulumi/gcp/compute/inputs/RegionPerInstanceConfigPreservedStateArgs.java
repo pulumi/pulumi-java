@@ -78,22 +78,21 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<RegionPerInstanceConfigPreservedStateDiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(RegionPerInstanceConfigPreservedStateDiskArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public RegionPerInstanceConfigPreservedStateArgs build() {
+        }        public RegionPerInstanceConfigPreservedStateArgs build() {
             return new RegionPerInstanceConfigPreservedStateArgs(disks, metadata);
         }
     }

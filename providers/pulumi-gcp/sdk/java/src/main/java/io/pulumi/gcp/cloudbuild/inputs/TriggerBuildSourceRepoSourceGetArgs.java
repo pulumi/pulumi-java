@@ -185,82 +185,66 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             this.branchName = branchName;
             return this;
         }
-
         public Builder branchName(@Nullable String branchName) {
             this.branchName = Output.ofNullable(branchName);
             return this;
         }
-
         public Builder commitSha(@Nullable Output<String> commitSha) {
             this.commitSha = commitSha;
             return this;
         }
-
         public Builder commitSha(@Nullable String commitSha) {
             this.commitSha = Output.ofNullable(commitSha);
             return this;
         }
-
         public Builder dir(@Nullable Output<String> dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder dir(@Nullable String dir) {
             this.dir = Output.ofNullable(dir);
             return this;
         }
-
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Output.ofNullable(invertRegex);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder repoName(Output<String> repoName) {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
-
         public Builder repoName(String repoName) {
             this.repoName = Output.of(Objects.requireNonNull(repoName));
             return this;
         }
-
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
-
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = Output.ofNullable(substitutions);
             return this;
         }
-
         public Builder tagName(@Nullable Output<String> tagName) {
             this.tagName = tagName;
             return this;
         }
-
         public Builder tagName(@Nullable String tagName) {
             this.tagName = Output.ofNullable(tagName);
             return this;
-        }
-        public TriggerBuildSourceRepoSourceGetArgs build() {
+        }        public TriggerBuildSourceRepoSourceGetArgs build() {
             return new TriggerBuildSourceRepoSourceGetArgs(branchName, commitSha, dir, invertRegex, projectId, repoName, substitutions, tagName);
         }
     }

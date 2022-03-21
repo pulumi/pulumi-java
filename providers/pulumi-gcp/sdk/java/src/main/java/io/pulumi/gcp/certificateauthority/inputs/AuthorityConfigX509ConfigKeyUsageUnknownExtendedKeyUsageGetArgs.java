@@ -57,12 +57,13 @@ public final class AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetAr
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs build() {
             return new AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs(objectIdPaths);
         }
     }

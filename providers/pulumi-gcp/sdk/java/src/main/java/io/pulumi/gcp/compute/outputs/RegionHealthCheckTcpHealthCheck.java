@@ -178,32 +178,26 @@ public final class RegionHealthCheckTcpHealthCheck {
             this.port = port;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
-
         public Builder proxyHeader(@Nullable String proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
-
         public Builder request(@Nullable String request) {
             this.request = request;
             return this;
         }
-
         public Builder response(@Nullable String response) {
             this.response = response;
             return this;
-        }
-        public RegionHealthCheckTcpHealthCheck build() {
+        }        public RegionHealthCheckTcpHealthCheck build() {
             return new RegionHealthCheckTcpHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }
     }

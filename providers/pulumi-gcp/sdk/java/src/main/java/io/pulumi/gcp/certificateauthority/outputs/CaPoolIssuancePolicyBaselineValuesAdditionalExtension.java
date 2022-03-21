@@ -91,17 +91,14 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
-
         public Builder objectId(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CaPoolIssuancePolicyBaselineValuesAdditionalExtension build() {
+        }        public CaPoolIssuancePolicyBaselineValuesAdditionalExtension build() {
             return new CaPoolIssuancePolicyBaselineValuesAdditionalExtension(critical, objectId, value);
         }
     }

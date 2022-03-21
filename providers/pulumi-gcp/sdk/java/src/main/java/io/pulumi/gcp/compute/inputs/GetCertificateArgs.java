@@ -75,12 +75,10 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCertificateArgs build() {
+        }        public GetCertificateArgs build() {
             return new GetCertificateArgs(name, project);
         }
     }

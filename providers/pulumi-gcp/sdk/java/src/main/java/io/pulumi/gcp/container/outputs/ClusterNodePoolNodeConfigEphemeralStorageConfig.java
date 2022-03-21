@@ -51,8 +51,7 @@ public final class ClusterNodePoolNodeConfigEphemeralStorageConfig {
         public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
-        }
-        public ClusterNodePoolNodeConfigEphemeralStorageConfig build() {
+        }        public ClusterNodePoolNodeConfigEphemeralStorageConfig build() {
             return new ClusterNodePoolNodeConfigEphemeralStorageConfig(localSsdCount);
         }
     }

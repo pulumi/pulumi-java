@@ -56,12 +56,10 @@ public final class TransferJobTransferSpecHttpDataSourceGetArgs extends io.pulum
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
-
         public Builder listUrl(String listUrl) {
             this.listUrl = Output.of(Objects.requireNonNull(listUrl));
             return this;
-        }
-        public TransferJobTransferSpecHttpDataSourceGetArgs build() {
+        }        public TransferJobTransferSpecHttpDataSourceGetArgs build() {
             return new TransferJobTransferSpecHttpDataSourceGetArgs(listUrl);
         }
     }

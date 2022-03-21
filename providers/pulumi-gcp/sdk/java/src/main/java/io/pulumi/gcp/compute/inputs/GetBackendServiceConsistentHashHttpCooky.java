@@ -82,17 +82,17 @@ public final class GetBackendServiceConsistentHashHttpCooky extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder ttls(List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
             this.ttls = Objects.requireNonNull(ttls);
             return this;
         }
-        public GetBackendServiceConsistentHashHttpCooky build() {
+        public Builder ttls(GetBackendServiceConsistentHashHttpCookyTtl... ttls) {
+            return ttls(List.of(ttls));
+        }        public GetBackendServiceConsistentHashHttpCooky build() {
             return new GetBackendServiceConsistentHashHttpCooky(name, path, ttls);
         }
     }

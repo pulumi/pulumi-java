@@ -78,22 +78,18 @@ public final class CaPoolPublishingOptionsArgs extends io.pulumi.resources.Resou
             this.publishCaCert = Objects.requireNonNull(publishCaCert);
             return this;
         }
-
         public Builder publishCaCert(Boolean publishCaCert) {
             this.publishCaCert = Output.of(Objects.requireNonNull(publishCaCert));
             return this;
         }
-
         public Builder publishCrl(Output<Boolean> publishCrl) {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }
-
         public Builder publishCrl(Boolean publishCrl) {
             this.publishCrl = Output.of(Objects.requireNonNull(publishCrl));
             return this;
-        }
-        public CaPoolPublishingOptionsArgs build() {
+        }        public CaPoolPublishingOptionsArgs build() {
             return new CaPoolPublishingOptionsArgs(publishCaCert, publishCrl);
         }
     }

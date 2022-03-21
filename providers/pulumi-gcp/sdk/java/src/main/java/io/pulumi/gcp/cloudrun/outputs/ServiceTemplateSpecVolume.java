@@ -76,12 +76,10 @@ public final class ServiceTemplateSpecVolume {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secret(ServiceTemplateSpecVolumeSecret secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public ServiceTemplateSpecVolume build() {
+        }        public ServiceTemplateSpecVolume build() {
             return new ServiceTemplateSpecVolume(name, secret);
         }
     }

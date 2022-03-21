@@ -75,12 +75,13 @@ public final class PerInstanceConfigPreservedState {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(PerInstanceConfigPreservedStateDisk... disks) {
+            return disks(List.of(disks));
+        }
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
-        }
-        public PerInstanceConfigPreservedState build() {
+        }        public PerInstanceConfigPreservedState build() {
             return new PerInstanceConfigPreservedState(disks, metadata);
         }
     }

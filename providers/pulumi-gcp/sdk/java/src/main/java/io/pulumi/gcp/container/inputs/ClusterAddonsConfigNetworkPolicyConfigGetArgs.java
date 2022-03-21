@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigNetworkPolicyConfigGetArgs extends io.pulu
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
-        }
-        public ClusterAddonsConfigNetworkPolicyConfigGetArgs build() {
+        }        public ClusterAddonsConfigNetworkPolicyConfigGetArgs build() {
             return new ClusterAddonsConfigNetworkPolicyConfigGetArgs(disabled);
         }
     }

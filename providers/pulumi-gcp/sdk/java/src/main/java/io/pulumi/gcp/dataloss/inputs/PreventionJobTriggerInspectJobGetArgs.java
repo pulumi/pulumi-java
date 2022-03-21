@@ -94,32 +94,29 @@ public final class PreventionJobTriggerInspectJobGetArgs extends io.pulumi.resou
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<PreventionJobTriggerInspectJobActionGetArgs> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(PreventionJobTriggerInspectJobActionGetArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder inspectTemplateName(Output<String> inspectTemplateName) {
             this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
             return this;
         }
-
         public Builder inspectTemplateName(String inspectTemplateName) {
             this.inspectTemplateName = Output.of(Objects.requireNonNull(inspectTemplateName));
             return this;
         }
-
         public Builder storageConfig(Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig) {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
-
         public Builder storageConfig(PreventionJobTriggerInspectJobStorageConfigGetArgs storageConfig) {
             this.storageConfig = Output.of(Objects.requireNonNull(storageConfig));
             return this;
-        }
-        public PreventionJobTriggerInspectJobGetArgs build() {
+        }        public PreventionJobTriggerInspectJobGetArgs build() {
             return new PreventionJobTriggerInspectJobGetArgs(actions, inspectTemplateName, storageConfig);
         }
     }

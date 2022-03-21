@@ -53,7 +53,9 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-        public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage build() {
             return new CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage(objectIdPaths);
         }
     }

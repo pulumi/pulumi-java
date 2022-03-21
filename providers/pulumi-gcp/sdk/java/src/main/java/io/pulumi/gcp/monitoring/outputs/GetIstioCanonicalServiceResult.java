@@ -121,47 +121,41 @@ public final class GetIstioCanonicalServiceResult {
             this.canonicalService = Objects.requireNonNull(canonicalService);
             return this;
         }
-
         public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
             this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder telemetries(List<GetIstioCanonicalServiceTelemetry> telemetries) {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-        public GetIstioCanonicalServiceResult build() {
+        public Builder telemetries(GetIstioCanonicalServiceTelemetry... telemetries) {
+            return telemetries(List.of(telemetries));
+        }        public GetIstioCanonicalServiceResult build() {
             return new GetIstioCanonicalServiceResult(canonicalService, canonicalServiceNamespace, displayName, id, meshUid, name, project, serviceId, telemetries);
         }
     }

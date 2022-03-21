@@ -179,82 +179,69 @@ public final class MachineImageState extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
-
         public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Output.ofNullable(guestFlush);
             return this;
         }
-
         public Builder machineImageEncryptionKey(@Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey) {
             this.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
-
         public Builder machineImageEncryptionKey(@Nullable MachineImageMachineImageEncryptionKeyGetArgs machineImageEncryptionKey) {
             this.machineImageEncryptionKey = Output.ofNullable(machineImageEncryptionKey);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
-
         public Builder sourceInstance(@Nullable String sourceInstance) {
             this.sourceInstance = Output.ofNullable(sourceInstance);
             return this;
         }
-
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
-        public MachineImageState build() {
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }        public MachineImageState build() {
             return new MachineImageState(description, guestFlush, machineImageEncryptionKey, name, project, selfLink, sourceInstance, storageLocations);
         }
     }

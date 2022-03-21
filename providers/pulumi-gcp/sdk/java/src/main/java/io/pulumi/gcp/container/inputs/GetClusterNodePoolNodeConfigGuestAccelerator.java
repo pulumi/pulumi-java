@@ -77,17 +77,14 @@ public final class GetClusterNodePoolNodeConfigGuestAccelerator extends io.pulum
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder gpuPartitionSize(String gpuPartitionSize) {
             this.gpuPartitionSize = Objects.requireNonNull(gpuPartitionSize);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetClusterNodePoolNodeConfigGuestAccelerator build() {
+        }        public GetClusterNodePoolNodeConfigGuestAccelerator build() {
             return new GetClusterNodePoolNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }
     }

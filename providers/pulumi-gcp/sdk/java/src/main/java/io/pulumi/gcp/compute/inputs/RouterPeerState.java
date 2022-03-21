@@ -318,152 +318,128 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
             this.advertiseMode = advertiseMode;
             return this;
         }
-
         public Builder advertiseMode(@Nullable String advertiseMode) {
             this.advertiseMode = Output.ofNullable(advertiseMode);
             return this;
         }
-
         public Builder advertisedGroups(@Nullable Output<List<String>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
-
         public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
             this.advertisedGroups = Output.ofNullable(advertisedGroups);
             return this;
         }
-
+        public Builder advertisedGroups(String... advertisedGroups) {
+            return advertisedGroups(List.of(advertisedGroups));
+        }
         public Builder advertisedIpRanges(@Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
-
         public Builder advertisedIpRanges(@Nullable List<RouterPeerAdvertisedIpRangeGetArgs> advertisedIpRanges) {
             this.advertisedIpRanges = Output.ofNullable(advertisedIpRanges);
             return this;
         }
-
+        public Builder advertisedIpRanges(RouterPeerAdvertisedIpRangeGetArgs... advertisedIpRanges) {
+            return advertisedIpRanges(List.of(advertisedIpRanges));
+        }
         public Builder advertisedRoutePriority(@Nullable Output<Integer> advertisedRoutePriority) {
             this.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
-
         public Builder advertisedRoutePriority(@Nullable Integer advertisedRoutePriority) {
             this.advertisedRoutePriority = Output.ofNullable(advertisedRoutePriority);
             return this;
         }
-
         public Builder bfd(@Nullable Output<RouterPeerBfdGetArgs> bfd) {
             this.bfd = bfd;
             return this;
         }
-
         public Builder bfd(@Nullable RouterPeerBfdGetArgs bfd) {
             this.bfd = Output.ofNullable(bfd);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder managementType(@Nullable Output<String> managementType) {
             this.managementType = managementType;
             return this;
         }
-
         public Builder managementType(@Nullable String managementType) {
             this.managementType = Output.ofNullable(managementType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder peerAsn(@Nullable Output<Integer> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder peerAsn(@Nullable Integer peerAsn) {
             this.peerAsn = Output.ofNullable(peerAsn);
             return this;
         }
-
         public Builder peerIpAddress(@Nullable Output<String> peerIpAddress) {
             this.peerIpAddress = peerIpAddress;
             return this;
         }
-
         public Builder peerIpAddress(@Nullable String peerIpAddress) {
             this.peerIpAddress = Output.ofNullable(peerIpAddress);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder router(@Nullable Output<String> router) {
             this.router = router;
             return this;
         }
-
         public Builder router(@Nullable String router) {
             this.router = Output.ofNullable(router);
             return this;
-        }
-        public RouterPeerState build() {
+        }        public RouterPeerState build() {
             return new RouterPeerState(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, $interface, ipAddress, managementType, name, peerAsn, peerIpAddress, project, region, router);
         }
     }

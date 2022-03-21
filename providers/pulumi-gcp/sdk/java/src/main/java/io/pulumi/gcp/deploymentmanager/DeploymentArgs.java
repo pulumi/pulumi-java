@@ -199,82 +199,69 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.createPolicy = createPolicy;
             return this;
         }
-
         public Builder createPolicy(@Nullable String createPolicy) {
             this.createPolicy = Output.ofNullable(createPolicy);
             return this;
         }
-
         public Builder deletePolicy(@Nullable Output<String> deletePolicy) {
             this.deletePolicy = deletePolicy;
             return this;
         }
-
         public Builder deletePolicy(@Nullable String deletePolicy) {
             this.deletePolicy = Output.ofNullable(deletePolicy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<DeploymentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<DeploymentLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(DeploymentLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder target(Output<DeploymentTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(DeploymentTargetArgs target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(createPolicy, deletePolicy, description, labels, name, preview, project, target);
         }
     }

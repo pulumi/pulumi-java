@@ -99,32 +99,26 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Output.ofNullable(urlMask);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public RegionNetworkEndpointGroupAppEngineArgs build() {
+        }        public RegionNetworkEndpointGroupAppEngineArgs build() {
             return new RegionNetworkEndpointGroupAppEngineArgs(service, urlMask, version);
         }
     }

@@ -183,82 +183,66 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyGetArgs> groupPlacementPolicy) {
             this.groupPlacementPolicy = groupPlacementPolicy;
             return this;
         }
-
         public Builder groupPlacementPolicy(@Nullable ResourcePolicyGroupPlacementPolicyGetArgs groupPlacementPolicy) {
             this.groupPlacementPolicy = Output.ofNullable(groupPlacementPolicy);
             return this;
         }
-
         public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyGetArgs> instanceSchedulePolicy) {
             this.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;
         }
-
         public Builder instanceSchedulePolicy(@Nullable ResourcePolicyInstanceSchedulePolicyGetArgs instanceSchedulePolicy) {
             this.instanceSchedulePolicy = Output.ofNullable(instanceSchedulePolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyGetArgs> snapshotSchedulePolicy) {
             this.snapshotSchedulePolicy = snapshotSchedulePolicy;
             return this;
         }
-
         public Builder snapshotSchedulePolicy(@Nullable ResourcePolicySnapshotSchedulePolicyGetArgs snapshotSchedulePolicy) {
             this.snapshotSchedulePolicy = Output.ofNullable(snapshotSchedulePolicy);
             return this;
-        }
-        public ResourcePolicyState build() {
+        }        public ResourcePolicyState build() {
             return new ResourcePolicyState(description, groupPlacementPolicy, instanceSchedulePolicy, name, project, region, selfLink, snapshotSchedulePolicy);
         }
     }

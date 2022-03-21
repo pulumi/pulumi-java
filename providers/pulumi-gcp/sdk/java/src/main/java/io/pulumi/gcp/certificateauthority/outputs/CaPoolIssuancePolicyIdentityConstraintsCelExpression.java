@@ -103,22 +103,18 @@ public final class CaPoolIssuancePolicyIdentityConstraintsCelExpression {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public CaPoolIssuancePolicyIdentityConstraintsCelExpression build() {
+        }        public CaPoolIssuancePolicyIdentityConstraintsCelExpression build() {
             return new CaPoolIssuancePolicyIdentityConstraintsCelExpression(description, expression, location, title);
         }
     }

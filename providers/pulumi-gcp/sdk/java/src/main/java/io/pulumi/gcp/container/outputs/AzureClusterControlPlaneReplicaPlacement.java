@@ -69,12 +69,10 @@ public final class AzureClusterControlPlaneReplicaPlacement {
             this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public AzureClusterControlPlaneReplicaPlacement build() {
+        }        public AzureClusterControlPlaneReplicaPlacement build() {
             return new AzureClusterControlPlaneReplicaPlacement(azureAvailabilityZone, subnetId);
         }
     }

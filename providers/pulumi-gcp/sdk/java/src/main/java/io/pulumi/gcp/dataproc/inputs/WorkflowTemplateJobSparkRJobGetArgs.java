@@ -141,62 +141,59 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
             this.archiveUris = archiveUris;
             return this;
         }
-
         public Builder archiveUris(@Nullable List<String> archiveUris) {
             this.archiveUris = Output.ofNullable(archiveUris);
             return this;
         }
-
+        public Builder archiveUris(String... archiveUris) {
+            return archiveUris(List.of(archiveUris));
+        }
         public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
-
         public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = Output.ofNullable(fileUris);
             return this;
         }
-
+        public Builder fileUris(String... fileUris) {
+            return fileUris(List.of(fileUris));
+        }
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobSparkRJobLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkRJobLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder mainRFileUri(Output<String> mainRFileUri) {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }
-
         public Builder mainRFileUri(String mainRFileUri) {
             this.mainRFileUri = Output.of(Objects.requireNonNull(mainRFileUri));
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public WorkflowTemplateJobSparkRJobGetArgs build() {
+        }        public WorkflowTemplateJobSparkRJobGetArgs build() {
             return new WorkflowTemplateJobSparkRJobGetArgs(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
         }
     }

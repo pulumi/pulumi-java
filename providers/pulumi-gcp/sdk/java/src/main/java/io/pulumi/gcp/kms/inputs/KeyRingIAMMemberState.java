@@ -125,52 +125,42 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable KeyRingIAMMemberConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder keyRingId(@Nullable Output<String> keyRingId) {
             this.keyRingId = keyRingId;
             return this;
         }
-
         public Builder keyRingId(@Nullable String keyRingId) {
             this.keyRingId = Output.ofNullable(keyRingId);
             return this;
         }
-
         public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
-
         public Builder member(@Nullable String member) {
             this.member = Output.ofNullable(member);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public KeyRingIAMMemberState build() {
+        }        public KeyRingIAMMemberState build() {
             return new KeyRingIAMMemberState(condition, etag, keyRingId, member, role);
         }
     }

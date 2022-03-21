@@ -86,17 +86,14 @@ public final class FlexibleAppVersionResourcesVolume {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public FlexibleAppVersionResourcesVolume build() {
+        }        public FlexibleAppVersionResourcesVolume build() {
             return new FlexibleAppVersionResourcesVolume(name, sizeGb, volumeType);
         }
     }

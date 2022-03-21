@@ -80,17 +80,14 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork build() {
+        }        public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork build() {
             return new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(expirationTime, name, value);
         }
     }

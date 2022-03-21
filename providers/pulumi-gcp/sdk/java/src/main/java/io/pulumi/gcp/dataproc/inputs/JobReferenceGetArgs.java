@@ -53,12 +53,10 @@ public final class JobReferenceGetArgs extends io.pulumi.resources.ResourceArgs 
             this.jobId = jobId;
             return this;
         }
-
         public Builder jobId(@Nullable String jobId) {
             this.jobId = Output.ofNullable(jobId);
             return this;
-        }
-        public JobReferenceGetArgs build() {
+        }        public JobReferenceGetArgs build() {
             return new JobReferenceGetArgs(jobId);
         }
     }

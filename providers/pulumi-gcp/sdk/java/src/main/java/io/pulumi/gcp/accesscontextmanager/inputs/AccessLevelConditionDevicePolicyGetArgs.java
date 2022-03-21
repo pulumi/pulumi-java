@@ -148,62 +148,59 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
             this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
-
         public Builder allowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = Output.ofNullable(allowedDeviceManagementLevels);
             return this;
         }
-
+        public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
+            return allowedDeviceManagementLevels(List.of(allowedDeviceManagementLevels));
+        }
         public Builder allowedEncryptionStatuses(@Nullable Output<List<String>> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
-
         public Builder allowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = Output.ofNullable(allowedEncryptionStatuses);
             return this;
         }
-
+        public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
+            return allowedEncryptionStatuses(List.of(allowedEncryptionStatuses));
+        }
         public Builder osConstraints(@Nullable Output<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> osConstraints) {
             this.osConstraints = osConstraints;
             return this;
         }
-
         public Builder osConstraints(@Nullable List<AccessLevelConditionDevicePolicyOsConstraintGetArgs> osConstraints) {
             this.osConstraints = Output.ofNullable(osConstraints);
             return this;
         }
-
+        public Builder osConstraints(AccessLevelConditionDevicePolicyOsConstraintGetArgs... osConstraints) {
+            return osConstraints(List.of(osConstraints));
+        }
         public Builder requireAdminApproval(@Nullable Output<Boolean> requireAdminApproval) {
             this.requireAdminApproval = requireAdminApproval;
             return this;
         }
-
         public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
             this.requireAdminApproval = Output.ofNullable(requireAdminApproval);
             return this;
         }
-
         public Builder requireCorpOwned(@Nullable Output<Boolean> requireCorpOwned) {
             this.requireCorpOwned = requireCorpOwned;
             return this;
         }
-
         public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
             this.requireCorpOwned = Output.ofNullable(requireCorpOwned);
             return this;
         }
-
         public Builder requireScreenLock(@Nullable Output<Boolean> requireScreenLock) {
             this.requireScreenLock = requireScreenLock;
             return this;
         }
-
         public Builder requireScreenLock(@Nullable Boolean requireScreenLock) {
             this.requireScreenLock = Output.ofNullable(requireScreenLock);
             return this;
-        }
-        public AccessLevelConditionDevicePolicyGetArgs build() {
+        }        public AccessLevelConditionDevicePolicyGetArgs build() {
             return new AccessLevelConditionDevicePolicyGetArgs(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);
         }
     }

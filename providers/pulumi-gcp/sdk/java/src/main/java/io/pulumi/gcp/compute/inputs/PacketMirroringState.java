@@ -204,92 +204,74 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
             this.collectorIlb = collectorIlb;
             return this;
         }
-
         public Builder collectorIlb(@Nullable PacketMirroringCollectorIlbGetArgs collectorIlb) {
             this.collectorIlb = Output.ofNullable(collectorIlb);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder filter(@Nullable Output<PacketMirroringFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable PacketMirroringFilterGetArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder mirroredResources(@Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources) {
             this.mirroredResources = mirroredResources;
             return this;
         }
-
         public Builder mirroredResources(@Nullable PacketMirroringMirroredResourcesGetArgs mirroredResources) {
             this.mirroredResources = Output.ofNullable(mirroredResources);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<PacketMirroringNetworkGetArgs> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable PacketMirroringNetworkGetArgs network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public PacketMirroringState build() {
+        }        public PacketMirroringState build() {
             return new PacketMirroringState(collectorIlb, description, filter, mirroredResources, name, network, priority, project, region);
         }
     }

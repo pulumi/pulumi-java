@@ -92,32 +92,26 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
             this.keyResultStatement = keyResultStatement;
             return this;
         }
-
         public Builder keyResultStatement(@Nullable String keyResultStatement) {
             this.keyResultStatement = Output.ofNullable(keyResultStatement);
             return this;
         }
-
         public Builder statementByteBudget(@Nullable Output<String> statementByteBudget) {
             this.statementByteBudget = statementByteBudget;
             return this;
         }
-
         public Builder statementByteBudget(@Nullable String statementByteBudget) {
             this.statementByteBudget = Output.ofNullable(statementByteBudget);
             return this;
         }
-
         public Builder statementTimeoutMs(@Nullable Output<String> statementTimeoutMs) {
             this.statementTimeoutMs = statementTimeoutMs;
             return this;
         }
-
         public Builder statementTimeoutMs(@Nullable String statementTimeoutMs) {
             this.statementTimeoutMs = Output.ofNullable(statementTimeoutMs);
             return this;
-        }
-        public JobQueryScriptOptionsGetArgs build() {
+        }        public JobQueryScriptOptionsGetArgs build() {
             return new JobQueryScriptOptionsGetArgs(keyResultStatement, statementByteBudget, statementTimeoutMs);
         }
     }

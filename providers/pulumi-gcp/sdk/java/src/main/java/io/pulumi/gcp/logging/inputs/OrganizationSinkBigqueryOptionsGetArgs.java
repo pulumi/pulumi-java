@@ -59,12 +59,10 @@ public final class OrganizationSinkBigqueryOptionsGetArgs extends io.pulumi.reso
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
-
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Output.of(Objects.requireNonNull(usePartitionedTables));
             return this;
-        }
-        public OrganizationSinkBigqueryOptionsGetArgs build() {
+        }        public OrganizationSinkBigqueryOptionsGetArgs build() {
             return new OrganizationSinkBigqueryOptionsGetArgs(usePartitionedTables);
         }
     }

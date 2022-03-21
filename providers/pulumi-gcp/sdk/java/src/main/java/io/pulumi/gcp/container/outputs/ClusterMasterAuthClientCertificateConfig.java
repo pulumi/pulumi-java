@@ -43,8 +43,7 @@ public final class ClusterMasterAuthClientCertificateConfig {
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
-        }
-        public ClusterMasterAuthClientCertificateConfig build() {
+        }        public ClusterMasterAuthClientCertificateConfig build() {
             return new ClusterMasterAuthClientCertificateConfig(issueClientCertificate);
         }
     }

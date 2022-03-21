@@ -404,202 +404,162 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.alternativeLocationId = alternativeLocationId;
             return this;
         }
-
         public Builder alternativeLocationId(@Nullable String alternativeLocationId) {
             this.alternativeLocationId = Output.ofNullable(alternativeLocationId);
             return this;
         }
-
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
-
         public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = Output.ofNullable(authEnabled);
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
-
         public Builder connectMode(@Nullable Output<String> connectMode) {
             this.connectMode = connectMode;
             return this;
         }
-
         public Builder connectMode(@Nullable String connectMode) {
             this.connectMode = Output.ofNullable(connectMode);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder locationId(@Nullable Output<String> locationId) {
             this.locationId = locationId;
             return this;
         }
-
         public Builder locationId(@Nullable String locationId) {
             this.locationId = Output.ofNullable(locationId);
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable Output<InstanceMaintenancePolicyArgs> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable InstanceMaintenancePolicyArgs maintenancePolicy) {
             this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
-
         public Builder maintenanceSchedule(@Nullable Output<InstanceMaintenanceScheduleArgs> maintenanceSchedule) {
             this.maintenanceSchedule = maintenanceSchedule;
             return this;
         }
-
         public Builder maintenanceSchedule(@Nullable InstanceMaintenanceScheduleArgs maintenanceSchedule) {
             this.maintenanceSchedule = Output.ofNullable(maintenanceSchedule);
             return this;
         }
-
         public Builder memorySizeGb(Output<Integer> memorySizeGb) {
             this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
             return this;
         }
-
         public Builder memorySizeGb(Integer memorySizeGb) {
             this.memorySizeGb = Output.of(Objects.requireNonNull(memorySizeGb));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder readReplicasMode(@Nullable Output<String> readReplicasMode) {
             this.readReplicasMode = readReplicasMode;
             return this;
         }
-
         public Builder readReplicasMode(@Nullable String readReplicasMode) {
             this.readReplicasMode = Output.ofNullable(readReplicasMode);
             return this;
         }
-
         public Builder redisConfigs(@Nullable Output<Map<String,String>> redisConfigs) {
             this.redisConfigs = redisConfigs;
             return this;
         }
-
         public Builder redisConfigs(@Nullable Map<String,String> redisConfigs) {
             this.redisConfigs = Output.ofNullable(redisConfigs);
             return this;
         }
-
         public Builder redisVersion(@Nullable Output<String> redisVersion) {
             this.redisVersion = redisVersion;
             return this;
         }
-
         public Builder redisVersion(@Nullable String redisVersion) {
             this.redisVersion = Output.ofNullable(redisVersion);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
-
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
-
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = Output.ofNullable(reservedIpRange);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
         }
-
         public Builder transitEncryptionMode(@Nullable Output<String> transitEncryptionMode) {
             this.transitEncryptionMode = transitEncryptionMode;
             return this;
         }
-
         public Builder transitEncryptionMode(@Nullable String transitEncryptionMode) {
             this.transitEncryptionMode = Output.ofNullable(transitEncryptionMode);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(alternativeLocationId, authEnabled, authorizedNetwork, connectMode, displayName, labels, locationId, maintenancePolicy, maintenanceSchedule, memorySizeGb, name, project, readReplicasMode, redisConfigs, redisVersion, region, replicaCount, reservedIpRange, tier, transitEncryptionMode);
         }
     }

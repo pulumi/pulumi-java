@@ -146,62 +146,50 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
-
         public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Output.ofNullable(guestFlush);
             return this;
         }
-
         public Builder machineImageEncryptionKey(@Nullable Output<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey) {
             this.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
-
         public Builder machineImageEncryptionKey(@Nullable MachineImageMachineImageEncryptionKeyArgs machineImageEncryptionKey) {
             this.machineImageEncryptionKey = Output.ofNullable(machineImageEncryptionKey);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sourceInstance(Output<String> sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
-
         public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Output.of(Objects.requireNonNull(sourceInstance));
             return this;
-        }
-        public MachineImageArgs build() {
+        }        public MachineImageArgs build() {
             return new MachineImageArgs(description, guestFlush, machineImageEncryptionKey, name, project, sourceInstance);
         }
     }

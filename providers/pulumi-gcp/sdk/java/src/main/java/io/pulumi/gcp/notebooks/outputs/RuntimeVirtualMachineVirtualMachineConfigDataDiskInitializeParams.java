@@ -143,27 +143,22 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             this.description = description;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams(description, diskName, diskSizeGb, diskType, labels);
         }
     }

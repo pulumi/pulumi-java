@@ -149,62 +149,53 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder interfaces(@Nullable Output<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces) {
             this.interfaces = interfaces;
             return this;
         }
-
         public Builder interfaces(@Nullable List<ExternalVpnGatewayInterfaceGetArgs> interfaces) {
             this.interfaces = Output.ofNullable(interfaces);
             return this;
         }
-
+        public Builder interfaces(ExternalVpnGatewayInterfaceGetArgs... interfaces) {
+            return interfaces(List.of(interfaces));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder redundancyType(@Nullable Output<String> redundancyType) {
             this.redundancyType = redundancyType;
             return this;
         }
-
         public Builder redundancyType(@Nullable String redundancyType) {
             this.redundancyType = Output.ofNullable(redundancyType);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public ExternalVpnGatewayState build() {
+        }        public ExternalVpnGatewayState build() {
             return new ExternalVpnGatewayState(description, interfaces, name, project, redundancyType, selfLink);
         }
     }

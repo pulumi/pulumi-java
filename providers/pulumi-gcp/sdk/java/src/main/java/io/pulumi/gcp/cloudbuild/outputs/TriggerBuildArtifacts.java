@@ -89,12 +89,13 @@ public final class TriggerBuildArtifacts {
             this.images = images;
             return this;
         }
-
+        public Builder images(String... images) {
+            return images(List.of(images));
+        }
         public Builder objects(@Nullable TriggerBuildArtifactsObjects objects) {
             this.objects = objects;
             return this;
-        }
-        public TriggerBuildArtifacts build() {
+        }        public TriggerBuildArtifacts build() {
             return new TriggerBuildArtifacts(images, objects);
         }
     }

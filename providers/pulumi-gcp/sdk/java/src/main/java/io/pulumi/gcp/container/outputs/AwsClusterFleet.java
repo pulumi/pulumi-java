@@ -73,12 +73,10 @@ public final class AwsClusterFleet {
             this.membership = membership;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public AwsClusterFleet build() {
+        }        public AwsClusterFleet build() {
             return new AwsClusterFleet(membership, project);
         }
     }

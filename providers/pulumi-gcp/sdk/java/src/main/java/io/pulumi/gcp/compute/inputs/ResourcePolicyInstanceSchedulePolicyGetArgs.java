@@ -127,52 +127,42 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
-
         public Builder vmStartSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule) {
             this.vmStartSchedule = vmStartSchedule;
             return this;
         }
-
         public Builder vmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs vmStartSchedule) {
             this.vmStartSchedule = Output.ofNullable(vmStartSchedule);
             return this;
         }
-
         public Builder vmStopSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule) {
             this.vmStopSchedule = vmStopSchedule;
             return this;
         }
-
         public Builder vmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs vmStopSchedule) {
             this.vmStopSchedule = Output.ofNullable(vmStopSchedule);
             return this;
-        }
-        public ResourcePolicyInstanceSchedulePolicyGetArgs build() {
+        }        public ResourcePolicyInstanceSchedulePolicyGetArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyGetArgs(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }
     }

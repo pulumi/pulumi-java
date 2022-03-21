@@ -127,37 +127,33 @@ public final class GetClusterPrivateClusterConfig extends io.pulumi.resources.In
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
-
         public Builder enablePrivateNodes(Boolean enablePrivateNodes) {
             this.enablePrivateNodes = Objects.requireNonNull(enablePrivateNodes);
             return this;
         }
-
         public Builder masterGlobalAccessConfigs(List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs) {
             this.masterGlobalAccessConfigs = Objects.requireNonNull(masterGlobalAccessConfigs);
             return this;
         }
-
+        public Builder masterGlobalAccessConfigs(GetClusterPrivateClusterConfigMasterGlobalAccessConfig... masterGlobalAccessConfigs) {
+            return masterGlobalAccessConfigs(List.of(masterGlobalAccessConfigs));
+        }
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
-
         public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
-
         public Builder privateEndpoint(String privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
-
         public Builder publicEndpoint(String publicEndpoint) {
             this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
             return this;
-        }
-        public GetClusterPrivateClusterConfig build() {
+        }        public GetClusterPrivateClusterConfig build() {
             return new GetClusterPrivateClusterConfig(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfigs, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }
     }

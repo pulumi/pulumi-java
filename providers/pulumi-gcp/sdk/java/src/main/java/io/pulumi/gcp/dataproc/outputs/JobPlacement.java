@@ -55,12 +55,10 @@ public final class JobPlacement {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterUuid(@Nullable String clusterUuid) {
             this.clusterUuid = clusterUuid;
             return this;
-        }
-        public JobPlacement build() {
+        }        public JobPlacement build() {
             return new JobPlacement(clusterName, clusterUuid);
         }
     }

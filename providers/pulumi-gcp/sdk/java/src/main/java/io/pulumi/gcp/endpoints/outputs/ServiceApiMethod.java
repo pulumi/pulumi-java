@@ -71,22 +71,18 @@ public final class ServiceApiMethod {
             this.name = name;
             return this;
         }
-
         public Builder requestType(@Nullable String requestType) {
             this.requestType = requestType;
             return this;
         }
-
         public Builder responseType(@Nullable String responseType) {
             this.responseType = responseType;
             return this;
         }
-
         public Builder syntax(@Nullable String syntax) {
             this.syntax = syntax;
             return this;
-        }
-        public ServiceApiMethod build() {
+        }        public ServiceApiMethod build() {
             return new ServiceApiMethod(name, requestType, responseType, syntax);
         }
     }

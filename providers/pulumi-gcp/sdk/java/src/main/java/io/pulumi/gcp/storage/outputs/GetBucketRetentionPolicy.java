@@ -54,12 +54,10 @@ public final class GetBucketRetentionPolicy {
             this.isLocked = Objects.requireNonNull(isLocked);
             return this;
         }
-
         public Builder retentionPeriod(Integer retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
-        }
-        public GetBucketRetentionPolicy build() {
+        }        public GetBucketRetentionPolicy build() {
             return new GetBucketRetentionPolicy(isLocked, retentionPeriod);
         }
     }

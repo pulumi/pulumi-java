@@ -71,12 +71,10 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfig {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
-        }
-        public ClusterNodePoolNodeConfigShieldedInstanceConfig build() {
+        }        public ClusterNodePoolNodeConfigShieldedInstanceConfig build() {
             return new ClusterNodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

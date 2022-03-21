@@ -45,8 +45,7 @@ public final class KeyRingImportJobPublicKey {
         public Builder pem(@Nullable String pem) {
             this.pem = pem;
             return this;
-        }
-        public KeyRingImportJobPublicKey build() {
+        }        public KeyRingImportJobPublicKey build() {
             return new KeyRingImportJobPublicKey(pem);
         }
     }

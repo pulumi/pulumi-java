@@ -55,8 +55,7 @@ public final class MembershipEndpoint {
         public Builder gkeCluster(@Nullable MembershipEndpointGkeCluster gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
-        }
-        public MembershipEndpoint build() {
+        }        public MembershipEndpoint build() {
             return new MembershipEndpoint(gkeCluster);
         }
     }

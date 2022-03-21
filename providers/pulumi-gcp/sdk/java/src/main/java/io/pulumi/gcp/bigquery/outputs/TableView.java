@@ -74,12 +74,10 @@ public final class TableView {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
-        }
-        public TableView build() {
+        }        public TableView build() {
             return new TableView(query, useLegacySql);
         }
     }

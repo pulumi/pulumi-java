@@ -57,12 +57,10 @@ public final class ApplicationFeatureSettingsArgs extends io.pulumi.resources.Re
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }
-
         public Builder splitHealthChecks(Boolean splitHealthChecks) {
             this.splitHealthChecks = Output.of(Objects.requireNonNull(splitHealthChecks));
             return this;
-        }
-        public ApplicationFeatureSettingsArgs build() {
+        }        public ApplicationFeatureSettingsArgs build() {
             return new ApplicationFeatureSettingsArgs(splitHealthChecks);
         }
     }

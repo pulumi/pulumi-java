@@ -73,12 +73,10 @@ public final class CertificateCertificateDescriptionPublicKey {
             this.format = format;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public CertificateCertificateDescriptionPublicKey build() {
+        }        public CertificateCertificateDescriptionPublicKey build() {
             return new CertificateCertificateDescriptionPublicKey(format, key);
         }
     }

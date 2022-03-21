@@ -108,22 +108,21 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
             this.delegates = delegates;
             return this;
         }
-
+        public Builder delegates(String... delegates) {
+            return delegates(List.of(delegates));
+        }
         public Builder includeEmail(@Nullable Boolean includeEmail) {
             this.includeEmail = includeEmail;
             return this;
         }
-
         public Builder targetAudience(String targetAudience) {
             this.targetAudience = Objects.requireNonNull(targetAudience);
             return this;
         }
-
         public Builder targetServiceAccount(@Nullable String targetServiceAccount) {
             this.targetServiceAccount = targetServiceAccount;
             return this;
-        }
-        public GetAccountIdTokenArgs build() {
+        }        public GetAccountIdTokenArgs build() {
             return new GetAccountIdTokenArgs(delegates, includeEmail, targetAudience, targetServiceAccount);
         }
     }

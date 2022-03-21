@@ -93,32 +93,32 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
             this.isStable = isStable;
             return this;
         }
-
         public Builder isStable(@Nullable Boolean isStable) {
             this.isStable = Output.ofNullable(isStable);
             return this;
         }
-
         public Builder statefuls(@Nullable Output<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
-
         public Builder statefuls(@Nullable List<RegionInstanceGroupManagerStatusStatefulGetArgs> statefuls) {
             this.statefuls = Output.ofNullable(statefuls);
             return this;
         }
-
+        public Builder statefuls(RegionInstanceGroupManagerStatusStatefulGetArgs... statefuls) {
+            return statefuls(List.of(statefuls));
+        }
         public Builder versionTargets(@Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }
-
         public Builder versionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTargetGetArgs> versionTargets) {
             this.versionTargets = Output.ofNullable(versionTargets);
             return this;
         }
-        public RegionInstanceGroupManagerStatusGetArgs build() {
+        public Builder versionTargets(RegionInstanceGroupManagerStatusVersionTargetGetArgs... versionTargets) {
+            return versionTargets(List.of(versionTargets));
+        }        public RegionInstanceGroupManagerStatusGetArgs build() {
             return new RegionInstanceGroupManagerStatusGetArgs(isStable, statefuls, versionTargets);
         }
     }

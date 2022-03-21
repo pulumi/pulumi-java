@@ -109,32 +109,29 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
-
         public Builder items(@Nullable Output<List<ServiceTemplateSpecVolumeSecretItemArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<ServiceTemplateSpecVolumeSecretItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(ServiceTemplateSpecVolumeSecretItemArgs... items) {
+            return items(List.of(items));
+        }
         public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
-        }
-        public ServiceTemplateSpecVolumeSecretArgs build() {
+        }        public ServiceTemplateSpecVolumeSecretArgs build() {
             return new ServiceTemplateSpecVolumeSecretArgs(defaultMode, items, secretName);
         }
     }

@@ -92,32 +92,26 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder config(Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(WorkflowTemplatePlacementManagedClusterConfigGetArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterGetArgs build() {
+        }        public WorkflowTemplatePlacementManagedClusterGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterGetArgs(clusterName, config, labels);
         }
     }

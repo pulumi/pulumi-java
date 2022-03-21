@@ -86,12 +86,13 @@ public final class EntityTypeEntity {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EntityTypeEntity build() {
+        }        public EntityTypeEntity build() {
             return new EntityTypeEntity(synonyms, value);
         }
     }

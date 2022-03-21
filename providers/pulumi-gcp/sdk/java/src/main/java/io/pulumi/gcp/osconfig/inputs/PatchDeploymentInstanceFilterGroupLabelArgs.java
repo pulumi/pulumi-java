@@ -57,12 +57,10 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends io.pulumi
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
-        }
-        public PatchDeploymentInstanceFilterGroupLabelArgs build() {
+        }        public PatchDeploymentInstanceFilterGroupLabelArgs build() {
             return new PatchDeploymentInstanceFilterGroupLabelArgs(labels);
         }
     }

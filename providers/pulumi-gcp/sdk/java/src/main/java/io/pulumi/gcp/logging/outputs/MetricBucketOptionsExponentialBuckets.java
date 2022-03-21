@@ -88,17 +88,14 @@ public final class MetricBucketOptionsExponentialBuckets {
             this.growthFactor = growthFactor;
             return this;
         }
-
         public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
             this.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
-
         public Builder scale(@Nullable Double scale) {
             this.scale = scale;
             return this;
-        }
-        public MetricBucketOptionsExponentialBuckets build() {
+        }        public MetricBucketOptionsExponentialBuckets build() {
             return new MetricBucketOptionsExponentialBuckets(growthFactor, numFiniteBuckets, scale);
         }
     }

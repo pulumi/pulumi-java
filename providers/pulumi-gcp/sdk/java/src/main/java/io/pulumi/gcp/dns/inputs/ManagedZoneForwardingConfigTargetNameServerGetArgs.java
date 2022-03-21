@@ -77,22 +77,18 @@ public final class ManagedZoneForwardingConfigTargetNameServerGetArgs extends io
             this.forwardingPath = forwardingPath;
             return this;
         }
-
         public Builder forwardingPath(@Nullable String forwardingPath) {
             this.forwardingPath = Output.ofNullable(forwardingPath);
             return this;
         }
-
         public Builder ipv4Address(Output<String> ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
-
         public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Output.of(Objects.requireNonNull(ipv4Address));
             return this;
-        }
-        public ManagedZoneForwardingConfigTargetNameServerGetArgs build() {
+        }        public ManagedZoneForwardingConfigTargetNameServerGetArgs build() {
             return new ManagedZoneForwardingConfigTargetNameServerGetArgs(forwardingPath, ipv4Address);
         }
     }

@@ -70,12 +70,13 @@ public final class InstanceTemplateReservationAffinitySpecificReservation {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public InstanceTemplateReservationAffinitySpecificReservation build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public InstanceTemplateReservationAffinitySpecificReservation build() {
             return new InstanceTemplateReservationAffinitySpecificReservation(key, values);
         }
     }

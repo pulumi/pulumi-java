@@ -91,32 +91,26 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public NamespaceIamPolicyState build() {
+        }        public NamespaceIamPolicyState build() {
             return new NamespaceIamPolicyState(etag, name, policyData);
         }
     }

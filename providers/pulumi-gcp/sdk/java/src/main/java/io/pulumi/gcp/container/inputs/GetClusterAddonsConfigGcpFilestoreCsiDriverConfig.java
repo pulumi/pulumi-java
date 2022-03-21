@@ -50,8 +50,7 @@ public final class GetClusterAddonsConfigGcpFilestoreCsiDriverConfig extends io.
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetClusterAddonsConfigGcpFilestoreCsiDriverConfig build() {
+        }        public GetClusterAddonsConfigGcpFilestoreCsiDriverConfig build() {
             return new GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(enabled);
         }
     }

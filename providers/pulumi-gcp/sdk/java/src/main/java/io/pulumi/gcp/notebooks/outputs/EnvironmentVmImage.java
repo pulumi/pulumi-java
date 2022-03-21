@@ -89,17 +89,14 @@ public final class EnvironmentVmImage {
             this.imageFamily = imageFamily;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public EnvironmentVmImage build() {
+        }        public EnvironmentVmImage build() {
             return new EnvironmentVmImage(imageFamily, imageName, project);
         }
     }

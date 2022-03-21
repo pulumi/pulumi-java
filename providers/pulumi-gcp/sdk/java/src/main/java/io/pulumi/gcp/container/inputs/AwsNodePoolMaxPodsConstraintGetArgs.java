@@ -56,12 +56,10 @@ public final class AwsNodePoolMaxPodsConstraintGetArgs extends io.pulumi.resourc
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
-
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             this.maxPodsPerNode = Output.of(Objects.requireNonNull(maxPodsPerNode));
             return this;
-        }
-        public AwsNodePoolMaxPodsConstraintGetArgs build() {
+        }        public AwsNodePoolMaxPodsConstraintGetArgs build() {
             return new AwsNodePoolMaxPodsConstraintGetArgs(maxPodsPerNode);
         }
     }

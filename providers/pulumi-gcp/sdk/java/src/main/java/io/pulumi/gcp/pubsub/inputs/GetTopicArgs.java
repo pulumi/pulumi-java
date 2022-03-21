@@ -75,12 +75,10 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetTopicArgs build() {
+        }        public GetTopicArgs build() {
             return new GetTopicArgs(name, project);
         }
     }

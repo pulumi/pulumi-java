@@ -66,17 +66,20 @@ public final class EntryBigqueryTableSpec {
             this.tableSourceType = tableSourceType;
             return this;
         }
-
         public Builder tableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs) {
             this.tableSpecs = tableSpecs;
             return this;
         }
-
+        public Builder tableSpecs(EntryBigqueryTableSpecTableSpec... tableSpecs) {
+            return tableSpecs(List.of(tableSpecs));
+        }
         public Builder viewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs) {
             this.viewSpecs = viewSpecs;
             return this;
         }
-        public EntryBigqueryTableSpec build() {
+        public Builder viewSpecs(EntryBigqueryTableSpecViewSpec... viewSpecs) {
+            return viewSpecs(List.of(viewSpecs));
+        }        public EntryBigqueryTableSpec build() {
             return new EntryBigqueryTableSpec(tableSourceType, tableSpecs, viewSpecs);
         }
     }

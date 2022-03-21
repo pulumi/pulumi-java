@@ -81,22 +81,18 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
             this.externalIpv6 = externalIpv6;
             return this;
         }
-
         public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
-
         public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
-        }
-        public InstanceTemplateNetworkInterfaceIpv6AccessConfig build() {
+        }        public InstanceTemplateNetworkInterfaceIpv6AccessConfig build() {
             return new InstanceTemplateNetworkInterfaceIpv6AccessConfig(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }
     }

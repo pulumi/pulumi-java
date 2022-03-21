@@ -87,32 +87,26 @@ public final class InstanceFromMachineImageAttachedDisk {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
-
         public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
-
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public InstanceFromMachineImageAttachedDisk build() {
+        }        public InstanceFromMachineImageAttachedDisk build() {
             return new InstanceFromMachineImageAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }
     }

@@ -132,17 +132,14 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder trigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
             this.trigger = trigger;
             return this;
-        }
-        public AlertPolicyConditionConditionMonitoringQueryLanguage build() {
+        }        public AlertPolicyConditionConditionMonitoringQueryLanguage build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguage(duration, query, trigger);
         }
     }

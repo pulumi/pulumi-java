@@ -196,62 +196,59 @@ public final class GetInstanceNetworkInterface {
             this.accessConfigs = Objects.requireNonNull(accessConfigs);
             return this;
         }
-
+        public Builder accessConfigs(GetInstanceNetworkInterfaceAccessConfig... accessConfigs) {
+            return accessConfigs(List.of(accessConfigs));
+        }
         public Builder aliasIpRanges(List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges) {
             this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges);
             return this;
         }
-
+        public Builder aliasIpRanges(GetInstanceNetworkInterfaceAliasIpRange... aliasIpRanges) {
+            return aliasIpRanges(List.of(aliasIpRanges));
+        }
         public Builder ipv6AccessConfigs(List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs);
             return this;
         }
-
+        public Builder ipv6AccessConfigs(GetInstanceNetworkInterfaceIpv6AccessConfig... ipv6AccessConfigs) {
+            return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
+        }
         public Builder ipv6AccessType(String ipv6AccessType) {
             this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkIp(String networkIp) {
             this.networkIp = Objects.requireNonNull(networkIp);
             return this;
         }
-
         public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
-
         public Builder queueCount(Integer queueCount) {
             this.queueCount = Objects.requireNonNull(queueCount);
             return this;
         }
-
         public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder subnetworkProject(String subnetworkProject) {
             this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
             return this;
-        }
-        public GetInstanceNetworkInterface build() {
+        }        public GetInstanceNetworkInterface build() {
             return new GetInstanceNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }
     }

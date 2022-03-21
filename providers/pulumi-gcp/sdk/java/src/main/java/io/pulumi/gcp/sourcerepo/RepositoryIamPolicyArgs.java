@@ -88,32 +88,26 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
-        }
-        public RepositoryIamPolicyArgs build() {
+        }        public RepositoryIamPolicyArgs build() {
             return new RepositoryIamPolicyArgs(policyData, project, repository);
         }
     }

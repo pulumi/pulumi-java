@@ -75,12 +75,10 @@ public final class GetProjectServiceAccountArgs extends io.pulumi.resources.Invo
             this.project = project;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetProjectServiceAccountArgs build() {
+        }        public GetProjectServiceAccountArgs build() {
             return new GetProjectServiceAccountArgs(project, userProject);
         }
     }

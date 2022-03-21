@@ -72,12 +72,10 @@ public final class WorkflowTemplatePlacement {
             this.clusterSelector = clusterSelector;
             return this;
         }
-
         public Builder managedCluster(@Nullable WorkflowTemplatePlacementManagedCluster managedCluster) {
             this.managedCluster = managedCluster;
             return this;
-        }
-        public WorkflowTemplatePlacement build() {
+        }        public WorkflowTemplatePlacement build() {
             return new WorkflowTemplatePlacement(clusterSelector, managedCluster);
         }
     }

@@ -66,22 +66,18 @@ public final class CertificateRevocationDetailArgs extends io.pulumi.resources.R
             this.revocationState = revocationState;
             return this;
         }
-
         public Builder revocationState(@Nullable String revocationState) {
             this.revocationState = Output.ofNullable(revocationState);
             return this;
         }
-
         public Builder revocationTime(@Nullable Output<String> revocationTime) {
             this.revocationTime = revocationTime;
             return this;
         }
-
         public Builder revocationTime(@Nullable String revocationTime) {
             this.revocationTime = Output.ofNullable(revocationTime);
             return this;
-        }
-        public CertificateRevocationDetailArgs build() {
+        }        public CertificateRevocationDetailArgs build() {
             return new CertificateRevocationDetailArgs(revocationState, revocationTime);
         }
     }

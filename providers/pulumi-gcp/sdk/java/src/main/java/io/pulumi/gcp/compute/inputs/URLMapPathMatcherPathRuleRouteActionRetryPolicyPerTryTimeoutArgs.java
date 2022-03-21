@@ -77,22 +77,18 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutA
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(Output<String> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs build() {
+        }        public URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs build() {
             return new URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs(nanos, seconds);
         }
     }

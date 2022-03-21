@@ -94,42 +94,40 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<DomainMappingStatusConditionGetArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(DomainMappingStatusConditionGetArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder mappedRouteName(@Nullable Output<String> mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
-
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
             this.mappedRouteName = Output.ofNullable(mappedRouteName);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder resourceRecords(@Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
-
         public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecordGetArgs> resourceRecords) {
             this.resourceRecords = Output.ofNullable(resourceRecords);
             return this;
         }
-        public DomainMappingStatusGetArgs build() {
+        public Builder resourceRecords(DomainMappingStatusResourceRecordGetArgs... resourceRecords) {
+            return resourceRecords(List.of(resourceRecords));
+        }        public DomainMappingStatusGetArgs build() {
             return new DomainMappingStatusGetArgs(conditions, mappedRouteName, observedGeneration, resourceRecords);
         }
     }

@@ -200,92 +200,74 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
             this.destroyScheduledDuration = destroyScheduledDuration;
             return this;
         }
-
         public Builder destroyScheduledDuration(@Nullable String destroyScheduledDuration) {
             this.destroyScheduledDuration = Output.ofNullable(destroyScheduledDuration);
             return this;
         }
-
         public Builder importOnly(@Nullable Output<Boolean> importOnly) {
             this.importOnly = importOnly;
             return this;
         }
-
         public Builder importOnly(@Nullable Boolean importOnly) {
             this.importOnly = Output.ofNullable(importOnly);
             return this;
         }
-
         public Builder keyRing(@Nullable Output<String> keyRing) {
             this.keyRing = keyRing;
             return this;
         }
-
         public Builder keyRing(@Nullable String keyRing) {
             this.keyRing = Output.ofNullable(keyRing);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder purpose(@Nullable Output<String> purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder purpose(@Nullable String purpose) {
             this.purpose = Output.ofNullable(purpose);
             return this;
         }
-
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
-
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = Output.ofNullable(rotationPeriod);
             return this;
         }
-
         public Builder skipInitialVersionCreation(@Nullable Output<Boolean> skipInitialVersionCreation) {
             this.skipInitialVersionCreation = skipInitialVersionCreation;
             return this;
         }
-
         public Builder skipInitialVersionCreation(@Nullable Boolean skipInitialVersionCreation) {
             this.skipInitialVersionCreation = Output.ofNullable(skipInitialVersionCreation);
             return this;
         }
-
         public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate) {
             this.versionTemplate = versionTemplate;
             return this;
         }
-
         public Builder versionTemplate(@Nullable CryptoKeyVersionTemplateGetArgs versionTemplate) {
             this.versionTemplate = Output.ofNullable(versionTemplate);
             return this;
-        }
-        public CryptoKeyState build() {
+        }        public CryptoKeyState build() {
             return new CryptoKeyState(destroyScheduledDuration, importOnly, keyRing, labels, name, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplate);
         }
     }

@@ -152,62 +152,53 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             this.allUpdatesRule = allUpdatesRule;
             return this;
         }
-
         public Builder allUpdatesRule(@Nullable BudgetAllUpdatesRuleArgs allUpdatesRule) {
             this.allUpdatesRule = Output.ofNullable(allUpdatesRule);
             return this;
         }
-
         public Builder amount(Output<BudgetAmountArgs> amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder amount(BudgetAmountArgs amount) {
             this.amount = Output.of(Objects.requireNonNull(amount));
             return this;
         }
-
         public Builder billingAccount(Output<String> billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
-
         public Builder billingAccount(String billingAccount) {
             this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
-
         public Builder budgetFilter(@Nullable Output<BudgetBudgetFilterArgs> budgetFilter) {
             this.budgetFilter = budgetFilter;
             return this;
         }
-
         public Builder budgetFilter(@Nullable BudgetBudgetFilterArgs budgetFilter) {
             this.budgetFilter = Output.ofNullable(budgetFilter);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder thresholdRules(Output<List<BudgetThresholdRuleArgs>> thresholdRules) {
             this.thresholdRules = Objects.requireNonNull(thresholdRules);
             return this;
         }
-
         public Builder thresholdRules(List<BudgetThresholdRuleArgs> thresholdRules) {
             this.thresholdRules = Output.of(Objects.requireNonNull(thresholdRules));
             return this;
         }
-        public BudgetArgs build() {
+        public Builder thresholdRules(BudgetThresholdRuleArgs... thresholdRules) {
+            return thresholdRules(List.of(thresholdRules));
+        }        public BudgetArgs build() {
             return new BudgetArgs(allUpdatesRule, amount, billingAccount, budgetFilter, displayName, thresholdRules);
         }
     }

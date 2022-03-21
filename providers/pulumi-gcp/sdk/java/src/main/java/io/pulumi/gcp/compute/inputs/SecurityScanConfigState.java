@@ -233,112 +233,99 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable SecurityScanConfigAuthenticationGetArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder blacklistPatterns(@Nullable Output<List<String>> blacklistPatterns) {
             this.blacklistPatterns = blacklistPatterns;
             return this;
         }
-
         public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
             this.blacklistPatterns = Output.ofNullable(blacklistPatterns);
             return this;
         }
-
+        public Builder blacklistPatterns(String... blacklistPatterns) {
+            return blacklistPatterns(List.of(blacklistPatterns));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder exportToSecurityCommandCenter(@Nullable Output<String> exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
             return this;
         }
-
         public Builder exportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = Output.ofNullable(exportToSecurityCommandCenter);
             return this;
         }
-
         public Builder maxQps(@Nullable Output<Integer> maxQps) {
             this.maxQps = maxQps;
             return this;
         }
-
         public Builder maxQps(@Nullable Integer maxQps) {
             this.maxQps = Output.ofNullable(maxQps);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedule(@Nullable Output<SecurityScanConfigScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable SecurityScanConfigScheduleGetArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder startingUrls(@Nullable Output<List<String>> startingUrls) {
             this.startingUrls = startingUrls;
             return this;
         }
-
         public Builder startingUrls(@Nullable List<String> startingUrls) {
             this.startingUrls = Output.ofNullable(startingUrls);
             return this;
         }
-
+        public Builder startingUrls(String... startingUrls) {
+            return startingUrls(List.of(startingUrls));
+        }
         public Builder targetPlatforms(@Nullable Output<List<String>> targetPlatforms) {
             this.targetPlatforms = targetPlatforms;
             return this;
         }
-
         public Builder targetPlatforms(@Nullable List<String> targetPlatforms) {
             this.targetPlatforms = Output.ofNullable(targetPlatforms);
             return this;
         }
-
+        public Builder targetPlatforms(String... targetPlatforms) {
+            return targetPlatforms(List.of(targetPlatforms));
+        }
         public Builder userAgent(@Nullable Output<String> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
-
         public Builder userAgent(@Nullable String userAgent) {
             this.userAgent = Output.ofNullable(userAgent);
             return this;
-        }
-        public SecurityScanConfigState build() {
+        }        public SecurityScanConfigState build() {
             return new SecurityScanConfigState(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, maxQps, name, project, schedule, startingUrls, targetPlatforms, userAgent);
         }
     }

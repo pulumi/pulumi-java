@@ -64,12 +64,10 @@ public final class NoteAttestationAuthorityGetArgs extends io.pulumi.resources.R
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public Builder hint(NoteAttestationAuthorityHintGetArgs hint) {
             this.hint = Output.of(Objects.requireNonNull(hint));
             return this;
-        }
-        public NoteAttestationAuthorityGetArgs build() {
+        }        public NoteAttestationAuthorityGetArgs build() {
             return new NoteAttestationAuthorityGetArgs(hint);
         }
     }

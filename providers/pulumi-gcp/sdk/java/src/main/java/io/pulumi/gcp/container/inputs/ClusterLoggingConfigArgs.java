@@ -57,12 +57,13 @@ public final class ClusterLoggingConfigArgs extends io.pulumi.resources.Resource
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public Builder enableComponents(List<String> enableComponents) {
             this.enableComponents = Output.of(Objects.requireNonNull(enableComponents));
             return this;
         }
-        public ClusterLoggingConfigArgs build() {
+        public Builder enableComponents(String... enableComponents) {
+            return enableComponents(List.of(enableComponents));
+        }        public ClusterLoggingConfigArgs build() {
             return new ClusterLoggingConfigArgs(enableComponents);
         }
     }

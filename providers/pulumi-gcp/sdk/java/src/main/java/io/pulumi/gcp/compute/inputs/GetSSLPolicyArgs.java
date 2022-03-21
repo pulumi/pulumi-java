@@ -75,12 +75,10 @@ public final class GetSSLPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetSSLPolicyArgs build() {
+        }        public GetSSLPolicyArgs build() {
             return new GetSSLPolicyArgs(name, project);
         }
     }

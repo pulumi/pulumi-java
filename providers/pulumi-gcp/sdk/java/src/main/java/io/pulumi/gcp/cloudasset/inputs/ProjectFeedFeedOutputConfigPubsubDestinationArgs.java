@@ -56,12 +56,10 @@ public final class ProjectFeedFeedOutputConfigPubsubDestinationArgs extends io.p
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public ProjectFeedFeedOutputConfigPubsubDestinationArgs build() {
+        }        public ProjectFeedFeedOutputConfigPubsubDestinationArgs build() {
             return new ProjectFeedFeedOutputConfigPubsubDestinationArgs(topic);
         }
     }

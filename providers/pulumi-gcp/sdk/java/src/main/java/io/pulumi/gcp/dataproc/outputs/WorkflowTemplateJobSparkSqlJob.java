@@ -139,32 +139,29 @@ public final class WorkflowTemplateJobSparkSqlJob {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkSqlJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryList(@Nullable WorkflowTemplateJobSparkSqlJobQueryList queryList) {
             this.queryList = queryList;
             return this;
         }
-
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
-        }
-        public WorkflowTemplateJobSparkSqlJob build() {
+        }        public WorkflowTemplateJobSparkSqlJob build() {
             return new WorkflowTemplateJobSparkSqlJob(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }
     }

@@ -124,52 +124,42 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
             this.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
-
         public Builder exportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
             this.exportCustomRoutes = Output.ofNullable(exportCustomRoutes);
             return this;
         }
-
         public Builder importCustomRoutes(@Nullable Output<Boolean> importCustomRoutes) {
             this.importCustomRoutes = importCustomRoutes;
             return this;
         }
-
         public Builder importCustomRoutes(@Nullable Boolean importCustomRoutes) {
             this.importCustomRoutes = Output.ofNullable(importCustomRoutes);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder peering(@Nullable Output<String> peering) {
             this.peering = peering;
             return this;
         }
-
         public Builder peering(@Nullable String peering) {
             this.peering = Output.ofNullable(peering);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public NetworkPeeringRoutesConfigState build() {
+        }        public NetworkPeeringRoutesConfigState build() {
             return new NetworkPeeringRoutesConfigState(exportCustomRoutes, importCustomRoutes, network, peering, project);
         }
     }

@@ -53,8 +53,7 @@ public final class FlexibleAppVersionDeploymentContainer {
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
-        }
-        public FlexibleAppVersionDeploymentContainer build() {
+        }        public FlexibleAppVersionDeploymentContainer build() {
             return new FlexibleAppVersionDeploymentContainer(image);
         }
     }

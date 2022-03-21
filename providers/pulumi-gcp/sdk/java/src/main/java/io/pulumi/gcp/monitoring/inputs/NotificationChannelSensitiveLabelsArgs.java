@@ -93,32 +93,26 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
             this.authToken = authToken;
             return this;
         }
-
         public Builder authToken(@Nullable String authToken) {
             this.authToken = Output.ofNullable(authToken);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder serviceKey(@Nullable Output<String> serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
-
         public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = Output.ofNullable(serviceKey);
             return this;
-        }
-        public NotificationChannelSensitiveLabelsArgs build() {
+        }        public NotificationChannelSensitiveLabelsArgs build() {
             return new NotificationChannelSensitiveLabelsArgs(authToken, password, serviceKey);
         }
     }

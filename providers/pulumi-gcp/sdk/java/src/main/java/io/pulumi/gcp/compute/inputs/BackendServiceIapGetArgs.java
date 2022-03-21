@@ -93,32 +93,26 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
             this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
             return this;
         }
-
         public Builder oauth2ClientId(String oauth2ClientId) {
             this.oauth2ClientId = Output.of(Objects.requireNonNull(oauth2ClientId));
             return this;
         }
-
         public Builder oauth2ClientSecret(Output<String> oauth2ClientSecret) {
             this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
             return this;
         }
-
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             this.oauth2ClientSecret = Output.of(Objects.requireNonNull(oauth2ClientSecret));
             return this;
         }
-
         public Builder oauth2ClientSecretSha256(@Nullable Output<String> oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
-
         public Builder oauth2ClientSecretSha256(@Nullable String oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = Output.ofNullable(oauth2ClientSecretSha256);
             return this;
-        }
-        public BackendServiceIapGetArgs build() {
+        }        public BackendServiceIapGetArgs build() {
             return new BackendServiceIapGetArgs(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }
     }

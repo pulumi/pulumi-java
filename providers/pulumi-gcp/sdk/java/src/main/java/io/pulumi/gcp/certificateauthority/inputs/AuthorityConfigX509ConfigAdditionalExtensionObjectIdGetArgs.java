@@ -57,12 +57,13 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs e
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs build() {
             return new AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs(objectIdPaths);
         }
     }

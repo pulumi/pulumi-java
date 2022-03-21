@@ -75,22 +75,18 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
             this.membership = membership;
             return this;
         }
-
         public Builder membership(@Nullable String membership) {
             this.membership = Output.ofNullable(membership);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public AzureClusterFleetGetArgs build() {
+        }        public AzureClusterFleetGetArgs build() {
             return new AzureClusterFleetGetArgs(membership, project);
         }
     }

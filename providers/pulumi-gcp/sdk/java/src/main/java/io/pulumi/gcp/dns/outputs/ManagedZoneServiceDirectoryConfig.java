@@ -53,8 +53,7 @@ public final class ManagedZoneServiceDirectoryConfig {
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespace namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public ManagedZoneServiceDirectoryConfig build() {
+        }        public ManagedZoneServiceDirectoryConfig build() {
             return new ManagedZoneServiceDirectoryConfig(namespace);
         }
     }

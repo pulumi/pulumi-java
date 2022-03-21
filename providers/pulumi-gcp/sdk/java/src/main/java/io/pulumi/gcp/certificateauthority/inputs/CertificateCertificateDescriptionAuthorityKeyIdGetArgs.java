@@ -53,12 +53,10 @@ public final class CertificateCertificateDescriptionAuthorityKeyIdGetArgs extend
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
-        }
-        public CertificateCertificateDescriptionAuthorityKeyIdGetArgs build() {
+        }        public CertificateCertificateDescriptionAuthorityKeyIdGetArgs build() {
             return new CertificateCertificateDescriptionAuthorityKeyIdGetArgs(keyId);
         }
     }

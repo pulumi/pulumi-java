@@ -101,32 +101,26 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs
             this.backendService = backendService;
             return this;
         }
-
         public Builder backendService(@Nullable String backendService) {
             this.backendService = Output.ofNullable(backendService);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs build() {
+        }        public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs(backendService, headerAction, weight);
         }
     }

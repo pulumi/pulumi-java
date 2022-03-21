@@ -124,52 +124,42 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
             this.allowAll = allowAll;
             return this;
         }
-
         public Builder allowAll(@Nullable String allowAll) {
             this.allowAll = Output.ofNullable(allowAll);
             return this;
         }
-
         public Builder condition(@Nullable Output<PolicySpecRuleConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable PolicySpecRuleConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder denyAll(@Nullable Output<String> denyAll) {
             this.denyAll = denyAll;
             return this;
         }
-
         public Builder denyAll(@Nullable String denyAll) {
             this.denyAll = Output.ofNullable(denyAll);
             return this;
         }
-
         public Builder enforce(@Nullable Output<String> enforce) {
             this.enforce = enforce;
             return this;
         }
-
         public Builder enforce(@Nullable String enforce) {
             this.enforce = Output.ofNullable(enforce);
             return this;
         }
-
         public Builder values(@Nullable Output<PolicySpecRuleValuesGetArgs> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable PolicySpecRuleValuesGetArgs values) {
             this.values = Output.ofNullable(values);
             return this;
-        }
-        public PolicySpecRuleGetArgs build() {
+        }        public PolicySpecRuleGetArgs build() {
             return new PolicySpecRuleGetArgs(allowAll, condition, denyAll, enforce, values);
         }
     }

@@ -88,22 +88,21 @@ public final class GetRegionsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetRegionsResult build() {
+        }        public GetRegionsResult build() {
             return new GetRegionsResult(id, names, project, status);
         }
     }

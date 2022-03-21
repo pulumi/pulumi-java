@@ -51,8 +51,7 @@ public final class ClusterNotificationConfig {
         public Builder pubsub(ClusterNotificationConfigPubsub pubsub) {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
-        }
-        public ClusterNotificationConfig build() {
+        }        public ClusterNotificationConfig build() {
             return new ClusterNotificationConfig(pubsub);
         }
     }

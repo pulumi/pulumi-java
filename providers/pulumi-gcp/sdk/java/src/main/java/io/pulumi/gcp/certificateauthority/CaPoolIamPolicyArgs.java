@@ -110,42 +110,34 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.caPool = Objects.requireNonNull(caPool);
             return this;
         }
-
         public Builder caPool(String caPool) {
             this.caPool = Output.of(Objects.requireNonNull(caPool));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public CaPoolIamPolicyArgs build() {
+        }        public CaPoolIamPolicyArgs build() {
             return new CaPoolIamPolicyArgs(caPool, location, policyData, project);
         }
     }

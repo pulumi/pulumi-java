@@ -74,22 +74,18 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
             this.deleteRule = deleteRule;
             return this;
         }
-
         public Builder deleteRule(@Nullable String deleteRule) {
             this.deleteRule = Output.ofNullable(deleteRule);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
-        }
-        public RegionInstanceGroupManagerStatefulDiskGetArgs build() {
+        }        public RegionInstanceGroupManagerStatefulDiskGetArgs build() {
             return new RegionInstanceGroupManagerStatefulDiskGetArgs(deleteRule, deviceName);
         }
     }

@@ -84,22 +84,21 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
-
         public Builder filterLabels(List<GlobalForwardingRuleMetadataFilterFilterLabelArgs> filterLabels) {
             this.filterLabels = Output.of(Objects.requireNonNull(filterLabels));
             return this;
         }
-
+        public Builder filterLabels(GlobalForwardingRuleMetadataFilterFilterLabelArgs... filterLabels) {
+            return filterLabels(List.of(filterLabels));
+        }
         public Builder filterMatchCriteria(Output<String> filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Output.of(Objects.requireNonNull(filterMatchCriteria));
             return this;
-        }
-        public GlobalForwardingRuleMetadataFilterArgs build() {
+        }        public GlobalForwardingRuleMetadataFilterArgs build() {
             return new GlobalForwardingRuleMetadataFilterArgs(filterLabels, filterMatchCriteria);
         }
     }

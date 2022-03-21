@@ -55,7 +55,9 @@ public final class TriggerBuildAvailableSecrets {
             this.secretManagers = Objects.requireNonNull(secretManagers);
             return this;
         }
-        public TriggerBuildAvailableSecrets build() {
+        public Builder secretManagers(TriggerBuildAvailableSecretsSecretManager... secretManagers) {
+            return secretManagers(List.of(secretManagers));
+        }        public TriggerBuildAvailableSecrets build() {
             return new TriggerBuildAvailableSecrets(secretManagers);
         }
     }

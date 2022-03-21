@@ -103,52 +103,42 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder nodeId(@Nullable Output<String> nodeId) {
             this.nodeId = nodeId;
             return this;
         }
-
         public Builder nodeId(@Nullable String nodeId) {
             this.nodeId = Output.ofNullable(nodeId);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceMemcacheNodeArgs build() {
+        }        public InstanceMemcacheNodeArgs build() {
             return new InstanceMemcacheNodeArgs(host, nodeId, port, state, zone);
         }
     }

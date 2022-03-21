@@ -61,8 +61,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig(kmsKey);
         }
     }

@@ -71,22 +71,27 @@ public final class GetBucketCor {
             this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
             return this;
         }
-
         public Builder methods(List<String> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder origins(List<String> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
-
+        public Builder origins(String... origins) {
+            return origins(List.of(origins));
+        }
         public Builder responseHeaders(List<String> responseHeaders) {
             this.responseHeaders = Objects.requireNonNull(responseHeaders);
             return this;
         }
-        public GetBucketCor build() {
+        public Builder responseHeaders(String... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public GetBucketCor build() {
             return new GetBucketCor(maxAgeSeconds, methods, origins, responseHeaders);
         }
     }

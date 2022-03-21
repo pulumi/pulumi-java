@@ -55,7 +55,9 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations build() {
+        public Builder transformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation... transformations) {
+            return transformations(List.of(transformations));
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations(transformations);
         }
     }

@@ -78,22 +78,18 @@ public final class TriggerBuildArtifactsObjectsTimingGetArgs extends io.pulumi.r
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public TriggerBuildArtifactsObjectsTimingGetArgs build() {
+        }        public TriggerBuildArtifactsObjectsTimingGetArgs build() {
             return new TriggerBuildArtifactsObjectsTimingGetArgs(endTime, startTime);
         }
     }

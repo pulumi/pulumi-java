@@ -110,42 +110,37 @@ public final class CxPageEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
             this.messages = messages;
             return this;
         }
-
         public Builder messages(@Nullable List<CxPageEventHandlerTriggerFulfillmentMessageGetArgs> messages) {
             this.messages = Output.ofNullable(messages);
             return this;
         }
-
+        public Builder messages(CxPageEventHandlerTriggerFulfillmentMessageGetArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder returnPartialResponses(@Nullable Output<Boolean> returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
-
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = Output.ofNullable(returnPartialResponses);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
         }
-
         public Builder webhook(@Nullable Output<String> webhook) {
             this.webhook = webhook;
             return this;
         }
-
         public Builder webhook(@Nullable String webhook) {
             this.webhook = Output.ofNullable(webhook);
             return this;
-        }
-        public CxPageEventHandlerTriggerFulfillmentGetArgs build() {
+        }        public CxPageEventHandlerTriggerFulfillmentGetArgs build() {
             return new CxPageEventHandlerTriggerFulfillmentGetArgs(messages, returnPartialResponses, tag, webhook);
         }
     }

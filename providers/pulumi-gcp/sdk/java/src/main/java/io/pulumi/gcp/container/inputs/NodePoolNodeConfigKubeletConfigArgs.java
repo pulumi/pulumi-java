@@ -79,32 +79,26 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
-
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = Output.ofNullable(cpuCfsQuota);
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Output.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
-
         public Builder cpuManagerPolicy(Output<String> cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
-
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Output.of(Objects.requireNonNull(cpuManagerPolicy));
             return this;
-        }
-        public NodePoolNodeConfigKubeletConfigArgs build() {
+        }        public NodePoolNodeConfigKubeletConfigArgs build() {
             return new NodePoolNodeConfigKubeletConfigArgs(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }
     }

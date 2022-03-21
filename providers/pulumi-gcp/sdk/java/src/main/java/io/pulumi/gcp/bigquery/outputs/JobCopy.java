@@ -153,27 +153,25 @@ public final class JobCopy {
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable JobCopyDestinationEncryptionConfiguration destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationTable(@Nullable JobCopyDestinationTable destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
-
         public Builder sourceTables(List<JobCopySourceTable> sourceTables) {
             this.sourceTables = Objects.requireNonNull(sourceTables);
             return this;
         }
-
+        public Builder sourceTables(JobCopySourceTable... sourceTables) {
+            return sourceTables(List.of(sourceTables));
+        }
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
-        }
-        public JobCopy build() {
+        }        public JobCopy build() {
             return new JobCopy(createDisposition, destinationEncryptionConfiguration, destinationTable, sourceTables, writeDisposition);
         }
     }

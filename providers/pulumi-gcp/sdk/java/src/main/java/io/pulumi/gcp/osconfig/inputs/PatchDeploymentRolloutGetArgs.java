@@ -80,22 +80,18 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
-
         public Builder disruptionBudget(PatchDeploymentRolloutDisruptionBudgetGetArgs disruptionBudget) {
             this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
             return this;
         }
-
         public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
-        }
-        public PatchDeploymentRolloutGetArgs build() {
+        }        public PatchDeploymentRolloutGetArgs build() {
             return new PatchDeploymentRolloutGetArgs(disruptionBudget, mode);
         }
     }

@@ -67,22 +67,21 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
             this.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
-
         public Builder caCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
             this.caCertificateAccessUrl = Output.ofNullable(caCertificateAccessUrl);
             return this;
         }
-
         public Builder crlAccessUrls(@Nullable Output<List<String>> crlAccessUrls) {
             this.crlAccessUrls = crlAccessUrls;
             return this;
         }
-
         public Builder crlAccessUrls(@Nullable List<String> crlAccessUrls) {
             this.crlAccessUrls = Output.ofNullable(crlAccessUrls);
             return this;
         }
-        public AuthorityAccessUrlArgs build() {
+        public Builder crlAccessUrls(String... crlAccessUrls) {
+            return crlAccessUrls(List.of(crlAccessUrls));
+        }        public AuthorityAccessUrlArgs build() {
             return new AuthorityAccessUrlArgs(caCertificateAccessUrl, crlAccessUrls);
         }
     }

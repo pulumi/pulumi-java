@@ -74,22 +74,18 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder tagKey(Output<String> tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
-
         public Builder tagKey(String tagKey) {
             this.tagKey = Output.of(Objects.requireNonNull(tagKey));
             return this;
-        }
-        public TagKeyIamPolicyArgs build() {
+        }        public TagKeyIamPolicyArgs build() {
             return new TagKeyIamPolicyArgs(policyData, tagKey);
         }
     }

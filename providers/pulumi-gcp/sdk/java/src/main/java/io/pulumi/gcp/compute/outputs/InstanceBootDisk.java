@@ -185,42 +185,34 @@ public final class InstanceBootDisk {
             this.autoDelete = autoDelete;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
-
         public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
-
         public Builder initializeParams(@Nullable InstanceBootDiskInitializeParams initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
-
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
-        }
-        public InstanceBootDisk build() {
+        }        public InstanceBootDisk build() {
             return new InstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }
     }

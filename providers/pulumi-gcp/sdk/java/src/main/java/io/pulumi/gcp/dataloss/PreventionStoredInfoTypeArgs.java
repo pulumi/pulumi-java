@@ -148,62 +148,50 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dictionary(@Nullable Output<PreventionStoredInfoTypeDictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
-
         public Builder dictionary(@Nullable PreventionStoredInfoTypeDictionaryArgs dictionary) {
             this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder largeCustomDictionary(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary) {
             this.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
-
         public Builder largeCustomDictionary(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryArgs largeCustomDictionary) {
             this.largeCustomDictionary = Output.ofNullable(largeCustomDictionary);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder regex(@Nullable Output<PreventionStoredInfoTypeRegexArgs> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable PreventionStoredInfoTypeRegexArgs regex) {
             this.regex = Output.ofNullable(regex);
             return this;
-        }
-        public PreventionStoredInfoTypeArgs build() {
+        }        public PreventionStoredInfoTypeArgs build() {
             return new PreventionStoredInfoTypeArgs(description, dictionary, displayName, largeCustomDictionary, parent, regex);
         }
     }

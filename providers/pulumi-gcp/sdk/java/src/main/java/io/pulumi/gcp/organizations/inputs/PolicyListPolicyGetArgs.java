@@ -106,42 +106,34 @@ public final class PolicyListPolicyGetArgs extends io.pulumi.resources.ResourceA
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable PolicyListPolicyAllowGetArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder deny(@Nullable Output<PolicyListPolicyDenyGetArgs> deny) {
             this.deny = deny;
             return this;
         }
-
         public Builder deny(@Nullable PolicyListPolicyDenyGetArgs deny) {
             this.deny = Output.ofNullable(deny);
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = Output.ofNullable(inheritFromParent);
             return this;
         }
-
         public Builder suggestedValue(@Nullable Output<String> suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
         }
-
         public Builder suggestedValue(@Nullable String suggestedValue) {
             this.suggestedValue = Output.ofNullable(suggestedValue);
             return this;
-        }
-        public PolicyListPolicyGetArgs build() {
+        }        public PolicyListPolicyGetArgs build() {
             return new PolicyListPolicyGetArgs(allow, deny, inheritFromParent, suggestedValue);
         }
     }

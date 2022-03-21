@@ -53,12 +53,10 @@ public final class InstanceGroupManagerStatusVersionTargetArgs extends io.pulumi
             this.isReached = isReached;
             return this;
         }
-
         public Builder isReached(@Nullable Boolean isReached) {
             this.isReached = Output.ofNullable(isReached);
             return this;
-        }
-        public InstanceGroupManagerStatusVersionTargetArgs build() {
+        }        public InstanceGroupManagerStatusVersionTargetArgs build() {
             return new InstanceGroupManagerStatusVersionTargetArgs(isReached);
         }
     }

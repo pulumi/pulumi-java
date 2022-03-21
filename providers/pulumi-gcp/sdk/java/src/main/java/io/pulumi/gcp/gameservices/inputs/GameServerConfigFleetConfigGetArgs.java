@@ -80,22 +80,18 @@ public final class GameServerConfigFleetConfigGetArgs extends io.pulumi.resource
             this.fleetSpec = Objects.requireNonNull(fleetSpec);
             return this;
         }
-
         public Builder fleetSpec(String fleetSpec) {
             this.fleetSpec = Output.of(Objects.requireNonNull(fleetSpec));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GameServerConfigFleetConfigGetArgs build() {
+        }        public GameServerConfigFleetConfigGetArgs build() {
             return new GameServerConfigFleetConfigGetArgs(fleetSpec, name);
         }
     }

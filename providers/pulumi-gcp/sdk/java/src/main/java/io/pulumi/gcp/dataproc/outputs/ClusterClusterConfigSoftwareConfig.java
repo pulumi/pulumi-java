@@ -136,22 +136,21 @@ public final class ClusterClusterConfigSoftwareConfig {
             this.imageVersion = imageVersion;
             return this;
         }
-
         public Builder optionalComponents(@Nullable List<String> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
-
+        public Builder optionalComponents(String... optionalComponents) {
+            return optionalComponents(List.of(optionalComponents));
+        }
         public Builder overrideProperties(@Nullable Map<String,String> overrideProperties) {
             this.overrideProperties = overrideProperties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = properties;
             return this;
-        }
-        public ClusterClusterConfigSoftwareConfig build() {
+        }        public ClusterClusterConfigSoftwareConfig build() {
             return new ClusterClusterConfigSoftwareConfig(imageVersion, optionalComponents, overrideProperties, properties);
         }
     }

@@ -76,22 +76,18 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyGetArgs extends i
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Integer code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public BackendServiceCdnPolicyNegativeCachingPolicyGetArgs build() {
+        }        public BackendServiceCdnPolicyNegativeCachingPolicyGetArgs build() {
             return new BackendServiceCdnPolicyNegativeCachingPolicyGetArgs(code, ttl);
         }
     }

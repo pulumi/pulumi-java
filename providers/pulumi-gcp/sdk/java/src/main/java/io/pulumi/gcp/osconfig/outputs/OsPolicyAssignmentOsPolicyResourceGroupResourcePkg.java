@@ -174,42 +174,34 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
             this.apt = apt;
             return this;
         }
-
         public Builder deb(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb) {
             this.deb = deb;
             return this;
         }
-
         public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder googet(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet) {
             this.googet = googet;
             return this;
         }
-
         public Builder msi(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi) {
             this.msi = msi;
             return this;
         }
-
         public Builder rpm(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm) {
             this.rpm = rpm;
             return this;
         }
-
         public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
             this.zypper = zypper;
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkg build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkg build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkg(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }
     }

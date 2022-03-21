@@ -56,12 +56,10 @@ public final class AwsClusterControlPlaneSshConfigGetArgs extends io.pulumi.reso
             this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
             return this;
         }
-
         public Builder ec2KeyPair(String ec2KeyPair) {
             this.ec2KeyPair = Output.of(Objects.requireNonNull(ec2KeyPair));
             return this;
-        }
-        public AwsClusterControlPlaneSshConfigGetArgs build() {
+        }        public AwsClusterControlPlaneSshConfigGetArgs build() {
             return new AwsClusterControlPlaneSshConfigGetArgs(ec2KeyPair);
         }
     }

@@ -77,22 +77,18 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
             this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
             return this;
         }
-
         public Builder gkeClusterReference(GameServerClusterConnectionInfoGkeClusterReferenceArgs gkeClusterReference) {
             this.gkeClusterReference = Output.of(Objects.requireNonNull(gkeClusterReference));
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
-        }
-        public GameServerClusterConnectionInfoArgs build() {
+        }        public GameServerClusterConnectionInfoArgs build() {
             return new GameServerClusterConnectionInfoArgs(gkeClusterReference, namespace);
         }
     }

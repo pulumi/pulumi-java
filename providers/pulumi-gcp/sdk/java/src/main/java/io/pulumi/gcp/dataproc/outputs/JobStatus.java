@@ -71,22 +71,18 @@ public final class JobStatus {
             this.details = details;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder stateStartTime(@Nullable String stateStartTime) {
             this.stateStartTime = stateStartTime;
             return this;
         }
-
         public Builder substate(@Nullable String substate) {
             this.substate = substate;
             return this;
-        }
-        public JobStatus build() {
+        }        public JobStatus build() {
             return new JobStatus(details, state, stateStartTime, substate);
         }
     }

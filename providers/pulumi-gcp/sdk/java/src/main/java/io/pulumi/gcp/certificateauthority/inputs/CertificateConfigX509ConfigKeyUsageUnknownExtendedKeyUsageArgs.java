@@ -57,12 +57,13 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArg
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-        public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs build() {
             return new CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs(objectIdPaths);
         }
     }

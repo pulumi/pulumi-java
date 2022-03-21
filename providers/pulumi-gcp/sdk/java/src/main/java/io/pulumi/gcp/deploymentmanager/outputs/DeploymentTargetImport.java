@@ -73,12 +73,10 @@ public final class DeploymentTargetImport {
             this.content = content;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DeploymentTargetImport build() {
+        }        public DeploymentTargetImport build() {
             return new DeploymentTargetImport(content, name);
         }
     }

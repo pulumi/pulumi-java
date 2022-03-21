@@ -195,92 +195,80 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
             this.attestations = attestations;
             return this;
         }
-
         public Builder attestations(@Nullable List<KeyRingImportJobAttestationGetArgs> attestations) {
             this.attestations = Output.ofNullable(attestations);
             return this;
         }
-
+        public Builder attestations(KeyRingImportJobAttestationGetArgs... attestations) {
+            return attestations(List.of(attestations));
+        }
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder importJobId(@Nullable Output<String> importJobId) {
             this.importJobId = importJobId;
             return this;
         }
-
         public Builder importJobId(@Nullable String importJobId) {
             this.importJobId = Output.ofNullable(importJobId);
             return this;
         }
-
         public Builder importMethod(@Nullable Output<String> importMethod) {
             this.importMethod = importMethod;
             return this;
         }
-
         public Builder importMethod(@Nullable String importMethod) {
             this.importMethod = Output.ofNullable(importMethod);
             return this;
         }
-
         public Builder keyRing(@Nullable Output<String> keyRing) {
             this.keyRing = keyRing;
             return this;
         }
-
         public Builder keyRing(@Nullable String keyRing) {
             this.keyRing = Output.ofNullable(keyRing);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protectionLevel(@Nullable Output<String> protectionLevel) {
             this.protectionLevel = protectionLevel;
             return this;
         }
-
         public Builder protectionLevel(@Nullable String protectionLevel) {
             this.protectionLevel = Output.ofNullable(protectionLevel);
             return this;
         }
-
         public Builder publicKeys(@Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public Builder publicKeys(@Nullable List<KeyRingImportJobPublicKeyGetArgs> publicKeys) {
             this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
-
+        public Builder publicKeys(KeyRingImportJobPublicKeyGetArgs... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public KeyRingImportJobState build() {
+        }        public KeyRingImportJobState build() {
             return new KeyRingImportJobState(attestations, expireTime, importJobId, importMethod, keyRing, name, protectionLevel, publicKeys, state);
         }
     }

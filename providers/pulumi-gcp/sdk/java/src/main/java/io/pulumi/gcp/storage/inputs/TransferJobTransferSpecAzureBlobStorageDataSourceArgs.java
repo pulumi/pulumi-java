@@ -107,42 +107,34 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceArgs extends
             this.azureCredentials = Objects.requireNonNull(azureCredentials);
             return this;
         }
-
         public Builder azureCredentials(TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs azureCredentials) {
             this.azureCredentials = Output.of(Objects.requireNonNull(azureCredentials));
             return this;
         }
-
         public Builder container(Output<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder container(String container) {
             this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder storageAccount(Output<String> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public Builder storageAccount(String storageAccount) {
             this.storageAccount = Output.of(Objects.requireNonNull(storageAccount));
             return this;
-        }
-        public TransferJobTransferSpecAzureBlobStorageDataSourceArgs build() {
+        }        public TransferJobTransferSpecAzureBlobStorageDataSourceArgs build() {
             return new TransferJobTransferSpecAzureBlobStorageDataSourceArgs(azureCredentials, container, path, storageAccount);
         }
     }

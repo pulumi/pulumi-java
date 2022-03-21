@@ -331,152 +331,128 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
-
         public Builder acceleratorConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs acceleratorConfig) {
             this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
             return this;
         }
-
         public Builder containerImages(@Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages) {
             this.containerImages = containerImages;
             return this;
         }
-
         public Builder containerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs> containerImages) {
             this.containerImages = Output.ofNullable(containerImages);
             return this;
         }
-
+        public Builder containerImages(RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs... containerImages) {
+            return containerImages(List.of(containerImages));
+        }
         public Builder dataDisk(Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
-
         public Builder dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs dataDisk) {
             this.dataDisk = Output.of(Objects.requireNonNull(dataDisk));
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder guestAttributes(@Nullable Output<Map<String,String>> guestAttributes) {
             this.guestAttributes = guestAttributes;
             return this;
         }
-
         public Builder guestAttributes(@Nullable Map<String,String> guestAttributes) {
             this.guestAttributes = Output.ofNullable(guestAttributes);
             return this;
         }
-
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
-
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = Output.ofNullable(internalIpOnly);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder nicType(@Nullable Output<String> nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder nicType(@Nullable String nicType) {
             this.nicType = Output.ofNullable(nicType);
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
-
         public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigGetArgs build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigGetArgs(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }
     }

@@ -75,12 +75,13 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageText {
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
-
         public Builder texts(@Nullable List<String> texts) {
             this.texts = texts;
             return this;
         }
-        public CxFlowTransitionRouteTriggerFulfillmentMessageText build() {
+        public Builder texts(String... texts) {
+            return texts(List.of(texts));
+        }        public CxFlowTransitionRouteTriggerFulfillmentMessageText build() {
             return new CxFlowTransitionRouteTriggerFulfillmentMessageText(allowPlaybackInterruption, texts);
         }
     }

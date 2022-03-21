@@ -121,22 +121,21 @@ public final class PolicyClusterAdmissionRule {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder enforcementMode(String enforcementMode) {
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
-
         public Builder evaluationMode(String evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
-
         public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-        public PolicyClusterAdmissionRule build() {
+        public Builder requireAttestationsBies(String... requireAttestationsBies) {
+            return requireAttestationsBies(List.of(requireAttestationsBies));
+        }        public PolicyClusterAdmissionRule build() {
             return new PolicyClusterAdmissionRule(cluster, enforcementMode, evaluationMode, requireAttestationsBies);
         }
     }

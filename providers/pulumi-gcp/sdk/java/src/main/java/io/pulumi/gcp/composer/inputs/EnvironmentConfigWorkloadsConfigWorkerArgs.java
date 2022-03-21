@@ -103,52 +103,42 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
-
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
-
         public Builder minCount(@Nullable Output<Integer> minCount) {
             this.minCount = minCount;
             return this;
         }
-
         public Builder minCount(@Nullable Integer minCount) {
             this.minCount = Output.ofNullable(minCount);
             return this;
         }
-
         public Builder storageGb(@Nullable Output<Double> storageGb) {
             this.storageGb = storageGb;
             return this;
         }
-
         public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = Output.ofNullable(storageGb);
             return this;
-        }
-        public EnvironmentConfigWorkloadsConfigWorkerArgs build() {
+        }        public EnvironmentConfigWorkloadsConfigWorkerArgs build() {
             return new EnvironmentConfigWorkloadsConfigWorkerArgs(cpu, maxCount, memoryGb, minCount, storageGb);
         }
     }

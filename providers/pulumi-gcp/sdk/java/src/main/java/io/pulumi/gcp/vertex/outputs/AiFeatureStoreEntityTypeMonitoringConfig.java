@@ -55,8 +55,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
         public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
             this.snapshotAnalysis = snapshotAnalysis;
             return this;
-        }
-        public AiFeatureStoreEntityTypeMonitoringConfig build() {
+        }        public AiFeatureStoreEntityTypeMonitoringConfig build() {
             return new AiFeatureStoreEntityTypeMonitoringConfig(snapshotAnalysis);
         }
     }

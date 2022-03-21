@@ -79,17 +79,23 @@ public final class GetEnvironmentConfigWorkloadsConfig extends io.pulumi.resourc
             this.schedulers = Objects.requireNonNull(schedulers);
             return this;
         }
-
+        public Builder schedulers(GetEnvironmentConfigWorkloadsConfigScheduler... schedulers) {
+            return schedulers(List.of(schedulers));
+        }
         public Builder webServers(List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers) {
             this.webServers = Objects.requireNonNull(webServers);
             return this;
         }
-
+        public Builder webServers(GetEnvironmentConfigWorkloadsConfigWebServer... webServers) {
+            return webServers(List.of(webServers));
+        }
         public Builder workers(List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
             this.workers = Objects.requireNonNull(workers);
             return this;
         }
-        public GetEnvironmentConfigWorkloadsConfig build() {
+        public Builder workers(GetEnvironmentConfigWorkloadsConfigWorker... workers) {
+            return workers(List.of(workers));
+        }        public GetEnvironmentConfigWorkloadsConfig build() {
             return new GetEnvironmentConfigWorkloadsConfig(schedulers, webServers, workers);
         }
     }

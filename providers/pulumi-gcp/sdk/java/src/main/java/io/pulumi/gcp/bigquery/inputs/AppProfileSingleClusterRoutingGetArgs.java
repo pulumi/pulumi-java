@@ -76,22 +76,18 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
             this.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
-
         public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
             this.allowTransactionalWrites = Output.ofNullable(allowTransactionalWrites);
             return this;
         }
-
         public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
-        }
-        public AppProfileSingleClusterRoutingGetArgs build() {
+        }        public AppProfileSingleClusterRoutingGetArgs build() {
             return new AppProfileSingleClusterRoutingGetArgs(allowTransactionalWrites, clusterId);
         }
     }

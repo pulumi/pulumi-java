@@ -259,52 +259,48 @@ public final class AutoscalerAutoscalingPolicy {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
-
         public Builder cpuUtilization(@Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
-
         public Builder loadBalancingUtilization(@Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization) {
             this.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
-
         public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
-
         public Builder metrics(@Nullable List<AutoscalerAutoscalingPolicyMetric> metrics) {
             this.metrics = metrics;
             return this;
         }
-
+        public Builder metrics(AutoscalerAutoscalingPolicyMetric... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minReplicas(Integer minReplicas) {
             this.minReplicas = Objects.requireNonNull(minReplicas);
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder scaleDownControl(@Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl) {
             this.scaleDownControl = scaleDownControl;
             return this;
         }
-
         public Builder scaleInControl(@Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl) {
             this.scaleInControl = scaleInControl;
             return this;
         }
-
         public Builder scalingSchedules(@Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
-        public AutoscalerAutoscalingPolicy build() {
+        public Builder scalingSchedules(AutoscalerAutoscalingPolicyScalingSchedule... scalingSchedules) {
+            return scalingSchedules(List.of(scalingSchedules));
+        }        public AutoscalerAutoscalingPolicy build() {
             return new AutoscalerAutoscalingPolicy(cooldownPeriod, cpuUtilization, loadBalancingUtilization, maxReplicas, metrics, minReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
         }
     }

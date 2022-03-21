@@ -53,7 +53,9 @@ public final class WorkflowTemplateJobPrestoJobQueryList {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-        public WorkflowTemplateJobPrestoJobQueryList build() {
+        public Builder queries(String... queries) {
+            return queries(List.of(queries));
+        }        public WorkflowTemplateJobPrestoJobQueryList build() {
             return new WorkflowTemplateJobPrestoJobQueryList(queries);
         }
     }

@@ -72,12 +72,10 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
-        }
-        public RegionInstanceGroupManagerAutoHealingPolicies build() {
+        }        public RegionInstanceGroupManagerAutoHealingPolicies build() {
             return new RegionInstanceGroupManagerAutoHealingPolicies(healthCheck, initialDelaySec);
         }
     }

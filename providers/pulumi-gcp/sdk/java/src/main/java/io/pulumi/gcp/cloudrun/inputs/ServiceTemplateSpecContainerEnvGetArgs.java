@@ -99,32 +99,26 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends io.pulumi.reso
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder valueFrom(@Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }
-
         public Builder valueFrom(@Nullable ServiceTemplateSpecContainerEnvValueFromGetArgs valueFrom) {
             this.valueFrom = Output.ofNullable(valueFrom);
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvGetArgs build() {
+        }        public ServiceTemplateSpecContainerEnvGetArgs build() {
             return new ServiceTemplateSpecContainerEnvGetArgs(name, value, valueFrom);
         }
     }

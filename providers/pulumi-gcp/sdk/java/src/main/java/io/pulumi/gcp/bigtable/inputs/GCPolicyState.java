@@ -157,72 +157,61 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             this.columnFamily = columnFamily;
             return this;
         }
-
         public Builder columnFamily(@Nullable String columnFamily) {
             this.columnFamily = Output.ofNullable(columnFamily);
             return this;
         }
-
         public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
-
         public Builder maxAge(@Nullable Output<GCPolicyMaxAgeGetArgs> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
-
         public Builder maxAge(@Nullable GCPolicyMaxAgeGetArgs maxAge) {
             this.maxAge = Output.ofNullable(maxAge);
             return this;
         }
-
         public Builder maxVersions(@Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions) {
             this.maxVersions = maxVersions;
             return this;
         }
-
         public Builder maxVersions(@Nullable List<GCPolicyMaxVersionGetArgs> maxVersions) {
             this.maxVersions = Output.ofNullable(maxVersions);
             return this;
         }
-
+        public Builder maxVersions(GCPolicyMaxVersionGetArgs... maxVersions) {
+            return maxVersions(List.of(maxVersions));
+        }
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
-        }
-        public GCPolicyState build() {
+        }        public GCPolicyState build() {
             return new GCPolicyState(columnFamily, instanceName, maxAge, maxVersions, mode, project, table);
         }
     }

@@ -291,142 +291,120 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             this.bigqueryDateShardedSpecs = bigqueryDateShardedSpecs;
             return this;
         }
-
         public Builder bigqueryDateShardedSpecs(@Nullable List<EntryBigqueryDateShardedSpecGetArgs> bigqueryDateShardedSpecs) {
             this.bigqueryDateShardedSpecs = Output.ofNullable(bigqueryDateShardedSpecs);
             return this;
         }
-
+        public Builder bigqueryDateShardedSpecs(EntryBigqueryDateShardedSpecGetArgs... bigqueryDateShardedSpecs) {
+            return bigqueryDateShardedSpecs(List.of(bigqueryDateShardedSpecs));
+        }
         public Builder bigqueryTableSpecs(@Nullable Output<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs) {
             this.bigqueryTableSpecs = bigqueryTableSpecs;
             return this;
         }
-
         public Builder bigqueryTableSpecs(@Nullable List<EntryBigqueryTableSpecGetArgs> bigqueryTableSpecs) {
             this.bigqueryTableSpecs = Output.ofNullable(bigqueryTableSpecs);
             return this;
         }
-
+        public Builder bigqueryTableSpecs(EntryBigqueryTableSpecGetArgs... bigqueryTableSpecs) {
+            return bigqueryTableSpecs(List.of(bigqueryTableSpecs));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder entryGroup(@Nullable Output<String> entryGroup) {
             this.entryGroup = entryGroup;
             return this;
         }
-
         public Builder entryGroup(@Nullable String entryGroup) {
             this.entryGroup = Output.ofNullable(entryGroup);
             return this;
         }
-
         public Builder entryId(@Nullable Output<String> entryId) {
             this.entryId = entryId;
             return this;
         }
-
         public Builder entryId(@Nullable String entryId) {
             this.entryId = Output.ofNullable(entryId);
             return this;
         }
-
         public Builder gcsFilesetSpec(@Nullable Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec) {
             this.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
-
         public Builder gcsFilesetSpec(@Nullable EntryGcsFilesetSpecGetArgs gcsFilesetSpec) {
             this.gcsFilesetSpec = Output.ofNullable(gcsFilesetSpec);
             return this;
         }
-
         public Builder integratedSystem(@Nullable Output<String> integratedSystem) {
             this.integratedSystem = integratedSystem;
             return this;
         }
-
         public Builder integratedSystem(@Nullable String integratedSystem) {
             this.integratedSystem = Output.ofNullable(integratedSystem);
             return this;
         }
-
         public Builder linkedResource(@Nullable Output<String> linkedResource) {
             this.linkedResource = linkedResource;
             return this;
         }
-
         public Builder linkedResource(@Nullable String linkedResource) {
             this.linkedResource = Output.ofNullable(linkedResource);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
             this.userSpecifiedSystem = userSpecifiedSystem;
             return this;
         }
-
         public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
             this.userSpecifiedSystem = Output.ofNullable(userSpecifiedSystem);
             return this;
         }
-
         public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
             this.userSpecifiedType = userSpecifiedType;
             return this;
         }
-
         public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
             this.userSpecifiedType = Output.ofNullable(userSpecifiedType);
             return this;
-        }
-        public EntryState build() {
+        }        public EntryState build() {
             return new EntryState(bigqueryDateShardedSpecs, bigqueryTableSpecs, description, displayName, entryGroup, entryId, gcsFilesetSpec, integratedSystem, linkedResource, name, schema, type, userSpecifiedSystem, userSpecifiedType);
         }
     }

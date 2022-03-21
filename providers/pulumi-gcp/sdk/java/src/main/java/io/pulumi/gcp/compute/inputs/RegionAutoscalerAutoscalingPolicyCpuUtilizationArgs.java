@@ -79,22 +79,18 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs extends i
             this.predictiveMethod = predictiveMethod;
             return this;
         }
-
         public Builder predictiveMethod(@Nullable String predictiveMethod) {
             this.predictiveMethod = Output.ofNullable(predictiveMethod);
             return this;
         }
-
         public Builder target(Output<Double> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(Double target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs build() {
+        }        public RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs build() {
             return new RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs(predictiveMethod, target);
         }
     }

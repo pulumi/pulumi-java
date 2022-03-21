@@ -78,22 +78,21 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
             this.projectMaps = projectMaps;
             return this;
         }
-
         public Builder projectMaps(@Nullable List<ReservationShareSettingsProjectMapArgs> projectMaps) {
             this.projectMaps = Output.ofNullable(projectMaps);
             return this;
         }
-
+        public Builder projectMaps(ReservationShareSettingsProjectMapArgs... projectMaps) {
+            return projectMaps(List.of(projectMaps));
+        }
         public Builder shareType(@Nullable Output<String> shareType) {
             this.shareType = shareType;
             return this;
         }
-
         public Builder shareType(@Nullable String shareType) {
             this.shareType = Output.ofNullable(shareType);
             return this;
-        }
-        public ReservationShareSettingsArgs build() {
+        }        public ReservationShareSettingsArgs build() {
             return new ReservationShareSettingsArgs(projectMaps, shareType);
         }
     }

@@ -237,102 +237,85 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
-
         public Builder autodetect(Boolean autodetect) {
             this.autodetect = Output.of(Objects.requireNonNull(autodetect));
             return this;
         }
-
         public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder csvOptions(@Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
-
         public Builder csvOptions(@Nullable TableExternalDataConfigurationCsvOptionsArgs csvOptions) {
             this.csvOptions = Output.ofNullable(csvOptions);
             return this;
         }
-
         public Builder googleSheetsOptions(@Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
-
         public Builder googleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptionsArgs googleSheetsOptions) {
             this.googleSheetsOptions = Output.ofNullable(googleSheetsOptions);
             return this;
         }
-
         public Builder hivePartitioningOptions(@Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
-
         public Builder hivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptionsArgs hivePartitioningOptions) {
             this.hivePartitioningOptions = Output.ofNullable(hivePartitioningOptions);
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Output.ofNullable(ignoreUnknownValues);
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = Output.ofNullable(maxBadRecords);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder sourceFormat(Output<String> sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
-
         public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Output.of(Objects.requireNonNull(sourceFormat));
             return this;
         }
-
         public Builder sourceUris(Output<List<String>> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
         public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Output.of(Objects.requireNonNull(sourceUris));
             return this;
         }
-        public TableExternalDataConfigurationArgs build() {
+        public Builder sourceUris(String... sourceUris) {
+            return sourceUris(List.of(sourceUris));
+        }        public TableExternalDataConfigurationArgs build() {
             return new TableExternalDataConfigurationArgs(autodetect, compression, csvOptions, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, schema, sourceFormat, sourceUris);
         }
     }

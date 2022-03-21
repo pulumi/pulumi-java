@@ -75,22 +75,18 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
             this.isLocked = isLocked;
             return this;
         }
-
         public Builder isLocked(@Nullable Boolean isLocked) {
             this.isLocked = Output.ofNullable(isLocked);
             return this;
         }
-
         public Builder retentionPeriod(Output<Integer> retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
-
         public Builder retentionPeriod(Integer retentionPeriod) {
             this.retentionPeriod = Output.of(Objects.requireNonNull(retentionPeriod));
             return this;
-        }
-        public BucketRetentionPolicyArgs build() {
+        }        public BucketRetentionPolicyArgs build() {
             return new BucketRetentionPolicyArgs(isLocked, retentionPeriod);
         }
     }

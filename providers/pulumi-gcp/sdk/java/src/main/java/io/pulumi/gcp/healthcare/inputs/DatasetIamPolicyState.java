@@ -94,32 +94,26 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public DatasetIamPolicyState build() {
+        }        public DatasetIamPolicyState build() {
             return new DatasetIamPolicyState(datasetId, etag, policyData);
         }
     }

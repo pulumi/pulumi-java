@@ -73,12 +73,10 @@ public final class BucketLogging {
             this.logBucket = Objects.requireNonNull(logBucket);
             return this;
         }
-
         public Builder logObjectPrefix(@Nullable String logObjectPrefix) {
             this.logObjectPrefix = logObjectPrefix;
             return this;
-        }
-        public BucketLogging build() {
+        }        public BucketLogging build() {
             return new BucketLogging(logBucket, logObjectPrefix);
         }
     }

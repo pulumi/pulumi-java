@@ -77,12 +77,10 @@ public final class ServicePerimeterStatusIngressPolicyIngressToOperationMethodSe
             this.method = method;
             return this;
         }
-
         public Builder permission(@Nullable String permission) {
             this.permission = permission;
             return this;
-        }
-        public ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector build() {
+        }        public ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector build() {
             return new ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector(method, permission);
         }
     }

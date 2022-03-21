@@ -66,22 +66,18 @@ public final class InstanceFromMachineImageGuestAcceleratorGetArgs extends io.pu
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public InstanceFromMachineImageGuestAcceleratorGetArgs build() {
+        }        public InstanceFromMachineImageGuestAcceleratorGetArgs build() {
             return new InstanceFromMachineImageGuestAcceleratorGetArgs(count, type);
         }
     }

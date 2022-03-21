@@ -74,12 +74,10 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
             this.disabled = disabled;
             return this;
         }
-
         public Builder monitoringInterval(@Nullable String monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
-        }
-        public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis build() {
+        }        public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis(disabled, monitoringInterval);
         }
     }

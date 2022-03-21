@@ -73,22 +73,24 @@ public final class GetClusterClusterAutoscaling {
             this.autoProvisioningDefaults = Objects.requireNonNull(autoProvisioningDefaults);
             return this;
         }
-
+        public Builder autoProvisioningDefaults(GetClusterClusterAutoscalingAutoProvisioningDefault... autoProvisioningDefaults) {
+            return autoProvisioningDefaults(List.of(autoProvisioningDefaults));
+        }
         public Builder autoscalingProfile(String autoscalingProfile) {
             this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder resourceLimits(List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }
-        public GetClusterClusterAutoscaling build() {
+        public Builder resourceLimits(GetClusterClusterAutoscalingResourceLimit... resourceLimits) {
+            return resourceLimits(List.of(resourceLimits));
+        }        public GetClusterClusterAutoscaling build() {
             return new GetClusterClusterAutoscaling(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }
     }

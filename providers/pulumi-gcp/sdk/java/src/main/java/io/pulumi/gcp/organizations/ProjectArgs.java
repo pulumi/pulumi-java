@@ -189,82 +189,66 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.autoCreateNetwork = autoCreateNetwork;
             return this;
         }
-
         public Builder autoCreateNetwork(@Nullable Boolean autoCreateNetwork) {
             this.autoCreateNetwork = Output.ofNullable(autoCreateNetwork);
             return this;
         }
-
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
-
         public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
-
         public Builder folderId(@Nullable Output<String> folderId) {
             this.folderId = folderId;
             return this;
         }
-
         public Builder folderId(@Nullable String folderId) {
             this.folderId = Output.ofNullable(folderId);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
-
         public Builder orgId(@Nullable String orgId) {
             this.orgId = Output.ofNullable(orgId);
             return this;
         }
-
         public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public Builder skipDelete(@Nullable Output<Boolean> skipDelete) {
             this.skipDelete = skipDelete;
             return this;
         }
-
         public Builder skipDelete(@Nullable Boolean skipDelete) {
             this.skipDelete = Output.ofNullable(skipDelete);
             return this;
-        }
-        public ProjectArgs build() {
+        }        public ProjectArgs build() {
             return new ProjectArgs(autoCreateNetwork, billingAccount, folderId, labels, name, orgId, projectId, skipDelete);
         }
     }

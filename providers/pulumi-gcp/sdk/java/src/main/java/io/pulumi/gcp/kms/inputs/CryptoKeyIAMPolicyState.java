@@ -94,32 +94,26 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
             this.cryptoKeyId = cryptoKeyId;
             return this;
         }
-
         public Builder cryptoKeyId(@Nullable String cryptoKeyId) {
             this.cryptoKeyId = Output.ofNullable(cryptoKeyId);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public CryptoKeyIAMPolicyState build() {
+        }        public CryptoKeyIAMPolicyState build() {
             return new CryptoKeyIAMPolicyState(cryptoKeyId, etag, policyData);
         }
     }

@@ -214,37 +214,33 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
             this.corsPolicy = corsPolicy;
             return this;
         }
-
         public Builder faultInjectionPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
-
         public Builder requestMirrorPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder timeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder urlRewrite(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
-
         public Builder weightedBackendServices(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-        public RegionUrlMapPathMatcherRouteRuleRouteAction build() {
+        public Builder weightedBackendServices(RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService... weightedBackendServices) {
+            return weightedBackendServices(List.of(weightedBackendServices));
+        }        public RegionUrlMapPathMatcherRouteRuleRouteAction build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteAction(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }
     }

@@ -91,17 +91,14 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
-
         public Builder objectId(AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AuthorityConfigX509ConfigAdditionalExtension build() {
+        }        public AuthorityConfigX509ConfigAdditionalExtension build() {
             return new AuthorityConfigX509ConfigAdditionalExtension(critical, objectId, value);
         }
     }

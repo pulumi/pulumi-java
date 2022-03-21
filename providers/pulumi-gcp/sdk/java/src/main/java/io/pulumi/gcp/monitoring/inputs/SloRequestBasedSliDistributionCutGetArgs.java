@@ -83,22 +83,18 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends io.pulumi.re
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
-
         public Builder distributionFilter(String distributionFilter) {
             this.distributionFilter = Output.of(Objects.requireNonNull(distributionFilter));
             return this;
         }
-
         public Builder range(Output<SloRequestBasedSliDistributionCutRangeGetArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public Builder range(SloRequestBasedSliDistributionCutRangeGetArgs range) {
             this.range = Output.of(Objects.requireNonNull(range));
             return this;
-        }
-        public SloRequestBasedSliDistributionCutGetArgs build() {
+        }        public SloRequestBasedSliDistributionCutGetArgs build() {
             return new SloRequestBasedSliDistributionCutGetArgs(distributionFilter, range);
         }
     }

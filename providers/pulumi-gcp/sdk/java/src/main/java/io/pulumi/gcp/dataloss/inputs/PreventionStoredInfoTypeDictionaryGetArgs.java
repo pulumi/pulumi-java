@@ -77,22 +77,18 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
-
         public Builder cloudStoragePath(@Nullable PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
             this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
             return this;
         }
-
         public Builder wordList(@Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
-
         public Builder wordList(@Nullable PreventionStoredInfoTypeDictionaryWordListGetArgs wordList) {
             this.wordList = Output.ofNullable(wordList);
             return this;
-        }
-        public PreventionStoredInfoTypeDictionaryGetArgs build() {
+        }        public PreventionStoredInfoTypeDictionaryGetArgs build() {
             return new PreventionStoredInfoTypeDictionaryGetArgs(cloudStoragePath, wordList);
         }
     }

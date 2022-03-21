@@ -153,37 +153,30 @@ public final class AutoscalerAutoscalingPolicyScalingSchedule {
             this.description = description;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder durationSec(Integer durationSec) {
             this.durationSec = Objects.requireNonNull(durationSec);
             return this;
         }
-
         public Builder minRequiredReplicas(Integer minRequiredReplicas) {
             this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public AutoscalerAutoscalingPolicyScalingSchedule build() {
+        }        public AutoscalerAutoscalingPolicyScalingSchedule build() {
             return new AutoscalerAutoscalingPolicyScalingSchedule(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);
         }
     }

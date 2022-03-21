@@ -75,22 +75,18 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
-
         public Builder coreCount(Integer coreCount) {
             this.coreCount = Output.of(Objects.requireNonNull(coreCount));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public InstanceAcceleratorConfigArgs build() {
+        }        public InstanceAcceleratorConfigArgs build() {
             return new InstanceAcceleratorConfigArgs(coreCount, type);
         }
     }

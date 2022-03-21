@@ -61,17 +61,14 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder memoryGb(Double memoryGb) {
             this.memoryGb = Objects.requireNonNull(memoryGb);
             return this;
         }
-
         public Builder storageGb(Double storageGb) {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
-        }
-        public GetEnvironmentConfigWorkloadsConfigWebServer build() {
+        }        public GetEnvironmentConfigWorkloadsConfigWebServer build() {
             return new GetEnvironmentConfigWorkloadsConfigWebServer(cpu, memoryGb, storageGb);
         }
     }

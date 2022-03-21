@@ -122,32 +122,32 @@ public final class CertificateCertificateDescriptionSubjectDescription {
             this.hexSerialNumber = hexSerialNumber;
             return this;
         }
-
         public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = lifetime;
             return this;
         }
-
         public Builder notAfterTime(@Nullable String notAfterTime) {
             this.notAfterTime = notAfterTime;
             return this;
         }
-
         public Builder notBeforeTime(@Nullable String notBeforeTime) {
             this.notBeforeTime = notBeforeTime;
             return this;
         }
-
         public Builder subjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
-
+        public Builder subjectAltNames(CertificateCertificateDescriptionSubjectDescriptionSubjectAltName... subjectAltNames) {
+            return subjectAltNames(List.of(subjectAltNames));
+        }
         public Builder subjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
             this.subjects = subjects;
             return this;
         }
-        public CertificateCertificateDescriptionSubjectDescription build() {
+        public Builder subjects(CertificateCertificateDescriptionSubjectDescriptionSubject... subjects) {
+            return subjects(List.of(subjects));
+        }        public CertificateCertificateDescriptionSubjectDescription build() {
             return new CertificateCertificateDescriptionSubjectDescription(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subjectAltNames, subjects);
         }
     }

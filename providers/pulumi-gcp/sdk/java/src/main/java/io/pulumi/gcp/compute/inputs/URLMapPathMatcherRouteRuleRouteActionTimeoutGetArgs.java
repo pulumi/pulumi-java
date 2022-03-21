@@ -77,22 +77,18 @@ public final class URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs extends i
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(Output<String> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs build() {
+        }        public URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionTimeoutGetArgs(nanos, seconds);
         }
     }

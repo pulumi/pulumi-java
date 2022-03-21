@@ -91,17 +91,14 @@ public final class TriggerBuildSourceStorageSource {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(@Nullable String generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public TriggerBuildSourceStorageSource build() {
+        }        public TriggerBuildSourceStorageSource build() {
             return new TriggerBuildSourceStorageSource(bucket, generation, object);
         }
     }

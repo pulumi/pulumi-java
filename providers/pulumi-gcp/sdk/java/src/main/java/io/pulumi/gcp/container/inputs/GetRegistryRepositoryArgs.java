@@ -66,12 +66,10 @@ public final class GetRegistryRepositoryArgs extends io.pulumi.resources.InvokeA
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetRegistryRepositoryArgs build() {
+        }        public GetRegistryRepositoryArgs build() {
             return new GetRegistryRepositoryArgs(project, region);
         }
     }

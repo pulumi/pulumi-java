@@ -93,32 +93,26 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public ApplicationUrlDispatchRulesDispatchRuleArgs build() {
+        }        public ApplicationUrlDispatchRulesDispatchRuleArgs build() {
             return new ApplicationUrlDispatchRulesDispatchRuleArgs(domain, path, service);
         }
     }

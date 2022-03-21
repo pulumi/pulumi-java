@@ -130,22 +130,21 @@ public final class URLMapPathMatcherPathRule {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder routeAction(@Nullable URLMapPathMatcherPathRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
-
         public Builder urlRedirect(@Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
-        }
-        public URLMapPathMatcherPathRule build() {
+        }        public URLMapPathMatcherPathRule build() {
             return new URLMapPathMatcherPathRule(paths, routeAction, service, urlRedirect);
         }
     }

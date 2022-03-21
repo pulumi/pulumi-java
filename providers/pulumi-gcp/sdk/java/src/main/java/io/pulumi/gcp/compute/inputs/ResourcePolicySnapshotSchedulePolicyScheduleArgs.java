@@ -95,32 +95,26 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
             this.dailySchedule = dailySchedule;
             return this;
         }
-
         public Builder dailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs dailySchedule) {
             this.dailySchedule = Output.ofNullable(dailySchedule);
             return this;
         }
-
         public Builder hourlySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
-
         public Builder hourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs hourlySchedule) {
             this.hourlySchedule = Output.ofNullable(hourlySchedule);
             return this;
         }
-
         public Builder weeklySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public Builder weeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs weeklySchedule) {
             this.weeklySchedule = Output.ofNullable(weeklySchedule);
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {
+        }        public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleArgs(dailySchedule, hourlySchedule, weeklySchedule);
         }
     }

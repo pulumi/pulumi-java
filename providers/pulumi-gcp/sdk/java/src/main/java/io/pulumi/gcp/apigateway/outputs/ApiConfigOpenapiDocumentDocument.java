@@ -69,12 +69,10 @@ public final class ApiConfigOpenapiDocumentDocument {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public ApiConfigOpenapiDocumentDocument build() {
+        }        public ApiConfigOpenapiDocumentDocument build() {
             return new ApiConfigOpenapiDocumentDocument(contents, path);
         }
     }

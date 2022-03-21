@@ -83,12 +83,10 @@ public final class GameServerConfigFleetConfig {
             this.fleetSpec = Objects.requireNonNull(fleetSpec);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GameServerConfigFleetConfig build() {
+        }        public GameServerConfigFleetConfig build() {
             return new GameServerConfigFleetConfig(fleetSpec, name);
         }
     }

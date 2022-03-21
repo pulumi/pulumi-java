@@ -177,72 +177,58 @@ public final class DomainMappingMetadataArgs extends io.pulumi.resources.Resourc
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public DomainMappingMetadataArgs build() {
+        }        public DomainMappingMetadataArgs build() {
             return new DomainMappingMetadataArgs(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }
     }

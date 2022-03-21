@@ -110,42 +110,37 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Integer cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder diskGb(@Nullable Output<Integer> diskGb) {
             this.diskGb = diskGb;
             return this;
         }
-
         public Builder diskGb(@Nullable Integer diskGb) {
             this.diskGb = Output.ofNullable(diskGb);
             return this;
         }
-
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<FlexibleAppVersionResourcesVolumeGetArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public FlexibleAppVersionResourcesGetArgs build() {
+        public Builder volumes(FlexibleAppVersionResourcesVolumeGetArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public FlexibleAppVersionResourcesGetArgs build() {
             return new FlexibleAppVersionResourcesGetArgs(cpu, diskGb, memoryGb, volumes);
         }
     }

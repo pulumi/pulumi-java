@@ -113,42 +113,34 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
             this.apt = apt;
             return this;
         }
-
         public Builder apt(@Nullable GuestPoliciesPackageRepositoryAptGetArgs apt) {
             this.apt = Output.ofNullable(apt);
             return this;
         }
-
         public Builder goo(@Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder goo(@Nullable GuestPoliciesPackageRepositoryGooGetArgs goo) {
             this.goo = Output.ofNullable(goo);
             return this;
         }
-
         public Builder yum(@Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder yum(@Nullable GuestPoliciesPackageRepositoryYumGetArgs yum) {
             this.yum = Output.ofNullable(yum);
             return this;
         }
-
         public Builder zypper(@Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
-
         public Builder zypper(@Nullable GuestPoliciesPackageRepositoryZypperGetArgs zypper) {
             this.zypper = Output.ofNullable(zypper);
             return this;
-        }
-        public GuestPoliciesPackageRepositoryGetArgs build() {
+        }        public GuestPoliciesPackageRepositoryGetArgs build() {
             return new GuestPoliciesPackageRepositoryGetArgs(apt, goo, yum, zypper);
         }
     }

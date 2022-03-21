@@ -113,42 +113,34 @@ public final class TriggerGithubGetArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder pullRequest(@Nullable Output<TriggerGithubPullRequestGetArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
-
         public Builder pullRequest(@Nullable TriggerGithubPullRequestGetArgs pullRequest) {
             this.pullRequest = Output.ofNullable(pullRequest);
             return this;
         }
-
         public Builder push(@Nullable Output<TriggerGithubPushGetArgs> push) {
             this.push = push;
             return this;
         }
-
         public Builder push(@Nullable TriggerGithubPushGetArgs push) {
             this.push = Output.ofNullable(push);
             return this;
-        }
-        public TriggerGithubGetArgs build() {
+        }        public TriggerGithubGetArgs build() {
             return new TriggerGithubGetArgs(name, owner, pullRequest, push);
         }
     }

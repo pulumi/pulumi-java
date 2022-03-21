@@ -78,32 +78,26 @@ public final class DomainMappingResourceRecordGetArgs extends io.pulumi.resource
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rrdata(@Nullable Output<String> rrdata) {
             this.rrdata = rrdata;
             return this;
         }
-
         public Builder rrdata(@Nullable String rrdata) {
             this.rrdata = Output.ofNullable(rrdata);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DomainMappingResourceRecordGetArgs build() {
+        }        public DomainMappingResourceRecordGetArgs build() {
             return new DomainMappingResourceRecordGetArgs(name, rrdata, type);
         }
     }

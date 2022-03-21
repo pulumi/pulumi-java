@@ -76,22 +76,18 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs extend
             this.localObjectReference = localObjectReference;
             return this;
         }
-
         public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs localObjectReference) {
             this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
-
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs build() {
+        }        public ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs build() {
             return new ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs(localObjectReference, optional);
         }
     }

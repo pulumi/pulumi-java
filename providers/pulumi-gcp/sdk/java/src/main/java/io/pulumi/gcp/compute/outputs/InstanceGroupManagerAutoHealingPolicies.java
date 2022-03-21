@@ -72,12 +72,10 @@ public final class InstanceGroupManagerAutoHealingPolicies {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
-        }
-        public InstanceGroupManagerAutoHealingPolicies build() {
+        }        public InstanceGroupManagerAutoHealingPolicies build() {
             return new InstanceGroupManagerAutoHealingPolicies(healthCheck, initialDelaySec);
         }
     }

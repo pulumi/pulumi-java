@@ -74,22 +74,18 @@ public final class InstanceGroupNamedPortGetArgs extends io.pulumi.resources.Res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public InstanceGroupNamedPortGetArgs build() {
+        }        public InstanceGroupNamedPortGetArgs build() {
             return new InstanceGroupNamedPortGetArgs(name, port);
         }
     }

@@ -53,8 +53,7 @@ public final class FeatureMembershipConfigmanagementBinauthz {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public FeatureMembershipConfigmanagementBinauthz build() {
+        }        public FeatureMembershipConfigmanagementBinauthz build() {
             return new FeatureMembershipConfigmanagementBinauthz(enabled);
         }
     }

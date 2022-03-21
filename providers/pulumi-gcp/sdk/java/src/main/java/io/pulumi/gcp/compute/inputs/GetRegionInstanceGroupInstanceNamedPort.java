@@ -73,12 +73,10 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends io.pulumi.res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public GetRegionInstanceGroupInstanceNamedPort build() {
+        }        public GetRegionInstanceGroupInstanceNamedPort build() {
             return new GetRegionInstanceGroupInstanceNamedPort(name, port);
         }
     }

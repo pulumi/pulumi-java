@@ -75,22 +75,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
             this.enforce = enforce;
             return this;
         }
-
         public Builder enforce(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs enforce) {
             this.enforce = Output.ofNullable(enforce);
             return this;
         }
-
         public Builder validate(Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate) {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
-
         public Builder validate(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs validate) {
             this.validate = Output.of(Objects.requireNonNull(validate));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs(enforce, validate);
         }
     }

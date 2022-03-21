@@ -157,32 +157,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
             this.fullPathMatch = fullPathMatch;
             return this;
         }
-
         public Builder headerMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches) {
             this.headerMatches = headerMatches;
             return this;
         }
-
+        public Builder headerMatches(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch... headerMatches) {
+            return headerMatches(List.of(headerMatches));
+        }
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
-
         public Builder pathTemplateMatch(@Nullable String pathTemplateMatch) {
             this.pathTemplateMatch = pathTemplateMatch;
             return this;
         }
-
         public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder queryParameterMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule build() {
+        public Builder queryParameterMatches(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch... queryParameterMatches) {
+            return queryParameterMatches(List.of(queryParameterMatches));
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, pathTemplateMatch, prefixMatch, queryParameterMatches);
         }
     }

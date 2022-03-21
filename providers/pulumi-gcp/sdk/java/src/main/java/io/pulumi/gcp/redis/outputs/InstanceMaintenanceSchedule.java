@@ -107,17 +107,14 @@ public final class InstanceMaintenanceSchedule {
             this.endTime = endTime;
             return this;
         }
-
         public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public InstanceMaintenanceSchedule build() {
+        }        public InstanceMaintenanceSchedule build() {
             return new InstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
         }
     }

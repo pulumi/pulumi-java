@@ -76,22 +76,18 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder field(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs field) {
             this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
-
         public Builder table(Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder table(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs table) {
             this.table = Output.of(Objects.requireNonNull(table));
             return this;
-        }
-        public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs build() {
+        }        public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs(field, table);
         }
     }

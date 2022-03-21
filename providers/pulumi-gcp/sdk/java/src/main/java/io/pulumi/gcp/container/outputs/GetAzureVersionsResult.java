@@ -104,27 +104,28 @@ public final class GetAzureVersionsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder supportedRegions(List<String> supportedRegions) {
             this.supportedRegions = Objects.requireNonNull(supportedRegions);
             return this;
         }
-
+        public Builder supportedRegions(String... supportedRegions) {
+            return supportedRegions(List.of(supportedRegions));
+        }
         public Builder validVersions(List<String> validVersions) {
             this.validVersions = Objects.requireNonNull(validVersions);
             return this;
         }
-        public GetAzureVersionsResult build() {
+        public Builder validVersions(String... validVersions) {
+            return validVersions(List.of(validVersions));
+        }        public GetAzureVersionsResult build() {
             return new GetAzureVersionsResult(id, location, project, supportedRegions, validVersions);
         }
     }

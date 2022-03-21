@@ -70,22 +70,18 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
             this.deployedUrl = deployedUrl;
             return this;
         }
-
         public Builder deployedUrl(@Nullable String deployedUrl) {
             this.deployedUrl = Output.ofNullable(deployedUrl);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public FunctionSourceRepositoryGetArgs build() {
+        }        public FunctionSourceRepositoryGetArgs build() {
             return new FunctionSourceRepositoryGetArgs(deployedUrl, url);
         }
     }

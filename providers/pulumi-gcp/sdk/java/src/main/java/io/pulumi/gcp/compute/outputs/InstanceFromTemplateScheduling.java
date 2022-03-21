@@ -83,27 +83,25 @@ public final class InstanceFromTemplateScheduling {
             this.automaticRestart = automaticRestart;
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
-
         public Builder nodeAffinities(@Nullable List<InstanceFromTemplateSchedulingNodeAffinity> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
-
+        public Builder nodeAffinities(InstanceFromTemplateSchedulingNodeAffinity... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
-
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
-        }
-        public InstanceFromTemplateScheduling build() {
+        }        public InstanceFromTemplateScheduling build() {
             return new InstanceFromTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }
     }

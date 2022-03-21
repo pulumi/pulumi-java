@@ -138,52 +138,45 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dataset(String dataset) {
             this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable DicomStoreNotificationConfigArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
-
         public Builder streamConfigs(@Nullable List<DicomStoreStreamConfigArgs> streamConfigs) {
             this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
-        public DicomStoreArgs build() {
+        public Builder streamConfigs(DicomStoreStreamConfigArgs... streamConfigs) {
+            return streamConfigs(List.of(streamConfigs));
+        }        public DicomStoreArgs build() {
             return new DicomStoreArgs(dataset, labels, name, notificationConfig, streamConfigs);
         }
     }

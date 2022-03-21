@@ -56,12 +56,10 @@ public final class PatchDeploymentPatchConfigGooArgs extends io.pulumi.resources
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public PatchDeploymentPatchConfigGooArgs build() {
+        }        public PatchDeploymentPatchConfigGooArgs build() {
             return new PatchDeploymentPatchConfigGooArgs(enabled);
         }
     }

@@ -361,182 +361,155 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
             this.autoscaling = autoscaling;
             return this;
         }
-
         public Builder autoscaling(@Nullable NodePoolAutoscalingGetArgs autoscaling) {
             this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
-
         public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
-
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
             this.initialNodeCount = Output.ofNullable(initialNodeCount);
             return this;
         }
-
         public Builder instanceGroupUrls(@Nullable Output<List<String>> instanceGroupUrls) {
             this.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
-
         public Builder instanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
             this.instanceGroupUrls = Output.ofNullable(instanceGroupUrls);
             return this;
         }
-
+        public Builder instanceGroupUrls(String... instanceGroupUrls) {
+            return instanceGroupUrls(List.of(instanceGroupUrls));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedInstanceGroupUrls(@Nullable Output<List<String>> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = managedInstanceGroupUrls;
             return this;
         }
-
         public Builder managedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = Output.ofNullable(managedInstanceGroupUrls);
             return this;
         }
-
+        public Builder managedInstanceGroupUrls(String... managedInstanceGroupUrls) {
+            return managedInstanceGroupUrls(List.of(managedInstanceGroupUrls));
+        }
         public Builder management(@Nullable Output<NodePoolManagementGetArgs> management) {
             this.management = management;
             return this;
         }
-
         public Builder management(@Nullable NodePoolManagementGetArgs management) {
             this.management = Output.ofNullable(management);
             return this;
         }
-
         public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
-
         public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = Output.ofNullable(maxPodsPerNode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<NodePoolNetworkConfigGetArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable NodePoolNetworkConfigGetArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder nodeConfig(@Nullable Output<NodePoolNodeConfigGetArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
-
         public Builder nodeConfig(@Nullable NodePoolNodeConfigGetArgs nodeConfig) {
             this.nodeConfig = Output.ofNullable(nodeConfig);
             return this;
         }
-
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
-
         public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
             this.nodeLocations = nodeLocations;
             return this;
         }
-
         public Builder nodeLocations(@Nullable List<String> nodeLocations) {
             this.nodeLocations = Output.ofNullable(nodeLocations);
             return this;
         }
-
+        public Builder nodeLocations(String... nodeLocations) {
+            return nodeLocations(List.of(nodeLocations));
+        }
         public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = Output.ofNullable(operation);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder upgradeSettings(@Nullable Output<NodePoolUpgradeSettingsGetArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
-
         public Builder upgradeSettings(@Nullable NodePoolUpgradeSettingsGetArgs upgradeSettings) {
             this.upgradeSettings = Output.ofNullable(upgradeSettings);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public NodePoolState build() {
+        }        public NodePoolState build() {
             return new NodePoolState(autoscaling, cluster, initialNodeCount, instanceGroupUrls, location, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, operation, project, upgradeSettings, version);
         }
     }

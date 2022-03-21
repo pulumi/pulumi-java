@@ -119,52 +119,45 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
             this.attestor = Objects.requireNonNull(attestor);
             return this;
         }
-
         public Builder attestor(String attestor) {
             this.attestor = Output.of(Objects.requireNonNull(attestor));
             return this;
         }
-
         public Builder condition(@Nullable Output<AttestorIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable AttestorIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public AttestorIamBindingArgs build() {
+        }        public AttestorIamBindingArgs build() {
             return new AttestorIamBindingArgs(attestor, condition, members, project, role);
         }
     }

@@ -114,32 +114,26 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends io.p
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
-
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = Output.ofNullable(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
-
         public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
-
         public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
             this.idleTimeoutSec = Output.ofNullable(idleTimeoutSec);
             return this;
         }
-
         public Builder trackingMode(@Nullable Output<String> trackingMode) {
             this.trackingMode = trackingMode;
             return this;
         }
-
         public Builder trackingMode(@Nullable String trackingMode) {
             this.trackingMode = Output.ofNullable(trackingMode);
             return this;
-        }
-        public RegionBackendServiceConnectionTrackingPolicyArgs build() {
+        }        public RegionBackendServiceConnectionTrackingPolicyArgs build() {
             return new RegionBackendServiceConnectionTrackingPolicyArgs(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
         }
     }

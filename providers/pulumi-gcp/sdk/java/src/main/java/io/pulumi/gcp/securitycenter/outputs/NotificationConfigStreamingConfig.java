@@ -87,8 +87,7 @@ public final class NotificationConfigStreamingConfig {
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
-        }
-        public NotificationConfigStreamingConfig build() {
+        }        public NotificationConfigStreamingConfig build() {
             return new NotificationConfigStreamingConfig(filter);
         }
     }

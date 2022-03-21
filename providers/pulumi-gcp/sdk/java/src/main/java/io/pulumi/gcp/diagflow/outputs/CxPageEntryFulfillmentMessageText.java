@@ -75,12 +75,13 @@ public final class CxPageEntryFulfillmentMessageText {
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
-
         public Builder texts(@Nullable List<String> texts) {
             this.texts = texts;
             return this;
         }
-        public CxPageEntryFulfillmentMessageText build() {
+        public Builder texts(String... texts) {
+            return texts(List.of(texts));
+        }        public CxPageEntryFulfillmentMessageText build() {
             return new CxPageEntryFulfillmentMessageText(allowPlaybackInterruption, texts);
         }
     }

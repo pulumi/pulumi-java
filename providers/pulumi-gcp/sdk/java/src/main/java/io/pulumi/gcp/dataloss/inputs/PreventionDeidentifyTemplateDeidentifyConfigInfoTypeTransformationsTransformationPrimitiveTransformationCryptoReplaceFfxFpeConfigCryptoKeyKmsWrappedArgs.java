@@ -74,22 +74,18 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
             return this;
         }
-
         public Builder cryptoKeyName(String cryptoKeyName) {
             this.cryptoKeyName = Output.of(Objects.requireNonNull(cryptoKeyName));
             return this;
         }
-
         public Builder wrappedKey(Output<String> wrappedKey) {
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }
-
         public Builder wrappedKey(String wrappedKey) {
             this.wrappedKey = Output.of(Objects.requireNonNull(wrappedKey));
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs(cryptoKeyName, wrappedKey);
         }
     }

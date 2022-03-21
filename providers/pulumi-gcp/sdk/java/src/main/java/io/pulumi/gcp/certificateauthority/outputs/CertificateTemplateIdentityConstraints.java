@@ -88,17 +88,14 @@ public final class CertificateTemplateIdentityConstraints {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
-
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
-
         public Builder celExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
             this.celExpression = celExpression;
             return this;
-        }
-        public CertificateTemplateIdentityConstraints build() {
+        }        public CertificateTemplateIdentityConstraints build() {
             return new CertificateTemplateIdentityConstraints(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }
     }

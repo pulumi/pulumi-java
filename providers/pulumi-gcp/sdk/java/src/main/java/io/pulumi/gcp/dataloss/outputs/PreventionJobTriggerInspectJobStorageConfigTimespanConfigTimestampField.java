@@ -51,8 +51,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTime
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField build() {
             return new PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField(name);
         }
     }

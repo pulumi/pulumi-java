@@ -76,22 +76,18 @@ public final class JobHttpTargetOidcTokenArgs extends io.pulumi.resources.Resour
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
-        }
-        public JobHttpTargetOidcTokenArgs build() {
+        }        public JobHttpTargetOidcTokenArgs build() {
             return new JobHttpTargetOidcTokenArgs(audience, serviceAccountEmail);
         }
     }

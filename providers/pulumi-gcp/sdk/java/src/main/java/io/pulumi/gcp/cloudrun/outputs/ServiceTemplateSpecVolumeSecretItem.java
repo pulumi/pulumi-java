@@ -102,17 +102,14 @@ public final class ServiceTemplateSpecVolumeSecretItem {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public ServiceTemplateSpecVolumeSecretItem build() {
+        }        public ServiceTemplateSpecVolumeSecretItem build() {
             return new ServiceTemplateSpecVolumeSecretItem(key, mode, path);
         }
     }

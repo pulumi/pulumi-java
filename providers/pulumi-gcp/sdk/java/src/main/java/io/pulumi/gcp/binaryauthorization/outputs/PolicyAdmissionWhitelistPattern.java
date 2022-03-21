@@ -57,8 +57,7 @@ public final class PolicyAdmissionWhitelistPattern {
         public Builder namePattern(String namePattern) {
             this.namePattern = Objects.requireNonNull(namePattern);
             return this;
-        }
-        public PolicyAdmissionWhitelistPattern build() {
+        }        public PolicyAdmissionWhitelistPattern build() {
             return new PolicyAdmissionWhitelistPattern(namePattern);
         }
     }

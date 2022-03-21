@@ -65,12 +65,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule
             this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule build() {
+        }        public GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule build() {
             return new GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(hoursInCycle, startTime);
         }
     }

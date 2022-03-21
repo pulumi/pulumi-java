@@ -87,22 +87,21 @@ public final class GetImageVersionsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageVersions(List<GetImageVersionsImageVersion> imageVersions) {
             this.imageVersions = Objects.requireNonNull(imageVersions);
             return this;
         }
-
+        public Builder imageVersions(GetImageVersionsImageVersion... imageVersions) {
+            return imageVersions(List.of(imageVersions));
+        }
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetImageVersionsResult build() {
+        }        public GetImageVersionsResult build() {
             return new GetImageVersionsResult(id, imageVersions, project, region);
         }
     }

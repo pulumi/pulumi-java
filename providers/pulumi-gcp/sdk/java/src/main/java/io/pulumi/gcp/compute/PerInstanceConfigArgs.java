@@ -186,82 +186,66 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager);
             return this;
         }
-
         public Builder instanceGroupManager(String instanceGroupManager) {
             this.instanceGroupManager = Output.of(Objects.requireNonNull(instanceGroupManager));
             return this;
         }
-
         public Builder minimalAction(@Nullable Output<String> minimalAction) {
             this.minimalAction = minimalAction;
             return this;
         }
-
         public Builder minimalAction(@Nullable String minimalAction) {
             this.minimalAction = Output.ofNullable(minimalAction);
             return this;
         }
-
         public Builder mostDisruptiveAllowedAction(@Nullable Output<String> mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
-
         public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Output.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder preservedState(@Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState) {
             this.preservedState = preservedState;
             return this;
         }
-
         public Builder preservedState(@Nullable PerInstanceConfigPreservedStateArgs preservedState) {
             this.preservedState = Output.ofNullable(preservedState);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder removeInstanceStateOnDestroy(@Nullable Output<Boolean> removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
-
         public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = Output.ofNullable(removeInstanceStateOnDestroy);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public PerInstanceConfigArgs build() {
+        }        public PerInstanceConfigArgs build() {
             return new PerInstanceConfigArgs(instanceGroupManager, minimalAction, mostDisruptiveAllowedAction, name, preservedState, project, removeInstanceStateOnDestroy, zone);
         }
     }

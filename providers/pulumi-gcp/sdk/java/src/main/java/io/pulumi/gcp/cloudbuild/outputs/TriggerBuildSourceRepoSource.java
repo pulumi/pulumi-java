@@ -195,42 +195,34 @@ public final class TriggerBuildSourceRepoSource {
             this.branchName = branchName;
             return this;
         }
-
         public Builder commitSha(@Nullable String commitSha) {
             this.commitSha = commitSha;
             return this;
         }
-
         public Builder dir(@Nullable String dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder repoName(String repoName) {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
-
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
-
         public Builder tagName(@Nullable String tagName) {
             this.tagName = tagName;
             return this;
-        }
-        public TriggerBuildSourceRepoSource build() {
+        }        public TriggerBuildSourceRepoSource build() {
             return new TriggerBuildSourceRepoSource(branchName, commitSha, dir, invertRegex, projectId, repoName, substitutions, tagName);
         }
     }

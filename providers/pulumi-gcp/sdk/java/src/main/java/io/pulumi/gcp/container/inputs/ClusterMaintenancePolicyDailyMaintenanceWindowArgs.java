@@ -66,22 +66,18 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowArgs extends io
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public ClusterMaintenancePolicyDailyMaintenanceWindowArgs build() {
+        }        public ClusterMaintenancePolicyDailyMaintenanceWindowArgs build() {
             return new ClusterMaintenancePolicyDailyMaintenanceWindowArgs(duration, startTime);
         }
     }

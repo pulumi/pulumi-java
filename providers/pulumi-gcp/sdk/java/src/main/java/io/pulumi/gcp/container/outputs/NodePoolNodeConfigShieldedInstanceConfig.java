@@ -55,12 +55,10 @@ public final class NodePoolNodeConfigShieldedInstanceConfig {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
-        }
-        public NodePoolNodeConfigShieldedInstanceConfig build() {
+        }        public NodePoolNodeConfigShieldedInstanceConfig build() {
             return new NodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

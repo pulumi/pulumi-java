@@ -74,22 +74,18 @@ public final class ClusterNodeConfigShieldedInstanceConfigGetArgs extends io.pul
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
             return this;
-        }
-        public ClusterNodeConfigShieldedInstanceConfigGetArgs build() {
+        }        public ClusterNodeConfigShieldedInstanceConfigGetArgs build() {
             return new ClusterNodeConfigShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

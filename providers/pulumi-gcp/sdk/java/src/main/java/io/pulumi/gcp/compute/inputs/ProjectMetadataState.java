@@ -76,22 +76,18 @@ public final class ProjectMetadataState extends io.pulumi.resources.ResourceArgs
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProjectMetadataState build() {
+        }        public ProjectMetadataState build() {
             return new ProjectMetadataState(metadata, project);
         }
     }

@@ -163,62 +163,62 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
             this.creditTypes = creditTypes;
             return this;
         }
-
         public Builder creditTypes(@Nullable List<String> creditTypes) {
             this.creditTypes = Output.ofNullable(creditTypes);
             return this;
         }
-
+        public Builder creditTypes(String... creditTypes) {
+            return creditTypes(List.of(creditTypes));
+        }
         public Builder creditTypesTreatment(@Nullable Output<String> creditTypesTreatment) {
             this.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
-
         public Builder creditTypesTreatment(@Nullable String creditTypesTreatment) {
             this.creditTypesTreatment = Output.ofNullable(creditTypesTreatment);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder projects(@Nullable Output<List<String>> projects) {
             this.projects = projects;
             return this;
         }
-
         public Builder projects(@Nullable List<String> projects) {
             this.projects = Output.ofNullable(projects);
             return this;
         }
-
+        public Builder projects(String... projects) {
+            return projects(List.of(projects));
+        }
         public Builder services(@Nullable Output<List<String>> services) {
             this.services = services;
             return this;
         }
-
         public Builder services(@Nullable List<String> services) {
             this.services = Output.ofNullable(services);
             return this;
         }
-
+        public Builder services(String... services) {
+            return services(List.of(services));
+        }
         public Builder subaccounts(@Nullable Output<List<String>> subaccounts) {
             this.subaccounts = subaccounts;
             return this;
         }
-
         public Builder subaccounts(@Nullable List<String> subaccounts) {
             this.subaccounts = Output.ofNullable(subaccounts);
             return this;
         }
-        public BudgetBudgetFilterGetArgs build() {
+        public Builder subaccounts(String... subaccounts) {
+            return subaccounts(List.of(subaccounts));
+        }        public BudgetBudgetFilterGetArgs build() {
             return new BudgetBudgetFilterGetArgs(creditTypes, creditTypesTreatment, labels, projects, services, subaccounts);
         }
     }

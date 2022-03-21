@@ -43,8 +43,7 @@ public final class GetIstioCanonicalServiceTelemetry {
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetIstioCanonicalServiceTelemetry build() {
+        }        public GetIstioCanonicalServiceTelemetry build() {
             return new GetIstioCanonicalServiceTelemetry(resourceName);
         }
     }

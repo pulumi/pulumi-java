@@ -50,8 +50,7 @@ public final class GetMeshIstioServiceTelemetry extends io.pulumi.resources.Invo
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetMeshIstioServiceTelemetry build() {
+        }        public GetMeshIstioServiceTelemetry build() {
             return new GetMeshIstioServiceTelemetry(resourceName);
         }
     }

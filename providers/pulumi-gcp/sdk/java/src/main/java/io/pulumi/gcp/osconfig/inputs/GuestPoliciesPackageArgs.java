@@ -105,32 +105,26 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
             this.desiredState = desiredState;
             return this;
         }
-
         public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = Output.ofNullable(desiredState);
             return this;
         }
-
         public Builder manager(@Nullable Output<String> manager) {
             this.manager = manager;
             return this;
         }
-
         public Builder manager(@Nullable String manager) {
             this.manager = Output.ofNullable(manager);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public GuestPoliciesPackageArgs build() {
+        }        public GuestPoliciesPackageArgs build() {
             return new GuestPoliciesPackageArgs(desiredState, manager, name);
         }
     }

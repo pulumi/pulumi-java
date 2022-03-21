@@ -75,12 +75,10 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetRegionsArgs build() {
+        }        public GetRegionsArgs build() {
             return new GetRegionsArgs(project, status);
         }
     }

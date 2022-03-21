@@ -178,37 +178,30 @@ public final class TriggerTriggerTemplate {
             this.branchName = branchName;
             return this;
         }
-
         public Builder commitSha(@Nullable String commitSha) {
             this.commitSha = commitSha;
             return this;
         }
-
         public Builder dir(@Nullable String dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder repoName(@Nullable String repoName) {
             this.repoName = repoName;
             return this;
         }
-
         public Builder tagName(@Nullable String tagName) {
             this.tagName = tagName;
             return this;
-        }
-        public TriggerTriggerTemplate build() {
+        }        public TriggerTriggerTemplate build() {
             return new TriggerTriggerTemplate(branchName, commitSha, dir, invertRegex, projectId, repoName, tagName);
         }
     }

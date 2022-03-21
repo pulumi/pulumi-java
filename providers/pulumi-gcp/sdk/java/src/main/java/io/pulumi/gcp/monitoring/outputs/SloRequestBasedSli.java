@@ -92,12 +92,10 @@ public final class SloRequestBasedSli {
             this.distributionCut = distributionCut;
             return this;
         }
-
         public Builder goodTotalRatio(@Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
-        }
-        public SloRequestBasedSli build() {
+        }        public SloRequestBasedSli build() {
             return new SloRequestBasedSli(distributionCut, goodTotalRatio);
         }
     }

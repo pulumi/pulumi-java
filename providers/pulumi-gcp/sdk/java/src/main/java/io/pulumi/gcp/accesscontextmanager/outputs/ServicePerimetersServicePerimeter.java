@@ -256,47 +256,38 @@ public final class ServicePerimetersServicePerimeter {
             this.createTime = createTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder perimeterType(@Nullable String perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
-
         public Builder spec(@Nullable ServicePerimetersServicePerimeterSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable ServicePerimetersServicePerimeterStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
-        }
-        public ServicePerimetersServicePerimeter build() {
+        }        public ServicePerimetersServicePerimeter build() {
             return new ServicePerimetersServicePerimeter(createTime, description, name, perimeterType, spec, status, title, updateTime, useExplicitDryRunSpec);
         }
     }

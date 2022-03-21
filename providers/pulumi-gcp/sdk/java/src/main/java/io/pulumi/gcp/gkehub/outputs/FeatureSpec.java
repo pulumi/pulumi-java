@@ -55,8 +55,7 @@ public final class FeatureSpec {
         public Builder multiclusteringress(@Nullable FeatureSpecMulticlusteringress multiclusteringress) {
             this.multiclusteringress = multiclusteringress;
             return this;
-        }
-        public FeatureSpec build() {
+        }        public FeatureSpec build() {
             return new FeatureSpec(multiclusteringress);
         }
     }

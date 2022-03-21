@@ -58,12 +58,13 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.objectIdPaths = objectIdPaths;
             return this;
         }
-
         public Builder objectIdPaths(@Nullable List<Integer> objectIdPaths) {
             this.objectIdPaths = Output.ofNullable(objectIdPaths);
             return this;
         }
-        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs(objectIdPaths);
         }
     }

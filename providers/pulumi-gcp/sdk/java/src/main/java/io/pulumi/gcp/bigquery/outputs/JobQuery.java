@@ -385,87 +385,76 @@ public final class JobQuery {
             this.allowLargeResults = allowLargeResults;
             return this;
         }
-
         public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder defaultDataset(@Nullable JobQueryDefaultDataset defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationTable(@Nullable JobQueryDestinationTable destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
-
         public Builder flattenResults(@Nullable Boolean flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
-
         public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
-
         public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
-
         public Builder parameterMode(@Nullable String parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
-
         public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
-
+        public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
+            return schemaUpdateOptions(List.of(schemaUpdateOptions));
+        }
         public Builder scriptOptions(@Nullable JobQueryScriptOptions scriptOptions) {
             this.scriptOptions = scriptOptions;
             return this;
         }
-
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
-
         public Builder useQueryCache(@Nullable Boolean useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
-
         public Builder userDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
-
+        public Builder userDefinedFunctionResources(JobQueryUserDefinedFunctionResource... userDefinedFunctionResources) {
+            return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
+        }
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
-        }
-        public JobQuery build() {
+        }        public JobQuery build() {
             return new JobQuery(allowLargeResults, createDisposition, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, schemaUpdateOptions, scriptOptions, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }
     }

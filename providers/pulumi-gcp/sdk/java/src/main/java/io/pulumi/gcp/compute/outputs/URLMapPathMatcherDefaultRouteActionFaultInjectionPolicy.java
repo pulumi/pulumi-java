@@ -76,12 +76,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
             this.abort = abort;
             return this;
         }
-
         public Builder delay(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay) {
             this.delay = delay;
             return this;
-        }
-        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy build() {
+        }        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy build() {
             return new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy(abort, delay);
         }
     }

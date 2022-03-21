@@ -181,82 +181,66 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskEncryptionKeyName(@Nullable Output<String> diskEncryptionKeyName) {
             this.diskEncryptionKeyName = diskEncryptionKeyName;
             return this;
         }
-
         public Builder diskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
             this.diskEncryptionKeyName = Output.ofNullable(diskEncryptionKeyName);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
-
         public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
-
         public Builder peeringCidrRange(@Nullable Output<String> peeringCidrRange) {
             this.peeringCidrRange = peeringCidrRange;
             return this;
         }
-
         public Builder peeringCidrRange(@Nullable String peeringCidrRange) {
             this.peeringCidrRange = Output.ofNullable(peeringCidrRange);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(description, diskEncryptionKeyName, displayName, ipRange, location, name, orgId, peeringCidrRange);
         }
     }

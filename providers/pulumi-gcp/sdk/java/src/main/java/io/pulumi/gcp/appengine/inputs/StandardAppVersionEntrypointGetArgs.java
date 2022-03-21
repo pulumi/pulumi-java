@@ -56,12 +56,10 @@ public final class StandardAppVersionEntrypointGetArgs extends io.pulumi.resourc
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public Builder shell(String shell) {
             this.shell = Output.of(Objects.requireNonNull(shell));
             return this;
-        }
-        public StandardAppVersionEntrypointGetArgs build() {
+        }        public StandardAppVersionEntrypointGetArgs build() {
             return new StandardAppVersionEntrypointGetArgs(shell);
         }
     }

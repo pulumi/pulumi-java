@@ -73,22 +73,18 @@ public final class InstanceNodeConfigGetArgs extends io.pulumi.resources.Resourc
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
-
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = Output.of(Objects.requireNonNull(cpuCount));
             return this;
         }
-
         public Builder memorySizeMb(Output<Integer> memorySizeMb) {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public Builder memorySizeMb(Integer memorySizeMb) {
             this.memorySizeMb = Output.of(Objects.requireNonNull(memorySizeMb));
             return this;
-        }
-        public InstanceNodeConfigGetArgs build() {
+        }        public InstanceNodeConfigGetArgs build() {
             return new InstanceNodeConfigGetArgs(cpuCount, memorySizeMb);
         }
     }

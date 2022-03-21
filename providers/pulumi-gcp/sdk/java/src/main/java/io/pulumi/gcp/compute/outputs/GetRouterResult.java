@@ -130,52 +130,45 @@ public final class GetRouterResult {
             this.bgps = Objects.requireNonNull(bgps);
             return this;
         }
-
+        public Builder bgps(GetRouterBgp... bgps) {
+            return bgps(List.of(bgps));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Objects.requireNonNull(encryptedInterconnectRouter);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetRouterResult build() {
+        }        public GetRouterResult build() {
             return new GetRouterResult(bgps, creationTimestamp, description, encryptedInterconnectRouter, id, name, network, project, region, selfLink);
         }
     }

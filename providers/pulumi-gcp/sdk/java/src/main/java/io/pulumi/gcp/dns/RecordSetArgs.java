@@ -145,62 +145,53 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
-
         public Builder managedZone(String managedZone) {
             this.managedZone = Output.of(Objects.requireNonNull(managedZone));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rrdatas(Output<List<String>> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
-
         public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Output.of(Objects.requireNonNull(rrdatas));
             return this;
         }
-
+        public Builder rrdatas(String... rrdatas) {
+            return rrdatas(List.of(rrdatas));
+        }
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RecordSetArgs build() {
+        }        public RecordSetArgs build() {
             return new RecordSetArgs(managedZone, name, project, rrdatas, ttl, type);
         }
     }

@@ -81,12 +81,10 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder subnetworkRangeName(String subnetworkRangeName) {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
-        }
-        public GetInstanceTemplateNetworkInterfaceAliasIpRange build() {
+        }        public GetInstanceTemplateNetworkInterfaceAliasIpRange build() {
             return new GetInstanceTemplateNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }
     }

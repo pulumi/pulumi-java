@@ -245,102 +245,85 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dataset(String dataset) {
             this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
-
         public Builder disableReferentialIntegrity(@Nullable Output<Boolean> disableReferentialIntegrity) {
             this.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
-
         public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
             this.disableReferentialIntegrity = Output.ofNullable(disableReferentialIntegrity);
             return this;
         }
-
         public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
             this.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
-
         public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
             this.disableResourceVersioning = Output.ofNullable(disableResourceVersioning);
             return this;
         }
-
         public Builder enableHistoryImport(@Nullable Output<Boolean> enableHistoryImport) {
             this.enableHistoryImport = enableHistoryImport;
             return this;
         }
-
         public Builder enableHistoryImport(@Nullable Boolean enableHistoryImport) {
             this.enableHistoryImport = Output.ofNullable(enableHistoryImport);
             return this;
         }
-
         public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
             this.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
-
         public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
             this.enableUpdateCreate = Output.ofNullable(enableUpdateCreate);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable FhirStoreNotificationConfigArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder streamConfigs(@Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
-
         public Builder streamConfigs(@Nullable List<FhirStoreStreamConfigArgs> streamConfigs) {
             this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
-
+        public Builder streamConfigs(FhirStoreStreamConfigArgs... streamConfigs) {
+            return streamConfigs(List.of(streamConfigs));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public FhirStoreArgs build() {
+        }        public FhirStoreArgs build() {
             return new FhirStoreArgs(dataset, disableReferentialIntegrity, disableResourceVersioning, enableHistoryImport, enableUpdateCreate, labels, name, notificationConfig, streamConfigs, version);
         }
     }

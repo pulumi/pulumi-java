@@ -90,42 +90,34 @@ public final class DeviceConfigGetArgs extends io.pulumi.resources.ResourceArgs 
             this.binaryData = binaryData;
             return this;
         }
-
         public Builder binaryData(@Nullable String binaryData) {
             this.binaryData = Output.ofNullable(binaryData);
             return this;
         }
-
         public Builder cloudUpdateTime(@Nullable Output<String> cloudUpdateTime) {
             this.cloudUpdateTime = cloudUpdateTime;
             return this;
         }
-
         public Builder cloudUpdateTime(@Nullable String cloudUpdateTime) {
             this.cloudUpdateTime = Output.ofNullable(cloudUpdateTime);
             return this;
         }
-
         public Builder deviceAckTime(@Nullable Output<String> deviceAckTime) {
             this.deviceAckTime = deviceAckTime;
             return this;
         }
-
         public Builder deviceAckTime(@Nullable String deviceAckTime) {
             this.deviceAckTime = Output.ofNullable(deviceAckTime);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DeviceConfigGetArgs build() {
+        }        public DeviceConfigGetArgs build() {
             return new DeviceConfigGetArgs(binaryData, cloudUpdateTime, deviceAckTime, version);
         }
     }

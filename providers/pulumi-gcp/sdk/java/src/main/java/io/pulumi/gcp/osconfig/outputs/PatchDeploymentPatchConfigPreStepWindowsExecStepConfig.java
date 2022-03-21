@@ -112,22 +112,21 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
-
+        public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
+            return allowedSuccessCodes(List.of(allowedSuccessCodes));
+        }
         public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
-
         public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = interpreter;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
-        }
-        public PatchDeploymentPatchConfigPreStepWindowsExecStepConfig build() {
+        }        public PatchDeploymentPatchConfigPreStepWindowsExecStepConfig build() {
             return new PatchDeploymentPatchConfigPreStepWindowsExecStepConfig(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }
     }

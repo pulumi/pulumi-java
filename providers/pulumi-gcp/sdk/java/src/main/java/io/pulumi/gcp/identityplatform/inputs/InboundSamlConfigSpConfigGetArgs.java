@@ -94,32 +94,29 @@ public final class InboundSamlConfigSpConfigGetArgs extends io.pulumi.resources.
             this.callbackUri = callbackUri;
             return this;
         }
-
         public Builder callbackUri(@Nullable String callbackUri) {
             this.callbackUri = Output.ofNullable(callbackUri);
             return this;
         }
-
         public Builder spCertificates(@Nullable Output<List<InboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
-
         public Builder spCertificates(@Nullable List<InboundSamlConfigSpConfigSpCertificateGetArgs> spCertificates) {
             this.spCertificates = Output.ofNullable(spCertificates);
             return this;
         }
-
+        public Builder spCertificates(InboundSamlConfigSpConfigSpCertificateGetArgs... spCertificates) {
+            return spCertificates(List.of(spCertificates));
+        }
         public Builder spEntityId(@Nullable Output<String> spEntityId) {
             this.spEntityId = spEntityId;
             return this;
         }
-
         public Builder spEntityId(@Nullable String spEntityId) {
             this.spEntityId = Output.ofNullable(spEntityId);
             return this;
-        }
-        public InboundSamlConfigSpConfigGetArgs build() {
+        }        public InboundSamlConfigSpConfigGetArgs build() {
             return new InboundSamlConfigSpConfigGetArgs(callbackUri, spCertificates, spEntityId);
         }
     }

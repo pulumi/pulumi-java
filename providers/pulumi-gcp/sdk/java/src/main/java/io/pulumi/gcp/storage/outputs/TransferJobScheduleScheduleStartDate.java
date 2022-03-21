@@ -85,17 +85,14 @@ public final class TransferJobScheduleScheduleStartDate {
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder month(Integer month) {
             this.month = Objects.requireNonNull(month);
             return this;
         }
-
         public Builder year(Integer year) {
             this.year = Objects.requireNonNull(year);
             return this;
-        }
-        public TransferJobScheduleScheduleStartDate build() {
+        }        public TransferJobScheduleScheduleStartDate build() {
             return new TransferJobScheduleScheduleStartDate(day, month, year);
         }
     }

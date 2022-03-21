@@ -58,12 +58,10 @@ public final class GameServerConfigScalingConfigSelectorArgs extends io.pulumi.r
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public GameServerConfigScalingConfigSelectorArgs build() {
+        }        public GameServerConfigScalingConfigSelectorArgs build() {
             return new GameServerConfigScalingConfigSelectorArgs(labels);
         }
     }

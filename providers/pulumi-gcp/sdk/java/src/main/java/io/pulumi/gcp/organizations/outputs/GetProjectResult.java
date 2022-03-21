@@ -137,52 +137,42 @@ public final class GetProjectResult {
             this.autoCreateNetwork = Objects.requireNonNull(autoCreateNetwork);
             return this;
         }
-
         public Builder billingAccount(String billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
-
         public Builder folderId(String folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder number(String number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder skipDelete(Boolean skipDelete) {
             this.skipDelete = Objects.requireNonNull(skipDelete);
             return this;
-        }
-        public GetProjectResult build() {
+        }        public GetProjectResult build() {
             return new GetProjectResult(autoCreateNetwork, billingAccount, folderId, id, labels, name, number, orgId, projectId, skipDelete);
         }
     }

@@ -79,32 +79,26 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
-
         public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
-
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
-
         public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = Output.ofNullable(tablePrefix);
             return this;
-        }
-        public EntryBigqueryDateShardedSpecArgs build() {
+        }        public EntryBigqueryDateShardedSpecArgs build() {
             return new EntryBigqueryDateShardedSpecArgs(dataset, shardCount, tablePrefix);
         }
     }

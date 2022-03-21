@@ -102,42 +102,37 @@ public final class NamespaceIamBindingArgs extends io.pulumi.resources.ResourceA
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable NamespaceIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public NamespaceIamBindingArgs build() {
+        }        public NamespaceIamBindingArgs build() {
             return new NamespaceIamBindingArgs(condition, members, name, role);
         }
     }

@@ -89,17 +89,14 @@ public final class JobCopySourceTable {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public JobCopySourceTable build() {
+        }        public JobCopySourceTable build() {
             return new JobCopySourceTable(datasetId, projectId, tableId);
         }
     }

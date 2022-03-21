@@ -77,22 +77,18 @@ public final class AutoscalarAutoscalingPolicyScaleInControlArgs extends io.pulu
             this.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
-
         public Builder maxScaledInReplicas(@Nullable AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs maxScaledInReplicas) {
             this.maxScaledInReplicas = Output.ofNullable(maxScaledInReplicas);
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = Output.ofNullable(timeWindowSec);
             return this;
-        }
-        public AutoscalarAutoscalingPolicyScaleInControlArgs build() {
+        }        public AutoscalarAutoscalingPolicyScaleInControlArgs build() {
             return new AutoscalarAutoscalingPolicyScaleInControlArgs(maxScaledInReplicas, timeWindowSec);
         }
     }

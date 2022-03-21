@@ -91,32 +91,26 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.day = day;
             return this;
         }
-
         public Builder day(@Nullable Integer day) {
             this.day = Output.ofNullable(day);
             return this;
         }
-
         public Builder month(@Nullable Output<Integer> month) {
             this.month = month;
             return this;
         }
-
         public Builder month(@Nullable Integer month) {
             this.month = Output.ofNullable(month);
             return this;
         }
-
         public Builder year(@Nullable Output<Integer> year) {
             this.year = year;
             return this;
         }
-
         public Builder year(@Nullable Integer year) {
             this.year = Output.ofNullable(year);
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs(day, month, year);
         }
     }

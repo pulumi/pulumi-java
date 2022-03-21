@@ -88,17 +88,14 @@ public final class MetricBucketOptionsLinearBuckets {
             this.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
-
         public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder width(@Nullable Double width) {
             this.width = width;
             return this;
-        }
-        public MetricBucketOptionsLinearBuckets build() {
+        }        public MetricBucketOptionsLinearBuckets build() {
             return new MetricBucketOptionsLinearBuckets(numFiniteBuckets, offset, width);
         }
     }

@@ -94,32 +94,29 @@ public final class GuestPoliciesRecipeInstallStepScriptRunGetArgs extends io.pul
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
-
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder interpreter(@Nullable Output<String> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
-
         public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = Output.ofNullable(interpreter);
             return this;
         }
-
         public Builder script(Output<String> script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public Builder script(String script) {
             this.script = Output.of(Objects.requireNonNull(script));
             return this;
-        }
-        public GuestPoliciesRecipeInstallStepScriptRunGetArgs build() {
+        }        public GuestPoliciesRecipeInstallStepScriptRunGetArgs build() {
             return new GuestPoliciesRecipeInstallStepScriptRunGetArgs(allowedExitCodes, interpreter, script);
         }
     }

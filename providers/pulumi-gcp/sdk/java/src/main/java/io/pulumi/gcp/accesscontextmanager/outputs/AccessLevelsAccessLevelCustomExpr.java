@@ -103,22 +103,18 @@ public final class AccessLevelsAccessLevelCustomExpr {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public AccessLevelsAccessLevelCustomExpr build() {
+        }        public AccessLevelsAccessLevelCustomExpr build() {
             return new AccessLevelsAccessLevelCustomExpr(description, expression, location, title);
         }
     }

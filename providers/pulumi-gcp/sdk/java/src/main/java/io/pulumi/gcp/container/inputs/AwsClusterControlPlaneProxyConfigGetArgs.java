@@ -73,22 +73,18 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
-
         public Builder secretVersion(Output<String> secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
-
         public Builder secretVersion(String secretVersion) {
             this.secretVersion = Output.of(Objects.requireNonNull(secretVersion));
             return this;
-        }
-        public AwsClusterControlPlaneProxyConfigGetArgs build() {
+        }        public AwsClusterControlPlaneProxyConfigGetArgs build() {
             return new AwsClusterControlPlaneProxyConfigGetArgs(secretArn, secretVersion);
         }
     }

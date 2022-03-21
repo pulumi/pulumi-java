@@ -73,22 +73,18 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
             this.hostProject = Objects.requireNonNull(hostProject);
             return this;
         }
-
         public Builder hostProject(String hostProject) {
             this.hostProject = Output.of(Objects.requireNonNull(hostProject));
             return this;
         }
-
         public Builder serviceProject(Output<String> serviceProject) {
             this.serviceProject = Objects.requireNonNull(serviceProject);
             return this;
         }
-
         public Builder serviceProject(String serviceProject) {
             this.serviceProject = Output.of(Objects.requireNonNull(serviceProject));
             return this;
-        }
-        public SharedVPCServiceProjectArgs build() {
+        }        public SharedVPCServiceProjectArgs build() {
             return new SharedVPCServiceProjectArgs(hostProject, serviceProject);
         }
     }

@@ -54,12 +54,13 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
             this.obectIds = obectIds;
             return this;
         }
-
         public Builder obectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs> obectIds) {
             this.obectIds = Output.ofNullable(obectIds);
             return this;
         }
-        public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs build() {
+        public Builder obectIds(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs... obectIds) {
+            return obectIds(List.of(obectIds));
+        }        public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs(obectIds);
         }
     }

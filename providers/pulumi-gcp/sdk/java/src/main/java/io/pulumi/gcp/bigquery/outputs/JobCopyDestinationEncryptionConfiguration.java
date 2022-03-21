@@ -75,12 +75,10 @@ public final class JobCopyDestinationEncryptionConfiguration {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
-        }
-        public JobCopyDestinationEncryptionConfiguration build() {
+        }        public JobCopyDestinationEncryptionConfiguration build() {
             return new JobCopyDestinationEncryptionConfiguration(kmsKeyName, kmsKeyVersion);
         }
     }

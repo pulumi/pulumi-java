@@ -91,32 +91,26 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder shortName(Output<String> shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public Builder shortName(String shortName) {
             this.shortName = Output.of(Objects.requireNonNull(shortName));
             return this;
-        }
-        public TagKeyArgs build() {
+        }        public TagKeyArgs build() {
             return new TagKeyArgs(description, parent, shortName);
         }
     }

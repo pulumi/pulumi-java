@@ -106,32 +106,29 @@ public final class GetEnvironmentResult {
             this.configs = Objects.requireNonNull(configs);
             return this;
         }
-
+        public Builder configs(GetEnvironmentConfig... configs) {
+            return configs(List.of(configs));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetEnvironmentResult build() {
+        }        public GetEnvironmentResult build() {
             return new GetEnvironmentResult(configs, id, labels, name, project, region);
         }
     }

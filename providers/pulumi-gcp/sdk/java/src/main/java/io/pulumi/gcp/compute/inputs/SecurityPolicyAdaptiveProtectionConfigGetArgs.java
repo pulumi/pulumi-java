@@ -57,12 +57,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
             this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
         }
-
         public Builder layer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs layer7DdosDefenseConfig) {
             this.layer7DdosDefenseConfig = Output.ofNullable(layer7DdosDefenseConfig);
             return this;
-        }
-        public SecurityPolicyAdaptiveProtectionConfigGetArgs build() {
+        }        public SecurityPolicyAdaptiveProtectionConfigGetArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigGetArgs(layer7DdosDefenseConfig);
         }
     }

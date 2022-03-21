@@ -118,42 +118,37 @@ public final class ClusterClusterAutoscalingArgs extends io.pulumi.resources.Res
             this.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
-
         public Builder autoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaultsArgs autoProvisioningDefaults) {
             this.autoProvisioningDefaults = Output.ofNullable(autoProvisioningDefaults);
             return this;
         }
-
         public Builder autoscalingProfile(@Nullable Output<String> autoscalingProfile) {
             this.autoscalingProfile = autoscalingProfile;
             return this;
         }
-
         public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
             this.autoscalingProfile = Output.ofNullable(autoscalingProfile);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder resourceLimits(@Nullable Output<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }
-
         public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimitArgs> resourceLimits) {
             this.resourceLimits = Output.ofNullable(resourceLimits);
             return this;
         }
-        public ClusterClusterAutoscalingArgs build() {
+        public Builder resourceLimits(ClusterClusterAutoscalingResourceLimitArgs... resourceLimits) {
+            return resourceLimits(List.of(resourceLimits));
+        }        public ClusterClusterAutoscalingArgs build() {
             return new ClusterClusterAutoscalingArgs(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }
     }

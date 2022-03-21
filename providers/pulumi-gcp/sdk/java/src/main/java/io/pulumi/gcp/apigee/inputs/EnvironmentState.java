@@ -107,42 +107,34 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
-
         public Builder orgId(@Nullable String orgId) {
             this.orgId = Output.ofNullable(orgId);
             return this;
-        }
-        public EnvironmentState build() {
+        }        public EnvironmentState build() {
             return new EnvironmentState(description, displayName, name, orgId);
         }
     }

@@ -95,42 +95,34 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
             this.clientCertificate = clientCertificate;
             return this;
         }
-
         public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
-
         public Builder clientCertificateConfig(Output<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig) {
             this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
             return this;
         }
-
         public Builder clientCertificateConfig(ClusterMasterAuthClientCertificateConfigGetArgs clientCertificateConfig) {
             this.clientCertificateConfig = Output.of(Objects.requireNonNull(clientCertificateConfig));
             return this;
         }
-
         public Builder clientKey(@Nullable Output<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
-
         public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = Output.ofNullable(clientKey);
             return this;
         }
-
         public Builder clusterCaCertificate(@Nullable Output<String> clusterCaCertificate) {
             this.clusterCaCertificate = clusterCaCertificate;
             return this;
         }
-
         public Builder clusterCaCertificate(@Nullable String clusterCaCertificate) {
             this.clusterCaCertificate = Output.ofNullable(clusterCaCertificate);
             return this;
-        }
-        public ClusterMasterAuthGetArgs build() {
+        }        public ClusterMasterAuthGetArgs build() {
             return new ClusterMasterAuthGetArgs(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate);
         }
     }

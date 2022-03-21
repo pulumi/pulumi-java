@@ -53,7 +53,9 @@ public final class AzureClusterAuthorization {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
-        public AzureClusterAuthorization build() {
+        public Builder adminUsers(AzureClusterAuthorizationAdminUser... adminUsers) {
+            return adminUsers(List.of(adminUsers));
+        }        public AzureClusterAuthorization build() {
             return new AzureClusterAuthorization(adminUsers);
         }
     }

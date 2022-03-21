@@ -273,62 +273,62 @@ public final class TriggerBuild {
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder availableSecrets(@Nullable TriggerBuildAvailableSecrets availableSecrets) {
             this.availableSecrets = availableSecrets;
             return this;
         }
-
         public Builder images(@Nullable List<String> images) {
             this.images = images;
             return this;
         }
-
+        public Builder images(String... images) {
+            return images(List.of(images));
+        }
         public Builder logsBucket(@Nullable String logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
-
         public Builder options(@Nullable TriggerBuildOptions options) {
             this.options = options;
             return this;
         }
-
         public Builder queueTtl(@Nullable String queueTtl) {
             this.queueTtl = queueTtl;
             return this;
         }
-
         public Builder secrets(@Nullable List<TriggerBuildSecret> secrets) {
             this.secrets = secrets;
             return this;
         }
-
+        public Builder secrets(TriggerBuildSecret... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder source(@Nullable TriggerBuildSource source) {
             this.source = source;
             return this;
         }
-
         public Builder steps(List<TriggerBuildStep> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
+        public Builder steps(TriggerBuildStep... steps) {
+            return steps(List.of(steps));
+        }
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public TriggerBuild build() {
+        }        public TriggerBuild build() {
             return new TriggerBuild(artifacts, availableSecrets, images, logsBucket, options, queueTtl, secrets, source, steps, substitutions, tags, timeout);
         }
     }

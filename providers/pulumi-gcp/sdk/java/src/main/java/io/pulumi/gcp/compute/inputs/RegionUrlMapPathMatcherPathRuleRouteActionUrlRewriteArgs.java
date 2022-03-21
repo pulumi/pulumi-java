@@ -78,22 +78,18 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs exte
             this.hostRewrite = hostRewrite;
             return this;
         }
-
         public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = Output.ofNullable(hostRewrite);
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable Output<String> pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = Output.ofNullable(pathPrefixRewrite);
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs(hostRewrite, pathPrefixRewrite);
         }
     }

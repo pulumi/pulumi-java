@@ -87,12 +87,13 @@ public final class AccessLevelsAccessLevelBasic {
             this.combiningFunction = combiningFunction;
             return this;
         }
-
         public Builder conditions(List<AccessLevelsAccessLevelBasicCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-        public AccessLevelsAccessLevelBasic build() {
+        public Builder conditions(AccessLevelsAccessLevelBasicCondition... conditions) {
+            return conditions(List.of(conditions));
+        }        public AccessLevelsAccessLevelBasic build() {
             return new AccessLevelsAccessLevelBasic(combiningFunction, conditions);
         }
     }

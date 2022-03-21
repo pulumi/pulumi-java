@@ -57,12 +57,10 @@ public final class FeatureMembershipConfigmanagementBinauthzArgs extends io.pulu
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public FeatureMembershipConfigmanagementBinauthzArgs build() {
+        }        public FeatureMembershipConfigmanagementBinauthzArgs build() {
             return new FeatureMembershipConfigmanagementBinauthzArgs(enabled);
         }
     }

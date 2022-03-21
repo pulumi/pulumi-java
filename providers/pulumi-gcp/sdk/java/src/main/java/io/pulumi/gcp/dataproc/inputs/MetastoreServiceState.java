@@ -279,142 +279,114 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
             this.artifactGcsUri = artifactGcsUri;
             return this;
         }
-
         public Builder artifactGcsUri(@Nullable String artifactGcsUri) {
             this.artifactGcsUri = Output.ofNullable(artifactGcsUri);
             return this;
         }
-
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Output.ofNullable(endpointUri);
             return this;
         }
-
         public Builder hiveMetastoreConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig) {
             this.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
-
         public Builder hiveMetastoreConfig(@Nullable MetastoreServiceHiveMetastoreConfigGetArgs hiveMetastoreConfig) {
             this.hiveMetastoreConfig = Output.ofNullable(hiveMetastoreConfig);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable MetastoreServiceMaintenanceWindowGetArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
-
         public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder stateMessage(@Nullable Output<String> stateMessage) {
             this.stateMessage = stateMessage;
             return this;
         }
-
         public Builder stateMessage(@Nullable String stateMessage) {
             this.stateMessage = Output.ofNullable(stateMessage);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public MetastoreServiceState build() {
+        }        public MetastoreServiceState build() {
             return new MetastoreServiceState(artifactGcsUri, endpointUri, hiveMetastoreConfig, labels, location, maintenanceWindow, name, network, port, project, serviceId, state, stateMessage, tier);
         }
     }

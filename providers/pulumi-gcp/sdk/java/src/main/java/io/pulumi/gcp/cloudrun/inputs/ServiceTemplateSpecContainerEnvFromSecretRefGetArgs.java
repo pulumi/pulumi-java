@@ -76,22 +76,18 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefGetArgs extends i
             this.localObjectReference = localObjectReference;
             return this;
         }
-
         public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceGetArgs localObjectReference) {
             this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
-
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromSecretRefGetArgs build() {
+        }        public ServiceTemplateSpecContainerEnvFromSecretRefGetArgs build() {
             return new ServiceTemplateSpecContainerEnvFromSecretRefGetArgs(localObjectReference, optional);
         }
     }

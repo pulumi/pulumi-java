@@ -111,42 +111,34 @@ public final class SnapshotSnapshotEncryptionKeyGetArgs extends io.pulumi.resour
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
-
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = Output.ofNullable(kmsKeySelfLink);
             return this;
         }
-
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
-
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = Output.ofNullable(kmsKeyServiceAccount);
             return this;
         }
-
         public Builder rawKey(@Nullable Output<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
-
         public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = Output.ofNullable(rawKey);
             return this;
         }
-
         public Builder sha256(@Nullable Output<String> sha256) {
             this.sha256 = sha256;
             return this;
         }
-
         public Builder sha256(@Nullable String sha256) {
             this.sha256 = Output.ofNullable(sha256);
             return this;
-        }
-        public SnapshotSnapshotEncryptionKeyGetArgs build() {
+        }        public SnapshotSnapshotEncryptionKeyGetArgs build() {
             return new SnapshotSnapshotEncryptionKeyGetArgs(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }
     }

@@ -79,22 +79,18 @@ public final class SubnetworkSecondaryIpRangeGetArgs extends io.pulumi.resources
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Output.of(Objects.requireNonNull(ipCidrRange));
             return this;
         }
-
         public Builder rangeName(Output<String> rangeName) {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }
-
         public Builder rangeName(String rangeName) {
             this.rangeName = Output.of(Objects.requireNonNull(rangeName));
             return this;
-        }
-        public SubnetworkSecondaryIpRangeGetArgs build() {
+        }        public SubnetworkSecondaryIpRangeGetArgs build() {
             return new SubnetworkSecondaryIpRangeGetArgs(ipCidrRange, rangeName);
         }
     }

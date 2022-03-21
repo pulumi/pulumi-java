@@ -54,12 +54,10 @@ public final class GetClusterNetworkPolicy {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
-        }
-        public GetClusterNetworkPolicy build() {
+        }        public GetClusterNetworkPolicy build() {
             return new GetClusterNetworkPolicy(enabled, provider);
         }
     }

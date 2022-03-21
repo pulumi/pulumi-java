@@ -156,27 +156,31 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
             this.availability = availability;
             return this;
         }
-
         public Builder latency(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency latency) {
             this.latency = latency;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder methods(@Nullable List<String> methods) {
             this.methods = methods;
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder versions(@Nullable List<String> versions) {
             this.versions = versions;
             return this;
         }
-        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance build() {
+        public Builder versions(String... versions) {
+            return versions(List.of(versions));
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance(availability, latency, locations, methods, versions);
         }
     }

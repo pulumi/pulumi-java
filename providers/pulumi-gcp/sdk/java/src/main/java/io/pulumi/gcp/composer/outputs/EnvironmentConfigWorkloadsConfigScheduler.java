@@ -72,22 +72,18 @@ public final class EnvironmentConfigWorkloadsConfigScheduler {
             this.count = count;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = storageGb;
             return this;
-        }
-        public EnvironmentConfigWorkloadsConfigScheduler build() {
+        }        public EnvironmentConfigWorkloadsConfigScheduler build() {
             return new EnvironmentConfigWorkloadsConfigScheduler(count, cpu, memoryGb, storageGb);
         }
     }

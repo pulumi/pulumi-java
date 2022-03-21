@@ -72,12 +72,10 @@ public final class WorkloadResource {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
-        }
-        public WorkloadResource build() {
+        }        public WorkloadResource build() {
             return new WorkloadResource(resourceId, resourceType);
         }
     }

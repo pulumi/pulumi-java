@@ -74,22 +74,18 @@ public final class ClusterClusterConfigMasterConfigAcceleratorArgs extends io.pu
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorCount(Integer acceleratorCount) {
             this.acceleratorCount = Output.of(Objects.requireNonNull(acceleratorCount));
             return this;
         }
-
         public Builder acceleratorType(Output<String> acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
             return this;
-        }
-        public ClusterClusterConfigMasterConfigAcceleratorArgs build() {
+        }        public ClusterClusterConfigMasterConfigAcceleratorArgs build() {
             return new ClusterClusterConfigMasterConfigAcceleratorArgs(acceleratorCount, acceleratorType);
         }
     }

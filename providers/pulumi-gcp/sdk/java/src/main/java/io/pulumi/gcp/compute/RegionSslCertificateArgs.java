@@ -167,72 +167,58 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public RegionSslCertificateArgs build() {
+        }        public RegionSslCertificateArgs build() {
             return new RegionSslCertificateArgs(certificate, description, name, namePrefix, privateKey, project, region);
         }
     }

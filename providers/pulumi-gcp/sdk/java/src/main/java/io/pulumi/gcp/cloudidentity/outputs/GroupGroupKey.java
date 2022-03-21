@@ -91,12 +91,10 @@ public final class GroupGroupKey {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
-        }
-        public GroupGroupKey build() {
+        }        public GroupGroupKey build() {
             return new GroupGroupKey(id, namespace);
         }
     }

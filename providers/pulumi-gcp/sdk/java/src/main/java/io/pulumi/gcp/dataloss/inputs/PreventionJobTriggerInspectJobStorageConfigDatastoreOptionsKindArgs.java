@@ -56,12 +56,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs(name);
         }
     }

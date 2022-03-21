@@ -77,12 +77,10 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelect
             this.method = method;
             return this;
         }
-
         public Builder permission(@Nullable String permission) {
             this.permission = permission;
             return this;
-        }
-        public ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector build() {
+        }        public ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector build() {
             return new ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector(method, permission);
         }
     }

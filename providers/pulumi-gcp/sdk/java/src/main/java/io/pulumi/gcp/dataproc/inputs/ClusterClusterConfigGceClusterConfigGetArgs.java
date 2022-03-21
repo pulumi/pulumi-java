@@ -210,92 +210,80 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
             this.internalIpOnly = internalIpOnly;
             return this;
         }
-
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = Output.ofNullable(internalIpOnly);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
             this.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
-
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
             this.serviceAccountScopes = Output.ofNullable(serviceAccountScopes);
             return this;
         }
-
+        public Builder serviceAccountScopes(String... serviceAccountScopes) {
+            return serviceAccountScopes(List.of(serviceAccountScopes));
+        }
         public Builder shieldedInstanceConfig(@Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public ClusterClusterConfigGceClusterConfigGetArgs build() {
+        }        public ClusterClusterConfigGceClusterConfigGetArgs build() {
             return new ClusterClusterConfigGceClusterConfigGetArgs(internalIpOnly, metadata, network, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetwork, tags, zone);
         }
     }

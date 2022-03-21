@@ -76,22 +76,18 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable String auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
         public Builder disabled(Output<Boolean> disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
-        }
-        public ClusterAddonsConfigIstioConfigGetArgs build() {
+        }        public ClusterAddonsConfigIstioConfigGetArgs build() {
             return new ClusterAddonsConfigIstioConfigGetArgs(auth, disabled);
         }
     }

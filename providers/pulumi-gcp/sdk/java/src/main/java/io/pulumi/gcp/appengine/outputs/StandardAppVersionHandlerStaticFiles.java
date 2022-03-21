@@ -163,37 +163,30 @@ public final class StandardAppVersionHandlerStaticFiles {
             this.applicationReadable = applicationReadable;
             return this;
         }
-
         public Builder expiration(@Nullable String expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder httpHeaders(@Nullable Map<String,String> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
-
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder requireMatchingFile(@Nullable Boolean requireMatchingFile) {
             this.requireMatchingFile = requireMatchingFile;
             return this;
         }
-
         public Builder uploadPathRegex(@Nullable String uploadPathRegex) {
             this.uploadPathRegex = uploadPathRegex;
             return this;
-        }
-        public StandardAppVersionHandlerStaticFiles build() {
+        }        public StandardAppVersionHandlerStaticFiles build() {
             return new StandardAppVersionHandlerStaticFiles(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
         }
     }

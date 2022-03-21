@@ -91,32 +91,26 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder spec(@Nullable Output<PolicySpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable PolicySpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
-        }
-        public PolicyArgs build() {
+        }        public PolicyArgs build() {
             return new PolicyArgs(name, parent, spec);
         }
     }

@@ -67,22 +67,18 @@ public final class FeatureResourceStateGetArgs extends io.pulumi.resources.Resou
             this.hasResources = hasResources;
             return this;
         }
-
         public Builder hasResources(@Nullable Boolean hasResources) {
             this.hasResources = Output.ofNullable(hasResources);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public FeatureResourceStateGetArgs build() {
+        }        public FeatureResourceStateGetArgs build() {
             return new FeatureResourceStateGetArgs(hasResources, state);
         }
     }

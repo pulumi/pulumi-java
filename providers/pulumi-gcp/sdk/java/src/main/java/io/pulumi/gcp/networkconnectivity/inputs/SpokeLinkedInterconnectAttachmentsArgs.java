@@ -75,22 +75,21 @@ public final class SpokeLinkedInterconnectAttachmentsArgs extends io.pulumi.reso
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Output.of(Objects.requireNonNull(siteToSiteDataTransfer));
             return this;
         }
-
         public Builder uris(Output<List<String>> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public Builder uris(List<String> uris) {
             this.uris = Output.of(Objects.requireNonNull(uris));
             return this;
         }
-        public SpokeLinkedInterconnectAttachmentsArgs build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public SpokeLinkedInterconnectAttachmentsArgs build() {
             return new SpokeLinkedInterconnectAttachmentsArgs(siteToSiteDataTransfer, uris);
         }
     }

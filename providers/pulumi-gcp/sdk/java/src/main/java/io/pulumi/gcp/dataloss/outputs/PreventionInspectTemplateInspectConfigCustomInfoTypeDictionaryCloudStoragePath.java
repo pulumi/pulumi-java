@@ -51,8 +51,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath build() {
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath(path);
         }
     }

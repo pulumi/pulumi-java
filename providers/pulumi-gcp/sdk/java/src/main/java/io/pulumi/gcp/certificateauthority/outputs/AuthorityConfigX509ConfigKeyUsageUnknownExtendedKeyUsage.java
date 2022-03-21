@@ -53,7 +53,9 @@ public final class AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-        public AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage build() {
             return new AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage(objectIdPaths);
         }
     }

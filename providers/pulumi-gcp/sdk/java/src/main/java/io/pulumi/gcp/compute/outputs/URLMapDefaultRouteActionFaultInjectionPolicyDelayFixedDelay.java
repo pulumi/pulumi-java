@@ -76,12 +76,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(@Nullable String seconds) {
             this.seconds = seconds;
             return this;
-        }
-        public URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay build() {
+        }        public URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay(nanos, seconds);
         }
     }

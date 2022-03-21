@@ -127,52 +127,42 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
             this.authFailAction = authFailAction;
             return this;
         }
-
         public Builder authFailAction(@Nullable String authFailAction) {
             this.authFailAction = Output.ofNullable(authFailAction);
             return this;
         }
-
         public Builder login(@Nullable Output<String> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder script(Output<String> script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public Builder script(String script) {
             this.script = Output.of(Objects.requireNonNull(script));
             return this;
         }
-
         public Builder securityLevel(@Nullable Output<String> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
-
         public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = Output.ofNullable(securityLevel);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public FlexibleAppVersionApiConfigArgs build() {
+        }        public FlexibleAppVersionApiConfigArgs build() {
             return new FlexibleAppVersionApiConfigArgs(authFailAction, login, script, securityLevel, url);
         }
     }

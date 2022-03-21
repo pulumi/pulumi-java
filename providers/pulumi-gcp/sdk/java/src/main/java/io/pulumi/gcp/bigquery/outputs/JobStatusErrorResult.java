@@ -71,17 +71,14 @@ public final class JobStatusErrorResult {
             this.location = location;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
-        }
-        public JobStatusErrorResult build() {
+        }        public JobStatusErrorResult build() {
             return new JobStatusErrorResult(location, message, reason);
         }
     }

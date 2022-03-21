@@ -94,42 +94,40 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<DomainMappingStatusConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(DomainMappingStatusConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder mappedRouteName(@Nullable Output<String> mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
-
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
             this.mappedRouteName = Output.ofNullable(mappedRouteName);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder resourceRecords(@Nullable Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
-
         public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecordArgs> resourceRecords) {
             this.resourceRecords = Output.ofNullable(resourceRecords);
             return this;
         }
-        public DomainMappingStatusArgs build() {
+        public Builder resourceRecords(DomainMappingStatusResourceRecordArgs... resourceRecords) {
+            return resourceRecords(List.of(resourceRecords));
+        }        public DomainMappingStatusArgs build() {
             return new DomainMappingStatusArgs(conditions, mappedRouteName, observedGeneration, resourceRecords);
         }
     }

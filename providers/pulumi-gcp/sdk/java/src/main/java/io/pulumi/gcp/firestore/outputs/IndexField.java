@@ -95,17 +95,14 @@ public final class IndexField {
             this.arrayConfig = arrayConfig;
             return this;
         }
-
         public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
-
         public Builder order(@Nullable String order) {
             this.order = order;
             return this;
-        }
-        public IndexField build() {
+        }        public IndexField build() {
             return new IndexField(arrayConfig, fieldPath, order);
         }
     }

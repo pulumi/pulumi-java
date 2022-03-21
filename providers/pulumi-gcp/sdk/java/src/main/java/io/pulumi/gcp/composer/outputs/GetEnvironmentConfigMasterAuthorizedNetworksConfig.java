@@ -55,12 +55,13 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetEnvironmentConfigMasterAuthorizedNetworksConfig build() {
+        }        public GetEnvironmentConfigMasterAuthorizedNetworksConfig build() {
             return new GetEnvironmentConfigMasterAuthorizedNetworksConfig(cidrBlocks, enabled);
         }
     }

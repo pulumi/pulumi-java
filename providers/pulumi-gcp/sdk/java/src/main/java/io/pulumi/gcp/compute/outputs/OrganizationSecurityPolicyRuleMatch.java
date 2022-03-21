@@ -96,17 +96,14 @@ public final class OrganizationSecurityPolicyRuleMatch {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder versionedExpr(@Nullable String versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
-        }
-        public OrganizationSecurityPolicyRuleMatch build() {
+        }        public OrganizationSecurityPolicyRuleMatch build() {
             return new OrganizationSecurityPolicyRuleMatch(config, description, versionedExpr);
         }
     }

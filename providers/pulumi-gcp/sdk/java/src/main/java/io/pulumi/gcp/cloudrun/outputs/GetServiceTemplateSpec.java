@@ -89,32 +89,32 @@ public final class GetServiceTemplateSpec {
             this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
             return this;
         }
-
         public Builder containers(List<GetServiceTemplateSpecContainer> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
+        public Builder containers(GetServiceTemplateSpecContainer... containers) {
+            return containers(List.of(containers));
+        }
         public Builder serviceAccountName(String serviceAccountName) {
             this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
             return this;
         }
-
         public Builder servingState(String servingState) {
             this.servingState = Objects.requireNonNull(servingState);
             return this;
         }
-
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }
-
         public Builder volumes(List<GetServiceTemplateSpecVolume> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-        public GetServiceTemplateSpec build() {
+        public Builder volumes(GetServiceTemplateSpecVolume... volumes) {
+            return volumes(List.of(volumes));
+        }        public GetServiceTemplateSpec build() {
             return new GetServiceTemplateSpec(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }
     }

@@ -95,12 +95,10 @@ public final class AccessApprovalSettingsEnrolledService {
             this.cloudProduct = Objects.requireNonNull(cloudProduct);
             return this;
         }
-
         public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
             this.enrollmentLevel = enrollmentLevel;
             return this;
-        }
-        public AccessApprovalSettingsEnrolledService build() {
+        }        public AccessApprovalSettingsEnrolledService build() {
             return new AccessApprovalSettingsEnrolledService(cloudProduct, enrollmentLevel);
         }
     }

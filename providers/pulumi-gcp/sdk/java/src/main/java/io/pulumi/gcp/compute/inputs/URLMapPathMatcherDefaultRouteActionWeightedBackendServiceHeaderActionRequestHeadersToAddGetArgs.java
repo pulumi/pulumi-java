@@ -92,32 +92,26 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
             this.headerName = headerName;
             return this;
         }
-
         public Builder headerName(@Nullable String headerName) {
             this.headerName = Output.ofNullable(headerName);
             return this;
         }
-
         public Builder headerValue(@Nullable Output<String> headerValue) {
             this.headerValue = headerValue;
             return this;
         }
-
         public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = Output.ofNullable(headerValue);
             return this;
         }
-
         public Builder replace(@Nullable Output<Boolean> replace) {
             this.replace = replace;
             return this;
         }
-
         public Builder replace(@Nullable Boolean replace) {
             this.replace = Output.ofNullable(replace);
             return this;
-        }
-        public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs build() {
+        }        public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs(headerName, headerValue, replace);
         }
     }

@@ -125,52 +125,45 @@ public final class OsPolicyAssignmentOsPolicyArgs extends io.pulumi.resources.Re
             this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
-
         public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = Output.ofNullable(allowNoResourceGroupMatch);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public Builder resourceGroups(Output<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public Builder resourceGroups(List<OsPolicyAssignmentOsPolicyResourceGroupArgs> resourceGroups) {
             this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
-        public OsPolicyAssignmentOsPolicyArgs build() {
+        public Builder resourceGroups(OsPolicyAssignmentOsPolicyResourceGroupArgs... resourceGroups) {
+            return resourceGroups(List.of(resourceGroups));
+        }        public OsPolicyAssignmentOsPolicyArgs build() {
             return new OsPolicyAssignmentOsPolicyArgs(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
         }
     }

@@ -55,8 +55,7 @@ public final class InboundSamlConfigSpConfigSpCertificate {
         public Builder x509Certificate(@Nullable String x509Certificate) {
             this.x509Certificate = x509Certificate;
             return this;
-        }
-        public InboundSamlConfigSpConfigSpCertificate build() {
+        }        public InboundSamlConfigSpConfigSpCertificate build() {
             return new InboundSamlConfigSpConfigSpCertificate(x509Certificate);
         }
     }

@@ -114,22 +114,18 @@ public final class GuestPoliciesPackageRepository {
             this.apt = apt;
             return this;
         }
-
         public Builder goo(@Nullable GuestPoliciesPackageRepositoryGoo goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder yum(@Nullable GuestPoliciesPackageRepositoryYum yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder zypper(@Nullable GuestPoliciesPackageRepositoryZypper zypper) {
             this.zypper = zypper;
             return this;
-        }
-        public GuestPoliciesPackageRepository build() {
+        }        public GuestPoliciesPackageRepository build() {
             return new GuestPoliciesPackageRepository(apt, goo, yum, zypper);
         }
     }

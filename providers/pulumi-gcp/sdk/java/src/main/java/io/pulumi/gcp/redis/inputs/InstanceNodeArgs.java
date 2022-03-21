@@ -70,22 +70,18 @@ public final class InstanceNodeArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceNodeArgs build() {
+        }        public InstanceNodeArgs build() {
             return new InstanceNodeArgs(id, zone);
         }
     }

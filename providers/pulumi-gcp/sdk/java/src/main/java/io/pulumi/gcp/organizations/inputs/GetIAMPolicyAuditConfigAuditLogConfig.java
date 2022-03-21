@@ -75,12 +75,13 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends io.pulumi.resou
             this.exemptedMembers = exemptedMembers;
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public GetIAMPolicyAuditConfigAuditLogConfig build() {
+        }        public GetIAMPolicyAuditConfigAuditLogConfig build() {
             return new GetIAMPolicyAuditConfigAuditLogConfig(exemptedMembers, logType);
         }
     }

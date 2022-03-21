@@ -77,22 +77,18 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends io.pulumi.resources.R
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public EdgeCacheKeysetPublicKeyGetArgs build() {
+        }        public EdgeCacheKeysetPublicKeyGetArgs build() {
             return new EdgeCacheKeysetPublicKeyGetArgs(id, value);
         }
     }

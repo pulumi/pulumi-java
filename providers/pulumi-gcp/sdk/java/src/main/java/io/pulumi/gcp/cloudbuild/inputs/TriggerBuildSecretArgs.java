@@ -77,22 +77,18 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public Builder secretEnv(@Nullable Output<Map<String,String>> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }
-
         public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
             this.secretEnv = Output.ofNullable(secretEnv);
             return this;
-        }
-        public TriggerBuildSecretArgs build() {
+        }        public TriggerBuildSecretArgs build() {
             return new TriggerBuildSecretArgs(kmsKeyName, secretEnv);
         }
     }

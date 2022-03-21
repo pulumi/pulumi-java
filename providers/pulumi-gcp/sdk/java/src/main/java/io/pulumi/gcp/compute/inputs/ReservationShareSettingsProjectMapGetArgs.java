@@ -74,22 +74,18 @@ public final class ReservationShareSettingsProjectMapGetArgs extends io.pulumi.r
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
-        }
-        public ReservationShareSettingsProjectMapGetArgs build() {
+        }        public ReservationShareSettingsProjectMapGetArgs build() {
             return new ReservationShareSettingsProjectMapGetArgs(id, projectId);
         }
     }
